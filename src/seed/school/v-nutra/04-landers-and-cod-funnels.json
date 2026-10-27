@@ -1,0 +1,2714 @@
+{
+  "school": "v-nutra",
+  "order": 4,
+  "slug": "landers-and-cod-funnels",
+  "title": "Landers and COD funnels",
+  "summary": "How a COD nutra funnel turns a click into cash: prelander, order form, confirmation call, delivery and buyout. You learn the approval and buyout maths, how to raise both honestly, and how to keep fake and duplicate leads out.",
+  "lessons": [
+    {
+      "slug": "cod-funnel-click-to-cash",
+      "title": "The COD funnel from click to cash",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can name every stage of a COD funnel and who controls it.",
+        "By the end you can turn payout and approval rate into a value per lead and a target CPL.",
+        "By the end you can write a COD numbers sheet before you spend."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why: a lead is not money yet",
+          "p": "In COD nutra you are usually paid per approved lead, not per form fill. Between your ad and your payout sit a call centre, a courier and a buyer who pays cash at the door. Each stage loses people. If you only watch cost per lead in Ads Manager, you can look like a winner there and still lose money at the network.",
+          "d": {
+            "b": "Leads cost money. Approved leads pay you.",
+            "s": "Bought-out orders keep you paid next month."
+          },
+          "say": "Here's why this lesson matters. In C O D, cash on delivery, nutra, you're usually paid per approved lead, not per form fill. Between your ad and your payout sit a call centre, a courier, and a buyer who pays cash at the door. Each stage loses people. Look at the headline: leads cost money, approved leads pay you. If you only watch cost per lead in Ads Manager, you can look like a winner there and still lose money at the network."
+        },
+        {
+          "v": "map",
+          "h": "The whole COD funnel",
+          "p": "This is the path from your ad to your payout. You control the first three boxes. The network, the call centre and the courier control the rest, but your traffic and your promises decide how well those later stages go. Tap through it once before reading on.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Your ad",
+                "kind": "ad"
+              },
+              {
+                "id": "pre",
+                "label": "Prelander",
+                "kind": "page"
+              },
+              {
+                "id": "form",
+                "label": "Order form",
+                "kind": "page"
+              },
+              {
+                "id": "cc",
+                "label": "Call centre",
+                "kind": "person"
+              },
+              {
+                "id": "cour",
+                "label": "Courier",
+                "kind": "person"
+              },
+              {
+                "id": "cash",
+                "label": "Buyer pays cash",
+                "kind": "money"
+              },
+              {
+                "id": "net",
+                "label": "Network",
+                "kind": "offer"
+              },
+              {
+                "id": "pb",
+                "label": "Postback",
+                "kind": "data"
+              },
+              {
+                "id": "you",
+                "label": "Your payout",
+                "kind": "money"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "pre",
+                "click"
+              ],
+              [
+                "pre",
+                "form",
+                "read"
+              ],
+              [
+                "form",
+                "net",
+                "lead"
+              ],
+              [
+                "net",
+                "cc",
+                "call"
+              ],
+              [
+                "cc",
+                "cour",
+                "approved"
+              ],
+              [
+                "cour",
+                "cash",
+                "deliver"
+              ],
+              [
+                "cc",
+                "pb",
+                "status"
+              ],
+              [
+                "pb",
+                "you",
+                "approved lead"
+              ]
+            ]
+          },
+          "say": "This map is the path from your ad to your payout. Follow the arrows. Your ad leads to a prelander, then an order form. The lead goes to the network, which passes it to the call centre. Approved orders go to the courier, and the buyer pays cash. Meanwhile the call centre sends a status back as a postback, and approved leads become your payout. You control the first three boxes. But your traffic and your promises decide how well the later stages go."
+        },
+        {
+          "v": "table",
+          "h": "Who controls each stage",
+          "p": "Every stage has an owner. Knowing who owns it tells you what you can fix yourself and what you can only ask about. Your biggest levers are the traffic you buy and the promises your ad and prelander make, because those shape every later stage.",
+          "d": {
+            "cols": [
+              "Stage",
+              "Owner",
+              "Your lever"
+            ],
+            "rows": [
+              [
+                "Click",
+                "You",
+                "Targeting, creative"
+              ],
+              [
+                "Prelander",
+                "You",
+                "Honest, clear, priced"
+              ],
+              [
+                "Order form",
+                "You or network",
+                "Valid phone, few fields"
+              ],
+              [
+                "Confirmation call",
+                "Call centre",
+                "Lead quality, timing"
+              ],
+              [
+                "Delivery",
+                "Courier",
+                "Correct address, geo"
+              ],
+              [
+                "Cash at door",
+                "Buyer",
+                "Realistic expectations"
+              ]
+            ]
+          },
+          "say": "Every stage has an owner. Read down the table. The click and the prelander are yours, with levers like targeting, creative, and an honest, clear, priced page. The order form is you or the network, so aim for a valid phone and few fields. The confirmation call belongs to the call centre, delivery to the courier, and cash at the door to the buyer. Your biggest levers are the traffic you buy and the promises you make, because they shape every later stage."
+        },
+        {
+          "v": "funnel",
+          "h": "Example: 1,000 clicks through COD",
+          "p": "Example: 1,000 clicks give 60 order-form leads. 8 are invalid or duplicates, so 52 are valid. The call centre approves 27, which is 45% of all 60 leads. 17 buyers accept and pay at the door, a 63% buyout. Each step loses people, and only some of the losses are under your control.",
+          "d": [
+            [
+              "Clicks",
+              1000
+            ],
+            [
+              "Leads",
+              60
+            ],
+            [
+              "Valid leads",
+              52
+            ],
+            [
+              "Approved",
+              27
+            ],
+            [
+              "Paid at door",
+              17
+            ]
+          ],
+          "more": "Approval rate is usually worked out on all leads, including trash, but some networks use valid leads only. Ask your network which one it uses, because the same traffic can show 45% or 52% depending on the definition. Buyout is normally paid orders divided by approved (or shipped) orders. Example: 17 ÷ 27 = 63%.",
+          "say": "Here's an example funnel. One thousand clicks give sixty order-form leads. Eight are invalid or duplicates, so fifty two are valid. The call centre approves twenty seven, which is forty five percent of all sixty leads. Seventeen buyers pay at the door, a sixty three percent buyout. One detail: some networks work out approval on valid leads only, so the same traffic could show fifty two percent. Ask your network which definition it uses."
+        },
+        {
+          "v": "eq",
+          "h": "Value of one raw lead",
+          "p": "Because only approved leads pay, one raw lead is worth the payout times the approval rate. This is the most useful number in COD. It tells you the most a lead can cost before you lose money, and it changes every time approval moves.",
+          "d": [
+            "Payout per approved",
+            "×",
+            "Approval rate",
+            "=",
+            "Value per lead"
+          ],
+          "more": "Example: payout $14 per approved lead and 45% approval. $14 × 0.45 = $6.30. If you pay $6.30 per lead you break even. Pay $7 and you lose $0.70 on every lead on average, even though 45 out of 100 leads paid you $14. Many beginners compare their CPL with the $14 payout and think they have a lot of room. They do not.",
+          "say": "This is the most useful number in C O D. Because only approved leads pay, one raw lead is worth the payout per approved times the approval rate. For example, a fourteen dollar payout at forty five percent approval gives six dollars thirty per lead. Pay six thirty and you break even. Pay seven dollars and you lose seventy cents on every lead on average. Many beginners compare their C P L, cost per lead, with the full fourteen dollars and think they have lots of room. They don't."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: your target CPL",
+          "p": "Example: payout $14, approval 45%, and you want to keep a 25% margin. Value per lead is $6.30. Keep 25% and you can pay up to $6.30 × 0.75 = $4.73 per lead. That is your target CPL. Your target CPA per approved lead is $14 × 0.75 = $10.50.",
+          "d": [
+            "$14",
+            "×",
+            "45%",
+            "×",
+            "(1 − 25%)",
+            "=",
+            "$4.73 target CPL"
+          ],
+          "say": "Now let's find a target C P L. In this example, the payout is fourteen dollars, approval forty five percent, and you want to keep a twenty five percent margin. Value per lead is six dollars thirty. Keep twenty five percent, and you can pay up to six thirty times zero point seven five, about four dollars seventy three per lead. That's your target C P L. Your target C P A, cost per approved lead, is fourteen times zero point seven five, ten dollars fifty."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: find your max CPL",
+          "p": "Try it with the calculator. The field for leads that convert stands for the approval rate here. Enter the payout, the approval rate and your margin, then check the answer. Change approval to 35% afterwards and watch how much the line drops.",
+          "d": {
+            "kind": "breakeven",
+            "task": "Payout $14 per approved lead, approval 45%, margin 25%. What is the most you can pay per raw lead?",
+            "preset": {
+              "payout": 14,
+              "cr_pct": 45,
+              "margin_pct": 25
+            },
+            "answer": {
+              "field": "max_cpl",
+              "value": 4.73,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Time to try it with the calculator. Here, the field for leads that convert stands for the approval rate. The task: a fourteen dollar payout per approved lead, forty five percent approval, and a twenty five percent margin. What's the most you can pay per raw lead? Enter the numbers. Pause and try it, then check your answer. Afterwards, change approval to thirty five percent and watch how much the line drops."
+        },
+        {
+          "v": "bars",
+          "h": "Same CPL, three approval rates",
+          "p": "Example: you pay $5 per lead in all three cases. At 30% approval each lead is worth $4.20 and you lose money. At 45% it is worth $6.30. At 60% it is worth $8.40. Same ads, same CPL, very different business. Approval is a multiplier on everything.",
+          "d": [
+            [
+              "30% approval",
+              50,
+              "$4.20 per lead"
+            ],
+            [
+              "45% approval",
+              75,
+              "$6.30 per lead"
+            ],
+            [
+              "60% approval",
+              100,
+              "$8.40 per lead"
+            ],
+            [
+              "Your CPL",
+              60,
+              "$5.00"
+            ]
+          ],
+          "say": "Look at these bars. In this example, you pay five dollars per lead in all three cases. At thirty percent approval, each lead is worth four dollars twenty, so you lose money. At forty five percent, it's worth six dollars thirty. At sixty percent, eight dollars forty. Same ads, same C P L, very different business. Approval is a multiplier on everything."
+        },
+        {
+          "v": "table",
+          "h": "Your COD numbers sheet",
+          "p": "Example: write these seven lines before launch, from a $14 payout, a 45% expected approval and a 25% margin. They feed every rule in this school. The kill and scale lines use approved leads, the same rule card you learned in Foundations, just counted on the stage that pays.",
+          "d": {
+            "cols": [
+              "Number",
+              "Rule",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Break-even CPA",
+                "= payout per approved",
+                "$14.00"
+              ],
+              [
+                "Target CPA",
+                "Payout × (1 − margin)",
+                "$10.50"
+              ],
+              [
+                "Scale line",
+                "0.8 × target CPA",
+                "$8.40"
+              ],
+              [
+                "Zero-lead kill",
+                "Spend 2 × target, 0 leads",
+                "$21.00"
+              ],
+              [
+                "CPA kill line",
+                "Lower of 1.5 × target and break-even",
+                "$14.00"
+              ],
+              [
+                "Break-even CPL",
+                "Payout × approval",
+                "$6.30"
+              ],
+              [
+                "Target CPL",
+                "Target CPA × approval",
+                "$4.73"
+              ]
+            ]
+          },
+          "more": "Why 'lower of 1.5 × target and break-even'? 1.5 × $10.50 is $15.75, which is above the $14 payout. A rule that lets you keep paying $15 for something that pays $14 is not a rule, so the break-even wins. Approvals arrive late in COD, so Module 5 shows how to apply these lines while statuses are still pending.",
+          "say": "Here's your C O D numbers sheet, an example from a fourteen dollar payout, forty five percent approval and twenty five percent margin. Break-even C P A, fourteen dollars. Target C P A, ten fifty. Scale line, zero point eight times target, eight forty. Zero-lead kill, spend two times target with no leads, twenty one dollars. The C P A kill line is the lower of one point five times target and break-even. One point five times ten fifty is above the payout, so break-even wins, fourteen dollars. Break-even C P L six thirty, target C P L four seventy three."
+        },
+        {
+          "v": "compare",
+          "h": "Mistakes when reading COD numbers",
+          "p": "These mistakes all come from treating a lead like a sale. Check your own sheet against the left column. If you are making any of them, your real margin is smaller than you think, and scaling will make that worse.",
+          "d": {
+            "a": {
+              "title": "Common mistakes",
+              "items": [
+                "Comparing CPL with the full payout",
+                "Using the network's best-geo approval for your plan",
+                "Ignoring trash and duplicate leads",
+                "Judging an ad set before statuses arrive"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Compare CPL with payout × approval",
+                "Plan with the network's average, or lower",
+                "Ask how trash is counted and track it",
+                "Wait for approvals or use a projection (Module 5)"
+              ]
+            }
+          },
+          "say": "These mistakes all come from treating a lead like a sale. On the left, the mistakes. On the right, the fixes. Comparing C P L with the full payout, instead compare with payout times approval. Using the network's best-geo approval for your plan, instead plan with the average or lower. Ignoring trash and duplicates, instead ask how trash is counted and track it. And judging an ad set before statuses arrive, instead wait for approvals or use a projection from Module five."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: only legal, honest orders pay",
+          "p": "Your numbers mean nothing if the product cannot legally be sold or advertised in the geo. Many countries require health products and supplements to be registered, and some require ads to be approved first. Ask the advertiser before you plan a budget.",
+          "d": {
+            "kind": "warn",
+            "text": "Ask for the product's registration in each geo (for example a NAFDAC number in Nigeria) and the list of claims you are allowed to make. No proof, no launch."
+          },
+          "say": "Your numbers mean nothing if the product can't legally be sold or advertised in the geo. Many countries require health products and supplements to be registered, and some require ads to be approved first. Read the warning: ask for the product's registration in each geo, for example a NAFDAC number in Nigeria, and the list of claims you're allowed to make. No proof, no launch."
+        },
+        {
+          "v": "partner",
+          "h": "Choosing a COD nutra partner",
+          "p": "These are the networks and advertisers we list for nutra. Whoever you work with, ask for the numbers in this lesson in writing before you build anything: payout per approved lead, average approval and buyout in your geo, hold period and how trash is counted.",
+          "d": {
+            "vertical": "nutra",
+            "note": "Prefer partners who share approval and buyout per geo, explain rejection reasons and pay on a fixed schedule."
+          },
+          "say": "These are the networks and advertisers we list for nutra. Whoever you work with, ask for the numbers in this lesson in writing before you build anything: payout per approved lead, average approval and buyout in your geo, hold period, and how trash is counted. As the note says, prefer partners who share approval and buyout per geo, explain rejection reasons, and pay on a fixed schedule."
+        },
+        {
+          "v": "check",
+          "h": "Before you pick a COD offer",
+          "p": "Use this list on every COD offer page and in your first message to the network manager. If you cannot fill a line, you cannot calculate your target CPL, and you are guessing with real money. A good manager will answer all of it.",
+          "d": [
+            "Payout per approved lead, in writing",
+            "Average approval and buyout in your geo",
+            "How approval and trash are counted",
+            "Hold period and payment schedule",
+            "Call-centre hours and languages",
+            "Product registration and allowed claims"
+          ],
+          "say": "Use this list on every C O D offer and in your first message to the network manager. Payout per approved lead, in writing. Average approval and buyout in your geo. How approval and trash are counted. Hold period and payment schedule. Call-centre hours and languages. And product registration and allowed claims. If you can't fill a line, you can't calculate your target C P L, and you're guessing with real money. A good manager will answer all of it."
+        }
+      ],
+      "takeaways": [
+        "In COD you are paid per approved lead, so one raw lead is worth payout × approval rate.",
+        "Target CPL = payout × approval × (1 − margin). Example: $14 × 45% × 75% = $4.73.",
+        "Your traffic and promises shape the later stages you do not control: approval, delivery and buyout."
+      ],
+      "action": "Pick one COD nutra offer and fill a numbers sheet: payout per approved lead, expected approval, break-even and target CPA, break-even and target CPL, scale line and both kill lines. Send the network the questions from the checklist.",
+      "glossary": [
+        {
+          "term": "COD",
+          "def": "Cash on delivery. The buyer pays when the parcel arrives, not when ordering."
+        },
+        {
+          "term": "Approved lead",
+          "def": "An order the call centre has confirmed by phone. Most COD offers pay per approved lead."
+        },
+        {
+          "term": "Approval rate",
+          "def": "Approved leads divided by leads. Ask whether your network counts all leads or valid leads only."
+        },
+        {
+          "term": "Buyout rate",
+          "def": "Orders paid at the door divided by approved or shipped orders."
+        },
+        {
+          "term": "Value per lead",
+          "def": "Payout × approval rate. The break-even cost of one raw lead."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Payout $14 per approved lead, approval 45%. What is one raw lead worth on average?",
+          "options": [
+            "$14.00",
+            "$10.50",
+            "$6.30",
+            "$4.73"
+          ],
+          "answer": 2,
+          "why": "$14 × 0.45 = $6.30. $10.50 is the target CPA and $4.73 the target CPL with a 25% margin."
+        },
+        {
+          "q": "You pay $5 per lead. Approval is 30% on a $14 payout. What is happening?",
+          "options": [
+            "You are losing about $0.80 per lead",
+            "You are profitable because $5 is far below $14",
+            "You break even",
+            "You cannot tell without buyout"
+          ],
+          "answer": 0,
+          "why": "Value per lead = $14 × 0.30 = $4.20. $5 − $4.20 = $0.80 lost per lead on average."
+        },
+        {
+          "q": "Which stage do you control directly?",
+          "options": [
+            "The confirmation call",
+            "The prelander and its promises",
+            "The courier's route",
+            "Whether the buyer has cash"
+          ],
+          "answer": 1,
+          "why": "You build the prelander. The other stages belong to the call centre, courier and buyer, though your traffic affects them."
+        },
+        {
+          "q": "Payout $20, approval 40%, margin 25%. What is your target CPL?",
+          "options": [
+            "$15.00",
+            "$8.00",
+            "$5.00",
+            "$6.00"
+          ],
+          "answer": 3,
+          "why": "$20 × 0.40 = $8 value per lead, × 0.75 = $6.00."
+        },
+        {
+          "q": "Why use the lower of 1.5 × target and break-even as the CPA kill line?",
+          "options": [
+            "It is easier to remember",
+            "Networks require it",
+            "So you never keep paying more per approved lead than the payout",
+            "Because approvals are always late"
+          ],
+          "answer": 2,
+          "why": "With a $10.50 target, 1.5 × is $15.75, above the $14 payout. The lower line stops you funding a loss."
+        }
+      ],
+      "say_intro": "In C O D, cash on delivery, nutra, a lead is not money yet. In this lesson you'll follow the whole funnel from click to cash, see who controls each stage, and turn payout and approval rate into a target cost per lead before you spend.",
+      "say_outro": "Remember, one raw lead is worth the payout times the approval rate, and every number on your sheet flows from that. Your task: pick one C O D nutra offer and fill a numbers sheet with payout per approved lead, expected approval, break-even and target C P A, break-even and target C P L, the scale line and both kill lines, then send the network the questions from the checklist. Now take the quiz."
+    },
+    {
+      "slug": "prelanders-that-prequalify",
+      "title": "Prelanders that pre-qualify buyers",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can explain why the best COD prelander is not the one with the most leads.",
+        "By the end you can build an honest prelander with price, delivery and expectations shown.",
+        "By the end you can test two prelanders on approved leads, not on CPL."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why: the prelander sets the phone call",
+          "p": "A prelander is the page between your ad and the order form. In COD its job is not the biggest number of form fills. Its job is form fills from people who will say yes on the phone and pay at the door. A page that hides the price or overpromises fills the call centre with people who were never going to buy.",
+          "d": {
+            "b": "Sell the call, not the click",
+            "s": "Every promise on the page is checked by a phone call and a cash payment."
+          },
+          "say": "A prelander is the page between your ad and the order form. In C O D, cash on delivery, its job isn't the biggest number of form fills. Its job is form fills from people who'll say yes on the phone and pay at the door. Look at the headline: sell the call, not the click. A page that hides the price or overpromises fills the call centre with people who were never going to buy."
+        },
+        {
+          "v": "compare",
+          "h": "Hype page vs pre-qualifying page",
+          "p": "The left column is common in nutra and it is the fastest way to lose ad accounts, network trust and approval rate. The right column gets fewer leads per click but more approved ones, and you can run it for months without hiding anything.",
+          "d": {
+            "a": {
+              "title": "Hype prelander",
+              "items": [
+                "Fake news-site masthead",
+                "Cure and miracle promises",
+                "Price hidden until the call",
+                "Fake comments and fake doctors"
+              ]
+            },
+            "b": {
+              "title": "Pre-qualifying prelander",
+              "items": [
+                "Labelled 'Advertisement'",
+                "What it is, what to expect",
+                "Price, delivery and COD shown",
+                "Real, permitted testimonials only"
+              ]
+            }
+          },
+          "say": "Compare the two columns. On the left, the hype prelander: a fake news-site masthead, cure and miracle promises, the price hidden until the call, and fake comments and fake doctors. It's common in nutra, and it's the fastest way to lose ad accounts, network trust and approval rate. On the right, the pre-qualifying page: labelled Advertisement, what it is and what to expect, price, delivery and C O D shown, and real, permitted testimonials only. Fewer leads per click, but more approved ones."
+        },
+        {
+          "v": "cards",
+          "h": "Prelander formats that fit COD",
+          "p": "Pick the format that fits your traffic and your offer, not the one that looks cleverest. Every format below can be honest or dishonest. Module 3 covered angles; here we care about how each format affects approval and buyout.",
+          "d": [
+            "Labelled advertorial|a story with clear 'Advertisement' label",
+            "Product info page|what it is, how to use, price",
+            "Short quiz|who it suits and who it does not",
+            "Video page|a person explains the product",
+            "Direct to order|no prelander, for warm or simple offers"
+          ],
+          "say": "Here are prelander formats that fit C O D. A labelled advertorial, a story with a clear Advertisement label. A product info page, covering what it is, how to use it, and the price. A short quiz on who it suits and who it doesn't. A video page where a person explains the product. Or direct to order, with no prelander, for warm or simple offers. Pick the format that fits your traffic and offer. Every one of these can be honest or dishonest."
+        },
+        {
+          "v": "flow",
+          "h": "A prelander structure that works",
+          "p": "This order works for most COD supplements. Each block answers one question the call-centre agent would otherwise have to answer, so the call is shorter and the yes is firmer. Keep each block short on mobile.",
+          "d": [
+            "Hook that matches the ad",
+            "The everyday problem, plain words",
+            "What the product is (and is not)",
+            "Realistic expectations and use",
+            "Price, delivery, pay on delivery",
+            "Order button"
+          ],
+          "say": "This order works for most C O D supplements. Follow the flow. A hook that matches the ad. The everyday problem, in plain words. What the product is, and what it isn't. Realistic expectations and how to use it. Then price, delivery, and pay on delivery. And finally the order button. Each block answers a question the call-centre agent would otherwise have to answer, so the call is shorter and the yes is firmer."
+        },
+        {
+          "v": "table",
+          "h": "Example: two prelanders, same spend",
+          "p": "Example: $300 spend and 1,000 clicks on each page. The hype page wins on CPL. The honest page wins on cost per approved lead, which is the number that pays. If you only read Ads Manager, you would pick the wrong page.",
+          "d": {
+            "cols": [
+              "Metric",
+              "Hype page",
+              "Honest page"
+            ],
+            "rows": [
+              [
+                "Leads",
+                "80",
+                "60"
+              ],
+              [
+                "CPL",
+                "$3.75",
+                "$5.00"
+              ],
+              [
+                "Approval",
+                "30%",
+                "50%"
+              ],
+              [
+                "Approved",
+                "24",
+                "30"
+              ],
+              [
+                "Cost per approved",
+                "$12.50",
+                "$10.00"
+              ]
+            ]
+          },
+          "more": "Maths: hype page 80 × 30% = 24 approved, $300 ÷ 24 = $12.50. Honest page 60 × 50% = 30 approved, $300 ÷ 30 = $10.00. Against a $10.50 target the honest page passes and the hype page does not. Buyout usually widens the gap further, because buyers who were promised a miracle refuse the parcel. These figures are illustrative; your own test decides.",
+          "say": "Here's an example with three hundred dollars spend and one thousand clicks on each page. The hype page gets eighty leads at three dollars seventy five, but only thirty percent approval, so twenty four approved at twelve dollars fifty each. The honest page gets sixty leads at five dollars, with fifty percent approval, so thirty approved at ten dollars each. Against a ten fifty target, the honest page passes. These figures are illustrative, and buyout usually widens the gap further."
+        },
+        {
+          "v": "eq",
+          "h": "Approved per 1,000 clicks",
+          "p": "To compare pages fairly, count approved leads per 1,000 clicks. It combines the page's lead rate and the call centre's approval in one number. Higher is better, as long as the cost per click is the same for both pages.",
+          "d": [
+            "1,000 clicks",
+            "×",
+            "Lead rate",
+            "×",
+            "Approval",
+            "=",
+            "Approved per 1,000"
+          ],
+          "more": "Example: honest page 1,000 × 6% × 50% = 30. Hype page 1,000 × 8% × 30% = 24. When the ads and audience are the same, CPC is the same, so the page with more approved per 1,000 clicks also has the lower cost per approved lead.",
+          "say": "To compare pages fairly, count approved leads per thousand clicks. Multiply one thousand clicks by the lead rate and by the approval rate. For example, the honest page: one thousand times six percent times fifty percent is thirty. The hype page: one thousand times eight percent times thirty percent is twenty four. When the ads and audience are the same, the C P C, cost per click, is the same, so the page with more approved per thousand also has the lower cost per approved lead."
+        },
+        {
+          "v": "phone",
+          "h": "What an honest COD prelander looks like",
+          "p": "This is a mobile prelander for a joint-care food supplement. Notice the label at the top, the plain description, the price before the button and the absence of cure claims. Copy only claims your advertiser has given you in writing for that geo.",
+          "d": {
+            "app": "browser",
+            "url": "example-wellness-notes.com/joint-care",
+            "page": {
+              "h": "Stiff mornings? What a joint-care supplement can and cannot do",
+              "p": "Advertisement. A food supplement, not a medicine. Price shown before you order. Pay cash on delivery in 2 to 5 days.",
+              "cta": "See price and order"
+            }
+          },
+          "say": "This is a mobile prelander for a joint-care food supplement. Notice the label at the top: Advertisement. A food supplement, not a medicine. The price is shown before you order, and you pay cash on delivery in two to five days. Notice also what's missing: no cure claims. Copy only claims your advertiser has given you in writing for that geo."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: build the prelander",
+          "p": "Follow these steps in any page builder. Work on your phone screen size first, because most nutra traffic in our geos is mobile. Do not add any claim that is not on the advertiser's approved list.",
+          "d": {
+            "steps": [
+              {
+                "title": "Start mobile first",
+                "text": "Pick a plain single-column template. Set the preview to a phone width.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "builder.example/new",
+                  "title": "New page",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Template",
+                      "value": "Single column article"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Preview",
+                      "value": "Mobile"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Create"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Add the label and details",
+                "text": "Put 'Advertisement' at the top. Add company name, contact and privacy link in the footer.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "builder.example/edit",
+                  "title": "Header and footer",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Top label",
+                      "value": "Advertisement"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Footer",
+                      "value": "Company name, contact, privacy policy"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Write from the claims list",
+                "text": "Paste the advertiser's approved claims next to your draft and check each sentence against it.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "builder.example/edit",
+                  "title": "Body copy",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "value": "Approved: 'supports joint comfort as part of a balanced diet'"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Not approved: 'cures arthritis', 'replaces your medicine'"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Show price and delivery",
+                "text": "Add a block with the price, delivery time and 'pay on delivery' before the button.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "builder.example/edit",
+                  "title": "Price block",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Price",
+                      "value": "Local price as set by advertiser"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Delivery",
+                      "value": "2 to 5 days, pay on delivery"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Link with the click ID",
+                "text": "Point the button to the order page or offer link and pass your click ID, as set up in Module 5.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "builder.example/edit",
+                  "title": "Button link",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Button URL",
+                      "value": "https://offer.example/order?sub1={clickid}"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Save"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Test speed on mobile data",
+                "text": "Open the page on a phone using mobile data, not office Wi-Fi. If it feels slow, compress images.",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "example-wellness-notes.com/joint-care",
+                  "page": {
+                    "h": "Loading test",
+                    "p": "Check on mobile data before launch.",
+                    "cta": "Order"
+                  }
+                }
+              }
+            ]
+          },
+          "say": "Let's build the prelander. Tap Next to follow each step. First, start mobile first, with a plain single-column template and a phone-width preview. Second, add the Advertisement label at the top, and company name, contact and privacy link in the footer. Third, write from the claims list, checking each sentence against the advertiser's approved claims. Fourth, show price, delivery time and pay on delivery before the button. Fifth, link the button to the order page and pass your click I D, as set up in Module five. Sixth, test speed on a phone using mobile data, and compress images if it's slow."
+        },
+        {
+          "v": "table",
+          "h": "Speed and mobile: rough guide",
+          "p": "Many buyers in our geos are on mid-range Android phones and mobile data that can be slow or costly. A heavy page loses people before the headline appears. These are rough guides, not hard limits; they vary by geo and device.",
+          "d": {
+            "cols": [
+              "Item",
+              "Rough guide",
+              "Why"
+            ],
+            "rows": [
+              [
+                "Total page size",
+                "Under about 1 MB",
+                "Faster on slow data"
+              ],
+              [
+                "Images",
+                "Compressed, few",
+                "Biggest weight on page"
+              ],
+              [
+                "Video",
+                "Short, optional",
+                "Do not autoplay heavy files"
+              ],
+              [
+                "Fonts and scripts",
+                "As few as possible",
+                "Each adds delay"
+              ],
+              [
+                "First screen",
+                "Headline and label visible",
+                "Message match at once"
+              ]
+            ]
+          },
+          "say": "Many buyers in our geos are on mid-range Android phones and mobile data that can be slow or costly. A heavy page loses people before the headline appears. Here's a rough guide. Total page size under about one megabyte. Few, compressed images. Short, optional video, without heavy autoplay. As few fonts and scripts as possible. And the headline and label visible on the first screen. These are rough guides, not hard limits."
+        },
+        {
+          "v": "table",
+          "h": "Decision rules for prelander tests",
+          "p": "Starting rules to adapt. Split traffic evenly between two pages in the same ad set or with identical ad sets. Judge on cost per approved lead after statuses have arrived. A page that wins on CPL but loses on approval is a loser.",
+          "d": {
+            "cols": [
+              "Situation",
+              "Starting rule"
+            ],
+            "rows": [
+              [
+                "Too early",
+                "Under 30 leads per page: keep running"
+              ],
+              [
+                "Statuses pending",
+                "Wait until about 90% of leads have a final status"
+              ],
+              [
+                "Clear winner",
+                "Lower cost per approved by 15% or more: keep it, pause the other"
+              ],
+              [
+                "Close result",
+                "Under 15% apart: keep the simpler, more honest page"
+              ],
+              [
+                "Both above kill line",
+                "Both over $14 per approved: fix the offer or angle, not the page"
+              ]
+            ]
+          },
+          "say": "These are starting rules for prelander tests. Under thirty leads per page, keep running. While statuses are pending, wait until about ninety percent of leads have a final status. If one page is fifteen percent or more cheaper per approved lead, keep it and pause the other. Under fifteen percent apart, keep the simpler, more honest page. And if both are over fourteen dollars per approved, fix the offer or angle, not the page. A page that wins on C P L but loses on approval is a loser."
+        },
+        {
+          "v": "cards",
+          "h": "Mistakes that hurt approval",
+          "p": "Each of these makes the form fill easier and the phone call harder. If your approval rate is below the network's average for the geo, check your page for these before blaming the call centre.",
+          "d": [
+            "Hiding the price|buyer hears it first on the call and says no",
+            "Overpromising|buyer refuses parcel when results feel ordinary",
+            "Fake urgency|countdowns that reset are deceptive",
+            "Message mismatch|ad says one thing, page another",
+            "No 'who it is not for'|wrong buyers order"
+          ],
+          "say": "Each of these mistakes makes the form fill easier and the phone call harder. Hiding the price, so the buyer hears it first on the call and says no. Overpromising, so they refuse the parcel when results feel ordinary. Fake urgency, like countdowns that reset, which is deceptive. Message mismatch between ad and page. And no 'who it's not for', so the wrong buyers order. If your approval is below the network's average, check your page before blaming the call centre."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: no fake proof",
+          "p": "Fake comment sections, invented news sites, fake doctors, fake celebrity endorsements and 'as seen on' logos you have no right to use are deceptive. In many countries they break consumer law, and platforms close accounts for them.",
+          "d": {
+            "kind": "warn",
+            "text": "Use only real testimonials you have permission to use, that reflect typical results and follow the advertiser's approved claims. If in doubt, leave it out."
+          },
+          "say": "Fake comment sections, invented news sites, fake doctors, fake celebrity endorsements, and 'as seen on' logos you have no right to use are deceptive. In many countries they break consumer law, and platforms close accounts for them. Read the warning: use only real testimonials you have permission to use, that reflect typical results, and that follow the advertiser's approved claims. If in doubt, leave it out."
+        },
+        {
+          "v": "quote",
+          "h": "From the founder",
+          "p": "A short note from Dchessking on how to think about prelanders in COD. Read it as a habit to build, not a slogan. Before you publish any page, read it as the call-centre agent would.",
+          "d": "In COD your prelander is the first half of the confirmation call. Whatever you promise on the page, the agent has to deal with on the phone, and the courier has to deal with at the door.",
+          "by": "dchessking",
+          "say": "Here's how Dchessking puts it: In C O D your prelander is the first half of the confirmation call. Whatever you promise on the page, the agent has to deal with on the phone, and the courier has to deal with at the door. Treat that as a habit to build. Before you publish any page, read it as the call-centre agent would."
+        },
+        {
+          "v": "product",
+          "h": "Building clean landers",
+          "p": "If you need fast, mobile-first prelanders with your label, company details and privacy link in place, a lander builder saves time. Any honest page builder works; this is one option.",
+          "d": {
+            "slug": "landvoo",
+            "why": "Build light, mobile-first prelanders with the advertisement label, price block and policy links included from the start."
+          },
+          "say": "If you need fast, mobile-first prelanders with your label, company details and privacy link in place, a lander builder saves time. Landvoo is one option. It builds light, mobile-first prelanders with the advertisement label, price block and policy links included from the start. Any honest page builder works, though."
+        },
+        {
+          "v": "check",
+          "h": "Honest prelander checklist",
+          "p": "Tick every line before the page goes live. This list protects your ad account, your network relationship and your approval rate at the same time. If one line fails, fix the page before you spend.",
+          "d": [
+            "'Advertisement' label at the top",
+            "Product described as what it is",
+            "Only claims from the approved list",
+            "Price, delivery time and COD shown",
+            "No fake comments, doctors or timers",
+            "Company details and privacy link"
+          ],
+          "say": "Tick every line before the page goes live. The Advertisement label at the top. The product described as what it is. Only claims from the approved list. Price, delivery time and C O D shown. No fake comments, doctors or timers. And company details with a privacy link. This list protects your ad account, your network relationship and your approval rate all at once. If one line fails, fix the page before you spend."
+        }
+      ],
+      "takeaways": [
+        "Judge prelanders on cost per approved lead, never on CPL alone.",
+        "Showing price, delivery and realistic expectations lowers lead count but usually raises approval and buyout.",
+        "Fake comments, fake doctors, fake news sites and fake timers are deceptive and get accounts closed."
+      ],
+      "action": "Build one honest prelander for your offer: label, plain description, approved claims only, price and delivery block, order button with click ID. Load it on a phone using mobile data and fix anything slow.",
+      "glossary": [
+        {
+          "term": "Prelander",
+          "def": "A page between the ad and the order form that explains the product before the buyer orders."
+        },
+        {
+          "term": "Advertorial",
+          "def": "A page written like an article that promotes a product. It must be clearly labelled as an advertisement."
+        },
+        {
+          "term": "Approved claims list",
+          "def": "The written list of statements the advertiser allows you to make about the product in each geo."
+        },
+        {
+          "term": "Approved per 1,000 clicks",
+          "def": "Clicks × lead rate × approval rate, used to compare pages fairly."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Page A: CPL $3.75, approval 30%. Page B: CPL $5.00, approval 50%. Which is cheaper per approved lead?",
+          "options": [
+            "Page A, because its CPL is lower",
+            "Page B: $10.00 vs $12.50",
+            "They are the same",
+            "You need buyout to decide"
+          ],
+          "answer": 1,
+          "why": "Cost per approved = CPL ÷ approval. A: $3.75 ÷ 0.30 = $12.50. B: $5 ÷ 0.50 = $10.00."
+        },
+        {
+          "q": "Why does showing the price on the prelander often raise approval?",
+          "options": [
+            "It makes the page load faster",
+            "Networks pay more for it",
+            "Buyers who object to the price drop out before ordering, not on the call",
+            "Meta rewards it"
+          ],
+          "answer": 2,
+          "why": "People who would refuse at the price stop before filling the form, so more of the leads you pay for say yes."
+        },
+        {
+          "q": "Which element is acceptable on a nutra prelander?",
+          "options": [
+            "A comment section written by you",
+            "A countdown that resets on reload",
+            "An invented doctor quote",
+            "A clear 'Advertisement' label"
+          ],
+          "answer": 3,
+          "why": "The label is required honesty. The other three are deceptive and can break consumer law and platform policy."
+        },
+        {
+          "q": "Two pages are 8% apart on cost per approved after 40 leads each. Starting rule?",
+          "options": [
+            "Keep the simpler, more honest page or keep testing",
+            "Kill both",
+            "Scale the cheaper one +50%",
+            "Switch to the hype version"
+          ],
+          "answer": 0,
+          "why": "Under 15% apart is too close to call. Keep the simpler, honest page or gather more data."
+        },
+        {
+          "q": "1,000 clicks, 6% lead rate, 50% approval. How many approved leads?",
+          "options": [
+            "60",
+            "30",
+            "50",
+            "300"
+          ],
+          "answer": 1,
+          "why": "1,000 × 0.06 = 60 leads, × 0.50 = 30 approved."
+        }
+      ],
+      "say_intro": "In C O D, your prelander shapes the phone call that follows. In this lesson you'll build an honest prelander that shows price, delivery and realistic expectations, and test pages on approved leads instead of cost per lead.",
+      "say_outro": "Sell the call, not the click: label the page, use only approved claims, and show price and delivery up front. Your task: build one honest prelander for your offer with the label, a plain description, approved claims only, a price and delivery block, and an order button with your click I D, then load it on a phone using mobile data and fix anything slow. Now take the quiz."
+    },
+    {
+      "slug": "order-forms-that-get-approved",
+      "title": "Order forms the call centre can approve",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can choose the right fields for a COD order form and explain the trade-off.",
+        "By the end you can add phone validation and double-submit protection.",
+        "By the end you can test a short form against a longer one on approved leads."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why: unreachable leads are paid for twice",
+          "p": "Every lead with a wrong number, a missing digit or a fake name costs you ad spend and can never be approved. It also raises your trash rate, which networks watch closely. A good order form makes it easy to order and hard to make a mistake.",
+          "d": {
+            "b": "Easy to order, hard to get wrong",
+            "s": "The form is where you protect approval rate cheaply."
+          },
+          "say": "Every lead with a wrong number, a missing digit or a fake name costs you ad spend and can never be approved. It also raises your trash rate, which networks watch closely. Look at the headline: easy to order, hard to get wrong. A good order form is where you protect approval rate cheaply."
+        },
+        {
+          "v": "cards",
+          "h": "Fields and what each one does",
+          "p": "Most COD forms need very few fields because the call centre collects the rest. Each extra field lowers the number of leads but can raise approval. Ask your network which fields they require; some only accept name and phone.",
+          "d": [
+            "Name|so the agent can greet the buyer",
+            "Phone with country code|the field that matters most",
+            "City or region|helps check delivery coverage",
+            "Address or landmark|optional; often taken on the call",
+            "Package choice|only if the offer has options"
+          ],
+          "say": "Most C O D, cash on delivery, forms need very few fields, because the call centre collects the rest. Look at the cards. Name, so the agent can greet the buyer. Phone with country code, the field that matters most. City or region, to check delivery coverage. Address or landmark, optional and often taken on the call. And package choice, only if the offer has options. Each extra field lowers lead count but can raise approval. Ask your network which fields they require."
+        },
+        {
+          "v": "compare",
+          "h": "Short form vs longer form",
+          "p": "There is no single right answer. A short form brings more leads, including more careless ones. A longer form filters out people who are only curious. You decide by testing, and you judge on approved leads.",
+          "d": {
+            "a": {
+              "title": "Short form (name + phone)",
+              "items": [
+                "More leads per click",
+                "Lower CPL",
+                "More trash and no-answers",
+                "Call centre collects the rest"
+              ]
+            },
+            "b": {
+              "title": "Longer form (+ city, landmark)",
+              "items": [
+                "Fewer leads per click",
+                "Higher CPL",
+                "Buyers who mean it",
+                "Faster, firmer calls"
+              ]
+            }
+          },
+          "say": "There's no single right answer here. On the left, the short form, name and phone: more leads per click, a lower C P L, cost per lead, but more trash and no-answers, and the call centre collects the rest. On the right, the longer form with city and landmark: fewer leads, a higher C P L, but buyers who mean it, and faster, firmer calls. You decide by testing, and you judge on approved leads."
+        },
+        {
+          "v": "table",
+          "h": "Example: form test on approved leads",
+          "p": "Example: $400 spend on each form. The short form gives 100 leads and the longer form 80. Approval decides the winner. Here the longer form is slightly cheaper per approved lead, but the gap is under 15%, so by our rule it is not yet a clear win.",
+          "d": {
+            "cols": [
+              "Metric",
+              "Short form",
+              "Longer form"
+            ],
+            "rows": [
+              [
+                "Leads",
+                "100",
+                "80"
+              ],
+              [
+                "CPL",
+                "$4.00",
+                "$5.00"
+              ],
+              [
+                "Approval",
+                "40%",
+                "52%"
+              ],
+              [
+                "Approved",
+                "40",
+                "41.6"
+              ],
+              [
+                "Cost per approved",
+                "$10.00",
+                "$9.62"
+              ]
+            ]
+          },
+          "more": "Maths: short form 100 × 40% = 40 approved, $400 ÷ 40 = $10.00. Longer form 80 × 52% = 41.6, $400 ÷ 41.6 = $9.62. The difference is about 4%. Keep testing or keep the version the call centre prefers. Ask the network which form gives them fewer no-answers and faster calls; that is useful data you cannot see yourself.",
+          "say": "Here's an example with four hundred dollars on each form. The short form gives one hundred leads at four dollars, forty percent approval, so forty approved at ten dollars each. The longer form gives eighty leads at five dollars, fifty two percent approval, so forty one point six approved at nine dollars sixty two. The longer form is slightly cheaper, but the gap is about four percent, under our fifteen percent rule, so it's not yet a clear win. Ask the network which form gives them fewer no-answers."
+        },
+        {
+          "v": "phone",
+          "h": "An order form that reduces mistakes",
+          "p": "This form shows the price and delivery again, prefills the country code and tells the buyer who will call. Each of those details removes a reason for the call to fail. The phone keyboard opens automatically for the number field.",
+          "d": {
+            "app": "browser",
+            "url": "example-wellness-notes.com/order",
+            "page": {
+              "h": "Order: joint-care supplement",
+              "p": "Price as shown. Pay cash on delivery. Name, then phone (+234 already filled in). Our team will call you today to confirm.",
+              "cta": "Place my order"
+            }
+          },
+          "say": "This form is designed to reduce mistakes. Notice it shows the price and pay on delivery again. The country code, plus two three four, is already filled in. And it tells the buyer that our team will call today to confirm. Each of those details removes a reason for the call to fail. The phone keyboard also opens automatically for the number field."
+        },
+        {
+          "v": "code",
+          "h": "Example: phone check for Nigeria",
+          "p": "Check the number format on the page before the lead is sent. This pattern accepts Nigerian mobile numbers starting with 0 or +234 followed by a valid prefix. It is an example only; number ranges change, so in production use a maintained phone-number library.",
+          "d": {
+            "lang": "js",
+            "text": "const ng = /^(?:\\+234|0)[789][01]\\d{8}$/;\nconst clean = phone.replace(/[\\s-]/g, '');\nif (ng.test(clean) === false) showError('Check your number, e.g. 0803 123 4567');",
+            "note": "Kenya, Ghana, South Africa and Cameroon need their own rules. Check the current numbering plan."
+          },
+          "say": "This slide shows an example phone check for Nigeria. You can see the code on screen. It checks the number format on the page before the lead is sent, accepting Nigerian mobile numbers starting with zero or plus two three four, followed by a valid prefix. If the number fails, the buyer sees a clear error message. It's an example only. Number ranges change, so in production use a maintained phone-number library. Kenya, Ghana, South Africa and Cameroon need their own rules."
+        },
+        {
+          "v": "flow",
+          "h": "What happens after the button",
+          "p": "The moments after submit matter as much as the form. The buyer should know the order worked, expect a call and recognise the number. A buyer who knows a call is coming answers it.",
+          "d": [
+            "Button disables (no double submit)",
+            "Lead sent with click ID",
+            "Thank-you page: what happens next",
+            "Advertiser SMS, if they send one",
+            "Confirmation call"
+          ],
+          "say": "The moments after submit matter as much as the form. Follow the flow. The button disables, so there's no double submit. The lead is sent with your click I D. The thank-you page explains what happens next. The advertiser may send an S M S. Then comes the confirmation call. A buyer who knows a call is coming, and recognises the number, answers it."
+        },
+        {
+          "v": "phone",
+          "h": "A thank-you page that helps approval",
+          "p": "Tell the buyer exactly what happens next. Use their first name, the call window and the delivery promise. Never add new claims here. If the advertiser gives you the call-centre number, show it so the buyer recognises the call.",
+          "d": {
+            "app": "browser",
+            "url": "example-wellness-notes.com/thanks",
+            "page": {
+              "h": "Thank you, Ada. Your order is received.",
+              "p": "Our team will call you today between 9am and 6pm to confirm. Keep your phone close. You pay only when the parcel arrives.",
+              "cta": "Done"
+            }
+          },
+          "say": "Here's a thank-you page that helps approval. It uses the buyer's first name: thank you, Ada, your order is received. It gives the call window: our team will call you today between nine a m and six p m. And it repeats the delivery promise: you pay only when the parcel arrives. Never add new claims here. If the advertiser gives you the call-centre number, show it, so the buyer recognises the call."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: send leads to the network",
+          "p": "Many COD networks either host the order form for you or give you an API to send leads from your own form. Field names and endpoints differ by network, so follow their documentation. These are the usual steps.",
+          "d": {
+            "steps": [
+              {
+                "title": "Get your API details",
+                "text": "In the network dashboard, find the API or 'own form' section and copy your key and offer ID.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/api",
+                  "title": "API access",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "API key",
+                      "value": "keep this secret"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Offer ID",
+                      "value": "1042"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Map your fields",
+                "text": "Match your form fields to theirs: name, phone, country, and your click ID in a sub field.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/api/docs",
+                  "title": "Field mapping",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Your form",
+                        "Network field"
+                      ],
+                      "rows": [
+                        [
+                          "name",
+                          "name"
+                        ],
+                        [
+                          "phone",
+                          "phone"
+                        ],
+                        [
+                          "click ID",
+                          "sub1"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Send a test lead",
+                "text": "Send one lead marked as a test if the network supports it, or tell your manager first so they do not call it.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/leads",
+                  "title": "Leads",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Time",
+                        "Status",
+                        "sub1"
+                      ],
+                      "rows": [
+                        [
+                          "10:02",
+                          "test",
+                          "abc123"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Check it arrived",
+                "text": "Confirm the lead shows in the network stats with your click ID, then go live.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/stats",
+                  "title": "Stats",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "value": "1 lead received, sub1 = abc123"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Go live"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              }
+            ]
+          },
+          "say": "Many C O D networks either host the order form for you or give you an A P I to send leads from your own form. Field names differ, so follow their documentation. Tap Next to follow the usual steps. First, get your A P I details from the network dashboard, and keep your key secret. Second, map your fields: name, phone, country, and your click I D in a sub field. Third, send a test lead, marked as a test, or tell your manager first so they don't call it. Fourth, check it arrived with your click I D, then go live."
+        },
+        {
+          "v": "table",
+          "h": "Starting rules for forms",
+          "p": "Starting rules to adapt to your network and geo. Track invalid numbers and duplicates from day one, because they show form problems quickly, long before approval data arrives.",
+          "d": {
+            "cols": [
+              "Signal",
+              "Starting rule"
+            ],
+            "rows": [
+              [
+                "Invalid phone rate over 10%",
+                "Add or tighten validation"
+              ],
+              [
+                "Duplicates over 5%",
+                "Check button disabling and dedupe"
+              ],
+              [
+                "Form test",
+                "50+ leads each, statuses final, then compare"
+              ],
+              [
+                "Winner",
+                "15%+ cheaper per approved: keep it"
+              ],
+              [
+                "Network says 'no answer' is high",
+                "Check call window and thank-you page"
+              ]
+            ]
+          },
+          "say": "These are starting rules for forms, to adapt. An invalid phone rate over ten percent, add or tighten validation. Duplicates over five percent, check button disabling and dedupe. For a form test, get fifty or more leads each with final statuses, then compare. A winner is fifteen percent or more cheaper per approved. And if the network says no-answers are high, check your call window and thank-you page. Track invalid numbers and duplicates from day one, because they show problems long before approval data arrives."
+        },
+        {
+          "v": "compare",
+          "h": "Mistakes on order forms",
+          "p": "These are the form problems networks complain about most. Most take ten minutes to fix and save money every day after. Check your own form against the left column before you send it any paid traffic.",
+          "d": {
+            "a": {
+              "title": "Common mistakes",
+              "items": [
+                "No country code or format help",
+                "Button can be pressed twice",
+                "Pre-ticked consent boxes",
+                "No thank-you page"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Prefill code, validate format",
+                "Disable button after first tap",
+                "Plain consent text, no pre-ticks",
+                "Say who calls and when"
+              ]
+            }
+          },
+          "say": "These are the form problems networks complain about most. On the left, the mistakes: no country code or format help, a button that can be pressed twice, pre-ticked consent boxes, and no thank-you page. On the right, the fixes: prefill the code and validate the format, disable the button after the first tap, use plain consent text with no pre-ticks, and say who calls and when. Most take ten minutes to fix and save money every day after."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: names and phones are personal data",
+          "p": "A COD order form collects personal data. Nigeria (NDPA 2023), Kenya (Data Protection Act 2019), Ghana (Data Protection Act 2012) and South Africa (POPIA) all have data protection laws. Say who receives the data and why, and use it only for the order.",
+          "d": {
+            "kind": "warn",
+            "text": "Show a privacy notice, never sell or reuse order data, never put names or phones in URLs, and check the current law in each geo with the advertiser or an adviser."
+          },
+          "say": "A C O D order form collects personal data. Nigeria has the N D P A twenty twenty three, Kenya the Data Protection Act twenty nineteen, Ghana the Data Protection Act twenty twelve, and South Africa has POPIA. Say who receives the data and why, and use it only for the order. Read the warning: show a privacy notice, never sell or reuse order data, never put names or phones in U R Ls, and check the current law in each geo with the advertiser or an adviser."
+        },
+        {
+          "v": "check",
+          "h": "Order form launch checklist",
+          "p": "Run through this before your form receives paid traffic. Test it yourself on a phone, using mobile data, with a real number you control and the network's test process.",
+          "d": [
+            "Country code prefilled, phone keyboard opens",
+            "Format check with a clear error message",
+            "Button disables after the first tap",
+            "Click ID sent in a hidden field",
+            "Privacy notice and plain consent text",
+            "Thank-you page says who calls and when"
+          ],
+          "say": "Run through this checklist before your form receives paid traffic. Country code prefilled, and the phone keyboard opens. A format check with a clear error message. The button disables after the first tap. The click I D is sent in a hidden field. A privacy notice and plain consent text. And a thank-you page that says who calls and when. Test it yourself on a phone, using mobile data, with a real number you control and the network's test process."
+        }
+      ],
+      "takeaways": [
+        "Every extra field costs leads but can raise approval; test and judge on cost per approved.",
+        "Validate phone numbers and stop double submits before the lead leaves the page.",
+        "A thank-you page that says who will call and when helps the buyer answer the call."
+      ],
+      "action": "Test your order form on your own phone with mobile data: try a wrong number, double-tap the button, and read the thank-you page. Fix every problem you find, then send one test lead and confirm it arrives with your click ID.",
+      "glossary": [
+        {
+          "term": "Order form",
+          "def": "The page where the buyer enters name and phone to place a COD order."
+        },
+        {
+          "term": "Phone validation",
+          "def": "A check that the number has the right format before the lead is sent."
+        },
+        {
+          "term": "Double submit",
+          "def": "When the buyer taps the button twice and creates two leads for one order."
+        },
+        {
+          "term": "Thank-you page",
+          "def": "The page shown after an order, telling the buyer what happens next."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Short form: 100 leads, 40% approval. Longer form: 80 leads, 52% approval. Same $400 spend. Which is cheaper per approved?",
+          "options": [
+            "Short form at $10.00",
+            "They are identical",
+            "Longer form at about $9.62",
+            "Short form, because it has more leads"
+          ],
+          "answer": 2,
+          "why": "Short: $400 ÷ 40 = $10.00. Longer: $400 ÷ 41.6 = $9.62. The gap is small, so keep testing."
+        },
+        {
+          "q": "Which number passes the Nigerian pattern in the lesson?",
+          "options": [
+            "08031234567",
+            "8031234567",
+            "+2340803123456",
+            "0603123456"
+          ],
+          "answer": 0,
+          "why": "It starts with 0, then 8 and 0, then 8 more digits: 11 digits in total."
+        },
+        {
+          "q": "Your invalid-phone rate is 14%. Starting rule?",
+          "options": [
+            "Raise the budget to get more valid ones",
+            "Add or tighten phone validation",
+            "Remove the phone field",
+            "Ignore it; the network filters them"
+          ],
+          "answer": 1,
+          "why": "Over 10% invalid numbers points to a form problem. Validation fixes it before you pay for more."
+        },
+        {
+          "q": "Which of these breaks data protection basics?",
+          "options": [
+            "A plain privacy notice",
+            "Disabling the button after one tap",
+            "Showing the call window",
+            "Passing the buyer's phone number in the offer URL"
+          ],
+          "answer": 3,
+          "why": "Personal data must not travel in URLs. Pass only an anonymous click ID."
+        },
+        {
+          "q": "Why tell buyers on the thank-you page who will call and when?",
+          "options": [
+            "It is required by Meta",
+            "So they recognise and answer the confirmation call",
+            "It raises the payout",
+            "It lowers CPM"
+          ],
+          "answer": 1,
+          "why": "Unknown numbers are often ignored. A buyer who expects the call is more likely to answer and confirm."
+        }
+      ],
+      "say_intro": "Your order form is the cheapest place to protect approval rate. In this lesson you'll choose the right fields, add phone validation and double-submit protection, and test a short form against a longer one on approved leads.",
+      "say_outro": "Make it easy to order and hard to get wrong: prefill the country code, check the format, disable the button, and tell buyers who will call. Your task: test your order form on your own phone with mobile data, try a wrong number, double-tap the button, read the thank-you page, fix every problem, then send one test lead and confirm it arrives with your click I D. Now take the quiz."
+    },
+    {
+      "slug": "call-centre-approval",
+      "title": "Call-centre approval: what you control",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can explain what happens on a confirmation call and each lead status.",
+        "By the end you can find the traffic, page and timing causes of low approval.",
+        "By the end you can apply approval rules per ad set and talk to the network with data."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why: approval multiplies everything",
+          "p": "Approval rate is the share of your leads the call centre confirms. Raise it from 40% to 50% and every lead is worth 25% more, without changing your CPL. Most affiliates cannot touch the call centre, but they control many of the things that decide how the call goes.",
+          "d": {
+            "b": "+10 points of approval is +25% value",
+            "s": "Example: from 40% to 50% on the same leads."
+          },
+          "say": "Approval rate is the share of your leads the call centre confirms. Look at the headline: plus ten points of approval is plus twenty five percent value. For example, going from forty to fifty percent on the same leads makes every lead worth twenty five percent more, without changing your C P L, cost per lead. Most affiliates can't touch the call centre, but they control many of the things that decide how the call goes."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: approval lift",
+          "p": "Example: payout $14. At 40% approval one lead is worth $5.60. At 50% it is worth $7.00. That is $1.40 more per lead, a 25% increase. At a $5 CPL you go from a $0.60 margin to a $2.00 margin per lead.",
+          "d": [
+            "$14 × 50% = $7.00",
+            "vs",
+            "$14 × 40% = $5.60",
+            "=",
+            "+25% per lead"
+          ],
+          "say": "Let's work the example. The payout is fourteen dollars. At forty percent approval, one lead is worth five dollars sixty. At fifty percent, it's worth seven dollars. That's one dollar forty more per lead, a twenty five percent increase. At a five dollar C P L, your margin goes from sixty cents to two dollars per lead. Same traffic, much better business."
+        },
+        {
+          "v": "phone",
+          "h": "What a confirmation call sounds like",
+          "p": "This is a typical, honest confirmation call, shown as text. The agent confirms the order, the price and the address, and gives the buyer a clear chance to say no. Your prelander should make every answer here unsurprising.",
+          "d": {
+            "app": "chat",
+            "title": "Confirmation call",
+            "subtitle": "call centre",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Good afternoon, is this Ada? You ordered a joint-care supplement today."
+              },
+              {
+                "from": "me",
+                "text": "Yes, I did."
+              },
+              {
+                "from": "them",
+                "text": "It is one pack at the price on the page, paid on delivery. Is that still fine?"
+              },
+              {
+                "from": "me",
+                "text": "Yes. How long will it take?"
+              },
+              {
+                "from": "them",
+                "text": "2 to 4 days. Can you confirm your address and a landmark?"
+              },
+              {
+                "from": "me",
+                "text": "12 Adeola Street, near the pharmacy."
+              },
+              {
+                "from": "them",
+                "text": "Thank you. Your order is confirmed."
+              }
+            ]
+          },
+          "say": "Here's a typical, honest confirmation call, shown as text. The agent checks it's Ada, and confirms the order: one pack at the price on the page, paid on delivery. Ada asks how long it takes, two to four days. The agent confirms her address and a landmark, near the pharmacy, then confirms the order. Notice the buyer gets a clear chance to say no. Your prelander should make every answer here unsurprising."
+        },
+        {
+          "v": "table",
+          "h": "Lead statuses you will see",
+          "p": "Networks report each lead with a status. Names differ by network, so check yours, but the meaning is usually close to this. Only approved leads pay. Callback leads can still become approved, which is why you wait before judging.",
+          "d": {
+            "cols": [
+              "Status",
+              "Meaning",
+              "Pays you?"
+            ],
+            "rows": [
+              [
+                "Approved",
+                "Order confirmed on the call",
+                "Yes"
+              ],
+              [
+                "Pending / callback",
+                "Not reached yet, will retry",
+                "Not yet"
+              ],
+              [
+                "Rejected / cancelled",
+                "Reached, said no",
+                "No"
+              ],
+              [
+                "Trash / invalid",
+                "Wrong number, fake, joke",
+                "No"
+              ],
+              [
+                "Duplicate",
+                "Same buyer already ordered",
+                "No"
+              ]
+            ]
+          },
+          "say": "Networks report each lead with a status. Names differ, but the meaning is usually close to this table. Approved, the order was confirmed on the call, and it pays you. Pending or callback, not reached yet, will retry, so not yet. Rejected or cancelled, reached but said no. Trash or invalid, a wrong number, fake or joke. Duplicate, the same buyer already ordered. Only approved leads pay. And callback leads can still become approved, which is why you wait before judging."
+        },
+        {
+          "v": "cards",
+          "h": "What you control that moves approval",
+          "p": "You cannot coach the agents, but these levers sit with you. Check them in this order when approval is below the network's average for the geo. The first two cause most problems.",
+          "d": [
+            "Honest page|price and expectations shown upfront",
+            "Right audience|age, region and language match the offer",
+            "Valid numbers|validation and dedupe on the form",
+            "Timing|ads run when the call centre can call soon",
+            "Geo coverage|only regions the courier reaches"
+          ],
+          "say": "You can't coach the agents, but these levers sit with you. Check them in this order when approval is below the network's average for the geo. An honest page, with price and expectations shown up front. The right audience, matching age, region and language. Valid numbers, through validation and dedupe. Timing, so ads run when the call centre can call soon. And geo coverage, only regions the courier reaches. The first two cause most problems."
+        },
+        {
+          "v": "bars",
+          "h": "Example: approval by order time",
+          "p": "Example from one test: leads placed in call-centre hours were reached within an hour and approved at 48%. Leads placed late at night waited until morning and were approved at 36%. Your data will differ; measure it before acting.",
+          "d": [
+            [
+              "8am to 6pm leads",
+              96,
+              "48% approved"
+            ],
+            [
+              "6pm to 10pm leads",
+              84,
+              "42% approved"
+            ],
+            [
+              "10pm to 8am leads",
+              72,
+              "36% approved"
+            ]
+          ],
+          "say": "Look at these bars from one example test. Leads placed between eight a m and six p m, during call-centre hours, were reached within an hour and approved at forty eight percent. Leads from six to ten p m were approved at forty two percent. And leads placed late at night, from ten p m to eight a m, waited until morning and were approved at thirty six percent. Your data will differ, so measure it before acting."
+        },
+        {
+          "v": "table",
+          "h": "Example: should you run ads at night?",
+          "p": "Example: CPL is $4.20 at night and $4.80 by day. Night leads look cheaper in Ads Manager but cost more per approved lead. Against a $10.50 target, day passes and night is close to the line.",
+          "d": {
+            "cols": [
+              "Window",
+              "CPL",
+              "Approval",
+              "Cost per approved"
+            ],
+            "rows": [
+              [
+                "Day",
+                "$4.80",
+                "48%",
+                "$10.00"
+              ],
+              [
+                "Night",
+                "$4.20",
+                "36%",
+                "$11.67"
+              ]
+            ]
+          },
+          "more": "Maths: day $4.80 ÷ 0.48 = $10.00. Night $4.20 ÷ 0.36 = $11.67. Before you cut night hours, check you have enough leads in each window (we use 30+ as a starting minimum). Ad scheduling options differ by platform; on Meta, scheduling has historically needed a lifetime budget. We are not certain this is current; check the current Ads Manager before relying on it.",
+          "say": "So should you run ads at night? In this example, C P L is four dollars twenty at night and four eighty by day. Night looks cheaper in Ads Manager. But four eighty divided by forty eight percent is ten dollars per approved by day, while four twenty divided by thirty six percent is eleven sixty seven at night. Against a ten fifty target, day passes. Check you have thirty or more leads per window first. On Meta, scheduling has historically needed a lifetime budget, but we're not certain that's current, so check Ads Manager."
+        },
+        {
+          "v": "table",
+          "h": "Decision rules for approval",
+          "p": "Starting rules to adapt. Always judge approval on leads whose status is final, and on enough of them. A low-approval ad set can still pass if its CPL is low enough, so the final test is always cost per approved lead.",
+          "d": {
+            "cols": [
+              "Situation",
+              "Starting rule"
+            ],
+            "rows": [
+              [
+                "Fewer than 30 final-status leads",
+                "Do not judge approval yet"
+              ],
+              [
+                "Ad set approval under 0.7 × your average",
+                "Judge on actual approvals only, no projections"
+              ],
+              [
+                "Cost per approved over $14 after $31.50 spend",
+                "Kill (lower of 1.5 × target and break-even)"
+              ],
+              [
+                "Account approval under network geo average for 3 days",
+                "Send the network a sub ID breakdown request"
+              ],
+              [
+                "High approval, low buyout",
+                "Check for overpromising (next lesson)"
+              ]
+            ]
+          },
+          "say": "These are starting rules for approval, to adapt. Fewer than thirty final-status leads, don't judge yet. Ad set approval under zero point seven times your average, judge on actual approvals only, no projections. Cost per approved over fourteen dollars after thirty one fifty spend, kill it. Account approval under the network's geo average for three days, ask for a sub I D breakdown. And high approval with low buyout, check for overpromising. The final test is always cost per approved lead."
+        },
+        {
+          "v": "phone",
+          "h": "Ask the network for reasons, with data",
+          "p": "When approval drops, ask your manager for a breakdown by your sub IDs and the main rejection reasons. Bring your own numbers. Managers help affiliates who show them data and fix problems quickly.",
+          "d": {
+            "app": "chat",
+            "title": "Network manager",
+            "subtitle": "chat",
+            "messages": [
+              {
+                "from": "me",
+                "text": "Hi. Approval on offer 1042 fell from 46% to 37% this week. Can you share statuses by sub2 and the top rejection reasons?"
+              },
+              {
+                "from": "them",
+                "text": "Sure. sub2 = adset_03 is at 24%, mostly 'did not order' and 'price too high'."
+              },
+              {
+                "from": "me",
+                "text": "Thanks. Pausing adset_03 and checking that its ad shows the price. Will update you tomorrow."
+              }
+            ]
+          },
+          "say": "When approval drops, ask your manager for data. In this chat, the affiliate writes: approval on the offer fell from forty six to thirty seven percent this week, can you share statuses by sub two and the top rejection reasons? The manager replies that one ad set is at twenty four percent, mostly did not order and price too high. The affiliate pauses it and checks its ad shows the price. Bring your own numbers. Managers help affiliates who show data and fix problems quickly."
+        },
+        {
+          "v": "product",
+          "h": "Answering buyers in chat",
+          "p": "If you run your own COD store, or the advertiser lets you handle a Telegram order flow, an AI inbox agent can answer pre-order questions and confirm details in chat, and hand hard cases to a person. Never contact a network's leads without the deal allowing it and the buyer's consent.",
+          "d": {
+            "slug": "replyvoo",
+            "why": "Answers pre-order questions and confirms order details in Telegram chats, with a hand-off to a human for anything unclear."
+          },
+          "say": "If you run your own C O D store, or the advertiser lets you handle a Telegram order flow, an A I inbox agent can answer pre-order questions and confirm details in chat, handing hard cases to a person. Replyvoo is one example. But never contact a network's leads unless the deal allows it and the buyer has consented."
+        },
+        {
+          "v": "compare",
+          "h": "Mistakes when approval is low",
+          "p": "When approval falls, the first instinct is to blame the call centre. Sometimes that is right, but the cause is usually upstream. Check your side first, then go to the network with evidence.",
+          "d": {
+            "a": {
+              "title": "Common mistakes",
+              "items": [
+                "Blaming the call centre with no data",
+                "Judging approval on 10 leads",
+                "Running ads in regions with no delivery",
+                "Promising more than the agent can confirm"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Ask for a sub ID breakdown",
+                "Wait for 30+ final statuses",
+                "Target only courier-covered regions",
+                "Match page claims to the approved list"
+              ]
+            }
+          },
+          "say": "When approval falls, the first instinct is to blame the call centre. On the left, the mistakes: blaming them with no data, judging approval on ten leads, running ads in regions with no delivery, and promising more than the agent can confirm. On the right, the fixes: ask for a sub I D breakdown, wait for thirty or more final statuses, target only courier-covered regions, and match page claims to the approved list. Check your side first, then go to the network with evidence."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: no pressure, no extra contact",
+          "p": "Confirmation calls are run by the advertiser's team under local law. As an affiliate, do not call, text or message the leads yourself unless your deal allows it and the buyer agreed to it. Never encourage pressure selling.",
+          "d": {
+            "kind": "warn",
+            "text": "Pressure on the call and aggressive upsells lead to refused parcels and complaints. If buyers report pressure, tell the network in writing."
+          },
+          "say": "Confirmation calls are run by the advertiser's team under local law. As an affiliate, don't call, text or message the leads yourself unless your deal allows it and the buyer agreed to it. And never encourage pressure selling. Read the warning: pressure on the call and aggressive upsells lead to refused parcels and complaints. If buyers report pressure, tell the network in writing."
+        },
+        {
+          "v": "check",
+          "h": "Approval rescue checklist",
+          "p": "Use this list in order whenever approval falls below the network's average for your geo. Change one thing at a time so you know what worked, and recheck after 30 more final-status leads.",
+          "d": [
+            "Statuses final on 30+ leads?",
+            "Worst ad set or creative found by sub ID",
+            "Page shows price and realistic expectations",
+            "Targeting matches courier regions",
+            "Ads run when calls can happen soon",
+            "Network asked for rejection reasons"
+          ],
+          "say": "Use this rescue checklist in order whenever approval falls below the network's average for your geo. Are statuses final on thirty or more leads? Have you found the worst ad set or creative by sub I D? Does the page show price and realistic expectations? Does targeting match courier regions? Do ads run when calls can happen soon? Have you asked the network for rejection reasons? Change one thing at a time, and recheck after thirty more final-status leads."
+        }
+      ],
+      "takeaways": [
+        "Approval rate multiplies lead value: +10 points from 40% is +25% per lead.",
+        "You control the page honesty, audience, phone quality, timing and geo coverage that decide most calls.",
+        "Judge approval on 30+ final-status leads, and always make the final call on cost per approved."
+      ],
+      "action": "Ask your network for last week's lead statuses by your sub IDs and the top three rejection reasons. Find your lowest-approval ad set and write down one change to test.",
+      "glossary": [
+        {
+          "term": "Confirmation call",
+          "def": "The call-centre call that confirms a COD order, price and address."
+        },
+        {
+          "term": "Callback",
+          "def": "A lead not reached yet that the call centre will try again."
+        },
+        {
+          "term": "Rejection reason",
+          "def": "The reason a lead was not approved, such as 'did not order' or 'price too high'."
+        },
+        {
+          "term": "Sub ID breakdown",
+          "def": "Network statistics split by the sub values you passed, such as ad set or creative."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Payout $14. Approval rises from 40% to 50%. How much more is each lead worth?",
+          "options": [
+            "$1.40",
+            "$0.70",
+            "$5.60",
+            "$14.00"
+          ],
+          "answer": 0,
+          "why": "$14 × 0.50 = $7.00 vs $14 × 0.40 = $5.60. The difference is $1.40, or 25%."
+        },
+        {
+          "q": "Night CPL $4.20 at 36% approval, day CPL $4.80 at 48%. Which is cheaper per approved lead?",
+          "options": [
+            "Night",
+            "They are equal",
+            "Day at $10.00",
+            "You cannot tell"
+          ],
+          "answer": 2,
+          "why": "Night: $4.20 ÷ 0.36 = $11.67. Day: $4.80 ÷ 0.48 = $10.00."
+        },
+        {
+          "q": "An ad set has 12 leads with final status and 25% approval. Starting rule?",
+          "options": [
+            "Kill it now",
+            "Do not judge approval yet",
+            "Scale it",
+            "Call the leads yourself"
+          ],
+          "answer": 1,
+          "why": "Under 30 final-status leads is too few to judge approval reliably."
+        },
+        {
+          "q": "A lead has status 'callback'. What does that mean for your numbers?",
+          "options": [
+            "It is rejected",
+            "It pays you now",
+            "It is trash",
+            "It may still become approved, so wait"
+          ],
+          "answer": 3,
+          "why": "Callback leads have not been reached yet. Judging before they resolve undercounts approvals."
+        },
+        {
+          "q": "Which action is not allowed for a normal COD affiliate?",
+          "options": [
+            "Asking the network for rejection reasons",
+            "Pausing a low-approval ad set",
+            "Texting the leads yourself to push them to confirm",
+            "Showing the price on the prelander"
+          ],
+          "answer": 2,
+          "why": "Unless your deal allows it and the buyer consented, contacting leads yourself is not allowed and can break data and consumer rules."
+        }
+      ],
+      "say_intro": "Approval rate multiplies the value of every lead you buy. In this lesson you'll learn what happens on a confirmation call, what each lead status means, and which levers you control when approval is low.",
+      "say_outro": "Approval multiplies everything, and you move it with honest pages, the right audience, valid numbers, good timing and courier-covered regions. Your task: ask your network for last week's lead statuses by your sub I Ds and the top three rejection reasons, find your lowest-approval ad set, and write down one change to test. Now take the quiz."
+    },
+    {
+      "slug": "buyout-and-delivery",
+      "title": "Buyout: why delivered-and-paid keeps you paid",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can explain why the advertiser cares about buyout even when you are paid on approval.",
+        "By the end you can work out an advertiser's break-even buyout from simple costs.",
+        "By the end you can spot traffic that approves well but buys out badly, and act on it."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why: approval pays you, buyout keeps you paid",
+          "p": "Most COD deals pay you when a lead is approved. The advertiser only earns when the buyer pays at the door. If your approved orders are refused at delivery, the advertiser loses money on them. Sooner or later that comes back to you as a lower payout, a smaller cap or a closed offer.",
+          "d": {
+            "b": "Your payout is funded by buyout",
+            "s": "Low buyout traffic gets cut, even when approval looks fine."
+          },
+          "say": "Most C O D, cash on delivery, deals pay you when a lead is approved. But the advertiser only earns when the buyer pays at the door. Look at the headline: your payout is funded by buyout. If your approved orders are refused at delivery, the advertiser loses money on them. Sooner or later that comes back to you as a lower payout, a smaller cap, or a closed offer, even when approval looks fine."
+        },
+        {
+          "v": "funnel",
+          "h": "Example: what happens after approval",
+          "p": "Example: 100 approved orders. 96 are shipped; the rest have stock or address problems. 82 are reached by the courier. 64 buyers pay. Buyout here is 64 of 100 approved, or 64%. Every refused parcel still cost the advertiser product, delivery and your payout.",
+          "d": [
+            [
+              "Approved",
+              100
+            ],
+            [
+              "Shipped",
+              96
+            ],
+            [
+              "Reached by courier",
+              82
+            ],
+            [
+              "Paid at door",
+              64
+            ]
+          ],
+          "say": "Here's an example of what happens after approval. One hundred approved orders. Ninety six are shipped, the rest have stock or address problems. Eighty two are reached by the courier. And sixty four buyers pay. So buyout here is sixty four of one hundred, or sixty four percent. Every refused parcel still cost the advertiser product, delivery and your payout."
+        },
+        {
+          "v": "table",
+          "h": "Example: the advertiser's maths",
+          "p": "Example: a simplified view of one approved order. The advertiser pays all these costs on every approved order but only gets the price when the buyer pays. Real models also count returns and restocking; this is enough to see the problem.",
+          "d": {
+            "cols": [
+              "Item",
+              "Per approved order",
+              "Note"
+            ],
+            "rows": [
+              [
+                "Price paid at door",
+                "$39",
+                "Only if bought out"
+              ],
+              [
+                "Product cost",
+                "$5",
+                "Every shipped order"
+              ],
+              [
+                "Delivery and COD fee",
+                "$6",
+                "Paid even if refused"
+              ],
+              [
+                "Call centre and admin",
+                "$2",
+                "Every order"
+              ],
+              [
+                "Your payout",
+                "$14",
+                "On approval"
+              ],
+              [
+                "Total cost",
+                "$27",
+                "Before any revenue"
+              ]
+            ]
+          },
+          "say": "This table is a simplified example of the advertiser's maths for one approved order. The price paid at the door is thirty nine dollars, but only if bought out. Product cost, five dollars on every shipped order. Delivery and the C O D fee, six dollars, paid even if refused. Call centre and admin, two dollars. Your payout, fourteen dollars on approval. Total cost, twenty seven dollars before any revenue. Real models also count returns and restocking, but this is enough to see the problem."
+        },
+        {
+          "v": "eq",
+          "h": "The advertiser's break-even buyout",
+          "p": "Divide the total cost per approved order by the price. Below that buyout, the advertiser loses money on your traffic. Example: $27 ÷ $39 = 69%. At 64% buyout they earn $24.96 per approved order and spend $27, a loss of about $2 each.",
+          "d": [
+            "Cost per approved",
+            "÷",
+            "Price",
+            "=",
+            "Break-even buyout"
+          ],
+          "more": "Example maths: $39 × 0.64 = $24.96 revenue per approved order. $24.96 − $27 = −$2.04. At 75% buyout: $39 × 0.75 = $29.25, so $29.25 − $27 = +$2.25. These numbers are illustrative; real costs vary a lot by product, courier and country. The point is that a few points of buyout decide whether the advertiser can keep paying you.",
+          "say": "Here's the advertiser's break-even buyout. Divide the cost per approved order by the price. In this example, twenty seven divided by thirty nine is sixty nine percent. At sixty four percent buyout, they earn twenty four dollars ninety six and spend twenty seven, a loss of about two dollars each. At seventy five percent, they make about two dollars twenty five. These numbers are illustrative, but a few points of buyout decide whether the advertiser can keep paying you."
+        },
+        {
+          "v": "bars",
+          "h": "Advertiser profit per approved order",
+          "p": "Example, using the costs above. Each step of 10 points in buyout moves the advertiser's result by about $3.90 per approved order. This is why networks ask about traffic quality and why they compare your buyout with other affiliates in the same geo.",
+          "d": [
+            [
+              "55% buyout",
+              30,
+              "−$5.55"
+            ],
+            [
+              "65% buyout",
+              55,
+              "−$1.65"
+            ],
+            [
+              "75% buyout",
+              80,
+              "+$2.25"
+            ],
+            [
+              "85% buyout",
+              100,
+              "+$6.15"
+            ]
+          ],
+          "say": "Look at these bars, using the same example costs. At fifty five percent buyout, the advertiser loses five dollars fifty five per approved order. At sixty five percent, minus one sixty five. At seventy five, plus two twenty five. At eighty five, plus six fifteen. Each ten point step moves the result by about three dollars ninety. That's why networks ask about traffic quality and compare your buyout with other affiliates in the same geo."
+        },
+        {
+          "v": "cards",
+          "h": "What raises buyout",
+          "p": "Buyout is decided at the door, days after the click. These are the factors that usually matter. The first three are in your hands as an affiliate; the rest are the advertiser's, but you can ask about them.",
+          "d": [
+            "Honest expectations|buyer gets what the ad promised",
+            "Right regions|only where the courier delivers",
+            "Clear price|no surprise at the door",
+            "Fast delivery|less time to change their mind",
+            "Reminder message|buyer remembers ordering",
+            "Easy rescheduling|missed delivery is retried"
+          ],
+          "say": "Buyout is decided at the door, days after the click. Here are the factors that usually matter. Honest expectations, so the buyer gets what the ad promised. Right regions, only where the courier delivers. A clear price, so there's no surprise at the door. These first three are in your hands. Then fast delivery, a reminder message, and easy rescheduling are the advertiser's, but you can ask about them."
+        },
+        {
+          "v": "phone",
+          "h": "A delivery reminder the advertiser sends",
+          "p": "Many advertisers send a short reminder before delivery. You do not send it, but knowing it exists helps you ask the right question. If your network's advertiser has no reminder step, ask whether they plan one.",
+          "d": {
+            "app": "chat",
+            "title": "Order updates",
+            "subtitle": "SMS",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Hello Ada, your joint-care supplement order arrives Thursday. Price as agreed, pay on delivery. To change the day, reply 1."
+              },
+              {
+                "from": "me",
+                "text": "1"
+              },
+              {
+                "from": "them",
+                "text": "No problem. We will call you to agree a new day."
+              }
+            ]
+          },
+          "say": "Many advertisers send a short reminder before delivery. In this example S M S, Ada is told her order arrives Thursday, price as agreed, pay on delivery, and to reply one to change the day. She replies one, and they'll call to agree a new day. You don't send this yourself, but knowing it exists helps you ask the right question. If your advertiser has no reminder step, ask whether they plan one."
+        },
+        {
+          "v": "table",
+          "h": "Example: two creatives, one hidden problem",
+          "p": "Example: creative X looks better in Ads Manager and at approval. But its buyers refuse far more parcels. When the network looks at buyout by sub ID, X is the traffic they will want you to stop. Y is the safer long-term winner.",
+          "d": {
+            "cols": [
+              "Metric",
+              "Creative X",
+              "Creative Y"
+            ],
+            "rows": [
+              [
+                "Cost per approved",
+                "$9.00",
+                "$10.00"
+              ],
+              [
+                "Approval",
+                "52%",
+                "47%"
+              ],
+              [
+                "Buyout",
+                "50%",
+                "72%"
+              ],
+              [
+                "Advertiser result",
+                "−$7.50",
+                "+$1.08"
+              ]
+            ]
+          },
+          "more": "Advertiser result per approved order, using the $27 cost and $39 price: X $39 × 0.50 = $19.50, minus $27 = −$7.50. Y $39 × 0.72 = $28.08, minus $27 = +$1.08. High approval with low buyout usually means the creative promised something the product cannot deliver. Fix the promise, not the budget.",
+          "say": "Here's an example with a hidden problem. Creative X costs nine dollars per approved, with fifty two percent approval. Creative Y costs ten dollars, with forty seven percent. X looks better. But look at buyout: X is fifty percent, Y is seventy two percent. For the advertiser, X loses seven dollars fifty per approved order, while Y makes one dollar eight. High approval with low buyout usually means the creative promised something the product can't deliver. Fix the promise, not the budget."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: read a buyout report",
+          "p": "Some networks show buyout per sub ID in the dashboard; others send it by request. Buyout arrives weeks after the lead, so look at older date ranges. Sort by buyout and look at the worst rows that have enough approved orders.",
+          "d": {
+            "kind": "browser",
+            "url": "network.example/stats/buyout",
+            "title": "Buyout by sub2, leads 1 to 14 Sep",
+            "blocks": [
+              {
+                "type": "select",
+                "label": "Group by",
+                "value": "sub2 (ad set)"
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "sub2",
+                  "Approved",
+                  "Paid",
+                  "Buyout"
+                ],
+                "rows": [
+                  [
+                    "adset_01",
+                    "64",
+                    "46",
+                    "72%"
+                  ],
+                  [
+                    "adset_02",
+                    "58",
+                    "41",
+                    "71%"
+                  ],
+                  [
+                    "adset_03",
+                    "55",
+                    "27",
+                    "49%"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Example. Buyout reported for orders with final delivery status only."
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "Here's an example buyout report, grouped by sub two, meaning ad set. Some networks show this in the dashboard, others send it on request. Look at the table. Ad set one, sixty four approved, seventy two percent buyout. Ad set two, seventy one percent. Ad set three, fifty five approved, only twenty seven paid, forty nine percent. That's the row to look at. Buyout arrives weeks after the lead, so check older date ranges, and focus on worst rows with enough approved orders."
+        },
+        {
+          "v": "table",
+          "h": "Decision rules for buyout",
+          "p": "Starting rules to adapt with your network. Buyout data is slow, so you act on it weekly, not daily. Always use rows with enough approved orders; 50 is our starting minimum.",
+          "d": {
+            "cols": [
+              "Situation",
+              "Starting rule"
+            ],
+            "rows": [
+              [
+                "Under 50 approved with final delivery status",
+                "Too early to judge buyout"
+              ],
+              [
+                "Ad set buyout 10+ points under your average",
+                "Check its creative and promise; pause if no fix"
+              ],
+              [
+                "Account buyout under the network minimum",
+                "Pause the worst sub IDs, ask for reasons"
+              ],
+              [
+                "High approval, low buyout",
+                "Treat as overpromising; rewrite the ad"
+              ],
+              [
+                "Network warns about buyout",
+                "Reply in 24 hours with a plan and data"
+              ]
+            ]
+          },
+          "say": "These are starting rules for buyout, to adapt with your network. Under fifty approved orders with final delivery status, it's too early to judge. An ad set ten or more points under your average, check its creative and promise, and pause if there's no fix. Account buyout under the network minimum, pause the worst sub I Ds and ask for reasons. High approval with low buyout, treat it as overpromising and rewrite the ad. And a network warning, reply within twenty four hours with a plan and data. Act weekly, not daily."
+        },
+        {
+          "v": "compare",
+          "h": "Mistakes about buyout",
+          "p": "Most affiliates ignore buyout until the network cuts the payout. By then weeks of traffic have already been judged. These mistakes are easy to avoid if you ask for buyout data from your first week.",
+          "d": {
+            "a": {
+              "title": "Common mistakes",
+              "items": [
+                "'I am paid on approval, buyout is not my problem'",
+                "Targeting the whole country",
+                "Scaling the creative with the best approval only",
+                "Asking for buyout only after a warning"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Your payout depends on it; track it",
+                "Target courier-covered regions",
+                "Compare buyout per creative too",
+                "Ask for buyout by sub ID every week"
+              ]
+            }
+          },
+          "say": "Most affiliates ignore buyout until the network cuts the payout. On the left, the mistakes: thinking I'm paid on approval so buyout isn't my problem, targeting the whole country, scaling the creative with the best approval only, and asking for buyout only after a warning. On the right, the fixes: your payout depends on it, so track it. Target courier-covered regions. Compare buyout per creative too. And ask for buyout by sub I D every week."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: overpromising is the root cause",
+          "p": "When buyers refuse parcels, the most common cause on the affiliate side is a promise the product cannot keep. For supplements, claims to cure, treat or prevent disease are not allowed in most countries and are a fast way to lose both accounts and payouts.",
+          "d": {
+            "kind": "warn",
+            "text": "If buyout is low on one creative, read its claims against the approved list. Remove anything that suggests a cure, a guaranteed result or a timeline the advertiser has not approved."
+          },
+          "say": "When buyers refuse parcels, the most common cause on the affiliate side is a promise the product can't keep. For supplements, claims to cure, treat or prevent disease aren't allowed in most countries, and they're a fast way to lose both accounts and payouts. Read the warning: if buyout is low on one creative, read its claims against the approved list. Remove anything suggesting a cure, a guaranteed result, or a timeline the advertiser hasn't approved."
+        },
+        {
+          "v": "check",
+          "h": "Weekly buyout routine",
+          "p": "Do this once a week, on the same day. It takes fifteen minutes and protects your payout for months. Keep the answers in your decision sheet next to approval.",
+          "d": [
+            "Ask the network for buyout by sub ID",
+            "Use leads at least 2 to 3 weeks old",
+            "Mark rows with 50+ approved orders",
+            "Compare each with your average",
+            "Fix or pause the worst rows",
+            "Reply to any network warning in writing"
+          ],
+          "say": "Do this weekly buyout routine on the same day each week. Ask the network for buyout by sub I D. Use leads at least two to three weeks old. Mark rows with fifty or more approved orders. Compare each with your average. Fix or pause the worst rows. And reply to any network warning in writing. It takes fifteen minutes and protects your payout for months. Keep the answers in your decision sheet next to approval."
+        }
+      ],
+      "takeaways": [
+        "The advertiser earns only on buyout, so low-buyout traffic eventually loses you payout or caps.",
+        "Break-even buyout = cost per approved order ÷ price. Example: $27 ÷ $39 = 69%.",
+        "High approval with low buyout usually means overpromising; fix the promise before scaling."
+      ],
+      "action": "Ask your network for buyout by sub ID for leads that are at least two weeks old. Mark any ad set or creative 10 or more points below your average and read its claims against the approved list.",
+      "glossary": [
+        {
+          "term": "Buyout",
+          "def": "When the buyer accepts the parcel and pays at the door."
+        },
+        {
+          "term": "Break-even buyout",
+          "def": "The buyout rate at which the advertiser covers all costs per approved order. Cost ÷ price."
+        },
+        {
+          "term": "Refused parcel",
+          "def": "An approved order the buyer does not accept at delivery. The advertiser still paid for it."
+        },
+        {
+          "term": "Overpromising",
+          "def": "Ad or page claims that set expectations the product cannot meet, often causing refusals."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Cost per approved order $27, price $39. What is the break-even buyout?",
+          "options": [
+            "50%",
+            "64%",
+            "75%",
+            "About 69%"
+          ],
+          "answer": 3,
+          "why": "$27 ÷ $39 = 0.692, about 69%."
+        },
+        {
+          "q": "You are paid per approved lead. Why should you care about buyout?",
+          "options": [
+            "Low buyout leads to payout cuts, smaller caps or losing the offer",
+            "You are charged for every refused parcel",
+            "Meta reports buyout to the network",
+            "It changes your CPM"
+          ],
+          "answer": 0,
+          "why": "The advertiser funds your payout from bought-out orders. If they lose money on your traffic, your terms change."
+        },
+        {
+          "q": "Creative X: approval 52%, buyout 50%. Creative Y: approval 47%, buyout 72%. What is the likely cause of X's pattern?",
+          "options": [
+            "The courier is slow only for X",
+            "The call centre prefers X",
+            "X promises more than the product delivers",
+            "X has a better hook"
+          ],
+          "answer": 2,
+          "why": "High approval but many refusals usually means buyers expected something different from what arrived."
+        },
+        {
+          "q": "An ad set has 22 approved orders with final delivery status and 55% buyout. Starting rule?",
+          "options": [
+            "Pause it now",
+            "Too early to judge buyout",
+            "Scale it",
+            "Report it to Meta"
+          ],
+          "answer": 1,
+          "why": "Our starting minimum is 50 approved orders with final status before judging buyout."
+        },
+        {
+          "q": "At a $39 price and $27 cost, what is the advertiser's result per approved order at 75% buyout?",
+          "options": [
+            "−$2.04",
+            "+$29.25",
+            "+$2.25",
+            "+$12.00"
+          ],
+          "answer": 2,
+          "why": "$39 × 0.75 = $29.25. $29.25 − $27 = +$2.25."
+        }
+      ],
+      "say_intro": "You're usually paid on approval, but the advertiser only earns when the buyer pays at the door. In this lesson you'll see why buyout funds your payout, work out an advertiser's break-even buyout, and spot traffic that approves well but buys out badly.",
+      "say_outro": "Your payout is funded by buyout, so track it by sub I D every week and fix the promise behind low rows. Your task: ask your network for buyout by sub I D for leads at least two weeks old, mark any ad set or creative ten or more points below your average, and read its claims against the approved list. Now take the quiz."
+    },
+    {
+      "slug": "fraud-duplicates-and-trash",
+      "title": "Fraud, duplicates and trash leads",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can name the main kinds of bad COD leads and where they come from.",
+        "By the end you can set up simple defences: validation, dedupe, honeypot and rate limits.",
+        "By the end you can use trash-rate rules to exclude bad placements and keep network trust."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why: trash costs you twice",
+          "p": "A trash lead costs you the ad spend and never pays. It also raises your trash rate, which networks use to judge your traffic. Sources with high trash get warnings, lower caps or bans. Clean leads are cheaper to buy than they look, because you keep the offer.",
+          "d": {
+            "b": "Clean traffic is how you keep the offer",
+            "s": "Networks rank affiliates by trash and fraud, not only by volume."
+          },
+          "say": "A trash lead costs you the ad spend and never pays. It also raises your trash rate, which networks use to judge your traffic. Sources with high trash get warnings, lower caps or bans. Look at the headline: clean traffic is how you keep the offer. Networks rank affiliates by trash and fraud, not only by volume. Clean leads are cheaper to buy than they look."
+        },
+        {
+          "v": "cards",
+          "h": "Kinds of bad leads",
+          "p": "Bad leads have different causes and different fixes. Some are honest mistakes, some are pranks and some are fraud. Knowing which one you have tells you whether to fix the form, the placement or the source.",
+          "d": [
+            "Duplicate|same buyer orders twice",
+            "Invalid number|typo, missing digits, fake",
+            "Prank or joke order|wrong name, no intent",
+            "Bot submissions|automated form fills",
+            "Motivated traffic|people paid to fill forms",
+            "Competitor sabotage|deliberate fake orders"
+          ],
+          "say": "Bad leads have different causes and different fixes. Look at the cards. Duplicates, where the same buyer orders twice. Invalid numbers, from typos, missing digits or fakes. Prank or joke orders, with no intent. Bot submissions, automated form fills. Motivated traffic, people paid to fill forms. And competitor sabotage, deliberate fake orders. Knowing which kind you have tells you whether to fix the form, the placement, or the source."
+        },
+        {
+          "v": "table",
+          "h": "Example: what trash does to your numbers",
+          "p": "Example: 200 leads for $900 spend. 30 are trash and 14 are duplicates, so 156 are valid. The call centre approves 90. On all leads that is 45% approval; on valid leads it is 58%. Your real cost per valid lead is higher than your CPL.",
+          "d": {
+            "cols": [
+              "Metric",
+              "Value",
+              "Maths"
+            ],
+            "rows": [
+              [
+                "CPL",
+                "$4.50",
+                "$900 ÷ 200"
+              ],
+              [
+                "Trash + duplicates",
+                "22%",
+                "44 ÷ 200"
+              ],
+              [
+                "Cost per valid lead",
+                "$5.77",
+                "$900 ÷ 156"
+              ],
+              [
+                "Approval on all leads",
+                "45%",
+                "90 ÷ 200"
+              ],
+              [
+                "Cost per approved",
+                "$10.00",
+                "$900 ÷ 90"
+              ]
+            ]
+          },
+          "say": "Here's an example of what trash does to your numbers. Two hundred leads for nine hundred dollars spend gives a C P L, cost per lead, of four dollars fifty. Thirty are trash and fourteen duplicates, so twenty two percent are bad and one hundred and fifty six are valid. Your cost per valid lead is five dollars seventy seven. The call centre approves ninety, forty five percent of all leads, or fifty eight percent of valid ones, and cost per approved is ten dollars."
+        },
+        {
+          "v": "eq",
+          "h": "Real cost per valid lead",
+          "p": "Ads Manager shows CPL on every form fill. The number that matters before approval is cost per valid lead. If it is far above your CPL, your form or traffic is letting junk in, and that junk is also hurting your standing with the network.",
+          "d": [
+            "Spend",
+            "÷",
+            "Valid leads",
+            "=",
+            "Real cost per valid lead"
+          ],
+          "say": "Ads Manager shows C P L on every form fill. But the number that matters before approval is cost per valid lead. Here's the formula: spend divided by valid leads gives your real cost per valid lead. If it's far above your C P L, your form or traffic is letting junk in, and that junk is also hurting your standing with the network."
+        },
+        {
+          "v": "flow",
+          "h": "Five simple defences",
+          "p": "None of these needs a big budget. Most can be set up in an afternoon with your page builder or a developer. Start with the first two; they stop most honest mistakes.",
+          "d": [
+            "Validate phone format",
+            "Disable button after submit",
+            "Dedupe by phone in a time window",
+            "Honeypot field and rate limit",
+            "Monitor trash per placement"
+          ],
+          "say": "Here are five simple defences. Follow the flow. Validate the phone format. Disable the button after submit. Dedupe by phone within a time window. Add a honeypot field and a rate limit. And monitor trash per placement. None of these needs a big budget. Most can be set up in an afternoon with your page builder or a developer. Start with the first two, because they stop most honest mistakes."
+        },
+        {
+          "v": "code",
+          "h": "Example: simple duplicate check",
+          "p": "A duplicate check stores each normalised phone number with the time it was seen and refuses the same number again within a window. 24 hours is a common starting window; ask your network what counts as a duplicate for them.",
+          "d": {
+            "lang": "js",
+            "text": "const key = phone.replace(/\\D/g, '').slice(-10);\nconst last = seen.get(key);\nif (last && Date.now() - last < 24 * 3600 * 1000) return 'duplicate';\nseen.set(key, Date.now());",
+            "note": "Example only. In production keep this on the server, not in the browser."
+          },
+          "say": "This slide shows an example duplicate check, and the code is on screen. It stores each normalised phone number with the time it was seen, and refuses the same number again within a window. Twenty four hours is a common starting window, but ask your network what counts as a duplicate for them. It's an example only. In production, keep this check on the server, not in the browser."
+        },
+        {
+          "v": "cards",
+          "h": "Honeypot and rate limit",
+          "p": "A honeypot is a hidden form field that people never see, so they leave it empty. Many simple bots fill every field, so a filled honeypot marks a bot. A rate limit refuses many orders from one device or IP in a short time.",
+          "d": [
+            "Honeypot|hidden field; if filled, drop the lead",
+            "Rate limit|for example 3 orders per IP per hour",
+            "Time check|forms sent in under 2 seconds are suspicious",
+            "Captcha|last resort; it can cut real orders too"
+          ],
+          "say": "A honeypot is a hidden form field that people never see, so they leave it empty. Many simple bots fill every field, so a filled honeypot marks a bot, and you drop the lead. A rate limit refuses many orders from one device or I P in a short time, for example three orders per I P per hour. A time check flags forms sent in under two seconds as suspicious. And a captcha is a last resort, because it can cut real orders too."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: find trash by placement",
+          "p": "Your tracker or the network's sub ID report shows trash per placement or site. Sort by trash rate and look for rows with enough leads. A placement with twice your average trash on 20+ leads is a candidate for exclusion.",
+          "d": {
+            "kind": "browser",
+            "url": "tracker.example/report",
+            "title": "Trash by placement, last 7 days",
+            "blocks": [
+              {
+                "type": "select",
+                "label": "Group by",
+                "value": "Placement (sub5)"
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "Placement",
+                  "Leads",
+                  "Trash",
+                  "Trash rate"
+                ],
+                "rows": [
+                  [
+                    "Feed",
+                    "140",
+                    "14",
+                    "10%"
+                  ],
+                  [
+                    "Stories",
+                    "48",
+                    "6",
+                    "13%"
+                  ],
+                  [
+                    "Audience network",
+                    "36",
+                    "15",
+                    "42%"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Example. Account average 12%. Audience network is 3.5 × average on 36 leads."
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "Here's an example trash report by placement, for the last seven days. Look at the table. Feed, one hundred and forty leads, ten percent trash. Stories, forty eight leads, thirteen percent. Audience network, thirty six leads, forty two percent trash. With an account average of twelve percent, audience network is three and a half times the average. Sort by trash rate and look for rows with enough leads. A placement with twice your average trash on twenty or more leads is a candidate for exclusion."
+        },
+        {
+          "v": "table",
+          "h": "Decision rules for trash",
+          "p": "Starting rules to adapt. Always compare with your own account average and the network's limit, and act only on rows with enough leads. Tell the network what you changed; it builds trust.",
+          "d": {
+            "cols": [
+              "Situation",
+              "Starting rule"
+            ],
+            "rows": [
+              [
+                "Placement or site trash ≥ 2 × your average, 20+ leads",
+                "Exclude it"
+              ],
+              [
+                "Creative duplicates over 15% on 30+ leads",
+                "Check button and dedupe; then the creative"
+              ],
+              [
+                "Account trash above the network limit",
+                "Pause new tests until fixed"
+              ],
+              [
+                "Sudden spike from one source",
+                "Pause it, check for bots, tell the network"
+              ],
+              [
+                "Network flags a sub ID",
+                "Pause it the same day, then investigate"
+              ]
+            ]
+          },
+          "say": "These are starting rules for trash, to adapt. Placement or site trash at two times your average or more, on twenty or more leads, exclude it. Creative duplicates over fifteen percent on thirty or more leads, check the button and dedupe, then the creative. Account trash above the network limit, pause new tests until fixed. A sudden spike from one source, pause it, check for bots, and tell the network. And if the network flags a sub I D, pause it the same day, then investigate."
+        },
+        {
+          "v": "phone",
+          "h": "When the network flags your traffic",
+          "p": "Treat a trash warning as urgent. Reply quickly, pause the flagged source and ask for details. Never argue without data, and never try to hide the source under a new sub ID.",
+          "d": {
+            "app": "chat",
+            "title": "Network manager",
+            "subtitle": "chat",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Your sub5 = an_placement has 41% trash this week. Our limit is 15%."
+              },
+              {
+                "from": "me",
+                "text": "Thanks for flagging. Excluded that placement now. Can you share the trash reasons?"
+              },
+              {
+                "from": "them",
+                "text": "Mostly wrong numbers and people saying they never ordered."
+              },
+              {
+                "from": "me",
+                "text": "Understood. Adding stricter validation today. I will send you the new numbers on Friday."
+              }
+            ]
+          },
+          "say": "Treat a trash warning as urgent. In this chat, the manager says one placement has forty one percent trash this week, against a fifteen percent limit. The affiliate thanks them, excludes the placement now, and asks for the reasons. Mostly wrong numbers and people saying they never ordered. So the affiliate adds stricter validation and promises new numbers on Friday. Never argue without data, and never try to hide the source under a new sub I D."
+        },
+        {
+          "v": "compare",
+          "h": "Mistakes with bad leads",
+          "p": "Some of these are honest mistakes and some cross into fraud. The right column keeps you in business. If anyone suggests the left column's last two items, walk away from that deal.",
+          "d": {
+            "a": {
+              "title": "Common mistakes",
+              "items": [
+                "No validation or dedupe",
+                "Buying cheap 'lead' traffic from unknown sellers",
+                "Re-sending rejected leads",
+                "Paying people to place orders"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Validate, dedupe, honeypot",
+                "Use sources the offer allows",
+                "Never resubmit; fix the cause",
+                "Only real buyers from real ads"
+              ]
+            }
+          },
+          "say": "Some of these are honest mistakes, and some cross into fraud. On the left: no validation or dedupe, buying cheap lead traffic from unknown sellers, re-sending rejected leads, and paying people to place orders. On the right, the fixes: validate, dedupe and add a honeypot. Use sources the offer allows. Never resubmit, fix the cause. And send only real buyers from real ads. If anyone suggests re-sending rejected leads or paying people to order, walk away from that deal."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: fake leads are fraud",
+          "p": "Submitting leads yourself, re-sending rejected leads, paying people to order or buying traffic you know is fake is fraud. It leads to unpaid balances, bans across networks and, in some countries, criminal liability. Motivated or incentivised traffic is almost never allowed on COD nutra.",
+          "d": {
+            "kind": "warn",
+            "text": "Only send leads from real people who chose to order after seeing your honest ad and page. If a deal or a 'supplier' suggests otherwise, refuse."
+          },
+          "say": "Let's be clear. Submitting leads yourself, re-sending rejected leads, paying people to order, or buying traffic you know is fake is fraud. It leads to unpaid balances, bans across networks and, in some countries, criminal liability. Motivated or incentivised traffic is almost never allowed on C O D nutra. Read the warning: only send leads from real people who chose to order after seeing your honest ad and page. If a deal or a supplier suggests otherwise, refuse."
+        },
+        {
+          "v": "check",
+          "h": "Weekly fraud and trash check",
+          "p": "Run this on the same day every week, alongside your buyout check. Keep a log of what you excluded and why, so you can show the network if they ask.",
+          "d": [
+            "Trash and duplicate rate per placement",
+            "Rows over 2 × average on 20+ leads excluded",
+            "Form validation and dedupe still working",
+            "Honeypot and rate limit hits reviewed",
+            "Network warnings answered in writing",
+            "Log of changes saved"
+          ],
+          "say": "Run this weekly check on the same day as your buyout check. Trash and duplicate rate per placement. Rows over two times average on twenty or more leads, excluded. Form validation and dedupe still working. Honeypot and rate limit hits reviewed. Network warnings answered in writing. And a log of changes saved. Keep that log of what you excluded and why, so you can show the network if they ask."
+        }
+      ],
+      "takeaways": [
+        "Trash costs ad spend and network trust; judge on cost per valid lead, not CPL.",
+        "Validate phones, stop double submits, dedupe, add a honeypot and rate limit.",
+        "Exclude placements with trash ≥ 2 × your average on 20+ leads, and never send fake or resubmitted leads."
+      ],
+      "action": "Pull last week's leads by placement or site, work out trash rate for each, and exclude any row at 2 × your average or more with 20+ leads. Tell your network manager what you changed.",
+      "glossary": [
+        {
+          "term": "Trash lead",
+          "def": "A lead that cannot become an order: wrong number, fake, prank or bot."
+        },
+        {
+          "term": "Duplicate lead",
+          "def": "A second lead from the same buyer within the network's duplicate window."
+        },
+        {
+          "term": "Honeypot",
+          "def": "A hidden form field that real people leave empty; bots often fill it."
+        },
+        {
+          "term": "Rate limit",
+          "def": "A cap on how many orders one device or IP can send in a set time."
+        },
+        {
+          "term": "Motivated traffic",
+          "def": "People paid or rewarded to fill forms. Almost never allowed on COD nutra."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "$900 spend, 200 leads, 156 valid. What is the real cost per valid lead?",
+          "options": [
+            "$4.50",
+            "$5.77",
+            "$10.00",
+            "$6.30"
+          ],
+          "answer": 1,
+          "why": "$900 ÷ 156 = $5.77. $4.50 is the CPL on all leads."
+        },
+        {
+          "q": "Account trash average 12%. A placement has 36 leads and 42% trash. Starting rule?",
+          "options": [
+            "Keep it; it is cheap",
+            "Wait for 100 leads",
+            "Exclude it: over 2 × average with 20+ leads",
+            "Raise its budget to dilute the trash"
+          ],
+          "answer": 2,
+          "why": "42% is 3.5 × the 12% average on more than 20 leads."
+        },
+        {
+          "q": "What does a honeypot field do?",
+          "options": [
+            "Catches simple bots that fill every field",
+            "Stores phone numbers",
+            "Raises approval directly",
+            "Shows the price"
+          ],
+          "answer": 0,
+          "why": "Real people do not see the hidden field. A filled honeypot marks an automated submission."
+        },
+        {
+          "q": "The network flags a sub ID for high trash. Best first move?",
+          "options": [
+            "Move the same traffic to a new sub ID",
+            "Argue that their call centre is wrong",
+            "Ignore it until payday",
+            "Pause it the same day and ask for the reasons"
+          ],
+          "answer": 3,
+          "why": "Pausing fast and asking for detail protects your standing. Hiding traffic under a new sub ID is deceptive."
+        },
+        {
+          "q": "Which practice is fraud?",
+          "options": [
+            "Adding a duplicate check",
+            "Re-sending leads the call centre rejected",
+            "Excluding a bad placement",
+            "Using a 24-hour dedupe window"
+          ],
+          "answer": 1,
+          "why": "Resubmitting rejected leads to get them approved is fraud and gets affiliates banned."
+        }
+      ],
+      "say_intro": "Trash and fraudulent leads cost you twice: once in ad spend and again in network trust. In this lesson you'll learn the kinds of bad C O D leads, set up simple defences, and use trash-rate rules to exclude bad placements.",
+      "say_outro": "Clean traffic is how you keep the offer: validate, dedupe, add a honeypot and rate limit, and exclude placements with high trash. Your task: pull last week's leads by placement or site, work out the trash rate for each, exclude any row at two times your average or more with twenty or more leads, and tell your network manager what you changed. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "COD offer: payout $16 per approved lead, expected approval 40%, margin 25%. What is your target CPL?",
+      "options": [
+        "$12.00",
+        "$6.40",
+        "$4.80",
+        "$4.00"
+      ],
+      "answer": 2,
+      "why": "$16 × 0.40 = $6.40 value per lead, × 0.75 = $4.80."
+    },
+    {
+      "q": "Payout $14, target CPA $10.50. An ad set spent $22 and has 0 leads. What do you do?",
+      "options": [
+        "Kill: spend is past 2 × target with no leads at all",
+        "Hold until approvals arrive",
+        "Scale to get leads faster",
+        "Change the order form only"
+      ],
+      "answer": 0,
+      "why": "2 × $10.50 = $21. With no leads there can be no approvals to wait for."
+    },
+    {
+      "q": "Page A: 90 leads, 32% approval. Page B: 70 leads, 46% approval. Same $350 spend. Which do you keep?",
+      "options": [
+        "A, it has more leads",
+        "Neither; buyout decides",
+        "B: about $10.87 per approved vs $12.15",
+        "A: its CPL is lower"
+      ],
+      "answer": 2,
+      "why": "A: 90 × 0.32 = 28.8 approved, $350 ÷ 28.8 = $12.15. B: 70 × 0.46 = 32.2, $350 ÷ 32.2 = $10.87. More than 10% apart and B is under the $14 kill line."
+    },
+    {
+      "q": "Your ad set approval is 28% on 45 final-status leads while your average is 46%. CPL is $3.40. Payout $14, target $10.50. What does the rule card say?",
+      "options": [
+        "Kill: projected approval is too low",
+        "Scale: CPL is low",
+        "Pause: approval is below average",
+        "No kill, no scale: $3.40 ÷ 0.28 = $12.14 is under the $14 kill line but above target"
+      ],
+      "answer": 3,
+      "why": "Judge on actual approvals. $12.14 is above target $10.50 but below the $14 kill line, so keep the budget flat and work on the cause."
+    },
+    {
+      "q": "Approval is 50%, buyout on your traffic is 52%, the network's geo average is 68%. 120 approved orders have final delivery status. Best move?",
+      "options": [
+        "Find the sub IDs with the lowest buyout, check their claims, pause what you cannot fix",
+        "Nothing; you are paid on approval",
+        "Raise budget to improve the average",
+        "Send the network more leads at night"
+      ],
+      "answer": 0,
+      "why": "With enough data and buyout far below average, the network will cut your terms. Low buyout usually traces back to promises in specific creatives."
+    },
+    {
+      "q": "Price $45, product $6, delivery and COD fee $7, call centre $2, payout $15. What is the advertiser's break-even buyout?",
+      "options": [
+        "50%",
+        "67%",
+        "33%",
+        "75%"
+      ],
+      "answer": 1,
+      "why": "Cost per approved = $6 + $7 + $2 + $15 = $30. $30 ÷ $45 = 0.667, about 67%."
+    },
+    {
+      "q": "Invalid-number rate on your form jumped from 6% to 19% after you removed the country code prefill. What do you do first?",
+      "options": [
+        "Blame the call centre",
+        "Raise the bid",
+        "Put the prefill and validation back, then recheck",
+        "Add a captcha everywhere"
+      ],
+      "answer": 2,
+      "why": "The change you made caused the jump. Over 10% invalid points to the form; undo it and validate."
+    },
+    {
+      "q": "A seller offers you '500 COD nutra leads a day at $1 each'. What do you do?",
+      "options": [
+        "Test 50 leads first",
+        "Buy and resend them under your sub IDs",
+        "Use them only for backup",
+        "Refuse: unknown bought leads are almost certainly fake or motivated and would be fraud to send"
+      ],
+      "answer": 3,
+      "why": "Real COD buyers come from real ads to real pages. Sending bought or fake leads is fraud and ends network relationships."
+    },
+    {
+      "q": "Day leads: CPL $5.00, approval 50%. Night leads: CPL $4.00, approval 33%. Target cost per approved $10.50, 40+ leads in each window. What do you do?",
+      "options": [
+        "Run night only",
+        "Run both; CPL is fine",
+        "Turn off ads entirely",
+        "Keep day; night is about $12.12 per approved, above target, so cut or limit it"
+      ],
+      "answer": 3,
+      "why": "Day: $5 ÷ 0.50 = $10.00. Night: $4 ÷ 0.33 = $12.12, above target and close to the $14 kill line."
+    },
+    {
+      "q": "Which prelander change is most likely to raise both approval and buyout honestly?",
+      "options": [
+        "Adding a fake comments section",
+        "Adding a countdown timer",
+        "Showing price, delivery time and realistic expectations before the button",
+        "Hiding the price until the call"
+      ],
+      "answer": 2,
+      "why": "Buyers who know what they are getting and what it costs confirm and pay more often. The others are deceptive."
+    }
+  ]
+}

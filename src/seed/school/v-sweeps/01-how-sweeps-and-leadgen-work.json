@@ -1,0 +1,2381 @@
+{
+  "school": "v-sweeps",
+  "order": 1,
+  "slug": "how-sweeps-and-leadgen-work",
+  "title": "How sweeps and lead gen work",
+  "summary": "Who pays for a lead and why, how SOI, DOI, ZIP submits and CPI differ, and how scrubs, holds and EPC decide what a lead is really worth. You finish with a vetted offer and a written CPL plan with kill and scale rules.",
+  "lessons": [
+    {
+      "slug": "who-pays-for-a-lead",
+      "title": "Who pays for a sweeps lead, and why",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can name every player in a sweeps or lead-gen deal and what each one wants.",
+        "By the end you can explain what the advertiser is really buying when it pays for a lead.",
+        "By the end you can trace the money from the advertiser's list to your ad account."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why this matters",
+          "p": "Sweeps and lead-gen payouts are small, often one or two dollars. You only make money with volume, and volume only lasts if every lead is a real person who knowingly said yes. Get the model wrong and you lose twice: once on ad spend, again when the network reverses leads it will not pay for.",
+          "d": {
+            "b": "A lead is a person, not a number",
+            "s": "Small payouts, big volume, zero room for fake data."
+          },
+          "say": "Here's why this matters. Sweeps and lead-gen payouts are small, often one or two dollars. So you only make money with volume, and volume only lasts if every lead is a real person who knowingly said yes. Get the model wrong and you lose twice: once on ad spend, and again when the network reverses leads it won't pay for. Remember the line on screen: a lead is a person, not a number."
+        },
+        {
+          "v": "map",
+          "h": "The money chain at a glance",
+          "p": "Follow one entry from ad to payout. The person sees your ad, reads your page, enters a prize draw on the advertiser's form and agrees to hear from them. The network tracks it, the advertiser checks it, and only then are you paid.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Your ad",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Prelander",
+                "kind": "page"
+              },
+              {
+                "id": "user",
+                "label": "Entrant",
+                "kind": "person"
+              },
+              {
+                "id": "form",
+                "label": "Sweeps entry form",
+                "kind": "offer"
+              },
+              {
+                "id": "crm",
+                "label": "Advertiser list",
+                "kind": "data"
+              },
+              {
+                "id": "net",
+                "label": "Network",
+                "kind": "money"
+              },
+              {
+                "id": "pb",
+                "label": "Postback",
+                "kind": "data"
+              },
+              {
+                "id": "you",
+                "label": "You",
+                "kind": "money"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "lp",
+                "click"
+              ],
+              [
+                "lp",
+                "user",
+                "reads"
+              ],
+              [
+                "user",
+                "form",
+                "enters"
+              ],
+              [
+                "form",
+                "crm",
+                "consented lead"
+              ],
+              [
+                "crm",
+                "net",
+                "validated"
+              ],
+              [
+                "net",
+                "pb",
+                "conversion"
+              ],
+              [
+                "pb",
+                "you",
+                "payout"
+              ]
+            ]
+          },
+          "say": "Follow one entry along this map, from ad to payout. Watch the dots. The person sees your ad, reads your prelander, and enters the prize draw on the advertiser's form, agreeing to hear from them. That consented lead goes onto the advertiser's list. The advertiser checks it, the network records the conversion, a postback is sent, and only then are you paid. Every link in that chain has to hold."
+        },
+        {
+          "v": "cards",
+          "h": "The five players",
+          "p": "Every deal has the same cast. Knowing what each one wants tells you which leads get paid and which get rejected. The advertiser wants customers, the network wants clean volume, the platform wants happy users and the entrant wants a fair chance at a real prize.",
+          "d": [
+            "Sponsor or advertiser|runs the draw, owns the list, pays for leads",
+            "Network|connects you to offers, tracks, pays you",
+            "Affiliate (you)|buys traffic and sends entrants",
+            "Traffic source|Meta, TikTok, native, search",
+            "Entrant|a real person who enters and gives consent"
+          ],
+          "say": "Every deal has the same five players, shown on the cards. The sponsor or advertiser runs the draw, owns the list and pays for leads. The network connects you to offers, tracks and pays you. You, the affiliate, buy traffic and send entrants. The traffic source is Meta, TikTok, native or search. And the entrant is a real person who enters and gives consent. Knowing what each one wants tells you which leads get paid, and which get rejected."
+        },
+        {
+          "v": "big",
+          "h": "What the advertiser is buying",
+          "p": "The advertiser does not care about the prize. The prize is the cost of getting a real person to share contact details and agree to marketing. What it buys is consented attention: someone who can be emailed, texted or called, legally, about products they may want.",
+          "more": "This is why honesty is not a nice extra in sweeps. A person who thought they had already won, or who did not notice the marketing consent, unsubscribes, marks emails as spam or complains. That lead costs the advertiser money instead of making it, so the network scrubs it and may cut your payout or close your account.",
+          "d": {
+            "b": "A chance to win, in exchange for permission",
+            "s": "If the person did not understand the trade, the lead is worthless."
+          },
+          "say": "Here's the surprising part. The advertiser doesn't care about the prize. The prize is just the cost of getting a real person to share contact details and agree to marketing. What it's buying is consented attention: someone it can legally email, text or call. So if the person didn't understand the trade, maybe they thought they'd already won, the lead is worthless. They unsubscribe or complain, the network scrubs the lead, and your payout or account can suffer."
+        },
+        {
+          "v": "cards",
+          "h": "The common offer types",
+          "p": "Lead offers pay at a defined moment called the conversion point. The deeper the point, the higher the payout and the fewer people reach it. You will compare these properly in the next two lessons. For now, learn the names.",
+          "d": [
+            "SOI|single opt-in: one form submitted",
+            "DOI|double opt-in: entrant confirms by email or SMS",
+            "ZIP or email submit|pays on the first field only",
+            "CPI|cost per install of an app",
+            "Long form or co-reg|longer survey, several advertisers",
+            "CC submit|card entered; high risk, see Module 2"
+          ],
+          "say": "Lead offers pay at a defined moment called the conversion point. The deeper the point, the higher the payout, and the fewer people reach it. For now, just learn the names on the cards. S O I, single opt-in, one form submitted. D O I, double opt-in, where the entrant confirms by email or S M S. ZIP or email submit, paying on the first field only. C P I, cost per install of an app. Long form or co-reg, a longer survey. And C C submit, where a card is entered, which is high risk."
+        },
+        {
+          "v": "table",
+          "h": "Example payouts by conversion point",
+          "p": "Example figures only, not benchmarks. Real payouts vary a lot by geo, network, traffic source and season. Use the shape: payouts rise as the user does more, and so does the drop-off before they get there.",
+          "more": "Rough guide, varies by geo and vertical. Tier 1 English-speaking geos such as the US, UK, Canada and Australia have historically had the most sweeps offers. Fewer sweeps offers exist for many African geos; check your network's current list rather than assuming.",
+          "d": {
+            "cols": [
+              "Conversion point",
+              "Pays when",
+              "Example payout"
+            ],
+            "rows": [
+              [
+                "ZIP submit",
+                "ZIP code entered",
+                "$0.45"
+              ],
+              [
+                "SOI",
+                "Form + consent sent",
+                "$1.20"
+              ],
+              [
+                "DOI",
+                "Entry confirmed",
+                "$2.50"
+              ],
+              [
+                "CPI",
+                "App installed and opened",
+                "$1.80"
+              ],
+              [
+                "Long form",
+                "Survey completed",
+                "$6.00"
+              ]
+            ]
+          },
+          "say": "Here are example payouts by conversion point. These are example figures only, not benchmarks. A ZIP submit at forty five cents. S O I at one dollar twenty. D O I at two fifty. C P I at one eighty. And a long form at six dollars. Real payouts vary a lot by geo, network, source and season. Use the shape: payouts rise as the user does more, and so does the drop-off. Also, many African geos have fewer sweeps offers, so check your network's current list."
+        },
+        {
+          "v": "eq",
+          "h": "Why an advertiser can pay $2.50",
+          "p": "The advertiser earns from the person over months: product sales, partner offers, newsletters. If one subscriber earns it $0.60 a month for 8 months, that subscriber is worth $4.80 to it. That value funds the prize, the network and you.",
+          "more": "Example only. Notice what drives the $4.80: the person must open emails, stay subscribed and sometimes buy. A fake or confused entrant earns nothing and may cost money in complaints. So the advertiser pays the network only for leads that pass its checks, and the network pays you only for those.",
+          "d": [
+            "$0.60 a month",
+            "×",
+            "8 months",
+            "=",
+            "$4.80 lead value"
+          ],
+          "say": "So why can an advertiser pay two dollars fifty? Because it earns from the person over months, through product sales, partner offers and newsletters. Follow the sum. Example: if one subscriber earns it sixty cents a month for eight months, that subscriber is worth four dollars eighty. That value funds the prize, the network and you. But only if the person opens emails and stays subscribed. A fake or confused entrant earns nothing."
+        },
+        {
+          "v": "bars",
+          "h": "Who gets what from one DOI",
+          "p": "Example: the advertiser values a DOI subscriber at $4.80. It pays the network $3.00 per DOI and keeps the rest as margin and risk cover. The network pays you $2.50 and keeps $0.50 for tracking, compliance and payment risk. Your ad cost must sit under your $2.50.",
+          "d": [
+            [
+              "Advertiser lead value",
+              100,
+              "$4.80"
+            ],
+            [
+              "Advertiser pays network",
+              63,
+              "$3.00"
+            ],
+            [
+              "Network pays you",
+              52,
+              "$2.50"
+            ],
+            [
+              "Your max ad cost (break-even)",
+              52,
+              "$2.50"
+            ]
+          ],
+          "say": "Now see who gets what from one D O I. Example: the advertiser values a subscriber at four dollars eighty. It pays the network three dollars per D O I, and keeps the rest as margin and risk cover. The network pays you two dollars fifty, and keeps fifty cents for tracking, compliance and payment risk. Look at the last bar. Your ad cost must sit under your two dollars fifty, because that's your break-even."
+        },
+        {
+          "v": "phone",
+          "h": "What an honest entry page looks like",
+          "p": "This is the advertiser's entry page on a phone. The sponsor is named, the prize is specific, the draw date is clear, it is free, and the rules are one tap away. If a page you are asked to promote is missing these, treat that as a warning.",
+          "d": {
+            "app": "browser",
+            "url": "monthly-draw.example/enter",
+            "page": {
+              "h": "Enter the June $500 gift card draw",
+              "p": "Run by Example Rewards Ltd. Free to enter, US residents 18+. One winner drawn on 30 June. You agree to receive our emails; unsubscribe any time. Official rules and odds below.",
+              "cta": "Enter the draw"
+            }
+          },
+          "say": "This is the advertiser's entry page on a phone, and it's what honest looks like. The sponsor is named, Example Rewards Limited. The prize is specific, a five hundred dollar gift card. The draw date is clear. It's free, for U S residents eighteen plus. It says you agree to their emails and can unsubscribe any time. And the rules are one tap away. If a page you're asked to promote is missing these, treat that as a warning."
+        },
+        {
+          "v": "check",
+          "h": "Walkthrough: map one offer's money chain",
+          "p": "Before you spend anything, write these five answers for the offer you are looking at. Use the offer page, the entry page and the official rules. Starting rule: if you cannot answer all five in about ten minutes, skip the offer.",
+          "d": [
+            "Who is the sponsor, by legal name?",
+            "What exactly is the conversion point?",
+            "What does the entrant agree to, in plain words?",
+            "Who pays you, and after what checks?",
+            "When are you paid (payment terms)?"
+          ],
+          "say": "Before you spend anything, map one offer's money chain by writing these five answers. Who's the sponsor, by legal name? What exactly is the conversion point? What does the entrant agree to, in plain words? Who pays you, and after what checks? And when are you paid? Use the offer page, the entry page and the official rules. Here's the starting rule: if you can't answer all five in about ten minutes, skip the offer."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and fixes",
+          "p": "Most beginners lose money in sweeps for the same few reasons, and none of them are about ad skill. They are about misunderstanding what is being bought. Check yourself against the left column.",
+          "d": {
+            "a": {
+              "title": "Common mistakes",
+              "items": [
+                "Picking the highest payout",
+                "Treating a lead like a click",
+                "Ignoring what happens after entry",
+                "Assuming every geo has offers"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Compare value per click (EPC)",
+                "Count only accepted leads",
+                "Read the rules and the consent text",
+                "Check the network's live geo list"
+              ]
+            }
+          },
+          "say": "Most beginners lose money in sweeps for the same few reasons, and none are about ad skill. Compare the columns. Picking the highest payout, when you should compare E P C, earnings per click. Treating a lead like a click, instead of counting only accepted leads. Ignoring what happens after entry, instead of reading the rules and the consent text. And assuming every geo has offers, instead of checking the network's live geo list."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: prize promotions are regulated",
+          "p": "Prize draws and marketing consent are covered by consumer protection, gambling or lottery, and data protection laws in most countries, and by each ad platform's policies. Module 2 covers this properly.",
+          "d": {
+            "kind": "warn",
+            "text": "Check the local law of every geo you target and the platform's current policy before running. Never imply someone has already won."
+          },
+          "say": "A compliance point before we go further. Prize draws and marketing consent are covered by consumer protection, gambling or lottery, and data protection laws in most countries, and by each ad platform's policies. Module two covers this properly. For now, the warning on screen: check the local law of every geo you target and the platform's current policy before running. And never imply someone has already won."
+        },
+        {
+          "v": "quote",
+          "h": "From Dchessking",
+          "p": "A short note from the founder on how to think about this vertical before you touch a budget. Keep it in mind every time a cheaper but shadier lead looks tempting.",
+          "d": "In lead gen you are not selling a prize. You are asking for permission. Ask clearly and the advertiser keeps paying you next month too.",
+          "by": "dchessking",
+          "say": "Here's a short note from Dchessking on how to think about this vertical before you touch a budget. Keep it in mind whenever a cheaper but shadier lead looks tempting: In lead gen you are not selling a prize. You are asking for permission. Ask clearly and the advertiser keeps paying you next month too."
+        }
+      ],
+      "takeaways": [
+        "The advertiser buys consented attention from a real person; the prize is only the cost of asking.",
+        "Payouts rise with the depth of the conversion point, and drop-off rises with them.",
+        "You are paid for leads that pass the advertiser's checks, not for every form you send."
+      ],
+      "action": "Open one sweeps or lead offer in any network you can access. Write the five money-chain answers: sponsor, conversion point, what the entrant agrees to, who pays after what checks, and payment terms.",
+      "glossary": [
+        {
+          "term": "Lead",
+          "def": "A real person's contact details, given with consent to be contacted about something."
+        },
+        {
+          "term": "Sponsor",
+          "def": "The company that runs the prize draw and is legally responsible for it."
+        },
+        {
+          "term": "Conversion point",
+          "def": "The exact action that triggers your payout, such as an SOI form or a DOI confirmation."
+        },
+        {
+          "term": "Lead value",
+          "def": "What one lead is worth to the advertiser over time, which sets how much it can pay."
+        },
+        {
+          "term": "Lead gen",
+          "def": "Lead generation: the business of collecting consented contacts for advertisers."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is a sweeps advertiser actually paying for?",
+          "options": [
+            "The click on your ad",
+            "A real person's consented contact details and attention",
+            "The prize itself",
+            "Impressions on its brand"
+          ],
+          "answer": 1,
+          "why": "The prize is the cost of asking. The advertiser pays for a real person who agreed to hear from it."
+        },
+        {
+          "q": "Example: a subscriber earns the advertiser $0.50 a month for 10 months. What is the lead value?",
+          "options": [
+            "$0.50",
+            "$2.50",
+            "$10.00",
+            "$5.00"
+          ],
+          "answer": 3,
+          "why": "$0.50 × 10 = $5.00. That value funds the prize, the network and the affiliate payout."
+        },
+        {
+          "q": "Which is the correct order of payment?",
+          "options": [
+            "You pay the network, the network pays the advertiser",
+            "The advertiser pays the network after checks, the network pays you",
+            "The traffic source pays you per lead",
+            "The entrant pays a small fee that is shared"
+          ],
+          "answer": 1,
+          "why": "Money flows from the advertiser through the network to you, and only for leads that pass validation."
+        },
+        {
+          "q": "An offer page does not name the sponsor and the entry page has no rules link. What does the starting rule say?",
+          "options": [
+            "Run it with a small budget",
+            "Ask for a higher payout",
+            "Skip the offer",
+            "Write your own rules"
+          ],
+          "answer": 2,
+          "why": "If you cannot map the sponsor, conversion point and consent in about ten minutes, skip it."
+        },
+        {
+          "q": "Which conversion point usually pays the least?",
+          "options": [
+            "ZIP submit",
+            "DOI",
+            "Long form survey",
+            "CPI in a Tier 1 geo"
+          ],
+          "answer": 0,
+          "why": "A ZIP submit is the shallowest step, so it pays least, though more people complete it."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn who pays for a sweeps lead and why. You'll meet every player in the deal, see what the advertiser is really buying, and trace the money from the advertiser's list to your ad account.",
+      "say_outro": "So, the advertiser is buying consented attention, the prize is just the cost of asking, and you're paid only for leads that pass its checks. Your task: open one sweeps or lead offer and write the five money-chain answers: sponsor, conversion point, what the entrant agrees to, who pays after what checks, and payment terms. Now take the quiz."
+    },
+    {
+      "slug": "soi-vs-doi-economics",
+      "title": "SOI vs DOI: the real economics",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can explain the difference between single and double opt-in and why DOI pays more.",
+        "By the end you can work out value per raw lead and EPC for an SOI and a DOI offer.",
+        "By the end you can choose between SOI and DOI with written starting rules."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why this matters",
+          "p": "A DOI offer paying $2.50 looks twice as good as an SOI paying $1.20. It may not be. Half the people may never confirm. If you compare headline payouts you will pick wrong about as often as you pick right, and every wrong pick burns a test budget.",
+          "d": {
+            "b": "Compare value per click, not payout per lead",
+            "s": "The payout is the price. EPC is what you actually earn."
+          },
+          "say": "Here's why this matters. A D O I, double opt-in, offer paying two dollars fifty looks twice as good as an S O I, single opt-in, paying one twenty. But it may not be, because half the people may never confirm. If you compare headline payouts, you'll pick wrong about as often as you pick right, and every wrong pick burns a test budget. The payout is the price. E P C, earnings per click, is what you actually earn."
+        },
+        {
+          "v": "compare",
+          "h": "SOI and DOI side by side",
+          "p": "SOI pays when the form is submitted. DOI pays only after the person confirms, usually by clicking a link in an email or replying to an SMS. The extra step proves the contact is real and the person meant it, so the advertiser pays more.",
+          "d": {
+            "a": {
+              "title": "SOI (single opt-in)",
+              "items": [
+                "Pays on form submit",
+                "Lower payout",
+                "More leads per click",
+                "Higher scrub risk"
+              ]
+            },
+            "b": {
+              "title": "DOI (double opt-in)",
+              "items": [
+                "Pays after confirmation",
+                "Higher payout",
+                "Fewer paid leads",
+                "Lower scrub risk"
+              ]
+            }
+          },
+          "say": "Compare the two columns. S O I pays when the form is submitted, with a lower payout, more leads per click, and a higher scrub risk. D O I pays only after the person confirms, usually by tapping a link in an email or replying to an S M S. So it has a higher payout, fewer paid leads, and lower scrub risk. That extra step proves the contact is real and the person meant it, which is why the advertiser pays more."
+        },
+        {
+          "v": "phone",
+          "h": "What the DOI step looks like",
+          "p": "After entering, the person gets a message like this. Only a tap on the confirm button turns an SOI into a paid DOI. A clear, honest confirmation message gets more taps than a vague or pushy one, and it keeps complaints down.",
+          "d": {
+            "app": "chat",
+            "title": "Example Rewards",
+            "subtitle": "email",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Hi Ada, please confirm your entry into the June $500 gift card draw. Confirming also confirms you are happy to get our weekly deals email."
+              },
+              {
+                "from": "them",
+                "text": "Didn't enter? Ignore this and you won't hear from us.",
+                "buttons": [
+                  "Confirm my entry"
+                ]
+              },
+              {
+                "from": "me",
+                "text": "Confirm my entry"
+              }
+            ]
+          },
+          "say": "Here's what the D O I step looks like. After entering, Ada gets a message like this. It names the draw, and says plainly that confirming also means she's happy to get the weekly deals email. If she didn't enter, she can ignore it. Only a tap on Confirm my entry turns an S O I into a paid D O I. A clear, honest message like this gets more taps than a vague or pushy one, and it keeps complaints down."
+        },
+        {
+          "v": "funnel",
+          "h": "Example: one funnel, two offers",
+          "p": "Example: the same 1,000 clicks and the same 18% lander-to-form rate. On the SOI offer you are paid for the 153 accepted forms. On the DOI offer only 81 confirm and 79 pass checks.",
+          "d": [
+            [
+              "Clicks",
+              1000
+            ],
+            [
+              "SOI forms",
+              180
+            ],
+            [
+              "SOI accepted (85%)",
+              153
+            ],
+            [
+              "DOI confirmed (45%)",
+              81
+            ],
+            [
+              "DOI accepted (97%)",
+              79
+            ]
+          ],
+          "say": "Here's one funnel and two offers. Example: the same one thousand clicks, and the same eighteen percent lander-to-form rate, giving one hundred and eighty forms. On the S O I offer, eighty five percent are accepted, so you're paid for one hundred and fifty three. On the D O I offer, only eighty one confirm, and seventy nine pass checks. Watch how each filter narrows the funnel."
+        },
+        {
+          "v": "eq",
+          "h": "Value per raw lead: SOI",
+          "p": "Your ad platform and tracker count raw leads: forms sent. The network pays only accepted ones. Multiply the payout by the share that is accepted to get what each raw lead is really worth to you.",
+          "d": [
+            "$1.20 payout",
+            "×",
+            "85% accepted",
+            "=",
+            "$1.02 per raw lead"
+          ],
+          "say": "Your ad platform and tracker count raw leads, meaning forms sent. But the network pays only accepted ones. So multiply the payout by the share that's accepted, to get what each raw lead is really worth. Example: one dollar twenty, times eighty five percent accepted, is one dollar and two cents per raw lead."
+        },
+        {
+          "v": "eq",
+          "h": "Value per raw lead: DOI",
+          "p": "For DOI, two filters apply: the confirm rate and the accept rate. Example: $2.50 × 45% × 97% = $1.09 per raw lead. The DOI wins here, but only by about seven cents, not by the $1.30 the payouts suggest.",
+          "more": "Exact figure: 2.50 × 0.45 × 0.97 = 1.09125. If the confirm rate drops to 40%, the DOI value falls to $0.97 and the SOI wins. That is why you should never decide between SOI and DOI on payout alone. The confirm rate depends on your traffic, your prelander honesty and the advertiser's email or SMS delivery, so measure it.",
+          "d": [
+            "$2.50",
+            "×",
+            "45% confirm",
+            "×",
+            "97% accepted",
+            "=",
+            "$1.09"
+          ],
+          "say": "For D O I, two filters apply: the confirm rate, and the accept rate. Example: two dollars fifty, times forty five percent confirming, times ninety seven percent accepted, is about one dollar nine per raw lead. So the D O I wins here, but only by about seven cents, not by the one dollar thirty the payouts suggest. And if the confirm rate drops to forty percent, the S O I wins. So measure the confirm rate yourself."
+        },
+        {
+          "v": "eq",
+          "h": "EPC: earnings per click",
+          "p": "EPC is earnings divided by clicks. It is the one number that lets you compare any two offers, any conversion points and any funnels on equal terms, because it already includes every drop-off and every rejection.",
+          "more": "Example, SOI: 153 accepted × $1.20 = $183.60. $183.60 ÷ 1,000 clicks = $0.18 EPC. DOI: 79 accepted × $2.50 = $197.50. $197.50 ÷ 1,000 = $0.20 EPC (rounded from $0.1975). If your cost per click is $0.15, both make money and the DOI makes more.",
+          "d": [
+            "Accepted earnings",
+            "÷",
+            "Clicks",
+            "=",
+            "EPC"
+          ],
+          "say": "E P C is earnings divided by clicks, using accepted earnings. It's the one number that lets you compare any two offers, any conversion points and any funnels on equal terms, because it already includes every drop-off and every rejection. In our example, the S O I earns about eighteen cents per click, and the D O I about twenty cents."
+        },
+        {
+          "v": "table",
+          "h": "The two offers compared",
+          "p": "Example figures with the same traffic. The bottom line, profit per 1,000 clicks at a $0.15 cost per click, is what matters. Spend is $150 in both cases.",
+          "d": {
+            "cols": [
+              "",
+              "SOI",
+              "DOI"
+            ],
+            "rows": [
+              [
+                "Payout",
+                "$1.20",
+                "$2.50"
+              ],
+              [
+                "Confirm rate",
+                "n/a",
+                "45%"
+              ],
+              [
+                "Accepted",
+                "85%",
+                "97%"
+              ],
+              [
+                "Value per raw lead",
+                "$1.02",
+                "$1.09"
+              ],
+              [
+                "EPC",
+                "$0.18",
+                "$0.20"
+              ],
+              [
+                "Profit per 1,000 clicks",
+                "$33.60",
+                "$47.50"
+              ]
+            ]
+          },
+          "say": "Here are the two offers compared, with the same traffic. Payout, one twenty against two fifty. Confirm rate, not applicable against forty five percent. Accepted, eighty five against ninety seven percent. Value per raw lead, one dollar two against one dollar nine. E P C, eighteen cents against twenty. Now look at the bottom line, profit per thousand clicks at a fifteen cent cost per click, with spend of one hundred and fifty dollars in both: thirty three sixty against forty seven fifty. That's what matters."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: max cost per raw lead on DOI",
+          "p": "Try it. The DOI pays $2.50, 45% of raw leads confirm, margin 25%. Max cost per raw lead? Ignore scrubs here.",
+          "more": "$2.50 × 45% = $1.125 per raw lead. × 75% = $0.84. If you then add the 97% accept rate, the target drops to about $0.82.",
+          "d": {
+            "kind": "breakeven",
+            "task": "DOI pays $2.50, 45% confirm, 25% margin. Max cost per raw lead?",
+            "preset": {
+              "payout": 2.5,
+              "cr_pct": 45,
+              "margin_pct": 25
+            },
+            "answer": {
+              "field": "max_cpl",
+              "value": 0.84,
+              "tolerance": 0.05
+            },
+            "labels": {
+              "unit": "confirmed lead (DOI)",
+              "rate": "Raw leads that confirm",
+              "answer": "Your answer: max cost per raw lead"
+            }
+          },
+          "say": "Lab time. The D O I pays two dollars fifty, forty five percent of raw leads confirm, and you want a twenty five percent margin. Work out the most you can pay per raw lead, and ignore scrubs for this one. Pause and try it, then check your answer."
+        },
+        {
+          "v": "curve",
+          "h": "Confirmations arrive late",
+          "p": "Example: share of raw leads confirmed, by day. Some people confirm in minutes, others the next day after the email lands. If you judge the confirm rate on day one, you may kill a good offer. Notice the slower line still ends near 41%.",
+          "d": {
+            "a": [
+              30,
+              38,
+              41,
+              43,
+              44,
+              45,
+              45
+            ],
+            "la": "Fast email delivery",
+            "b": [
+              12,
+              22,
+              30,
+              35,
+              38,
+              40,
+              41
+            ],
+            "lb": "Slow delivery",
+            "x": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7"
+            ]
+          },
+          "say": "Confirmations arrive late. This chart shows an example share of raw leads confirmed, by day, under fast and slow email delivery. Some people confirm in minutes, others the next day after the email lands. On day one, the slow line is only at twelve percent. But notice it still ends near forty one percent. So if you judge the confirm rate on day one, you may kill a good offer."
+        },
+        {
+          "v": "flow",
+          "h": "Walkthrough: compare SOI and DOI in ten minutes",
+          "p": "Use these steps for any pair of offers. Write each number down. If the network cannot give you a typical confirm or accept rate, run both with the same traffic and measure them yourself.",
+          "d": [
+            "Write both payouts",
+            "Ask the manager for confirm and accept rates",
+            "Work out value per raw lead",
+            "Multiply by your form rate for EPC",
+            "Pick the higher EPC"
+          ],
+          "say": "Here's how to compare S O I and D O I in about ten minutes. Follow the steps. Write both payouts. Ask the manager for confirm and accept rates. Work out value per raw lead. Multiply by your form rate to get E P C. And pick the higher E P C. Write each number down. If the network can't give you typical rates, run both with the same traffic and measure them yourself."
+        },
+        {
+          "v": "cards",
+          "h": "Mistakes with SOI and DOI",
+          "p": "Each of these looks reasonable on the day and costs money a week later. The fix for almost all of them is to wait for complete data and compare in EPC.",
+          "d": [
+            "Comparing payouts|compare value per raw lead and EPC",
+            "Judging DOI on day one|wait at least 72 hours",
+            "Ignoring scrubs on SOI|use accepted leads only",
+            "Pushing confirms with tricks|kills quality and breaks rules"
+          ],
+          "say": "Each of these mistakes looks reasonable on the day and costs money a week later. Comparing payouts, instead of value per raw lead and E P C. Judging D O I on day one, when you should wait at least seventy two hours. Ignoring scrubs on S O I, instead of using accepted leads only. And pushing confirms with tricks, which kills quality and breaks rules. The fix for almost all of them is to wait for complete data and compare in E P C."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: the confirm step must be honest",
+          "p": "The confirmation message is part of the consent the advertiser is paying for. It must say plainly what the person is confirming, and it must not promise or imply a prize.",
+          "d": {
+            "kind": "warn",
+            "text": "Never push confirms with 'Confirm to claim your prize' or by paying people to confirm unless the offer explicitly allows it. That is misleading and breaks most offer terms."
+          },
+          "say": "The confirm step must be honest. The confirmation message is part of the consent the advertiser is paying for. It must say plainly what the person is confirming, and it must not promise or imply a prize. The warning on screen is clear: never push confirms with lines like confirm to claim your prize, or by paying people to confirm unless the offer explicitly allows it. That's misleading and breaks most offer terms."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules: SOI or DOI",
+          "p": "Starting rules to adapt once you have your own data. They stop you deciding on a hunch or on one lucky day. Write them on your plan before launch.",
+          "d": [
+            "Choose DOI only if its value per raw lead beats SOI by 5% or more",
+            "Judge confirm rate only after 72 hours and 100+ raw leads",
+            "Confirm rate under 30% on 100+ raw leads: pause and fix the flow",
+            "Switch offers only on EPC measured over 500+ clicks each"
+          ],
+          "say": "Here are your starting decision rules for S O I or D O I. Write them on your plan before launch. Choose D O I only if its value per raw lead beats S O I by five percent or more. Judge confirm rate only after seventy two hours and one hundred plus raw leads. If confirm rate is under thirty percent on one hundred plus raw leads, pause and fix the flow. And switch offers only on E P C measured over five hundred plus clicks each. Adapt them once you have your own data."
+        }
+      ],
+      "takeaways": [
+        "Value per raw lead = payout × accept rate (× confirm rate for DOI).",
+        "EPC = accepted earnings ÷ clicks, and it is the fairest way to compare offers.",
+        "DOI confirmations arrive over days; judge the rate after 72 hours and 100+ raw leads."
+      ],
+      "action": "Take one SOI and one DOI offer in the same geo. Ask the network for typical confirm and accept rates, then work out value per raw lead and EPC for both at an 18% form rate. Write which one you would test first and why.",
+      "glossary": [
+        {
+          "term": "SOI",
+          "def": "Single opt-in. The lead counts when the form is submitted."
+        },
+        {
+          "term": "DOI",
+          "def": "Double opt-in. The lead counts only after the person confirms by email or SMS."
+        },
+        {
+          "term": "Confirm rate",
+          "def": "The share of SOI leads who complete the DOI confirmation."
+        },
+        {
+          "term": "Value per raw lead",
+          "def": "What one submitted form is really worth after confirms and rejections."
+        },
+        {
+          "term": "EPC",
+          "def": "Earnings per click. Accepted earnings divided by clicks."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Example: DOI pays $3.00, 40% confirm, 100% accepted. What is the value per raw lead?",
+          "options": [
+            "$3.00",
+            "$1.20",
+            "$1.80",
+            "$0.40"
+          ],
+          "answer": 1,
+          "why": "$3.00 × 40% = $1.20. The other 60% of raw leads earn nothing."
+        },
+        {
+          "q": "You earned $240 in accepted leads from 1,500 clicks. What is the EPC?",
+          "options": [
+            "$0.16",
+            "$1.60",
+            "$0.24",
+            "$6.25"
+          ],
+          "answer": 0,
+          "why": "$240 ÷ 1,500 = $0.16 per click."
+        },
+        {
+          "q": "A DOI offer shows a 15% confirm rate four hours after launch. What should you do?",
+          "options": [
+            "Kill it now",
+            "Switch to SOI immediately",
+            "Ask for a higher payout",
+            "Wait until 72 hours and 100+ raw leads before judging"
+          ],
+          "answer": 3,
+          "why": "Confirmations arrive over days. Early confirm rates understate the final rate."
+        },
+        {
+          "q": "SOI value per raw lead is $1.02. DOI is $1.05. Under the starting rule, which do you choose?",
+          "options": [
+            "DOI, it pays more per lead",
+            "SOI, because DOI does not beat it by 5% or more",
+            "Both at equal budget forever",
+            "Neither"
+          ],
+          "answer": 1,
+          "why": "$1.05 is only about 3% above $1.02. The rule asks for at least 5% before taking on DOI's extra delay."
+        },
+        {
+          "q": "Which confirmation message is acceptable?",
+          "options": [
+            "Confirm to claim your prize",
+            "You are a winner, tap to confirm",
+            "Please confirm your entry and that you agree to our weekly email",
+            "Confirm now or lose your reward"
+          ],
+          "answer": 2,
+          "why": "It says exactly what the person confirms. The others imply a win or create false urgency."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn the real economics of S O I and D O I, single and double opt-in. A higher payout doesn't always mean higher earnings, so you'll learn to compare offers by value per raw lead and E P C instead.",
+      "say_outro": "So, compare offers by value per raw lead and E P C, not by payout, and give confirmations time to arrive. Your task: take one S O I and one D O I offer in the same geo, ask the network for typical confirm and accept rates, work out value per raw lead and E P C for both at an eighteen percent form rate, and write which you'd test first and why. Now take the quiz."
+    },
+    {
+      "slug": "conversion-points",
+      "title": "ZIP submits, email submits, CPI and long forms",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can describe each common conversion point and what triggers the payout.",
+        "By the end you can compare conversion points by EPC using a multi-step funnel.",
+        "By the end you can work out the click-to-install rate a CPI offer needs to break even."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why this matters",
+          "p": "The conversion point decides three things at once: how much you are paid, how many people get there and how good those people are. Many affiliates pick the shallowest point because conversions look cheap, then find out the network scrubs or caps it.",
+          "d": {
+            "b": "Where you get paid shapes everything",
+            "s": "Payout, volume and quality move together."
+          },
+          "say": "Here's why this matters. The conversion point, where you get paid, decides three things at once: how much you're paid, how many people get there, and how good those people are. Payout, volume and quality move together. Many affiliates pick the shallowest point because conversions look cheap, then find out the network scrubs or caps it."
+        },
+        {
+          "v": "flow",
+          "h": "The conversion ladder",
+          "p": "Most sweeps flows are a series of small steps. Each step can be a conversion point on a different offer. The further down the ladder, the more the person has committed and the higher the payout.",
+          "d": [
+            "ZIP or email",
+            "Full SOI form",
+            "DOI confirm",
+            "Survey or long form",
+            "Purchase or trial"
+          ],
+          "say": "Most sweeps flows are a series of small steps, like a ladder. Follow it on screen. ZIP or email. Full S O I, single opt-in, form. D O I, double opt-in, confirm. Survey or long form. And purchase or trial. Each step can be a conversion point on a different offer. The further down the ladder, the more the person has committed, and the higher the payout."
+        },
+        {
+          "v": "phone",
+          "h": "A ZIP-first entry page",
+          "p": "ZIP-first flows ask for one easy field to start. That is fine when it is honest about what comes next. This page says it is step one, who can enter and where the rules are. It does not pretend the person qualified for anything.",
+          "d": {
+            "app": "browser",
+            "url": "monthly-draw.example/start",
+            "page": {
+              "h": "Start your entry: step 1 of 3",
+              "p": "Enter your ZIP code to begin. Open to US residents 18+. Free, no purchase necessary. Official rules below.",
+              "cta": "Continue"
+            }
+          },
+          "say": "Here's a ZIP-first entry page. These flows ask for one easy field to start, and that's fine when it's honest about what comes next. Look at what this page says. It's step one of three. It's open to U S residents eighteen plus. It's free, with no purchase necessary, and the official rules are below. And notice what it doesn't do: it doesn't pretend the person has qualified for anything."
+        },
+        {
+          "v": "funnel",
+          "h": "Example: a three-step funnel",
+          "p": "Example figures. 1,000 clicks reach the entry page. 42% type a ZIP, half of those give an email, and fewer finish the full form and confirm. Each step is a payout point on some offers.",
+          "d": [
+            [
+              "Clicks",
+              1000
+            ],
+            [
+              "ZIP submits",
+              420
+            ],
+            [
+              "Email submits",
+              210
+            ],
+            [
+              "Full SOI forms",
+              150
+            ],
+            [
+              "DOI confirms",
+              68
+            ]
+          ],
+          "say": "Here's an example three-step funnel. One thousand clicks reach the entry page. Four hundred and twenty type a ZIP, that's forty two percent. Half of those, two hundred and ten, give an email. One hundred and fifty finish the full form, and sixty eight confirm. Each of these steps is a payout point on some offers, so which one should you be paid on?"
+        },
+        {
+          "v": "eq",
+          "h": "EPC at any conversion point",
+          "p": "To compare points fairly, use EPC again: conversions at that point, times the payout, divided by clicks. This works for one funnel paid at different points, or for completely different offers.",
+          "d": [
+            "Conversions",
+            "×",
+            "Payout",
+            "÷",
+            "Clicks",
+            "=",
+            "EPC"
+          ],
+          "say": "To compare points fairly, use E P C, earnings per click, again. Follow the formula: conversions at that point, times the payout, divided by clicks. It works for one funnel paid at different points, or for completely different offers."
+        },
+        {
+          "v": "bars",
+          "h": "Example: which point earns most",
+          "p": "Same 1,000 clicks. ZIP at $0.45: 420 × $0.45 = $189, EPC $0.19. Email submit at $1.20: 210 × $1.20 = $252, EPC $0.25. DOI at $2.50: 68 × $2.50 = $170, EPC $0.17. Here the middle point wins.",
+          "more": "Example only, before scrubs. Shallow points usually have higher scrub rates, so the ZIP figure may fall further once the network removes duplicates and junk. Deep points have fewer rejections but more drop-off. You only learn which one wins for your traffic by measuring accepted EPC.",
+          "d": [
+            [
+              "ZIP submit",
+              75,
+              "$0.19 EPC"
+            ],
+            [
+              "Email submit (SOI)",
+              100,
+              "$0.25 EPC"
+            ],
+            [
+              "DOI",
+              67,
+              "$0.17 EPC"
+            ]
+          ],
+          "say": "Here's the answer for our example, with the same thousand clicks. ZIP at forty five cents gives one hundred and eighty nine dollars, an E P C of nineteen cents. Email submit at one twenty gives two hundred and fifty two dollars, an E P C of twenty five cents. D O I at two fifty gives one hundred and seventy dollars, seventeen cents. Look at the bars: here the middle point wins. These are before scrubs, and shallow points usually get scrubbed more, so measure accepted E P C."
+        },
+        {
+          "v": "cards",
+          "h": "How CPI offers work",
+          "p": "CPI offers pay per app install. The install is usually counted by a mobile measurement partner (MMP), a tracking service the advertiser uses, when the person installs and opens the app. Some CPI offers pay only after an in-app event.",
+          "d": [
+            "Install + first open|the usual trigger",
+            "MMP|tracks installs for the advertiser",
+            "Event-based CPI|pays after sign-up or a level",
+            "Store rules|follow app store and offer terms"
+          ],
+          "say": "C P I offers, cost per install, pay per app install. Look at the cards. The usual trigger is install plus first open. That's counted by an M M P, a mobile measurement partner, the tracking service the advertiser uses. Some are event-based, paying only after a sign-up or a level inside the app. And you must follow the app store and offer terms."
+        },
+        {
+          "v": "stat",
+          "h": "Example: CPI break-even rate",
+          "p": "Example: you pay $0.12 per click and the offer pays $1.80 per install. Break-even is $0.12 ÷ $1.80 = 6.7%. Fewer than about 7 installs per 100 clicks and you lose money.",
+          "d": {
+            "n": 6.7,
+            "pre": "",
+            "suf": "%",
+            "dec": 1,
+            "label": "click-to-install rate needed to break even",
+            "note": "Example: $0.12 CPC ÷ $1.80 CPI."
+          },
+          "say": "Here's how to find a C P I break-even rate. Example: you pay twelve cents per click, and the offer pays one dollar eighty per install. Divide twelve cents by one eighty, and you get six point seven percent. That's the click-to-install rate you need just to break even. So if fewer than about seven in every hundred clicks install, you lose money."
+        },
+        {
+          "v": "screen",
+          "h": "Read the conversion definition",
+          "p": "Every offer page should state the exact conversion point and what is not paid. Read this block before anything else. The text line here is the scrub policy in one sentence; ask the manager if yours is missing.",
+          "d": {
+            "kind": "browser",
+            "url": "network.example/offers/2214",
+            "title": "Offer 2214: Gift card draw (SOI)",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Conversion point",
+                "value": "Email submit (SOI)"
+              },
+              {
+                "type": "field",
+                "label": "Payout",
+                "value": "$1.20 per accepted lead"
+              },
+              {
+                "type": "field",
+                "label": "Geo",
+                "value": "US only"
+              },
+              {
+                "type": "text",
+                "value": "Not paid: duplicates, invalid emails, non-US IPs, incentivised entries."
+              },
+              {
+                "type": "button",
+                "label": "Get tracking link"
+              }
+            ],
+            "highlight": 3
+          },
+          "say": "Every offer page should state the exact conversion point, and what isn't paid. Here's an example S O I gift card offer: email submit, one dollar twenty per accepted lead, U S only. Read the highlighted line before anything else. It's the scrub policy in one sentence: not paid for duplicates, invalid emails, non U S I Ps, or incentivised entries. If your offer page is missing this, ask the manager."
+        },
+        {
+          "v": "compare",
+          "h": "Mistakes with conversion points",
+          "p": "These come from chasing cheap-looking conversions instead of earnings. The fix is always the same: measure accepted EPC per point and read what is not paid.",
+          "d": {
+            "a": {
+              "title": "Common mistakes",
+              "items": [
+                "Choosing the cheapest point to hit",
+                "Ignoring the 'not paid' list",
+                "Paying for installs with rewards",
+                "Comparing CPI to CPL by payout"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Compare accepted EPC",
+                "Read scrub rules first",
+                "Only if the offer allows it",
+                "Compare both in EPC"
+              ]
+            }
+          },
+          "say": "These mistakes come from chasing cheap-looking conversions instead of earnings. Compare the columns. Choosing the cheapest point to hit, instead of comparing accepted E P C. Ignoring the not paid list, instead of reading scrub rules first. Paying for installs with rewards, which you should do only if the offer allows it. And comparing C P I to C P L by payout, when you should compare both in E P C."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: early steps still count",
+          "p": "A ZIP or email field is still the start of a consent journey. What your ad and prelander say before it shapes whether the lead is honest, and whether it gets paid.",
+          "d": {
+            "kind": "warn",
+            "text": "Never say 'check if you qualify' or 'see your prize' to get a ZIP. For CPI, do not reward installs unless the offer permits it, and follow app store policy."
+          },
+          "say": "Early steps still count for compliance. A ZIP or email field is still the start of a consent journey. What your ad and prelander say before it shapes whether the lead is honest, and whether it gets paid. The warning on screen: never say check if you qualify, or see your prize, to get a ZIP. And for C P I, don't reward installs unless the offer permits it, and follow app store policy."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules: which point",
+          "p": "Starting rules to adapt with your own data. They keep you from switching offers on random noise and from falling for conversion points that look cheap but get scrubbed later.",
+          "d": [
+            "Compare points only after 500+ clicks each",
+            "If EPCs are within 10%, pick the deeper point (fewer scrubs)",
+            "Drop a ZIP or email-submit offer if scrub stays above 20% on 100+ leads",
+            "For CPI, kill if click-to-install rate is under break-even after 300 clicks"
+          ],
+          "say": "Here are your starting decision rules for choosing a point. Compare points only after five hundred plus clicks each. If E P Cs are within ten percent, pick the deeper point, because it has fewer scrubs. Drop a ZIP or email-submit offer if scrub stays above twenty percent on one hundred plus leads. And for C P I, kill if the click-to-install rate is under break-even after three hundred clicks. Adapt these with your own data."
+        }
+      ],
+      "takeaways": [
+        "Each step of a sweeps flow can be a conversion point; deeper points pay more and lose more people.",
+        "Compare points by EPC: conversions × payout ÷ clicks, using accepted conversions.",
+        "CPI break-even install rate = cost per click ÷ payout per install."
+      ],
+      "action": "Find two offers in your network with different conversion points (for example email submit and DOI). Read each offer's 'not paid' rules and write down the EPC you would need from each to beat a $0.15 cost per click.",
+      "glossary": [
+        {
+          "term": "ZIP submit",
+          "def": "A conversion point that pays when the person enters a postal or ZIP code."
+        },
+        {
+          "term": "Email submit",
+          "def": "A conversion point that pays when a valid email is entered, often the first SOI step."
+        },
+        {
+          "term": "CPI",
+          "def": "Cost per install. The offer pays when someone installs and usually opens an app."
+        },
+        {
+          "term": "MMP",
+          "def": "Mobile measurement partner. A service that tracks app installs and events for the advertiser."
+        },
+        {
+          "term": "Long form",
+          "def": "A longer survey or form, often shared with several advertisers, that pays more per completion."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "1,000 clicks, 300 email submits at $1.00, 90 DOIs at $2.80. Which point has the higher EPC?",
+          "options": [
+            "DOI, $0.25",
+            "They are equal",
+            "Email submit, $0.30 vs $0.25",
+            "DOI, because it pays more"
+          ],
+          "answer": 2,
+          "why": "300 × $1.00 ÷ 1,000 = $0.30. 90 × $2.80 ÷ 1,000 = $0.252. Email submit earns more per click here."
+        },
+        {
+          "q": "CPC is $0.09 and the CPI is $1.50. What install rate do you need to break even?",
+          "options": [
+            "6%",
+            "1.5%",
+            "9%",
+            "16.7%"
+          ],
+          "answer": 0,
+          "why": "$0.09 ÷ $1.50 = 0.06, so 6 installs per 100 clicks."
+        },
+        {
+          "q": "Two points have EPCs of $0.21 and $0.22. The $0.21 one is deeper. What does the starting rule say?",
+          "options": [
+            "Pick the $0.22 one",
+            "Pick the deeper one, the EPCs are within 10%",
+            "Run neither",
+            "Split 50/50 forever"
+          ],
+          "answer": 1,
+          "why": "Within 10%, the deeper point usually brings fewer scrubs and happier advertisers."
+        },
+        {
+          "q": "Which ZIP-first headline is honest?",
+          "options": [
+            "Check if you qualify for your prize",
+            "See the prize waiting in your area",
+            "Your reward is reserved, enter ZIP",
+            "Start your entry: step 1 of 3"
+          ],
+          "answer": 3,
+          "why": "It says what is happening. The others imply eligibility or a prize already waiting."
+        },
+        {
+          "q": "What usually counts a CPI conversion?",
+          "options": [
+            "Your ad platform's click report",
+            "An MMP recording the install and first open",
+            "A screenshot from the user",
+            "The app store rating"
+          ],
+          "answer": 1,
+          "why": "The advertiser's mobile measurement partner records installs and in-app events."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn the common conversion points: ZIP and email submits, C P I installs and long forms. You'll compare them by E P C, and work out the install rate a C P I offer needs to break even.",
+      "say_outro": "So, every conversion point trades payout against volume and quality, and accepted E P C is how you compare them. Your task: find two offers with different conversion points, read each one's not paid rules, and write down the E P C you'd need from each to beat a fifteen cent cost per click. Now take the quiz."
+    },
+    {
+      "slug": "scrubs-holds-and-lead-quality",
+      "title": "What a lead is worth: scrubs, holds and EPC",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can explain why leads get scrubbed and work out your effective payout.",
+        "By the end you can read a network report by sub ID and find the traffic that is costing you.",
+        "By the end you can plan cash around holds and payment terms."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why this matters",
+          "p": "Your tracker says 200 leads. The network pays for 160. The 40 missing leads are not a bug; they were scrubbed. If you planned your costs on 200, you are losing money and do not know it. Quality is not a soft topic in lead gen. It is your margin.",
+          "d": {
+            "b": "You are paid on accepted leads",
+            "s": "Plan every number on what the network accepts."
+          },
+          "say": "Here's why this matters. Your tracker says two hundred leads, but the network pays for one hundred and sixty. Those forty missing leads aren't a bug. They were scrubbed. If you planned your costs on two hundred, you're losing money and don't know it. Quality isn't a soft topic in lead gen. It's your margin. So plan every number on what the network accepts."
+        },
+        {
+          "v": "cards",
+          "h": "Why leads get scrubbed",
+          "p": "A scrub is a lead the network or advertiser refuses to pay for. The reasons are usually listed in the offer terms. Most scrubs come from traffic quality, form validation or misleading promises earlier in the funnel.",
+          "d": [
+            "Duplicate|same person or email already on the list",
+            "Invalid|fake email, wrong phone format",
+            "Bot or fraud|automated or farmed entries",
+            "Out of geo|IP or details outside allowed geo",
+            "Incentivised|paid or rewarded entries",
+            "Complaint|person says they never agreed"
+          ],
+          "say": "A scrub is a lead the network or advertiser refuses to pay for. Look at the common reasons on the cards. Duplicate, the same person already on the list. Invalid, like a fake email or wrong phone format. Bot or fraud, automated or farmed entries. Out of geo. Incentivised, paid or rewarded entries. And complaint, when the person says they never agreed. Most scrubs come from traffic quality, form validation, or misleading promises earlier in the funnel."
+        },
+        {
+          "v": "eq",
+          "h": "Effective payout",
+          "p": "Effective payout is the payout after scrubs. It is the number you should use for every target, kill line and budget. Example: $1.20 payout with a 15% scrub rate gives $1.02 per raw lead.",
+          "d": [
+            "$1.20 payout",
+            "×",
+            "(1 − 15% scrub)",
+            "=",
+            "$1.02"
+          ],
+          "say": "Effective payout is the payout after scrubs. It's the number you should use for every target, kill line and budget. Follow the sum. Example: a one dollar twenty payout with a fifteen percent scrub rate gives one dollar and two cents per raw lead."
+        },
+        {
+          "v": "table",
+          "h": "Example: a week of tracker vs network",
+          "p": "Example. Your tracker counts raw leads. The network report shows what it accepted, usually a day or more later. Day 4 stands out: something sent bad leads.",
+          "d": {
+            "cols": [
+              "Day",
+              "Raw leads",
+              "Accepted",
+              "Scrub"
+            ],
+            "rows": [
+              [
+                "Mon",
+                "120",
+                "104",
+                "13%"
+              ],
+              [
+                "Tue",
+                "135",
+                "117",
+                "13%"
+              ],
+              [
+                "Wed",
+                "128",
+                "110",
+                "14%"
+              ],
+              [
+                "Thu",
+                "150",
+                "96",
+                "36%"
+              ],
+              [
+                "Fri",
+                "125",
+                "107",
+                "14%"
+              ]
+            ]
+          },
+          "say": "Here's an example week of your tracker against the network. Your tracker counts raw leads in real time, and the network shows what it accepted, usually a day or more later. Monday to Wednesday, the scrub sits at thirteen or fourteen percent. Now look at Thursday: one hundred and fifty raw leads, but only ninety six accepted, a thirty six percent scrub. Something sent bad leads that day."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: find the bad sub ID",
+          "p": "Open the network report and break it down by sub ID, the label you add to each link for each ad set. Here one ad set has a 38% scrub rate while the others sit near 12%. That is where to look.",
+          "d": {
+            "kind": "browser",
+            "url": "network.example/reports?group=sub1",
+            "title": "Conversions by Sub ID 1",
+            "blocks": [
+              {
+                "type": "select",
+                "label": "Group by",
+                "value": "Sub ID 1"
+              },
+              {
+                "type": "select",
+                "label": "Date range",
+                "value": "Last 7 days"
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "Sub ID 1",
+                  "Leads",
+                  "Accepted",
+                  "Scrub"
+                ],
+                "rows": [
+                  [
+                    "fb_as01",
+                    "310",
+                    "274",
+                    "12%"
+                  ],
+                  [
+                    "fb_as02",
+                    "295",
+                    "260",
+                    "12%"
+                  ],
+                  [
+                    "fb_as03",
+                    "180",
+                    "112",
+                    "38%"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Click a row to see scrub reasons, if the network shows them."
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "Here's how to find the bad source. Open the network report and group it by sub I D, the label you add to each link for each ad set. Look at the highlighted row. Two ad sets sit at twelve percent scrub, but the third, f b a s zero three, is at thirty eight percent. That's where to look. If the network shows scrub reasons, click the row to see them."
+        },
+        {
+          "v": "check",
+          "h": "How to investigate a high-scrub sub ID",
+          "p": "Do these in order. Most causes are found in the first three checks. If you find nothing, ask the affiliate manager for the scrub reasons on that sub ID in writing.",
+          "d": [
+            "Check placements: audience network or in-app?",
+            "Check geo and IP spread",
+            "Check the creative promise: does it imply a win?",
+            "Check the form: validation on, autofill working?",
+            "Ask the network for scrub reasons"
+          ],
+          "say": "When one sub I D has a high scrub rate, work through these checks in order. Check placements, like audience network or in-app. Check the geo and I P spread. Check the creative promise: does it imply a win? Check the form, with validation on and autofill working. And if you've found nothing, ask the network for the scrub reasons on that sub I D, in writing. Most causes turn up in the first three checks."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: ROAS after scrubs",
+          "p": "Example: you spent $150. The network accepted 153 of 180 leads at $1.20, so it paid $183.60. Work out ROAS (revenue ÷ spend) and profit, then check.",
+          "more": "$183.60 ÷ $150 = 1.224, so ROAS is about 1.22 and profit is $33.60. Had you counted all 180 raw leads at $1.20 you would have expected $216 and ROAS 1.44, a much rosier and wrong picture.",
+          "d": {
+            "kind": "roas",
+            "task": "Spend $150, accepted revenue $183.60. What is ROAS?",
+            "preset": {
+              "spend": 150,
+              "revenue": 183.6
+            },
+            "answer": {
+              "field": "roas",
+              "value": 1.22,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Lab time. Example: you spent one hundred and fifty dollars. The network accepted one hundred and fifty three of your one hundred and eighty leads, at one dollar twenty each, so it paid one hundred and eighty three dollars sixty. Work out your R O A S, return on ad spend, which is revenue divided by spend, and your profit. Pause and try it, then check your answer."
+        },
+        {
+          "v": "flow",
+          "h": "Holds and payment terms",
+          "p": "Money arrives late in lead gen. Leads are validated, then the advertiser may audit the month, then you are paid on the network's terms. Example: net-30 means paid 30 days after the period closes. Ask for terms in writing.",
+          "d": [
+            "Lead sent",
+            "Validated (1-3 days)",
+            "Monthly audit",
+            "Invoice",
+            "Paid (e.g. net-15 or net-30)"
+          ],
+          "say": "Money arrives late in lead gen. Follow the flow. A lead is sent. It's validated, in one to three days. The advertiser may audit the month. Then there's an invoice. And you're paid on the network's terms, for example net fifteen or net thirty. Net thirty means paid thirty days after the period closes. Ask for terms in writing."
+        },
+        {
+          "v": "stat",
+          "h": "Example: cash you need up front",
+          "p": "Example: you spend $100 a day and the network pays net-30 on monthly periods. You may spend for up to 60 days before the first payment lands. That is $6,000 of cash, not counting reversals.",
+          "more": "Why 60 days? Day 1 of the month starts the period. It closes on day 30. Net-30 pays around day 60. Some networks pay weekly once you have history, some hold longer for new affiliates. A clawback is when the network reverses leads it already counted, often after an advertiser audit; keep a buffer for it.",
+          "d": {
+            "n": 6000,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "spent before your first payment",
+            "note": "Example: $100 a day × 60 days."
+          },
+          "say": "Here's what that means for your cash. Example: you spend one hundred dollars a day, and the network pays net thirty on monthly periods. The period runs thirty days, then payment comes about thirty days later. So you may spend for up to sixty days before the first payment lands. That's six thousand dollars of cash, not counting reversals, which are called clawbacks. Keep a buffer for them."
+        },
+        {
+          "v": "compare",
+          "h": "Mistakes with lead quality",
+          "p": "These are the habits that turn a profitable-looking campaign into a reversed one at the end of the month. The right column is cheap to do, takes minutes, and saves both money and accounts.",
+          "d": {
+            "a": {
+              "title": "Common mistakes",
+              "items": [
+                "Planning on raw leads",
+                "One link for every ad set",
+                "Scaling before the network report lands",
+                "Spending all your cash with net-30 terms"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Plan on accepted leads",
+                "A sub ID per ad set",
+                "Wait for accepted numbers",
+                "Keep 60 days of spend in reserve"
+              ]
+            }
+          },
+          "say": "These habits turn a profitable-looking campaign into a reversed one at the end of the month. Compare the columns. Planning on raw leads, instead of accepted leads. One link for every ad set, instead of a sub I D per ad set. Scaling before the network report lands, instead of waiting for accepted numbers. And spending all your cash with net thirty terms, instead of keeping sixty days of spend in reserve. Each fix takes minutes."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: never manufacture leads",
+          "p": "Filling forms yourself, buying lists, using bots or paying people to enter, when the offer does not allow it, is fraud. Networks look for these patterns and reverse whole periods when they find them.",
+          "d": {
+            "kind": "warn",
+            "text": "It leads to clawbacks, bans and, in many countries, legal liability. Only send real people from traffic sources the offer allows."
+          },
+          "say": "Never manufacture leads. Filling forms yourself, buying lists, using bots, or paying people to enter when the offer doesn't allow it, is fraud. Networks look for these patterns and reverse whole periods when they find them. As the warning says, it leads to clawbacks, bans and, in many countries, legal liability. Only send real people from traffic sources the offer allows."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules: quality",
+          "p": "Starting rules to adapt to your network's stated limits. Check them every time the network report updates, not only on days when CPL looks bad, because quality problems often hide behind a good CPL.",
+          "d": [
+            "Any sub ID with scrub over 2 × your average on 50+ leads: pause and investigate",
+            "Scrub above the network's stated limit on 50+ leads: pause",
+            "Never scale until accepted numbers for that period are in",
+            "Keep cash for 60 days of spend plus 10% for reversals"
+          ],
+          "say": "Here are your starting quality rules. If any sub I D has a scrub over two times your average on fifty plus leads, pause and investigate. If scrub is above the network's stated limit on fifty plus leads, pause. Never scale until accepted numbers for that period are in. And keep cash for sixty days of spend, plus ten percent for reversals. Check these every time the report updates, because quality problems often hide behind a good C P L, cost per lead."
+        }
+      ],
+      "takeaways": [
+        "Effective payout = payout × (1 − scrub rate); build every plan on it.",
+        "Put a sub ID on every link so you can find the ad set sending bad leads.",
+        "Holds and payment terms mean you may spend for weeks before you are paid; budget cash for it."
+      ],
+      "action": "Ask your affiliate manager three questions in writing: what the typical scrub rate is for your traffic type, what the main scrub reasons are, and the exact payment terms for new affiliates. Save the answers in your plan.",
+      "glossary": [
+        {
+          "term": "Scrub",
+          "def": "A lead the network or advertiser rejects and does not pay for."
+        },
+        {
+          "term": "Effective payout",
+          "def": "Payout multiplied by the share of leads accepted."
+        },
+        {
+          "term": "Sub ID",
+          "def": "A label you add to your tracking link, such as the ad set name, so reports can be split by it."
+        },
+        {
+          "term": "Hold",
+          "def": "The period while leads are validated or audited before they count as payable."
+        },
+        {
+          "term": "Clawback",
+          "def": "A reversal of leads or money already credited, usually after an audit."
+        },
+        {
+          "term": "Net terms",
+          "def": "Payment terms, such as net-30: paid 30 days after the period closes."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Payout $2.00, scrub rate 20%. What is the effective payout?",
+          "options": [
+            "$1.60",
+            "$2.40",
+            "$1.80",
+            "$0.40"
+          ],
+          "answer": 0,
+          "why": "$2.00 × (1 − 0.20) = $1.60."
+        },
+        {
+          "q": "Your average scrub is 12%. One sub ID shows 30% on 80 leads. What does the starting rule say?",
+          "options": [
+            "Scale it",
+            "Pause and investigate: it is over 2 × the average",
+            "Ignore it, 80 leads is too few",
+            "Raise its budget to dilute the scrub"
+          ],
+          "answer": 1,
+          "why": "30% is more than 2 × 12% on more than 50 leads, so pause and check placements, geo, creative and form."
+        },
+        {
+          "q": "You spend $80 a day on net-30 monthly terms. Roughly how much may you spend before the first payment?",
+          "options": [
+            "$800",
+            "$2,400",
+            "$4,800",
+            "$80"
+          ],
+          "answer": 2,
+          "why": "Up to about 60 days × $80 = $4,800 before the first payment lands."
+        },
+        {
+          "q": "Which is fraud?",
+          "options": [
+            "Using a sub ID per ad set",
+            "Asking for scrub reasons",
+            "Waiting for accepted numbers before scaling",
+            "Filling entry forms yourself to hit a cap"
+          ],
+          "answer": 3,
+          "why": "Manufactured leads are fraud, get clawed back and can carry legal risk."
+        },
+        {
+          "q": "Spend $200, accepted revenue $230. What is ROAS?",
+          "options": [
+            "0.87",
+            "1.15",
+            "1.30",
+            "2.30"
+          ],
+          "answer": 1,
+          "why": "$230 ÷ $200 = 1.15. Profit is $30."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn what a lead is really worth after scrubs, holds and payment terms. You'll find the traffic that's costing you in a network report, and plan your cash so late payments don't stop you.",
+      "say_outro": "So, plan on accepted leads, find bad traffic by sub I D, and keep enough cash to wait out holds and payment terms. Your task: ask your affiliate manager three questions in writing, the typical scrub rate for your traffic type, the main scrub reasons, and the exact payment terms for new affiliates, and save the answers in your plan. Now take the quiz."
+    },
+    {
+      "slug": "reading-a-sweeps-offer",
+      "title": "Reading a sweeps offer and choosing a network",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can read every field on a sweeps offer page and know what it means for your campaign.",
+        "By the end you can spot the red flags that mean an offer is not worth running.",
+        "By the end you can rank several offers by expected EPC and choose one to test."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why this matters",
+          "p": "A sweeps offer page is a contract in short form. It tells you what you are paid for, what traffic is allowed and what gets you banned. Affiliates who skim it run disallowed traffic, lose a month of earnings and get removed. Ten careful minutes prevents that.",
+          "d": {
+            "b": "The offer page is the contract",
+            "s": "Read it all before you click 'Get link'."
+          },
+          "say": "Here's why this matters. A sweeps offer page is a contract in short form. It tells you what you're paid for, what traffic is allowed, and what gets you banned. Affiliates who skim it run disallowed traffic, lose a month of earnings and get removed. Ten careful minutes prevents that. So read it all before you tap Get link."
+        },
+        {
+          "v": "screen",
+          "h": "A typical offer page",
+          "p": "This is a simplified offer page. Look at the allowed traffic block first: it decides whether you can run the offer at all. Social traffic is allowed here, but only to the advertiser's approved landing pages.",
+          "d": {
+            "kind": "browser",
+            "url": "network.example/offers/3107",
+            "title": "Offer 3107: June $500 gift card draw (DOI)",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Payout",
+                "value": "$2.50 per accepted DOI"
+              },
+              {
+                "type": "field",
+                "label": "Geo",
+                "value": "US, 18+"
+              },
+              {
+                "type": "toggle",
+                "label": "Social traffic allowed",
+                "on": true
+              },
+              {
+                "type": "toggle",
+                "label": "Incentive traffic allowed",
+                "on": false
+              },
+              {
+                "type": "field",
+                "label": "Daily cap",
+                "value": "300 DOIs"
+              },
+              {
+                "type": "text",
+                "value": "Approved creatives only. Sponsor: Example Rewards Ltd. Official rules linked on the entry page."
+              },
+              {
+                "type": "button",
+                "label": "Get tracking link"
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "Here's a simplified offer page: a five hundred dollar gift card draw, D O I, double opt-in. Two fifty per accepted D O I, U S only, eighteen plus, with a daily cap of three hundred. Look at the allowed traffic block first, because it decides whether you can run the offer at all. Social traffic is allowed, incentive traffic isn't. And note the line below: approved creatives only, with a named sponsor and official rules."
+        },
+        {
+          "v": "table",
+          "h": "The fields that matter",
+          "p": "Learn what each field means for you. The cap is the most a network will pay for in a day; leads above it may not be paid. Approved creatives means you use only the ads and claims the advertiser has signed off.",
+          "d": {
+            "cols": [
+              "Field",
+              "What to check"
+            ],
+            "rows": [
+              [
+                "Conversion point",
+                "Exactly what is paid"
+              ],
+              [
+                "Payout",
+                "Per accepted lead"
+              ],
+              [
+                "Geo and age",
+                "Who may enter"
+              ],
+              [
+                "Allowed traffic",
+                "Your source must be listed"
+              ],
+              [
+                "Cap",
+                "Daily or monthly limit"
+              ],
+              [
+                "Creatives",
+                "Approved only?"
+              ],
+              [
+                "Terms",
+                "Scrubs, holds, payment"
+              ]
+            ]
+          },
+          "say": "Here are the fields that matter. Conversion point, exactly what's paid. Payout, per accepted lead. Geo and age, who may enter. Allowed traffic, where your source must be listed. The cap, the most the network will pay for in a day or month, because leads above it may not be paid. Creatives, and whether only approved ones are allowed, meaning the ads and claims the advertiser signed off. And terms: scrubs, holds and payment."
+        },
+        {
+          "v": "cards",
+          "h": "Traffic restrictions explained",
+          "p": "Offers list which traffic types are allowed. If yours is not listed, ask; do not assume. Running a disallowed type is the fastest way to lose your earnings for the period.",
+          "d": [
+            "Incentive|rewarding people to enter",
+            "Email|sending to your own list",
+            "SMS|texting people",
+            "Brand bidding|search ads on the brand name",
+            "Pop and push|low-intent formats",
+            "Social|Meta, TikTok and similar"
+          ],
+          "say": "Offers list which traffic types are allowed, shown on the cards. Incentive, meaning rewarding people to enter. Email, sending to your own list. S M S, texting people. Brand bidding, search ads on the brand name. Pop and push, which are low-intent formats. And social, like Meta and TikTok. If your type isn't listed, ask, don't assume. Running a disallowed type is the fastest way to lose your earnings for the period."
+        },
+        {
+          "v": "check",
+          "h": "Red flags: skip the offer",
+          "p": "If you see any of these, skip the offer however good the payout. They are signs the funnel is misleading or that you will not be paid fairly.",
+          "d": [
+            "No named sponsor or no official rules",
+            "Approved ads say 'You have won'",
+            "Card details asked for a 'free' prize",
+            "Hidden paid SMS or subscription",
+            "No written scrub or payment terms"
+          ],
+          "say": "If you see any of these red flags, skip the offer, however good the payout. No named sponsor, or no official rules. Approved ads that say you have won. Card details asked for a free prize. A hidden paid S M S or subscription. Or no written scrub or payment terms. They're signs the funnel is misleading, or that you won't be paid fairly."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: vet an offer in five steps",
+          "p": "Do this for every new offer before you request a tracking link. It takes about fifteen minutes and you only do it once per offer. Tap through each step and copy the format.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open the offer page",
+                "text": "Note conversion point, payout, geo, allowed traffic and cap.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/offers/3107",
+                  "title": "Offer 3107",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Conversion point",
+                      "value": "DOI"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Payout",
+                      "value": "$2.50"
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Social traffic allowed",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 2
+                }
+              },
+              {
+                "title": "Open the entry page on your phone",
+                "text": "Check the sponsor name, the prize, the draw date and the rules link.",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "monthly-draw.example/enter",
+                  "page": {
+                    "h": "Enter the June $500 draw",
+                    "p": "Run by Example Rewards Ltd. Free. US 18+. Official rules below.",
+                    "cta": "Enter the draw"
+                  }
+                }
+              },
+              {
+                "title": "Read the official rules",
+                "text": "Find eligibility, entry period, how winners are chosen and the free entry method.",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "monthly-draw.example/rules",
+                  "page": {
+                    "h": "Official rules",
+                    "p": "No purchase necessary. Sponsor: Example Rewards Ltd. Entry period 1-30 June. One winner drawn at random. Odds depend on entries.",
+                    "cta": "Back"
+                  }
+                }
+              },
+              {
+                "title": "Ask the manager",
+                "text": "Ask confirm rate, scrub rate, scrub reasons and payment terms. Get it in writing.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Affiliate manager",
+                  "subtitle": "network chat",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "For Meta traffic on 3107, what confirm and scrub rates should I expect? And payment terms?"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Example answer: around 40-50% confirm, scrub under 5% on clean traffic, net-30 monthly."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Decide",
+                "text": "Work out expected EPC. Run it only if it passes every check.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheets.example/offer-vetting",
+                  "title": "Offer vetting",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Offer",
+                        "Exp. EPC",
+                        "Checks"
+                      ],
+                      "rows": [
+                        [
+                          "3107",
+                          "$0.20",
+                          "All pass"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "button",
+                      "label": "Add to test plan"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              }
+            ]
+          },
+          "say": "Let's vet an offer in five steps. It takes about fifteen minutes, once per offer. Tap Next to follow each step. First, open the offer page and note the conversion point, payout, geo, allowed traffic and cap. Second, open the entry page on your phone and check the sponsor, prize, draw date and rules link. Third, read the official rules for eligibility, entry period, how winners are chosen, and the free entry method. Fourth, ask the manager for confirm rate, scrub rate, reasons and payment terms, in writing. Fifth, work out expected E P C, and run it only if it passes every check."
+        },
+        {
+          "v": "bars",
+          "h": "Example: rank three offers by EPC",
+          "p": "Example: same traffic, 18% form rate. A: $3.00 DOI, 35% confirm, 97% accepted, EPC $0.18. B: $1.10 SOI, 90% accepted, 20% form rate, EPC $0.20. C: $2.50 DOI, 45% confirm, 97% accepted, EPC $0.20.",
+          "more": "A: 3.00 × 0.35 × 0.97 × 0.18 = $0.183. B has a shorter form, so assume a 20% form rate: 1.10 × 0.90 × 0.20 = $0.198. C: 2.50 × 0.45 × 0.97 × 0.18 = $0.196. The highest payout ranks last. B and C are close enough that the deeper point, C, is the safer first test under the 10% rule from Lesson 3.",
+          "d": [
+            [
+              "Offer A ($3.00 DOI)",
+              92,
+              "$0.18"
+            ],
+            [
+              "Offer B ($1.10 SOI)",
+              100,
+              "$0.20"
+            ],
+            [
+              "Offer C ($2.50 DOI)",
+              98,
+              "$0.20"
+            ]
+          ],
+          "say": "Here's how to rank three offers by E P C, earnings per click, with the same traffic. Offer A is a three dollar D O I with thirty five percent confirming, an E P C of eighteen cents. Offer B is a one dollar ten S O I, single opt-in, with a shorter form, about twenty cents. Offer C is a two fifty D O I with forty five percent confirming, also about twenty cents. Look at the bars: the highest payout ranks last. B and C are close, so the deeper point, C, is the safer first test."
+        },
+        {
+          "v": "partner",
+          "h": "Networks and advertisers we work with",
+          "p": "These are partner networks and advertisers for this vertical, kept up to date by the VooSquare team. Use the same checks on them as on any other network: terms in writing, named advertisers and clear scrub reasons.",
+          "d": {
+            "vertical": "sweeps",
+            "note": "Look for published payment terms, named sponsors, public official rules and written scrub reasons."
+          },
+          "say": "These are partner networks and advertisers for this vertical, kept up to date by the VooSquare team. Use the same checks on them as on any other network. Look for published payment terms, named sponsors, public official rules, and written scrub reasons."
+        },
+        {
+          "v": "product",
+          "h": "Find and compare offers faster",
+          "p": "Comparing offers across networks by hand takes time. A deals directory can help you shortlist, but you still vet each offer yourself with the five steps above.",
+          "d": {
+            "slug": "affleego",
+            "why": "Browse lead-gen and sweeps deals in one place to build a shortlist before you vet each offer."
+          },
+          "say": "Comparing offers across networks by hand takes time. A deals directory like the one on screen can help you browse lead-gen and sweeps deals in one place and build a shortlist. But you still vet each offer yourself, using the five steps from earlier."
+        },
+        {
+          "v": "compare",
+          "h": "Mistakes when choosing an offer",
+          "p": "Most bad offer choices come from staring at the payout column. The fix is to read the rest of the page, and the entry funnel behind it, as carefully as you read the number.",
+          "d": {
+            "a": {
+              "title": "Common mistakes",
+              "items": [
+                "Choosing on payout",
+                "Assuming your traffic is allowed",
+                "Ignoring the cap",
+                "Taking verbal terms"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Rank on expected EPC",
+                "Find it in allowed traffic",
+                "Plan budget under the cap",
+                "Get terms in writing"
+              ]
+            }
+          },
+          "say": "Most bad offer choices come from staring at the payout column. Compare the columns. Choosing on payout, instead of ranking on expected E P C. Assuming your traffic is allowed, instead of finding it in the allowed list. Ignoring the cap, instead of planning budget under it. And taking verbal terms, instead of getting them in writing. Read the rest of the page, and the funnel behind it, as carefully as the number."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: you own your ads",
+          "p": "Approved creatives help, but they do not move responsibility away from you. The ad runs in your account, under your name, and the platform and regulators judge it as yours.",
+          "d": {
+            "kind": "warn",
+            "text": "Even with approved creatives, check each ad against the platform's current policy and the law of the geo. If an approved creative implies a win, do not run it."
+          },
+          "say": "You own your ads. Approved creatives help, but they don't move responsibility away from you. The ad runs in your account, under your name, and the platform and regulators judge it as yours. The warning on screen: even with approved creatives, check each ad against the platform's current policy and the law of the geo. And if an approved creative implies a win, don't run it."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rule: go or skip",
+          "p": "Run an offer only if every line is true. If one is not, skip it or ask the network to fix it first. Starting rule; tighten it as you gain experience.",
+          "d": [
+            "Your traffic source is listed as allowed",
+            "Sponsor and official rules are public",
+            "No red flags in the funnel",
+            "Scrub and payment terms are in writing",
+            "Expected EPC beats your CPC with your margin"
+          ],
+          "say": "Here's your starting go or skip rule. Run an offer only if every line is true. Your traffic source is listed as allowed. The sponsor and official rules are public. There are no red flags in the funnel. Scrub and payment terms are in writing. And expected E P C beats your C P C, cost per click, with your margin. If one isn't true, skip it, or ask the network to fix it first."
+        }
+      ],
+      "takeaways": [
+        "Read allowed traffic, cap and creative rules before the payout.",
+        "Any red flag (no sponsor, 'you have won', hidden charges) means skip the offer.",
+        "Rank offers by expected EPC; the highest payout often ranks last."
+      ],
+      "action": "Vet one real sweeps or lead offer using the five-step walkthrough. Fill in a short sheet with conversion point, payout, allowed traffic, cap, red flags found and expected EPC. Decide go or skip.",
+      "glossary": [
+        {
+          "term": "Cap",
+          "def": "The most conversions a network will pay for in a day or month on an offer."
+        },
+        {
+          "term": "Allowed traffic",
+          "def": "The traffic types the offer accepts. Anything not listed should be treated as not allowed."
+        },
+        {
+          "term": "Approved creative",
+          "def": "An ad or claim the advertiser has signed off for use with its offer."
+        },
+        {
+          "term": "Incentive traffic",
+          "def": "Traffic where people are rewarded for entering or converting."
+        },
+        {
+          "term": "Affiliate manager",
+          "def": "Your contact at the network who answers questions and sets terms."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "The offer lists Native and Search as allowed traffic, not Social. You run Meta. What should you do?",
+          "options": [
+            "Run it, nobody will check",
+            "Run it only with a small budget",
+            "Ask the manager in writing before running",
+            "Use a different tracking link"
+          ],
+          "answer": 2,
+          "why": "Treat unlisted traffic as not allowed. Ask, and get the answer in writing."
+        },
+        {
+          "q": "Which is a red flag?",
+          "options": [
+            "A $300 daily cap",
+            "Net-30 payment terms",
+            "An approved ad saying 'You have won a $500 card'",
+            "A US-only geo"
+          ],
+          "answer": 2,
+          "why": "Implying a win is misleading. The others are normal terms."
+        },
+        {
+          "q": "Offer pays $1.50 SOI, 80% accepted, 20% form rate. Expected EPC?",
+          "options": [
+            "$0.24",
+            "$0.30",
+            "$1.20",
+            "$0.16"
+          ],
+          "answer": 0,
+          "why": "$1.50 × 0.80 × 0.20 = $0.24."
+        },
+        {
+          "q": "What does a daily cap of 300 mean for you?",
+          "options": [
+            "You must send at least 300 leads",
+            "Leads beyond 300 a day may not be paid",
+            "Your payout drops after 300",
+            "You can only run 300 clicks"
+          ],
+          "answer": 1,
+          "why": "Plan budgets so you stay under the cap, or ask for a raise before sending more."
+        },
+        {
+          "q": "Who is responsible for an ad that runs in your account using an approved creative?",
+          "options": [
+            "Only the advertiser",
+            "Only the network",
+            "Nobody, it was approved",
+            "You, as well as the advertiser"
+          ],
+          "answer": 3,
+          "why": "Approval helps, but the ad is yours. Check it against platform policy and local law."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn to read a sweeps offer page field by field, spot the red flags that mean you should skip an offer, and rank offers by expected E P C so you choose the right one to test.",
+      "say_outro": "So, read the whole offer page as a contract, skip any offer with red flags, and rank the rest by expected E P C. Your task: vet one real sweeps or lead offer with the five-step walkthrough, fill in a short sheet with conversion point, payout, allowed traffic, cap, red flags and expected E P C, and decide go or skip. Now take the quiz."
+    },
+    {
+      "slug": "numbers-plan-and-kill-rules",
+      "title": "Your lead-gen numbers plan and kill rules",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can work out target CPL, scale line and kill lines from payout and scrub rate.",
+        "By the end you can apply CPL starting rules at each checkpoint.",
+        "By the end you can size a test budget and a daily budget for a CPL offer."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why this matters",
+          "p": "Rules built for $40 FTD offers do not fit $1.20 leads. Leads are cheap and frequent, so you can afford to wait for more of them before deciding, and you should. Better evidence per dollar is the one advantage this vertical gives you. Use it.",
+          "d": {
+            "b": "Cheap leads buy better evidence",
+            "s": "Judge on more conversions than you would in FTD verticals."
+          },
+          "say": "Here's why this matters. Rules built for forty dollar F T D, first-time deposit, offers don't fit one dollar twenty leads. Leads are cheap and frequent, so you can afford to wait for more of them before deciding, and you should. Better evidence per dollar is the one advantage this vertical gives you. Use it."
+        },
+        {
+          "v": "eq",
+          "h": "Target CPL",
+          "p": "Target CPL is the most you want to pay per raw lead in your ad account. Start from value per raw lead, then keep your margin. Example: $1.20 payout, 15% scrub, so $1.02 per raw lead. With a 25% margin, $1.02 × 75% = $0.765, call it $0.77.",
+          "more": "Why per raw lead? Ads Manager and your tracker count raw leads in real time. The network's accepted count arrives later. Building the target on value per raw lead means you can make decisions on the live numbers while the scrub is already priced in. For DOI offers, include the confirm rate as well: payout × confirm rate × accept rate.",
+          "d": [
+            "$1.02 value per raw lead",
+            "×",
+            "(1 − 25% margin)",
+            "=",
+            "$0.77 target CPL"
+          ],
+          "say": "Target C P L, cost per lead, is the most you want to pay per raw lead in your ad account. Start from value per raw lead, then keep your margin. Follow the sum. Example: a one dollar twenty payout with a fifteen percent scrub gives one dollar two per raw lead. With a twenty five percent margin, that's about seventy seven cents. Why per raw lead? Because your tracker counts raw leads live, so the scrub is already priced in when you decide."
+        },
+        {
+          "v": "table",
+          "h": "Your CPL numbers sheet",
+          "p": "Example, built from a $1.20 SOI payout, 15% scrub and 25% margin. Every rule in this lesson uses these lines. Recalculate them whenever the payout or the scrub rate changes.",
+          "d": {
+            "cols": [
+              "Line",
+              "Rule",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Value per raw lead",
+                "Payout × accepted",
+                "$1.02"
+              ],
+              [
+                "Target CPL",
+                "Value × (1 − margin)",
+                "$0.77"
+              ],
+              [
+                "Scale line",
+                "0.85 × target",
+                "$0.65"
+              ],
+              [
+                "CPL kill line",
+                "1.3 × target",
+                "$1.00"
+              ],
+              [
+                "Zero-lead kill",
+                "5 × target spend, 0 leads",
+                "$3.85"
+              ],
+              [
+                "Minimum read",
+                "20 × target spend",
+                "$15.40"
+              ]
+            ]
+          },
+          "say": "Here's your C P L numbers sheet, an example built from a one dollar twenty S O I payout, fifteen percent scrub, and twenty five percent margin. Value per raw lead, one dollar two. Target C P L, seventy seven cents. Scale line, zero point eight five times target, sixty five cents. C P L kill line, one point three times target, one dollar. Zero-lead kill, at five times target spend, three eighty five. And minimum read, twenty times target, fifteen dollars forty. Recalculate whenever the payout or scrub rate changes."
+        },
+        {
+          "v": "table",
+          "h": "Starting rules at each checkpoint",
+          "p": "Starting rules to adapt with your own data. Check them once a day at a fixed time. Leads are counted in your tracker; accepted leads come from the network report.",
+          "more": "Why these multiples? With a $0.77 target, 20 × target is $15.40, which buys around 20 leads at target. That is enough to see a real CPL rather than luck, while still cheap. The zero-lead line is lower, 5 × target, because if 5 leads' worth of money brings none at all, tracking or the funnel is usually broken. The quality rule overrides a good CPL: cheap leads that are scrubbed are not cheap.",
+          "d": {
+            "cols": [
+              "Rule",
+              "When",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Zero-lead",
+                "Spend ≥ 5 × target, 0 leads",
+                "Check tracking, then kill"
+              ],
+              [
+                "CPL kill",
+                "Spend ≥ 20 × target, CPL > 1.3 × target",
+                "Kill"
+              ],
+              [
+                "Hold",
+                "CPL between target and 1.3 × target",
+                "New creative, re-read at 40 leads"
+              ],
+              [
+                "Keep",
+                "CPL ≤ target",
+                "Leave running"
+              ],
+              [
+                "Scale",
+                "50+ leads, 3+ days, CPL ≤ 0.85 × target",
+                "+20% budget every 48h"
+              ],
+              [
+                "Quality",
+                "Accepted rate 10+ points below plan, 50+ leads",
+                "Pause"
+              ]
+            ]
+          },
+          "say": "Here are the starting rules at each checkpoint. Zero-lead: at five times target spend with no leads, check tracking, then kill. C P L kill: past twenty times target with C P L over one point three times target, kill. Hold: C P L between target and one point three times, try a new creative and re-read at forty leads. Keep: C P L at or under target. Scale: fifty plus leads, three plus days, C P L at or under zero point eight five times target, add twenty percent every forty eight hours. And quality: accepted rate ten points below plan on fifty plus leads, pause."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: apply the rules to three ad sets",
+          "p": "Example, day 3, target $0.77. Ad set A is under the scale line but has only 28 leads, so keep. B has spent past $15.40 at $1.23, above the $1.00 kill line, so kill. C spent $4.00 with no leads, so check tracking, then kill.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/campaigns/sweeps-us-test",
+            "title": "US_Sweeps_SOI_Test_01",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Ad set",
+                  "Spend",
+                  "Leads",
+                  "CPL"
+                ],
+                "rows": [
+                  [
+                    "A",
+                    "$18.00",
+                    "28",
+                    "$0.64"
+                  ],
+                  [
+                    "B",
+                    "$16.00",
+                    "13",
+                    "$1.23"
+                  ],
+                  [
+                    "C",
+                    "$4.00",
+                    "0",
+                    "-"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Verdicts: A keep (scale needs 50+ leads over 3+ days). B kill. C check tracking, then kill."
+              },
+              {
+                "type": "toggle",
+                "label": "Ad set B active",
+                "on": false
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "Let's apply the rules to three ad sets. Example, day three, target seventy seven cents. Ad set A spent eighteen dollars for twenty eight leads, sixty four cents each. It's under the scale line, but has only twenty eight leads, so keep. B spent sixteen dollars past the fifteen forty minimum read, at one twenty three per lead, above the one dollar kill line, so kill. You can see its toggle switched off. C spent four dollars with no leads, so check tracking, then kill."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: kill, hold or scale",
+          "p": "Example: target CPL $0.77. An ad set has spent $40 over 3 days and brought 25 leads. Read conversions as leads. The calculator uses its own default thresholds, not this lesson's CPL rules; on this case both say the same thing.",
+          "more": "$40 ÷ 25 = $1.60 CPL. That is more than double the target and far above the $1.00 kill line, with spend well past the $15.40 minimum read. Kill.",
+          "d": {
+            "kind": "killscale",
+            "task": "Spend $40, 25 leads, target CPL $0.77, 3 days. Kill, hold or scale?",
+            "preset": {
+              "spend": 40,
+              "conversions": 25,
+              "target_cpa": 0.77,
+              "days": 3
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "kill"
+            }
+          },
+          "say": "Lab time. Example: your target C P L is seventy seven cents. An ad set has spent forty dollars over three days, and brought twenty five leads. Read conversions in the calculator as leads. Note that the calculator uses its own default thresholds, not this lesson's C P L rules, but on this case they agree. Work out the C P L, compare it with your lines, and make the call: kill, hold or scale. Pause and try it, then check your answer."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: daily budget per ad set",
+          "p": "You want about 40 leads per ad set to read it properly, at a $0.77 target, over 4 days. Work out the daily budget per ad set.",
+          "more": "40 × $0.77 = $30.80 test budget per ad set. ÷ 4 days = $7.70 a day. Three ad sets need about $92 plus a 10% buffer, roughly $100. Check your ad platform's current minimum daily budget for your currency; we are not certain of today's minimums in every geo.",
+          "d": {
+            "kind": "budget",
+            "task": "Goal 40 leads, target CPL $0.77, over 4 days. Daily budget per ad set?",
+            "preset": {
+              "goal": 40,
+              "target_cpa": 0.77,
+              "days": 4
+            },
+            "answer": {
+              "field": "daily_budget",
+              "value": 7.7,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Another lab. You want about forty leads per ad set to read it properly, at a seventy seven cent target, over four days. Your job is to work out the daily budget for each ad set. Think about the total test budget first, then spread it across the days. Pause and try it, then check your answer. Afterwards, check your ad platform's current minimum daily budget for your currency."
+        },
+        {
+          "v": "flow",
+          "h": "Your daily checkpoint routine",
+          "p": "Same time every day, same order. Most bad decisions happen when someone checks numbers randomly and reacts to one hour of data. This routine takes about fifteen minutes.",
+          "d": [
+            "Pull tracker leads by sub ID",
+            "Pull network accepted counts",
+            "Update CPL and accepted rate",
+            "Apply the rule table",
+            "Log every change with the reason"
+          ],
+          "say": "Here's your daily checkpoint routine, about fifteen minutes. Same time every day, same order. Pull tracker leads by sub I D. Pull the network's accepted counts. Update C P L and accepted rate. Apply the rule table. And log every change with the reason. Most bad decisions happen when someone checks numbers at random and reacts to one hour of data."
+        },
+        {
+          "v": "bars",
+          "h": "How margin moves the target",
+          "p": "Example: the same $1.02 value per raw lead with three margins. A thin margin lets more ad sets pass but leaves no room for a bad scrub week. A thick one is safer but fewer ad sets pass.",
+          "d": [
+            [
+              "10% margin",
+              90,
+              "$0.92 target"
+            ],
+            [
+              "25% margin",
+              75,
+              "$0.77 target"
+            ],
+            [
+              "40% margin",
+              60,
+              "$0.61 target"
+            ]
+          ],
+          "say": "See how margin moves the target. Example: the same one dollar two value per raw lead, with three margins. A ten percent margin gives a ninety two cent target. Twenty five percent gives seventy seven cents. Forty percent gives sixty one cents. A thin margin lets more ad sets pass, but leaves no room for a bad scrub week. A thick one is safer, but fewer ad sets pass."
+        },
+        {
+          "v": "cards",
+          "h": "Mistakes with CPL rules",
+          "p": "These are the patterns we see in beginner lead-gen tests. Each one makes a test either too short to mean anything or too long to be affordable.",
+          "d": [
+            "Using FTD rules on CPL|wait for more leads; they are cheap",
+            "Target on raw payout|build it on accepted value",
+            "Scaling on tracker leads alone|check the accepted rate first",
+            "Changing three things at once|one change per ad set per checkpoint"
+          ],
+          "say": "These are the patterns we see in beginner lead-gen tests. Using F T D rules on C P L, when you should wait for more leads, because they're cheap. Setting the target on the raw payout, instead of accepted value. Scaling on tracker leads alone, instead of checking the accepted rate first. And changing three things at once, instead of one change per ad set per checkpoint. Each one makes a test either too short to mean anything, or too long to afford."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: never buy a cheaper CPL with a lie",
+          "p": "The fastest way to cut CPL in sweeps is to imply a win or hide the marketing consent in small print. It works for a day or two, and then the bill arrives.",
+          "d": {
+            "kind": "warn",
+            "text": "Then scrubs, complaints and ad rejections arrive. Misleading prize claims break platform policy and consumer law. Lower CPL only with honest creative, better targeting and a faster page."
+          },
+          "say": "Never buy a cheaper C P L with a lie. The fastest way to cut C P L in sweeps is to imply a win, or hide the marketing consent in small print. It works for a day or two, and then the bill arrives: scrubs, complaints and ad rejections. Misleading prize claims break platform policy and consumer law. Lower C P L only with honest creative, better targeting, and a faster page."
+        },
+        {
+          "v": "check",
+          "h": "Sign-off before launch",
+          "p": "Tick every line before your first lead-gen ad goes live. If one is missing, you are not ready to spend. These are starting rules; adapt them once you have a few tests of your own data.",
+          "d": [
+            "Value per raw lead and target CPL written",
+            "Scale line and both kill lines written",
+            "Test budget and daily budget per ad set set",
+            "Sub ID on every link, tracker tested with a real lead",
+            "Checkpoint time fixed in your calendar"
+          ],
+          "say": "Before your first lead-gen ad goes live, tick every line. Value per raw lead and target C P L written. Scale line and both kill lines written. Test budget and daily budget per ad set set. A sub I D on every link, with the tracker tested using a real lead. And your checkpoint time fixed in your calendar. If one is missing, you're not ready to spend. Adapt these starting rules once you have your own data."
+        }
+      ],
+      "takeaways": [
+        "Target CPL = value per raw lead × (1 − margin), where value per raw lead already includes scrubs and confirms.",
+        "Starting rules: zero-lead kill at 5 × target; CPL kill at 1.3 × target once spend reaches 20 × target; scale at ≤ 0.85 × target with 50+ leads over 3+ days.",
+        "The quality rule overrides a good CPL: pause when the accepted rate falls 10+ points below plan."
+      ],
+      "action": "Pick the offer you vetted in Lesson 5. Build its numbers sheet: value per raw lead, target CPL, scale line, both kill lines, minimum read, test budget and daily budget per ad set. Date it and save a screenshot.",
+      "glossary": [
+        {
+          "term": "CPL",
+          "def": "Cost per lead. Ad spend divided by leads."
+        },
+        {
+          "term": "Target CPL",
+          "def": "The cost per raw lead that leaves your chosen margin after scrubs and confirms."
+        },
+        {
+          "term": "Minimum read",
+          "def": "The spend you wait for, here 20 × target, before judging CPL."
+        },
+        {
+          "term": "Zero-lead kill line",
+          "def": "The spend, here 5 × target, at which an ad set with no leads is checked and switched off."
+        },
+        {
+          "term": "Accepted rate",
+          "def": "The share of your raw leads the network accepts and pays for."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Value per raw lead is $1.40, margin 25%. What is the target CPL?",
+          "options": [
+            "$1.40",
+            "$1.05",
+            "$0.35",
+            "$1.75"
+          ],
+          "answer": 1,
+          "why": "$1.40 × 0.75 = $1.05."
+        },
+        {
+          "q": "Target CPL $0.80. An ad set spent $17 with 12 leads. What does the rule table say?",
+          "options": [
+            "Scale",
+            "Keep",
+            "Kill: spend is past $16 and CPL $1.42 is above $1.04",
+            "Hold: only 12 leads"
+          ],
+          "answer": 2,
+          "why": "Minimum read is 20 × $0.80 = $16. CPL $17 ÷ 12 = $1.42, above 1.3 × $0.80 = $1.04. Kill."
+        },
+        {
+          "q": "Target CPL $0.77. An ad set spent $4.20 with 0 leads. First action?",
+          "options": [
+            "Scale to get data faster",
+            "Check tracking with a real test lead, then kill if it works",
+            "Wait a week",
+            "Change the offer"
+          ],
+          "answer": 1,
+          "why": "$4.20 is past the 5 × target zero-lead line of $3.85. Zero leads often means broken tracking, so check first."
+        },
+        {
+          "q": "CPL is $0.60 against a $0.77 target, but the accepted rate fell from 85% to 70% on 80 leads. What do you do?",
+          "options": [
+            "Scale +20%",
+            "Pause: the quality rule overrides the CPL",
+            "Keep and ignore the accepted rate",
+            "Raise the bid"
+          ],
+          "answer": 1,
+          "why": "A 15-point fall on 50+ leads triggers the quality rule. Cheap leads that are scrubbed are not cheap."
+        },
+        {
+          "q": "Goal 30 leads per ad set at a $1.00 target over 5 days. Daily budget per ad set?",
+          "options": [
+            "$30",
+            "$5",
+            "$15",
+            "$6"
+          ],
+          "answer": 3,
+          "why": "30 × $1.00 = $30 ÷ 5 days = $6 a day."
+        }
+      ],
+      "say_intro": "In this final lesson you'll build your lead-gen numbers plan: a target C P L, a scale line and kill lines, all from your payout and scrub rate. Then you'll size a test budget and set a daily routine.",
+      "say_outro": "So, build your target C P L from accepted value, write your scale and kill lines before launch, and check them at the same time every day. Your task: take the offer you vetted in the last lesson and build its numbers sheet, with value per raw lead, target C P L, scale line, both kill lines, minimum read, test budget and daily budget per ad set, then date it and save a screenshot. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "Offer A: SOI $1.30, 80% accepted. Offer B: DOI $2.80, 40% confirm, 95% accepted. Same 18% form rate. Which has the higher EPC?",
+      "options": [
+        "A, by about $0.02 per click",
+        "B, about $0.192 vs $0.187 for A",
+        "A, because it pays per form",
+        "B, because it pays more per lead"
+      ],
+      "answer": 1,
+      "why": "A: 1.30 × 0.80 × 0.18 = $0.187. B: 2.80 × 0.40 × 0.95 × 0.18 = $0.192. B is slightly higher, though under the 5% rule the gap is too small to prefer DOI on EPC alone."
+    },
+    {
+      "q": "Your tracker shows 400 leads; the network accepted 300 at $1.20. You spent $330. What is your real profit?",
+      "options": [
+        "$150",
+        "$30",
+        "$0",
+        "−$30"
+      ],
+      "answer": 1,
+      "why": "300 × $1.20 = $360. $360 − $330 = $30. Planning on 400 leads would have shown a false $150."
+    },
+    {
+      "q": "A DOI offer is 6 hours old with a 14% confirm rate on 60 raw leads. Under the starting rules, what do you do?",
+      "options": [
+        "Kill it",
+        "Switch to SOI",
+        "Wait: judge confirm rate after 72 hours and 100+ raw leads",
+        "Ask people to confirm in your ad copy"
+      ],
+      "answer": 2,
+      "why": "Confirmations arrive over days and 60 raw leads is below the 100 minimum."
+    },
+    {
+      "q": "Target CPL $0.90. Ad set: $19 spent, 15 leads. Kill, hold or keep?",
+      "options": [
+        "Kill: past the $18 minimum read and CPL $1.27 is above $1.17",
+        "Hold: CPL is under 1.5 × target",
+        "Keep",
+        "Scale"
+      ],
+      "answer": 0,
+      "why": "Minimum read 20 × $0.90 = $18. CPL $19 ÷ 15 = $1.27, above 1.3 × $0.90 = $1.17. Kill."
+    },
+    {
+      "q": "Target CPL $0.90. Ad set: 60 leads over 4 days at $0.74, accepted rate on plan. What now?",
+      "options": [
+        "Keep only",
+        "Kill",
+        "Scale +20% now and review again in 48 hours",
+        "Double the budget"
+      ],
+      "answer": 2,
+      "why": "$0.74 is under the scale line 0.85 × $0.90 = $0.765, with 50+ leads over 3+ days and quality on plan."
+    },
+    {
+      "q": "The best-paying offer's approved creative says 'Congratulations, you have been selected'. What do you do?",
+      "options": [
+        "Run it, it is approved",
+        "Run it but change one word",
+        "Run it only on native traffic",
+        "Skip the offer or ask the network for honest creative"
+      ],
+      "answer": 3,
+      "why": "Implying a win is misleading whatever the approval. Approved creatives do not move responsibility away from you."
+    },
+    {
+      "q": "CPC $0.10, CPI payout $1.25. After 400 clicks you have 26 installs. What does the CPI starting rule suggest?",
+      "options": [
+        "Kill: 6.5% is below the 8% break-even",
+        "Scale: 26 installs is a lot",
+        "Hold one more week",
+        "Raise the bid"
+      ],
+      "answer": 0,
+      "why": "Break-even = $0.10 ÷ $1.25 = 8%. 26 ÷ 400 = 6.5%, below break-even after 300+ clicks."
+    },
+    {
+      "q": "You spend $150 a day on net-30 monthly terms. How much cash should you plan for before the first payment, including a 10% reversal buffer?",
+      "options": [
+        "$4,500",
+        "$9,000",
+        "$9,900",
+        "$1,500"
+      ],
+      "answer": 2,
+      "why": "About 60 days × $150 = $9,000, plus 10% = $9,900."
+    },
+    {
+      "q": "Average scrub across sub IDs is 10%. One ad set shows 26% on 120 leads, mostly from in-app placements. What first?",
+      "options": [
+        "Scale the others and ignore it",
+        "Raise its budget",
+        "Ask the network to stop scrubbing",
+        "Pause it and check placements, geo and form validation"
+      ],
+      "answer": 3,
+      "why": "26% is over 2 × the average on 50+ leads. Placements are a common cause of low-quality leads."
+    },
+    {
+      "q": "Value per raw lead is $1.10. You want a 30% margin. What are your target CPL and scale line?",
+      "options": [
+        "$0.77 and $0.65",
+        "$1.10 and $0.94",
+        "$0.77 and $0.94",
+        "$0.83 and $0.70"
+      ],
+      "answer": 0,
+      "why": "$1.10 × 0.70 = $0.77 target. 0.85 × $0.77 = $0.65 scale line."
+    }
+  ]
+}

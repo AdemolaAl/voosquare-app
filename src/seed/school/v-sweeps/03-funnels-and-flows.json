@@ -1,0 +1,2558 @@
+{
+  "school": "v-sweeps",
+  "order": 3,
+  "slug": "funnels-and-flows",
+  "title": "Funnels and flows",
+  "summary": "How to build honest sweeps funnels that earn: choosing a funnel shape, prelanders, quizzes, entry forms, DOI confirmation and the tracking that ties them together. Every step is judged on accepted EPC, with starting rules for when to keep, fix or drop it.",
+  "lessons": [
+    {
+      "slug": "funnel-shapes",
+      "title": "Funnel shapes for sweeps and lead gen",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can describe the five common sweeps funnel shapes and when each fits.",
+        "By the end you can compare funnel shapes by accepted EPC, not form rate.",
+        "By the end you can plan a fair test between two funnel shapes."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why this matters",
+          "p": "The same ad and offer can earn very different amounts depending on what sits between the click and the form. A funnel that adds one honest page can lift accepted EPC; one that adds a misleading page can double leads and halve payouts. The shape is a money decision.",
+          "d": {
+            "b": "The page between the click and the form is where you earn",
+            "s": "Pick the shape on accepted EPC, not on lead count."
+          },
+          "say": "Here's why funnel shape matters. The same ad and offer can earn very different amounts depending on what sits between the click and the form. A funnel that adds one honest page can lift accepted E P C, earnings per click. One that adds a misleading page can double leads and halve payouts. As the screen says, the page between the click and the form is where you earn. Pick the shape on accepted E P C, not on lead count."
+        },
+        {
+          "v": "map",
+          "h": "A complete sweeps flow",
+          "p": "This is the full flow you will build across this module. Every arrow is a place people drop off or data can break. The postback at the end is how you learn which ads made money.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Ad",
+                "kind": "ad"
+              },
+              {
+                "id": "trk",
+                "label": "Tracker",
+                "kind": "tool"
+              },
+              {
+                "id": "lp",
+                "label": "Prelander",
+                "kind": "page"
+              },
+              {
+                "id": "form",
+                "label": "Entry form",
+                "kind": "offer"
+              },
+              {
+                "id": "mail",
+                "label": "DOI email",
+                "kind": "person"
+              },
+              {
+                "id": "net",
+                "label": "Network",
+                "kind": "money"
+              },
+              {
+                "id": "pb",
+                "label": "Postback",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "trk",
+                "click"
+              ],
+              [
+                "trk",
+                "lp",
+                "redirect"
+              ],
+              [
+                "lp",
+                "form",
+                "enter"
+              ],
+              [
+                "form",
+                "mail",
+                "confirm"
+              ],
+              [
+                "mail",
+                "net",
+                "DOI"
+              ],
+              [
+                "net",
+                "pb",
+                "conversion"
+              ],
+              [
+                "pb",
+                "trk",
+                "report"
+              ]
+            ]
+          },
+          "say": "This map shows a complete sweeps flow, the one you'll build across this module. Follow the arrows. The ad sends a click to your tracker, which redirects to a prelander. From there people enter on the entry form, then confirm through a D O I email, double opt-in. That goes to the network, which fires a postback that reports back to your tracker. Every arrow is a place people drop off or data can break. The postback is how you learn which ads made money."
+        },
+        {
+          "v": "cards",
+          "h": "The five common shapes",
+          "p": "Most sweeps campaigns use one of these. Not every offer allows every shape: some forbid prelanders, many forbid platform lead forms. Check the offer terms before you plan.",
+          "d": [
+            "Direct link|ad straight to the entry form",
+            "Prelander|one honest page that explains the draw",
+            "Quiz|a few light questions, then the entry",
+            "Multi-step|ZIP or email first, details next",
+            "Platform lead form|form inside the ad app"
+          ],
+          "say": "Most sweeps campaigns use one of these five shapes. Direct link sends the ad straight to the entry form. A prelander is one honest page that explains the draw. A quiz asks a few light questions, then leads to the entry. Multi-step asks for a zip code or email first, then details next. And a platform lead form puts the form inside the ad app. Not every offer allows every shape. Some forbid prelanders, and many forbid platform lead forms. Check the offer terms first."
+        },
+        {
+          "v": "table",
+          "h": "When each shape fits",
+          "p": "A rough guide, not a law. Your traffic, geo and offer decide what works, so treat this table as where to start testing, not as the answer. Your own accepted EPC is the only answer.",
+          "d": {
+            "cols": [
+              "Shape",
+              "Strength",
+              "Watch out for"
+            ],
+            "rows": [
+              [
+                "Direct link",
+                "Simple, fast",
+                "Low intent, more scrubs"
+              ],
+              [
+                "Prelander",
+                "Explains, filters",
+                "Extra page, speed"
+              ],
+              [
+                "Quiz",
+                "Engaging",
+                "Misleading results"
+              ],
+              [
+                "Multi-step",
+                "Easy first step",
+                "Implied eligibility"
+              ],
+              [
+                "Lead form",
+                "High form rate",
+                "Lower quality, data rules"
+              ]
+            ]
+          },
+          "say": "Here's a rough guide to when each shape fits. Direct link is simple and fast, but watch for low intent and more scrubs. A prelander explains and filters, but it's an extra page, so speed matters. A quiz is engaging, but watch for misleading results. Multi-step has an easy first step, but must not imply eligibility. A lead form has a high form rate, but lower quality and data rules. Treat this table as where to start testing. Your own accepted E P C is the only real answer."
+        },
+        {
+          "v": "funnel",
+          "h": "Example: direct link vs prelander",
+          "p": "Example. Direct: 1,000 clicks, 15% fill the form, 150 leads. Prelander: 64% click through to the form and 28% of those enter, 179 leads. People who read the prelander knew what they entered, so more are accepted.",
+          "d": [
+            [
+              "Clicks",
+              1000
+            ],
+            [
+              "Reached form via prelander",
+              640
+            ],
+            [
+              "Leads via prelander",
+              179
+            ],
+            [
+              "Paid via prelander (88%)",
+              157
+            ]
+          ],
+          "say": "Here's an example comparing a direct link with a prelander. Direct: one thousand clicks, fifteen percent fill the form, one hundred and fifty leads. Now follow the prelander funnel on screen. Six hundred and forty reach the form, one hundred and seventy nine become leads, and one hundred and fifty seven are paid, eighty eight percent. People who read the prelander knew what they were entering, so more of their leads are accepted."
+        },
+        {
+          "v": "bars",
+          "h": "Example: accepted EPC by shape",
+          "p": "Same traffic and a $1.20 SOI. Direct: 150 leads × 85% × $1.20 = $153, EPC $0.15. Prelander: 157 paid × $1.20 = $188.40, EPC $0.19. Quiz: about $0.19. Lead form: 300 leads × 50% × $1.20 = $180, EPC $0.18.",
+          "more": "Example only. The lead form shows the trap: it doubled leads, but half were rejected because people tapped through a pre-filled form without reading. Your numbers will differ. The method does not: compare shapes on accepted earnings per click.",
+          "d": [
+            [
+              "Direct link",
+              79,
+              "$0.15"
+            ],
+            [
+              "Prelander",
+              100,
+              "$0.19"
+            ],
+            [
+              "Quiz",
+              100,
+              "$0.19"
+            ],
+            [
+              "Lead form (if allowed)",
+              95,
+              "$0.18"
+            ]
+          ],
+          "say": "Now compare accepted E P C by shape, with the same traffic and a one dollar twenty S O I, single opt-in, payout. Look at the bars. Direct link earns fifteen cents per click. Prelander and quiz each earn about nineteen cents. The lead form earns eighteen cents, if allowed. Notice the trap in the lead form. It doubled leads, but half were rejected, because people tapped through a pre-filled form without reading. This is an example, so your numbers will differ. The method doesn't: compare on accepted earnings per click."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: find the weakest step",
+          "p": "Example prelander funnel from this lesson. Work out each step's pass-through rate from the step above, then enter the index of the weakest one (first row = 0). That step is where to focus your next test.",
+          "more": "Clicks to form: 64%. Form to lead: 179 ÷ 640 = 28%. Lead to paid: 157 ÷ 179 = 88%. The form step, index 2, loses the largest share. That points at the offer's form or at visitors arriving unsure what they are entering.",
+          "d": {
+            "kind": "funnel",
+            "task": "Which step has the lowest pass-through rate from the step above? Enter its index (first row = 0).",
+            "preset": {
+              "steps": [
+                [
+                  "Clicks",
+                  1000
+                ],
+                [
+                  "Reached form",
+                  640
+                ],
+                [
+                  "Leads",
+                  179
+                ],
+                [
+                  "Paid leads",
+                  157
+                ]
+              ],
+              "payout": 1.2
+            },
+            "answer": {
+              "field": "worst_step",
+              "value": 2
+            }
+          },
+          "say": "Time for a lab, using the prelander funnel from this lesson. Work out each step's pass-through rate from the step above it. Then enter the index of the weakest step, where the first row, clicks, is zero. That weakest step is where to focus your next test. Pause and try it, then check your answer."
+        },
+        {
+          "v": "phone",
+          "h": "A multi-step entry, done honestly",
+          "p": "Multi-step flows ask for one easy field first. Honest versions say which step this is, what comes next and who can enter. They never suggest the person has qualified for anything by typing a ZIP code.",
+          "d": {
+            "app": "browser",
+            "url": "monthly-draw.example/start",
+            "page": {
+              "h": "Step 1 of 2: your email",
+              "p": "Enter your email to start your entry in the June $500 draw. Next: confirm by email. Free, US 18+. Rules below.",
+              "cta": "Continue"
+            }
+          },
+          "say": "Multi-step flows ask for one easy field first. Look at this example on the phone. The heading says step one of two, your email. The text explains you're starting your entry in the June five hundred dollar draw, that the next step is to confirm by email, that it's free for U S adults eighteen plus, and that rules are below. That's the honest version. It says which step this is, what comes next and who can enter. It never suggests someone has qualified just by typing a zip code."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: choose your first shape",
+          "p": "Use these steps for each new offer. They take a few minutes and stop you building a funnel the offer does not allow, or a test that cannot give you a clear answer. Tap through each step.",
+          "d": {
+            "steps": [
+              {
+                "title": "Read the offer's funnel rules",
+                "text": "Look for 'prelanders allowed', 'lead forms allowed' and approved pages.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/offers/3107",
+                  "title": "Offer 3107",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Prelanders allowed",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Platform lead forms allowed",
+                      "on": false
+                    },
+                    {
+                      "type": "text",
+                      "value": "Approved entry page only."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Pick a baseline",
+                "text": "Start with the simplest allowed shape that explains the draw. Usually a prelander.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheets.example/test-plan",
+                  "title": "Funnel test plan",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Baseline",
+                      "value": "Prelander"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Challenger",
+                      "value": "Direct link"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Plan the split",
+                "text": "Same ad, same audience, traffic split evenly by your tracker.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "trk.example/campaigns/3107",
+                  "title": "Tracker campaign",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Path A",
+                      "value": "Prelander v1 (50%)"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Path B",
+                      "value": "Direct (50%)"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Save paths"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Set the read point",
+                "text": "Decide now: compare after 500+ clicks per path on accepted EPC.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheets.example/test-plan",
+                  "title": "Funnel test plan",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Read at",
+                      "value": "500 clicks per path"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Metric",
+                      "value": "Accepted EPC"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Here's how to choose your first shape for each new offer. Tap Next to follow each step. First, read the offer's funnel rules. In this example, prelanders are allowed, but platform lead forms are not. Second, pick a baseline, the simplest allowed shape that explains the draw, usually a prelander. Here the challenger is a direct link. Third, plan the split: same ad, same audience, traffic split evenly by your tracker, fifty fifty. Fourth, set the read point now: compare after five hundred or more clicks per path, on accepted E P C."
+        },
+        {
+          "v": "compare",
+          "h": "Mistakes when choosing a shape",
+          "p": "These mistakes come from looking at the wrong number or skipping the offer rules. The right column costs nothing extra; it only needs a little patience and a test plan written before launch.",
+          "d": {
+            "a": {
+              "title": "Common mistakes",
+              "items": [
+                "Choosing the shape with most leads",
+                "Using lead forms the offer bans",
+                "Testing shapes with different ads",
+                "Deciding after 100 clicks"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Choose on accepted EPC",
+                "Read the funnel rules first",
+                "Same ad, split in the tracker",
+                "Wait for 500+ clicks per path"
+              ]
+            }
+          },
+          "say": "These mistakes come from looking at the wrong number or skipping the offer rules. Read across. Choosing the shape with the most leads? Choose on accepted E P C. Using lead forms the offer bans? Read the funnel rules first. Testing shapes with different ads? Use the same ad, split in the tracker. Deciding after one hundred clicks? Wait for five hundred or more clicks per path. The fixes cost nothing extra, just patience and a written plan."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: platform lead forms",
+          "p": "Lead forms inside an ad app send personal data to the advertiser through you or an integration. They need a privacy policy link and clear consent, and the offer must allow them.",
+          "d": {
+            "kind": "warn",
+            "text": "We are not certain which lead form features and fields are current on each platform; check the platform's Help Center. Never use a lead form an offer does not permit."
+          },
+          "say": "A word on compliance for platform lead forms. These forms, inside an ad app, send personal data to the advertiser through you or an integration. They need a privacy policy link and clear consent, and the offer must allow them. As the warning says, we're not certain which lead form features and fields are current on each platform, so check the platform's Help Center. And never use a lead form an offer doesn't permit."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules: funnel shape",
+          "p": "Starting rules to adapt with your own data. Write them in the test plan before the split starts so you cannot move the goalposts afterwards.",
+          "d": [
+            "Compare shapes only after 500+ clicks per path",
+            "Keep the challenger only if accepted EPC beats baseline by 10% or more",
+            "Any path with accepted rate 15+ points below the other: drop it",
+            "Change one thing per test: shape or ad, never both"
+          ],
+          "say": "Here are your starting decision rules for funnel shape. Compare shapes only after five hundred or more clicks per path. Keep the challenger only if its accepted E P C beats the baseline by ten percent or more. If any path's accepted rate is fifteen or more points below the other, drop it. And change one thing per test, shape or ad, never both. Write these in your test plan before the split starts, so you can't move the goalposts afterwards."
+        }
+      ],
+      "takeaways": [
+        "Five common shapes: direct link, prelander, quiz, multi-step, platform lead form.",
+        "Compare shapes on accepted EPC; more leads can mean less money.",
+        "Split traffic evenly with the same ad and judge after 500+ clicks per path."
+      ],
+      "action": "For your chosen offer, read its funnel rules and write a one-page test plan: baseline shape, challenger shape, split method, read point (clicks per path) and the decision rule you will apply.",
+      "glossary": [
+        {
+          "term": "Funnel shape",
+          "def": "The sequence of pages or steps between the ad click and the conversion."
+        },
+        {
+          "term": "Direct link",
+          "def": "Sending the ad click straight to the offer's entry page."
+        },
+        {
+          "term": "Prelander",
+          "def": "A page you control before the offer that explains it and warms the visitor up."
+        },
+        {
+          "term": "Split test",
+          "def": "Sending traffic evenly to two versions to compare them fairly."
+        },
+        {
+          "term": "Platform lead form",
+          "def": "A form inside the ad app that collects details without leaving it."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Direct: 1,000 clicks, 160 leads, 80% accepted. Prelander: 1,000 clicks, 170 leads, 90% accepted. $1.00 payout. Which has the higher accepted EPC?",
+          "options": [
+            "Direct, $0.16",
+            "Prelander, $0.153 vs $0.128",
+            "They are equal",
+            "Direct, more raw leads"
+          ],
+          "answer": 1,
+          "why": "Direct: 160 × 0.80 = $128 ÷ 1,000 = $0.128. Prelander: 170 × 0.90 = $153 ÷ 1,000 = $0.153."
+        },
+        {
+          "q": "The offer page says 'Platform lead forms: not allowed'. A lead form would double your leads. What do you do?",
+          "options": [
+            "Use it anyway",
+            "Use it on a small budget",
+            "Do not use it; pick an allowed shape",
+            "Ask users to re-enter on the offer"
+          ],
+          "answer": 2,
+          "why": "Funnel rules are part of the offer terms. Breaking them gets leads unpaid."
+        },
+        {
+          "q": "Challenger EPC $0.21, baseline $0.20 after 600 clicks each. What does the starting rule say?",
+          "options": [
+            "Keep the baseline: the gain is under 10%",
+            "Switch to the challenger",
+            "Run both forever",
+            "Kill both"
+          ],
+          "answer": 0,
+          "why": "$0.21 is only 5% above $0.20. The rule needs 10% or more to switch."
+        },
+        {
+          "q": "Why test shapes with the same ad?",
+          "options": [
+            "It is cheaper",
+            "Platforms require it",
+            "Ads do not matter",
+            "So the shape is the only thing that changed"
+          ],
+          "answer": 3,
+          "why": "Change one thing at a time or you cannot tell what caused the result."
+        },
+        {
+          "q": "Which shape most often brings many leads with a low accepted rate?",
+          "options": [
+            "Prelander",
+            "Platform lead form with pre-filled details",
+            "Honest quiz",
+            "Multi-step with clear steps"
+          ],
+          "answer": 1,
+          "why": "Pre-filled forms are quick to submit without reading, so more get rejected."
+        }
+      ],
+      "say_intro": "This lesson covers funnel shapes for sweepstakes and lead gen. You'll learn the five common shapes, when each one fits, and how to compare them on accepted earnings per click. It matters because the page between the click and the form is where you actually earn.",
+      "say_outro": "To recap: there are five common shapes, each offer has rules on which you can use, and you pick the winner on accepted E P C after a fair split, never on lead count. Your task: for your chosen offer, read its funnel rules and write a one-page test plan with your baseline shape, challenger shape, split method, read point in clicks per path, and the decision rule you'll apply. Now take the quiz."
+    },
+    {
+      "slug": "honest-prelanders",
+      "title": "Prelanders that tell the truth",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can build a prelander with every element an honest sweeps page needs.",
+        "By the end you can measure click loss and click-through to the offer, and fix both.",
+        "By the end you can run and judge a prelander A/B test with starting rules."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why this matters",
+          "p": "A prelander does two jobs: it tells people exactly what they are entering, and it filters out people who would not want to. Done honestly, it lifts the accepted rate. Done with tricks, it inflates leads that get scrubbed and ads that get rejected.",
+          "d": {
+            "b": "Explain the draw, then let people choose",
+            "s": "An honest prelander raises accepted EPC."
+          },
+          "say": "A prelander does two jobs. It tells people exactly what they're entering, and it filters out people who wouldn't want to. Done honestly, it lifts your accepted rate. Done with tricks, it inflates leads that get scrubbed, and ads that get rejected. As the screen says, explain the draw, then let people choose. An honest prelander raises accepted E P C, earnings per click."
+        },
+        {
+          "v": "cards",
+          "h": "Anatomy of an honest prelander",
+          "p": "Six blocks, in this order, on one short mobile page. Every fact comes from the official rules. If a block would need a fact the rules do not give, leave it out.",
+          "d": [
+            "Headline|the draw and the prize",
+            "Prize facts|value, number of winners, date",
+            "How it works|three short steps",
+            "Rules summary|eligibility, free entry, odds",
+            "Sponsor|who runs it, rules link",
+            "Button|'Enter the draw'"
+          ],
+          "say": "Here's the anatomy of an honest prelander: six blocks, in this order, on one short mobile page. A headline with the draw and the prize. Prize facts: value, number of winners and date. How it works, in three short steps. A rules summary: eligibility, free entry and odds. The sponsor, who runs it, with a rules link. And a button that says enter the draw. Every fact comes from the official rules. If a block needs a fact the rules don't give, leave it out."
+        },
+        {
+          "v": "phone",
+          "h": "Example: an honest prelander",
+          "p": "This is what the six blocks look like on a phone. No countdown, no 'you were selected', no fake comments. It is plain, and plain is what keeps the accepted rate high and the ad approved.",
+          "d": {
+            "app": "browser",
+            "url": "draw-guide.example/june",
+            "page": {
+              "h": "Enter the June $500 gift card draw",
+              "p": "One winner, drawn 1 July. 1) Enter your email. 2) Confirm by email. 3) Wait for the draw. Free, US 18+. Run by Example Rewards Ltd. Official rules linked.",
+              "cta": "Enter the draw"
+            }
+          },
+          "say": "Here's what those six blocks look like on a phone. Read it with me. Enter the June five hundred dollar gift card draw. One winner, drawn on the first of July. One, enter your email. Two, confirm by email. Three, wait for the draw. Free, U S adults eighteen plus. Run by Example Rewards Limited, with official rules linked. Notice what's missing: no countdown, no you were selected, no fake comments. Plain is what keeps the accepted rate high and the ad approved."
+        },
+        {
+          "v": "eq",
+          "h": "Prelander EPC",
+          "p": "Prelander EPC is the share of visitors who click through to the offer, times what each offer click earns. You can improve either side: a clearer prelander or a better offer page.",
+          "more": "Example: 64% click through. On the offer, 28% enter and 88% are accepted at $1.20, so each offer click earns 0.28 × 0.88 × $1.20 = $0.296. Prelander EPC = 0.64 × $0.296 = $0.19. That matches the funnel in Lesson 1.",
+          "d": [
+            "Click-through to offer",
+            "×",
+            "Offer EPC",
+            "=",
+            "Prelander EPC"
+          ],
+          "say": "Prelander E P C is the share of visitors who click through to the offer, times what each offer click earns. That's the equation on screen. In this example, sixty four percent click through. On the offer, twenty eight percent enter and eighty eight percent are accepted at one dollar twenty, so each offer click earns about thirty cents. Sixty four percent of thirty cents gives a prelander E P C of about nineteen cents. You can improve either side: a clearer prelander, or a better offer page."
+        },
+        {
+          "v": "stat",
+          "h": "Example: click loss",
+          "p": "Click loss is the share of ad clicks that never load your page. Compare clicks in Ads Manager with page views in your tracker. Here 22% of paid clicks never saw the page, usually because it loaded too slowly.",
+          "d": {
+            "n": 22,
+            "pre": "",
+            "suf": "%",
+            "dec": 0,
+            "label": "of paid clicks never reached the page",
+            "note": "Example: 1,000 clicks, 780 page views."
+          },
+          "say": "Click loss is the share of ad clicks that never load your page. You find it by comparing clicks in Ads Manager with page views in your tracker. In this example, one thousand clicks led to just seven hundred and eighty page views. So twenty two percent of paid clicks never saw the page, the number on screen. Usually that's because the page loaded too slowly. You paid for those clicks and got nothing."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: prelander settings that matter",
+          "p": "Whatever page builder you use, check these settings. The pulsing one is the button link: it must carry your click ID to the offer, or the network cannot credit you. Setting names here are generic.",
+          "d": {
+            "kind": "browser",
+            "url": "pages.example/edit/june-draw",
+            "title": "Page settings: june-draw",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Page weight",
+                "value": "380 KB (aim small)"
+              },
+              {
+                "type": "toggle",
+                "label": "Compress images",
+                "on": true
+              },
+              {
+                "type": "field",
+                "label": "Button link",
+                "value": "trk.example/click?cid={clickid}"
+              },
+              {
+                "type": "toggle",
+                "label": "Rules link visible above the fold",
+                "on": true
+              },
+              {
+                "type": "button",
+                "label": "Publish"
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "Whatever page builder you use, check these settings. Setting names here are generic. Page weight is three hundred and eighty kilobytes, so aim small. Compress images is on. Now look at the highlighted line, the button link. It must carry your click I D to the offer, or the network can't credit you. Below that, the rules link is visible above the fold. Then publish."
+        },
+        {
+          "v": "product",
+          "h": "Build landers faster",
+          "p": "You can hand-build prelanders in any page tool. A lander builder made for affiliates can save time on speed, tracking links and mobile layout. Keep every fact from the official rules either way.",
+          "d": {
+            "slug": "landvoo",
+            "why": "Build fast, mobile-first prelanders with tracking-ready buttons, then fill them only with facts from the rules."
+          },
+          "say": "You can hand-build prelanders in any page tool. A lander builder made for affiliates, like Landvoo shown here, can save time on speed, tracking links and mobile layout. It's built for fast, mobile-first prelanders with tracking-ready buttons. But either way, fill every page only with facts from the official rules."
+        },
+        {
+          "v": "table",
+          "h": "Example: a headline A/B test",
+          "p": "Example after 600 visits each. B has a slightly lower click-through but a higher accepted rate, because it sets honest expectations. Judge on accepted EPC, which here favours B.",
+          "more": "A: 0.68 × 0.27 × 0.78 × $1.20 = $0.172. B: 0.64 × 0.28 × 0.88 × $1.20 = $0.189. B wins by about 10%, which meets the starting rule. Example figures; your tests will differ.",
+          "d": {
+            "cols": [
+              "",
+              "A: 'Your chance at $500'",
+              "B: 'Enter the June $500 draw'"
+            ],
+            "rows": [
+              [
+                "Click-through",
+                "68%",
+                "64%"
+              ],
+              [
+                "Form rate",
+                "27%",
+                "28%"
+              ],
+              [
+                "Accepted",
+                "78%",
+                "88%"
+              ],
+              [
+                "Accepted EPC",
+                "$0.17",
+                "$0.19"
+              ]
+            ]
+          },
+          "say": "Here's an example headline test, after six hundred visits each. Headline A says your chance at five hundred dollars. Headline B says enter the June five hundred dollar draw. Read the table. A has a higher click-through, sixty eight percent against sixty four. But B has a higher accepted rate, eighty eight percent against seventy eight, because it sets honest expectations. So B wins on accepted E P C, nineteen cents against seventeen, about ten percent better. These are example figures."
+        },
+        {
+          "v": "code",
+          "h": "A prelander copy skeleton",
+          "p": "Start every prelander from this skeleton and fill each line from the official rules. If you cannot fill a line truthfully, delete it rather than inventing something.",
+          "d": {
+            "lang": "text",
+            "text": "Headline: Enter the [month] [prize] draw\nPrize: [prize], [number] winner(s), drawn [date]\nHow it works: 1) [entry step] 2) [confirm step] 3) [draw]\nSmall print: Free to enter. [eligibility]. Odds depend on entries.\nSponsor: [legal name]. Official rules: [link]\nButton: Enter the draw",
+            "note": "Example skeleton."
+          },
+          "say": "Start every prelander from this copy skeleton, the text on screen. It has a line for the headline, the prize, how it works in three steps, the small print saying it's free, the eligibility and that odds depend on entries, the sponsor with a rules link, and the button. Fill each line from the official rules. If you can't fill a line truthfully, delete it rather than inventing something."
+        },
+        {
+          "v": "compare",
+          "h": "Mistakes on prelanders",
+          "p": "The left column raises clicks for a day and lowers payouts for a month. Several also break platform policies on misleading content and fake endorsements.",
+          "d": {
+            "a": {
+              "title": "Common mistakes",
+              "items": [
+                "Fake news-article layout",
+                "Fake comments or winners",
+                "Countdown that resets",
+                "Heavy images, slow load"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Plain page, clearly an ad",
+                "Only real, permitted info",
+                "Real closing date from rules",
+                "Compress, aim for a light page"
+              ]
+            }
+          },
+          "say": "These mistakes raise clicks for a day and lower payouts for a month. Several also break platform policies on misleading content and fake endorsements. Read across. A fake news-article layout? Use a plain page that's clearly an ad. Fake comments or winners? Only real, permitted info. A countdown that resets? Use the real closing date from the rules. Heavy images and slow load? Compress, and aim for a light page."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: no fake formats or endorsements",
+          "p": "Prelanders styled as news articles, invented comments, fake winner photos and celebrity images without permission are misleading and break most platforms' policies and consumer law.",
+          "d": {
+            "kind": "warn",
+            "text": "Never imply endorsement, editorial coverage or winners that do not exist. Every claim on the page must come from the official rules."
+          },
+          "say": "Compliance matters here. Prelanders styled as news articles, invented comments, fake winner photos, and celebrity images without permission are misleading. They break most platforms' policies and consumer law. As the warning says, never imply endorsement, editorial coverage, or winners that don't exist. Every claim on the page must come from the official rules."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules: prelanders",
+          "p": "Starting rules to adapt. Check click loss and click-through daily in the first week, and judge A/B tests only at the read point you wrote before launch.",
+          "d": [
+            "Click loss over 20%: fix page speed before anything else",
+            "Click-through under 40% after 300 visits: rewrite the page",
+            "Judge A/B tests after 500+ visits per version",
+            "Keep a variant only if accepted EPC beats the other by 10% or more"
+          ],
+          "say": "Here are starting decision rules for prelanders. If click loss is over twenty percent, fix page speed before anything else. If click-through is under forty percent after three hundred visits, rewrite the page. Judge A B tests only after five hundred or more visits per version. And keep a variant only if its accepted E P C beats the other by ten percent or more. Check click loss and click-through daily in the first week."
+        }
+      ],
+      "takeaways": [
+        "An honest prelander has six blocks, all taken from the official rules.",
+        "Prelander EPC = click-through × offer EPC; click loss tells you if speed is costing you.",
+        "Judge prelander tests on accepted EPC after 500+ visits per version."
+      ],
+      "action": "Build one prelander for your chosen offer using the copy skeleton, with every fact taken from the official rules. Measure its page weight and test the button link carries your click ID.",
+      "glossary": [
+        {
+          "term": "Click-through to offer",
+          "def": "The share of prelander visitors who click on to the offer page."
+        },
+        {
+          "term": "Click loss",
+          "def": "The share of paid clicks that never load your page."
+        },
+        {
+          "term": "Page weight",
+          "def": "The total size of a page's files, which affects load speed."
+        },
+        {
+          "term": "Advertorial",
+          "def": "An ad made to look like an article. Misleading when it hides that it is an ad."
+        },
+        {
+          "term": "A/B test",
+          "def": "A split test of two versions of one page or ad."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Click-through 50%, offer EPC $0.30. What is prelander EPC?",
+          "options": [
+            "$0.15",
+            "$0.60",
+            "$0.30",
+            "$0.80"
+          ],
+          "answer": 0,
+          "why": "0.50 × $0.30 = $0.15."
+        },
+        {
+          "q": "Ads Manager shows 1,200 clicks; your tracker shows 840 page views. What is the click loss and the action?",
+          "options": [
+            "70%, scale",
+            "30%, fix page speed first",
+            "12%, fine",
+            "30%, change the offer"
+          ],
+          "answer": 1,
+          "why": "1 − 840 ÷ 1,200 = 30%, above the 20% line. Speed is usually the cause."
+        },
+        {
+          "q": "Which prelander element is allowed?",
+          "options": [
+            "Invented comments from happy winners",
+            "A news-article layout",
+            "A countdown that resets every visit",
+            "A rules summary with a link to the full rules"
+          ],
+          "answer": 3,
+          "why": "A rules summary is honest and helps people decide. The others are misleading."
+        },
+        {
+          "q": "Version A: 70% click-through, 75% accepted. Version B: 62%, 90% accepted. Same 28% form rate and payout. Which wins on accepted EPC?",
+          "options": [
+            "A",
+            "B",
+            "Equal",
+            "Cannot compare"
+          ],
+          "answer": 1,
+          "why": "A: 0.70 × 0.75 = 0.525. B: 0.62 × 0.90 = 0.558. B earns about 6% more per visit, though under the 10% rule you would keep testing."
+        },
+        {
+          "q": "Where should every fact on your prelander come from?",
+          "options": [
+            "Competitors' pages",
+            "The official rules",
+            "What converts best",
+            "The network's ad examples only"
+          ],
+          "answer": 1,
+          "why": "Your page can only promise what the rules promise."
+        }
+      ],
+      "say_intro": "In this lesson you'll build prelanders that tell the truth. You'll learn the six blocks of an honest page, how to measure click loss and click-through, and how to judge a headline test. It matters because an honest prelander raises your accepted earnings, while tricks get leads scrubbed and ads rejected.",
+      "say_outro": "To recap: six honest blocks with every fact from the official rules, a light, fast page, a button that carries your click I D, and tests judged on accepted E P C. Your task: build one prelander for your chosen offer using the copy skeleton, with every fact taken from the official rules, then measure its page weight and test that the button link carries your click I D. Now take the quiz."
+    },
+    {
+      "slug": "quizzes-and-surveys",
+      "title": "Quizzes and surveys without the tricks",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can design a short quiz that personalises the next step without implying a win.",
+        "By the end you can measure quiz completion and its effect on accepted EPC.",
+        "By the end you know which questions you should never ask in a sweeps quiz."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why this matters",
+          "p": "Quizzes are popular in sweeps because tapping answers feels easy. The risk is the result screen. 'Congratulations, you qualify' turns a harmless quiz into a misleading promise. Built honestly, a quiz helps people pick what they want and lifts quality.",
+          "d": {
+            "b": "A quiz may personalise, never promise",
+            "s": "The result screen is where most quizzes break the rules."
+          },
+          "say": "Quizzes are popular in sweeps, because tapping answers feels easy. The risk is the result screen. Congratulations, you qualify, turns a harmless quiz into a misleading promise. Built honestly, a quiz helps people pick what they want, and it lifts quality. As the screen says, a quiz may personalise, but never promise."
+        },
+        {
+          "v": "flow",
+          "h": "Structure of an honest quiz",
+          "p": "Keep it short. Each question must have a purpose the person can see, such as choosing a prize type or a topic for emails. The result explains what happens next, nothing more.",
+          "d": [
+            "One easy opening question",
+            "Two or three purposeful questions",
+            "Honest summary of choices",
+            "Entry button",
+            "Official rules link"
+          ],
+          "say": "Here's the structure of an honest quiz. Follow the flow. One easy opening question. Then two or three purposeful questions. Then an honest summary of choices, the entry button, and the official rules link. Keep it short. Each question must have a purpose the person can see, like choosing a prize type or a topic for emails. The result explains what happens next, and nothing more."
+        },
+        {
+          "v": "phone",
+          "h": "Example: a quiz in a chat-style flow",
+          "p": "Example quiz on a phone. The questions shape which draw and which emails the person sees. The last message tells them what entering means. Nothing says they have won or qualified.",
+          "d": {
+            "app": "bot",
+            "title": "Gift Card Draws",
+            "subtitle": "quiz",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Which gift card would you rather enter a draw for?",
+                "buttons": [
+                  "Groceries",
+                  "Fuel",
+                  "Online shopping"
+                ]
+              },
+              {
+                "from": "me",
+                "text": "Groceries"
+              },
+              {
+                "from": "them",
+                "text": "How often would you like deal emails?",
+                "buttons": [
+                  "Weekly",
+                  "Monthly"
+                ]
+              },
+              {
+                "from": "me",
+                "text": "Weekly"
+              },
+              {
+                "from": "them",
+                "text": "Thanks. You can enter the June $500 grocery card draw. Free, one winner, rules linked. Entering means weekly deal emails.",
+                "buttons": [
+                  "Enter the draw"
+                ]
+              }
+            ]
+          },
+          "say": "Here's an example quiz in a chat-style flow on a phone. First it asks which gift card you'd rather enter a draw for, and the person picks groceries. Then it asks how often you'd like deal emails, and they pick weekly. The last message says thanks, you can enter the June five hundred dollar grocery card draw. Free, one winner, rules linked, and entering means weekly deal emails. Notice that nothing says they've won or qualified."
+        },
+        {
+          "v": "compare",
+          "h": "Result screens: misleading vs honest",
+          "p": "The result screen decides whether the quiz is honest. The left side implies a win or special status. The right side summarises choices and explains the entry.",
+          "d": {
+            "a": {
+              "title": "Misleading",
+              "items": [
+                "Congratulations, you qualify",
+                "You are one of 5 selected",
+                "Your prize is reserved",
+                "Only 2 spots left for you"
+              ]
+            },
+            "b": {
+              "title": "Honest",
+              "items": [
+                "Thanks, here is your draw",
+                "You chose: grocery card",
+                "Enter free, rules linked",
+                "Draw closes 30 June"
+              ]
+            }
+          },
+          "say": "The result screen decides whether the quiz is honest. On the left, misleading lines: congratulations, you qualify. You're one of five selected. Your prize is reserved. Only two spots left for you. These imply a win or special status. On the right, honest lines: thanks, here's your draw. You chose a grocery card. Enter free, rules linked. The draw closes thirtieth June. These just summarise choices and explain the entry."
+        },
+        {
+          "v": "funnel",
+          "h": "Example: a quiz funnel",
+          "p": "Example, 1,000 clicks. 85% start, 70% finish, 62% tap through to the entry form, and 29% of those enter. That gives 180 leads. The question is whether they are accepted at a higher rate than your plain prelander's leads.",
+          "d": [
+            [
+              "Clicks",
+              1000
+            ],
+            [
+              "Started quiz",
+              850
+            ],
+            [
+              "Finished quiz",
+              700
+            ],
+            [
+              "Reached form",
+              620
+            ],
+            [
+              "Leads",
+              180
+            ]
+          ],
+          "say": "Here's an example quiz funnel from one thousand clicks. Follow the bars down. Eight hundred and fifty start the quiz, seven hundred finish, six hundred and twenty reach the entry form, and one hundred and eighty enter. That's one hundred and eighty leads. But the real question is whether they're accepted at a higher rate than your plain prelander's leads."
+        },
+        {
+          "v": "bars",
+          "h": "Example: completion by number of questions",
+          "p": "Example from one test. Each extra question loses some people. Seven questions finished at 55%, four at 70%. Only add a question if its answer changes something for the person.",
+          "d": [
+            [
+              "3 questions",
+              100,
+              "74%"
+            ],
+            [
+              "4 questions",
+              95,
+              "70%"
+            ],
+            [
+              "5 questions",
+              86,
+              "64%"
+            ],
+            [
+              "7 questions",
+              74,
+              "55%"
+            ]
+          ],
+          "say": "Every extra question loses some people. In this example from one test, look at the bars. Three questions finished at seventy four percent. Four, at seventy percent. Five, at sixty four. And seven questions, only fifty five percent. So only add a question if its answer changes something for the person."
+        },
+        {
+          "v": "eq",
+          "h": "Example: is the quiz worth it?",
+          "p": "Example: 180 leads × 90% accepted × $1.20 = $194.40 per 1,000 clicks, EPC $0.19. The plain prelander earned $188.40, EPC $0.19. Only about 3% better, so under the 10% rule the quiz has not earned its place yet.",
+          "d": [
+            "180 × 90% × $1.20",
+            "÷",
+            "1,000 clicks",
+            "=",
+            "$0.19 EPC"
+          ],
+          "say": "So, is the quiz worth it? In this example, one hundred and eighty leads, times ninety percent accepted, times one dollar twenty, gives one hundred and ninety four dollars forty per thousand clicks. That's an E P C, earnings per click, of nineteen cents. The plain prelander earned one hundred and eighty eight dollars forty, also about nineteen cents. The quiz is only about three percent better, so under the ten percent rule, it hasn't earned its place yet."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: quiz builder settings",
+          "p": "Check these settings in whatever quiz tool you use. The pulsing one is the result text: write it last, from the official rules, and read it as if you were a tired person on a bus.",
+          "d": {
+            "kind": "browser",
+            "url": "quiz.example/edit/grocery-draw",
+            "title": "Quiz: grocery draw",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Questions",
+                "value": "3"
+              },
+              {
+                "type": "toggle",
+                "label": "Save answers with consent record",
+                "on": true
+              },
+              {
+                "type": "field",
+                "label": "Result text",
+                "value": "Thanks. You can enter the June $500 grocery card draw. Rules linked."
+              },
+              {
+                "type": "toggle",
+                "label": "Show rules link on result",
+                "on": true
+              },
+              {
+                "type": "button",
+                "label": "Publish"
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "Check these settings in whatever quiz tool you use. In this example there are three questions, and answers are saved with a consent record. Look at the highlighted line, the result text. It reads: thanks, you can enter the June five hundred dollar grocery card draw, rules linked. Write it last, from the official rules, and read it as if you were a tired person on a bus. The rules link is also shown on the result."
+        },
+        {
+          "v": "cards",
+          "h": "Questions you should not ask",
+          "p": "Quiz answers are personal data. Some are sensitive data under many laws. Unless an offer lawfully needs one and the person clearly agrees, leave these out of sweeps quizzes.",
+          "d": [
+            "Health conditions|sensitive data",
+            "Debts or income|financial details",
+            "Religion or politics|sensitive data",
+            "Age of a child|minors' data",
+            "Anything not used|collect only what you need"
+          ],
+          "say": "Quiz answers are personal data, and some are sensitive data under many laws. Look at the cards. Health conditions are sensitive data. Debts or income are financial details. Religion or politics are sensitive data. A child's age is minors' data. And anything you won't use, don't collect. Unless an offer lawfully needs one of these and the person clearly agrees, leave them out of sweeps quizzes."
+        },
+        {
+          "v": "cards",
+          "h": "Mistakes with quizzes",
+          "p": "Most broken quizzes were built to raise click-through, not to help the person. Every question and every result line should pass a simple test: would you be happy to explain it to a regulator?",
+          "d": [
+            "'You qualify' results|summarise choices instead",
+            "Seven questions for nothing|cut to what changes the next step",
+            "Fake progress bars|show real steps",
+            "Sensitive questions|leave them out"
+          ],
+          "say": "Most broken quizzes were built to raise click-through, not to help the person. Look at the fixes. You qualify results? Summarise choices instead. Seven questions for nothing? Cut to what changes the next step. Fake progress bars? Show real steps. Sensitive questions? Leave them out. Every question and result line should pass a simple test: would you be happy to explain it to a regulator?"
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: quiz answers are data",
+          "p": "Quiz answers become personal data once they are linked to an email. Collect only what you need, explain why you ask, and store the answers with the consent record so you can show what was agreed.",
+          "d": {
+            "kind": "warn",
+            "text": "Never imply eligibility, selection or a reserved prize. Avoid sensitive questions such as health, finances or religion unless an offer lawfully needs them with explicit consent."
+          },
+          "say": "Quiz answers become personal data once they're linked to an email. So collect only what you need, explain why you ask, and store answers with the consent record, so you can show what was agreed. As the warning says, never imply eligibility, selection or a reserved prize. And avoid sensitive questions like health, finances or religion, unless an offer lawfully needs them with explicit consent."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules: quizzes",
+          "p": "Starting rules to adapt. A quiz is extra work to build and extra data to protect, so it has to earn its place against a plain prelander, measured honestly on accepted EPC.",
+          "d": [
+            "Completion under 50%: cut questions",
+            "Every question must change what the person sees next",
+            "Keep the quiz only if accepted EPC beats the plain prelander by 10%+ after 500 clicks each",
+            "Any result line implying a win: fix before launch"
+          ],
+          "say": "Here are starting decision rules for quizzes. If completion is under fifty percent, cut questions. Every question must change what the person sees next. Keep the quiz only if its accepted E P C beats the plain prelander by ten percent or more, after five hundred clicks each. And if any result line implies a win, fix it before launch. A quiz is extra work and extra data to protect, so it has to earn its place."
+        }
+      ],
+      "takeaways": [
+        "A quiz may personalise the next step; it must never imply a win or selection.",
+        "Each extra question costs completions; keep only questions that change something.",
+        "Keep a quiz only if it beats a plain prelander on accepted EPC by 10% or more."
+      ],
+      "action": "Write a three-question quiz for your chosen offer. For each question, write what it changes for the person. Write the result screen from the official rules and check it against the misleading list.",
+      "glossary": [
+        {
+          "term": "Quiz funnel",
+          "def": "A funnel that asks a few questions before the entry form."
+        },
+        {
+          "term": "Completion rate",
+          "def": "The share of people who start a quiz and finish it."
+        },
+        {
+          "term": "Result screen",
+          "def": "The final quiz screen that summarises answers and offers the next step."
+        },
+        {
+          "term": "Sensitive data",
+          "def": "Personal data such as health, religion or finances that many laws protect more strictly."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which quiz result line is honest?",
+          "options": [
+            "Congratulations, you qualify",
+            "You chose a grocery card. Enter the June draw, rules linked",
+            "Your prize is reserved for 10 minutes",
+            "You are one of 5 people selected"
+          ],
+          "answer": 1,
+          "why": "It summarises the choice and explains the entry without implying a win."
+        },
+        {
+          "q": "Your quiz has a 46% completion rate. What does the starting rule say?",
+          "options": [
+            "Cut questions",
+            "Add a progress bar that jumps ahead",
+            "Add a prize countdown",
+            "Scale it"
+          ],
+          "answer": 0,
+          "why": "Under 50% completion means cut questions to the ones that change something."
+        },
+        {
+          "q": "Quiz EPC $0.20, plain prelander $0.19, after 600 clicks each. Keep the quiz?",
+          "options": [
+            "Yes, it is higher",
+            "Yes, quizzes always win",
+            "No, it is about 5% better, under the 10% rule",
+            "Delete both"
+          ],
+          "answer": 2,
+          "why": "$0.20 is about 5% above $0.19, not the 10% the starting rule needs."
+        },
+        {
+          "q": "Which question should you leave out of a sweeps quiz?",
+          "options": [
+            "Which gift card would you prefer?",
+            "Weekly or monthly emails?",
+            "Which store do you shop at most?",
+            "Do you have any health conditions?"
+          ],
+          "answer": 3,
+          "why": "Health is sensitive data. Leave it out unless an offer lawfully needs it with explicit consent."
+        },
+        {
+          "q": "Example: 1,000 clicks, 160 leads, 90% accepted, $1.25 payout. EPC?",
+          "options": [
+            "$0.20",
+            "$0.18",
+            "$0.16",
+            "$1.13"
+          ],
+          "answer": 1,
+          "why": "160 × 0.90 × $1.25 = $180 ÷ 1,000 = $0.18."
+        }
+      ],
+      "say_intro": "This lesson is about quizzes and surveys without the tricks. You'll design a short quiz that personalises the next step without implying a win, measure whether it earns its place, and learn which questions never belong in a sweeps quiz. It matters because the result screen is where most quizzes break the rules.",
+      "say_outro": "To recap: keep quizzes short, make every question change something for the person, write an honest result screen from the official rules, avoid sensitive questions, and keep the quiz only if it beats a plain prelander. Your task: write a three-question quiz for your chosen offer, note what each question changes for the person, then write the result screen from the official rules and check it against the misleading list. Now take the quiz."
+    },
+    {
+      "slug": "entry-forms",
+      "title": "Entry forms that convert honestly",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can set up a mobile entry form with the right field types and validation.",
+        "By the end you can work out how much invalid leads cost you and what validation saves.",
+        "By the end you can apply starting rules for invalid rates and form changes."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why this matters",
+          "p": "Every field you add loses some people. Every invalid email you accept is a lead that will be scrubbed. A good form is short, easy on a phone and strict about mistakes. If you host the form, these details are yours; if the advertiser does, you can still ask for fixes.",
+          "d": {
+            "b": "Short, easy and strict",
+            "s": "Easy to fill, hard to fill wrongly."
+          },
+          "say": "Here's why entry forms matter. Every field you add loses some people. Every invalid email you accept is a lead that'll be scrubbed. A good form is short, easy on a phone, and strict about mistakes. As the screen says, easy to fill, hard to fill wrongly. If you host the form, these details are yours. If the advertiser hosts it, you can still ask for fixes."
+        },
+        {
+          "v": "cards",
+          "h": "Field rules",
+          "p": "Use these for any form you host, and as a checklist when reviewing an advertiser's form. The right field type opens the right keyboard on a phone, which alone reduces typos.",
+          "d": [
+            "Only required fields|ask what the offer pays for",
+            "Email type|opens the email keyboard",
+            "Numeric ZIP|opens the number pad",
+            "Phone format|country code, clear example",
+            "Autofill on|fewer typing errors",
+            "Inline errors|fix before submit"
+          ],
+          "say": "Here are the field rules, for any form you host, and as a checklist for an advertiser's form. Only required fields, so ask only what the offer pays for. Email type, which opens the email keyboard. A numeric zip field, which opens the number pad. A phone format with country code and a clear example. Autofill on, for fewer typing errors. And inline errors, so people fix mistakes before they submit. The right field type alone reduces typos."
+        },
+        {
+          "v": "phone",
+          "h": "Example: a good mobile form",
+          "p": "One column, large fields, labels above fields, consent box unticked and next to the button. The button says what happens. The error message appears as soon as the email looks wrong, not after submit.",
+          "d": {
+            "app": "browser",
+            "url": "monthly-draw.example/enter",
+            "page": {
+              "h": "Enter the June $500 draw",
+              "p": "Email: ada@gmial.com  (Did you mean gmail.com?)  [ ] I agree Example Rewards Ltd may email me offers. Unsubscribe any time.",
+              "cta": "Enter the draw"
+            }
+          },
+          "say": "Here's an example of a good mobile form. Notice the layout: one column, large fields, labels above them. Look at the email. Someone typed a common misspelling of gmail, and the form instantly asks, did you mean gmail dot com? That error appears as soon as the email looks wrong, not after submit. The consent box is unticked and sits next to the button. And the button says what happens: enter the draw."
+        },
+        {
+          "v": "eq",
+          "h": "Example: the cost of invalid leads",
+          "p": "Example: 200 leads, 8% invalid emails, $1.20 payout. 16 leads scrubbed, $19.20 lost. Validation cuts invalid to 2%: 4 leads, $4.80. You save $14.40 on every 200 leads.",
+          "more": "Example only. At 1,000 leads a day that is $72 a day, more than $2,000 a month, from a few lines of validation. Invalid leads also hurt your accepted rate on the network's report, which can affect your terms.",
+          "d": [
+            "16 invalid",
+            "×",
+            "$1.20",
+            "=",
+            "$19.20 lost"
+          ],
+          "say": "What do invalid leads cost? In this example, you get two hundred leads with eight percent invalid emails, at a one dollar twenty payout. Follow the equation: sixteen invalid leads, times one dollar twenty, is nineteen dollars twenty lost. Validation cuts invalid to two percent, just four leads, four dollars eighty. So you save fourteen dollars forty on every two hundred leads. Invalid leads also hurt your accepted rate on the network's report, which can affect your terms."
+        },
+        {
+          "v": "code",
+          "h": "A simple email typo check",
+          "p": "This small script suggests a fix for common email domain typos. It does not block the entry; it asks the person to check. Use it only on forms you host, and test it on a phone.",
+          "d": {
+            "lang": "js",
+            "text": "const fixes = {\"gmial.com\": \"gmail.com\", \"gamil.com\": \"gmail.com\", \"yaho.com\": \"yahoo.com\", \"hotmial.com\": \"hotmail.com\"};\nfunction suggest(email) {\n  const [user, domain] = email.toLowerCase().split(\"@\");\n  return fixes[domain] ? user + \"@\" + fixes[domain] : null;\n}",
+            "note": "Example; a real list would be longer."
+          },
+          "say": "This small script, on screen, suggests a fix for common email domain typos. I won't read the code out. The idea is simple: it holds a short list of misspelled domains and their correct versions, and when someone's email matches one, it suggests the fix. It doesn't block the entry, it just asks the person to check. Use it only on forms you host, and test it on a phone. A real list would be longer."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: set up a hosted form",
+          "p": "If the offer lets you host the form and post leads, set it up in this order. Field names are generic; your form tool will differ.",
+          "d": {
+            "steps": [
+              {
+                "title": "Add only required fields",
+                "text": "Match the offer's required fields exactly.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "forms.example/edit/june",
+                  "title": "Form fields",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Email",
+                      "value": "type: email, required"
+                    },
+                    {
+                      "type": "field",
+                      "label": "First name",
+                      "value": "required"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Set field types",
+                "text": "Email type for email, numeric input for ZIP, tel for phone.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "forms.example/edit/june",
+                  "title": "Field settings",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Email field type",
+                      "value": "email"
+                    },
+                    {
+                      "type": "select",
+                      "label": "ZIP input mode",
+                      "value": "numeric"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Turn on validation",
+                "text": "Inline checks for format and common typos.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "forms.example/edit/june",
+                  "title": "Validation",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Inline validation",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Typo suggestions",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Add consent",
+                "text": "Unticked box, clear text, partner list link, next to the button.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "forms.example/edit/june",
+                  "title": "Consent",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Consent text",
+                      "value": "I agree Example Rewards Ltd may email me offers."
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Pre-ticked",
+                      "on": false
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Test on a phone",
+                "text": "Submit a test lead, check it reaches the advertiser and the tracker.",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "monthly-draw.example/enter?test=1",
+                  "page": {
+                    "h": "Test entry",
+                    "p": "Test lead submitted.",
+                    "cta": "Done"
+                  }
+                }
+              }
+            ]
+          },
+          "say": "Here's how to set up a hosted form, if the offer lets you host it and post leads. Tap Next to follow each step. First, add only required fields, matching the offer exactly. Second, set field types: email type for email, numeric for zip, tel for phone. Third, turn on validation, with inline checks for format and common typos. Fourth, add consent: an unticked box, clear text, a partner list link, next to the button. Fifth, test on a phone. Submit a test lead and check it reaches the advertiser and the tracker."
+        },
+        {
+          "v": "table",
+          "h": "Example: form changes and their effect",
+          "p": "Example log from one form. Each change was tested alone. Removing a field lifted the form rate; validation cost a little form rate but raised the accepted rate more.",
+          "more": "Accepted EPC here is per form-page visit at $1.20: 0.24 × 0.84 × 1.20 = $0.24; 0.28 × 0.84 × 1.20 = $0.28; 0.27 × 0.92 × 1.20 = $0.30. Remove a field only if the offer does not require it.",
+          "d": {
+            "cols": [
+              "Change",
+              "Form rate",
+              "Accepted",
+              "Accepted EPC"
+            ],
+            "rows": [
+              [
+                "Baseline",
+                "24%",
+                "84%",
+                "$0.24"
+              ],
+              [
+                "Remove phone field",
+                "28%",
+                "84%",
+                "$0.28"
+              ],
+              [
+                "Add validation",
+                "27%",
+                "92%",
+                "$0.30"
+              ]
+            ]
+          },
+          "say": "Here's an example log from one form, with each change tested alone. Read the table. The baseline had a twenty four percent form rate and eighty four percent accepted, an accepted E P C, earnings per click, of twenty four cents. Removing the phone field lifted the form rate to twenty eight percent, and E P C to twenty eight cents. Adding validation cost a little form rate, but raised the accepted rate to ninety two percent, and E P C to thirty cents. Remove a field only if the offer doesn't require it."
+        },
+        {
+          "v": "bars",
+          "h": "Example: fields vs form rate",
+          "p": "Example from one offer's tests. Each extra field lowered the form rate. The advertiser decides which fields it pays for; your job is not to add any it does not need, and to make the required ones easy.",
+          "d": [
+            [
+              "1 field (email)",
+              100,
+              "32%"
+            ],
+            [
+              "2 fields",
+              88,
+              "28%"
+            ],
+            [
+              "4 fields",
+              69,
+              "22%"
+            ],
+            [
+              "6 fields",
+              50,
+              "16%"
+            ]
+          ],
+          "say": "This example, from one offer's tests, shows fields against form rate. Look at the bars. One field, just email, converts at thirty two percent. Two fields, twenty eight. Four fields, twenty two. Six fields, sixteen percent. Each extra field lowers the form rate. The advertiser decides which fields it pays for. Your job is not to add any it doesn't need, and to make the required ones easy."
+        },
+        {
+          "v": "stat",
+          "h": "Example: what validation saves in a month",
+          "p": "Example from the earlier slide: validation saves $14.40 per 200 leads. At 1,000 leads a day that is $72 a day, or about $2,160 over 30 days, from a short script and a few settings.",
+          "d": {
+            "n": 2160,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "saved in 30 days by validation",
+            "note": "Example: $72 a day × 30 days."
+          },
+          "say": "Here's what validation saves over a month, using the earlier example. It saves fourteen dollars forty per two hundred leads. At one thousand leads a day, that's seventy two dollars a day. Over thirty days, it's about two thousand one hundred and sixty dollars, the number on screen. All from a short script and a few settings."
+        },
+        {
+          "v": "cards",
+          "h": "Mistakes with entry forms",
+          "p": "These mistakes are small and common. Each one quietly lowers your form rate or your accepted rate, and you usually only notice days later in the network report, after the money is spent.",
+          "d": [
+            "Asking for fields not needed|remove them",
+            "Text keyboard for ZIP|use numeric input",
+            "Errors only after submit|validate inline",
+            "Consent box pre-ticked|leave it unticked"
+          ],
+          "say": "These mistakes are small and common. Asking for fields you don't need? Remove them. A text keyboard for zip? Use numeric input. Errors only shown after submit? Validate inline. A pre-ticked consent box? Leave it unticked. Each one quietly lowers your form rate or accepted rate, and you usually only notice days later in the network report, after the money is spent."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: eligibility and minors",
+          "p": "If the rules say 18+, the form and ads must not target or encourage under-18s, and many rules require a date of birth or age confirmation.",
+          "d": {
+            "kind": "warn",
+            "text": "Never collect data you do not need, never pre-tick consent, and never target minors. Follow the age and eligibility rules of the draw and the geo."
+          },
+          "say": "Now compliance, on eligibility and minors. If the rules say eighteen plus, your form and ads must not target or encourage under eighteens, and many rules require a date of birth or age confirmation. As the warning says, never collect data you don't need, never pre-tick consent, and never target minors. Follow the age and eligibility rules of the draw and the geo."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules: forms",
+          "p": "Starting rules to adapt. Check invalid rates using the network's scrub reasons, change one thing at a time, and roll back any change that hurts accepted EPC, however good it looked in theory.",
+          "d": [
+            "Invalid-lead rate over 5%: add or tighten validation",
+            "Form rate drops 20%+ after a change: roll it back",
+            "Remove a field only if the offer does not require it",
+            "Judge form changes after 300+ form visits each"
+          ],
+          "say": "Here are starting decision rules for forms. If the invalid-lead rate is over five percent, add or tighten validation. If the form rate drops twenty percent or more after a change, roll it back. Remove a field only if the offer doesn't require it. And judge form changes after three hundred or more form visits each. Use the network's scrub reasons to check invalid rates, and change one thing at a time."
+        }
+      ],
+      "takeaways": [
+        "Ask only for required fields, with the right field types and inline validation.",
+        "Invalid leads are scrubbed; validation often pays for itself quickly.",
+        "Never pre-tick consent or target minors; follow the draw's eligibility rules."
+      ],
+      "action": "Open your chosen offer's entry form on your phone. Check field types, validation, autofill and consent against this lesson's checklist, and send the network one written suggestion if anything is missing.",
+      "glossary": [
+        {
+          "term": "Field type",
+          "def": "The kind of input a form field expects, such as email or number, which sets the phone keyboard."
+        },
+        {
+          "term": "Inline validation",
+          "def": "Checking each field as it is filled in, before the form is sent."
+        },
+        {
+          "term": "Autofill",
+          "def": "The browser filling in saved details, which reduces typing errors."
+        },
+        {
+          "term": "Invalid lead",
+          "def": "A lead with wrong or fake details that the network will not pay for."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "300 leads, 6% invalid, $1.50 payout. How much do invalid leads cost?",
+          "options": [
+            "$18",
+            "$27",
+            "$9",
+            "$45"
+          ],
+          "answer": 1,
+          "why": "300 × 6% = 18 invalid × $1.50 = $27."
+        },
+        {
+          "q": "Which field setup is best for a ZIP code on mobile?",
+          "options": [
+            "Text field, no hints",
+            "Dropdown of all ZIPs",
+            "Numeric input with a clear label",
+            "Free text with an example"
+          ],
+          "answer": 2,
+          "why": "Numeric input opens the number pad and reduces errors."
+        },
+        {
+          "q": "Your invalid-lead rate is 7%. What does the starting rule say?",
+          "options": [
+            "Add or tighten validation",
+            "Remove the consent box",
+            "Scale",
+            "Ignore it"
+          ],
+          "answer": 0,
+          "why": "Over 5% invalid means improve validation."
+        },
+        {
+          "q": "After removing a field, form rate fell from 26% to 19%. What do you do?",
+          "options": [
+            "Keep it",
+            "Remove another field",
+            "Add a countdown",
+            "Roll back the change"
+          ],
+          "answer": 3,
+          "why": "A fall of more than 20% after a change means roll it back and investigate."
+        },
+        {
+          "q": "Rules say 18+. What must your form and ads do?",
+          "options": [
+            "Nothing special",
+            "Follow the age rule and never target minors",
+            "Ask parents for consent",
+            "Target students to raise volume"
+          ],
+          "answer": 1,
+          "why": "Eligibility rules apply to targeting and the form."
+        }
+      ],
+      "say_intro": "This lesson is about entry forms that convert honestly. You'll set up a mobile form with the right field types and validation, work out what invalid leads cost you, and apply starting rules for form changes. It matters because every extra field loses people, and every invalid email is a lead that gets scrubbed.",
+      "say_outro": "To recap: ask only for required fields, use the right field types, validate inline, leave consent unticked, and change one thing at a time. Your task: open your chosen offer's entry form on your phone, check field types, validation, autofill and consent against this lesson's checklist, and send the network one written suggestion if anything is missing. Now take the quiz."
+    },
+    {
+      "slug": "doi-confirmation",
+      "title": "DOI confirmation: helping real people confirm",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can map every step between an SOI and a confirmed DOI.",
+        "By the end you can work out what a higher confirm rate is worth.",
+        "By the end you can test your own DOI flow and apply confirm-rate rules."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why this matters",
+          "p": "On a DOI offer, the confirm rate decides your value per raw lead more than almost anything else. People who meant to enter still miss emails, find them in spam or forget. Small, honest fixes to the confirmation journey can lift your earnings without spending more on ads.",
+          "d": {
+            "b": "Confirms are earned after the form",
+            "s": "Help people who meant to enter finish."
+          },
+          "say": "On a D O I, double opt-in, offer, the confirm rate decides your value per raw lead more than almost anything else. People who meant to enter still miss emails, find them in spam, or simply forget. As the screen says, confirms are earned after the form. Help people who meant to enter finish. Small, honest fixes to this journey can lift your earnings without spending more on ads."
+        },
+        {
+          "v": "flow",
+          "h": "From SOI to confirmed DOI",
+          "p": "Each step loses some people. You control some steps, the advertiser controls others. Know which is which so you ask the right person to fix the right problem.",
+          "d": [
+            "Form submitted",
+            "Thank-you page explains next step",
+            "Email or SMS arrives",
+            "Person taps confirm",
+            "Confirmed page",
+            "DOI postback"
+          ],
+          "say": "Follow the flow from S O I, single opt-in, to a confirmed D O I. The form is submitted. A thank-you page explains the next step. An email or S M S arrives. The person taps confirm. They see a confirmed page. And the D O I postback fires. Each step loses some people. You control some steps, and the advertiser controls others. Know which is which, so you ask the right person to fix the right problem."
+        },
+        {
+          "v": "phone",
+          "h": "A thank-you page that helps",
+          "p": "The thank-you page should say exactly what to do next: which inbox, which sender, what subject line, and to check spam. Many people stop here because nothing tells them a second step exists.",
+          "d": {
+            "app": "browser",
+            "url": "monthly-draw.example/thanks",
+            "page": {
+              "h": "One more step: confirm your entry",
+              "p": "We sent an email from draws@example-rewards.example with the subject 'Confirm your June draw entry'. Not there in 2 minutes? Check spam or promotions.",
+              "cta": "Open my email app"
+            }
+          },
+          "say": "Here's a thank-you page that helps. The heading says one more step: confirm your entry. Then it tells people exactly what to look for: which sender the email comes from, shown on screen, and the subject line, confirm your June draw entry. And if it's not there in two minutes, check spam or promotions. The button opens the email app. Many people stop at this point simply because nothing tells them a second step exists."
+        },
+        {
+          "v": "phone",
+          "h": "SMS confirmation, done properly",
+          "p": "Some DOI offers confirm by SMS. The message names the sender, says what replying means and how to stop. Example only; SMS rules are strict in many geos, especially the US.",
+          "d": {
+            "app": "chat",
+            "title": "Example Rewards",
+            "subtitle": "SMS",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Example Rewards: reply YES to confirm your June draw entry and weekly deal texts. Msg rates may apply. Reply STOP to opt out."
+              },
+              {
+                "from": "me",
+                "text": "YES"
+              },
+              {
+                "from": "them",
+                "text": "Thanks, you're entered. Draw 1 July. Reply STOP any time."
+              }
+            ]
+          },
+          "say": "Some D O I offers confirm by S M S. Here's an example done properly. The message names the sender, Example Rewards. It says replying yes confirms the June draw entry and weekly deal texts, that message rates may apply, and to reply stop to opt out. The person replies yes, and gets a thanks, you're entered, draw on the first of July, reply stop any time. This is an example only. S M S rules are strict in many geos, especially the U S."
+        },
+        {
+          "v": "eq",
+          "h": "Example: what a better confirm rate is worth",
+          "p": "Example: DOI $2.50, 97% accepted. A clearer thank-you page lifts confirms from 38% to 46%. Value per raw lead rises from $0.92 to $1.12. On 1,000 raw leads that is about $194 more, with no extra ad spend.",
+          "more": "Exact: 2.50 × 0.46 × 0.97 = 1.1155. 2.50 × 0.38 × 0.97 = 0.9215. Difference 0.194, so about $194 per 1,000 raw leads. Example figures; test on your own offer.",
+          "d": [
+            "$2.50 × 46% × 97%",
+            "−",
+            "$2.50 × 38% × 97%",
+            "=",
+            "+$0.19 per raw lead"
+          ],
+          "say": "What's a better confirm rate worth? In this example, the D O I pays two dollars fifty, with ninety seven percent accepted. A clearer thank-you page lifts confirms from thirty eight percent to forty six. Follow the equation. Value per raw lead rises from about ninety two cents to one dollar twelve, about nineteen cents more. On one thousand raw leads, that's about one hundred and ninety four dollars more, with no extra ad spend. Test this on your own offer."
+        },
+        {
+          "v": "curve",
+          "h": "Example: confirms with and without a reminder",
+          "p": "Share of raw leads confirmed by day. The advertiser sent one reminder on day 2 to people who had not confirmed. Reminders are the advertiser's decision; you can ask whether they send one.",
+          "d": {
+            "a": [
+              30,
+              36,
+              42,
+              44,
+              45,
+              46,
+              46
+            ],
+            "la": "With one reminder",
+            "b": [
+              30,
+              35,
+              37,
+              38,
+              38,
+              38,
+              38
+            ],
+            "lb": "No reminder",
+            "x": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7"
+            ]
+          },
+          "say": "This chart shows the share of raw leads confirmed, day by day. Both lines start at thirty percent on day one. The lower line had no reminder, and it flattens at thirty eight percent. The upper line is where the advertiser sent one reminder on day two to people who hadn't confirmed. It keeps climbing to forty six percent. Reminders are the advertiser's decision, but you can ask whether they send one."
+        },
+        {
+          "v": "table",
+          "h": "What drives the confirm rate",
+          "p": "Use this table to decide who should fix what. Fix your own side first. Ask the network for help on the advertiser's side, in writing, with your test results and numbers attached.",
+          "d": {
+            "cols": [
+              "Driver",
+              "Who controls it"
+            ],
+            "rows": [
+              [
+                "Honest promise in ad and page",
+                "You"
+              ],
+              [
+                "Clear thank-you page",
+                "You or advertiser"
+              ],
+              [
+                "Email typos caught",
+                "Form owner"
+              ],
+              [
+                "Sending speed and inbox placement",
+                "Advertiser"
+              ],
+              [
+                "Clear confirm message",
+                "Advertiser"
+              ],
+              [
+                "One reminder",
+                "Advertiser"
+              ]
+            ]
+          },
+          "say": "Use this table to decide who should fix what. An honest promise in the ad and page is on you. A clear thank-you page is you or the advertiser. Catching email typos is the form owner. Sending speed and inbox placement, a clear confirm message, and one reminder are all on the advertiser. Fix your own side first. Then ask the network for help on the advertiser's side, in writing, with your test results attached."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: test your own DOI flow",
+          "p": "Run this test before launch and again whenever the confirm rate drops. Use your own test addresses, and tell the network you are testing so test leads are not counted or paid.",
+          "d": {
+            "steps": [
+              {
+                "title": "Enter with two test emails",
+                "text": "Use two different mail providers to compare inbox placement.",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "trk.example/c/3107?sub1=test",
+                  "page": {
+                    "h": "Enter the June draw",
+                    "p": "Test entry with test addresses.",
+                    "cta": "Enter the draw"
+                  }
+                }
+              },
+              {
+                "title": "Time the email",
+                "text": "Note how long it takes to arrive and which folder it lands in.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheets.example/doi-test",
+                  "title": "DOI test",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Inbox",
+                        "Arrived",
+                        "Folder"
+                      ],
+                      "rows": [
+                        [
+                          "Provider A",
+                          "40 s",
+                          "Inbox"
+                        ],
+                        [
+                          "Provider B",
+                          "6 min",
+                          "Promotions"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Confirm and watch the tracker",
+                "text": "Tap confirm and check the DOI postback appears against your test click.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "trk.example/conversions",
+                  "title": "Conversions",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Click ID",
+                        "Event",
+                        "Time"
+                      ],
+                      "rows": [
+                        [
+                          "test-01",
+                          "SOI",
+                          "10:02"
+                        ],
+                        [
+                          "test-01",
+                          "DOI",
+                          "10:09"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Send results to the network",
+                "text": "Share delays and folder placement in writing.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Affiliate manager",
+                  "subtitle": "network chat",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "DOI test on 3107: provider B took 6 min and landed in Promotions. Any way to improve?"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "say": "Here's how to test your own D O I flow. Run it before launch, and again whenever the confirm rate drops. Tell the network you're testing, so test leads aren't counted or paid. Tap Next to follow each step. First, enter with two test emails from different mail providers. Second, time the email. In this example, provider A arrived in forty seconds in the inbox, provider B took six minutes and landed in promotions. Third, confirm and watch the tracker for the D O I postback against your test click. Fourth, send the results to the network in writing."
+        },
+        {
+          "v": "quote",
+          "h": "From Dchessking",
+          "p": "A short note from the founder on where the easiest money in a DOI campaign usually hides. It is rarely in the ads, and it costs nothing to check.",
+          "d": "Before you touch the ads, read your own thank-you page on a phone. Half my confirm problems were fixed with one clear sentence.",
+          "by": "dchessking",
+          "say": "Here's how Dchessking puts it, on where the easiest money in a D O I campaign usually hides. Before you touch the ads, read your own thank-you page on a phone. Half my confirm problems were fixed with one clear sentence."
+        },
+        {
+          "v": "cards",
+          "h": "Mistakes with DOI flows",
+          "p": "These are the usual reasons confirm rates fall. Most of them can be found in a ten-minute test of your own flow on a phone, long before you start blaming the traffic or the offer.",
+          "d": [
+            "Blank thank-you page|say exactly what to do next",
+            "Never testing the email|test with two providers",
+            "Judging confirms on day one|wait 72 hours",
+            "Pushing confirms with promises|explain, never promise"
+          ],
+          "say": "These are the usual reasons confirm rates fall. A blank thank-you page? Say exactly what to do next. Never testing the email? Test with two providers. Judging confirms on day one? Wait seventy two hours. Pushing confirms with promises? Explain, never promise. Most of these can be found in a ten minute test of your own flow on a phone, long before you blame the traffic or the offer."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: confirm means consent",
+          "p": "The confirmation step is consent being given a second time, and it is what the advertiser relies on. It must be clear and honest, and opt-outs such as STOP must always work.",
+          "d": {
+            "kind": "warn",
+            "text": "Never say confirming claims a prize, never pay for confirms unless the offer allows it, and never send more reminders than the advertiser's consent covers."
+          },
+          "say": "The confirmation step is consent being given a second time, and it's what the advertiser relies on. So it must be clear and honest, and opt-outs like stop must always work. As the warning says, never say confirming claims a prize. Never pay for confirms unless the offer allows it. And never send more reminders than the advertiser's consent covers."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules: confirm rate",
+          "p": "Starting rules to adapt with your network. Judge the confirm rate only on complete data, after 72 hours, and test the flow yourself before blaming the traffic or the advertiser.",
+          "d": [
+            "Confirm rate under 30% on 100+ raw leads after 72 hours: pause and test the flow",
+            "Confirm rate drops 10+ points day over day: run the DOI test, tell the network",
+            "Thank-you page must name sender and subject before launch",
+            "Re-test the DOI flow every month"
+          ],
+          "say": "Here are starting rules for confirm rate. If the confirm rate is under thirty percent on one hundred or more raw leads after seventy two hours, pause and test the flow. If it drops ten or more points day over day, run the D O I test and tell the network. Your thank-you page must name the sender and subject before launch. And re-test the D O I flow every month. Judge only on complete data, and test the flow yourself before blaming anyone."
+        }
+      ],
+      "takeaways": [
+        "The confirm rate often decides DOI value per raw lead; small honest fixes can lift it.",
+        "Your thank-you page should name the sender, the subject and where to look.",
+        "Test your own DOI flow with two inbox providers before launch and when rates drop."
+      ],
+      "action": "Run the four-step DOI test on your chosen offer with two test inboxes. Write down arrival time, folder and whether the DOI postback reached your tracker, and send the results to your affiliate manager.",
+      "glossary": [
+        {
+          "term": "Thank-you page",
+          "def": "The page shown after the form is sent, which should explain the confirm step."
+        },
+        {
+          "term": "Inbox placement",
+          "def": "Whether an email lands in the main inbox, promotions or spam."
+        },
+        {
+          "term": "Reminder",
+          "def": "A follow-up message asking someone who has not confirmed to do so."
+        },
+        {
+          "term": "Opt-out",
+          "def": "A way for someone to stop messages, such as an unsubscribe link or replying STOP."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "DOI $3.00, 100% accepted. Confirms rise from 35% to 45%. Extra value per raw lead?",
+          "options": [
+            "$0.30",
+            "$0.10",
+            "$1.35",
+            "$0.45"
+          ],
+          "answer": 0,
+          "why": "$3.00 × 0.45 − $3.00 × 0.35 = $1.35 − $1.05 = $0.30."
+        },
+        {
+          "q": "What should a good thank-you page say?",
+          "options": [
+            "Nothing, to keep it clean",
+            "That the prize is reserved",
+            "The sender, the subject line and to check spam",
+            "A countdown to confirm"
+          ],
+          "answer": 2,
+          "why": "People need to know a second step exists and how to find the email."
+        },
+        {
+          "q": "Who usually controls email sending speed and inbox placement?",
+          "options": [
+            "The ad platform",
+            "The advertiser",
+            "You",
+            "The entrant"
+          ],
+          "answer": 1,
+          "why": "Sending is the advertiser's system. Report problems to the network in writing."
+        },
+        {
+          "q": "Confirm rate fell from 44% to 31% overnight. What does the starting rule say?",
+          "options": [
+            "Kill the offer",
+            "Raise ad spend",
+            "Change the ad copy",
+            "Run the DOI test and tell the network"
+          ],
+          "answer": 3,
+          "why": "A 10+ point drop day over day points to a delivery problem. Test, then report."
+        },
+        {
+          "q": "Which SMS confirmation is acceptable?",
+          "options": [
+            "Reply YES to claim your prize",
+            "Reply YES to confirm your entry and weekly texts. Reply STOP to opt out",
+            "You won, reply now",
+            "Reply within 5 minutes or lose your spot"
+          ],
+          "answer": 1,
+          "why": "It names what is being confirmed and how to stop."
+        }
+      ],
+      "say_intro": "This lesson is about D O I confirmation, helping real people finish confirming their entry. You'll map every step from a single opt-in to a confirmed double opt-in, work out what a better confirm rate is worth, and test your own flow. It matters because small, honest fixes here can lift earnings without extra ad spend.",
+      "say_outro": "To recap: the confirm rate drives value on D O I offers, a clear thank-you page is your biggest lever, you judge confirms after seventy two hours, and you test your own flow before blaming the traffic. Your task: run the four-step D O I test on your chosen offer with two test inboxes, note arrival time, folder and whether the D O I postback reached your tracker, and send the results to your affiliate manager. Now take the quiz."
+    },
+    {
+      "slug": "wiring-the-flow",
+      "title": "Wiring the flow: sub IDs, postbacks and lead posting",
+      "minutes": 19,
+      "objectives": [
+        "By the end you can build a tracking link with sub IDs and a postback for SOI and DOI.",
+        "By the end you can test the full wiring with a test lead before launch.",
+        "By the end you can spot broken tracking from the numbers and act on it."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why this matters",
+          "p": "If the wiring is wrong you either cannot see which ads make money, or the network cannot credit you at all. Both are expensive. Example: three days at $40 a day with a broken sub ID is $120 spent with no way to tell good ad sets from bad ones.",
+          "d": {
+            "b": "Test the wiring before you spend",
+            "s": "Broken tracking turns every decision into a guess."
+          },
+          "say": "If the wiring is wrong, you either can't see which ads make money, or the network can't credit you at all. Both are expensive. Here's the example on this slide: three days at forty dollars a day with a broken sub I D is one hundred and twenty dollars spent with no way to tell good ad sets from bad ones. As the screen says, test the wiring before you spend."
+        },
+        {
+          "v": "map",
+          "h": "Where the data flows",
+          "p": "The click goes out with IDs attached. The conversion comes back with the same IDs. Your tracker joins them up and can send the event on to the ad platform. Each arrow must carry the click ID.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Ad (sub IDs)",
+                "kind": "ad"
+              },
+              {
+                "id": "trk",
+                "label": "Tracker (click ID)",
+                "kind": "tool"
+              },
+              {
+                "id": "lp",
+                "label": "Prelander",
+                "kind": "page"
+              },
+              {
+                "id": "offer",
+                "label": "Offer form",
+                "kind": "offer"
+              },
+              {
+                "id": "net",
+                "label": "Network",
+                "kind": "money"
+              },
+              {
+                "id": "pb",
+                "label": "SOI / DOI postback",
+                "kind": "data"
+              },
+              {
+                "id": "capi",
+                "label": "Ad platform event",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "trk",
+                "click"
+              ],
+              [
+                "trk",
+                "lp",
+                "cid"
+              ],
+              [
+                "lp",
+                "offer",
+                "cid"
+              ],
+              [
+                "offer",
+                "net",
+                "lead"
+              ],
+              [
+                "net",
+                "pb",
+                "cid + event"
+              ],
+              [
+                "pb",
+                "trk",
+                "match"
+              ],
+              [
+                "trk",
+                "capi",
+                "server event"
+              ]
+            ]
+          },
+          "say": "This map shows where the data flows. Follow the arrows. The ad carries sub I Ds to the tracker, which creates a click I D. That click I D travels to the prelander, then to the offer form. The lead goes to the network. The network sends back an S O I or D O I postback, single or double opt-in, with the click I D and event. The tracker matches it, and can send a server event on to the ad platform. Every arrow must carry the click I D."
+        },
+        {
+          "v": "code",
+          "h": "A tracking link with sub IDs",
+          "p": "The ad's URL carries labels the platform fills in automatically, called dynamic parameters or macros. Your tracker stores them with the click. Names change; check the current Ads Manager. The exact macro names differ by platform.",
+          "d": {
+            "lang": "url",
+            "text": "https://trk.example/c/3107?sub1={{adset.id}}&sub2={{ad.id}}&sub3={{placement}}&src=meta",
+            "note": "Example. Never put names, emails or phone numbers in a URL."
+          },
+          "say": "Here's a tracking link with sub I Ds, the one on screen. I won't read it out. The ad's link carries labels the platform fills in automatically, called dynamic parameters or macros, here for the ad set, the ad and the placement. Your tracker stores them with the click. Names change, so check the current Ads Manager, and the exact macro names differ by platform. And notice the note: never put names, emails or phone numbers in a link."
+        },
+        {
+          "v": "code",
+          "h": "A postback for each event",
+          "p": "The network calls your tracker's postback URL when a lead converts. Ask for separate postbacks for SOI and DOI if the offer has both, so you can see the confirm rate per ad set.",
+          "d": {
+            "lang": "url",
+            "text": "https://trk.example/postback?cid={clickid}&event=doi&payout={payout}",
+            "note": "Example. Macro names such as {clickid} vary by network; copy them from the network's docs."
+          },
+          "say": "The network calls your tracker's postback link when a lead converts. You can see an example on screen, carrying the click I D, the event and the payout. Ask for separate postbacks for S O I and D O I if the offer has both. That way you can see the confirm rate per ad set. Macro names vary by network, so copy them from the network's docs."
+        },
+        {
+          "v": "table",
+          "h": "Which event to send where",
+          "p": "Map each network event to a tracker event and, if you use one, an ad platform event. Optimising on DOI gives better signal but it arrives later and in smaller numbers; many affiliates start on SOI.",
+          "more": "We are not certain how each platform currently handles delayed events, attribution windows or custom conversions for optimisation; check the platform's Help Center before choosing. A rough guide: optimise on the deepest event you get often enough for the platform to learn from, which for small budgets is often SOI.",
+          "d": {
+            "cols": [
+              "Network event",
+              "Tracker",
+              "Ad platform (example)"
+            ],
+            "rows": [
+              [
+                "SOI accepted",
+                "lead",
+                "Lead"
+              ],
+              [
+                "DOI confirmed",
+                "doi",
+                "Custom: DOI"
+              ],
+              [
+                "Scrubbed",
+                "reversal",
+                "Not sent"
+              ]
+            ]
+          },
+          "say": "Map each network event to a tracker event and, if you use one, an ad platform event. Read the table. S O I accepted becomes lead. D O I confirmed becomes a custom D O I event. And scrubbed becomes a reversal, which isn't sent to the platform. Optimising on D O I gives a better signal, but it arrives later and in smaller numbers, so many affiliates start on S O I. We're not certain how each platform currently handles delayed events, so check the platform's Help Center before choosing."
+        },
+        {
+          "v": "code",
+          "h": "Posting a hosted lead to the advertiser",
+          "p": "If the offer lets you host the form, you send each lead to the advertiser's API with consent details attached. Only do this when the offer permits it, over HTTPS, and with the consent record included.",
+          "d": {
+            "lang": "json",
+            "text": "{\n  \"offer_id\": 3107,\n  \"click_id\": \"8f2c1a\",\n  \"email\": \"ada@example.com\",\n  \"consent_text\": \"I agree Example Rewards Ltd may email me offers.\",\n  \"consent_ts\": \"2026-06-04T10:22:31Z\",\n  \"page_version\": \"june-draw-v3\",\n  \"ip\": \"203.0.113.24\"\n}",
+            "note": "Example payload with dummy data; follow the advertiser's API docs."
+          },
+          "say": "If the offer lets you host the form, you send each lead to the advertiser's A P I, with consent details attached. The example on screen uses dummy data, so I won't read it. Notice what it includes: the offer, the click I D, the email, the exact consent text, a timestamp, the page version and the I P address. Only do this when the offer permits it, over H T T P S, with the consent record included, and follow the advertiser's A P I docs."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: test the whole wiring",
+          "p": "Run this before every launch and after any change to links, pages or offers. Use the network's test mode or tell the manager you are testing, so test leads are not paid.",
+          "d": {
+            "steps": [
+              {
+                "title": "Click your own ad link",
+                "text": "Use the live link with sub IDs, on a phone.",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "trk.example/c/3107?sub1=test_as&sub2=test_ad",
+                  "page": {
+                    "h": "Enter the June draw",
+                    "p": "Test click.",
+                    "cta": "Enter the draw"
+                  }
+                }
+              },
+              {
+                "title": "Check the click in the tracker",
+                "text": "The click ID and sub IDs should appear within a minute.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "trk.example/clicks",
+                  "title": "Live clicks",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Click ID",
+                        "sub1",
+                        "sub2"
+                      ],
+                      "rows": [
+                        [
+                          "8f2c1a",
+                          "test_as",
+                          "test_ad"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Submit a test lead",
+                "text": "Confirm the SOI postback arrives against that click ID.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "trk.example/conversions",
+                  "title": "Conversions",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Click ID",
+                        "Event",
+                        "Payout"
+                      ],
+                      "rows": [
+                        [
+                          "8f2c1a",
+                          "lead",
+                          "$0.00 (test)"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Confirm the DOI",
+                "text": "Tap the confirm link and check the DOI postback.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "trk.example/conversions",
+                  "title": "Conversions",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Click ID",
+                        "Event",
+                        "Payout"
+                      ],
+                      "rows": [
+                        [
+                          "8f2c1a",
+                          "lead",
+                          "$0.00"
+                        ],
+                        [
+                          "8f2c1a",
+                          "doi",
+                          "$0.00 (test)"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Check the network report",
+                "text": "The test should show under the right sub ID.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/reports",
+                  "title": "Network report",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Sub ID 1",
+                        "Leads",
+                        "DOI"
+                      ],
+                      "rows": [
+                        [
+                          "test_as",
+                          "1",
+                          "1"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Here's how to test the whole wiring. Run it before every launch and after any change, and use test mode or tell the manager, so test leads aren't paid. Tap Next to follow each step. First, click your own ad link, the live one with sub I Ds, on a phone. Second, check the click shows in the tracker within a minute, with its sub I Ds. Third, submit a test lead and confirm the S O I postback arrives against that click I D. Fourth, tap the confirm link and check the D O I postback. Fifth, check the network report shows the test under the right sub I D."
+        },
+        {
+          "v": "table",
+          "h": "Example: reading tracking health",
+          "p": "Example: compare tracker and network counts daily. A gap that matches the usual scrub is normal. A sudden gap, or zero, usually means broken wiring, not bad traffic.",
+          "d": {
+            "cols": [
+              "Day",
+              "Tracker leads",
+              "Network leads",
+              "Read"
+            ],
+            "rows": [
+              [
+                "Mon",
+                "180",
+                "153",
+                "Normal 15% scrub"
+              ],
+              [
+                "Tue",
+                "175",
+                "149",
+                "Normal"
+              ],
+              [
+                "Wed",
+                "190",
+                "0",
+                "Postback broken"
+              ],
+              [
+                "Thu",
+                "182",
+                "96",
+                "Partial: check"
+              ]
+            ]
+          },
+          "say": "Compare tracker and network counts every day. In this example, read the table. Monday, one hundred and eighty tracker leads and one hundred and fifty three on the network, a normal fifteen percent scrub. Tuesday, also normal. Wednesday, one hundred and ninety in the tracker, but zero on the network. That's a broken postback. Thursday, about half are missing, so check it. A gap that matches the usual scrub is normal. A sudden gap or a zero usually means broken wiring, not bad traffic."
+        },
+        {
+          "v": "flow",
+          "h": "Launch-day order",
+          "p": "Follow this order on launch day. Each step depends on the one before it, and skipping ahead is how most blind spending starts. Keep the first hour's budget small until the first postback arrives.",
+          "d": [
+            "Build links with sub IDs",
+            "Run the wiring test",
+            "Launch at a low budget",
+            "Check first postback within the hour",
+            "First checkpoint next day"
+          ],
+          "say": "Follow this order on launch day, because each step depends on the one before. Build links with sub I Ds. Run the wiring test. Launch at a low budget. Check the first postback arrives within the hour. Then have your first checkpoint the next day. Keep the first hour's budget small until that first postback arrives. Skipping ahead is how most blind spending starts."
+        },
+        {
+          "v": "compare",
+          "h": "Mistakes with tracking",
+          "p": "Almost every one of these is found by the walkthrough test. Teams that skip the test usually find these after a week of blind spending.",
+          "d": {
+            "a": {
+              "title": "Common mistakes",
+              "items": [
+                "One link for every ad set",
+                "No DOI postback",
+                "Testing on desktop only",
+                "Personal data in sub IDs"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Sub IDs from platform macros",
+                "Separate SOI and DOI postbacks",
+                "Test on a phone, live link",
+                "IDs only, never personal data"
+              ]
+            }
+          },
+          "say": "Almost every one of these mistakes is caught by the walkthrough test. One link for every ad set? Use sub I Ds from platform macros. No D O I postback? Set up separate S O I and D O I postbacks. Testing on desktop only? Test on a phone, with the live link. Personal data in sub I Ds? Use I Ds only, never personal data. Teams that skip the test usually find these after a week of blind spending."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: personal data in tracking",
+          "p": "Sub IDs and URLs are logged by many systems. Personal data must never travel in them. Sending lead data to ad platforms has its own rules on hashing and consent.",
+          "d": {
+            "kind": "warn",
+            "text": "Never put emails, names or phone numbers in URLs or sub IDs. Only send customer data to an ad platform when the person's consent and the platform's current terms allow it."
+          },
+          "say": "Now compliance, on personal data in tracking. Sub I Ds and links are logged by many systems, so personal data must never travel in them. Sending lead data to ad platforms has its own rules on hashing and consent. As the warning says, never put emails, names or phone numbers in links or sub I Ds. Only send customer data to an ad platform when the person's consent and the platform's current terms allow it."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules: tracking",
+          "p": "Starting rules to adapt. They catch broken wiring within hours instead of days, which is the difference between a small loss and a large one.",
+          "d": [
+            "Run the full wiring test before every launch",
+            "Tracker vs network gap more than 10 points above normal scrub: investigate",
+            "Zero postbacks for 2 × the usual time between leads: pause and test",
+            "Never scale until the network report matches the tracker within normal scrub"
+          ],
+          "say": "Here are your starting rules for tracking. Run the full wiring test before every launch. If the tracker and network gap is more than ten points above your normal scrub, investigate. If there are zero postbacks for twice the usual time between leads, pause and test. And never scale until the network report matches the tracker within normal scrub. These catch broken wiring within hours instead of days, which is the difference between a small loss and a large one."
+        }
+      ],
+      "takeaways": [
+        "Put sub IDs on every link and get separate SOI and DOI postbacks.",
+        "Test the whole wiring on a phone with a test lead before every launch.",
+        "Compare tracker and network counts daily; a sudden gap means broken wiring."
+      ],
+      "action": "Build your tracking link with sub IDs and set up SOI and DOI postbacks for your chosen offer. Run the five-step wiring test and screenshot each step into your compliance file.",
+      "glossary": [
+        {
+          "term": "Dynamic parameter",
+          "def": "A placeholder in an ad URL that the platform fills in, such as the ad set ID. Also called a macro."
+        },
+        {
+          "term": "Click ID",
+          "def": "A unique ID your tracker gives each click so conversions can be matched to it."
+        },
+        {
+          "term": "Postback",
+          "def": "A server-to-server call from the network to your tracker when a conversion happens."
+        },
+        {
+          "term": "Lead posting",
+          "def": "Sending a lead you collected to the advertiser's system through an API."
+        },
+        {
+          "term": "Test mode",
+          "def": "A network setting that marks conversions as tests so they are not paid."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Tracker shows 200 leads, network shows 0 today, yesterday it showed 85% of tracker. What is most likely?",
+          "options": [
+            "Terrible traffic",
+            "The postback is broken",
+            "Normal scrub",
+            "The offer cap"
+          ],
+          "answer": 1,
+          "why": "A sudden drop to zero usually means wiring, not quality. Run the wiring test."
+        },
+        {
+          "q": "Why ask for separate SOI and DOI postbacks?",
+          "options": [
+            "To get paid twice",
+            "To see the confirm rate per ad set",
+            "Platforms require it",
+            "To reduce scrubs"
+          ],
+          "answer": 1,
+          "why": "With both events you can see which ad sets bring people who confirm."
+        },
+        {
+          "q": "Which sub ID value is acceptable?",
+          "options": [
+            "ada@example.com",
+            "+234 801 234 5678",
+            "Ada Okafor",
+            "{{adset.id}}"
+          ],
+          "answer": 3,
+          "why": "IDs only. Personal data must never travel in URLs or sub IDs."
+        },
+        {
+          "q": "Normal scrub is 15%. Today the network shows 60% of tracker leads. What does the starting rule say?",
+          "options": [
+            "Investigate: the gap is far more than 10 points above normal",
+            "Ignore it",
+            "Scale",
+            "Kill the offer"
+          ],
+          "answer": 0,
+          "why": "A 40% gap is 25 points above normal scrub, past the investigate line."
+        },
+        {
+          "q": "When should you run the full wiring test?",
+          "options": [
+            "Once a year",
+            "Only when leads drop",
+            "Before every launch and after any change",
+            "Only for DOI offers"
+          ],
+          "answer": 2,
+          "why": "Most tracking breaks after a change to links, pages or offers."
+        }
+      ],
+      "say_intro": "This lesson is about wiring the whole flow: sub I Ds, postbacks and lead posting. You'll build a tracking link and postbacks for single and double opt-in, test the wiring with a test lead before launch, and spot broken tracking from the numbers. It matters because broken tracking turns every decision into a guess.",
+      "say_outro": "To recap: every arrow must carry the click I D, use separate S O I and D O I postbacks, never put personal data in links, and run the full wiring test before every launch. Your task: build your tracking link with sub I Ds, set up S O I and D O I postbacks for your chosen offer, run the five-step wiring test, and screenshot each step into your compliance file. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "Path A (direct): 1,000 clicks, 170 leads, 80% accepted. Path B (prelander): 1,000 clicks, 160 leads, 92% accepted. $1.20 payout. What do you do?",
+      "options": [
+        "Keep A, more leads",
+        "Keep testing; B is about 8% better, under the 10% rule",
+        "Switch to B immediately",
+        "Drop both"
+      ],
+      "answer": 1,
+      "why": "A: 170 × 0.80 × 1.20 = $163.20. B: 160 × 0.92 × 1.20 = $176.64, about 8% more. Under 10%, keep testing to more clicks."
+    },
+    {
+      "q": "Ads Manager shows 2,000 clicks; your tracker shows 1,500 prelander views. What do you fix first?",
+      "options": [
+        "The offer",
+        "The ad copy",
+        "Page speed: 25% click loss is above 20%",
+        "Nothing"
+      ],
+      "answer": 2,
+      "why": "1 − 1,500 ÷ 2,000 = 25% click loss."
+    },
+    {
+      "q": "A quiz result says 'Congratulations, you qualify for the $500 prize'. The draw is random. What is wrong?",
+      "options": [
+        "Nothing",
+        "It implies eligibility or a win that does not exist",
+        "It is too short",
+        "It needs a countdown"
+      ],
+      "answer": 1,
+      "why": "A random draw has no qualifying. The result must summarise choices and explain entry."
+    },
+    {
+      "q": "Quiz EPC $0.23, plain prelander $0.20, after 700 clicks each, accepted rates similar. Keep the quiz?",
+      "options": [
+        "Yes: 15% better, over the 10% rule",
+        "No",
+        "Only on weekends",
+        "Cannot tell"
+      ],
+      "answer": 0,
+      "why": "$0.23 ÷ $0.20 = 1.15, a 15% gain after 500+ clicks each."
+    },
+    {
+      "q": "Invalid-lead rate 9% on 500 leads at $1.10. How much is lost, and what is the rule?",
+      "options": [
+        "$9.90, ignore",
+        "$49.50, add or tighten validation",
+        "$99, kill",
+        "$4.95, scale"
+      ],
+      "answer": 1,
+      "why": "500 × 9% = 45 × $1.10 = $49.50. Over 5% invalid means improve validation."
+    },
+    {
+      "q": "DOI $2.80, 95% accepted. A thank-you page fix lifts confirms from 36% to 44%. Extra per 1,000 raw leads?",
+      "options": [
+        "$80",
+        "$280",
+        "$212.80",
+        "$28"
+      ],
+      "answer": 2,
+      "why": "2.80 × 0.95 × 0.08 = $0.2128 per raw lead × 1,000 = $212.80."
+    },
+    {
+      "q": "Confirm rate is 26% on 140 raw leads, 80 hours after launch. What does the starting rule say?",
+      "options": [
+        "Wait another week",
+        "Scale to get more data",
+        "Switch to a lead form",
+        "Pause and test the DOI flow"
+      ],
+      "answer": 3,
+      "why": "Under 30% on 100+ raw leads after 72 hours: pause and test."
+    },
+    {
+      "q": "A colleague wants to add the lead's email to sub3 'to match leads easily'. What do you say?",
+      "options": [
+        "Good idea",
+        "Only for DOI",
+        "Hash it first in the URL",
+        "No: never put personal data in URLs or sub IDs; use the click ID"
+      ],
+      "answer": 3,
+      "why": "The click ID already matches leads. Personal data in URLs is logged widely and breaks data rules."
+    },
+    {
+      "q": "Tracker 210 leads, network 0, for 6 hours. Leads usually arrive every few minutes. What do you do?",
+      "options": [
+        "Pause and run the wiring test",
+        "Scale",
+        "Wait until tomorrow",
+        "Change the creative"
+      ],
+      "answer": 0,
+      "why": "Zero postbacks for far longer than twice the usual gap means broken wiring."
+    },
+    {
+      "q": "The offer allows prelanders but not platform lead forms. A lead form would double raw leads. What do you do?",
+      "options": [
+        "Use the lead form",
+        "Use the lead form on a second account",
+        "Use an allowed shape and improve the prelander instead",
+        "Ask entrants to re-enter on the offer page"
+      ],
+      "answer": 2,
+      "why": "Offer funnel rules are terms. Break them and leads go unpaid."
+    }
+  ]
+}

@@ -1,0 +1,2477 @@
+{
+  "school": "v-finance",
+  "order": 1,
+  "slug": "how-finance-offers-work",
+  "title": "How finance offers work",
+  "summary": "How loan, card, insurance and banking offers pay, why approval rates and lead quality decide your profit, and how to compare CPL with CPA on approval or funding. You finish able to read a finance offer, run the economics and refuse the offers that harm people.",
+  "lessons": [
+    {
+      "slug": "finance-lead-gen-map",
+      "title": "The finance lead-gen map: products, players and money",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can name the five main finance product groups and what each one pays for.",
+        "You can draw the path from an ad to a payout and say who decides each step.",
+        "You can work out what one click is worth from a payout and a funded rate.",
+        "You can explain why finance is regulated and why that changes how you buy traffic."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why finance pays well, and why it is watched",
+          "p": "Lenders, card issuers, insurers and banks pay affiliates because a good customer is worth a lot to them over months or years. The same fact makes finance regulated: you are helping a person take on debt, buy cover or hand over financial data. High payouts and high responsibility come together.",
+          "more": "A credit card customer may pay fees and interest for years. An insurance customer pays a premium every month. A bank customer may hold savings and take loans later. The advertiser can afford a large payout because they expect to earn more than that over the life of the account. That same long relationship is why regulators care: a bad loan or the wrong policy follows a person for years. In this school you learn to make money in finance by sending people who should get the product, telling them the true cost, and collecting data only with their clear consent. That is also the approach that survives platform reviews and network audits.",
+          "d": {
+            "b": "You are selling access to money",
+            "s": "The payout is high because the customer is valuable and the product can hurt people."
+          },
+          "say": "Let's start with why finance pays well. Lenders, card issuers, insurers and banks pay affiliates because a good customer is worth a lot to them, over months or years. A card customer may pay fees for years. An insurance customer pays every month. But that same fact makes finance regulated. You're helping a person take on debt, buy cover, or hand over financial data. As the slide says, you're selling access to money. High payouts and high responsibility come together."
+        },
+        {
+          "v": "map",
+          "h": "The players between an ad and a payout",
+          "p": "Every finance campaign has the same skeleton. You bring the person. A network or aggregator routes the lead. The lender, issuer or insurer decides. A postback tells you what happened. Only some of those decisions are in your hands.",
+          "more": "Underwriting is the advertiser's check of whether to approve someone: identity, income, credit history and affordability. You do not control it, but your traffic strongly affects it. If your ad attracts people who meet the lender's criteria, more get approved. If it attracts people who cannot qualify, approvals fall and your payout per lead falls with them. The network sits in the middle: it holds the offer terms, checks lead quality, passes status back and pays you.",
+          "d": {
+            "nodes": [
+              {
+                "id": "user",
+                "label": "Applicant",
+                "kind": "person"
+              },
+              {
+                "id": "ad",
+                "label": "Your ad",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Form or comparison page",
+                "kind": "page"
+              },
+              {
+                "id": "net",
+                "label": "Network or aggregator",
+                "kind": "tool"
+              },
+              {
+                "id": "lender",
+                "label": "Lender, issuer or insurer",
+                "kind": "offer"
+              },
+              {
+                "id": "uw",
+                "label": "Underwriting decision",
+                "kind": "data"
+              },
+              {
+                "id": "pb",
+                "label": "Postback",
+                "kind": "data"
+              },
+              {
+                "id": "pay",
+                "label": "Your payout",
+                "kind": "money"
+              }
+            ],
+            "edges": [
+              [
+                "user",
+                "ad",
+                "sees"
+              ],
+              [
+                "ad",
+                "lp",
+                "click"
+              ],
+              [
+                "lp",
+                "net",
+                "lead"
+              ],
+              [
+                "net",
+                "lender",
+                "routes"
+              ],
+              [
+                "lender",
+                "uw",
+                "decides"
+              ],
+              [
+                "uw",
+                "pb",
+                "status"
+              ],
+              [
+                "pb",
+                "pay",
+                "if paid event"
+              ]
+            ]
+          },
+          "say": "Every finance campaign has the same skeleton, and this map shows it. Follow it along. The applicant sees your ad and clicks to a form or comparison page. The lead goes to a network or aggregator, which routes it to the lender, issuer or insurer. They make the underwriting decision, checking identity, income, credit and affordability. A postback reports the status, and you get paid if it's a paid event. You don't control underwriting, but your traffic strongly affects it."
+        },
+        {
+          "v": "cards",
+          "h": "The five product groups you will meet",
+          "p": "Each group has a different buyer, a different paid event and a different kind of harm if done badly. Know which one you are promoting before you write copy.",
+          "more": "Short-term, high-cost loans (often called payday loans) sit inside the first group but carry the highest risk of harm and the strictest rules. Some platforms and countries restrict or ban advertising them at the time of writing. We cover how to judge them in the compliance module. As a first offer, avoid them.",
+          "d": [
+            "Personal and digital loans|Instalment or short-term credit; paid on approval or funding",
+            "Credit cards and BNPL|Revolving credit; paid on approval, sometimes activation",
+            "Insurance|Car, health, life, device; paid per quote lead or bought policy",
+            "Banking and savings|Accounts and apps; paid on open or first deposit",
+            "Lead generation|You collect consented data; paid per valid lead"
+          ],
+          "say": "Here are the five product groups you'll meet. Personal and digital loans, paid on approval or funding. Credit cards and B N P L, buy now pay later, paid on approval, sometimes activation. Insurance, paid per quote lead or bought policy. Banking and savings, paid when an account opens or gets a first deposit. And lead generation, where you collect consented data and get paid per valid lead. Short-term, high cost loans carry the highest risk of harm and the strictest rules, so as a first offer, avoid them."
+        },
+        {
+          "v": "table",
+          "h": "What each product usually pays for",
+          "p": "Rough guide, varies by geo, network and advertiser. Always read the offer's own definition of the paid event, because two offers with the same name can pay on very different events.",
+          "d": {
+            "cols": [
+              "Product",
+              "Typical paid event",
+              "Time to confirm"
+            ],
+            "rows": [
+              [
+                "Personal loan",
+                "Approved or funded loan",
+                "Days to weeks"
+              ],
+              [
+                "Credit card",
+                "Approved card, sometimes used",
+                "Days to weeks"
+              ],
+              [
+                "Insurance",
+                "Quote lead or bought policy",
+                "Hours to weeks"
+              ],
+              [
+                "Bank account",
+                "Opened, sometimes funded",
+                "Days"
+              ],
+              [
+                "Lead gen (CPL)",
+                "Valid, consented lead",
+                "Hours to days"
+              ]
+            ]
+          },
+          "say": "This table shows what each product usually pays for, and how long it takes to confirm. Read across. A personal loan pays on an approved or funded loan, in days to weeks. A credit card, on an approved card. Insurance, on a quote lead or bought policy, in hours to weeks. A bank account, when it's opened. And lead gen, C P L, cost per lead, on a valid, consented lead. This is a rough guide that varies by geo and network. Always read the offer's own definition, because two offers with the same name can pay on very different events."
+        },
+        {
+          "v": "flow",
+          "h": "The life of one finance lead",
+          "p": "Most of the value is decided after the click, often days later. That delay is the biggest difference between finance and a simple e-commerce sale, and it shapes your budget, your kill rules and your cash flow.",
+          "d": [
+            "Click",
+            "Form submitted",
+            "Lead validated",
+            "Application",
+            "Approval",
+            "Funding and payout"
+          ],
+          "say": "Here's the life of one finance lead. Click. Form submitted. Lead validated. Application. Approval. And finally, funding and payout. Notice how most of the value is decided after the click, often days later. That delay is the biggest difference between finance and a simple e-commerce sale. It shapes your budget, your kill rules and your cash flow."
+        },
+        {
+          "v": "funnel",
+          "h": "Worked example: 1,000 clicks to funded loans",
+          "p": "Example, illustrative numbers. Of 1,000 clicks, 90 submit the form, 72 pass validation, 22 are approved and 15 are funded. At $60 per funded loan that is $900. If the clicks cost $0.50 each, spend is $500 and profit is $400 before any later reversals.",
+          "more": "Check the maths. 15 x $60 = $900 revenue. 1,000 x $0.50 = $500 spend. $900 minus $500 = $400. Now notice how fragile it is: if only 8 loans had been funded instead of 15, revenue would be $480 and you would lose $20. A small change in the funded rate swings the whole result. That is why lead quality and approval rate get whole lessons in this module, and why you never judge a finance campaign on clicks or form submits alone.",
+          "d": [
+            [
+              "Clicks",
+              1000
+            ],
+            [
+              "Form submits",
+              90
+            ],
+            [
+              "Valid leads",
+              72
+            ],
+            [
+              "Approved",
+              22
+            ],
+            [
+              "Funded",
+              15
+            ]
+          ],
+          "say": "Let's follow one thousand clicks, with illustrative numbers. Ninety submit the form. Seventy two pass validation. Twenty two are approved. And fifteen are funded. At sixty dollars per funded loan, that's nine hundred dollars. If clicks cost fifty cents each, spend is five hundred, and profit is four hundred, before any reversals. But notice how fragile this is. If only eight loans were funded, revenue would be four eighty, and you'd lose twenty dollars. That's why you never judge finance on clicks or form submits alone."
+        },
+        {
+          "v": "eq",
+          "h": "What one click is worth",
+          "p": "Turn any payout into a value per click. Multiply the payout by the share of clicks that reach the paid event. This is the ceiling on what you can pay per click and still break even.",
+          "more": "Example. 15 funded from 1,000 clicks is 1.5%. $60 x 0.015 = $0.90. That is break-even per click. You want to pay well under it, because you need a margin and because the funded rate in your first week is only an estimate. If you keep a 30% margin, your ceiling is $0.63 per click.",
+          "d": [
+            "$60 per funded loan",
+            "x",
+            "1.5% clicks to funded",
+            "=",
+            "$0.90 per click"
+          ],
+          "say": "Here's how to turn any payout into a value per click. Read the sum on screen. Sixty dollars per funded loan, times one point five percent of clicks reaching funding, equals ninety cents per click. That's your break-even ceiling. You want to pay well under it, because you need a margin, and your first week's funded rate is only an estimate. With a thirty percent margin, your ceiling is sixty three cents per click."
+        },
+        {
+          "v": "screen",
+          "h": "What a network report usually shows",
+          "p": "Finance networks report each lead by status. Learn to read pending as unknown, not as zero and not as approved. Screen is an illustrative mock-up; real dashboards differ.",
+          "d": {
+            "kind": "browser",
+            "url": "network.example/reports/leads",
+            "title": "Lead status report",
+            "blocks": [
+              {
+                "type": "select",
+                "label": "Offer",
+                "value": "KE Personal Loan (Example)"
+              },
+              {
+                "type": "select",
+                "label": "Date range",
+                "value": "Last 14 days"
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "Status",
+                  "Leads",
+                  "Payout"
+                ],
+                "rows": [
+                  [
+                    "Approved and funded",
+                    "15",
+                    "$900"
+                  ],
+                  [
+                    "Pending",
+                    "31",
+                    "$0 so far"
+                  ],
+                  [
+                    "Rejected",
+                    "26",
+                    "$0"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Pending leads can still turn into funded loans for days or weeks."
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "Finance networks report each lead by status. Look at the highlighted table in this mock-up. Fifteen approved and funded, worth nine hundred dollars. Twenty six rejected. And thirty one pending, zero so far. Here's the key lesson: read pending as unknown. It isn't zero, and it isn't approved. As the note says, pending leads can still turn into funded loans for days or weeks. Real dashboards differ."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes when new to finance",
+          "p": "These come from treating finance like any other click offer. Each fix protects both your profit and the people you reach, and each one is easy to slip into during the first week of a test.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Buying the cheapest leads possible",
+                "Promising easy approval to lift clicks",
+                "Aiming ads at people in money trouble",
+                "Judging on day-one numbers"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Buy leads that can be approved",
+                "Say approval is not guaranteed",
+                "Speak to a real need and show the cost",
+                "Judge on approvals once they have matured"
+              ]
+            }
+          },
+          "say": "These mistakes come from treating finance like any other click offer. Read across. Buying the cheapest leads possible: buy leads that can be approved. Promising easy approval to lift clicks: say approval isn't guaranteed. Aiming ads at people in money trouble: speak to a real need and show the cost. Judging on day one numbers: judge on approvals once they've matured. Each fix protects both your profit and the people you reach."
+        },
+        {
+          "v": "tip",
+          "h": "Finance is regulated: check law and platform first",
+          "p": "Lending, cards, insurance and banking are regulated in every core market. Ads usually need the right platform setup, such as a special ad category, and must follow local law. Check both before you run.",
+          "d": {
+            "kind": "warn",
+            "text": "Before any spend: confirm the advertiser is licensed for your geo, read the platform's financial ads policy for that country, and get the required cost disclosure in writing. Module 2 shows how."
+          },
+          "say": "Lending, cards, insurance and banking are regulated in every core market. Ads usually need the right platform setup, such as a special ad category, and must follow local law. Look at the warning. Before any spend, confirm the advertiser is licensed for your geo, read the platform's financial ads policy for that country, and get the required cost disclosure in writing. Module two shows you how."
+        },
+        {
+          "v": "check",
+          "h": "Starting rules before your first finance test",
+          "p": "Starting rules to adapt. They stop the most common money mistakes in this vertical before they happen. If one line is not true yet, fix it before you spend.",
+          "more": "Why 3 x target? With a target cost per funded loan of $42, a $126 test lets you see two or three funded loans or a clear zero. Why 30 days of cash? Many finance offers confirm and pay weeks after the click, so you pay Meta today and get paid later.",
+          "d": [
+            "Test budget is at least 3 x your target cost per paid event",
+            "You can fund 30 days of spend before payouts arrive",
+            "The offer sends a postback for each status, not just approvals",
+            "The paid event is defined in writing",
+            "The lender's licence for your geo is verified"
+          ],
+          "say": "Here are your starting rules before a first finance test. Your test budget is at least three times your target cost per paid event, so you can see two or three results or a clear zero. You can fund thirty days of spend before payouts arrive, because you pay Meta today and get paid weeks later. The offer sends a postback for every status, not just approvals. The paid event is defined in writing. And the lender's licence for your geo is verified. If one line isn't true yet, fix it before you spend."
+        },
+        {
+          "v": "big",
+          "h": "Your real job in this vertical",
+          "p": "You are not paid for clicks or forms. You are paid when a lender says yes and the person goes ahead. So your job is to reach people who need the product and can qualify, and to tell them the truth about cost so the ones who apply are ready.",
+          "d": {
+            "b": "Send people who should get the product",
+            "s": "Approvals follow honest targeting and clear cost."
+          },
+          "say": "So here's your real job in this vertical. You're not paid for clicks or forms. You're paid when a lender says yes and the person goes ahead. So your job is to reach people who need the product and can qualify, and to tell them the truth about cost, so the ones who apply are ready. As the slide says: send people who should get the product. Approvals follow honest targeting and clear cost."
+        }
+      ],
+      "takeaways": [
+        "Finance pays for valuable, long-lived customers, which is also why it is regulated.",
+        "The value of a lead is decided after the click, by underwriting, often days later.",
+        "Value per click = payout x clicks-to-paid-event rate; pay well under it."
+      ],
+      "action": "Pick one finance offer on any network you use. Write down its product group, its exact paid event, how long confirmation takes and its payout, then calculate its value per click using a 1.5% example rate.",
+      "glossary": [
+        {
+          "term": "Underwriting",
+          "def": "The advertiser's check of whether to approve an applicant: identity, income, credit history and ability to repay."
+        },
+        {
+          "term": "Funded loan",
+          "def": "A loan where the money has actually been paid out to the borrower. Often the paid event for loan offers."
+        },
+        {
+          "term": "Aggregator",
+          "def": "A company that collects finance leads and routes them to several lenders or insurers."
+        },
+        {
+          "term": "Paid event",
+          "def": "The exact action that triggers your payout, as defined in the offer terms."
+        },
+        {
+          "term": "Pending",
+          "def": "A lead whose decision is not known yet. It is not approved and not rejected."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why do finance advertisers pay high payouts?",
+          "options": [
+            "Because a good customer can earn them money for months or years",
+            "Because finance traffic is cheap",
+            "Because regulators set minimum payouts",
+            "Because leads are always approved"
+          ],
+          "answer": 0,
+          "why": "Lenders, insurers and banks earn from a customer over a long period, so they can pay a lot to acquire one."
+        },
+        {
+          "q": "Who decides whether an applicant is approved?",
+          "options": [
+            "The affiliate",
+            "The ad platform",
+            "The network's affiliate manager",
+            "The lender, issuer or insurer through underwriting"
+          ],
+          "answer": 3,
+          "why": "Underwriting is the advertiser's decision. Your traffic affects it, but you do not make it."
+        },
+        {
+          "q": "Payout $50 per funded loan, 2% of clicks get funded. What is break-even per click?",
+          "options": [
+            "$0.50",
+            "$1.00",
+            "$2.50",
+            "$0.10"
+          ],
+          "answer": 1,
+          "why": "$50 x 0.02 = $1.00 per click. Above that you lose money."
+        },
+        {
+          "q": "A report shows 30 leads as pending. How should you treat them?",
+          "options": [
+            "As approved",
+            "As unknown until they mature",
+            "As rejected",
+            "As fraud"
+          ],
+          "answer": 1,
+          "why": "Pending means no decision yet. Count them neither as wins nor losses until the approval window has passed."
+        },
+        {
+          "q": "Which first finance test is safest?",
+          "options": [
+            "A payday loan offer with no postbacks",
+            "Any offer your friend is running",
+            "The highest payout you can find",
+            "An offer with a written paid event, stage postbacks and a verified licence"
+          ],
+          "answer": 3,
+          "why": "A clear paid event, status postbacks and a verified licence let you measure properly and stay compliant."
+        }
+      ],
+      "say_intro": "In this lesson you'll get the map of finance lead generation: the main products, the players between your ad and your payout, and how the money flows. You'll also see why finance pays well, and why that same fact makes it regulated.",
+      "say_outro": "You can now name the five product groups, trace the path from an ad to a payout, work out what one click is worth, and explain why finance is regulated. Your task: pick one finance offer, write down its product group, exact paid event, confirmation time and payout, then calculate its value per click using a one point five percent example rate. Now take the quiz."
+    },
+    {
+      "slug": "payout-models",
+      "title": "Payout models: CPL, CPA on approval, CPA on funding",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can explain CPL, CPA on approval, CPA on funding, pay per call and tiered pricing.",
+        "You can say who carries the approval risk in each model.",
+        "You can convert any payout into a value per submitted lead and compare offers fairly.",
+        "You can pick a model that fits your cash flow."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the payout model matters as much as the payout",
+          "p": "Two offers can show $4 and $40 and the $4 one can be the better deal. What matters is the payout times the share of leads that reach the paid event, how long you wait for it, and who carries the risk that the lender says no.",
+          "d": {
+            "b": "Compare value per lead, not payout",
+            "s": "A big number on a hard event can be worth less than a small number on an easy one."
+          },
+          "say": "Here's a surprising idea. Two offers can show four dollars and forty dollars, and the four dollar one can be the better deal. What matters is the payout times the share of leads that reach the paid event, how long you wait for it, and who carries the risk that the lender says no. As the slide says: compare value per lead, not payout. A big number on a hard event can be worth less than a small number on an easy one."
+        },
+        {
+          "v": "cards",
+          "h": "The payout models in finance",
+          "p": "These are the models you will see on finance offer pages. Many offers mix two of them. Always read the exact wording, because networks use the same labels for different events.",
+          "more": "SOI (single opt-in) means one form submit counts. DOI (double opt-in) means the person also confirms, for example by an SMS code or email link. A ping tree is a system where a lead is offered to several buyers in order of price until one accepts it. RevShare, a share of the advertiser's income from the customer, is rare in finance; if you see it, ask how the income is measured and reported.",
+          "d": [
+            "CPL|Paid per valid lead; the advertiser carries approval risk",
+            "CPA on approval|Paid when the lender approves",
+            "CPA on funding|Paid when money is paid out or the card is issued",
+            "Pay per call|Paid for a qualified call over a minimum length",
+            "Tiered or dynamic|Price depends on lead data or buyer bids",
+            "Hybrid|A small CPL plus a CPA on approval"
+          ],
+          "say": "These are the payout models you'll see on finance offer pages. C P L, cost per lead: paid per valid lead, so the advertiser carries the approval risk. C P A, cost per acquisition, on approval: paid when the lender approves. C P A on funding: paid when money is paid out or the card is issued. Pay per call: paid for a qualified call over a minimum length. Tiered or dynamic: the price depends on lead data or buyer bids. And hybrid: a small C P L plus a C P A on approval. Many offers mix two, so always read the exact wording."
+        },
+        {
+          "v": "table",
+          "h": "Who carries the risk in each model",
+          "p": "The further down the funnel you are paid, the more of the advertiser's risk you carry. In return, the payout is bigger. Rough guide; read each offer.",
+          "d": {
+            "cols": [
+              "Model",
+              "You are paid when",
+              "Risk you carry"
+            ],
+            "rows": [
+              [
+                "CPL",
+                "Lead is valid",
+                "Scrubs and returns"
+              ],
+              [
+                "CPA on approval",
+                "Lender approves",
+                "Approval rate"
+              ],
+              [
+                "CPA on funding",
+                "Money is paid out",
+                "Approval and drop-off"
+              ],
+              [
+                "Pay per call",
+                "Call passes minimum",
+                "Call quality"
+              ],
+              [
+                "Hybrid",
+                "Lead, then approval",
+                "Split"
+              ]
+            ]
+          },
+          "say": "This table shows who carries the risk in each model. Read across. On C P L, you're paid when the lead is valid, and you carry the risk of scrubs and returns. On C P A on approval, you carry the approval rate. On C P A on funding, both approval and drop-off. On pay per call, call quality. And hybrid splits the risk. The rule: the further down the funnel you're paid, the more of the advertiser's risk you carry, and in return, the payout is bigger."
+        },
+        {
+          "v": "eq",
+          "h": "Turn every payout into value per lead",
+          "p": "This one formula lets you compare any two finance offers on the same footing. Use the rate from the offer's own history for similar traffic, then replace it with your own data as soon as you have it.",
+          "d": [
+            "Payout",
+            "x",
+            "Leads reaching the paid event",
+            "=",
+            "Value per lead"
+          ],
+          "say": "This one formula lets you compare any two finance offers on the same footing. Read the sum on screen: payout, times the share of leads reaching the paid event, equals value per lead. Start with the rate from the offer's own history for similar traffic. Then replace it with your own data as soon as you have it."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: the same 100 leads, three models",
+          "p": "Example, illustrative rates. 100 submitted leads go to three offers. The CPL looks smallest but is close to the others, and it pays fastest. The CPA offers win only if their rates hold up for your traffic.",
+          "more": "Check the maths. CPL: 100 leads minus 15% scrubbed is 85 accepted, x $4 = $340. Approval: 18 approved x $25 = $450. Funding: 11 funded x $40 = $440. Hybrid: 100 x $1 = $100 plus 15 approvals x $20 = $300, total $400. The CPA on approval pays most here, but it depends on an 18% approval rate. If your traffic gets 12% instead, it earns 12 x $25 = $300, less than the CPL.",
+          "d": {
+            "cols": [
+              "Model",
+              "Maths",
+              "Revenue",
+              "Per lead"
+            ],
+            "rows": [
+              [
+                "CPL $4, 15% scrubbed",
+                "85 x $4",
+                "$340",
+                "$3.40"
+              ],
+              [
+                "CPA approval $25, 18%",
+                "18 x $25",
+                "$450",
+                "$4.50"
+              ],
+              [
+                "CPA funding $40, 11%",
+                "11 x $40",
+                "$440",
+                "$4.40"
+              ],
+              [
+                "Hybrid $1 + $20, 15%",
+                "$100 + 15 x $20",
+                "$400",
+                "$4.00"
+              ]
+            ]
+          },
+          "say": "Here are the same one hundred leads sent to different models, with illustrative rates. Read the table. C P L at four dollars with fifteen percent scrubbed: three forty, or three dollars forty per lead. C P A on approval at twenty five dollars, eighteen percent approved: four fifty. C P A on funding at forty, eleven percent funded: four forty. Hybrid: four hundred. The approval offer pays most here, but only if eighteen percent holds. At twelve percent, it earns three hundred, less than the C P L, which also pays fastest."
+        },
+        {
+          "v": "curve",
+          "h": "Cash arrives at different speeds",
+          "p": "Example. Same weekly spend, two offers. The CPL confirms within days. The funding offer reaches a higher weekly revenue only after approvals mature, so the first weeks look bad and you need cash to wait.",
+          "more": "Example figures only. The funding line starts low because loans approved in week 1 are still being funded in weeks 2 and 3. If you judged it in week 1 you would kill a campaign that ends up earning about 30% more per week than the CPL. If you cannot afford to wait four weeks, the CPL may be the right choice even though it earns less at steady state.",
+          "d": {
+            "a": [
+              300,
+              340,
+              340,
+              340,
+              340,
+              340,
+              340
+            ],
+            "la": "CPL revenue per week ($)",
+            "b": [
+              40,
+              180,
+              330,
+              420,
+              440,
+              440,
+              440
+            ],
+            "lb": "CPA on funding revenue per week ($)",
+            "x": [
+              "W1",
+              "W2",
+              "W3",
+              "W4",
+              "W5",
+              "W6",
+              "W7"
+            ]
+          },
+          "say": "Cash arrives at different speeds. This curve shows an example with the same weekly spend on two offers. The C P L line confirms within days and sits steady around three forty a week. The funding line starts low, around forty dollars, because loans approved in week one are still being funded in weeks two and three. It only reaches four forty a week after approvals mature. Judge it in week one and you'd kill a campaign that ends up earning about thirty percent more. If you can't afford to wait four weeks, the C P L may be the right choice."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: the most you can pay per lead",
+          "p": "Practise. Payout $40 per funded loan, 11% of leads get funded, and you want a 30% margin.",
+          "more": "Working: $40 x 11% = $4.40 break-even per lead. Keep 30%: $4.40 x 0.7 = $3.08. If your leads cost more than $3.08 you are below your margin target; above $4.40 you lose money.",
+          "d": {
+            "kind": "breakeven",
+            "task": "Payout $40 per funded loan, 11% of leads funded, margin 30%. What is your max cost per lead?",
+            "preset": {
+              "payout": 40,
+              "cr_pct": 11,
+              "margin_pct": 30
+            },
+            "answer": {
+              "field": "max_cpl",
+              "value": 3.08,
+              "tolerance": 0.05
+            },
+            "labels": {
+              "unit": "funded loan",
+              "rate": "Leads funded",
+              "answer": "Your answer: max cost per lead"
+            }
+          },
+          "say": "Time to practise. The payout is forty dollars per funded loan. Eleven percent of leads get funded. And you want a thirty percent margin. What's the most you can pay per lead? Pause and try it, then check your answer."
+        },
+        {
+          "v": "phone",
+          "h": "Pin down the paid event before you spend",
+          "p": "Ask the affiliate manager in writing before you spend. The answers go into your offer file, and they settle disputes later about what was promised. Ask for rates on traffic like yours, not the offer average. Chat is illustrative.",
+          "d": {
+            "app": "chat",
+            "title": "Affiliate manager",
+            "subtitle": "network",
+            "messages": [
+              {
+                "from": "me",
+                "text": "For the KE personal loan offer, is the $40 paid on approval or on disbursement?"
+              },
+              {
+                "from": "them",
+                "text": "On disbursement. Status comes by postback, usually within 14 days."
+              },
+              {
+                "from": "me",
+                "text": "What share of valid leads from social traffic were funded in the last 30 days?"
+              },
+              {
+                "from": "them",
+                "text": "Roughly 9 to 12 percent. It varies a lot by source."
+              },
+              {
+                "from": "me",
+                "text": "Thanks. Please send the scrub rules and the payout definition by email so I can file them."
+              }
+            ]
+          },
+          "say": "Before you spend, pin down the paid event in writing. Look at this illustrative chat. You ask whether the forty dollars is paid on approval or disbursement. The manager says disbursement, usually within fourteen days. You ask what share of valid leads from social traffic were funded. Roughly nine to twelve percent, and it varies by source. Then you ask for the scrub rules and payout definition by email. Notice you asked for rates on traffic like yours, not the offer average. These answers go in your offer file and settle disputes later."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes with payout models",
+          "p": "Most losses in the first month come from comparing headline payouts or from not having the cash to wait for a CPA offer to mature.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Picking the biggest payout on the list",
+                "Assuming approval and funding mean the same",
+                "Running CPA on funding with no cash buffer",
+                "Trusting a quoted rate as your own"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Compare value per lead",
+                "Get the paid event in writing",
+                "Pick CPL until you can wait 30+ days",
+                "Replace quoted rates with your data fast"
+              ]
+            }
+          },
+          "say": "Most losses in the first month come from comparing headline payouts, or from not having the cash to wait. Read across. Picking the biggest payout on the list: compare value per lead. Assuming approval and funding mean the same: get the paid event in writing. Running C P A on funding with no cash buffer: pick C P L until you can wait thirty days or more. And trusting a quoted rate as your own: replace quoted rates with your own data fast."
+        },
+        {
+          "v": "tip",
+          "h": "Ping trees, pay per call and resold leads",
+          "p": "When a lead can be sold to several buyers, the person's consent must clearly cover that before the data moves. This is a legal and ethical line, not a technical detail, and networks will ask you to prove it.",
+          "d": {
+            "kind": "warn",
+            "text": "Never sell or pass one person's data to more buyers than their consent covers. Ping trees and lead resale are restricted or under scrutiny in several markets; we are not certain of current rules in each geo, so ask your network and a local adviser."
+          },
+          "say": "Now a legal and ethical line. When a lead can be sold to several buyers, through a ping tree, pay per call or resale, the person's consent must clearly cover that before the data moves. Networks will ask you to prove it. Look at the warning: never sell or pass one person's data to more buyers than their consent covers. Ping trees and lead resale are restricted or under scrutiny in several markets. We're not certain of the current rules in each geo, so ask your network and a local adviser."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example: a hybrid offer",
+          "p": "Hybrids pay a little on every valid lead and more on approval. They reduce your risk while you learn an offer, at the cost of a smaller total if your approval rate turns out high. Run the numbers both ways before you choose.",
+          "d": {
+            "kind": "example",
+            "text": "Example. 200 leads, hybrid $1 CPL + $20 per approval, 16% approved. 200 x $1 = $200. 32 x $20 = $640. Total $840, or $4.20 per lead. A pure $25 CPA would give 32 x $25 = $800."
+          },
+          "say": "Here's a worked example of a hybrid offer. Two hundred leads, paying one dollar C P L plus twenty dollars per approval, with sixteen percent approved. Two hundred times one dollar is two hundred. Thirty two approvals times twenty is six forty. Total, eight hundred and forty dollars, or four twenty per lead. A pure twenty five dollar C P A would give eight hundred. So hybrids reduce your risk while you learn an offer, at the cost of a smaller total if your approval rate turns out high. Run the numbers both ways."
+        },
+        {
+          "v": "check",
+          "h": "Starting rules for choosing a model",
+          "p": "Starting rules to adapt. Use them to choose between offers before spending, then revisit them after your first matured cohort, when your own rates replace the network's quoted ones.",
+          "more": "The 1.2 x buffer exists because CPA rates are uncertain and paid later. In the worked example the approval offer ($4.50) beats the CPL ($3.40) by 1.32 x, so it passes. The funding offer ($4.40) passes at 1.29 x, but only if you have the cash to wait.",
+          "d": [
+            "Prefer CPL if you cannot fund 30 days of spend before payout",
+            "Choose a CPA offer only if its value per lead is at least 1.2 x the CPL's",
+            "Use the offer's own rate for planning, then your own after 50 leads",
+            "Get the paid event, scrub rules and hold period in writing",
+            "Never accept a model you cannot track by postback"
+          ],
+          "say": "Here are your starting rules for choosing a model. Prefer C P L if you can't fund thirty days of spend before payout. Choose a C P A offer only if its value per lead is at least one point two times the C P L's, because C P A rates are uncertain and paid later. Use the offer's own rate for planning, then your own after fifty leads. Get the paid event, scrub rules and hold period in writing. And never accept a model you can't track by postback. Revisit these after your first matured cohort."
+        }
+      ],
+      "takeaways": [
+        "Compare offers on value per lead: payout x rate to the paid event.",
+        "Further down the funnel means bigger payouts, more risk and slower cash.",
+        "Get the paid event in writing before you spend a cent."
+      ],
+      "action": "Take two finance offers from your network. For each, write the paid event and a planning rate, calculate value per lead, and apply the 1.2 x rule to choose one.",
+      "glossary": [
+        {
+          "term": "CPL",
+          "def": "Cost per lead. You are paid for each valid lead, whether or not the person is approved later."
+        },
+        {
+          "term": "SOI and DOI",
+          "def": "Single opt-in counts one form submit. Double opt-in also needs the person to confirm, for example with an SMS code."
+        },
+        {
+          "term": "CPA on funding",
+          "def": "A payout paid only when the loan money is disbursed or the card is issued."
+        },
+        {
+          "term": "Pay per call",
+          "def": "A payout for a phone call from a lead that lasts longer than an agreed minimum."
+        },
+        {
+          "term": "Ping tree",
+          "def": "A system that offers one lead to several buyers in price order until one accepts it."
+        },
+        {
+          "term": "Hybrid payout",
+          "def": "A mix of a small payout per lead and a larger one on approval or funding."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "CPL $3 with 20% scrubbed, versus CPA $30 at 9% approval. Which pays more per submitted lead?",
+          "options": [
+            "CPA at $2.70",
+            "CPL at $2.40",
+            "They are equal",
+            "You cannot compare them"
+          ],
+          "answer": 0,
+          "why": "CPL: 0.8 x $3 = $2.40. CPA: 0.09 x $30 = $2.70. The CPA pays more, if its rate holds."
+        },
+        {
+          "q": "In which model do you carry the most approval risk?",
+          "options": [
+            "CPL",
+            "Pay per call",
+            "CPA on funding",
+            "Hybrid"
+          ],
+          "answer": 2,
+          "why": "With CPA on funding you are paid only after approval and disbursement, so every drop-off before that is your loss."
+        },
+        {
+          "q": "Why might a buyer choose a CPL offer over a CPA offer with higher value per lead?",
+          "options": [
+            "CPL offers never scrub",
+            "CPL has no consent rules",
+            "CPL leads are always better",
+            "CPL cash usually arrives sooner, which matters with little cash"
+          ],
+          "answer": 3,
+          "why": "If you cannot wait weeks for approvals and funding, faster cash can matter more than a higher eventual value."
+        },
+        {
+          "q": "Payout $50, 8% funded, 30% margin. What is the max cost per lead?",
+          "options": [
+            "$4.00",
+            "$2.80",
+            "$3.50",
+            "$1.20"
+          ],
+          "answer": 1,
+          "why": "$50 x 0.08 = $4.00 break-even. x 0.7 = $2.80."
+        },
+        {
+          "q": "What is a ping tree?",
+          "options": [
+            "A system that offers one lead to several buyers in price order",
+            "A tracking pixel",
+            "A type of credit score",
+            "A Meta audience"
+          ],
+          "answer": 0,
+          "why": "A ping tree auctions a lead across buyers, which is why consent must cover the buyers it can reach."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn the payout models in finance, and why the model matters as much as the payout itself. You'll learn who carries the approval risk in each one, and how to compare offers fairly with value per lead.",
+      "say_outro": "You can now explain C P L, C P A on approval, C P A on funding, pay per call and tiered pricing, say who carries the risk, convert any payout into value per lead, and pick a model that fits your cash. Your task: take two finance offers, write the paid event and a planning rate for each, calculate value per lead, and apply the one point two times rule to choose one. Now take the quiz."
+    },
+    {
+      "slug": "approval-economics",
+      "title": "Approval rates: the number that decides your profit",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can calculate each stage rate from a lead report.",
+        "You can set a target cost per approval and a max cost per lead from it.",
+        "You can explain approval lag and judge campaigns on matured cohorts.",
+        "You can apply exact kill, hold and scale rules that respect lag."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why approval rate beats every other number",
+          "p": "In CPA finance offers, a small change in approval rate changes everything. Going from 15% to 10% approval cuts your revenue by a third with the same spend. Your targeting, angle and form design move this number more than most beginners expect.",
+          "d": {
+            "b": "Approval rate is your profit lever",
+            "s": "Same leads, same cost: 15% vs 10% approval is a third less revenue."
+          },
+          "say": "In C P A, cost per acquisition, finance offers, a small change in approval rate changes everything. Going from fifteen percent to ten percent approval cuts your revenue by a third, with the same spend. And your targeting, angle and form design move this number more than most beginners expect. As the slide says, approval rate is your profit lever."
+        },
+        {
+          "v": "funnel",
+          "h": "Worked example: from submits to funded",
+          "p": "Example, illustrative. 500 submits, 430 valid, 300 complete the full application, 90 approved, 66 funded. Each step has its own rate and its own cause. Find the weakest step before you change anything.",
+          "d": [
+            [
+              "Form submits",
+              500
+            ],
+            [
+              "Valid leads",
+              430
+            ],
+            [
+              "Full applications",
+              300
+            ],
+            [
+              "Approved",
+              90
+            ],
+            [
+              "Funded",
+              66
+            ]
+          ],
+          "say": "Here's an example funnel, from submits to funded. Follow it down. Five hundred form submits. Four hundred and thirty valid leads. Three hundred complete the full application. Ninety approved. Sixty six funded. Each step has its own rate, and its own cause. So before you change anything, find the weakest step."
+        },
+        {
+          "v": "table",
+          "h": "The stage rates from that funnel",
+          "p": "Example, from the funnel above. Write these five rates for every campaign. When profit moves, one of them moved, and you will know where to look.",
+          "more": "Rates rounded. Approval rate can be quoted per application or per lead; networks differ. Here 90 approvals from 430 valid leads is about 21% per valid lead, but 30% per completed application. Always ask which base a quoted rate uses, or you will plan with a number that is too high.",
+          "d": {
+            "cols": [
+              "Stage",
+              "Maths",
+              "Rate"
+            ],
+            "rows": [
+              [
+                "Valid rate",
+                "430 / 500",
+                "86%"
+              ],
+              [
+                "Application rate",
+                "300 / 430",
+                "70%"
+              ],
+              [
+                "Approval rate",
+                "90 / 300",
+                "30%"
+              ],
+              [
+                "Funding rate",
+                "66 / 90",
+                "73%"
+              ],
+              [
+                "Submit to funded",
+                "66 / 500",
+                "13.2%"
+              ]
+            ]
+          },
+          "say": "These are the stage rates from that funnel. Read down. Valid rate, eighty six percent. Application rate, seventy percent. Approval rate, thirty percent of applications. Funding rate, seventy three percent. And submit to funded, thirteen point two percent. Write these five rates for every campaign. When profit moves, one of them moved. One warning: approval rate can be quoted per application or per lead. Here it's thirty percent per application, but about twenty one percent per valid lead. Always ask which base a quoted rate uses."
+        },
+        {
+          "v": "eq",
+          "h": "From payout to max cost per lead",
+          "p": "Set your target cost per approval first, then turn it into a max cost per lead using your approval rate per lead. Example: $35 per approval, 18% of leads approved, 30% margin.",
+          "more": "Check: $35 x 0.18 = $6.30 break-even per lead. Keeping 30%: $6.30 x 0.7 = $4.41. Your target cost per approval is $35 x 0.7 = $24.50. Both lines describe the same plan: pay at most $4.41 per lead and you will land at or under $24.50 per approval if the 18% holds.",
+          "d": [
+            "$35 x 18%",
+            "=",
+            "$6.30 per lead",
+            "x 0.7 =",
+            "$4.41 max CPL"
+          ],
+          "say": "Now turn your payout into a max cost per lead. In this example, the payout is thirty five dollars per approval, eighteen percent of leads are approved, and you want a thirty percent margin. Read the sum on screen. Thirty five times eighteen percent is six dollars thirty per lead, your break-even. Times point seven is four dollars forty one, your max C P L, cost per lead. Pay at most that, and you'll land at or under twenty four fifty per approval, if the eighteen percent holds."
+        },
+        {
+          "v": "curve",
+          "h": "Approval lag: early numbers lie",
+          "p": "Example. A cohort of leads from one week, with $300 spent and 20 approvals in the end. On day 1 only a few are reported, so the cost per approval looks terrible. It settles only as approvals arrive.",
+          "more": "Example maths: final cost per approval is $300 / 20 = $15. On day 1, 10% of approvals (2) are reported, so it looks like $150. On day 7, 60% (12) gives $25. If your target were $24.50 you would have killed a campaign on day 7 that ends at $15. The lag differs by lender and product; ask the network how long it takes for most approvals to arrive, and measure it yourself.",
+          "d": {
+            "a": [
+              10,
+              35,
+              60,
+              75,
+              88,
+              96,
+              100
+            ],
+            "la": "Share of final approvals reported (%)",
+            "b": [
+              150,
+              43,
+              25,
+              20,
+              17,
+              16,
+              15
+            ],
+            "lb": "Reported cost per approval ($)",
+            "x": [
+              "D1",
+              "D3",
+              "D7",
+              "D10",
+              "D14",
+              "D21",
+              "D30"
+            ]
+          },
+          "say": "This curve shows why early numbers lie. It's one week's cohort, with three hundred dollars spent and twenty approvals in the end. Look at day one: only ten percent of approvals are reported, so cost per approval looks like one hundred and fifty dollars. By day seven, it looks like twenty five. And by day thirty, it settles at fifteen. If your target were twenty four fifty, you'd have killed this campaign on day seven. The lag differs by lender, so ask the network, and measure it yourself."
+        },
+        {
+          "v": "big",
+          "h": "Judge cohorts, not calendar days",
+          "p": "A cohort is the leads you generated in one period, such as one day or one week. Track each cohort's approvals until they mature. Compare matured cohorts with each other, never a fresh cohort with an old one.",
+          "d": {
+            "b": "Group leads by the day they came in",
+            "s": "Read a cohort's approvals only after its approval window."
+          },
+          "say": "So judge cohorts, not calendar days. A cohort is the leads you generated in one period, like one day or one week. Track each cohort's approvals until they mature. Then compare matured cohorts with each other, never a fresh cohort with an old one. As the slide says: group leads by the day they came in, and read a cohort's approvals only after its approval window."
+        },
+        {
+          "v": "screen",
+          "h": "A cohort view in your sheet or tracker",
+          "p": "Lay results out by lead date, not by approval date. Mark immature cohorts so nobody makes a call on them. Screen is an illustrative mock-up.",
+          "d": {
+            "kind": "browser",
+            "url": "tracker.example/cohorts",
+            "title": "Approvals by lead date",
+            "blocks": [
+              {
+                "type": "select",
+                "label": "Offer",
+                "value": "ZA Personal Loan (Example)"
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "Lead week",
+                  "Spend",
+                  "Approved",
+                  "Cost per approval"
+                ],
+                "rows": [
+                  [
+                    "W1 (matured)",
+                    "$300",
+                    "20",
+                    "$15.00"
+                  ],
+                  [
+                    "W2 (matured)",
+                    "$320",
+                    "16",
+                    "$20.00"
+                  ],
+                  [
+                    "W3 (day 9)",
+                    "$310",
+                    "9 so far",
+                    "Immature"
+                  ],
+                  [
+                    "W4 (day 2)",
+                    "$330",
+                    "1 so far",
+                    "Immature"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Only W1 and W2 can be judged. Approval window for this offer: 21 days."
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "Here's a cohort view, as an illustrative mock-up. Results are laid out by lead date, not approval date. Look at the table. Weeks one and two are matured, at fifteen and twenty dollars per approval. Weeks three and four are marked immature, with only a few approvals so far. As the note says, the approval window for this offer is twenty one days, so only weeks one and two can be judged. Mark immature cohorts clearly, so nobody makes a call on them."
+        },
+        {
+          "v": "code",
+          "h": "Ask for a postback at every status",
+          "p": "To build cohorts you need each lead's status as it changes, linked to the click that produced it. Ask the network to fire a postback for lead, approved, rejected and funded, each with the original click ID.",
+          "more": "Store every postback as a raw row first. Use the transaction ID to ignore repeats, because networks sometimes send the same status twice. If the network can pass the original lead date, cohort reports become easy; if not, look the date up from the click ID in your tracker. A rejected status matters as much as an approval: it tells you which ad sets bring people who cannot qualify.",
+          "d": {
+            "lang": "url",
+            "text": "https://track.yourdomain.example/pb?key=<SECRET>&cid={sub1}&status={status}&payout={payout}&txid={transaction_id}&lead_date={lead_date}\n\nstatus examples: lead, approved, rejected, funded",
+            "note": "Macro names vary by network and are examples. Copy them exactly from your network's postback settings."
+          },
+          "say": "To build cohorts, you need each lead's status as it changes, linked to the click that produced it. So ask the network to fire a postback for every status: lead, approved, rejected and funded, each with your original click I D. The example on screen shows the shape. Store every postback as a raw row, and use the transaction I D to ignore repeats. And remember, a rejection matters as much as an approval, because it tells you which ad sets bring people who can't qualify. Macro names vary, so copy them exactly from your network."
+        },
+        {
+          "v": "table",
+          "h": "Leading signals you can read early",
+          "p": "While approvals mature, these early numbers tell you if a cohort is on track. They are signals, not proof. Rough guide; set your own normal ranges from matured cohorts.",
+          "d": {
+            "cols": [
+              "Signal",
+              "When you see it",
+              "Warning sign"
+            ],
+            "rows": [
+              [
+                "Valid lead rate",
+                "Same day",
+                "Well below your matured average"
+              ],
+              [
+                "Application rate",
+                "1 to 3 days",
+                "Falling week on week"
+              ],
+              [
+                "Contact rate",
+                "1 to 3 days",
+                "Leads not answering"
+              ],
+              [
+                "Early approvals",
+                "3 to 7 days",
+                "Behind past cohorts at the same age"
+              ]
+            ]
+          },
+          "say": "While approvals mature, these early signals tell you if a cohort is on track. Read the table. Valid lead rate, same day: warning if it's well below your matured average. Application rate, one to three days: warning if falling week on week. Contact rate: warning if leads aren't answering. Early approvals, three to seven days: warning if behind past cohorts at the same age. These are signals, not proof. Set your own normal ranges from matured cohorts."
+        },
+        {
+          "v": "bars",
+          "h": "Example: angle changes approval rate",
+          "p": "Example, illustrative numbers from a single test. Three angles, same offer and form. The urgency angle brought cheap leads with the lowest approval rate. The planning angles cost more per lead and earned more per lead.",
+          "more": "Example. At $35 per approval: the urgency angle at $1.80 per lead earns 0.09 x $35 = $3.15 per lead, profit $1.35. The purchase angle at $3.50 per lead earns 0.26 x $35 = $9.10, profit $5.60. The cheap lead was the expensive choice. Angles that speak to urgency also tend to reach people under the most financial pressure, which is a harm issue as well as a profit issue.",
+          "d": [
+            [
+              "Fast cash today",
+              35,
+              "9% approved"
+            ],
+            [
+              "Spread a big cost",
+              85,
+              "22% approved"
+            ],
+            [
+              "Plan a purchase",
+              100,
+              "26% approved"
+            ]
+          ],
+          "say": "Look at these three bars, from a single test with the same offer and form. Fast cash today brought cheap leads, but only nine percent approved. Spread a big cost got twenty two percent. And plan a purchase got twenty six percent. At thirty five dollars per approval, the urgency angle at a dollar eighty per lead makes one thirty five profit per lead. The purchase angle at three fifty makes five sixty. The cheap lead was the expensive choice. And urgency angles also tend to reach people under the most financial pressure, which is a harm issue too."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes with approval data",
+          "p": "These mistakes come from impatience or from mixing up bases. Each one leads to killing good campaigns or scaling bad ones, and in finance you only find out weeks later, when the money is already spent.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Killing on day-2 cost per approval",
+                "Mixing per-lead and per-application rates",
+                "Comparing a new cohort with a matured one",
+                "Chasing cheap leads with low approval"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Wait for the approval window",
+                "Write the base next to every rate",
+                "Compare cohorts at the same age",
+                "Optimise value per lead, not CPL"
+              ]
+            }
+          },
+          "say": "These mistakes come from impatience, or from mixing up bases. Read across. Killing on day two cost per approval: wait for the approval window. Mixing per lead and per application rates: write the base next to every rate. Comparing a new cohort with a matured one: compare cohorts at the same age. Chasing cheap leads with low approval: optimise value per lead, not C P L. In finance, you only find these mistakes weeks later, when the money's already spent."
+        },
+        {
+          "v": "tip",
+          "h": "Never raise approvals by coaching applicants",
+          "p": "Approval rate rises honestly when you reach eligible people and explain the criteria clearly. It must never rise because someone was told what to type. That line is fraud, and lenders do check.",
+          "d": {
+            "kind": "warn",
+            "text": "Never suggest that users overstate income, hide debts or use someone else's details. That is fraud, it harms the applicant, and lenders claw back payouts and report it. Pre-filling or editing applicant data is the same."
+          },
+          "say": "Approval rate rises honestly when you reach eligible people and explain the criteria clearly. It must never rise because someone was told what to type. Look at the warning: never suggest that users overstate income, hide debts, or use someone else's details. That's fraud. It harms the applicant, and lenders claw back payouts and report it. Pre-filling or editing applicant data is the same. And lenders do check."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules with approval lag",
+          "p": "Starting rules to adapt. T is your target cost per approval (payout x 0.7). The window is the number of days in which about 85% of approvals usually arrive for this offer.",
+          "more": "Example with T = $24.50. Early kill at $49 spend if fewer than 70% of leads are valid. Zero kill at $73.50 spend with no approvals after the window. Scale only when two matured cohorts each show cost per approval of $19.60 or less with at least five approvals. These are cautious on purpose: in finance, a bad scale decision is paid for weeks later.",
+          "d": [
+            "Early kill: spend ≥ 2 x T and valid rate below 70%",
+            "Zero kill: spend ≥ 3 x T and 0 approvals after the window",
+            "Hold: any cohort younger than the window",
+            "Scale +20%: two matured cohorts at ≤ 0.8 x T, ≥ 5 approvals each",
+            "Pause: matured approval rate down by a third versus the last two"
+          ],
+          "say": "Here are your starting decision rules. T is your target cost per approval, the payout times point seven. The window is the days in which about eighty five percent of approvals arrive. Early kill: spend of two times T or more and a valid rate below seventy percent. Zero kill: three times T spent and zero approvals after the window. Hold any cohort younger than the window. Scale by twenty percent when two matured cohorts are at point eight times T or better, with at least five approvals each. And pause if the matured approval rate drops by a third. These are cautious on purpose."
+        }
+      ],
+      "takeaways": [
+        "Approval rate is the main profit lever in CPA finance offers.",
+        "Approvals arrive late, so judge cohorts after their approval window.",
+        "Optimise value per lead, not the cheapest cost per lead."
+      ],
+      "action": "Set up a cohort sheet with columns: lead date, spend, leads, valid, approved, funded, cost per approval, matured yes or no. Ask your network for the approval window of one offer and write it at the top.",
+      "glossary": [
+        {
+          "term": "Approval rate",
+          "def": "Share of leads or applications the lender approves. Always state which base is used."
+        },
+        {
+          "term": "Cohort",
+          "def": "A group of leads that came in during the same period, tracked together over time."
+        },
+        {
+          "term": "Approval window",
+          "def": "The time in which most approvals for a cohort usually arrive, for example 21 days."
+        },
+        {
+          "term": "Leading signal",
+          "def": "An early number, such as valid rate, that hints at the final result before approvals mature."
+        },
+        {
+          "term": "Target cost per approval",
+          "def": "The most you plan to pay per approval: payout x (1 minus your margin)."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "500 submits, 300 applications, 90 approved. What is the approval rate per application?",
+          "options": [
+            "18%",
+            "60%",
+            "30%",
+            "9%"
+          ],
+          "answer": 2,
+          "why": "90 / 300 = 30%. Per submit it would be 90 / 500 = 18%."
+        },
+        {
+          "q": "A cohort is 4 days old with a cost per approval of $80. Target is $25 and the window is 21 days. What do you do?",
+          "options": [
+            "Hold and check leading signals",
+            "Scale it",
+            "Kill it",
+            "Change the payout"
+          ],
+          "answer": 0,
+          "why": "The cohort is immature. Check valid and application rates; judge cost per approval after the window."
+        },
+        {
+          "q": "Payout $40 per approval, 15% of leads approved, 30% margin. Max CPL?",
+          "options": [
+            "$6.00",
+            "$2.80",
+            "$4.20",
+            "$4.00"
+          ],
+          "answer": 2,
+          "why": "$40 x 0.15 = $6.00 break-even. x 0.7 = $4.20."
+        },
+        {
+          "q": "Angle A: $1.50 per lead, 8% approved. Angle B: $3.00 per lead, 20% approved. Payout $30. Which earns more profit per lead?",
+          "options": [
+            "A",
+            "B",
+            "Equal",
+            "Not enough data to compare at all"
+          ],
+          "answer": 1,
+          "why": "A: $2.40 revenue - $1.50 = $0.90. B: $6.00 - $3.00 = $3.00. B wins."
+        },
+        {
+          "q": "Which is an honest way to raise approval rate?",
+          "options": [
+            "Telling users what income to enter",
+            "Filling forms for users",
+            "Hiding the cost",
+            "Stating the eligibility criteria clearly in the ad and form"
+          ],
+          "answer": 3,
+          "why": "Clear criteria filter out people who cannot qualify, so more of those who apply are approved."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn why approval rate is the number that decides your profit in finance. You'll calculate stage rates, set a max cost per lead, and learn to judge campaigns on matured cohorts, because early numbers lie.",
+      "say_outro": "You can now calculate stage rates, set a target cost per approval and a max cost per lead, explain approval lag, and apply kill, hold and scale rules that respect it. Your task: set up a cohort sheet with columns for lead date, spend, leads, valid, approved, funded, cost per approval and matured yes or no, then ask your network for one offer's approval window and write it at the top. Now take the quiz."
+    },
+    {
+      "slug": "lead-quality",
+      "title": "Lead quality: real, eligible, contactable, consented",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can name the four tests every finance lead must pass.",
+        "You can calculate net revenue after scrubs and returns.",
+        "You can spot duplicate, fake and incentivised leads in your own data.",
+        "You can apply exact pause rules when quality drops."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why lead quality is your income, not a detail",
+          "p": "Finance networks check every lead and pay only for the ones that pass. Bad leads are rejected now or clawed back later, and a pattern of them gets you removed. Quality decides how much of your spend turns into revenue.",
+          "d": {
+            "b": "You are paid for leads that pass checks",
+            "s": "Everything else is spend with no revenue."
+          },
+          "say": "Finance networks check every lead and pay only for the ones that pass. Bad leads are rejected now, or clawed back later. And a pattern of them gets you removed. So quality decides how much of your spend turns into revenue. As the slide says, you're paid for leads that pass checks. Everything else is spend with no revenue."
+        },
+        {
+          "v": "cards",
+          "h": "The four tests of a good finance lead",
+          "p": "A lead must pass all four tests. Fail one and it is worth nothing to the buyer, or worse, it causes a complaint that reaches the network, the platform or a regulator.",
+          "d": [
+            "Real|A real person, with correct name, phone and email",
+            "Eligible|Meets the product's basic criteria: age, geo, income",
+            "Contactable|Answers the call, SMS or email that follows",
+            "Consented|Agreed, clearly, to be contacted by this buyer"
+          ],
+          "say": "A good finance lead must pass all four of these tests. Real: a real person, with a correct name, phone and email. Eligible: meets the product's basic criteria, like age, geo and income. Contactable: answers the call, S M S or email that follows. And consented: agreed, clearly, to be contacted by this buyer. Fail one and the lead is worth nothing to the buyer. Or worse, it causes a complaint that reaches the network, the platform, or a regulator."
+        },
+        {
+          "v": "table",
+          "h": "Why networks scrub leads",
+          "p": "Rough guide; each network has its own list. Ask for the scrub reasons per lead, because they tell you exactly what to fix, and fix the biggest reason first before touching anything else.",
+          "d": {
+            "cols": [
+              "Scrub reason",
+              "Likely cause",
+              "Your fix"
+            ],
+            "rows": [
+              [
+                "Duplicate",
+                "Same person, twice",
+                "Dedupe before sending"
+              ],
+              [
+                "Invalid phone",
+                "Typos, fake numbers",
+                "Phone format check, OTP"
+              ],
+              [
+                "Outside geo",
+                "Loose targeting, VPNs",
+                "Tighten geo, check IP"
+              ],
+              [
+                "Under age",
+                "Weak targeting, no field",
+                "Age field, platform age"
+              ],
+              [
+                "Ineligible",
+                "Angle draws wrong people",
+                "State criteria upfront"
+              ],
+              [
+                "No consent record",
+                "Form missing consent",
+                "Fix the form"
+              ]
+            ]
+          },
+          "say": "Here's why networks scrub leads, with a likely cause and your fix. Duplicates: dedupe before sending. Invalid phones from typos or fakes: add a phone format check and an O T P, a one time code. Outside geo: tighten geo and check I P. Under age: add an age field. Ineligible: state the criteria upfront. No consent record: fix the form. Each network has its own list, so ask for the scrub reason per lead, and fix the biggest reason first."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: net billable leads",
+          "p": "Example. 400 leads, 22% scrubbed, $3.50 per accepted lead. Revenue is far below what the raw lead count suggests, so always plan on accepted leads, never on form submits.",
+          "more": "Check: 400 x 0.78 = 312 accepted. 312 x $3.50 = $1,092. A buyer who planned on 400 x $3.50 = $1,400 overestimated revenue by $308.",
+          "d": [
+            "400 leads",
+            "x",
+            "78% accepted",
+            "x $3.50 =",
+            "$1,092"
+          ],
+          "say": "Here's a worked example of net billable leads. Four hundred leads, twenty two percent scrubbed, three dollars fifty per accepted lead. Read the sum on screen. Four hundred times seventy eight percent accepted, times three fifty, equals one thousand and ninety two dollars. A buyer who planned on all four hundred would expect fourteen hundred, and overestimate revenue by three hundred and eight dollars. So always plan on accepted leads, never on form submits."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: the hidden cost of returns",
+          "p": "Example, illustrative. Spend $1,000 for 400 leads looks like a $2.50 CPL. After scrubs and later returns, the real margin is thin. Run this table for every CPL offer.",
+          "more": "A return is a lead the buyer accepted and later sends back, for example because the phone was disconnected or the person said they never applied. Networks often deduct returns from later payouts. 312 x 0.06 = 18.72, rounded to 19 returned leads. The campaign looked profitable at a $2.50 CPL against a $3.50 payout, but it made $25.50 on $1,000 of spend. One more point of scrub would have made it a loss.",
+          "d": {
+            "cols": [
+              "Step",
+              "Maths",
+              "Result"
+            ],
+            "rows": [
+              [
+                "Raw CPL",
+                "$1,000 / 400",
+                "$2.50"
+              ],
+              [
+                "Accepted",
+                "400 x 78%",
+                "312"
+              ],
+              [
+                "Cost per accepted lead",
+                "$1,000 / 312",
+                "$3.21"
+              ],
+              [
+                "Returned later (6%)",
+                "312 x 6%",
+                "19 leads"
+              ],
+              [
+                "Paid leads",
+                "312 - 19",
+                "293"
+              ],
+              [
+                "Revenue",
+                "293 x $3.50",
+                "$1,025.50"
+              ],
+              [
+                "Profit",
+                "$1,025.50 - $1,000",
+                "$25.50"
+              ]
+            ]
+          },
+          "say": "Now the hidden cost of returns. A return is a lead the buyer accepted and later sent back, for example a disconnected phone. Read down the table. One thousand dollars for four hundred leads looks like a two fifty C P L, cost per lead. Three hundred and twelve are accepted, so each accepted lead really costs three twenty one. Then six percent come back as returns, nineteen leads, leaving two hundred and ninety three paid. Revenue is one thousand and twenty five fifty. Profit, just twenty five dollars fifty. One more point of scrub would have made it a loss."
+        },
+        {
+          "v": "big",
+          "h": "Duplicates are paid once",
+          "p": "People often submit twice: once from the ad, once from a retargeting ad, or on two of your landers. The network pays once. Count duplicates before you count profit, and remove them before sending if your setup allows.",
+          "d": {
+            "b": "One person, one payout",
+            "s": "Dedupe on phone and email before you count leads."
+          },
+          "say": "People often submit twice: once from the ad, once from a retargeting ad, or on two of your landers. But the network pays once. As the slide says: one person, one payout. So count duplicates before you count profit, and dedupe on phone and email before sending, if your setup allows."
+        },
+        {
+          "v": "walk",
+          "h": "How to check your own leads for fraud",
+          "p": "Do this weekly on a sample of leads, or daily while testing a new source. You are looking for patterns no real group of people would produce. Screens are illustrative mock-ups.",
+          "d": {
+            "steps": [
+              {
+                "title": "Sort by submit time",
+                "text": "Clusters of many leads in the same minute, at 3 a.m., are a warning.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/leads",
+                  "title": "Leads by time",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Time",
+                        "Phone",
+                        "Fill time"
+                      ],
+                      "rows": [
+                        [
+                          "03:12:04",
+                          "0722 000 111",
+                          "3 s"
+                        ],
+                        [
+                          "03:12:09",
+                          "0722 000 112",
+                          "2 s"
+                        ],
+                        [
+                          "03:12:15",
+                          "0722 000 113",
+                          "3 s"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Look at fill time",
+                "text": "Real people take time to read and type. A median under about 15 seconds on a multi-field form needs a closer look.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/leads",
+                  "title": "Fill time",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Median fill time this source",
+                      "value": "4 seconds"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Compare with your other sources. Example: 48 seconds."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Check number patterns",
+                "text": "Sequential or repeated phone numbers and copied emails point to fake data.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/leads",
+                  "title": "Pattern check",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Sequential phones",
+                      "value": "37 of 120"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Same email domain, random names",
+                      "value": "52 of 120"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Pause and report",
+                "text": "Pause the source, tell the network what you found, and do not ask to be paid for those leads.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "ads.example/manage",
+                  "title": "Ad set",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Ad set: KE_Loans_Src3",
+                      "on": false
+                    },
+                    {
+                      "type": "button",
+                      "label": "Send report to network"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Here's how to check your own leads for fraud. Do it weekly on a sample, or daily while testing a new source. Tap Next to follow each step. First, sort by submit time: many leads in the same minute, at three a m, is a warning. Second, look at fill time: a median under about fifteen seconds on a multi-field form needs a closer look. Here it's four seconds. Third, check number patterns: sequential phones and copied emails point to fake data. Finally, pause the source, tell the network what you found, and don't ask to be paid for those leads."
+        },
+        {
+          "v": "phone",
+          "h": "Reading a network quality note",
+          "p": "Good managers tell you why leads failed. Act on it the same day and reply with what you changed, so they see you take quality seriously. That trust matters when caps are set. Chat is illustrative.",
+          "d": {
+            "app": "chat",
+            "title": "Affiliate manager",
+            "subtitle": "network",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Yesterday: 22% of your leads scrubbed. Most were invalid phones from one placement."
+              },
+              {
+                "from": "me",
+                "text": "Thanks. Which placement, and can you share the lead IDs?"
+              },
+              {
+                "from": "them",
+                "text": "The in-app placement. IDs attached."
+              },
+              {
+                "from": "me",
+                "text": "Excluded it today and added an SMS code check on the form. I will send tomorrow's numbers."
+              }
+            ]
+          },
+          "say": "Good managers tell you why leads failed. In this illustrative chat, the manager says twenty two percent scrubbed yesterday, mostly invalid phones from one placement. You ask which placement and for the lead I Ds. It's the in-app placement. Then you reply that you've excluded it today and added an S M S code check, and you'll send tomorrow's numbers. Act on it the same day and say what you changed. That trust matters when caps are set."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes that destroy lead quality",
+          "p": "Each of these can raise lead volume for a few days and then cost you the offer, the payouts already earned or the whole network relationship. Volume that fails checks is not volume.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Paying users to fill forms",
+                "Buying traffic from unknown resellers",
+                "Letting every placement run",
+                "Removing fields to cut CPL"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Only reach people who want the product",
+                "Use sources you control and can audit",
+                "Exclude placements that scrub high",
+                "Keep the fields the lender needs"
+              ]
+            }
+          },
+          "say": "These mistakes can raise lead volume for a few days, then cost you the offer, your earned payouts, or the whole network relationship. Read across. Paying users to fill forms: only reach people who want the product. Buying traffic from unknown resellers: use sources you control and can audit. Letting every placement run: exclude placements that scrub high. Removing fields to cut C P L: keep the fields the lender needs. Volume that fails checks isn't volume."
+        },
+        {
+          "v": "tip",
+          "h": "Fake and incentivised leads are fraud",
+          "p": "Some practices are not grey areas. They break network terms and, in many places, the law, and they hurt real people whose details are misused. No payout makes them acceptable.",
+          "d": {
+            "kind": "warn",
+            "text": "Never generate, buy or recycle leads, never pay or reward people to apply, never submit data on someone's behalf, and never resell a lead beyond its consent. Expect clawbacks, bans and possible legal action."
+          },
+          "say": "Some practices aren't grey areas. They break network terms and, in many places, the law, and they hurt real people whose details are misused. Look at the warning. Never generate, buy or recycle leads. Never pay or reward people to apply. Never submit data on someone's behalf. And never resell a lead beyond its consent. Expect clawbacks, bans and possible legal action. No payout makes them acceptable."
+        },
+        {
+          "v": "check",
+          "h": "Starting rules for lead quality",
+          "p": "Starting rules to adapt. Check them daily during a test, then weekly once a source is stable. Each one tells you exactly what to do, so you are not guessing under pressure.",
+          "d": [
+            "Pause a source when scrub is above 25% for 2 days in a row",
+            "Pause when duplicates exceed 10% of leads",
+            "Investigate when median fill time is under 15 seconds",
+            "Exclude any placement scrubbing 2 x your average",
+            "Resume only after a fix and a small test of 30+ leads"
+          ],
+          "say": "Here are your starting rules for lead quality. Pause a source when scrub is above twenty five percent for two days in a row. Pause when duplicates exceed ten percent. Investigate when median fill time is under fifteen seconds. Exclude any placement scrubbing two times your average. And resume only after a fix and a small test of thirty or more leads. Check them daily during a test, then weekly once a source is stable."
+        },
+        {
+          "v": "stat",
+          "h": "The number to watch daily",
+          "p": "Your scrub rate turns gross leads into paid leads. Track it per source and per placement, not just per offer. In the worked example 22% scrub plus 6% returns left a margin of about 2.5%.",
+          "d": {
+            "n": 22,
+            "pre": "",
+            "suf": "%",
+            "dec": 0,
+            "label": "scrub rate in the worked example",
+            "note": "Example. Rough guide, varies by geo, offer and source."
+          },
+          "say": "Here's the number to watch daily: your scrub rate. In the worked example, it's twenty two percent. Your scrub rate turns gross leads into paid leads. Track it per source and per placement, not just per offer. In that example, twenty two percent scrub plus six percent returns left a margin of only about two and a half percent. This is an example and a rough guide; it varies by geo, offer and source."
+        }
+      ],
+      "takeaways": [
+        "Every lead must be real, eligible, contactable and consented.",
+        "Scrubs and returns can turn a profitable-looking CPL into a loss.",
+        "Fake, incentivised or resold leads are fraud, not a growth tactic."
+      ],
+      "action": "Export your last 100 leads (or a sample from any form you run). Sort by time, look at fill time and phone patterns, count duplicates, and write your scrub and duplicate rates at the top.",
+      "glossary": [
+        {
+          "term": "Scrub",
+          "def": "A lead the network rejects at validation, so it is not paid."
+        },
+        {
+          "term": "Return",
+          "def": "A lead that was accepted and later sent back by the buyer, often deducted from later payouts."
+        },
+        {
+          "term": "Duplicate lead",
+          "def": "A second lead from the same person. Networks normally pay for only one."
+        },
+        {
+          "term": "Incentivised traffic",
+          "def": "Traffic where people are rewarded for clicking or applying. Banned on finance offers in most network terms."
+        },
+        {
+          "term": "OTP",
+          "def": "One-time passcode, such as an SMS code, used to confirm a phone number is real."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "500 leads, 20% scrubbed, $4 per accepted lead. Revenue?",
+          "options": [
+            "$2,000",
+            "$400",
+            "$1,600",
+            "$1,800"
+          ],
+          "answer": 2,
+          "why": "500 x 0.8 = 400 accepted. 400 x $4 = $1,600."
+        },
+        {
+          "q": "A source shows 40 leads in 2 minutes at 3 a.m. with a 3-second median fill time. What do you do?",
+          "options": [
+            "Pause it, report it, and do not claim those leads",
+            "Scale it",
+            "Lower the bid",
+            "Ignore it"
+          ],
+          "answer": 0,
+          "why": "Those patterns point to bots or fake data. Pause, report and do not ask to be paid."
+        },
+        {
+          "q": "Which is a valid reason to keep a field the lender needs, even if removing it lowers CPL?",
+          "options": [
+            "Fields always increase CTR",
+            "It makes the form longer",
+            "Platforms require all fields",
+            "Leads without needed data get scrubbed or rejected"
+          ],
+          "answer": 3,
+          "why": "A cheaper lead that the buyer cannot use is worth nothing."
+        },
+        {
+          "q": "Your scrub has been 28% and 31% on the last two days. Your rule is pause above 25% for 2 days. What do you do?",
+          "options": [
+            "Hold",
+            "Pause the source",
+            "Scale to dilute it",
+            "Change the payout"
+          ],
+          "answer": 1,
+          "why": "Both days are above 25%, so the rule says pause and fix before resuming."
+        },
+        {
+          "q": "What is a return?",
+          "options": [
+            "A refund to the user",
+            "A lead accepted then sent back later, often deducted from payouts",
+            "A retargeting ad",
+            "A form error"
+          ],
+          "answer": 1,
+          "why": "Returns happen after acceptance, which is why net revenue can drop weeks later."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn why lead quality is your income, not a detail. You'll learn the four tests every finance lead must pass, how scrubs and returns eat into revenue, and how to spot fake leads in your own data.",
+      "say_outro": "You can now name the four tests of a good lead, calculate net revenue after scrubs and returns, spot duplicate, fake and incentivised leads, and apply pause rules when quality drops. Your task: export your last one hundred leads, sort by time, check fill time and phone patterns, count duplicates, and write your scrub and duplicate rates at the top. Now take the quiz."
+    },
+    {
+      "slug": "products-compared",
+      "title": "Loans, cards, insurance and banking compared",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can match each finance product to the person it fits and the harm it can cause.",
+        "You can compare products on revenue for the same spend.",
+        "You can name the loan offers you should refuse to promote.",
+        "You can choose a sensible first product for your budget."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the product decides your whole campaign",
+          "p": "A loan, a card, an insurance policy and a bank account attract different people, pay on different events and fail in different ways. The product decides your angle, your disclosure, your cash cycle and how much harm a careless ad can do.",
+          "d": {
+            "b": "Different product, different rules",
+            "s": "Angle, disclosure, cash cycle and risk all change with it."
+          },
+          "say": "A loan, a card, an insurance policy and a bank account attract different people, pay on different events, and fail in different ways. So the product decides your angle, your disclosure, your cash cycle, and how much harm a careless ad can do. As the slide says: different product, different rules."
+        },
+        {
+          "v": "table",
+          "h": "Who each product fits and what to show",
+          "p": "Rough guide. Disclosure rules are set per country and per product. Ask the advertiser for the exact wording for your geo, and never shorten it to fit a design.",
+          "d": {
+            "cols": [
+              "Product",
+              "Fits someone who",
+              "Must show (typical)"
+            ],
+            "rows": [
+              [
+                "Personal loan",
+                "Has a planned cost and steady income",
+                "Rate, total repayable, term"
+              ],
+              [
+                "Short-term loan",
+                "Has a brief gap and can repay fast",
+                "Full cost; often strict rules"
+              ],
+              [
+                "Credit card",
+                "Wants flexible credit and pays on time",
+                "Rate, fees, eligibility"
+              ],
+              [
+                "Insurance",
+                "Needs cover for a real risk",
+                "Insurer, what is and is not covered"
+              ],
+              [
+                "Bank account",
+                "Wants to save, pay or receive money",
+                "Fees, rates with date, protection"
+              ]
+            ]
+          },
+          "say": "This table shows who each product fits, and what you must typically show. A personal loan fits someone with a planned cost and steady income; show the rate, total repayable and term. A short-term loan fits a brief gap with fast repayment; show the full cost, and expect strict rules. A credit card fits someone who pays on time; show rate, fees and eligibility. Insurance fits a real risk; name the insurer and what is and isn't covered. A bank account: show fees, dated rates and protection. Ask the advertiser for exact wording for your geo, and never shorten it to fit a design."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: the same $500 on four products",
+          "p": "Example, illustrative rates. 1,250 clicks at $0.40 each on four different offers. Results are close, which is why value per click matters more than which product sounds most profitable.",
+          "more": "Check: 1,250 x $0.40 = $500 spend in each row. Loan: 1,250 x 1.2% = 15 x $40 = $600. Card: 1,250 x 0.8% = 10 x $55 = $550. Insurance: 1,250 x 6% = 75 x $7 = $525. Bank: 1,250 x 4% = 50 x $12 = $600. The bank offer matches the loan offer with far less harm risk and usually a faster confirmation.",
+          "d": {
+            "cols": [
+              "Product",
+              "Paid events",
+              "Revenue",
+              "Profit"
+            ],
+            "rows": [
+              [
+                "Loan, $40 funded",
+                "1.2% = 15",
+                "$600",
+                "$100"
+              ],
+              [
+                "Card, $55 approved",
+                "0.8% = 10",
+                "$550",
+                "$50"
+              ],
+              [
+                "Insurance, $7 quote",
+                "6% = 75",
+                "$525",
+                "$25"
+              ],
+              [
+                "Bank, $12 opened",
+                "4% = 50",
+                "$600",
+                "$100"
+              ]
+            ]
+          },
+          "say": "Here's the same five hundred dollars on four products, with illustrative rates: twelve hundred and fifty clicks at forty cents each. Read the table. The loan, at forty dollars funded, makes six hundred, a hundred profit. The card, at fifty five approved, makes fifty profit. Insurance, at seven dollars a quote, makes twenty five. And the bank account, at twelve dollars opened, also makes a hundred. The results are close. That's why value per click matters more than which product sounds most profitable. And the bank offer matches the loan with far less harm risk, and usually faster confirmation."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: find the weakest step in the loan funnel",
+          "p": "Practise. Here is the loan row from the table as a full funnel. Work out each pass-through rate and pick the step that loses the largest share of people. That is where you look first.",
+          "more": "Working: submits 110 / 1,250 = 8.8%. Approved 22 / 110 = 20%. Funded 15 / 22 = 68%. The click to form step is the weakest, so the page and its message match come first. Note the lab says FTD; read it as funded loan.",
+          "d": {
+            "kind": "funnel",
+            "task": "Which step has the lowest pass-through rate?",
+            "preset": {
+              "steps": [
+                [
+                  "Clicks",
+                  1250
+                ],
+                [
+                  "Form submits",
+                  110
+                ],
+                [
+                  "Approved",
+                  22
+                ],
+                [
+                  "Funded",
+                  15
+                ]
+              ],
+              "payout": 40
+            },
+            "answer": {
+              "field": "worst_step",
+              "value": 1
+            }
+          },
+          "say": "Time to practise. Here's the loan row as a full funnel: twelve hundred and fifty clicks, a hundred and ten form submits, twenty two approved, and fifteen funded. Work out each pass-through rate, and find the step that loses the largest share of people. That's where you look first. The lab says F T D; read it as funded loan. Pause and try it, then check your answer."
+        },
+        {
+          "v": "bars",
+          "h": "Example: how long until the paid event confirms",
+          "p": "Example, rough guide, varies widely by advertiser. Faster confirmation means you learn faster and need less cash to wait. For your first offer, speed of learning is worth a lot.",
+          "d": [
+            [
+              "Insurance quote lead",
+              23,
+              "About 7 days"
+            ],
+            [
+              "Bank account opened",
+              47,
+              "About 14 days"
+            ],
+            [
+              "Card approved",
+              70,
+              "About 21 days"
+            ],
+            [
+              "Loan funded",
+              100,
+              "About 30 days"
+            ]
+          ],
+          "say": "These bars show how long each paid event takes to confirm, as a rough example that varies widely. An insurance quote lead, about seven days. A bank account opened, about fourteen. A card approved, about twenty one. A loan funded, about thirty days. Faster confirmation means you learn faster, and need less cash to wait. For your first offer, that speed of learning is worth a lot."
+        },
+        {
+          "v": "big",
+          "h": "Some loan offers should never be promoted",
+          "p": "Predatory lending exists. It means lending designed to profit from people who cannot afford it: hidden fees, endless rollovers, abusive collection, misuse of phone contacts. A high payout on such an offer is paid for by the borrower's harm, and it puts your accounts at risk.",
+          "more": "Signs we cover in depth in module 2: the lender is not on the regulator's list; the cost is not shown before applying; fees are deducted upfront so the borrower receives less than advertised; repayment terms are days long with rollovers; the app asks for access to contacts or photos; reviews describe shaming calls to family or employers. In Nigeria and Kenya, regulators have acted against digital lenders over practices like these. If you see these signs, do not run the offer and tell your network why.",
+          "d": {
+            "b": "Refuse predatory loan offers",
+            "s": "No payout is worth building someone else's debt trap."
+          },
+          "say": "Some loan offers should never be promoted. Predatory lending means lending designed to profit from people who can't afford it: hidden fees, endless rollovers, abusive collection, and misuse of phone contacts. Warning signs include a lender not on the regulator's list, cost not shown before applying, fees taken upfront, and apps asking for contacts or photos. In Nigeria and Kenya, regulators have acted against digital lenders over practices like these. A high payout on such an offer is paid for by the borrower's harm. Refuse it, and tell your network why."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: how a rollover grows a debt",
+          "p": "Example. A 30-day loan of KES 10,000 with a KES 1,500 fee. The borrower cannot repay, pays only the fee and rolls over three times. After four months they have paid KES 6,000 in fees and still owe the KES 10,000.",
+          "more": "Check: 1,500 x 4 = 6,000. The borrower has paid 60% of the amount borrowed in fees and owes the full original amount. Some markets cap fees or limit rollovers; others do not. When you promote a loan, the ad that brought this person in is part of that story, which is why disclosure and targeting matter so much.",
+          "d": [
+            "KES 1,500 fee",
+            "x",
+            "4 periods",
+            "=",
+            "KES 6,000 paid, debt unchanged"
+          ],
+          "say": "Here's how a rollover grows a debt. A thirty day loan of ten thousand Kenyan shillings, with a fifteen hundred shilling fee. The borrower can't repay, so they pay only the fee and roll over, three times. Read the sum on screen. Fifteen hundred times four periods equals six thousand shillings paid, and the debt is unchanged. That's sixty percent of the amount borrowed, paid in fees, while still owing all of it. When you promote a loan, the ad that brought this person in is part of that story."
+        },
+        {
+          "v": "cards",
+          "h": "Insurance: what changes",
+          "p": "Insurance leads are often easier on the user than loans, but they bring their own rules. Promises about cover are where most problems start, because a person finds out the truth only when they claim.",
+          "d": [
+            "Name the insurer|Who carries the risk, and their licence",
+            "Cover, not price alone|What is and is not covered",
+            "No unproven cheapest claims|Only if the advertiser can prove it",
+            "Renewal timing|Car and device cover renew yearly"
+          ],
+          "say": "Insurance leads are often easier on the user than loans, but they bring their own rules. Name the insurer, who carries the risk, and their licence. Show cover, not price alone: what is and isn't covered. Make no unproven cheapest claims, only ones the advertiser can prove. And remember renewal timing, since car and device cover renew yearly. Promises about cover are where most problems start, because people only find out the truth when they claim."
+        },
+        {
+          "v": "phone",
+          "h": "A banking offer page done right",
+          "p": "Rates change, so a rate without a date misleads. Show the rate, its date, the fees and who provides the account, all above the button. Mock-up with an illustrative brand and rate, not a real offer.",
+          "d": {
+            "app": "browser",
+            "url": "example-savings.example/ng",
+            "page": {
+              "h": "Save in naira with no monthly fee",
+              "p": "Interest 12% a year, paid monthly. Rate as of 1 Oct, can change. Account by Example Microfinance Bank, licensed by the CBN. Deposits protected as stated in our terms.",
+              "cta": "Open an account"
+            }
+          },
+          "say": "Here's a banking offer page done right, a mock-up with an illustrative brand and rate. Look at what sits above the button. The rate, twelve percent a year, paid monthly. Its date, with a note that it can change. Who provides the account, a microfinance bank licensed by the C B N. And how deposits are protected. Rates change, so a rate without a date misleads."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes when choosing a product",
+          "p": "These lead to slow learning, cash problems or harm to users. The fix is usually a simpler, faster-confirming product for your first tests, then harder products once your process works.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Starting with short-term loans",
+                "Choosing on payout size",
+                "Ignoring confirmation time",
+                "Showing an old savings rate"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Start with banking, cards or insurance",
+                "Choose on value per click",
+                "Prefer events that confirm in 14 days",
+                "Date every rate and update it"
+              ]
+            }
+          },
+          "say": "These mistakes lead to slow learning, cash problems, or harm to users. Read across. Starting with short-term loans: start with banking, cards or insurance. Choosing on payout size: choose on value per click. Ignoring confirmation time: prefer events that confirm within fourteen days. Showing an old savings rate: date every rate and update it. The fix is usually a simpler, faster-confirming product first, then harder products once your process works."
+        },
+        {
+          "v": "tip",
+          "h": "Every product here is regulated",
+          "p": "Loans, cards, insurance and bank accounts each need a licence in the country you target, and each has its own ad rules on the platform and in local law. Check both.",
+          "d": {
+            "kind": "warn",
+            "text": "Check the advertiser's licence for your geo, the platform's financial products policy, and the disclosure your country requires before running any of these products. Policies differ by country and change often."
+          },
+          "say": "Every product here is regulated. Loans, cards, insurance and bank accounts each need a licence in the country you target, and each has its own ad rules, on the platform and in local law. Look at the warning: check the advertiser's licence for your geo, the platform's financial products policy, and the disclosure your country requires, before running any of these. Policies differ by country and change often."
+        },
+        {
+          "v": "check",
+          "h": "Starting rules for your first finance product",
+          "p": "Starting rules to adapt. They favour fast learning and low harm while you build skill. Relax them only once you have three matured, profitable tests behind you.",
+          "more": "Example: expected CPC $0.40. Value per click must be at least $0.52. The loan offer in the worked example has $40 x 1.2% = $0.48 per click, so it fails this rule. The bank offer has $12 x 4% = $0.48 too and also fails; you would need a better rate or a lower CPC before starting.",
+          "d": [
+            "Pick a paid event that confirms within 14 days",
+            "Avoid short-term and high-cost loans as a first offer",
+            "Value per click must be ≥ 1.3 x your expected CPC",
+            "Licence verified and disclosure wording received",
+            "Refuse any offer showing a predatory red flag"
+          ],
+          "say": "Here are your starting rules for a first finance product. Pick a paid event that confirms within fourteen days. Avoid short-term and high cost loans as a first offer. Value per click must be at least one point three times your expected C P C, cost per click. Have the licence verified and disclosure wording received. And refuse any offer showing a predatory red flag. For example, with a forty cent C P C, you need at least fifty two cents per click, so both the loan and bank offers at forty eight cents would fail. Relax these only after three matured, profitable tests."
+        }
+      ],
+      "takeaways": [
+        "Each product has its own buyer, paid event, cash cycle and harm.",
+        "Predatory lending must be refused, whatever it pays.",
+        "For a first test, favour fast confirmation and low harm."
+      ],
+      "action": "List three finance offers available to you, one loan, one non-loan and one more of either. For each, note who it fits, the paid event, the confirmation time and any predatory red flag. Cross out any with a red flag.",
+      "glossary": [
+        {
+          "term": "Predatory lending",
+          "def": "Lending designed to profit from people who cannot afford it, through hidden costs, rollovers, abusive collection or data misuse."
+        },
+        {
+          "term": "Rollover",
+          "def": "Paying a fee to extend a loan instead of repaying it, which keeps the debt and adds cost."
+        },
+        {
+          "term": "Premium",
+          "def": "The amount paid for an insurance policy, usually monthly or yearly."
+        },
+        {
+          "term": "BNPL",
+          "def": "Buy now, pay later. Short-term credit that splits a purchase into instalments."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which first offer best fits the starting rules?",
+          "options": [
+            "A 14-day loan with rollovers",
+            "An unlicensed loan app",
+            "The highest-paying card offer with no postback",
+            "A bank account offer confirming in 7 to 14 days with a verified licence"
+          ],
+          "answer": 3,
+          "why": "Fast confirmation, low harm and a verified licence fit every starting rule."
+        },
+        {
+          "q": "A borrower pays a NGN 3,000 fee five times on a NGN 20,000 loan and still owes NGN 20,000. How much have they paid in fees?",
+          "options": [
+            "NGN 15,000",
+            "NGN 3,000",
+            "NGN 20,000",
+            "NGN 23,000"
+          ],
+          "answer": 0,
+          "why": "3,000 x 5 = 15,000 in fees, with the full debt still owed."
+        },
+        {
+          "q": "Which is a predatory red flag?",
+          "options": [
+            "The lender shows the total repayable",
+            "The lender is on the regulator's list",
+            "The app requests access to the phone's contacts",
+            "The term is 12 months"
+          ],
+          "answer": 2,
+          "why": "Contact harvesting has been used for shaming collection and is a clear warning sign."
+        },
+        {
+          "q": "1,000 clicks at $0.50, 5% open a bank account paying $12. Profit?",
+          "options": [
+            "$50",
+            "$600",
+            "$-100",
+            "$100"
+          ],
+          "answer": 3,
+          "why": "50 x $12 = $600 revenue. Spend $500. Profit $100."
+        },
+        {
+          "q": "Why must a savings rate on a page carry a date?",
+          "options": [
+            "Platforms need it for targeting",
+            "Rates change, so an undated rate can mislead",
+            "It improves CTR",
+            "It is optional decoration"
+          ],
+          "answer": 1,
+          "why": "An out-of-date rate is a misleading claim. A date shows when it was true."
+        }
+      ],
+      "say_intro": "In this lesson you'll compare loans, cards, insurance and banking side by side: who each one fits, how fast it pays, and the harm it can cause. You'll also learn which loan offers you should refuse to promote.",
+      "say_outro": "You can now match each product to the person it fits and its risk, compare products on revenue for the same spend, name the loan offers to refuse, and choose a sensible first product. Your task: list three finance offers, one loan, one non-loan and one more of either, note who each fits, the paid event, confirmation time and any predatory red flag, and cross out any with a red flag. Now take the quiz."
+    },
+    {
+      "slug": "choosing-finance-offers",
+      "title": "Reading a finance offer and choosing your first",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can read every line of a finance offer page and know what it means for you.",
+        "You can ask a network the questions that matter before spending.",
+        "You can score two offers on value, cash cycle and risk.",
+        "You can apply a written go or no-go rule to an offer."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the offer page is a contract",
+          "p": "The offer page tells you what you will be paid for, what traffic is allowed and what gets you banned. Most disputes in finance come from a line someone did not read. Ten minutes of reading saves weeks of unpaid leads.",
+          "d": {
+            "b": "Read every line before you spend",
+            "s": "Most unpaid leads trace back to a rule nobody read."
+          },
+          "say": "The offer page tells you what you'll be paid for, what traffic is allowed, and what gets you banned. Most disputes in finance come from a line someone didn't read. As the slide says: read every line before you spend. Ten minutes of reading saves weeks of unpaid leads."
+        },
+        {
+          "v": "screen",
+          "h": "A finance offer page, line by line",
+          "p": "The payout definition is the line to read first. Then the traffic rules, then the hold and payment terms, then the cap. Screen is an illustrative mock-up; real offer pages differ by network.",
+          "d": {
+            "kind": "browser",
+            "url": "network.example/offers/ke-loan",
+            "title": "KE Personal Loan (Example)",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Payout",
+                "value": "$38 per disbursed loan"
+              },
+              {
+                "type": "field",
+                "label": "Geo",
+                "value": "Kenya, ages 18+"
+              },
+              {
+                "type": "field",
+                "label": "Allowed traffic",
+                "value": "Social (special ad category required), search, email with consent"
+              },
+              {
+                "type": "field",
+                "label": "Not allowed",
+                "value": "Incentivised, brand bidding, guaranteed approval claims"
+              },
+              {
+                "type": "field",
+                "label": "Hold and payment",
+                "value": "30-day hold, paid net 15"
+              },
+              {
+                "type": "field",
+                "label": "Cap",
+                "value": "60 disbursed loans a day"
+              },
+              {
+                "type": "button",
+                "label": "Request access"
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Here's a finance offer page, as an illustrative mock-up. Read the highlighted payout line first: thirty eight dollars per disbursed loan. Then the traffic rules: social with a special ad category, search, and email with consent. Not allowed: incentivised traffic, brand bidding, and guaranteed approval claims. Then hold and payment: a thirty day hold, paid net fifteen. And finally the cap, sixty disbursed loans a day. That's the order to read in."
+        },
+        {
+          "v": "table",
+          "h": "Questions to ask before you spend",
+          "p": "Ask in writing and keep the replies in your offer file. If a manager cannot answer one, treat it as a no until they can.",
+          "d": {
+            "cols": [
+              "Question",
+              "Why it matters"
+            ],
+            "rows": [
+              [
+                "Exact paid event?",
+                "Approval and funding differ"
+              ],
+              [
+                "Funded rate for social traffic?",
+                "Sets your max CPL"
+              ],
+              [
+                "Approval window?",
+                "Sets when you judge"
+              ],
+              [
+                "Postback for each status?",
+                "Lets you see cohorts"
+              ],
+              [
+                "Licence and legal entity?",
+                "You must verify it"
+              ],
+              [
+                "Required cost disclosure?",
+                "Goes in ad and page"
+              ],
+              [
+                "Consent wording for forms?",
+                "Covers data sharing"
+              ]
+            ]
+          },
+          "say": "Here are the questions to ask before you spend, with why each matters. The exact paid event, because approval and funding differ. The funded rate for social traffic, which sets your max C P L, cost per lead. The approval window, which sets when you judge. A postback for each status, so you can see cohorts. The licence and legal entity, which you must verify. The required cost disclosure, for your ad and page. And the consent wording for forms. Ask in writing. If a manager can't answer one, treat it as a no until they can."
+        },
+        {
+          "v": "eq",
+          "h": "Use network EPC with care",
+          "p": "Networks often show EPC, earnings per click from all affiliates. It is a hint, not a promise, because other affiliates' traffic is not yours. Example: EPC $0.45, your expected CPC $0.38.",
+          "more": "Example. A $0.07 margin on a $0.38 click is about 18% before scrubs, returns and lag. That is thin. EPC from search or email traffic can be much higher than what social traffic earns on the same offer, so ask which sources make up the number. Plan with a cautious rate, then switch to your own data.",
+          "d": [
+            "EPC $0.45",
+            "-",
+            "CPC $0.38",
+            "=",
+            "$0.07 margin per click"
+          ],
+          "say": "Networks often show E P C, earnings per click, averaged across all affiliates. It's a hint, not a promise, because other affiliates' traffic isn't yours. Read the example sum. An E P C of forty five cents, minus your expected C P C, cost per click, of thirty eight cents, leaves a seven cent margin per click. That's about eighteen percent, before scrubs, returns and lag. Thin. E P C from search or email can be much higher than social on the same offer, so ask which sources make up the number."
+        },
+        {
+          "v": "compare",
+          "h": "Worked example: two offers side by side",
+          "p": "Example. Offer A pays more per lead but slowly. Offer B pays less but fast. With $600 of spare cash, B is the better first offer even though A wins on paper.",
+          "more": "Example maths. A: $60 x 0.06 = $3.60. B: $3.20 x 0.9 = $2.88. A is worth 1.25 x more per lead. But at $100 a day, A needs roughly six weeks of spend, $4,200, before the first payout arrives. With $600 of spare cash you cannot run A properly, so B is the honest choice for now.",
+          "d": {
+            "a": {
+              "title": "Offer A: loan, CPA on funding",
+              "items": [
+                "$60 x 6% funded = $3.60 per lead",
+                "Approval window 21 days, net 30",
+                "Cash out before first payout: about 6 weeks of spend",
+                "Higher harm risk to manage"
+              ]
+            },
+            "b": {
+              "title": "Offer B: card, CPL",
+              "items": [
+                "$3.20 x 90% accepted = $2.88 per lead",
+                "Confirmed in 3 days, paid weekly",
+                "Cash out before payout: about 1 to 2 weeks",
+                "Lower harm risk"
+              ]
+            }
+          },
+          "say": "Here are two offers side by side. Offer A, a loan on C P A, cost per acquisition, on funding: sixty dollars times six percent, three sixty per lead. But it has a twenty one day approval window, net thirty payment, about six weeks of spend before the first payout, and higher harm risk. Offer B, a card on C P L: three twenty times ninety percent accepted, two eighty eight per lead, confirmed in three days and paid weekly, with lower harm risk. A wins on paper. But with six hundred dollars of spare cash, you can't run A properly, so B is the honest choice for now."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: max cost per lead for Offer A",
+          "p": "Practise on Offer A. Payout $60 per funded loan, 6% of leads funded, keep a 30% margin.",
+          "more": "Working: $60 x 6% = $3.60 break-even per lead. x 0.7 = $2.52.",
+          "d": {
+            "kind": "breakeven",
+            "task": "Payout $60 per funded loan, 6% of leads funded, margin 30%. What is your max cost per lead?",
+            "preset": {
+              "payout": 60,
+              "cr_pct": 6,
+              "margin_pct": 30
+            },
+            "answer": {
+              "field": "max_cpl",
+              "value": 2.52,
+              "tolerance": 0.05
+            },
+            "labels": {
+              "unit": "funded loan",
+              "rate": "Leads funded",
+              "answer": "Your answer: max cost per lead"
+            }
+          },
+          "say": "Practise on Offer A. The payout is sixty dollars per funded loan, six percent of leads get funded, and you want to keep a thirty percent margin. What's your max cost per lead? Pause and try it, then check your answer."
+        },
+        {
+          "v": "partner",
+          "h": "Choosing a finance partner",
+          "p": "These are the finance networks and advertisers we list. Whoever you choose, judge them on clear paid events, stage postbacks, licensed advertisers and honest answers.",
+          "d": {
+            "vertical": "finance",
+            "note": "Ask for the licensed entity per geo, the paid event in writing and postbacks for every status."
+          },
+          "say": "These are the finance networks and advertisers we list. Whoever you choose, judge them on clear paid events, stage postbacks, licensed advertisers, and honest answers. As the note on screen says, ask for the licensed entity per geo, the paid event in writing, and postbacks for every status."
+        },
+        {
+          "v": "product",
+          "h": "Finding and comparing offers",
+          "p": "Comparing many offers by hand is slow. A deals directory helps you shortlist, then you still read each offer page and ask the questions above.",
+          "d": {
+            "slug": "affleego",
+            "why": "Browse affiliate deals in one place and shortlist finance offers before you contact managers."
+          },
+          "say": "Comparing many offers by hand is slow. A deals directory helps you shortlist. The card on screen shows Affleego, where you can browse affiliate deals in one place and shortlist finance offers before contacting managers. But you still read each offer page and ask the questions from earlier."
+        },
+        {
+          "v": "cards",
+          "h": "Mistakes when choosing an offer",
+          "p": "Each of these has cost new finance buyers their first month of spend. They all come from skipping the reading or skipping the questions, and each takes minutes to avoid.",
+          "d": [
+            "Trusting EPC as your own|Ask which sources made it",
+            "Ignoring the hold|Plan cash for hold plus net terms",
+            "Skipping the not-allowed list|One banned claim voids payouts",
+            "No written paid event|Disputes you cannot win"
+          ],
+          "say": "Each of these mistakes has cost new finance buyers their first month of spend. Trusting E P C as your own: ask which sources made it. Ignoring the hold: plan cash for the hold plus net terms. Skipping the not-allowed list: one banned claim voids payouts. And no written paid event: that leads to disputes you can't win. They all come from skipping the reading or the questions, and each takes minutes to avoid."
+        },
+        {
+          "v": "tip",
+          "h": "Check the advertiser, not just the network",
+          "p": "A network listing an offer does not prove the lender is licensed or fair. You are the one running the ads, so you must check yourself before any spend.",
+          "d": {
+            "kind": "warn",
+            "text": "Verify the lender's legal entity on the regulator's official register for your geo, read real customer complaints, and request the cost disclosure. If anything is unclear, do not run it. Module 2 walks through each check."
+          },
+          "say": "A network listing an offer doesn't prove the lender is licensed or fair. You're the one running the ads, so you must check yourself. Look at the warning. Verify the lender's legal entity on the regulator's official register for your geo, read real customer complaints, and request the cost disclosure. If anything is unclear, don't run it. Module two walks through each check."
+        },
+        {
+          "v": "check",
+          "h": "Starting go or no-go rule for an offer",
+          "p": "Starting rules to adapt. Every line must be a written yes. One no or one unknown means no-go for now, however good the payout looks.",
+          "d": [
+            "Paid event, scrub rules and hold received in writing",
+            "Licence of the legal entity verified on an official register",
+            "No predatory red flags in terms, app or reviews",
+            "Value per lead ≥ 1.3 x your expected cost per lead",
+            "Cash covers spend through hold and net terms",
+            "Stage postbacks available and tested"
+          ],
+          "say": "Here's your starting go or no-go rule. Every line must be a written yes. The paid event, scrub rules and hold received in writing. The licence verified on an official register. No predatory red flags in the terms, app or reviews. Value per lead at least one point three times your expected cost per lead. Cash that covers spend through the hold and net terms. And stage postbacks available and tested. One no, or one unknown, means no-go for now, however good the payout looks."
+        },
+        {
+          "v": "quote",
+          "h": "From the founder",
+          "p": "Dchessking on choosing offers. His point is simple: the best first offer is one you can measure, afford to wait for and defend to a platform or a network.",
+          "d": "Pick the offer you can measure and wait for, not the one with the biggest number. A payout you cannot track or afford to hold is just a story.",
+          "by": "dchessking",
+          "say": "Here's how Dchessking puts it, on choosing offers: Pick the offer you can measure and wait for, not the one with the biggest number. A payout you cannot track or afford to hold is just a story. The best first offer is one you can measure, afford to wait for, and defend to a platform or a network."
+        }
+      ],
+      "takeaways": [
+        "Read the payout definition, traffic rules and hold before anything else.",
+        "Network EPC is a hint; plan with a cautious rate and your cash cycle.",
+        "Use a written go or no-go rule for every offer."
+      ],
+      "action": "Choose one finance offer and send its manager the seven questions in this lesson in one message. File the answers, then run the go or no-go rule.",
+      "glossary": [
+        {
+          "term": "EPC",
+          "def": "Earnings per click: total payouts divided by clicks, usually averaged across all affiliates on an offer."
+        },
+        {
+          "term": "Cap",
+          "def": "The most conversions an offer will accept per day or month. Leads above it may not be paid."
+        },
+        {
+          "term": "Hold period",
+          "def": "Time the network waits before payouts become payable, to allow for reversals."
+        },
+        {
+          "term": "Net terms",
+          "def": "How long after the period closes you are paid, for example net 15."
+        },
+        {
+          "term": "Brand bidding",
+          "def": "Bidding on the advertiser's own brand name in search. Often banned in offer terms."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which line on a finance offer page should you read first?",
+          "options": [
+            "The payout definition",
+            "The cap",
+            "The logo",
+            "The EPC"
+          ],
+          "answer": 0,
+          "why": "The paid event decides everything else, including your max CPL and when you get paid."
+        },
+        {
+          "q": "EPC is $0.50 and your CPC is $0.45. What should you conclude?",
+          "options": [
+            "Guaranteed $0.05 profit per click",
+            "Scale immediately",
+            "A thin margin based on other affiliates' traffic; test cautiously",
+            "EPC is the same as your value per click"
+          ],
+          "answer": 2,
+          "why": "EPC averages everyone's traffic, so treat a small gap as a hint to test, not a profit."
+        },
+        {
+          "q": "Offer A is $3.60 per lead with 6 weeks to first payout. Offer B is $2.88 with 1 week. You have $500 spare. Which fits?",
+          "options": [
+            "B",
+            "A",
+            "Both at once",
+            "Neither can be tested"
+          ],
+          "answer": 0,
+          "why": "You cannot fund six weeks of spend with $500, so the faster offer is the realistic test."
+        },
+        {
+          "q": "A manager says the lender is licensed but cannot give the legal entity name. Per the go or no-go rule?",
+          "options": [
+            "Go",
+            "Go at half budget",
+            "No-go until verified",
+            "Go if EPC is high"
+          ],
+          "answer": 2,
+          "why": "One unknown means no-go. You need the legal entity to check the register."
+        },
+        {
+          "q": "Payout $45 per approval, 10% approved per lead, 30% margin. Max CPL?",
+          "options": [
+            "$4.50",
+            "$3.15",
+            "$1.35",
+            "$3.50"
+          ],
+          "answer": 1,
+          "why": "$45 x 0.10 = $4.50 break-even. x 0.7 = $3.15."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn to read a finance offer page like a contract, ask the network the questions that matter, and compare two offers on value, cash cycle and risk. You'll finish with a written go or no-go rule.",
+      "say_outro": "You can now read every line of an offer page, ask the right questions before spending, score offers on value, cash cycle and risk, and apply a go or no-go rule. Your task: choose one finance offer, send its manager the seven questions from this lesson in one message, file the answers, then run the go or no-go rule. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "Offer pays $30 per approval. Your leads cost $3 and 8% are approved. What is your profit or loss per lead?",
+      "options": [
+        "$0.60 profit",
+        "$0.60 loss",
+        "$2.40 profit",
+        "Break-even"
+      ],
+      "answer": 1,
+      "why": "$30 x 0.08 = $2.40 revenue per lead. $2.40 - $3.00 = $0.60 loss."
+    },
+    {
+      "q": "You spent $120 on a loan offer. Target cost per approval is $25. The cohort is 3 days old with 1 approval and a 21-day window. What do you do?",
+      "options": [
+        "Kill: $120 for 1 approval",
+        "Hold: the cohort is immature; check valid and application rates",
+        "Scale +20%",
+        "Switch offers today"
+      ],
+      "answer": 1,
+      "why": "With lag, a 3-day cohort cannot be judged on cost per approval. Use leading signals until the window passes."
+    },
+    {
+      "q": "CPL offer $4 with 25% scrub versus CPA $35 at 10% approval. Your cash buffer is two weeks. Which do you start with and why?",
+      "options": [
+        "CPA, because $3.50 beats $3.00",
+        "Neither",
+        "CPA, because payouts are bigger",
+        "CPL, because the CPA's edge is under 1.2 x and cash is short"
+      ],
+      "answer": 3,
+      "why": "CPL = $3.00, CPA = $3.50 per lead. 3.50 / 3.00 = 1.17, under the 1.2 x rule, and cash is short."
+    },
+    {
+      "q": "Your scrub rate jumps to 30% for two days, mostly invalid phones from one placement. What is the right sequence?",
+      "options": [
+        "Exclude the placement, add phone verification, test 30+ leads before resuming",
+        "Scale other placements first",
+        "Ask the network to pay anyway",
+        "Remove the phone field"
+      ],
+      "answer": 0,
+      "why": "Fix the cause, verify the fix with a small test, then resume."
+    },
+    {
+      "q": "A new loan app pays $70 per funded loan, asks users for contact access and has reviews about calls to employers. What do you do?",
+      "options": [
+        "Run it with honest copy",
+        "Run it in another geo",
+        "Refuse it and tell the network why",
+        "Run it at a small budget"
+      ],
+      "answer": 2,
+      "why": "Contact harvesting and shaming collection are predatory red flags. No copy fixes the product."
+    },
+    {
+      "q": "400 leads, 20% scrubbed, $3.50 per accepted lead, then 5% of accepted leads returned. Revenue?",
+      "options": [
+        "$1,120",
+        "$1,330",
+        "$1,400",
+        "$1,064"
+      ],
+      "answer": 3,
+      "why": "400 x 0.8 = 320. 320 x 0.95 = 304. 304 x $3.50 = $1,064."
+    },
+    {
+      "q": "Angle A: $2 per lead, 10% approved. Angle B: $3.20 per lead, 20% approved. Payout $30 per approval. Which angle do you keep?",
+      "options": [
+        "A: cheaper leads",
+        "B: $2.80 profit per lead against A's $1.00",
+        "Both equally",
+        "Neither is profitable"
+      ],
+      "answer": 1,
+      "why": "A: $3.00 - $2.00 = $1.00. B: $6.00 - $3.20 = $2.80. B earns more per lead."
+    },
+    {
+      "q": "Two matured cohorts show $17 and $18 per approval with 6 and 7 approvals. Target is $24. What does the starting rule say?",
+      "options": [
+        "Scale +20%: both ≤ 0.8 x target ($19.20) with ≥ 5 approvals",
+        "Hold",
+        "Kill",
+        "Scale +100%"
+      ],
+      "answer": 0,
+      "why": "0.8 x $24 = $19.20. Both cohorts are under it with at least five approvals."
+    },
+    {
+      "q": "Network EPC on a card offer is $0.60, mostly from email traffic. You plan Meta traffic at $0.50 CPC. Best move?",
+      "options": [
+        "Assume $0.10 profit per click",
+        "Skip the offer",
+        "Ask for the EPC from social traffic and plan with a cautious rate",
+        "Bid $0.59"
+      ],
+      "answer": 2,
+      "why": "Email traffic often earns more per click than social. Get the right comparison before planning."
+    },
+    {
+      "q": "A user tells you in chat they earn too little to qualify and asks what to enter. What is the correct reply?",
+      "options": [
+        "Tell them to enter their real details and explain the criteria honestly",
+        "Suggest a higher income figure",
+        "Fill the form for them",
+        "Ignore and count the lead"
+      ],
+      "answer": 0,
+      "why": "Coaching misstatements is fraud and harms the user. Honest criteria protect them and you."
+    }
+  ]
+}

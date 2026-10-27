@@ -1,0 +1,3118 @@
+{
+  "school": "scale",
+  "order": 1,
+  "slug": "scaling-mechanics",
+  "title": "Scaling mechanics",
+  "summary": "How to grow a profitable campaign without breaking it: when to scale, how big each step should be, when to duplicate, and how to open new audiences, geos and creatives. You will judge every step by confirmed CPA since the step and marginal profit, using the same starting rules as the Budget and kill rules module, and finish with a two-week worked case.",
+  "lessons": [
+    {
+      "slug": "ready-to-scale",
+      "title": "Is it ready to scale?",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can tell a campaign that is ready to scale from one that only had a lucky week.",
+        "By the end you can calculate margin headroom and cash runway before adding budget.",
+        "By the end you can list the situations where the right answer is not to scale."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Scaling is a different job",
+          "p": "Testing asks one question: does this work at all? Scaling asks a harder one: how much more money can this absorb before the cost per result rises past what you earn? Many profitable campaigns die at the scaling step, not the testing step, because the buyer adds money faster than the data can support.",
+          "d": {
+            "b": "Testing finds it. Scaling stretches it.",
+            "s": "Different questions need different rules"
+          },
+          "say": "Here's the big idea on screen: testing finds it, scaling stretches it. When you test, you're asking one question. Does this work at all? Scaling asks a harder one. How much more money can this campaign absorb before the cost per result climbs past what you earn? Many profitable campaigns die right here, at the scaling step, not the testing step. Why? Because the buyer adds money faster than the data can support. So scaling needs its own rules."
+        },
+        {
+          "v": "cards",
+          "h": "Four signals a campaign is ready",
+          "p": "A campaign is ready when four things are true at the same time. One strong signal on its own, like a single cheap day, is not enough. Check all four before you touch the budget.",
+          "d": [
+            "Volume|enough conversions to trust the average",
+            "Stability|cost per result steady for several days",
+            "Headroom|CPA well below the payout",
+            "Capacity|offer cap and your cash can take more"
+          ],
+          "say": "Look at these four cards. A campaign is ready to scale when all four are true at the same time. Volume, meaning enough conversions to trust the average. Stability, meaning the cost per result has held steady for several days. Headroom, meaning your C P A, cost per acquisition, sits well below the payout. And capacity, meaning the offer cap and your own cash can take more. One strong signal on its own, like a single cheap day, isn't enough. Check all four before you touch the budget."
+        },
+        {
+          "v": "eq",
+          "h": "Margin headroom",
+          "p": "Headroom tells you how much room you have before scaling eats your profit. Scaling almost always raises cost per result, so headroom is the buffer that absorbs that rise.",
+          "d": [
+            "(Payout − CPA)",
+            "÷",
+            "Payout",
+            "=",
+            "Headroom"
+          ],
+          "more": "CPA here means your real cost per confirmed result, such as cost per FTD (first-time deposit) confirmed by the network, not the number the ad platform reports. A campaign with thin headroom can be profitable at its current budget and still be a poor candidate for scaling, because any rise in cost wipes out the margin.",
+          "say": "Here's the headroom formula. Take the payout, subtract your C P A, then divide by the payout. Headroom tells you how much room you have before scaling eats your profit. Scaling almost always raises cost per result, so headroom is the buffer that absorbs that rise. One important detail. C P A here means your real cost per confirmed result, such as cost per F T D, first-time deposit, confirmed by the network, not the number the ad platform reports. Thin headroom can be profitable today and still be a poor candidate for scaling."
+        },
+        {
+          "v": "stat",
+          "h": "Worked example: headroom",
+          "p": "Example: the network pays $50 per qualified FTD. Over the last 7 days your confirmed cost per FTD is $30. Headroom is (50 − 30) ÷ 50 = 0.40, or 40%. Your CPA could rise to almost $50 before you stop making money on each extra FTD.",
+          "d": {
+            "n": 40,
+            "pre": "",
+            "suf": "%",
+            "dec": 0,
+            "label": "margin headroom",
+            "note": "Example: $50 payout, $30 CPA."
+          },
+          "more": "Compare a second campaign: payout $50, CPA $44. Headroom is (50 − 44) ÷ 50 = 12%. Both campaigns are profitable today. Only the first one has room to scale. A rough guide many operators use is to want 30% or more headroom before scaling hard, but this varies by geo, vertical and how fast payouts arrive.",
+          "say": "Let's work an example. The network pays fifty dollars per qualified F T D. Over the last seven days, your confirmed cost per F T D is thirty dollars. Fifty minus thirty is twenty, divided by fifty, gives forty percent headroom, the number on screen. Your C P A could rise to almost fifty dollars before each extra F T D stops making money. Now compare a campaign paying fifty with a C P A of forty four. That's only twelve percent. Both are profitable today, but only the first has room to scale. Many operators want thirty percent or more, though it varies by geo, vertical and payout speed."
+        },
+        {
+          "v": "table",
+          "h": "Headroom and the rule card agree",
+          "p": "Example: payout $50 and the 25% margin used in the Budget and kill rules module. Your target CPA is $37.50 and your scale line, 0.8 × target, is $30. A campaign sitting at the scale line has exactly 40% headroom, so the two checks point the same way. Starting rules; adapt them to your vertical and data.",
+          "more": "Check the maths: 50 × 0.75 = 37.50. 0.8 × 37.50 = 30. 2 × 37.50 = 75. 1.5 × 37.50 = 56.25, which is above the $50 payout, so the CPA kill line is the lower number, $50. Headroom at the scale line: (50 − 30) ÷ 50 = 40%. Count only network-confirmed conversions. Full rules and timing: Budget and kill rules module.",
+          "d": {
+            "cols": [
+              "Number",
+              "Rule",
+              "Example, $50 payout"
+            ],
+            "rows": [
+              [
+                "Break-even CPA",
+                "= payout",
+                "$50"
+              ],
+              [
+                "Target CPA",
+                "payout × (1 − 25%)",
+                "$37.50"
+              ],
+              [
+                "Scale line",
+                "0.8 × target",
+                "$30"
+              ],
+              [
+                "Zero-FTD kill",
+                "2 × target, 0 FTDs",
+                "$75"
+              ],
+              [
+                "CPA kill line",
+                "lower of 1.5 × target and break-even",
+                "$50"
+              ],
+              [
+                "First step",
+                "3+ FTDs, CPA ≤ $30, 72 h",
+                "+20%"
+              ]
+            ]
+          },
+          "say": "This table shows that headroom and the rule card agree. Example: a fifty dollar payout and the twenty five percent margin from the Budget and kill rules module. The target C P A is thirty seven dollars fifty, and the scale line, zero point eight times target, is thirty dollars. Read down the rows. Break-even is fifty. The zero-F T D kill is seventy five. The C P A kill line is the lower of one point five times target and break-even, so fifty. A campaign at the thirty dollar scale line has exactly forty percent headroom. These are starting rules, so adapt them, and count only network-confirmed conversions."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: does it pass the scale row?",
+          "p": "Apply the rule card before you think about bigger moves. Work out the confirmed CPA, compare it with the $30 scale line and count the conversions. Then use the readiness table on the next slide for anything bigger than one +20% step.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $37.50. Last 7 days: $232 spent, 8 network-confirmed FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 232,
+              "conversions": 8,
+              "target_cpa": 37.5,
+              "days": 7
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "scale"
+            }
+          },
+          "say": "Time for a lab. Your target is thirty seven dollars fifty. Over the last seven days you spent two hundred and thirty two dollars and got eight network-confirmed F T Ds. Work out the confirmed C P A, compare it with the thirty dollar scale line, and count the conversions. Then decide: kill, hold or scale? Remember, this is only the scale row, for one plus twenty percent step. Anything bigger uses the readiness table on the next slide. Pause and try it, then check your answer."
+        },
+        {
+          "v": "table",
+          "h": "Readiness checklist with rough guides",
+          "p": "Use this as a starting point, not a law. One +20% step only needs the scale row of the rule card. The rough guides below are for bigger moves: larger steps, duplicates and new geos. They vary by geo, vertical and payout size, so write your own down before you look at the data.",
+          "d": {
+            "cols": [
+              "Check",
+              "Rough guide",
+              "Why it matters"
+            ],
+            "rows": [
+              [
+                "Conversions",
+                "15–30 in 3–7 days",
+                "Small samples lie"
+              ],
+              [
+                "CPA trend",
+                "Flat or falling",
+                "Rising CPA gets worse with spend"
+              ],
+              [
+                "Headroom",
+                "30%+",
+                "Buffer for higher cost"
+              ],
+              [
+                "Frequency",
+                "Still low",
+                "Room left in the audience"
+              ],
+              [
+                "Offer cap",
+                "Under 70% used",
+                "No point buying FTDs you cannot sell"
+              ],
+              [
+                "Cash runway",
+                "Covers the payout delay",
+                "Scaling ties up cash"
+              ]
+            ]
+          },
+          "say": "This readiness checklist is a starting point, not a law. One plus twenty percent step only needs the scale row of the rule card. These rough guides are for bigger moves, like larger steps, duplicates and new geos. Look down the rows. Fifteen to thirty conversions in three to seven days, because small samples lie. A C P A trend that's flat or falling. Headroom of thirty percent or more. Frequency still low. The offer cap under seventy percent used. And cash runway that covers the payout delay. These vary by geo, vertical and payout size, so write your own down before you look at the data."
+        },
+        {
+          "v": "curve",
+          "h": "Same average, different story",
+          "p": "Illustration: two campaigns with the same 7-day average CPA of about $23.60. The first is stable. The second swings wildly. Only the first gives you a reliable base to scale from. The second needs more data or a fix first.",
+          "d": {
+            "a": [
+              24,
+              22,
+              25,
+              23,
+              24,
+              23,
+              24
+            ],
+            "la": "Stable CPA ($)",
+            "b": [
+              12,
+              40,
+              18,
+              34,
+              9,
+              30,
+              22
+            ],
+            "lb": "Noisy CPA ($)",
+            "x": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7"
+            ]
+          },
+          "more": "Both lines add up to $165 over 7 days, so both average $23.57. The noisy campaign often has too few conversions per day, so one or two FTDs more or less moves the CPA a lot. The fix is usually patience or consolidation, not more budget.",
+          "say": "This is an illustration. Two campaigns with the same seven-day average C P A, about twenty three dollars sixty. Look at the two lines. The first is stable, sitting close to that average every day. The second swings wildly, from nine dollars up to forty. Only the first gives you a reliable base to scale from. The noisy one often has too few conversions per day, so one or two F T Ds more or less moves the C P A a lot. The fix is usually patience or consolidation, not more budget."
+        },
+        {
+          "v": "stat",
+          "h": "Worked example: cash runway",
+          "p": "Example: you plan to scale to $400 a day. The network pays monthly, about 30 days after month end, so you may spend for 45 days or more before the first payout lands. That is $18,000 of your own cash in the system before money comes back.",
+          "d": {
+            "n": 18000,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "cash needed before first payout",
+            "note": "Example: $400/day × 45 days."
+          },
+          "more": "At $100 a day the same delay needs $4,500. Scaling four times means four times the cash tied up. Payment terms vary by network and are sometimes negotiable once you have history. Many operators who were profitable on paper have stopped because they ran out of cash, not because the campaign stopped working.",
+          "say": "Now cash runway. Example: you plan to scale to four hundred dollars a day. The network pays monthly, about thirty days after month end, so you may spend for forty five days or more before the first payout lands. That's eighteen thousand dollars, the number on screen, of your own cash in the system before money comes back. At one hundred dollars a day, the same delay needs four thousand five hundred. Payment terms vary by network. Many operators who were profitable on paper stopped because they ran out of cash, not because the campaign stopped working."
+        },
+        {
+          "v": "compare",
+          "h": "Scale now or not yet",
+          "p": "Put the evidence side by side. If most of what you see sits in the right column, waiting is the profitable choice, even if it feels slow.",
+          "d": {
+            "a": {
+              "title": "Ready",
+              "items": [
+                "CPA steady for 5+ days",
+                "Headroom above 30%",
+                "Network confirms quality",
+                "Cap and cash have room"
+              ]
+            },
+            "b": {
+              "title": "Not yet",
+              "items": [
+                "One great day",
+                "CPA close to payout",
+                "Network flagged traffic",
+                "Cash only covers a week"
+              ]
+            }
+          },
+          "say": "Put the evidence side by side. On the left, ready: C P A steady for five or more days, headroom above thirty percent, the network confirms quality, and the cap and cash have room. On the right, not yet: one great day, a C P A close to the payout, the network flagged your traffic, or cash that only covers a week. If most of what you see sits in the right column, waiting is the profitable choice, even if it feels slow."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes before scaling",
+          "p": "These four mistakes cause most of the failed scaling attempts we see. Each one makes a campaign look more ready than it really is. Check yourself against the left column every time you open the readiness sheet.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Counting platform conversions",
+                "Scaling on one cheap day",
+                "Forgetting the offer cap",
+                "No cash for the payout delay"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Network-confirmed FTDs only",
+                "Judge 3 to 7 days of data",
+                "Ask the manager about the cap first",
+                "Fund 45 days at the new budget"
+              ]
+            }
+          },
+          "say": "These four mistakes cause most failed scaling attempts, and each one makes a campaign look more ready than it really is. Counting platform conversions, fixed by using network-confirmed F T Ds only. Scaling on one cheap day, fixed by judging three to seven days of data. Forgetting the offer cap, fixed by asking the manager about the cap first. And no cash for the payout delay, fixed by funding forty five days at the new budget. Check yourself against the left column every time you open your readiness sheet."
+        },
+        {
+          "v": "check",
+          "h": "When the answer is no",
+          "p": "Some situations mean you should not scale, however good the numbers look on the dashboard. Treat any one of these as a stop sign until it is resolved.",
+          "d": [
+            "CPA has risen three days in a row",
+            "The offer cap is nearly full",
+            "The network questioned traffic quality",
+            "The ad account is under review",
+            "Cash will not cover the payout delay",
+            "Only one ad is carrying all results"
+          ],
+          "say": "Some situations mean you should not scale, however good the dashboard looks. Read through this list. C P A has risen three days in a row. The offer cap is nearly full. The network questioned your traffic quality. The ad account is under review. Cash won't cover the payout delay. Or only one ad is carrying all the results. Treat any one of these as a stop sign until it's resolved."
+        },
+        {
+          "v": "tip",
+          "h": "Quality comes before volume",
+          "p": "Networks check the quality of what you send. If deposits are tiny, users are duplicates or activity looks unusual, they can hold or reverse payouts. Scaling low-quality traffic multiplies that problem.",
+          "d": {
+            "kind": "warn",
+            "text": "Ask your manager for quality feedback before you scale. A reversal after scaling hurts far more than one before."
+          },
+          "say": "A word on quality. Networks check the quality of what you send. If deposits are tiny, users are duplicates, or activity looks unusual, they can hold or reverse payouts. Scaling low-quality traffic just multiplies that problem. So, as the warning on screen says, ask your manager for quality feedback before you scale. A reversal after scaling hurts far more than one before."
+        },
+        {
+          "v": "flow",
+          "h": "A readiness review in five steps",
+          "p": "Run this short review before every budget increase, in the same order each time. It takes about ten minutes and it stops most of the expensive mistakes buyers make when a campaign feels hot.",
+          "d": [
+            "Pull 7-day data",
+            "Check CPA trend",
+            "Calculate headroom",
+            "Check cap and cash",
+            "Get quality feedback",
+            "Decide the step"
+          ],
+          "say": "Here's a short readiness review. Follow the flow on screen. Pull your seven-day data. Check the C P A trend. Calculate headroom. Check the cap and your cash. Get quality feedback from the network. Then decide the step. Run it before every budget increase, in the same order each time. It takes about ten minutes, and it stops most of the expensive mistakes buyers make when a campaign feels hot."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: the readiness sheet",
+          "p": "Make one tab in your sheet for this review and fill it in before every budget change. Formulas do the maths, so you only type the network numbers. The verdict is the last line you fill, after every other line is checked. Example figures.",
+          "more": "Check the maths: $232 ÷ 8 = $29 confirmed CPA. Headroom (50 − 29) ÷ 50 = 42%. The current budget is about $232 ÷ 7 = $33 a day; +20% is about $40. Cash for a 45-day payout delay at $40 a day is $1,800.",
+          "d": {
+            "kind": "browser",
+            "url": "sheets.example/readiness-ofr12",
+            "title": "Readiness review: NG_META_OFR12_PROOF",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "7-day spend",
+                "value": "$232"
+              },
+              {
+                "type": "field",
+                "label": "Network-confirmed FTDs",
+                "value": "8"
+              },
+              {
+                "type": "field",
+                "label": "Confirmed CPA = spend ÷ FTDs",
+                "value": "$29.00"
+              },
+              {
+                "type": "field",
+                "label": "Headroom = (50 − CPA) ÷ 50",
+                "value": "42%"
+              },
+              {
+                "type": "field",
+                "label": "Offer cap used this week",
+                "value": "55%"
+              },
+              {
+                "type": "field",
+                "label": "Daily budget now → after step",
+                "value": "$33 → $40"
+              },
+              {
+                "type": "field",
+                "label": "Cash for 45 days at new budget",
+                "value": "$1,800"
+              },
+              {
+                "type": "radio",
+                "label": "Verdict",
+                "options": [
+                  "Not yet",
+                  "Step +20%"
+                ],
+                "value": 1
+              },
+              {
+                "type": "button",
+                "label": "Save and date the review"
+              }
+            ],
+            "highlight": 7
+          },
+          "say": "Here's the readiness sheet, with example figures. Make one tab for this review and fill it in before every budget change. Formulas do the maths, so you only type the network numbers. Seven-day spend, two hundred and thirty two dollars. Eight network-confirmed F T Ds. That gives a confirmed C P A of twenty nine dollars and headroom of forty two percent. The cap is fifty five percent used. The budget moves from about thirty three to forty dollars a day, and forty five days of cash at the new budget is one thousand eight hundred dollars. Notice the verdict comes last, after every other line is checked."
+        },
+        {
+          "v": "big",
+          "h": "Default to not yet",
+          "p": "When you are unsure, waiting a day costs little. Scaling a campaign that was never stable can cost a week of profit. Good operators are patient at this step and fast at the next ones.",
+          "d": {
+            "b": "Unsure means wait a day",
+            "s": "Patience here is cheaper than repair later"
+          },
+          "say": "Here's the rule to remember: unsure means wait a day. When you're unsure, waiting a day costs little. Scaling a campaign that was never stable can cost a week of profit. Good operators are patient at this step, and fast at the next ones. Patience here is cheaper than repair later."
+        }
+      ],
+      "takeaways": [
+        "Scaling asks how much more money a campaign can absorb, not just whether it works.",
+        "Check volume, stability, headroom and capacity together before adding budget.",
+        "Cash runway and payout delays limit how fast you can scale, even when the campaign is profitable."
+      ],
+      "action": "Pick your best campaign. Write down its 7-day confirmed CPA, payout, headroom, cap usage and the cash you would need at double the budget. Decide: ready or not yet.",
+      "glossary": [
+        {
+          "term": "Headroom",
+          "def": "The share of the payout left after your cost per result: (payout − CPA) ÷ payout. The buffer you have before scaling erases profit."
+        },
+        {
+          "term": "Cash runway",
+          "def": "How long your cash can fund ad spend before payouts arrive."
+        },
+        {
+          "term": "Offer cap",
+          "def": "The maximum number of conversions a network will accept and pay for in a period."
+        },
+        {
+          "term": "Confirmed CPA",
+          "def": "Cost per result using conversions the network has confirmed, not the platform's own count."
+        },
+        {
+          "term": "Scale line",
+          "def": "0.8 × target CPA. A campaign must reach it, with at least 3 confirmed conversions, to earn a +20% budget step. A starting rule."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Payout is $40 and confirmed CPA is $30. What is the headroom?",
+          "options": [
+            "10%",
+            "25%",
+            "33%",
+            "75%"
+          ],
+          "answer": 1,
+          "why": "Headroom is (40 − 30) ÷ 40 = 0.25, or 25%. 33% divides by the CPA instead of the payout."
+        },
+        {
+          "q": "Two campaigns both average $24 CPA over 7 days. Which is the better scaling candidate?",
+          "options": [
+            "The one whose daily CPA is steady",
+            "The one whose daily CPA swings the most",
+            "The one with the most clicks",
+            "Either, since the average is the same"
+          ],
+          "answer": 0,
+          "why": "A steady CPA gives a reliable base. Large swings usually mean too few conversions to trust the average."
+        },
+        {
+          "q": "Which of these is a reason not to scale even if CPA looks good?",
+          "options": [
+            "Frequency is still low",
+            "The network questioned your traffic quality",
+            "Headroom is 45%",
+            "CPA is flat for a week"
+          ],
+          "answer": 1,
+          "why": "Scaling traffic the network doubts multiplies the risk of held or reversed payouts. The other options are healthy signs."
+        },
+        {
+          "q": "You want to spend $250 a day and payouts arrive about 40 days after spend. Roughly how much cash must you fund?",
+          "options": [
+            "$2,500",
+            "$6,250",
+            "$10,000",
+            "$40,000"
+          ],
+          "answer": 2,
+          "why": "$250 × 40 days = $10,000 of spend before the first payout arrives."
+        },
+        {
+          "q": "Payout is $50 and you keep a 25% margin. What is your scale line?",
+          "options": [
+            "$37.50",
+            "$30",
+            "$40",
+            "$50"
+          ],
+          "answer": 1,
+          "why": "Target CPA is $50 × 0.75 = $37.50. The scale line is 0.8 × $37.50 = $30."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn how to tell a campaign that's truly ready to scale from one that only had a lucky week. We'll work out margin headroom and cash runway, and look at the times when the right answer is simply, not yet.",
+      "say_outro": "So, a campaign is ready when volume, stability, headroom and capacity all line up, and when you're unsure, you wait a day. Your task: pick your best campaign and write down its seven-day confirmed C P A, payout, headroom, cap usage, and the cash you'd need at double the budget. Then decide, ready or not yet. Now take the quiz."
+    },
+    {
+      "slug": "vertical-scaling",
+      "title": "Vertical scaling: more budget, same setup",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can raise budget in steps that keep cost per result stable.",
+        "By the end you can calculate marginal CPA and use it to decide the next step.",
+        "By the end you can explain how large budget changes interact with the learning phase."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "What vertical scaling means",
+          "p": "Vertical scaling means putting more money into the same campaign, ad set and ads. Nothing else changes. It is the simplest way to grow, and the fastest way to break a winner if you do it carelessly.",
+          "d": {
+            "b": "Same setup, more money",
+            "s": "Simple to do, easy to overdo"
+          },
+          "say": "Vertical scaling means putting more money into the same campaign, ad set and ads. Nothing else changes. As the screen says, same setup, more money. It's the simplest way to grow, and that's exactly why it's so easy to overdo. Done carelessly, it's also the fastest way to break a winner. In this lesson, we'll learn how to add money without breaking what already works."
+        },
+        {
+          "v": "flow",
+          "h": "A budget ladder",
+          "p": "Example: a ladder of +20% steps from $50 a day, the starting rule from the Budget and kill rules module. Each step must be earned again with fresh data and waits at least 48 hours before the next. Four steps take you from $50 to about $104 a day.",
+          "d": [
+            "$50",
+            "$60",
+            "$72",
+            "$86",
+            "$104"
+          ],
+          "more": "Check the maths: 50 × 1.2 = 60. 60 × 1.2 = 72. 72 × 1.2 = 86.40. 86.40 × 1.2 = 103.68, about $104. With at least 48 hours between steps, four steps take at least 8 days, and longer when a step has to wait for data. That feels slow, but a campaign that holds its CPA at $104 a day is worth far more than one that breaks at $100 after one big jump.",
+          "say": "Here's an example budget ladder. Start at fifty dollars a day, and each step adds twenty percent, the starting rule from the Budget and kill rules module. Fifty becomes sixty, then seventy two, then about eighty six, then about one hundred and four. Each step must be earned again with fresh data, and waits at least forty eight hours before the next. So four steps take at least eight days. That feels slow, but a campaign that holds its C P A, cost per acquisition, at one hundred and four dollars a day is worth far more than one that breaks after one big jump."
+        },
+        {
+          "v": "table",
+          "h": "Step size and risk",
+          "p": "There is no perfect step size. Bigger steps get you there faster and carry more risk of a cost spike. Our starting rule is +20%. A bigger step of +30% to 50% is only for CPA at or under 0.6 × target with at least 10 confirmed conversions. Rough guide; varies by account and vertical.",
+          "d": {
+            "cols": [
+              "Step size",
+              "Speed",
+              "Risk of CPA spike"
+            ],
+            "rows": [
+              [
+                "10–20%",
+                "Slow",
+                "Low; 20% is our starting rule"
+              ],
+              [
+                "30–50%",
+                "Fast",
+                "High; advanced only"
+              ],
+              [
+                "Double or more",
+                "Very fast",
+                "Very high"
+              ]
+            ]
+          },
+          "say": "There's no perfect step size. Look at the rows. Ten to twenty percent is slow, with low risk of a cost spike, and twenty percent is our starting rule. Thirty to fifty percent is fast, with high risk, and it's for advanced buyers only. Doubling or more is very fast and very high risk. A bigger step of thirty to fifty percent is only for a C P A at or under zero point six times target, with at least ten confirmed conversions. This is a rough guide, and it varies by account and vertical."
+        },
+        {
+          "v": "tip",
+          "h": "The learning phase",
+          "p": "On Meta, a significant edit to an ad set, which can include a large budget change, may send it back into the learning phase, where delivery and cost are less stable. We are not certain of the current threshold, and the +20% step is a habit, not an official number. Check Meta's Help Center.",
+          "d": {
+            "kind": "tip",
+            "text": "Change one thing at a time and give each change time to settle before judging it."
+          },
+          "say": "Now the learning phase. On Meta, a significant edit to an ad set, which can include a large budget change, may send it back into the learning phase, where delivery and cost are less stable. To be honest, we're not certain of the current threshold, and the twenty percent step is a habit, not an official number. Check Meta's Help Center for the current rules. The tip on screen is the safe habit. Change one thing at a time, and give each change time to settle before you judge it."
+        },
+        {
+          "v": "curve",
+          "h": "Steady steps versus big jumps",
+          "p": "Illustration: CPA after seven budget changes. Steady steps let cost drift up slowly. Big jumps cause spikes, then partial recovery, and the buyer often panics and cuts at the worst moment.",
+          "d": {
+            "a": [
+              22,
+              23,
+              23,
+              24,
+              25,
+              25,
+              26
+            ],
+            "la": "Steady 20% steps",
+            "b": [
+              22,
+              31,
+              27,
+              35,
+              29,
+              38,
+              33
+            ],
+            "lb": "Big jumps",
+            "x": [
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5",
+              "S6",
+              "S7"
+            ]
+          },
+          "say": "This is an illustration of C P A after seven budget changes. Look at the steady line, twenty percent steps. Cost drifts up slowly, from twenty two to twenty six dollars. Now the other line, big jumps. It spikes, partly recovers, then spikes again, up to thirty eight. And here's the human problem. The buyer often panics and cuts at the worst moment. Steady steps give you a calmer line, and calmer decisions."
+        },
+        {
+          "v": "eq",
+          "h": "Marginal CPA",
+          "p": "Your average CPA hides what the extra money is buying. Marginal CPA measures the cost of only the additional results you got from the additional spend. It is the number that tells you whether the last step was worth it.",
+          "d": [
+            "Extra spend",
+            "÷",
+            "Extra FTDs",
+            "=",
+            "Marginal CPA"
+          ],
+          "say": "Here's a formula that changes how you scale. Extra spend, divided by extra F T Ds, that's first-time deposits, equals marginal C P A. Your average C P A hides what the extra money is buying. Marginal C P A measures the cost of only the additional results you got from the additional spend. It's the number that tells you whether your last step was actually worth it."
+        },
+        {
+          "v": "stat",
+          "h": "Worked example: marginal CPA",
+          "p": "Example: at $300 a day, CPA is $20, so you get 15 FTDs. You scale to $450 a day and CPA rises to $24, so you get 18.75 FTDs on average. The extra $150 bought 3.75 extra FTDs. That is $40 each.",
+          "d": {
+            "n": 40,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "marginal CPA on the extra $150",
+            "note": "Example: ($450 − $300) ÷ (18.75 − 15)."
+          },
+          "more": "The average only moved from $20 to $24, which looks fine. But every FTD the new money bought cost $40. If your payout is $45, the extra spend is barely profitable: $5 of margin per extra FTD against $25 at the original budget. If the payout were $35, the step lost money even though the average CPA of $24 still looks profitable.",
+          "say": "Let's work it. Example: at three hundred dollars a day, C P A is twenty, so you get fifteen F T Ds. You scale to four hundred and fifty a day, and C P A rises to twenty four, so you get eighteen point seven five F T Ds on average. The extra one hundred and fifty dollars bought three point seven five extra F T Ds. That's forty dollars each, the number on screen. The average only moved from twenty to twenty four, which looks fine. But with a forty five dollar payout, the extra spend is barely profitable. With a thirty five dollar payout, that step lost money."
+        },
+        {
+          "v": "bars",
+          "h": "Average versus marginal",
+          "p": "Example from the last slide, with a $45 payout. The average CPA looks comfortable. The marginal CPA shows the new money is working much harder for much less.",
+          "d": [
+            [
+              "Average CPA at $300/day",
+              44,
+              "$20"
+            ],
+            [
+              "Average CPA at $450/day",
+              53,
+              "$24"
+            ],
+            [
+              "Marginal CPA of extra $150",
+              89,
+              "$40"
+            ],
+            [
+              "Payout",
+              100,
+              "$45"
+            ]
+          ],
+          "say": "Here's the same example as bars, with a forty five dollar payout. The first bar, average C P A at three hundred a day, twenty dollars. Next, the average at four hundred and fifty a day, twenty four. Now look at the third bar, the marginal C P A of the extra money, forty dollars, sitting right up near the payout bar at forty five. The average looks comfortable. The marginal shows the new money is working much harder for much less."
+        },
+        {
+          "v": "table",
+          "h": "Step rules after each +20%",
+          "p": "Example: payout $40, target $30, scale line $24. After each step, judge only the spend and conversions since that step, not the lifetime total. Starting rules from the Budget and kill rules module; adapt them to your vertical and data. Count network-confirmed FTDs only.",
+          "d": {
+            "cols": [
+              "Since the last step",
+              "Action"
+            ],
+            "rows": [
+              [
+                "48 h+, 2+ FTDs, CPA ≤ $24",
+                "Next +20% step"
+              ],
+              [
+                "CPA $24 to $30",
+                "Keep; no more steps"
+              ],
+              [
+                "CPA above $30 for 48 h",
+                "Back to last good budget"
+              ],
+              [
+                "CPA above $40 (break-even)",
+                "Back one step now"
+              ],
+              [
+                "Offer cap nearly full",
+                "Stop raising"
+              ]
+            ]
+          },
+          "say": "These are the step rules after each twenty percent step. Example: payout forty, target thirty, scale line twenty four. Judge only the spend and conversions since the step, not the lifetime total. Read the rows. Forty eight hours or more, two or more F T Ds, and C P A at or under twenty four, take the next step. Between twenty four and thirty, keep, with no more steps. Above thirty for forty eight hours, back to the last good budget. Above forty, which is break-even, back one step now. And if the cap is nearly full, stop raising. Count network-confirmed F T Ds only."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: keep or step?",
+          "p": "Judge the numbers since the step, not the lifetime total. Work out the CPA since the step and compare it with the $24 scale line and the $30 target. In the tool, Keep shows as Hold, because the action is the same: no budget change.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $30. Since the last step 2 days ago: $130 spent, 5 network-confirmed FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 130,
+              "conversions": 5,
+              "target_cpa": 30,
+              "days": 2
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "hold"
+            }
+          },
+          "say": "Lab time. Your target is thirty dollars. Since the last step, two days ago, you spent one hundred and thirty dollars and got five network-confirmed F T Ds. Work out the C P A since the step, and compare it with the twenty four dollar scale line and the thirty dollar target. Then choose kill, hold or scale. One note: in the tool, keep shows as hold, because the action is the same, no budget change. Pause and try it, then check your answer."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes: impatient vs patient",
+          "p": "Two buyers with the same winning ad set. The difference after two weeks usually comes from how they handled the budget, not from the campaign. The left column lists the mistakes we see most; the right column is the fix for each one.",
+          "d": {
+            "a": {
+              "title": "Impatient (mistakes)",
+              "items": [
+                "Doubles budget on a good morning",
+                "Judges after 6 hours",
+                "Cuts hard after one bad day",
+                "Edits ads and budget together"
+              ]
+            },
+            "b": {
+              "title": "Patient (fixes)",
+              "items": [
+                "+20% steps, 48 h+ apart",
+                "Judges CPA since the step",
+                "Rolls back one step if needed",
+                "One change at a time"
+              ]
+            }
+          },
+          "say": "Two buyers, same winning ad set. After two weeks, the difference usually comes from how they handled the budget, not from the campaign. On the left, the impatient buyer's mistakes. Doubles the budget on a good morning. Judges after six hours. Cuts hard after one bad day. Edits ads and budget together. On the right, the fixes. Twenty percent steps, forty eight hours or more apart. Judge C P A since the step. Roll back one step if needed. And one change at a time."
+        },
+        {
+          "v": "cards",
+          "h": "Ways to add budget vertically",
+          "p": "Raising the daily budget is not the only option. Each method trades speed against control. Names and availability change by platform and account, so check the current Ads Manager.",
+          "d": [
+            "Raise budget|simplest, watch CPA closely",
+            "Cost cap bidding|more budget with a cost guardrail",
+            "Higher-budget duplicate|new copy at a new level",
+            "Campaign budget|lets the platform shift spend between ad sets"
+          ],
+          "say": "Raising the daily budget isn't the only option. Look at the cards. Raise budget, the simplest, but watch C P A closely. Cost cap bidding, more budget with a cost guardrail. A higher-budget duplicate, a new copy at a new level. And campaign budget, which lets the platform shift spend between ad sets. Each method trades speed against control. Names and availability change by platform and account, so check the current Ads Manager."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example: a cost cap",
+          "p": "Example: payout $45, you set a cost cap near $30 and raise the budget from $200 to $400. The platform may not spend all $400 if it cannot find results near $30. Lower spend with a held CPA is often better than full spend at $38. Bid strategy names and behaviour change; check the current Ads Manager.",
+          "d": {
+            "kind": "example",
+            "text": "Underspending under a cap is information: the audience at that price is smaller than your budget."
+          },
+          "say": "Here's an example with a cost cap. Payout, forty five dollars. You set a cost cap near thirty and raise the budget from two hundred to four hundred. The platform may not spend all four hundred if it can't find results near thirty. And that's often fine. Lower spend with a held C P A is often better than full spend at thirty eight. The note on screen puts it well. Underspending under a cap is information. The audience at that price is smaller than your budget. Bid strategy names and behaviour change, so check the current Ads Manager."
+        },
+        {
+          "v": "check",
+          "h": "Vertical scaling routine",
+          "p": "Follow the same routine every time you add budget. Consistency makes your results comparable from one step to the next, so you can see exactly which step pushed cost up.",
+          "d": [
+            "Confirm readiness checks pass",
+            "Raise by one +20% step only",
+            "Change nothing else",
+            "Wait at least 48 hours",
+            "Judge CPA since the step",
+            "Next step, keep or roll back"
+          ],
+          "say": "Follow the same routine every time you add budget. Confirm the readiness checks pass. Raise by one twenty percent step only. Change nothing else. Wait at least forty eight hours. Judge C P A since the step. Then decide: next step, keep, or roll back. Consistency makes your results comparable from one step to the next, so you can see exactly which step pushed cost up."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: raise the budget one step",
+          "p": "Generic mock-ups, not real screens. Menu names change and we are not certain these are current, so look for the same idea in your Ads Manager. The order is what matters: check the rules, change one thing, log it, then wait at least 48 hours.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open the ad set",
+                "text": "Find the winning ad set and its budget. If the budget sits at campaign level, edit it there instead.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/adsets",
+                  "title": "Ad sets",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Ad set",
+                        "Budget",
+                        "CPA since step",
+                        "FTDs"
+                      ],
+                      "rows": [
+                        [
+                          "NG_PROOF_SCALE",
+                          "$72",
+                          "$22.50",
+                          "6"
+                        ],
+                        [
+                          "NG_DEMO_TEST",
+                          "$15",
+                          "$31.00",
+                          "2"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "button",
+                      "label": "Edit NG_PROOF_SCALE"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Change only the budget",
+                "text": "Raise $72 by 20% to $86.40. Do not touch the audience, the ads or the bid in the same edit.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/adsets/edit",
+                  "title": "Edit ad set",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Daily budget",
+                      "value": "$86.40"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Was $72.00. +20%."
+                    },
+                    {
+                      "type": "button",
+                      "label": "Publish"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Log the step",
+                "text": "Write the date, time, old and new budget. From now on, judge only spend and FTDs since this line.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheets.example/ofr12-log",
+                  "title": "Step log",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Date",
+                        "Budget",
+                        "Spend since",
+                        "FTDs since"
+                      ],
+                      "rows": [
+                        [
+                          "05 Oct 10:00",
+                          "$60 → $72",
+                          "$144",
+                          "6"
+                        ],
+                        [
+                          "07 Oct 10:00",
+                          "$72 → $86.40",
+                          "$0",
+                          "0"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "These are generic mock-ups, not real screens, and menu names change, so look for the same idea in your own Ads Manager. Tap Next to follow each step. First, open the winning ad set and find its budget. If the budget sits at campaign level, edit it there. Second, change only the budget, from seventy two dollars to eighty six forty, a twenty percent step. Don't touch the audience, the ads or the bid. Third, log the step: date, time, old and new budget. From then on, judge only spend and F T Ds since that line, and wait at least forty eight hours."
+        },
+        {
+          "v": "tip",
+          "h": "Never scale to recover a bad day",
+          "p": "Raising budget to win back yesterday's loss is a gambler's move. The campaign does not know you lost money. Decide on the data trend, not on how you feel.",
+          "d": {
+            "kind": "warn",
+            "text": "If the trend is bad, the answer is hold or roll back, never add."
+          },
+          "say": "One last rule. Never scale to recover a bad day. Raising budget to win back yesterday's loss is a gambler's move. The campaign doesn't know you lost money. Decide on the data trend, not on how you feel. As the warning on screen says, if the trend is bad, the answer is hold or roll back, never add."
+        }
+      ],
+      "takeaways": [
+        "Vertical scaling adds budget to the same setup, in steps.",
+        "Marginal CPA shows what the extra money is really buying.",
+        "Wait for data to settle between steps and change one thing at a time."
+      ],
+      "action": "For your best campaign, write a five-step budget ladder with +20% steps and the date you will check each step.",
+      "glossary": [
+        {
+          "term": "Vertical scaling",
+          "def": "Growing a campaign by adding budget to the same setup without changing audience, creative or geo."
+        },
+        {
+          "term": "Marginal CPA",
+          "def": "Extra spend divided by extra results. The cost of the results that the new money bought."
+        },
+        {
+          "term": "Learning phase",
+          "def": "The period after launch or a significant edit when the platform is still learning who to show the ad to and cost is less stable."
+        },
+        {
+          "term": "Cost cap",
+          "def": "A bidding option that asks the platform to keep average cost per result near a set amount. Names and behaviour vary; check the current platform help."
+        },
+        {
+          "term": "CPA since the step",
+          "def": "Spend since the last budget change divided by confirmed conversions since then. The number each new step is judged on."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "At $200 a day CPA is $20. At $300 a day CPA is $25. What is the marginal CPA of the extra $100?",
+          "options": [
+            "$25",
+            "$33.33",
+            "$50",
+            "$100"
+          ],
+          "answer": 2,
+          "why": "$200 bought 10 FTDs; $300 bought 12. The extra $100 bought 2 FTDs, so $50 each."
+        },
+        {
+          "q": "Your ad set runs at $60 a day and has earned its next step. Under the starting rule, what is the new daily budget?",
+          "options": [
+            "$66",
+            "$72",
+            "$90",
+            "$120"
+          ],
+          "answer": 1,
+          "why": "The starting rule is +20%: $60 × 1.2 = $72. Bigger steps are reserved for CPA at or under 0.6 × target with 10+ conversions."
+        },
+        {
+          "q": "You raised budget yesterday and today CPA is high. What is usually the right first move?",
+          "options": [
+            "Raise budget again to push through",
+            "Change the creative and audience as well",
+            "Wait for the change to settle unless losses pass your rule",
+            "Delete the ad set"
+          ],
+          "answer": 2,
+          "why": "One day after a change is too early to judge. Wait unless a pre-set loss rule is hit, and never stack changes."
+        },
+        {
+          "q": "Payout is $35. Average CPA rose from $20 to $25 after scaling, and marginal CPA is $40. What does this mean?",
+          "options": [
+            "The step is profitable because $25 is below $35",
+            "You should double again",
+            "Marginal CPA does not matter",
+            "The extra spend is losing money on each extra FTD"
+          ],
+          "answer": 3,
+          "why": "Each extra FTD costs $40 against a $35 payout. The average hides this loss."
+        },
+        {
+          "q": "Why might a campaign with a cost cap not spend its full budget?",
+          "options": [
+            "The platform cannot find enough results near the cap",
+            "The ad was rejected",
+            "The pixel is broken",
+            "Cost caps always halve spend"
+          ],
+          "answer": 0,
+          "why": "A cap limits cost. If few results are available at that price, spend stays below budget."
+        }
+      ],
+      "say_intro": "This lesson is about vertical scaling, adding budget to the same setup. You'll learn to raise budget in steps that keep cost stable, and to measure what the extra money is really buying, so you can decide your next step with confidence.",
+      "say_outro": "So, vertical scaling means small, earned steps, one change at a time, judged on C P A since the step and on marginal cost. Your task: for your best campaign, write a five-step budget ladder with twenty percent steps, and the date you'll check each step. Now take the quiz."
+    },
+    {
+      "slug": "duplication-and-structure",
+      "title": "Duplication and campaign structure",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can use duplication on purpose instead of as a reflex.",
+        "By the end you can set up a testing and scaling structure with clear naming.",
+        "By the end you can compare a duplicate against its parent fairly."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Duplication is a tool, not a fix",
+          "p": "Duplicating means copying a campaign or ad set and running the copy alongside or instead of the original. It can help you scale. It can also split your data, confuse your reporting and hide the real reason something stopped working.",
+          "d": {
+            "b": "Copy with a reason",
+            "s": "Every duplicate needs a job and an end date"
+          },
+          "say": "Duplicating means copying a campaign or ad set and running the copy alongside, or instead of, the original. It can help you scale. But it can also split your data, confuse your reporting, and hide the real reason something stopped working. That's why the screen says, copy with a reason. Every duplicate needs a job, and an end date."
+        },
+        {
+          "v": "cards",
+          "h": "Four reasons to duplicate",
+          "p": "Each reason gives the duplicate a different job. Write that job in your notes before you create the copy, so you know what success means. Under our starting rules a duplicate begins at the original's start budget, not its raised budget, and is judged from zero.",
+          "d": [
+            "Scale beside the winner|copy at the start budget",
+            "New audience|same ads, different people",
+            "New geo|same angle, new country",
+            "New bidding|same setup, different bid strategy"
+          ],
+          "say": "Here are four reasons to duplicate, and each one gives the copy a different job. Scale beside the winner, copying at the start budget. New audience, same ads but different people. New geo, the same angle in a new country. And new bidding, the same setup with a different bid strategy. Write the job in your notes before you create the copy, so you know what success means. Under our starting rules, a duplicate begins at the original's start budget, not its raised budget, and it's judged from zero."
+        },
+        {
+          "v": "flow",
+          "h": "A testing and scaling structure",
+          "p": "Many teams separate testing from scaling. New ideas start cheap in a testing campaign. Winners graduate to a scaling campaign with more budget. Losers are switched off and recorded, not deleted.",
+          "d": [
+            "Testing campaign",
+            "Pick winners",
+            "Scaling campaign",
+            "Monitor and refresh",
+            "Archive with notes"
+          ],
+          "more": "Separating the two keeps small tests from stealing budget from proven winners, and keeps proven winners from being disturbed by constant testing. Do not delete losing ads: switch them off and keep the record, so you never pay to test the same failed idea twice.",
+          "say": "Many teams separate testing from scaling. Follow the flow. New ideas start cheap in a testing campaign. You pick the winners. Winners graduate to a scaling campaign with more budget, where you monitor and refresh them. And losers are archived with notes. This keeps small tests from stealing budget from proven winners, and keeps winners from being disturbed by constant testing. Don't delete losing ads. Switch them off and keep the record, so you never pay to test the same failed idea twice."
+        },
+        {
+          "v": "table",
+          "h": "A naming convention",
+          "p": "Names are how a team reads an account at a glance. Pick one pattern and use it everywhere: campaigns, ad sets, ads, tracker and sheet. Example pattern below.",
+          "d": {
+            "cols": [
+              "Part",
+              "Example",
+              "Meaning"
+            ],
+            "rows": [
+              [
+                "Geo",
+                "NG",
+                "Nigeria"
+              ],
+              [
+                "Source",
+                "META",
+                "Traffic source"
+              ],
+              [
+                "Offer",
+                "OFR12",
+                "Offer ID from your sheet"
+              ],
+              [
+                "Angle",
+                "PROOF",
+                "Creative angle"
+              ],
+              [
+                "Stage",
+                "SCALE",
+                "Test or scale"
+              ],
+              [
+                "Date",
+                "1004",
+                "Launch date"
+              ]
+            ]
+          },
+          "more": "Full example: NG_META_OFR12_PROOF_SCALE_1004. Anyone on the team can now filter the account, the tracker and the sheet by any part of the name. Keep the parent's name in the duplicate with a suffix, like _D1, so you can always trace where it came from.",
+          "say": "Names are how a team reads an account at a glance. Here's an example pattern. The geo, like N G for Nigeria. The traffic source, like Meta. The offer I D from your sheet. The creative angle, like proof. The stage, test or scale. And the launch date. Pick one pattern and use it everywhere: campaigns, ad sets, ads, tracker and sheet. Then anyone on the team can filter by any part of the name. And keep the parent's name in a duplicate, with a suffix like D one, so you can always trace where it came from."
+        },
+        {
+          "v": "code",
+          "h": "Names in practice",
+          "p": "Example: one angle's life in names. It starts in testing, graduates to scaling, gets one duplicate, then a test in Kenya. Anyone on the team can filter the account, the tracker and the sheet by geo, offer, angle or stage without asking you.",
+          "d": {
+            "lang": "text",
+            "text": "NG_META_OFR12_PROOF_TEST_1004\nNG_META_OFR12_PROOF_SCALE_1009\nNG_META_OFR12_PROOF_SCALE_1009_D1\nKE_META_OFR12_PROOF_TEST_1012",
+            "note": "Parent name plus _D1 shows where every copy came from."
+          },
+          "say": "Here's one angle's life in names, the text on screen. It starts in testing, in Nigeria. A few days later it graduates to scaling. Then it gets one duplicate, marked with D one at the end. Then it gets a test in Kenya, with K E at the front. Notice how the parent name plus that D one suffix shows where every copy came from. Anyone on the team can filter the account, the tracker and the sheet by geo, offer, angle or stage, without asking you."
+        },
+        {
+          "v": "check",
+          "h": "Rules for duplicates",
+          "p": "A few simple rules keep duplication from turning the account into a mess that nobody, including you in three weeks from now, can read or trust.",
+          "d": [
+            "Only after the original passed 2 steps",
+            "Start at the original start budget",
+            "Leave the original untouched",
+            "At most 2 copies per winner at once",
+            "Record the parent and the reason",
+            "Judge each copy from zero"
+          ],
+          "say": "A few simple rules keep duplication from turning your account into a mess. Only duplicate after the original has passed two steps. Start the copy at the original start budget. Leave the original untouched. Keep at most two copies per winner at once. Record the parent and the reason. And judge each copy from zero. Follow these, and the account stays readable, including for you, three weeks from now."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: duplicate an ad set",
+          "p": "Generic mock-ups, not real screens. The duplicate option and its menus change, and we are not certain these names are current, so check the current Ads Manager. The order is what matters: copy, place, rename, set the start budget, log.",
+          "d": {
+            "steps": [
+              {
+                "title": "Select the winner",
+                "text": "Tick the winning ad set and choose Duplicate. Do not edit the original.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/adsets",
+                  "title": "Ad sets",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Ad set",
+                        "Budget",
+                        "CPA"
+                      ],
+                      "rows": [
+                        [
+                          "NG_META_OFR12_PROOF_SCALE_1009",
+                          "$80",
+                          "$18"
+                        ],
+                        [
+                          "NG_META_OFR12_HOWTO_TEST_1011",
+                          "$15",
+                          "$27"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "button",
+                      "label": "Duplicate"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Choose where it goes",
+                "text": "Send the copy to your scaling campaign. Keep the ads and audience the same unless the copy's job is a new audience.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/duplicate",
+                  "title": "Duplicate ad set",
+                  "blocks": [
+                    {
+                      "type": "radio",
+                      "label": "Destination",
+                      "options": [
+                        "Original campaign",
+                        "Existing campaign: SCALE",
+                        "New campaign"
+                      ],
+                      "value": 1
+                    },
+                    {
+                      "type": "button",
+                      "label": "Continue"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Rename and set the start budget",
+                "text": "Add _D1 to the parent name and set the original start budget, $40, not the raised $80.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/adsets/edit",
+                  "title": "Edit duplicate",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Ad set name",
+                      "value": "NG_META_OFR12_PROOF_SCALE_1009_D1"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Daily budget",
+                      "value": "$40.00"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Publish"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Log the copy",
+                "text": "Write the parent, the reason, the start budget and the date. The copy now runs its own rule card from zero.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheets.example/ofr12-log",
+                  "title": "Duplicates log",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Copy",
+                        "Parent",
+                        "Reason",
+                        "Start"
+                      ],
+                      "rows": [
+                        [
+                          "_D1",
+                          "PROOF_SCALE_1009",
+                          "Scale beside winner",
+                          "$40, 12 Oct"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "These are generic mock-ups, not real screens. The duplicate option and its menus change, so check the current Ads Manager. Tap Next to follow each step. First, select the winning ad set and choose duplicate. Don't edit the original. Second, choose where the copy goes, here, your scaling campaign. Keep the ads and audience the same unless the copy's job is a new audience. Third, add D one to the parent name, and set the original start budget, forty dollars, not the raised eighty. Finally, log the copy: the parent, the reason, the start budget and the date. The copy now runs its own rule card from zero."
+        },
+        {
+          "v": "table",
+          "h": "Rules for judging a duplicate",
+          "p": "Example: target $30, break-even $40. A duplicate is a new ad set, so it gets the full rule card from zero, with its own checkpoints and its own spend. Starting rules from the Budget and kill rules module; adapt them to your vertical and data.",
+          "d": {
+            "cols": [
+              "Copy's confirmed result",
+              "Action"
+            ],
+            "rows": [
+              [
+                "0 FTDs at $60 spent",
+                "Kill the copy"
+              ],
+              [
+                "$90+ spent, CPA over $40",
+                "Kill the copy"
+              ],
+              [
+                "3+ FTDs, CPA ≤ $24",
+                "+20% step, 48 h apart"
+              ],
+              [
+                "3+ FTDs, CPA $24 to $30",
+                "Keep"
+              ],
+              [
+                "Anything else",
+                "Hold"
+              ]
+            ]
+          },
+          "say": "How do you judge a duplicate? Example: target thirty, break-even forty. A duplicate is a new ad set, so it gets the full rule card from zero, with its own checkpoints and its own spend. Zero F T Ds, first-time deposits, at sixty dollars spent, kill the copy. Ninety dollars or more spent with a C P A, cost per acquisition, over forty, kill it. Three or more F T Ds at or under twenty four, take a twenty percent step, forty eight hours apart. Between twenty four and thirty, keep. Anything else, hold. These are starting rules, so adapt them to your vertical and data."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example: a duplicate beside the winner",
+          "p": "Example: a winner started at $40 a day and has been stepped up to $80 at $18 CPA, target $30. You duplicate it into the scaling campaign at its $40 start budget and leave the original running. After 3 days the copy runs at $21 CPA, under the $24 scale line, so it stays.",
+          "d": {
+            "kind": "example",
+            "text": "Daily FTDs: 80 ÷ 18 = 4.44 plus 40 ÷ 21 = 1.90, total 6.35. Blended CPA: $120 ÷ 6.35 = $18.90."
+          },
+          "say": "Let's work an example. A winner started at forty dollars a day and has been stepped up to eighty, at an eighteen dollar C P A, with a thirty dollar target. You duplicate it into the scaling campaign at its forty dollar start budget, and leave the original running. After three days the copy runs at twenty one dollars, under the twenty four dollar scale line, so it stays. Look at the maths on screen. About four point four F T Ds a day from the original, plus about one point nine from the copy, gives about six point three five a day in total."
+        },
+        {
+          "v": "stat",
+          "h": "Blended CPA after duplication",
+          "p": "Example from the last slide. Total spend rose by half, from $80 to $120 a day, and blended CPA moved from $18 to about $18.90. That is a healthy result. If the copy keeps earning its own +20% steps, it climbs the ladder just as the original did.",
+          "d": {
+            "n": 18.9,
+            "pre": "$",
+            "suf": "",
+            "dec": 2,
+            "label": "blended CPA at $120/day",
+            "note": "Example: $120 ÷ 6.35 FTDs."
+          },
+          "say": "Following on from that example, total spend rose by half, from eighty to one hundred and twenty dollars a day. And the blended C P A, the number on screen, moved from eighteen dollars to about eighteen ninety. That's one hundred and twenty divided by six point three five F T Ds. A small rise for fifty percent more spend is a healthy result. If the copy keeps earning its own twenty percent steps, it climbs the ladder just as the original did."
+        },
+        {
+          "v": "bars",
+          "h": "Not every copy wins",
+          "p": "Example: three copies of the same winner after equal spend. Identical setups often perform differently because they enter different auctions and find different early users. Judge each copy on its own results.",
+          "d": [
+            [
+              "Original",
+              36,
+              "$18 CPA"
+            ],
+            [
+              "Copy A",
+              42,
+              "$21 CPA"
+            ],
+            [
+              "Copy B",
+              88,
+              "$44 CPA"
+            ],
+            [
+              "Copy C",
+              38,
+              "$19 CPA"
+            ]
+          ],
+          "more": "Bar length is CPA on a $50 scale. With a $30 target and a $40 payout, the CPA kill line is $40. Copy B has spent the same as the others, more than 3 × target, at $44 CPA, so the rule card says kill it. Do not keep making copies until one gets lucky: that is gambling with the budget and it fills the account with clutter.",
+          "say": "Not every copy wins. Example: three copies of the same winner, after equal spend. Bar length is C P A. The original sits at eighteen dollars. Copy A, twenty one. Copy C, nineteen. But look at copy B, forty four dollars. Identical setups often perform differently, because they enter different auctions and find different early users. With a forty dollar kill line, copy B has spent more than three times target, so the rule card says kill it. And don't keep making copies until one gets lucky. That's gambling with the budget, and it fills the account with clutter."
+        },
+        {
+          "v": "compare",
+          "h": "Consolidated versus fragmented",
+          "p": "A rough guide: fewer ad sets with more budget each tend to learn faster than many small ones, because each gets more conversions to learn from. Varies by platform and account.",
+          "d": {
+            "a": {
+              "title": "Fragmented",
+              "items": [
+                "12 ad sets at $10",
+                "Each gets 0–1 FTD a day",
+                "Slow, noisy learning",
+                "Hard to read results"
+              ]
+            },
+            "b": {
+              "title": "Consolidated",
+              "items": [
+                "3 ad sets at $40",
+                "Each gets several FTDs a day",
+                "Faster, steadier learning",
+                "Clear results"
+              ]
+            }
+          },
+          "say": "Here's a rough guide on structure. On the left, fragmented: twelve ad sets at ten dollars each, each getting zero to one F T D a day, with slow, noisy learning and results that are hard to read. On the right, consolidated: three ad sets at forty dollars, each getting several F T Ds a day, with faster, steadier learning and clear results. Fewer ad sets with more budget each tend to learn faster, because each gets more conversions to learn from. This varies by platform and account."
+        },
+        {
+          "v": "compare",
+          "h": "Common duplication mistakes",
+          "p": "Most failed duplicates fail for the same few reasons. Each mistake on the left either overspends the copy or misreads it. The fixes on the right match the rules in the Budget and kill rules module.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Copying at the raised budget",
+                "Judging the copy on the parent's history",
+                "Many copies to find a lucky one",
+                "Killing the original when a copy fails"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Start at the start budget",
+                "Rule card from zero",
+                "At most 2 copies at once",
+                "Only the failing copy goes"
+              ]
+            }
+          },
+          "say": "Most failed duplicates fail for the same few reasons. Copying at the raised budget, fixed by starting at the start budget. Judging the copy on the parent's history, fixed by using the rule card from zero. Making many copies to find a lucky one, fixed by keeping at most two copies at once. And killing the original when a copy fails, fixed by switching off only the failing copy. These fixes match the rules in the Budget and kill rules module."
+        },
+        {
+          "v": "tip",
+          "h": "Duplication is not a way past review",
+          "p": "Copying a rejected ad and relaunching it to slip past review is circumvention. Platforms treat it as a serious policy violation and it can lead to account restrictions.",
+          "d": {
+            "kind": "warn",
+            "text": "If an ad is rejected, fix it or request a review. Never re-upload it unchanged to dodge the decision."
+          },
+          "say": "This one is a compliance warning, so listen carefully. Copying a rejected ad and relaunching it to slip past review is circumvention. Platforms treat it as a serious policy violation, and it can lead to account restrictions. As the warning on screen says, if an ad is rejected, fix it or request a review. Never re-upload it unchanged to dodge the decision."
+        },
+        {
+          "v": "big",
+          "h": "Structure is how you scale a team",
+          "p": "A clear structure and naming pattern let a second buyer understand your account without asking you. That matters once you scale beyond what one person can watch.",
+          "d": {
+            "b": "If a stranger can read it, it can scale",
+            "s": "Structure first, budget second"
+          },
+          "say": "Here's the closing idea: if a stranger can read it, it can scale. A clear structure and naming pattern let a second buyer understand your account without asking you. That matters once you scale beyond what one person can watch. So remember, structure first, budget second."
+        }
+      ],
+      "takeaways": [
+        "Duplicate with a stated reason and leave the original untouched.",
+        "Separate testing from scaling and use one naming convention everywhere.",
+        "Compare copies at equal spend and switch off the ones that lose."
+      ],
+      "action": "Write your naming convention on one line and rename the campaigns in one account to match it.",
+      "glossary": [
+        {
+          "term": "Duplicate",
+          "def": "A copy of a campaign, ad set or ad, used to test a change or a new budget level without disturbing the original."
+        },
+        {
+          "term": "Blended CPA",
+          "def": "Total spend across several campaigns or ad sets divided by their total results."
+        },
+        {
+          "term": "Consolidation",
+          "def": "Running fewer, larger ad sets so each one gets enough conversions to learn from."
+        },
+        {
+          "term": "Naming convention",
+          "def": "A fixed pattern for naming campaigns, ad sets and ads so anyone can read and filter them."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "An original spends $100 at $20 CPA. A copy spends $100 at $25 CPA. What is the blended CPA?",
+          "options": [
+            "$20",
+            "$22.22",
+            "$22.50",
+            "$25"
+          ],
+          "answer": 1,
+          "why": "FTDs are 5 + 4 = 9. $200 ÷ 9 = $22.22. Simply averaging $20 and $25 gives $22.50, which is wrong."
+        },
+        {
+          "q": "What should you do with the original winner when you create a duplicate?",
+          "options": [
+            "Switch it off",
+            "Raise its budget too",
+            "Leave it untouched",
+            "Change its creative"
+          ],
+          "answer": 2,
+          "why": "The original is your proven baseline. Changing it at the same time makes it impossible to tell what caused any change in results."
+        },
+        {
+          "q": "Copy B costs about double the other copies after equal spend, above the CPA kill line. What do you do?",
+          "options": [
+            "Make more copies until one works",
+            "Rename it",
+            "Double its budget",
+            "Switch it off and record why"
+          ],
+          "answer": 3,
+          "why": "Judge each copy on its own results. Endless copies are gambling and clutter the account."
+        },
+        {
+          "q": "A winner started at $30 a day and now runs at $52. Under the starting rules, what budget does a new duplicate start at?",
+          "options": [
+            "$52",
+            "$30",
+            "$104",
+            "$15"
+          ],
+          "answer": 1,
+          "why": "A duplicate is a new ad set judged from zero, so it starts at the original start budget, $30, and earns its own steps."
+        },
+        {
+          "q": "Your ad was rejected. A colleague suggests re-uploading it in a new ad set. What is correct?",
+          "options": [
+            "Do it, review is random",
+            "Fix the ad or request a review instead",
+            "Do it in a new ad account",
+            "Change one word and re-upload"
+          ],
+          "answer": 1,
+          "why": "Relaunching to dodge review is circumvention and risks account restrictions. Fix or appeal."
+        }
+      ],
+      "say_intro": "This lesson covers duplication and campaign structure. You'll learn to duplicate on purpose rather than by reflex, to name things so anyone can read your account, and to judge a copy fairly against its parent.",
+      "say_outro": "So, duplicate with a reason, start every copy at the start budget, judge it from zero, and name everything so a stranger could follow it. Your task: write your naming convention on one line, and rename the campaigns in one account to match it. Now take the quiz."
+    },
+    {
+      "slug": "horizontal-scaling",
+      "title": "Horizontal scaling: audiences, geos, creatives",
+      "minutes": 19,
+      "objectives": [
+        "By the end you can choose between new audiences, geos, placements, creatives and sources as scaling levers.",
+        "By the end you can plan a geo expansion that respects regulation and local differences.",
+        "By the end you can keep a creative supply that matches your spend."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Horizontal means new people",
+          "p": "Vertical scaling pushes harder into the same pool of people. Horizontal scaling finds new pools: new audiences, new countries, new placements, new angles or new traffic sources. When the vertical ladder stops working, this is where growth comes from.",
+          "d": {
+            "b": "Wider, not just deeper",
+            "s": "New pools of people for the same offer"
+          },
+          "say": "Vertical scaling pushes harder into the same pool of people. Horizontal scaling finds new pools: new audiences, new countries, new placements, new angles, or new traffic sources. As the screen says, wider, not just deeper. When the vertical ladder stops working, this is where your growth comes from, the same offer reaching new people."
+        },
+        {
+          "v": "cards",
+          "h": "Five horizontal levers",
+          "p": "Each lever opens a different pool of people. Most operators pull them in roughly this order, because the first ones are cheaper, faster to test and easier to undo.",
+          "d": [
+            "Creatives|new angles reach new people",
+            "Audiences|broad, interests, lookalikes",
+            "Placements|feeds, stories, reels",
+            "Geos|new countries",
+            "Sources|a new traffic platform"
+          ],
+          "say": "Here are five horizontal levers. Creatives, because new angles reach new people. Audiences, like broad, interests and lookalikes. Placements, such as feeds, stories and reels. Geos, meaning new countries. And sources, a new traffic platform. Each lever opens a different pool of people. Most operators pull them in roughly this order, because the first ones are cheaper, faster to test, and easier to undo."
+        },
+        {
+          "v": "map",
+          "h": "One winner, many pools",
+          "p": "One winning idea feeds several new pools. Each branch is its own test with its own budget and rule card, but they all send people to the same honest lander and offer, and every result is judged on the network's confirmed postback.",
+          "d": {
+            "nodes": [
+              {
+                "id": "win",
+                "label": "Winning ad set",
+                "kind": "ad"
+              },
+              {
+                "id": "ang",
+                "label": "New angles",
+                "kind": "ad"
+              },
+              {
+                "id": "aud",
+                "label": "Broad audience",
+                "kind": "ad"
+              },
+              {
+                "id": "geo",
+                "label": "Kenya test",
+                "kind": "ad"
+              },
+              {
+                "id": "src",
+                "label": "Second source",
+                "kind": "tool"
+              },
+              {
+                "id": "lp",
+                "label": "Same lander",
+                "kind": "page"
+              },
+              {
+                "id": "off",
+                "label": "Offer",
+                "kind": "offer"
+              },
+              {
+                "id": "pb",
+                "label": "Network postback",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "win",
+                "ang",
+                "new hook"
+              ],
+              [
+                "win",
+                "aud",
+                "new pool"
+              ],
+              [
+                "win",
+                "geo",
+                "new country"
+              ],
+              [
+                "win",
+                "src",
+                "new platform"
+              ],
+              [
+                "ang",
+                "lp",
+                "click"
+              ],
+              [
+                "aud",
+                "lp",
+                "click"
+              ],
+              [
+                "geo",
+                "lp",
+                "click"
+              ],
+              [
+                "src",
+                "lp",
+                "click"
+              ],
+              [
+                "lp",
+                "off",
+                "sign-up"
+              ],
+              [
+                "off",
+                "pb",
+                "confirmed FTD"
+              ]
+            ]
+          },
+          "say": "Look at this map. One winning ad set feeds several new pools: new angles, a broad audience, a Kenya test, and a second source. Each branch is its own test, with its own budget and its own rule card. Now follow the arrows. They all send clicks to the same honest lander, then on to the offer. And every result is judged on the network's postback for each confirmed F T D, first-time deposit."
+        },
+        {
+          "v": "table",
+          "h": "Cost and risk by lever",
+          "p": "Rough guide, varies by account and vertical. New geos and new sources cost the most to test because almost everything has to be relearned, from creative to payment habits.",
+          "d": {
+            "cols": [
+              "Lever",
+              "Test cost",
+              "What you relearn"
+            ],
+            "rows": [
+              [
+                "New angle",
+                "Low",
+                "The hook"
+              ],
+              [
+                "New audience",
+                "Low",
+                "Who responds"
+              ],
+              [
+                "New placement",
+                "Low",
+                "Format and size"
+              ],
+              [
+                "New geo",
+                "Medium–high",
+                "Language, law, payments"
+              ],
+              [
+                "New source",
+                "High",
+                "The whole platform"
+              ]
+            ]
+          },
+          "say": "Here's a rough guide to cost and risk by lever. A new angle, a new audience or a new placement are all low cost to test. You relearn the hook, who responds, or the format and size. A new geo is medium to high cost, because you relearn language, law and payments. And a new source is high cost, because you relearn the whole platform. That's why new geos and new sources are the most expensive tests. This varies by account and vertical."
+        },
+        {
+          "v": "curve",
+          "h": "Why creative supply matters",
+          "p": "Illustration: CPA by week with one creative running alone versus a steady flow of new creatives. As the same people see the same ad, results fade. New creatives keep reaching fresh people.",
+          "d": {
+            "a": [
+              20,
+              21,
+              24,
+              28,
+              33,
+              38,
+              44
+            ],
+            "la": "One creative",
+            "b": [
+              20,
+              21,
+              22,
+              21,
+              22,
+              23,
+              22
+            ],
+            "lb": "Steady new creatives",
+            "x": [
+              "W1",
+              "W2",
+              "W3",
+              "W4",
+              "W5",
+              "W6",
+              "W7"
+            ]
+          },
+          "say": "This is an illustration of C P A, cost per acquisition, by week. Look at the line for one creative running alone. It climbs from twenty dollars to forty four by week seven. As the same people see the same ad, results fade. Now the other line, a steady flow of new creatives. It stays around twenty to twenty three. New creatives keep reaching fresh people, so your creative supply matters as much as your budget."
+        },
+        {
+          "v": "stat",
+          "h": "Worked example: creatives per week",
+          "p": "Example rule: plan one new creative per week for every $100 of daily spend. At $500 a day, that is five new creatives a week. If one in five usually wins, you get about one new winner each week.",
+          "d": {
+            "n": 5,
+            "pre": "",
+            "suf": "",
+            "dec": 0,
+            "label": "new creatives a week at $500/day",
+            "note": "Example rule, not a standard. Set your own from your hit rate."
+          },
+          "more": "Work backwards from your own hit rate. If one in eight creatives becomes a winner and you need one new winner a week to replace fatigued ads, you need about eight new creatives a week. The bigger the spend, the faster the audience sees everything, so creative supply often limits scale before budget does. How to test them fairly: Creative testing lab module.",
+          "say": "Here's an example rule, not a standard. Plan one new creative per week for every hundred dollars of daily spend. At five hundred a day, that's five new creatives a week, the number on screen. If one in five usually wins, you get about one new winner each week. Better still, work backwards from your own hit rate. If one in eight wins and you need one new winner a week, you need about eight. The bigger the spend, the faster the audience sees everything, so creative supply often limits scale before budget does."
+        },
+        {
+          "v": "product",
+          "h": "Research angles before you brief",
+          "p": "Before you brief new creatives for a new pool or geo, look at what is already running there. Use research for ideas about angles and formats, never to copy another advertiser's ad, words or footage.",
+          "d": {
+            "slug": "spyvoo",
+            "why": "See which angles and formats are running in a new geo before you brief your own creatives; ideas only, never copies."
+          },
+          "say": "Before you brief new creatives for a new pool or geo, look at what's already running there. This is where a tool like Spyvoo fits. It lets you see which angles and formats are running in a new geo before you brief your own creatives. Use research for ideas about angles and formats only. Never copy another advertiser's ad, words or footage."
+        },
+        {
+          "v": "compare",
+          "h": "Narrow targeting versus broad",
+          "p": "On many platforms, at the time of writing, broad targeting with strong creative and a clean conversion signal often matches or beats narrow interest targeting. This varies by account and changes over time; test both rather than assuming, and check the current Ads Manager.",
+          "d": {
+            "a": {
+              "title": "Narrow interests",
+              "items": [
+                "Small, specific pools",
+                "Fill up quickly",
+                "Useful for new angles",
+                "Can cost more per result"
+              ]
+            },
+            "b": {
+              "title": "Broad",
+              "items": [
+                "Large pools",
+                "Relies on your conversion data",
+                "Creative does the targeting",
+                "Needs a clean signal"
+              ]
+            }
+          },
+          "say": "Narrow targeting versus broad. On the left, narrow interests: small, specific pools that fill up quickly. They're useful for new angles, but can cost more per result. On the right, broad: large pools that rely on your conversion data, where the creative does the targeting, and you need a clean signal. On many platforms, at the time of writing, broad with strong creative often matches or beats narrow. But this varies by account and changes over time. Test both rather than assuming, and check the current Ads Manager."
+        },
+        {
+          "v": "flow",
+          "h": "Expanding to a new geo",
+          "p": "Move geo by geo, starting with the one closest to what already works. Similar language, devices and payment methods reduce what you have to relearn.",
+          "d": [
+            "Prove the home geo",
+            "Pick a close neighbour",
+            "Check offer and law",
+            "Localise the creative",
+            "Small test budget",
+            "Scale with the ladder"
+          ],
+          "say": "Here's how to expand to a new geo. Follow the steps. Prove the home geo first. Pick a close neighbour. Check the offer and the law. Localise the creative. Run a small test budget. Then scale with the ladder. Move geo by geo, starting with the one closest to what already works. Similar language, devices and payment methods reduce what you have to relearn."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: comparing two geos",
+          "p": "Example figures only. A higher payout does not always mean a better geo, because costs are often higher too. Compare margin per FTD and headroom, not the payout on its own.",
+          "d": {
+            "cols": [
+              "Geo",
+              "Payout",
+              "CPA",
+              "Headroom"
+            ],
+            "rows": [
+              [
+                "Geo A",
+                "$30",
+                "$18",
+                "40%"
+              ],
+              [
+                "Geo B",
+                "$40",
+                "$28",
+                "30%"
+              ],
+              [
+                "Geo C",
+                "$55",
+                "$50",
+                "9%"
+              ]
+            ]
+          },
+          "more": "Check the maths: Geo A (30 − 18) ÷ 30 = 40%. Geo B (40 − 28) ÷ 40 = 30%. Geo C (55 − 50) ÷ 55 = 9%. Geo A and Geo B both earn $12 per FTD, but Geo A has more headroom to scale. Geo C has the biggest payout and the worst position: almost any cost rise makes it unprofitable.",
+          "say": "Here's a worked example comparing geos, with example figures only. Geo A pays thirty, with an eighteen dollar C P A, so forty percent headroom. Geo B pays forty, with a twenty eight dollar C P A, so thirty percent. Geo C pays fifty five, but its C P A is fifty, so only nine percent. Geo A and Geo B both earn twelve dollars per F T D, but A has more room to scale. And Geo C, with the biggest payout, is in the worst position. A higher payout doesn't always mean a better geo. Compare margin and headroom."
+        },
+        {
+          "v": "table",
+          "h": "Every geo gets its own numbers",
+          "p": "Example: Kenya pays $30 per FTD and you keep the 25% margin. Work out every line again from the new payout; never reuse the home geo's numbers. Starting rules from the Budget and kill rules module; adapt them to your vertical and data.",
+          "more": "Check the maths: 30 × 0.75 = 22.50. 2 × 22.50 = 45 and 3 × 22.50 = 67.50. 1.5 × 22.50 = 33.75, above the $30 payout, so the CPA kill line is $30. 0.8 × 22.50 = 18.",
+          "d": {
+            "cols": [
+              "Number",
+              "Rule",
+              "Kenya example"
+            ],
+            "rows": [
+              [
+                "Target CPA",
+                "$30 × (1 − 25%)",
+                "$22.50"
+              ],
+              [
+                "Test budget per ad set",
+                "2 to 3 × target",
+                "$45 to $67.50"
+              ],
+              [
+                "Zero-FTD kill",
+                "2 × target, 0 FTDs",
+                "$45"
+              ],
+              [
+                "CPA kill line",
+                "lower of 1.5 × target and $30",
+                "$30"
+              ],
+              [
+                "Scale line",
+                "0.8 × target",
+                "$18"
+              ]
+            ]
+          },
+          "say": "Every geo gets its own numbers. Example: Kenya pays thirty dollars per F T D and you keep the twenty five percent margin. The target C P A is twenty two dollars fifty. The test budget per ad set is two to three times target, so forty five to sixty seven fifty. The zero-F T D kill is forty five. The C P A kill line is the lower of one point five times target and the payout, so thirty. And the scale line is eighteen. Work out every line again from the new payout, and never reuse the home geo's numbers. These are starting rules, so adapt them."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: the new geo's target",
+          "p": "Work out the new geo's target CPA from its own payout before you spend there. A lower payout moves every line down, including both kill lines. Then try a $36 payout and see how far the target moves.",
+          "d": {
+            "kind": "breakeven",
+            "task": "Kenya pays $30 per FTD and you keep a 25% margin. What is your target CPA (max cost per FTD)?",
+            "preset": {
+              "payout": 30,
+              "cr_pct": 10,
+              "margin_pct": 25
+            },
+            "answer": {
+              "field": "max_cpa",
+              "value": 22.5,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Lab time. Kenya pays thirty dollars per F T D, and you keep a twenty five percent margin. What's your target C P A, your maximum cost per F T D? Work it out from this geo's own payout before you spend. Notice that a lower payout moves every line down, including both kill lines. Once you have it, try a thirty six dollar payout and see how far the target moves. Pause and try it, then check your answer."
+        },
+        {
+          "v": "check",
+          "h": "Before you enter a new geo",
+          "p": "Treat every new country as a new launch, not as a copy of the old one. Run this list before you spend a single dollar there, and keep the answers in your notes.",
+          "d": [
+            "Offer accepts traffic from this geo",
+            "Payout and cap for this geo are confirmed",
+            "Product is legal to advertise here",
+            "Ad authorization obtained where required",
+            "Creative in the right language",
+            "Local payment methods are supported"
+          ],
+          "say": "Treat every new country as a new launch, not a copy of the old one. Run this list before you spend a single dollar there. The offer accepts traffic from this geo. The payout and cap for this geo are confirmed. The product is legal to advertise here. Ad authorization is obtained where required. The creative is in the right language. And local payment methods are supported. Keep the answers in your notes."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: a geo expansion sheet",
+          "p": "Put each new geo on one row of a sheet and fill every field before the first dollar. A blank field means you are not ready to launch. Example values; your offer, the platform and the local regulator decide the real ones.",
+          "d": {
+            "kind": "browser",
+            "url": "sheets.example/geo-plan",
+            "title": "Geo plan: OFR12",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Geo",
+                "value": "Kenya"
+              },
+              {
+                "type": "field",
+                "label": "Offer accepts KE traffic",
+                "value": "Yes, confirmed in writing 02 Oct"
+              },
+              {
+                "type": "field",
+                "label": "Payout and cap",
+                "value": "$30, 20 FTDs a week"
+              },
+              {
+                "type": "field",
+                "label": "Platform authorization for KE",
+                "value": "Granted; copy in folder"
+              },
+              {
+                "type": "field",
+                "label": "Local law checked",
+                "value": "Yes, notes dated 01 Oct"
+              },
+              {
+                "type": "field",
+                "label": "Creative",
+                "value": "English and Swahili, KES amounts"
+              },
+              {
+                "type": "field",
+                "label": "Target / zero-FTD kill",
+                "value": "$22.50 / $45"
+              },
+              {
+                "type": "toggle",
+                "label": "Ready to launch",
+                "on": true
+              }
+            ],
+            "highlight": 3
+          },
+          "say": "Here's a geo expansion sheet, with example values. Put each new geo on one row and fill every field before the first dollar. This one is Kenya. The offer accepts Kenyan traffic, confirmed in writing. A thirty dollar payout, with a cap of twenty F T Ds a week. Look at the highlighted line, platform authorization for Kenya, granted, with a copy in the folder. Local law checked, creative in English and Swahili with local amounts, and target and kill numbers filled in. A blank field means you're not ready. Your offer, the platform and the local regulator decide the real values."
+        },
+        {
+          "v": "tip",
+          "h": "Regulated verticals need checks per country",
+          "p": "Trading, gambling and finance ads usually need platform authorization, and rules are set country by country. Approval in one country does not carry to another. Full detail: Compliance for finance, trading and gambling offers module.",
+          "d": {
+            "kind": "warn",
+            "text": "Check the platform's current policy and the local law for each new geo before you run. If you cannot get authorization, do not run there."
+          },
+          "say": "This is an important compliance point. Trading, gambling and finance ads usually need platform authorization, and the rules are set country by country. Approval in one country does not carry to another. As the warning says, check the platform's current policy and the local law for each new geo before you run. If you can't get authorization, don't run there. The full detail is in the Compliance for finance, trading and gambling offers module."
+        },
+        {
+          "v": "tip",
+          "h": "Localise, do not just translate",
+          "p": "Example: an ad that works in Nigeria in English may need Swahili, or English with local references, in Kenya, and French in much of Cameroon. Money amounts, payment methods and faces should match the viewer.",
+          "d": {
+            "kind": "example",
+            "text": "Show amounts in local currency and use real local payment names the offer supports."
+          },
+          "say": "Localise, don't just translate. Example: an ad that works in Nigeria in English may need Swahili, or English with local references, in Kenya, and French in much of Cameroon. Money amounts, payment methods and faces should all match the viewer. As the example on screen says, show amounts in local currency, and use real local payment names the offer supports."
+        },
+        {
+          "v": "compare",
+          "h": "Common horizontal mistakes",
+          "p": "Opening new pools goes wrong in predictable ways. Each mistake on the left makes a new geo or audience look worse, or riskier, than it really is. Use the fixes on the right before you judge any new lever.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Reusing the home geo's target",
+                "Translating word for word",
+                "Assuming authorization carries over",
+                "Testing four levers at once"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Work out each geo's own numbers",
+                "Localise money, faces, payments",
+                "Check policy and law per country",
+                "One lever per test"
+              ]
+            }
+          },
+          "say": "Opening new pools goes wrong in predictable ways. Reusing the home geo's target, fixed by working out each geo's own numbers. Translating word for word, fixed by localising money, faces and payments. Assuming authorization carries over, fixed by checking policy and law per country. And testing four levers at once, fixed by testing one lever per test. Each mistake makes a new geo or audience look worse, or riskier, than it really is."
+        },
+        {
+          "v": "big",
+          "h": "Horizontal growth is slower and sturdier",
+          "p": "Each new pool takes time to open, but a business spread over several audiences, geos and sources does not collapse when one of them changes. That is the real reason to scale horizontally.",
+          "d": {
+            "b": "Many pools, less fragility",
+            "s": "One audience changing should not end the business"
+          },
+          "say": "Horizontal growth is slower, and sturdier. Each new pool takes time to open. But a business spread over several audiences, geos and sources doesn't collapse when one of them changes. As the screen says, many pools, less fragility. One audience changing should not end the business. That's the real reason to scale horizontally."
+        }
+      ],
+      "takeaways": [
+        "Horizontal scaling opens new pools: creatives, audiences, placements, geos and sources.",
+        "Compare geos on headroom and margin, not on payout alone.",
+        "Creative supply often limits scale before budget does."
+      ],
+      "action": "List three horizontal levers for your best campaign, ranked by test cost, and plan the first test with its budget and kill rule.",
+      "glossary": [
+        {
+          "term": "Horizontal scaling",
+          "def": "Growing by reaching new pools of people: new audiences, geos, placements, creatives or traffic sources."
+        },
+        {
+          "term": "Broad targeting",
+          "def": "Running ads with few or no interest limits and letting the platform find buyers from your conversion data and creative."
+        },
+        {
+          "term": "Localisation",
+          "def": "Adapting language, references, currency and payment methods to a specific market, not just translating words."
+        },
+        {
+          "term": "Hit rate",
+          "def": "The share of new creatives or tests that become winners."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A new geo pays $36 per FTD and you keep a 25% margin. What is its zero-FTD kill line?",
+          "options": [
+            "$27",
+            "$36",
+            "$54",
+            "$72"
+          ],
+          "answer": 2,
+          "why": "Target is $36 × 0.75 = $27. The zero-FTD kill line is 2 × target, $54."
+        },
+        {
+          "q": "Which lever is usually the most expensive to test?",
+          "options": [
+            "A new traffic source",
+            "A new placement",
+            "A new angle",
+            "A new interest audience"
+          ],
+          "answer": 0,
+          "why": "A new source means relearning the platform, its auction, formats and policies."
+        },
+        {
+          "q": "One in ten creatives becomes a winner and you need two new winners a week. Roughly how many creatives a week do you need?",
+          "options": [
+            "2",
+            "5",
+            "10",
+            "20"
+          ],
+          "answer": 3,
+          "why": "Two winners at a one-in-ten hit rate needs about 20 creatives a week."
+        },
+        {
+          "q": "You have Meta authorization for gambling ads in one country. You want to expand to a neighbour. What applies?",
+          "options": [
+            "The authorization carries over automatically",
+            "Check the policy and local law and get authorization for the new country",
+            "Gambling ads need no authorization",
+            "Run first and apply if rejected"
+          ],
+          "answer": 1,
+          "why": "Rules and authorization are country by country. Do not run until both platform and law allow it."
+        },
+        {
+          "q": "Why is it often wise to expand to a geo close to your home geo first?",
+          "options": [
+            "Payouts are always higher",
+            "Platforms prefer it",
+            "Less has to be relearned: language, devices, payments",
+            "No localisation is needed at all"
+          ],
+          "answer": 2,
+          "why": "A similar market reduces the number of new variables in the test."
+        }
+      ],
+      "say_intro": "This lesson is about horizontal scaling, finding new pools of people for the same offer. You'll compare levers like creatives, audiences, placements, geos and sources, plan a careful geo expansion, and keep a creative supply that matches your spend.",
+      "say_outro": "So, when one pool fills up, you open new ones, cheapest levers first, and every new geo gets its own numbers and its own compliance checks. Your task: list three horizontal levers for your best campaign, ranked by test cost, and plan the first test with its budget and kill rule. Now take the quiz."
+    },
+    {
+      "slug": "protecting-roi",
+      "title": "Protecting ROI while you scale",
+      "minutes": 19,
+      "objectives": [
+        "By the end you can find the budget where profit peaks, not where spend peaks.",
+        "By the end you can set guardrails and rollback rules before you scale.",
+        "By the end you can reconcile platform and network numbers before making a scaling decision."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Scale profit, not spend",
+          "p": "Spend is easy to grow. Profit is what pays the team and funds the next test. Every scaling decision should answer one question: does this step increase total profit, after the network confirms the results?",
+          "d": {
+            "b": "Spend is a cost. Profit is the goal.",
+            "s": "Bigger budgets can mean smaller profits"
+          },
+          "say": "Here's the core idea: spend is a cost, profit is the goal. Spend is easy to grow. Profit is what pays the team and funds the next test. So every scaling decision should answer one question. Does this step increase total profit, after the network confirms the results? Keep in mind, bigger budgets can mean smaller profits."
+        },
+        {
+          "v": "eq",
+          "h": "The profit line",
+          "p": "Keep this formula in front of you on every scaling decision. Use confirmed results and the payout the network actually pays, after any adjustments, holds or rejected conversions.",
+          "d": [
+            "Confirmed FTDs",
+            "×",
+            "Payout",
+            "−",
+            "Spend",
+            "=",
+            "Profit"
+          ],
+          "say": "Keep this profit line in front of you on every scaling decision. Confirmed F T Ds, that's first-time deposits, times the payout, minus spend, equals profit. Use confirmed results, and the payout the network actually pays, after any adjustments, holds or rejected conversions. Not the numbers a dashboard estimates, but the money that actually arrives."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: where profit peaks",
+          "p": "Example with a $45 payout. As budget rises, CPA rises too. Total profit grows at first, then flattens, then falls. Spend kept growing the whole time.",
+          "d": {
+            "cols": [
+              "Budget/day",
+              "CPA",
+              "FTDs",
+              "Profit/day"
+            ],
+            "rows": [
+              [
+                "$200",
+                "$20",
+                "10",
+                "$250"
+              ],
+              [
+                "$400",
+                "$25",
+                "16",
+                "$320"
+              ],
+              [
+                "$800",
+                "$32",
+                "25",
+                "$325"
+              ],
+              [
+                "$1,200",
+                "$40",
+                "30",
+                "$150"
+              ]
+            ]
+          },
+          "more": "Check the maths. $200 ÷ $20 = 10 FTDs, revenue 10 × 45 = $450, profit $250. $400 ÷ $25 = 16 FTDs, revenue $720, profit $320. $800 ÷ $32 = 25 FTDs, revenue $1,125, profit $325. $1,200 ÷ $40 = 30 FTDs, revenue $1,350, profit $150. Going from $400 to $800 doubled spend and risk for $5 more profit a day.",
+          "say": "Here's a worked example with a forty five dollar payout. At two hundred dollars a day, the C P A, cost per acquisition, is twenty, giving ten F T Ds and two hundred and fifty dollars profit a day. At four hundred, C P A twenty five, sixteen F T Ds, three hundred and twenty profit. At eight hundred, C P A thirty two, twenty five F T Ds, three hundred and twenty five profit. At twelve hundred, C P A forty, thirty F T Ds, and profit falls to one hundred and fifty. Spend kept growing. Profit grew, flattened, then fell."
+        },
+        {
+          "v": "bars",
+          "h": "Profit by budget level",
+          "p": "Example from the table. Each bar is daily profit. The best risk-adjusted budget here is around $400 a day, not $1,200, because $800 doubles spend and risk for almost nothing.",
+          "d": [
+            [
+              "$200/day",
+              77,
+              "$250"
+            ],
+            [
+              "$400/day",
+              98,
+              "$320"
+            ],
+            [
+              "$800/day",
+              100,
+              "$325"
+            ],
+            [
+              "$1,200/day",
+              46,
+              "$150"
+            ]
+          ],
+          "say": "Here's the same example as bars. Each bar is daily profit. Two hundred and fifty at two hundred a day. Three hundred and twenty at four hundred. Three hundred and twenty five at eight hundred, barely any longer. And then look at the drop, one hundred and fifty at twelve hundred a day. The best risk-adjusted budget here is around four hundred a day, not twelve hundred, because eight hundred doubles spend and risk for almost nothing."
+        },
+        {
+          "v": "table",
+          "h": "The rule card agrees with the profit table",
+          "p": "Example: the same $45 payout with a 25% margin gives a target of $33.75 and a scale line of $27. Read the profit table again through the rule card. It stops the steps at about the same place the profit table does. Starting rules; adapt them.",
+          "more": "Check the maths: 45 × 0.75 = 33.75. 0.8 × 33.75 = 27. At $800 a day the $32 CPA is above the scale line, so no more steps. At $1,200 the $40 CPA is above the $33.75 target, so the stop rules send you back to the last budget that worked. The real rule card uses CPA since each step; here we use the table's averages to keep the example short. Full rules: Budget and kill rules module.",
+          "d": {
+            "cols": [
+              "Budget/day",
+              "CPA",
+              "Rule card says"
+            ],
+            "rows": [
+              [
+                "$200",
+                "$20",
+                "Step: under $27"
+              ],
+              [
+                "$400",
+                "$25",
+                "Step: under $27"
+              ],
+              [
+                "$800",
+                "$32",
+                "Keep: no more steps"
+              ],
+              [
+                "$1,200",
+                "$40",
+                "Back to last good budget"
+              ]
+            ]
+          },
+          "say": "Now read the profit table through the rule card. Example: the same forty five dollar payout with a twenty five percent margin gives a target of thirty three seventy five, and a scale line of twenty seven. At two hundred and four hundred a day, C P A is under twenty seven, so you step. At eight hundred, a thirty two dollar C P A is above the scale line, so keep, no more steps. At twelve hundred, forty is above target, so back to the last good budget. The rule card stops you at about the same place the profit table does. These are starting rules, so adapt them."
+        },
+        {
+          "v": "stat",
+          "h": "Marginal CPA from $400 to $800",
+          "p": "Example: the extra $400 a day bought 9 extra FTDs. That is $44.44 per extra FTD against a $45 payout. The new money is almost exactly breaking even, which is why profit barely moved.",
+          "d": {
+            "n": 44.44,
+            "pre": "$",
+            "suf": "",
+            "dec": 2,
+            "label": "marginal CPA, $400 to $800/day",
+            "note": "Example: $400 ÷ (25 − 16) FTDs."
+          },
+          "say": "Let's check the marginal C P A from four hundred to eight hundred a day. Example: the extra four hundred dollars a day bought nine extra F T Ds. That's forty four dollars forty four per extra F T D, the number on screen, against a forty five dollar payout. The new money is almost exactly breaking even. That's why profit barely moved, even though spend doubled."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: profit at $800 a day",
+          "p": "Check the profit line yourself. Revenue is confirmed FTDs times the payout the network actually pays. Then change the inputs to the $400 a day row, spend $400 and revenue $720, and compare the two profits.",
+          "d": {
+            "kind": "roas",
+            "task": "Spend $800 a day. 25 confirmed FTDs at $45 gives revenue of $1,125. What is the daily profit?",
+            "preset": {
+              "spend": 800,
+              "revenue": 1125
+            },
+            "answer": {
+              "field": "profit",
+              "value": 325,
+              "tolerance": 0.01
+            }
+          },
+          "say": "Lab time. You spend eight hundred dollars a day. Twenty five confirmed F T Ds at forty five dollars gives revenue of one thousand one hundred and twenty five dollars. What's the daily profit? Remember, revenue is confirmed F T Ds times the payout the network actually pays. Then change the inputs to the four hundred dollar row, spend four hundred and revenue seven hundred and twenty, and compare the two profits. Pause and try it, then check your answer."
+        },
+        {
+          "v": "compare",
+          "h": "Platform view versus network view",
+          "p": "The ad platform and the network rarely agree on the numbers. Scale on what the network confirms and pays, because that is your actual revenue, not what the dashboard estimates.",
+          "d": {
+            "a": {
+              "title": "Platform says",
+              "items": [
+                "Spend $600",
+                "30 conversions",
+                "CPA $20",
+                "Looks ready to scale"
+              ]
+            },
+            "b": {
+              "title": "Network confirms",
+              "items": [
+                "Spend $600",
+                "24 qualified FTDs",
+                "CPA $25",
+                "Headroom smaller than it looked"
+              ]
+            }
+          },
+          "more": "Gaps come from attribution windows, duplicate events, users who registered but did not qualify, and timing. Some gap is normal. A growing gap is a warning sign about tracking or traffic quality. Reconcile weekly and use the network figure for decisions.",
+          "say": "The ad platform and the network rarely agree. On the left, the platform says: spend six hundred, thirty conversions, C P A twenty, looks ready to scale. On the right, the network confirms: spend six hundred, twenty four qualified F T Ds, C P A twenty five, and headroom smaller than it looked. Gaps come from attribution windows, duplicate events, users who registered but didn't qualify, and timing. Some gap is normal, but a growing gap is a warning sign about tracking or traffic quality. Scale on what the network confirms and pays, because that's your actual revenue."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: the weekly reconciliation",
+          "p": "Once a week, put platform and network numbers side by side for each campaign and work out the match rate. Decide on the network column. A campaign whose match rate suddenly drops gets a tracking check, not a budget step. Full setup: Tracking setup lab module.",
+          "more": "Match rate is network-confirmed results divided by platform-reported results. Example: 24 ÷ 30 = 80%. NG_DEMO_SCALE at 50% is the one to investigate first: either tracking is double-counting or the traffic is not qualifying. Do not step its budget until you know which.",
+          "d": {
+            "kind": "browser",
+            "url": "sheets.example/weekly-recon",
+            "title": "Weekly reconciliation, week 40",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Campaign",
+                  "Platform",
+                  "Network",
+                  "Match"
+                ],
+                "rows": [
+                  [
+                    "NG_PROOF_SCALE",
+                    "30",
+                    "24",
+                    "80%"
+                  ],
+                  [
+                    "KE_PROOF_TEST",
+                    "12",
+                    "11",
+                    "92%"
+                  ],
+                  [
+                    "NG_DEMO_SCALE",
+                    "18",
+                    "9",
+                    "50%"
+                  ]
+                ]
+              },
+              {
+                "type": "field",
+                "label": "Confirmed CPA, NG_PROOF_SCALE",
+                "value": "$600 ÷ 24 = $25"
+              },
+              {
+                "type": "text",
+                "value": "Example rule: a sudden drop in match rate gets a tracking check before any step."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Here's the weekly reconciliation sheet. Once a week, put platform and network numbers side by side for each campaign, and work out the match rate. That's network-confirmed results divided by platform results. The first row, thirty on the platform and twenty four on the network, is eighty percent. Now look at the last row, eighteen against nine, just fifty percent. That's the one to investigate first. Either tracking is double-counting, or the traffic isn't qualifying. A sudden drop in match rate gets a tracking check, not a budget step. Full setup is in the Tracking setup lab module."
+        },
+        {
+          "v": "cards",
+          "h": "Guardrails to set before scaling",
+          "p": "Write these rules down before you raise budget. Rules written in advance are much easier to follow than decisions made while you watch money leave the account in real time.",
+          "d": [
+            "Kill rule|spend limit with no result",
+            "Rollback rule|when to drop one step",
+            "Step limit|max increase per day",
+            "Frequency watch|when the audience is tired",
+            "Quality check|weekly network feedback"
+          ],
+          "say": "Write these guardrails down before you raise budget. A kill rule, a spend limit with no result. A rollback rule, when to drop one step. A step limit, the maximum increase per day. A frequency watch, for when the audience is tired. And a quality check, weekly network feedback. Rules written in advance are much easier to follow than decisions made while you watch money leave the account in real time."
+        },
+        {
+          "v": "flow",
+          "h": "A rollback routine",
+          "p": "Rolling back is not failure. It is how you find the real ceiling of a campaign without losing a week of profit trying to force it past that ceiling.",
+          "d": [
+            "CPA since step above target 48 h",
+            "Drop to last good budget",
+            "Wait 48 hours",
+            "Check network data",
+            "Resume ladder or hold"
+          ],
+          "say": "Here's a rollback routine. If C P A since the step stays above target for forty eight hours, drop to the last good budget. Wait forty eight hours. Check the network data. Then resume the ladder, or hold. Rolling back isn't failure. It's how you find the real ceiling of a campaign, without losing a week of profit trying to force it past that ceiling."
+        },
+        {
+          "v": "compare",
+          "h": "Common ROI mistakes",
+          "p": "These mistakes turn a profitable campaign into a busy, unprofitable one. Each looks reasonable on the day, which is why the fixes need to be written as rules before you start scaling.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Scaling on platform numbers",
+                "Judging on average CPA only",
+                "Pushing past the profit peak",
+                "No cash reserve for holds"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Decide on network-confirmed data",
+                "Check marginal CPA each step",
+                "Hold at the peak, grow sideways",
+                "Reserve one payout cycle"
+              ]
+            }
+          },
+          "say": "These mistakes turn a profitable campaign into a busy, unprofitable one. Scaling on platform numbers, fixed by deciding on network-confirmed data. Judging on average C P A only, fixed by checking marginal C P A each step. Pushing past the profit peak, fixed by holding at the peak and growing sideways. And no cash reserve for holds, fixed by reserving one payout cycle. Each mistake looks reasonable on the day, which is why the fixes need to be written as rules before you start."
+        },
+        {
+          "v": "check",
+          "h": "Weekly scaling review",
+          "p": "Once a week, step back from the daily noise and answer these questions using confirmed network data. Write the answers down so next week's review can compare against them.",
+          "d": [
+            "Profit by campaign this week",
+            "Marginal CPA of each step",
+            "Gap between platform and network",
+            "Cap usage and payout dates",
+            "Creatives near fatigue",
+            "Next week's budget plan"
+          ],
+          "say": "Once a week, step back from the daily noise and answer these questions using confirmed network data. Profit by campaign this week. The marginal C P A of each step. The gap between platform and network. Cap usage and payout dates. Creatives near fatigue. And next week's budget plan. Write the answers down, so next week's review can compare against them."
+        },
+        {
+          "v": "quote",
+          "h": "What the last dollar bought",
+          "p": "Dchessking on the question that changed how he scales. Average cost hides what new money buys; asking about the last dollar shows it plainly, step by step.",
+          "d": "The day I stopped asking how much I could spend and started asking what the last hundred dollars bought, my scaling stopped breaking.",
+          "by": "dchessking",
+          "say": "Here's how Dchessking puts it, on the question that changed how he scales. Average cost hides what new money buys, and asking about the last dollar shows it plainly, step by step. In his words: The day I stopped asking how much I could spend and started asking what the last hundred dollars bought, my scaling stopped breaking."
+        },
+        {
+          "v": "tip",
+          "h": "Cash is a guardrail too",
+          "p": "Scaling increases the cash you have tied up while you wait for payouts, and any hold or reversal from the network hits much harder at larger volume.",
+          "d": {
+            "kind": "warn",
+            "text": "Do not scale with money you need for rent, salaries or tax. Keep a reserve that covers at least one full payout cycle at the new budget."
+          },
+          "say": "Cash is a guardrail too. Scaling increases the cash you have tied up while you wait for payouts, and any hold or reversal from the network hits much harder at larger volume. As the warning on screen says, don't scale with money you need for rent, salaries or tax. Keep a reserve that covers at least one full payout cycle at the new budget."
+        },
+        {
+          "v": "big",
+          "h": "The ceiling is information",
+          "p": "Every campaign has a budget where profit peaks. Finding it is a success. Hold there, protect it and use horizontal levers to grow beyond it.",
+          "d": {
+            "b": "Find the peak, then hold it",
+            "s": "Grow past it with new pools, not more pressure"
+          },
+          "say": "Here's the closing idea: find the peak, then hold it. Every campaign has a budget where profit peaks. Finding it is a success, not a failure. Hold there, protect it, and use horizontal levers to grow beyond it. Grow past the ceiling with new pools, not more pressure."
+        }
+      ],
+      "takeaways": [
+        "Total confirmed profit, not spend, decides the right budget.",
+        "Marginal CPA shows when new money stops paying for itself.",
+        "Write guardrails and rollback rules before scaling, and decide on network-confirmed data."
+      ],
+      "action": "Take one campaign's last four budget levels and fill a table of budget, confirmed CPA, FTDs and profit. Mark the budget where profit peaked.",
+      "glossary": [
+        {
+          "term": "Profit peak",
+          "def": "The budget level where total profit is highest. Beyond it, extra spend buys results that cost more than they earn."
+        },
+        {
+          "term": "Rollback",
+          "def": "Returning a campaign to its last good budget when cost rises past your rule."
+        },
+        {
+          "term": "Guardrail",
+          "def": "A rule set in advance that limits how much you risk, such as a kill rule or a daily step limit."
+        },
+        {
+          "term": "Reconciliation",
+          "def": "Comparing platform-reported results with network-confirmed results to find gaps."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Payout $50. At $500 a day CPA is $25. At $1,000 a day CPA is $40. Which budget earns more daily profit?",
+          "options": [
+            "$500 a day",
+            "$1,000 a day",
+            "They are equal",
+            "Cannot tell without CTR"
+          ],
+          "answer": 0,
+          "why": "$500: 20 FTDs, $1,000 revenue, $500 profit. $1,000: 25 FTDs, $1,250 revenue, $250 profit."
+        },
+        {
+          "q": "The platform shows 40 conversions on $800. The network confirms 32. What CPA should you use for scaling decisions?",
+          "options": [
+            "$20",
+            "$25",
+            "$22.50",
+            "$32"
+          ],
+          "answer": 1,
+          "why": "$800 ÷ 32 = $25. Use the network-confirmed figure because it reflects what you are paid."
+        },
+        {
+          "q": "CPA has been above target for two days after a step. What does a rollback rule tell you to do?",
+          "options": [
+            "Pause the account",
+            "Drop to the last good budget and wait",
+            "Double budget",
+            "Change every ad"
+          ],
+          "answer": 1,
+          "why": "A rollback returns to the last budget that worked, then waits for data before deciding."
+        },
+        {
+          "q": "Why write guardrails before you scale rather than during?",
+          "options": [
+            "Platforms ask for them",
+            "They lower CPM",
+            "Rules decided in advance are easier to follow under pressure",
+            "They speed up approval"
+          ],
+          "answer": 2,
+          "why": "Watching money leave makes judgement worse. Pre-set rules remove that pressure."
+        },
+        {
+          "q": "Profit at $400/day is $320. At $800/day it is $325. What is the sensible conclusion?",
+          "options": [
+            "Go to $1,600",
+            "Cut to $100",
+            "Profit is the same so spend does not matter",
+            "The extra $400 barely pays; hold near $400 and grow horizontally"
+          ],
+          "answer": 3,
+          "why": "Doubling spend and risk for $5 more profit is a poor trade. Grow with new pools instead."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn to scale profit, not spend. We'll find the budget where profit peaks, set guardrails and rollback rules before you scale, and reconcile platform numbers against what the network actually confirms.",
+      "say_outro": "So, scale profit, not spend. Decide on confirmed network numbers, watch marginal C P A, set your guardrails in advance, and hold at the peak. Your task: take one campaign's last four budget levels, fill a table of budget, confirmed C P A, F T Ds and profit, and mark the budget where profit peaked. Now take the quiz."
+    },
+    {
+      "slug": "scaling-case-study",
+      "title": "A two-week scaling case, step by step",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can apply the rule card and the stop-scaling rules at every checkpoint of a real-looking scale.",
+        "By the end you can judge each step on CPA since the step, not lifetime CPA.",
+        "By the end you can tell when an ad set has reached its ceiling and what to do next."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why a worked case",
+          "p": "Rules on a card are easy to agree with and hard to follow when money is moving. This lesson follows one ad set for thirteen days, checkpoint by checkpoint, so you can see every rule from this module applied to realistic numbers. All figures are Example.",
+          "d": {
+            "b": "Same rules, every checkpoint",
+            "s": "Starting rules; adapt to your vertical and data."
+          },
+          "say": "Rules on a card are easy to agree with, and hard to follow when money is moving. So this lesson follows one ad set for thirteen days, checkpoint by checkpoint, so you can see every rule from this module applied to realistic numbers. All the figures are examples. And as the screen says, these are starting rules, so adapt them to your vertical and data."
+        },
+        {
+          "v": "table",
+          "h": "The plan, written before day 1",
+          "p": "Example: a Nigerian trading offer paying $40 per qualified FTD, with a 25% margin. These numbers were written and dated before the ad set went live. Every decision in the case comes from this table, nothing else.",
+          "more": "Check the maths: 40 × 0.75 = 30. 0.8 × 30 = 24. 2 × 30 = 60. 1.5 × 30 = 45, which is above the $40 payout, so the CPA kill line is $40. The ad set had already passed testing at $50 a day before day 1. Full rules: Budget and kill rules module.",
+          "d": {
+            "cols": [
+              "Number",
+              "Rule",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Payout / break-even",
+                "from the network",
+                "$40"
+              ],
+              [
+                "Target CPA",
+                "40 × (1 − 25%)",
+                "$30"
+              ],
+              [
+                "Scale line",
+                "0.8 × target",
+                "$24"
+              ],
+              [
+                "Zero-FTD kill",
+                "2 × target",
+                "$60"
+              ],
+              [
+                "CPA kill line",
+                "lower of $45 and $40",
+                "$40"
+              ],
+              [
+                "Step",
+                "+20%, 48 h+ apart",
+                "from $50"
+              ]
+            ]
+          },
+          "say": "Here's the plan, written and dated before day one. Example: a Nigerian trading offer paying forty dollars per qualified F T D, first-time deposit, with a twenty five percent margin. Break-even is forty. The target C P A, cost per acquisition, is thirty. The scale line is twenty four. The zero-F T D kill is sixty. The C P A kill line is the lower of forty five and forty, so forty. And steps are twenty percent, forty eight hours or more apart, starting from fifty dollars a day. Every decision in the case comes from this table, nothing else."
+        },
+        {
+          "v": "map",
+          "h": "The setup being scaled",
+          "p": "One ad set sends people to a prelander and then to the broker's sign-up. The network fires a postback for each qualified FTD, and the buyer reads only those confirmed numbers into the sheet. Platform conversions are shown but never used for decisions.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Meta ad set",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Prelander",
+                "kind": "page"
+              },
+              {
+                "id": "off",
+                "label": "Broker sign-up",
+                "kind": "offer"
+              },
+              {
+                "id": "pb",
+                "label": "Network postback",
+                "kind": "data"
+              },
+              {
+                "id": "sh",
+                "label": "Decision sheet",
+                "kind": "tool"
+              },
+              {
+                "id": "me",
+                "label": "Buyer",
+                "kind": "person"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "lp",
+                "click"
+              ],
+              [
+                "lp",
+                "off",
+                "sign-up"
+              ],
+              [
+                "off",
+                "pb",
+                "qualified FTD"
+              ],
+              [
+                "pb",
+                "sh",
+                "confirmed"
+              ],
+              [
+                "sh",
+                "me",
+                "checkpoint"
+              ],
+              [
+                "me",
+                "ad",
+                "budget step"
+              ]
+            ]
+          },
+          "say": "Look at the setup being scaled. One Meta ad set sends people to a prelander, then to the broker's sign-up. The network fires a postback for each qualified F T D. Those confirmed numbers go into the decision sheet. The buyer reads the sheet at each checkpoint, and then makes a budget step on the ad set. Platform conversions are shown, but they're never used for decisions."
+        },
+        {
+          "v": "table",
+          "h": "Thirteen days of checkpoints",
+          "p": "Each row is a checkpoint. The middle column shows spend, confirmed FTDs and CPA since the last budget change, not since launch. Read the decision column against the plan table and check that every decision follows the rules.",
+          "more": "Check the maths: 150 ÷ 7 = 21.43. 120 ÷ 6 = 20. 144 ÷ 6 = 24. 172 ÷ 6 = 28.67. Day 11 covers four days since the $86 step: 344 ÷ 11 = 31.27. 144 ÷ 5 = 28.80. Budgets: 50 × 1.2 = 60, 60 × 1.2 = 72, 72 × 1.2 = 86.40, shown as $86.",
+          "d": {
+            "cols": [
+              "Day",
+              "Budget",
+              "Since step: spend / FTDs / CPA",
+              "Decision"
+            ],
+            "rows": [
+              [
+                "3",
+                "$50",
+                "$150 / 7 / $21.43",
+                "Step to $60"
+              ],
+              [
+                "5",
+                "$60",
+                "$120 / 6 / $20.00",
+                "Step to $72"
+              ],
+              [
+                "7",
+                "$72",
+                "$144 / 6 / $24.00",
+                "Step to $86"
+              ],
+              [
+                "9",
+                "$86",
+                "$172 / 6 / $28.67",
+                "Keep"
+              ],
+              [
+                "11",
+                "$86",
+                "$344 / 11 / $31.27",
+                "Back to $72"
+              ],
+              [
+                "13",
+                "$72",
+                "$144 / 5 / $28.80",
+                "Keep; go sideways"
+              ]
+            ]
+          },
+          "say": "Here are the thirteen days of checkpoints. The middle column is spend, confirmed F T Ds and C P A since the last budget change, not since launch. Day three, about twenty one dollars, step to sixty. Day five, twenty dollars, step to seventy two. Day seven, exactly twenty four, step to eighty six. Day nine, about twenty eight sixty seven, keep. Day eleven, about thirty one, back to seventy two. Day thirteen, about twenty nine, keep, and go sideways. Check each decision against the plan table."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: the day 3 checkpoint",
+          "p": "You are the buyer on day 3. The ad set has run 72 hours at $50 a day. Apply the rule card from the top: zero-FTD kill, CPA kill, then the scale row. Count the conversions as well as the CPA.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $30. 3 days: $150 spent, 7 network-confirmed FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 150,
+              "conversions": 7,
+              "target_cpa": 30,
+              "days": 3
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "scale"
+            }
+          },
+          "say": "You're the buyer on day three. The ad set has run seventy two hours at fifty dollars a day, with a thirty dollar target. You've spent one hundred and fifty dollars and got seven network-confirmed F T Ds. Apply the rule card from the top: the zero-F T D kill, then the C P A kill, then the scale row. Count the conversions as well as the C P A. Kill, hold or scale? Pause and try it, then check your answer."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: the day 9 checkpoint",
+          "p": "Two days after the step to $86. Use only the spend and FTDs since that step. The CPA is under target but above the scale line. In the tool, Keep shows as Hold, because the action is the same: no budget change.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $30. Since the $86 step, 2 days: $172 spent, 6 network-confirmed FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 172,
+              "conversions": 6,
+              "target_cpa": 30,
+              "days": 2
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "hold"
+            }
+          },
+          "say": "Now day nine, two days after the step to eighty six. Since that step, you've spent one hundred and seventy two dollars and got six network-confirmed F T Ds. Use only those numbers since the step. You'll find the C P A is under the target, but above the scale line. In the tool, keep shows as hold, because the action is the same, no budget change. Kill, hold or scale? Pause and try it, then check your answer."
+        },
+        {
+          "v": "tip",
+          "h": "Day 11: why you step back",
+          "p": "At day 11 the rule card alone says Hold: CPA since the step is $31.27, above target but under the $40 kill line. The stop-scaling rules add one more instruction: CPA since the step above target for 48 hours means back to the last budget that worked, $72.",
+          "d": {
+            "kind": "example",
+            "text": "Since the $86 step: $344 ÷ 11 FTDs = $31.27. Above the $30 target for 48 hours, so back to $72."
+          },
+          "say": "Day eleven is where you step back. The rule card alone says hold. C P A since the step is thirty one dollars twenty seven, above the thirty dollar target but under the forty dollar kill line. But the stop-scaling rules add one more instruction. C P A since the step above target for forty eight hours means back to the last budget that worked, seventy two dollars. Look at the maths on screen, three hundred and forty four dollars divided by eleven F T Ds."
+        },
+        {
+          "v": "bars",
+          "h": "Profit per day at each budget",
+          "p": "Example: confirmed profit per day in each period, at $40 per FTD. The best day rate came at $60, not at $86. More budget brought more spend and less profit, which is exactly what the stop rules caught.",
+          "more": "Check the maths. Days 1–3: 7 × 40 − 150 = 130, ÷ 3 = $43.33 a day. Days 4–5: 240 − 120 = 120, $60 a day. Days 6–7: 240 − 144 = 96, $48 a day. Days 8–9: 240 − 172 = 68, $34 a day. Days 10–11: 200 − 172 = 28, $14 a day. Days 12–13: 200 − 144 = 56, $28 a day. Total: 35 FTDs, $902 spent, $1,400 revenue, $498 profit.",
+          "d": [
+            [
+              "Days 1–3 at $50",
+              72,
+              "$43/day"
+            ],
+            [
+              "Days 4–5 at $60",
+              100,
+              "$60/day"
+            ],
+            [
+              "Days 6–7 at $72",
+              80,
+              "$48/day"
+            ],
+            [
+              "Days 8–9 at $86",
+              57,
+              "$34/day"
+            ],
+            [
+              "Days 10–11 at $86",
+              23,
+              "$14/day"
+            ],
+            [
+              "Days 12–13 at $72",
+              47,
+              "$28/day"
+            ]
+          ],
+          "say": "Here's confirmed profit per day in each period, at forty dollars per F T D. Look at the bars. About forty three a day at fifty. Sixty a day at sixty dollars, the longest bar. Forty eight at seventy two. Then thirty four, and then fourteen, at eighty six. And twenty eight after stepping back to seventy two. The best day rate came at sixty dollars, not eighty six. More budget brought more spend and less profit, which is exactly what the stop rules caught. Across the case, that's thirty five F T Ds and four hundred and ninety eight dollars of profit."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: the decision log on day 11",
+          "p": "This is what the buyer's sheet looks like on the morning of day 11. Every row has the date, the budget, the numbers since the step and the decision with its rule. A teammate could take over from this sheet without a call.",
+          "d": {
+            "kind": "browser",
+            "url": "sheets.example/ofr12-case",
+            "title": "Decision log: NG_META_OFR12_PROOF_SCALE",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Day",
+                  "Budget",
+                  "CPA since step",
+                  "Decision, rule"
+                ],
+                "rows": [
+                  [
+                    "7",
+                    "$72",
+                    "$24.00",
+                    "Step: ≤ $24, 6 FTDs"
+                  ],
+                  [
+                    "9",
+                    "$86",
+                    "$28.67",
+                    "Keep: $24 to $30"
+                  ],
+                  [
+                    "11",
+                    "$86",
+                    "$31.27",
+                    "Back: > $30 for 48 h"
+                  ]
+                ]
+              },
+              {
+                "type": "select",
+                "label": "New budget",
+                "value": "$72.00"
+              },
+              {
+                "type": "button",
+                "label": "Log decision and time"
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "This is the buyer's decision log on the morning of day eleven. Every row has the day, the budget, the C P A since the step, and the decision with its rule. Day seven, step, at or under twenty four. Day nine, keep, between twenty four and thirty. Day eleven, back, above thirty for forty eight hours. The new budget is set to seventy two dollars, and the decision is logged with its time. A teammate could take over from this sheet without a call."
+        },
+        {
+          "v": "phone",
+          "h": "Checking the cap before a step",
+          "p": "Before the day 7 step, the buyer asks the affiliate manager whether the cap can take the extra volume. One short message prevents buying FTDs the network will not pay for. Example conversation.",
+          "d": {
+            "app": "chat",
+            "title": "Affiliate manager",
+            "subtitle": "network",
+            "messages": [
+              {
+                "from": "me",
+                "text": "Hi, we plan to raise OFR12 Nigeria by about 20% tomorrow, roughly one more FTD a day. Is there room in this week's cap?"
+              },
+              {
+                "from": "them",
+                "text": "Yes, about 15 left this week. Deposit quality looks fine so far."
+              },
+              {
+                "from": "me",
+                "text": "Thanks. I will send numbers on Friday and ask again before any further step."
+              }
+            ]
+          },
+          "say": "Before the day seven step, the buyer checks the cap. Look at this example chat with the affiliate manager. The buyer says they plan to raise the Nigeria offer by about twenty percent tomorrow, roughly one more F T D a day, and asks if there's room in this week's cap. The manager replies, yes, about fifteen left this week, and deposit quality looks fine so far. The buyer promises numbers on Friday, and to ask again before any further step. One short message prevents buying F T Ds the network won't pay for."
+        },
+        {
+          "v": "compare",
+          "h": "What an impatient buyer would have done",
+          "p": "The same thirteen days, run on feelings instead of rules. Each mistake on the left feels reasonable on the day. Each fix on the right is a rule you have already met in this module.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Doubled to $100 on day 3",
+                "Judged day 9 on lifetime CPA",
+                "Stayed at $86 after day 11",
+                "Raised again to win back day 11"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "+20% to $60, earned each time",
+                "Checked CPA since the step",
+                "Stepped back to $72",
+                "Held and opened a new angle test"
+              ]
+            }
+          },
+          "say": "Here's the same thirteen days, run on feelings instead of rules. Doubling to one hundred dollars on day three, instead of twenty percent to sixty, earned each time. Judging day nine on lifetime C P A, instead of C P A since the step. Staying at eighty six after day eleven, instead of stepping back to seventy two. And raising again to win back day eleven, instead of holding and opening a new angle test. Each mistake feels reasonable on the day. Each fix is a rule you've already met in this module."
+        },
+        {
+          "v": "cards",
+          "h": "What the case teaches",
+          "p": "Thirteen days of data gave four clear lessons. None of them needed a guess, because every decision came from a line written before day 1. That is what makes a scale repeatable by you and by your team.",
+          "d": [
+            "Ceiling|this ad set tops out near $60 to $72",
+            "Rules|each step earned, each stop obeyed",
+            "Profit|best day rate came at $60, not $86",
+            "Next|grow with new angles and geos"
+          ],
+          "say": "Thirteen days of data gave four clear lessons. Ceiling: this ad set tops out near sixty to seventy two dollars a day. Rules: each step was earned, and each stop obeyed. Profit: the best day rate came at sixty, not eighty six. Next: grow with new angles and geos. None of this needed a guess, because every decision came from a line written before day one. That's what makes a scale repeatable, by you and by your team."
+        },
+        {
+          "v": "tip",
+          "h": "Scale the same honest ad",
+          "p": "As spend grows, more people and more reviewers see your ads. Scale only ads that passed review with approved claims, and send every new angle through the same review. For trading and gambling offers, check platform authorization and local law for every geo you add.",
+          "d": {
+            "kind": "warn",
+            "text": "More spend never justifies stronger claims. Full detail: Compliance for finance, trading and gambling offers module."
+          },
+          "say": "As spend grows, more people and more reviewers see your ads. So scale only ads that passed review with approved claims, and send every new angle through the same review. For trading and gambling offers, check platform authorization and local law for every geo you add. As the warning says, more spend never justifies stronger claims. The full detail is in the Compliance for finance, trading and gambling offers module."
+        },
+        {
+          "v": "check",
+          "h": "Your checkpoint routine",
+          "p": "Run this list at every checkpoint, in this order, for every ad set on a scale path. It takes a few minutes and it is the same list the buyer in this case followed for thirteen days.",
+          "d": [
+            "Pull network FTDs for the period",
+            "Work out CPA since the step",
+            "Read the rule card from the top",
+            "Read the stop-scaling rules",
+            "Check cap and cash",
+            "Log decision, date and budget"
+          ],
+          "say": "Here's your checkpoint routine. Run it at every checkpoint, in this order, for every ad set on a scale path. Pull network F T Ds for the period. Work out C P A since the step. Read the rule card from the top. Read the stop-scaling rules. Check cap and cash. Then log the decision, the date and the budget. It takes a few minutes, and it's the same list the buyer in this case followed for thirteen days."
+        },
+        {
+          "v": "product",
+          "h": "A calculator for the rule card",
+          "p": "You can apply the rule card by hand, as in this case. A calculator that applies the same lines removes arithmetic mistakes at checkpoints, especially late at night or across many ad sets.",
+          "d": {
+            "slug": "voosquare",
+            "why": "The free Kill-or-scale tool applies the same starting rules when you type spend, confirmed conversions and target CPA."
+          },
+          "say": "You can apply the rule card by hand, as we did in this case. But a calculator that applies the same lines removes arithmetic mistakes at checkpoints, especially late at night, or across many ad sets. On VooSquare, the free kill or scale tool applies the same starting rules when you type in spend, confirmed conversions and target C P A."
+        },
+        {
+          "v": "big",
+          "h": "Next: go sideways",
+          "p": "Once an ad set shows its ceiling, stop pushing it. Keep it at the budget that worked, protect it and use the horizontal levers from this module, new angles, audiences and geos, to grow total profit beyond what one ad set can carry.",
+          "d": {
+            "b": "Hold the winner, open new pools",
+            "s": "One ad set has a ceiling. A business does not have to."
+          },
+          "say": "Once an ad set shows its ceiling, stop pushing it. Keep it at the budget that worked, and protect it. Then use the horizontal levers from this module, new angles, audiences and geos, to grow total profit beyond what one ad set can carry. As the screen says, one ad set has a ceiling. A business doesn't have to."
+        }
+      ],
+      "takeaways": [
+        "Judge every step on spend and confirmed FTDs since that step, not on lifetime numbers.",
+        "The rule card and the stop-scaling rules together tell you when to step, keep or step back.",
+        "When profit per day stops rising, hold the winner and grow sideways."
+      ],
+      "action": "Take one ad set you scaled recently and rebuild its checkpoint table: budget, spend and confirmed FTDs since each step, CPA since the step and the decision the rules give. Mark any step you took that the rules did not allow.",
+      "glossary": [
+        {
+          "term": "Checkpoint",
+          "def": "A planned moment, usually every 24 to 48 hours, when you read confirmed numbers and make one decision per ad set."
+        },
+        {
+          "term": "Stop-scaling rule",
+          "def": "A rule that ends or reverses budget steps, such as stepping back when CPA since the step stays above target for 48 hours."
+        },
+        {
+          "term": "Ceiling",
+          "def": "The budget above which an ad set's profit per day stops rising."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Day 3: $150 spent at $50 a day, 7 confirmed FTDs, target $30. What is the decision?",
+          "options": [
+            "Hold",
+            "Kill",
+            "Step +20% to $60",
+            "Double to $100"
+          ],
+          "answer": 2,
+          "why": "CPA is $21.43, under the $24 scale line, with 7 FTDs and 72 hours, so the scale row applies: +20%."
+        },
+        {
+          "q": "Two days after stepping to $86, CPA since the step is $28.67. Scale line $24, target $30. What do you do?",
+          "options": [
+            "Step to $103",
+            "Keep at $86, no more steps",
+            "Kill",
+            "Back to $50"
+          ],
+          "answer": 1,
+          "why": "$28.67 is above the scale line but under target, so Keep: no change and no further steps until it returns to $24."
+        },
+        {
+          "q": "Four days after the $86 step: $344 spent, 11 confirmed FTDs, target $30. What do the stop-scaling rules say?",
+          "options": [
+            "Back to the last good budget, $72",
+            "Keep at $86",
+            "Step up again",
+            "Kill the ad set"
+          ],
+          "answer": 0,
+          "why": "CPA since the step is $31.27, above target for 48 hours, so you return to the last budget that worked."
+        },
+        {
+          "q": "Profit per day was highest at the $60 budget. What does that suggest?",
+          "options": [
+            "Always run every ad set at $60",
+            "Scaling never works",
+            "The payout must be wrong",
+            "This ad set's ceiling is near $60 to $72; grow with new pools"
+          ],
+          "answer": 3,
+          "why": "Extra budget above that level bought less profit, so the winner is held and growth comes from horizontal levers."
+        },
+        {
+          "q": "Over 13 days: $902 spent, 35 confirmed FTDs, payout $40. What was the total profit?",
+          "options": [
+            "$400",
+            "$902",
+            "$1,400",
+            "$498"
+          ],
+          "answer": 3,
+          "why": "Revenue is 35 × $40 = $1,400. Profit is $1,400 − $902 = $498."
+        }
+      ],
+      "say_intro": "In this lesson we follow one ad set through thirteen days of scaling, checkpoint by checkpoint. You'll apply the rule card at every step, judge each step on cost since the step, and see what to do when an ad set reaches its ceiling.",
+      "say_outro": "So, every checkpoint follows the same order: C P A since the step, the rule card from the top, the stop rules, then cap and cash. Your task: take one ad set you scaled recently and rebuild its checkpoint table, with budget, spend and confirmed F T Ds since each step, C P A since the step, and the decision the rules give. Mark any step you took that the rules didn't allow. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "Payout $45. Campaign at $300/day, CPA $20. You step to $450/day and CPA becomes $24. What should you conclude?",
+      "options": [
+        "The step is excellent because average CPA is far below payout",
+        "Roll back immediately because CPA rose",
+        "Each extra FTD cost $40, so the step earns little; hold and watch",
+        "Double again to $900"
+      ],
+      "answer": 2,
+      "why": "Extra $150 bought 3.75 FTDs at $40 each, only $5 margin per extra FTD. Hold and monitor rather than push further."
+    },
+    {
+      "q": "Target $30. Three days after stepping from $300 to $360 a day: $1,080 spent, 32 confirmed FTDs. What do you do?",
+      "options": [
+        "Step up again to $432",
+        "Kill the ad set",
+        "Keep at $360 and wait",
+        "Go back to $300, the last budget that worked"
+      ],
+      "answer": 3,
+      "why": "CPA since the step is $1,080 ÷ 32 = $33.75, above the $30 target for more than 48 hours. The stop-scaling rule sends you back to the last good budget."
+    },
+    {
+      "q": "You plan to grow from $150 to $600 a day. The network pays about 45 days after spend. How much more cash will be tied up than now?",
+      "options": [
+        "$6,750",
+        "$20,250",
+        "$27,000",
+        "$450"
+      ],
+      "answer": 1,
+      "why": "Now: $150 × 45 = $6,750. After: $600 × 45 = $27,000. Extra is $20,250."
+    },
+    {
+      "q": "Three geos: A payout $30, CPA $20. B payout $50, CPA $42. C payout $25, CPA $15. Which is the best scaling candidate on headroom?",
+      "options": [
+        "C",
+        "B",
+        "A",
+        "All equal"
+      ],
+      "answer": 0,
+      "why": "A 33%, B 16%, C 40%. C has the most buffer."
+    },
+    {
+      "q": "Target $30. Two days after a +20% step, CPA since the step is $28 on 5 confirmed FTDs. What does the starting rule say?",
+      "options": [
+        "Step again +20%",
+        "Keep the budget; no more steps for now",
+        "Back to the last good budget",
+        "Kill the ad set"
+      ],
+      "answer": 1,
+      "why": "$28 is above the $24 scale line but under the $30 target, so Keep: no change, and no more steps until CPA since the step returns to the scale line."
+    },
+    {
+      "q": "An original at $100/day has $20 CPA. A duplicate, started at its $50 start budget, has $25 CPA. What is the blended CPA?",
+      "options": [
+        "$21.43",
+        "$22.50",
+        "$20.71",
+        "$25"
+      ],
+      "answer": 0,
+      "why": "FTDs: 100 ÷ 20 = 5 plus 50 ÷ 25 = 2, total 7. $150 ÷ 7 = $21.43."
+    },
+    {
+      "q": "Budget levels with payout $40: $300 at $20 CPA, $600 at $30 CPA, $900 at $36 CPA. Where is profit highest?",
+      "options": [
+        "$900",
+        "$600",
+        "$300",
+        "All the same"
+      ],
+      "answer": 2,
+      "why": "$300: 15 FTDs, $600 rev, $300 profit. $600: 20 FTDs, $800 rev, $200. $900: 25 FTDs, $1,000 rev, $100."
+    },
+    {
+      "q": "Spend is $1,000 a day across 2 creatives that are fatiguing. Your hit rate is one in five. You need two new winners a week. What is the bottleneck?",
+      "options": [
+        "Budget",
+        "Bidding strategy",
+        "Pixel setup",
+        "Creative supply: you need about 10 new creatives a week"
+      ],
+      "answer": 3,
+      "why": "Two winners at one in five needs around 10 new creatives a week. Without them, scale stalls."
+    },
+    {
+      "q": "Platform shows $25 CPA. Network confirms $33 CPA. Payout $36. The gap has grown each week. What first?",
+      "options": [
+        "Investigate tracking and traffic quality before any increase",
+        "Scale, the platform says it is profitable",
+        "Switch to a new geo",
+        "Ignore it, gaps are normal"
+      ],
+      "answer": 0,
+      "why": "A growing gap signals tracking or quality issues, and confirmed headroom is only 8%. Fix before scaling."
+    },
+    {
+      "q": "New geo test: payout $30, margin 25%. An ad set has spent $46 with 0 confirmed FTDs. What do you do?",
+      "options": [
+        "Hold; it needs 3 × target first",
+        "Raise the budget to find buyers",
+        "Kill: spend passed the $45 zero-FTD line, 2 × $22.50",
+        "Copy it into a second ad set"
+      ],
+      "answer": 2,
+      "why": "Each geo gets its own numbers. Target is $30 × 0.75 = $22.50, so the zero-FTD kill line is $45."
+    }
+  ]
+}

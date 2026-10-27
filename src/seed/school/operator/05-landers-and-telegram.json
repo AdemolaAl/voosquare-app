@@ -1,0 +1,2755 @@
+{
+  "school": "operator",
+  "order": 5,
+  "slug": "landers-and-telegram",
+  "title": "Landers and Telegram",
+  "summary": "How to build the pages and Telegram spaces that sit between your ad and the offer: prelanders, quizzes, honest advertorials, channels, groups, join requests, bots, welcome flows and broadcasts. A good funnel warms people up honestly and keeps working the lead for weeks after the click. It ends with building and wiring your own lander so every click ID reaches the offer and every page test can be judged with the starting rules.",
+  "lessons": [
+    {
+      "slug": "prelanders-that-earn-the-click",
+      "title": "Prelanders that earn the click",
+      "minutes": 20,
+      "objectives": [
+        "By the end you can explain what a prelander does and when to skip one",
+        "By the end you can choose between a bridge page, listicle, calculator and VSL",
+        "By the end you can build a fast, mobile-first prelander with one clear action",
+        "By the end you can work out whether a prelander is paying for itself",
+        "By the end you can apply the starting rule card to a direct link vs prelander test"
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "A prelander is a bridge",
+          "p": "A prelander is a short page between your ad and the offer page. Its job is to take a cold person who tapped an ad in two seconds and give them enough context to take the next step on purpose. It does not close the sale. It prepares the reader for the offer.",
+          "d": {
+            "b": "Warm up, then hand over",
+            "s": "Context before the offer page"
+          },
+          "say": "Think of a prelander as a bridge. It's a short page that sits between your ad and the offer page. Someone tapped your ad in two seconds, so they arrive cold. The prelander's job is to give them just enough context to take the next step on purpose. Notice what it doesn't do. It doesn't close the sale. It warms the reader up, then hands them over to the offer."
+        },
+        {
+          "v": "compare",
+          "h": "Direct link or prelander",
+          "p": "Sending people straight to the offer is simpler and loses fewer clicks. A prelander loses some clicks but can send better-prepared people forward. Which wins depends on the offer and the audience, so you test both.",
+          "d": {
+            "a": {
+              "title": "Direct link",
+              "items": [
+                "Fewer steps, fewer drop-offs",
+                "Offer page does all the work",
+                "Good for simple, known products",
+                "Less control over the message"
+              ]
+            },
+            "b": {
+              "title": "Prelander",
+              "items": [
+                "One extra step",
+                "You explain the offer first",
+                "Good for new or complex offers",
+                "You own the page and the data"
+              ]
+            }
+          },
+          "say": "Here's the big choice, side by side. On the left, the direct link. Fewer steps, fewer drop-offs, and the offer page does all the work, which suits simple, known products. On the right, the prelander. It adds one extra step, so you lose some clicks, but you get to explain the offer first, and you own the page and the data. Which one wins depends on the offer and the audience. That's why you test both."
+        },
+        {
+          "v": "cards",
+          "h": "Four common prelander formats",
+          "p": "Most prelanders fall into a few shapes. Pick the one that matches what the reader needs to understand before the offer makes sense to them.",
+          "d": [
+            "Bridge page|short intro, one button",
+            "Listicle|ranked tips or options",
+            "Calculator|reader enters numbers, sees a result",
+            "VSL|a short explainer video above the button"
+          ],
+          "say": "Most prelanders fall into one of four shapes, shown on these cards. A bridge page is a short intro with one button. A listicle gives ranked tips or options. A calculator lets the reader enter numbers and see a result. And a V S L, a video sales letter, puts a short explainer video above the button. Pick the format that matches what the reader needs to understand before the offer makes sense."
+        },
+        {
+          "v": "flow",
+          "h": "The shape of a page that works",
+          "p": "Good prelanders follow the same order. A headline that matches the ad, a short problem, the honest answer, proof that is real, then one button. Anything that does not move the reader down this line gets cut.",
+          "d": [
+            "Headline matches ad",
+            "The problem",
+            "The honest answer",
+            "Real proof",
+            "One button"
+          ],
+          "say": "Good prelanders follow the same order. Follow the line on screen. First, a headline that matches the ad. Then a short statement of the problem. Then the honest answer. Then proof that is real. And finally, one button. Here's the useful test: anything on the page that doesn't move the reader down this line gets cut."
+        },
+        {
+          "v": "tip",
+          "h": "Message match is the first test",
+          "p": "If the ad says 'Learn to read a trading chart in 10 minutes' and the page opens with 'Join the best broker', the reader feels tricked and leaves. Repeat the ad's promise, in the ad's words, in the first line of the page.",
+          "d": {
+            "kind": "tip",
+            "text": "Read the ad, then read only the page headline. If they do not sound like one conversation, rewrite the headline."
+          },
+          "say": "Message match is your first test. Imagine the ad says, learn to read a trading chart in ten minutes, and the page opens with, join the best broker. The reader feels tricked and leaves. So repeat the ad's promise, in the ad's own words, in the first line of the page. A quick check from the tip box: read the ad, then read only the page headline. If they don't sound like one conversation, rewrite the headline."
+        },
+        {
+          "v": "phone",
+          "h": "A bridge page on a phone",
+          "p": "This is a one-screen bridge page for the ad 'Learn to read a trading chart in 10 minutes'. The headline repeats the ad, the risk line is visible, and there is one button. Everything fits before the first scroll.",
+          "d": {
+            "app": "browser",
+            "url": "lander.example/ke/charts",
+            "page": {
+              "h": "Read a trading chart in 10 minutes",
+              "p": "Three short lessons: candles, trends and stop losses. Practise on a free demo account. Sponsored. Trading is risky; only use money you can afford to lose.",
+              "cta": "Start the free lessons"
+            }
+          },
+          "say": "Here's a bridge page on a phone, built for that same ad about reading a trading chart in ten minutes. Look at the screen. The headline repeats the ad. It promises three short lessons on a free demo account. The sponsored label and the risk line are visible: trading is risky, only use money you can afford to lose. And there's one button. Everything fits before the first scroll."
+        },
+        {
+          "v": "check",
+          "h": "Mobile-first basics",
+          "p": "In African geos, most of your Meta traffic is likely to be on Android phones, often on mobile data; check your own device breakdown. Build for a small screen and a slow connection first, then check it on a laptop.",
+          "more": "Test on a real low-cost Android phone with mobile data, not only your office Wi-Fi. Chrome DevTools can throttle the network to simulate a slow connection. Google's Core Web Vitals treat a Largest Contentful Paint under 2.5 seconds as good; aim for that or better. These are rough guides; your own tests decide.",
+          "d": [
+            "One column, text at least 16px",
+            "Button visible without scrolling far",
+            "Images compressed, under about 150 KB each",
+            "No pop-ups that cover the page",
+            "Works on a cheap Android on 3G or 4G"
+          ],
+          "say": "Now, build for the phone first. In African geos, most of your Meta traffic is likely to be on Android phones, often on mobile data, but check your own device breakdown. Work through the checklist: one column with text at least sixteen pixels, a button visible without scrolling far, images compressed to under about one hundred and fifty kilobytes each, no pop-ups covering the page, and it has to work on a cheap Android on three G or four G. Then check it on a laptop."
+        },
+        {
+          "v": "bars",
+          "h": "Speed and drop-off",
+          "p": "Every second of loading costs you readers who already paid you a click. The figures below are an illustration of the pattern, not a benchmark. Measure your own page.",
+          "d": [
+            [
+              "Loads in 1.5 s",
+              100,
+              "Example: 90% stay"
+            ],
+            [
+              "Loads in 3 s",
+              78,
+              "Example: 70% stay"
+            ],
+            [
+              "Loads in 6 s",
+              50,
+              "Example: 45% stay"
+            ],
+            [
+              "Loads in 10 s",
+              28,
+              "Example: 25% stay"
+            ]
+          ],
+          "say": "Every second of loading costs you readers who already paid you a click. Look at the bars. These are illustration figures, not a benchmark. In this example, a page loading in one and a half seconds keeps ninety percent of people. At three seconds, seventy percent. At six seconds, forty five percent. At ten seconds, only twenty five percent stay. The pattern is what matters. Measure your own page."
+        },
+        {
+          "v": "table",
+          "h": "Prelander metrics to watch",
+          "p": "A prelander has its own numbers, separate from the ad and the offer. Track them per page version so you know whether the page helps or hurts. If load rate is low, fix speed. If page CTR is low, fix the message. If offer CR is low, the page may be sending the wrong people.",
+          "d": {
+            "cols": [
+              "Metric",
+              "Formula",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Load rate",
+                "Page views ÷ ad clicks",
+                "85%"
+              ],
+              [
+                "Click-through",
+                "Button clicks ÷ page views",
+                "40%"
+              ],
+              [
+                "Offer CR",
+                "Conversions ÷ button clicks",
+                "6%"
+              ],
+              [
+                "Time on page",
+                "Average seconds",
+                "35 s"
+              ]
+            ]
+          },
+          "say": "A prelander has its own numbers, separate from the ad and the offer. In the table: load rate is page views divided by ad clicks. Click through is button clicks divided by page views. Offer C R, conversion rate, is conversions divided by button clicks. And time on page. Track them per page version. If load rate is low, fix speed. If page C T R, click through rate, is low, fix the message. If offer C R is low, the page may be sending the wrong people."
+        },
+        {
+          "v": "eq",
+          "h": "Does the page pay for itself",
+          "p": "Compare the conversions per 1,000 ad clicks with and without the prelander. The page only stays if it produces more conversions from the same paid clicks.",
+          "d": [
+            "Ad clicks",
+            "×",
+            "Load rate",
+            "×",
+            "Page CTR",
+            "×",
+            "Offer CR",
+            "=",
+            "Conversions"
+          ],
+          "say": "So does the page pay for itself? Here's the equation on screen. Ad clicks, times load rate, times page click through, times offer conversion rate, equals conversions. Compare conversions per thousand ad clicks with and without the prelander. The page only stays if it produces more conversions from the same paid clicks. Not more page clicks. More conversions."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example",
+          "p": "Example: 1,000 ad clicks. Direct link: 1,000 × 90% load × 3% offer CR = 27 sign-ups. Prelander: 1,000 × 85% load × 40% page CTR × 10% offer CR = 34 sign-ups. The prelander wins here because it sends fewer but better-prepared people.",
+          "more": "If the same prelander only lifted offer CR to 6%, you would get 1,000 × 85% × 40% × 6% = about 20 sign-ups, and the direct link would win. That is why you test both versions with the same ad and budget split evenly, and why you look at the final conversion, not the page CTR alone. A page with a high CTR that sends curious but unready people can still lose.",
+          "d": {
+            "kind": "example",
+            "text": "Direct: 27 sign-ups. Prelander: 34 sign-ups. Same 1,000 clicks. Example figures."
+          },
+          "say": "Let's work an example. These are example figures. One thousand ad clicks. Direct link: a thousand, times ninety percent load, times three percent offer conversion, gives twenty seven sign-ups. Prelander: a thousand, times eighty five percent load, times forty percent page click through, times ten percent offer conversion, gives thirty four sign-ups. The prelander wins here because it sends fewer but better-prepared people. But if it only lifted offer conversion to six percent, you'd get about twenty, and the direct link would win. So judge the final conversion, not page click through alone."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: where does this prelander leak?",
+          "p": "Use the funnel lab on a prelander's own numbers. Work out the pass-through rate at each step and pick the weakest one. That step is where you work first: speed, message or audience.",
+          "more": "Working. Loads 850 ÷ 1,000 = 85%. Button 340 ÷ 850 = 40%. Sign-ups 34 ÷ 340 = 10%. The weakest step is sign-up on the offer page. Before blaming the offer, check that the prelander sets honest expectations, because a page that over-promises sends people who leave at the sign-up form.",
+          "d": {
+            "kind": "funnel",
+            "task": "1,000 ad clicks, 850 page loads, 340 button clicks, 34 sign-ups. Which step has the lowest pass-through?",
+            "preset": {
+              "steps": [
+                [
+                  "Ad clicks",
+                  1000
+                ],
+                [
+                  "Page loads",
+                  850
+                ],
+                [
+                  "Button clicks",
+                  340
+                ],
+                [
+                  "Sign-ups",
+                  34
+                ]
+              ]
+            },
+            "answer": {
+              "field": "worst_step",
+              "value": 3
+            }
+          },
+          "say": "Time for a lab. You've got a prelander's own numbers: one thousand ad clicks, eight hundred and fifty page loads, three hundred and forty button clicks, and thirty four sign-ups. Work out the pass-through rate at each step, then pick the weakest one. That step is where you work first, whether it's speed, message or audience. Pause and try it, then check your answer."
+        },
+        {
+          "v": "tip",
+          "h": "Starting rule for a prelander test",
+          "p": "Run the direct link and the prelander as two ad sets with the same ad, audience and budget. Apply the starting rule card to each on network-confirmed conversions. Keep the version with the lower CPA once both have spent 3 × target. Adapt to your data.",
+          "more": "Full rule card: Budget and kill rules module. Why the same ad in both: if the ads differ, you are testing the ad, not the page.",
+          "d": {
+            "kind": "example",
+            "text": "Example: target $20. Both spent $60. Direct: 2 sign-ups, $30 CPA, hold at best. Prelander: 4 at $15 CPA, under 0.8 × target, so keep it and allow a +20% step."
+          },
+          "say": "Here's a starting rule for a prelander test. Run the direct link and the prelander as two ad sets with the same ad, audience and budget. Same ad, because otherwise you're testing the ad, not the page. Apply the rule card to each on network-confirmed conversions, and keep the version with the lower C P A, cost per acquisition, once both have spent three times target. In the example, target is twenty dollars and both spent sixty. Direct got two sign-ups at thirty dollars C P A, hold at best. The prelander got four at fifteen dollars, under point eight times target, so keep it and allow a twenty percent step up. Adapt this to your data."
+        },
+        {
+          "v": "compare",
+          "h": "Proof that is real",
+          "p": "Proof builds trust only when it is true. Readers in trading and betting have seen many fake screenshots and they spot them. Fake proof also breaks ad policies and, in many countries, consumer law. Use proof a reader could check for themselves.",
+          "d": {
+            "a": {
+              "title": "Never use",
+              "items": [
+                "Invented testimonials",
+                "Stock photos posing as users",
+                "Fake screenshots of earnings",
+                "Celebrity faces without permission"
+              ]
+            },
+            "b": {
+              "title": "Use instead",
+              "items": [
+                "Real reviews with permission",
+                "Licence and regulator details",
+                "Plain steps of how it works",
+                "Clear risk warnings"
+              ]
+            }
+          },
+          "say": "Proof only builds trust when it's true. Readers in trading and betting have seen plenty of fake screenshots, and they spot them. Fake proof also breaks ad policies and, in many countries, consumer law. On the left, never use: invented testimonials, stock photos posing as users, fake earnings screenshots, or celebrity faces without permission. On the right, use instead: real reviews with permission, licence and regulator details, plain steps of how it works, and clear risk warnings. Use proof a reader could check for themselves."
+        },
+        {
+          "v": "compare",
+          "h": "Common prelander mistakes",
+          "p": "Most prelanders that lose money make one of these mistakes. Each one is cheap to check before launch and expensive to discover after a week of spend.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Headline that ignores the ad",
+                "Heavy images on slow mobile data",
+                "Three buttons and a pop-up",
+                "Judging by page CTR",
+                "No risk or sponsored label"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Repeat the ad's promise first",
+                "Compress, test on a cheap phone",
+                "One action per page",
+                "Judge on conversions per 1,000 clicks",
+                "Labels near the top"
+              ]
+            }
+          },
+          "say": "Most prelanders that lose money make one of these mistakes, each matched to a fix. A headline that ignores the ad, fix it by repeating the ad's promise first. Heavy images on slow mobile data, compress and test on a cheap phone. Three buttons and a pop-up, go to one action per page. Judging by page click through, judge on conversions per thousand clicks instead. And no risk or sponsored label, put labels near the top. Each is cheap to check before launch, and expensive to discover after a week of spend."
+        },
+        {
+          "v": "tip",
+          "h": "Same page for everyone, honest labels",
+          "p": "Every visitor, including ad reviewers, must see the same page. Showing reviewers one page and users another is cloaking, which breaks every major ad policy. On trading and betting pages, show the risk warning and a sponsored label near the top.",
+          "more": "What cloaking leads to: Ad account bans module. Required warnings for regulated offers: Compliance for finance, trading and gambling offers module.",
+          "d": {
+            "kind": "warn",
+            "text": "No cloaking, no fake news layouts, no hidden risk text. If the page needs hiding, do not run it."
+          },
+          "say": "This one is non-negotiable. Every visitor, including ad reviewers, must see the same page. Showing reviewers one page and users another is cloaking, and it breaks every major ad policy. On trading and betting pages, show the risk warning and a sponsored label near the top. Read the warning box: no cloaking, no fake news layouts, no hidden risk text. If the page needs hiding, don't run it."
+        },
+        {
+          "v": "product",
+          "h": "Building landers quickly",
+          "p": "If you need a fast, mobile-first prelander with your company details, privacy link and risk warning already in place, a lander builder saves time. Any honest page builder works; this is one option.",
+          "d": {
+            "slug": "landvoo",
+            "why": "Build fast, mobile-first prelanders with policy links and risk text included from the start."
+          },
+          "say": "If you need a fast, mobile-first prelander with your company details, privacy link and risk warning already in place, a lander builder saves time. This card shows Landvoo, which builds prelanders with policy links and risk text included from the start. To be clear, any honest page builder works. This is just one option."
+        },
+        {
+          "v": "check",
+          "h": "Before the page goes live",
+          "p": "Run this list on every new prelander before any money goes behind it. It takes about five minutes and saves wasted spend, broken tracking and rejected ads. Keep a copy of the list in your team's launch notes so nobody skips it.",
+          "d": [
+            "Headline repeats the ad's promise",
+            "Risk warning shown for trading or betting",
+            "Sponsored or advertiser label visible",
+            "Privacy policy and contact link in footer",
+            "Button link goes to the right offer with tracking",
+            "Tested on a real phone"
+          ],
+          "say": "Finally, run this checklist on every new prelander before any money goes behind it. The headline repeats the ad's promise. A risk warning shows for trading or betting. A sponsored or advertiser label is visible. Privacy policy and contact link sit in the footer. The button goes to the right offer with tracking. And you've tested it on a real phone. It takes about five minutes. Keep a copy in your team's launch notes so nobody skips it."
+        }
+      ],
+      "takeaways": [
+        "A prelander prepares the reader; the offer page closes",
+        "Message match between ad and headline decides whether people stay",
+        "Speed and mobile layout matter more than design polish",
+        "Judge a prelander by conversions per 1,000 ad clicks, not by page CTR",
+        "Test prelander vs direct as two ad sets with the same ad, and decide with the rule card on network conversions"
+      ],
+      "action": "Take one live ad, write a one-screen bridge page whose headline repeats the ad's promise, and load it on a low-cost Android phone using mobile data. Note how long it takes to load.",
+      "glossary": [
+        {
+          "term": "Prelander",
+          "def": "A page between the ad and the offer page that gives context before the reader moves on."
+        },
+        {
+          "term": "Message match",
+          "def": "When the page repeats the promise and wording of the ad the person just tapped."
+        },
+        {
+          "term": "Bridge page",
+          "def": "A short prelander with a brief explanation and one button."
+        },
+        {
+          "term": "VSL",
+          "def": "Video sales letter. A short explainer video placed above the call to action."
+        },
+        {
+          "term": "Load rate",
+          "def": "The share of ad clicks that actually see the page load. Page views divided by ad clicks."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the main job of a prelander?",
+          "options": [
+            "Close the sale on its own",
+            "Hide the offer from ad reviewers",
+            "Prepare a cold reader to take the next step on purpose",
+            "Collect as many emails as possible"
+          ],
+          "answer": 2,
+          "why": "A prelander gives context so the reader arrives at the offer ready. Hiding the offer from reviewers is cloaking and breaks policy."
+        },
+        {
+          "q": "Your ad says 'See how forex charts work in 10 minutes'. Which headline gives the best message match?",
+          "options": [
+            "Forex charts explained in 10 minutes",
+            "Open an account with the top broker today",
+            "Limited spots left",
+            "Why most people fail at life"
+          ],
+          "answer": 0,
+          "why": "It repeats the ad's promise in the ad's words, so the reader knows they are in the right place."
+        },
+        {
+          "q": "1,000 clicks, 850 page loads, 340 button clicks, 34 sign-ups. Which step has the lowest pass-through?",
+          "options": [
+            "Page loads, 85%",
+            "Button clicks, 40%",
+            "Sign-ups, 10%",
+            "They are all the same"
+          ],
+          "answer": 2,
+          "why": "34 ÷ 340 = 10% is the lowest. Work on expectations set by the page and the offer sign-up first."
+        },
+        {
+          "q": "Which proof is acceptable on a prelander?",
+          "options": [
+            "A stock photo labelled as a real customer",
+            "The broker's regulator and licence number",
+            "A screenshot of earnings you made up",
+            "A celebrity photo you found online"
+          ],
+          "answer": 1,
+          "why": "Real regulator details are verifiable. The other options are fake or used without permission."
+        },
+        {
+          "q": "A prelander has 60% page CTR but fewer final sign-ups than the direct link. What should you conclude?",
+          "options": [
+            "The prelander wins because CTR is high",
+            "Turn off tracking and test again",
+            "Page CTR and sign-ups mean the same thing",
+            "The direct link wins on the number that matters"
+          ],
+          "answer": 3,
+          "why": "The final conversion per paid click is what pays you. A high page CTR can send curious but unready people forward."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn what a prelander is, when it helps, and when you should skip it. A prelander can make a campaign or quietly drain it, so knowing how to test one properly matters.",
+      "say_outro": "So, a prelander is a bridge that earns its place only if it produces more conversions from the same paid clicks, and it must be fast, honest and clearly labelled. Your task: take one live ad, write a one-screen bridge page whose headline repeats the ad's promise, load it on a low-cost Android phone using mobile data, and note how long it takes. Now take the quiz."
+    },
+    {
+      "slug": "quizzes-and-honest-advertorials",
+      "title": "Quizzes and honest advertorials",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can design a short quiz funnel that segments people honestly",
+        "By the end you can write an advertorial that is clearly labelled as advertising",
+        "By the end you can spot fake news-style pages, fake scarcity and fake endorsements and avoid them",
+        "By the end you can use quiz answers to send each person the right message",
+        "By the end you can pass a quiz segment and click ID forward to your bot"
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Quizzes ask before they tell",
+          "p": "A quiz funnel asks the reader three to five short questions before showing a result and a next step. People like tapping answers more than reading walls of text, and you learn who they are. Used honestly, a quiz both warms people up and sorts them.",
+          "d": {
+            "b": "Ask, then guide",
+            "s": "Engagement plus segmentation"
+          },
+          "say": "A quiz funnel asks the reader three to five short questions before showing a result and a next step. Why does that work? People like tapping answers more than reading walls of text. And while they tap, you learn who they are. Used honestly, a quiz does two jobs at once. It warms people up, and it sorts them, so you can guide each one properly."
+        },
+        {
+          "v": "flow",
+          "h": "Shape of a quiz funnel",
+          "p": "Keep a quiz funnel short. Every extra question loses a few readers, so each question must change what you show or send at the end. If an answer would not change the result or the follow-up, remove that question.",
+          "d": [
+            "Hook question",
+            "2 to 4 profile questions",
+            "Honest result",
+            "Matched next step"
+          ],
+          "say": "Keep a quiz funnel short. Follow the shape on screen: a hook question, then two to four profile questions, then an honest result, then a matched next step. Every extra question loses a few readers, so each one has to earn its place. Here's the test. If an answer wouldn't change the result or the follow-up, remove that question."
+        },
+        {
+          "v": "phone",
+          "h": "One quiz question on a phone",
+          "p": "This is what one quiz screen should look like: a progress line, one question, big tap answers, and nothing else. The reader knows how far they are and can answer with a thumb.",
+          "d": {
+            "app": "browser",
+            "url": "quiz.example/ng/start?q=2",
+            "page": {
+              "h": "Question 2 of 4: What do you want first?",
+              "p": "Learn the basics  ·  Try a demo account  ·  Compare apps  ·  Just curious",
+              "cta": "Next"
+            }
+          },
+          "say": "Here's one quiz screen on a phone. Notice how little is on it. A progress line saying question two of four. One question: what do you want first? Big tap answers: learn the basics, try a demo account, compare apps, or just curious. And a next button. The reader knows how far they are, and they can answer with a thumb."
+        },
+        {
+          "v": "chat",
+          "h": "A quiz in practice",
+          "p": "Example of a four-question quiz for a trading education channel. Each answer decides which result page and which Telegram welcome message the reader sees later.",
+          "d": [
+            {
+              "from": "ai",
+              "text": "How long have you been trading?"
+            },
+            {
+              "from": "lead",
+              "text": "Never traded"
+            },
+            {
+              "from": "ai",
+              "text": "What do you want first?"
+            },
+            {
+              "from": "lead",
+              "text": "Learn the basics"
+            },
+            {
+              "from": "ai",
+              "text": "Your result: Beginner path. Start with our free lessons channel. Trading carries risk; only use money you can afford to lose."
+            }
+          ],
+          "say": "Here's a quiz in practice for a trading education channel. In this chat, the quiz asks how long they've been trading. The lead says, never traded. It asks what they want first. They say, learn the basics. The result: beginner path, start with the free lessons channel, with a risk line that trading carries risk and to only use money you can afford to lose. Each answer decides which result page and which Telegram welcome they see later."
+        },
+        {
+          "v": "compare",
+          "h": "Honest result or rigged result",
+          "p": "A quiz that tells everyone they 'qualify' or have 'won' is a trick, and readers feel it the moment they reach the offer. Results must follow from the answers, must not promise outcomes, and must be shown before you ask for anything.",
+          "d": {
+            "a": {
+              "title": "Rigged",
+              "items": [
+                "Everyone 'qualifies'",
+                "Promises profit or winnings",
+                "Asks for a deposit to 'see results'",
+                "Collects data with no reason"
+              ]
+            },
+            "b": {
+              "title": "Honest",
+              "items": [
+                "Result depends on answers",
+                "Explains the next step and its risk",
+                "Result shown before any sign-up",
+                "Only asks what you will use"
+              ]
+            }
+          },
+          "say": "Now compare an honest result with a rigged one. A quiz that tells everyone they qualify or have won is a trick, and readers feel it the moment they hit the offer. Rigged quizzes promise profit or winnings, ask for a deposit to see results, and collect data with no reason. Honest ones make the result depend on the answers, explain the next step and its risk, show the result before any sign-up, and only ask what you'll use."
+        },
+        {
+          "v": "funnel",
+          "h": "Where quiz readers drop",
+          "p": "Example counts from a 4-question quiz. Watch for any single question that loses far more people than the others; that question is confusing or too personal.",
+          "d": [
+            [
+              "Quiz starts",
+              1000
+            ],
+            [
+              "Question 2",
+              820
+            ],
+            [
+              "Question 3",
+              740
+            ],
+            [
+              "Question 4",
+              690
+            ],
+            [
+              "Result viewed",
+              650
+            ],
+            [
+              "Clicked next step",
+              300
+            ]
+          ],
+          "say": "Look at this funnel of example counts from a four-question quiz. One thousand start. Eight hundred and twenty reach question two, seven hundred and forty reach question three, six hundred and ninety reach question four, six hundred and fifty view the result, and three hundred click the next step. What you're watching for is any single question that loses far more people than the others. That question is confusing or too personal."
+        },
+        {
+          "v": "tip",
+          "h": "Starting rule for quiz questions",
+          "p": "Measure the drop at each question over at least a few hundred starts. Starting rule: rewrite or remove any question that loses more than twice the average drop of the others. Judge the whole quiz on cost per paid event, not completion rate.",
+          "d": {
+            "kind": "example",
+            "text": "Example: questions lose 8%, 10% and 40%. Average of the others is 9%; 40% is far over 18%, so rewrite that question first."
+          },
+          "say": "Here's a starting rule for quiz questions. Measure the drop at each question over at least a few hundred starts. Then rewrite or remove any question that loses more than twice the average drop of the others. In the example, questions lose eight, ten and forty percent. The average of the others is nine percent, so the line is eighteen. Forty is far over it, so rewrite that question first. And judge the whole quiz on cost per paid event, not completion rate."
+        },
+        {
+          "v": "compare",
+          "h": "Common quiz funnel mistakes",
+          "p": "These mistakes make quiz funnels lose readers or lose the value of the answers. Most are fixed by cutting questions and using every answer you collect.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Eight questions when four would do",
+                "Questions that change nothing",
+                "No progress bar",
+                "Answers never passed forward",
+                "Asking for a phone number before the result"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "3 to 5 tap questions",
+                "Every answer changes the result or follow-up",
+                "Show progress on every screen",
+                "Pass a segment tag to the next step",
+                "Result first, then the ask"
+              ]
+            }
+          },
+          "say": "These mistakes make quizzes lose readers, or lose the value of the answers. Eight questions when four would do, use three to five tap questions. Questions that change nothing, make every answer change the result or follow-up. No progress bar, show progress on every screen. Answers never passed forward, pass a segment tag to the next step. And asking for a phone number before the result, show the result first, then ask."
+        },
+        {
+          "v": "big",
+          "h": "What an advertorial is",
+          "p": "An advertorial is advertising written in the style of an article. It can be useful: it has room to explain a product, its risks and how it works. It becomes dishonest the moment it pretends to be independent news.",
+          "d": {
+            "b": "An ad that explains",
+            "s": "Always labelled as an ad"
+          },
+          "say": "Now the second style. An advertorial is advertising written in the style of an article. It can be genuinely useful, because it has room to explain a product, its risks and how it works. But it becomes dishonest the moment it pretends to be independent news. The rule is in the subtitle: an ad that explains, always labelled as an ad."
+        },
+        {
+          "v": "check",
+          "h": "Rules for an honest advertorial",
+          "p": "These rules keep you inside ad policies on Meta, TikTok and Google, inside consumer and advertising law in most countries, and they keep readers' trust.",
+          "more": "Advertising regulators exist in most of your geos, for example ARCON in Nigeria and the Advertising Regulatory Board in South Africa, and many have rules on disclosure and on financial or gambling ads. In the EU, UK and US, consumer protection agencies treat disguised advertising as deceptive. Rules change and differ by country; check the current rules for each geo before you run.",
+          "d": [
+            "'Advertisement' or 'Sponsored' label at the top",
+            "Your own brand name, not a copy of a news site",
+            "No real journalist names or bylines you made up",
+            "Claims you can prove, with risks stated",
+            "Disclosure if you earn a commission"
+          ],
+          "say": "Here are the rules for an honest advertorial. An advertisement or sponsored label at the top. Your own brand name, not a copy of a news site. No real journalist names, and no bylines you made up. Claims you can prove, with risks stated. And disclosure if you earn a commission. These keep you inside ad policies on Meta, TikTok and Google, inside consumer and advertising law in most countries, and they keep readers' trust. Rules differ by country, so check each geo before you run."
+        },
+        {
+          "v": "compare",
+          "h": "Lines you never cross",
+          "p": "Some prelander styles are common in the industry and still wrong. They get ad accounts banned and they mislead people who trusted you with a click.",
+          "d": {
+            "a": {
+              "title": "Fake and banned",
+              "items": [
+                "Copy of BBC, Punch or CNN layout",
+                "Fake celebrity 'interview'",
+                "Invented comments section",
+                "Countdown timer that resets on reload"
+              ]
+            },
+            "b": {
+              "title": "Honest alternative",
+              "items": [
+                "Your own clean brand",
+                "Real customer story with consent",
+                "No comments, or real moderated ones",
+                "Real deadline, or no deadline"
+              ]
+            }
+          },
+          "say": "Some prelander styles are common in the industry and still wrong. On the left, fake and banned: a copy of a B B C, Punch or C N N layout, a fake celebrity interview, an invented comments section, and a countdown timer that resets on reload. On the right, the honest alternatives: your own clean brand, a real customer story with consent, no comments or real moderated ones, and a real deadline or no deadline. The fakes get accounts banned and mislead people who trusted you."
+        },
+        {
+          "v": "tip",
+          "h": "Fake scarcity is still fake",
+          "p": "'Only 3 spots left' on a page anyone can join is a lie. If a limit is real, such as a webinar seat cap or a bonus that ends on a date set by the advertiser, say exactly what it is and when it ends.",
+          "d": {
+            "kind": "warn",
+            "text": "If you cannot prove the limit or deadline exists, delete it."
+          },
+          "say": "Fake scarcity is still fake. Only three spots left, on a page anyone can join, is a lie. If a limit is real, like a webinar seat cap, or a bonus that ends on a date set by the advertiser, say exactly what it is and when it ends. The warning box puts it simply: if you can't prove the limit or deadline exists, delete it."
+        },
+        {
+          "v": "table",
+          "h": "Using quiz answers later",
+          "p": "The quiz is only half the value. The other half is using the answers. Pass each answer forward as a tag so the next page and your Telegram messages fit the person, instead of sending everyone the same thing.",
+          "more": "You pass answers by adding them to the next link as parameters, for example ?seg=new, or by saving them against the click ID in your tracker. When the person later joins your Telegram through a tracked link, your bot can read the segment and send the matching welcome. Only collect what you will use, and say so in your privacy notice.",
+          "d": {
+            "cols": [
+              "Answer",
+              "Tag",
+              "What they get next"
+            ],
+            "rows": [
+              [
+                "Never traded",
+                "seg_new",
+                "Basics lessons, slow drip"
+              ],
+              [
+                "Traded before",
+                "seg_active",
+                "Strategy posts, offer review"
+              ],
+              [
+                "Wants signals",
+                "seg_signals",
+                "Risk explainer first"
+              ],
+              [
+                "Just curious",
+                "seg_cold",
+                "Light weekly digest"
+              ]
+            ]
+          },
+          "say": "The quiz is only half the value. The other half is using the answers. Look at the table. Never traded gets the tag seg new, and receives basics lessons on a slow drip. Traded before gets seg active, with strategy posts and an offer review. Wants signals gets seg signals, and a risk explainer first. Just curious gets seg cold, and a light weekly digest. Pass each answer forward as a tag so the next page and your Telegram messages fit the person."
+        },
+        {
+          "v": "code",
+          "h": "Passing the answer forward",
+          "p": "The quiz result page passes the segment and the click ID to the next link. Here it opens your bot with a short start code, so the welcome can match the segment. Example values; parameter names depend on your tracker.",
+          "more": "Telegram limits the start parameter length; at the time of writing it is 64 characters of letters, numbers, underscores and hyphens. Check the current Bot API docs. Full bot build: Telegram build lab module.",
+          "d": {
+            "lang": "url",
+            "text": "https://quiz.example/ng/result?seg=new&cid=7f3a91\n→ https://t.me/YourLessonsBot?start=new_7f3a91",
+            "note": "The start code stays short: segment plus click ID. Look the rest up on your server."
+          },
+          "say": "Here's how the answer travels. The quiz result page passes the segment and the click I D to the next link. In the code on screen, it opens your bot with a short start code, so the welcome can match the segment. Notice the note: keep the start code short, just segment plus click I D, and look the rest up on your server. These are example values, and parameter names depend on your tracker."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example",
+          "p": "Example: 2,000 ad clicks to a quiz. 65% finish, 46% of finishers click the next step: about 600 people. Of those, 25% join Telegram: 150 joins. Spend $120 gives a cost per join of $0.80, and each join already carries a segment tag.",
+          "d": {
+            "kind": "example",
+            "text": "2,000 × 65% × 46% ≈ 600 next-step clicks; 150 joins; $120 ÷ 150 = $0.80 per tagged join. Example figures."
+          },
+          "say": "Let's work an example. These are example figures. Two thousand ad clicks go to a quiz. Sixty five percent finish, and forty six percent of finishers click the next step, which is about six hundred people. Of those, twenty five percent join Telegram, so one hundred and fifty joins. A spend of one hundred and twenty dollars gives a cost per join of eighty cents. And every one of those joins already carries a segment tag."
+        },
+        {
+          "v": "check",
+          "h": "Quiz build checklist",
+          "p": "Use this checklist before you launch any quiz funnel. A quiz that fails one of these points either loses readers or misleads them, and both cost you money and trust. Fix the gap first, then spend.",
+          "d": [
+            "3 to 5 questions, tap answers only",
+            "Progress bar so people see the end",
+            "Result depends on the answers",
+            "Risk warning on regulated verticals",
+            "Answers passed to the next step",
+            "Privacy notice linked"
+          ],
+          "say": "Use this checklist before you launch any quiz funnel. Three to five questions, tap answers only. A progress bar so people see the end. A result that depends on the answers. A risk warning on regulated verticals. Answers passed to the next step. And a linked privacy notice. A quiz that fails one of these either loses readers or misleads them, and both cost money and trust. Fix the gap first, then spend."
+        }
+      ],
+      "takeaways": [
+        "A short quiz warms people up and tells you who they are",
+        "Quiz results must follow from the answers and never promise outcomes",
+        "Advertorials are allowed only when clearly labelled as advertising",
+        "No copied news layouts, fake celebrities, fake comments or fake countdowns"
+      ],
+      "action": "Draft a 4-question quiz for one offer you run. Write the result text for each path and check every result against the honest-result list.",
+      "glossary": [
+        {
+          "term": "Quiz funnel",
+          "def": "A sequence of short questions before a result and next step, used to engage and segment readers."
+        },
+        {
+          "term": "Advertorial",
+          "def": "An advertisement written in an article style. It must be labelled as an ad."
+        },
+        {
+          "term": "Segment",
+          "def": "A group of people who share a trait, such as experience level, so they can get messages written for them."
+        },
+        {
+          "term": "Fake scarcity",
+          "def": "Claiming a limit or deadline that does not exist to rush a decision. Misleading and against ad policies."
+        },
+        {
+          "term": "Disclosure",
+          "def": "A clear statement that content is paid or that you earn a commission from it."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What makes a quiz result honest?",
+          "options": [
+            "Everyone gets the same 'You qualify' result",
+            "The result follows from the answers and states the next step and its risks",
+            "The result is hidden until the person deposits",
+            "The result promises a profit range"
+          ],
+          "answer": 1,
+          "why": "An honest result depends on the answers and explains what happens next, including risk."
+        },
+        {
+          "q": "Which advertorial is acceptable?",
+          "options": [
+            "A labelled 'Sponsored' article on your own brand explaining a product and its risks",
+            "A page styled like a national newspaper with its logo",
+            "A fake interview with a famous footballer",
+            "An article with 200 invented comments"
+          ],
+          "answer": 0,
+          "why": "Labelled, own-brand, honest content is allowed. The others impersonate or invent."
+        },
+        {
+          "q": "Your quiz loses 8% at Q1, 10% at Q2 and 40% at Q3. Using the starting rule, what do you do first?",
+          "options": [
+            "Add more questions",
+            "Raise the budget",
+            "Rewrite or remove question 3",
+            "Remove the progress bar"
+          ],
+          "answer": 2,
+          "why": "The other questions average 9%. Q3 loses more than twice that, so it is the one to fix."
+        },
+        {
+          "q": "A countdown timer resets each time the page reloads. Is this acceptable?",
+          "options": [
+            "Yes, it raises urgency",
+            "No, it is fake scarcity",
+            "Yes, if the timer is short",
+            "Only on mobile"
+          ],
+          "answer": 1,
+          "why": "A timer with no real deadline misleads readers and breaks ad policies."
+        },
+        {
+          "q": "Why pass quiz answers forward as tags?",
+          "options": [
+            "Tags are needed to pass ad review",
+            "To sell the data to other buyers",
+            "To make the URL longer",
+            "To send each person messages written for their segment"
+          ],
+          "answer": 3,
+          "why": "Tags let your next page and Telegram messages match the person. Selling data without consent is not acceptable."
+        }
+      ],
+      "say_intro": "This lesson covers two prelander styles: quizzes and advertorials. Done honestly, they warm people up and sort them. Done dishonestly, they get accounts banned and break trust.",
+      "say_outro": "Quizzes sort people honestly when every question matters and results follow the answers, and advertorials stay honest when they're clearly labelled as ads. Your task: draft a four-question quiz for one offer you run, write the result text for each path, and check every result against the honest-result list. Now take the quiz."
+    },
+    {
+      "slug": "telegram-channels-groups-and-links",
+      "title": "Telegram channels, groups and invite links",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can explain the difference between a channel and a group and pick the right one",
+        "By the end you can set up public and private invite links and name them per campaign",
+        "By the end you can explain how join requests work and why buyers use them",
+        "By the end you can calculate cost per join and cost per active member",
+        "By the end you can create a named approval link and read joins per link"
+      ],
+      "steps": [
+        {
+          "v": "compare",
+          "h": "Channel or group",
+          "p": "A channel is a broadcast: admins post, members read. A group is a conversation: members can talk to each other. Many operators run both, a channel for content and a linked group for questions.",
+          "more": "Telegram's limits change from time to time. At the time of writing, groups hold up to 200,000 members and channels have no subscriber limit. A channel can link a discussion group so each post gets a comments thread. Check Telegram's current FAQ for limits before you plan around them.",
+          "d": {
+            "a": {
+              "title": "Channel",
+              "items": [
+                "Only admins post",
+                "No member limit",
+                "Members do not see each other",
+                "Comments only via a linked discussion group"
+              ]
+            },
+            "b": {
+              "title": "Group",
+              "items": [
+                "Members can post",
+                "Up to 200,000 members",
+                "Members can see each other",
+                "Needs active moderation"
+              ]
+            }
+          },
+          "say": "Let's start with the basic choice. A channel is a broadcast: admins post, members read. A group is a conversation: members can talk to each other. On screen, channels have no member limit, members don't see each other, and comments only come through a linked discussion group. Groups let members post, hold up to two hundred thousand members at the time of writing, and need active moderation. Many operators run both, a channel for content and a linked group for questions. Limits change, so check Telegram's current F A Q."
+        },
+        {
+          "v": "cards",
+          "h": "Which one for which job",
+          "p": "Choose by what the reader needs to do, not by habit or by what a competitor uses. If they need to read, use a channel. If they need to ask and talk, use a group. If they need a personal reply, use a bot.",
+          "d": [
+            "Channel|daily posts, education, updates",
+            "Group|questions, support, peer chat",
+            "Channel + group|content plus comments",
+            "Bot|one-to-one welcome and follow-up"
+          ],
+          "say": "So which one for which job? Choose by what the reader needs to do, not by habit or what a competitor uses. A channel for daily posts, education and updates. A group for questions, support and peer chat. A channel plus a group for content with comments. And a bot for a one-to-one welcome and follow-up. The simple rule: to read, a channel. To ask and talk, a group. For a personal reply, a bot."
+        },
+        {
+          "v": "compare",
+          "h": "Public or private",
+          "p": "A public channel or group has a @username and a t.me link anyone can find in search. A private one is reachable only through invite links you create. For paid traffic, private with tracked invite links gives you far more control.",
+          "d": {
+            "a": {
+              "title": "Public",
+              "items": [
+                "Found in Telegram search",
+                "One link for everyone",
+                "Easy to share",
+                "Hard to tell which ad brought whom"
+              ]
+            },
+            "b": {
+              "title": "Private",
+              "items": [
+                "Only invite links work",
+                "Many links, one per campaign or click",
+                "Links can expire or be revoked",
+                "You can see which link each join used"
+              ]
+            }
+          },
+          "say": "Next, public or private. A public channel or group has a username and a link anyone can find in search. It's easy to share, but it's hard to tell which ad brought whom. A private one is reachable only through invite links you create. You can have many links, one per campaign or click, they can expire or be revoked, and you can see which link each join used. For paid traffic, private with tracked invite links gives you far more control."
+        },
+        {
+          "v": "check",
+          "h": "Invite link settings",
+          "p": "Admins can create many additional invite links for one chat. Each link can have its own settings. Names and options can change in Telegram updates, so check the current app.",
+          "more": "At the time of writing, a link that requires admin approval cannot also have a member limit in the Telegram apps; check the current app. Name each link so you can read joins per campaign in the channel's invite link list. For per-click attribution, tools create a fresh link or use a join-request bot for each visitor so each join can be tied back to one ad click. Full build: Telegram build lab module.",
+          "d": [
+            "A name, such as the campaign or ad set",
+            "An expiry date",
+            "A limit on how many people can join",
+            "Request admin approval (join requests)",
+            "Revoke at any time"
+          ],
+          "say": "Admins can create many extra invite links for one chat, each with its own settings. Look at the list. A name, such as the campaign or ad set. An expiry date. A limit on how many people can join. Request admin approval, which is join requests. And you can revoke a link at any time. Naming each link is what lets you read joins per campaign. Names and options can change in Telegram updates, so check the current app."
+        },
+        {
+          "v": "walk",
+          "h": "Create a named approval link",
+          "p": "A generic Telegram-style walkthrough on desktop. Menu names here are as we understand them at the time of writing and may differ in your app version. Telegram changes its apps and Bot API; we describe them as at the time of writing, so check the current app and docs.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open the channel's invite links",
+                "text": "In the channel, open the admin settings, then the invite links section.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "telegram.example/channel/settings",
+                  "title": "Channel: Trading Basics KE",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Channel type",
+                      "value": "Private"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Invite links"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Create a new link",
+                "text": "Give the link the ad set's name so joins can be read per campaign.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "telegram.example/channel/invite/new",
+                  "title": "New invite link",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Link name",
+                      "value": "KE_TEST_W40_AS01"
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Request admin approval",
+                      "on": true
+                    },
+                    {
+                      "type": "field",
+                      "label": "Expiry",
+                      "value": "30 days"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Copy it into the ad set",
+                "text": "Copy the link and use it only in that ad set's lander or ad.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "telegram.example/channel/invite",
+                  "title": "Invite links",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "KE_TEST_W40_AS01",
+                      "value": "t.me/+AbC123example"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Copy link"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              }
+            ]
+          },
+          "say": "Let's walk through creating a named approval link. This is a generic Telegram-style walkthrough on desktop, and menu names may differ in your app version. Tap Next to follow each step. First, in the channel, open the admin settings, then the invite links section. Second, create a new link and give it the ad set's name, so joins can be read per campaign. In the example, request admin approval is on, with a thirty day expiry. Third, copy the link and use it only in that ad set's lander or ad. Telegram changes its apps and Bot A P I, the bot programming interface, so check the current docs."
+        },
+        {
+          "v": "big",
+          "h": "Join requests",
+          "p": "With 'request admin approval' on, tapping the link does not join the person straight away. It sends a request. An admin, or a bot with the right admin permission, then approves or declines it. While the request is pending the person sees that they are waiting.",
+          "d": {
+            "b": "Tap, request, approve",
+            "s": "Join requests put a step before entry"
+          },
+          "say": "Now, join requests. With request admin approval turned on, tapping the link doesn't join the person straight away. It sends a request. An admin, or a bot with the right admin permission, then approves or declines it. While the request is pending, the person sees that they're waiting. So the summary on screen: tap, request, approve. Join requests put a step before entry."
+        },
+        {
+          "v": "flow",
+          "h": "How a join request flows",
+          "p": "This is why buyers like join requests. The request tells your bot exactly who wants in and through which link, before they are a member.",
+          "d": [
+            "Ad click",
+            "Private link with approval",
+            "Request sent",
+            "Bot receives it",
+            "Bot approves",
+            "Member joins"
+          ],
+          "say": "Here's why buyers like join requests. Follow the flow. An ad click leads to a private link with approval. A request is sent. Your bot receives it. The bot approves. And the member joins. The key point is the middle of this line. The request tells your bot exactly who wants in, and through which link, before they're even a member."
+        },
+        {
+          "v": "cards",
+          "h": "What join requests give you",
+          "p": "The extra step costs a few people who give up before approval, so measure how many requests you receive against how many become members. In return you get several things a plain link cannot give you.",
+          "d": [
+            "Attribution|which link and click each request came from",
+            "A first message|bot can greet while pending",
+            "Screening|decline spam or bot accounts",
+            "Control|approve in batches or by rules"
+          ],
+          "say": "That extra step costs a few people who give up before approval, so measure requests received against members gained. In return, look at what you get. Attribution, meaning which link and click each request came from. A first message, because the bot can greet while the request is pending. Screening, so you can decline spam or bot accounts. And control, to approve in batches or by rules. A plain link gives you none of these."
+        },
+        {
+          "v": "tip",
+          "h": "The pending window",
+          "p": "Telegram's Bot API lets a bot that received a join request message that person for a short time while the request is pending, documented as 5 minutes at the time of writing. Use it for a greeting, never for spam. This can change; check the current Bot API docs.",
+          "d": {
+            "kind": "warn",
+            "text": "Bot rules and time windows change. Re-read the Bot API changelog before you build a flow around them."
+          },
+          "say": "Here's a detail worth knowing: the pending window. Telegram's Bot A P I lets a bot that received a join request message that person for a short time while the request is pending. At the time of writing, that's documented as five minutes. Use it for a greeting, never for spam. And as the warning says, bot rules and time windows change, so re-read the Bot A P I changelog before you build a flow around them."
+        },
+        {
+          "v": "table",
+          "h": "Telegram numbers to track",
+          "p": "Telegram has its own set of numbers, separate from your ad platform's. Track them per invite link, in a simple sheet or a join tracking tool, so you can compare campaigns on the people they bring and keep, not only on clicks.",
+          "d": {
+            "cols": [
+              "Metric",
+              "Formula",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Cost per join",
+                "Spend ÷ joins",
+                "$0.60"
+              ],
+              [
+                "Request approval rate",
+                "Approved ÷ requests",
+                "95%"
+              ],
+              [
+                "Day-7 retention",
+                "Still in on day 7 ÷ joins",
+                "70%"
+              ],
+              [
+                "Cost per active member",
+                "Spend ÷ active on day 7",
+                "$0.86"
+              ]
+            ]
+          },
+          "say": "Telegram has its own numbers, separate from your ad platform. In the table, all example values: cost per join is spend divided by joins, sixty cents. Request approval rate is approved divided by requests, ninety five percent. Day seven retention is people still in on day seven divided by joins, seventy percent. And cost per active member is spend divided by those active on day seven, eighty six cents. Track these per invite link, so you compare campaigns on the people they bring and keep, not just clicks."
+        },
+        {
+          "v": "screen",
+          "h": "Reading joins per link",
+          "p": "A generic mock-up of the invite link list after a week. Each named link shows requests and joins, so you can put spend next to it in your sheet and compare ad sets on people, not clicks.",
+          "d": {
+            "kind": "browser",
+            "url": "telegram.example/channel/invite",
+            "title": "Invite links, last 7 days",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Link name",
+                  "Requests",
+                  "Joined",
+                  "Spend (your sheet)"
+                ],
+                "rows": [
+                  [
+                    "KE_TEST_W40_AS01",
+                    "540",
+                    "500",
+                    "$150"
+                  ],
+                  [
+                    "KE_TEST_W40_AS02",
+                    "372",
+                    "350",
+                    "$150"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Next: add day-7 members and FTDs per link before deciding."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "This is a generic mock-up of the invite link list after a week. Each named link shows requests and joins. The first ad set link has five hundred and forty requests and five hundred joined. The second has three hundred and seventy two requests and three hundred and fifty joined. Spend, a hundred and fifty dollars each, comes from your own sheet. And notice the next step at the bottom: add day seven members and F T Ds, first time deposits, per link before deciding."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example",
+          "p": "Example: $300 spent on two ad sets. Ad set A brings 500 joins, 250 still in after 7 days. Ad set B brings 350 joins, 280 still in. A costs $0.30 per join but $0.60 per retained member. B costs $0.43 per join but $0.54 per retained member.",
+          "more": "Cheap joins that leave in a day are noise. If you only look at cost per join, you would scale A. Looking one step further, at retained members or, better, at deposits per link, shows B is buying people who stay. This is why you name every invite link and keep a sheet of joins, leaves and deposits per link.",
+          "d": {
+            "kind": "example",
+            "text": "Spend split $150 each. A: $150 ÷ 250 = $0.60 per retained member. B: $150 ÷ 280 = $0.54. B is the better buy. Example figures."
+          },
+          "say": "Let's work an example. These are example figures. Three hundred dollars across two ad sets, a hundred and fifty each. Ad set A brings five hundred joins, with two hundred and fifty still in after seven days. Ad set B brings three hundred and fifty joins, with two hundred and eighty still in. A costs thirty cents per join but sixty cents per retained member. B costs forty three cents per join but fifty four cents per retained member. Look only at cost per join and you'd scale A. Look one step further and B is the better buy."
+        },
+        {
+          "v": "product",
+          "h": "Tracking joins per link",
+          "p": "Counting requests, joins, leaves and deposits per invite link by hand gets slow once you run several ad sets. A join tracker does it for you and keeps the numbers next to each link.",
+          "d": {
+            "slug": "joinvoo",
+            "why": "Track Telegram joins and leaves per invite link, so each ad set is judged on the people it brings and keeps."
+          },
+          "say": "Counting requests, joins, leaves and deposits per invite link by hand gets slow once you run several ad sets. A join tracker does it for you and keeps the numbers next to each link. This card shows Joinvoo, which tracks Telegram joins and leaves per invite link, so each ad set is judged on the people it brings and keeps."
+        },
+        {
+          "v": "check",
+          "h": "Setting up a channel for paid traffic",
+          "p": "A clean setup makes the first visit feel trustworthy. It also helps your ads pass review when they mention the channel, because reviewers may open the link. Do these before you send paid traffic.",
+          "d": [
+            "Clear name and photo, no impersonation",
+            "Description with who you are and a risk note",
+            "Pinned post: start here",
+            "Private with named invite links",
+            "At least two admins with 2-step verification on"
+          ],
+          "say": "Before you send paid traffic, set the channel up cleanly. A clear name and photo, with no impersonation. A description of who you are, with a risk note. A pinned start-here post. Private, with named invite links. And at least two admins with two-step verification on. A clean setup makes the first visit feel trustworthy, and it helps your ads pass review, because reviewers may open the link."
+        },
+        {
+          "v": "compare",
+          "h": "Common channel and link mistakes",
+          "p": "These mistakes make Telegram traffic impossible to read or put the channel itself at risk. All of them are easy to fix before you send paid traffic.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "One public link in every ad",
+                "Unnamed invite links",
+                "Judging on cost per join",
+                "One admin, no 2-step verification",
+                "Channel name that copies a brand"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Private chat, link per ad set",
+                "Name every link after its ad set",
+                "Judge on retained members and FTDs",
+                "Two admins with 2-step on",
+                "Your own clear name"
+              ]
+            }
+          },
+          "say": "These mistakes make Telegram traffic impossible to read, or put the channel itself at risk. One public link in every ad, instead use a private chat with a link per ad set. Unnamed invite links, name every link after its ad set. Judging on cost per join, judge on retained members and F T Ds. One admin with no two-step verification, have two admins with it on. And a channel name that copies a brand, use your own clear name."
+        },
+        {
+          "v": "tip",
+          "h": "Telegram is not anonymous for you",
+          "p": "Members can report channels for spam, scams or impersonation, and Telegram can restrict them. Running honest content, clear risk warnings and real contact details protects the asset you are paying to grow.",
+          "d": {
+            "kind": "tip",
+            "text": "Treat your channel like an ad account: it can be restricted, so keep it clean and keep a backup way to reach people who agreed to hear from you."
+          },
+          "say": "Remember, Telegram isn't anonymous for you. Members can report channels for spam, scams or impersonation, and Telegram can restrict them. Honest content, clear risk warnings and real contact details protect the asset you're paying to grow. The tip says it well: treat your channel like an ad account. It can be restricted, so keep it clean, and keep a backup way to reach people who agreed to hear from you."
+        }
+      ],
+      "takeaways": [
+        "Channels broadcast, groups converse; many funnels use both",
+        "Private chats with named invite links show which campaign brought each join",
+        "Join requests add a step but give attribution, screening and a first message",
+        "Judge links by retained members and deposits, not cheapest join"
+      ],
+      "action": "Create three named invite links for your channel, one with approval required, and write down which ad set each one will be used for.",
+      "glossary": [
+        {
+          "term": "Channel",
+          "def": "A Telegram broadcast chat where only admins post and members read."
+        },
+        {
+          "term": "Group",
+          "def": "A Telegram chat where members can post and talk to each other."
+        },
+        {
+          "term": "Invite link",
+          "def": "A t.me link that lets people join a chat. Admins can create many, each with its own name and settings."
+        },
+        {
+          "term": "Join request",
+          "def": "A request to join a chat through a link that needs admin approval, approved by an admin or a bot."
+        },
+        {
+          "term": "Day-7 retention",
+          "def": "The share of people who joined and are still members seven days later."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "You want to post daily lessons and stop members messaging each other. Which do you use?",
+          "options": [
+            "A group",
+            "A public group with slow mode",
+            "A channel",
+            "A bot only"
+          ],
+          "answer": 2,
+          "why": "In a channel only admins post. Members read without seeing each other."
+        },
+        {
+          "q": "Why do paid-traffic operators prefer private chats with named invite links?",
+          "options": [
+            "Each link shows which campaign brought each join",
+            "Private chats rank higher in search",
+            "Public chats cannot have admins",
+            "Private chats have no member limit"
+          ],
+          "answer": 0,
+          "why": "Named links let you count joins per campaign. Public links are one link for everyone."
+        },
+        {
+          "q": "What happens when someone taps an invite link that requires admin approval?",
+          "options": [
+            "They join immediately",
+            "The link expires",
+            "They get a payment page",
+            "A join request is sent and must be approved"
+          ],
+          "answer": 3,
+          "why": "The person sends a request that an admin or permitted bot approves or declines."
+        },
+        {
+          "q": "Ad set A: $100, 400 joins, 120 still in after 7 days. Ad set B: $100, 250 joins, 200 still in. Which costs less per retained member?",
+          "options": [
+            "A at about $0.83",
+            "B at $0.50",
+            "Both are equal",
+            "A at $0.25"
+          ],
+          "answer": 1,
+          "why": "A: $100 ÷ 120 ≈ $0.83. B: $100 ÷ 200 = $0.50. B is cheaper per retained member."
+        },
+        {
+          "q": "Why name each invite link after its ad set?",
+          "options": [
+            "Telegram requires names",
+            "So joins and leaves can be read per ad set and matched to spend",
+            "Named links load faster",
+            "To hide the link from reviewers"
+          ],
+          "answer": 1,
+          "why": "Named links let you compare ad sets on the people they bring and keep, next to the spend in your sheet."
+        }
+      ],
+      "say_intro": "Telegram is where many paid funnels land, so you need to set it up so you can read it. In this lesson you'll learn channels versus groups, invite links, join requests, and the numbers that tell you which ad sets bring people who stay.",
+      "say_outro": "You now know when to use a channel or a group, why private named invite links and join requests matter, and why you judge ad sets on retained members, not cheap joins. Your task: create three named invite links for your channel, one with approval required, and write down which ad set each will be used for. Now take the quiz."
+    },
+    {
+      "slug": "bots-and-welcome-flows",
+      "title": "Bots and welcome flows",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can explain what a Telegram bot can and cannot do",
+        "By the end you can design a welcome flow that starts on join request or /start",
+        "By the end you can collect consent and offer an easy way to stop messages",
+        "By the end you can measure a welcome flow's effect on deposits",
+        "By the end you can create a bot with BotFather and explain the calls that greet and approve a join request"
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "A bot is your one-to-one line",
+          "p": "A channel talks to everyone at once. A bot talks to one person at a time, in a private chat, with messages that can depend on who they are and what they did. It is how you welcome, answer and follow up at scale.",
+          "d": {
+            "b": "One chat per person",
+            "s": "Automated, personal, permission-based"
+          },
+          "say": "A channel talks to everyone at once. A bot talks to one person at a time, in a private chat. And its messages can depend on who that person is and what they did. That's what makes it so useful. It's how you welcome, answer and follow up at scale. As the screen says: one chat per person. Automated, personal, and permission-based."
+        },
+        {
+          "v": "compare",
+          "h": "What bots can and cannot do",
+          "p": "Bots are useful but Telegram limits them to protect users from spam. Build your flows within these limits from day one. The limits can change with Bot API updates, so check the official docs before you design a new flow.",
+          "more": "The usual rule is that a bot can only start a private conversation after the user has opened it and pressed Start, or sent it a message. The join request exception lets a bot message a requester briefly while the request is pending. If a user blocks the bot, sends fail with an error, which is also your best signal that someone has opted out.",
+          "d": {
+            "a": {
+              "title": "Bots can",
+              "items": [
+                "Reply to people who started them",
+                "Approve join requests as admin",
+                "Post in chats where they are admin",
+                "Send buttons, links and media"
+              ]
+            },
+            "b": {
+              "title": "Bots cannot",
+              "items": [
+                "Message someone who never started them",
+                "Read a channel's full member list",
+                "Add people to chats without consent",
+                "Keep messaging after being blocked"
+              ]
+            }
+          },
+          "say": "Bots are useful, but Telegram limits them to protect users from spam. On the left, bots can reply to people who started them, approve join requests as admin, post in chats where they're admin, and send buttons, links and media. On the right, bots cannot message someone who never started them, read a channel's full member list, add people to chats without consent, or keep messaging after being blocked. Build within these limits from day one, and check the official docs, because limits can change."
+        },
+        {
+          "v": "phone",
+          "h": "Creating a bot with BotFather",
+          "p": "Bots are created in the official @BotFather chat. Send /newbot, choose a display name, then a username that ends in 'bot'. BotFather replies with an HTTP API token. Telegram changes its apps and Bot API; we describe them as at the time of writing, so check the current app and docs.",
+          "more": "Then use /setdescription, /setabouttext, /setuserpic and /setcommands to tell people who runs the bot and what it does. Add the bot as an admin of your channel with permission to invite users, so it can approve join requests. Full step-by-step build: Telegram build lab module.",
+          "d": {
+            "app": "chat",
+            "title": "BotFather",
+            "subtitle": "bot",
+            "messages": [
+              {
+                "from": "me",
+                "text": "/newbot"
+              },
+              {
+                "from": "them",
+                "text": "Alright, a new bot. How are we going to call it? Please choose a name for your bot."
+              },
+              {
+                "from": "me",
+                "text": "Trading Basics KE"
+              },
+              {
+                "from": "them",
+                "text": "Good. Now let's choose a username for your bot. It must end in `bot`."
+              },
+              {
+                "from": "me",
+                "text": "TradingBasicsKEbot"
+              },
+              {
+                "from": "them",
+                "text": "Done. Use this token to access the HTTP API: 123456:ABC-example-token. Keep your token secure."
+              }
+            ]
+          },
+          "say": "Bots are created in the official BotFather chat. Follow the conversation on screen. You send the new bot command. BotFather asks for a display name, here, Trading Basics K E. Then a username, which must end in bot. BotFather replies with an H T T P A P I token, which I won't read out, and reminds you to keep it secure. After that, add descriptions and commands, and make the bot an admin of your channel so it can approve join requests. Telegram changes its apps, so check the current docs."
+        },
+        {
+          "v": "cards",
+          "h": "Two ways a welcome flow starts",
+          "p": "There are a few ways to start a welcome flow. Pick the entry point that matches your funnel. All of them rely on the person taking an action first, which is also what makes the conversation permission-based.",
+          "d": [
+            "Join request|bot greets while approving",
+            "/start|person taps a bot link from your page",
+            "Deep link|t.me/yourbot?start=code carries a tag",
+            "Group join|bot posts a short welcome in the group"
+          ],
+          "say": "Here are the ways a welcome flow can start. A join request, where the bot greets while approving. The start command, when the person taps a bot link from your page. A deep link, which carries a tag. And a group join, where the bot posts a short welcome in the group. Pick the entry point that matches your funnel. Notice what they all share: the person takes an action first. That's what makes the conversation permission-based."
+        },
+        {
+          "v": "tip",
+          "h": "Deep links carry your tags",
+          "p": "A bot link like t.me/YourBot?start=seg_new_ad12 passes the text after start= to your bot when the person taps Start. Your bot can read the segment and the ad, then pick the right welcome. Keep the code short and use only letters, numbers, underscores and hyphens.",
+          "d": {
+            "kind": "tip",
+            "text": "Telegram limits the start parameter to 64 characters at the time of writing. Store a short code and look the details up on your server."
+          },
+          "say": "Deep links carry your tags. A bot link with a start code passes that code to your bot when the person taps Start. Your bot can read the segment and the ad, then pick the right welcome. Keep the code short and use only letters, numbers, underscores and hyphens. The tip box explains why: Telegram limits the start parameter to sixty four characters at the time of writing. So store a short code, and look the details up on your server."
+        },
+        {
+          "v": "chat",
+          "h": "A welcome that works",
+          "p": "Example welcome after a join request. It greets the person by name, says what the channel posts, asks one easy question and gives a clear way out. Short messages, one idea each, read better on a phone than one long block.",
+          "d": [
+            {
+              "from": "ai",
+              "text": "Hi Amina, welcome. Your request is approved. This channel posts one trading lesson a day."
+            },
+            {
+              "from": "ai",
+              "text": "Quick question so I send the right things: are you new to trading or already active?"
+            },
+            {
+              "from": "lead",
+              "text": "New"
+            },
+            {
+              "from": "ai",
+              "text": "Start with the pinned 'Basics' post. Trading is risky; never use money you need. Reply STOP any time and I will stop messaging you."
+            }
+          ],
+          "say": "Here's a welcome that works, after a join request. In this chat, the bot greets Amina by name, says her request is approved, and that the channel posts one trading lesson a day. It asks one easy question: are you new to trading, or already active? She says new. The bot points her to the pinned basics post, adds that trading is risky and to never use money she needs, and says reply STOP any time to stop messages. Short messages, one idea each, read better on a phone."
+        },
+        {
+          "v": "code",
+          "h": "Approving a request and greeting",
+          "p": "When a join request arrives as a chat_join_request update, the bot can send a short greeting in the pending window and approve the request. These are the two Bot API methods, shown as simple HTTPS calls. Telegram changes its apps and Bot API; we describe them as at the time of writing, so check the current app and docs.",
+          "more": "Bots receive updates by long polling with getUpdates or by a webhook set with setWebhook. Both work; a webhook suits a server that is always on. Respect rate limits and log every error, including blocks, which mean the person no longer wants messages.",
+          "d": {
+            "lang": "bash",
+            "text": "# greet while the request is pending (short window)\ncurl \"https://api.telegram.org/bot<TOKEN>/sendMessage?chat_id=<USER_ID>&text=Hi%2C%20welcome\"\n\n# approve the request\ncurl \"https://api.telegram.org/bot<TOKEN>/approveChatJoinRequest?chat_id=<CHANNEL_ID>&user_id=<USER_ID>\"",
+            "note": "Never put the real token in a page or a shared document. Run calls from your server."
+          },
+          "say": "Under the hood, when a join request arrives, the bot can send a short greeting in the pending window, then approve the request. The code on screen shows those two Bot A P I methods as simple web calls. I won't read the code itself. The important note is this: never put the real token in a page or a shared document. Run the calls from your server, and log every error, including blocks, which mean the person no longer wants messages. Check the current docs, as the A P I changes."
+        },
+        {
+          "v": "flow",
+          "h": "A simple welcome sequence",
+          "p": "Example timing for a new member. Each step only fires if the person has not already taken the action it pushes, so a person who already read the start-here post never gets reminded to read it.",
+          "d": [
+            "Minute 0: greeting + question",
+            "Hour 2: start-here post",
+            "Day 1: how the offer works",
+            "Day 3: real FAQ",
+            "Day 5: next step + risk note"
+          ],
+          "say": "Here's an example timing for a new member. Follow the line. Minute zero, a greeting and a question. Hour two, the start-here post. Day one, how the offer works. Day three, a real F A Q. Day five, the next step with a risk note. And here's the smart part: each step only fires if the person hasn't already taken the action it pushes. Someone who already read the start-here post never gets reminded to read it."
+        },
+        {
+          "v": "check",
+          "h": "Consent and opt-out",
+          "p": "People joined your channel. That is not permission for unlimited private messages. Tell them what you will send, give a simple way to stop, and keep a record of how and when they agreed. It protects them and your channel.",
+          "more": "Data protection laws in your geos, such as Nigeria's NDPA 2023, Kenya's Data Protection Act 2019, South Africa's POPIA and Ghana's Data Protection Act 2012, generally require a lawful basis for processing personal data and respect for people's choices. Telegram user IDs and chat histories can be personal data. This is not legal advice; check the current law with a professional in each country you run.",
+          "d": [
+            "Say what you will send and how often",
+            "Offer STOP or a button to stop",
+            "Honour stop requests at once",
+            "Store when and how consent was given",
+            "Link your privacy notice"
+          ],
+          "say": "Joining your channel isn't permission for unlimited private messages. So, consent and opt-out. Say what you'll send and how often. Offer STOP, or a button to stop. Honour stop requests at once. Store when and how consent was given. And link your privacy notice. Data protection laws in your geos, like Nigeria's N D P A, Kenya's Data Protection Act, South Africa's POPIA and Ghana's Data Protection Act, generally require a lawful basis and respect for people's choices. This isn't legal advice, so check with a professional."
+        },
+        {
+          "v": "tip",
+          "h": "Permission first, and a real way out",
+          "p": "A join is not consent to unlimited private messages. Say what you will send, offer STOP in the first message, and honour it at once. Never buy lists, add people to chats without consent, or message people who never started your bot.",
+          "more": "Data protection law in your geos applies to Telegram user IDs and chats. This is not legal advice. Regulated offers also need risk or age wording in messages: Compliance for finance, trading and gambling offers module.",
+          "d": {
+            "kind": "warn",
+            "text": "If a person blocks the bot or replies STOP, they are out of every flow."
+          },
+          "say": "Let me repeat the core rule, because it matters. A join is not consent to unlimited private messages. Say what you'll send, offer STOP in the first message, and honour it at once. Never buy lists, never add people to chats without consent, and never message people who never started your bot. Regulated offers also need risk or age wording in messages. And the warning box: if a person blocks the bot or replies STOP, they're out of every flow."
+        },
+        {
+          "v": "bars",
+          "h": "Example: response by first-message style",
+          "p": "Illustration of how the style of the first message can change reply rates. Short messages with one easy question usually get more replies than long ones with links. Your audience will differ, so test your own versions side by side.",
+          "d": [
+            [
+              "Long paragraph + link",
+              30,
+              "Example: 9% reply"
+            ],
+            [
+              "Short greeting only",
+              55,
+              "Example: 16% reply"
+            ],
+            [
+              "Greeting + one easy question",
+              100,
+              "Example: 29% reply"
+            ]
+          ],
+          "say": "Here's an illustration of how the style of the first message can change reply rates. Look at the bars, all example figures. A long paragraph with a link gets nine percent replies. A short greeting only gets sixteen percent. A greeting with one easy question gets twenty nine percent. Short messages with one easy question usually beat long ones with links. But your audience will differ, so test your own versions side by side."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example",
+          "p": "Example: 1,000 joins a week. Without a welcome flow, 2% deposit in 14 days: 20 FTDs. With a flow, 3% deposit: 30 FTDs. At a $40 CPA, the flow adds $400 of payouts per week from the same ad spend.",
+          "d": {
+            "kind": "example",
+            "text": "10 extra FTDs × $40 = $400 a week, before the cost of the bot tool. Example figures."
+          },
+          "say": "Let's work an example. These are example figures. One thousand joins a week. Without a welcome flow, two percent deposit within fourteen days, that's twenty F T Ds, first time deposits. With a flow, three percent deposit, thirty F T Ds. At a forty dollar C P A, cost per acquisition, those ten extra F T Ds add four hundred dollars of payouts a week from the same ad spend. That's before the cost of the bot tool."
+        },
+        {
+          "v": "compare",
+          "h": "Human handover",
+          "p": "Bots handle the first reply and the routine questions well. Some situations need a person: payment problems, complaints, anyone upset about money. Build a clear handover so those people reach a human quickly.",
+          "d": {
+            "a": {
+              "title": "Bot handles",
+              "items": [
+                "Greeting and segmenting",
+                "Common questions",
+                "Links to lessons",
+                "Reminders"
+              ]
+            },
+            "b": {
+              "title": "Human handles",
+              "items": [
+                "Deposit or withdrawal problems",
+                "Complaints",
+                "Anyone upset or confused",
+                "Anything the bot cannot answer"
+              ]
+            }
+          },
+          "say": "Bots handle the first reply and routine questions well. On the left: greeting and segmenting, common questions, links to lessons, and reminders. But some situations need a person, shown on the right: deposit or withdrawal problems, complaints, anyone upset or confused, and anything the bot can't answer. Build a clear handover, so those people reach a human quickly. Money problems shouldn't be stuck in a loop with a bot."
+        },
+        {
+          "v": "product",
+          "h": "Answering leads at scale",
+          "p": "Once a welcome flow is running, people start replying with questions. A reply assistant can handle routine answers in the chat and hand the rest to a human, inside the same consent rules.",
+          "d": {
+            "slug": "replyvoo",
+            "why": "Answer routine questions in your Telegram chats quickly, with a clear handover to a human for money problems."
+          },
+          "say": "Once a welcome flow is running, people start replying with questions. A reply assistant can handle routine answers in the chat and hand the rest to a human, inside the same consent rules. This card shows Replyvoo, which answers routine questions in your Telegram chats quickly, with a clear handover to a human for money problems."
+        },
+        {
+          "v": "compare",
+          "h": "Common bot and welcome mistakes",
+          "p": "These are the mistakes that make welcome flows annoying, ineffective or risky. Most are fixed by keeping messages short, staged, matched to the segment and easy to stop.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "One long first message with links",
+                "No STOP option",
+                "Token pasted in page code",
+                "Bot with full admin rights",
+                "Same flow for every segment"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Short greeting, one easy question",
+                "STOP in the first message",
+                "Token only on the server",
+                "Only the rights it needs",
+                "Branch by segment tag"
+              ]
+            }
+          },
+          "say": "These mistakes make welcome flows annoying, ineffective or risky. One long first message with links, use a short greeting and one easy question. No STOP option, put STOP in the first message. A token pasted in page code, keep it only on the server. A bot with full admin rights, give only the rights it needs. And the same flow for every segment, branch by segment tag. Short, staged, matched and easy to stop."
+        },
+        {
+          "v": "check",
+          "h": "Bot safety basics",
+          "p": "A bot token works like a password to your bot. If someone else gets it, they can message all your bot users as you, and change what the bot does. Protect it as carefully as your ad account login.",
+          "d": [
+            "Keep the token in a server secret, never in page code",
+            "Give the bot only the admin rights it needs",
+            "Rate-limit your own sends",
+            "Log errors and blocks",
+            "Revoke and replace the token if leaked"
+          ],
+          "say": "Finally, bot safety basics. A bot token works like a password to your bot. If someone else gets it, they can message all your bot users as you, and change what the bot does. So keep the token in a server secret, never in page code. Give the bot only the admin rights it needs. Rate-limit your own sends. Log errors and blocks. And revoke and replace the token if it leaks. Protect it as carefully as your ad account login."
+        }
+      ],
+      "takeaways": [
+        "Bots only start private chats with people who started them, plus the short join request window",
+        "Deep links and join requests let the bot know who the person is and where they came from",
+        "Welcome flows should be short, staged and easy to stop",
+        "Measure the flow by extra deposits per join, not by messages sent"
+      ],
+      "action": "Write a three-message welcome for your channel: a greeting, one segmenting question and a start-here pointer with a STOP option. Keep each message under 40 words.",
+      "glossary": [
+        {
+          "term": "Bot",
+          "def": "An automated Telegram account controlled by your server through the Bot API."
+        },
+        {
+          "term": "Bot API",
+          "def": "Telegram's official interface for building bots. Its rules and limits change over time."
+        },
+        {
+          "term": "Deep link",
+          "def": "A bot link with a start parameter that passes a short code to the bot when the person taps Start."
+        },
+        {
+          "term": "Bot token",
+          "def": "The secret key that controls a bot. Anyone with it can act as the bot."
+        },
+        {
+          "term": "Opt-out",
+          "def": "A person's choice to stop receiving messages, which you must honour."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Can a bot send a private message to a channel member who has never started the bot?",
+          "options": [
+            "Yes, always",
+            "No, apart from narrow cases like a pending join request",
+            "Yes, if the bot is a channel admin",
+            "Only on weekends"
+          ],
+          "answer": 1,
+          "why": "Bots need the user to start them first. The join request window is a limited exception."
+        },
+        {
+          "q": "What does t.me/YourBot?start=seg_new do?",
+          "options": [
+            "Passes 'seg_new' to the bot when the person taps Start",
+            "Joins the person to a group",
+            "Blocks the bot",
+            "Sends a payment link"
+          ],
+          "answer": 0,
+          "why": "The start parameter is delivered to the bot so it can personalise the welcome."
+        },
+        {
+          "q": "A member replies STOP. What should happen?",
+          "options": [
+            "Send one more offer first",
+            "Move them to a different bot",
+            "Stop messaging them and record the opt-out",
+            "Ignore it"
+          ],
+          "answer": 2,
+          "why": "Opt-outs must be honoured immediately and recorded."
+        },
+        {
+          "q": "You create a bot in BotFather. Which username is accepted?",
+          "options": [
+            "TradingBasicsKE",
+            "@TradingBasics",
+            "TradingBasicsKEbot",
+            "Trading Basics KE"
+          ],
+          "answer": 2,
+          "why": "A bot username must end in 'bot'. The display name can have spaces; the username cannot."
+        },
+        {
+          "q": "Where should the bot token live?",
+          "options": [
+            "In the landing page JavaScript",
+            "In the channel description",
+            "In a pinned post",
+            "In a server-side secret"
+          ],
+          "answer": 3,
+          "why": "The token controls the bot. Keep it only on the server."
+        }
+      ],
+      "say_intro": "A bot is your one-to-one line to each member. In this lesson you'll learn what bots can and can't do, how to build a welcome flow, and how to keep it permission-based, because that protects both people and your channel.",
+      "say_outro": "A bot gives you a personal line to each member, but only inside Telegram's limits and with real consent and an easy way out. Your task: write a three-message welcome for your channel, a greeting, one segmenting question, and a start-here pointer with a STOP option, keeping each message under forty words. Now take the quiz."
+    },
+    {
+      "slug": "broadcasts-drips-and-retention",
+      "title": "Broadcasts, drips and retention",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can tell a broadcast from a drip and use each well",
+        "By the end you can plan a posting rhythm that keeps members without spamming them",
+        "By the end you can measure retention and reactivation",
+        "By the end you can run an honest reactivation campaign",
+        "By the end you can apply starting rules for leave spikes, blocks and reactivation"
+      ],
+      "steps": [
+        {
+          "v": "compare",
+          "h": "Broadcast or drip",
+          "p": "A broadcast goes to many people at the same moment. A drip goes to each person on their own timeline, counted from when they joined or acted. You need both.",
+          "d": {
+            "a": {
+              "title": "Broadcast",
+              "items": [
+                "Same message, same time",
+                "News, live sessions, updates",
+                "Channel posts or bot sends",
+                "Easy to overdo"
+              ]
+            },
+            "b": {
+              "title": "Drip",
+              "items": [
+                "Timed from each person's join",
+                "Onboarding and education",
+                "Bot private messages",
+                "Stops when the person acts"
+              ]
+            }
+          },
+          "say": "First, two kinds of sending. A broadcast goes to many people at the same moment: same message, same time, for news, live sessions and updates. It's easy to overdo. A drip goes to each person on their own timeline, counted from when they joined or acted. It's for onboarding and education, sent as bot private messages, and it stops when the person acts. You need both."
+        },
+        {
+          "v": "check",
+          "h": "A posting rhythm that holds",
+          "p": "Too few posts and people forget why they joined. Too many and they mute the channel or leave. Start with a modest rhythm, watch your leave rate after each post, and adjust slowly from there.",
+          "d": [
+            "One to three channel posts a day",
+            "One clear topic per post",
+            "Pin a start-here post",
+            "Fixed times members can expect",
+            "No posting at 2 a.m. in their time zone"
+          ],
+          "say": "Now a posting rhythm that holds. Too few posts and people forget why they joined. Too many and they mute or leave. The checklist gives a starting point: one to three channel posts a day, one clear topic per post, a pinned start-here post, fixed times members can expect, and no posting at two in the morning in their time zone. Start modest, watch your leave rate after each post, and adjust slowly."
+        },
+        {
+          "v": "cards",
+          "h": "What to post",
+          "p": "A mix of post types keeps people reading. Promotion works best when most of your posts are useful on their own, so that members open your messages because they expect something worth their time.",
+          "d": [
+            "Teach|a lesson or how-to",
+            "Show|a real example or case study",
+            "Answer|a common question",
+            "Invite|a live session or next step",
+            "Remind|risk and responsible play or trading"
+          ],
+          "say": "What should you post? These cards show a healthy mix. Teach, with a lesson or how-to. Show, with a real example or case study. Answer, a common question. Invite, to a live session or next step. And Remind, about risk and responsible play or trading. Promotion works best when most of your posts are useful on their own. Members open your messages because they expect something worth their time."
+        },
+        {
+          "v": "phone",
+          "h": "A channel post that keeps members",
+          "p": "Example of a useful post in a Telegram-style channel: one topic, short, a real lesson, a risk line and one button. Members open posts like this because most of your posts look like this.",
+          "d": {
+            "app": "chat",
+            "title": "Trading Basics KE",
+            "subtitle": "channel",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Lesson 12: what a stop loss does, in 60 seconds. It closes a trade at a price you choose, so one bad move cannot take more than you planned."
+              },
+              {
+                "from": "them",
+                "text": "Try it on the demo account first. Trading is risky; only use money you can afford to lose.",
+                "buttons": [
+                  "Watch the 60s video"
+                ]
+              }
+            ]
+          },
+          "say": "Here's an example of a channel post that keeps members. Look at the screen. One topic: lesson twelve, what a stop loss does, in sixty seconds. It closes a trade at a price you choose, so one bad move can't take more than you planned. Then, try it on the demo account first, trading is risky, only use money you can afford to lose. And one button to watch the video. Short, real, and with a risk line."
+        },
+        {
+          "v": "tip",
+          "h": "Rate limits on bot broadcasts",
+          "p": "Bot sends are rate-limited by Telegram. At the time of writing, the docs suggest staying around 30 messages per second across all chats and about one per second to the same chat. Large sends must be queued. These limits change; check the current Bot API FAQ.",
+          "d": {
+            "kind": "warn",
+            "text": "Sending too fast returns 'Too Many Requests' errors with a retry time. Respect it and slow down."
+          },
+          "say": "Bot sends are rate-limited by Telegram. At the time of writing, the docs suggest staying around thirty messages per second across all chats, and about one per second to the same chat. So large sends must be queued. The warning explains what happens otherwise: sending too fast returns too many requests errors with a retry time. Respect it and slow down. These limits change, so check the current Bot A P I F A Q."
+        },
+        {
+          "v": "screen",
+          "h": "A broadcast queue that respects limits",
+          "p": "A generic mock-up of a bot broadcast tool. It sends to one segment, at a speed under the limits, skips people who opted out and logs blocks. Limits change; check the current Bot API FAQ.",
+          "d": {
+            "kind": "browser",
+            "url": "broadcast.example/queue/112",
+            "title": "Broadcast: weekly lesson, seg_new",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Segment",
+                "value": "seg_new, joined 7+ days, not opted out"
+              },
+              {
+                "type": "field",
+                "label": "Recipients",
+                "value": "6,240"
+              },
+              {
+                "type": "field",
+                "label": "Send speed",
+                "value": "20 messages per second"
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "Sent",
+                  "Blocked",
+                  "Errors",
+                  "Retry"
+                ],
+                "rows": [
+                  [
+                    "6,180",
+                    "48",
+                    "12",
+                    "Queued"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Blocked users are removed from all future sends."
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "Here's a generic mock-up of a broadcast tool that respects the limits. It sends a weekly lesson to one segment: seg new, joined seven or more days ago, not opted out. That's six thousand two hundred and forty recipients, at twenty messages per second, under the limit. The results table shows six thousand one hundred and eighty sent, forty eight blocked, twelve errors queued for retry. And note the line at the bottom: blocked users are removed from all future sends."
+        },
+        {
+          "v": "curve",
+          "h": "Retention without and with a plan",
+          "p": "Illustration: the share of one week's joins still in the channel over 30 days. A steady rhythm and an onboarding drip keep more people. Every member you keep is one you do not have to pay for again.",
+          "d": {
+            "a": [
+              100,
+              88,
+              82,
+              78,
+              75,
+              72,
+              70
+            ],
+            "la": "Rhythm + drip",
+            "b": [
+              100,
+              74,
+              62,
+              54,
+              48,
+              44,
+              41
+            ],
+            "lb": "Random posting",
+            "x": [
+              "D0",
+              "D1",
+              "D3",
+              "D7",
+              "D14",
+              "D21",
+              "D30"
+            ]
+          },
+          "say": "This chart is an illustration of the share of one week's joins still in the channel over thirty days. Follow the two lines. With a steady rhythm and an onboarding drip, seventy eight percent are still there on day seven, and seventy percent on day thirty. With random posting, it's fifty four percent on day seven, and just forty one percent by day thirty. Every member you keep is one you don't have to pay for again."
+        },
+        {
+          "v": "table",
+          "h": "Retention numbers",
+          "p": "Track these numbers per weekly join cohort, so a good week is not hidden inside a bad month. Comparing cohorts is how you learn whether a change you made actually helped.",
+          "more": "A cohort is everyone who joined in the same period, usually a week. Comparing cohorts shows whether a change you made, such as a new welcome flow or a new posting time, actually helped. If one post makes leaves jump far above your normal rate, look at what that post said.",
+          "d": {
+            "cols": [
+              "Metric",
+              "Formula",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Day-7 retention",
+                "In on D7 ÷ joined",
+                "78%"
+              ],
+              [
+                "Leave rate per post",
+                "Leaves in 1 h ÷ members",
+                "0.2%"
+              ],
+              [
+                "Bot block rate",
+                "Blocks ÷ bot users",
+                "6%"
+              ],
+              [
+                "FTD by day 30",
+                "FTDs ÷ joined",
+                "3.5%"
+              ]
+            ]
+          },
+          "say": "Here are the retention numbers, all example values. Day seven retention, those still in on day seven divided by those who joined, seventy eight percent. Leave rate per post, leaves within an hour divided by members, point two percent. Bot block rate, blocks divided by bot users, six percent. And F T D, first time deposit, by day thirty, three point five percent. Track these per weekly join cohort, everyone who joined in the same week, so a good week isn't hidden in a bad month."
+        },
+        {
+          "v": "table",
+          "h": "Starting rules for sending",
+          "p": "Write these next to your posting plan. They protect the channel the same way the rule card protects ad spend. Starting rules; adapt them to your own normal rates.",
+          "more": "Example: normal leave rate per post is 0.2%. A post that loses 0.8% in an hour is 4 × normal, so that kind of post stops until you understand why. These rules sit beside your ad rule card from the Budget and kill rules module; the ad card decides spend, these decide messages.",
+          "d": {
+            "cols": [
+              "Trigger",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Leave rate after a post over 3 × your normal",
+                "Stop that post type; review it"
+              ],
+              [
+                "Bot block rate on a send over 2 × normal",
+                "Pause the sequence; check segment and copy"
+              ],
+              [
+                "Inactive 14+ days",
+                "Max 2 reactivation messages, then stop"
+              ],
+              [
+                "Anyone replies STOP or blocks",
+                "Remove from every flow at once"
+              ]
+            ]
+          },
+          "say": "Write these starting rules next to your posting plan. They protect the channel the way the rule card protects ad spend. If the leave rate after a post is over three times your normal, stop that post type and review it. If the bot block rate on a send is over two times normal, pause the sequence and check segment and copy. For people inactive fourteen days or more, a maximum of two reactivation messages, then stop. And anyone who replies STOP or blocks is removed from every flow at once. Adapt to your own normal rates."
+        },
+        {
+          "v": "big",
+          "h": "Segment before you send",
+          "p": "The fastest way to lose people is to send everyone everything. Use the tags you collected in the quiz or welcome flow to send each segment the message written for them.",
+          "d": {
+            "b": "Right message, right group",
+            "s": "Use tags from quiz, deep link and replies"
+          },
+          "say": "The fastest way to lose people is to send everyone everything. So segment before you send. Use the tags you collected in the quiz, the deep link, or the welcome replies, and send each segment the message written for them. Right message, right group."
+        },
+        {
+          "v": "flow",
+          "h": "An honest reactivation flow",
+          "p": "Members who stopped opening or replying are not lost. One or two relevant messages can bring some back. Anyone who does not respond is left alone.",
+          "d": [
+            "Find inactive 14+ days",
+            "One useful message",
+            "Wait 3 days",
+            "One clear question",
+            "No reply: stop"
+          ],
+          "say": "Members who stopped opening or replying aren't lost. Here's an honest reactivation flow. Follow the line. Find members inactive fourteen days or more. Send one useful message. Wait three days. Send one clear question. And if there's no reply, stop. One or two relevant messages can bring some people back. Anyone who doesn't respond is left alone."
+        },
+        {
+          "v": "chat",
+          "h": "Reactivation example",
+          "p": "Example of a respectful reactivation message to a beginner who went quiet. It leads with something useful, asks a simple question and offers an easy exit. No pressure, no fake deadline.",
+          "d": [
+            {
+              "from": "ai",
+              "text": "Hi Kofi, it's been a while. We just posted a 5-minute guide to reading candlesticks for beginners. Want the link?"
+            },
+            {
+              "from": "lead",
+              "text": "Yes send"
+            },
+            {
+              "from": "ai",
+              "text": "Here it is. If you'd rather not get these messages, reply STOP and I'll stop."
+            }
+          ],
+          "say": "Here's a respectful reactivation message to a beginner who went quiet. In this chat, the bot says hi to Kofi, it's been a while, and offers a five-minute guide to reading candlesticks for beginners. Kofi says, yes send. The bot shares it, and adds that if he'd rather not get these messages, reply STOP. Notice it leads with something useful, asks a simple question, and offers an easy exit. No pressure, no fake deadline."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example",
+          "p": "Example: 4,000 inactive members. A reactivation message gets 12% to reply or click: 480. Of those, 5% make a first deposit within 14 days: 24 FTDs. At a $35 CPA that is $840 in payouts with no new ad spend.",
+          "d": {
+            "kind": "example",
+            "text": "4,000 × 12% = 480; 480 × 5% = 24 FTDs; 24 × $35 = $840. Example figures."
+          },
+          "say": "Let's work an example. These are example figures. Four thousand inactive members. A reactivation message gets twelve percent to reply or click, that's four hundred and eighty. Of those, five percent make a first deposit within fourteen days, that's twenty four F T Ds. At a thirty five dollar C P A, cost per acquisition, that's eight hundred and forty dollars in payouts, with no new ad spend."
+        },
+        {
+          "v": "product",
+          "h": "Scheduling broadcasts and drips",
+          "p": "Running segmented broadcasts and drips by hand gets error-prone as the list grows. A broadcast tool can queue sends under the limits, respect opt-outs and log blocks.",
+          "d": {
+            "slug": "castvoo",
+            "why": "Schedule segmented Telegram broadcasts and drips that queue under rate limits and honour opt-outs."
+          },
+          "say": "As your list grows, running segmented broadcasts and drips by hand gets error-prone. A broadcast tool can queue sends under the limits, respect opt-outs and log blocks. This card shows Castvoo, which schedules segmented Telegram broadcasts and drips that queue under rate limits and honour opt-outs."
+        },
+        {
+          "v": "quote",
+          "h": "From the founder",
+          "p": "Dchessking on why the work after the join matters as much as the ad that brought the person in. The cost of a join is paid once; the value depends on what you do next.",
+          "d": "The join is where the work starts. We pay for the join once, and we keep earning from it only if we keep showing up with something useful.",
+          "by": "dchessking",
+          "say": "Here's Dchessking on why the work after the join matters as much as the ad that brought the person in. The join is where the work starts. We pay for the join once, and we keep earning from it only if we keep showing up with something useful."
+        },
+        {
+          "v": "compare",
+          "h": "Common broadcast mistakes",
+          "p": "Broadcast mistakes rarely show in one day. They show as a slowly shrinking channel and a rising block rate, which means you pay again for people you already had.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Same promo to every member",
+                "Sending as fast as the bot can",
+                "Reactivating forever",
+                "Ignoring a leave spike",
+                "Posting at 2 a.m. their time"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Segment every send",
+                "Queue under the rate limits",
+                "Two tries, then stop",
+                "Review the post that caused it",
+                "Fixed, local posting times"
+              ]
+            }
+          },
+          "say": "Broadcast mistakes rarely show in one day. They show as a slowly shrinking channel and a rising block rate. Same promo to every member, segment every send instead. Sending as fast as the bot can, queue under the rate limits. Reactivating forever, two tries then stop. Ignoring a leave spike, review the post that caused it. Posting at two in the morning their time, use fixed, local posting times. Each mistake means paying again for people you already had."
+        },
+        {
+          "v": "compare",
+          "h": "Retention habits",
+          "p": "Small daily habits decide whether your channel compounds or leaks over months. Most of the difference comes from respecting the reader: sending fewer, better messages to the right people and stopping when asked.",
+          "d": {
+            "a": {
+              "title": "Leaky",
+              "items": [
+                "Same post to everyone",
+                "Promotion every post",
+                "No onboarding",
+                "Messaging people who said stop"
+              ]
+            },
+            "b": {
+              "title": "Compounding",
+              "items": [
+                "Segmented sends",
+                "Mostly useful content",
+                "Day-by-day onboarding drip",
+                "Clean opt-outs and records"
+              ]
+            }
+          },
+          "say": "Small daily habits decide whether your channel compounds or leaks over months. On the left, leaky: the same post to everyone, promotion in every post, no onboarding, and messaging people who said stop. On the right, compounding: segmented sends, mostly useful content, a day-by-day onboarding drip, and clean opt-outs and records. Most of the difference comes from respecting the reader. Fewer, better messages, to the right people, and stopping when asked."
+        }
+      ],
+      "takeaways": [
+        "Broadcasts reach everyone at once; drips follow each person's timeline",
+        "A steady, useful rhythm keeps more members than constant promotion",
+        "Track retention by weekly cohort and watch leaves per post",
+        "Reactivate with one or two useful messages, then stop"
+      ],
+      "action": "Pull last week's joins as a cohort and write down how many are still members today. Then draft one reactivation message with a clear STOP option.",
+      "glossary": [
+        {
+          "term": "Broadcast",
+          "def": "One message sent to many people at the same time."
+        },
+        {
+          "term": "Drip",
+          "def": "A sequence of messages timed from each person's own join or action."
+        },
+        {
+          "term": "Cohort",
+          "def": "Everyone who joined in the same period, used to compare results over time."
+        },
+        {
+          "term": "Reactivation",
+          "def": "Messages that try to bring inactive members back, with a clear way to stop."
+        },
+        {
+          "term": "Rate limit",
+          "def": "The maximum speed at which Telegram lets a bot send messages."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A new member should get lesson 1 on day 1, lesson 2 on day 3 and lesson 3 on day 5. What is this?",
+          "options": [
+            "A broadcast",
+            "A join request",
+            "A drip",
+            "A rate limit"
+          ],
+          "answer": 2,
+          "why": "A drip is timed from each person's own join."
+        },
+        {
+          "q": "Normal leave rate per post is 0.2%. One post loses 0.9% in an hour. What does the starting rule say?",
+          "options": [
+            "Stop that post type and review what it said",
+            "Post it again tomorrow",
+            "Delete the channel",
+            "Ignore it; leaves do not matter"
+          ],
+          "answer": 0,
+          "why": "0.9% is more than 3 × the normal 0.2%, so that kind of post stops until you understand why."
+        },
+        {
+          "q": "Your bot gets 'Too Many Requests' errors during a broadcast. What is right?",
+          "options": [
+            "Retry instantly in a loop",
+            "Switch to user accounts",
+            "Create more bots to send faster",
+            "Slow down and respect the retry time"
+          ],
+          "answer": 3,
+          "why": "Telegram returns a retry time. Respect it and queue sends. Multiplying bots to evade limits is circumvention."
+        },
+        {
+          "q": "3,000 inactive members, 10% engage, 4% of those deposit, CPA $30. Payout?",
+          "options": [
+            "$900",
+            "$360",
+            "$120",
+            "$3,600"
+          ],
+          "answer": 1,
+          "why": "3,000 × 10% = 300; 300 × 4% = 12 FTDs; 12 × $30 = $360."
+        },
+        {
+          "q": "A member did not reply to two reactivation messages. What next?",
+          "options": [
+            "Message daily until they reply",
+            "Send a fake 'last chance' offer",
+            "Add them to another channel",
+            "Stop messaging them"
+          ],
+          "answer": 3,
+          "why": "An honest flow ends after a couple of relevant tries. Fake urgency is not acceptable."
+        }
+      ],
+      "say_intro": "Paying for a join is only the start. In this lesson you'll learn how broadcasts and drips keep members, how to measure retention, and how to bring quiet members back honestly.",
+      "say_outro": "Broadcasts and drips, sent at a steady rhythm, segmented and under the limits, keep the members you paid for, and honest reactivation brings some back. Your task: pull last week's joins as a cohort, write down how many are still members today, then draft one reactivation message with a clear STOP option. Now take the quiz."
+    },
+    {
+      "slug": "building-and-tracking-your-lander",
+      "title": "Building and tracking your lander",
+      "minutes": 20,
+      "objectives": [
+        "By the end you can build and publish a simple, fast prelander with the required pages",
+        "By the end you can pass the click ID and campaign names from the ad to the offer link",
+        "By the end you can run a fair A/B test of two lander versions with starting rules"
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "A lander that loses the click ID loses money",
+          "p": "If your lander does not pass tracking forward, every sign-up after it arrives with no source. You cannot tell which ad set made money, so you cannot apply a single kill or scale rule. Building the page is easy; wiring it is what pays.",
+          "d": {
+            "b": "Build it, wire it, then test it",
+            "s": "No click ID, no decision"
+          },
+          "say": "Here's the hard truth on screen. A lander that loses the click I D loses money. If your page doesn't pass tracking forward, every sign-up after it arrives with no source. You can't tell which ad set made money, so you can't apply a single kill or scale rule. Building the page is easy. Wiring it is what pays. So the order is: build it, wire it, then test it."
+        },
+        {
+          "v": "map",
+          "h": "What travels through your lander",
+          "p": "The ad sends a click with campaign names and a click ID. The lander copies them into the offer link. The network sends the conversion back by postback, and your tracker joins it to the ad. Every arrow must carry the IDs.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Meta ad",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Your lander",
+                "kind": "page"
+              },
+              {
+                "id": "off",
+                "label": "Offer sign-up",
+                "kind": "offer"
+              },
+              {
+                "id": "net",
+                "label": "Network",
+                "kind": "data"
+              },
+              {
+                "id": "trk",
+                "label": "Tracker",
+                "kind": "tool"
+              },
+              {
+                "id": "sheet",
+                "label": "Decision sheet",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "lp",
+                "utm + cid"
+              ],
+              [
+                "lp",
+                "off",
+                "sub1 + sub4"
+              ],
+              [
+                "off",
+                "net",
+                "FTD"
+              ],
+              [
+                "net",
+                "trk",
+                "postback cid"
+              ],
+              [
+                "trk",
+                "sheet",
+                "FTDs per ad set"
+              ]
+            ]
+          },
+          "say": "Look at this map of what travels through your lander. The Meta ad sends a click with U T M campaign names and a click I D to your lander. The lander copies them into the offer link as sub values. The offer sign-up produces an F T D, a first time deposit, at the network. The network sends a postback with the click I D to your tracker. And the tracker feeds F T Ds per ad set into your decision sheet. Every arrow must carry the I Ds."
+        },
+        {
+          "v": "walk",
+          "h": "Build the page, step by step",
+          "p": "A generic walkthrough in a page builder. Any honest builder works; the names here are examples. Keep it to one screen, one button, and the labels and links every ad reviewer looks for.",
+          "d": {
+            "steps": [
+              {
+                "title": "Start from a one-column template",
+                "text": "Pick the simplest mobile template. Delete anything that is not headline, text, proof or button.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "builder.example/new",
+                  "title": "New page",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Template",
+                      "value": "Bridge, one column"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Page name",
+                      "value": "ke-charts-v1"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Write the top of the page",
+                "text": "Paste the ad's promise as the headline, add the sponsored label and risk line.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "builder.example/edit/ke-charts-v1",
+                  "title": "Edit page",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Headline",
+                      "value": "Read a trading chart in 10 minutes"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Label",
+                      "value": "Sponsored"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Risk line",
+                      "value": "Trading is risky; only use money you can afford to lose."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Set the button and footer",
+                "text": "Give the button an ID so a script can add tracking. Link privacy, terms and contact in the footer.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "builder.example/edit/ke-charts-v1",
+                  "title": "Edit page",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Button ID",
+                      "value": "cta"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Button link",
+                      "value": "https://track.network.example/click?offer=4821"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Footer",
+                      "value": "Privacy · Terms · Contact · Company name"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Publish on your domain",
+                "text": "Publish to your own domain with HTTPS, then open it on a cheap phone on mobile data.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "builder.example/publish",
+                  "title": "Publish",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Domain",
+                      "value": "lessons.example.com/ke-charts"
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "HTTPS",
+                      "on": true
+                    },
+                    {
+                      "type": "button",
+                      "label": "Publish"
+                    }
+                  ],
+                  "highlight": 2
+                }
+              }
+            ]
+          },
+          "say": "Let's walk through building the page in a generic page builder. Tap Next to follow each step. First, start from the simplest one-column mobile template and delete anything that isn't headline, text, proof or button. Second, paste the ad's promise as the headline, and add the sponsored label and risk line. Third, give the button an I D so a script can add tracking, and link privacy, terms and contact in the footer. Fourth, publish to your own domain with H T T P S, then open it on a cheap phone on mobile data. Any honest builder works."
+        },
+        {
+          "v": "code",
+          "h": "Copy the IDs into the button",
+          "p": "A tiny script that reads the campaign name and click ID from the page address and adds them to the offer link. Parameter names depend on your tracker and network; check both.",
+          "more": "Why 'none' as a default: a visible placeholder shows up in the network report, so you notice broken links instead of losing the conversion silently. If you use a tracker, it may do this for you with its own lander script; use one method, not two. Full tracking setup: Tracking setup lab module.",
+          "d": {
+            "lang": "js",
+            "text": "const q = new URLSearchParams(location.search);\nconst btn = document.getElementById('cta');\nconst url = new URL(btn.href);\nurl.searchParams.set('sub1', q.get('utm_campaign') || 'none');\nurl.searchParams.set('sub2', q.get('utm_content') || 'none');\nurl.searchParams.set('sub4', q.get('cid') || 'none');\nbtn.href = url.toString();",
+            "note": "Test: open the page with ?utm_campaign=test&cid=abc and check the button link."
+          },
+          "say": "Here's how the I Ds get into the button. The code on screen is a tiny script that reads the campaign name and click I D from the page address and adds them to the offer link. I won't read the code. Two things to notice. If a value is missing, it fills in none, so broken links show up in your network report instead of silently losing conversions. And use one tracking method only, not two. To test, open the page with test values and check the button link. Parameter names depend on your tracker and network."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: build the ad's link",
+          "p": "Build the link your ad will use, with UTM names that match your naming pattern. Then paste the result into a browser and check that the page opens and the button carries the values.",
+          "d": {
+            "kind": "utm",
+            "task": "Build the ad link for campaign KE_TEST_W40, ad C07_hookA, to your lander.",
+            "preset": {
+              "base": "https://lessons.example.com/ke-charts",
+              "source": "facebook",
+              "medium": "paid_social",
+              "campaign": "KE_TEST_W40"
+            }
+          },
+          "say": "Time for a lab. Build the link your ad will use, for campaign K E test W forty, ad C zero seven hook A, pointing to your lander. Use U T M names that match your naming pattern. Then paste the result into a browser, check the page opens, and check that the button carries the values. Pause and try it, then check your answer."
+        },
+        {
+          "v": "check",
+          "h": "Speed checks before launch",
+          "p": "Speed is part of tracking: a click that never loads never converts. Run these on every version. Google's Core Web Vitals treat a Largest Contentful Paint under 2.5 seconds as good at the time of writing; check the current guidance.",
+          "d": [
+            "Images compressed, under about 150 KB each",
+            "No video autoplay above the button",
+            "Test on a low-cost Android on mobile data",
+            "Run a page speed test tool",
+            "Load rate tracked: page views ÷ ad clicks"
+          ],
+          "say": "Speed is part of tracking, because a click that never loads never converts. Run these on every version. Images compressed under about one hundred and fifty kilobytes each. No video autoplay above the button. Test on a low-cost Android on mobile data. Run a page speed test tool. And track load rate, page views divided by ad clicks. Google's Core Web Vitals treat a largest contentful paint under two and a half seconds as good, at the time of writing. Check the current guidance."
+        },
+        {
+          "v": "table",
+          "h": "Pages and labels reviewers look for",
+          "p": "Ad reviewers and users both look for these. Missing ones are a common reason for rejected ads and low trust. Requirements differ by platform and geo; check the current policy.",
+          "d": {
+            "cols": [
+              "Item",
+              "Where",
+              "Why"
+            ],
+            "rows": [
+              [
+                "Sponsored or ad label",
+                "Top of page",
+                "Honest disclosure"
+              ],
+              [
+                "Risk or age warning",
+                "Near the headline",
+                "Regulated offers"
+              ],
+              [
+                "Privacy policy",
+                "Footer link",
+                "Data and consent"
+              ],
+              [
+                "Terms and contact",
+                "Footer link",
+                "Who runs the page"
+              ],
+              [
+                "Company name",
+                "Footer",
+                "Accountability"
+              ]
+            ]
+          },
+          "say": "These are the pages and labels ad reviewers, and users, look for. In the table: a sponsored or ad label at the top, for honest disclosure. A risk or age warning near the headline, for regulated offers. A privacy policy footer link, for data and consent. Terms and contact in the footer, showing who runs the page. And your company name in the footer, for accountability. Missing ones are a common reason for rejected ads and low trust. Requirements differ by platform and geo, so check the current policy."
+        },
+        {
+          "v": "eq",
+          "h": "Budget for a fair A/B test",
+          "p": "Test two versions as two ad sets with the same ad and audience. Each needs about 3 × target to reach the kill and CPA checks. Example: target $20, so $60 per version and $120 for the test.",
+          "d": [
+            "$20 target",
+            "×",
+            "3",
+            "×",
+            "2 versions",
+            "=",
+            "$120"
+          ],
+          "say": "Now a fair A B test. Test two versions as two ad sets with the same ad and audience. Each needs about three times target to reach the kill and C P A, cost per acquisition, checks. Look at the equation. In this example, a twenty dollar target, times three, times two versions, equals one hundred and twenty dollars. So sixty dollars per version."
+        },
+        {
+          "v": "table",
+          "h": "The rule card for each version",
+          "p": "Apply the same starting card to each version on network-confirmed conversions. Example: target $20, payout $28, so the kill line is the lower of $30 and $28. Starting rules; adapt to your data.",
+          "more": "Full rule card: Budget and kill rules module. When one version is killed, move its budget to the other only in +20% steps that the card allows, not all at once.",
+          "d": {
+            "cols": [
+              "Decision",
+              "Rule",
+              "Example, $20 target"
+            ],
+            "rows": [
+              [
+                "Kill",
+                "0 conversions at spend ≥ 2 × target",
+                "$40, 0 sign-ups"
+              ],
+              [
+                "Kill",
+                "Spend ≥ 3 × target, CPA over the kill line",
+                "$60+, CPA over $28"
+              ],
+              [
+                "Scale +20%",
+                "3+ conversions, CPA ≤ 0.8 × target, 48 h since last step",
+                "CPA ≤ $16"
+              ],
+              [
+                "Hold",
+                "Anything else",
+                "Change nothing"
+              ]
+            ]
+          },
+          "say": "Apply the same starting rule card to each version, on network-confirmed conversions. In the example, target is twenty dollars and payout twenty eight, so the kill line is the lower of thirty and twenty eight. Kill at zero conversions once spend reaches two times target, forty dollars. Also kill at three times target if C P A is over the kill line. Scale twenty percent with three or more conversions, C P A at or under point eight times target, sixteen dollars, and forty eight hours since the last step. Anything else, hold and change nothing. Adapt to your data."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: version B after two days",
+          "p": "Apply the card to version B of your lander test. Check spend against 2 × target and count network-confirmed conversions. Then press check to see the working.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $20. Version B spent $42 in 2 days, 0 network-confirmed sign-ups, postbacks same day. Kill, hold or scale?",
+            "preset": {
+              "spend": 42,
+              "conversions": 0,
+              "target_cpa": 20,
+              "days": 2
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "kill"
+            }
+          },
+          "say": "Lab time. Apply the card to version B of your lander test. The target is twenty dollars. Version B spent forty two dollars in two days, with zero network-confirmed sign-ups, and postbacks are arriving the same day. Check spend against two times target, and count the confirmed conversions. Then decide: kill, hold or scale? Pause and try it, then check your answer."
+        },
+        {
+          "v": "compare",
+          "h": "Common lander build mistakes",
+          "p": "These are the build mistakes that cost the most, because they break tracking or trust without any error message. Test each one on a real phone before launch.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Button link with no sub IDs",
+                "Two scripts both editing the link",
+                "Testing two ads and two pages at once",
+                "No privacy or contact page",
+                "Never opening it on mobile data"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Script copies cid and names",
+                "One tracking method only",
+                "Same ad, two pages",
+                "Footer links on every page",
+                "Cheap phone, mobile data, every version"
+              ]
+            }
+          },
+          "say": "These build mistakes cost the most, because they break tracking or trust without any error message. A button link with no sub I Ds, add a script that copies the click I D and names. Two scripts both editing the link, use one tracking method only. Testing two ads and two pages at once, use the same ad with two pages. No privacy or contact page, put footer links on every page. Never opening it on mobile data, test every version on a cheap phone, on mobile data."
+        },
+        {
+          "v": "tip",
+          "h": "No cloaking, no hidden pages",
+          "p": "Every visitor and every reviewer must land on the same page. Never redirect reviewers to a safe page, never hide the offer behind a second domain to avoid review, and never strip warnings for some visitors.",
+          "more": "What cloaking leads to: Ad account bans module. Required warnings for regulated offers: Compliance for finance, trading and gambling offers module.",
+          "d": {
+            "kind": "warn",
+            "text": "If the honest page would be rejected, the campaign should not run."
+          },
+          "say": "Same rule as before, and it bears repeating. Every visitor and every reviewer must land on the same page. Never redirect reviewers to a safe page, never hide the offer behind a second domain to avoid review, and never strip warnings for some visitors. That's cloaking. The warning box says it plainly: if the honest page would be rejected, the campaign should not run."
+        },
+        {
+          "v": "product",
+          "h": "A builder with the basics in place",
+          "p": "A lander builder that includes footer links, labels and fast mobile templates saves setup time on every new version. You still add and test the tracking yourself.",
+          "d": {
+            "slug": "landvoo",
+            "why": "Start from fast mobile templates with labels and policy links in place, then add your tracking script."
+          },
+          "say": "A lander builder that includes footer links, labels and fast mobile templates saves setup time on every new version. This card shows Landvoo, which starts you from fast mobile templates with labels and policy links in place. One thing to remember: you still add and test the tracking script yourself."
+        },
+        {
+          "v": "check",
+          "h": "Lander launch checklist",
+          "p": "Run this list on every new lander before any paid click. It takes about ten minutes. Keep a copy in your launch notes so every buyer on the team uses the same one.",
+          "d": [
+            "Headline matches the ad",
+            "Labels, risk line and footer links in place",
+            "Test click shows cid and names in the button",
+            "Test conversion reaches your tracker",
+            "Loads fast on a cheap phone",
+            "Rule card written for each version"
+          ],
+          "say": "Last, the lander launch checklist. Run it on every new lander before any paid click. The headline matches the ad. Labels, risk line and footer links are in place. A test click shows the click I D and names in the button. A test conversion reaches your tracker. It loads fast on a cheap phone. And a rule card is written for each version. It takes about ten minutes. Keep it in your launch notes so every buyer on the team uses the same one."
+        }
+      ],
+      "takeaways": [
+        "Every lander must pass the click ID and campaign names into the offer link, or no rule can be applied.",
+        "Build one screen, one button, with labels, risk line and footer links, and test it on a cheap phone.",
+        "A/B test pages as two ad sets with the same ad, each with about 3 × target, and use the rule card on each."
+      ],
+      "action": "Publish one prelander with the ID-copying script, open it with ?utm_campaign=test&cid=abc on your phone, and confirm the button link carries sub1 and sub4.",
+      "glossary": [
+        {
+          "term": "Click ID",
+          "def": "A unique ID for one ad click, passed through the funnel so the conversion can be matched back to it."
+        },
+        {
+          "term": "Cloaking",
+          "def": "Showing reviewers a different page from the one users see. Banned by every major ad platform."
+        },
+        {
+          "term": "A/B test",
+          "def": "Comparing two versions of one thing, such as a page, with everything else kept the same."
+        },
+        {
+          "term": "HTTPS",
+          "def": "A secure web address. Pages without it can show browser warnings and lose visitors."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Your lander button links to the offer without sub IDs. What is the main problem?",
+          "options": [
+            "The page loads slower",
+            "Conversions cannot be matched to ad sets, so no rule can be applied",
+            "The offer pays less",
+            "Ad review will always reject it"
+          ],
+          "answer": 1,
+          "why": "Without the click ID and names, conversions arrive with no source, so kill and scale decisions are guesses."
+        },
+        {
+          "q": "Target $25. You A/B test two landers. How much per version does the 3 × target starting rule plan?",
+          "options": [
+            "$25",
+            "$50",
+            "$150",
+            "$75"
+          ],
+          "answer": 3,
+          "why": "3 × $25 = $75 per version, $150 for both."
+        },
+        {
+          "q": "Version B spent $42 with 0 network-confirmed sign-ups. Target $20, postbacks same day. What does the card say?",
+          "options": [
+            "Kill: over 2 × target with 0 conversions",
+            "Hold",
+            "Scale",
+            "Move all budget to B"
+          ],
+          "answer": 0,
+          "why": "2 × $20 = $40. $42 with zero conversions meets the zero-conversion kill rule."
+        },
+        {
+          "q": "Which is cloaking?",
+          "options": [
+            "A sponsored label at the top",
+            "A footer privacy link",
+            "Sending reviewers to a safe page and users to a different one",
+            "A one-button bridge page"
+          ],
+          "answer": 2,
+          "why": "Showing reviewers a different page from users is cloaking and breaks ad policies."
+        },
+        {
+          "q": "How do you check your ID-copying script works?",
+          "options": [
+            "Ask the network",
+            "Wait for the first payment",
+            "Look at Ads Manager CTR",
+            "Open the page with test parameters and inspect the button link"
+          ],
+          "answer": 3,
+          "why": "A test click with known values shows straight away whether the button carries sub1 and sub4."
+        }
+      ],
+      "say_intro": "In this lesson you'll build a simple lander and, more importantly, wire it so tracking survives from the ad to the offer. Without that, you can't tell which ad set made money, and you can't run a fair test.",
+      "say_outro": "A lander only pays when it's fast, honest, and carries the click I D and campaign names all the way to the offer, so you can test versions fairly with the rule card. Your task: publish one prelander with the I D-copying script, open it on your phone with test values, and confirm the button link carries sub one and sub four. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "You run 1,000 clicks direct to an offer at 3% CR. A prelander test gives 85% load, 35% page CTR and 8% offer CR. Which wins?",
+      "options": [
+        "Prelander, about 24 vs 30",
+        "Direct, 30 vs about 24",
+        "They tie",
+        "You cannot compare them"
+      ],
+      "answer": 1,
+      "why": "Direct: 30. Prelander: 1,000 × 0.85 × 0.35 × 0.08 ≈ 24. The direct link wins on final conversions."
+    },
+    {
+      "q": "A teammate builds a prelander that copies a national newspaper's logo and layout, labelled 'Sponsored' in small grey text. What do you do?",
+      "options": [
+        "Rebuild it on your own brand with a clear label",
+        "Run it; the label covers it",
+        "Run it only in one geo",
+        "Remove the label so it looks natural"
+      ],
+      "answer": 0,
+      "why": "Copying a real outlet impersonates it even with a label. Use your own brand and a clear disclosure."
+    },
+    {
+      "q": "Your quiz tells 100% of people 'You qualify for the VIP program'. What is wrong?",
+      "options": [
+        "Nothing",
+        "The quiz is too short",
+        "The result does not depend on answers and misleads",
+        "It needs a countdown timer"
+      ],
+      "answer": 2,
+      "why": "An everyone-qualifies result is a trick. Results must follow from the answers."
+    },
+    {
+      "q": "Which setup lets you see which ad set brought each Telegram join?",
+      "options": [
+        "One public @username link in every ad",
+        "A named private invite link per ad set",
+        "Asking members which ad they saw",
+        "Posting the link in the channel description"
+      ],
+      "answer": 1,
+      "why": "Separate named links per ad set let you count joins per campaign."
+    },
+    {
+      "q": "You create a bot to approve join requests. Which setup is correct?",
+      "options": [
+        "Username without 'bot', token in the lander code",
+        "Bot added as channel admin with permission to invite users, token kept on the server",
+        "Bot not added to the channel, approvals by hand",
+        "Token shared in the team group for convenience"
+      ],
+      "answer": 1,
+      "why": "The bot needs admin rights to invite users to approve requests, and the token must stay secret on the server."
+    },
+    {
+      "q": "Ad set A: $200, 800 joins, 20 FTDs. Ad set B: $200, 400 joins, 28 FTDs. Which do you scale?",
+      "options": [
+        "A, cheaper joins",
+        "Both equally",
+        "B, lower cost per FTD",
+        "Neither"
+      ],
+      "answer": 2,
+      "why": "A: $10 per FTD. B: about $7.14 per FTD. Deposits pay you, not joins."
+    },
+    {
+      "q": "Your lander's offer button has a fixed link. Sign-ups arrive in the network report with empty sub IDs. What is the fix?",
+      "options": [
+        "Add a script or tracker that copies the click ID and campaign names into the button link, then test it",
+        "Ask the network to guess the source",
+        "Use a traffic objective",
+        "Remove the lander"
+      ],
+      "answer": 0,
+      "why": "The IDs must travel from the ad, through the lander, into the offer link, or conversions cannot be matched to ad sets."
+    },
+    {
+      "q": "A broadcast to 50,000 bot users is planned. What do you plan for?",
+      "options": [
+        "Sending all in one second",
+        "Sending from personal accounts",
+        "Using several bots to bypass limits",
+        "Queueing within Telegram's rate limits and handling blocked users"
+      ],
+      "answer": 3,
+      "why": "Respect rate limits, queue sends and treat blocks as opt-outs."
+    },
+    {
+      "q": "A/B lander test, target $20, payout $28. Version A: $65 spent, 2 network sign-ups. Version B: $62 spent, 4 sign-ups. What do the starting rules say?",
+      "options": [
+        "Kill both",
+        "Scale A",
+        "Kill A (CPA $32.50 over the $28 kill line); B at $15.50 CPA qualifies for a +20% step",
+        "Hold both until $200"
+      ],
+      "answer": 2,
+      "why": "Both spent over 3 × target. A's CPA is above the lower of $30 and $28. B's CPA is under 0.8 × $20 = $16 with 4 conversions."
+    },
+    {
+      "q": "Which line is acceptable on a trading prelander?",
+      "options": [
+        "Guaranteed 20% weekly returns",
+        "Only 2 spots left today (no limit exists)",
+        "As seen on CNN (it was not)",
+        "Trading involves risk. Only use money you can afford to lose."
+      ],
+      "answer": 3,
+      "why": "A clear risk warning is honest and often required. The others are false claims or fake scarcity."
+    }
+  ]
+}

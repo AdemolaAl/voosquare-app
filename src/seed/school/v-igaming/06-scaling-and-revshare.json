@@ -1,0 +1,2744 @@
+{
+  "school": "v-igaming",
+  "order": 6,
+  "slug": "scaling-and-revshare",
+  "title": "Scaling and RevShare",
+  "summary": "How RevShare really pays, how negative carryover changes your cash flow, and when to choose CPA, RevShare or hybrid as you grow. You will build a portfolio of licensed partners, support retention honestly and negotiate better deals with data before scaling within caps.",
+  "lessons": [
+    {
+      "slug": "revshare-math",
+      "title": "RevShare maths in depth",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can calculate GGR, NGR and your RevShare commission from an operator statement.",
+        "By the end you can compare deals with different percentages, admin fees and tier rules.",
+        "By the end you can list the contract terms that decide what a RevShare deal is really worth."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the small print is the deal",
+          "p": "Two RevShare offers with the same headline percentage can pay very different amounts. What counts as revenue, what is deducted first, how tiers work and how long you are paid all sit in the contract. Read it before you send a single player, because you cannot renegotiate players already sent.",
+          "d": {
+            "b": "The percentage is the headline, not the deal",
+            "s": "Definitions decide what you are paid."
+          },
+          "say": "Here's something many affiliates learn too late. Two RevShare offers with the same headline percentage can pay very different amounts. What counts as revenue, what's deducted first, how tiers work, and how long you're paid, all of that sits in the contract. As the screen says, the percentage is the headline, not the deal. Read it before you send a single player, because you can't renegotiate players already sent."
+        },
+        {
+          "v": "eq",
+          "h": "From stakes to NGR",
+          "p": "GGR (gross gaming revenue) is what players staked minus what they won. NGR (net gaming revenue) is GGR minus deductions the contract allows, usually bonuses and often fees or taxes. Your RevShare percentage applies to NGR.",
+          "d": [
+            "GGR",
+            "−",
+            "Bonuses and allowed deductions",
+            "=",
+            "NGR"
+          ],
+          "say": "Let's define the terms. G G R, gross gaming revenue, is what players staked minus what they won. N G R, net gaming revenue, is G G R minus the deductions the contract allows, usually bonuses, and often fees or taxes. Look at the formula on screen: G G R, minus bonuses and allowed deductions, equals N G R. And your RevShare percentage applies to N G R, not G G R."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: one month's statement",
+          "p": "Example: an operator statement for your players in one month. Follow each line down to your commission. The deductions shown are common, but your contract decides which ones apply.",
+          "d": {
+            "cols": [
+              "Line",
+              "How",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Stakes",
+                "total wagered",
+                "$50,000"
+              ],
+              [
+                "Winnings paid",
+                "returned to players",
+                "$45,500"
+              ],
+              [
+                "GGR",
+                "$50,000 − $45,500",
+                "$4,500"
+              ],
+              [
+                "Bonuses",
+                "bonus cost",
+                "−$900"
+              ],
+              [
+                "Fees and taxes",
+                "as the contract allows",
+                "−$600"
+              ],
+              [
+                "NGR",
+                "$4,500 − $900 − $600",
+                "$3,000"
+              ],
+              [
+                "Your 30%",
+                "$3,000 × 30%",
+                "$900"
+              ]
+            ]
+          },
+          "say": "Here's an example statement for one month. Follow each line down. Players staked fifty thousand dollars, and forty five thousand five hundred was paid back in winnings. So G G R is four thousand five hundred. Bonuses take nine hundred, and fees and taxes take six hundred. That leaves N G R of three thousand. Your thirty percent share is nine hundred dollars. These deductions are common, but your contract decides which ones apply."
+        },
+        {
+          "v": "flow",
+          "h": "From a player's bet to your payment",
+          "p": "Every RevShare payment follows the same chain. When a number on your statement looks wrong, walk back along this chain to find the step where your figure and the operator's differ.",
+          "d": [
+            "Stakes",
+            "Minus winnings = GGR",
+            "Minus deductions = NGR",
+            "× your share",
+            "Invoice",
+            "Payment"
+          ],
+          "say": "Every RevShare payment follows this same chain. Look at the flow. Stakes, minus winnings gives G G R. Minus deductions gives N G R. Times your share. Then an invoice, then payment. Why does this matter? When a number on your statement looks wrong, walk back along this chain to find the exact step where your figure and the operator's differ."
+        },
+        {
+          "v": "table",
+          "h": "Admin fees change everything",
+          "p": "Example: two offers on the same player activity, GGR of $10,000 after bonuses. Offer A pays a higher percentage but takes a 20% admin fee first. Offer B pays less but deducts nothing extra. The lower headline pays more.",
+          "more": "Always convert every offer into the same test: 'what do I earn on $10,000 of GGR after bonuses?' Ask the operator for a sample statement so you can see the real deductions. If they will not show one, treat that as a warning sign.",
+          "d": {
+            "cols": [
+              "Offer",
+              "Calculation",
+              "Commission"
+            ],
+            "rows": [
+              [
+                "A: 35%, 20% admin fee",
+                "($10,000 − $2,000) × 35%",
+                "$2,800"
+              ],
+              [
+                "B: 30%, no admin fee",
+                "$10,000 × 30%",
+                "$3,000"
+              ]
+            ]
+          },
+          "say": "Admin fees change everything. In this example, two offers on the same activity, ten thousand dollars of G G R after bonuses. Offer A pays thirty five percent, but takes a twenty percent admin fee first. So it's eight thousand times thirty five percent, two thousand eight hundred dollars. Offer B pays thirty percent with no admin fee, three thousand dollars. The lower headline pays more. Always compare offers on the same ten thousand dollars, and ask for a sample statement. If they won't show one, treat that as a warning sign."
+        },
+        {
+          "v": "screen",
+          "h": "What a monthly statement looks like",
+          "p": "Example of a statement screen. Layouts differ, but the same lines appear. Check each deduction against your contract, and keep a copy of every statement with your deal sheet.",
+          "d": {
+            "kind": "browser",
+            "url": "partner.example/statements",
+            "title": "Statement: last month",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Line",
+                  "Amount"
+                ],
+                "rows": [
+                  [
+                    "GGR",
+                    "$4,500"
+                  ],
+                  [
+                    "Bonuses",
+                    "−$900"
+                  ],
+                  [
+                    "Fees and taxes",
+                    "−$600"
+                  ],
+                  [
+                    "NGR",
+                    "$3,000"
+                  ],
+                  [
+                    "Commission 30%",
+                    "$900"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Carried balance: $0"
+              },
+              {
+                "type": "button",
+                "label": "Download PDF"
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "Here's an example statement screen. Layouts differ, but you'll see the same lines. G G R, four thousand five hundred. Bonuses, minus nine hundred. Fees and taxes, minus six hundred. N G R, three thousand. And commission at thirty percent, nine hundred. Check each deduction against your contract, and keep a copy of every statement with your deal sheet."
+        },
+        {
+          "v": "table",
+          "h": "Tiers: whole or marginal",
+          "p": "Many deals raise the percentage as your monthly NGR grows. The contract says whether the higher rate applies to all your NGR or only to the part above each threshold. On the same month the difference is real money. Example tiers: 25% up to $5,000 of NGR, 30% from there to $15,000.",
+          "more": "Check: $5,000 × 25% = $1,250. $7,000 × 30% = $2,100. $1,250 + $2,100 = $3,350. Whole-amount tiers pay $250 more this month. Neither is wrong; you just need to know which one you are signing so your forecasts are right.",
+          "d": {
+            "cols": [
+              "Tier basis",
+              "Calculation on $12,000 NGR",
+              "Commission"
+            ],
+            "rows": [
+              [
+                "Whole amount at reached tier",
+                "$12,000 × 30%",
+                "$3,600"
+              ],
+              [
+                "Marginal by band",
+                "$5,000 × 25% + $7,000 × 30%",
+                "$3,350"
+              ]
+            ]
+          },
+          "say": "Many deals raise your percentage as monthly N G R grows. The contract says whether the higher rate applies to all your N G R, or only to the part above each threshold. In this example, tiers are twenty five percent up to five thousand, and thirty percent from there to fifteen thousand. On twelve thousand dollars of N G R, the whole-amount basis pays three thousand six hundred. The marginal basis pays three thousand three hundred and fifty. Neither is wrong, but you need to know which you're signing."
+        },
+        {
+          "v": "cards",
+          "h": "Contract terms to read first",
+          "p": "Before accepting any RevShare or hybrid deal, find these clauses and copy them into your deal sheet. If a clause is missing or vague, ask in writing.",
+          "d": [
+            "NGR definition|exactly what is deducted from GGR",
+            "Admin fee|any percentage taken before your share",
+            "Negative carryover|whether losses roll into next month",
+            "Duration|lifetime of the player or a fixed period",
+            "Tier basis|whole amount or marginal bands",
+            "Changes clause|how and with what notice terms can change"
+          ],
+          "say": "Before accepting any RevShare or hybrid deal, find these six clauses. The N G R definition, exactly what's deducted from G G R. The admin fee, any percentage taken before your share. Negative carryover, whether losses roll into next month. Duration, lifetime of the player or a fixed period. Tier basis, whole amount or marginal bands. And the changes clause, how and with what notice terms can change. Copy them into your deal sheet, and if a clause is missing or vague, ask in writing."
+        },
+        {
+          "v": "walk",
+          "h": "Read a RevShare contract",
+          "p": "Walk through the contract in this order. It takes twenty minutes and stops most surprises. Clause names differ; search for the words shown. Copy what you find straight into your deal sheet.",
+          "d": {
+            "steps": [
+              {
+                "title": "Find the NGR definition",
+                "text": "Search 'net gaming revenue' or 'net revenue'. List every deduction.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "docs.example/agreement",
+                  "title": "Definitions",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "value": "NGR means GGR less bonuses, payment processing fees, gaming taxes and an administration fee of 15%."
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Admin fee present",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Find carryover",
+                "text": "Search 'negative', 'carry' or 'carried forward'.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "docs.example/agreement",
+                  "title": "Commission",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "value": "Negative NGR in any month shall be carried forward and offset against future positive NGR."
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Carryover applies",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Find duration and tiers",
+                "text": "Search 'lifetime', 'months', 'tier'.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "docs.example/agreement",
+                  "title": "Rates",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Duration",
+                      "value": "Lifetime of player"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Tiers",
+                      "value": "25% / 30% / 35%, whole amount"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Find the changes clause",
+                "text": "Search 'amend' or 'change'. Note the notice period.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "docs.example/agreement",
+                  "title": "Amendments",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "value": "Company may amend commission terms with 14 days notice by email."
+                    },
+                    {
+                      "type": "field",
+                      "label": "Your note",
+                      "value": "Ask: do changes apply to players already referred?"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Fill your deal sheet",
+                "text": "One row per deal so you can compare like for like.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/deals",
+                  "title": "Deal sheet",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Deal",
+                        "RS",
+                        "Admin",
+                        "Carry"
+                      ],
+                      "rows": [
+                        [
+                          "Operator A",
+                          "30%",
+                          "15%",
+                          "Yes"
+                        ],
+                        [
+                          "Operator B",
+                          "25%",
+                          "0%",
+                          "No"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Let's read a contract. Tap Next to follow each step. First, find the N G R definition: search net gaming revenue, and list every deduction. Here, there's a fifteen percent admin fee. Second, find carryover: search negative, carry or carried forward. Third, find duration and tiers. Here it's lifetime of the player, with whole-amount tiers. Fourth, find the changes clause and note the notice period. Here, fourteen days by email, so ask whether changes apply to players already referred. It takes about twenty minutes."
+        },
+        {
+          "v": "compare",
+          "h": "Common RevShare mistakes",
+          "p": "These are the mistakes that make a 'good' RevShare deal pay far less than the affiliate expected. Each fix takes a few minutes before signing and can be worth hundreds of dollars a month after.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Comparing headline percentages only",
+                "Ignoring the admin fee",
+                "Assuming lifetime when it is 12 months",
+                "Not knowing the tier basis",
+                "Accepting changes by email without reading"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Compare on $10,000 of GGR",
+                "Ask for a sample statement",
+                "Value only inside the paid period",
+                "Model both tier bases",
+                "Ask if changes hit existing players"
+              ]
+            }
+          },
+          "say": "These mistakes make a good-looking deal pay far less than expected. Comparing headline percentages only. Ignoring the admin fee. Assuming lifetime when it's twelve months. Not knowing the tier basis. And accepting changes by email without reading. The fixes: compare on ten thousand dollars of G G R, ask for a sample statement, value only inside the paid period, model both tier bases, and ask if changes hit existing players."
+        },
+        {
+          "v": "check",
+          "h": "RevShare decision rules",
+          "p": "Starting rules to adapt. They make every deal comparable and stop you from signing on a headline. Apply them to every new offer, including ones a friend or a forum recommends.",
+          "d": [
+            "Compare every deal on commission per $10,000 GGR after bonuses",
+            "No sample statement: treat the deal as higher risk",
+            "Fixed-period deals: count value only inside the period",
+            "Changes clause with no protection for existing players: negotiate or prefer another deal",
+            "Write every term into your deal sheet before sending traffic"
+          ],
+          "say": "Here are starting decision rules to adapt. Compare every deal on commission per ten thousand dollars of G G R after bonuses. No sample statement, treat the deal as higher risk. Fixed-period deals, count value only inside the period. A changes clause with no protection for existing players, negotiate or prefer another deal. And write every term into your deal sheet before sending traffic. Apply these to every offer, even ones a friend or forum recommends."
+        },
+        {
+          "v": "tip",
+          "h": "RevShare and responsible gambling",
+          "p": "On RevShare your income rises when your players lose more. That makes it more important, not less, to market honestly and never encourage chasing losses, longer play or bigger deposits. Some regulators restrict revenue-share deals for affiliates for exactly this reason.",
+          "d": {
+            "kind": "warn",
+            "text": "Some jurisdictions restrict or ban revenue-share affiliate deals. Check local law in each geo and your platform's gambling policy. We are not certain this is current; check your contract and the operator's terms before relying on it."
+          },
+          "say": "This one matters. On RevShare, your income rises when your players lose more. That makes honest marketing more important, not less. Never encourage chasing losses, longer play or bigger deposits. Some regulators restrict revenue-share deals for affiliates for exactly this reason. As the warning says, some jurisdictions restrict or ban them, so check local law in each geo and your platform's gambling policy. We're not certain this is current, so check your contract and the operator's terms."
+        },
+        {
+          "v": "big",
+          "h": "Read once, earn correctly for years",
+          "p": "A lifetime RevShare deal can pay you for years on players you sent this month. That is the upside. The same contract terms apply for all those years, which is why twenty minutes of reading now matters more than any creative test.",
+          "d": {
+            "b": "The contract runs as long as the players do",
+            "s": "Read it before the first player."
+          },
+          "say": "A lifetime RevShare deal can pay you for years on players you sent this month. That's the upside. But the same contract terms apply for all those years. That's why twenty minutes of reading now matters more than any creative test. As the screen says, the contract runs as long as the players do. Read it before the first player."
+        }
+      ],
+      "takeaways": [
+        "Your share applies to NGR, and the contract defines NGR.",
+        "Compare deals on commission per $10,000 of GGR after bonuses.",
+        "Admin fees, tier basis, duration and changes clauses can outweigh the headline percentage.",
+        "RevShare ties your income to player losses; market more carefully, not less."
+      ],
+      "action": "Take one RevShare or hybrid deal you have or are offered, find the six clauses in the contract, and calculate what it pays on $10,000 of GGR after bonuses.",
+      "glossary": [
+        {
+          "term": "GGR",
+          "def": "Gross gaming revenue: total stakes minus winnings paid to players."
+        },
+        {
+          "term": "Admin fee",
+          "def": "A percentage some operators deduct from revenue before calculating your share."
+        },
+        {
+          "term": "Tier basis",
+          "def": "Whether a higher tier rate applies to all NGR or only to NGR above each threshold."
+        },
+        {
+          "term": "Lifetime deal",
+          "def": "A RevShare deal that pays on a player for as long as they play, subject to contract terms."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Stakes $40,000, winnings $36,800, bonuses $700, no other deductions. RevShare 30%. What is your commission?",
+          "options": [
+            "$3,200",
+            "$960",
+            "$1,200",
+            "$750"
+          ],
+          "answer": 3,
+          "why": "GGR $3,200; NGR $3,200 − $700 = $2,500; $2,500 × 30% = $750."
+        },
+        {
+          "q": "GGR after bonuses $10,000. Offer A: 40% with 25% admin fee. Offer B: 30%, no fee. Which pays more?",
+          "options": [
+            "A pays more",
+            "They pay the same, $3,000 each",
+            "B pays more",
+            "A pays $4,000"
+          ],
+          "answer": 1,
+          "why": "A: ($10,000 − $2,500) × 40% = $3,000. B: $3,000. They are equal."
+        },
+        {
+          "q": "Tiers 25% to $5,000 and 30% above, marginal. NGR $9,000. Commission?",
+          "options": [
+            "$2,450",
+            "$2,250",
+            "$2,700",
+            "$2,500"
+          ],
+          "answer": 0,
+          "why": "$5,000 × 25% = $1,250; $4,000 × 30% = $1,200; total $2,450."
+        },
+        {
+          "q": "A deal pays RevShare for 12 months per player. How should you value it?",
+          "options": [
+            "As lifetime",
+            "As a CPA",
+            "Only on NGR inside the 12 months",
+            "At double the 12-month value"
+          ],
+          "answer": 2,
+          "why": "Count value only inside the paid period."
+        },
+        {
+          "q": "Why does RevShare call for more careful marketing?",
+          "options": [
+            "It pays less than CPA",
+            "Your income rises when players lose more, so the pressure to push play must be resisted",
+            "Operators require louder ads",
+            "It has no compliance rules"
+          ],
+          "answer": 1,
+          "why": "The incentive points toward more play; honest marketing keeps you and players safe."
+        }
+      ],
+      "say_intro": "This lesson goes deep on RevShare maths. You'll learn to calculate G G R, N G R and your commission from an operator statement, compare deals with admin fees and tiers, and spot the contract terms that decide what a deal is really worth.",
+      "say_outro": "To recap: your share applies to N G R, admin fees and tier rules can flip which deal pays more, and six clauses decide the real value. Your task: take one RevShare or hybrid deal, find the six clauses in the contract, and calculate what it pays on ten thousand dollars of G G R after bonuses. Now take the quiz."
+    },
+    {
+      "slug": "negative-carryover",
+      "title": "Negative carryover, month by month",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can calculate RevShare commission with and without negative carryover over several months.",
+        "By the end you can track a carried balance and forecast when it clears.",
+        "By the end you can apply rules that protect your cash flow from big player wins."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why one winner can cost you months",
+          "p": "When a player wins big, NGR for that month can go negative. With negative carryover, that negative amount is subtracted from your future months until it is used up. One lucky player can wipe out commission you were counting on for two or three months.",
+          "d": {
+            "b": "A big win is carried into your future",
+            "s": "Know the rule before the winner arrives."
+          },
+          "say": "When a player wins big, N G R, net gaming revenue, for that month can go negative. With negative carryover, that negative amount is subtracted from your future months until it's used up. So one lucky player can wipe out commission you were counting on for two or three months. As the screen says, know the rule before the winner arrives."
+        },
+        {
+          "v": "eq",
+          "h": "The carryover formula",
+          "p": "Each month, add the carried balance to this month's NGR. If the total is positive, you are paid your share and the balance resets to zero. If it is negative, you are paid nothing and the negative total carries forward.",
+          "d": [
+            "This month's NGR",
+            "+",
+            "Carried balance",
+            "=",
+            "Commission base (paid only if > 0)"
+          ],
+          "say": "Here's the carryover formula. Each month, add the carried balance to this month's N G R. That gives your commission base. If the total is positive, you're paid your share and the balance resets to zero. If it's negative, you're paid nothing, and the negative total carries forward into next month."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: with carryover",
+          "p": "Example: 30% RevShare. In month 2 a player wins big and NGR is −$5,000. Watch how it eats into months 3 and 4. Follow the 'base after carry' column; it is the number your share is calculated on.",
+          "more": "Month 3: −$5,000 + $4,000 = −$1,000, still negative, so nothing is paid and −$1,000 carries. Month 4: −$1,000 + $3,000 = +$2,000. $2,000 × 30% = $600. Over four months the players produced $5,000 of NGR in total (3,000 − 5,000 + 4,000 + 3,000) and 30% of $5,000 is exactly the $1,500 you were paid.",
+          "d": {
+            "cols": [
+              "Month",
+              "NGR",
+              "Base after carry",
+              "You are paid"
+            ],
+            "rows": [
+              [
+                "1",
+                "+$3,000",
+                "+$3,000",
+                "$900"
+              ],
+              [
+                "2",
+                "−$5,000",
+                "−$5,000",
+                "$0, carry −$5,000"
+              ],
+              [
+                "3",
+                "+$4,000",
+                "−$1,000",
+                "$0, carry −$1,000"
+              ],
+              [
+                "4",
+                "+$3,000",
+                "+$2,000",
+                "$600"
+              ],
+              [
+                "Total",
+                "",
+                "",
+                "$1,500"
+              ]
+            ]
+          },
+          "say": "Let's walk through an example at thirty percent RevShare. Month one, N G R is three thousand, so you're paid nine hundred. Month two, a player wins big, N G R is minus five thousand, so you're paid nothing and carry minus five thousand. Month three, N G R is four thousand, but after the carry, the base is still minus one thousand, so nothing again. Month four, three thousand plus minus one thousand gives two thousand, so you're paid six hundred. Total, fifteen hundred dollars."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: without carryover",
+          "p": "Same players, same months, but the deal resets negative months to zero. The negative month pays nothing, but it does not reduce later months. Compare the total at the bottom with the previous slide.",
+          "more": "The difference is $3,000 − $1,500 = $1,500 over four months, from one clause. With carryover you are paid on true net results. Without it, the operator absorbs the losing month. That is why operators prefer carryover and why removing it is one of the most valuable things to negotiate once you have volume.",
+          "d": {
+            "cols": [
+              "Month",
+              "NGR",
+              "Base",
+              "You are paid"
+            ],
+            "rows": [
+              [
+                "1",
+                "+$3,000",
+                "+$3,000",
+                "$900"
+              ],
+              [
+                "2",
+                "−$5,000",
+                "$0 (reset)",
+                "$0"
+              ],
+              [
+                "3",
+                "+$4,000",
+                "+$4,000",
+                "$1,200"
+              ],
+              [
+                "4",
+                "+$3,000",
+                "+$3,000",
+                "$900"
+              ],
+              [
+                "Total",
+                "",
+                "",
+                "$3,000"
+              ]
+            ]
+          },
+          "say": "Now the same players and months, but this deal resets negative months to zero. Month one pays nine hundred. Month two pays nothing, but it doesn't reduce later months. Month three pays twelve hundred on four thousand. Month four pays nine hundred. Total, three thousand dollars. Compare that with fifteen hundred on the previous slide. That difference comes from one clause, and it's why removing carryover is valuable to negotiate once you have volume."
+        },
+        {
+          "v": "curve",
+          "h": "Example: cumulative commission over seven months",
+          "p": "Example: the same players continue at +$2,500, +$2,000 and +$2,000 in months 5 to 7. The no-carryover line pulls ahead in month 3 and stays $1,500 ahead.",
+          "d": {
+            "a": [
+              900,
+              900,
+              900,
+              1500,
+              2250,
+              2850,
+              3450
+            ],
+            "la": "With carryover ($)",
+            "b": [
+              900,
+              900,
+              2100,
+              3000,
+              3750,
+              4350,
+              4950
+            ],
+            "lb": "No carryover ($)",
+            "x": [
+              "M1",
+              "M2",
+              "M3",
+              "M4",
+              "M5",
+              "M6",
+              "M7"
+            ]
+          },
+          "say": "Look at these two lines. It's an example of cumulative commission over seven months, with the same players continuing at two thousand five hundred, two thousand and two thousand in months five to seven. The no-carryover line pulls ahead in month three, and stays fifteen hundred dollars ahead all the way to month seven."
+        },
+        {
+          "v": "stat",
+          "h": "The cost of one clause",
+          "p": "Example: over four months the same players paid $3,000 without carryover and $1,500 with it. One clause halved the commission in this case. On a bigger account the same clause can be worth thousands a month.",
+          "d": {
+            "n": 1500,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "difference over four months",
+            "note": "Example from the previous two slides."
+          },
+          "say": "Here's the cost of one clause. In this example, over four months, the same players paid three thousand dollars without carryover, and fifteen hundred with it. The difference is fifteen hundred dollars, the number on screen. One clause halved the commission in this case. And on a bigger account, the same clause can be worth thousands a month."
+        },
+        {
+          "v": "cards",
+          "h": "How carryover clauses vary",
+          "p": "Carryover is not one rule. Read exactly which version you have, because each one behaves differently when a big win lands. Ask your manager which one applies, and get the answer in writing.",
+          "d": [
+            "Pooled|negatives across all brands offset each other",
+            "Per brand|each brand's negative stays with that brand",
+            "Rolling|carries until it is used up, however long",
+            "Capped or time-limited|resets after a set period or amount",
+            "None|each month stands alone"
+          ],
+          "say": "Carryover isn't one rule. Look at the cards. Pooled, where negatives across all brands offset each other. Per brand, where each brand's negative stays with that brand. Rolling, which carries until it's used up, however long. Capped or time-limited, which resets after a set period or amount. And none, where each month stands alone. Ask your manager which version applies to you, and get the answer in writing."
+        },
+        {
+          "v": "walk",
+          "h": "Track your carried balance",
+          "p": "Keep your own carryover ledger. Operator dashboards do not always show the balance clearly, and you need it for cash forecasts. A spreadsheet with three formulas is enough.",
+          "d": {
+            "steps": [
+              {
+                "title": "One row per month per deal",
+                "text": "Record NGR exactly as the statement shows it.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/carry",
+                  "title": "Ledger",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Month",
+                        "NGR",
+                        "Carry in"
+                      ],
+                      "rows": [
+                        [
+                          "M1",
+                          "$3,000",
+                          "$0"
+                        ],
+                        [
+                          "M2",
+                          "−$5,000",
+                          "$0"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Add the formula",
+                "text": "Base = NGR + carry in. Paid = 30% of base if positive. Carry out = base if negative, else zero.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/carry",
+                  "title": "Formulas",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Base",
+                      "value": "= NGR + CarryIn"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Paid",
+                      "value": "= IF(Base>0, Base × 30%, 0)"
+                    },
+                    {
+                      "type": "field",
+                      "label": "CarryOut",
+                      "value": "= IF(Base<0, Base, 0)"
+                    }
+                  ],
+                  "highlight": 2
+                }
+              },
+              {
+                "title": "Check against the statement",
+                "text": "Your paid amount should match the operator's. If not, ask which deductions differ.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/carry",
+                  "title": "Check",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Month",
+                        "Your calc",
+                        "Statement"
+                      ],
+                      "rows": [
+                        [
+                          "M4",
+                          "$600",
+                          "$600"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Matches",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Forecast the clear date",
+                "text": "Divide the carried negative by your average monthly NGR to estimate months to clear.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/carry",
+                  "title": "Forecast",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Carried",
+                      "value": "−$5,000"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Average NGR",
+                      "value": "$3,000 a month"
+                    },
+                    {
+                      "type": "text",
+                      "value": "About 1.7 months to clear."
+                    }
+                  ],
+                  "highlight": 2
+                }
+              }
+            ]
+          },
+          "say": "Keep your own carryover ledger, because operator dashboards don't always show the balance clearly. Tap Next to follow each step. First, one row per month per deal, recording N G R exactly as the statement shows. Second, add the formulas on screen: base, paid, and carry out. Third, check your paid amount against the operator's statement, and if it differs, ask which deductions differ. Fourth, forecast the clear date: here, minus five thousand divided by three thousand average N G R is about one point seven months."
+        },
+        {
+          "v": "check",
+          "h": "Carryover decision rules",
+          "p": "Starting rules to adapt. They stop one player's luck from breaking your cash flow or your budget plan. Write them next to your carryover ledger so you see them every month.",
+          "more": "Example: average commission $900 a month, so two months is $1,800. A carried balance of −$5,000 NGR equals $1,500 of lost commission at 30%, just under the line. A −$7,000 balance ($2,100) would pass it, and that is the moment to talk to your manager with your ledger.",
+          "d": [
+            "Budget ad spend from cash received, never from expected RevShare",
+            "One player > 25% of monthly NGR: expect swings, do not plan on that month",
+            "Carried negative > 2 months of average commission: ask for a reset or shift new volume to CPA or hybrid",
+            "Prefer per-brand over pooled carryover when you run several brands",
+            "Once you have 3 months of steady volume, ask to remove carryover"
+          ],
+          "say": "Here are starting carryover rules to adapt. Budget ad spend from cash received, never from expected RevShare. If one player is over twenty five percent of monthly N G R, expect swings and don't plan on that month. If the carried negative is over two months of average commission, ask for a reset, or shift new volume to C P A, cost per acquisition, or hybrid. Prefer per-brand over pooled carryover. And once you have three months of steady volume, ask to remove carryover."
+        },
+        {
+          "v": "phone",
+          "h": "Asking for a carryover reset",
+          "p": "Here is how to raise a large carried balance with your manager. Lead with the ledger, explain the cause, and make a specific request. The answer may be no; ask anyway once you have steady volume.",
+          "d": {
+            "app": "chat",
+            "title": "Affiliate manager",
+            "subtitle": "online",
+            "messages": [
+              {
+                "from": "me",
+                "text": "One player's win in March left a carried balance of −$7,000. Our other players are steady: 3 months above $3,000 NGR. Ledger attached."
+              },
+              {
+                "from": "me",
+                "text": "Could you reset the balance, or move new players to per-brand carryover?"
+              },
+              {
+                "from": "them",
+                "text": "I can't reset March, but new players from next month go on per-brand carryover. I'll confirm by email."
+              }
+            ]
+          },
+          "say": "In this chat, the affiliate raises a large carried balance. Notice how. They lead with the facts: one player's win in March left minus seven thousand, and other players are steady, three months above three thousand N G R, with the ledger attached. Then a specific request: reset the balance, or move new players to per-brand carryover. The manager can't reset March, but agrees per-brand for new players, and will confirm by email. The answer may be no, but ask anyway once you have steady volume."
+        },
+        {
+          "v": "compare",
+          "h": "Common carryover mistakes",
+          "p": "These mistakes turn a normal swing into a cash crisis. Each one has a fix that costs nothing but discipline. Check yourself against the left column every quarter.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Spending next month's RevShare before it arrives",
+                "Not knowing carryover exists until month 3",
+                "Pooling all brands under one negative",
+                "Panic-cutting good traffic after one big win"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Spend only cash received",
+                "Read the clause before the first player",
+                "Ask for per-brand carryover",
+                "Judge traffic on cohort value, not one month"
+              ]
+            }
+          },
+          "say": "These mistakes turn a normal swing into a cash crisis. Spending next month's RevShare before it arrives. Not knowing carryover exists until month three. Pooling all brands under one negative. And panic-cutting good traffic after one big win. The fixes: spend only cash received, read the clause before the first player, ask for per-brand carryover, and judge traffic on cohort value, not one month."
+        },
+        {
+          "v": "tip",
+          "h": "Terms vary widely",
+          "p": "Carryover rules differ by operator, by network and sometimes by deal. Some operators have dropped carryover; others keep it strictly. Do not assume what you read here or elsewhere applies to your contract.",
+          "d": {
+            "kind": "warn",
+            "text": "We are not certain this is current; check your contract and the operator's terms before relying on it. Ask your affiliate manager to confirm the carryover rule in writing, including whether it is pooled or per brand."
+          },
+          "say": "Carryover rules differ by operator, by network, and sometimes by deal. Some operators have dropped carryover, others keep it strictly. So don't assume what you read here or anywhere else applies to your contract. As the warning says, we're not certain this is current, so check your contract and the operator's terms, and ask your affiliate manager to confirm the rule in writing, including whether it's pooled or per brand."
+        },
+        {
+          "v": "big",
+          "h": "A player's win is not your loss to fix",
+          "p": "When a player wins, that is the game working as advertised. Never respond by trying to win the money back through more aggressive marketing to that player or anyone else. Carryover is a business risk you manage with contracts and cash, not with pressure.",
+          "d": {
+            "b": "Manage carryover with contracts and cash",
+            "s": "Never with pressure on players."
+          },
+          "say": "When a player wins, that's the game working as advertised. Never respond by trying to win that money back through more aggressive marketing, to that player or anyone else. Carryover is a business risk. As the screen says, you manage it with contracts and cash, never with pressure on players."
+        }
+      ],
+      "takeaways": [
+        "With carryover, a negative month is subtracted from later months until it clears.",
+        "Over time you are paid your share of true net NGR; without carryover you keep more.",
+        "Keep your own ledger and forecast when a balance clears.",
+        "Spend only cash received, and negotiate carryover once you have volume."
+      ],
+      "action": "Build a carryover ledger for one RevShare deal with the base, paid and carry-out formulas, and fill it with your last three months of statements, or with this lesson's example if you have none yet.",
+      "glossary": [
+        {
+          "term": "Negative carryover",
+          "def": "A contract rule that carries a negative NGR month forward and offsets it against future positive months."
+        },
+        {
+          "term": "Carried balance",
+          "def": "The negative amount still waiting to be offset against future NGR."
+        },
+        {
+          "term": "Pooled carryover",
+          "def": "Carryover where negatives from one brand offset positives from other brands in the same account."
+        },
+        {
+          "term": "Reset",
+          "def": "Clearing a carried negative balance to zero, by contract or by agreement."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "30% RevShare with carryover. M1 NGR −$2,000, M2 +$3,000. What are you paid in M2?",
+          "options": [
+            "$900",
+            "$300",
+            "$0",
+            "$1,500"
+          ],
+          "answer": 1,
+          "why": "−$2,000 + $3,000 = $1,000; $1,000 × 30% = $300."
+        },
+        {
+          "q": "Same months without carryover. What are you paid in M2?",
+          "options": [
+            "$300",
+            "$600",
+            "$900",
+            "$0"
+          ],
+          "answer": 2,
+          "why": "M1 resets to zero, so M2 pays $3,000 × 30% = $900."
+        },
+        {
+          "q": "Carried balance −$6,000. Average monthly NGR $2,000. About how long to clear?",
+          "options": [
+            "1 month",
+            "2 months",
+            "6 months",
+            "3 months"
+          ],
+          "answer": 3,
+          "why": "$6,000 ÷ $2,000 = 3 months."
+        },
+        {
+          "q": "Average commission $1,000 a month at 25%. Carried NGR balance −$10,000. What does the rule say?",
+          "options": [
+            "Ask for a reset or shift new volume to CPA or hybrid",
+            "Do nothing",
+            "Increase spend",
+            "Stop all traffic"
+          ],
+          "answer": 0,
+          "why": "−$10,000 × 25% = $2,500 of commission, more than 2 months ($2,000), so act."
+        },
+        {
+          "q": "Which is the safest way to fund ad spend on a RevShare deal?",
+          "options": [
+            "Expected RevShare for next month",
+            "A loan against the carried balance",
+            "Cash already received",
+            "Operator's forecast"
+          ],
+          "answer": 2,
+          "why": "Spend only cash received; RevShare can drop to zero after a big win."
+        }
+      ],
+      "say_intro": "One big player win can cost you months of commission. In this lesson you'll calculate RevShare with and without negative carryover, track a carried balance, and use rules that protect your cash flow.",
+      "say_outro": "To recap: negative carryover can push one big win into your future months, so read the clause, track your own ledger, and spend only cash received. Your task: build a carryover ledger for one RevShare deal with the base, paid and carry-out formulas, and fill it with your last three months of statements, or this lesson's example if you have none yet. Now take the quiz."
+    },
+    {
+      "slug": "choosing-deal-type-at-scale",
+      "title": "CPA, RevShare or hybrid at scale",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can model the same cohort under CPA, RevShare and hybrid deals.",
+        "By the end you can find the payback month for each deal type.",
+        "By the end you can decide with a rule when to move part of your volume to RevShare or hybrid."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why deal type is a cash decision",
+          "p": "CPA pays soon after the player qualifies. RevShare pays slowly, over months or years. Hybrid sits between. The same players can make you profitable this month or leave you short of cash for half a year, depending only on the deal type.",
+          "d": {
+            "b": "Same players, different cash flow",
+            "s": "Choose the deal your bank account can carry."
+          },
+          "say": "C P A, cost per acquisition, pays soon after the player qualifies. RevShare pays slowly, over months or years. Hybrid sits in between. So the same players can make you profitable this month, or leave you short of cash for half a year, depending only on the deal type. As the screen says, choose the deal your bank account can carry."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: one cohort, three deals",
+          "p": "Example: 100 qualified players acquired for $3,000, so $30 each. Six-month NGR for the cohort is $6,000, the figure from Module 5. Compare what each deal pays by month six.",
+          "more": "At these numbers CPA wins by month six. RevShare only catches up if players keep generating NGR for much longer. To reach the $4,000 CPA total at 30%, the cohort would need $13,333 of NGR, more than twice its six-month figure. That can happen with long-lived players, which is why some affiliates hold RevShare as a long-term asset, but it is never guaranteed.",
+          "d": {
+            "cols": [
+              "Deal",
+              "Calculation",
+              "Paid by month 6",
+              "Profit"
+            ],
+            "rows": [
+              [
+                "CPA $40",
+                "100 × $40",
+                "$4,000",
+                "+$1,000"
+              ],
+              [
+                "RevShare 30%",
+                "$6,000 × 30%",
+                "$1,800",
+                "−$1,200"
+              ],
+              [
+                "Hybrid $20 + 20%",
+                "$2,000 + $6,000 × 20%",
+                "$3,200",
+                "+$200"
+              ]
+            ]
+          },
+          "say": "Here's an example cohort: one hundred qualified players, acquired for three thousand dollars, thirty each. Six-month N G R, net gaming revenue, is six thousand. Look at the table. C P A at forty dollars pays four thousand, a thousand profit. RevShare at thirty percent pays eighteen hundred, a twelve hundred loss so far. Hybrid at twenty dollars plus twenty percent pays thirty two hundred, two hundred profit. At these numbers C P A wins by month six. RevShare only catches up if players keep playing much longer, and that's never guaranteed."
+        },
+        {
+          "v": "bars",
+          "h": "Example: paid by month six",
+          "p": "Example: the same cohort's commission by month six under each deal, as bars. CPA is the longest bar here, but that depends entirely on how long players stay and on the percentages offered.",
+          "d": [
+            [
+              "CPA $40",
+              100,
+              "$4,000"
+            ],
+            [
+              "Hybrid $20 + 20%",
+              80,
+              "$3,200"
+            ],
+            [
+              "RevShare 30%",
+              45,
+              "$1,800"
+            ]
+          ],
+          "say": "These bars show the same comparison. It's the example cohort's commission by month six under each deal. C P A is the longest bar here, at four thousand dollars. Hybrid follows at thirty two hundred, and RevShare at eighteen hundred. But remember, that ranking depends entirely on how long players stay, and on the percentages offered."
+        },
+        {
+          "v": "curve",
+          "h": "Example: cumulative cash by deal",
+          "p": "Example: cumulative commission per deal for the cohort above. CPA pays almost at once. RevShare climbs slowly and flattens as players leave. The gap is the price of waiting.",
+          "more": "RevShare line: cumulative cohort NGR of $2,500, $3,700, $4,500, $5,100, $5,600, $6,000 and $6,300, each × 30%. CPA is shown as paid in month 1 for simplicity; in practice network payment terms and holds delay it by weeks.",
+          "d": {
+            "a": [
+              4000,
+              4000,
+              4000,
+              4000,
+              4000,
+              4000,
+              4000
+            ],
+            "la": "CPA ($)",
+            "b": [
+              750,
+              1110,
+              1350,
+              1530,
+              1680,
+              1800,
+              1890
+            ],
+            "lb": "RevShare 30% ($)",
+            "x": [
+              "M1",
+              "M2",
+              "M3",
+              "M4",
+              "M5",
+              "M6",
+              "M7"
+            ]
+          },
+          "say": "Now look at cash over time, in this example. The C P A line pays almost at once, four thousand dollars. It's shown in month one for simplicity, though in practice payment terms and holds delay it by weeks. The RevShare line climbs slowly, seven hundred and fifty in month one, eighteen hundred by month six, and it flattens as players leave. The gap between the lines is the price of waiting."
+        },
+        {
+          "v": "eq",
+          "h": "Payback month",
+          "p": "Payback is the first month when cumulative commission is at least what you spent to acquire the cohort. Before it, the cohort is a loan you made. After it, every payment is profit.",
+          "more": "Example: spend $3,000. Hybrid cumulative: month 1 $2,000 + 20% × $2,500 = $2,500; month 2 $2,000 + 20% × $3,700 = $2,740; month 3 $2,900; month 4 $3,020. Payback is month 4. RevShare at 30% reaches only $1,890 by month 7, so no payback in the period shown.",
+          "d": [
+            "Cumulative commission",
+            "≥",
+            "Acquisition spend",
+            "→",
+            "Payback month"
+          ],
+          "say": "Payback is the first month when cumulative commission is at least what you spent to acquire the cohort. Before that month, the cohort is like a loan you made. After it, every payment is profit. In this example, spend is three thousand. The hybrid deal reaches three thousand and twenty in month four, so payback is month four. RevShare at thirty percent reaches only eighteen ninety by month seven, so there's no payback in the period shown."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: hybrid return",
+          "p": "Use the ROAS lab on the hybrid deal at month six. Spend is what you paid for the cohort; revenue is the hybrid commission so far. Work out ROAS and profit.",
+          "more": "$3,200 ÷ $3,000 = 1.067, about 1.07. Profit $200 so far, with a small RevShare tail still to come. Compare: CPA ROAS is $4,000 ÷ $3,000 = 1.33.",
+          "d": {
+            "kind": "roas",
+            "task": "Cohort cost $3,000. Hybrid has paid $3,200 by month 6. What is the ROAS?",
+            "preset": {
+              "spend": 3000,
+              "revenue": 3200
+            },
+            "answer": {
+              "field": "roas",
+              "value": 1.07,
+              "tolerance": 0.02
+            }
+          },
+          "say": "Time for a lab. The cohort cost three thousand dollars, and the hybrid deal has paid three thousand two hundred by month six. Use the R O A S lab, that's return on ad spend. Spend is what you paid for the cohort, and revenue is the hybrid commission so far. Work out the R O A S and the profit. Pause and try it, then check your answer."
+        },
+        {
+          "v": "walk",
+          "h": "Model a deal in your sheet",
+          "p": "Build this once and reuse it for every offer. The inputs come from your cohort table in Module 5 and the deal sheet in Lesson 1.",
+          "d": {
+            "steps": [
+              {
+                "title": "Enter the cohort",
+                "text": "Qualified players, cost per qualified and monthly NGR.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/model",
+                  "title": "Inputs",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Players",
+                      "value": "100"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Cost per qualified",
+                      "value": "$30"
+                    },
+                    {
+                      "type": "field",
+                      "label": "NGR by month",
+                      "value": "2,500 / 1,200 / 800 / 600 / 500 / 400"
+                    }
+                  ],
+                  "highlight": 2
+                }
+              },
+              {
+                "title": "Enter each deal",
+                "text": "CPA amount, RevShare percent, hybrid split.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/model",
+                  "title": "Deals",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "CPA",
+                      "value": "$40"
+                    },
+                    {
+                      "type": "field",
+                      "label": "RevShare",
+                      "value": "30%"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Hybrid",
+                      "value": "$20 + 20%"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Read payback and month-6 profit",
+                "text": "The sheet shows the payback month and profit for each deal.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/model",
+                  "title": "Output",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Deal",
+                        "Payback",
+                        "M6 profit"
+                      ],
+                      "rows": [
+                        [
+                          "CPA",
+                          "M1*",
+                          "+$1,000"
+                        ],
+                        [
+                          "RevShare",
+                          "none",
+                          "−$1,200"
+                        ],
+                        [
+                          "Hybrid",
+                          "M4",
+                          "+$200"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "*after network payment terms"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Let's model a deal in your sheet. Tap Next to follow each step. First, enter the cohort: one hundred players, thirty dollars per qualified player, and N G R by month. Second, enter each deal: C P A forty dollars, RevShare thirty percent, and hybrid twenty dollars plus twenty percent. Third, read the output. C P A pays back in month one, after network payment terms, with a thousand profit at month six. RevShare has no payback yet. Hybrid pays back in month four, with two hundred profit. Build it once and reuse it."
+        },
+        {
+          "v": "check",
+          "h": "Deal type decision rules",
+          "p": "Starting rules to adapt. They let you take long-term upside without risking the cash that keeps your campaigns running. Write the numbers for each partner in your deal sheet.",
+          "more": "Example: 6-month value $60 per player at 35% RevShare = $21. CPA × 1.2 = $40 × 1.2 = $48. $21 is far below $48, so stay on CPA. If six-month value were $150, 35% gives $52.50, above $48, and a RevShare test would make sense.",
+          "d": [
+            "New geo or source: CPA first, until you have 90-day cohort data",
+            "Move volume to RevShare only if 6-month value × RS% > CPA × 1.2",
+            "Never fund RevShare acquisition with cash you need within 6 months",
+            "Hybrid when the operator will not raise CPA but you want some upside",
+            "Cap RevShare acquisition at a set share of monthly spend, for example 20%"
+          ],
+          "say": "Here are starting deal-type rules to adapt. In a new geo or source, use C P A first, until you have ninety-day cohort data. Move volume to RevShare only if six-month value times the RevShare percent beats C P A times one point two. Never fund RevShare with cash you need within six months. Use hybrid when the operator won't raise C P A but you want some upside. And cap RevShare acquisition at a set share of monthly spend, for example twenty percent."
+        },
+        {
+          "v": "table",
+          "h": "Cash you need to carry RevShare",
+          "p": "Example: if you acquire $3,000 of players a month on RevShare and a cohort pays back slowly, your cash is tied up month after month. Work out how much before you start.",
+          "more": "Received each month is the sum of every cohort's RevShare that month. Month 1: cohort 1 pays $750. Month 2: cohort 1 pays $360 more (cumulative $1,110) and cohort 2 pays $750, so cumulative received is $750 + $360 + $750 = $1,860. Month 3: cohort 1 +$240, cohort 2 +$360, cohort 3 +$750 = $1,350, cumulative $3,210. Cash tied up keeps growing for months. That is why the rules cap the RevShare share of spend.",
+          "d": {
+            "cols": [
+              "Month",
+              "Spent so far",
+              "RevShare received",
+              "Cash tied up"
+            ],
+            "rows": [
+              [
+                "1",
+                "$3,000",
+                "$750",
+                "$2,250"
+              ],
+              [
+                "2",
+                "$6,000",
+                "$1,860",
+                "$4,140"
+              ],
+              [
+                "3",
+                "$9,000",
+                "$3,210",
+                "$5,790"
+              ]
+            ]
+          },
+          "say": "How much cash do you need to carry RevShare? In this example, you acquire three thousand dollars of players a month. By month one, you've spent three thousand and received seven fifty, so twenty two fifty is tied up. By month two, six thousand spent, eighteen sixty received, forty one forty tied up. By month three, nine thousand spent, thirty two ten received, fifty seven ninety tied up. Cash tied up keeps growing for months. That's why the rules cap RevShare's share of spend."
+        },
+        {
+          "v": "compare",
+          "h": "Common deal-type mistakes",
+          "p": "Most deal-type mistakes come from choosing the long-term deal without the cash to wait for it. Each fix keeps your cash safe while you build the long-term side.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "RevShare on a brand new source",
+                "Funding RevShare from next month's ad budget",
+                "Comparing RevShare to CPA after 30 days",
+                "All volume on one deal type"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "CPA first, then test RevShare",
+                "Separate RevShare budget from cash reserves",
+                "Compare at 6 months or later",
+                "Mix: mostly CPA, a capped RevShare share"
+              ]
+            }
+          },
+          "say": "Most deal-type mistakes come from choosing the long-term deal without the cash to wait for it. RevShare on a brand new source. Funding RevShare from next month's ad budget. Comparing RevShare to C P A after thirty days. All volume on one deal type. The fixes: C P A first, then test RevShare. Keep a separate RevShare budget from cash reserves. Compare at six months or later. And mix, mostly C P A with a capped RevShare share."
+        },
+        {
+          "v": "tip",
+          "h": "Incentives and honesty",
+          "p": "RevShare and hybrid deals tie part of your income to player losses over time. Keep your marketing exactly as honest as on CPA. Do not change angles, targeting or messages to find heavier players because the deal now rewards it.",
+          "d": {
+            "kind": "warn",
+            "text": "Local law in some geos restricts revenue-share affiliate deals, and all gambling marketing must follow responsible gambling rules. We are not certain this is current; check your contract and the operator's terms before relying on it."
+          },
+          "say": "RevShare and hybrid deals tie part of your income to player losses over time. So keep your marketing exactly as honest as on C P A. Don't change angles, targeting or messages to find heavier players just because the deal now rewards it. As the warning says, local law in some geos restricts revenue-share deals, and all gambling marketing must follow responsible gambling rules. We're not certain this is current, so check your contract and the operator's terms."
+        },
+        {
+          "v": "big",
+          "h": "Cash first, upside second",
+          "p": "The affiliates who last treat CPA as the cash that pays for today's campaigns and RevShare as a slowly growing asset on top. They never let the asset starve the cash. That order matters more than which deal pays most on paper.",
+          "d": {
+            "b": "CPA pays the bills, RevShare builds the asset",
+            "s": "Never the other way round."
+          },
+          "say": "The affiliates who last treat C P A as the cash that pays for today's campaigns, and RevShare as a slowly growing asset on top. They never let the asset starve the cash. As the screen says, C P A pays the bills, RevShare builds the asset, never the other way round."
+        }
+      ],
+      "takeaways": [
+        "Model each cohort under CPA, RevShare and hybrid before choosing.",
+        "Payback month tells you how long your money is tied up.",
+        "Move volume to RevShare only when 6-month value × RS% beats CPA by 20% or more.",
+        "Keep RevShare acquisition capped and funded separately from cash reserves."
+      ],
+      "action": "Use your cohort data, or this lesson's example, to model one offer under CPA, RevShare and hybrid, and write down the payback month and month-6 profit for each.",
+      "glossary": [
+        {
+          "term": "Hybrid deal",
+          "def": "A deal that pays a smaller CPA plus a smaller RevShare percentage on the same player."
+        },
+        {
+          "term": "Payback month",
+          "def": "The first month when cumulative commission covers the cost of acquiring a cohort."
+        },
+        {
+          "term": "RevShare tail",
+          "def": "Commission still arriving after the main payback period, from players who keep playing."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "100 players cost $2,500. CPA $35. Profit by month 6?",
+          "options": [
+            "$1,000",
+            "$500",
+            "$3,500",
+            "$1,250"
+          ],
+          "answer": 0,
+          "why": "100 × $35 = $3,500; $3,500 − $2,500 = $1,000."
+        },
+        {
+          "q": "Same cohort, 6-month NGR $5,000, RevShare 35%. Paid by month 6?",
+          "options": [
+            "$1,250",
+            "$3,500",
+            "$1,750",
+            "$5,000"
+          ],
+          "answer": 2,
+          "why": "$5,000 × 35% = $1,750."
+        },
+        {
+          "q": "6-month value $120 per player, RevShare 40%, CPA $40. Does the rule allow moving volume to RevShare?",
+          "options": [
+            "Yes, $48 equals $48, so test",
+            "No, $48 is not more than $48",
+            "Yes, any RevShare above 30%",
+            "No, never move to RevShare"
+          ],
+          "answer": 1,
+          "why": "$120 × 40% = $48. CPA × 1.2 = $48. The rule needs strictly more, so not yet."
+        },
+        {
+          "q": "Hybrid $15 + 25%. Cohort of 100, cumulative NGR $4,000 by month 3. Cumulative commission?",
+          "options": [
+            "$1,500",
+            "$4,000",
+            "$1,000",
+            "$2,500"
+          ],
+          "answer": 3,
+          "why": "100 × $15 = $1,500; $4,000 × 25% = $1,000; total $2,500."
+        },
+        {
+          "q": "What should a brand new source start on?",
+          "options": [
+            "CPA, until 90-day cohort data exists",
+            "RevShare, for the long tail",
+            "Hybrid only",
+            "Whatever pays the highest headline"
+          ],
+          "answer": 0,
+          "why": "Without cohort data you cannot value RevShare; CPA gives cash and data first."
+        }
+      ],
+      "say_intro": "Choosing between C P A, RevShare and hybrid is really a cash decision. In this lesson you'll model one cohort under all three deals, find the payback month, and use rules to decide when to move some volume to RevShare.",
+      "say_outro": "To recap: deal type changes your cash flow, so model each deal, find the payback month, and keep RevShare capped and funded from spare cash. Your task: use your cohort data, or this lesson's example, to model one offer under C P A, RevShare and hybrid, and write down the payback month and month-six profit for each. Now take the quiz."
+    },
+    {
+      "slug": "igaming-portfolio",
+      "title": "Building a portfolio of operators, geos and products",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can measure concentration risk in your revenue.",
+        "By the end you can run due diligence on a new operator before sending volume.",
+        "By the end you can plan a portfolio that spreads risk across operators, geos and products."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why one operator is a single point of failure",
+          "p": "Operators lose licences, leave markets, change terms, delay payments and close affiliate programmes. If one operator is most of your revenue, any of those events can stop your business overnight. A portfolio does not raise your best month; it protects you from your worst.",
+          "d": {
+            "b": "Spread the risk before you need to",
+            "s": "A portfolio protects your worst month."
+          },
+          "say": "Operators lose licences, leave markets, change terms, delay payments, and close affiliate programmes. If one operator is most of your revenue, any of those events can stop your business overnight. A portfolio doesn't raise your best month. As the screen says, it protects your worst month. So spread the risk before you need to."
+        },
+        {
+          "v": "cards",
+          "h": "What can go wrong with one partner",
+          "p": "These events happen in iGaming every year. None of them is a sign you did anything wrong, and all of them hurt more when one partner is most of your income.",
+          "d": [
+            "Licence loss or market exit|traffic stops paying at once",
+            "Term changes|lower CPA or new carryover rules",
+            "Payment delays|cash flow breaks while spend continues",
+            "Cap cuts|volume above the cap may not be paid",
+            "Programme closure|lifetime RevShare can end"
+          ],
+          "say": "Look at these cards. They're events that happen in iGaming every year. Licence loss or market exit, where traffic stops paying at once. Term changes, like a lower C P A, cost per acquisition, or new carryover rules. Payment delays, where cash flow breaks while spend continues. Cap cuts, where volume above the cap may not be paid. And programme closure, where lifetime RevShare can end. None of these means you did anything wrong, but all of them hurt more when one partner is most of your income."
+        },
+        {
+          "v": "eq",
+          "h": "Concentration",
+          "p": "Concentration is the share of your monthly commission that comes from your largest partner. It is the simplest measure of how exposed you are. Work it out every month from your commission statements.",
+          "more": "Example: total monthly commission $10,000. Operator A pays $6,000. Concentration = $6,000 ÷ $10,000 = 60%. If A stopped paying, you would lose 60% of income while your ad spend commitments continued for days or weeks.",
+          "d": [
+            "Largest partner's commission",
+            "÷",
+            "Total commission",
+            "=",
+            "Concentration"
+          ],
+          "say": "Concentration is the share of your monthly commission that comes from your largest partner. The formula is your largest partner's commission divided by total commission. In this example, total commission is ten thousand dollars, and operator A pays six thousand. So concentration is sixty percent. If A stopped paying, you'd lose sixty percent of income while ad spend commitments continued. Work this out every month from your statements."
+        },
+        {
+          "v": "table",
+          "h": "Example: from concentrated to balanced",
+          "p": "Example: a plan to bring concentration under 40% over a few months by growing other partners, not by cutting the one that works. Read the 'Target' column as a direction, not a deadline.",
+          "more": "A stays the same in dollars but drops to $6,000 ÷ $15,000 = 40%. Growth comes from B and C, each tested properly with the kill and scale rules. Cutting a profitable partner to hit a percentage would be a mistake; growing the others is the fix.",
+          "d": {
+            "cols": [
+              "Partner",
+              "Now",
+              "Target in 3 months"
+            ],
+            "rows": [
+              [
+                "A: sports, NG, CPA",
+                "$6,000 (60%)",
+                "$6,000 (40%)"
+              ],
+              [
+                "B: sports and casino, KE, hybrid",
+                "$3,000 (30%)",
+                "$5,000 (33%)"
+              ],
+              [
+                "C: sports, GH, CPA",
+                "$1,000 (10%)",
+                "$4,000 (27%)"
+              ],
+              [
+                "Total",
+                "$10,000",
+                "$15,000"
+              ]
+            ]
+          },
+          "say": "Here's an example plan to bring concentration under forty percent. Notice the method: grow the others, don't cut the one that works. Operator A stays at six thousand dollars, but drops from sixty percent to forty, because the total grows. Operator B grows from three thousand to five thousand, and C from one thousand to four thousand, each tested with the kill and scale rules. Total goes from ten to fifteen thousand. Read the target column as a direction, not a deadline."
+        },
+        {
+          "v": "map",
+          "h": "A simple portfolio map",
+          "p": "Example: one buyer's portfolio. Two traffic sources feed three operators across three geos. No single line carries everything, so one failure slows the business without stopping it.",
+          "d": {
+            "nodes": [
+              {
+                "id": "meta",
+                "label": "Meta ads",
+                "kind": "ad"
+              },
+              {
+                "id": "tg",
+                "label": "Telegram channel",
+                "kind": "telegram"
+              },
+              {
+                "id": "a",
+                "label": "Operator A (NG)",
+                "kind": "offer"
+              },
+              {
+                "id": "b",
+                "label": "Operator B (KE)",
+                "kind": "offer"
+              },
+              {
+                "id": "c",
+                "label": "Operator C (GH)",
+                "kind": "offer"
+              },
+              {
+                "id": "you",
+                "label": "Your commission",
+                "kind": "money"
+              }
+            ],
+            "edges": [
+              [
+                "meta",
+                "a",
+                "sports"
+              ],
+              [
+                "meta",
+                "b",
+                "sports"
+              ],
+              [
+                "meta",
+                "c",
+                "sports"
+              ],
+              [
+                "tg",
+                "a",
+                "content"
+              ],
+              [
+                "tg",
+                "b",
+                "content"
+              ],
+              [
+                "a",
+                "you",
+                "CPA"
+              ],
+              [
+                "b",
+                "you",
+                "hybrid"
+              ],
+              [
+                "c",
+                "you",
+                "CPA"
+              ]
+            ]
+          },
+          "say": "This map shows an example portfolio for one buyer. Meta ads send sports traffic to three operators, in Nigeria, Kenya and Ghana. A Telegram channel sends content traffic to two of them. Then operators A and C pay commission on C P A, and B on hybrid. Notice that no single line carries everything. So one failure slows the business, without stopping it."
+        },
+        {
+          "v": "walk",
+          "h": "Onboard a new operator safely",
+          "p": "Run these steps before you send real volume to any new operator or network. Skipping them is how affiliates end up with unpaid invoices. They apply however good the payout looks.",
+          "d": {
+            "steps": [
+              {
+                "title": "Verify the licence",
+                "text": "Find the operator on the official regulator register for each geo. Do not rely on a logo on their site.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "regulator.example/register",
+                  "title": "Licence search",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Search",
+                      "value": "Operator legal name"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Check: licence status, products covered, expiry date."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Get the terms in writing",
+                "text": "Payout, qualification, carryover, cap, payment terms, ad guidelines.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/deals",
+                  "title": "New deal",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Payout",
+                      "value": "$40 CPA, qualified"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Cap",
+                      "value": "100 FTDs a month"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Payment",
+                      "value": "Net 30"
+                    }
+                  ],
+                  "highlight": 2
+                }
+              },
+              {
+                "title": "Test tracking",
+                "text": "Postback tested end to end, as in Module 5.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "tracker.example/conversions",
+                  "title": "Test",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Postback tested",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Sub-IDs show in report",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Small capped test",
+                "text": "Send a capped test, for example 20 FTDs, and judge on qualified FTDs.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/campaigns",
+                  "title": "Test campaign",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Campaign",
+                      "value": "GH_Sports_OpC_Test"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Daily budget",
+                      "value": "$30"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Wait for the first payment",
+                "text": "Scale only after the first invoice is paid in full and on time.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/payments",
+                  "title": "Payments",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Invoice",
+                        "Due",
+                        "Paid"
+                      ],
+                      "rows": [
+                        [
+                          "OpC_M1",
+                          "Day 30",
+                          "Day 28, in full"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Cleared to scale",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 1
+                }
+              }
+            ]
+          },
+          "say": "Run these steps before sending real volume to any new operator. Tap Next to follow each step. First, verify the licence on the official regulator register for each geo, not from a logo on their site. Second, get the terms in writing: payout, qualification, carryover, cap, payment terms and ad guidelines. Third, test tracking, with the postback tested end to end. Fourth, send a small capped test, for example twenty F T Ds, first-time deposits, and judge on qualified F T Ds. Fifth, scale only after the first invoice is paid in full and on time."
+        },
+        {
+          "v": "check",
+          "h": "Portfolio decision rules",
+          "p": "Starting rules to adapt. They keep you diversified without spreading yourself too thin to test properly. Review them each quarter as your volume and partner list grow.",
+          "d": [
+            "No single partner above 40% of monthly commission, as a target",
+            "New partner: scale only after the first payment arrives in full",
+            "Keep cash for at least 2 months of planned ad spend",
+            "Add a new geo or operator only when current ones are stable at target",
+            "Late payment twice: freeze new volume to that partner"
+          ],
+          "say": "Here are starting portfolio rules to adapt. As a target, no single partner above forty percent of monthly commission. With a new partner, scale only after the first payment arrives in full. Keep cash for at least two months of planned ad spend. Add a new geo or operator only when current ones are stable at target. And if a partner pays late twice, freeze new volume to them. Review these each quarter as you grow."
+        },
+        {
+          "v": "partner",
+          "h": "Partners to consider",
+          "p": "These are partners we list for iGaming. Run every one of them through the onboarding steps above, whoever recommends them, and confirm licensing for your geos yourself.",
+          "d": {
+            "vertical": "igaming",
+            "note": "Check licences per geo, payment history, quality reporting by sub-ID and carryover terms before sending volume."
+          },
+          "say": "These are partners we list for iGaming. But here's the important part: run every one of them through the onboarding steps you just saw, whoever recommends them, and confirm licensing for your geos yourself. As the note says, check licences per geo, payment history, quality reporting by sub I D, and carryover terms before sending volume."
+        },
+        {
+          "v": "product",
+          "h": "Find and compare offers",
+          "p": "When you add partners, you need to compare payouts, geos and terms side by side. A deals directory saves time, but every offer still goes through your own due diligence.",
+          "d": {
+            "slug": "affleego",
+            "why": "Browse and compare iGaming affiliate deals by geo and payout model when you are adding partners to your portfolio."
+          },
+          "say": "When you're adding partners, you need to compare payouts, geos and terms side by side. A deals directory like Affleego lets you browse and compare iGaming affiliate deals by geo and payout model. It saves time, but every offer still goes through your own due diligence."
+        },
+        {
+          "v": "compare",
+          "h": "Common portfolio mistakes",
+          "p": "Diversifying badly can be as risky as not diversifying at all. The fixes below keep the benefit of spreading risk without losing the focus you need to test properly.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "One operator at 80% of revenue",
+                "Ten partners, none tested properly",
+                "Scaling before the first payment",
+                "Cutting a winner to hit a percentage"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Grow others toward a 40% cap",
+                "Add one partner at a time",
+                "Wait for the first full payment",
+                "Grow the others instead"
+              ]
+            }
+          },
+          "say": "Diversifying badly can be as risky as not diversifying at all. The mistakes: one operator at eighty percent of revenue, ten partners with none tested properly, scaling before the first payment, and cutting a winner to hit a percentage. The fixes: grow others toward a forty percent cap, add one partner at a time, wait for the first full payment, and grow the others instead of cutting."
+        },
+        {
+          "v": "tip",
+          "h": "Licensing per geo and product",
+          "p": "A licence in one country does not cover another, and a sports licence may not cover casino. Some operators market to countries where they hold no local licence; sending traffic there can break local law and platform policy.",
+          "d": {
+            "kind": "warn",
+            "text": "Verify each operator's licence on the official regulator register for every geo and product you promote. Registers and rules change; we are not certain any list is current, so check before every new deal."
+          },
+          "say": "A licence in one country doesn't cover another, and a sports licence may not cover casino. Some operators market to countries where they hold no local licence, and sending traffic there can break local law and platform policy. As the warning says, verify each operator's licence on the official regulator register for every geo and product you promote. Registers and rules change, and we're not certain any list is current, so check before every new deal."
+        },
+        {
+          "v": "big",
+          "h": "A portfolio of responsible partners",
+          "p": "Choose partners whose responsible gambling tools work: deposit limits, time-outs, self-exclusion and real support. A partner that neglects players is a partner more likely to lose its licence, and a risk to everyone you send there.",
+          "d": {
+            "b": "Responsible partners are safer partners",
+            "s": "Check their RG tools before you sign."
+          },
+          "say": "Choose partners whose responsible gambling tools actually work: deposit limits, time-outs, self-exclusion and real support. A partner that neglects players is more likely to lose its licence, and that's a risk to everyone you send there. As the screen says, responsible partners are safer partners. Check their responsible gambling tools before you sign."
+        }
+      ],
+      "takeaways": [
+        "Concentration = largest partner ÷ total; aim to keep it under 40%.",
+        "Diversify by growing new partners, not by cutting the one that works.",
+        "Verify licences, test tracking, cap the test and wait for the first payment.",
+        "Prefer partners with real responsible gambling tools."
+      ],
+      "action": "Calculate your concentration from last month's commission, and if it is above 40%, write a three-month plan to grow one other partner using the onboarding steps.",
+      "glossary": [
+        {
+          "term": "Concentration",
+          "def": "The share of total commission from your largest partner."
+        },
+        {
+          "term": "Due diligence",
+          "def": "Checks on a partner's licence, terms, tracking and payments before sending volume."
+        },
+        {
+          "term": "Net 30",
+          "def": "Payment terms where an invoice is paid within 30 days."
+        },
+        {
+          "term": "Regulator register",
+          "def": "The official public list of licensed operators kept by a gambling regulator."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Total commission $8,000; largest partner $4,800. Concentration?",
+          "options": [
+            "40%",
+            "48%",
+            "75%",
+            "60%"
+          ],
+          "answer": 3,
+          "why": "$4,800 ÷ $8,000 = 60%."
+        },
+        {
+          "q": "Your largest partner pays $6,000 a month. To bring it to 40% without cutting it, what total do you need?",
+          "options": [
+            "$15,000",
+            "$12,000",
+            "$10,000",
+            "$24,000"
+          ],
+          "answer": 0,
+          "why": "$6,000 ÷ 0.40 = $15,000."
+        },
+        {
+          "q": "A new operator's test is profitable but the first invoice is not yet paid. What does the rule say?",
+          "options": [
+            "Scale now",
+            "Stop the test",
+            "Wait for the first full payment before scaling",
+            "Double the cap"
+          ],
+          "answer": 2,
+          "why": "Scale only after the first payment arrives in full."
+        },
+        {
+          "q": "Where do you verify an operator's licence?",
+          "options": [
+            "The logo in its site footer",
+            "The official regulator register",
+            "A forum",
+            "The affiliate manager's word"
+          ],
+          "answer": 1,
+          "why": "Only the official register is reliable."
+        },
+        {
+          "q": "A partner pays late twice. What does the rule say?",
+          "options": [
+            "Raise volume to make up",
+            "Switch to RevShare",
+            "Ignore it",
+            "Freeze new volume to that partner"
+          ],
+          "answer": 3,
+          "why": "Two late payments: freeze new volume until it is resolved."
+        }
+      ],
+      "say_intro": "Relying on one operator is a single point of failure. In this lesson you'll measure concentration risk, run due diligence on a new operator, and plan a portfolio that spreads risk across operators, geos and products.",
+      "say_outro": "To recap: measure concentration monthly, onboard each operator with due diligence, and diversify by growing other partners, not cutting winners. Your task: calculate your concentration from last month's commission, and if it's above forty percent, write a three-month plan to grow one other partner using the onboarding steps. Now take the quiz."
+    },
+    {
+      "slug": "retention-and-player-lifetime",
+      "title": "Retention and player lifetime, done honestly",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can explain what affiliates can and cannot do to support player retention.",
+        "By the end you can estimate the value of better retention on a RevShare or hybrid deal.",
+        "By the end you can run an opt-in content channel with responsible frequency rules."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why retention matters, and its limits",
+          "p": "On RevShare and hybrid deals, players who keep playing keep paying you. But the operator owns the player relationship and its marketing. Your role is limited to honest content people chose to receive, never pushing deposits or play.",
+          "d": {
+            "b": "Earn attention, never push play",
+            "s": "Retention for affiliates is about useful content."
+          },
+          "say": "On RevShare and hybrid deals, players who keep playing keep paying you. But the operator owns the player relationship and its marketing. Your role is limited to honest content that people chose to receive. You never push deposits or play. As the screen says, earn attention, never push play. For affiliates, retention is about useful content."
+        },
+        {
+          "v": "compare",
+          "h": "What you can and cannot do",
+          "p": "The line is simple: you can give people useful, honest content they asked for. You cannot pressure them to deposit, chase losses or come back.",
+          "d": {
+            "a": {
+              "title": "Not allowed or not honest",
+              "items": [
+                "'You haven't deposited in 7 days' messages",
+                "Messaging numbers you scraped or bought",
+                "Showing only winning tips",
+                "Bonus pushes to people who left"
+              ]
+            },
+            "b": {
+              "title": "Honest and allowed",
+              "items": [
+                "Weekly fixture previews with 18+ line",
+                "Opt-in channel people joined themselves",
+                "Full tip record including losses",
+                "Easy way to leave, and RG resources"
+              ]
+            }
+          },
+          "say": "The line is simple. Compare the columns. Not allowed or not honest: messages like you haven't deposited in seven days, messaging numbers you scraped or bought, showing only winning tips, and bonus pushes to people who left. Honest and allowed: weekly fixture previews with an eighteen plus line, an opt-in channel people joined themselves, a full tip record including losses, and an easy way to leave, with responsible gambling resources."
+        },
+        {
+          "v": "curve",
+          "h": "Example: active players over time",
+          "p": "Example: share of a 100-player cohort still active each month. The community line represents players who also follow a useful content channel. Both decline; one declines more slowly.",
+          "more": "These are illustrative numbers, not a measured effect. Whether a channel improves retention for your players is something you test with cohorts, not something to assume.",
+          "d": {
+            "a": [
+              100,
+              60,
+              45,
+              38,
+              33,
+              30,
+              28
+            ],
+            "la": "No community",
+            "b": [
+              100,
+              65,
+              52,
+              45,
+              40,
+              37,
+              35
+            ],
+            "lb": "With content channel",
+            "x": [
+              "M0",
+              "M1",
+              "M2",
+              "M3",
+              "M4",
+              "M5",
+              "M6"
+            ]
+          },
+          "say": "This curve shows an example of the share of a hundred-player cohort still active each month. The lower line has no community. The upper line represents players who also follow a useful content channel. Both decline, but one declines more slowly, thirty five percent at month six versus twenty eight. These are illustrative numbers, not a measured effect. Whether a channel helps your players is something you test with cohorts, not something to assume."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: what retention is worth",
+          "p": "Example: in month 6, 35 players are active instead of 28. At $20 average monthly NGR per active player and 30% RevShare, that is a modest monthly gain that compounds over time.",
+          "more": "$42 a month from one cohort is small. Across twelve cohorts it becomes about $500 a month, if the effect holds. Weigh it against the time a channel takes to run. Never try to raise it by pushing play; the honest version is the only one worth having.",
+          "d": {
+            "cols": [
+              "Item",
+              "Rule",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Extra active players",
+                "35 − 28",
+                "7"
+              ],
+              [
+                "NGR per active player",
+                "monthly average",
+                "$20"
+              ],
+              [
+                "Extra NGR",
+                "7 × $20",
+                "$140 a month"
+              ],
+              [
+                "Your share",
+                "$140 × 30%",
+                "$42 a month"
+              ]
+            ]
+          },
+          "say": "What's that retention worth? In this example, in month six, thirty five players are active instead of twenty eight, so seven extra. At twenty dollars average monthly N G R, net gaming revenue, per active player, that's one hundred and forty dollars extra a month. Your thirty percent share is forty two dollars a month. It's modest, and it compounds over time if the effect holds. Never try to raise it by pushing play."
+        },
+        {
+          "v": "phone",
+          "h": "An honest weekly preview",
+          "p": "Here is the kind of post that keeps an opt-in channel useful. It gives information, sets expectations and carries the age and responsible gambling message.",
+          "d": {
+            "app": "chat",
+            "title": "Derby Preview Channel",
+            "subtitle": "channel",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Weekend preview: 3 fixtures, kickoff times in WAT, team news and form for each."
+              },
+              {
+                "from": "them",
+                "text": "Last week's picks: 2 won, 3 lost. Full record pinned. Tips are opinions, not guarantees."
+              },
+              {
+                "from": "them",
+                "text": "18+ only. Bet only what you can afford to lose. Set a deposit limit in your account settings.",
+                "buttons": [
+                  "Read preview",
+                  "Leave channel"
+                ]
+              }
+            ]
+          },
+          "say": "Here's the kind of post that keeps an opt-in channel useful. Look at the messages. A weekend preview with three fixtures, kickoff times in West Africa Time, and team news and form. Then last week's record: two won, three lost, with the full record pinned, and tips are opinions, not guarantees. Then the line: eighteen plus only, bet only what you can afford to lose, set a deposit limit. And notice the leave channel button."
+        },
+        {
+          "v": "walk",
+          "h": "Set a broadcast schedule",
+          "p": "Plan your channel content around the fixture calendar from Module 4. A fixed, modest schedule is easier to keep honest than ad hoc posting. Write the schedule down and keep it for a full season before changing it.",
+          "d": {
+            "steps": [
+              {
+                "title": "Choose your rhythm",
+                "text": "For example: one preview before the weekend, one midweek, one results post.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/content",
+                  "title": "Schedule",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Day",
+                        "Post"
+                      ],
+                      "rows": [
+                        [
+                          "Thursday",
+                          "Midweek results"
+                        ],
+                        [
+                          "Friday",
+                          "Weekend preview"
+                        ],
+                        [
+                          "Monday",
+                          "Weekend record"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Write the template",
+                "text": "Fixtures, local kickoff times, form, record, RG line.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/content",
+                  "title": "Template",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Header",
+                      "value": "Weekend preview"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Footer",
+                      "value": "18+. Bet only what you can afford to lose."
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Record included",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Schedule and review",
+                "text": "Schedule posts in advance and check each against the 'Never' list from Module 4.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "broadcast.example/schedule",
+                  "title": "Scheduled posts",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Post",
+                        "Time"
+                      ],
+                      "rows": [
+                        [
+                          "Weekend preview",
+                          "Fri 17:00 WAT"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "button",
+                      "label": "Schedule"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              }
+            ]
+          },
+          "say": "Let's set a broadcast schedule. Tap Next to follow each step. First, choose your rhythm, for example Thursday midweek results, Friday weekend preview, and Monday weekend record. Second, write the template: fixtures, local kickoff times, form, record, and the responsible gambling line in the footer. Third, schedule posts in advance, and check each one against the never list from Module four. A fixed, modest schedule is easier to keep honest. Keep it for a full season before changing it."
+        },
+        {
+          "v": "product",
+          "h": "Schedule honest broadcasts",
+          "p": "Once the template and rhythm are set, a broadcast tool keeps the schedule consistent without late-night manual posting. Keep the content review step; a tool sends what you give it.",
+          "d": {
+            "slug": "castvoo",
+            "why": "Schedule weekly fixture previews and results posts to your opt-in channel on a fixed, modest rhythm."
+          },
+          "say": "Once your template and rhythm are set, a broadcast tool like Castvoo can schedule your weekly previews and results posts on a fixed, modest rhythm, without late-night manual posting. But keep your content review step. A tool sends exactly what you give it."
+        },
+        {
+          "v": "check",
+          "h": "Retention decision rules",
+          "p": "Starting rules to adapt. They keep your channel useful and keep it away from pressure tactics. Pin them in your channel's admin notes so every moderator follows them.",
+          "d": [
+            "At most one promotional post a day; most posts are content, not offers",
+            "Every post that mentions betting carries an 18+ and RG line",
+            "Publish your full tip record, wins and losses",
+            "Anyone who asks to leave or stop is removed at once",
+            "No messages aimed at lapsed or losing players"
+          ],
+          "say": "Here are starting retention rules to adapt. At most one promotional post a day, with most posts being content, not offers. Every post that mentions betting carries an eighteen plus and responsible gambling line. Publish your full tip record, wins and losses. Anyone who asks to leave or stop is removed at once. And no messages aimed at lapsed or losing players. Pin these in your admin notes so every moderator follows them."
+        },
+        {
+          "v": "table",
+          "h": "Seasonality and the off-season",
+          "p": "Retention also depends on the calendar. In years without a major tournament, the European football off-season leaves a quiet gap in June and July. Plan content and budget for it instead of forcing activity.",
+          "d": {
+            "cols": [
+              "Period",
+              "What changes",
+              "Plan"
+            ],
+            "rows": [
+              [
+                "European season",
+                "most fixtures and interest",
+                "full schedule"
+              ],
+              [
+                "Off-season, no tournament",
+                "fewer fixtures",
+                "other sports, lower budget"
+              ],
+              [
+                "Tournament summer",
+                "national teams, new bettors",
+                "event plan from Module 4"
+              ]
+            ]
+          },
+          "say": "Retention also depends on the calendar. Look at the table. During the European season, there are the most fixtures and interest, so run a full schedule. In the off-season, in years without a major tournament, June and July are quiet, with fewer fixtures, so cover other sports with a lower budget. In a tournament summer, national teams bring new bettors, so use the event plan from Module four. Plan for the quiet gap instead of forcing activity."
+        },
+        {
+          "v": "cards",
+          "h": "Common retention mistakes",
+          "p": "These turn a useful channel into one that harms players and gets reported or removed. Each one has a simple fix, shown after the line.",
+          "d": [
+            "Daily bonus pushes|mostly content, rare offers",
+            "Hiding losing tips|publish the full record",
+            "Messaging bought lists|opt-in members only",
+            "No way to leave|easy exit, removed on request"
+          ],
+          "say": "These mistakes turn a useful channel into one that harms players and gets reported or removed. Look at each card and its fix. Daily bonus pushes: keep it mostly content, with rare offers. Hiding losing tips: publish the full record. Messaging bought lists: opt-in members only. And no way to leave: make exit easy, and remove people on request."
+        },
+        {
+          "v": "tip",
+          "h": "Consent and direct marketing",
+          "p": "Messaging people who did not opt in can break data protection and direct marketing laws, and platform rules. Gambling marketing to people who have asked to stop, or who have self-excluded, can also break gambling rules.",
+          "d": {
+            "kind": "warn",
+            "text": "Send content only to people who opted in, honour every request to stop, and follow local data protection, direct marketing and gambling rules. Check them per geo."
+          },
+          "say": "Messaging people who didn't opt in can break data protection and direct marketing laws, and platform rules. And gambling marketing to people who've asked to stop, or who've self-excluded, can also break gambling rules. As the warning says, send content only to people who opted in, honour every request to stop, and follow local data protection, direct marketing and gambling rules. Check them per geo."
+        },
+        {
+          "v": "big",
+          "h": "Retention is trust, not pressure",
+          "p": "Players stay with a channel that respects them: accurate times, honest records, no hype and a clear way out. That trust is also what keeps your channel within the rules and the operator happy to work with you.",
+          "d": {
+            "b": "Earn the right to stay in their feed",
+            "s": "Respect is the retention strategy."
+          },
+          "say": "Players stay with a channel that respects them: accurate times, honest records, no hype, and a clear way out. That same trust keeps your channel within the rules, and keeps the operator happy to work with you. As the screen says, earn the right to stay in their feed. Respect is the retention strategy."
+        }
+      ],
+      "takeaways": [
+        "The operator owns the player relationship; you offer opt-in, honest content.",
+        "Retention value is real but modest; test it with cohorts, never assume it.",
+        "Publish full records, carry RG lines and remove anyone who asks.",
+        "Plan content around the season, including the quiet months."
+      ],
+      "action": "Write your channel's posting schedule and one post template with local kickoff times, a full tip record line and an 18+ responsible gambling line.",
+      "glossary": [
+        {
+          "term": "Retention",
+          "def": "Players continuing to be active over time."
+        },
+        {
+          "term": "Opt-in",
+          "def": "A person's own choice to join or receive messages."
+        },
+        {
+          "term": "Tip record",
+          "def": "The full history of published picks, including losses."
+        },
+        {
+          "term": "Off-season",
+          "def": "The period between football seasons when fewer major fixtures are played."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "9 extra active players, $25 monthly NGR each, 30% RevShare. Your extra monthly commission?",
+          "options": [
+            "$225.00",
+            "$75.00",
+            "$67.50",
+            "$22.50"
+          ],
+          "answer": 2,
+          "why": "9 × $25 = $225; $225 × 30% = $67.50."
+        },
+        {
+          "q": "Which channel post is acceptable?",
+          "options": [
+            "'You haven't deposited this week, here's a bonus'",
+            "'Sure tips, guaranteed'",
+            "Only last week's winning picks",
+            "Weekend preview with local kickoff times, full record and an 18+ RG line"
+          ],
+          "answer": 3,
+          "why": "It is useful, honest and carries the RG line."
+        },
+        {
+          "q": "A member asks to stop receiving messages. What do you do?",
+          "options": [
+            "Remove them at once",
+            "Wait a week",
+            "Send one last offer",
+            "Ask why first, then decide"
+          ],
+          "answer": 0,
+          "why": "Honour every request to stop immediately."
+        },
+        {
+          "q": "What should you do in a quiet off-season month?",
+          "options": [
+            "Force daily offers",
+            "Shift to other sports and lower budget",
+            "Stop all content forever",
+            "Buy contact lists"
+          ],
+          "answer": 1,
+          "why": "Plan for the gap instead of forcing activity."
+        },
+        {
+          "q": "Who owns the player relationship and its marketing?",
+          "options": [
+            "The affiliate",
+            "The ad platform",
+            "The operator",
+            "The network"
+          ],
+          "answer": 2,
+          "why": "The operator owns the player account and its marketing; affiliates offer opt-in content."
+        }
+      ],
+      "say_intro": "On RevShare and hybrid deals, retention matters, but affiliates have clear limits. In this lesson you'll learn what you can and can't do, what better retention is worth, and how to run an opt-in content channel responsibly.",
+      "say_outro": "To recap: affiliates support retention only with honest, opt-in content, full records and easy exits, never pressure. Your task: write your channel's posting schedule and one post template with local kickoff times, a full tip record line, and an eighteen plus responsible gambling line. Now take the quiz."
+    },
+    {
+      "slug": "negotiating-and-scaling",
+      "title": "Negotiating deals and scaling budget",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can prepare a data pack and make a specific, defensible ask to an affiliate manager.",
+        "By the end you can calculate the value of a better deal and check it from the operator's side.",
+        "By the end you can scale budget within caps using the scale rules and quality gate."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why negotiation is the cheapest growth",
+          "p": "A better deal on the same traffic raises profit without more spend or more risk. Operators raise payouts for affiliates who send steady, qualified, compliant volume and can prove it. Your weekly reviews from Module 5 are your negotiating file.",
+          "d": {
+            "b": "Same traffic, better deal",
+            "s": "Your data is your leverage."
+          },
+          "say": "A better deal on the same traffic raises profit without more spend or more risk. Operators raise payouts for affiliates who send steady, qualified, compliant volume, and can prove it. As the screen says, your data is your leverage. Your weekly reviews from Module five are your negotiating file."
+        },
+        {
+          "v": "cards",
+          "h": "What to bring",
+          "p": "Bring evidence the operator can check against its own data. Managers need numbers to get a better deal approved internally. Pull it from your weekly scorecards.",
+          "d": [
+            "Volume history|qualified FTDs per month, 3 months or more",
+            "Quality|qualified rate and redeposit rate by month",
+            "Player value|cohort NGR per player at 30 and 90 days",
+            "Compliance record|no flags, fast fixes, review log",
+            "Plan|the volume you can add if terms improve"
+          ],
+          "say": "Bring evidence the operator can check against its own data. Look at the cards. Volume history, qualified F T Ds, first-time deposits, per month, for three months or more. Quality, your qualified rate and redeposit rate by month. Player value, cohort N G R, net gaming revenue, per player at thirty and ninety days. Your compliance record: no flags, fast fixes, a review log. And your plan, the volume you can add if terms improve. Managers need numbers to get a deal approved internally."
+        },
+        {
+          "v": "cards",
+          "h": "What to ask for",
+          "p": "Ask for one or two specific things, not everything at once. Each ask below has a clear value you can calculate before the conversation. Pick the one that matters most to your business right now.",
+          "d": [
+            "Higher CPA|the most direct gain",
+            "Easier qualification|more of your FTDs paid",
+            "Hybrid or RevShare upgrade|long-term upside",
+            "No or reset carryover|protects against big wins",
+            "Higher cap|room to scale",
+            "Faster payment terms|better cash flow"
+          ],
+          "say": "Ask for one or two specific things, not everything at once. Your options: a higher C P A, cost per acquisition, the most direct gain. Easier qualification, so more of your F T Ds are paid. A hybrid or RevShare upgrade, for long-term upside. No carryover or a reset, to protect against big wins. A higher cap, for room to scale. Or faster payment terms, for better cash flow. Each has a value you can calculate, so pick the one that matters most right now."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: the value of the ask",
+          "p": "Example: you send 120 qualified FTDs a month at $40. Your 90-day cohort value is strong. You ask for $46, a 15% rise. Check both your gain and the operator's side.",
+          "more": "Showing the operator's side makes the ask easier to approve: at $46 they still earn $24 of NGR per player over six months before their own costs. If your cohort value were $45, a $46 ask would leave them losing money and you should not expect a yes. The data tells you what is realistic.",
+          "d": {
+            "cols": [
+              "Item",
+              "Rule",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Current monthly commission",
+                "120 × $40",
+                "$4,800"
+              ],
+              [
+                "Asked",
+                "120 × $46",
+                "$5,520"
+              ],
+              [
+                "Your gain",
+                "$5,520 − $4,800",
+                "$720 a month"
+              ],
+              [
+                "Operator: 6-month NGR per player",
+                "from cohort data",
+                "$70"
+              ],
+              [
+                "Operator margin at $46",
+                "$70 − $46",
+                "$24 per player"
+              ]
+            ]
+          },
+          "say": "Let's value an ask. In this example, you send a hundred and twenty qualified F T Ds a month at forty dollars, so forty eight hundred a month. You ask for forty six, a fifteen percent rise, which is fifty five twenty. Your gain is seven hundred and twenty dollars a month. Now the operator's side: six-month N G R per player is seventy dollars, so at forty six they keep twenty four per player. Showing that makes the ask easier to approve. If their value were forty five, don't expect a yes."
+        },
+        {
+          "v": "phone",
+          "h": "A negotiation, done well",
+          "p": "Here is a short, specific negotiation. The affiliate leads with data, makes one clear ask, offers something in return and confirms in writing. Notice that the affiliate accepts a partial yes.",
+          "d": {
+            "app": "chat",
+            "title": "Affiliate manager",
+            "subtitle": "online",
+            "messages": [
+              {
+                "from": "me",
+                "text": "Three months: 110, 118, 124 qualified FTDs. Qualified rate 74%. 90-day NGR per player $52. Report attached."
+              },
+              {
+                "from": "me",
+                "text": "Could we move CPA from $40 to $46 and the cap to 160? We would add Kenya traffic next month."
+              },
+              {
+                "from": "them",
+                "text": "I can do $44 now and review $46 at 150 a month. Cap 160 approved."
+              },
+              {
+                "from": "me",
+                "text": "Agreed. Please confirm by email with the start date so we both have it in writing."
+              }
+            ]
+          },
+          "say": "Here's a negotiation done well. Notice the affiliate leads with data: three months of one ten, one eighteen and one twenty four qualified F T Ds, a seventy four percent qualified rate, and fifty two dollars of ninety-day N G R per player. Then one clear ask, forty six dollars and a cap of one sixty, with something offered in return, Kenya traffic. The manager offers forty four now, reviewing forty six at one fifty a month, and approves the cap. The affiliate accepts the partial yes, and asks for email confirmation."
+        },
+        {
+          "v": "quote",
+          "h": "From Dchessking",
+          "p": "A short note from the founder on how to approach managers when asking for better terms. Use it as a reminder before every negotiation call.",
+          "d": "Walk in with three months of clean numbers and one clear ask. Managers can approve data. They cannot approve noise.",
+          "by": "dchessking",
+          "say": "Here's a short note from Dchessking to keep in mind before every negotiation call. Here's how he puts it: Walk in with three months of clean numbers and one clear ask. Managers can approve data. They cannot approve noise."
+        },
+        {
+          "v": "flow",
+          "h": "The scaling path",
+          "p": "Scale in this order. Each step depends on the one before it, and skipping a step is how scaling turns a profitable campaign into a loss.",
+          "d": [
+            "Prove at target",
+            "Pass the quality gate",
+            "Confirm cap room",
+            "Scale +20% steps",
+            "Negotiate terms",
+            "Add geo or partner"
+          ],
+          "say": "Scale in this order. Follow the flow. Prove the campaign at target. Pass the quality gate. Confirm you have room under the cap. Scale in plus twenty percent steps. Negotiate terms. Then add a geo or partner. Each step depends on the one before it. Skipping a step is how scaling turns a profitable campaign into a loss."
+        },
+        {
+          "v": "check",
+          "h": "Scale rules at this level",
+          "p": "Starting rules to adapt. These combine the foundations scale rule with the quality and cap checks from this school. Check all five before every budget step.",
+          "more": "Example: cap 160 FTDs a month. 80% is 128. If you are on track for 120 and a 20% budget step would add about 24 FTDs, you would reach about 144, over the 128 line, so ask for a higher cap before taking the step. FTDs above a cap may not be paid; check your terms.",
+          "d": [
+            "Scale +20% every ≥ 48 hours at cost per qualified ≤ 0.8 × target with ≥ 3 qualified",
+            "Quality gate passed: qualified rate ≥ 60% of account average",
+            "Planned monthly FTDs ≤ 80% of the cap",
+            "Stop scaling if cost per qualified is above target in 2 reviews in a row",
+            "New partner: no scaling before the first full payment"
+          ],
+          "say": "Here are starting scale rules to check before every budget step. Scale plus twenty percent every forty eight hours or more, at cost per qualified of point eight times target or less, with at least three qualified. The quality gate: qualified rate at least sixty percent of account average. Planned monthly F T Ds at or under eighty percent of the cap. Stop scaling if cost per qualified is above target in two reviews in a row. And with a new partner, no scaling before the first full payment. F T Ds above a cap may not be paid, so check your terms."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: daily budget for a monthly goal",
+          "p": "Use the budget lab to turn a monthly qualified FTD goal into a daily budget at your target cost per qualified FTD. Then read the explanation underneath.",
+          "more": "150 × $30 = $4,500 for the month. $4,500 ÷ 30 = $150 a day. Reach it in +20% steps from where you are today, not in one jump, and only while the scale rules hold.",
+          "d": {
+            "kind": "budget",
+            "task": "Goal 150 qualified FTDs in 30 days at a $30 target. What daily budget?",
+            "preset": {
+              "goal": 150,
+              "target_cpa": 30,
+              "days": 30
+            },
+            "answer": {
+              "field": "daily_budget",
+              "value": 150,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Time for a lab. Your goal is one hundred and fifty qualified F T Ds in thirty days, at a thirty dollar target cost per qualified F T D. Use the budget lab to turn that monthly goal into a daily budget. Pause and try it, then check your answer. Then read the explanation underneath."
+        },
+        {
+          "v": "compare",
+          "h": "Common negotiation and scaling mistakes",
+          "p": "Most of these mistakes come from impatience: asking without data, or scaling past what the deal will pay for. Each fix is slower in the moment and far cheaper over a quarter.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Asking for more with one good week",
+                "Threatening to move traffic",
+                "Accepting a verbal promise",
+                "Scaling past the cap",
+                "Jumping budget 100% in a day"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Bring 3 months of data",
+                "Make one clear ask and offer something",
+                "Confirm every change by email",
+                "Stay under 80% of cap or raise it first",
+                "+20% steps, 48 hours apart"
+              ]
+            }
+          },
+          "say": "Most of these mistakes come from impatience. Asking for more after one good week. Threatening to move traffic. Accepting a verbal promise. Scaling past the cap. Jumping budget a hundred percent in a day. The fixes: bring three months of data, make one clear ask and offer something, confirm every change by email, stay under eighty percent of the cap or raise it first, and use plus twenty percent steps, forty eight hours apart."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance does not shrink at scale",
+          "p": "More volume means more ads, more creatives and more people seeing them. Every one still needs the pre-flight checks. Operators and regulators look harder at large affiliates, not less.",
+          "d": {
+            "kind": "warn",
+            "text": "At scale, keep platform authorization, local law, age targeting and responsible gambling messaging on every ad. Get every deal change in writing. We are not certain this is current; check your contract and the operator's terms before relying on it."
+          },
+          "say": "More volume means more ads, more creatives, and more people seeing them. Every one still needs the pre-flight checks, and operators and regulators look harder at large affiliates, not less. As the warning says, at scale keep platform authorization, local law, age targeting and responsible gambling messaging on every ad, and get every deal change in writing. We're not certain this is current, so check your contract and the operator's terms."
+        },
+        {
+          "v": "big",
+          "h": "Grow only what you can run responsibly",
+          "p": "Scale is only worth having if you can still review every creative, answer every flag within a day and keep your players' wellbeing in view. If the volume outgrows your review process, slow down until the process catches up.",
+          "d": {
+            "b": "Scale the process before the budget",
+            "s": "If you cannot review it, do not run it."
+          },
+          "say": "Scale is only worth having if you can still review every creative, answer every flag within a day, and keep your players' wellbeing in view. If volume outgrows your review process, slow down until the process catches up. As the screen says, scale the process before the budget. If you can't review it, don't run it."
+        }
+      ],
+      "takeaways": [
+        "Bring three months of qualified volume, quality and cohort value; make one clear ask.",
+        "Calculate your gain and the operator's margin before asking.",
+        "Scale in +20% steps with the quality gate and under 80% of cap.",
+        "Get every change in writing and keep compliance at every scale."
+      ],
+      "action": "Prepare a one-page data pack for your best operator (three months of qualified FTDs, qualified rate, cohort value, compliance record) and write one specific ask with its value calculated.",
+      "glossary": [
+        {
+          "term": "Cap",
+          "def": "The maximum number of FTDs or players an operator will pay for in a period."
+        },
+        {
+          "term": "Data pack",
+          "def": "A short summary of your volume, quality and compliance record used in negotiation."
+        },
+        {
+          "term": "Payment terms",
+          "def": "When the operator pays an invoice, for example net 30."
+        },
+        {
+          "term": "Quality gate",
+          "def": "A minimum qualified rate a source must meet before it can be scaled."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "You send 90 qualified FTDs a month at $35. You negotiate $40. Monthly gain?",
+          "options": [
+            "$450",
+            "$350",
+            "$500",
+            "$3,600"
+          ],
+          "answer": 0,
+          "why": "90 × $5 = $450."
+        },
+        {
+          "q": "Your cohort's 6-month NGR per player is $42. Is a CPA ask of $46 realistic?",
+          "options": [
+            "Yes, always ask high",
+            "Only on RevShare",
+            "Yes, CPA has nothing to do with NGR",
+            "Unlikely, it leaves the operator losing $4 per player before costs"
+          ],
+          "answer": 3,
+          "why": "The operator would pay more than it earns from your players."
+        },
+        {
+          "q": "Cap 100 FTDs a month. You are on track for 75. A 20% budget step would add about 15. What do you do?",
+          "options": [
+            "Take the step, 90 is fine",
+            "Ask for a higher cap first",
+            "Stop scaling",
+            "Double the budget"
+          ],
+          "answer": 1,
+          "why": "75 + 15 = 90, above 80% of cap (80), so raise the cap first."
+        },
+        {
+          "q": "Goal 200 qualified FTDs in 30 days at a $25 target. Daily budget?",
+          "options": [
+            "$125.00",
+            "$200.00",
+            "$166.67",
+            "$250.00"
+          ],
+          "answer": 2,
+          "why": "200 × $25 = $5,000; $5,000 ÷ 30 = $166.67."
+        },
+        {
+          "q": "The manager agrees a better CPA on a call. What next?",
+          "options": [
+            "Start sending more volume at once",
+            "Post it in your channel",
+            "Assume it applies to last month",
+            "Ask them to confirm by email with the start date"
+          ],
+          "answer": 3,
+          "why": "Every deal change should be in writing."
+        }
+      ],
+      "say_intro": "A better deal on the same traffic is the cheapest growth there is. In this lesson you'll prepare a data pack, make a specific ask to an affiliate manager, and scale budget safely within caps.",
+      "say_outro": "To recap: negotiate with data and one clear ask, check the operator's side, and scale in steps within your cap and quality gate. Your task: prepare a one-page data pack for your best operator, with three months of qualified F T Ds, qualified rate, cohort value and compliance record, and write one specific ask with its value calculated. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "Stakes $80,000, winnings $73,000, bonuses $1,500, fees $500. RevShare 25%. Commission?",
+      "options": [
+        "$1,250",
+        "$1,750",
+        "$1,375",
+        "$5,000"
+      ],
+      "answer": 0,
+      "why": "GGR $7,000; NGR $7,000 − $1,500 − $500 = $5,000; × 25% = $1,250."
+    },
+    {
+      "q": "30% RevShare with carryover. M1 +$2,000, M2 −$4,000, M3 +$1,500, M4 +$3,500. Total paid over four months?",
+      "options": [
+        "$1,500",
+        "$2,100",
+        "$900",
+        "$2,400"
+      ],
+      "answer": 2,
+      "why": "M1 $600. M2 carry −$4,000. M3 −$2,500, carry. M4 +$1,000 → $300. Total $900."
+    },
+    {
+      "q": "Same months without carryover. Total paid?",
+      "options": [
+        "$900",
+        "$3,000",
+        "$2,400",
+        "$2,100"
+      ],
+      "answer": 3,
+      "why": "$600 + $0 + $450 + $1,050 = $2,100."
+    },
+    {
+      "q": "Offer A: 35% with a 20% admin fee. Offer B: 30%, no fee. On $10,000 GGR after bonuses, which pays more?",
+      "options": [
+        "B by $200",
+        "A by $200",
+        "Equal",
+        "A by $500"
+      ],
+      "answer": 0,
+      "why": "A: $8,000 × 35% = $2,800. B: $3,000. B pays $200 more."
+    },
+    {
+      "q": "100 players cost $3,000. Hybrid $20 + 20%. Cumulative cohort NGR by month 4 is $5,100. Has the cohort paid back?",
+      "options": [
+        "Yes, $4,040",
+        "No, $2,900",
+        "Yes, $3,020",
+        "No, $1,020"
+      ],
+      "answer": 2,
+      "why": "$2,000 + 20% × $5,100 = $3,020, just above $3,000."
+    },
+    {
+      "q": "6-month value $90 per player, RevShare 35%, CPA $30. Does the rule allow moving volume to RevShare?",
+      "options": [
+        "Yes, $31.50 beats $30",
+        "No, $31.50 is below $36",
+        "Yes, any RevShare above 30%",
+        "No, never"
+      ],
+      "answer": 1,
+      "why": "$90 × 35% = $31.50. CPA × 1.2 = $36. It needs to beat $36."
+    },
+    {
+      "q": "Total commission $12,000; largest partner $7,200. Concentration, and the action?",
+      "options": [
+        "60%; grow other partners toward a 40% cap",
+        "60%; cut the largest partner",
+        "40%; fine",
+        "72%; stop all traffic"
+      ],
+      "answer": 0,
+      "why": "$7,200 ÷ $12,000 = 60%. Grow the others rather than cutting a working partner."
+    },
+    {
+      "q": "Cap 150. On track for 115. A +20% step adds about 23 FTDs. What do you do?",
+      "options": [
+        "Take the step",
+        "Move to RevShare",
+        "Pause the campaign",
+        "Ask for a higher cap first"
+      ],
+      "answer": 3,
+      "why": "115 + 23 = 138, above 80% of cap (120). Raise the cap first."
+    },
+    {
+      "q": "Which channel practice is acceptable for retention?",
+      "options": [
+        "Bonus messages to players who stopped depositing",
+        "Weekly opt-in previews with the full tip record and an 18+ RG line",
+        "Messaging a bought phone list",
+        "Showing only winning tips"
+      ],
+      "answer": 1,
+      "why": "Opt-in, honest, with RG messaging."
+    },
+    {
+      "q": "120 qualified FTDs a month at $40; you ask for $45. Your cohort's 6-month NGR per player is $65. Gain to you and the operator's margin per player at $45?",
+      "options": [
+        "$480; $25",
+        "$600; $25",
+        "$5,400; $20",
+        "$600; $20"
+      ],
+      "answer": 3,
+      "why": "120 × $5 = $600 a month. $65 − $45 = $20 per player before the operator's costs."
+    }
+  ]
+}

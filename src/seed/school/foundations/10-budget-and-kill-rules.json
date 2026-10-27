@@ -1,0 +1,2835 @@
+{
+  "school": "foundations",
+  "order": 10,
+  "slug": "budget-and-kill-rules",
+  "title": "Budget and kill rules",
+  "summary": "Exact starting rules for when to kill, hold, keep or scale an ad set, how to scale a winner and when to stop a whole test. You set your numbers before launch, apply one rule card at fixed checkpoints and protect your bankroll with written loss caps.",
+  "lessons": [
+    {
+      "slug": "set-your-numbers",
+      "title": "Set your numbers before launch",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can work out break-even CPA, target CPA and the scale line from one payout.",
+        "By the end you can set a zero-conversion kill line and a CPA kill line for any offer.",
+        "By the end you can size the test budget and daily budget for each ad set."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the numbers come first",
+          "p": "Every kill, hold or scale decision compares a result with a line. If the line is not written before launch, you will draw it after you see the result, and you will draw it where it makes you feel better. That habit is how a planned $90 test turns into a $400 loss.",
+          "d": {
+            "b": "Draw the lines before you spend",
+            "s": "Starting rules; adapt to your vertical and data."
+          },
+          "say": "Here's the big idea of this whole module. Every kill, hold or scale decision compares a result with a line. If you don't write that line before launch, you'll draw it after you see the result, and you'll draw it wherever it makes you feel better. That's exactly how a planned ninety dollar test quietly turns into a four hundred dollar loss. So we draw the lines before we spend. And remember, these are starting rules. Adapt them to your vertical and your data."
+        },
+        {
+          "v": "cards",
+          "h": "The six numbers on your plan",
+          "p": "Before any ad goes live you write six numbers on one page. All six come from the payout and the margin you want to keep. The rest of this module uses them at every checkpoint, so get them right once and you never have to argue with yourself later.",
+          "d": [
+            "Payout|what the network pays per FTD or lead",
+            "Break-even CPA|the most you can pay without losing",
+            "Target CPA|the cost that leaves your margin",
+            "Scale line|0.8 × target, proof of a real winner",
+            "Kill lines|when an ad set is switched off",
+            "Test budget|planned spend per ad set"
+          ],
+          "say": "Look at these six cards. Before any ad goes live, you write these six numbers on one page: the payout, break-even C P A, which means cost per acquisition, target C P A, the scale line, your kill lines, and your test budget. All six come from just two things, the payout and the margin you want to keep. The rest of this module uses them at every checkpoint. Get them right once, and you never have to argue with yourself later."
+        },
+        {
+          "v": "eq",
+          "h": "Break-even CPA",
+          "p": "Break-even CPA is the cost per conversion where you neither win nor lose. On a flat CPA deal it is simply the payout. Pay more than this per FTD and every FTD loses you money, however good the other numbers look.",
+          "more": "Example: the network pays $40 per qualified FTD. Break-even CPA is $40. If you pay $44 per FTD you lose $4 on each one. On RevShare or hybrid deals break-even depends on value over time, which is harder; for your first tests choose a flat CPA deal so this line is clear.",
+          "d": [
+            "Payout",
+            "=",
+            "Break-even CPA"
+          ],
+          "say": "First, break-even C P A. This is the cost per conversion where you neither win nor lose. On a flat C P A deal, it's simply the payout, just like the equation on screen. Here's an example. The network pays forty dollars per qualified F T D, a first-time deposit. Break-even is forty dollars. Pay forty four per F T D and you lose four dollars on each one. On RevShare or hybrid deals it's harder, so for your first tests, choose a flat C P A deal so this line is clear."
+        },
+        {
+          "v": "eq",
+          "h": "Target CPA",
+          "p": "Target CPA is the cost per conversion that leaves you the margin you chose. You multiply the payout by what is left after your margin. The margin covers tools, fees, rejected conversions and the noise in small tests, so do not set it at zero.",
+          "d": [
+            "Payout",
+            "×",
+            "(1 − margin)",
+            "=",
+            "Target CPA"
+          ],
+          "say": "Next, target C P A. This is the cost per conversion that leaves you the margin you chose. Follow the equation: payout, times one minus your margin, gives target C P A. Why keep a margin at all? Because it has to cover your tools, fees, rejected conversions and the noise you get in small tests. So never set the margin at zero. Paying exactly the payout leaves you no room for anything to go wrong."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: target CPA",
+          "p": "Example: payout $40 per FTD and you want to keep a 25% margin. One minus 25% is 75%. $40 × 75% = $30. Your target CPA is $30. This is the number every rule in this module is built on.",
+          "more": "Why 25%? It is a starting choice, not a law. A 10% margin leaves almost no room for rejected FTDs or a bad week. A 40% margin can make your target so low that almost nothing passes. Many beginners start between 20% and 30% and adjust once they have data. We use 25% for every Example in this module.",
+          "d": [
+            "$40",
+            "×",
+            "(1 − 25%)",
+            "=",
+            "$30"
+          ],
+          "say": "Let's work one through. This is an example. The payout is forty dollars per F T D and you want to keep a twenty five percent margin. One minus twenty five percent is seventy five percent. Forty dollars times seventy five percent is thirty dollars. So your target C P A is thirty dollars. Why twenty five percent? It's a starting choice, not a law. Ten percent leaves almost no room for a bad week, and forty percent can make the target so low almost nothing passes. Many beginners start between twenty and thirty percent. We use twenty five for every example in this module."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: find your target CPA",
+          "p": "Try it. Enter the payout and the margin, then check your answer. The lead-to-deposit rate does not change the target CPA, only the cost per lead. Change the numbers afterwards to see how a thinner or fatter margin moves the line.",
+          "d": {
+            "kind": "breakeven",
+            "task": "Payout $40 per FTD, margin 25%. What is your target CPA (max cost per FTD)?",
+            "preset": {
+              "payout": 40,
+              "cr_pct": 10,
+              "margin_pct": 25
+            },
+            "answer": {
+              "field": "max_cpa",
+              "value": 30,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Now it's your turn. The payout is forty dollars per F T D and the margin is twenty five percent. What's your target C P A, the most you can pay per F T D? Enter the payout and the margin in the tool. One note: the lead-to-deposit rate doesn't change the target C P A, only the cost per lead. Pause and try it, then check your answer. Afterwards, change the numbers and watch how a thinner or fatter margin moves the line."
+        },
+        {
+          "v": "eq",
+          "h": "The zero-conversion kill line",
+          "p": "The first kill line handles ad sets that bring nothing. When spend reaches 2 × target CPA and there are 0 network-confirmed conversions, you switch the ad set off. With a $30 target that line is $60.",
+          "more": "Why 2 × target and not 1 ×? One target CPA of spend gives an ad set roughly one fair chance at a conversion. Many decent ad sets miss that first one by luck. By 2 × target with nothing at all, the odds that it is a hidden winner are low enough that the money is better spent on a new ad set. Some guides use 2 × payout as a simple first threshold. Here we tighten it to 2 × target, which kills losers a little sooner.",
+          "d": [
+            "2",
+            "×",
+            "Target CPA",
+            "=",
+            "Zero-conversion kill line"
+          ],
+          "say": "The first kill line handles ad sets that bring nothing at all. When spend reaches two times your target C P A and there are zero network-confirmed conversions, you switch the ad set off. With a thirty dollar target, that line is sixty dollars. Why two times and not one? One target C P A of spend gives roughly one fair chance at a conversion, and plenty of decent ad sets miss that first one by luck. Some guides use two times payout as a simple first threshold. Here we tighten it to two times target, which kills losers a little sooner."
+        },
+        {
+          "v": "table",
+          "h": "Your numbers sheet",
+          "p": "Example: all six numbers for one offer, worked out from a $40 payout and a 25% margin. Notice the CPA kill line. It is the lower of 1.5 × target and break-even, because you never want a rule that lets you keep paying more than the payout.",
+          "d": {
+            "cols": [
+              "Number",
+              "Rule",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Break-even CPA",
+                "= Payout",
+                "$40"
+              ],
+              [
+                "Target CPA",
+                "Payout × (1 − margin)",
+                "$30"
+              ],
+              [
+                "Scale line",
+                "0.8 × target",
+                "$24"
+              ],
+              [
+                "Zero-FTD kill",
+                "2 × target, 0 FTDs",
+                "$60"
+              ],
+              [
+                "CPA kill line",
+                "Lower of 1.5 × target and break-even",
+                "$40"
+              ],
+              [
+                "Test budget per ad set",
+                "2 to 3 × target",
+                "$60 to $90"
+              ]
+            ]
+          },
+          "say": "Here's your full numbers sheet. This is an example, built from a forty dollar payout and a twenty five percent margin. Break-even is forty dollars, target is thirty, the scale line is twenty four, and the zero F T D kill is sixty. Now notice the C P A kill line. It's the lower of one point five times target and break-even, so here it's forty dollars. That's because you never want a rule that lets you keep paying more than the payout. And the test budget per ad set is sixty to ninety dollars."
+        },
+        {
+          "v": "eq",
+          "h": "Test budget per ad set",
+          "p": "As a starting rule, plan 2 to 3 × target CPA of spend for each ad set. 2 × lets you apply the zero-conversion kill. 3 × lets you judge CPA on an ad set that does convert. Plan 3 × if you can afford it.",
+          "more": "Example: target $30. 2 × $30 = $60, 3 × $30 = $90. With three ad sets, the planned spend is $180 to $270. Add a 10% buffer for overspend and rounding: about $200 to $300. If that is more than you can afford to lose, test fewer ad sets, not smaller ones.",
+          "d": [
+            "2 to 3",
+            "×",
+            "Target CPA",
+            "=",
+            "Test budget per ad set"
+          ],
+          "say": "How much should each ad set get? As a starting rule, plan two to three times target C P A per ad set. Two times lets you apply the zero conversion kill. Three times lets you actually judge C P A on an ad set that does convert, so plan three times if you can afford it. Example: with a thirty dollar target, that's sixty to ninety dollars. Three ad sets means one hundred eighty to two hundred seventy, plus a ten percent buffer, so about two to three hundred. If that's too much to lose, test fewer ad sets, not smaller ones."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: daily budget per ad set",
+          "p": "Turn the test budget into a daily budget. You want room for about 3 target CPAs in each ad set, spread over 6 days so that you see a full week of behaviour. Work it out, then check.",
+          "d": {
+            "kind": "budget",
+            "task": "Room for 3 FTDs at a $30 target CPA over 6 days. What daily budget per ad set?",
+            "preset": {
+              "goal": 3,
+              "target_cpa": 30,
+              "days": 6
+            },
+            "answer": {
+              "field": "daily_budget",
+              "value": 15,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Now turn that test budget into a daily budget. You want room for about three target C P As in each ad set, spread over six days, so you see a full week of behaviour. The task on screen gives you the numbers: room for three F T Ds at a thirty dollar target C P A, over six days. What daily budget per ad set does that give you? Pause and try it, then check your answer."
+        },
+        {
+          "v": "table",
+          "h": "When each checkpoint arrives",
+          "p": "Example, target $30. The daily budget decides how many days pass before you can apply each rule. Too small and the decisions take weeks. Too big and you reach the kill line on day one, before postbacks have time to arrive.",
+          "d": {
+            "cols": [
+              "Daily per ad set",
+              "Days to $60 (2×)",
+              "Days to $90 (3×)"
+            ],
+            "rows": [
+              [
+                "$10",
+                "6",
+                "9"
+              ],
+              [
+                "$15",
+                "4",
+                "6"
+              ],
+              [
+                "$20",
+                "3",
+                "4.5"
+              ],
+              [
+                "$30",
+                "2",
+                "3"
+              ]
+            ]
+          },
+          "say": "This table shows why the daily budget matters. It's an example with a thirty dollar target. The daily budget decides how many days pass before you can apply each rule. Read across the rows. At ten dollars a day, it takes six days to reach the sixty dollar line. At thirty a day, just two. Too small, and decisions take weeks. Too big, and you hit the kill line on day one, before postbacks have had time to arrive."
+        },
+        {
+          "v": "bars",
+          "h": "Margin moves every line",
+          "p": "Example: the same $40 payout with three different margins. A bigger margin gives a lower target, so fewer ad sets pass, but the ones that pass are safer. Recalculate every line whenever you change the margin or the network changes the payout.",
+          "d": [
+            [
+              "10% margin",
+              90,
+              "$36 target"
+            ],
+            [
+              "25% margin",
+              75,
+              "$30 target"
+            ],
+            [
+              "40% margin",
+              60,
+              "$24 target"
+            ],
+            [
+              "Break-even",
+              100,
+              "$40"
+            ]
+          ],
+          "say": "Look at these bars. It's an example with the same forty dollar payout and three different margins. A ten percent margin gives a thirty six dollar target. Twenty five percent gives thirty. Forty percent gives twenty four. A bigger margin means a lower target, so fewer ad sets pass, but the ones that do are safer. And here's the habit to build: recalculate every line whenever you change your margin or the network changes the payout."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: write the plan in a sheet",
+          "p": "Open a blank spreadsheet and make a plan tab before you open Ads Manager. Type the payout and margin, then let formulas fill the rest so a payout change updates every line. Screenshot it with the date. This tab is what you read at every checkpoint.",
+          "d": {
+            "kind": "browser",
+            "url": "sheets.example/ng-offera-plan",
+            "title": "Test plan: NG_OfferA_FTD_1004",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Payout per FTD (B1)",
+                "value": "$40"
+              },
+              {
+                "type": "field",
+                "label": "Margin (B2)",
+                "value": "25%"
+              },
+              {
+                "type": "field",
+                "label": "Target CPA (B3) = B1*(1-B2)",
+                "value": "$30"
+              },
+              {
+                "type": "field",
+                "label": "Scale line (B4) = 0.8*B3",
+                "value": "$24"
+              },
+              {
+                "type": "field",
+                "label": "Zero-FTD kill (B5) = 2*B3",
+                "value": "$60"
+              },
+              {
+                "type": "field",
+                "label": "CPA kill line (B6) = MIN(1.5*B3, B1)",
+                "value": "$40"
+              },
+              {
+                "type": "field",
+                "label": "Test budget per ad set (B7) = 3*B3",
+                "value": "$90"
+              },
+              {
+                "type": "text",
+                "value": "Example. Starting rules; adapt to your vertical and data."
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "Here's how to put this into practice. Open a blank spreadsheet and make a plan tab before you even open Ads Manager. On screen you can see it. Type the payout and the margin, then let formulas fill in everything else, the target, scale line, both kill lines and test budget. That way, if the payout changes, every line updates. Then screenshot it with the date. This tab is what you read at every checkpoint."
+        },
+        {
+          "v": "compare",
+          "h": "Mistakes when setting numbers",
+          "p": "Most broken tests were broken before launch. These are the mistakes we see most often in beginner plans, and the fix for each one. Check your own plan against the left column before you spend anything.",
+          "d": {
+            "a": {
+              "title": "Common mistakes",
+              "items": [
+                "Target CPA = payout, no margin",
+                "Kill line decided after launch",
+                "$5 a day across many ad sets",
+                "Using the payout before network holds and rejections"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Keep 20% to 30% margin to start",
+                "All lines written and dated first",
+                "Fewer ad sets, enough budget each",
+                "Ask the network for the qualified payout and reject rate"
+              ]
+            }
+          },
+          "say": "Most broken tests were broken before launch. On the left are the mistakes we see most in beginner plans. Setting target C P A equal to the payout with no margin. Deciding the kill line after launch. Spreading five dollars a day across many ad sets. And using the payout before network holds and rejections. On the right are the fixes: keep twenty to thirty percent margin to start, write and date all lines first, use fewer ad sets with enough budget each, and ask the network for the qualified payout and reject rate. Check your own plan against the left column."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: the payout must be clean",
+          "p": "Your numbers only mean something if the conversions are real and allowed. Trading, gambling and finance offers usually need platform authorization and must follow local law in each geo. Check both before you plan a budget.",
+          "d": {
+            "kind": "warn",
+            "text": "Never improve your numbers with misleading claims or incentives the offer does not allow. Those FTDs get rejected and can close your account."
+          },
+          "say": "A word on compliance. Your numbers only mean something if the conversions are real and allowed. Trading, gambling and finance offers usually need platform authorization, and they must follow local law in each geo. Check both before you plan a budget. And read the warning on screen carefully: never improve your numbers with misleading claims or incentives the offer doesn't allow. Those F T Ds get rejected, and they can close your account."
+        },
+        {
+          "v": "check",
+          "h": "Sign-off before launch",
+          "p": "Tick every line before your first ad goes live. If one is missing, you are not ready to spend, even if the ads are approved and waiting. It takes ten minutes and it is the cheapest part of the whole test.",
+          "d": [
+            "Payout confirmed in writing",
+            "Margin chosen and target CPA calculated",
+            "Scale line and both kill lines written",
+            "Test budget per ad set chosen (2 to 3 × target)",
+            "Daily budget fits the checkpoints",
+            "Plan tab dated and screenshotted"
+          ],
+          "say": "Before your first ad goes live, tick every line on this checklist. Payout confirmed in writing. Margin chosen and target C P A calculated. Scale line and both kill lines written. Test budget per ad set chosen, two to three times target. Daily budget that fits the checkpoints. And the plan tab dated and screenshotted. If one is missing, you're not ready to spend, even if the ads are approved and waiting. It takes ten minutes, and it's the cheapest part of the whole test."
+        }
+      ],
+      "takeaways": [
+        "Target CPA = payout × (1 − margin). Break-even CPA on a flat deal = payout.",
+        "Zero-conversion kill line = 2 × target. CPA kill line = the lower of 1.5 × target and break-even.",
+        "Plan 2 to 3 × target CPA of spend per ad set, and test fewer ad sets rather than smaller ones."
+      ],
+      "action": "Pick one offer you could run and fill in a plan tab: payout, margin, target CPA, scale line, both kill lines, test budget per ad set and daily budget. Date it and save a screenshot.",
+      "glossary": [
+        {
+          "term": "Break-even CPA",
+          "def": "The cost per conversion at which you neither win nor lose. On a flat CPA deal it equals the payout."
+        },
+        {
+          "term": "Target CPA",
+          "def": "Payout × (1 − margin). The cost per conversion that leaves the margin you chose."
+        },
+        {
+          "term": "Margin",
+          "def": "The share of the payout you plan to keep after paying for traffic, such as 25%."
+        },
+        {
+          "term": "Kill line",
+          "def": "A written spend or CPA level at which an ad set is switched off."
+        },
+        {
+          "term": "Scale line",
+          "def": "0.8 × target CPA. An ad set at or under it, with enough conversions, may get more budget."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Payout $50 per FTD, margin 20%. What is your target CPA?",
+          "options": [
+            "$50",
+            "$45",
+            "$40",
+            "$30"
+          ],
+          "answer": 2,
+          "why": "$50 × (1 − 20%) = $50 × 0.8 = $40. $50 is break-even, not target."
+        },
+        {
+          "q": "Target CPA $30. What is the zero-conversion kill line?",
+          "options": [
+            "$60",
+            "$30",
+            "$45",
+            "$90"
+          ],
+          "answer": 0,
+          "why": "2 × $30 = $60 of spend with 0 confirmed conversions."
+        },
+        {
+          "q": "Payout $40, target $30. What is the CPA kill line?",
+          "options": [
+            "$45, because it is 1.5 × target",
+            "$40, the lower of $45 and break-even",
+            "$60",
+            "$30"
+          ],
+          "answer": 1,
+          "why": "1.5 × $30 = $45, but break-even is $40. Use the lower so you never keep paying above the payout."
+        },
+        {
+          "q": "Target CPA $20. What test budget per ad set does the starting rule suggest?",
+          "options": [
+            "$10 to $20",
+            "$20",
+            "$100 to $200",
+            "$40 to $60"
+          ],
+          "answer": 3,
+          "why": "2 to 3 × $20 = $40 to $60."
+        },
+        {
+          "q": "Your planned test is more than you can afford to lose. What is the better fix?",
+          "options": [
+            "Cut each ad set to $5 a day and keep all of them",
+            "Raise the margin to 50%",
+            "Test fewer ad sets, each with a full test budget",
+            "Skip the kill lines this time"
+          ],
+          "answer": 2,
+          "why": "Small budgets spread thin never reach a kill or scale line. Fewer, properly funded ad sets give real answers."
+        }
+      ],
+      "say_intro": "In this lesson you'll set your numbers before you launch anything. From one payout you'll work out break-even C P A, target C P A, the scale line, two kill lines and your test budget, so every later decision is a lookup, not a guess.",
+      "say_outro": "So, every line comes from the payout and the margin, and you write them all down before you spend. Your task: pick one offer you could run and fill in a plan tab with payout, margin, target C P A, scale line, both kill lines, test budget per ad set and daily budget, then date it and save a screenshot. Now take the quiz."
+    },
+    {
+      "slug": "the-rule-card",
+      "title": "The rule card: kill, hold, keep, scale",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can apply exact kill, hold, keep and scale rules to an ad set's numbers.",
+        "By the end you can say which decisions are allowed at the 24, 48 and 72 hour checkpoints.",
+        "By the end you can explain why decisions use network-confirmed conversions."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "One card, four decisions",
+          "p": "Every checkpoint ends with one of four decisions for each ad set. A rule card turns that into a lookup instead of a debate. Without it, a beginner usually keeps losers too long and starves winners, and both mistakes cost real money.",
+          "d": {
+            "b": "Kill, hold, keep or scale",
+            "s": "Starting rules; adapt to your vertical and data."
+          },
+          "say": "Every checkpoint ends with one of four decisions for each ad set: kill, hold, keep or scale. A rule card turns that into a simple lookup instead of a debate with yourself. Without one, beginners usually keep losers too long and starve their winners, and both mistakes cost real money. As always, these are starting rules. Adapt them to your vertical and your data."
+        },
+        {
+          "v": "cards",
+          "h": "What each decision means",
+          "p": "These four words mean exact actions, not moods. Hold and Keep both leave the budget alone, but for different reasons: Hold means you cannot judge yet, Keep means you judged and it is working at target.",
+          "d": [
+            "Kill|pause the ad set. Do not restart it",
+            "Hold|data too thin or CPA unclear. Change nothing",
+            "Keep|working at target. Leave the budget",
+            "Scale|clear winner. Add budget in a step"
+          ],
+          "say": "Look at these four cards. These words mean exact actions, not moods. Kill means pause the ad set, and don't restart it. Hold means the data is too thin or the C P A, your cost per acquisition, is unclear, so you change nothing. Keep means it's working at target, so you leave the budget. Scale means a clear winner, so you add budget in a step. Notice Hold and Keep both leave the budget alone, but for different reasons. Hold means you can't judge yet. Keep means you judged, and it's working."
+        },
+        {
+          "v": "table",
+          "h": "The rule card",
+          "p": "Example with a $30 target, $40 break-even. Check the rows from the top and stop at the first one that is true. Starting rules; adapt them to your vertical and data. Count only network-confirmed conversions.",
+          "d": {
+            "cols": [
+              "Decision",
+              "Rule",
+              "Example, $30 target"
+            ],
+            "rows": [
+              [
+                "Kill",
+                "0 conversions at spend ≥ 2 × target",
+                "$60 spent, 0 FTDs"
+              ],
+              [
+                "Kill",
+                "Spend ≥ 3 × target and CPA above CPA kill line",
+                "$90+ spent, CPA over $40"
+              ],
+              [
+                "Scale",
+                "≥ 3 conversions and CPA ≤ 0.8 × target",
+                "3+ FTDs, CPA ≤ $24"
+              ],
+              [
+                "Keep",
+                "≥ 3 conversions and CPA ≤ target",
+                "3+ FTDs, CPA $24 to $30"
+              ],
+              [
+                "Hold",
+                "Anything else",
+                "e.g. $50 spent, 1 FTD"
+              ]
+            ]
+          },
+          "say": "Here's the rule card itself. It's an example with a thirty dollar target and forty dollar break-even. Check the rows from the top and stop at the first one that's true. Kill with zero conversions at sixty dollars spent. Kill when spend is ninety or more and C P A is over forty. Scale with three or more F T Ds, first-time deposits, at a C P A of twenty four or less. Keep with three or more at twenty four to thirty. Anything else is Hold. Count only network-confirmed conversions, and adapt these starting rules to your data."
+        },
+        {
+          "v": "map",
+          "h": "The rule card as a decision tree",
+          "p": "The same card as a path. Start at the checkpoint and answer each question with yes or no. The first yes gives your decision. If you reach the end with no yes, the answer is Hold, and you change nothing until the next checkpoint.",
+          "d": {
+            "nodes": [
+              {
+                "id": "chk",
+                "label": "Checkpoint: network FTDs",
+                "kind": "data"
+              },
+              {
+                "id": "q1",
+                "label": "0 FTDs, spend ≥ 2× target?",
+                "kind": "tool"
+              },
+              {
+                "id": "kill",
+                "label": "Kill: pause",
+                "kind": "money"
+              },
+              {
+                "id": "q2",
+                "label": "Spend ≥ 3×, CPA over kill line?",
+                "kind": "tool"
+              },
+              {
+                "id": "q3",
+                "label": "3+ FTDs, CPA ≤ 0.8× target?",
+                "kind": "tool"
+              },
+              {
+                "id": "scale",
+                "label": "Scale +20%",
+                "kind": "money"
+              },
+              {
+                "id": "q4",
+                "label": "3+ FTDs, CPA ≤ target?",
+                "kind": "tool"
+              },
+              {
+                "id": "keep",
+                "label": "Keep: no change",
+                "kind": "money"
+              },
+              {
+                "id": "hold",
+                "label": "Hold: wait",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "chk",
+                "q1",
+                "check"
+              ],
+              [
+                "q1",
+                "kill",
+                "yes"
+              ],
+              [
+                "q1",
+                "q2",
+                "no"
+              ],
+              [
+                "q2",
+                "kill",
+                "yes"
+              ],
+              [
+                "q2",
+                "q3",
+                "no"
+              ],
+              [
+                "q3",
+                "scale",
+                "yes"
+              ],
+              [
+                "q3",
+                "q4",
+                "no"
+              ],
+              [
+                "q4",
+                "keep",
+                "yes"
+              ],
+              [
+                "q4",
+                "hold",
+                "no"
+              ]
+            ]
+          },
+          "say": "This is the same card drawn as a path. Start at the checkpoint on the left and answer each question, yes or no. Zero F T Ds with spend at two times target? Kill. Spend at three times with C P A over the kill line? Kill. Three plus F T Ds with C P A at zero point eight times target or less? Scale by twenty percent. Three plus at or under target? Keep. If you reach the end with no yes at all, the answer is Hold, and you change nothing until the next checkpoint."
+        },
+        {
+          "v": "tip",
+          "h": "Why the CPA kill line uses break-even",
+          "p": "The free Kill-or-scale tool kills on CPA above 1.5 × target. With a 25% margin, 1.5 × target is above your payout, so you would keep paying more than you earn. Our card uses the lower of the two.",
+          "more": "When is 1.5 × target the lower one? Only when your margin is above about 33%. Example: payout $60, margin 40%, target $36. 1.5 × $36 = $54, below the $60 break-even, so $54 is the kill line. Work this out once per offer and write the result on your plan tab.",
+          "d": {
+            "kind": "example",
+            "text": "Example: target $30. 1.5 × $30 = $45. Payout $40. The CPA kill line is $40, the lower one."
+          },
+          "say": "Here's why our C P A kill line uses break-even. The free Kill-or-scale tool kills on C P A above one point five times target. But with a twenty five percent margin, one point five times target is above your payout, so you'd keep paying more than you earn. Look at the example on screen: target thirty, so one point five times is forty five, but the payout is forty, so the kill line is forty, the lower one. One point five times target is only lower when your margin is above about thirty three percent. Work it out once per offer and write it on your plan tab."
+        },
+        {
+          "v": "table",
+          "h": "What you may decide, and when",
+          "p": "Timing matters as much as the numbers. Early hours show whether things work, not whether they pay. These are starting rules for an FTD offer with postbacks that usually arrive the same day. Slow postbacks need the rules in the next lesson.",
+          "d": {
+            "cols": [
+              "Checkpoint",
+              "Look at",
+              "Allowed"
+            ],
+            "rows": [
+              [
+                "0 to 6 h",
+                "Approved, spending, link works",
+                "Fix only"
+              ],
+              [
+                "24 h",
+                "CTR, CPC, page views, sign-ups",
+                "Fix; zero-FTD kill only"
+              ],
+              [
+                "48 h",
+                "Network FTDs and CPA",
+                "Kill rules"
+              ],
+              [
+                "72 h",
+                "Network FTDs and CPA",
+                "Kill, keep, scale"
+              ],
+              [
+                "Every 24 h after",
+                "Same, same time each day",
+                "All four, scale steps ≥ 48 h apart"
+              ]
+            ]
+          },
+          "say": "Timing matters as much as the numbers. Early hours show whether things work, not whether they pay. In the first six hours, you check the ad is approved, spending and the link works, and you only fix things. At twenty four hours you look at C T R, click-through rate, C P C, cost per click, page views and sign-ups, and the only kill allowed is the zero F T D kill. At forty eight hours, kill rules apply. At seventy two, kill, keep and scale. After that, all four, with scale steps at least forty eight hours apart. This assumes postbacks usually arrive the same day. Slow postbacks need the next lesson."
+        },
+        {
+          "v": "big",
+          "h": "Confirmed by the network, not the platform",
+          "p": "Ads Manager reports what its pixel or conversions API saw. The network reports what it will pay for. They often differ: duplicate events, deposits under the minimum, rejected or held FTDs. Your rule card uses the network number, because that is the money.",
+          "d": {
+            "b": "Judge with what you get paid for",
+            "s": "The platform number guides delivery, not decisions"
+          },
+          "say": "This is a crucial point. Ads Manager reports what its pixel or conversions A P I saw. The network reports what it will actually pay for. They often differ, because of duplicate events, deposits under the minimum, and rejected or held F T Ds. Your rule card uses the network number, because that's the money. The platform number guides delivery. It doesn't make your decisions."
+        },
+        {
+          "v": "compare",
+          "h": "Platform-reported vs network-confirmed",
+          "p": "Example: the same ad set on the same day. Using the platform number, CPA looks like $20 and you would scale. Using the network number, CPA is $40, which is break-even, so the card says Hold at best. One wrong column can double your spend on a loser.",
+          "d": {
+            "a": {
+              "title": "Platform says",
+              "items": [
+                "$80 spent",
+                "4 purchases",
+                "CPA $20",
+                "Looks like Scale"
+              ]
+            },
+            "b": {
+              "title": "Network confirms",
+              "items": [
+                "$80 spent",
+                "2 qualified FTDs",
+                "CPA $40",
+                "Hold, close to kill"
+              ]
+            }
+          },
+          "say": "Compare the two columns. It's an example: the same ad set on the same day, eighty dollars spent. The platform says four purchases, a C P A of twenty dollars, which looks like Scale. The network confirms only two qualified F T Ds, so the C P A is forty dollars. That's break-even, so the card says Hold at best, close to kill. Reading the wrong column could double your spend on a loser."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: a zero-FTD ad set",
+          "p": "Apply the card. Remember to check the rows from the top. Then press check to see the working. Try changing the spend to $55 afterwards and see how the verdict changes.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $30. Spent $62 in 4 days, 0 network-confirmed FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 62,
+              "conversions": 0,
+              "target_cpa": 30,
+              "days": 4
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "kill"
+            }
+          },
+          "say": "Time to apply the card. The target is thirty dollars. This ad set has spent sixty two dollars in four days with zero network-confirmed F T Ds. Is it kill, hold or scale? Remember to check the rows from the top. Pause and try it, then check your answer and read the working. Afterwards, try changing the spend to fifty five dollars and see how the verdict changes."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: a strong ad set",
+          "p": "Another one. Work out the CPA first, then compare it with the scale line, 0.8 × target. Count the conversions too: the scale rule needs at least 3.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $30. Spent $72 in 3 days, 4 network-confirmed FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 72,
+              "conversions": 4,
+              "target_cpa": 30,
+              "days": 3
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "scale"
+            }
+          },
+          "say": "Here's another one. Target thirty dollars. This ad set spent seventy two dollars in three days and has four network-confirmed F T Ds. Work out the C P A first, then compare it with the scale line, zero point eight times target. And count the conversions too, because the scale rule needs at least three. Pause and try it, then check your answer."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: one early FTD",
+          "p": "One more. The CPA is above target, but how much has it spent compared with 3 × target? In the tool, Keep shows as Hold, because the action is the same: no budget change.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $30. Spent $50 in 3 days, 1 network-confirmed FTD. Kill, hold or scale?",
+            "preset": {
+              "spend": 50,
+              "conversions": 1,
+              "target_cpa": 30,
+              "days": 3
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "hold"
+            }
+          },
+          "say": "One more. Target thirty dollars. This ad set spent fifty dollars in three days with one network-confirmed F T D. The C P A is above target, but ask yourself, how much has it spent compared with three times target? One note on the tool: Keep shows up as Hold, because the action is the same, no budget change. Pause and try it, then check your answer."
+        },
+        {
+          "v": "check",
+          "h": "How long a Hold can last",
+          "p": "Hold is not forever. An ad set stuck above target eats budget that a new ad set could use. These limits stop a Hold from turning into a slow leak. Starting rules; adapt to your vertical and data.",
+          "more": "Example: target $30, kill line $40. An ad set has spent $96 with 3 FTDs, CPA $32. It is above target but under the kill line, so Hold. Two days later it has spent $126 with 4 FTDs, CPA $31.50. Still above target after 2 more checkpoints, so kill it and move the money to a new angle.",
+          "d": [
+            "Change nothing while in Hold",
+            "Re-check at the next daily checkpoint",
+            "Above target after 2 more checkpoints: kill",
+            "Spend reaches 5 × target, CPA still above target: kill",
+            "To try a new creative, launch it as a new ad set"
+          ],
+          "say": "Hold isn't forever. An ad set stuck above target eats budget a new ad set could use. So here are the limits. Change nothing while in Hold. Re-check at the next daily checkpoint. If it's still above target after two more checkpoints, kill it. If spend reaches five times target and C P A is still above target, kill it. And to try a new creative, launch it as a new ad set. Example: an ad set spent ninety six dollars for three F T Ds, thirty two each, so Hold. Two days later it's at thirty one fifty. Still above target, so kill it and move the money to a new angle."
+        },
+        {
+          "v": "compare",
+          "h": "Rule card mistakes",
+          "p": "These are the ways beginners break their own card. Each one feels reasonable in the moment, which is why the card has to be written before launch and read at every checkpoint.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Killing on CTR at 6 hours",
+                "Scaling on 1 cheap FTD",
+                "Using platform conversions",
+                "Reviving a killed ad set",
+                "Raising budget on a Hold"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "No CPA decisions before 48 h",
+                "Scale needs 3+ FTDs",
+                "Network-confirmed only",
+                "Launch a new ad set instead",
+                "Hold means no change"
+              ]
+            }
+          },
+          "say": "These are the ways beginners break their own card. Killing on C T R at six hours. Scaling on one cheap F T D. Using platform conversions. Reviving a killed ad set. Raising budget on a Hold. And on the right, the fixes: no C P A decisions before forty eight hours, scaling needs three or more F T Ds, use network-confirmed only, launch a new ad set instead of reviving, and Hold means no change. Each mistake feels reasonable in the moment, which is why the card is written before launch."
+        },
+        {
+          "v": "product",
+          "h": "Check a call in seconds",
+          "p": "Once you know the card by heart, a calculator saves time at each daily checkpoint. Use it to check your call, not to replace your written rules, and remember to adjust the CPA kill line to break-even.",
+          "d": {
+            "slug": "voosquare",
+            "why": "The Kill-or-scale tool applies these default rules to spend, conversions and target CPA so you can check each decision quickly."
+          },
+          "say": "Once you know the card by heart, a calculator saves time. The Kill-or-scale tool on VooSquare applies these default rules to your spend, conversions and target C P A, so you can check each decision quickly. Use it to check your call, not to replace your written rules. And remember to adjust the C P A kill line to break-even, as we discussed."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance at every checkpoint",
+          "p": "Checkpoints are also a policy check. Look at rejected ads, comments and any account warnings before you look at CPA. A cheap CPA from an ad that breaks policy is not a winner.",
+          "d": {
+            "kind": "warn",
+            "text": "Regulated offers need authorization and must follow local law. A rule card never overrides an ad policy."
+          },
+          "say": "Every checkpoint is also a policy check. Look at rejected ads, comments and any account warnings before you even look at C P A. A cheap C P A from an ad that breaks policy is not a winner. And as the warning on screen says, regulated offers need authorization and must follow local law. A rule card never overrides an ad policy."
+        },
+        {
+          "v": "quote",
+          "h": "Why the card sits next to the screen",
+          "p": "This is from the founder, on why the rule card is printed and kept in sight during every check. The habit is simple and it costs nothing, which is exactly why it works.",
+          "d": "I keep the rule card next to my screen. When a number tempts me, I read the card, not the number.",
+          "by": "dchessking",
+          "say": "Here's a line from the founder, on why the rule card is printed and kept in sight during every check. Here's how Dchessking puts it: I keep the rule card next to my screen. When a number tempts me, I read the card, not the number. The habit is simple and it costs nothing, which is exactly why it works."
+        }
+      ],
+      "takeaways": [
+        "Check from the top: zero-FTD kill, CPA kill, scale, keep, then hold.",
+        "No decisions before 24 hours, no CPA kills before 48 hours, no scaling before 72 hours.",
+        "Use network-confirmed conversions for decisions. Platform numbers only guide delivery."
+      ],
+      "action": "Write your own rule card for the offer you planned in lesson 1, with the dollar values filled in for each row, and print it or save it next to your plan tab.",
+      "glossary": [
+        {
+          "term": "Rule card",
+          "def": "A short written list of kill, hold, keep and scale rules with exact numbers, checked in order at every checkpoint."
+        },
+        {
+          "term": "Hold",
+          "def": "Leave the ad set unchanged because the data is too thin or the CPA is unclear."
+        },
+        {
+          "term": "Keep",
+          "def": "Leave the budget unchanged because the ad set has enough conversions and a CPA at or under target."
+        },
+        {
+          "term": "Network-confirmed conversion",
+          "def": "A conversion the network has recorded and will pay for, as opposed to one the ad platform reports."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Target $30, break-even $40. Spent $66, 0 FTDs, 3 days. What does the card say?",
+          "options": [
+            "Hold",
+            "Keep",
+            "Scale",
+            "Kill"
+          ],
+          "answer": 3,
+          "why": "$66 is above 2 × $30 = $60 with no FTDs, so the zero-FTD kill applies."
+        },
+        {
+          "q": "Target $30. Spent $69, 3 FTDs, 4 days. What does the card say?",
+          "options": [
+            "Scale",
+            "Kill",
+            "Hold",
+            "Keep"
+          ],
+          "answer": 0,
+          "why": "$69 ÷ 3 = $23, under the $24 scale line, with 3 FTDs."
+        },
+        {
+          "q": "Target $30. Spent $84, 3 FTDs, 4 days. CPA $28. What does the card say?",
+          "options": [
+            "Scale",
+            "Keep",
+            "Kill",
+            "Hold, data too thin"
+          ],
+          "answer": 1,
+          "why": "3 FTDs and $28 is at or under target but above the $24 scale line, so Keep."
+        },
+        {
+          "q": "At 6 hours an ad set has a 0.4% CTR and no FTDs. What may you do?",
+          "options": [
+            "Kill it for low CTR",
+            "Double the budget",
+            "Check it works and fix anything broken, nothing else",
+            "Change the audience"
+          ],
+          "answer": 2,
+          "why": "The first hours are for checking delivery and links. CPA decisions wait for 48 hours."
+        },
+        {
+          "q": "Ads Manager shows 5 purchases, the network shows 2 FTDs. Which number goes on the rule card?",
+          "options": [
+            "2, the network number",
+            "5, the platform number",
+            "The average, 3.5",
+            "Whichever is higher"
+          ],
+          "answer": 0,
+          "why": "The network number is what you get paid for, so decisions use it."
+        }
+      ],
+      "say_intro": "In this lesson you'll build your rule card, the one page that turns every checkpoint into kill, hold, keep or scale. You'll also learn when each decision is allowed and why we only trust network-confirmed conversions.",
+      "say_outro": "So, check the rows from the top, stop at the first true one, respect the checkpoint timing, and count only network-confirmed conversions. Your task: write your own rule card for the offer you planned in lesson one, with the dollar values filled in for each row, and print it or save it next to your plan tab. Now take the quiz."
+    },
+    {
+      "slug": "thin-or-late-data",
+      "title": "Rules when data is thin or late",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can find your network's postback delay and use only matured spend for CPA decisions.",
+        "By the end you can use a proxy metric to spot a weak ad set early without scaling on it.",
+        "By the end you can size a small budget so the rule card still works."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Late data kills good ad sets",
+          "p": "If FTDs reach your network hours after the spend, today's numbers always look worse than they are. Judge too early and you kill ad sets that were working. Panic the other way and you feed losers. Both cost money, so late data needs its own rules.",
+          "d": {
+            "b": "Today's spend, tomorrow's FTDs",
+            "s": "Starting rules; adapt to your vertical and data."
+          },
+          "say": "If first-time deposits, or F T Ds, reach your network hours after the spend, today's numbers will always look worse than they really are. Judge too early, and you kill ad sets that were actually working. Panic the other way, and you feed losers. Both cost money. So late data needs its own rules. Today's spend often means tomorrow's F T Ds. These are starting rules, so adapt them to your vertical and data."
+        },
+        {
+          "v": "cards",
+          "h": "Why conversions arrive late",
+          "p": "Four things push conversions after the spend that caused them. You cannot remove them, so you measure them and plan around them. Ask your network manager about each one before your first test.",
+          "d": [
+            "Deposit delay|people sign up today, deposit days later",
+            "Postback delay|the network sends the event minutes to hours later",
+            "Holds and review|FTDs sit as pending before approval",
+            "Time zones|the ad account day and network day differ"
+          ],
+          "say": "Look at these four cards. Four things push conversions later than the spend that caused them. Deposit delay: people sign up today but deposit days later. Postback delay: the network sends the event minutes to hours later. Holds and review: F T Ds sit as pending before approval. And time zones: the ad account day and the network day differ. You can't remove these, so you measure them and plan around them. Ask your network manager about each one before your first test."
+        },
+        {
+          "v": "curve",
+          "h": "One day's spend, counted over time",
+          "p": "Example: one ad set spent $45 on Monday. Watch how the confirmed counts for that same day keep rising for days. A CPA read on Monday night would be wrong, and a kill decision based on it would be wrong too.",
+          "d": {
+            "a": [
+              2,
+              6,
+              8,
+              10,
+              10,
+              11,
+              11
+            ],
+            "la": "Sign-ups from Monday (Example)",
+            "b": [
+              0,
+              1,
+              1,
+              2,
+              2,
+              3,
+              3
+            ],
+            "lb": "FTDs from Monday (Example)",
+            "x": [
+              "+0 h",
+              "+6 h",
+              "+12 h",
+              "+24 h",
+              "+48 h",
+              "+72 h",
+              "+7 d"
+            ]
+          },
+          "say": "Watch this chart. It's an example: one ad set spent forty five dollars on Monday. The top line shows sign-ups from that Monday, and the lower line shows F T Ds from that same Monday. Notice how both keep rising for days. F T Ds go from zero at the start to three by day seven. A C P A, or cost per acquisition, read on Monday night would be wrong, and a kill decision based on it would be wrong too."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: measure your postback delay",
+          "p": "Do this once per offer after your first few conversions. You compare the click time with the conversion time in the network's report. The typical gap is your lag. Write it on your plan tab.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open the conversions report",
+                "text": "In the network dashboard, open the conversion or FTD report and add columns for click time and conversion time. Names vary by network.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/reports/conversions",
+                  "title": "Conversions",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Report",
+                      "value": "Conversions by sub ID"
+                    },
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Sub ID",
+                        "Click time",
+                        "FTD time",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "Broad_HowItWorks",
+                          "Mon 10:12",
+                          "Mon 19:40",
+                          "Approved"
+                        ],
+                        [
+                          "Broad_HowItWorks",
+                          "Mon 14:30",
+                          "Tue 02:05",
+                          "Approved"
+                        ],
+                        [
+                          "Broad_SchoolFees",
+                          "Mon 16:02",
+                          "Tue 05:48",
+                          "Pending"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Work out each gap",
+                "text": "Subtract click time from FTD time for each row. Example: 9 h 28 min, 11 h 35 min, 13 h 46 min.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheets.example/lag",
+                  "title": "Lag check",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "FTD",
+                        "Gap"
+                      ],
+                      "rows": [
+                        [
+                          "1",
+                          "9.5 h"
+                        ],
+                        [
+                          "2",
+                          "11.6 h"
+                        ],
+                        [
+                          "3",
+                          "13.8 h"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "Most FTDs arrive within about 12 hours (Example)."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Write the lag on your plan",
+                "text": "Round up to a safe number and use it at every checkpoint. Re-check after 20 or so FTDs.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheets.example/ng-offera-plan",
+                  "title": "Test plan",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Postback lag (B8)",
+                      "value": "12 h"
+                    },
+                    {
+                      "type": "text",
+                      "value": "CPA decisions use spend older than 12 h."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Here's how to measure your postback delay. Do this once per offer after your first few conversions. Tap Next to follow each step. First, open the conversions report in your network dashboard and add columns for click time and conversion time. Names vary by network. Second, work out each gap by subtracting click time from F T D time. In the example, the gaps are about nine and a half, eleven and a half, and nearly fourteen hours, so most arrive within about twelve. Third, round up to a safe number, write the lag on your plan, and re-check after twenty or so F T Ds."
+        },
+        {
+          "v": "big",
+          "h": "The matured-spend rule",
+          "p": "Matured spend is spend old enough that its conversions have had time to arrive. If your lag is 12 hours, matured spend is everything spent more than 12 hours ago. Kill lines and CPA are checked against matured spend only.",
+          "d": {
+            "b": "Judge only spend that has had time to convert",
+            "s": "Matured spend = spend older than your lag"
+          },
+          "say": "Now the key rule. Matured spend is spend that's old enough for its conversions to have had time to arrive. If your lag is twelve hours, matured spend is everything you spent more than twelve hours ago. From now on, your kill lines and your C P A are checked against matured spend only. Judge only the spend that's had time to convert."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: the 48-hour check",
+          "p": "Example: target $30, zero-FTD kill line $60, lag 12 hours, $30 a day. At 48 hours the ad set shows $60 spent and 0 FTDs. It looks like a kill. But only $45 of that spend is matured, so the kill waits until the 60-hour check.",
+          "d": {
+            "cols": [
+              "Item",
+              "Value",
+              "Note"
+            ],
+            "rows": [
+              [
+                "Total spend at 48 h",
+                "$60",
+                "Hits 2 × target"
+              ],
+              [
+                "Spend older than 12 h",
+                "$45",
+                "Matured"
+              ],
+              [
+                "Network FTDs",
+                "0",
+                "Confirmed"
+              ],
+              [
+                "Decision at 48 h",
+                "Hold",
+                "Matured $45 < $60"
+              ],
+              [
+                "Decision at 60 h, still 0",
+                "Kill",
+                "Matured $60 = 2 × target"
+              ]
+            ]
+          },
+          "say": "Let's see it in action. This is an example: target thirty dollars, zero F T D kill line sixty, lag twelve hours, thirty dollars a day. At forty eight hours, the ad set shows sixty dollars spent and zero F T Ds. That looks like a kill. But read the second row. Only forty five dollars of that spend is matured. So the decision at forty eight hours is Hold. If it's still at zero by the sixty hour check, the matured spend reaches sixty, and then it's a kill."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: matured spend only",
+          "p": "Use matured spend as the spend figure. Then apply the rule card from the top. A zero is not a kill until the matured spend reaches 2 × target.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $30. Matured spend $45 over 3 days, 0 network-confirmed FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 45,
+              "conversions": 0,
+              "target_cpa": 30,
+              "days": 3
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "hold"
+            }
+          },
+          "say": "Your turn. Target thirty dollars. Matured spend is forty five dollars over three days, with zero network-confirmed F T Ds. Is it kill, hold or scale? Use the matured spend as your spend figure, then apply the rule card from the top. Remember, a zero isn't a kill until matured spend reaches two times target. Pause and try it, then check your answer."
+        },
+        {
+          "v": "eq",
+          "h": "Proxy metric: target cost per sign-up",
+          "p": "When FTDs are slow, an earlier step can warn you. Multiply your target CPA by the sign-up-to-FTD rate the network or your past data gives you. That is the most you should pay per sign-up.",
+          "more": "Example: target $30 and about 20% of sign-ups deposit (rough guide from your network; varies by geo and vertical). $30 × 20% = $6 per sign-up. Warning rule: if cost per sign-up is above 2 × that ($12) once matured spend reaches 1 × target ($30), the ad set is unlikely to hit target. You may kill early or plan a replacement. A proxy can trigger an early kill. It can never trigger a scale: only confirmed FTDs do that.",
+          "d": [
+            "Target CPA",
+            "×",
+            "Sign-up → FTD rate",
+            "=",
+            "Target cost per sign-up"
+          ],
+          "say": "When F T Ds are slow, an earlier step in the funnel can warn you. Follow the equation: target C P A times your sign-up to F T D rate gives your target cost per sign-up. Example: target thirty dollars and about twenty percent of sign-ups deposit. That's a rough guide, and it varies by geo and vertical. So the target is six dollars per sign-up. If cost per sign-up is above twice that, twelve dollars, once matured spend reaches thirty, you may kill early. But here's the rule: a proxy can trigger an early kill. It can never trigger a scale. Only confirmed F T Ds do that."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example: an early warning",
+          "p": "Example: target cost per sign-up $6, warning line $12. An ad set has $30 of matured spend and 2 sign-ups, so $15 per sign-up. That is above $12. You may kill it now rather than wait for $60, or keep it to the zero-FTD line if you have no replacement ready.",
+          "d": {
+            "kind": "example",
+            "text": "$30 ÷ 2 sign-ups = $15. Above the $12 warning line. Early kill allowed, scale never on a proxy."
+          },
+          "say": "Here's that early warning in action. It's an example. Target cost per sign-up is six dollars, so the warning line is twelve. An ad set has thirty dollars of matured spend and two sign-ups. Thirty divided by two is fifteen dollars per sign-up, which is above twelve. You may kill it now rather than wait for sixty. Or, if you have no replacement ready, keep it running to the zero F T D line. Early kill is allowed. Scale on a proxy, never."
+        },
+        {
+          "v": "stat",
+          "h": "Small budgets slow every decision",
+          "p": "Example: target $30, so the zero-FTD kill line is $60. At $5 a day per ad set, it takes 12 days to reach it. Starting rule: give each ad set at least half your target CPA per day, so the kill line arrives within about 4 days.",
+          "d": {
+            "n": 12,
+            "pre": "",
+            "suf": " days",
+            "dec": 0,
+            "label": "to reach a $60 kill line at $5 a day",
+            "note": "Example. $60 ÷ $5 = 12."
+          },
+          "say": "Look at that big number: twelve days. Here's the example. Target thirty dollars, so the zero F T D kill line is sixty. At five dollars a day per ad set, it takes twelve days to reach it. That's far too slow. So here's a starting rule: give each ad set at least half your target C P A per day, so the kill line arrives within about four days."
+        },
+        {
+          "v": "bars",
+          "h": "Same money, fewer ad sets",
+          "p": "Example: $45 a day total, target $30. Split across 9 ad sets, each needs 12 days to reach the kill line. Split across 3, each gets there in 4 days. If money is tight, cut the number of ad sets, not the budget per ad set.",
+          "d": [
+            [
+              "3 ad sets at $15",
+              33,
+              "4 days to $60"
+            ],
+            [
+              "5 ad sets at $9",
+              56,
+              "6.7 days"
+            ],
+            [
+              "9 ad sets at $5",
+              100,
+              "12 days"
+            ]
+          ],
+          "say": "These bars show the same money split different ways. It's an example: forty five dollars a day total, with a thirty dollar target. Split across nine ad sets at five dollars, each needs twelve days to reach the kill line. Five ad sets at nine dollars, about six point seven days. Three ad sets at fifteen dollars, just four days. So if money is tight, cut the number of ad sets, not the budget per ad set."
+        },
+        {
+          "v": "tip",
+          "h": "The learning phase: what we know",
+          "p": "At the time of writing, Meta describes a learning phase that an ad set leaves after roughly 50 optimisation events in about a week. We are not certain this threshold is current; check Meta's Help Center. Small beginner ad sets often never leave it. Judge with your rule card, not the learning label.",
+          "d": {
+            "kind": "warn",
+            "text": "Not sure this is current. Check Meta's Help Center before relying on any learning-phase number."
+          },
+          "say": "Now, something we're careful about. At the time of writing, Meta describes a learning phase that an ad set leaves after roughly fifty optimisation events in about a week. We're not certain this threshold is current, so check Meta's Help Center before relying on any learning-phase number. Small beginner ad sets often never leave it anyway. So judge with your rule card, not the learning label."
+        },
+        {
+          "v": "compare",
+          "h": "What not to do with thin data",
+          "p": "Thin data tempts you into action. Almost every action here makes the data thinner or noisier. When in doubt between doing something and waiting for the next checkpoint, wait, unless something is broken.",
+          "d": {
+            "a": {
+              "title": "Do not",
+              "items": [
+                "Kill at 6 hours on zero FTDs",
+                "Count unmatured spend in CPA",
+                "Raise budget to get data faster",
+                "Edit the ad set every day",
+                "Switch it off and on to reset it"
+              ]
+            },
+            "b": {
+              "title": "Do instead",
+              "items": [
+                "Fix only broken things early",
+                "Use matured spend",
+                "Keep the planned budget",
+                "Wait for the next checkpoint",
+                "Launch a new ad set for a new idea"
+              ]
+            }
+          },
+          "say": "Thin data tempts you into action, and almost every action makes the data thinner or noisier. On the left, what not to do: kill at six hours on zero F T Ds, count unmatured spend in C P A, raise budget to get data faster, edit the ad set every day, or switch it off and on to reset it. On the right, what to do instead: fix only broken things early, use matured spend, keep the planned budget, wait for the next checkpoint, and launch a new ad set for a new idea. When in doubt, wait, unless something's broken."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: never fake the data",
+          "p": "Some buyers send extra or invented conversion events to the ad platform to push the ad set out of learning. That is sending false data and breaks platform rules. Pending FTDs that the network later rejects for fraud or self-deposits can also cost you the account.",
+          "d": {
+            "kind": "warn",
+            "text": "Send only real events. Never deposit yourself or pay people to deposit to make numbers move."
+          },
+          "say": "An important compliance point. Some buyers send extra or invented conversion events to the ad platform to push an ad set out of learning. That's sending false data, and it breaks platform rules. Pending F T Ds that the network later rejects for fraud or self-deposits can also cost you the account. As the warning says, send only real events. Never deposit yourself, or pay people to deposit, to make numbers move."
+        },
+        {
+          "v": "check",
+          "h": "Thin-data checklist",
+          "p": "Run through this at each checkpoint when results are slow. It keeps you on the rules while the numbers are still filling in. Starting rules; adapt to your vertical and data.",
+          "d": [
+            "Postback lag written on the plan",
+            "Matured spend used for every kill line",
+            "Pending and rejected FTDs left out of CPA",
+            "Proxy used for early warnings only",
+            "At least half target CPA per ad set per day",
+            "No edits before the next checkpoint"
+          ],
+          "say": "Run through this checklist at each checkpoint when results are slow. Postback lag written on the plan. Matured spend used for every kill line. Pending and rejected F T Ds left out of C P A. Proxy used for early warnings only. At least half your target C P A per ad set per day. And no edits before the next checkpoint. It keeps you on the rules while the numbers are still filling in."
+        }
+      ],
+      "takeaways": [
+        "Measure your postback lag and judge only matured spend.",
+        "A proxy like cost per sign-up can justify an early kill, never a scale.",
+        "With a small budget, run fewer ad sets so each one reaches its kill line within about 4 days."
+      ],
+      "action": "Ask your network manager, in writing, how long FTD postbacks usually take and how long FTDs stay pending. Write the lag on your plan tab and set your matured-spend rule.",
+      "glossary": [
+        {
+          "term": "Postback lag",
+          "def": "The usual time between a click and the network reporting the conversion from it."
+        },
+        {
+          "term": "Matured spend",
+          "def": "Spend older than your postback lag, so its conversions have had time to arrive."
+        },
+        {
+          "term": "Proxy metric",
+          "def": "An earlier step, such as cost per sign-up, used to warn about an ad set before the paid conversion arrives."
+        },
+        {
+          "term": "Pending conversion",
+          "def": "A conversion the network has recorded but not yet approved for payment."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Lag 12 hours, $30 a day, target $30. At 48 hours: $60 spent, 0 FTDs. What do you do?",
+          "options": [
+            "Kill now",
+            "Scale",
+            "Hold until matured spend reaches $60",
+            "Change the creative"
+          ],
+          "answer": 2,
+          "why": "Only $45 is older than 12 hours. The kill waits until matured spend reaches 2 × target."
+        },
+        {
+          "q": "Target $30, 25% of sign-ups deposit. What is your target cost per sign-up?",
+          "options": [
+            "$7.50",
+            "$30",
+            "$12",
+            "$3"
+          ],
+          "answer": 0,
+          "why": "$30 × 25% = $7.50."
+        },
+        {
+          "q": "An ad set's cost per sign-up is half your target, but it has 0 FTDs so far. May you scale it?",
+          "options": [
+            "Yes, the proxy is great",
+            "No, scaling needs confirmed FTDs",
+            "Yes, by 50%",
+            "Only at the weekend"
+          ],
+          "answer": 1,
+          "why": "Proxies can warn or justify an early kill, never a scale."
+        },
+        {
+          "q": "Target $40. At least how much per ad set per day does the starting rule ask for?",
+          "options": [
+            "$5",
+            "$40",
+            "$80",
+            "$20"
+          ],
+          "answer": 3,
+          "why": "Half the target CPA: $40 ÷ 2 = $20, so the $80 kill line arrives in about 4 days."
+        },
+        {
+          "q": "Which of these is allowed when data is thin?",
+          "options": [
+            "Sending extra events to leave learning",
+            "Raising budget to get data faster",
+            "Fixing a broken link at once",
+            "Switching the ad set off and on to reset it"
+          ],
+          "answer": 2,
+          "why": "Broken things should be fixed at once. The other actions add noise or break rules."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn how to make good decisions when conversions arrive late or the data is thin. You'll measure your postback delay, judge only matured spend, use an early warning metric safely, and size small budgets so the rule card still works.",
+      "say_outro": "So, measure your lag, judge only matured spend, use proxies for warnings never for scaling, and give each ad set enough daily budget. Your task: ask your network manager, in writing, how long F T D postbacks usually take and how long F T Ds stay pending, then write the lag on your plan tab and set your matured-spend rule. Now take the quiz."
+    },
+    {
+      "slug": "scaling-rules",
+      "title": "Scaling rules and when to stop",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can scale a winning ad set in exact +20% steps with the right waiting time.",
+        "By the end you can choose between raising budget, duplicating and scaling sideways.",
+        "By the end you can apply stop-scaling rules that protect profit, not just volume."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Scaling multiplies mistakes too",
+          "p": "Scaling is where profit grows, and where losses grow fastest. A $15 ad set that slips above break-even loses a few dollars. The same ad set at $60 a day loses four times as much, every day. So scaling has entry rules, step rules and stop rules.",
+          "d": {
+            "b": "Earn each step with data",
+            "s": "Starting rules; adapt to your vertical and data."
+          },
+          "say": "Scaling is where profit grows, and it's also where losses grow fastest. A fifteen dollar ad set that slips above break-even loses a few dollars. The same ad set at sixty dollars a day loses four times as much, every single day. So scaling has entry rules, step rules and stop rules. Earn each step with data. These are starting rules, so adapt them to your vertical and data."
+        },
+        {
+          "v": "eq",
+          "h": "The entry rule",
+          "p": "An ad set may get its first budget step only when all three are true: at least 3 network-confirmed conversions, CPA at or under 0.8 × target, and at least 72 hours running. This is the Scale row of the rule card.",
+          "d": [
+            "3+ FTDs",
+            "+",
+            "CPA ≤ 0.8 × target",
+            "+",
+            "72 h+",
+            "=",
+            "Step +20%"
+          ],
+          "say": "Here's the entry rule. An ad set can get its first budget step only when all three parts of this equation are true. At least three network-confirmed F T Ds, first-time deposits. A C P A, cost per acquisition, at or under zero point eight times target. And at least seventy two hours running. When all three line up, you step up twenty percent. This is simply the Scale row of your rule card."
+        },
+        {
+          "v": "table",
+          "h": "A +20% step plan",
+          "p": "Example: start at $15 a day, target $30. Each step adds 20% to the current budget. At least 48 hours pass between steps, and each step has to be earned again. The days shown are the earliest possible, not a promise.",
+          "d": {
+            "cols": [
+              "Step",
+              "Daily budget",
+              "Earliest day"
+            ],
+            "rows": [
+              [
+                "Start",
+                "$15.00",
+                "Day 1"
+              ],
+              [
+                "Step 1",
+                "$18.00",
+                "End of day 3"
+              ],
+              [
+                "Step 2",
+                "$21.60",
+                "End of day 5"
+              ],
+              [
+                "Step 3",
+                "$25.92",
+                "End of day 7"
+              ],
+              [
+                "Step 4",
+                "$31.10",
+                "End of day 9"
+              ]
+            ]
+          },
+          "say": "Look at this step plan. It's an example: start at fifteen dollars a day with a thirty dollar target. Each step adds twenty percent to the current budget. Fifteen goes to eighteen, then twenty one sixty, then twenty five ninety two, then thirty one ten. At least forty eight hours pass between steps, and each step has to be earned again. The days in the right column are the earliest possible, not a promise."
+        },
+        {
+          "v": "check",
+          "h": "The rule for every next step",
+          "p": "After a step, the new budget has to prove itself. Look at the numbers since the last step, not the lifetime total, because the lifetime number hides a slipping CPA. Starting rules; adapt to your vertical and data.",
+          "more": "Example: target $30, scale line $24. After stepping to $18, two days pass: $36 spent, 2 FTDs since the step, $18 CPA. Lifetime: $96 for 5 FTDs, $19.20. Both are under $24, so step again to $21.60. If those two days had brought 1 FTD, $36 CPA since the step, you would not step. You would Keep at $18 and check again tomorrow.",
+          "d": [
+            "At least 48 hours since the last step",
+            "At least 2 network FTDs since the step",
+            "CPA since the step ≤ 0.8 × target",
+            "Lifetime CPA still ≤ 0.8 × target",
+            "Any miss: no step, Keep or Hold"
+          ],
+          "say": "After a step, the new budget has to prove itself. Here are the rules for every next step: at least forty eight hours since the last step, at least two network F T Ds since the step, C P A since the step at zero point eight times target or less, and lifetime C P A still under that line too. Any miss means no step, just Keep or Hold. Why look since the step? Because the lifetime number hides a slipping C P A. Example: after stepping to eighteen, two days bring two F T Ds for thirty six dollars, eighteen each, so you step again. If they'd brought only one, you'd Keep at eighteen."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: ready to step?",
+          "p": "These are lifetime numbers for an ad set that has run 6 days. Apply the scale row. Then imagine the same spend with 3 FTDs and see how the answer changes.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $30. Lifetime $96 over 6 days, 5 network-confirmed FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 96,
+              "conversions": 5,
+              "target_cpa": 30,
+              "days": 6
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "scale"
+            }
+          },
+          "say": "Let's practice. These are lifetime numbers for an ad set that's run six days. Target thirty dollars, lifetime spend ninety six dollars, and five network-confirmed F T Ds. Is it kill, hold or scale? Apply the scale row of your card. Pause and try it, then check your answer. Afterwards, imagine the same spend with only three F T Ds and see how the answer changes."
+        },
+        {
+          "v": "curve",
+          "h": "Budget up, CPA watched",
+          "p": "Example: daily budget and CPA since the last step for one ad set. Budget rises in steps. CPA wobbles but stays under the $24 scale line, so each step is earned. The moment the CPA line crosses $24, steps stop.",
+          "d": {
+            "a": [
+              15,
+              15,
+              15,
+              18,
+              18,
+              21.6,
+              21.6
+            ],
+            "la": "Daily budget $ (Example)",
+            "b": [
+              23,
+              22.5,
+              22,
+              20,
+              19.5,
+              18,
+              21
+            ],
+            "lb": "CPA since last step $ (Example)",
+            "x": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7"
+            ]
+          },
+          "say": "Watch the two lines on this chart. It's an example for one ad set. The daily budget rises in steps, from fifteen to eighteen to twenty one sixty. The other line is C P A since the last step. It wobbles, but it stays under the twenty four dollar scale line, so each step is earned. The moment the C P A line crosses twenty four, the steps stop."
+        },
+        {
+          "v": "table",
+          "h": "Stop-scaling rules",
+          "p": "Example, target $30, break-even $40. These rules decide when to stop raising, step back or hand the ad set back to the rule card. Write them under your rule card. Starting rules; adapt to your vertical and data.",
+          "d": {
+            "cols": [
+              "Trigger",
+              "Action"
+            ],
+            "rows": [
+              [
+                "CPA since step above $24 for 48 h",
+                "No more steps; Keep"
+              ],
+              [
+                "CPA since step above $30 for 48 h",
+                "Back to the last budget that worked"
+              ],
+              [
+                "CPA since step above $40",
+                "Back one step now; rule card at next check"
+              ],
+              [
+                "Network cap nearly full",
+                "Stop raising; budget to fit the cap"
+              ],
+              [
+                "CTR down 30%+ from its best, frequency rising",
+                "New creatives before any step"
+              ]
+            ]
+          },
+          "say": "These are the stop-scaling rules. It's an example with a thirty dollar target and forty dollar break-even. If C P A since the step is above twenty four for forty eight hours, no more steps, just Keep. Above thirty for forty eight hours, go back to the last budget that worked. Above forty, step back one now, then use the rule card at the next check. If the network cap is nearly full, stop raising. And if C T R, your click-through rate, drops thirty percent or more from its best while frequency rises, add new creatives before any step. Write these under your rule card."
+        },
+        {
+          "v": "cards",
+          "h": "Three ways to scale",
+          "p": "Raising the budget is only one way. Once a winner has passed two steps, you can also copy it or take its idea sideways. Each way has its own risk, so use them in this order.",
+          "d": [
+            "Vertical|raise the winner's budget in +20% steps",
+            "Duplicate|copy the winner at its start budget",
+            "Horizontal|same creative, new angle, placement or geo",
+            "Feed it|add new ads to the winning ad set's idea"
+          ],
+          "say": "Raising the budget is only one way to scale. Look at these four cards. Vertical: raise the winner's budget in plus twenty percent steps. Duplicate: copy the winner at its start budget. Horizontal: the same creative, but a new angle, placement or geo. And feed it: add new ads to the winning ad set's idea. Each has its own risk, so use them in this order, and only once a winner has passed two steps for the copying and sideways moves."
+        },
+        {
+          "v": "check",
+          "h": "Duplication rules",
+          "p": "A duplicate is a new ad set. It starts at zero data and goes through the full rule card from day one. Most failed duplicates fail because buyers give them the winner's raised budget and judge them on the winner's history.",
+          "d": [
+            "Only after the original passed 2 steps",
+            "Start at the original start budget, not the raised one",
+            "Full rule card from zero, own checkpoints",
+            "At most 2 duplicates per winner at once",
+            "If a duplicate fails, kill it, not the original"
+          ],
+          "say": "A duplicate is a new ad set. It starts at zero data and goes through the full rule card from day one. Here are the rules. Only duplicate after the original has passed two steps. Start at the original start budget, not the raised one. Run the full rule card from zero with its own checkpoints. No more than two duplicates per winner at once. And if a duplicate fails, kill the duplicate, not the original. Most failed duplicates fail because buyers give them the winner's raised budget and judge them on the winner's history."
+        },
+        {
+          "v": "bars",
+          "h": "More spend is not more profit",
+          "p": "Example, $40 payout. Profit per day = FTDs per day × $40 − spend. Doubling to $30 a day raises CPA a little and profit a little. Doubling again to $60 pushes CPA to $36 and profit falls. The aim is the most profit, not the biggest budget.",
+          "more": "Working: $15 ÷ $20 = 0.75 FTDs a day × $40 = $30 revenue − $15 = $15 profit. $30 ÷ $26 = 1.154 FTDs × $40 = $46.15 − $30 = $16.15. $60 ÷ $36 = 1.667 FTDs × $40 = $66.67 − $60 = $6.67. This is why the stop rules look at CPA since the step, not just whether the ad set is still profitable.",
+          "d": [
+            [
+              "$15/day, CPA $20",
+              93,
+              "$15.00 profit/day"
+            ],
+            [
+              "$30/day, CPA $26",
+              100,
+              "$16.15"
+            ],
+            [
+              "$60/day, CPA $36",
+              41,
+              "$6.67"
+            ]
+          ],
+          "say": "More spend isn't always more profit. It's an example with a forty dollar payout. At fifteen dollars a day and a twenty dollar C P A, profit is fifteen dollars a day. Doubling to thirty a day pushes C P A to twenty six, and profit rises only a little, to about sixteen fifteen. Doubling again to sixty pushes C P A to thirty six, and profit falls to about six sixty seven. Look at how short that last bar is. The aim is the most profit, not the biggest budget. That's why the stop rules look at C P A since the step."
+        },
+        {
+          "v": "tip",
+          "h": "Budget changes and learning: not certain",
+          "p": "Meta has said that significant edits, which can include budget changes, may send an ad set back into learning. We are not certain of the exact threshold today. The +20% step is a habit many buyers use, not an official Meta number. Check Meta's Help Center.",
+          "d": {
+            "kind": "warn",
+            "text": "Names and thresholds change. Check the current Ads Manager and Help Center before relying on any number."
+          },
+          "say": "Here's something we're not certain about. Meta has said that significant edits, which can include budget changes, may send an ad set back into learning. We're not certain of the exact threshold today. The plus twenty percent step is a habit many buyers use, not an official Meta number. Names and thresholds change, so check the current Ads Manager and Help Center before relying on any number."
+        },
+        {
+          "v": "tip",
+          "h": "Bigger steps, advanced only",
+          "p": "The VooSquare Kill-or-scale tool also flags a bigger step: +30% to 50% when CPA is at or under 0.6 × target with at least 10 conversions. Beginners should stay at +20% until they have run several scaled ad sets.",
+          "d": {
+            "kind": "example",
+            "text": "Example: target $30. 12 FTDs at $17 CPA (0.57 × target) qualifies for a bigger step. 5 FTDs at $17 does not."
+          },
+          "say": "There's also a bigger step, for advanced buyers only. The VooSquare Kill-or-scale tool flags a step of plus thirty to fifty percent when C P A is at or under zero point six times target with at least ten conversions. Look at the example: target thirty, and twelve F T Ds at seventeen dollars qualifies. Five F T Ds at seventeen does not. Beginners should stay at plus twenty percent until they've run several scaled ad sets."
+        },
+        {
+          "v": "compare",
+          "h": "Scaling mistakes",
+          "p": "These mistakes usually come right after a good day. A good day feels like proof, but one day is a small sample, and the rule card needs several days of evidence before each step.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Doubling after one good day",
+                "Judging steps on lifetime CPA only",
+                "Duplicating at the raised budget",
+                "Scaling past the network cap",
+                "Scaling with tired creatives"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "+20%, 48 h apart, earned each time",
+                "Check CPA since the step",
+                "Duplicates start at start budget",
+                "Ask the cap before each step",
+                "New creatives before a step"
+              ]
+            }
+          },
+          "say": "These scaling mistakes usually come right after a good day. Doubling after one good day. Judging steps on lifetime C P A only. Duplicating at the raised budget. Scaling past the network cap. Scaling with tired creatives. And the fixes on the right: plus twenty percent, forty eight hours apart, earned each time. Check C P A since the step. Start duplicates at the start budget. Ask about the cap before each step. And bring in new creatives before a step. One good day is a small sample."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: scale inside the rules",
+          "p": "More spend brings more attention from reviewers and regulators. Each new geo can need its own authorization and has its own law. Never open extra ad accounts or use other people's accounts to get past spend limits or bans.",
+          "d": {
+            "kind": "warn",
+            "text": "Scaling horizontally into a new country means checking that country's ad policy and law first."
+          },
+          "say": "Scaling brings compliance attention too. More spend brings more attention from reviewers and regulators. Each new geo can need its own authorization and has its own law. And never open extra ad accounts or use other people's accounts to get past spend limits or bans. As the warning says, scaling horizontally into a new country means checking that country's ad policy and law first."
+        },
+        {
+          "v": "check",
+          "h": "Your scaling routine",
+          "p": "Run this list at each daily checkpoint for any ad set in a scale path. Keep a column in your sheet for the date and size of every step, so you can always see what changed and when.",
+          "d": [
+            "Write step date and new budget",
+            "Track spend and FTDs since the step",
+            "Check entry or next-step rules",
+            "Check stop-scaling rules first",
+            "Ask the network about caps weekly"
+          ],
+          "say": "Here's your scaling routine. Run it at each daily checkpoint for any ad set on a scale path. Write the step date and new budget. Track spend and F T Ds since the step. Check the entry or next-step rules. Check the stop-scaling rules first. And ask the network about caps weekly. Keep a column in your sheet for the date and size of every step, so you can always see what changed and when."
+        }
+      ],
+      "takeaways": [
+        "First step: 3+ FTDs, CPA ≤ 0.8 × target, 72 hours running. Then +20% at most every 48 hours.",
+        "Judge each step on the numbers since the step, and step back when CPA since the step passes target.",
+        "Duplicate at the start budget with the full rule card, and stop when profit, not volume, stops rising."
+      ],
+      "action": "Under your rule card, write your step plan (start budget and four +20% steps) and the five stop-scaling rules with dollar values for your offer.",
+      "glossary": [
+        {
+          "term": "Vertical scaling",
+          "def": "Raising the budget of an ad set that is already winning."
+        },
+        {
+          "term": "Horizontal scaling",
+          "def": "Taking a winning idea to new angles, placements, audiences or geos instead of only raising budget."
+        },
+        {
+          "term": "Duplicate",
+          "def": "A copy of a winning ad set launched as a new ad set, judged from zero."
+        },
+        {
+          "term": "CPA since the step",
+          "def": "Spend since the last budget change divided by conversions since then."
+        },
+        {
+          "term": "Network cap",
+          "def": "The most conversions a network will accept from you in a day or week on an offer."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Target $30. 72 hours in: $66 spent, 3 FTDs. May you take the first step?",
+          "options": [
+            "Yes, +50%",
+            "No, keep it",
+            "Yes, +20%, because $22 ≤ $24",
+            "No, kill it"
+          ],
+          "answer": 2,
+          "why": "$66 ÷ 3 = $22, under 0.8 × $30 = $24, with 3 FTDs at 72 hours."
+        },
+        {
+          "q": "Your ad set is at $25 a day. What is the next +20% step?",
+          "options": [
+            "$30",
+            "$45",
+            "$27",
+            "$50"
+          ],
+          "answer": 0,
+          "why": "$25 × 1.2 = $30."
+        },
+        {
+          "q": "Two days after a step, CPA since the step is $33 with a $30 target. What do you do?",
+          "options": [
+            "Step up again",
+            "Go back to the last budget that worked",
+            "Duplicate it at the new budget",
+            "Kill the original"
+          ],
+          "answer": 1,
+          "why": "CPA since the step above target for 48 hours means step back."
+        },
+        {
+          "q": "You duplicate a winner that now runs at $26 a day and started at $15. What budget does the duplicate get?",
+          "options": [
+            "$26",
+            "$52",
+            "$5",
+            "$15"
+          ],
+          "answer": 3,
+          "why": "Duplicates start at the original start budget and earn their steps."
+        },
+        {
+          "q": "Which is horizontal scaling?",
+          "options": [
+            "Raising budget by 20%",
+            "Doubling budget",
+            "Testing the winning creative in a new allowed geo",
+            "Restarting a killed ad set"
+          ],
+          "answer": 2,
+          "why": "Horizontal scaling takes a winning idea sideways to new angles, placements or geos."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn to scale a winner safely. You'll use exact plus twenty percent steps, choose between raising budget, duplicating and scaling sideways, and apply stop rules that protect profit, not just volume.",
+      "say_outro": "So, earn every step with data, check C P A since the last step, follow the duplication rules, and stop when profit stops growing. Your task: under your rule card, write your step plan, with your start budget and four plus twenty percent steps, and the five stop-scaling rules with dollar values for your offer. Now take the quiz."
+    },
+    {
+      "slug": "daily-routine-and-sheet",
+      "title": "Your daily routine and decision sheet",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can run a 15-minute daily check at a fixed cut-off time.",
+        "By the end you can fill a decision sheet from Ads Manager and network data.",
+        "By the end you can follow three ad sets through seven days of rule-card decisions."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Same time, same steps, every day",
+          "p": "Rules only work if you apply them the same way each day. Checking at random times mixes half-days with full days and makes CPA jump around. A fixed routine and one sheet turn the rule card into a 15-minute habit instead of an all-day worry.",
+          "d": {
+            "b": "One check a day, at a fixed time",
+            "s": "Starting rules; adapt to your vertical and data."
+          },
+          "say": "Rules only work if you apply them the same way every day. Checking at random times mixes half-days with full days, and that makes your C P A, your cost per acquisition, jump around for no real reason. A fixed routine and one sheet turn the rule card into a fifteen minute habit, instead of an all-day worry. One check a day, at a fixed time. These are starting rules, so adapt them to your data."
+        },
+        {
+          "v": "flow",
+          "h": "The 15-minute routine",
+          "p": "Do these six steps in this order once a day, at the same cut-off time. Use the ad account's time zone for the cut-off so that a day is the same day everywhere. Fix broken things at once; everything else waits for this check.",
+          "d": [
+            "Pull spend to cut-off",
+            "Pull network FTDs",
+            "Update the sheet",
+            "Apply the rule card",
+            "Make the changes",
+            "Write one note"
+          ],
+          "say": "Here's the fifteen minute routine. Follow the flow on screen, in this order, once a day, at the same cut-off time. Pull spend to the cut-off. Pull network F T Ds, your first-time deposits. Update the sheet. Apply the rule card. Make the changes. And write one note. Use the ad account's time zone for the cut-off, so a day means the same day everywhere. Fix broken things at once, but everything else waits for this check."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: the daily update",
+          "p": "Here is the routine on screen. The tool names are generic; names change, so check the current Ads Manager and your network dashboard. The point is the order: spend first, then confirmed FTDs, then the sheet, then decisions.",
+          "d": {
+            "steps": [
+              {
+                "title": "Spend by ad set",
+                "text": "In Ads Manager, open the ad sets tab, set the date range to the full test so far, and read spend per ad set.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/adsets",
+                  "title": "Ad sets",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Date range",
+                      "value": "Launch to yesterday"
+                    },
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Ad set",
+                        "Spend",
+                        "Results (platform)"
+                      ],
+                      "rows": [
+                        [
+                          "A_Savings",
+                          "$60.00",
+                          "1"
+                        ],
+                        [
+                          "B_HowItWorks",
+                          "$60.00",
+                          "4"
+                        ],
+                        [
+                          "C_SchoolFees",
+                          "$60.00",
+                          "3"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Confirmed FTDs by sub ID",
+                "text": "In the network, open stats by sub ID for the same dates and read approved FTDs only.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/stats",
+                  "title": "Stats by sub ID",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Approved only",
+                      "on": true
+                    },
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Sub ID",
+                        "Sign-ups",
+                        "FTDs"
+                      ],
+                      "rows": [
+                        [
+                          "A_Savings",
+                          "4",
+                          "0"
+                        ],
+                        [
+                          "B_HowItWorks",
+                          "17",
+                          "3"
+                        ],
+                        [
+                          "C_SchoolFees",
+                          "12",
+                          "2"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Fill the sheet and decide",
+                "text": "Type the two numbers per ad set. Formulas give CPA. Read the rule card and write the decision in the last column.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheets.example/ng-offera-log",
+                  "title": "Decision log, day 4",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Ad set",
+                        "Spend",
+                        "FTDs",
+                        "CPA",
+                        "Decision"
+                      ],
+                      "rows": [
+                        [
+                          "A",
+                          "$60",
+                          "0",
+                          "none",
+                          "Kill"
+                        ],
+                        [
+                          "B",
+                          "$60",
+                          "3",
+                          "$20.00",
+                          "Scale to $18"
+                        ],
+                        [
+                          "C",
+                          "$60",
+                          "2",
+                          "$30.00",
+                          "Hold"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "Example. Platform results are not used for decisions."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Here's the routine on screen. Tap Next to follow each step. The tool names are generic, and names change, so check the current Ads Manager and your network dashboard. Step one: in Ads Manager, open the ad sets tab, set the date range to the full test so far, and read spend per ad set. Step two: in the network, open stats by sub I D for the same dates and read approved F T Ds only. Step three: type the two numbers per ad set, let formulas give you C P A, read the rule card, and write the decision in the last column."
+        },
+        {
+          "v": "table",
+          "h": "The 7-day example: the plan",
+          "p": "Example: one offer, three ad sets, one angle each, $15 a day each. These are the lines from lesson 1. Postbacks arrive the same day in this example, so all spend counts as matured at each daily check.",
+          "d": {
+            "cols": [
+              "Line",
+              "Rule",
+              "Value"
+            ],
+            "rows": [
+              [
+                "Payout / break-even",
+                "Flat CPA",
+                "$40"
+              ],
+              [
+                "Target CPA",
+                "$40 × 75%",
+                "$30"
+              ],
+              [
+                "Scale line",
+                "0.8 × target, 3+ FTDs",
+                "$24"
+              ],
+              [
+                "Zero-FTD kill",
+                "2 × target",
+                "$60"
+              ],
+              [
+                "CPA kill line",
+                "Lower of $45 and $40, at $90+",
+                "$40"
+              ],
+              [
+                "Budget",
+                "$15 a day each",
+                "$45 a day"
+              ]
+            ]
+          },
+          "say": "Now we'll follow a full seven day example. Here's the plan: one offer, three ad sets, one angle each, fifteen dollars a day each. These are the lines from lesson one. Payout and break-even forty dollars, target thirty, scale line twenty four with three or more F T Ds, zero F T D kill sixty, C P A kill line forty, and forty five dollars a day in total. In this example, postbacks arrive the same day, so all spend counts as matured at each check."
+        },
+        {
+          "v": "table",
+          "h": "Days 1 to 3: everything holds",
+          "p": "Example. Cumulative spend and network FTDs at each daily check. Nothing reaches a kill line and nothing has 3 FTDs, so every decision is Hold. This is normal and the hardest part: doing nothing on purpose.",
+          "more": "Why each is Hold on day 3. A: $45 with 0 FTDs is under the $60 kill line. B: 2 FTDs at $22.50 looks good, but the scale rule needs 3. C: 1 FTD at $45 is above the $40 kill line, but the CPA kill only applies from $90 of spend. Tempting moves on day 3: kill C, scale B. Both would break the card.",
+          "d": {
+            "cols": [
+              "Day",
+              "A Savings",
+              "B How it works",
+              "C School fees"
+            ],
+            "rows": [
+              [
+                "1",
+                "$15, 0: Hold",
+                "$15, 0: Hold",
+                "$15, 0: Hold"
+              ],
+              [
+                "2",
+                "$30, 0: Hold",
+                "$30, 1: Hold",
+                "$30, 1: Hold"
+              ],
+              [
+                "3",
+                "$45, 0: Hold",
+                "$45, 2: Hold",
+                "$45, 1: Hold"
+              ]
+            ]
+          },
+          "say": "Days one to three. This is an example, showing cumulative spend and network F T Ds at each daily check. Nothing reaches a kill line, and nothing has three F T Ds, so every decision is Hold. On day three, A has forty five dollars and zero F T Ds, under the sixty line. B has two F T Ds at twenty two fifty, looks good, but scaling needs three. C has one at forty five, above the forty line, but the C P A kill only applies from ninety dollars. The tempting moves are kill C and scale B. Both would break the card. Doing nothing on purpose is the hardest part."
+        },
+        {
+          "v": "table",
+          "h": "Day 4: the first real decisions",
+          "p": "Example. Each ad set has now spent $60. A hits the zero-FTD kill line. B reaches 3 FTDs at $20, under the $24 scale line, after 72 hours, so it takes its first +20% step. C has 2 FTDs, so it still holds.",
+          "d": {
+            "cols": [
+              "Ad set",
+              "Spend, FTDs",
+              "CPA",
+              "Decision"
+            ],
+            "rows": [
+              [
+                "A Savings",
+                "$60, 0",
+                "none",
+                "Kill"
+              ],
+              [
+                "B How it works",
+                "$60, 3",
+                "$20.00",
+                "Scale to $18 a day"
+              ],
+              [
+                "C School fees",
+                "$60, 2",
+                "$30.00",
+                "Hold (needs 3 FTDs)"
+              ]
+            ]
+          },
+          "say": "Day four brings the first real decisions. It's still the example, and each ad set has now spent sixty dollars. Look at the table. A hits the zero F T D kill line, so it's killed. B reaches three F T Ds at twenty dollars each, under the twenty four dollar scale line, after seventy two hours, so it takes its first plus twenty percent step, to eighteen dollars a day. C has two F T Ds, so it still holds, because it needs three."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: ad set C on day 4",
+          "p": "Check the day-4 call for ad set C yourself. CPA is exactly on target, but count the FTDs before you decide between Keep and Hold. The tool shows both as Hold.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $30. C has spent $60 in 4 days with 2 network-confirmed FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 60,
+              "conversions": 2,
+              "target_cpa": 30,
+              "days": 4
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "hold"
+            }
+          },
+          "say": "Check the day four call for ad set C yourself. Target thirty dollars. C has spent sixty dollars in four days with two network-confirmed F T Ds. Is it kill, hold or scale? The C P A is exactly on target, but count the F T Ds before you decide between Keep and Hold. The tool shows both as Hold. Pause and try it, then check your answer."
+        },
+        {
+          "v": "table",
+          "h": "Days 5 to 7",
+          "p": "Example. B steps again on day 6, because the two days since its step brought 2 FTDs for $36, an $18 CPA. C reaches $90 on day 6 with CPA $45, above the $40 kill line, so it is killed. On day 7 B is Kept until its next step check on day 8.",
+          "d": {
+            "cols": [
+              "Day",
+              "B How it works",
+              "C School fees"
+            ],
+            "rows": [
+              [
+                "5",
+                "$78, 4, $19.50: Hold (step 1 day ago)",
+                "$75, 2, $37.50: Hold"
+              ],
+              [
+                "6",
+                "$96, 5, $19.20: Scale to $21.60",
+                "$90, 2, $45.00: Kill"
+              ],
+              [
+                "7",
+                "$117.60, 6, $19.60: Keep",
+                "Off"
+              ]
+            ]
+          },
+          "say": "Days five to seven, still the example. B steps again on day six, because the two days since its step brought two F T Ds for thirty six dollars, an eighteen dollar C P A, so it goes to twenty one sixty. C reaches ninety dollars on day six with a C P A of forty five, above the forty dollar kill line, so it's killed. On day seven, B is Kept until its next step check on day eight."
+        },
+        {
+          "v": "tip",
+          "h": "Why C dies on day 6",
+          "p": "On day 6 C's CPA is $45, exactly 1.5 × target. The VooSquare tool kills only above 1.5 ×, so it would say Hold. Our card uses the lower $40 break-even line, so the call is Kill. Every FTD at $45 loses $5.",
+          "d": {
+            "kind": "example",
+            "text": "Example: $90 ÷ 2 = $45. Above the $40 CPA kill line, with spend at 3 × target. Kill."
+          },
+          "say": "Why does C die on day six? Its C P A is forty five dollars, exactly one point five times target. The VooSquare tool kills only above one point five times, so it would say Hold. But our card uses the lower forty dollar break-even line, so the call is Kill. Look at the example on screen: ninety divided by two is forty five, above the forty dollar line, with spend at three times target. Every F T D at forty five dollars loses you five."
+        },
+        {
+          "v": "bars",
+          "h": "Where the money went",
+          "p": "Example: total spend per ad set over 7 days, with confirmed FTDs. The rules moved money away from A and C and towards B, the only ad set that proved itself. That shift is what the rule card is for.",
+          "d": [
+            [
+              "A Savings, 0 FTDs",
+              51,
+              "$60.00"
+            ],
+            [
+              "B How it works, 6 FTDs",
+              100,
+              "$117.60"
+            ],
+            [
+              "C School fees, 2 FTDs",
+              77,
+              "$90.00"
+            ]
+          ],
+          "say": "Here's where the money went over the seven days. It's an example. A spent sixty dollars and got zero F T Ds. B spent one hundred seventeen sixty and got six. C spent ninety and got two. The rules moved money away from A and C, and towards B, the only ad set that proved itself. That shift is exactly what the rule card is for."
+        },
+        {
+          "v": "stat",
+          "h": "The 7-day result",
+          "p": "Example: total spend $60 + $117.60 + $90 = $267.60. Confirmed FTDs 8, revenue 8 × $40 = $320. Profit $52.40, ROI 19.6%. A different week could lose. The point is that every dollar moved by a rule, not a feeling. Results vary.",
+          "d": {
+            "n": 19.6,
+            "pre": "",
+            "suf": "%",
+            "dec": 1,
+            "label": "ROI over 7 days ($52.40 ÷ $267.60)",
+            "note": "Example. Not a promise; results vary."
+          },
+          "say": "Here's the seven day result, as an example. Total spend is sixty, plus one hundred seventeen sixty, plus ninety, which is two hundred sixty seven sixty. Eight confirmed F T Ds at forty dollars is three hundred twenty in revenue. That's fifty two forty profit, and an R O I, return on investment, of nineteen point six percent. This is not a promise. A different week could lose, and results vary. The point is that every dollar moved by a rule, not a feeling."
+        },
+        {
+          "v": "compare",
+          "h": "Routine mistakes",
+          "p": "A routine fails quietly. Each of these makes the sheet disagree with reality, and then the rule card gives wrong answers. Fix them early, before there is money on a scale path.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Checking every hour",
+                "A different cut-off each day",
+                "Platform results in the FTD column",
+                "Budget changes not logged",
+                "No note on why"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "One fixed daily check",
+                "Same cut-off, account time zone",
+                "Network-approved FTDs only",
+                "Step column with date and size",
+                "One line per decision"
+              ]
+            }
+          },
+          "say": "A routine fails quietly. Each of these mistakes makes the sheet disagree with reality, and then the rule card gives wrong answers. Checking every hour. A different cut-off each day. Platform results in the F T D column. Budget changes not logged. And no note on why. The fixes are on the right: one fixed daily check, the same cut-off in the account time zone, network-approved F T Ds only, a step column with date and size, and one line per decision. Fix these early."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: what goes in the sheet",
+          "p": "Your sheet needs counts, not people. Do not copy names, phone numbers or emails of sign-ups into it. Keep it private, and keep it: platforms, networks and tax advisers may ask how you ran a campaign.",
+          "d": {
+            "kind": "warn",
+            "text": "Counts and money only. No personal data of leads in your decision sheet."
+          },
+          "say": "A compliance point about your sheet. It needs counts, not people. Don't copy names, phone numbers or emails of sign-ups into it. As the warning says, counts and money only, no personal data of leads in your decision sheet. Keep it private, and keep it, because platforms, networks and tax advisers may ask how you ran a campaign."
+        },
+        {
+          "v": "check",
+          "h": "End-of-check sign-off",
+          "p": "Before you close the sheet each day, tick these. If a decision column is empty, the check is not finished, even if nothing changed. Hold is a decision too, so write it down.",
+          "d": [
+            "Spend and FTDs filled for every ad set",
+            "CPA formula checked",
+            "Decision written for every ad set",
+            "Changes made in Ads Manager",
+            "Step dates and budgets logged",
+            "One note on what you learned"
+          ],
+          "say": "Before you close the sheet each day, tick these. Spend and F T Ds filled for every ad set. C P A formula checked. A decision written for every ad set. Changes made in Ads Manager. Step dates and budgets logged. And one note on what you learned. If a decision column is empty, the check isn't finished, even if nothing changed. Hold is a decision too, so write it down."
+        }
+      ],
+      "takeaways": [
+        "Check once a day at a fixed cut-off: spend, network FTDs, sheet, rule card, changes, note.",
+        "Early days are mostly Hold. The first real decisions arrive when spend reaches 2 to 3 × target.",
+        "The rule card moves money from ad sets that do not prove themselves to the one that does."
+      ],
+      "action": "Build your decision sheet with columns for day, ad set, cumulative spend, network FTDs, CPA, decision, step date and note. Fill days 1 to 7 of this lesson's Example into it and check your formulas give the same CPAs.",
+      "glossary": [
+        {
+          "term": "Cut-off time",
+          "def": "The fixed time each day up to which you count spend and conversions, in the ad account's time zone."
+        },
+        {
+          "term": "Decision sheet",
+          "def": "A daily log of spend, confirmed conversions, CPA and the rule-card decision for every ad set."
+        },
+        {
+          "term": "Cumulative spend",
+          "def": "Total spend since launch, used to compare with kill lines."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "In the 7-day Example, why was ad set B not scaled on day 3?",
+          "options": [
+            "CPA was above target",
+            "It had only 2 FTDs; scale needs 3",
+            "It had spent too little",
+            "It was killed"
+          ],
+          "answer": 1,
+          "why": "B's CPA was $22.50, but the scale rule needs at least 3 confirmed FTDs."
+        },
+        {
+          "q": "Ad set C on day 3: $45 spent, 1 FTD, CPA $45, kill line $40. Why Hold and not Kill?",
+          "options": [
+            "The CPA kill applies only from 3 × target spend, $90",
+            "C had good CTR",
+            "Kill needs 0 FTDs",
+            "C was on a scale path"
+          ],
+          "answer": 0,
+          "why": "The CPA kill line is only applied once spend reaches 3 × target."
+        },
+        {
+          "q": "B runs at $18 from day 4. Days 5 and 6 bring $36 of spend and 2 FTDs. Lifetime: $96, 5 FTDs. What is the call on day 6?",
+          "options": [
+            "Keep",
+            "Step back",
+            "Kill",
+            "Scale to $21.60"
+          ],
+          "answer": 3,
+          "why": "CPA since the step is $18 and lifetime $19.20, both under $24, with 2 FTDs since the step after 48 hours."
+        },
+        {
+          "q": "Which column should never be used for the FTD count?",
+          "options": [
+            "Network approved FTDs",
+            "Network FTDs by sub ID",
+            "Platform results",
+            "FTDs from your tracker matched to the network"
+          ],
+          "answer": 2,
+          "why": "Platform results guide delivery. Decisions use network-confirmed counts."
+        },
+        {
+          "q": "What is the main reason to check at the same cut-off time every day?",
+          "options": [
+            "The platform requires it",
+            "So each day's numbers cover a full, comparable day",
+            "It lowers CPM",
+            "It speeds up postbacks"
+          ],
+          "answer": 1,
+          "why": "Random check times mix part-days and full days, and CPA jumps around for no real reason."
+        }
+      ],
+      "say_intro": "In this lesson you'll turn the rule card into a fifteen minute daily habit. You'll run the check at a fixed time, fill a decision sheet from Ads Manager and network data, and follow three ad sets through seven days of decisions.",
+      "say_outro": "So, one fixed check a day, spend first, then confirmed F T Ds, then the sheet, then decisions, all logged. Your task: build your decision sheet with columns for day, ad set, cumulative spend, network F T Ds, C P A, decision, step date and note, then fill in days one to seven of this lesson's example and check your formulas give the same C P As. Now take the quiz."
+    },
+    {
+      "slug": "bankroll-caps-and-stopping",
+      "title": "Bankroll caps and when to stop a test",
+      "minutes": 15,
+      "objectives": [
+        "By the end you can set a maximum loss per test, per day and per week from your bankroll.",
+        "By the end you can check that a test plan fits inside its cap before launch.",
+        "By the end you can name the six conditions that stop a whole test."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Ad set rules protect ad sets. Caps protect you.",
+          "p": "The rule card decides about one ad set at a time. It cannot see that you have lost three tests in a row or that a budget typo spent $300 overnight. Bankroll caps are the rules above the card: how much you can lose on a test, in a day and in a week.",
+          "d": {
+            "b": "Caps are your last line",
+            "s": "Starting rules; adapt to your vertical and data."
+          },
+          "say": "The rule card decides about one ad set at a time. But it can't see that you've lost three tests in a row, or that a budget typo spent three hundred dollars overnight. That's what bankroll caps are for. They're the rules above the card: how much you can lose on a test, in a day and in a week. Ad set rules protect ad sets. Caps protect you. These are starting rules, so adapt them to your situation."
+        },
+        {
+          "v": "cards",
+          "h": "Four caps to write down",
+          "p": "These four numbers come from your bankroll, the money set aside only for ads and tools. The Operator habits module covers how to build that bankroll. Here we turn it into hard stop lines that work alongside the rule card.",
+          "d": [
+            "Per test|the most one test may lose",
+            "Per day|the most all campaigns may lose in a day",
+            "Per week|the most all tests may lose in a week",
+            "Bankroll floor|the level where all new tests stop"
+          ],
+          "say": "Look at these four cards. Per test, the most one test may lose. Per day, the most all your campaigns may lose in a day. Per week, the most all your tests may lose in a week. And the bankroll floor, the level where all new tests stop. They all come from your bankroll, the money set aside only for ads and tools. The Operator habits module covers how to build that bankroll. Here, we turn it into hard stop lines."
+        },
+        {
+          "v": "table",
+          "h": "Example caps from a $2,000 bankroll",
+          "p": "Example. The percentages are starting rules for beginners; adapt them to your situation. Loss means spend minus network-confirmed revenue, counted on matured spend. The weekly cap is lower than two full tests so one bad week cannot take a big bite.",
+          "d": {
+            "cols": [
+              "Cap",
+              "Starting rule",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Per test",
+                "10% to 20% of bankroll; we use 15%",
+                "$300"
+              ],
+              [
+                "Per day",
+                "5% of bankroll",
+                "$100"
+              ],
+              [
+                "Per week",
+                "25% of bankroll",
+                "$500"
+              ],
+              [
+                "Bankroll floor",
+                "50% of starting bankroll",
+                "$1,000"
+              ]
+            ]
+          },
+          "say": "Here are example caps from a two thousand dollar bankroll. The percentages are starting rules for beginners. Per test, ten to twenty percent of bankroll, and we use fifteen, so three hundred dollars. Per day, five percent, one hundred dollars. Per week, twenty five percent, five hundred dollars. And the floor, half the starting bankroll, one thousand dollars. Loss means spend minus network-confirmed revenue, counted on matured spend. Notice the weekly cap is lower than two full tests, so one bad week can't take a big bite."
+        },
+        {
+          "v": "eq",
+          "h": "Does the test fit its cap?",
+          "p": "Before launch, check that the planned test budget plus a 10% buffer is at or under the per-test cap. If it is over, cut ad sets, not the budget per ad set, as you learned in lessons 1 and 3.",
+          "more": "Example: 3 ad sets × 3 × $30 target = $270. Plus 10% = $297. That is under the $300 cap, so the plan fits. With 4 ad sets the plan would be $360 + $36 = $396, over the cap, so you would drop one ad set or plan 2 × target ($60) each: 4 × $60 = $240 + $24 = $264.",
+          "d": [
+            "Test budget",
+            "+",
+            "10% buffer",
+            "≤",
+            "Per-test cap"
+          ],
+          "say": "Before launch, check the test fits its cap. Follow the equation: test budget, plus a ten percent buffer, must be at or under the per-test cap. Example: three ad sets times three times a thirty dollar target is two hundred seventy, plus ten percent is two hundred ninety seven. That's under three hundred, so it fits. With four ad sets you'd be at three hundred ninety six, over the cap. So drop one ad set, or plan two times target each, which gives two hundred sixty four. Cut ad sets, not the budget per ad set."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: daily budget inside the cap",
+          "p": "Your plan has room for 9 target CPAs in total: 3 ad sets, 3 × target each. Spread over 6 days, what is the daily total? Use the conversions box for the 9.",
+          "d": {
+            "kind": "budget",
+            "task": "Room for 9 target CPAs of $30 over 6 days. What is the daily total budget?",
+            "preset": {
+              "goal": 9,
+              "target_cpa": 30,
+              "days": 6
+            },
+            "answer": {
+              "field": "daily_budget",
+              "value": 45,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Now a lab. Your plan has room for nine target C P As, cost per acquisition, in total: three ad sets, three times target each. The target is thirty dollars, spread over six days. What's the daily total budget? In the tool, use the conversions box for the nine. Pause and try it, then check your answer."
+        },
+        {
+          "v": "table",
+          "h": "When to stop the whole test",
+          "p": "Any one of these ends the test, even if one ad set looks promising. Stopping is not failing; it is keeping money for a better test. Write these under your rule card. Starting rules; adapt to your vertical and data.",
+          "d": {
+            "cols": [
+              "Trigger",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Net loss reaches the per-test cap",
+                "Stop all; review notes"
+              ],
+              [
+                "All ad sets killed, no new creative ready",
+                "Stop; plan the next round"
+              ],
+              [
+                "3 rounds, no ad set reached Keep",
+                "Stop; change offer, geo or angle"
+              ],
+              [
+                "Tracking or postbacks broken",
+                "Pause until fixed and tested"
+              ],
+              [
+                "Payout cut, cap full or offer paused",
+                "Pause; redo your numbers"
+              ],
+              [
+                "Same ad rejected twice for policy",
+                "Stop; fix compliance first"
+              ]
+            ]
+          },
+          "say": "Any one of these six triggers ends the whole test, even if one ad set looks promising. Net loss reaches the per-test cap. All ad sets killed and no new creative ready. Three rounds with no ad set reaching Keep. Tracking or postbacks broken. Payout cut, cap full or offer paused. And the same ad rejected twice for policy. Read the action next to each one. Stopping isn't failing. It's keeping money for a better test. Write these under your rule card."
+        },
+        {
+          "v": "tip",
+          "h": "The daily cap catches errors",
+          "p": "If one day's net loss passes the daily cap, something is usually wrong rather than unlucky: a budget typed as $150 instead of $15, a duplicated campaign, a broken link. Pause everything and find the cause before the next day starts.",
+          "d": {
+            "kind": "example",
+            "text": "Example: daily cap $100. Wednesday's loss is $110. Pause all, check budgets, links and postbacks, restart only after the cause is found."
+          },
+          "say": "The daily cap is great at catching errors. If one day's net loss passes it, something is usually wrong rather than unlucky. A budget typed as one hundred fifty instead of fifteen. A duplicated campaign. A broken link. Look at the example: the daily cap is one hundred dollars and Wednesday's loss is one hundred ten. So you pause everything, check budgets, links and postbacks, and restart only after you've found the cause."
+        },
+        {
+          "v": "curve",
+          "h": "A week against the weekly cap",
+          "p": "Example: cumulative loss across all tests over one week, against a $500 weekly cap. Wednesday passes the daily cap, so everything pauses Thursday while the error is found. The week ends at $350, under the cap.",
+          "d": {
+            "a": [
+              40,
+              110,
+              220,
+              220,
+              290,
+              350,
+              350
+            ],
+            "la": "Cumulative loss this week $ (Example)",
+            "b": [
+              500,
+              500,
+              500,
+              500,
+              500,
+              500,
+              500
+            ],
+            "lb": "Weekly cap $ (Example)",
+            "x": [
+              "Mon",
+              "Tue",
+              "Wed",
+              "Thu",
+              "Fri",
+              "Sat",
+              "Sun"
+            ]
+          },
+          "say": "Watch this chart. It's an example of cumulative loss across all tests over one week, against a five hundred dollar weekly cap, the flat line at the top. On Wednesday, the loss jumps by one hundred ten, past the daily cap, so everything pauses on Thursday while the error is found. That's why the line is flat there. The week ends at three hundred fifty dollars, under the cap."
+        },
+        {
+          "v": "stat",
+          "h": "The bankroll floor",
+          "p": "If your bankroll falls to half its starting size, stop launching new tests for at least a week. Review every note, then change one big thing: offer, geo, source or vertical. Running the same kind of test with less money rarely ends differently.",
+          "d": {
+            "n": 1000,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "bankroll floor: stop new tests and review",
+            "note": "Example. 50% of a $2,000 start."
+          },
+          "say": "Here's the bankroll floor. In the example, it's one thousand dollars, half of a two thousand dollar start. If your bankroll falls to half its starting size, stop launching new tests for at least a week. Review every note, then change one big thing: the offer, the geo, the source or the vertical. Running the same kind of test with less money rarely ends differently."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: set a spending limit",
+          "p": "A platform spending limit backs up your caps if you forget or mistype. Most ad platforms let you set an account spending limit in billing settings. Names and menus change and we are not certain of the current path; check the current Ads Manager.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open billing settings",
+                "text": "In Ads Manager, open billing or payment settings for the ad account.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/billing",
+                  "title": "Billing and payments",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "value": "Payment method: card ending 4421"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Account spending limit"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Set the limit to the test cap",
+                "text": "Set it to the per-test cap for this test. When it is reached, ads stop delivering until you change it.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/billing/limit",
+                  "title": "Account spending limit",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Limit",
+                      "value": "$300"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Example. Reset it at the start of each new test."
+                    },
+                    {
+                      "type": "button",
+                      "label": "Save"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Write it in your sheet",
+                "text": "Note the limit and the date set on the plan tab, next to your caps.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheets.example/ng-offera-plan",
+                  "title": "Test plan",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Per-test cap / account limit",
+                      "value": "$300, set 4 Oct"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "A platform spending limit backs up your caps if you forget or mistype. Most ad platforms let you set one in billing settings. We're not certain of the current menu path, so check the current Ads Manager. Tap Next to follow each step. First, open billing or payment settings for the ad account. Second, set the account spending limit to the per-test cap, in the example three hundred dollars. When it's reached, ads stop until you change it, and you reset it for each new test. Third, write the limit and the date on your plan tab, next to your caps."
+        },
+        {
+          "v": "compare",
+          "h": "Cap mistakes",
+          "p": "Caps fail in predictable ways, mostly after a loss. A cap you move in the middle of a test is not a cap. Decide caps on a calm day and only change them between tests, in writing.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Raising the cap mid-test",
+                "'One more day' after the cap",
+                "Restarting killed ad sets to win it back",
+                "Borrowing to refill the bankroll"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Change caps only between tests",
+                "Cap reached means stop today",
+                "New test with a new question",
+                "Wait, review, rebuild from income"
+              ]
+            }
+          },
+          "say": "Caps fail in predictable ways, mostly after a loss. Raising the cap mid-test. Saying one more day after hitting the cap. Restarting killed ad sets to win the money back. Borrowing to refill the bankroll. And the fixes: change caps only between tests, cap reached means stop today, run a new test with a new question, and wait, review, and rebuild from income. A cap you move in the middle of a test isn't a cap. Decide caps on a calm day, in writing."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: stop means stop",
+          "p": "When an account hits a limit, gets restricted or is banned, the honest move is to stop, read the reason and appeal through official channels. Never open new accounts, use someone else's card or rent accounts to keep spending.",
+          "d": {
+            "kind": "warn",
+            "text": "Never use borrowed money, other people's cards or other people's accounts to get past a cap or a ban."
+          },
+          "say": "When an account hits a limit, gets restricted or is banned, the honest move is to stop, read the reason, and appeal through official channels. Never open new accounts, use someone else's card, or rent accounts to keep spending. As the warning says, never use borrowed money, other people's cards or other people's accounts to get past a cap or a ban."
+        },
+        {
+          "v": "tip",
+          "h": "Almost working is not working",
+          "p": "A test where one ad set sat at $32 against a $30 target for a week feels close. If, after the full test budget, no ad set reached Keep, the test has ended. Write down what you learned and design the next question.",
+          "d": {
+            "kind": "tip",
+            "text": "Close to target is a lesson, not a pass. Change one thing and run a new test."
+          },
+          "say": "Here's a hard one. Imagine a test where one ad set sat at thirty two dollars against a thirty dollar target for a week. It feels close. But if, after the full test budget, no ad set reached Keep, the test has ended. Close to target is a lesson, not a pass. Write down what you learned, change one thing, and design the next test."
+        },
+        {
+          "v": "check",
+          "h": "Write your caps today",
+          "p": "Fill these in before your next test and keep them on the same page as your rule card. You will need them most on the days you least want to read them.",
+          "d": [
+            "Bankroll amount, kept separate",
+            "Per-test cap and the % used",
+            "Per-day cap",
+            "Per-week cap",
+            "Bankroll floor",
+            "Account spending limit set to the test cap"
+          ],
+          "say": "Fill these in before your next test, and keep them on the same page as your rule card. Your bankroll amount, kept separate. Your per-test cap and the percentage used. Your per-day cap. Your per-week cap. Your bankroll floor. And your account spending limit set to the test cap. You'll need them most on the days you least want to read them."
+        }
+      ],
+      "takeaways": [
+        "Set per-test, per-day and per-week loss caps and a bankroll floor before you launch.",
+        "A test plan plus 10% buffer must fit under the per-test cap; cut ad sets to make it fit.",
+        "Stop a whole test on any of the six stop triggers, and change caps only between tests."
+      ],
+      "action": "Write your bankroll, per-test, per-day and per-week caps and your bankroll floor on your plan tab, then set your ad account spending limit to the per-test cap.",
+      "glossary": [
+        {
+          "term": "Per-test cap",
+          "def": "The most a single test may lose before it is stopped, set as a share of your bankroll."
+        },
+        {
+          "term": "Daily cap",
+          "def": "The most all your campaigns together may lose in one day before you pause and look for errors."
+        },
+        {
+          "term": "Bankroll floor",
+          "def": "A bankroll level, such as half the starting amount, at which you stop new tests and review."
+        },
+        {
+          "term": "Account spending limit",
+          "def": "A platform setting that stops ad delivery once total spend reaches a set amount. Names vary."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Bankroll $1,000, per-test cap 15%. What is the most one test may lose?",
+          "options": [
+            "$15",
+            "$150",
+            "$100",
+            "$300"
+          ],
+          "answer": 1,
+          "why": "$1,000 × 15% = $150."
+        },
+        {
+          "q": "Per-test cap $300, target $30. Which plan fits with a 10% buffer?",
+          "options": [
+            "4 ad sets × $90",
+            "5 ad sets × $60",
+            "3 ad sets × $90",
+            "6 ad sets × $60"
+          ],
+          "answer": 2,
+          "why": "3 × $90 = $270, plus 10% = $297, under $300. 4 × $90 + 10% = $396; 5 × $60 + 10% = $330; 6 × $60 + 10% = $396."
+        },
+        {
+          "q": "Your daily cap is $100 and today's net loss is $140. What do you do?",
+          "options": [
+            "Pause everything and look for an error",
+            "Raise budgets tomorrow to recover",
+            "Ignore it, it is one day",
+            "Double the cap"
+          ],
+          "answer": 0,
+          "why": "Passing the daily cap usually means a mistake, such as a budget typo. Pause and find it."
+        },
+        {
+          "q": "After three rounds of creatives, no ad set ever reached Keep. What does the stop rule say?",
+          "options": [
+            "Run a fourth round with the same offer",
+            "Raise the per-test cap",
+            "Scale the best one anyway",
+            "Stop and change the offer, geo or angle"
+          ],
+          "answer": 3,
+          "why": "Three rounds without a Keep ends the test. Change one big thing."
+        },
+        {
+          "q": "Your bankroll started at $2,000 and is now $980. What does the floor rule say?",
+          "options": [
+            "Keep testing with smaller budgets",
+            "Stop new tests for at least a week and review",
+            "Borrow to refill it",
+            "Open a second ad account"
+          ],
+          "answer": 1,
+          "why": "$980 is under the 50% floor of $1,000, so pause new tests and review."
+        }
+      ],
+      "say_intro": "In this lesson you'll set the caps that protect you, not just your ad sets. You'll work out the most you can lose per test, per day and per week, check your plan fits, and learn the six conditions that stop a whole test.",
+      "say_outro": "So, caps sit above the rule card, you set them on a calm day, and when one is hit, you stop. Your task: write your bankroll, per-test, per-day and per-week caps and your bankroll floor on your plan tab, then set your ad account spending limit to the per-test cap. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "Payout $50, margin 30%. An ad set has spent $72 with 0 network-confirmed FTDs after 3 days. What do you do?",
+      "options": [
+        "Hold one more day",
+        "Kill: $72 is above the $70 zero-FTD kill line",
+        "Scale to find buyers faster",
+        "Change the creative inside the same ad set"
+      ],
+      "answer": 1,
+      "why": "Target = $50 × 0.7 = $35. 2 × $35 = $70. Spend has passed it with 0 FTDs."
+    },
+    {
+      "q": "Target $30, break-even $40. Spent $95, 2 FTDs after 5 days. What does the rule card say?",
+      "options": [
+        "Kill: spend is over 3 × target and CPA $47.50 is above the $40 kill line",
+        "Hold: 2 FTDs is too few",
+        "Keep",
+        "Scale"
+      ],
+      "answer": 0,
+      "why": "$95 ≥ $90 and $95 ÷ 2 = $47.50, above the lower kill line of $40."
+    },
+    {
+      "q": "Target $25. At 72 hours: $57 spent, 3 FTDs. What do you do?",
+      "options": [
+        "Keep",
+        "Hold",
+        "Scale +20%",
+        "Kill"
+      ],
+      "answer": 2,
+      "why": "$57 ÷ 3 = $19, under 0.8 × $25 = $20, with 3 FTDs at 72 hours."
+    },
+    {
+      "q": "Ads Manager shows 6 conversions on $90; the network approved 2. Target $30, break-even $40. What is your decision?",
+      "options": [
+        "Scale, CPA is $15",
+        "Keep, CPA is $30",
+        "Hold, data is thin",
+        "Kill: network CPA $45 is above the $40 kill line at 3 × target spend"
+      ],
+      "answer": 3,
+      "why": "Decisions use the network count: $90 ÷ 2 = $45, above $40, with spend at 3 × target."
+    },
+    {
+      "q": "Postback lag 24 hours, $20 a day, target $30. At 72 hours: $60 spent, 0 FTDs. What do you do?",
+      "options": [
+        "Kill now",
+        "Hold: matured spend is $40, under the $60 line",
+        "Scale",
+        "Restart the ad set"
+      ],
+      "answer": 1,
+      "why": "Only spend older than 24 hours counts: $40. The zero-FTD kill waits until matured spend reaches $60."
+    },
+    {
+      "q": "Target $30, 20% of sign-ups deposit. Matured spend $30, 0 FTDs, 4 sign-ups. What does the proxy say?",
+      "options": [
+        "Early kill, cost per sign-up is too high",
+        "Scale on the proxy",
+        "On track: $7.50 per sign-up is under the $12 warning line; Hold",
+        "Kill, 0 FTDs"
+      ],
+      "answer": 2,
+      "why": "Target per sign-up = $30 × 20% = $6, warning line $12. $30 ÷ 4 = $7.50 is under it, and spend is under the $60 kill line."
+    },
+    {
+      "q": "You stepped an ad set from $20 to $24 two days ago. Since then: $48 spent, 1 FTD. Target $30. What now?",
+      "options": [
+        "Back to $20: CPA since the step is $48, above target",
+        "Step to $28.80",
+        "Keep at $24 and wait",
+        "Duplicate at $24"
+      ],
+      "answer": 0,
+      "why": "CPA since the step above target for 48 hours means back to the last budget that worked."
+    },
+    {
+      "q": "Bankroll $3,000, per-test cap 15%, target $40. You want 4 ad sets at 3 × target each. Does the plan fit?",
+      "options": [
+        "Yes, $480 is under $450",
+        "No: $480 + 10% = $528 is over $450; cut to 3 ad sets",
+        "Yes, caps do not include buffer",
+        "No, cut each ad set to $20"
+      ],
+      "answer": 1,
+      "why": "Cap = $450. 4 × $120 = $480, plus 10% = $528. 3 ad sets: $360 + $36 = $396 fits."
+    },
+    {
+      "q": "Daily cap $100. Overnight an ad set spent $160 because the budget was typed as $160 instead of $16. What is the right order?",
+      "options": [
+        "Pause all, fix the budget, then restart with the same rules",
+        "Leave it, the rule card will catch it",
+        "Raise the daily cap",
+        "Kill every ad set permanently"
+      ],
+      "answer": 0,
+      "why": "Passing the daily cap signals an error. Pause, fix the cause, then continue under the same rules."
+    },
+    {
+      "q": "Target $30. Ad set has 12 FTDs at a $17 CPA. A beginner asks whether to raise budget by 50%. Best answer?",
+      "options": [
+        "Yes, always +50% on winners",
+        "No, never scale",
+        "It qualifies for the advanced +30% to 50% rule, but as a beginner step +20% and keep checking CPA since the step",
+        "Duplicate it at 3 × the budget"
+      ],
+      "answer": 2,
+      "why": "$17 ÷ $30 = 0.57, under 0.6 × with 10+ FTDs, so a bigger step is allowed by the advanced rule; beginners stay at +20%."
+    }
+  ]
+}

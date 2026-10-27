@@ -1,0 +1,2870 @@
+{
+  "school": "v-sweeps",
+  "order": 5,
+  "slug": "tracking-and-lead-quality",
+  "title": "Tracking and lead quality",
+  "summary": "How to follow every lead from click to payout, read scrubs honestly, defend your forms against bots and validate leads before delivery. You set up stage postbacks, optimise on quality events and run a weekly dashboard with written rules.",
+  "lessons": [
+    {
+      "slug": "follow-a-lead-to-payout",
+      "title": "Follow a lead from click to payout",
+      "minutes": 15,
+      "objectives": [
+        "By the end you can name each stage a lead passes through and who controls it.",
+        "By the end you can work out cost per lead at every stage from one set of numbers.",
+        "By the end you can find the stage that loses the most money."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the last stage is the one that pays",
+          "p": "Ads Manager shows leads. Your lander shows entries. The network pays for accepted leads after its checks and a holding period. Between the first number and the last, money disappears. If you only watch the first number, you will scale campaigns that look cheap and quietly lose. This module is about measuring the whole path honestly.",
+          "d": {
+            "b": "You are paid on the last stage, not the first",
+            "s": "Track every stage, or you are guessing."
+          },
+          "say": "Here's the big idea of this module. Ads Manager shows leads. Your lander shows entries. But the network pays for accepted leads, after its checks and a holding period. Between that first number and the last, money disappears. If you only watch the first number, you'll scale campaigns that look cheap and quietly lose. As the slide says, you're paid on the last stage, not the first. Track every stage, or you're guessing."
+        },
+        {
+          "v": "map",
+          "h": "The path of one lead",
+          "p": "Every lead takes this path. Each arrow is a place where leads drop out and where data must be passed on correctly. Module 3 built the funnel; here we follow the data and the money through it.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Ad",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Lander and form",
+                "kind": "page"
+              },
+              {
+                "id": "val",
+                "label": "Your checks",
+                "kind": "tool"
+              },
+              {
+                "id": "net",
+                "label": "Network",
+                "kind": "offer"
+              },
+              {
+                "id": "doi",
+                "label": "Confirm email",
+                "kind": "person"
+              },
+              {
+                "id": "pb",
+                "label": "Postback",
+                "kind": "data"
+              },
+              {
+                "id": "pay",
+                "label": "Payout",
+                "kind": "money"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "lp",
+                "click"
+              ],
+              [
+                "lp",
+                "val",
+                "entry"
+              ],
+              [
+                "val",
+                "net",
+                "clean lead"
+              ],
+              [
+                "net",
+                "doi",
+                "DOI offers"
+              ],
+              [
+                "net",
+                "pb",
+                "status"
+              ],
+              [
+                "pb",
+                "pay",
+                "after hold"
+              ]
+            ]
+          },
+          "say": "Every lead takes this path. Follow the map. The ad sends a click to your lander and form. The entry goes through your own checks. A clean lead goes to the network. On double opt-in offers, the person confirms by email. The network sends the status back by postback. And after the hold, you get your payout. Each arrow is a place where leads drop out, and where data must be passed on correctly."
+        },
+        {
+          "v": "table",
+          "h": "The stages and who controls them",
+          "p": "Name the stages the same way in your sheet, your tracker and your talks with the network. Many arguments about numbers are really two people using one word for different stages.",
+          "d": {
+            "cols": [
+              "Stage",
+              "Meaning",
+              "Controlled by"
+            ],
+            "rows": [
+              [
+                "Entry",
+                "Form submitted",
+                "You"
+              ],
+              [
+                "Validated",
+                "Passed your checks",
+                "You"
+              ],
+              [
+                "Delivered",
+                "Received by network",
+                "You and network"
+              ],
+              [
+                "Accepted",
+                "Passed network checks",
+                "Network"
+              ],
+              [
+                "Confirmed",
+                "Clicked DOI email",
+                "Lead"
+              ],
+              [
+                "Paid",
+                "Survived the hold",
+                "Network"
+              ]
+            ]
+          },
+          "say": "Here are the stages, and who controls each one. Entry, a form submitted, is yours. Validated, passed your checks, is yours. Delivered, received by the network, is you and the network. Accepted, passed network checks, is the network. Confirmed, clicked the confirmation email, is the lead. And paid, survived the hold, is the network. Use these exact names in your sheet, your tracker, and your talks with the network. Many arguments about numbers are really two people using one word for different stages."
+        },
+        {
+          "v": "funnel",
+          "h": "Example: one week on offer 3310",
+          "p": "Example offer 3310: SOI email entry, South Africa, $1.20 per accepted lead, 30-day hold. One week, $300 spend. Watch how many leads drop between entry and payment. Each step down is money you spent and will not be paid for.",
+          "d": [
+            [
+              "Clicks",
+              2000
+            ],
+            [
+              "Entries",
+              500
+            ],
+            [
+              "Validated",
+              455
+            ],
+            [
+              "Accepted",
+              410
+            ],
+            [
+              "Paid after hold",
+              402
+            ]
+          ],
+          "say": "Here's one week on an example offer, three three one zero: an S O I email entry in South Africa, paying one dollar twenty per accepted lead, with a thirty day hold. Three hundred dollars of spend. Follow the funnel down. Two thousand clicks. Five hundred entries. Four hundred and fifty five validated. Four hundred and ten accepted. And four hundred and two paid after the hold. Each step down is money you spent and won't be paid for."
+        },
+        {
+          "v": "table",
+          "h": "Example: cost at every stage",
+          "p": "Same week, $300 spend. Cost per entry looks great at $0.60. Cost per paid lead is $0.75. Revenue is 402 × $1.20 = $482.40, profit $182.40. Your target is $0.90 per paid lead, so this week passes. Judge only on the last row.",
+          "more": "Maths: $300 ÷ 500 = $0.60; $300 ÷ 455 = $0.659; $300 ÷ 410 = $0.732; $300 ÷ 402 = $0.746. Target: $1.20 × (1 − 25%) = $0.90. Profit: $482.40 − $300 = $182.40. Example figures only; your rates will differ by geo, offer and traffic.",
+          "d": {
+            "cols": [
+              "Stage",
+              "Count",
+              "Cost per lead"
+            ],
+            "rows": [
+              [
+                "Entries",
+                "500",
+                "$0.60"
+              ],
+              [
+                "Validated",
+                "455",
+                "$0.66"
+              ],
+              [
+                "Accepted",
+                "410",
+                "$0.73"
+              ],
+              [
+                "Paid",
+                "402",
+                "$0.75"
+              ]
+            ]
+          },
+          "say": "Now the cost at every stage, for that same three hundred dollars. Read down the table. Cost per entry looks great, at sixty cents. Per validated, sixty six cents. Per accepted, seventy three. And per paid lead, seventy five cents. Revenue is four hundred and two times one twenty, four hundred eighty two dollars forty, so profit is one eighty two forty. Your target is ninety cents per paid lead, so this week passes. But judge only on the last row. These are example figures; yours will differ."
+        },
+        {
+          "v": "bars",
+          "h": "Example: the same spend, four different costs",
+          "p": "Example, $300 spend. The bar grows as leads drop out between stages. The last bar is the only one you compare with your $0.90 target. A campaign judged on the first bar would look 20% cheaper than it really is.",
+          "d": [
+            [
+              "Per entry",
+              67,
+              "$0.60"
+            ],
+            [
+              "Per validated",
+              73,
+              "$0.66"
+            ],
+            [
+              "Per accepted",
+              81,
+              "$0.73"
+            ],
+            [
+              "Per paid",
+              83,
+              "$0.75"
+            ],
+            [
+              "Target",
+              100,
+              "$0.90"
+            ]
+          ],
+          "say": "Look at these bars. It's the same three hundred dollars, but four different costs. The bar grows as leads drop out between stages: sixty cents per entry, sixty six, seventy three, and seventy five per paid lead. The last bar is your ninety cent target. Only the paid lead bar should be compared with it. A campaign judged on the first bar would look twenty percent cheaper than it really is."
+        },
+        {
+          "v": "eq",
+          "h": "Accept rate",
+          "p": "The accept rate is the share of leads you delivered that the network accepted. It is the single most important quality number in lead gen. In the example, 410 ÷ 455 = 90%. Compare it with the rate the network says is normal for this offer.",
+          "d": [
+            "Accepted",
+            "÷",
+            "Delivered",
+            "=",
+            "Accept rate"
+          ],
+          "say": "Here's the single most important quality number in lead gen: the accept rate. Read the sum on screen. Accepted, divided by delivered, equals your accept rate. In the example, four hundred and ten divided by four hundred and fifty five is ninety percent. Compare it with the rate the network says is normal for this offer."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: find the leaking stage",
+          "p": "Example week on a different campaign. Enter the counts and find the stage with the lowest pass-through from the one above. That is where to look first. Row indexes start at 0.",
+          "more": "Pass-through: 600 ÷ 640 = 94%; 330 ÷ 600 = 55%; 322 ÷ 330 = 98%. The network accepted only 55% of what passed your checks. Your checks are missing something the network catches, or the network is rejecting more than its terms say. Lessons 2 to 4 show how to tell which.",
+          "d": {
+            "kind": "funnel",
+            "task": "Which stage loses the biggest share of the stage above? Enter its index (first row = 0).",
+            "preset": {
+              "steps": [
+                [
+                  "Entries submitted",
+                  640
+                ],
+                [
+                  "Passed your checks",
+                  600
+                ],
+                [
+                  "Accepted by network",
+                  330
+                ],
+                [
+                  "Paid after hold",
+                  322
+                ]
+              ],
+              "payout": 1.2
+            },
+            "answer": {
+              "field": "worst_step",
+              "value": 2,
+              "tolerance": 0
+            }
+          },
+          "say": "Your turn. Here's an example week on a different campaign. Six hundred and forty entries submitted, six hundred passed your checks, three hundred and thirty accepted by the network, and three hundred and twenty two paid after the hold. Find the stage with the lowest pass-through from the one above it. That's where you'd look first. Row numbers start at zero. Pause and try it, then check your answer."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: see every stage in one place",
+          "p": "You need three screens: your tracker or sheet, the network panel and your postback log. Screens are generic mock-ups; report names vary by network. Do this once now, then weekly.",
+          "d": {
+            "steps": [
+              {
+                "title": "Entries and validation",
+                "text": "From your form tool or tracker, export entries and the result of your checks for the week.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "tracker.example/leads?week=40",
+                  "title": "Leads, week 40",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Status",
+                        "Count"
+                      ],
+                      "rows": [
+                        [
+                          "Entry",
+                          "500"
+                        ],
+                        [
+                          "Validated",
+                          "455"
+                        ],
+                        [
+                          "Flagged",
+                          "45"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Network status report",
+                "text": "In the network panel, open conversions grouped by status. Pick the same dates and time zone.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "network.example/reports/status",
+                  "title": "Conversions by status",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Time zone",
+                      "value": "SAST"
+                    },
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Status",
+                        "Count"
+                      ],
+                      "rows": [
+                        [
+                          "Received",
+                          "455"
+                        ],
+                        [
+                          "Accepted",
+                          "410"
+                        ],
+                        [
+                          "Rejected",
+                          "45"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Postback log",
+                "text": "Check that every accepted lead also arrived in your tracker by postback.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "tracker.example/postbacks",
+                  "title": "Postback log",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Event",
+                        "Count"
+                      ],
+                      "rows": [
+                        [
+                          "accepted",
+                          "410"
+                        ],
+                        [
+                          "rejected",
+                          "45"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "Matches network: yes"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Write the week in your sheet",
+                "text": "One row per week: entries, validated, delivered, accepted, paid, spend.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/lead-stages",
+                  "title": "Stage sheet",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Week 40",
+                      "value": "500 / 455 / 455 / 410 / pending"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Spend",
+                      "value": "$300"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "To see every stage in one place, you need three screens. Tap Next to follow each step. First, export entries and the results of your checks for the week from your form tool or tracker. Second, in the network panel, open conversions grouped by status, using the same dates and time zone. Third, check your postback log, so every accepted lead also arrived in your tracker. Finally, write one row per week in your sheet: entries, validated, delivered, accepted, paid and spend. Do it once now, then weekly."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: every stage holds personal data",
+          "p": "Each stage stores names, emails or phone numbers. Data protection laws such as South Africa's POPIA, Nigeria's NDPA, Kenya's Data Protection Act and the EU's GDPR expect you to keep only what you need, secure it and delete it when no longer needed. The consent record from Module 2 must travel with each lead.",
+          "d": {
+            "kind": "warn",
+            "text": "Limit who can export lead data, never share lead files in open chats, and delete what you no longer need. Check the data law of each geo you run."
+          },
+          "say": "Every stage holds personal data: names, emails or phone numbers. Data protection laws, such as South Africa's POPIA, Nigeria's N D P A, Kenya's Data Protection Act and the E U's G D P R, expect you to keep only what you need, secure it, and delete it when it's no longer needed. And the consent record from module two must travel with each lead. Look at the warning: limit who can export lead data, never share lead files in open chats, and check the data law of each geo you run."
+        },
+        {
+          "v": "compare",
+          "h": "Mistakes reading the stages",
+          "p": "These mistakes make a losing campaign look like a winner, and they are easy to make when three reports disagree. Each fix is a habit, not a tool. Build the habits now, while your volume is small and mistakes are cheap.",
+          "more": "Pending leads can still be reversed during the hold period, for example if the network finds duplicates across affiliates or fraud. Until the hold ends, treat pending revenue as an estimate.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Judging on Ads Manager leads",
+                "Different time zones per report",
+                "Counting pending as paid",
+                "Ignoring reversals after the hold"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Judge on network-paid leads",
+                "One time zone everywhere",
+                "Pending is not money yet",
+                "Subtract reversals when they post"
+              ]
+            }
+          },
+          "say": "These mistakes make a losing campaign look like a winner. Read across. Judging on Ads Manager leads: judge on network-paid leads. Different time zones per report: use one time zone everywhere. Counting pending as paid: pending isn't money yet, because leads can still be reversed during the hold, for duplicates or fraud. And ignoring reversals after the hold: subtract them when they post. Each fix is a habit, not a tool. Build them now, while your volume is small and mistakes are cheap."
+        },
+        {
+          "v": "table",
+          "h": "Decision rules for stage tracking",
+          "p": "Starting rules to adapt. They tell you when the numbers are good enough to decide on, and when to stop and investigate first. Ask your network for its normal accept rate on each offer, so you have a line to compare with.",
+          "d": {
+            "cols": [
+              "Situation",
+              "Rule"
+            ],
+            "rows": [
+              [
+                "Validated vs network-received differ > 5%",
+                "Fix delivery before any decision"
+              ],
+              [
+                "Accept rate 10+ points below plan, 50+ leads",
+                "Pause and investigate"
+              ],
+              [
+                "Accept rate within 5 points of norm",
+                "Decide on cost per paid lead"
+              ],
+              [
+                "Reversals > 5% of accepted",
+                "Ask network for reasons by lead ID"
+              ]
+            ]
+          },
+          "say": "Here are your starting decision rules. If validated and network-received counts differ by more than five percent, fix delivery before any decision. If the accept rate is ten or more points below plan on fifty or more leads, pause and investigate. If the accept rate is within five points of the norm, decide on cost per paid lead. And if reversals are more than five percent of accepted, ask the network for reasons by lead I D. Ask your network for its normal accept rate on each offer, so you have a line to compare with."
+        }
+      ],
+      "takeaways": [
+        "Name the stages the same way everywhere: entry, validated, delivered, accepted, confirmed, paid.",
+        "Cost per entry is a clue; cost per paid lead is the result.",
+        "Accept rate is the key quality number; compare it with the network's norm."
+      ],
+      "action": "Build a stage sheet for your current or next lead gen campaign with one column per stage and fill in last week's numbers.",
+      "glossary": [
+        {
+          "term": "Accept rate",
+          "def": "Accepted leads divided by delivered leads."
+        },
+        {
+          "term": "Hold period",
+          "def": "Time the network waits before paying, during which leads can still be reversed."
+        },
+        {
+          "term": "Reversal",
+          "def": "A lead that was accepted and later removed, so it is not paid."
+        },
+        {
+          "term": "Delivered lead",
+          "def": "A lead the network's system received from you."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "$300 spend, 402 paid leads. Cost per paid lead?",
+          "options": [
+            "$0.60",
+            "$0.75",
+            "$0.90",
+            "$1.20"
+          ],
+          "answer": 1,
+          "why": "$300 ÷ 402 = $0.746, about $0.75."
+        },
+        {
+          "q": "You delivered 455 leads and 410 were accepted. Accept rate?",
+          "options": [
+            "90%",
+            "82%",
+            "91%",
+            "95%"
+          ],
+          "answer": 0,
+          "why": "410 ÷ 455 = 0.901, about 90%."
+        },
+        {
+          "q": "Which number should decide whether you scale?",
+          "options": [
+            "Ads Manager leads",
+            "Lander entries",
+            "Click-through rate",
+            "Cost per network-paid lead"
+          ],
+          "answer": 3,
+          "why": "You are paid only for leads that survive the network's checks and hold."
+        },
+        {
+          "q": "Your tracker shows 455 delivered; the network shows 380 received. Starting rule?",
+          "options": [
+            "Scale anyway",
+            "Ignore the difference",
+            "Fix delivery before any decision",
+            "Lower the budget 50%"
+          ],
+          "answer": 2,
+          "why": "A gap over 5% means leads are not arriving; decisions on broken data are guesses."
+        },
+        {
+          "q": "Who controls the accepted stage?",
+          "options": [
+            "The network or advertiser",
+            "The lead",
+            "The ad platform",
+            "You"
+          ],
+          "answer": 0,
+          "why": "Acceptance is the network's check after it receives your lead."
+        }
+      ],
+      "say_intro": "In this lesson you'll follow one lead all the way from the click to the payout. You'll learn each stage, who controls it, and how to find the stage where your money leaks, because you're paid on the last stage, not the first.",
+      "say_outro": "You can now name every stage a lead passes through and who controls it, work out cost per lead at each stage, and find the stage that loses the most money. Your task: build a stage sheet for your current or next lead gen campaign, with one column per stage, and fill in last week's numbers. Now take the quiz."
+    },
+    {
+      "slug": "scrubs-why-leads-get-rejected",
+      "title": "Scrubs: why leads get rejected",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can list the honest reasons leads are scrubbed and fix the ones on your side.",
+        "By the end you can tell an honest scrub from a shave using lead-level data.",
+        "By the end you can calculate your effective payout and decide when to move volume."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why scrubs decide your real payout",
+          "p": "A scrub is a lead the network or advertiser rejects and does not pay for. Every offer has some. The scrub rate turns the payout on the offer page into your real payout. A $1.20 offer with a 25% scrub pays you $0.90 per lead you deliver. Understanding scrubs is how you compare offers honestly.",
+          "d": {
+            "b": "Payout × accept rate = what a lead is really worth",
+            "s": "Scrub rate = 1 − accept rate."
+          },
+          "say": "A scrub is a lead the network or advertiser rejects and doesn't pay for. Every offer has some. Your scrub rate turns the payout on the offer page into your real payout. For example, a one dollar twenty offer with a twenty five percent scrub pays you ninety cents per lead you deliver. As the slide says: payout times accept rate is what a lead is really worth. Understanding scrubs is how you compare offers honestly."
+        },
+        {
+          "v": "cards",
+          "h": "Honest reasons leads get scrubbed",
+          "p": "Most scrubs have a clear reason, and many reasons are fixable on your side. Ask for the reason on each rejected lead. Reasons and names vary by network.",
+          "d": [
+            "Duplicate|already in the advertiser's list",
+            "Invalid contact|email bounces or phone does not exist",
+            "Out of geo or age|outside the offer's rules",
+            "Failed confirmation|DOI email never clicked",
+            "Fraud signals|bot patterns or data-centre traffic",
+            "Over cap|sent after the daily cap was full"
+          ],
+          "say": "Most scrubs have a clear reason, and many are fixable on your side. Duplicate: already in the advertiser's list. Invalid contact: the email bounces, or the phone doesn't exist. Out of geo or age: outside the offer's rules. Failed confirmation: the double opt-in email was never clicked. Fraud signals: bot patterns or data centre traffic. And over cap: sent after the daily cap was full. Ask for the reason on each rejected lead. Reasons and names vary by network."
+        },
+        {
+          "v": "table",
+          "h": "Example: one week's scrub report",
+          "p": "Example offer 3310: SOI email entry, South Africa, $1.20 per accepted lead, 30-day hold. You delivered 1,000 leads. The network accepted 750. Below are the reasons it gave. Notice that duplicates and invalid contacts, both fixable with your own checks, are 180 of the 250 rejects.",
+          "more": "Expected if all paid: 1,000 × $1.20 = $1,200. Actual: 750 × $1.20 = $900. Duplicates plus invalid emails cost you 180 × $1.20 = $216 of revenue you might keep with a duplicate check and email validation (Lesson 4). Advertiser quality rejects need a conversation: ask what quality means on this offer.",
+          "d": {
+            "cols": [
+              "Reason",
+              "Leads",
+              "Share of delivered"
+            ],
+            "rows": [
+              [
+                "Duplicate",
+                "120",
+                "12%"
+              ],
+              [
+                "Invalid email",
+                "60",
+                "6%"
+              ],
+              [
+                "Out of geo",
+                "30",
+                "3%"
+              ],
+              [
+                "Advertiser quality",
+                "40",
+                "4%"
+              ],
+              [
+                "Accepted",
+                "750",
+                "75%"
+              ]
+            ]
+          },
+          "say": "Here's one week's scrub report on our example offer, paying one dollar twenty per accepted lead. You delivered one thousand leads, and the network accepted seven fifty. Read the reasons. One hundred and twenty duplicates. Sixty invalid emails. Thirty out of geo. Forty for advertiser quality. Notice that duplicates and invalid emails, both fixable with your own checks, are one hundred and eighty of the two hundred and fifty rejects. That's two hundred and sixteen dollars of revenue you might keep. And the quality rejects need a conversation."
+        },
+        {
+          "v": "eq",
+          "h": "Effective payout",
+          "p": "Effective payout is the payout multiplied by your accept rate. It is what each delivered lead is worth to you. Use it to compare offers: $1.20 at 75% accepted is $0.90; $1.00 at 95% accepted is $0.95, the better deal.",
+          "d": [
+            "Payout",
+            "×",
+            "Accept rate",
+            "=",
+            "Effective payout"
+          ],
+          "say": "Effective payout is the payout multiplied by your accept rate. Read the sum on screen: payout, times accept rate, equals effective payout. It's what each delivered lead is worth to you. So use it to compare offers. One dollar twenty at seventy five percent accepted is ninety cents. One dollar at ninety five percent accepted is ninety five cents, the better deal."
+        },
+        {
+          "v": "compare",
+          "h": "Honest scrub versus a shave",
+          "p": "A shave is when a network or advertiser removes leads without a real reason to pay you less. Most networks do not shave, but it happens. You cannot see inside their systems, so you look for patterns. One sign alone proves nothing; several together are a warning.",
+          "d": {
+            "a": {
+              "title": "Honest scrub",
+              "items": [
+                "Reasons given per lead ID",
+                "Rate steady week to week",
+                "Matches the offer terms",
+                "Changes you make move the rate"
+              ]
+            },
+            "b": {
+              "title": "Warning signs of a shave",
+              "items": [
+                "No reasons, only totals",
+                "Rate jumps as your volume grows",
+                "Rejects rise after a payout bump",
+                "Your fixes never change the rate"
+              ]
+            }
+          },
+          "say": "A shave is when a network or advertiser removes leads without a real reason, to pay you less. Most networks don't shave, but it happens. You can't see inside their systems, so you look for patterns. Compare the columns. An honest scrub gives reasons per lead I D, stays steady week to week, matches the offer terms, and moves when you make changes. Warning signs of a shave: only totals, a rate that jumps as your volume grows, rejects rising after a payout bump, and fixes that never change the rate. One sign alone proves nothing. Several together are a warning."
+        },
+        {
+          "v": "screen",
+          "h": "Reading a lead-level reject report",
+          "p": "Ask for this report. Each rejected lead has its ID, your sub ID and a reason. Match the IDs to your own records: if the network says invalid email but your validation showed the mailbox existed, you have a specific case to discuss. Report layouts vary by network.",
+          "d": {
+            "v": "screen",
+            "kind": "browser",
+            "url": "network.example/reports/rejects",
+            "title": "Rejected leads, week 40",
+            "blocks": [
+              {
+                "type": "select",
+                "label": "Offer",
+                "value": "3310 SA SOI"
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "Lead ID",
+                  "Sub ID",
+                  "Reason"
+                ],
+                "rows": [
+                  [
+                    "L-88412",
+                    "c_91a2",
+                    "Duplicate"
+                  ],
+                  [
+                    "L-88419",
+                    "c_77f0",
+                    "Invalid email"
+                  ],
+                  [
+                    "L-88433",
+                    "c_91a2",
+                    "Duplicate"
+                  ],
+                  [
+                    "L-88450",
+                    "c_3b18",
+                    "Out of geo"
+                  ]
+                ]
+              },
+              {
+                "type": "button",
+                "label": "Export CSV"
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "Ask your network for a report like this one. Each rejected lead has its lead I D, your sub I D, and a reason. Look at the highlighted table. Match those I Ds to your own records. If the network says invalid email, but your validation showed the mailbox existed, you have a specific case to discuss. Report layouts vary by network."
+        },
+        {
+          "v": "phone",
+          "h": "Asking for reasons, the right way",
+          "p": "Example message to an affiliate manager. Lead with data and a question, not an accusation. Ask what the advertiser means by quality, because the answer tells you what to change. Most scrub problems are fixed in this conversation.",
+          "d": {
+            "v": "phone",
+            "app": "chat",
+            "title": "Affiliate manager",
+            "subtitle": "network",
+            "messages": [
+              {
+                "from": "me",
+                "text": "Week 40 on 3310: 1,000 delivered, 750 accepted. Could you share rejects by lead ID with reasons?"
+              },
+              {
+                "from": "them",
+                "text": "Sure, exporting now. Most are duplicates against the advertiser's list."
+              },
+              {
+                "from": "me",
+                "text": "Thanks. 40 say advertiser quality. What does quality mean on this offer, so I can fix it?"
+              },
+              {
+                "from": "them",
+                "text": "Leads that never open the first email. They want engaged entrants."
+              }
+            ]
+          },
+          "say": "Here's how to ask for reasons the right way, in an example chat. You lead with data: one thousand delivered, seven fifty accepted, could you share rejects by lead I D. The manager says most are duplicates against the advertiser's list. Then you ask what quality means on this offer. The answer: leads that never open the first email. They want engaged entrants. Lead with data and a question, not an accusation. Most scrub problems are fixed in this conversation."
+        },
+        {
+          "v": "quote",
+          "h": "From the founder",
+          "p": "A habit worth copying when scrubs rise. It keeps the relationship with your manager calm, gets you facts fast and stops you from making a decision you regret on a bad day. Write it on your rule card.",
+          "d": "Ask for reasons by lead ID before you argue. Most scrubs have a fix on your side. The few that do not tell you who to stop working with.",
+          "by": "dchessking",
+          "say": "Here's how Dchessking puts it, on what to do when scrubs rise: Ask for reasons by lead ID before you argue. Most scrubs have a fix on your side. The few that do not tell you who to stop working with. This habit keeps your relationship with your manager calm, gets you facts fast, and stops you making a decision you regret on a bad day. Write it on your rule card."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: never try to beat a scrub",
+          "p": "Resubmitting rejected leads, changing their details, mixing in leads from other sources or sending leads after the cap to slip past it is fraud. It gets affiliates banned and can be illegal. The honest response is to fix the cause or move to an offer that fits your traffic.",
+          "d": {
+            "kind": "warn",
+            "text": "Never resubmit, edit or recycle rejected leads, and never deliver leads you did not collect yourself with consent for that offer."
+          },
+          "say": "Never try to beat a scrub. Resubmitting rejected leads, changing their details, mixing in leads from other sources, or sending leads after the cap to slip past it, is fraud. It gets affiliates banned, and can be illegal. Look at the warning: never resubmit, edit or recycle rejected leads, and never deliver leads you didn't collect yourself with consent for that offer. The honest response is to fix the cause, or move to an offer that fits your traffic."
+        },
+        {
+          "v": "partner",
+          "h": "Choosing a lead gen partner",
+          "p": "These are the sweeps and lead gen partners we list. Whoever you work with, ask before you start: do they give lead-level reject reasons, what is the normal accept rate on this offer, and is the scrub policy written down?",
+          "d": {
+            "vertical": "sweeps",
+            "note": "Prefer partners who give reject reasons by lead ID, a normal accept rate per offer and a written scrub policy."
+          },
+          "say": "These are the sweeps and lead gen partners we list. Whoever you work with, ask three questions before you start. Do they give lead-level reject reasons? What's the normal accept rate on this offer? And is the scrub policy written down? As the note on screen says, prefer partners who do all three."
+        },
+        {
+          "v": "cards",
+          "h": "Common scrub mistakes",
+          "p": "These mistakes turn a fixable scrub into lost money or a lost partner. Most come from reacting fast to a bad number. Check yourself against the list each time your accept rate drops, before you message anyone.",
+          "d": [
+            "Arguing with totals only|ask for lead-level reasons",
+            "Comparing payouts, not effective payouts|multiply by accept rate",
+            "No duplicate check on your side|add one before delivery",
+            "Sending after cap|pause at the cap, ask for more",
+            "Accusing before checking|check your own data first"
+          ],
+          "say": "These mistakes turn a fixable scrub into lost money, or a lost partner. Arguing with totals only: ask for lead-level reasons. Comparing payouts, not effective payouts: multiply by accept rate. No duplicate check on your side: add one before delivery. Sending after the cap: pause at the cap and ask for more. Accusing before checking: check your own data first. Most come from reacting fast to a bad number, so check yourself against this list before you message anyone."
+        },
+        {
+          "v": "table",
+          "h": "Decision rules for scrubs",
+          "p": "Starting rules to adapt. Use at least 200 delivered leads before judging a scrub rate, because small samples swing a lot. A few duplicates in a batch of 50 can move the rate by ten points on their own.",
+          "d": {
+            "cols": [
+              "Situation (200+ leads)",
+              "Rule"
+            ],
+            "rows": [
+              [
+                "Accept rate within 5 points of network norm",
+                "Normal; optimise cost"
+              ],
+              [
+                "Drops 10+ points with no change on your side",
+                "Ask for lead-level reasons"
+              ],
+              [
+                "Fixable reasons > 50% of rejects",
+                "Add the missing check this week"
+              ],
+              [
+                "Unexplained gap 15+ points for 2 weeks",
+                "Cut volume to that offer by half"
+              ],
+              [
+                "No reasons given after two requests",
+                "Move volume elsewhere"
+              ]
+            ]
+          },
+          "say": "Here are your starting rules for scrubs, using at least two hundred delivered leads, because small samples swing a lot. Accept rate within five points of the network norm: normal, so optimise cost. A drop of ten or more points with no change on your side: ask for lead-level reasons. Fixable reasons over half of rejects: add the missing check this week. An unexplained gap of fifteen or more points for two weeks: cut volume to that offer by half. And no reasons given after two requests: move your volume elsewhere."
+        }
+      ],
+      "takeaways": [
+        "A scrub is a rejected, unpaid lead; payout × accept rate is what a lead is really worth.",
+        "Ask for reasons by lead ID; most scrubs are fixable on your side.",
+        "Watch for shave patterns, and never try to beat a scrub by recycling or editing leads."
+      ],
+      "action": "Ask your affiliate manager for last week's rejected leads by lead ID with reasons, and sort them into fixable on your side and not fixable.",
+      "glossary": [
+        {
+          "term": "Scrub",
+          "def": "A lead the network or advertiser rejects and does not pay for."
+        },
+        {
+          "term": "Scrub rate",
+          "def": "Rejected leads divided by delivered leads; 1 minus the accept rate."
+        },
+        {
+          "term": "Effective payout",
+          "def": "Payout multiplied by accept rate; what each delivered lead is worth."
+        },
+        {
+          "term": "Shave",
+          "def": "Removing valid leads without a real reason to pay an affiliate less; a form of fraud by the network or advertiser."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Offer A pays $1.20 with 75% accepted. Offer B pays $1.00 with 95% accepted. Which is worth more per delivered lead?",
+          "options": [
+            "A at $0.90",
+            "A, because the payout is higher",
+            "They are equal",
+            "B at $0.95"
+          ],
+          "answer": 3,
+          "why": "$1.00 × 0.95 = $0.95 beats $1.20 × 0.75 = $0.90."
+        },
+        {
+          "q": "Which is a warning sign of a shave?",
+          "options": [
+            "Reasons given per lead ID",
+            "Rate steady for months",
+            "Rejects jump right after a payout bump",
+            "Duplicates against the advertiser list"
+          ],
+          "answer": 2,
+          "why": "A rise right after a bump, with no change on your side, is a known warning pattern."
+        },
+        {
+          "q": "120 of 250 rejects are duplicates. What is the first fix?",
+          "options": [
+            "Resubmit them with new emails",
+            "Add a duplicate check before delivery",
+            "Change networks today",
+            "Lower your bid"
+          ],
+          "answer": 1,
+          "why": "A duplicate check on your side stops paying for leads that will be rejected."
+        },
+        {
+          "q": "Your accept rate fell 12 points this week, you changed nothing. Starting rule?",
+          "options": [
+            "Ask for lead-level reasons",
+            "Stop all traffic",
+            "Resubmit the rejects",
+            "Ignore it"
+          ],
+          "answer": 0,
+          "why": "A drop of 10+ points with no change on your side means ask for reasons by lead ID."
+        },
+        {
+          "q": "A friend offers to sell you leads to fill your cap. What is true?",
+          "options": [
+            "Fine if the leads are real",
+            "Fine if cheaper than ads",
+            "Fraud unless the offer allows it in writing and consent covers it",
+            "Fine for SOI offers"
+          ],
+          "answer": 2,
+          "why": "Delivering leads you did not collect with consent for that offer is fraud and breaks data law."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn why leads get scrubbed, which reasons you can fix on your side, and how to tell an honest scrub from a shave. Scrubs turn the payout on the offer page into your real payout.",
+      "say_outro": "You can now list the honest reasons leads are scrubbed and fix the ones on your side, tell an honest scrub from a shave using lead-level data, and calculate your effective payout. Your task: ask your affiliate manager for last week's rejected leads by lead I D with reasons, and sort them into fixable on your side and not fixable. Now take the quiz."
+    },
+    {
+      "slug": "bots-and-fake-leads",
+      "title": "Bots and fake leads: defend your form",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can name the main sources of fake leads in paid traffic.",
+        "By the end you can spot bot patterns in your own entry data.",
+        "By the end you can add simple defences to a form and decide when to pause a source."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why fake leads cost you twice",
+          "p": "A fake lead costs you the click and then gets scrubbed, so you pay and earn nothing. Worse, the network sees fake leads coming from your sub ID and may reverse past payouts or close your account, even if you did not create them. Defending your form protects your money and your name.",
+          "d": {
+            "b": "Fake leads arriving from your link are your problem",
+            "s": "We teach this from the defender's side only."
+          },
+          "say": "Fake leads cost you twice. First, you pay for the click, then the lead gets scrubbed, so you earn nothing. Worse, the network sees fake leads coming from your sub I D, and may reverse past payouts or close your account, even if you didn't create them. As the slide says, fake leads arriving from your link are your problem. Defending your form protects your money and your name."
+        },
+        {
+          "v": "cards",
+          "h": "Where fake leads come from",
+          "p": "Fake leads rarely come from one place. Knowing the source tells you the fix. Most beginners only meet the first two, but if you ever buy traffic from other publishers, all six matter.",
+          "d": [
+            "Form bots|scripts that fill any form they find",
+            "Invalid clicks|automated or accidental ad clicks",
+            "Lead farms|people paid to fill forms",
+            "Sub-publishers|partners who send you bad traffic",
+            "Competitors|deliberate junk entries",
+            "Insiders|a team member inflating numbers"
+          ],
+          "say": "Fake leads rarely come from one place, and knowing the source tells you the fix. Form bots, scripts that fill any form they find. Invalid clicks, automated or accidental ad clicks. Lead farms, people paid to fill forms. Sub-publishers, partners who send you bad traffic. Competitors, with deliberate junk. And insiders, a team member inflating numbers. Most beginners only meet the first two, but if you ever buy traffic from other publishers, all six matter."
+        },
+        {
+          "v": "table",
+          "h": "Bot signals in your entry data",
+          "p": "None of these proves fraud alone; several together are a strong sign. Most can be logged by your form or tracker. Thresholds are starting points, labelled Example; tune them to your own data.",
+          "d": {
+            "cols": [
+              "Signal",
+              "Example threshold"
+            ],
+            "rows": [
+              [
+                "Time from page load to submit",
+                "Under 3 seconds"
+              ],
+              [
+                "Hidden honeypot field filled",
+                "Any value"
+              ],
+              [
+                "Entries from one IP per day",
+                "More than 3"
+              ],
+              [
+                "Data-centre or hosting IP",
+                "Any"
+              ],
+              [
+                "IP country differs from form country",
+                "Any"
+              ],
+              [
+                "Patterned emails",
+                "name1234, name1235..."
+              ],
+              [
+                "Spike at odd local hours",
+                "3× normal hourly rate"
+              ]
+            ]
+          },
+          "say": "Here are bot signals you can find in your entry data, with example thresholds. Submitting under three seconds after page load. A hidden honeypot field filled in. More than three entries from one I P a day. A data centre or hosting I P. An I P country that differs from the form country. Patterned emails, like a name followed by counting numbers. And spikes at odd local hours, three times the normal rate. None of these proves fraud alone, but several together are a strong sign. Tune the thresholds to your own data."
+        },
+        {
+          "v": "table",
+          "h": "Example: a night-time bot spike",
+          "p": "Example. On Tuesday between 02:00 and 04:00 SAST, entries jump to 180, against a normal 20 for those hours. Most came from three IP ranges with an average time to submit of 2.1 seconds. The network accepted 14.",
+          "more": "If the clicks behind those entries cost $0.15 each and 400 clicks arrived in the spike, that is $60 spent for 14 accepted leads, or $4.29 per paid lead against a $0.90 target. Delivering the other 166 entries would also push your weekly accept rate down and invite a fraud review. Example figures only.",
+          "d": {
+            "cols": [
+              "Item",
+              "Normal night",
+              "Spike night"
+            ],
+            "rows": [
+              [
+                "Entries 02:00 to 04:00",
+                "20",
+                "180"
+              ],
+              [
+                "Avg time to submit",
+                "41 s",
+                "2.1 s"
+              ],
+              [
+                "From 3 IP ranges",
+                "0",
+                "150"
+              ],
+              [
+                "Accepted by network",
+                "17",
+                "14"
+              ],
+              [
+                "Accept rate",
+                "85%",
+                "8%"
+              ]
+            ]
+          },
+          "say": "Here's an example night-time bot spike. On Tuesday, between two and four in the morning, South Africa time, entries jumped to one hundred and eighty, against a normal twenty. Compare the columns. Average time to submit fell from forty one seconds to two point one. One hundred and fifty came from three I P ranges. And the network accepted just fourteen, an eight percent accept rate. Delivering the rest would push down your weekly accept rate and invite a fraud review. Example figures only."
+        },
+        {
+          "v": "flow",
+          "h": "Layers of defence on your form",
+          "p": "Each layer is cheap and catches a different kind of junk. Together they stop most simple bots before a lead ever reaches the network. None stops a determined human, which is why you still watch accept rates.",
+          "d": [
+            "Hidden honeypot field",
+            "Minimum time to submit",
+            "Entries per IP limit",
+            "Validation (Lesson 4)",
+            "Review flagged, deliver only clean"
+          ],
+          "say": "Here are the layers of defence on your form. A hidden honeypot field. A minimum time to submit. A limit on entries per I P. Validation, which you'll meet in lesson four. And finally, review flagged entries and deliver only clean ones. Each layer is cheap and catches a different kind of junk. Together they stop most simple bots before a lead reaches the network. None stops a determined human, which is why you still watch accept rates."
+        },
+        {
+          "v": "code",
+          "h": "A simple honeypot and timer check",
+          "p": "Example code for a form handler. The honeypot is a field hidden from people but visible to simple bots. The timer flags forms submitted faster than a person can type. Flagged entries are held for review, not sent to the network.",
+          "d": {
+            "lang": "js",
+            "text": "// Example only: flag obvious bots before delivery\nconst flags = [];\nif (form.company_site.value !== '') flags.push('honeypot');\nif (Date.now() - pageLoadedAt < 3000) flags.push('too_fast');\nif (entriesFromIpToday(ip) > 3) flags.push('ip_limit');\nlead.status = flags.length ? 'held' : 'clean';",
+            "note": "Hide the honeypot with CSS, not type=hidden, and label it so screen readers skip it."
+          },
+          "say": "This example code shows a simple honeypot and timer check. You don't need to read it line by line. The honeypot is a field hidden from people, but visible to simple bots, so if it's filled, the entry is flagged. The timer flags forms submitted faster than a person can type. And too many entries from one I P are flagged too. Flagged entries are held for review, not sent to the network. As the note says, hide the honeypot with C S S, not as a hidden input, and label it so screen readers skip it."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: add defences to your form",
+          "p": "These steps work in most form tools or a simple custom form. Tool names vary; look for the same idea. Test with your own phone after each step to be sure real people can still enter easily.",
+          "d": {
+            "steps": [
+              {
+                "title": "Add a honeypot field",
+                "text": "Add a field such as company site, hide it with CSS and mark it to be skipped by assistive tools.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "forms.example/editor",
+                  "title": "Form fields",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Email",
+                      "value": "visible"
+                    },
+                    {
+                      "type": "field",
+                      "label": "company_site",
+                      "value": "hidden by CSS, aria-hidden"
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Flag entry if filled",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Record time to submit",
+                "text": "Store when the page loaded and when the form was sent. Flag under 3 seconds.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "forms.example/rules",
+                  "title": "Entry rules",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Min time to submit",
+                      "value": "3 s"
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Flag faster entries",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Limit entries per IP",
+                "text": "Allow a few per IP per day; families and offices share IPs, so do not set it to 1.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "forms.example/rules",
+                  "title": "Entry rules",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Max entries per IP per day",
+                      "value": "3"
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Hold extra entries for review",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Hold, do not deliver, flagged leads",
+                "text": "Route flagged entries to a review list instead of the network.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "tracker.example/leads",
+                  "title": "Lead routing",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Clean leads",
+                      "value": "Deliver to network"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Flagged leads",
+                      "value": "Hold for review"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Save"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              }
+            ]
+          },
+          "say": "Let's add these defences to your form. Tap Next to follow each step. First, add a honeypot field, such as company site, hide it with C S S, and mark it to be skipped by assistive tools. Second, record when the page loaded and when the form was sent, and flag anything under three seconds. Third, limit entries per I P, but allow a few a day, because families and offices share I Ps, so never set it to one. Finally, route flagged entries to a review list, not the network. Test with your own phone after each step."
+        },
+        {
+          "v": "compare",
+          "h": "Wrong and right responses to junk",
+          "p": "When junk appears, the instinct is to let the network sort it out or to hide the problem. Both make it worse. The right response is quick and open.",
+          "d": {
+            "a": {
+              "title": "Wrong response",
+              "items": [
+                "Deliver everything; network will scrub",
+                "Delete the logs",
+                "Buy leads to make up the gap",
+                "Keep running the source to hit cap"
+              ]
+            },
+            "b": {
+              "title": "Right response",
+              "items": [
+                "Hold flagged entries",
+                "Keep logs as evidence",
+                "Tell your manager what you found",
+                "Pause the source until fixed"
+              ]
+            }
+          },
+          "say": "When junk appears, the instinct is to let the network sort it out, or hide the problem. Both make it worse. Compare the columns. The wrong response: deliver everything, delete the logs, buy leads to fill the gap, and keep the source running to hit cap. The right response: hold flagged entries, keep logs as evidence, tell your manager what you found, and pause the source until it's fixed. Be quick, and be open."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: defend, never generate",
+          "p": "Never create, buy or incentivise leads unless the offer allows it in writing and consent covers it. Logging IPs and device details to fight fraud is personal data processing, so say so in your privacy notice and keep logs only as long as needed. Check the data law in each geo.",
+          "d": {
+            "kind": "warn",
+            "text": "Your privacy notice should mention fraud prevention logging. Keep fraud logs secure and time-limited."
+          },
+          "say": "Defend, never generate. Never create, buy or incentivise leads unless the offer allows it in writing and consent covers it. And remember, logging I Ps and device details to fight fraud is personal data processing. So say so in your privacy notice, and keep logs only as long as needed. Look at the warning: your privacy notice should mention fraud prevention logging, and fraud logs should be secure and time-limited. Check the data law in each geo."
+        },
+        {
+          "v": "tip",
+          "h": "Invalid clicks on the ad platform",
+          "p": "Ad platforms say they filter invalid clicks, and some give credits for activity they later find invalid. We are not certain of Meta's current process or whether credits apply to your case; check Meta's Help Center. Your own data on bot entries is useful if you need to report a problem.",
+          "d": {
+            "kind": "tip",
+            "text": "Save dated exports of bot spikes with sub IDs. They help with the network and with any platform report."
+          },
+          "say": "What about invalid clicks on the ad platform? Ad platforms say they filter invalid clicks, and some give credits for activity they later find invalid. We're not certain of Meta's current process, or whether credits apply to your case, so check Meta's Help Center. Your own data on bot entries is useful if you need to report a problem. As the tip says, save dated exports of bot spikes with sub I Ds. They help with the network, and with any platform report."
+        },
+        {
+          "v": "cards",
+          "h": "Common mistakes",
+          "p": "These mistakes either let junk through or block real people. Both cost money: junk gets scrubbed, and blocked people never become leads. Check your form against each one, then test it yourself on a phone.",
+          "d": [
+            "Honeypot as type=hidden|many bots skip it; hide with CSS",
+            "IP limit of 1|blocks families and offices",
+            "CAPTCHA on every entry|adds friction; use only if junk persists",
+            "Not telling the network|they find it anyway; tell first",
+            "No logs|you cannot prove what happened"
+          ],
+          "say": "These mistakes either let junk through, or block real people. Both cost money. A honeypot as a hidden input type: many bots skip it, so hide it with C S S. An I P limit of one: it blocks families and offices. A CAPTCHA on every entry: it adds friction, so use it only if junk persists. Not telling the network: they find it anyway, so tell them first. And no logs: then you can't prove what happened. Check your form against each one, then test it on a phone."
+        },
+        {
+          "v": "table",
+          "h": "Decision rules for fake leads",
+          "p": "Starting rules to adapt. Flag rate is flagged entries divided by all entries for one source or ad set in a day. Check it daily while a source is new, then weekly once it has a steady history.",
+          "d": {
+            "cols": [
+              "Situation",
+              "Rule"
+            ],
+            "rows": [
+              [
+                "Flag rate under 5%",
+                "Normal; review flagged weekly"
+              ],
+              [
+                "Flag rate 10% or more in a day",
+                "Investigate that source today"
+              ],
+              [
+                "Flag rate 25% or more",
+                "Pause the source"
+              ],
+              [
+                "Bot spike found",
+                "Tell the network the same day"
+              ],
+              [
+                "Flagged lead not reviewed",
+                "Never deliver it"
+              ]
+            ]
+          },
+          "say": "Here are your starting rules for fake leads. Flag rate means flagged entries divided by all entries, for one source or ad set in a day. Under five percent: normal, review flagged entries weekly. Ten percent or more in a day: investigate that source today. Twenty five percent or more: pause the source. A bot spike found: tell the network the same day. And a flagged lead that hasn't been reviewed: never deliver it. Check daily while a source is new, then weekly once it's steady."
+        }
+      ],
+      "takeaways": [
+        "Fake leads cost the click and then get scrubbed; from your link, they are your problem.",
+        "Look for patterns: fast submits, honeypot hits, many entries per IP, odd-hour spikes.",
+        "Hold flagged leads, keep logs, tell the network and pause bad sources."
+      ],
+      "action": "Add a honeypot field and a minimum time-to-submit flag to your entry form, then test that a real person can still enter in under a minute.",
+      "glossary": [
+        {
+          "term": "Honeypot field",
+          "def": "A form field hidden from people; if it is filled, a bot probably filled it."
+        },
+        {
+          "term": "Flag rate",
+          "def": "Share of entries marked suspicious by your checks."
+        },
+        {
+          "term": "Lead farm",
+          "def": "A group paid to fill in forms, producing leads with no real interest."
+        },
+        {
+          "term": "Invalid click",
+          "def": "An ad click from a bot or by accident that the platform should not charge for."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "An entry arrives 1.4 seconds after the page loaded and the honeypot is filled. What do you do?",
+          "options": [
+            "Deliver it",
+            "Hold it as flagged",
+            "Resubmit with new data",
+            "Delete your logs"
+          ],
+          "answer": 1,
+          "why": "Two bot signals together; hold it and never deliver unreviewed."
+        },
+        {
+          "q": "Why not set the entries-per-IP limit to 1?",
+          "options": [
+            "Bots use one IP",
+            "It slows the page",
+            "Networks require 5",
+            "Families and offices share IPs"
+          ],
+          "answer": 3,
+          "why": "Real people often share an IP, so a limit of 1 blocks genuine entrants."
+        },
+        {
+          "q": "Flag rate on one ad set hits 28% today. Starting rule?",
+          "options": [
+            "Pause the source",
+            "Investigate next week",
+            "Normal",
+            "Raise the budget"
+          ],
+          "answer": 0,
+          "why": "25% or more flagged means pause that source."
+        },
+        {
+          "q": "400 spike clicks at $0.15 bring 14 accepted leads. Cost per paid lead?",
+          "options": [
+            "$0.15",
+            "$1.20",
+            "$4.29",
+            "$0.90"
+          ],
+          "answer": 2,
+          "why": "400 × $0.15 = $60; $60 ÷ 14 = $4.29."
+        },
+        {
+          "q": "You find a bot spike from your traffic. What first?",
+          "options": [
+            "Hide it and hope",
+            "Tell the network the same day",
+            "Buy leads to fill the gap",
+            "Delete the entries and logs"
+          ],
+          "answer": 1,
+          "why": "Telling the network first protects the relationship and your account."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn where fake leads come from, how to spot bot patterns in your own data, and how to add simple defences to your form. We teach this only from the defender's side.",
+      "say_outro": "You can now name the main sources of fake leads, spot bot patterns in your entry data, add simple defences to a form, and decide when to pause a source. Your task: add a honeypot field and a minimum time to submit flag to your entry form, then test that a real person can still enter in under a minute. Now take the quiz."
+    },
+    {
+      "slug": "validate-before-you-send",
+      "title": "Validate before you send",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can build a validation stack for email and phone leads.",
+        "By the end you can decide with numbers whether a check is worth its friction and cost.",
+        "By the end you can store a consent record with every lead."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why checking on your side pays",
+          "p": "Every invalid lead you deliver lowers your accept rate, weakens your case for a payout increase and can trigger a quality review. Catching it yourself costs a fraction of a cent per check. But every check also adds friction or cost, so you add checks with numbers, not by habit.",
+          "d": {
+            "b": "Catch bad leads before the network does",
+            "s": "But only add a check when the numbers say it pays."
+          },
+          "say": "Every invalid lead you deliver lowers your accept rate, weakens your case for a payout increase, and can trigger a quality review. Catching it yourself costs a fraction of a cent per check. But every check also adds friction or cost. So, as the slide says, catch bad leads before the network does, but only add a check when the numbers say it pays."
+        },
+        {
+          "v": "check",
+          "h": "A validation stack for sweeps leads",
+          "p": "These are the common checks, from cheapest and least intrusive to most. Start with the first four on every form. Add the rest when your scrub report shows a need.",
+          "d": [
+            "Email format and a real mail domain",
+            "Block disposable email domains",
+            "Suggest fixes for typos like gmial.com",
+            "Duplicate check against your past entries",
+            "Phone format for the selected country",
+            "Phone confirmation code (OTP) when needed"
+          ],
+          "say": "Here's a validation stack for sweeps leads, from cheapest and least intrusive to most. Check the email format and a real mail domain. Block disposable email domains. Suggest fixes for typos, like gmail spelled wrong. Run a duplicate check against your past entries. Check the phone format for the selected country. And use a phone confirmation code, an O T P or one time passcode, when needed. Start with the first four on every form, and add the rest when your scrub report shows a need."
+        },
+        {
+          "v": "table",
+          "h": "Phone formats for five African markets",
+          "p": "Phone format checks catch typing errors before they become rejects. Store numbers in international format. Digit counts below are for mobile numbers after the country code, as we understand them; confirm with the network's spec.",
+          "d": {
+            "cols": [
+              "Country",
+              "Code",
+              "Digits after code",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Nigeria",
+                "+234",
+                "10",
+                "+234 803 123 4567"
+              ],
+              [
+                "Kenya",
+                "+254",
+                "9",
+                "+254 712 345 678"
+              ],
+              [
+                "South Africa",
+                "+27",
+                "9",
+                "+27 82 123 4567"
+              ],
+              [
+                "Ghana",
+                "+233",
+                "9",
+                "+233 24 123 4567"
+              ],
+              [
+                "Cameroon",
+                "+237",
+                "9",
+                "+237 6 71 23 45 67"
+              ]
+            ]
+          },
+          "say": "Phone format checks catch typing errors before they become rejects. Store numbers in international format. Read the table. Nigeria, plus two three four, with ten digits after the code. Kenya, plus two five four, nine digits. South Africa, plus two seven, nine digits. Ghana, plus two three three, nine digits. And Cameroon, plus two three seven, nine digits. These are for mobile numbers, as we understand them, so confirm with the network's spec."
+        },
+        {
+          "v": "table",
+          "h": "Example: is a phone OTP worth it?",
+          "p": "Example, $300 spend each way. OTP cuts entries by a quarter but raises acceptance. On cost per paid lead alone, OTP looks slightly worse. It wins only because the network pays more for verified phone leads. Without that higher payout, you would skip OTP.",
+          "more": "No OTP: 500 × 70% = 350 paid; revenue 350 × $1.20 = $420; profit $420 − $300 = $120. With OTP: 375 × 92% = 345 paid; SMS cost 375 × $0.03 = $11.25; total $311.25; revenue 345 × $1.40 = $483; profit $483 − $311.25 = $171.75. Cost per paid lead: $0.86 versus $0.90. SMS price and payouts are Example figures; check your own.",
+          "d": {
+            "cols": [
+              "Item",
+              "No OTP",
+              "With OTP"
+            ],
+            "rows": [
+              [
+                "Entries",
+                "500",
+                "375"
+              ],
+              [
+                "Accept rate",
+                "70%",
+                "92%"
+              ],
+              [
+                "Paid leads",
+                "350",
+                "345"
+              ],
+              [
+                "Cost incl. SMS at $0.03",
+                "$300",
+                "$311.25"
+              ],
+              [
+                "Payout",
+                "$1.20",
+                "$1.40"
+              ],
+              [
+                "Profit",
+                "$120",
+                "$171.75"
+              ]
+            ]
+          },
+          "say": "Is a phone O T P worth it? Here's an example with three hundred dollars spend each way. Read the columns. O T P cuts entries from five hundred to three seventy five, but raises acceptance from seventy to ninety two percent. Paid leads are almost the same. With the S M S cost, O T P actually looks slightly worse on cost per paid lead. It wins, with one seventy one seventy five profit versus one twenty, only because the network pays one forty for verified phone leads. Without that higher payout, you'd skip O T P. These are example figures."
+        },
+        {
+          "v": "phone",
+          "h": "What a phone check looks like to the entrant",
+          "p": "Example of an OTP step on the lander. Keep it short: one screen, a clear reason, a resend option and no tricks. Say why you ask for the code. If people do not understand the step, many leave, and the profit maths from the last slide changes.",
+          "d": {
+            "v": "phone",
+            "app": "browser",
+            "url": "enter.example/solar/verify",
+            "page": {
+              "h": "Check your phone",
+              "p": "We sent a 6-digit code to +27 82 *** 4567 to confirm your entry is yours. Didn't get it? Resend in 30 s.",
+              "cta": "Confirm entry"
+            }
+          },
+          "say": "Here's what a phone check looks like to the entrant, in an example lander. Keep it short: one screen, a clear reason, a resend option, and no tricks. Notice it says why it asks: to confirm your entry is yours. And it offers a resend in thirty seconds. If people don't understand the step, many leave, and the profit maths from the last slide changes."
+        },
+        {
+          "v": "eq",
+          "h": "Is a check worth adding?",
+          "p": "A check is worth adding when the money it saves or earns is more than the good entries it loses plus its cost. Write the three numbers down before you switch it on, then compare after a week.",
+          "d": [
+            "Saved or extra revenue",
+            "−",
+            "Lost good entries − check cost",
+            "=",
+            "Value of the check"
+          ],
+          "say": "So, is a check worth adding? Read the sum on screen. The saved or extra revenue, minus the good entries it loses and the check's cost, equals the value of the check. A check is worth adding when that value is positive. Write the three numbers down before you switch it on, then compare after a week."
+        },
+        {
+          "v": "code",
+          "h": "What a validation result looks like",
+          "p": "Example record your form or tracker can store for each entry. Keep the result with the lead so you can match it to the network's reject reasons later. Field names are illustrative.",
+          "d": {
+            "lang": "json",
+            "text": "{\n  \"lead_id\": \"L-88412\",\n  \"email_format\": \"ok\",\n  \"mail_domain\": \"ok\",\n  \"disposable\": false,\n  \"duplicate_90d\": false,\n  \"phone_e164\": \"+27821234567\",\n  \"otp\": \"verified\",\n  \"status\": \"clean\"\n}",
+            "note": "Example only. Never store the OTP code itself."
+          },
+          "say": "Here's an example of a validation result your form or tracker can store for each entry. You don't need to read the code. Notice what it records: the email format, the mail domain, whether it's disposable, whether it's a duplicate within ninety days, the phone in international format, the O T P result, and a final status of clean. Keep this result with the lead, so you can match it to the network's reject reasons later. And as the note says, never store the O T P code itself."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: set up validation",
+          "p": "These steps fit most form builders and trackers. Validation services are third parties that process personal data, so check their data processing terms first. Screens are generic mock-ups; names change.",
+          "d": {
+            "steps": [
+              {
+                "title": "Choose a validation service",
+                "text": "Compare price per check, countries covered and where data is stored. Sign a data processing agreement.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "vendor.example/pricing",
+                  "title": "Email and phone validation",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Email check",
+                      "value": "$0.002 each (Example)"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Phone format and line type",
+                      "value": "$0.004 each (Example)"
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Data processing agreement signed",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 2
+                }
+              },
+              {
+                "title": "Add real-time email checks",
+                "text": "Check as the person types, and suggest a fix for typos instead of silently changing it.",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "enter.example/solar",
+                  "page": {
+                    "h": "Enter the draw",
+                    "p": "Did you mean name@gmail.com?",
+                    "cta": "Yes, fix it"
+                  }
+                }
+              },
+              {
+                "title": "Add the duplicate check",
+                "text": "Compare email and phone with your last 90 days of entries for this offer.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "tracker.example/rules",
+                  "title": "Duplicate rule",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Match on",
+                      "value": "email or phone"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Window",
+                      "value": "90 days"
+                    },
+                    {
+                      "type": "select",
+                      "label": "If duplicate",
+                      "value": "Show 'already entered' and stop"
+                    }
+                  ],
+                  "highlight": 2
+                }
+              },
+              {
+                "title": "Store the consent record",
+                "text": "Save what the person saw and agreed to, with time and page version, alongside the lead.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "tracker.example/consent",
+                  "title": "Consent record",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Timestamp",
+                      "value": "2026-10-04 14:02 SAST"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Checkbox text",
+                      "value": "I agree to receive emails from Example Energy"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Page version",
+                      "value": "solar-v3"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              }
+            ]
+          },
+          "say": "Let's set up validation. Validation services are third parties that process personal data, so check their terms first. Tap Next to follow each step. First, choose a service: compare price per check, countries covered, and where data is stored, and sign a data processing agreement. Second, add real-time email checks, and suggest a fix for typos instead of silently changing it. Third, add a duplicate check against your last ninety days of entries for this offer. Finally, store the consent record: what the person saw and agreed to, with time and page version."
+        },
+        {
+          "v": "table",
+          "h": "What the consent record holds",
+          "p": "Module 2 covered consent law. Here is what to store so you can prove it. Many networks and advertisers ask for this in disputes or audits, and data protection regulators can too.",
+          "d": {
+            "cols": [
+              "Field",
+              "Why"
+            ],
+            "rows": [
+              [
+                "Date and time",
+                "When consent was given"
+              ],
+              [
+                "Page URL and version",
+                "What the person saw"
+              ],
+              [
+                "Exact checkbox and notice text",
+                "What they agreed to"
+              ],
+              [
+                "Partners named",
+                "Who may contact them"
+              ],
+              [
+                "IP address",
+                "Supports authenticity"
+              ]
+            ]
+          },
+          "say": "Here's what the consent record holds, so you can prove consent. The date and time, showing when consent was given. The page U R L and version, showing what the person saw. The exact checkbox and notice text, showing what they agreed to. The partners named, showing who may contact them. And the I P address, which supports authenticity. Many networks and advertisers ask for this in disputes or audits, and data protection regulators can too."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: validation is data processing",
+          "p": "Sending emails and phone numbers to a validation service shares personal data with a third party. Your privacy notice should say so, the service should have a data processing agreement, and you should only check data you are allowed to collect. Never validate an email by sending it marketing.",
+          "d": {
+            "kind": "warn",
+            "text": "Check the data law of each geo before using a foreign validation service, and never store OTP codes."
+          },
+          "say": "Validation is data processing. Sending emails and phone numbers to a validation service shares personal data with a third party. So your privacy notice should say so, the service should have a data processing agreement, and you should only check data you're allowed to collect. Never validate an email by sending it marketing. And look at the warning: check the data law of each geo before using a foreign validation service, and never store O T P codes."
+        },
+        {
+          "v": "cards",
+          "h": "Common validation mistakes",
+          "p": "Over-strict checks reject real people; missing checks let junk through. Both show up later as lost money. These are the validation mistakes we see most often, with the fix for each one.",
+          "d": [
+            "Regex rejects valid emails|allow plus signs and new domains",
+            "Auto-correcting typos|suggest, let the person confirm",
+            "OTP everywhere by habit|add it only when the numbers pay",
+            "Duplicate window too long|match the offer's window",
+            "No consent record|store it with every lead"
+          ],
+          "say": "Over-strict checks reject real people, and missing checks let junk through. Both show up later as lost money. A regex that rejects valid emails: allow plus signs and new domains. Auto-correcting typos: suggest, and let the person confirm. O T P everywhere by habit: add it only when the numbers pay. A duplicate window that's too long: match the offer's window. And no consent record: store it with every lead."
+        },
+        {
+          "v": "table",
+          "h": "Decision rules for validation",
+          "p": "Starting rules to adapt. Run each new check for a week on at least 300 entries before you judge it. Change only one check at a time, or you will not know which one moved the numbers.",
+          "d": {
+            "cols": [
+              "Situation",
+              "Rule"
+            ],
+            "rows": [
+              [
+                "Fixable rejects > 10% of delivered",
+                "Add the matching check"
+              ],
+              [
+                "Check cuts entries > 20%, accepts same",
+                "Remove or soften it"
+              ],
+              [
+                "Network pays more for verified leads",
+                "Test OTP with the profit maths"
+              ],
+              [
+                "Value of check negative after a week",
+                "Switch it off"
+              ]
+            ]
+          },
+          "say": "Here are your starting rules for validation. If fixable rejects are over ten percent of delivered, add the matching check. If a check cuts entries by more than twenty percent while accepts stay the same, remove or soften it. If the network pays more for verified leads, test O T P with the profit maths. And if a check's value is negative after a week, switch it off. Run each new check for a week on at least three hundred entries, and change only one check at a time."
+        }
+      ],
+      "takeaways": [
+        "Start with email format, mail domain, disposable block, typo suggestions and duplicates.",
+        "Add costly checks like OTP only when the profit maths says so.",
+        "Store a consent record with every lead and treat validation services as data processors."
+      ],
+      "action": "Add email format, disposable domain and duplicate checks to your form, then compare next week's accept rate with last week's.",
+      "glossary": [
+        {
+          "term": "Validation",
+          "def": "Checking a lead's details are real and allowed before you deliver it."
+        },
+        {
+          "term": "Disposable email",
+          "def": "A temporary inbox address that expires, often used to avoid real sign-ups."
+        },
+        {
+          "term": "OTP (one-time passcode)",
+          "def": "A code sent by SMS that the person types to prove the phone is theirs."
+        },
+        {
+          "term": "Consent record",
+          "def": "Stored proof of what a person agreed to, when and on which page."
+        },
+        {
+          "term": "Data processing agreement",
+          "def": "A contract with a service that handles personal data for you, setting how it may use and protect it."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which check should go on every form first?",
+          "options": [
+            "Phone OTP",
+            "Credit check",
+            "Duplicate check",
+            "Video selfie"
+          ],
+          "answer": 2,
+          "why": "A duplicate check is cheap, low friction and fixes a common reject reason."
+        },
+        {
+          "q": "No OTP: 350 paid at $1.20, $300 cost. With OTP: 345 paid at $1.40, $311.25 cost. Which earns more?",
+          "options": [
+            "With OTP, $171.75",
+            "No OTP, $120",
+            "Equal",
+            "No OTP, $171.75"
+          ],
+          "answer": 0,
+          "why": "$483 − $311.25 = $171.75 beats $420 − $300 = $120."
+        },
+        {
+          "q": "A person types name@gmial.com. Best handling?",
+          "options": [
+            "Reject the entry",
+            "Silently change it",
+            "Accept as is",
+            "Suggest gmail.com and let them confirm"
+          ],
+          "answer": 3,
+          "why": "Suggesting keeps the person in control and avoids a bounce."
+        },
+        {
+          "q": "A new check cuts entries 25% with no change in accept rate. Starting rule?",
+          "options": [
+            "Keep it",
+            "Remove or soften it",
+            "Add OTP too",
+            "Raise bids"
+          ],
+          "answer": 1,
+          "why": "It adds friction without improving quality, so it costs money."
+        },
+        {
+          "q": "What must you never store?",
+          "options": [
+            "The OTP code itself",
+            "The page version",
+            "The consent timestamp",
+            "The phone in international format"
+          ],
+          "answer": 0,
+          "why": "OTP codes are temporary secrets; store only the verified result."
+        }
+      ],
+      "say_intro": "In this lesson you'll build a validation stack that catches bad leads before the network does. You'll also learn to decide with numbers whether each check is worth its friction and cost, and how to store a consent record with every lead.",
+      "say_outro": "You can now build a validation stack for email and phone leads, decide with numbers whether a check is worth it, and store a consent record with every lead. Your task: add email format, disposable domain and duplicate checks to your form, then compare next week's accept rate with last week's. Now take the quiz."
+    },
+    {
+      "slug": "postbacks-for-every-stage",
+      "title": "Postbacks for every stage",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can set up network postbacks for accepted and rejected leads.",
+        "By the end you can send a quality lead event to the ad platform instead of raw form submits.",
+        "By the end you can decide which event to optimise for, using volume rules."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the platform needs to know which leads were good",
+          "p": "The ad platform finds more of whoever you tell it converted. If every form submit counts as a conversion, it finds the cheapest submitters, including bots and people who never confirm. If only validated or accepted leads count, it learns to find people the network will pay for. Postbacks make that possible.",
+          "d": {
+            "b": "Teach the algorithm with good leads only",
+            "s": "It finds more of whatever you count as a conversion."
+          },
+          "say": "The ad platform finds more of whoever you tell it converted. If every form submit counts as a conversion, it finds the cheapest submitters, including bots and people who never confirm. If only validated or accepted leads count, it learns to find people the network will pay for. Postbacks make that possible. As the slide says, teach the algorithm with good leads only."
+        },
+        {
+          "v": "map",
+          "h": "How status flows back",
+          "p": "The click ID travels forward with the lead. The status travels back by postback, a server-to-server message from the network to your tracker. Your tracker then sends a quality event to the ad platform through its server-side API. Module 6 of the foundations school covered the basics.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Ad click",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Form",
+                "kind": "page"
+              },
+              {
+                "id": "tr",
+                "label": "Your tracker",
+                "kind": "tool"
+              },
+              {
+                "id": "net",
+                "label": "Network",
+                "kind": "offer"
+              },
+              {
+                "id": "pb",
+                "label": "Postback",
+                "kind": "data"
+              },
+              {
+                "id": "api",
+                "label": "Platform API",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "lp",
+                "click ID"
+              ],
+              [
+                "lp",
+                "tr",
+                "entry"
+              ],
+              [
+                "tr",
+                "net",
+                "lead + sub1"
+              ],
+              [
+                "net",
+                "pb",
+                "status"
+              ],
+              [
+                "pb",
+                "tr",
+                "accepted"
+              ],
+              [
+                "tr",
+                "api",
+                "quality event"
+              ]
+            ]
+          },
+          "say": "Here's how status flows back. Follow the map. The ad click carries a click I D to your form. The entry goes to your tracker, which sends the lead to the network with sub one. The network sends the status back by postback, a server to server message, to your tracker. And your tracker sends a quality event to the ad platform through its server-side A P I. So the click I D travels forward, and the status travels back."
+        },
+        {
+          "v": "table",
+          "h": "Which stage to send as which event",
+          "p": "Example mapping. Event names on the platform side are your choice within its list of standard or custom events; check the current list in Events Manager. The principle matters: the deeper the stage, the better the signal, but the fewer the events.",
+          "d": {
+            "cols": [
+              "Stage",
+              "Known by",
+              "Send to platform"
+            ],
+            "rows": [
+              [
+                "Entry",
+                "Your form",
+                "Do not optimise on it"
+              ],
+              [
+                "Validated",
+                "Your tracker, instantly",
+                "Lead event"
+              ],
+              [
+                "Accepted",
+                "Network postback, hours",
+                "Custom quality event"
+              ],
+              [
+                "Confirmed DOI",
+                "Network postback, days",
+                "Custom event, if volume allows"
+              ]
+            ]
+          },
+          "say": "Here's an example mapping of which stage to send as which event. An entry, known by your form: don't optimise on it. Validated, known by your tracker instantly: send it as a Lead event. Accepted, known by network postback within hours: a custom quality event. Confirmed double opt-in, known within days: a custom event, if volume allows. The event names are your choice within the platform's list, so check Events Manager. The principle is what matters: the deeper the stage, the better the signal, but the fewer the events."
+        },
+        {
+          "v": "code",
+          "h": "A postback URL template",
+          "p": "Example of the URL you paste into the network's postback settings. The parts in braces are macros the network replaces with real values. Macro names differ by network; copy them from your network's documentation, never guess.",
+          "d": {
+            "lang": "url",
+            "text": "https://track.example/pb?cid={sub1}&status={status}&payout={payout}&lead={lead_id}",
+            "note": "Example. {sub1} carries your click ID; {status} sends accepted or rejected."
+          },
+          "say": "This is an example of the postback U R L you paste into the network's settings. You don't need to read it out. The parts in curly braces are macros, which the network replaces with real values, like your click I D in sub one, and the status, accepted or rejected. Macro names differ by network. Copy them from your network's documentation, and never guess."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: set the postback in the network",
+          "p": "Most network panels have a postback or pixel section per offer or globally. Names and layouts vary by network. Do this once per offer and test before any traffic.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open postback settings",
+                "text": "In the network panel, find postbacks or tracking for offer 3310.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "network.example/offers/3310/postback",
+                  "title": "Postback settings",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Offer",
+                      "value": "3310 SA SOI"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Event",
+                      "value": "Accepted"
+                    },
+                    {
+                      "type": "field",
+                      "label": "URL",
+                      "value": ""
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Paste your URL with macros",
+                "text": "Use the macros from the network's documentation. Add one postback for accepted and one for rejected if offered.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "network.example/offers/3310/postback",
+                  "title": "Postback settings",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Event",
+                      "value": "Accepted"
+                    },
+                    {
+                      "type": "field",
+                      "label": "URL",
+                      "value": "https://track.example/pb?cid={sub1}&status=accepted&payout={payout}"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Ask for a test conversion",
+                "text": "Ask your manager to fire a test. Do not create fake entries on a live offer.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Affiliate manager",
+                  "subtitle": "network",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "Postbacks set on 3310 for accepted and rejected. Could you fire a test with sub1=test_001?"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Done, sent both."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Check your tracker log",
+                "text": "Both tests should appear with the right click ID and status.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "tracker.example/postbacks",
+                  "title": "Postback log",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "cid",
+                        "status",
+                        "payout"
+                      ],
+                      "rows": [
+                        [
+                          "test_001",
+                          "accepted",
+                          "1.20"
+                        ],
+                        [
+                          "test_001",
+                          "rejected",
+                          "0"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "Both received"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Let's set the postback in the network. Do it once per offer, and test before any traffic. Tap Next to follow each step. First, open the postback or tracking settings for the offer. Second, paste your U R L with the macros from the network's docs, adding one postback for accepted and one for rejected if offered. Third, ask your manager to fire a test conversion. Don't create fake entries on a live offer. Finally, check your tracker log: both tests should appear with the right click I D and status."
+        },
+        {
+          "v": "code",
+          "h": "A quality event sent server-side",
+          "p": "Example of a lead event your tracker sends through Meta's Conversions API after validation. Email is hashed with SHA-256 before sending. The event_id lets the platform remove duplicates if the browser pixel also fires. Field names are as we understand them at the time of writing; check Meta's current developer docs.",
+          "d": {
+            "lang": "json",
+            "text": "{\n  \"data\": [{\n    \"event_name\": \"Lead\",\n    \"event_time\": 1791126120,\n    \"event_id\": \"L-88412\",\n    \"action_source\": \"website\",\n    \"user_data\": {\n      \"em\": [\"<sha256 of lowercased email>\"],\n      \"fbc\": \"<click id cookie>\"\n    }\n  }]\n}",
+            "note": "Example only. Send only what your privacy notice and consent allow."
+          },
+          "say": "Here's an example lead event your tracker sends through Meta's Conversions API after validation. You don't need to read the code. Notice two things. The email is hashed with S H A two fifty six before sending. And the event I D lets the platform remove duplicates if the browser pixel also fires. These field names are as we understand them at the time of writing, so check Meta's current developer docs. And as the note says, send only what your privacy notice and consent allow."
+        },
+        {
+          "v": "table",
+          "h": "Example: optimising on submits versus validated",
+          "p": "Example, two weeks, same offer and budget. Optimising on raw submits gives cheaper entries but worse ones. Optimising on validated leads costs more per entry and less per accepted lead.",
+          "more": "Maths: $0.45 ÷ 0.55 = $0.818, about $0.82. $0.55 ÷ 0.85 = $0.647, about $0.65. Against a $0.90 target both pass, but the validated campaign leaves $0.25 a lead instead of $0.08, and its accept rate keeps you in good standing with the network. Example figures only.",
+          "d": {
+            "cols": [
+              "Optimised on",
+              "Cost per entry",
+              "Accept rate",
+              "Cost per accepted"
+            ],
+            "rows": [
+              [
+                "Raw submits",
+                "$0.45",
+                "55%",
+                "$0.82"
+              ],
+              [
+                "Validated leads",
+                "$0.55",
+                "85%",
+                "$0.65"
+              ]
+            ]
+          },
+          "say": "Here's an example over two weeks, same offer and budget. Read the rows. Optimising on raw submits gives a cost per entry of forty five cents, but only a fifty five percent accept rate, so eighty two cents per accepted lead. Optimising on validated leads costs fifty five cents per entry, but with eighty five percent accepted, that's sixty five cents per accepted lead. Both pass a ninety cent target, but validated leaves you more per lead, and keeps you in good standing with the network. Example figures only."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: send only what you may send",
+          "p": "Sending personal data to an ad platform, even hashed, is data processing. Your privacy notice and consent must cover it, and some data must never be sent. Rules differ by geo and change; we are not certain of current platform requirements for every market, so check the platform's terms and your local data law.",
+          "d": {
+            "kind": "warn",
+            "text": "Hash contact data before sending, send the minimum, and never send data your consent does not cover."
+          },
+          "say": "Sending personal data to an ad platform, even hashed, is data processing. Your privacy notice and consent must cover it, and some data must never be sent. Rules differ by geo and change, and we're not certain of current platform requirements in every market, so check the platform's terms and your local data law. Look at the warning: hash contact data before sending, send the minimum, and never send data your consent doesn't cover."
+        },
+        {
+          "v": "tip",
+          "h": "Late events and attribution windows",
+          "p": "Accepted and DOI statuses can arrive hours or days after the click. Platforms only credit events inside their attribution window and may reject events sent too long after they happened. We are not certain of current limits; check Meta's Help Center. Send each status as soon as the postback arrives.",
+          "d": {
+            "kind": "tip",
+            "text": "If DOI confirmations usually take days, optimise on validated leads and track DOI in your sheet."
+          },
+          "say": "Accepted and confirmed statuses can arrive hours or days after the click. Platforms only credit events inside their attribution window, and may reject events sent too long after they happened. We're not certain of the current limits, so check Meta's Help Center. Send each status as soon as the postback arrives. And as the tip says, if confirmations usually take days, optimise on validated leads, and track confirmations in your sheet."
+        },
+        {
+          "v": "cards",
+          "h": "Common postback mistakes",
+          "p": "These mistakes send the wrong lesson to the algorithm or break your numbers without any warning. Most come from small setup slips. Test the whole chain again after every change to the form, tracker or network settings.",
+          "d": [
+            "Lead event on page load|fire only after a validated entry",
+            "No event_id|pixel and server double count",
+            "Guessed macro names|copy from network docs",
+            "Rejected leads counted|send only accepted as quality",
+            "Never tested|ask for a test conversion"
+          ],
+          "say": "These mistakes send the wrong lesson to the algorithm, or break your numbers without warning. A Lead event on page load: fire it only after a validated entry. No event I D: the pixel and server double count. Guessed macro names: copy them from the network docs. Rejected leads counted: send only accepted as quality. And never tested: ask for a test conversion. Test the whole chain again after every change to the form, tracker or network settings."
+        },
+        {
+          "v": "table",
+          "h": "Decision rules for optimisation events",
+          "p": "Starting rules to adapt. Meta has long advised roughly 50 optimisation events per ad set per week for stable delivery; we are not certain this figure is current, so check Meta's Help Center.",
+          "d": {
+            "cols": [
+              "Situation",
+              "Rule"
+            ],
+            "rows": [
+              [
+                "Deeper event has 50+ per ad set per week",
+                "Optimise on the deeper event"
+              ],
+              [
+                "Fewer than 50",
+                "Optimise one stage up"
+              ],
+              [
+                "Tracker and network differ > 5%",
+                "Fix before reading results"
+              ],
+              [
+                "Event fires on page load",
+                "Stop; fix the trigger"
+              ]
+            ]
+          },
+          "say": "Here are your starting rules for optimisation events. Meta has long advised roughly fifty optimisation events per ad set per week for stable delivery, but we're not certain that figure is current, so check Meta's Help Center. If the deeper event has fifty or more per ad set per week, optimise on it. If fewer, optimise one stage up. If tracker and network differ by more than five percent, fix that before reading results. And if an event fires on page load, stop and fix the trigger."
+        },
+        {
+          "v": "product",
+          "h": "Build the postback URL cleanly",
+          "p": "Typing macros by hand is where most postback errors start. A builder helps you assemble the URL from your network's macros and check the parameters before you paste it in.",
+          "d": {
+            "slug": "voosquare",
+            "why": "The Postback builder turns your network's macros into a clean postback URL you can test."
+          },
+          "say": "Typing macros by hand is where most postback errors start. A builder helps you assemble the U R L from your network's macros, and check the parameters before you paste it in. The card on screen shows the VooSquare Postback builder, which turns your network's macros into a clean postback U R L you can test."
+        }
+      ],
+      "takeaways": [
+        "Never optimise on raw form submits; send validated or accepted leads as the conversion.",
+        "Postbacks carry status back by click ID; test them with a network test conversion.",
+        "Send hashed, minimal data only where your consent and privacy notice allow it."
+      ],
+      "action": "Set up accepted and rejected postbacks for one offer, ask your manager for a test conversion and confirm both appear in your tracker.",
+      "glossary": [
+        {
+          "term": "Postback",
+          "def": "A server-to-server message from the network telling your tracker a lead's status."
+        },
+        {
+          "term": "Macro",
+          "def": "A placeholder such as {sub1} that the network replaces with a real value."
+        },
+        {
+          "term": "Quality event",
+          "def": "A conversion you send to the ad platform only for leads that passed checks."
+        },
+        {
+          "term": "event_id",
+          "def": "A unique ID that lets the platform remove duplicate events from pixel and server."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why not optimise on raw form submits?",
+          "options": [
+            "Too few events",
+            "They are not allowed",
+            "Postbacks cannot send them",
+            "The platform finds cheap submitters, including junk"
+          ],
+          "answer": 3,
+          "why": "The algorithm finds more of whatever you count, so raw submits attract low-quality entries."
+        },
+        {
+          "q": "$0.55 per entry with 85% accepted. Cost per accepted lead?",
+          "options": [
+            "$0.47",
+            "$0.65",
+            "$0.55",
+            "$0.85"
+          ],
+          "answer": 1,
+          "why": "$0.55 ÷ 0.85 = $0.647."
+        },
+        {
+          "q": "Where do macro names like {sub1} come from?",
+          "options": [
+            "Your guess",
+            "Meta's Events Manager",
+            "The network's documentation",
+            "The lander code"
+          ],
+          "answer": 2,
+          "why": "Each network names its macros; copy them exactly."
+        },
+        {
+          "q": "Accepted leads average 30 per ad set per week. Starting rule?",
+          "options": [
+            "Optimise one stage up, on validated",
+            "Optimise on accepted",
+            "Stop the campaign",
+            "Optimise on clicks"
+          ],
+          "answer": 0,
+          "why": "Under about 50 events, optimise one stage up for stable delivery."
+        },
+        {
+          "q": "Pixel and server both send the same lead. What prevents double counting?",
+          "options": [
+            "A higher bid",
+            "Hashing the email",
+            "A second pixel",
+            "A matching event_id"
+          ],
+          "answer": 3,
+          "why": "The shared event_id lets the platform deduplicate."
+        }
+      ],
+      "say_intro": "In this lesson you'll set up postbacks for every stage, so the ad platform learns from good leads instead of raw form submits. You'll also learn which event to optimise for, using simple volume rules.",
+      "say_outro": "You can now set up postbacks for accepted and rejected leads, send a quality lead event to the ad platform, and choose your optimisation event with volume rules. Your task: set up accepted and rejected postbacks for one offer, ask your manager for a test conversion, and confirm both appear in your tracker. Now take the quiz."
+    },
+    {
+      "slug": "quality-dashboard-and-kill-rules",
+      "title": "The quality dashboard and kill rules",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can build a one-screen quality dashboard per source and ad set.",
+        "By the end you can combine cost and quality rules into one decision.",
+        "By the end you can run a weekly quality review with your network."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why cost and quality must sit side by side",
+          "p": "An ad set can look cheap per entry and still lose money because the network rejects half its leads. Another can look expensive and be your best earner. You only see this when cost and quality numbers are on the same row. That row is what you decide on.",
+          "d": {
+            "b": "One row per ad set: cost and quality together",
+            "s": "Decide on cost per paid lead, watch accept rate."
+          },
+          "say": "An ad set can look cheap per entry and still lose money, because the network rejects half its leads. Another can look expensive and be your best earner. You only see this when cost and quality sit on the same row. As the slide says: one row per ad set, cost and quality together. Decide on cost per paid lead, and watch accept rate."
+        },
+        {
+          "v": "eq",
+          "h": "Cost per paid lead from cost per entry",
+          "p": "If you know cost per entry and the share of entries that end up paid, you can work out cost per paid lead before the network report arrives. Example: $0.45 per entry and 55% paid gives $0.82.",
+          "d": [
+            "Cost per entry",
+            "÷",
+            "Share of entries paid",
+            "=",
+            "Cost per paid lead"
+          ],
+          "say": "Here's a handy formula. If you know your cost per entry and the share of entries that end up paid, you can work out cost per paid lead before the network report arrives. Read the sum on screen: cost per entry, divided by the share of entries paid, equals cost per paid lead. For example, forty five cents per entry with fifty five percent paid gives about eighty two cents."
+        },
+        {
+          "v": "screen",
+          "h": "A one-screen quality dashboard",
+          "p": "Example dashboard for offer 3310, target $0.90 per paid lead. One row per ad set. The columns you need are below; add more only if you will act on them. Build it in a sheet first; a tool can come later.",
+          "d": {
+            "v": "screen",
+            "kind": "browser",
+            "url": "sheets.example/quality-3310",
+            "title": "Quality dashboard, week 40",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Ad set",
+                  "Spend",
+                  "Accept",
+                  "Cost/paid"
+                ],
+                "rows": [
+                  [
+                    "A Broad",
+                    "$120",
+                    "88%",
+                    "$0.71"
+                  ],
+                  [
+                    "B Interests",
+                    "$90",
+                    "52%",
+                    "$1.15"
+                  ],
+                  [
+                    "C Lookalike",
+                    "$60",
+                    "84%",
+                    "$0.83"
+                  ],
+                  [
+                    "D Reels",
+                    "$30",
+                    "61%",
+                    "$0.98"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Flag rate: A 3%, B 14%, C 4%, D 7%"
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Here's an example one-screen dashboard for offer three three one zero, with a ninety cent target per paid lead. One row per ad set, showing spend, accept rate and cost per paid lead. Ad set A, broad, has eighty eight percent accepted at seventy one cents. B, interests, has fifty two percent at one dollar fifteen. And below, the flag rates: B is at fourteen percent. Add more columns only if you'll act on them, and build it in a sheet first."
+        },
+        {
+          "v": "table",
+          "h": "Example: reading the dashboard",
+          "p": "Example readings with a $0.90 target, a 0.85 × scale line of $0.77 and a 1.3 × kill line of $1.17. Ad set B's low accept rate and high flag rate say its problem is quality, not price.",
+          "more": "A: $0.71 is under the $0.77 scale line; with 50+ paid leads over 3 days, scale +20%. B: $1.15 is just under the $1.17 kill line, so cost alone says hold, but 14% flags crosses the 10% investigate line, so you look at the source today. C: under target, keep. D: above target, under kill line, hold. Example figures only.",
+          "d": {
+            "cols": [
+              "Ad set",
+              "Reading",
+              "Action"
+            ],
+            "rows": [
+              [
+                "A",
+                "$0.71, quality high",
+                "Scale +20%"
+              ],
+              [
+                "B",
+                "$1.15, accept 52%, flags 14%",
+                "Investigate source today"
+              ],
+              [
+                "C",
+                "$0.83, quality good",
+                "Keep"
+              ],
+              [
+                "D",
+                "$0.98, accept 61%",
+                "Hold; check placements"
+              ]
+            ]
+          },
+          "say": "Here's how to read that dashboard, with a ninety cent target, a scale line of seventy seven cents, and a kill line of one dollar seventeen. A, at seventy one cents with high quality: scale by twenty percent. B, at one fifteen, is just under the kill line on cost, but its fifty two percent accept rate and fourteen percent flags say the problem is quality, not price, so investigate the source today. C, at eighty three cents: keep. D, at ninety eight cents: hold, and check placements. Example figures only."
+        },
+        {
+          "v": "bars",
+          "h": "Example: cost per paid lead against target",
+          "p": "Example, same four ad sets. Bars are cost per paid lead as a share of the $1.17 kill line. A is the only one under the $0.77 scale line. B is close to the kill line on cost, and its quality numbers make it the first to investigate.",
+          "d": [
+            [
+              "A Broad",
+              61,
+              "$0.71"
+            ],
+            [
+              "C Lookalike",
+              71,
+              "$0.83"
+            ],
+            [
+              "D Reels",
+              84,
+              "$0.98"
+            ],
+            [
+              "B Interests",
+              98,
+              "$1.15"
+            ],
+            [
+              "Target",
+              77,
+              "$0.90"
+            ]
+          ],
+          "say": "These bars show the same four ad sets, with cost per paid lead as a share of the one dollar seventeen kill line. A, at seventy one cents, is the only one under the seventy seven cent scale line. C and D sit in the middle. B is close to the kill line on cost, and its quality numbers make it the first to investigate."
+        },
+        {
+          "v": "table",
+          "h": "The lead gen rule card",
+          "p": "Starting rules to adapt: the Module 1 rule card, with this module's quality rules on top. Target $0.90 in the example column. Check quality rules first: a cheap ad set with junk leads is not a winner.",
+          "d": {
+            "cols": [
+              "Rule",
+              "Line (target $0.90)"
+            ],
+            "rows": [
+              [
+                "Flag rate ≥ 25% or accept 10+ pts below plan (50+ leads)",
+                "Pause source"
+              ],
+              [
+                "Zero-lead kill: 0 paid after 5 × target",
+                "$4.50 spend"
+              ],
+              [
+                "Minimum read: 20 × target",
+                "$18 spend"
+              ],
+              [
+                "CPL kill after minimum read: > 1.3 × target",
+                "> $1.17"
+              ],
+              [
+                "Hold: 1 × to 1.3 × target",
+                "$0.90 to $1.17"
+              ],
+              [
+                "Scale +20% every 48 h: ≤ 0.85 × target, 50+ paid, 3+ days",
+                "≤ $0.77"
+              ]
+            ]
+          },
+          "say": "Here's the lead gen rule card, with this module's quality rules on top, and a ninety cent target. Check quality first: a flag rate of twenty five percent or more, or accept rate ten points below plan on fifty leads, means pause the source. Zero paid leads after five times target, four fifty: kill. Minimum read: twenty times target, eighteen dollars. After that, above one point three times target, one seventeen: kill. Between one and one point three times target: hold. And scale twenty percent every forty eight hours at point eight five times target or better, with fifty paid leads over three days."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: apply the rule card",
+          "p": "Example. Ad set E spent $30, the network paid 30 leads, target $0.90 per paid lead, 4 days running, quality normal. Work out cost per paid lead and enter your verdict.",
+          "more": "$30 ÷ 30 = $1.00 per paid lead, 1.11 × target. Above target, under the 1.3 × kill line of $1.17: hold. Fix one thing, such as a new hook or placement, before adding budget.",
+          "d": {
+            "kind": "killscale",
+            "task": "Ad set E: $30 spent, 30 paid leads, target $0.90, 4 days. Kill, hold or scale?",
+            "preset": {
+              "spend": 30,
+              "conversions": 30,
+              "target_cpa": 0.9,
+              "days": 4
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "hold",
+              "tolerance": 0
+            }
+          },
+          "say": "Time to apply the rule card. Ad set E spent thirty dollars, and the network paid thirty leads. The target is ninety cents per paid lead, it's been running four days, and quality is normal. Work out the cost per paid lead, compare it with the lines on the rule card, and decide: kill, hold or scale. Pause and try it, then check your answer."
+        },
+        {
+          "v": "curve",
+          "h": "Watch quality while you scale",
+          "p": "Example of an ad set scaled +20% every three days. Spend rises and accept rate drifts down as the audience broadens. The cost rules alone would miss it for a while. A starting rule: if accept rate falls 10 points from its level before scaling, step budget back one level.",
+          "d": {
+            "a": [
+              40,
+              48,
+              48,
+              58,
+              58,
+              70,
+              70
+            ],
+            "la": "Daily spend ($)",
+            "b": [
+              88,
+              87,
+              85,
+              82,
+              80,
+              76,
+              74
+            ],
+            "lb": "Accept rate (%)",
+            "x": [
+              "D1",
+              "D3",
+              "D5",
+              "D7",
+              "D9",
+              "D11",
+              "D13"
+            ]
+          },
+          "say": "Watch quality while you scale. This curve shows an example ad set scaled by twenty percent every three days. Follow the two lines. Daily spend climbs from forty dollars to seventy. But the accept rate drifts down, from eighty eight percent to seventy four, as the audience broadens. The cost rules alone would miss this for a while. So here's a starting rule: if accept rate falls ten points from its level before scaling, step the budget back one level."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: the weekly quality review",
+          "p": "Once a week, 30 minutes, same order every time. The order matters: data first, then decisions, then the message to your network. Screens are generic mock-ups.",
+          "d": {
+            "steps": [
+              {
+                "title": "Update the dashboard",
+                "text": "Pull spend from Ads Manager and statuses from the network, same dates and time zone.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/quality-3310",
+                  "title": "Dashboard update",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Week",
+                      "value": "40"
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Spend updated",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Network statuses updated",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 2
+                }
+              },
+              {
+                "title": "Apply the rule card",
+                "text": "Quality rules first, then cost rules. Write the action next to each ad set.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/quality-3310",
+                  "title": "Actions",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Ad set",
+                        "Action"
+                      ],
+                      "rows": [
+                        [
+                          "A",
+                          "Scale +20%"
+                        ],
+                        [
+                          "B",
+                          "Investigate"
+                        ],
+                        [
+                          "C",
+                          "Keep"
+                        ],
+                        [
+                          "D",
+                          "Hold"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Send the network a short note",
+                "text": "Share what you changed and what you found. It builds trust before you ask for more.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Affiliate manager",
+                  "subtitle": "network",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "Week 40 on 3310: accept 79% overall. Paused one source with 14% flags. Adding a duplicate check. Anything you see on your side?"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Thanks. Duplicates dropped already. Quality on A looks strong."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Record decisions",
+                "text": "Note the date, the rule used and the result so next week you can see what worked.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/decisions",
+                  "title": "Decision log",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "2026-10-04",
+                      "value": "B paused, flag rate 14%"
+                    },
+                    {
+                      "type": "field",
+                      "label": "2026-10-04",
+                      "value": "A +20%, $0.71 per paid"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Here's the weekly quality review: once a week, thirty minutes, same order every time. Tap Next to follow each step. First, update the dashboard with spend from Ads Manager and statuses from the network, same dates and time zone. Second, apply the rule card, quality rules first, then cost, and write the action next to each ad set. Third, send the network a short note on what you changed and found. It builds trust before you ask for more. Finally, record each decision with the date, the rule used and the result."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: be open about quality",
+          "p": "Share quality data honestly with your network. If you find fraud in your own traffic, tell them and expect them to reverse those leads; hiding it risks your account and can make you part of the fraud. Keep dashboard exports with personal data out of open chats and shared drives.",
+          "d": {
+            "kind": "warn",
+            "text": "Report fraud you find in your own traffic. Share totals and lead IDs, not people's personal details, in chats."
+          },
+          "say": "Be open about quality. Share quality data honestly with your network. If you find fraud in your own traffic, tell them, and expect them to reverse those leads. Hiding it risks your account, and can make you part of the fraud. Keep dashboard exports with personal data out of open chats and shared drives. As the warning says: report fraud you find, and share totals and lead I Ds, not people's personal details."
+        },
+        {
+          "v": "cards",
+          "h": "Common dashboard mistakes",
+          "p": "A dashboard only helps if you act on it the same way every week. These are the habits that quietly break that routine, and the fix for each. Check your own dashboard against them today.",
+          "d": [
+            "Too many columns|keep what you act on",
+            "Platform leads in the cost column|use network-paid leads",
+            "Cost rules before quality rules|check quality first",
+            "No decision log|you repeat old mistakes",
+            "Reviewing only when worried|same day every week"
+          ],
+          "say": "A dashboard only helps if you act on it the same way every week. Too many columns: keep only what you act on. Platform leads in the cost column: use network-paid leads. Cost rules before quality rules: check quality first. No decision log: then you repeat old mistakes. And reviewing only when worried: review on the same day every week. Check your own dashboard against these today."
+        },
+        {
+          "v": "check",
+          "h": "Weekly quality checklist",
+          "p": "Tick each line before you change any budget. If a line fails, fix it first; decisions on broken data cost more than waiting a day.",
+          "d": [
+            "Spend and statuses use the same dates and time zone",
+            "Tracker and network counts within 5%",
+            "Quality rules applied before cost rules",
+            "Every action written with its rule",
+            "Short note sent to the network"
+          ],
+          "say": "Here's your weekly quality checklist. Tick each line before you change any budget. Spend and statuses use the same dates and time zone. Tracker and network counts are within five percent. Quality rules applied before cost rules. Every action written with its rule. And a short note sent to the network. If a line fails, fix it first. Decisions on broken data cost more than waiting a day."
+        }
+      ],
+      "takeaways": [
+        "Put cost per paid lead and quality on one row per ad set.",
+        "Apply quality rules first, then cost rules, at fixed weekly checkpoints.",
+        "Watch accept rate as you scale; step back if it falls 10 points."
+      ],
+      "action": "Build the four-column quality dashboard for your current campaign and fill in last week, then write one action per ad set using the rule card.",
+      "glossary": [
+        {
+          "term": "Quality dashboard",
+          "def": "One table showing cost and quality numbers for each ad set or source."
+        },
+        {
+          "term": "Rule card",
+          "def": "Your written kill, hold and scale rules with exact lines."
+        },
+        {
+          "term": "Decision log",
+          "def": "A dated record of each decision, the rule used and the result."
+        },
+        {
+          "term": "Quality drift",
+          "def": "A slow fall in lead quality as you scale or broaden an audience."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "$0.45 per entry and 55% of entries paid. Cost per paid lead?",
+          "options": [
+            "$0.82",
+            "$0.45",
+            "$0.25",
+            "$1.00"
+          ],
+          "answer": 0,
+          "why": "$0.45 ÷ 0.55 = $0.818."
+        },
+        {
+          "q": "Ad set: $1.15 per paid lead (target $0.90), flag rate 14%. What first?",
+          "options": [
+            "Scale",
+            "Kill on cost",
+            "Investigate the source today",
+            "Ignore flags"
+          ],
+          "answer": 2,
+          "why": "Cost is under the kill line, but flags over 10% mean investigate the source."
+        },
+        {
+          "q": "$30 spent, 30 paid, target $0.90. Verdict?",
+          "options": [
+            "Kill",
+            "Hold",
+            "Scale +20%",
+            "Scale +50%"
+          ],
+          "answer": 1,
+          "why": "$1.00 is above target and under 1.3 × target ($1.17), so hold."
+        },
+        {
+          "q": "While scaling, accept rate falls from 88% to 76%. Starting rule?",
+          "options": [
+            "Keep scaling",
+            "Stop tracking",
+            "Change offer",
+            "Step budget back one level"
+          ],
+          "answer": 3,
+          "why": "A fall of 10+ points from the pre-scale level means step back."
+        },
+        {
+          "q": "Which rules do you apply first in the weekly review?",
+          "options": [
+            "Cost rules",
+            "Creative rules",
+            "Quality rules",
+            "Budget rules"
+          ],
+          "answer": 2,
+          "why": "A cheap ad set with junk leads is not a winner, so quality comes first."
+        }
+      ],
+      "say_intro": "In this lesson you'll build a one-screen quality dashboard that puts cost and quality side by side. Then you'll combine them into one decision per ad set, and run a calm weekly review with your network.",
+      "say_outro": "You can now build a one-screen quality dashboard, combine cost and quality rules into one decision, and run a weekly quality review with your network. Your task: build the four column quality dashboard for your current campaign, fill in last week, then write one action per ad set using the rule card. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "$400 spend: 800 entries, 720 validated, 504 accepted, 496 paid. Payout $1.20. Profit and cost per paid lead?",
+      "options": [
+        "$204.80 profit, $0.79",
+        "$560 profit, $0.50",
+        "$195.20 profit, $0.81",
+        "$164.80 profit, $0.56"
+      ],
+      "answer": 2,
+      "why": "Revenue 496 × $1.20 = $595.20; profit $195.20; $400 ÷ 496 = $0.81."
+    },
+    {
+      "q": "Offer X pays $1.50 with 60% accepted. Offer Y pays $1.10 with 90% accepted. Which is worth more per delivered lead?",
+      "options": [
+        "Y, $0.99",
+        "X, $0.90",
+        "Equal",
+        "X, because the payout is higher"
+      ],
+      "answer": 0,
+      "why": "$1.10 × 0.9 = $0.99 beats $1.50 × 0.6 = $0.90."
+    },
+    {
+      "q": "Accept rate drops from 82% to 64% after your volume doubled. You changed nothing and get only totals. What next?",
+      "options": [
+        "Resubmit rejected leads",
+        "Double volume again",
+        "Accept it",
+        "Ask for lead-level reasons; if refused twice, move volume"
+      ],
+      "answer": 3,
+      "why": "No reasons plus a jump at volume are shave warning signs; ask, then move if refused."
+    },
+    {
+      "q": "A night spike: 160 entries in 2 hours, 2.0 s average to submit, 12 accepted. What do you do?",
+      "options": [
+        "Deliver all and let the network scrub",
+        "Hold flagged entries, tell the network, pause the source",
+        "Buy leads to make up the shortfall",
+        "Raise bids at night"
+      ],
+      "answer": 1,
+      "why": "Hold, report and pause; never deliver unreviewed junk or buy leads."
+    },
+    {
+      "q": "Adding OTP: entries 600 to 450, accept 65% to 92%, SMS $0.03 per entry, payout unchanged at $1.20, ad spend $300. Better or worse?",
+      "options": [
+        "Better: $102.20 vs $168 profit",
+        "Worse: $168 vs $183.30 profit",
+        "Better: $183.30 vs $168 profit",
+        "Equal"
+      ],
+      "answer": 2,
+      "why": "No OTP: 390 paid × $1.20 − $300 = $168. OTP: 414 paid × $1.20 = $496.80 − ($300 + $13.50) = $183.30, so better."
+    },
+    {
+      "q": "Your Lead event fires when the form page loads. What is the effect?",
+      "options": [
+        "Better optimisation",
+        "Fewer duplicates",
+        "No effect",
+        "The platform learns from visitors, not leads"
+      ],
+      "answer": 3,
+      "why": "It counts page views as conversions, teaching the algorithm the wrong goal."
+    },
+    {
+      "q": "Accepted leads: 35 per ad set per week. Validated leads: 120. Which do you optimise on?",
+      "options": [
+        "Validated",
+        "Accepted",
+        "Clicks",
+        "Impressions"
+      ],
+      "answer": 0,
+      "why": "Under about 50 deeper events, optimise one stage up."
+    },
+    {
+      "q": "Tracker shows 610 leads delivered; network shows 540 received. What do you do before judging ad sets?",
+      "options": [
+        "Nothing",
+        "Fix delivery; the gap is over 5%",
+        "Scale the best ad set",
+        "Lower all budgets"
+      ],
+      "answer": 1,
+      "why": "A gap over 5% means the data is broken; fix it first."
+    },
+    {
+      "q": "Ad set: $27 spent, 18 paid, target $0.90, flag rate 4%. Verdict?",
+      "options": [
+        "Pause for quality",
+        "Hold",
+        "Scale",
+        "Kill: $1.50 is above $1.17"
+      ],
+      "answer": 3,
+      "why": "$27 ÷ 18 = $1.50 > 1.3 × target ($1.17), past the $18 minimum read; quality is fine, so kill on cost."
+    },
+    {
+      "q": "You find that a sub-publisher sent you 300 fake leads last month that were paid. What is right?",
+      "options": [
+        "Tell the network and expect reversals; cut the sub-publisher",
+        "Say nothing",
+        "Replace them with new leads",
+        "Delete the logs"
+      ],
+      "answer": 0,
+      "why": "Reporting protects your account and is the honest course; expect those payouts to be reversed."
+    }
+  ]
+}

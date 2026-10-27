@@ -1,0 +1,3156 @@
+{
+  "school": "operator",
+  "order": 10,
+  "slug": "ad-account-bans",
+  "title": "Ad account bans: prevention, appeals and the same-day plan",
+  "summary": "How ad accounts get restricted, how to prevent it, how to read Account Quality and appeal honestly, and exactly what to do hour by hour on the day a ban hits. You also learn to build a business that survives a restriction using only legitimate assets you own, and why evasion destroys businesses.",
+  "lessons": [
+    {
+      "slug": "why-accounts-get-restricted",
+      "title": "Why accounts get restricted",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can name the four levels of restriction and what each one stops.",
+        "You can list the common causes of restrictions and spot them in your own setup.",
+        "You can work out your rejection rate and use it as an early warning."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "A restriction is a business event",
+          "p": "When an ad account stops, your spend stops, your data stops and your network sees your volume drop. For an affiliate this is a cash-flow event, not just a technical problem. This module teaches you how to prevent it, read it, appeal it and survive the day it happens.",
+          "d": {
+            "b": "No account, no traffic, no income",
+            "s": "Treat account health like cash in the bank"
+          },
+          "say": "Let's start with a mindset shift. When an ad account stops, it's not just a technical problem. Your spend stops, your data stops, and your network sees your volume drop. For an affiliate, that's a cash-flow event. Look at the line on screen: no account, no traffic, no income. That's why we treat account health like cash in the bank. In this module you'll learn how to prevent a restriction, read it, appeal it, and survive the day it happens."
+        },
+        {
+          "v": "stat",
+          "h": "Example: what one day offline costs",
+          "p": "Example numbers only. A buyer spends $300 a day at 35% ROI. That leaves about $105 profit a day. If the account is down for a week, that is about $735 of profit gone before you count team wages, lost caps or a network losing patience.",
+          "more": "ROI here means profit divided by spend. $300 × 0.35 = $105 profit a day. Seven days × $105 = $735. The real cost is usually higher: fixed costs such as salaries and tools keep running, a network may give your cap to another affiliate, and restarting a fresh setup often means a few days of higher cost while delivery relearns. Results vary; these figures are illustrative.",
+          "d": {
+            "n": 105,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "profit lost per day offline",
+            "note": "Example: $300 spend × 35% ROI."
+          },
+          "say": "Let's put a number on it. These are example numbers only. A buyer spends three hundred dollars a day at thirty five percent R O I, return on investment, which here means profit divided by spend. That leaves about one hundred and five dollars profit a day. If the account is down for a week, that's about seven hundred and thirty five dollars of profit gone. And that's before team wages, lost caps, or a network losing patience. Results vary, but the real cost is usually higher than it looks."
+        },
+        {
+          "v": "cards",
+          "h": "The four levels of restriction",
+          "p": "Restrictions happen at different levels, and the level decides how much of your business stops. A rejected ad is small. A restricted personal profile or business portfolio can stop many accounts at once. Always find out which level you are dealing with first.",
+          "d": [
+            "Ad rejected|one ad fails review; the account keeps running",
+            "Ad account disabled|that account cannot run ads",
+            "Business portfolio restricted|every asset inside may be affected",
+            "Personal profile restricted|that person cannot advertise or manage ads"
+          ],
+          "say": "Restrictions happen at different levels, and the level decides how much of your business stops. Look at the four cards. A rejected ad is small: one ad fails review, and the account keeps running. A disabled ad account can't run ads at all. A restricted business portfolio can affect every asset inside it. And a restricted personal profile means that person can't advertise or manage ads. So your first question is always, which level am I dealing with?"
+        },
+        {
+          "v": "table",
+          "h": "What each level usually stops",
+          "p": "This is a simplified guide to the four levels. The exact effects depend on the reason and can change. Use it to judge how serious a notice is, then confirm the details in Account Quality for the specific asset.",
+          "d": {
+            "cols": [
+              "Level",
+              "What stops",
+              "How wide"
+            ],
+            "rows": [
+              [
+                "Ad rejected",
+                "That ad",
+                "Narrow"
+              ],
+              [
+                "Ad account",
+                "All ads in that account",
+                "Medium"
+              ],
+              [
+                "Business portfolio",
+                "Ads across its assets",
+                "Wide"
+              ],
+              [
+                "Personal profile",
+                "That person's ad access",
+                "Wide if they are the only admin"
+              ]
+            ]
+          },
+          "say": "This table is a simplified guide to what each level usually stops. Read it from top to bottom. A rejected ad stops that ad, so it's narrow. An ad account stops all ads in that account, so medium. A business portfolio stops ads across its assets, so it's wide. And a personal profile stops that person's ad access, which is wide if they're the only admin. The exact effects depend on the reason and can change, so confirm the details in Account Quality for the specific asset."
+        },
+        {
+          "v": "tip",
+          "h": "Names and labels change",
+          "p": "Meta has renamed things before: Business Manager became business portfolio, and status labels and menus move. We describe the levels as they work at the time of writing, but we are not certain every label is current. Always read the exact notice in your own account.",
+          "d": {
+            "kind": "warn",
+            "text": "We are not certain this wording is current. Check Account Quality and Meta's Business Help Center before relying on it."
+          },
+          "say": "A quick warning before we go further. Meta has renamed things before. Business Manager became business portfolio, and status labels and menus move around. We describe the levels as they work at the time of writing, but we're not certain every label is current. So always read the exact notice in your own account, and check Account Quality and Meta's Business Help Center before relying on any wording here."
+        },
+        {
+          "v": "map",
+          "h": "How one restriction can spread",
+          "p": "Your assets are linked. A profile admins a portfolio, the portfolio owns ad accounts, pages and pixels, and a payment method sits behind the accounts. A problem at the top can reach everything below it, which is why one weak link can stop a whole operation.",
+          "d": {
+            "nodes": [
+              {
+                "id": "p",
+                "label": "Your profile",
+                "kind": "person"
+              },
+              {
+                "id": "bp",
+                "label": "Business portfolio",
+                "kind": "tool"
+              },
+              {
+                "id": "a1",
+                "label": "Ad account 1",
+                "kind": "ad"
+              },
+              {
+                "id": "a2",
+                "label": "Ad account 2",
+                "kind": "ad"
+              },
+              {
+                "id": "pg",
+                "label": "Page",
+                "kind": "page"
+              },
+              {
+                "id": "px",
+                "label": "Pixel / dataset",
+                "kind": "data"
+              },
+              {
+                "id": "pay",
+                "label": "Payment method",
+                "kind": "money"
+              }
+            ],
+            "edges": [
+              [
+                "p",
+                "bp",
+                "admins"
+              ],
+              [
+                "bp",
+                "a1",
+                "owns"
+              ],
+              [
+                "bp",
+                "a2",
+                "owns"
+              ],
+              [
+                "bp",
+                "pg",
+                "owns"
+              ],
+              [
+                "bp",
+                "px",
+                "owns"
+              ],
+              [
+                "pay",
+                "a1",
+                "funds"
+              ],
+              [
+                "pay",
+                "a2",
+                "funds"
+              ]
+            ]
+          },
+          "say": "Now look at this map, because it shows why one restriction can spread. Your profile admins a business portfolio. The portfolio owns your ad accounts, your page and your pixel or dataset. And a payment method sits behind the ad accounts, funding them. Everything is linked. So a problem at the top can reach everything below it. That's why one weak link, like a single profile or a bad payment method, can stop a whole operation."
+        },
+        {
+          "v": "cards",
+          "h": "Common causes, part 1",
+          "p": "Most restrictions trace back to a small set of causes. The first group is about behaviour: what you advertise, how you set things up, how you pay and how you log in. Each one is something you control.",
+          "more": "Circumventing systems is treated very seriously. It includes things like showing reviewers a different page from users (cloaking), opening new accounts to continue after a restriction, or using other people's accounts. Platforms often restrict every linked asset when they find it. Suspicious payments include repeated declines, cards in many different names and chargebacks on charges you owed. Suspicious logins include sudden access from new countries or many people sharing one profile.",
+          "d": [
+            "Policy violations|ads or pages that break advertising rules",
+            "Circumventing systems|trying to get around review or past bans",
+            "Suspicious payments|failed charges, disputes, mismatched cards",
+            "Suspicious logins|new devices, many locations, shared logins"
+          ],
+          "say": "Most restrictions trace back to a small set of causes. This first group is about behaviour, and every one is something you control. Policy violations, meaning ads or pages that break advertising rules. Circumventing systems, like showing reviewers a different page from users, or opening new accounts after a ban. Platforms treat that very seriously. Suspicious payments, such as repeated declines, cards in many names, or chargebacks on charges you owed. And suspicious logins, like sudden access from new countries or many people sharing one profile."
+        },
+        {
+          "v": "cards",
+          "h": "Common causes, part 2",
+          "p": "The second group is about trust and quality. A platform trusts accounts it can verify and that behave steadily. Unverified identity, sudden spend jumps, poor landing pages and regulated offers without permission all raise risk signals.",
+          "d": [
+            "Unverified identity|no business or identity verification",
+            "Sudden spend spikes|$20 a day to $500 overnight",
+            "Low-quality landers|slow, misleading or mismatched pages",
+            "Restricted categories|gambling, finance or crypto without authorization"
+          ],
+          "say": "The second group is about trust and quality. A platform trusts accounts it can verify and that behave steadily. Look at the cards. Unverified identity, with no business or identity verification. Sudden spend spikes, like going from twenty dollars a day to five hundred overnight. Low-quality landers that are slow, misleading or don't match the ad. And restricted categories, such as gambling, finance or crypto, run without authorization. Each one raises a risk signal."
+        },
+        {
+          "v": "tip",
+          "h": "Regulated offers need permission",
+          "p": "Trading, gambling, crypto and some financial products are restricted categories. Ads usually need Meta's authorization or must meet extra requirements, and they must follow local law. Rules differ by country and change, so check Meta's current policy pages and the law before you run.",
+          "d": {
+            "kind": "warn",
+            "text": "Running restricted-category ads without the required authorization is a common cause of disabled accounts. Check current requirements per country before launch."
+          },
+          "say": "This one deserves its own warning. Trading, gambling, crypto and some financial products are restricted categories. Ads usually need Meta's authorization or must meet extra requirements, and they must follow local law. Rules differ by country and they change. Running restricted-category ads without the required authorization is a common cause of disabled accounts. So check Meta's current policy pages, and the law, for each country before you launch."
+        },
+        {
+          "v": "eq",
+          "h": "Your early-warning number",
+          "p": "Rejected ads are the first signal that something is wrong. Track your rejection rate every week. A rising rate means your copy, creatives or landers are drifting towards trouble long before a full restriction arrives.",
+          "d": [
+            "Ads rejected",
+            "÷",
+            "Ads submitted",
+            "=",
+            "Rejection rate"
+          ],
+          "say": "Here's your early-warning number. Look at the equation: ads rejected, divided by ads submitted, equals your rejection rate. Rejected ads are the first signal that something is wrong. Track this rate every week. If it starts rising, your copy, creatives or landers are drifting toward trouble, often long before a full restriction arrives. It's a simple number, and it gives you time to fix things while they're still small."
+        },
+        {
+          "v": "table",
+          "h": "Example: three weeks of review results",
+          "p": "Example numbers only. Week 1 is calm. Week 2 the rate jumps after a new angle launched. Week 3 the buyer keeps launching the same angle. A pattern like this often comes before an account restriction.",
+          "more": "Check the maths: 2 ÷ 40 = 0.05 = 5%. 6 ÷ 40 = 0.15 = 15%. 11 ÷ 44 = 0.25 = 25%. The right move in week 2 was to stop launching that angle, read every rejection reason and fix the root cause. Meta does not publish a rejection rate that triggers a ban, so treat any rise as a warning, not a safe zone.",
+          "d": {
+            "cols": [
+              "Week",
+              "Submitted",
+              "Rejected",
+              "Rate"
+            ],
+            "rows": [
+              [
+                "1",
+                "40",
+                "2",
+                "5%"
+              ],
+              [
+                "2",
+                "40",
+                "6",
+                "15%"
+              ],
+              [
+                "3",
+                "44",
+                "11",
+                "25%"
+              ]
+            ]
+          },
+          "say": "Here's an example, with example numbers only. In week one, two of forty ads were rejected, five percent. Calm. In week two, after a new angle launched, six of forty, so fifteen percent. In week three the buyer kept launching that same angle, and eleven of forty four were rejected, twenty five percent. A pattern like this often comes before a restriction. The right move in week two was to stop that angle, read every reason and fix the cause. Meta doesn't publish a rate that triggers a ban, so treat any rise as a warning."
+        },
+        {
+          "v": "curve",
+          "h": "Warning signs build before a ban",
+          "p": "Example pattern. Rejections climb while the buyer keeps raising spend. Restrictions rarely come from nowhere; there is usually a trail of rejections, payment problems or login alerts first. Watch both lines together.",
+          "d": {
+            "a": [
+              1,
+              2,
+              2,
+              5,
+              7,
+              9,
+              11
+            ],
+            "la": "Ads rejected per week",
+            "b": [
+              20,
+              25,
+              40,
+              80,
+              120,
+              180,
+              250
+            ],
+            "lb": "Daily spend ($)",
+            "x": [
+              "W1",
+              "W2",
+              "W3",
+              "W4",
+              "W5",
+              "W6",
+              "W7"
+            ]
+          },
+          "say": "Look at the two lines on this chart. It's an example pattern. Ads rejected per week climb from one up to eleven, while daily spend climbs from twenty dollars to two hundred and fifty. The buyer kept raising spend while the warnings piled up. Restrictions rarely come from nowhere. There's usually a trail first: rejections, payment problems, or login alerts. So watch both lines together, not just your spend."
+        },
+        {
+          "v": "screen",
+          "h": "What a restriction notice looks like",
+          "p": "This is a generic mock-up, not a real screen. A notice usually names the asset, says what is restricted, points to a policy area and tells you whether you can request a review. The exact wording varies and changes, so read your real notice slowly.",
+          "d": {
+            "v": "screen",
+            "kind": "browser",
+            "url": "business.example/notifications",
+            "title": "Notifications",
+            "blocks": [
+              {
+                "type": "text",
+                "value": "Your ad account NG_Trading_01 is restricted from advertising."
+              },
+              {
+                "type": "field",
+                "label": "Reason (example wording)",
+                "value": "Doesn't follow our policies on unacceptable business practices"
+              },
+              {
+                "type": "field",
+                "label": "Affected asset",
+                "value": "Ad account ID 1234567890"
+              },
+              {
+                "type": "button",
+                "label": "See details in Account Quality"
+              }
+            ],
+            "highlight": 3
+          },
+          "say": "This is a generic mock-up of a restriction notice, not a real screen. Notice what it tells you. It names the asset, the ad account. It says what's restricted, which is advertising. It points to a policy area, here shown as example wording. And the highlighted button sends you to the details in Account Quality, where you'll see whether you can request a review. The exact wording varies and changes, so read your real notice slowly."
+        },
+        {
+          "v": "compare",
+          "h": "Mistakes and fixes",
+          "p": "Most restrictions we see come from habits that felt harmless at the time. On the left are common habits; on the right are the fixes. None of the fixes cost much money; they cost attention.",
+          "d": {
+            "a": {
+              "title": "Common mistakes",
+              "items": [
+                "Ignoring rejected ads",
+                "Jumping budget 5× in a day",
+                "Sharing one login across the team",
+                "Running a trading offer without checking authorization"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Read and fix every rejection",
+                "Raise budget in small steps",
+                "Give each person their own access",
+                "Check category rules before launch"
+              ]
+            }
+          },
+          "say": "On the left are common habits that felt harmless at the time. Ignoring rejected ads. Jumping budget five times in a day. Sharing one login across the team. Running a trading offer without checking authorization. On the right are the fixes. Read and fix every rejection. Raise budget in small steps. Give each person their own access. Check category rules before launch. Notice that none of these fixes cost much money. They cost attention."
+        },
+        {
+          "v": "flow",
+          "h": "Starting rule: when rejections rise",
+          "p": "Starting rule to adapt: if more than 1 in 10 ads is rejected in a week, or 3 rejections land on the same angle, stop launching new ads in that account. Read every reason, fix the cause, then relaunch one fixed ad before the rest.",
+          "d": [
+            "Rate above 10% or 3 on one angle",
+            "Pause new launches",
+            "Read every reason",
+            "Fix the root cause",
+            "Relaunch one ad, then the rest"
+          ],
+          "say": "Here's a starting rule you can adapt. Follow the flow on screen. If more than one in ten ads is rejected in a week, or three rejections land on the same angle, pause new launches in that account. Then read every reason. Fix the root cause. And relaunch one fixed ad first, before the rest. That single ad tells you whether the fix worked before you put everything back at risk."
+        },
+        {
+          "v": "big",
+          "h": "Most restrictions have a findable cause",
+          "p": "Platforms make mistakes, and honest accounts do get restricted. But most restrictions have a cause you can find in your ads, landers, payments or logins. The rest of this module shows you how to prevent it, read it and respond.",
+          "d": {
+            "b": "Find the cause before you react",
+            "s": "Then prevent the next one"
+          },
+          "say": "Let's close the lesson with the big idea. Platforms do make mistakes, and honest accounts do get restricted. But most restrictions have a cause you can find, in your ads, your landers, your payments or your logins. So find the cause before you react, and then prevent the next one. The rest of this module shows you how to prevent a restriction, read it and respond."
+        }
+      ],
+      "takeaways": [
+        "There are four levels: ad, ad account, business portfolio and personal profile. The level decides how much stops.",
+        "Common causes are policy breaks, circumvention, payment and login problems, no verification, spend spikes, poor landers and restricted categories without authorization.",
+        "Track your weekly rejection rate. A rising rate is your early warning.",
+        "Labels change; always read the real notice in Account Quality."
+      ],
+      "action": "Count how many ads you submitted and how many were rejected in the last 7 days. Work out your rejection rate and write down the reason for every rejection.",
+      "glossary": [
+        {
+          "term": "Business portfolio",
+          "def": "Meta's container for your business assets (ad accounts, pages, pixels, people). It was previously called Business Manager. Names change; check current Meta wording."
+        },
+        {
+          "term": "Account Quality",
+          "def": "The area in Meta's business tools where you can see restrictions on your assets and request a review, at the time of writing."
+        },
+        {
+          "term": "Restricted category",
+          "def": "A type of product, such as gambling or financial services, that can only be advertised with extra requirements or authorization."
+        },
+        {
+          "term": "Circumvention",
+          "def": "Trying to get around a platform's review or enforcement, such as cloaking or opening new accounts after a ban. Always prohibited."
+        },
+        {
+          "term": "Rejection rate",
+          "def": "Ads rejected divided by ads submitted over a period. A rising rate is an early warning sign."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which restriction usually stops the most at once?",
+          "options": [
+            "The business portfolio restricted",
+            "One ad rejected",
+            "One ad account disabled",
+            "A single ad set paused"
+          ],
+          "answer": 0,
+          "why": "A business portfolio holds many assets, so a restriction there can stop ads across all of them. A rejected ad or one disabled account is narrower."
+        },
+        {
+          "q": "You submitted 50 ads this week and 8 were rejected. What is your rejection rate?",
+          "options": [
+            "8%",
+            "6.25%",
+            "42%",
+            "16%"
+          ],
+          "answer": 3,
+          "why": "8 ÷ 50 = 0.16 = 16%. That is above the 10% starting rule, so pause launches and fix the cause."
+        },
+        {
+          "q": "Which of these is circumventing systems?",
+          "options": [
+            "Raising budget by 20% after three good days",
+            "Showing reviewers a different page from the one users see",
+            "Turning on two-factor authentication",
+            "Appealing a rejected ad once with evidence"
+          ],
+          "answer": 1,
+          "why": "Showing reviewers a different page is cloaking, a form of circumvention. The others are normal, allowed actions."
+        },
+        {
+          "q": "Your account goes from $20 a day to $600 a day overnight with a new card. Why is this risky?",
+          "options": [
+            "It is not risky if the ads are good",
+            "Meta always blocks budgets over $500",
+            "Sudden spend spikes and new payment methods are common risk signals",
+            "It lowers your CPM"
+          ],
+          "answer": 2,
+          "why": "Sudden jumps and payment changes are risk signals. Meta does not publish a fixed $500 limit; the issue is the sudden change."
+        },
+        {
+          "q": "You see a notice but the label differs from what this lesson shows. What should you do?",
+          "options": [
+            "Assume the lesson is right",
+            "Ignore the notice until it changes",
+            "Ask a stranger in a group chat to log in and check",
+            "Read the real notice in Account Quality and the Help Center"
+          ],
+          "answer": 3,
+          "why": "Labels change. The real notice in your account and Meta's Help Center are the sources to trust. Never share logins."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn why ad accounts get restricted, the four levels a restriction can hit, and the early-warning number that tells you trouble is coming. Knowing this is how you protect the spend, the data and the income that sit behind every account.",
+      "say_outro": "So, restrictions come in four levels, most have a cause you can find, and a rising rejection rate is your early warning. Your task: count the ads you submitted and the ads rejected in the last seven days, work out your rejection rate, and write down the reason for every rejection. Now take the quiz."
+    },
+    {
+      "slug": "prevention-checklist",
+      "title": "The prevention checklist",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can set up verification, two-factor authentication and admin roles the right way.",
+        "You can plan a gradual spend warm-up for a new account.",
+        "You can check a landing page and ad copy against a policy-safe checklist."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Prevention is cheaper than any appeal",
+          "p": "An appeal can take days and may fail. Prevention takes a few hours once and a few minutes each day. Most of what protects an account is boring: a real identity, secure logins, a steady payment method, gradual spending and honest pages.",
+          "d": {
+            "b": "Hours of setup protect weeks of spend",
+            "s": "Boring habits keep accounts alive"
+          },
+          "say": "Here's the core idea. An appeal can take days, and it may fail. Prevention takes a few hours once, then a few minutes each day. And most of what protects an account is honestly a bit boring. A real identity. Secure logins. A steady payment method. Gradual spending. Honest pages. As the slide says, hours of setup protect weeks of spend, and boring habits keep accounts alive."
+        },
+        {
+          "v": "table",
+          "h": "Example: prevention cost versus ban cost",
+          "p": "Example numbers only. A buyer earns about $210 profit a day on $600 spend at 35% ROI. Prevention costs a few hours. One week offline costs far more than that, before counting wages or lost caps.",
+          "more": "Check the maths: $600 × 0.35 = $210 profit a day. Seven days × $210 = $1,470. The $400 fixed costs are an example of a week of one buyer's wage and tools that still need paying. These numbers are illustrative; results vary.",
+          "d": {
+            "cols": [
+              "Item",
+              "Prevention",
+              "One week offline"
+            ],
+            "rows": [
+              [
+                "Your time",
+                "About 4 hours once",
+                "Days of stress"
+              ],
+              [
+                "Profit",
+                "$0 lost",
+                "$1,470 lost"
+              ],
+              [
+                "Fixed costs",
+                "Same",
+                "$400 paid with no income"
+              ],
+              [
+                "Network cap",
+                "Kept",
+                "May be reassigned"
+              ]
+            ]
+          },
+          "say": "Let's compare the two costs. These are example numbers only. A buyer earns about two hundred and ten dollars profit a day, on six hundred dollars spend at thirty five percent R O I, return on investment. Look at the table. Prevention costs about four hours once, and no lost profit. One week offline costs one thousand four hundred and seventy dollars of profit, plus four hundred dollars of fixed costs paid with no income, and your network cap may be reassigned. The figures are illustrative, but the gap is clear."
+        },
+        {
+          "v": "check",
+          "h": "Identity and security basics",
+          "p": "These are the foundations. Every item links the account to a real, verifiable business and stops strangers getting in. If any of these is missing, fix it before you raise spend.",
+          "d": [
+            "Business verified in your business portfolio",
+            "Real name and real details on every admin profile",
+            "Two-factor authentication on for every admin",
+            "Each person uses their own login",
+            "At least two trusted admins",
+            "Business email on your own domain"
+          ],
+          "say": "These are your foundations. Go down the checklist. Business verified in your business portfolio. Real name and real details on every admin profile. Two-factor authentication on for every admin. Each person uses their own login. At least two trusted admins. And a business email on your own domain. Every item links the account to a real, verifiable business and keeps strangers out. If any of these is missing, fix it before you raise spend."
+        },
+        {
+          "v": "walk",
+          "h": "Turn on two-factor and check verification",
+          "p": "Follow these steps in Meta's business settings. The menu names here are as we understand them at the time of writing; we are not certain they are current, so look for the same idea if your screen differs. Names change; check the current settings.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open business settings",
+                "text": "Go to your business portfolio and open its settings. Choose the portfolio you advertise from.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/settings",
+                  "title": "Business settings",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Business portfolio",
+                      "value": "Zed Media Ltd"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Security center"
+                    },
+                    {
+                      "type": "button",
+                      "label": "People"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Check verification status",
+                "text": "In the security area, check whether the business is verified. If not, start verification with your registered company details.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/settings/security",
+                  "title": "Security center",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Business verification",
+                      "value": "Not verified"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Start verification"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Require two-factor",
+                "text": "Where the option exists, require two-factor authentication for everyone in the portfolio.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/settings/security",
+                  "title": "Security center",
+                  "blocks": [
+                    {
+                      "type": "radio",
+                      "label": "Two-factor authentication",
+                      "options": [
+                        "Not required",
+                        "Required for admins",
+                        "Required for everyone"
+                      ],
+                      "value": 2
+                    },
+                    {
+                      "type": "button",
+                      "label": "Save"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Turn it on for your profile",
+                "text": "On your own profile, open the security settings and switch on an authenticator app. Save your backup codes somewhere safe and offline.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Security",
+                  "subtitle": "settings",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "Two-factor authentication: Off",
+                      "buttons": [
+                        "Use authentication app"
+                      ]
+                    },
+                    {
+                      "from": "me",
+                      "text": "Authentication app set up. Backup codes saved."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "say": "Let's walk through it. Tap Next to follow each step. First, open business settings: go to your business portfolio, open its settings, and choose the portfolio you advertise from. Second, check verification status in the security area. If it's not verified, start verification with your registered company details. Third, where the option exists, require two-factor authentication for everyone in the portfolio. Fourth, on your own profile, switch on an authenticator app, and save your backup codes somewhere safe and offline. Menu names change, so if your screen differs, look for the same idea."
+        },
+        {
+          "v": "screen",
+          "h": "A healthy security view",
+          "p": "This generic mock-up shows what you want to see: the business verified, two-factor required, and two named admins who are real people you trust. If your view shows one admin, or someone you do not recognise, fix that today.",
+          "d": {
+            "v": "screen",
+            "kind": "browser",
+            "url": "business.example/settings/security",
+            "title": "Security center",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Business verification",
+                "value": "Verified"
+              },
+              {
+                "type": "toggle",
+                "label": "Two-factor required for everyone",
+                "on": true
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "Person",
+                  "Role",
+                  "2FA"
+                ],
+                "rows": [
+                  [
+                    "Founder",
+                    "Admin",
+                    "On"
+                  ],
+                  [
+                    "Ops lead",
+                    "Admin",
+                    "On"
+                  ],
+                  [
+                    "Buyer 1",
+                    "Employee",
+                    "On"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Two admins, nobody shares a login, everyone has two-factor."
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "This generic mock-up shows what a healthy security view looks like. The business is verified. Two-factor is required for everyone. And look at the highlighted table: two named admins, the founder and the ops lead, plus a buyer with employee access, and everyone has two-factor on. Nobody shares a login. If your own view shows only one admin, or someone you don't recognise, fix that today."
+        },
+        {
+          "v": "table",
+          "h": "Admin hygiene: who gets what",
+          "p": "Give each person the lowest access that lets them do their job. Admins can remove everyone else, so keep that role for two people you trust completely. Remove access the same day someone leaves.",
+          "d": {
+            "cols": [
+              "Person",
+              "Access",
+              "Why"
+            ],
+            "rows": [
+              [
+                "Founder",
+                "Admin",
+                "Owns the business"
+              ],
+              [
+                "Trusted partner",
+                "Admin (backup)",
+                "Someone can act if you are locked out"
+              ],
+              [
+                "Media buyer",
+                "Ad account access only",
+                "Runs ads, cannot remove admins"
+              ],
+              [
+                "Freelancer",
+                "Temporary, one account",
+                "Remove when the job ends"
+              ]
+            ]
+          },
+          "say": "Now, admin hygiene. The rule is simple: give each person the lowest access that lets them do their job. Look at the table. The founder is admin, because they own the business. A trusted partner is the backup admin, so someone can act if you're locked out. A media buyer gets ad account access only, so they can run ads but can't remove admins. And a freelancer gets temporary access to one account. Remember, admins can remove everyone else, and you remove access the same day someone leaves."
+        },
+        {
+          "v": "check",
+          "h": "Payment method hygiene",
+          "p": "Payment problems are one of the most common triggers. Use one steady method that belongs to your business, keep funds available, and never dispute a charge you genuinely owe.",
+          "d": [
+            "Card or account in your business or your own name",
+            "Same billing country as your business",
+            "Enough funds before each billing threshold",
+            "Do not swap cards repeatedly",
+            "Never file a chargeback on ads you ran",
+            "Keep invoices for every charge"
+          ],
+          "say": "Payment problems are one of the most common triggers, so let's get this right. Use a card or account in your business or your own name. Keep the same billing country as your business. Have enough funds before each billing threshold. Don't swap cards repeatedly. Never file a chargeback on ads you actually ran. And keep invoices for every charge. One steady method that belongs to you builds trust."
+        },
+        {
+          "v": "bars",
+          "h": "Example: a gradual warm-up",
+          "p": "Rough guide, varies by geo and vertical. New accounts often start better with modest spend that rises steadily. This example raises daily budget about 30% every three days, from $20 to about $44 by day 10, instead of jumping straight to $50.",
+          "more": "Check the maths: $20 × 1.3 = $26. $26 × 1.3 = $33.80, rounded to $34. $34 × 1.3 = $44.20, rounded to $44. Meta does not publish a safe warm-up schedule, so this is a starting habit, not a guarantee. The idea is to build a steady history of normal spending and payments rather than a sudden spike.",
+          "d": [
+            [
+              "Days 1 to 3",
+              45,
+              "$20 a day"
+            ],
+            [
+              "Days 4 to 6",
+              59,
+              "$26 a day"
+            ],
+            [
+              "Days 7 to 9",
+              77,
+              "$34 a day"
+            ],
+            [
+              "Days 10 to 12",
+              100,
+              "$44 a day"
+            ]
+          ],
+          "say": "New accounts often do better with modest spend that rises steadily. This is a rough guide, and it varies by geo and vertical. Look at the bars. Days one to three at twenty dollars a day. Days four to six at twenty six. Days seven to nine at thirty four. And by day ten, about forty four dollars a day. That's roughly thirty percent more every three days, instead of jumping straight to fifty. Meta doesn't publish a safe schedule, so this is a starting habit, not a guarantee."
+        },
+        {
+          "v": "tip",
+          "h": "Spending limits on new accounts",
+          "p": "New ad accounts may have a daily spending limit set by Meta that rises as the account builds history. We are not certain how this works today or in every country. Check the billing and payment settings of your own account for any limit shown.",
+          "d": {
+            "kind": "warn",
+            "text": "We are not certain this is current. Check the billing settings in your ad account and Meta's Help Center before planning budgets around it."
+          },
+          "say": "New ad accounts may have a daily spending limit set by Meta, which rises as the account builds history. But we're not certain how this works today, or in every country. So before you plan budgets around it, check the billing and payment settings in your own ad account for any limit shown, and check Meta's Help Center."
+        },
+        {
+          "v": "check",
+          "h": "Clean landing page checklist",
+          "p": "Reviewers and users judge the page your ad sends them to. A clean page loads fast, matches the ad, says who you are and makes no promises you cannot keep. Run every lander through this list before launch.",
+          "d": [
+            "Loads in about 3 seconds on mobile data",
+            "Headline matches the ad's promise",
+            "Business name and contact details visible",
+            "Privacy policy and terms linked",
+            "Risk warning where the offer needs one",
+            "No fake timers, fake reviews or income promises"
+          ],
+          "say": "Reviewers and users both judge the page your ad sends them to. Run every lander through this list before launch. Does it load in about three seconds on mobile data? Does the headline match the ad's promise? Are your business name and contact details visible? Are the privacy policy and terms linked? Is there a risk warning where the offer needs one? And no fake timers, fake reviews, or income promises. A clean page is honest and fast."
+        },
+        {
+          "v": "product",
+          "h": "Building clean landers",
+          "p": "If you need a fast, simple lander with your company details, privacy link and risk warning in place, a lander builder saves time. Any honest page builder works; this is one option.",
+          "d": {
+            "slug": "landvoo",
+            "why": "Build fast, mobile-first landers with company details and policy links included from the start."
+          },
+          "say": "If you need a fast, simple lander with your company details, privacy link and risk warning already in place, a lander builder saves time. On screen is one option, Landvoo, which builds mobile-first landers with company details and policy links included from the start. But any honest page builder works. The tool matters less than the checklist you just saw."
+        },
+        {
+          "v": "compare",
+          "h": "Policy-safe copy",
+          "p": "Copy that promises results or targets personal hardship gets rejected and raises risk. Copy that explains what the product is, who it is for and what the risks are is safer and usually converts better people.",
+          "d": {
+            "a": {
+              "title": "Risky copy",
+              "items": [
+                "Make $500 a day from your phone",
+                "Are you broke? This fixes it",
+                "Guaranteed profit, no risk",
+                "Only 2 spots left (when untrue)"
+              ]
+            },
+            "b": {
+              "title": "Policy-safe copy",
+              "items": [
+                "Learn how trading works, step by step",
+                "Free lessons for beginners, 18+",
+                "Trading involves risk of loss",
+                "Sign-ups open this week"
+              ]
+            }
+          },
+          "say": "Copy matters too. On the left is risky copy: make five hundred dollars a day from your phone. Are you broke, this fixes it. Guaranteed profit, no risk. Only two spots left, when that's untrue. On the right is policy-safe copy: learn how trading works, step by step. Free lessons for beginners, eighteen plus. Trading involves risk of loss. Sign-ups open this week. Promising results or targeting hardship gets rejected and raises risk. Explaining what it is, who it's for and the risks is safer, and usually converts better people."
+        },
+        {
+          "v": "cards",
+          "h": "Common mistakes and fixes",
+          "p": "These are the setup mistakes we see most often in new buyers. None of them feels dangerous on the day you make it, which is why they are common. Each one has a simple fix you can do this week without spending money.",
+          "d": [
+            "One admin only|add a trusted backup admin",
+            "Team shares a login|give everyone their own access",
+            "Card in a friend's name|use a method in your own or business name",
+            "Five new ad accounts on day one|start with one and build history"
+          ],
+          "say": "These are the setup mistakes we see most in new buyers. One admin only, so add a trusted backup admin. The team shares a login, so give everyone their own access. A card in a friend's name, so use a method in your own or your business name. And five new ad accounts on day one, so start with one and build history. None of these feels dangerous on the day, which is why they're common. Each fix can be done this week without spending money."
+        },
+        {
+          "v": "flow",
+          "h": "Starting rule: before every budget raise",
+          "p": "Starting rule to adapt: raise daily budget by no more than about 20 to 30% at a time, and only when the last three days had no new rejections, no payment failures and no login alerts. If any is present, fix it first.",
+          "d": [
+            "Last 3 days clean?",
+            "No rejections or payment issues",
+            "No new login alerts",
+            "Raise budget 20 to 30%",
+            "Wait 2 to 3 days, repeat"
+          ],
+          "say": "Here's a starting rule for every budget raise. Follow the flow. First ask, were the last three days clean? No new rejections, no payment issues, and no new login alerts. Only then raise the daily budget, by no more than about twenty to thirty percent at a time. Then wait two to three days and repeat. If any warning is present, fix it first, before you raise anything."
+        },
+        {
+          "v": "tip",
+          "h": "Regulated offers: authorization first",
+          "p": "If you run trading, gambling, crypto or some financial offers, check whether Meta requires authorization for that category and country, apply for it if needed, and follow local law. Do this before your first ad, not after a restriction.",
+          "d": {
+            "kind": "warn",
+            "text": "Restricted categories usually need platform authorization and must follow local law. Check both before running."
+          },
+          "say": "One more reminder for regulated offers. If you run trading, gambling, crypto or some financial offers, check whether Meta requires authorization for that category and country. Apply for it if needed, and follow local law. Do this before your first ad, not after a restriction. Restricted categories usually need platform authorization, and must follow local law. Check both before running."
+        },
+        {
+          "v": "check",
+          "h": "Your five-minute daily health check",
+          "p": "Do this every morning before you touch budgets. It takes about five minutes and catches most problems while they are still small, when a fix costs one ad instead of a whole account.",
+          "d": [
+            "Any new rejected ads? Read the reason",
+            "Any payment failure or unpaid balance?",
+            "Any unknown login or new admin?",
+            "Any warning in Account Quality?",
+            "Any lander down or changed?"
+          ],
+          "say": "Finally, your five-minute daily health check. Do this every morning, before you touch budgets. Any new rejected ads? Read the reason. Any payment failure or unpaid balance? Any unknown login or new admin? Any warning in Account Quality? Any lander down or changed? It takes about five minutes, and it catches most problems while they're small, when a fix costs one ad instead of a whole account."
+        }
+      ],
+      "takeaways": [
+        "Verify the business, turn on two-factor for everyone and keep two trusted admins.",
+        "Use one steady payment method in your own or business name and never dispute charges you owe.",
+        "Warm up spend gradually as a rough guide; Meta publishes no safe schedule.",
+        "Clean landers and honest copy protect the account and bring better leads."
+      ],
+      "action": "Open your business settings today. Confirm verification status, turn on two-factor for every admin, and make sure there are exactly two trusted admins with their own logins.",
+      "glossary": [
+        {
+          "term": "Two-factor authentication (2FA)",
+          "def": "A second login step, such as a code from an authenticator app, that stops someone with only your password from getting in."
+        },
+        {
+          "term": "Business verification",
+          "def": "Confirming your real, registered business with the platform using official documents."
+        },
+        {
+          "term": "Warm-up",
+          "def": "Raising spend on a new account gradually so it builds a steady history. A habit, not a published rule."
+        },
+        {
+          "term": "Chargeback",
+          "def": "Asking your bank to reverse a card payment. Doing this on ads you ran is a serious payment risk signal."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "How many admins should a business portfolio ideally have?",
+          "options": [
+            "One, so nobody else can interfere",
+            "At least two trusted people",
+            "Everyone on the team",
+            "Admins do not matter"
+          ],
+          "answer": 1,
+          "why": "Two trusted admins means someone can act if one is locked out. Giving everyone admin lets anyone remove others."
+        },
+        {
+          "q": "Example: daily budget is $40. Using the 20 to 30% starting rule, what is the highest next budget?",
+          "options": [
+            "$48",
+            "$60",
+            "$52",
+            "$80"
+          ],
+          "answer": 2,
+          "why": "$40 × 1.3 = $52. $48 is a 20% raise, which is also fine; $52 is the top of the range. $60 and $80 are bigger jumps."
+        },
+        {
+          "q": "Your bank flags a Meta charge you did authorise. What should you do?",
+          "options": [
+            "File a chargeback to get the money back",
+            "Switch to a friend's card",
+            "Ignore it",
+            "Confirm with your bank that the charge is genuine"
+          ],
+          "answer": 3,
+          "why": "Confirm the charge with your bank. Chargebacks on ads you ran are a serious risk signal, and using someone else's card adds more risk."
+        },
+        {
+          "q": "Which ad line is policy-safe?",
+          "options": [
+            "Learn the basics of trading. Trading involves risk.",
+            "Guaranteed $300 a day",
+            "Tired of being poor?",
+            "Last chance, only 1 spot left (when untrue)"
+          ],
+          "answer": 0,
+          "why": "It describes the product honestly and states the risk. The others promise income, target hardship or create fake scarcity."
+        },
+        {
+          "q": "A freelancer finished their job yesterday. What do you do with their access?",
+          "options": [
+            "Keep it in case you need them",
+            "Make them admin",
+            "Remove it today",
+            "Share your login instead"
+          ],
+          "answer": 2,
+          "why": "Remove access the same day someone leaves. Unused access is a security risk."
+        }
+      ],
+      "say_intro": "In this lesson you'll build the prevention checklist that keeps accounts alive: verification, two-factor, admin roles, payment hygiene, a gradual warm-up and clean landers. A few hours of setup here protects weeks of spend.",
+      "say_outro": "So, prevention is boring on purpose: a real identity, secure logins, steady payments, gradual spend and honest pages. Your task: open your business settings today, confirm verification status, turn on two-factor for every admin, and make sure there are exactly two trusted admins with their own logins. Now take the quiz."
+    },
+    {
+      "slug": "reading-the-restriction",
+      "title": "Reading the restriction and Account Quality",
+      "minutes": 15,
+      "objectives": [
+        "By the end you can open Account Quality and find every restricted asset.",
+        "You can explain what each common status means and what to do first.",
+        "You can document a restriction properly before you act."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Read before you react",
+          "p": "The first instinct after a restriction is to do something fast: appeal, open a new account, change everything. That usually makes it worse. Your first job is to read exactly what is restricted, at which level and for what stated reason.",
+          "d": {
+            "b": "Five minutes of reading saves days",
+            "s": "Panic moves create new problems"
+          },
+          "say": "When a restriction lands, your first instinct is to do something fast. Appeal, open a new account, change everything. That usually makes it worse. Your first job is to read. Exactly what is restricted, at which level, and for what stated reason. As the slide says, five minutes of reading saves days, and panic moves create new problems."
+        },
+        {
+          "v": "tip",
+          "h": "Where Account Quality lives",
+          "p": "At the time of writing, Meta shows restrictions in an area called Account Quality, reachable from its business tools and Help Center. We are not certain of the current menu path or labels, and they change. Search Account Quality in Meta's Business Help Center if you cannot find it.",
+          "d": {
+            "kind": "warn",
+            "text": "We are not certain this wording is current. Check Account Quality and Meta's Business Help Center before relying on it."
+          },
+          "say": "So where do you read it? At the time of writing, Meta shows restrictions in an area called Account Quality, reachable from its business tools and Help Center. But we're not certain of the current menu path or labels, and they change. If you can't find it, search for Account Quality in Meta's Business Help Center. And check there before relying on any wording here."
+        },
+        {
+          "v": "walk",
+          "h": "Opening Account Quality, step by step",
+          "p": "This walkthrough uses generic mock-ups, not real screens. The order is what matters: choose the right portfolio, see every asset, open the restricted one, read the reason, then check what options you have. Names change; check the current tools.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open Account Quality",
+                "text": "From Meta's business tools or Help Center, open Account Quality. Log in with your own profile, never someone else's.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/account-quality",
+                  "title": "Account Quality",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Business portfolio",
+                      "value": "Zed Media Ltd"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Select the portfolio you want to check."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "See all assets",
+                "text": "Look at the full list: profiles, portfolio, ad accounts, pages. Note every one that is not active.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/account-quality",
+                  "title": "Account Quality",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Asset",
+                        "Type",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "Your profile",
+                          "Profile",
+                          "Active"
+                        ],
+                        [
+                          "Zed Media Ltd",
+                          "Portfolio",
+                          "Active"
+                        ],
+                        [
+                          "NG_Trading_01",
+                          "Ad account",
+                          "Restricted"
+                        ],
+                        [
+                          "KE_Trading_02",
+                          "Ad account",
+                          "Active"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Open the restricted asset",
+                "text": "Click the restricted asset. Read the reason, the date and the policy area named.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/account-quality/1234567890",
+                  "title": "NG_Trading_01",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Status",
+                      "value": "Restricted from advertising"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Policy area (example)",
+                      "value": "Unacceptable business practices"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Date",
+                      "value": "4 Oct"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Check your options",
+                "text": "See whether a review can be requested and whether a deadline is shown. Do not click anything yet; document first.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/account-quality/1234567890",
+                  "title": "NG_Trading_01",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "value": "You can request a review of this decision."
+                    },
+                    {
+                      "type": "button",
+                      "label": "Request review"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              }
+            ]
+          },
+          "say": "Let's walk through it with generic mock-ups. Tap Next to follow each step. First, open Account Quality and choose the right portfolio, logged in with your own profile, never someone else's. Second, look at the full list of assets: profiles, portfolio, ad accounts and pages, and note every one that isn't active. Third, open the restricted asset and read the reason, the date and the policy area named. Fourth, check your options: can you request a review, and is there a deadline? Don't click anything yet. Document first."
+        },
+        {
+          "v": "screen",
+          "h": "A generic Account Quality overview",
+          "p": "This mock-up shows a portfolio with one restricted ad account, one with rejected ads and everything else active. In this case the problem is narrow. If the portfolio or your profile showed restricted, the problem would be much wider.",
+          "d": {
+            "v": "screen",
+            "kind": "browser",
+            "url": "business.example/account-quality",
+            "title": "Account Quality: overview",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Asset",
+                  "Status",
+                  "Action"
+                ],
+                "rows": [
+                  [
+                    "Your profile",
+                    "Active",
+                    "None"
+                  ],
+                  [
+                    "Zed Media Ltd",
+                    "Active",
+                    "None"
+                  ],
+                  [
+                    "NG_Trading_01",
+                    "Restricted",
+                    "Review available"
+                  ],
+                  [
+                    "KE_Trading_02",
+                    "3 ads rejected",
+                    "Fix or review"
+                  ],
+                  [
+                    "GH_Trading_03",
+                    "Active",
+                    "None"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Generic mock-up. Real labels may differ."
+              },
+              {
+                "type": "button",
+                "label": "Request review"
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "This mock-up shows an overview. Look at the highlighted table. Your profile is active. The portfolio is active. One ad account is restricted, with a review available. Another has three ads rejected. And the rest are active. In this case the problem is narrow, one account. But if the portfolio or your profile showed restricted, the problem would be much wider. Real labels may differ."
+        },
+        {
+          "v": "table",
+          "h": "What common statuses mean",
+          "p": "These are plain-English meanings for statuses you are likely to see. The exact labels vary and we are not certain they are all current, so match them by meaning, not exact words.",
+          "d": {
+            "cols": [
+              "Status (meaning)",
+              "What it means",
+              "First step"
+            ],
+            "rows": [
+              [
+                "Ad rejected",
+                "One ad failed review",
+                "Read reason, fix or request review"
+              ],
+              [
+                "Account restricted",
+                "Account cannot run ads",
+                "Read reason, document, decide"
+              ],
+              [
+                "Under review",
+                "Your request is being checked",
+                "Wait, do not resubmit"
+              ],
+              [
+                "Decision final",
+                "No further review offered",
+                "Stop using that asset; review your setup"
+              ],
+              [
+                "Profile restricted",
+                "You cannot manage ads",
+                "Secure login, read reason"
+              ]
+            ]
+          },
+          "say": "Here are plain-English meanings for statuses you're likely to see. Ad rejected: one ad failed review, so read the reason, fix it or request a review. Account restricted: the account can't run ads, so read, document and decide. Under review: your request is being checked, so wait, and don't resubmit. Decision final: no further review, so stop using that asset and review your setup. Profile restricted: secure your login and read the reason. Labels vary, so match them by meaning, not exact words."
+        },
+        {
+          "v": "cards",
+          "h": "What the notice tells you",
+          "p": "A good reading of the notice answers four questions. Write the answers down before you do anything. If one is missing, look in the Help Center link attached to the notice.",
+          "d": [
+            "Which asset|the exact ID, not just the name",
+            "Which level|ad, account, portfolio or profile",
+            "Which policy area|the named reason",
+            "What options|review available, deadline, or final"
+          ],
+          "say": "A good reading of the notice answers four questions. Look at the cards. Which asset, meaning the exact I D, not just the name. Which level: ad, account, portfolio or profile. Which policy area, the named reason. And what options: is a review available, is there a deadline, or is it final? Write the answers down before you do anything. If one is missing, look in the Help Center link attached to the notice."
+        },
+        {
+          "v": "table",
+          "h": "Example: triage of five assets",
+          "p": "Example only. A buyer runs five ad accounts at $120 a day each. One is restricted. That is 20% of daily spend paused, not 100%. Reading the scope first stops an overreaction like pausing everything or an underreaction like ignoring it.",
+          "more": "Total daily spend is 5 × $120 = $600. One account paused is $120 ÷ $600 = 20%. If the portfolio itself were restricted, all $600 might stop. That is why the level matters more than the number of notices. Account 3 also needs attention, because rejected ads can be the start of a pattern.",
+          "d": {
+            "cols": [
+              "Asset",
+              "Status",
+              "Daily spend",
+              "Paused"
+            ],
+            "rows": [
+              [
+                "Account 1",
+                "Restricted",
+                "$120",
+                "$120"
+              ],
+              [
+                "Account 2",
+                "Active",
+                "$120",
+                "$0"
+              ],
+              [
+                "Account 3",
+                "2 ads rejected",
+                "$120",
+                "$0"
+              ],
+              [
+                "Account 4",
+                "Active",
+                "$120",
+                "$0"
+              ],
+              [
+                "Account 5",
+                "Active",
+                "$120",
+                "$0"
+              ]
+            ]
+          },
+          "say": "Here's an example of triage. A buyer runs five ad accounts at one hundred and twenty dollars a day each, six hundred in total. One is restricted. Look at the paused column: that's one hundred and twenty dollars, so twenty percent of daily spend, not a hundred percent. Reading the scope first stops an overreaction, like pausing everything, and an underreaction, like ignoring it. And notice account three, with two ads rejected. That needs attention too, because rejections can be the start of a pattern."
+        },
+        {
+          "v": "stat",
+          "h": "Why the level matters",
+          "p": "Example: in the same setup, a portfolio restriction could pause all five accounts at once. That is 100% of spend, compared with 20% for one account. Always confirm the level before deciding how serious your day is.",
+          "d": {
+            "n": 600,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "daily spend at risk if the portfolio is restricted",
+            "note": "Example: 5 accounts × $120."
+          },
+          "say": "Now see why the level matters. In the same example setup, if the business portfolio were restricted, it could pause all five accounts at once. That's the number on screen: six hundred dollars of daily spend at risk, a hundred percent, compared with twenty percent for one account. So always confirm the level before you decide how serious your day is."
+        },
+        {
+          "v": "flow",
+          "h": "Triage order: top down",
+          "p": "Check from the top down, because higher levels affect everything below. A restricted profile or portfolio changes your whole plan; a rejected ad changes one creative.",
+          "d": [
+            "Your profile",
+            "Business portfolio",
+            "Each ad account",
+            "Pages and datasets",
+            "Individual ads"
+          ],
+          "say": "Here's the triage order: top down. Follow the flow. Your profile first. Then the business portfolio. Then each ad account. Then pages and datasets. And finally individual ads. Why top down? Because higher levels affect everything below them. A restricted profile or portfolio changes your whole plan. A rejected ad changes one creative."
+        },
+        {
+          "v": "check",
+          "h": "Document before you click",
+          "p": "Before you request a review or change anything, record what you see. You will need it for the appeal, for your network and for learning later. Screenshots disappear from memory; files do not.",
+          "d": [
+            "Screenshot every notice with date and time",
+            "Copy asset IDs, not just names",
+            "Note the stated policy area",
+            "List what changed in the last 7 days",
+            "Save the ads and landers that were live"
+          ],
+          "say": "Before you request a review or change anything, record what you see. Go down the list. Screenshot every notice with the date and time. Copy asset I Ds, not just names. Note the stated policy area. List what changed in the last seven days. And save the ads and landers that were live. You'll need all of it for the appeal, for your network, and for learning later. Memory fades; files don't."
+        },
+        {
+          "v": "code",
+          "h": "An incident log template",
+          "p": "Copy this into your notes and fill it in for every restriction. One file per incident. Over time you will see patterns, such as the same angle or lander causing trouble.",
+          "d": {
+            "lang": "text",
+            "text": "INCIDENT LOG\nDate/time found:\nAsset + ID:\nLevel (ad / account / portfolio / profile):\nStated reason:\nReview available? Deadline?\nChanges in last 7 days:\nLive ads + landers (saved where):\nDecision (appeal / fix / accept):\nOwner:\nOutcome + date:",
+            "note": "Keep it factual. You will copy from it into your appeal."
+          },
+          "say": "Here's an incident log template, shown on screen. Copy it into your notes and fill it in for every restriction, one file per incident. It covers the date and time found, the asset and its I D, the level, the stated reason, whether a review is available, changes in the last seven days, where the live ads and landers are saved, your decision, the owner, and the outcome. Keep it factual, because you'll copy from it into your appeal. Over time, you'll spot patterns, like the same angle causing trouble."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes when reading a notice",
+          "p": "Most damage after a restriction happens in the first hour, through rushed decisions. The left side is what panicked buyers do. The right side is what calm operators do.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Clicking review before reading",
+                "Guessing the reason",
+                "Deleting ads that were live",
+                "Trusting a support message outside the account"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Read, document, then decide",
+                "Use the stated policy area",
+                "Keep ads for your records",
+                "Trust notices inside your account only"
+              ]
+            }
+          },
+          "say": "Most damage after a restriction happens in the first hour, through rushed decisions. On the left, what panicked buyers do: click review before reading, guess the reason, delete ads that were live, and trust a support message from outside the account. On the right, what calm operators do: read, document, then decide. Use the stated policy area. Keep ads for your records. And trust notices inside your account only."
+        },
+        {
+          "v": "tip",
+          "h": "Fake support messages",
+          "p": "After a restriction, scammers send messages pretending to be Meta support, often with a link to restore your account. Real notices appear inside your account and Meta's official tools. Never log in through a link sent in a message or share codes with anyone.",
+          "d": {
+            "kind": "warn",
+            "text": "Never enter your password or 2FA code on a page reached from a message. Go to Account Quality directly."
+          },
+          "say": "Here's an important warning. After a restriction, scammers send messages pretending to be Meta support, often with a link to restore your account. Real notices appear inside your account and Meta's official tools. So never log in through a link sent in a message, and never share codes with anyone. Never enter your password or two-factor code on a page reached from a message. Go to Account Quality directly."
+        },
+        {
+          "v": "big",
+          "h": "Diagnose first, then act",
+          "p": "When you know the asset, the level, the reason and your options, you can make a real decision: appeal, fix and resubmit, or accept and change your setup. The next lesson covers that decision.",
+          "d": {
+            "b": "Asset, level, reason, options",
+            "s": "Four answers before any action"
+          },
+          "say": "So, diagnose first, then act. When you know four things, the asset, the level, the reason and your options, you can make a real decision. Appeal. Fix and resubmit. Or accept and change your setup. Four answers before any action. The next lesson covers how to make that decision."
+        }
+      ],
+      "takeaways": [
+        "Read Account Quality top down: profile, portfolio, ad accounts, pages, ads.",
+        "Answer four questions: which asset, which level, which policy area, what options.",
+        "Document everything before you click anything.",
+        "Real notices live inside your account; ignore support messages with links."
+      ],
+      "action": "Open Account Quality now, even if nothing is wrong. Write down every asset you see and its status, and save a blank copy of the incident log template.",
+      "glossary": [
+        {
+          "term": "Asset",
+          "def": "Anything in your business setup: a profile, portfolio, ad account, page, pixel or dataset."
+        },
+        {
+          "term": "Request review",
+          "def": "Asking the platform to look at a decision again. Labels vary; check your current tools."
+        },
+        {
+          "term": "Triage",
+          "def": "Sorting problems by how serious they are so you deal with the most important first."
+        },
+        {
+          "term": "Incident log",
+          "def": "A written record of a restriction: what, when, why, what you did and what happened."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "In what order should you check your assets?",
+          "options": [
+            "Ads first, profile last",
+            "Only the account that got the email",
+            "Whichever loads fastest",
+            "Profile, portfolio, ad accounts, pages, ads"
+          ],
+          "answer": 3,
+          "why": "Higher levels affect everything below them, so check from the top down."
+        },
+        {
+          "q": "Example: you run 4 ad accounts at $150 a day each. One is restricted. What share of daily spend is paused?",
+          "options": [
+            "25%",
+            "10%",
+            "40%",
+            "100%"
+          ],
+          "answer": 0,
+          "why": "$150 ÷ $600 = 0.25 = 25%. If the portfolio were restricted, it could be 100%."
+        },
+        {
+          "q": "A message arrives saying 'Meta Support: restore your account here' with a link. What do you do?",
+          "options": [
+            "Click and log in quickly",
+            "Send them your 2FA code",
+            "Ignore the link and check Account Quality directly",
+            "Forward it to your team to try"
+          ],
+          "answer": 2,
+          "why": "Real notices live inside your account. Messages with links are a common phishing trick after restrictions."
+        },
+        {
+          "q": "What should you do before requesting a review?",
+          "options": [
+            "Delete the ads that were live",
+            "Document the notice, IDs, reason and recent changes",
+            "Open a new ad account",
+            "Change your payment method"
+          ],
+          "answer": 1,
+          "why": "Documentation is what your appeal, your network update and your learning depend on."
+        },
+        {
+          "q": "Your status shows a request is under review. What is the right action?",
+          "options": [
+            "Wait and do not resubmit",
+            "Submit the same request five more times",
+            "Open a second portfolio",
+            "Delete the account"
+          ],
+          "answer": 0,
+          "why": "Repeated requests do not speed things up and can look like spam. Wait for the outcome."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn to read a restriction properly: where Account Quality lives, what the common statuses mean, and how to document everything before you act. Reading first is what stops a bad day from becoming a bad week.",
+      "say_outro": "So, read before you react: find the asset, the level, the reason and your options, check from the top down, and document everything. Your task: open Account Quality now, even if nothing is wrong, write down every asset and its status, and save a blank copy of the incident log template. Now take the quiz."
+    },
+    {
+      "slug": "appeals",
+      "title": "Appeals: when, how and what helps",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can decide whether to appeal or to fix and resubmit.",
+        "You can write a calm, factual appeal using a template.",
+        "You can gather evidence that helps and avoid anything false."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "An appeal is a request, not a fight",
+          "p": "An appeal asks a reviewer to look again. The reviewer does not know you and reads many requests. A short, calm, factual request with clear evidence gives them an easy reason to agree. Anger, threats and long stories do not help.",
+          "d": {
+            "b": "Calm, short and true",
+            "s": "Make it easy to say yes"
+          },
+          "say": "Let's set the tone first. An appeal is a request, not a fight. It asks a reviewer to look again, and that reviewer doesn't know you and reads many requests. A short, calm, factual request with clear evidence gives them an easy reason to agree. Anger, threats and long stories don't help. Calm, short and true. Make it easy to say yes."
+        },
+        {
+          "v": "stat",
+          "h": "Example: the cost of the wrong choice",
+          "p": "Example numbers only. A buyer appeals an ad that really did break a rule and waits 5 days for a no. At $120 profit a day from that account, that wait cost $600. Fixing the ad on day one would have had it back the same day.",
+          "d": {
+            "n": 600,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "lost waiting on a weak appeal",
+            "note": "Example: 5 days × $120 profit."
+          },
+          "say": "Here's what the wrong choice costs, with example numbers only. A buyer appeals an ad that really did break a rule, and waits five days for a no. At one hundred and twenty dollars profit a day from that account, that wait cost six hundred dollars, the number on screen. If they'd fixed the ad on day one, it would have been back the same day."
+        },
+        {
+          "v": "compare",
+          "h": "Appeal, or fix and resubmit?",
+          "p": "Appeal when you believe the decision is wrong and you can show why. Fix and resubmit when the ad or page really does break a rule. Be honest with yourself here; appealing a real violation wastes days.",
+          "d": {
+            "a": {
+              "title": "Appeal when",
+              "items": [
+                "The ad follows the policy as written",
+                "The reason seems unrelated to the ad",
+                "Your account was restricted with no clear cause",
+                "You have evidence, such as an authorization"
+              ]
+            },
+            "b": {
+              "title": "Fix and resubmit when",
+              "items": [
+                "The copy makes a claim you cannot prove",
+                "The lander does not match the ad",
+                "A risk warning is missing",
+                "You see the problem once you reread"
+              ]
+            }
+          },
+          "say": "So, appeal, or fix and resubmit? On the left, appeal when the ad follows the policy as written, when the reason seems unrelated, when your account was restricted with no clear cause, or when you have evidence, such as an authorization. On the right, fix and resubmit when the copy makes a claim you can't prove, the lander doesn't match the ad, a risk warning is missing, or you see the problem once you reread. Be honest with yourself here. Appealing a real violation wastes days."
+        },
+        {
+          "v": "flow",
+          "h": "Starting rule: the appeal decision",
+          "p": "Starting rule to adapt. Reread the ad and lander against the named policy. If you can point to the exact rule it breaks, fix it and launch a corrected version. If you cannot, and you have evidence, appeal once.",
+          "d": [
+            "Read the named policy",
+            "Does the ad break it?",
+            "Yes: fix, launch corrected version",
+            "No: gather evidence",
+            "Appeal once, then wait"
+          ],
+          "say": "Here's a starting rule to adapt. Follow the flow. Read the named policy. Then ask, does the ad break it? If yes, fix it and launch a corrected version. If no, gather evidence. Then appeal once, and wait. The key test is this: if you can point to the exact rule it breaks, fix it. If you can't, and you have evidence, appeal."
+        },
+        {
+          "v": "table",
+          "h": "Common situations and the usual move",
+          "p": "These are typical cases and our suggested first move. Your notice may say something different, so always follow what it says about whether a review is available.",
+          "d": {
+            "cols": [
+              "Situation",
+              "Usual move",
+              "Why"
+            ],
+            "rows": [
+              [
+                "Ad says guaranteed profit",
+                "Fix and relaunch",
+                "It breaks the rules"
+              ],
+              [
+                "Educational ad rejected as finance",
+                "Appeal with context",
+                "Likely a misread"
+              ],
+              [
+                "Account restricted, no clear cause",
+                "Appeal with documents",
+                "Ask for another look"
+              ],
+              [
+                "Gambling ads, no authorization",
+                "Stop; apply for authorization",
+                "Appeal will not fix it"
+              ],
+              [
+                "Decision marked final",
+                "Do not create new accounts",
+                "Review your whole setup"
+              ]
+            ]
+          },
+          "say": "These are typical cases and our suggested first move. An ad that says guaranteed profit: fix and relaunch, because it breaks the rules. An educational ad rejected as finance: appeal with context, because it's likely a misread. An account restricted with no clear cause: appeal with documents. Gambling ads without authorization: stop and apply for authorization, because an appeal won't fix it. And a decision marked final: don't create new accounts; review your whole setup. Always follow what your notice says about whether a review is available."
+        },
+        {
+          "v": "code",
+          "h": "A calm appeal template",
+          "p": "Adapt this to your case. Keep it under about 150 words. State facts, what you checked, what you changed if anything, and what you are asking for. Every statement must be true.",
+          "d": {
+            "lang": "text",
+            "text": "Hello,\n\nOur ad account [ID] for [business name] was restricted on [date] under [policy area].\n\nWe advertise [what you promote, plainly]. We have reviewed our ads and landing page [URL] against this policy. [We hold authorization / licence X for country Y, attached.] [We have removed ad Z, which used wording we have since corrected.]\n\nWe believe the account follows the policy and ask you to review the decision. We are happy to provide any further documents.\n\nThank you,\n[Your real name], [Role], [Business name]",
+            "note": "Only include bracketed lines that are true for you."
+          },
+          "say": "Here's a calm appeal template, on screen. Adapt it to your case, and keep it under about one hundred and fifty words. It states the account, the date and the policy area. It says plainly what you advertise and that you reviewed your ads and landing page against the policy. It mentions an authorization or a corrected ad, only if that's true for you. And it asks politely for a review. Every statement must be true. Only include the bracketed lines that actually apply to you."
+        },
+        {
+          "v": "compare",
+          "h": "Tone: what hurts and what helps",
+          "p": "Reviewers respond to clear facts. Emotional pressure, blame and threats make an appeal harder to approve and can make you look like a risk. Compare the two styles.",
+          "d": {
+            "a": {
+              "title": "Hurts",
+              "items": [
+                "This is unfair, fix it now",
+                "I spend thousands with you",
+                "Your system is broken",
+                "Five paragraphs of backstory"
+              ]
+            },
+            "b": {
+              "title": "Helps",
+              "items": [
+                "We reviewed the ad against the policy",
+                "Our business is [name], registered in [country]",
+                "Authorization attached",
+                "Short, specific, polite"
+              ]
+            }
+          },
+          "say": "Tone matters. Compare the two columns. What hurts: this is unfair, fix it now. I spend thousands with you. Your system is broken. Five paragraphs of backstory. What helps: we reviewed the ad against the policy. Our business is this name, registered in this country. Authorization attached. Short, specific, polite. Emotional pressure and blame make an appeal harder to approve, and can make you look like a risk."
+        },
+        {
+          "v": "check",
+          "h": "Evidence that helps",
+          "p": "Attach only real, relevant documents. Good evidence answers the reviewer's likely doubt, such as who you are, whether you may advertise this category, or what you changed. Do not attach everything you have; attach what proves your point.",
+          "d": [
+            "Business registration that matches your portfolio",
+            "Your real ID if identity is requested",
+            "Authorization or licence for regulated categories",
+            "Screenshot of the corrected ad or lander",
+            "Invoice or bank proof for payment questions"
+          ],
+          "say": "Attach only real, relevant documents. Good evidence answers the reviewer's likely doubt. Look at the list. Business registration that matches your portfolio. Your real I D, if identity is requested. Authorization or a licence for regulated categories. A screenshot of the corrected ad or lander. And an invoice or bank proof for payment questions. Don't attach everything you have. Attach what proves your point."
+        },
+        {
+          "v": "walk",
+          "h": "Submitting the review request",
+          "p": "Generic mock-up steps. The real path may differ and we are not certain it is current. Look for a request review option next to the restricted asset in Account Quality. Names change; check the current tools.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open the restricted asset",
+                "text": "In Account Quality, open the asset and confirm a review is available.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/account-quality/1234567890",
+                  "title": "NG_Trading_01",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Status",
+                      "value": "Restricted"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Request review"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Confirm identity if asked",
+                "text": "You may be asked to confirm your identity. Use your real details and documents only.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/account-quality/review",
+                  "title": "Request review",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "value": "Confirm it's you to continue."
+                    },
+                    {
+                      "type": "button",
+                      "label": "Continue"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Add your explanation",
+                "text": "Paste your short appeal from the template and attach real evidence.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/account-quality/review",
+                  "title": "Request review",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Explanation",
+                      "value": "Our ad account was restricted on 4 Oct under..."
+                    },
+                    {
+                      "type": "field",
+                      "label": "Attachment",
+                      "value": "authorization_NG.pdf"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Submit"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Record and wait",
+                "text": "Screenshot the confirmation, note the date in your incident log, and do not resubmit while it is under review.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/account-quality",
+                  "title": "Account Quality",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "NG_Trading_01",
+                      "value": "Under review"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Submitted 4 Oct, 14:10. Logged."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Let's walk through submitting the request, using generic mock-ups. Tap Next to follow each step. First, in Account Quality, open the restricted asset and confirm a review is available. Second, you may be asked to confirm your identity, so use your real details and documents only. Third, paste your short appeal from the template and attach real evidence. Fourth, screenshot the confirmation, note the date in your incident log, and don't resubmit while it's under review. The real path may differ, so check the current tools."
+        },
+        {
+          "v": "tip",
+          "h": "Never submit false information",
+          "p": "Never send edited, borrowed or forged documents, someone else's ID, or claims you cannot back up. Platforms treat false information as a serious violation, it can make a restriction permanent, and forging documents can be a crime. If you lack a document, say so honestly.",
+          "d": {
+            "kind": "warn",
+            "text": "False documents or claims in an appeal can turn a fixable problem into a permanent ban and legal risk."
+          },
+          "say": "This is a serious warning. Never send edited, borrowed or forged documents, someone else's I D, or claims you can't back up. Platforms treat false information as a serious violation, it can make a restriction permanent, and forging documents can be a crime. False documents or claims can turn a fixable problem into a permanent ban and legal risk. If you lack a document, say so honestly."
+        },
+        {
+          "v": "table",
+          "h": "Timing and what to do while waiting",
+          "p": "Meta does not publish guaranteed review times, and we are not certain of current averages. Reviews can take hours or several days. Some notices show a deadline to appeal, so read yours. Use the waiting time well.",
+          "d": {
+            "cols": [
+              "Time",
+              "Do",
+              "Do not"
+            ],
+            "rows": [
+              [
+                "Day 0",
+                "Submit one clear appeal",
+                "Submit many copies"
+              ],
+              [
+                "Days 1 to 3",
+                "Fix other rejected ads, check setup",
+                "Open new accounts"
+              ],
+              [
+                "Day 4+",
+                "Check for updates in-account",
+                "Pay strangers to 'unban'"
+              ],
+              [
+                "Any time",
+                "Keep compliant accounts steady",
+                "Move the same ads elsewhere"
+              ]
+            ]
+          },
+          "say": "How long will it take? Meta doesn't publish guaranteed review times, and we're not certain of current averages. Reviews can take hours or several days, and some notices show a deadline to appeal, so read yours. Look at the table. Day zero, submit one clear appeal, not many copies. Days one to three, fix other rejected ads and check your setup, and don't open new accounts. Day four onward, check for updates in your account, and never pay strangers to unban you. And keep compliant accounts steady throughout."
+        },
+        {
+          "v": "tip",
+          "h": "Support channels vary",
+          "p": "Some advertisers can reach Meta support by chat or email, and some paid verification products have offered extra support in some countries. Availability changes and we are not certain what applies to you. Check Meta's Business Help Center for current support options.",
+          "d": {
+            "kind": "tip",
+            "text": "We are not certain this is current. Check the Business Help Center for the support options shown to your account."
+          },
+          "say": "Support channels vary. Some advertisers can reach Meta support by chat or email, and some paid verification products have offered extra support in some countries. But availability changes, and we're not certain what applies to you. Check Meta's Business Help Center for the support options shown to your account."
+        },
+        {
+          "v": "cards",
+          "h": "Appeal mistakes and fixes",
+          "p": "These mistakes turn a fixable restriction into a long one. They usually come from frustration on the first day. Each has a simple fix that costs nothing but patience.",
+          "more": "Services that promise to unban accounts for a fee are often scams, and some ask for your login, which puts every asset you own at risk. Only Meta can review a Meta decision, and it does so through its own tools. If someone outside Meta claims special access, treat it as a red flag.",
+          "d": [
+            "Appealing a real violation|fix and relaunch instead",
+            "Sending many appeals|send one, then wait",
+            "Angry or long messages|short and factual",
+            "Paying 'unban' services|use only official channels"
+          ],
+          "say": "These mistakes turn a fixable restriction into a long one. Appealing a real violation, so fix and relaunch instead. Sending many appeals, so send one, then wait. Angry or long messages, so keep it short and factual. And paying unban services, so use only official channels. Those services are often scams, and some ask for your login, which puts every asset you own at risk. Only Meta can review a Meta decision. If someone outside Meta claims special access, treat it as a red flag."
+        },
+        {
+          "v": "quote",
+          "h": "From the founder",
+          "p": "Dchessking on appeals, from years of dealing with restrictions across trading and iGaming accounts in Nigeria, Kenya, Ghana, South Africa and Cameroon, and the advice he gives every buyer before they write one.",
+          "d": "Write the appeal as if the reviewer is tired and has fifty more to read. Short, true and polite gets read. Everything else gets skipped.",
+          "by": "dchessking",
+          "say": "Here's how Dchessking puts it, from years of dealing with restrictions across trading and iGaming accounts in Nigeria, Kenya, Ghana, South Africa and Cameroon: Write the appeal as if the reviewer is tired and has fifty more to read. Short, true and polite gets read. Everything else gets skipped."
+        },
+        {
+          "v": "big",
+          "h": "One honest appeal beats ten loud ones",
+          "p": "Decide honestly: fix or appeal. If you appeal, send one clear, true request with real evidence, log it and wait. Meanwhile, keep everything else clean.",
+          "d": {
+            "b": "Fix what is wrong, appeal what is not",
+            "s": "Never anything false"
+          },
+          "say": "So, one honest appeal beats ten loud ones. Decide honestly whether to fix or appeal. If you appeal, send one clear, true request with real evidence, log it, and wait. Meanwhile, keep everything else clean. Fix what is wrong, appeal what is not, and never send anything false."
+        }
+      ],
+      "takeaways": [
+        "Appeal when the decision looks wrong and you can show why; fix and resubmit when the ad really breaks a rule.",
+        "Keep appeals short, calm and factual, and attach only real, relevant evidence.",
+        "Never submit false documents or claims; it can make a ban permanent and create legal risk.",
+        "Review times are not guaranteed; submit once, log it and wait."
+      ],
+      "action": "Take your most recent rejected ad. Reread it against the named policy, decide honestly whether to fix or appeal, and write the decision and reason in your incident log.",
+      "glossary": [
+        {
+          "term": "Appeal",
+          "def": "A request for the platform to review a decision again. Meta may call it a review request."
+        },
+        {
+          "term": "Fix and resubmit",
+          "def": "Correcting an ad or page that broke a rule and launching the corrected version."
+        },
+        {
+          "term": "Final decision",
+          "def": "A decision the platform says it will not review again."
+        },
+        {
+          "term": "Evidence",
+          "def": "Real documents that support your appeal, such as business registration or an authorization."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Your rejected ad says 'Guaranteed returns every week'. What should you do?",
+          "options": [
+            "Appeal, the reviewer was wrong",
+            "Appeal three times",
+            "Fix the wording and launch a corrected version",
+            "Run it in another account"
+          ],
+          "answer": 2,
+          "why": "Guaranteed returns is a claim that breaks the rules. Fixing it is faster than a doomed appeal. Running it elsewhere is circumvention."
+        },
+        {
+          "q": "Which appeal line helps most?",
+          "options": [
+            "I spend a lot of money with you",
+            "Our licence for this country is attached",
+            "This is completely unfair",
+            "Fix it now or I leave"
+          ],
+          "answer": 1,
+          "why": "It gives the reviewer evidence. The others add pressure without facts."
+        },
+        {
+          "q": "You do not have a business registration document yet. What do you do?",
+          "options": [
+            "Say honestly that you are registering and provide what you have",
+            "Borrow a friend's",
+            "Edit an old document",
+            "Use a template from the internet"
+          ],
+          "answer": 0,
+          "why": "Never submit false documents. Honesty keeps the problem fixable; forgery can make it permanent and illegal."
+        },
+        {
+          "q": "Example: you wait 4 days on an appeal for an account earning $90 profit a day. How much profit is paused?",
+          "options": [
+            "$90",
+            "$270",
+            "$450",
+            "$360"
+          ],
+          "answer": 3,
+          "why": "4 × $90 = $360. This is why you decide quickly whether to fix or appeal."
+        },
+        {
+          "q": "Someone offers to unban your account for $200 if you share your login. What is this?",
+          "options": [
+            "A likely scam and a security risk",
+            "A normal agency service",
+            "Meta's paid support",
+            "A faster appeal route"
+          ],
+          "answer": 0,
+          "why": "Only Meta reviews Meta decisions through its own tools. Sharing your login puts every asset at risk."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn when to appeal and when to simply fix and resubmit, how to write a calm, factual appeal, and what evidence actually helps. Getting this right saves days of lost spend.",
+      "say_outro": "So, fix what's wrong, appeal what isn't, and send one short, true appeal with real evidence, then log it and wait. Your task: take your most recent rejected ad, reread it against the named policy, decide honestly whether to fix or appeal, and write the decision and reason in your incident log. Now take the quiz."
+    },
+    {
+      "slug": "the-same-day-plan",
+      "title": "The same-day plan",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can follow an hour-by-hour plan on the day a restriction hits.",
+        "You can decide which other spend to pause and which to keep, without evasion.",
+        "You can protect cash flow and keep your network and team informed."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "The first day decides the week",
+          "p": "A restriction on its own is a problem. A panicked day after it can turn it into a disaster: hacked logins missed, more accounts linked, false appeals, angry networks. A written plan lets you act calmly. Print this lesson or save it where your team can find it.",
+          "d": {
+            "b": "Have the plan before you need it",
+            "s": "Calm is a process, not a mood"
+          },
+          "say": "A restriction on its own is a problem. A panicked day after it can turn it into a disaster: hacked logins missed, more accounts linked, false appeals, angry networks. A written plan lets you act calmly. So print this lesson, or save it where your team can find it. Have the plan before you need it. Calm is a process, not a mood."
+        },
+        {
+          "v": "stat",
+          "h": "Example: what the day is protecting",
+          "p": "Example numbers only. A team spends $600 a day at 35% ROI, about $210 profit a day. A clean same-day response might get one account back in two days. A messy one could cost a week or every linked account.",
+          "d": {
+            "n": 1470,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "profit at risk in one week offline",
+            "note": "Example: $210 × 7 days."
+          },
+          "say": "Here's what the day is protecting, with example numbers only. A team spends six hundred dollars a day at thirty five percent R O I, return on investment, so about two hundred and ten dollars profit a day. Over a week offline, that's the number on screen, one thousand four hundred and seventy dollars at risk. A clean same-day response might get one account back in two days. A messy one could cost a week, or every linked account."
+        },
+        {
+          "v": "walk",
+          "h": "Hour by hour, the day it hits",
+          "p": "This is the plan. Each step shows the job for that block of time. Times are a guide; what matters is the order. Secure first, then understand, then decide, then communicate, then protect cash.",
+          "d": {
+            "steps": [
+              {
+                "title": "Hour 0: stop and breathe",
+                "text": "Do not appeal, delete or create anything yet. Tell your team: no changes in any account until you say so.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Team ops",
+                  "subtitle": "group",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "NG_Trading_01 is restricted. Please make no changes in any account until 11:00. I am on it."
+                    },
+                    {
+                      "from": "them",
+                      "text": "Understood, hands off."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Hour 0 to 1: secure logins",
+                "text": "Check for unknown logins, new admins or changed emails. Change your password, confirm 2FA and remove anyone you do not recognise.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/settings/security",
+                  "title": "Security check",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Task",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "Unknown logins",
+                          "None found"
+                        ],
+                        [
+                          "New admins",
+                          "None"
+                        ],
+                        [
+                          "Password changed",
+                          "Done"
+                        ],
+                        [
+                          "2FA on all admins",
+                          "Yes"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "If you find a stranger, treat it as a hack first."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Hour 1: read every asset",
+                "text": "Open Account Quality. List every restricted asset, its level and the stated reason.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/account-quality",
+                  "title": "Account Quality",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Task",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "Profile",
+                          "Active"
+                        ],
+                        [
+                          "Portfolio",
+                          "Active"
+                        ],
+                        [
+                          "NG_Trading_01",
+                          "Restricted"
+                        ],
+                        [
+                          "Other accounts",
+                          "Active"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "Level: one ad account. Scope: 20% of spend."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Hour 1 to 2: document",
+                "text": "Fill in the incident log: screenshots, IDs, reason, live ads and landers, changes in the last 7 days.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "notes.example/incident-04-oct",
+                  "title": "Incident log",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Task",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "Screenshots",
+                          "Saved"
+                        ],
+                        [
+                          "IDs copied",
+                          "Done"
+                        ],
+                        [
+                          "Live ads saved",
+                          "Done"
+                        ],
+                        [
+                          "Last 7 days changes",
+                          "New lander on 2 Oct"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "The new lander is the first suspect."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Hour 2 to 3: decide on other spend",
+                "text": "Pause anything elsewhere that shares the likely cause. Keep unrelated compliant campaigns at their current budget. Do not raise them.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/campaigns",
+                  "title": "Other accounts",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Task",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "Ads using new lander",
+                          "Paused"
+                        ],
+                        [
+                          "Older compliant ads",
+                          "Running, same budget"
+                        ],
+                        [
+                          "Budget raises",
+                          "Frozen"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "Do not move the restricted ads anywhere."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Hour 3 to 4: fix or appeal",
+                "text": "Fix what clearly breaks a rule. If the decision looks wrong, submit one calm appeal with evidence.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/account-quality",
+                  "title": "Review",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Task",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "Lander fixed",
+                          "Risk warning added"
+                        ],
+                        [
+                          "Appeal",
+                          "Submitted 14:10"
+                        ],
+                        [
+                          "Logged",
+                          "Yes"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "One appeal only. Now wait."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Hour 4 to 6: tell people and check cash",
+                "text": "Message your network manager and team. Then work out cash runway and pending payouts.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/cash",
+                  "title": "Cash check",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Task",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "Cash available",
+                          "$3,000"
+                        ],
+                        [
+                          "Fixed costs per day",
+                          "$150"
+                        ],
+                        [
+                          "Runway",
+                          "20 days"
+                        ],
+                        [
+                          "Pending payout",
+                          "$2,400 on net 30"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "Example figures."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "This is the plan. Tap Next to follow each step. Hour zero: stop, don't appeal, delete or create anything, and tell the team, no changes. Hour zero to one: secure logins, check for strangers, change your password and confirm two-factor. Hour one: read every asset in Account Quality. Hours one to two: document in the incident log. Hours two to three: pause only what shares the likely cause, and freeze raises. Hours three to four: fix, or send one calm appeal. Hours four to six: message your network and team, then check cash. Times are a guide; the order matters."
+        },
+        {
+          "v": "table",
+          "h": "The day on one page",
+          "p": "Keep this table pinned in your team chat. If you are not available, your backup admin can follow it. Times are a guide; the order is what matters.",
+          "d": {
+            "cols": [
+              "Time",
+              "Job",
+              "Owner"
+            ],
+            "rows": [
+              [
+                "Hour 0",
+                "Freeze changes, inform team",
+                "Lead"
+              ],
+              [
+                "0 to 1",
+                "Secure logins and admins",
+                "Admin"
+              ],
+              [
+                "1",
+                "Read all assets in Account Quality",
+                "Lead"
+              ],
+              [
+                "1 to 2",
+                "Document in incident log",
+                "Buyer"
+              ],
+              [
+                "2 to 3",
+                "Pause shared causes only",
+                "Lead"
+              ],
+              [
+                "3 to 4",
+                "Fix or one appeal",
+                "Lead"
+              ],
+              [
+                "4 to 6",
+                "Network, team, cash",
+                "Founder"
+              ]
+            ]
+          },
+          "say": "Here's the whole day on one page. Keep this table pinned in your team chat. Hour zero, freeze changes and inform the team, owned by the lead. Zero to one, secure logins, owned by the admin. Hour one, read all assets. One to two, document, owned by the buyer. Two to three, pause shared causes only. Three to four, fix or one appeal. And four to six, network, team and cash, owned by the founder. If you're not available, your backup admin can follow it."
+        },
+        {
+          "v": "compare",
+          "h": "Should you stop spend elsewhere?",
+          "p": "Not automatically. Stopping everything costs money for no reason; ignoring a shared cause can spread the restriction. Pause only what shares the likely cause, and keep the rest steady.",
+          "d": {
+            "a": {
+              "title": "Pause it if it shares",
+              "items": [
+                "The same lander or domain",
+                "The same angle or claim",
+                "The same payment method under question",
+                "The same restricted category"
+              ]
+            },
+            "b": {
+              "title": "Keep it steady if",
+              "items": [
+                "It is unrelated and compliant",
+                "It has no recent rejections",
+                "It uses different landers and copy",
+                "But do not raise its budget today"
+              ]
+            }
+          },
+          "say": "Should you stop spend elsewhere? Not automatically. Stopping everything costs money for no reason. Ignoring a shared cause can spread the restriction. On the left, pause it if it shares the same lander or domain, the same angle or claim, the same payment method under question, or the same restricted category. On the right, keep it steady if it's unrelated and compliant, has no recent rejections, and uses different landers and copy. But don't raise its budget today."
+        },
+        {
+          "v": "tip",
+          "h": "What never to do on ban day",
+          "p": "Never create new profiles, portfolios or ad accounts to keep advertising while restricted. Never move the restricted ads or landers to another account. Never use someone else's account. Meta treats these as circumvention, and it can spread the restriction to everything you own.",
+          "d": {
+            "kind": "warn",
+            "text": "Opening new assets or using other people's accounts to continue after a restriction is circumvention. It often ends with every linked asset banned."
+          },
+          "say": "Here's what never to do on ban day. Never create new profiles, portfolios or ad accounts to keep advertising while restricted. Never move the restricted ads or landers to another account. Never use someone else's account. Meta treats these as circumvention, and it often ends with every linked asset banned. This is the one rule you can't bend."
+        },
+        {
+          "v": "check",
+          "h": "Securing logins, in detail",
+          "p": "Some restrictions follow a hacked profile, often after a phishing link. Before anything else, make sure nobody else is inside your business. If you find a stranger, report the compromised account through Meta's official help pages.",
+          "d": [
+            "Check recent login locations and devices",
+            "Remove unknown people and partners",
+            "Change passwords on email and profile",
+            "Confirm 2FA on every admin",
+            "Check the business email has not changed",
+            "Revoke apps or tokens you do not use"
+          ],
+          "say": "Now, securing logins in detail. Some restrictions follow a hacked profile, often after a phishing link. Go down the list. Check recent login locations and devices. Remove unknown people and partners. Change passwords on your email and profile. Confirm two-factor on every admin. Check the business email hasn't changed. And revoke apps or tokens you don't use. If you find a stranger, report the compromised account through Meta's official help pages."
+        },
+        {
+          "v": "phone",
+          "h": "Telling your network manager",
+          "p": "Your affiliate manager would rather hear it from you today than notice your volume vanish. Be brief and factual: what happened, the expected impact, what you are doing and when you will update. Do not blame the platform or promise dates you cannot control.",
+          "d": {
+            "v": "phone",
+            "app": "chat",
+            "title": "Affiliate manager",
+            "subtitle": "network",
+            "messages": [
+              {
+                "from": "me",
+                "text": "Hi, heads up: one of our ad accounts was restricted this morning. We expect about 20% lower volume for a few days."
+              },
+              {
+                "from": "me",
+                "text": "Other traffic is running normally. We have fixed a lander issue and submitted a review. I will update you on Thursday."
+              },
+              {
+                "from": "them",
+                "text": "Thanks for telling me early. I will hold your cap this week. Keep me posted."
+              }
+            ]
+          },
+          "say": "Look at this chat with an affiliate manager. Your manager would rather hear it from you today than notice your volume vanish. Notice how brief and factual it is: what happened, one account restricted. The expected impact, about twenty percent lower volume for a few days. What you're doing: fixed a lander issue and submitted a review. And when you'll update: Thursday. The manager replies that they'll hold the cap. Don't blame the platform, and don't promise dates you can't control."
+        },
+        {
+          "v": "eq",
+          "h": "Cash runway",
+          "p": "Runway tells you how long you can keep paying fixed costs if income slows. Work it out on ban day so decisions about wages, tools and spend come from numbers, not fear.",
+          "d": [
+            "Cash available",
+            "÷",
+            "Fixed costs per day",
+            "=",
+            "Days of runway"
+          ],
+          "say": "Runway tells you how long you can keep paying fixed costs if income slows. Look at the equation: cash available, divided by fixed costs per day, equals days of runway. Work it out on ban day, so your decisions about wages, tools and spend come from numbers, not fear."
+        },
+        {
+          "v": "table",
+          "h": "Example: protecting cash flow",
+          "p": "Example numbers only. The team has $3,000 cash and $150 a day of fixed costs, so 20 days of runway. A $2,400 payout is due on net 30 terms. The account matters, but the business is not in danger this week.",
+          "more": "Check the maths: $3,000 ÷ $150 = 20 days. Net 30 means the network pays 30 days after the period ends, so that $2,400 is not cash you can use today. Ask the network whether the restriction affects any pending payouts; it usually should not if your traffic was compliant, but confirm. If runway were under 10 days, the starting rule is to cut non-essential costs the same day.",
+          "d": {
+            "cols": [
+              "Item",
+              "Example",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Cash available",
+                "$3,000",
+                "Keep a reserve"
+              ],
+              [
+                "Fixed costs",
+                "$150 a day",
+                "No new costs this week"
+              ],
+              [
+                "Runway",
+                "20 days",
+                "Review on day 7"
+              ],
+              [
+                "Pending payout",
+                "$2,400, net 30",
+                "Confirm with network"
+              ],
+              [
+                "Ad spend reserve",
+                "$600",
+                "Hold, do not chase volume"
+              ]
+            ]
+          },
+          "say": "Here's an example, with example numbers only. The team has three thousand dollars cash, and one hundred and fifty dollars a day of fixed costs. Three thousand divided by one fifty is twenty days of runway. There's a two thousand four hundred dollar payout due on net thirty terms, which means it isn't cash you can use today, so confirm with the network whether the restriction affects it. The account matters, but the business isn't in danger this week. If runway were under ten days, the starting rule is to cut non-essential costs that same day."
+        },
+        {
+          "v": "check",
+          "h": "What to tell your team",
+          "p": "Your buyers need a clear picture so they do not make it worse. Send one message with these points, and repeat it at the end of the day.",
+          "d": [
+            "What is restricted and the likely cause",
+            "What is paused and what keeps running",
+            "Nobody opens new accounts or moves ads",
+            "Who owns the appeal and network update",
+            "When the next update is"
+          ],
+          "say": "Your buyers need a clear picture so they don't make things worse. Send one message with these points. What's restricted and the likely cause. What's paused and what keeps running. That nobody opens new accounts or moves ads. Who owns the appeal and the network update. And when the next update is. Then repeat it at the end of the day."
+        },
+        {
+          "v": "cards",
+          "h": "Ban-day mistakes and fixes",
+          "p": "These are the moves that turn one restriction into many. They feel like action, which is why stressed buyers make them. Each one has a calmer alternative that protects the rest of the business.",
+          "d": [
+            "Opening a fresh account|wait, fix, appeal through official tools",
+            "Pausing everything|pause only what shares the cause",
+            "Going silent with the network|send a short factual update",
+            "Raising budgets to make up volume|freeze raises until it is resolved"
+          ],
+          "say": "These are the moves that turn one restriction into many. They feel like action, which is why stressed buyers make them. Opening a fresh account, so instead wait, fix, and appeal through official tools. Pausing everything, so pause only what shares the cause. Going silent with the network, so send a short factual update. And raising budgets to make up volume, so freeze raises until it's resolved."
+        },
+        {
+          "v": "check",
+          "h": "End of day: the next 72 hours",
+          "p": "Before you close the day, set the plan for the next three days so nobody has to improvise. Write it in the incident log and share it with the team and your backup admin.",
+          "d": [
+            "Incident log complete",
+            "Appeal status recorded",
+            "Daily health check on every other account",
+            "Update the network on the date you promised",
+            "Owned channels like Telegram keep posting as normal",
+            "Review the cause in the weekly meeting"
+          ],
+          "say": "Before you close the day, set the plan for the next seventy two hours, so nobody has to improvise. Incident log complete. Appeal status recorded. A daily health check on every other account. An update to the network on the date you promised. Owned channels, like Telegram, keep posting as normal. And review the cause in the weekly meeting. Write it in the incident log, and share it with the team and your backup admin."
+        },
+        {
+          "v": "big",
+          "h": "Calm, documented and inside the rules",
+          "p": "A restriction is survivable when you secure, read, document, decide, communicate and protect cash, in that order. What makes it fatal is panic and shortcuts.",
+          "d": {
+            "b": "Secure, read, decide, tell, protect",
+            "s": "Then wait and fix the root cause"
+          },
+          "say": "So, a restriction is survivable when you secure, read, document, decide, communicate and protect cash, in that order. What makes it fatal is panic and shortcuts. Secure, read, decide, tell, protect. Then wait, and fix the root cause."
+        }
+      ],
+      "takeaways": [
+        "Follow the order: freeze changes, secure logins, read every asset, document, decide, communicate, protect cash.",
+        "Pause only spend that shares the likely cause; keep unrelated compliant campaigns steady and do not raise budgets.",
+        "Never open new assets or move restricted ads to keep advertising; that is circumvention.",
+        "Tell your network and team early and work out cash runway on the same day."
+      ],
+      "action": "Copy the one-page table into your team chat, fill in a real owner for each row, and pin it. Then calculate your own cash runway today.",
+      "glossary": [
+        {
+          "term": "Runway",
+          "def": "How many days your cash covers fixed costs if income stops or slows."
+        },
+        {
+          "term": "Net 30",
+          "def": "Payment terms where you are paid 30 days after the period ends."
+        },
+        {
+          "term": "Affiliate manager (AM)",
+          "def": "Your contact at the network who manages your caps, payouts and questions."
+        },
+        {
+          "term": "Compromised account",
+          "def": "A profile or business someone else has accessed without permission, often through phishing."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the very first thing to do when a restriction hits?",
+          "options": [
+            "Freeze changes and tell the team, then secure logins",
+            "Submit an appeal",
+            "Open a backup ad account",
+            "Pause every account you own"
+          ],
+          "answer": 0,
+          "why": "Freezing changes stops the team making it worse, and securing logins rules out a hack before you act."
+        },
+        {
+          "q": "Another account uses the same new lander as the restricted one. What do you do?",
+          "options": [
+            "Raise its budget to replace lost volume",
+            "Leave it, it is a different account",
+            "Copy the restricted ads into it",
+            "Pause the ads using that lander until it is fixed"
+          ],
+          "answer": 3,
+          "why": "It shares the likely cause, so pause that part. Raising budgets or copying restricted ads risks spreading the restriction."
+        },
+        {
+          "q": "Example: cash $2,400, fixed costs $120 a day. What is your runway?",
+          "options": [
+            "20 days",
+            "12 days",
+            "24 days",
+            "30 days"
+          ],
+          "answer": 0,
+          "why": "$2,400 ÷ $120 = 20 days."
+        },
+        {
+          "q": "Which network update is best?",
+          "options": [
+            "Say nothing and hope volume recovers",
+            "Meta is broken, not our fault",
+            "We will be back tomorrow, guaranteed",
+            "One account restricted, about 20% lower volume, review submitted, update Thursday"
+          ],
+          "answer": 3,
+          "why": "It is brief, factual and sets a clear update date without blaming or promising what you cannot control."
+        },
+        {
+          "q": "A buyer suggests creating a new profile to keep running the restricted campaign. What is the answer?",
+          "options": [
+            "Yes, if it uses a different name",
+            "No, that is circumvention and can ban every linked asset",
+            "Yes, but only for one day",
+            "Yes, if the network agrees"
+          ],
+          "answer": 1,
+          "why": "Creating new assets to continue after a restriction is circumvention. Nobody's agreement makes it allowed."
+        }
+      ],
+      "say_intro": "In this lesson you'll get an hour-by-hour plan for the day a restriction hits, so you can act calmly instead of reacting. You'll also learn what to pause, how to talk to your network and team, and how to protect your cash.",
+      "say_outro": "So, on ban day you secure, read, document, decide, communicate and protect cash, in that order, and you never take shortcuts. Your task: copy the one-page table into your team chat, fill in a real owner for each row and pin it, then calculate your own cash runway today. Now take the quiz."
+    },
+    {
+      "slug": "resilience-inside-the-rules",
+      "title": "Building resilience inside the rules",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can design a setup where one restriction does not stop your business.",
+        "You can build owned audiences and diversified traffic the honest way.",
+        "You can explain why buying, renting, farming, cloaking and evasion destroy businesses."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Resilience means no single switch",
+          "p": "If one account, one admin or one traffic source can switch off all your income, you do not have a business yet; you have a risk. Resilience means legitimate backups you actually own, spread across assets, people and channels.",
+          "d": {
+            "b": "One switch should never turn off everything",
+            "s": "Spread risk the honest way"
+          },
+          "say": "Here's the test of a real business. If one account, one admin or one traffic source can switch off all your income, you don't have a business yet. You have a risk. Resilience means legitimate backups you actually own, spread across assets, people and channels. One switch should never turn off everything. Spread risk the honest way."
+        },
+        {
+          "v": "table",
+          "h": "Example: a week offline, two setups",
+          "p": "Example numbers only. Both buyers earn $250 profit a day and have $600 a week in fixed costs. Buyer A has everything on one ad account. Buyer B has the same income spread so Meta is 55% of profit. Meta is offline for a week for both.",
+          "more": "Check the maths: $250 × 7 = $1,750 a week. Buyer A loses all of it and still pays $600, so the week ends at −$600. Buyer B loses 55% of $1,750, which is $962.50, rounded to $963. B keeps $787.50 from other channels, minus $600 fixed costs, leaving about +$187. Same skill, very different week. Figures are illustrative; results vary.",
+          "d": {
+            "cols": [
+              "Item",
+              "Buyer A (one account)",
+              "Buyer B (diversified)"
+            ],
+            "rows": [
+              [
+                "Profit share from Meta",
+                "100%",
+                "55%"
+              ],
+              [
+                "Weekly profit normally",
+                "$1,750",
+                "$1,750"
+              ],
+              [
+                "Profit lost in the week",
+                "$1,750",
+                "$963"
+              ],
+              [
+                "Fixed costs still due",
+                "$600",
+                "$600"
+              ],
+              [
+                "Net for the week",
+                "−$600",
+                "+$187"
+              ]
+            ]
+          },
+          "say": "Let's compare two buyers, with example numbers only. Both earn two hundred and fifty dollars profit a day, and both have six hundred dollars a week in fixed costs. Buyer A has everything on one ad account. Buyer B has the same income spread, so Meta is fifty five percent of profit. Meta goes offline for a week for both. Look at the bottom row. Buyer A ends the week at minus six hundred dollars. Buyer B ends at about plus one hundred and eighty seven. Same skill, very different week. Results vary."
+        },
+        {
+          "v": "bars",
+          "h": "Example: where profit comes from",
+          "p": "Example mix for a resilient operator after a year of building. No single channel is above about half. Owned audiences, like a Telegram channel or email list, keep earning when ads pause.",
+          "d": [
+            [
+              "Meta ads",
+              100,
+              "55%"
+            ],
+            [
+              "Owned audiences",
+              45,
+              "25%"
+            ],
+            [
+              "Second traffic source",
+              36,
+              "20%"
+            ]
+          ],
+          "say": "Here's an example profit mix for a resilient operator after a year of building. Look at the bars. Meta ads, fifty five percent. Owned audiences, twenty five percent. A second traffic source, twenty percent. No single channel is above about half. And notice the owned audiences, like a Telegram channel or an email list. They keep earning when ads pause."
+        },
+        {
+          "v": "screen",
+          "h": "Example: a profit-by-channel view",
+          "p": "Example numbers only. Keep a simple weekly view of where profit comes from. When one row creeps above about 60%, that is your signal to build the next legitimate channel before you need it, not after a restriction.",
+          "d": {
+            "v": "screen",
+            "kind": "browser",
+            "url": "sheet.example/profit-by-channel",
+            "title": "Profit by channel: example week",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Channel",
+                  "Profit",
+                  "Share"
+                ],
+                "rows": [
+                  [
+                    "Meta account 1",
+                    "$560",
+                    "32%"
+                  ],
+                  [
+                    "Meta account 2",
+                    "$402",
+                    "23%"
+                  ],
+                  [
+                    "Telegram broadcasts",
+                    "$438",
+                    "25%"
+                  ],
+                  [
+                    "Second source",
+                    "$350",
+                    "20%"
+                  ]
+                ]
+              },
+              {
+                "type": "field",
+                "label": "Largest single source",
+                "value": "Meta total 55%: below the 60% line"
+              },
+              {
+                "type": "text",
+                "value": "Total $1,750. Review every Monday."
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "Keep a simple weekly view like this one, with example numbers only. Look at the table: two Meta accounts, Telegram broadcasts, and a second source, with a total of one thousand seven hundred and fifty dollars. The highlighted field shows the largest single source: Meta, at fifty five percent in total, below the sixty percent line. When one row creeps above about sixty percent, that's your signal to build the next legitimate channel, before you need it, not after a restriction."
+        },
+        {
+          "v": "cards",
+          "h": "Legitimate backups you actually own",
+          "p": "These are backups that follow platform rules because they are real, owned by you, and used for real business. Check each platform's current rules on how many accounts and admins are allowed.",
+          "d": [
+            "Verified business|your real registered company",
+            "Backup admin|a trusted person with their own profile",
+            "More than one ad account|inside your own verified portfolio, where allowed",
+            "Your own domain|landers and email you control",
+            "Second traffic source|another platform, set up properly",
+            "Owned audiences|Telegram, email, with consent"
+          ],
+          "say": "These are backups that follow platform rules, because they're real, owned by you, and used for real business. A verified business, your real registered company. A backup admin, a trusted person with their own profile. More than one ad account, inside your own verified portfolio, where allowed. Your own domain for landers and email. A second traffic source, set up properly. And owned audiences, on Telegram or email, with consent. Check each platform's current rules on how many accounts and admins are allowed."
+        },
+        {
+          "v": "tip",
+          "h": "Limits on accounts and portfolios",
+          "p": "Meta sets limits on how many ad accounts a portfolio can have and how new ones are added, often based on history and spend. We are not certain of current numbers and they change. Check Meta's Help Center rather than relying on figures from forums.",
+          "d": {
+            "kind": "warn",
+            "text": "We are not certain this is current. Check Meta's Business Help Center for today's account limits."
+          },
+          "say": "Meta sets limits on how many ad accounts a portfolio can have and how new ones are added, often based on history and spend. We're not certain of current numbers, and they change. So check Meta's Business Help Center for today's limits, rather than relying on figures from forums."
+        },
+        {
+          "v": "map",
+          "h": "A resilient setup",
+          "p": "One verified business owns several assets. Two admins can reach it. Ads on two sources feed your own Telegram channel and email list, which you can message even if an ad account pauses. Every piece is real and owned by you.",
+          "d": {
+            "nodes": [
+              {
+                "id": "biz",
+                "label": "Verified business",
+                "kind": "tool"
+              },
+              {
+                "id": "adm",
+                "label": "Two admins",
+                "kind": "person"
+              },
+              {
+                "id": "m",
+                "label": "Meta ad accounts",
+                "kind": "ad"
+              },
+              {
+                "id": "s2",
+                "label": "Second source",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Own-domain lander",
+                "kind": "page"
+              },
+              {
+                "id": "tg",
+                "label": "Telegram channel",
+                "kind": "telegram"
+              },
+              {
+                "id": "em",
+                "label": "Email list",
+                "kind": "data"
+              },
+              {
+                "id": "off",
+                "label": "Offers",
+                "kind": "offer"
+              }
+            ],
+            "edges": [
+              [
+                "adm",
+                "biz",
+                "manage"
+              ],
+              [
+                "biz",
+                "m",
+                "owns"
+              ],
+              [
+                "biz",
+                "s2",
+                "owns"
+              ],
+              [
+                "m",
+                "lp",
+                "click"
+              ],
+              [
+                "s2",
+                "lp",
+                "click"
+              ],
+              [
+                "lp",
+                "tg",
+                "join"
+              ],
+              [
+                "lp",
+                "em",
+                "opt in"
+              ],
+              [
+                "tg",
+                "off",
+                "content"
+              ],
+              [
+                "em",
+                "off",
+                "content"
+              ]
+            ]
+          },
+          "say": "Look at this map of a resilient setup. One verified business, managed by two admins. It owns Meta ad accounts and a second traffic source. Both send clicks to a lander on your own domain. From there, people can join your Telegram channel or opt in to your email list, and both of those carry content toward your offers. So if an ad account pauses, you can still message your audience. Every piece is real and owned by you."
+        },
+        {
+          "v": "product",
+          "h": "Keep owned audiences active",
+          "p": "Once people have joined your channel, regular useful broadcasts keep that audience alive while ads are paused. Any honest broadcast tool works; this is one option.",
+          "d": {
+            "slug": "castvoo",
+            "why": "Schedule broadcasts and drips to your own Telegram audience so income does not depend on one ad account."
+          },
+          "say": "Once people have joined your channel, regular, useful broadcasts keep that audience alive while ads are paused. On screen is one option, Castvoo, which schedules broadcasts and drips to your own Telegram audience, so income doesn't depend on one ad account. But any honest broadcast tool works."
+        },
+        {
+          "v": "check",
+          "h": "Building owned audiences honestly",
+          "p": "An owned audience is only an asset if people chose to be there. Ask clearly, give real value, make leaving easy and follow privacy law in each geo.",
+          "d": [
+            "Clear opt-in on the lander",
+            "Privacy policy that says what you send",
+            "Useful content, not only offers",
+            "Easy unsubscribe or leave",
+            "No buying or scraping contact lists",
+            "Follow local data laws"
+          ],
+          "say": "An owned audience is only an asset if people chose to be there. Go down the checklist. A clear opt-in on the lander. A privacy policy that says what you send. Useful content, not only offers. An easy way to unsubscribe or leave. No buying or scraping contact lists. And follow local data laws in each geo."
+        },
+        {
+          "v": "flow",
+          "h": "The resilience test",
+          "p": "Before you add any backup, ask these questions in order. If any answer is no, it is not a backup; it is evasion, and it will hurt you.",
+          "d": [
+            "Do I really own it?",
+            "Is it in my real name or business?",
+            "Would I show it to a reviewer?",
+            "Does it follow the platform rules?",
+            "Yes to all: it is a backup"
+          ],
+          "say": "Here's the resilience test. Ask these questions in order before you add any backup. Do I really own it? Is it in my real name or business? Would I show it to a reviewer? Does it follow the platform rules? Only if the answer is yes to all of them is it a backup. If any answer is no, it's not a backup. It's evasion, and it will hurt you."
+        },
+        {
+          "v": "cards",
+          "h": "Why bought or rented accounts fail",
+          "p": "Buying or renting ad accounts, profiles or portfolios looks like a shortcut. It breaks platform terms and usually ends badly. You do not control the identity behind it, and it links your business to whoever did.",
+          "d": [
+            "Banned with links|platforms often restrict linked assets",
+            "Not your identity|you cannot verify or appeal honestly",
+            "Theft risk|the seller can take it back or empty it",
+            "Legal risk|using someone's identity can be fraud"
+          ],
+          "say": "Buying or renting ad accounts, profiles or portfolios looks like a shortcut. It breaks platform terms and usually ends badly. Look at the cards. Banned with links, because platforms often restrict linked assets. Not your identity, so you can't verify or appeal honestly. Theft risk, because the seller can take it back or empty it. And legal risk, because using someone's identity can be fraud."
+        },
+        {
+          "v": "table",
+          "h": "Example: the rented-account maths",
+          "p": "Example numbers only, to show why shortcuts lose. A buyer rents an account for $150, spends $900 on aggressive ads, and the account is banned on day 9. The network sees cloaked traffic and claws back commissions.",
+          "more": "Check the maths: −$150 − $900 + $1,400 − $1,400 = −$1,050. Many network terms let them withhold or reverse commissions for traffic that breaks their rules or the platform's, and to close the affiliate account. Your own verified assets may also be restricted if they are linked. This is an illustrative example; outcomes vary, and some are worse.",
+          "d": {
+            "cols": [
+              "Item",
+              "Amount",
+              "Note"
+            ],
+            "rows": [
+              [
+                "Account rental",
+                "−$150",
+                "Gone"
+              ],
+              [
+                "Ad spend",
+                "−$900",
+                "Spent"
+              ],
+              [
+                "Commissions earned",
+                "+$1,400",
+                "Before review"
+              ],
+              [
+                "Network clawback",
+                "−$1,400",
+                "Fraud flagged"
+              ],
+              [
+                "Net",
+                "−$1,050",
+                "Plus banned from network"
+              ]
+            ]
+          },
+          "say": "Here's the rented-account maths, with example numbers only, to show why shortcuts lose. A buyer rents an account for one hundred and fifty dollars and spends nine hundred on aggressive ads. They earn one thousand four hundred dollars in commissions, before review. The account is banned on day nine, the network sees cloaked traffic and claws back the full one thousand four hundred. The net is minus one thousand and fifty dollars, plus a ban from the network. This is illustrative, and some outcomes are worse."
+        },
+        {
+          "v": "cards",
+          "h": "Farming, cloaking and evasion",
+          "p": "These are the shortcuts we refuse to teach. Each one tries to hide from a platform's rules. Each one puts the whole business, and sometimes your freedom, at risk.",
+          "d": [
+            "Account farming|making fake profiles to age and sell; breaks terms",
+            "Cloaking|showing reviewers a different page; seen as deception",
+            "Ban evasion|new assets to continue after a restriction",
+            "Network fallout|clawbacks, closed accounts, blacklists"
+          ],
+          "say": "These are the shortcuts we refuse to teach. Account farming, making fake profiles to age and sell, which breaks terms. Cloaking, showing reviewers a different page, which is seen as deception. Ban evasion, creating new assets to continue after a restriction. And the network fallout that follows: clawbacks, closed accounts and blacklists. Each one puts the whole business, and sometimes your freedom, at risk."
+        },
+        {
+          "v": "tip",
+          "h": "This is where businesses end",
+          "p": "Platforms can restrict every asset linked to evasion. Networks can withhold payouts and close accounts. Fake identities and deceptive pages can break consumer and fraud laws. We do not teach any of these, and we ask you not to use them.",
+          "d": {
+            "kind": "warn",
+            "text": "Buying, renting or farming accounts, cloaking and ban evasion break platform rules and can break the law. Never use them."
+          },
+          "say": "This is where businesses end. Platforms can restrict every asset linked to evasion. Networks can withhold payouts and close accounts. Fake identities and deceptive pages can break consumer and fraud laws. Buying, renting or farming accounts, cloaking and ban evasion break platform rules and can break the law. We don't teach any of these, and we ask you never to use them."
+        },
+        {
+          "v": "compare",
+          "h": "Resilience mistakes and fixes",
+          "p": "Most people know evasion is wrong. The more common mistakes are honest ones that still leave the business fragile, usually because the first setup worked and nobody built a second leg.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "All income from one ad account",
+                "Only one admin",
+                "No owned audience",
+                "Telegram channel used only for offers"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Spread across assets and sources",
+                "Add a trusted backup admin",
+                "Collect opt-ins from day one",
+                "Mix useful content and offers"
+              ]
+            }
+          },
+          "say": "Most people know evasion is wrong. The more common mistakes are honest ones that still leave a business fragile. On the left: all income from one ad account, only one admin, no owned audience, and a Telegram channel used only for offers. On the right, the fixes: spread across assets and sources, add a trusted backup admin, collect opt-ins from day one, and mix useful content with offers. It usually happens because the first setup worked, and nobody built a second leg."
+        },
+        {
+          "v": "check",
+          "h": "Your 30-day resilience plan",
+          "p": "Starting plan to adapt. One step a week is enough, and none of it needs a big budget. At the end of the month, one restriction should hurt your business but not end it.",
+          "d": [
+            "Week 1: verify the business, add a backup admin",
+            "Week 2: move landers to your own domain",
+            "Week 3: add an opt-in to a Telegram channel or email list",
+            "Week 4: test a second traffic source properly",
+            "Write the same-day plan and pin it",
+            "Target: no channel above about 60% of profit"
+          ],
+          "say": "Here's a starting thirty-day plan to adapt. One step a week is enough. Week one, verify the business and add a backup admin. Week two, move landers to your own domain. Week three, add an opt-in to a Telegram channel or email list. Week four, test a second traffic source properly. Write the same-day plan and pin it. And aim for no channel above about sixty percent of profit. None of it needs a big budget."
+        },
+        {
+          "v": "big",
+          "h": "Clean and diversified lasts",
+          "p": "Operators who last are not the ones who never get restricted. They are the ones whose business survives it, because every asset is real, owned and inside the rules.",
+          "d": {
+            "b": "Real assets, real people, real rules",
+            "s": "That is the only backup that works"
+          },
+          "say": "Let's finish the module with this. The operators who last aren't the ones who never get restricted. They're the ones whose business survives it, because every asset is real, owned and inside the rules. Real assets, real people, real rules. That's the only backup that works."
+        }
+      ],
+      "takeaways": [
+        "Resilience means legitimate backups you own: verified business, backup admins, own domain, more than one source, owned audiences.",
+        "Owned audiences such as Telegram and email keep earning when ads pause, if people opted in.",
+        "Buying, renting or farming accounts, cloaking and evasion lead to linked bans, network clawbacks and legal risk.",
+        "Use the resilience test: owned, real, showable, within the rules."
+      ],
+      "action": "Write down what share of your profit comes from each channel and each ad account. If any single one is above 60%, choose one step from the 30-day plan and start it today.",
+      "glossary": [
+        {
+          "term": "Owned audience",
+          "def": "People who chose to hear from you directly, such as Telegram channel members or email subscribers."
+        },
+        {
+          "term": "Account farming",
+          "def": "Creating fake or aged profiles to sell or use for ads. Breaks platform terms."
+        },
+        {
+          "term": "Cloaking",
+          "def": "Showing reviewers a different page from what users see. Treated as deception and always prohibited."
+        },
+        {
+          "term": "Clawback",
+          "def": "When a network reverses commissions already credited, often because traffic broke the rules."
+        },
+        {
+          "term": "Ban evasion",
+          "def": "Using new or other people's assets to keep advertising after a restriction."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which of these is a legitimate backup?",
+          "options": [
+            "A second admin who is a trusted person with their own profile",
+            "A rented ad account from a seller",
+            "An aged profile bought online",
+            "A new portfolio made after a ban"
+          ],
+          "answer": 0,
+          "why": "A real person with their own profile is a legitimate backup. The others break platform rules or are evasion."
+        },
+        {
+          "q": "Example: 70% of your profit comes from one ad account. If it pauses for a week and you normally earn $200 a day, how much profit is lost?",
+          "options": [
+            "$140",
+            "$490",
+            "$1,400",
+            "$980"
+          ],
+          "answer": 3,
+          "why": "$200 × 7 = $1,400 a week. 70% of $1,400 = $980."
+        },
+        {
+          "q": "Why do owned audiences help when an ad account is restricted?",
+          "options": [
+            "They make Meta lift the ban",
+            "You can still reach people who opted in",
+            "They replace the need for compliance",
+            "They hide traffic from reviewers"
+          ],
+          "answer": 1,
+          "why": "You can keep sending useful content to people who chose to join, so income does not stop completely."
+        },
+        {
+          "q": "A network finds cloaked traffic from an affiliate. What often follows?",
+          "options": [
+            "A bonus",
+            "A higher cap",
+            "Withheld or reversed commissions and a closed account",
+            "Nothing"
+          ],
+          "answer": 2,
+          "why": "Many network terms allow clawbacks and account closure for rule-breaking traffic."
+        },
+        {
+          "q": "Which question is part of the resilience test?",
+          "options": [
+            "Is it the cheapest option?",
+            "Can I hide it from Meta?",
+            "Did a forum recommend it?",
+            "Would I show it to a reviewer?"
+          ],
+          "answer": 3,
+          "why": "If you would not show it to a reviewer, it is not a backup; it is evasion."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn to build a business where one restriction hurts but doesn't end you, using legitimate backups you actually own. You'll also see clearly why bought accounts, cloaking and evasion destroy businesses.",
+      "say_outro": "So, resilience means real assets, real people and real rules, spread so no single switch turns everything off. Your task: write down what share of your profit comes from each channel and each ad account, and if any single one is above sixty percent, choose one step from the thirty-day plan and start it today. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "You submitted 60 ads this week and 9 were rejected, 5 on the same angle. Spend is $200 a day. What do you do?",
+      "options": [
+        "Raise budget to push through",
+        "Move the angle to another account",
+        "Pause new launches, read every reason, fix the angle, relaunch one fixed ad",
+        "Appeal all 9 at once"
+      ],
+      "answer": 2,
+      "why": "9 ÷ 60 = 15%, above the 10% starting rule, with 5 on one angle. Fix the root cause; moving it elsewhere is circumvention."
+    },
+    {
+      "q": "Account Quality shows your personal profile restricted, but all ad accounts look active. How serious is this?",
+      "options": [
+        "Not serious, the accounts are fine",
+        "Only serious for pages",
+        "It only affects personal posts",
+        "Serious: you may be unable to manage ads, and you are a single point of failure if you are the only admin"
+      ],
+      "answer": 3,
+      "why": "A restricted profile can stop you managing ads. That is why a trusted backup admin matters."
+    },
+    {
+      "q": "Your ad said 'double your money in a week'. It was rejected and the account restricted. Best move?",
+      "options": [
+        "Remove the claim, fix the copy and lander, then request review stating what you changed",
+        "Appeal saying the reviewer misunderstood",
+        "Run it in a new account",
+        "Ask the network to complain to Meta"
+      ],
+      "answer": 0,
+      "why": "The claim breaks the rules, so fix it first. An honest review request can mention the correction."
+    },
+    {
+      "q": "Example: 5 ad accounts at $100 a day each; one is disabled. What share of spend stops, and what do you do with the other four?",
+      "options": [
+        "20%; raise the others by 25% to recover volume",
+        "100%; pause everything",
+        "20%; keep unrelated compliant ones steady, pause any sharing the cause, no budget raises",
+        "50%; open new accounts"
+      ],
+      "answer": 2,
+      "why": "$100 ÷ $500 = 20%. Pause only what shares the cause and freeze raises."
+    },
+    {
+      "q": "On ban day you find an unknown admin added to your portfolio yesterday. What comes first?",
+      "options": [
+        "Write the appeal",
+        "Remove the unknown admin, change passwords, confirm 2FA, report the compromise",
+        "Message the network",
+        "Pause all campaigns and wait"
+      ],
+      "answer": 1,
+      "why": "A stranger inside means a possible hack. Secure the business before anything else."
+    },
+    {
+      "q": "Cash $1,800, fixed costs $200 a day, payout of $3,000 due on net 30. What is your runway and what follows?",
+      "options": [
+        "9 days; cut non-essential costs today",
+        "24 days; no action",
+        "15 days; hire more buyers",
+        "9 days; borrow to raise spend"
+      ],
+      "answer": 0,
+      "why": "$1,800 ÷ $200 = 9 days. The net 30 payout is not usable cash today, so under 10 days means cutting non-essential costs now."
+    },
+    {
+      "q": "You lack your company registration certificate for an appeal. A friend offers to edit theirs with your name. What do you do?",
+      "options": [
+        "Use it once",
+        "Use it but crop it",
+        "Ask an agency to make one",
+        "Refuse; explain honestly and send what genuine documents you have"
+      ],
+      "answer": 3,
+      "why": "False documents can make a ban permanent and can be a crime. Honesty keeps the problem fixable."
+    },
+    {
+      "q": "A seller offers an aged ad account with a high spend limit for $300. Why is this a bad deal?",
+      "options": [
+        "It breaks platform terms, links your business to an identity you do not control, and risks bans and clawbacks",
+        "It is too cheap",
+        "Aged accounts convert worse",
+        "It is fine if the network agrees"
+      ],
+      "answer": 0,
+      "why": "Renting or buying accounts is prohibited and often leads to linked bans and network clawbacks."
+    },
+    {
+      "q": "Your new account spent $20 a day for 3 clean days. The new offer looks great. What is a sensible next budget?",
+      "options": [
+        "$200 to catch the opportunity",
+        "$20 forever",
+        "$100 if you change cards",
+        "$24 to $26, then reassess in 2 to 3 days"
+      ],
+      "answer": 3,
+      "why": "A 20 to 30% raise is $24 to $26. Sudden spikes are a risk signal; this is a rough guide, not a published rule."
+    },
+    {
+      "q": "Buyer A earns 100% of profit from one ad account; Buyer B earns 50% from Meta, 30% from a Telegram channel, 20% from a second source. Both earn $300 a day and Meta pauses for 5 days. How much profit does each lose?",
+      "options": [
+        "A $1,500, B $1,500",
+        "A $1,500, B $750",
+        "A $750, B $300",
+        "A $300, B $150"
+      ],
+      "answer": 1,
+      "why": "5 × $300 = $1,500. A loses all of it; B loses 50%, $750. Diversified, legitimate channels halve the damage."
+    }
+  ]
+}

@@ -1,0 +1,2978 @@
+{
+  "school": "v-finance",
+  "order": 5,
+  "slug": "tracking-and-lead-quality",
+  "title": "Tracking and lead quality",
+  "summary": "How to track every stage a lender reports, measure lead quality in money terms, handle duplicates and returns, keep fraud out of your traffic, capture provable consent and teach ad platforms to find approved customers. Finance pays on quality, so this module is where profit is protected.",
+  "lessons": [
+    {
+      "slug": "stages-and-postbacks",
+      "title": "Funnel stages and postbacks per stage",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can list the paid and unpaid stages for loans, cards, insurance and bank accounts.",
+        "By the end you can set up a postback that reports each stage with your click ID.",
+        "By the end you can map lender stages to ad platform events without sending personal data."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why one conversion is not enough",
+          "p": "A finance lead passes through several stages before anyone is paid: submitted, valid, contacted, approved, funded or issued. If your tracking only sees 'lead', you cannot tell a creative that brings funded customers from one that brings rejected forms. Stage-level postbacks are how you see the difference and get paid for it.",
+          "d": {
+            "b": "Track every stage the lender reports",
+            "s": "Your profit lives in the later stages."
+          },
+          "say": "Why is one conversion not enough? A finance lead passes through several stages before anyone gets paid: submitted, valid, contacted, approved, and funded or issued. If your tracking only sees lead, you can't tell a creative that brings funded customers from one that brings rejected forms. Stage-level postbacks are how you see the difference, and get paid for it. As the screen says, your profit lives in the later stages."
+        },
+        {
+          "v": "table",
+          "h": "Stages by product",
+          "p": "Example stage ladders. Each network and advertiser names stages differently and pays on a different one. Ask which stages they can report back and which one triggers payment, and write both down before launch.",
+          "d": {
+            "cols": [
+              "Product",
+              "Early stages",
+              "Paid stage (often)"
+            ],
+            "rows": [
+              [
+                "Personal loan",
+                "Lead, valid, approved",
+                "Funded loan"
+              ],
+              [
+                "Credit card",
+                "Application, approved",
+                "Approved or activated"
+              ],
+              [
+                "Insurance",
+                "Quote, call, application",
+                "Policy issued"
+              ],
+              [
+                "Bank / savings app",
+                "Sign-up, KYC passed",
+                "Account funded"
+              ],
+              [
+                "Lead-gen CPL",
+                "Submitted, validated",
+                "Valid lead accepted"
+              ]
+            ]
+          },
+          "say": "Here are example stage ladders by product. A personal loan goes lead, valid, approved, and is often paid on the funded loan. A credit card goes application, approved, and is paid on approved or activated. Insurance goes quote, call, application, paid when the policy is issued. A bank or savings app goes sign-up, K Y C passed, paid when the account is funded. And lead-gen C P L, cost per lead, pays on a valid lead accepted. Each network names stages differently, so ask which stages they report and which one triggers payment, and write both down before launch."
+        },
+        {
+          "v": "map",
+          "h": "How a stage travels back to you",
+          "p": "The lender decides; the network records it; a postback carries the stage and your click ID to your tracker; your tracker can forward a matching event to the ad platform. Each arrow is a place where data can be lost, so each one gets tested.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Ad click",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Lander + form",
+                "kind": "page"
+              },
+              {
+                "id": "net",
+                "label": "Network",
+                "kind": "tool"
+              },
+              {
+                "id": "lender",
+                "label": "Lender decision",
+                "kind": "offer"
+              },
+              {
+                "id": "pb",
+                "label": "Stage postback",
+                "kind": "data"
+              },
+              {
+                "id": "trk",
+                "label": "Your tracker",
+                "kind": "tool"
+              },
+              {
+                "id": "capi",
+                "label": "Ad platform event",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "lp",
+                "click ID"
+              ],
+              [
+                "lp",
+                "net",
+                "lead + click ID"
+              ],
+              [
+                "net",
+                "lender",
+                "application"
+              ],
+              [
+                "lender",
+                "net",
+                "approved / funded"
+              ],
+              [
+                "net",
+                "pb",
+                "stage"
+              ],
+              [
+                "pb",
+                "trk",
+                "click ID + stage"
+              ],
+              [
+                "trk",
+                "capi",
+                "event"
+              ]
+            ]
+          },
+          "say": "Here's how a stage travels back to you. Follow the arrows. The ad click carries a click I D to your lander and form. The lead and click I D go to the network, which sends the application to the lender. The lender decides, approved or funded, and tells the network. The network fires a stage postback, carrying the click I D and stage to your tracker. And your tracker can forward a matching event to the ad platform. Each arrow is a place where data can be lost, so each one gets tested."
+        },
+        {
+          "v": "code",
+          "h": "Example: a stage postback URL",
+          "p": "Example postback you give the network. Your tracker defines the parameter names; the network fills its own macros. The status tells you which stage fired. Check both systems' current documentation for exact macro names.",
+          "d": {
+            "lang": "url",
+            "text": "https://track.example/postback?cid={click_id}&status={status}&payout={payout}&txid={transaction_id}",
+            "note": "Example. Macro names differ by network and tracker."
+          },
+          "say": "This is an example postback U R L, the one you give the network. You don't need to read the code on screen. Here's what matters. Your tracker defines the parameter names, and the network fills in its own placeholders, called macros, for the click I D, the status, the payout and the transaction I D. The status tells you which stage fired. Macro names differ by network and tracker, so check both systems' current documentation."
+        },
+        {
+          "v": "table",
+          "h": "Map stages to events",
+          "p": "Example mapping. Use standard event names where they fit and custom ones for later stages. Agree the mapping with your team once, write it down, and do not rename events after launch or your history breaks.",
+          "d": {
+            "cols": [
+              "Network status",
+              "Tracker event",
+              "Ad platform event"
+            ],
+            "rows": [
+              [
+                "lead",
+                "Lead",
+                "Lead (standard)"
+              ],
+              [
+                "valid",
+                "ValidLead",
+                "Custom event"
+              ],
+              [
+                "approved",
+                "Approved",
+                "Custom event"
+              ],
+              [
+                "funded",
+                "Funded",
+                "Purchase or custom, with value"
+              ],
+              [
+                "rejected / returned",
+                "Rejected",
+                "Not sent"
+              ]
+            ]
+          },
+          "say": "Now map each stage to an event. Look at the example table. Lead becomes the tracker event Lead, sent as the standard Lead event. Valid becomes Valid Lead, sent as a custom event. Approved becomes Approved, also custom. Funded becomes Funded, sent as Purchase or a custom event, with value. And rejected or returned is not sent to the platform at all. Agree this mapping with your team once, write it down, and don't rename events after launch, or your history breaks."
+        },
+        {
+          "v": "funnel",
+          "h": "Worked example: one week, one offer",
+          "p": "Example: a loan offer paying $30 per funded loan, $600 spent. Read each step's rate. Lead to funded is 48 out of 800, which is 6%. That number, not the 800 leads, decides profit.",
+          "more": "Rates: click to lead 20%; lead to valid 80%; valid to approved 15%; approved to funded 50%; lead to funded 6%. Revenue 48 × $30 = $1,440. Spend $600. Profit $840 before fees and returns, ROI 140%. Change only the valid-to-approved rate from 15% to 10% and funded drops to 32, revenue to $960, profit to $360. Illustrative figures.",
+          "d": [
+            [
+              "Clicks",
+              4000
+            ],
+            [
+              "Leads",
+              800
+            ],
+            [
+              "Valid",
+              640
+            ],
+            [
+              "Approved",
+              96
+            ],
+            [
+              "Funded",
+              48
+            ]
+          ],
+          "say": "Here's a worked example, one week, one offer. A loan offer pays thirty dollars per funded loan, and you spent six hundred dollars. Four thousand clicks became eight hundred leads, six hundred and forty valid, ninety six approved, and forty eight funded. Lead to funded is forty eight out of eight hundred, which is six percent. That's the number that decides profit, not the eight hundred leads. Revenue is one thousand four hundred and forty dollars, so eight hundred and forty profit before fees and returns. These are illustrative figures."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: set up and test a postback",
+          "p": "Do this before spending any money. A postback that silently fails is one of the most common reasons a good finance campaign is killed by mistake, because the stages it earned never show up in your reports.",
+          "d": {
+            "steps": [
+              {
+                "title": "Copy the postback from your tracker",
+                "text": "In your tracker's settings, copy the postback URL template with the click ID and status parameters.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "tracker.example/settings/postback",
+                  "title": "Postback template",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "URL",
+                      "value": "https://track.example/postback?cid={click_id}&status={status}&payout={payout}"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Copy"
+                    }
+                  ],
+                  "highlight": 0,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "Paste it in the network",
+                "text": "In the network's offer or global postback settings, paste the URL and map their macros to your parameters.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "network.example/postbacks",
+                  "title": "Add postback",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Offer",
+                      "value": "KE Loan 03"
+                    },
+                    {
+                      "type": "field",
+                      "label": "URL",
+                      "value": "...?cid={aff_sub}&status={goal}&payout={payout}"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Fire on",
+                      "value": "All goals"
+                    }
+                  ],
+                  "highlight": 2,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "Send a test",
+                "text": "Use the network's test tool or ask your manager to fire a test conversion for each stage.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "network.example/postbacks/test",
+                  "title": "Test postback",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Goal",
+                      "value": "approved"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Test click ID",
+                      "value": "test_123"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Send test"
+                    }
+                  ],
+                  "highlight": 2,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "Confirm in the tracker",
+                "text": "Check the tracker log shows each stage with the right click ID and payout. Fix any mismatch before launch.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "tracker.example/logs",
+                  "title": "Postback log",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "cid",
+                        "status",
+                        "payout"
+                      ],
+                      "rows": [
+                        [
+                          "test_123",
+                          "lead",
+                          "0"
+                        ],
+                        [
+                          "test_123",
+                          "approved",
+                          "0"
+                        ],
+                        [
+                          "test_123",
+                          "funded",
+                          "30"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0,
+                  "v": "screen"
+                }
+              }
+            ]
+          },
+          "say": "Do this before spending any money. Tap Next to follow each step. First, copy the postback U R L template from your tracker's settings, with the click I D and status parameters. Second, paste it into the network's postback settings, and map their macros to your parameters. Third, send a test, using the network's test tool, or ask your manager to fire a test conversion for each stage. Fourth, confirm in the tracker log that each stage shows with the right click I D and payout. A postback that silently fails can get a good campaign killed by mistake."
+        },
+        {
+          "v": "check",
+          "h": "Ask the network before launch",
+          "p": "Send these questions to your affiliate manager for every new finance offer and keep the answers in your offer folder. Missing answers are the usual cause of tracking surprises in week two.",
+          "d": [
+            "Which stages can you post back?",
+            "Which stage triggers payment?",
+            "Typical days from lead to that stage",
+            "Macro names for click ID and status",
+            "Can a stage be reversed later?"
+          ],
+          "say": "Send these questions to your affiliate manager for every new finance offer. Which stages can you post back? Which stage triggers payment? How many days, typically, from lead to that stage? What are the macro names for click I D and status? And can a stage be reversed later? Keep the answers in your offer folder. Missing answers are the usual cause of tracking surprises in week two."
+        },
+        {
+          "v": "tip",
+          "h": "Keep personal data out of URLs and events",
+          "p": "Postbacks and ad platform events should carry IDs and stages, not the applicant's details. Finance data is some of the most sensitive data you will ever touch, so keep it inside the lender's systems.",
+          "d": {
+            "kind": "warn",
+            "text": "Never put names, phone numbers, ID numbers or loan amounts tied to a person in postback URLs or ad platform events unless the lender and your lawyer confirm a lawful basis and the platform's rules allow it. Finance data is sensitive under most data protection laws. Ad platforms also restrict sending financial information; check their current terms."
+          },
+          "say": "This is an important warning. Postbacks and ad platform events should carry I Ds and stages, not the applicant's details. Never put names, phone numbers, I D numbers, or loan amounts tied to a person into postback U R Ls or ad platform events, unless the lender and your lawyer confirm a lawful basis and the platform's rules allow it. Finance data is sensitive under most data protection laws, and ad platforms restrict sending financial information too. Check their current terms, and keep this data inside the lender's systems."
+        },
+        {
+          "v": "cards",
+          "h": "Common postback mistakes",
+          "p": "These mistakes make good campaigns look bad, or bad ones look good. Most of them are found in five minutes with a test postback per stage, done before launch and after every change.",
+          "d": [
+            "Only the lead stage tracked|ask for every stage the network can send",
+            "Click ID not passed to the offer|check the sub-ID field name",
+            "Duplicate stage fires|dedupe on transaction ID",
+            "Renaming events mid-campaign|fix names before launch",
+            "Counting 'rejected' as a conversion|map it to no event"
+          ],
+          "say": "These mistakes make good campaigns look bad, or bad ones look good. Tracking only the lead stage, instead of asking for every stage the network can send. Not passing the click I D to the offer, so check the sub I D field name. Duplicate stage fires, so de-duplicate on the transaction I D. Renaming events mid-campaign, so fix names before launch. And counting rejected as a conversion, when it should map to no event. Most are found in five minutes with a test postback per stage."
+        },
+        {
+          "v": "table",
+          "h": "Starting rules for tracking health",
+          "p": "Starting rules to adapt. Run these checks daily for a new offer and weekly once it is stable. Tracking problems are cheaper to find than to explain later.",
+          "d": {
+            "cols": [
+              "Check",
+              "Rule"
+            ],
+            "rows": [
+              [
+                "Tracker vs network count, any stage",
+                "Gap > 10%: stop optimising, find the cause"
+              ],
+              [
+                "Test postback per stage",
+                "Before launch and after any link change"
+              ],
+              [
+                "Leads with no click ID",
+                "> 5%: check the link and form"
+              ],
+              [
+                "Same transaction ID twice",
+                "Count once; ask why"
+              ]
+            ]
+          },
+          "say": "Here are starting rules for tracking health, to adapt. If the tracker and network counts differ by more than ten percent at any stage, stop optimising and find the cause. Send a test postback per stage before launch and after any link change. If more than five percent of leads have no click I D, check the link and the form. And if the same transaction I D appears twice, count it once, and ask why. Run these daily for a new offer, and weekly once it's stable."
+        },
+        {
+          "v": "tip",
+          "h": "Platform features change",
+          "p": "Ad platforms keep changing how offline and server events are sent and how old an event may be. Treat any specific feature name in this lesson as a pointer to check, not a promise.",
+          "d": {
+            "kind": "tip",
+            "text": "Meta has moved offline and CRM event uploads into its Conversions API in recent years. We are not certain of the exact current setup or time limits for older events; check Meta's Events Manager and developer documentation before building."
+          },
+          "say": "One last note. Ad platforms keep changing how offline and server events are sent, and how old an event may be. So treat any feature name in this lesson as a pointer to check, not a promise. As the tip says, Meta has moved offline and C R M event uploads into its Conversions A P I in recent years. We're not certain of the exact current setup or time limits for older events, so check Meta's Events Manager and developer documentation before building."
+        }
+      ],
+      "takeaways": [
+        "Finance leads pass several stages; ask which ones the network reports and which one pays.",
+        "Use a stage postback with your click ID, test every stage before launch, and dedupe on transaction ID.",
+        "Send IDs and stages to ad platforms, never personal or financial details without a confirmed lawful basis."
+      ],
+      "action": "Ask your network which stages they can post back for one finance offer, then set up and test a postback for each stage in your tracker.",
+      "glossary": [
+        {
+          "term": "Stage",
+          "def": "A step in the lender's process, such as valid, approved or funded, that the network can report."
+        },
+        {
+          "term": "Postback",
+          "def": "A server-to-server call from the network to your tracker reporting a conversion and its click ID."
+        },
+        {
+          "term": "Transaction ID",
+          "def": "A unique ID for one conversion event, used to stop the same event being counted twice."
+        },
+        {
+          "term": "Event mapping",
+          "def": "The written list of which network stage becomes which tracker and ad platform event."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Example: 1,000 leads, 75% valid, 20% of valid approved, half of approved funded. Funded loans?",
+          "options": [
+            "75",
+            "150",
+            "200",
+            "100"
+          ],
+          "answer": 0,
+          "why": "1,000 × 0.75 = 750 valid; × 0.20 = 150 approved; × 0.5 = 75 funded."
+        },
+        {
+          "q": "Which item belongs in a postback URL?",
+          "options": [
+            "Applicant's phone number",
+            "Applicant's ID number",
+            "Click ID and stage",
+            "Loan amount tied to a name"
+          ],
+          "answer": 2,
+          "why": "Postbacks carry IDs and stages. Personal and financial details stay out unless a lawful basis is confirmed."
+        },
+        {
+          "q": "Tracker shows 40 approvals, network shows 52. What do you do?",
+          "options": [
+            "Optimise anyway",
+            "Stop optimising on that stage and find the cause of the 23% gap",
+            "Trust the higher number",
+            "Delete the tracker"
+          ],
+          "answer": 1,
+          "why": "A gap over 10% means tracking is broken somewhere. Fix it before making decisions."
+        },
+        {
+          "q": "A 'rejected' status arrives. What should it map to on the ad platform?",
+          "options": [
+            "Purchase",
+            "Lead",
+            "Funded",
+            "No event"
+          ],
+          "answer": 3,
+          "why": "Sending rejected applications as conversions teaches the platform to find more of them."
+        },
+        {
+          "q": "Why dedupe on transaction ID?",
+          "options": [
+            "To lower CPL",
+            "Platforms require it for leads",
+            "So one approval fired twice is counted once",
+            "To hide data from the network"
+          ],
+          "answer": 2,
+          "why": "Networks sometimes resend postbacks; deduping keeps your counts true."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn to track every stage a finance lead passes through, not just the first form. We'll set up postbacks that report each stage with your click I D, and map those stages to ad platform events without sending personal data.",
+      "say_outro": "So, a finance lead has many stages, your profit lives in the later ones, and every stage should come back to you by a tested postback, with no personal data attached. Your task: ask your network which stages they can post back for one finance offer, then set up and test a postback for each stage in your tracker. Now take the quiz."
+    },
+    {
+      "slug": "measuring-lead-quality",
+      "title": "Measuring lead quality",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can calculate valid, contact, approval and funded rates and earnings per lead.",
+        "By the end you can build a quality scorecard by ad, placement and geo.",
+        "By the end you can find the worst step in a finance funnel and choose what to fix."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why quality is your real product",
+          "p": "In finance lead generation you are not selling clicks or forms. You are selling people who qualify and become customers. Advertisers measure you on that, cut payouts or close deals when it falls, and raise payouts when it is strong. Measuring quality yourself, before they tell you, is how you stay in control.",
+          "d": {
+            "b": "You sell customers, not forms",
+            "s": "Advertisers pay, and cut, on quality."
+          },
+          "say": "In finance lead generation, you're not selling clicks or forms. As the screen says, you sell customers, not forms. You're selling people who qualify and become customers. Advertisers measure you on that. They cut payouts or close deals when quality falls, and raise payouts when it's strong. Measuring quality yourself, before they tell you, is how you stay in control."
+        },
+        {
+          "v": "table",
+          "h": "The quality rates",
+          "p": "Each rate is one stage divided by the stage before it, except earnings per lead, which ties everything to money. Calculate them per ad, placement and geo, using lag-adjusted leads only.",
+          "d": {
+            "cols": [
+              "Rate",
+              "Formula",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Valid rate",
+                "Valid ÷ leads",
+                "80%"
+              ],
+              [
+                "Contact rate",
+                "Contacted ÷ valid",
+                "70%"
+              ],
+              [
+                "Approval rate",
+                "Approved ÷ valid",
+                "15%"
+              ],
+              [
+                "Funded rate",
+                "Funded ÷ approved",
+                "50%"
+              ],
+              [
+                "EPL",
+                "Revenue ÷ leads",
+                "$1.80"
+              ]
+            ]
+          },
+          "say": "Here are the quality rates. Valid rate is valid divided by leads, eighty percent in this example. Contact rate is contacted divided by valid, seventy percent. Approval rate is approved divided by valid, fifteen percent. Funded rate is funded divided by approved, fifty percent. And E P L, earnings per lead, is revenue divided by leads, one dollar eighty here. Calculate them per ad, placement and geo, using lag-adjusted leads only, meaning leads old enough for their later stages to have been reported."
+        },
+        {
+          "v": "eq",
+          "h": "Earnings per lead",
+          "p": "Earnings per lead (EPL) turns every stage into one money number. Compare it with your CPL: if CPL is below EPL, the traffic makes money before fees. It works for any payout stage.",
+          "more": "Example: 600 leads produce 36 funded loans at $30 each. Revenue $1,080. EPL = $1,080 ÷ 600 = $1.80. If your CPL is $1.20, you earn $0.60 per lead before fees, a 50% ROI on ad spend. If CPL rises to $1.90, every lead loses $0.10.",
+          "d": [
+            "Revenue",
+            "÷",
+            "Leads",
+            "=",
+            "EPL"
+          ],
+          "say": "Earnings per lead, or E P L, turns every stage into one money number. Revenue divided by leads. Then compare it with your C P L, cost per lead. If C P L is below E P L, the traffic makes money before fees. Example: six hundred leads produce thirty six funded loans at thirty dollars each. That's one thousand and eighty dollars of revenue, so E P L is one dollar eighty. At a one dollar twenty C P L, you earn sixty cents per lead. If C P L rises to one ninety, every lead loses ten cents."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: placements compared",
+          "p": "Example: one loan offer, $30 per funded loan, split by placement. Feed placements bring cheaper leads in this example, but compare EPL against CPL to see which actually earn.",
+          "more": "EPL = funded per lead × $30. Feed: 6% × $30 = $1.80, profit $0.60 per lead. Stories/Reels: 3% × $30 = $0.90, break-even at $0.90 CPL. Partner network placements: 0.5% × $30 = $0.15, losing $0.35 on every lead. Many finance buyers report weak quality from some third-party app placements, but this varies; test with your own data rather than assuming. Illustrative figures.",
+          "d": {
+            "cols": [
+              "Placement",
+              "CPL",
+              "Funded / lead",
+              "EPL"
+            ],
+            "rows": [
+              [
+                "Feed",
+                "$1.20",
+                "6%",
+                "$1.80"
+              ],
+              [
+                "Stories / Reels",
+                "$0.90",
+                "3%",
+                "$0.90"
+              ],
+              [
+                "Partner apps / network",
+                "$0.50",
+                "0.5%",
+                "$0.15"
+              ]
+            ]
+          },
+          "say": "Here's a worked example comparing placements, for one loan offer paying thirty dollars per funded loan. Feed costs one dollar twenty per lead, with six percent funded, so E P L is one eighty, and you earn sixty cents a lead. Stories and Reels cost ninety cents, with three percent funded, so E P L is ninety cents, just break-even. Partner apps cost only fifty cents, but with half a percent funded, E P L is fifteen cents, losing money on every lead. These figures are illustrative. Test with your own data rather than assuming."
+        },
+        {
+          "v": "bars",
+          "h": "CPL versus EPL by placement",
+          "p": "Example from the table. When the EPL bar is shorter than the CPL bar, that placement loses money on every lead, however cheap it looks in the ad platform.",
+          "d": [
+            [
+              "Feed CPL",
+              60,
+              "$1.20"
+            ],
+            [
+              "Feed EPL",
+              90,
+              "$1.80"
+            ],
+            [
+              "Reels CPL",
+              45,
+              "$0.90"
+            ],
+            [
+              "Reels EPL",
+              45,
+              "$0.90"
+            ],
+            [
+              "Partner CPL",
+              25,
+              "$0.50"
+            ],
+            [
+              "Partner EPL",
+              8,
+              "$0.15"
+            ]
+          ],
+          "say": "Here's the same example as bars. Look at each pair. For Feed, the E P L bar is longer than the C P L bar, so it earns. For Reels, the two bars are equal, break-even. Now look at Partner. The C P L bar is short, it looks cheap, but the E P L bar is even shorter. When the E P L bar is shorter than the C P L bar, that placement loses money on every lead, however cheap it looks in the ad platform."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: find the worst step",
+          "p": "Enter the funnel and payout. The lab finds the step with the lowest pass-through rate. Fix that step first; it is usually where the cheapest improvement is hiding.",
+          "more": "Pass-through rates: clicks to leads 40%, leads to valid 25%, valid to approved 30%, approved to funded 60%. Lead to valid is the lowest, against a rough 70% to 90% in many lead-gen funnels (rough guide, varies by geo and vertical). That points at fake or mistyped data, bots, or a form that lets junk through. Fix validation before touching creatives.",
+          "d": {
+            "kind": "funnel",
+            "task": "Which step is the weakest in this loan funnel?",
+            "preset": {
+              "steps": [
+                [
+                  "Clicks",
+                  2500
+                ],
+                [
+                  "Leads",
+                  1000
+                ],
+                [
+                  "Valid",
+                  250
+                ],
+                [
+                  "Approved",
+                  75
+                ],
+                [
+                  "Funded",
+                  45
+                ]
+              ],
+              "payout": 30
+            },
+            "answer": {
+              "field": "worst_step",
+              "value": 2
+            }
+          },
+          "say": "Lab time. Here's a loan funnel: two thousand five hundred clicks, one thousand leads, two hundred and fifty valid, seventy five approved, and forty five funded, with a thirty dollar payout. Work out the pass-through rate between each step, and find the step with the lowest rate. That's the weakest step, and it's usually where the cheapest improvement is hiding. Which step should you fix first? Pause and try it, then check your answer."
+        },
+        {
+          "v": "check",
+          "h": "Your quality scorecard columns",
+          "p": "Build one sheet with these columns, one row per ad, placement or geo. Fill it from the network's stage report joined with ad spend. Review it twice a week.",
+          "d": [
+            "Spend, leads, CPL",
+            "Valid rate",
+            "Approval rate",
+            "Paid events and cost per paid event",
+            "EPL and EPL − CPL",
+            "Returns and reasons"
+          ],
+          "say": "Build one sheet with these columns, one row per ad, placement or geo. Spend, leads and C P L. Valid rate. Approval rate. Paid events and cost per paid event. E P L, and E P L minus C P L. And returns, with their reasons. Fill it from the network's stage report, joined with your ad spend, and review it twice a week."
+        },
+        {
+          "v": "product",
+          "h": "Answer questions fast where you own the chat",
+          "p": "If your funnel includes your own chat channel, for example a Telegram or WhatsApp-style help line before the form, slow answers lose good applicants. Fast, accurate replies keep them moving.",
+          "d": {
+            "slug": "replyvoo",
+            "why": "Answer applicant questions in your own chat channel quickly and consistently, using only approved product facts."
+          },
+          "say": "If your funnel includes your own chat channel, for example a Telegram or WhatsApp-style help line before the form, slow answers lose good applicants. Fast, accurate replies keep them moving. This is where a tool like Replyvoo fits. It helps you answer applicant questions in your own chat channel quickly and consistently, using only approved product facts."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: build the scorecard",
+          "p": "Two exports and one sheet. Do it on the same day each week, with the same lag-adjusted date range, so the numbers are comparable from one week to the next.",
+          "d": {
+            "steps": [
+              {
+                "title": "Export stages by sub-ID",
+                "text": "From the network, export leads, valid, approved and funded grouped by your ad or placement sub-ID.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "network.example/reports",
+                  "title": "Stage report",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Group by",
+                      "value": "sub2 (placement)"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Range",
+                      "value": "Leads 7 to 14 days old"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Export CSV"
+                    }
+                  ],
+                  "highlight": 1,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "Export spend",
+                "text": "From the ad platform, export spend and leads by the same breakdown and range.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "adsmanager.example/reports",
+                  "title": "Spend by placement",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Breakdown",
+                      "value": "Placement"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Range",
+                      "value": "Same as network"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Export"
+                    }
+                  ],
+                  "highlight": 0,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "Join and calculate",
+                "text": "Paste both into the scorecard and let formulas compute the rates, EPL and EPL minus CPL.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/scorecard",
+                  "title": "Quality scorecard",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Row",
+                        "CPL",
+                        "EPL",
+                        "EPL−CPL"
+                      ],
+                      "rows": [
+                        [
+                          "Feed",
+                          "$1.20",
+                          "$1.80",
+                          "$0.60"
+                        ],
+                        [
+                          "Reels",
+                          "$0.90",
+                          "$0.90",
+                          "$0.00"
+                        ],
+                        [
+                          "Partner",
+                          "$0.50",
+                          "$0.15",
+                          "−$0.35"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0,
+                  "v": "screen"
+                }
+              }
+            ]
+          },
+          "say": "Here's how to build the scorecard, with two exports and one sheet. Tap Next to follow each step. First, export stages by sub I D from the network: leads, valid, approved and funded, grouped by your ad or placement, using leads seven to fourteen days old. Second, export spend and leads from the ad platform, with the same breakdown and the same range. Third, paste both into the scorecard and let formulas compute the rates, E P L, and E P L minus C P L. Do it the same day each week, so the numbers are comparable."
+        },
+        {
+          "v": "tip",
+          "h": "Do not pressure quality numbers",
+          "p": "When quality falls, the temptation is to argue the advertiser's numbers down or to push more volume. Check your own traffic first, slice by slice, before you say anything.",
+          "d": {
+            "kind": "warn",
+            "text": "Never coach applicants on what to enter to pass checks, never fill forms on anyone's behalf, and never ask the advertiser to lower its lending standards to approve your traffic. Your job is to send people who genuinely want and may qualify for the product."
+          },
+          "say": "When quality falls, it's tempting to argue the advertiser's numbers down, or to push more volume. Check your own traffic first, slice by slice. And please hear this warning clearly. Never coach applicants on what to enter to pass checks. Never fill forms on anyone's behalf. And never ask the advertiser to lower its lending standards to approve your traffic. Your job is to send people who genuinely want, and may qualify for, the product."
+        },
+        {
+          "v": "cards",
+          "h": "Common quality-measurement mistakes",
+          "p": "These mistakes make the scorecard lie. Most come from mixing data of different ages, ignoring returns, or comparing rates that were calculated on different bases.",
+          "d": [
+            "Using leads that are too new|only lag-adjusted rows",
+            "Approval ÷ leads vs ÷ valid|pick one base, label it",
+            "Ignoring returns|subtract returned leads from revenue",
+            "Judging tiny rows|merge until ≥ 100 leads per row"
+          ],
+          "say": "These mistakes make the scorecard lie. Using leads that are too new, when you should use only lag-adjusted rows. Mixing approval divided by leads with approval divided by valid, when you should pick one base and label it. Ignoring returns, instead of subtracting returned leads from revenue. And judging tiny rows, instead of merging until each row has at least one hundred leads."
+        },
+        {
+          "v": "table",
+          "h": "Starting rules from the scorecard",
+          "p": "Starting rules to adapt. Apply them only to rows with enough lag-adjusted leads. Below about 100 leads a row is noise more often than signal, so merge rows before acting.",
+          "d": {
+            "cols": [
+              "Signal (≥ 100 lagged leads)",
+              "Action"
+            ],
+            "rows": [
+              [
+                "EPL < CPL for 7 days",
+                "Exclude placement or kill ad"
+              ],
+              [
+                "EPL ≥ 1.25 × CPL, stable 7 days",
+                "Candidate to scale +20%"
+              ],
+              [
+                "Valid rate < 60%",
+                "Fix form validation first"
+              ],
+              [
+                "Approval rate drops 30% week on week",
+                "Pause new spend; investigate"
+              ]
+            ]
+          },
+          "say": "Here are starting rules from the scorecard, to adapt. Apply them only to rows with at least one hundred lag-adjusted leads, because below that, a row is more often noise than signal. If E P L is below C P L for seven days, exclude the placement or kill the ad. If E P L is at least one point two five times C P L, stable for seven days, it's a candidate to scale by twenty percent. If the valid rate is below sixty percent, fix form validation first. And if approval drops thirty percent week on week, pause new spend and investigate."
+        }
+      ],
+      "takeaways": [
+        "Calculate quality rates per ad, placement and geo from the network's stage data.",
+        "EPL against CPL tells you whether a slice of traffic earns or loses money.",
+        "Fix the weakest step first, and never try to game the advertiser's checks."
+      ],
+      "action": "Build a quality scorecard for one finance offer with spend, CPL, valid rate, approval rate, EPL and EPL minus CPL, split by placement.",
+      "glossary": [
+        {
+          "term": "Valid rate",
+          "def": "Share of leads that pass the advertiser's basic checks, such as a working phone and correct geo."
+        },
+        {
+          "term": "Approval rate",
+          "def": "Share of valid leads (or leads, if stated) that the lender approves."
+        },
+        {
+          "term": "EPL",
+          "def": "Earnings per lead: revenue divided by leads."
+        },
+        {
+          "term": "Quality scorecard",
+          "def": "A sheet of quality rates and EPL per ad, placement or geo, reviewed on a fixed schedule."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Example: 500 leads, 20 funded at $40. EPL?",
+          "options": [
+            "$0.80",
+            "$1.60",
+            "$2.00",
+            "$4.00"
+          ],
+          "answer": 1,
+          "why": "Revenue 20 × $40 = $800. $800 ÷ 500 = $1.60."
+        },
+        {
+          "q": "Placement CPL $0.60, EPL $0.20 for 7 days with 300 lagged leads. Starting rule?",
+          "options": [
+            "Scale",
+            "Raise the bid",
+            "Hold for a month",
+            "Exclude the placement"
+          ],
+          "answer": 3,
+          "why": "EPL below CPL for 7 days with enough data means it loses money on every lead."
+        },
+        {
+          "q": "Lead to valid is 35%. Where do you look first?",
+          "options": [
+            "Creative colours",
+            "Payout",
+            "Form validation, bots or junk data",
+            "Bid strategy"
+          ],
+          "answer": 2,
+          "why": "A low valid rate usually means fake, mistyped or bot data getting through the form."
+        },
+        {
+          "q": "Which is a quality-measurement mistake?",
+          "options": [
+            "Comparing rows with 12 leads each",
+            "Subtracting returned leads",
+            "Using only lag-adjusted leads",
+            "Labelling the base of each rate"
+          ],
+          "answer": 0,
+          "why": "Tiny rows are noise. Merge rows until each has enough leads."
+        },
+        {
+          "q": "Approval rate falls and your manager says your traffic is weak. Honest first step?",
+          "options": [
+            "Coach applicants on answers",
+            "Ask the lender to approve more",
+            "Send more leads to dilute it",
+            "Check your own scorecard for which ads, placements or geos changed"
+          ],
+          "answer": 3,
+          "why": "Check your own data first. The other options game the lender's checks."
+        }
+      ],
+      "say_intro": "This lesson is about measuring lead quality yourself, before the advertiser tells you. You'll calculate the key quality rates and earnings per lead, build a scorecard by ad, placement and geo, and find the weakest step in a finance funnel.",
+      "say_outro": "So, you sell customers, not forms, and earnings per lead against cost per lead tells you which traffic actually earns. Your task: build a quality scorecard for one finance offer with spend, C P L, valid rate, approval rate, E P L, and E P L minus C P L, split by placement. Now take the quiz."
+    },
+    {
+      "slug": "duplicates-returns-and-scrubs",
+      "title": "Duplicates, returns and scrubs",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can explain dedupe windows, return windows and scrub rates in a finance deal.",
+        "By the end you can reconcile your lead count with the network's paid count.",
+        "By the end you can reduce duplicates and returns at the source."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why your count is not your invoice",
+          "p": "On CPL and CPA finance deals, the number you are paid for is almost always lower than the number you sent. Duplicates, invalid data and returned leads are removed. If you plan with your own count, every month looks better than the bank account. Know the gap, then shrink it honestly.",
+          "more": "Module 1 showed why networks scrub and how to estimate net billable leads. This lesson goes further: the deal terms that set the rules, a full monthly reconciliation, disputes with evidence and fixing duplicates at the source.",
+          "d": {
+            "b": "Plan with paid leads, not sent leads",
+            "s": "The gap is real money."
+          },
+          "say": "On C P L, cost per lead, and C P A, cost per acquisition, finance deals, the number you're paid for is almost always lower than the number you sent. Duplicates, invalid data and returned leads are removed. If you plan with your own count, every month looks better than your bank account. As the screen says, plan with paid leads, not sent leads. The gap is real money. Know it, then shrink it honestly."
+        },
+        {
+          "v": "cards",
+          "h": "Where leads disappear",
+          "p": "These are the usual reasons a submitted lead is not paid. The exact list and the time limits are in your deal terms. Ask for them in writing before you send traffic.",
+          "d": [
+            "Duplicate|same person already in the buyer's system",
+            "Invalid data|bad phone, fake email, wrong geo",
+            "Out of criteria|under minimum age, income or geo rules",
+            "Return|buyer rejects after delivery, within a window",
+            "Fraud flag|suspected bot or fake identity"
+          ],
+          "say": "Here's where leads disappear. Duplicate, when the same person is already in the buyer's system. Invalid data, like a bad phone, fake email or wrong geo. Out of criteria, under the minimum age, income or geo rules. Return, when the buyer rejects a lead after delivery, within a window. And fraud flag, a suspected bot or fake identity. The exact list and time limits are in your deal terms, so ask for them in writing before you send traffic."
+        },
+        {
+          "v": "table",
+          "h": "Deal terms to agree up front",
+          "p": "Example terms to ask about. Numbers vary by buyer and market; do not assume. A deal without written return rules is a deal where the rules change after you have spent.",
+          "d": {
+            "cols": [
+              "Term",
+              "What to ask",
+              "Example answer"
+            ],
+            "rows": [
+              [
+                "Dedupe window",
+                "How far back do you check duplicates?",
+                "30 days"
+              ],
+              [
+                "Return window",
+                "How long can you return a lead?",
+                "7 days"
+              ],
+              [
+                "Return reasons",
+                "Which reasons are accepted?",
+                "Invalid phone, duplicate, out of geo"
+              ],
+              [
+                "Return cap",
+                "Maximum % returned per month?",
+                "15%"
+              ],
+              [
+                "Evidence",
+                "What proof comes with a return?",
+                "Lead ID + reason code"
+              ]
+            ]
+          },
+          "say": "Here are example deal terms to agree up front. The dedupe window: how far back do they check duplicates? Example, thirty days. The return window: how long can they return a lead? Example, seven days. Return reasons, like invalid phone, duplicate, or out of geo. The return cap, the maximum percent returned per month, example fifteen percent. And evidence, like a lead I D and reason code. Numbers vary by buyer and market. A deal without written return rules is a deal where the rules change after you've spent."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: a month reconciled",
+          "p": "Example: CPL deal at $3 per accepted lead. You sent 2,000 leads and spent $3,600. Watch what happens to the invoice and the real CPL.",
+          "more": "Your tracker said 2,000 × $3 = $6,000 revenue and $2,400 profit. The invoice is 1,600 × $3 = $4,800 and profit is $1,200, half what you planned. Your true cost per paid lead is $3,600 ÷ 1,600 = $2.25, not $1.80. The scrub rate (all removed ÷ sent) is 400 ÷ 2,000 = 20%. Illustrative figures.",
+          "d": {
+            "cols": [
+              "Line",
+              "Leads",
+              "Running total"
+            ],
+            "rows": [
+              [
+                "Sent (your tracker)",
+                "2,000",
+                "2,000"
+              ],
+              [
+                "Duplicates removed",
+                "−160",
+                "1,840"
+              ],
+              [
+                "Invalid at delivery",
+                "−140",
+                "1,700"
+              ],
+              [
+                "Returned in window",
+                "−100",
+                "1,600"
+              ],
+              [
+                "Paid at $3",
+                "1,600",
+                "$4,800"
+              ]
+            ]
+          },
+          "say": "Here's a month reconciled. Example: a C P L deal at three dollars per accepted lead. You sent two thousand leads and spent three thousand six hundred dollars. Follow the running total. One hundred and sixty duplicates removed. One hundred and forty invalid at delivery. One hundred returned in the window. That leaves one thousand six hundred paid, so the invoice is four thousand eight hundred dollars. Your tracker said six thousand. Profit is one thousand two hundred, half what you planned. Illustrative figures."
+        },
+        {
+          "v": "eq",
+          "h": "True cost per paid lead",
+          "p": "Always plan with this number, not your platform CPL. It folds every removed lead into your cost, which is how the money actually behaves when the invoice is paid.",
+          "d": [
+            "Spend",
+            "÷",
+            "Paid leads",
+            "=",
+            "True CPL"
+          ],
+          "say": "Always plan with this number: true C P L. Spend divided by paid leads. It folds every removed lead into your cost, which is how the money actually behaves when the invoice is paid. In the last example, that's three thousand six hundred divided by one thousand six hundred, so two dollars twenty five per paid lead, not the one eighty your platform showed."
+        },
+        {
+          "v": "stat",
+          "h": "The scrub rate",
+          "p": "Example from the reconciliation: 20% of what you sent was not paid. Track this every month. A rising scrub rate is an early warning about your traffic, your form, or a change on the buyer's side.",
+          "d": {
+            "n": 20,
+            "pre": "",
+            "suf": "%",
+            "dec": 0,
+            "label": "of sent leads removed before payment",
+            "note": "Example."
+          },
+          "say": "Here's the scrub rate, everything removed divided by everything sent. In the example, four hundred out of two thousand, so twenty percent of what you sent was not paid. That's the number on screen. Track it every month. A rising scrub rate is an early warning, about your traffic, your form, or a change on the buyer's side."
+        },
+        {
+          "v": "bars",
+          "h": "Planned versus paid revenue",
+          "p": "Example from the reconciliation. The tracker's revenue bar is the money you thought you made. The paid bar is the money that arrives. Profit shrinks far more than revenue, because spend stays the same.",
+          "d": [
+            [
+              "Spend",
+              60,
+              "$3,600"
+            ],
+            [
+              "Revenue (sent)",
+              100,
+              "$6,000"
+            ],
+            [
+              "Revenue (paid)",
+              80,
+              "$4,800"
+            ],
+            [
+              "Profit (sent)",
+              40,
+              "$2,400"
+            ],
+            [
+              "Profit (paid)",
+              20,
+              "$1,200"
+            ]
+          ],
+          "say": "Here's the reconciliation as bars. Spend stays at three thousand six hundred. Revenue on sent leads was six thousand, but paid revenue is four thousand eight hundred. Now look at the profit bars. Two thousand four hundred planned, against one thousand two hundred paid. Profit shrinks far more than revenue, because spend stays the same. The tracker's bar is the money you thought you made. The paid bar is the money that arrives."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: reconcile with the network",
+          "p": "Do this every month before the invoice is final. Disputes are easiest, and fairest, when you raise them inside the agreed window and back them with lead IDs and evidence.",
+          "d": {
+            "steps": [
+              {
+                "title": "Export your leads",
+                "text": "From your tracker or form tool, export lead IDs, timestamps and click IDs for the month.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "tracker.example/leads",
+                  "title": "Leads export",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Range",
+                      "value": "1 to 30 Sep"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Rows",
+                      "value": "2,000"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Export CSV"
+                    }
+                  ],
+                  "highlight": 2,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "Get the network's file",
+                "text": "Ask for the accepted and returned list with reason codes for the same period.",
+                "screen": {
+                  "app": "chat",
+                  "title": "Affiliate manager",
+                  "subtitle": "chat",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "Can you send September's accepted and returned lead IDs with reason codes?"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Sure, CSV attached. 1,600 accepted, 400 removed."
+                    }
+                  ],
+                  "v": "phone"
+                }
+              },
+              {
+                "title": "Match and sort reasons",
+                "text": "Match on lead ID. Count each reason and flag any removed lead you think is valid, with your evidence.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/reconcile",
+                  "title": "September reconciliation",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Reason",
+                        "Count",
+                        "Disputed"
+                      ],
+                      "rows": [
+                        [
+                          "Duplicate",
+                          "160",
+                          "0"
+                        ],
+                        [
+                          "Invalid phone",
+                          "140",
+                          "12"
+                        ],
+                        [
+                          "Returned: no contact",
+                          "100",
+                          "0"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "button",
+                      "label": "Send dispute list"
+                    }
+                  ],
+                  "highlight": 0,
+                  "v": "screen"
+                }
+              }
+            ]
+          },
+          "say": "Do this every month before the invoice is final. Tap Next to follow each step. First, export your leads from your tracker or form tool, with lead I Ds, timestamps and click I Ds for the month. Second, ask your manager for the accepted and returned list, with reason codes, for the same period. Third, match on lead I D, count each reason, and flag any removed lead you think is valid, with your evidence. Disputes are easiest, and fairest, when you raise them inside the agreed window."
+        },
+        {
+          "v": "code",
+          "h": "Example: your own dedupe check",
+          "p": "Check duplicates in your own system before delivery, using a key built from normalised phone and email and a window that matches the buyer's. Store a hash, not the raw values, where you can.",
+          "d": {
+            "lang": "text",
+            "text": "key = hash(normalise(phone) + '|' + lower(trim(email)))\nif key seen in last 30 days: mark duplicate, do not deliver\nelse: store key with timestamp, deliver lead",
+            "note": "Pseudocode. Match the window to your buyer's dedupe window."
+          },
+          "say": "Here's an example of your own dedupe check, in simple pseudocode on screen. The idea is this. Build a key from the person's normalised phone and email, and store a hash of it, not the raw values, where you can. If that key was seen in the last thirty days, mark the lead as a duplicate and don't deliver it. Otherwise, store the key with a timestamp and deliver. Match your window to your buyer's dedupe window."
+        },
+        {
+          "v": "compare",
+          "h": "Reducing duplicates at the source",
+          "p": "Most duplicates come from the same person submitting twice or from your own retargeting showing ads to people who already applied. Both are fixable before the lead ever reaches the buyer.",
+          "d": {
+            "a": {
+              "title": "Causes",
+              "items": [
+                "Double-tap on submit",
+                "Retargeting people who already applied",
+                "Same person via two offers on one buyer",
+                "Lead sold to the same buyer twice"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Disable button after submit",
+                "Exclude applicants from audiences",
+                "Check buyer overlap across offers",
+                "Dedupe in your own system first"
+              ]
+            }
+          },
+          "say": "Most duplicates are fixable before they reach the buyer. Double-tapping submit, fixed by disabling the button after submit. Retargeting people who already applied, fixed by excluding applicants from audiences. The same person arriving via two offers on one buyer, fixed by checking buyer overlap across offers. And selling a lead to the same buyer twice, fixed by de-duplicating in your own system first."
+        },
+        {
+          "v": "tip",
+          "h": "Dispute honestly, accept fair returns",
+          "p": "Disputes only work when they are fair. Raising every return damages trust with your manager and gets you ignored on the day you really are right.",
+          "d": {
+            "kind": "warn",
+            "text": "Dispute only removals you can support with evidence, inside the agreed window. Never resubmit returned or duplicate leads to the same or another buyer without the person's consent for that buyer; in many countries that breaks data protection law as well as the deal."
+          },
+          "say": "Disputes only work when they're fair. Raising every return damages trust with your manager, and gets you ignored on the day you really are right. As the warning says, dispute only removals you can support with evidence, inside the agreed window. And never resubmit returned or duplicate leads to the same or another buyer without the person's consent for that buyer. In many countries, that breaks data protection law as well as the deal."
+        },
+        {
+          "v": "cards",
+          "h": "Common mistakes with scrubs",
+          "p": "Each mistake makes your plans look better than your bank balance. The fix is the same every time: plan with what is paid, not what is sent.",
+          "d": [
+            "Budgeting on sent leads|use true CPL from paid leads",
+            "No written return terms|agree them before traffic",
+            "Disputing everything|dispute with evidence only",
+            "Ignoring a rising scrub rate|investigate the week it moves"
+          ],
+          "say": "Each of these mistakes makes your plans look better than your bank balance. Budgeting on sent leads, instead of true C P L from paid leads. No written return terms, instead of agreeing them before traffic. Disputing everything, instead of disputing with evidence only. And ignoring a rising scrub rate, instead of investigating the week it moves. The fix is the same every time: plan with what's paid, not what's sent."
+        },
+        {
+          "v": "table",
+          "h": "Starting rules for scrubs",
+          "p": "Starting rules to adapt. They protect your margin and your relationship with the buyer at the same time, and they tell you which part of your setup to check first.",
+          "d": {
+            "cols": [
+              "Signal",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Scrub rate > the deal's return cap",
+                "Pause; review with manager"
+              ],
+              [
+                "Scrub rate up 5+ points in a week",
+                "Check form, placements, retargeting"
+              ],
+              [
+                "Duplicates > 5% of sent",
+                "Fix submit button and audience exclusions"
+              ],
+              [
+                "True CPL > target",
+                "Treat as a losing campaign even if platform CPL looks fine"
+              ]
+            ]
+          },
+          "say": "Here are starting rules for scrubs, to adapt. If the scrub rate is above the deal's return cap, pause and review with your manager. If it rises five or more points in a week, check your form, placements and retargeting. If duplicates are over five percent of sent leads, fix the submit button and audience exclusions. And if true C P L is above target, treat it as a losing campaign, even if the platform C P L looks fine."
+        }
+      ],
+      "takeaways": [
+        "You are paid on accepted leads; plan with true CPL from paid leads, not sent leads.",
+        "Agree dedupe windows, return windows, reasons and caps in writing before you send traffic.",
+        "Reduce duplicates at the source and dispute removals only with evidence."
+      ],
+      "action": "Ask your network for last month's accepted and returned lead list with reason codes, reconcile it with your own count, and calculate your scrub rate and true CPL.",
+      "glossary": [
+        {
+          "term": "Dedupe window",
+          "def": "The period a buyer checks back for duplicates; a repeat within it is not paid."
+        },
+        {
+          "term": "Return window",
+          "def": "The time a buyer has to reject a delivered lead for an agreed reason."
+        },
+        {
+          "term": "Scrub rate",
+          "def": "Share of sent leads removed before payment, for any reason."
+        },
+        {
+          "term": "True CPL",
+          "def": "Spend divided by paid leads, the real cost of each lead you earn on."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Spend $1,500, sent 1,000 leads, 800 paid. True CPL?",
+          "options": [
+            "$1.50",
+            "$1.20",
+            "$1.88",
+            "$2.00"
+          ],
+          "answer": 2,
+          "why": "$1,500 ÷ 800 = $1.875, about $1.88."
+        },
+        {
+          "q": "Sent 3,000, removed 450. Scrub rate?",
+          "options": [
+            "15%",
+            "10%",
+            "45%",
+            "85%"
+          ],
+          "answer": 0,
+          "why": "450 ÷ 3,000 = 15%."
+        },
+        {
+          "q": "Duplicates are 9% of sent leads. First fixes?",
+          "options": [
+            "Raise the bid",
+            "Ignore them",
+            "Send duplicates to another buyer",
+            "Disable the submit button after a tap and exclude applicants from retargeting"
+          ],
+          "answer": 3,
+          "why": "These two fixes remove the most common causes at the source."
+        },
+        {
+          "q": "A buyer returns 120 leads as 'invalid phone'. You can prove 10 were valid. What do you do?",
+          "options": [
+            "Dispute all 120",
+            "Dispute the 10 with evidence inside the window",
+            "Resell the 120 elsewhere",
+            "Accept and say nothing"
+          ],
+          "answer": 1,
+          "why": "Fair, evidence-based disputes are taken seriously; blanket disputes are not."
+        },
+        {
+          "q": "Platform CPL is $1.40, target $1.60, but true CPL is $1.90. How do you treat the campaign?",
+          "options": [
+            "Losing until true CPL is under target",
+            "Winning",
+            "Break-even",
+            "Unknown"
+          ],
+          "answer": 0,
+          "why": "Paid leads decide profit. At $1.90 true CPL it is above target."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn why the leads you're paid for are fewer than the leads you send. We'll cover dedupe windows, return windows and scrub rates, reconcile your count with the network's, and reduce duplicates and returns at the source.",
+      "say_outro": "So, plan with paid leads, not sent leads, agree return terms in writing, reconcile every month, and dispute only with evidence. Your task: ask your network for last month's accepted and returned lead list with reason codes, reconcile it with your own count, and calculate your scrub rate and true C P L. Now take the quiz."
+    },
+    {
+      "slug": "fraud-from-the-honest-side",
+      "title": "Fraud from the honest affiliate's side",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can recognise bot, incentivised and fake-identity patterns in your own leads.",
+        "By the end you can filter suspicious traffic and report it before the advertiser does.",
+        "By the end you can vet sub-affiliates and traffic partners so their fraud does not become yours."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why fraud is your problem too",
+          "p": "Even if you never cheat, fraud can reach your traffic through bots, click farms, paid form-fillers or a partner you buy traffic from. Finance advertisers often reverse payouts for fraudulent leads, sometimes months later, and may close your account. Fake applications can also involve stolen identities, which harms real people.",
+          "more": "Module 1 covered checking your own leads and why fake or incentivised leads are fraud. This lesson goes deeper: signal combinations, investigating a source step by step, form-level protections and vetting the partners whose traffic you resell or buy.",
+          "d": {
+            "b": "Clean traffic is your responsibility",
+            "s": "Even when someone else made it dirty."
+          },
+          "say": "Even if you never cheat, fraud can reach your traffic, through bots, click farms, paid form-fillers, or a partner you buy traffic from. Finance advertisers often reverse payouts for fraudulent leads, sometimes months later, and may close your account. Fake applications can also involve stolen identities, which harms real people. As the screen says, clean traffic is your responsibility, even when someone else made it dirty."
+        },
+        {
+          "v": "cards",
+          "h": "What fraud looks like in finance",
+          "p": "Learn these patterns to defend against them. This lesson teaches detection and prevention only. If you see them in your data, you filter, report and stop the source.",
+          "d": [
+            "Bots|automated form fills, often in bursts",
+            "Click farms|people paid to fill forms with junk",
+            "Incentivised traffic|users rewarded to apply, low intent",
+            "Identity misuse|real people's details used without consent",
+            "Partner stuffing|a sub-source inflates leads with fakes"
+          ],
+          "say": "Here's what fraud looks like in finance. Bots, automated form fills, often in bursts. Click farms, people paid to fill forms with junk. Incentivised traffic, users rewarded to apply, with low intent. Identity misuse, real people's details used without consent. And partner stuffing, where a sub-source inflates leads with fakes. We learn these patterns only to detect and prevent them. If you see them in your data, you filter, report, and stop the source."
+        },
+        {
+          "v": "table",
+          "h": "Signals to watch in your data",
+          "p": "Example signals. None of them proves fraud alone; several together are a strong reason to pause and investigate. Thresholds are rough guides that vary by form and geo.",
+          "d": {
+            "cols": [
+              "Signal",
+              "Looks suspicious when"
+            ],
+            "rows": [
+              [
+                "Time to complete form",
+                "Many under a few seconds"
+              ],
+              [
+                "Leads per device or IP",
+                "Several from one source"
+              ],
+              [
+                "IP location vs stated geo",
+                "Frequent mismatch, data-centre IPs"
+              ],
+              [
+                "Patterns in data",
+                "Sequential emails, repeated names"
+              ],
+              [
+                "Hour of day",
+                "Spikes at odd hours, unlike clicks"
+              ],
+              [
+                "Approval rate",
+                "Near zero with normal CPL"
+              ]
+            ]
+          },
+          "say": "Here are example signals to watch. Many forms completed in under a few seconds. Several leads from one device or I P address. Frequent mismatches between I P location and the stated geo, or data-centre I Ps. Patterns in the data, like sequential emails or repeated names. Spikes at odd hours that don't match clicks. And an approval rate near zero with a normal C P L, cost per lead. None of these proves fraud alone. Several together are a strong reason to pause and investigate. Thresholds vary by form and geo."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: one bad source",
+          "p": "Example: four traffic sources on a $25-per-approval loan offer. Source D looks cheap, but look at approvals and what happens when the advertiser reverses its payouts.",
+          "more": "Cost per approval: A $12.50, B about $14.29, C about $13.89, D $125. D's approval rate is 4 ÷ 1,200 ≈ 0.3%, against about 10% elsewhere. If the advertiser finds D's leads fraudulent and also reverses $1,000 of CPL bonuses already paid on them, D's real result is far worse than its spend. The honest fix is to stop D, report it, and keep evidence. Illustrative figures.",
+          "d": {
+            "cols": [
+              "Source",
+              "Spend",
+              "Leads",
+              "Approved"
+            ],
+            "rows": [
+              [
+                "A",
+                "$500",
+                "400",
+                "40"
+              ],
+              [
+                "B",
+                "$500",
+                "350",
+                "35"
+              ],
+              [
+                "C",
+                "$500",
+                "450",
+                "36"
+              ],
+              [
+                "D (partner)",
+                "$500",
+                "1,200",
+                "4"
+              ]
+            ]
+          },
+          "say": "Here's a worked example, four sources on a loan offer paying twenty five dollars per approval, each spending five hundred dollars. A gets forty approvals, B thirty five, C thirty six. Now look at source D, the partner. One thousand two hundred leads, it looks cheap, but only four approvals. That's about one hundred and twenty five dollars per approval, against roughly thirteen or fourteen elsewhere. And if the advertiser reverses payouts on D's leads, it gets worse. The honest fix is to stop D, report it, and keep evidence. Illustrative figures."
+        },
+        {
+          "v": "bars",
+          "h": "Approval rate by source",
+          "p": "Example from the table. One source with an approval rate a small fraction of the others is the clearest single fraud signal in finance lead gen, because lenders verify identity and affordability.",
+          "d": [
+            [
+              "Source A",
+              100,
+              "10.0%"
+            ],
+            [
+              "Source B",
+              100,
+              "10.0%"
+            ],
+            [
+              "Source C",
+              80,
+              "8.0%"
+            ],
+            [
+              "Source D",
+              3,
+              "0.3%"
+            ]
+          ],
+          "say": "Here's approval rate by source, from the same example. Sources A and B at ten percent. Source C at eight. And look at source D, a tiny bar at zero point three percent. A source with an approval rate a small fraction of the others is the clearest single fraud signal in finance lead gen, because lenders verify identity and affordability."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: investigate a suspicious source",
+          "p": "When a source trips your signals, investigate in this order. Pause first, then look; spending more while you investigate only adds to the possible reversal.",
+          "d": {
+            "steps": [
+              {
+                "title": "Pause the source",
+                "text": "Pause the ad set, placement or partner link. Note the time and reason in your log.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "tracker.example/sources",
+                  "title": "Sources",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Source",
+                        "Status",
+                        "Note"
+                      ],
+                      "rows": [
+                        [
+                          "D partner",
+                          "Paused",
+                          "0.3% approval, 4 Oct"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "button",
+                      "label": "Save note"
+                    }
+                  ],
+                  "highlight": 0,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "Pull the lead details",
+                "text": "Export time-to-complete, device, IP country and timestamps for that source's leads.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "tracker.example/leads?src=D",
+                  "title": "Lead details",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Lead",
+                        "Form time",
+                        "IP country",
+                        "Device"
+                      ],
+                      "rows": [
+                        [
+                          "L1",
+                          "3s",
+                          "Other",
+                          "Same"
+                        ],
+                        [
+                          "L2",
+                          "2s",
+                          "Other",
+                          "Same"
+                        ],
+                        [
+                          "L3",
+                          "4s",
+                          "Other",
+                          "Same"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "Tell the advertiser first",
+                "text": "Report what you found and the lead IDs. Advertisers trust affiliates who report problems before they are caught.",
+                "screen": {
+                  "app": "chat",
+                  "title": "Affiliate manager",
+                  "subtitle": "chat",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "I paused source D today. Form times of 2 to 4 seconds and foreign IPs. Lead IDs attached; please exclude them."
+                    },
+                    {
+                      "from": "them",
+                      "text": "Thanks for flagging. We'll review and adjust."
+                    }
+                  ],
+                  "v": "phone"
+                }
+              },
+              {
+                "title": "Close or fix the source",
+                "text": "If it is a partner, end the deal or require fixes in writing before any new traffic.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "mail.example/compose",
+                  "title": "To: traffic partner",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Subject",
+                      "value": "Traffic paused: quality review"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Leads show bot patterns. We need source details and fixes before resuming."
+                    },
+                    {
+                      "type": "button",
+                      "label": "Send"
+                    }
+                  ],
+                  "highlight": 1,
+                  "v": "screen"
+                }
+              }
+            ]
+          },
+          "say": "When a source trips your signals, investigate in this order. Tap Next to follow each step. First, pause the source, and note the time and reason in your log. Second, pull the lead details: time to complete, device, I P country and timestamps. Third, tell the advertiser first, with what you found and the lead I Ds. Advertisers trust affiliates who report problems before they're caught. Fourth, close or fix the source. If it's a partner, end the deal, or require fixes in writing before any new traffic. Pause first, then look."
+        },
+        {
+          "v": "check",
+          "h": "Form-level protections to add",
+          "p": "These protections stop much of the junk before it is a lead. Ask your developer or form tool which ones are available. Each one adds a little friction for real people, so test the effect on valid leads.",
+          "d": [
+            "Bot challenge on the form",
+            "Phone check by one-time code (OTP)",
+            "Hidden honeypot field bots fill",
+            "Minimum time-on-form check",
+            "One submit per device per day",
+            "Geo check on IP vs stated country"
+          ],
+          "say": "These form-level protections stop much of the junk before it becomes a lead. A bot challenge on the form. A phone check by O T P, a one-time code. A hidden honeypot field that bots fill. A minimum time-on-form check. One submit per device per day. And a geo check of I P against the stated country. Ask your developer or form tool which are available. Each adds a little friction for real people, so test the effect on valid leads."
+        },
+        {
+          "v": "code",
+          "h": "Example: a honeypot field",
+          "p": "A honeypot is a form field hidden from people with styling. Real users leave it empty; many bots fill every field. Reject or flag any submission where it has a value.",
+          "d": {
+            "lang": "text",
+            "text": "<input type=\"text\" name=\"company_website\" tabindex=\"-1\" autocomplete=\"off\" class=\"hp\">\n.hp { position:absolute; left:-9999px; }\nServer: if company_website is not empty -> flag as bot",
+            "note": "Example only. Keep it accessible: hide from screen readers too (aria-hidden)."
+          },
+          "say": "Here's an example of a honeypot field, shown in the code on screen. A honeypot is a form field hidden from people with styling. Real users never see it, so they leave it empty. But many bots fill in every field. So on your server, if that hidden field has a value, flag or reject the submission as a bot. As the note says, keep it accessible, and hide it from screen readers too."
+        },
+        {
+          "v": "compare",
+          "h": "Vetting traffic partners",
+          "p": "If you buy traffic or work with sub-affiliates, their fraud is paid out under your name. Vet them before the first lead, and keep the right to see where every lead came from.",
+          "d": {
+            "a": {
+              "title": "Risky partner",
+              "items": [
+                "Won't say where traffic comes from",
+                "Very cheap leads, huge volume overnight",
+                "No sub-source IDs",
+                "Pushes you to scale before data returns"
+              ]
+            },
+            "b": {
+              "title": "Safer partner",
+              "items": [
+                "Names sources and methods",
+                "Starts small, grows with approval data",
+                "Passes sub-source IDs on every lead",
+                "Accepts written quality terms"
+              ]
+            }
+          },
+          "say": "If you buy traffic or work with sub-affiliates, their fraud is paid out under your name. On the left, a risky partner. Won't say where traffic comes from. Very cheap leads, huge volume overnight. No sub-source I Ds. Pushes you to scale before data returns. On the right, a safer partner. Names sources and methods. Starts small and grows with approval data. Passes sub-source I Ds on every lead. And accepts written quality terms."
+        },
+        {
+          "v": "tip",
+          "h": "Never take part, never hide it",
+          "p": "If you discover fraud in your traffic, the honest response protects you, the advertiser and the people whose identities may have been misused. Hiding it protects nobody.",
+          "d": {
+            "kind": "warn",
+            "text": "Never generate, buy or pass on fake or incentivised applications, never use other people's details, and never hide fraud you discover. Report it to the advertiser and network with evidence. Suspected identity theft may need to be reported to the authorities; ask the advertiser how they handle it."
+          },
+          "say": "Here's the rule with no exceptions. Never generate, buy or pass on fake or incentivised applications. Never use other people's details. And never hide fraud you discover. Report it to the advertiser and network, with evidence. Suspected identity theft may need to be reported to the authorities, so ask the advertiser how they handle it. The honest response protects you, the advertiser, and the people whose identities may have been misused."
+        },
+        {
+          "v": "cards",
+          "h": "Common mistakes with fraud",
+          "p": "These mistakes usually come from hope, not bad intent. A cheap source looks too good to stop. Stop it anyway until the data proves it is real.",
+          "d": [
+            "Scaling a cheap source before approvals return|wait for lagged data",
+            "Trusting a partner's word|require sub-source IDs",
+            "Hoping the advertiser won't notice|they verify identities",
+            "Deleting evidence|keep logs for disputes"
+          ],
+          "say": "These mistakes usually come from hope, not bad intent. Scaling a cheap source before approvals return, instead of waiting for lagged data. Trusting a partner's word, instead of requiring sub-source I Ds. Hoping the advertiser won't notice, when they verify identities. And deleting evidence, instead of keeping logs for disputes. A cheap source looks too good to stop. Stop it anyway, until the data proves it's real."
+        },
+        {
+          "v": "table",
+          "h": "Starting rules for fraud signals",
+          "p": "Starting rules to adapt. Act on combinations of signals, with lag-adjusted approval data where you have it. Pausing a source for a day is cheap; a reversal of a month's payouts is not.",
+          "d": {
+            "cols": [
+              "Signal",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Approval rate < 25% of account average, ≥ 100 lagged leads",
+                "Pause source; investigate"
+              ],
+              [
+                "> 10% of leads complete form in < 5 s",
+                "Add bot challenge; pause if it continues"
+              ],
+              [
+                "Several leads per device or IP",
+                "Block repeats; review source"
+              ],
+              [
+                "Partner refuses sub-source IDs",
+                "Do not start or continue"
+              ]
+            ]
+          },
+          "say": "Here are starting rules for fraud signals, to adapt. If a source's approval rate is under twenty five percent of your account average, with at least one hundred lagged leads, pause and investigate. If more than ten percent of leads complete the form in under five seconds, add a bot challenge, and pause if it continues. If you see several leads per device or I P, block repeats and review the source. And if a partner refuses sub-source I Ds, don't start, or don't continue."
+        },
+        {
+          "v": "tip",
+          "h": "Rough guides only",
+          "p": "Every threshold in this lesson is a starting point. Real forms differ, and some honest people really do type fast, use autofill or share a family device.",
+          "d": {
+            "kind": "tip",
+            "text": "Thresholds such as 5 seconds or 25% of average are rough guides that vary by geo, form length and device mix. Calibrate them on your own clean traffic before you rely on them."
+          },
+          "say": "A final reminder: every threshold in this lesson is a rough guide. Real forms differ, and some honest people really do type fast, use autofill, or share a family device. As the tip says, thresholds like five seconds, or twenty five percent of average, vary by geo, form length and device mix. Calibrate them on your own clean traffic before you rely on them."
+        }
+      ],
+      "takeaways": [
+        "Fraud can reach honest traffic through bots, click farms, incentives and partners; you are responsible for what you send.",
+        "Watch combinations of signals, especially an approval rate far below other sources.",
+        "Pause, investigate, report first with evidence, and vet every traffic partner."
+      ],
+      "action": "Add a 'form time' and 'IP country' column to your lead export for one finance offer and check whether any source shows several fraud signals together.",
+      "glossary": [
+        {
+          "term": "Bot traffic",
+          "def": "Automated clicks or form fills that are not made by real, interested people."
+        },
+        {
+          "term": "Incentivised traffic",
+          "def": "Users rewarded to click or apply, which brings low intent and is banned by most finance offers."
+        },
+        {
+          "term": "Honeypot field",
+          "def": "A hidden form field real users never see; bots that fill it reveal themselves."
+        },
+        {
+          "term": "Sub-source ID",
+          "def": "An ID identifying where within a partner's traffic a lead came from."
+        },
+        {
+          "term": "Reversal",
+          "def": "A payout taken back after the advertiser rejects conversions, often for quality or fraud."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Source X: 900 leads, 3 approvals. Others average 9% approval. What first?",
+          "options": [
+            "Scale X; cheap leads",
+            "Move X's leads to another offer",
+            "Ask the lender to approve more",
+            "Pause X and investigate"
+          ],
+          "answer": 3,
+          "why": "0.33% against 9% is far below a quarter of average. Pause and investigate."
+        },
+        {
+          "q": "Which is the strongest single fraud signal in finance lead gen?",
+          "options": [
+            "High CTR",
+            "Approval rate a small fraction of other sources",
+            "Leads on weekends",
+            "Long form times"
+          ],
+          "answer": 1,
+          "why": "Lenders verify identity and affordability, so fake leads rarely get approved."
+        },
+        {
+          "q": "A partner refuses to pass sub-source IDs. Starting rule?",
+          "options": [
+            "Do not start or continue",
+            "Start with a big budget",
+            "Accept if CPL is low",
+            "Ask once and start anyway"
+          ],
+          "answer": 0,
+          "why": "Without sub-source IDs you cannot find or remove bad traffic."
+        },
+        {
+          "q": "You discover bot leads in last week's traffic. Honest response?",
+          "options": [
+            "Say nothing and hope",
+            "Resubmit them with new emails",
+            "Report to the advertiser with lead IDs and pause the source",
+            "Delete the logs"
+          ],
+          "answer": 2,
+          "why": "Reporting first, with evidence, protects you and the advertiser."
+        },
+        {
+          "q": "What does a honeypot field catch?",
+          "options": [
+            "Fast human typists",
+            "Bots that fill hidden fields",
+            "Duplicate phones",
+            "Wrong geo"
+          ],
+          "answer": 1,
+          "why": "Humans never see the field; bots often fill every field."
+        }
+      ],
+      "say_intro": "This lesson looks at fraud from the honest affiliate's side. You'll learn to recognise bot, incentivised and fake-identity patterns in your own leads, filter and report suspicious traffic, and vet partners so their fraud doesn't become yours.",
+      "say_outro": "So, you protect yourself by watching combinations of signals, pausing first, reporting early, and only working with partners who show where every lead comes from. Your task: add a form time and an I P country column to your lead export for one finance offer, and check whether any source shows several fraud signals together. Now take the quiz."
+    },
+    {
+      "slug": "validation-consent-and-data",
+      "title": "Validation, consent and data handling",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can choose validation steps and judge their cost against cost per valid lead.",
+        "By the end you can capture consent that is specific, recorded and provable.",
+        "By the end you can handle finance lead data under the main African data protection laws."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why consent is part of the lead",
+          "p": "A finance lead is a person's identity and money situation. Buyers increasingly ask for proof that each person agreed to be contacted by them, and data protection regulators can fine businesses that cannot show it. A lead without provable consent is worth less, and can become a liability.",
+          "d": {
+            "b": "No provable consent, no real lead",
+            "s": "Buyers and regulators both ask."
+          },
+          "say": "A finance lead is a person's identity and money situation. Buyers increasingly ask for proof that each person agreed to be contacted by them. And data protection regulators can fine businesses that can't show it. So a lead without provable consent is worth less, and can become a liability. As the screen says, no provable consent, no real lead."
+        },
+        {
+          "v": "cards",
+          "h": "Validation options",
+          "p": "Validation stops junk before it becomes a lead. Each step adds friction for real people, so measure its effect on cost per valid lead, not on raw CPL.",
+          "d": [
+            "Format checks|phone and email shape",
+            "Email domain check|domain can receive mail",
+            "Phone OTP|one-time code proves the number",
+            "Geo check|IP matches stated country",
+            "Duplicate check|already applied recently?"
+          ],
+          "say": "Here are your validation options. Format checks, on the shape of the phone and email. An email domain check, that the domain can receive mail. Phone O T P, a one-time code that proves the number. A geo check, that the I P matches the stated country. And a duplicate check, whether the person applied recently. Validation stops junk before it becomes a lead. Each step adds friction for real people, so measure its effect on cost per valid lead, not on raw C P L, cost per lead."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: adding OTP",
+          "p": "Example: the same form with and without a phone OTP step, $1,000 spend each, payout $3 per valid lead. OTP raises CPL but lifts the valid rate a lot.",
+          "more": "Check: no OTP $1,000 ÷ 1,000 = $1.00 CPL; 65% valid = 650; $1,000 ÷ 650 ≈ $1.54. With OTP $1,000 ÷ 700 ≈ $1.43 CPL; 95% valid = 665; $1,000 ÷ 665 ≈ $1.50. More valid leads for the same spend, fewer returns to dispute, and a buyer who trusts your data. The result depends on how the OTP is built; slow or failing codes can lose real people. Illustrative figures.",
+          "d": {
+            "cols": [
+              "",
+              "No OTP",
+              "With OTP"
+            ],
+            "rows": [
+              [
+                "Leads",
+                "1,000",
+                "700"
+              ],
+              [
+                "CPL",
+                "$1.00",
+                "$1.43"
+              ],
+              [
+                "Valid rate",
+                "65%",
+                "95%"
+              ],
+              [
+                "Valid leads",
+                "650",
+                "665"
+              ],
+              [
+                "Cost per valid lead",
+                "$1.54",
+                "$1.50"
+              ]
+            ]
+          },
+          "say": "Here's a worked example, the same form with and without a phone O T P step, one thousand dollars spend each. Without O T P, you get a thousand leads at one dollar each, but only sixty five percent are valid, six hundred and fifty, so about one fifty four per valid lead. With O T P, you get seven hundred leads at about one forty three, but ninety five percent valid, six hundred and sixty five, so about one fifty per valid lead. More valid leads for the same spend. It depends on how the O T P is built. Illustrative figures."
+        },
+        {
+          "v": "phone",
+          "h": "Example: OTP step on mobile",
+          "p": "Example flow. The code arrives by SMS or a messaging app, the person types it, and the form continues. Keep the wait short and offer a resend.",
+          "d": {
+            "app": "chat",
+            "title": "Lender form",
+            "subtitle": "verify",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Enter the 6-digit code we sent to +254 7XX XXX 123"
+              },
+              {
+                "from": "me",
+                "text": "481 207"
+              },
+              {
+                "from": "them",
+                "text": "Number confirmed. Next: how much would you like to borrow?",
+                "buttons": [
+                  "Continue"
+                ]
+              }
+            ]
+          },
+          "say": "Here's an example O T P step on mobile. The form says, enter the six-digit code we sent to your number. The person types the code. The form replies, number confirmed, and moves on to the next question, how much would you like to borrow, with a continue button. The code arrives by S M S or a messaging app. Keep the wait short, and offer a resend."
+        },
+        {
+          "v": "check",
+          "h": "What good consent looks like",
+          "p": "Wording varies by law and buyer, but these features are widely expected. Get the exact consent text from the advertiser and a local lawyer, and do not edit it yourself.",
+          "d": [
+            "Unticked box the person ticks",
+            "Plain words: who will contact, how, why",
+            "Named buyer or a clear link to the list",
+            "Separate from accepting terms",
+            "Easy way to withdraw later"
+          ],
+          "say": "Here's what good consent looks like. An unticked box that the person ticks. Plain words saying who will contact them, how, and why. A named buyer, or a clear link to the list. Consent that's separate from accepting the terms. And an easy way to withdraw later. Wording varies by law and buyer, so get the exact consent text from the advertiser and a local lawyer, and don't edit it yourself."
+        },
+        {
+          "v": "screen",
+          "h": "Example: a consent record",
+          "p": "Store this for every lead. It lets you prove what the person saw and agreed to if a buyer, platform or regulator asks. Keep the page version so you can show the exact wording.",
+          "d": {
+            "kind": "browser",
+            "url": "forms.example/leads/L-20391",
+            "title": "Consent record: L-20391",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Timestamp",
+                "value": "2026-10-04 10:42:13 WAT"
+              },
+              {
+                "type": "field",
+                "label": "Page version",
+                "value": "ng-loan-form-v7"
+              },
+              {
+                "type": "field",
+                "label": "Consent text",
+                "value": "I agree that Example Finance Ltd may contact me by phone and SMS about my loan application."
+              },
+              {
+                "type": "field",
+                "label": "Checkbox",
+                "value": "Ticked by user"
+              },
+              {
+                "type": "field",
+                "label": "IP / device",
+                "value": "Stored, access restricted"
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "Here's an example consent record. Store one for every lead. It holds the timestamp, the page version, and, highlighted here, the exact consent text the person saw, naming who may contact them, by phone and S M S, about their loan application. It also shows the checkbox was ticked by the user, and the I P and device are stored with restricted access. Keep the page version, so you can show the exact wording if a buyer, platform or regulator asks."
+        },
+        {
+          "v": "table",
+          "h": "Data protection laws to know",
+          "p": "Example list for main African geos and one global reference. These laws generally require a lawful basis, purpose limits, security and respect for people's rights. Details differ; check the regulator's site and take legal advice.",
+          "more": "We are confident these laws exist; we are not certain of every current rule, registration duty or guidance note under them. In the United States, calls and texts to leads are also governed by the TCPA and related rules on consent, which have changed in recent years and were the subject of court decisions; we are not certain of the current state, so check with a US lawyer before running US lead gen.",
+          "d": {
+            "cols": [
+              "Country",
+              "Law (as we understand it)",
+              "Regulator"
+            ],
+            "rows": [
+              [
+                "Nigeria",
+                "Nigeria Data Protection Act 2023",
+                "NDPC"
+              ],
+              [
+                "Kenya",
+                "Data Protection Act 2019",
+                "ODPC"
+              ],
+              [
+                "South Africa",
+                "POPIA",
+                "Information Regulator"
+              ],
+              [
+                "Ghana",
+                "Data Protection Act 2012",
+                "Data Protection Commission"
+              ],
+              [
+                "EU / UK",
+                "GDPR / UK GDPR",
+                "National authorities, ICO"
+              ]
+            ]
+          },
+          "say": "Here are the data protection laws to know, as we understand them. Nigeria, the Nigeria Data Protection Act twenty twenty three, regulator N D P C. Kenya, the Data Protection Act twenty nineteen, regulator O D P C. South Africa, POPIA, with the Information Regulator. Ghana, the Data Protection Act twenty twelve, with the Data Protection Commission. And as a global reference, G D P R in the E U and U K, with national authorities and the I C O. Details differ, and we're not certain of every current rule, so check the regulator's site and take legal advice."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: data handling basics",
+          "p": "Simple habits that cover most of the risk when you hold finance leads, even briefly. Ask the advertiser what their contract requires on top of these.",
+          "d": {
+            "steps": [
+              {
+                "title": "Collect only what is needed",
+                "text": "Ask only the fields the buyer needs at this stage. Fewer fields means less to protect and often more leads.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "builder.example/form",
+                  "title": "Form fields",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Full name",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Phone",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "National ID number",
+                      "on": false
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Bank account number",
+                      "on": false
+                    },
+                    {
+                      "type": "text",
+                      "value": "Leave sensitive IDs to the lender's own secure process."
+                    }
+                  ],
+                  "highlight": 2,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "Restrict access",
+                "text": "Only people who need leads can see them. Use individual logins, not one shared password.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "forms.example/settings/access",
+                  "title": "Access",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "User",
+                        "Role"
+                      ],
+                      "rows": [
+                        [
+                          "Ejiro",
+                          "Owner"
+                        ],
+                        [
+                          "Buyer A",
+                          "Media buyer: no lead export"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Two-factor login",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 1,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "Delete on schedule",
+                "text": "Set a retention period agreed with the advertiser and delete leads after it ends.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "forms.example/settings/retention",
+                  "title": "Retention",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Delete leads after",
+                      "value": "90 days (example)"
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Auto-delete",
+                      "on": true
+                    },
+                    {
+                      "type": "button",
+                      "label": "Save"
+                    }
+                  ],
+                  "highlight": 1,
+                  "v": "screen"
+                }
+              }
+            ]
+          },
+          "say": "Here are simple data handling habits. Tap Next to follow each step. First, collect only what's needed. Ask only the fields the buyer needs at this stage. Notice the national I D and bank account toggles are off. Leave sensitive I Ds to the lender's own secure process. Second, restrict access. Only people who need leads can see them, with individual logins and two-factor login, not one shared password. Third, delete on schedule. Set a retention period agreed with the advertiser, here ninety days as an example, and delete leads after it ends."
+        },
+        {
+          "v": "chat",
+          "h": "Example: someone withdraws consent",
+          "p": "People can change their minds. Handle a withdrawal quickly, confirm it, and pass it to every buyer who received the lead, as your contracts require. Example exchange in your own help chat.",
+          "d": [
+            {
+              "from": "lead",
+              "text": "Please stop calling me about loans. I don't want them any more."
+            },
+            {
+              "from": "ai",
+              "text": "Understood. We have removed your details from our list and told the lender you received offers from to stop contacting you."
+            },
+            {
+              "from": "lead",
+              "text": "Thank you."
+            },
+            {
+              "from": "buyer",
+              "text": "Logged: L-20391 consent withdrawn 4 Oct, buyer notified, record deleted per retention rules."
+            }
+          ],
+          "say": "People can change their minds. In this example chat, a lead says, please stop calling me about loans. The reply confirms their details have been removed from the list, and the lender has been told to stop contacting them. Then the log records that consent was withdrawn, the buyer notified, and the record deleted per retention rules. Handle a withdrawal quickly, confirm it, and pass it to every buyer who received the lead, as your contracts require."
+        },
+        {
+          "v": "tip",
+          "h": "Consent and data are legal duties",
+          "p": "These are not nice-to-haves. In finance they are often written into the advertiser's contract as well as the law, and breaking them can end the deal.",
+          "d": {
+            "kind": "warn",
+            "text": "Do not collect national ID, bank or card numbers on your own forms unless the advertiser requires it and you can secure it; let the lender's regulated process collect them. Never sell or share leads with anyone the person did not agree to. Check the data protection law of each geo and the platform's lead ad terms. This is not legal advice."
+          },
+          "say": "Consent and data are legal duties, not nice-to-haves. Don't collect national I D, bank or card numbers on your own forms, unless the advertiser requires it and you can secure it. Let the lender's regulated process collect them. Never sell or share leads with anyone the person didn't agree to. And check the data protection law of each geo, and the platform's lead ad terms. As the slide says, this is not legal advice."
+        },
+        {
+          "v": "compare",
+          "h": "Common consent and data mistakes",
+          "p": "Each mistake can turn a valuable list into a legal problem for you and the buyer. Each fix is small if you build it in from the very first form.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Pre-ticked consent box",
+                "Consent hidden in terms",
+                "Leads in a shared spreadsheet",
+                "Keeping leads forever"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Unticked box, person ticks it",
+                "Separate, plain consent line",
+                "Access-controlled lead store",
+                "Agreed retention, then delete"
+              ]
+            }
+          },
+          "say": "Each of these mistakes can turn a valuable list into a legal problem. A pre-ticked consent box, fixed by an unticked box the person ticks. Consent hidden in the terms, fixed by a separate, plain consent line. Leads in a shared spreadsheet, fixed by an access-controlled lead store. And keeping leads forever, fixed by an agreed retention period, then deletion. Each fix is small if you build it in from the very first form."
+        },
+        {
+          "v": "table",
+          "h": "Starting rules for validation",
+          "p": "Starting rules to adapt. Measure every validation change on cost per valid lead and on returns, never on CPL alone, and give each change at least a week of data.",
+          "d": {
+            "cols": [
+              "Signal",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Valid rate < 70%",
+                "Add or tighten validation; test OTP"
+              ],
+              [
+                "Cost per valid lead falls after a check",
+                "Keep it"
+              ],
+              [
+                "OTP failure rate > 15% (rough guide)",
+                "Check SMS delivery; offer resend"
+              ],
+              [
+                "Any lead without a consent record",
+                "Do not deliver it"
+              ]
+            ]
+          },
+          "say": "Here are starting rules for validation, to adapt. If the valid rate is below seventy percent, add or tighten validation, and test O T P. If cost per valid lead falls after adding a check, keep it. If the O T P failure rate is over fifteen percent, as a rough guide, check S M S delivery and offer a resend. And any lead without a consent record, don't deliver it. Measure every change on cost per valid lead and returns, and give it at least a week of data."
+        }
+      ],
+      "takeaways": [
+        "Judge validation by cost per valid lead; friction that removes junk often pays.",
+        "Capture consent with an unticked box, plain words, named buyers and a stored record.",
+        "Collect the minimum, restrict access, delete on schedule and follow each geo's data law."
+      ],
+      "action": "Write down every field on one finance form you run, remove any the buyer does not need, and check that every lead has a stored consent record with timestamp and page version.",
+      "glossary": [
+        {
+          "term": "OTP",
+          "def": "One-time password: a short code sent to a phone or email to prove the person controls it."
+        },
+        {
+          "term": "Consent record",
+          "def": "Stored proof of what a person agreed to, when, on which page version."
+        },
+        {
+          "term": "Data minimisation",
+          "def": "Collecting only the personal data you actually need for the purpose."
+        },
+        {
+          "term": "Retention period",
+          "def": "How long you keep personal data before deleting it."
+        },
+        {
+          "term": "Lawful basis",
+          "def": "The legal reason that allows you to process someone's personal data, such as consent."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "$800 spend. No OTP: 800 leads, 60% valid. OTP: 560 leads, 90% valid. Cost per valid lead?",
+          "options": [
+            "$1.67 vs $1.59",
+            "$1.00 vs $1.43",
+            "$1.33 vs $1.43",
+            "$1.67 vs $1.43"
+          ],
+          "answer": 0,
+          "why": "No OTP: 480 valid, $800 ÷ 480 ≈ $1.67. OTP: 504 valid, $800 ÷ 504 ≈ $1.59."
+        },
+        {
+          "q": "Which consent setup is widely expected?",
+          "options": [
+            "Pre-ticked box",
+            "Consent inside the terms",
+            "Unticked box with plain words naming who will contact",
+            "Verbal consent only"
+          ],
+          "answer": 2,
+          "why": "An active, specific, separate choice that names the buyer is the common standard."
+        },
+        {
+          "q": "Should your own prelander form collect national ID numbers?",
+          "options": [
+            "Yes, always",
+            "Only if the advertiser requires it and you can secure it; usually leave it to the lender",
+            "Yes, it raises approval",
+            "Yes, for retargeting"
+          ],
+          "answer": 1,
+          "why": "Sensitive IDs are best collected by the lender's regulated process."
+        },
+        {
+          "q": "Which law governs personal data in Nigeria (as at this writing)?",
+          "options": [
+            "POPIA",
+            "Kenya Data Protection Act",
+            "GDPR only",
+            "Nigeria Data Protection Act 2023"
+          ],
+          "answer": 3,
+          "why": "Nigeria's Data Protection Act 2023, overseen by the NDPC. Check for current guidance."
+        },
+        {
+          "q": "A lead has no consent record. Starting rule?",
+          "options": [
+            "Deliver it",
+            "Deliver to a different buyer",
+            "Do not deliver it",
+            "Add consent later"
+          ],
+          "answer": 2,
+          "why": "A lead without provable consent should not be delivered."
+        }
+      ],
+      "say_intro": "This lesson covers validation, consent and data handling. You'll choose validation steps and judge them by cost per valid lead, capture consent that's specific and provable, and handle finance lead data under the main African data protection laws.",
+      "say_outro": "So, validate to cut junk, measure it on cost per valid lead, record provable consent for every lead, and collect, protect and delete data carefully. Your task: write down every field on one finance form you run, remove any the buyer doesn't need, and check that every lead has a stored consent record with timestamp and page version. Now take the quiz."
+    },
+    {
+      "slug": "optimising-for-quality",
+      "title": "Optimising ad platforms for quality",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can choose which stage to optimise for, given your volume.",
+        "By the end you can send deeper-stage events back to the ad platform safely.",
+        "By the end you can apply lag-aware rules when the platform learns from late events."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the platform needs quality signals",
+          "p": "Ad platforms find more of whatever you tell them is a conversion. If you only send 'lead', the algorithm learns to find people who fill forms, including people who will never be approved. Sending later stages, where volume allows, teaches it to find people more like your approved and funded customers.",
+          "d": {
+            "b": "The platform finds what you reward",
+            "s": "Reward the stage you are paid for."
+          },
+          "say": "Ad platforms find more of whatever you tell them is a conversion. If you only send lead, the algorithm learns to find people who fill forms, including people who'll never be approved. Sending later stages, where volume allows, teaches it to find people more like your approved and funded customers. As the screen says, the platform finds what you reward, so reward the stage you're paid for."
+        },
+        {
+          "v": "flow",
+          "h": "The optimisation ladder",
+          "p": "Move down the ladder only when the deeper event happens often enough for the platform to learn. Each rung gives a better signal and fewer events.",
+          "d": [
+            "Optimise for leads",
+            "Optimise for valid leads",
+            "Optimise for approved",
+            "Optimise for funded, with value"
+          ],
+          "say": "Here's the optimisation ladder. Start by optimising for leads. Then valid leads. Then approved. And finally funded, with value. Each rung down gives the platform a better signal, but fewer events. So move down the ladder only when the deeper event happens often enough for the platform to learn from it."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: which rung can you use?",
+          "p": "Example: one ad set spending $100 a day on a loan offer. Many buyers use about 50 optimisation events per ad set per week as a rough guide for stable learning; Meta has published guidance in this range, but check the current Help Center.",
+          "more": "Example: $700 a week at $1.00 CPL = 700 leads. Valid at 80% = 560. Approved at 12% = 84. Funded at 6% = 42. Approved clears the rough guide of about 50 per week; funded does not at this budget. You could optimise for approved, or for funded across a combined ad set with more budget. The approval event must arrive quickly enough for the platform to use it; check current limits on how old an event can be. Illustrative figures.",
+          "d": {
+            "cols": [
+              "Event",
+              "Rate per lead",
+              "Per week at 700 leads",
+              "Usable?"
+            ],
+            "rows": [
+              [
+                "Lead",
+                "100%",
+                "700",
+                "Yes"
+              ],
+              [
+                "Valid lead",
+                "80%",
+                "560",
+                "Yes"
+              ],
+              [
+                "Approved",
+                "12%",
+                "84",
+                "Yes, if reported in time"
+              ],
+              [
+                "Funded",
+                "6%",
+                "42",
+                "Below rough guide"
+              ]
+            ]
+          },
+          "say": "Which rung can you use? Example: one ad set spending one hundred dollars a day on a loan offer, so about seven hundred leads a week. Five hundred and sixty valid. Eighty four approved. Forty two funded. Many buyers use about fifty optimisation events per ad set per week as a rough guide for stable learning, and Meta has published guidance in that range, but check the current Help Center. Here, approved clears the guide, if it's reported in time. Funded doesn't, at this budget. Illustrative figures."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: send an approved event",
+          "p": "The usual path is network postback to your tracker, then your tracker sends a server event to the ad platform with the original click identifier. Names and fields change; check the platform's current Conversions API documentation.",
+          "d": {
+            "steps": [
+              {
+                "title": "Store the click identifier",
+                "text": "When the lead arrives, store the platform's click identifier (for Meta, the fbclid from the landing URL, often kept as a cookie value) with your click ID.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "tracker.example/clicks/c_7781",
+                  "title": "Click record",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Your click ID",
+                      "value": "c_7781"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Platform click ID",
+                      "value": "stored"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Ad ID (sub1)",
+                      "value": "120200...45"
+                    }
+                  ],
+                  "highlight": 1,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "Receive the stage postback",
+                "text": "The network posts back status=approved for click c_7781.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "tracker.example/logs",
+                  "title": "Postback received",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "cid",
+                      "value": "c_7781"
+                    },
+                    {
+                      "type": "field",
+                      "label": "status",
+                      "value": "approved"
+                    },
+                    {
+                      "type": "field",
+                      "label": "time",
+                      "value": "3 days after lead"
+                    }
+                  ],
+                  "highlight": 1,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "Forward as a server event",
+                "text": "Your tracker sends a custom 'Approved' event with the click identifier and event time. No personal or financial details.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "tracker.example/integrations/meta",
+                  "title": "Server event (example)",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "event_name",
+                      "value": "Approved"
+                    },
+                    {
+                      "type": "field",
+                      "label": "event_time",
+                      "value": "time of approval (Unix)"
+                    },
+                    {
+                      "type": "field",
+                      "label": "action_source",
+                      "value": "website"
+                    },
+                    {
+                      "type": "field",
+                      "label": "user_data.fbc",
+                      "value": "stored click identifier"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Example shape only. Check the current API reference and allowed data."
+                    },
+                    {
+                      "type": "button",
+                      "label": "Send"
+                    }
+                  ],
+                  "highlight": 0,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "Check it arrived",
+                "text": "In the platform's events tool, confirm the event shows and is matched. Then create a conversion that uses it.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "events.example/overview",
+                  "title": "Events overview",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Event",
+                        "Received",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "Lead",
+                          "702",
+                          "Active"
+                        ],
+                        [
+                          "Approved",
+                          "81",
+                          "Active"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "Names change; check the current Events Manager."
+                    }
+                  ],
+                  "highlight": 0,
+                  "v": "screen"
+                }
+              }
+            ]
+          },
+          "say": "Here's how to send an approved event. Tap Next to follow each step. First, when the lead arrives, store the platform's click identifier alongside your own click I D. Second, receive the stage postback, here, approved, three days after the lead. Third, your tracker forwards a custom Approved event to the platform as a server event, with the click identifier and the event time, and no personal or financial details. Fourth, check in the platform's events tool that it arrived and is matched, then create a conversion that uses it. Names change, so check the current Conversions A P I documentation."
+        },
+        {
+          "v": "check",
+          "h": "Before switching to a deeper event",
+          "p": "Tick these before you move an ad set from lead to approved or funded optimisation. Switching resets learning, so a failed switch costs money as well as time.",
+          "d": [
+            "Postback for the stage tested and matching",
+            "Events arrive within the platform's time limit",
+            "Enough weekly events at current budget",
+            "Lag measured and written on the rule card",
+            "Old ad set kept running as control"
+          ],
+          "say": "Tick these before you move an ad set to approved or funded optimisation. The postback for that stage is tested and matching. Events arrive within the platform's time limit. There are enough weekly events at your current budget. The lag is measured and written on your rule card. And the old ad set is kept running as a control. Switching resets learning, so a failed switch costs money as well as time."
+        },
+        {
+          "v": "tip",
+          "h": "Financial data and platform terms",
+          "p": "Ad platforms restrict what financial information you may send them, and many treat financial services data as sensitive. Send the minimum the event needs, and nothing that describes the person's money.",
+          "d": {
+            "kind": "warn",
+            "text": "Send stage names and IDs only. Do not send loan amounts tied to a person, credit scores, account numbers or health or financial status. Check the platform's current business tools terms and any restrictions on events for financial services; we are not certain how they apply in every region."
+          },
+          "say": "This is an important warning. Ad platforms restrict what financial information you may send them, and many treat financial services data as sensitive. Send stage names and I Ds only. Don't send loan amounts tied to a person, credit scores, account numbers, or health or financial status. Check the platform's current business tools terms, and any restrictions on events for financial services. We're not certain how they apply in every region."
+        },
+        {
+          "v": "cards",
+          "h": "Other honest quality levers",
+          "p": "Event choice is the biggest lever, but not the only one. These options often improve quality without any change to the offer. Settings names change; check the current Ads Manager.",
+          "d": [
+            "Higher-intent lead form|adds a review step before submit",
+            "Qualifying question|ask what the lender needs to know",
+            "Exclude weak placements|from your scorecard data",
+            "Audience exclusions|remove people who already applied"
+          ],
+          "say": "Event choice is the biggest lever, but not the only one. A higher-intent lead form, which adds a review step before submit. A qualifying question, asking what the lender needs to know. Excluding weak placements, using your scorecard data. And audience exclusions, removing people who already applied. These often improve quality without any change to the offer. Settings names change, so check the current Ads Manager."
+        },
+        {
+          "v": "curve",
+          "h": "Lag makes good ad sets look bad early",
+          "p": "Example: cost per approved for one ad set as reported each day versus the final figure after all approvals arrive. Early readings overstate the cost. Rules on deep events must wait for the lag.",
+          "d": {
+            "a": [
+              40,
+              24,
+              17,
+              14,
+              12.5,
+              12,
+              11.8
+            ],
+            "la": "Reported cost per approved",
+            "b": [
+              11.8,
+              11.8,
+              11.8,
+              11.8,
+              11.8,
+              11.8,
+              11.8
+            ],
+            "lb": "Final cost per approved",
+            "x": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7"
+            ]
+          },
+          "say": "Lag makes good ad sets look bad early. Look at this example. On day one, the reported cost per approved is forty dollars. But approvals keep arriving, and by day seven it settles near eleven eighty, the flat line, which is the final figure. Early readings overstate the cost. So any rule on a deep event must wait for the lag."
+        },
+        {
+          "v": "table",
+          "h": "Lag-aware rule card",
+          "p": "Starting rules to adapt when optimising for a delayed stage. The lag is the typical days from lead to that stage being reported for this offer; measure it from your own postbacks.",
+          "d": {
+            "cols": [
+              "Condition",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Ad set younger than the lag",
+                "No kill decisions on the deep event"
+              ],
+              [
+                "Spend ≥ 2 × target + lag passed, 0 events",
+                "Kill"
+              ],
+              [
+                "Lagged cost ≤ 0.8 × target, ≥ 3 events",
+                "Scale +20%"
+              ],
+              [
+                "Event volume < ~50 per week (rough guide)",
+                "Move up one rung or merge ad sets"
+              ]
+            ]
+          },
+          "say": "Here's a lag-aware rule card, to adapt. The lag is the typical days from lead to that stage being reported, measured from your own postbacks. If the ad set is younger than the lag, make no kill decisions on the deep event. If spend reaches two times target, the lag has passed, and there are zero events, kill. If the lagged cost is at or under zero point eight times target, with three or more events, scale by twenty percent. And if volume is under about fifty a week, move up a rung or merge ad sets."
+        },
+        {
+          "v": "product",
+          "h": "One view across stages",
+          "p": "When you track joins, leads and stages across several channels, a single dashboard makes lag and quality easier to see. Use it alongside, not instead of, the network's own report.",
+          "d": {
+            "slug": "voosquare",
+            "why": "Keep your funnels, tools and learning in one place so stage data and decisions stay together."
+          },
+          "say": "When you track joins, leads and stages across several channels, a single dashboard makes lag and quality easier to see. On VooSquare, you can keep your funnels, tools and learning in one place, so stage data and decisions stay together. Use it alongside the network's own report, not instead of it."
+        },
+        {
+          "v": "screen",
+          "h": "Example: a higher-intent lead form",
+          "p": "If you use platform lead forms, a form type that adds a review step before submit can cut casual sign-ups. We are not certain of the current option names; check the current Ads Manager before relying on it.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/instant-form",
+            "title": "Create form",
+            "blocks": [
+              {
+                "type": "radio",
+                "label": "Form type",
+                "options": [
+                  "More volume",
+                  "Higher intent"
+                ],
+                "value": 1
+              },
+              {
+                "type": "field",
+                "label": "Qualifying question",
+                "value": "What is your monthly income range?"
+              },
+              {
+                "type": "toggle",
+                "label": "Review screen before submit",
+                "on": true
+              },
+              {
+                "type": "text",
+                "value": "Names change; check the current Ads Manager."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Here's an example higher-intent lead form. The form type is set to higher intent, highlighted here, rather than more volume. There's a qualifying question about monthly income range, and a review screen before submit is switched on. If you use platform lead forms, a type that adds a review step can cut casual sign-ups. We're not certain of the current option names, so check the current Ads Manager before relying on it."
+        },
+        {
+          "v": "compare",
+          "h": "Optimisation mistakes",
+          "p": "These mistakes either starve the algorithm of events or teach it the wrong thing. Both cost money quietly for weeks before anyone notices the pattern.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Optimising for funded at 10 events a week",
+                "Sending rejected leads as conversions",
+                "Killing on day 2 for a 5-day lag",
+                "Many small ad sets splitting events"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Use the deepest rung with enough volume",
+                "Send only positive stages",
+                "Wait for the lag",
+                "Fewer, larger ad sets for deep events"
+              ]
+            }
+          },
+          "say": "These mistakes either starve the algorithm of events, or teach it the wrong thing. Optimising for funded at ten events a week, instead of the deepest rung with enough volume. Sending rejected leads as conversions, instead of only positive stages. Killing on day two for a five-day lag, instead of waiting for the lag. And many small ad sets splitting events, instead of fewer, larger ad sets for deep events. Both kinds cost money quietly for weeks."
+        },
+        {
+          "v": "stat",
+          "h": "Example: lift from deeper optimisation",
+          "p": "Example: after switching from lead to approved optimisation, cost per approval fell from $14 to $11 at similar spend. Results vary widely and can also get worse; test it in a controlled split rather than switching everything at once.",
+          "d": {
+            "n": 21,
+            "pre": "",
+            "suf": "%",
+            "dec": 0,
+            "label": "lower cost per approval in this example ($14 to $11)",
+            "note": "Example. Not a benchmark."
+          },
+          "say": "Here's an example of the lift from deeper optimisation. After switching from lead to approved optimisation, cost per approval fell from fourteen dollars to eleven, at similar spend. That's twenty one percent lower, the number on screen. But this is an example, not a benchmark. Results vary widely, and can also get worse. So test it in a controlled split, rather than switching everything at once."
+        }
+      ],
+      "takeaways": [
+        "Optimise for the deepest stage that has enough weekly events, sending only positive stages.",
+        "Forward stages as server events with the platform click identifier and no personal or financial details.",
+        "Use lag-aware rules: no kill decisions on deep events before the lag has passed."
+      ],
+      "action": "Measure the typical days from lead to approval for one finance offer from your postback log, and write that lag at the top of your rule card.",
+      "glossary": [
+        {
+          "term": "Optimisation event",
+          "def": "The conversion the ad platform tries to get more of when delivering your ads."
+        },
+        {
+          "term": "Server event",
+          "def": "A conversion sent from your server or tracker to the ad platform rather than from the browser."
+        },
+        {
+          "term": "Higher-intent form",
+          "def": "A lead form option that adds a review or confirmation step to reduce casual submissions; names vary."
+        },
+        {
+          "term": "Event lag",
+          "def": "Days between the click and when a later stage is reported."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Example: 400 leads a week, 10% approved. Can you optimise for approved on a rough guide of ~50 a week?",
+          "options": [
+            "No, only 4",
+            "No, 40 is below ~50",
+            "Yes, 400",
+            "Yes, 50 exactly"
+          ],
+          "answer": 1,
+          "why": "400 × 10% = 40 approvals a week, below the rough guide. Merge ad sets, add budget, or optimise for valid leads."
+        },
+        {
+          "q": "Which status should never be sent as a conversion event?",
+          "options": [
+            "Approved",
+            "Funded",
+            "Valid",
+            "Rejected"
+          ],
+          "answer": 3,
+          "why": "Rewarding rejected leads trains the platform to find more of them."
+        },
+        {
+          "q": "Approval lag is 4 days. An ad set is 2 days old with 0 approvals. Starting rule?",
+          "options": [
+            "Kill it",
+            "Scale it",
+            "No kill decision on approvals yet",
+            "Switch to funded"
+          ],
+          "answer": 2,
+          "why": "The ad set is younger than the lag, so approvals cannot be judged yet."
+        },
+        {
+          "q": "What should a server 'Approved' event include?",
+          "options": [
+            "Platform click identifier and event time, no personal or financial details",
+            "Name and phone",
+            "Loan amount and credit score",
+            "Bank account number"
+          ],
+          "answer": 0,
+          "why": "IDs and timing are enough; financial and personal details stay out."
+        },
+        {
+          "q": "Lagged cost per approval $8, target $12, 5 approvals over 3 days. Verdict?",
+          "options": [
+            "Kill",
+            "Hold",
+            "Restart",
+            "Scale +20%"
+          ],
+          "answer": 3,
+          "why": "$8 ≤ 0.8 × $12 = $9.60 with ≥ 3 events: scale +20%."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn to optimise ad platforms for quality, not just form fills. We'll choose which stage to optimise for given your volume, send deeper-stage events back safely, and apply lag-aware rules when the platform learns from late events.",
+      "say_outro": "So, reward the stage you're paid for, as deep as your volume allows, send only safe stage data, and wait for the lag before you judge. Your task: measure the typical days from lead to approval for one finance offer from your postback log, and write that lag at the top of your rule card. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "Loan offer: 2,000 leads, 75% valid, 12% of valid approved, half of approved funded at $35. Revenue?",
+      "options": [
+        "$3,150",
+        "$6,300",
+        "$2,100",
+        "$4,200"
+      ],
+      "answer": 0,
+      "why": "2,000 × 0.75 = 1,500 valid; × 0.12 = 180 approved; × 0.5 = 90 funded; × $35 = $3,150."
+    },
+    {
+      "q": "Tracker: 120 approvals. Network: 95. What do you do?",
+      "options": [
+        "Trust the tracker",
+        "Average them",
+        "Stop optimising on approvals and find the cause of the gap",
+        "Ignore it"
+      ],
+      "answer": 2,
+      "why": "A 21% gap breaks the starting rule of 10%. Fix tracking before deciding."
+    },
+    {
+      "q": "Placement CPL $0.70, EPL $0.25 over 7 days with 400 lagged leads. Action?",
+      "options": [
+        "Scale",
+        "Exclude the placement",
+        "Hold",
+        "Increase bid"
+      ],
+      "answer": 1,
+      "why": "EPL below CPL with enough data means it loses money on every lead."
+    },
+    {
+      "q": "CPL deal: $2,000 spend, 1,500 sent, 1,250 paid at $2. Profit and true CPL?",
+      "options": [
+        "$1,000 and $1.33",
+        "$0 and $1.60",
+        "$500 and $1.33",
+        "$500 and $1.60"
+      ],
+      "answer": 3,
+      "why": "Revenue 1,250 × $2 = $2,500; profit $500; true CPL $2,000 ÷ 1,250 = $1.60."
+    },
+    {
+      "q": "A partner source: 1,000 leads, 2 approvals; others average 8%. Partner won't share sub-source IDs. Action?",
+      "options": [
+        "Scale; cheap leads",
+        "Pause, report with lead IDs, and end the deal unless they provide sub-source IDs",
+        "Ask the lender to relax checks",
+        "Move leads to another buyer"
+      ],
+      "answer": 1,
+      "why": "0.2% approval is far below a quarter of average, and refusing sub-source IDs fails vetting."
+    },
+    {
+      "q": "OTP raises CPL from $1.00 to $1.30 and valid rate from 60% to 90%. Cost per valid lead?",
+      "options": [
+        "Down, from $1.67 to $1.44",
+        "Up, from $1.30 to $1.67",
+        "Unchanged",
+        "Down, from $1.00 to $0.90"
+      ],
+      "answer": 0,
+      "why": "$1.00 ÷ 0.60 ≈ $1.67; $1.30 ÷ 0.90 ≈ $1.44."
+    },
+    {
+      "q": "Which consent setup should you not deliver leads from?",
+      "options": [
+        "Unticked box with named buyer",
+        "Separate plain consent line",
+        "Stored record with page version",
+        "Pre-ticked box hidden in terms"
+      ],
+      "answer": 3,
+      "why": "Pre-ticked, hidden consent is not active or specific and is not widely accepted."
+    },
+    {
+      "q": "Approved events per week: 35. Rough guide ~50. Best move?",
+      "options": [
+        "Optimise for funded instead",
+        "Send rejected events to add volume",
+        "Optimise for valid leads, or merge ad sets / add budget before moving to approved",
+        "Split into more ad sets"
+      ],
+      "answer": 2,
+      "why": "Move to a rung with enough volume or concentrate events; never pad with rejected leads."
+    },
+    {
+      "q": "Approval lag 5 days. Day-3 cost per approved looks like $30 against a $12 target. Action?",
+      "options": [
+        "Kill",
+        "No kill decision yet; wait for the lag",
+        "Scale",
+        "Change the claims"
+      ],
+      "answer": 1,
+      "why": "Before the lag passes, reported cost overstates the final figure."
+    },
+    {
+      "q": "A buyer returns 200 leads; your records show 30 had valid OTP-confirmed phones and consent. Fair response?",
+      "options": [
+        "Dispute all 200",
+        "Accept all",
+        "Resell the 200",
+        "Dispute the 30 with evidence inside the window"
+      ],
+      "answer": 3,
+      "why": "Dispute what you can prove, inside the window; never resell without consent."
+    }
+  ]
+}

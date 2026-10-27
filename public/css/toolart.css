@@ -1,0 +1,72 @@
+/* VooSquare tool art (VTA.art): one animated scene per tool. Surfaces set the colour roles; scenes animate transform and opacity only. */
+.ta { display: block; position: relative; width: 100%; height: 100%; --e: cubic-bezier(.45,.05,.25,1); }
+.ta svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.ta text { font-family: var(--f-d); letter-spacing: -.02em; }
+
+/* colour roles */
+.ta { --a: #00A86B; --s: color-mix(in srgb, var(--a) 13%, #fff); --i: #0A1A13; --d: #C5D3CC; --l: #E7EEEA; --w: #fff; --n: #fff; --surf: #fff; }
+.ta .f-a { fill: var(--a); } .ta .f-a2 { fill: color-mix(in srgb, var(--a) 72%, #000); } .ta .s-a2 { stroke: rgba(255,255,255,.4); stroke-width: 1; }
+.ta .f-s { fill: var(--s); } .ta .f-i { fill: var(--i); } .ta .f-d { fill: var(--d); } .ta .f-l { fill: var(--l); } .ta .f-w { fill: var(--w); } .ta .f-n { fill: var(--n); } .ta .f-surf { fill: var(--surf); }
+.ta .s-a { stroke: var(--a); } .ta .s-i { stroke: var(--i); } .ta .s-d { stroke: var(--d); } .ta .s-l { stroke: var(--l); stroke-width: 1.5; } .ta .s-w { stroke: var(--w); }
+.ta.sf-night { --a: #C9F65B; --s: rgba(201,246,91,.16); --i: #F2F7F4; --d: #3A5446; --surf: #0A1611; }
+.ta.sf-lime { --a: #00774B; --s: rgba(10,26,19,.08); --i: #0A1A13; --d: rgba(10,26,19,.3); --surf: #C9F65B; }
+.ta.sf-coal { --a: #3EE08F; --s: rgba(62,224,143,.14); --i: #fff; --d: #34443B; --n: #18221D; --w: #E8EEEA; --surf: #101513; }
+.ta-killscale { --a: #EE5A2F; --i: #13221B; } .ta-budget { --a: #E8A317; --l: #F4EBD3; } .ta-funnel { --a: #3D6BF2; } .ta-utm { --a: #5B3FE8; --i: #0A1A13; } .ta-sizes { --a: #0E9384; }
+
+/* break-even: the beam levels as coins land */
+.ta-beam { transform-origin: 60px 28px; animation: ta-tilt 6s var(--e) infinite; }
+.ta-pan.l { transform-origin: 20px 28px; animation: ta-untilt 6s var(--e) infinite; }
+.ta-pan.r { transform-origin: 100px 28px; animation: ta-untilt 6s var(--e) infinite; }
+.ta-ok { transform-origin: 60px 28px; animation: ta-okp 6s ease-out infinite; }
+@keyframes ta-tilt { 0%, 12% { transform: rotate(11deg); } 26% { transform: rotate(7deg); } 38% { transform: rotate(3.5deg); } 50% { transform: rotate(-1.6deg); } 57% { transform: rotate(.7deg); } 62%, 88% { transform: none; } 100% { transform: rotate(11deg); } }
+@keyframes ta-untilt { 0%, 12% { transform: rotate(-11deg); } 26% { transform: rotate(-7deg); } 38% { transform: rotate(-3.5deg); } 50% { transform: rotate(1.6deg); } 57% { transform: rotate(-.7deg); } 62%, 88% { transform: none; } 100% { transform: rotate(-11deg); } }
+@keyframes ta-okp { 0%, 60% { opacity: 0; transform: scale(.3); } 66% { opacity: .4; transform: scale(1); } 82%, 100% { opacity: 0; transform: scale(1.8); } }
+
+/* roas: the multiple pops when the stack is built */
+.ta-sp .f-a { fill: rgba(10,26,19,.2); } .ta-sp .f-a2 { fill: rgba(10,26,19,.32); }
+.ta-x { transform-origin: 25px 18px; animation: ta-xpop 5.6s var(--e) infinite; }
+@keyframes ta-xpop { 0%, 62% { opacity: 0; transform: translateY(6px) scale(.7); } 70% { opacity: 1; transform: scale(1.07); } 76%, 90% { opacity: 1; transform: none; } 97%, 100% { opacity: 0; transform: none; } }
+
+/* kill or scale: one light, one verdict */
+.ta-lamp.l1, .ta-lamp.l2, .ta-pill.p1, .ta-pill.p2 { opacity: 0; }
+.ta-lamp.l1 { animation: ta-k1 6s infinite; } .ta-lamp.l2 { animation: ta-k2 6s infinite; } .ta-lamp.l3 { animation: ta-k3 6s infinite; }
+.ta-pill { transform-origin: 81px 39px; }
+.ta-pill.p1 { animation: ta-k1 6s infinite, ta-flip 2s var(--e) infinite; } .ta-pill.p2 { animation: ta-k2 6s infinite, ta-flip 2s var(--e) infinite; } .ta-pill.p3 { animation: ta-k3 6s infinite, ta-flip 2s var(--e) infinite; }
+@keyframes ta-k1 { 0%, 32% { opacity: 1; } 33.4%, 100% { opacity: 0; } }
+@keyframes ta-k2 { 0%, 32% { opacity: 0; } 33.4%, 65.6% { opacity: 1; } 66.7%, 100% { opacity: 0; } }
+@keyframes ta-k3 { 0%, 65.6% { opacity: 0; } 66.7%, 99% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes ta-flip { 0% { transform: scaleY(.12); } 12% { transform: scaleY(1.08); } 20%, 100% { transform: none; } }
+
+/* budget: the spend bar follows the days */
+.ta-bar { transform-origin: 25px 0; animation: ta-grow 5.6s var(--e) infinite; }
+@keyframes ta-grow { 0%, 5% { transform: scaleX(0); } 62% { transform: scaleX(1); opacity: 1; } 90% { transform: scaleX(1); opacity: 1; } 97%, 100% { transform: scaleX(1); opacity: 0; } }
+
+/* funnel: falling people, some lost */
+.ta-p { animation: ta-fall 3.2s cubic-bezier(.45,0,.75,1) infinite both; }
+.ta-p.off { animation-name: ta-off; }
+@keyframes ta-fall { 0% { transform: translate(var(--x), 0); opacity: 0; } 8% { opacity: 1; } 45% { transform: translate(calc(var(--x) * .3), 40px); } 72% { transform: translate(0, 60px); opacity: 1; } 88%, 100% { transform: translate(0, 76px); opacity: 0; } }
+@keyframes ta-off { 0% { transform: translate(var(--x), 0); opacity: 0; } 10% { opacity: 1; } 34% { transform: translate(calc(var(--x) * 1.4), 16px); } 70% { opacity: .9; } 100% { transform: translate(calc(var(--x) * 3.2), 72px); opacity: 0; } }
+
+/* utm: the links snap */
+.ta-lk.l { animation: ta-snapl 5s var(--e) infinite; } .ta-lk.r { animation: ta-snapr 5s var(--e) infinite; }
+@keyframes ta-snapl { 0%, 18% { transform: translateX(-13px); } 32% { transform: translateX(1.5px); } 36%, 92% { transform: none; } 100% { transform: translateX(-13px); } }
+@keyframes ta-snapr { 0%, 18% { transform: translateX(13px); } 32% { transform: translateX(-1.5px); } 36%, 92% { transform: none; } 100% { transform: translateX(13px); } }
+
+/* postback: out, ack, tick */
+.ta-go, .ta-back { opacity: 0; }
+.ta-go { animation: ta-go 4.8s var(--e) infinite; } .ta-back { animation: ta-back 4.8s var(--e) infinite; }
+.ta-node { transform-origin: 98px 40px; animation: ta-node 4.8s var(--e) infinite; }
+.ta-tk { transform-origin: 22px 40px; animation: ta-tk 4.8s var(--e) infinite; }
+@keyframes ta-go { 0% { transform: none; opacity: 0; } 5% { opacity: 1; } 32% { transform: translateX(48px); opacity: 1; } 36%, 100% { transform: translateX(48px); opacity: 0; } }
+@keyframes ta-node { 0%, 32% { transform: none; } 38% { transform: scale(1.14); } 46%, 100% { transform: none; } }
+@keyframes ta-back { 0%, 44% { transform: none; opacity: 0; } 48% { opacity: 1; } 72% { transform: translateX(-48px); opacity: 1; } 76%, 100% { transform: translateX(-48px); opacity: 0; } }
+@keyframes ta-tk { 0%, 74% { opacity: 0; transform: scale(.4); } 81% { opacity: 1; transform: scale(1.18); } 86%, 94% { opacity: 1; transform: none; } 100% { opacity: 0; transform: none; } }
+
+/* ad sizes: one frame, three ratios */
+.ta-fr { transform-origin: 60px 44px; animation: ta-ratio 6s var(--e) infinite; }
+.ta-rt.r2, .ta-rt.r3 { opacity: 0; }
+.ta-rt.r1 { animation: ta-r1 6s infinite; } .ta-rt.r2 { animation: ta-r2 6s infinite; } .ta-rt.r3 { animation: ta-r3 6s infinite; }
+@keyframes ta-ratio { 0%, 24% { transform: none; } 33%, 57% { transform: scaleY(1.25); } 66%, 90% { transform: scaleY(1.777); } 100% { transform: none; } }
+@keyframes ta-r1 { 0%, 26% { opacity: 1; } 30%, 95% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes ta-r2 { 0%, 30% { opacity: 0; } 34%, 59% { opacity: 1; } 63%, 100% { opacity: 0; } }
+@keyframes ta-r3 { 0%, 63% { opacity: 0; } 67%, 92% { opacity: 1; } 96%, 100% { opacity: 0; } }

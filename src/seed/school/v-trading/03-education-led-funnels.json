@@ -1,0 +1,2746 @@
+{
+  "school": "v-trading",
+  "order": 3,
+  "slug": "education-led-funnels",
+  "title": "Education-led funnels",
+  "summary": "How to build trading funnels that teach before they sell: demo-first pages, live classes, Telegram education channels and email courses, all with honest risk messages. You finish able to track each step, set proxy targets and apply exact kill and scale rules to funnels whose results arrive late.",
+  "lessons": [
+    {
+      "slug": "why-education-funnels",
+      "title": "Why education-led funnels work",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can compare a direct-link funnel and an education funnel on qualified FTDs and 90-day activity.",
+        "You can name the main education formats and what each one is good for.",
+        "You can test whether an education funnel is honest or a sales pitch in disguise.",
+        "You can set starting rules for your first education funnel."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why teaching first can pay more",
+          "p": "A direct link to a broker's sign-up page often brings cheaper FTDs, but many of those users did not understand what they signed up for. They fail qualification or leave after their first loss. People who learn first deposit less often but tend to qualify and stay. It is also the honest way to sell a risky product.",
+          "d": {
+            "b": "Fewer FTDs, better clients",
+            "s": "Education filters for people who understand the risk."
+          },
+          "say": "Let's start with the big idea. A direct link to a broker's sign-up page often brings cheaper F T Ds, first time deposits. But many of those users didn't really understand what they signed up for. They fail qualification, or leave after their first loss. People who learn first deposit less often, but they tend to qualify and stay. As the slide says: fewer F T Ds, better clients. And it's also the honest way to sell a risky product."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: direct link versus education",
+          "p": "Example. Same $1,000 spend, same $60 payout per qualified FTD. The direct link brings more FTDs, but fewer qualify. The education funnel brings fewer, but more qualify and more are still active after 90 days. Figures are illustrative.",
+          "more": "Example maths: direct 25 × $60 = $1,500, minus $1,000 = $500. Education 35 × 80% = 28 qualified, 28 × $60 = $1,680, minus $1,000 = $680. Active users at 90 days: 50 × 20% = 10, and 35 × 45% = 15.75, about 16. The rates are illustrative, not benchmarks, and your results will differ. On a RevShare or hybrid deal the gap in active users matters even more, because active users are what generate RevShare.",
+          "d": {
+            "cols": [
+              "Metric",
+              "Direct link",
+              "Education funnel"
+            ],
+            "rows": [
+              [
+                "FTDs",
+                "50",
+                "35"
+              ],
+              [
+                "CPA per FTD",
+                "$20.00",
+                "$28.57"
+              ],
+              [
+                "Qualified",
+                "25 (50%)",
+                "28 (80%)"
+              ],
+              [
+                "Revenue at $60",
+                "$1,500",
+                "$1,680"
+              ],
+              [
+                "Profit",
+                "$500",
+                "$680"
+              ],
+              [
+                "Active at 90 days",
+                "10 (20%)",
+                "About 16 (45%)"
+              ]
+            ]
+          },
+          "say": "Here's a worked example. Same one thousand dollar spend, same sixty dollar payout per qualified F T D. Look at the table. The direct link brings fifty F T Ds, at a C P A, cost per acquisition, of twenty dollars. But only half qualify, so revenue is fifteen hundred dollars and profit five hundred. The education funnel brings thirty five, at a higher C P A. But eighty percent qualify, so revenue is sixteen eighty and profit six eighty. And after ninety days, about sixteen are still active, versus ten. These figures are illustrative, not benchmarks."
+        },
+        {
+          "v": "bars",
+          "h": "Example: who is still trading after 90 days",
+          "p": "Example from the same two funnels. On CPA you are paid once. On RevShare or hybrid, every user still active keeps generating revenue share, so the funnel that keeps more people active is worth more over time.",
+          "d": [
+            [
+              "Direct link",
+              63,
+              "10 active"
+            ],
+            [
+              "Education funnel",
+              100,
+              "About 16 active"
+            ]
+          ],
+          "say": "Now look at these two bars, from the same example. They show who is still trading after ninety days: ten people from the direct link, and about sixteen from the education funnel. Why does that matter? On a C P A deal, you're paid once. But on RevShare or a hybrid deal, every user who stays active keeps earning you revenue share. So the funnel that keeps more people active is worth more over time."
+        },
+        {
+          "v": "map",
+          "h": "The shape of an education funnel",
+          "p": "An education funnel adds one or more learning steps between the ad and the broker. Each step gives the user something useful on its own and filters for people who are curious enough to learn.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Ad: learn a skill",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Lesson page",
+                "kind": "page"
+              },
+              {
+                "id": "demo",
+                "label": "Demo account",
+                "kind": "offer"
+              },
+              {
+                "id": "tg",
+                "label": "Education channel",
+                "kind": "telegram"
+              },
+              {
+                "id": "web",
+                "label": "Live class",
+                "kind": "person"
+              },
+              {
+                "id": "live",
+                "label": "Live account",
+                "kind": "offer"
+              },
+              {
+                "id": "pb",
+                "label": "Postback",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "lp",
+                "click"
+              ],
+              [
+                "lp",
+                "demo",
+                "practise"
+              ],
+              [
+                "lp",
+                "tg",
+                "join"
+              ],
+              [
+                "tg",
+                "web",
+                "attend"
+              ],
+              [
+                "web",
+                "live",
+                "decide"
+              ],
+              [
+                "demo",
+                "live",
+                "decide"
+              ],
+              [
+                "live",
+                "pb",
+                "FTD"
+              ]
+            ]
+          },
+          "say": "This map shows the shape of an education funnel. Start at the ad, which offers to teach a skill. It leads to a lesson page. From there, people can practise on a demo account, or join an education channel and attend a live class. Then they decide whether to open a live account, which fires the postback. Each learning step gives something useful on its own, and filters for people curious enough to learn."
+        },
+        {
+          "v": "cards",
+          "h": "The main formats",
+          "p": "Each format suits a different budget, skill and audience. Start with one, run it well and measure it before adding another. The next lessons cover each in depth.",
+          "d": [
+            "Demo-first|Practise with virtual money before any deposit",
+            "Live class or webinar|Teach live, answer questions, share a replay",
+            "Telegram education channel|Steady lessons and community",
+            "Email course|A sequence of lessons over two weeks",
+            "Video series|Short lessons on social or a page"
+          ],
+          "say": "Here are the main formats. Demo-first, where people practise with virtual money before any deposit. A live class or webinar, where you teach live, answer questions and share a replay. A Telegram education channel, for steady lessons and community. An email course, a sequence of lessons over two weeks. And a video series, short lessons on social or a page. Each suits a different budget, skill and audience. Start with one, run it well, and measure it before adding another."
+        },
+        {
+          "v": "check",
+          "h": "Is it education or a disguised pitch?",
+          "p": "Use this test on your own funnel. An honest education funnel passes every line. If it fails one, it is a sales pitch dressed as a course, and users and regulators will see it that way.",
+          "d": [
+            "The free content is useful even if nobody opens an account",
+            "Risk and costs are taught, with numbers",
+            "No income claims, no lifestyle bait",
+            "It says who is behind it and that you earn a commission",
+            "Leaving or unsubscribing is easy",
+            "Nobody is told what to trade"
+          ],
+          "say": "Use this checklist to test your own funnel. An honest education funnel passes every line. The free content is useful even if nobody opens an account. Risk and costs are taught, with numbers. No income claims and no lifestyle bait. It says who's behind it and that you earn a commission. Leaving or unsubscribing is easy. And nobody is told what to trade. If it fails even one line, it's a sales pitch dressed as a course, and users and regulators will see it that way."
+        },
+        {
+          "v": "flow",
+          "h": "Walkthrough: build your first education funnel",
+          "p": "Build in this order so each piece is checked before the next depends on it. Do not run ads until the compliance and tracking steps are done.",
+          "d": [
+            "Pick one format",
+            "Write 5 short lessons",
+            "Add risk and disclosure lines",
+            "Set up tracking per step",
+            "Get compliance sign-off",
+            "Launch a small test"
+          ],
+          "say": "Build your first education funnel in this order, so each piece is checked before the next one depends on it. Pick one format. Write five short lessons. Add your risk and disclosure lines. Set up tracking for each step. Get compliance sign-off. Then launch a small test. And don't run any ads until the compliance and tracking steps are done."
+        },
+        {
+          "v": "tip",
+          "h": "Disclose that you are paid",
+          "p": "Tell people that you earn a commission when they open an account through your link. It is required in some places and good practice everywhere. It also builds the trust that education funnels depend on.",
+          "d": {
+            "kind": "tip",
+            "text": "Example line: 'We may earn a commission if you open an account through our links. This does not change what we teach.'"
+          },
+          "say": "Tell people that you earn a commission when they open an account through your link. It's required in some places, and good practice everywhere. It also builds the trust that education funnels depend on. Here's the example line on screen: We may earn a commission if you open an account through our links. This does not change what we teach."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "These mistakes turn an education funnel back into a hype funnel with extra steps. They usually creep in when a manager asks for more FTDs quickly.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "'Free course' that is one long sales pitch",
+                "Teachers who show profits as proof",
+                "'Only 10 spots left' on a recorded class",
+                "Judging it on day-3 FTDs"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Lessons that stand on their own",
+                "Teach method and risk, not results",
+                "No fake scarcity, ever",
+                "Judge it on mature cohorts and qualified FTDs"
+              ]
+            }
+          },
+          "say": "These mistakes turn an education funnel back into a hype funnel with extra steps. They usually creep in when a manager asks for more F T Ds quickly. Read across. A free course that's one long sales pitch: make lessons that stand on their own. Teachers who show profits as proof: teach method and risk, not results. Only ten spots left on a recorded class: no fake scarcity, ever. And judging it on day three F T Ds: judge it on mature cohorts and qualified F T Ds."
+        },
+        {
+          "v": "quote",
+          "h": "From the founder",
+          "p": "Dchessking on why he builds education into trading funnels. It is slower at the start, which is why most buyers skip it. Keep it in mind when a faster, louder funnel looks tempting.",
+          "d": "Teach first. The people who learn are the people who stay, and the people who stay are the business.",
+          "by": "dchessking",
+          "say": "Here's how Dchessking explains why he builds education into trading funnels: Teach first. The people who learn are the people who stay, and the people who stay are the business. It's slower at the start, which is why most buyers skip it. Keep this in mind when a faster, louder funnel looks tempting."
+        },
+        {
+          "v": "partner",
+          "h": "Partners with good education support",
+          "p": "When you choose a broker for an education funnel, look for a free demo account, plain-language education material and support in your users' languages. These are the partners we list for trading.",
+          "d": {
+            "vertical": "trading",
+            "note": "Prefer licensed brokers with a free demo account, education material and local-language support."
+          },
+          "say": "When you choose a broker for an education funnel, look for three things: a free demo account, plain-language education material, and support in your users' languages. The note on screen adds one more: prefer licensed brokers. These are the partners we list for trading."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance warning",
+          "p": "Education funnels are still financial promotion. Every lesson, post and email that leads to a broker must follow the same rules as an ad. Education is the honest way to sell a risky product, not a way around the rules.",
+          "d": {
+            "kind": "warn",
+            "text": "Educational content that links to a broker is usually still a financial promotion. Keep risk warnings, no income claims and no trading calls in every step. Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country and the broker's licence for that country before you run. Education, not legal or financial advice."
+          },
+          "say": "This is important. Education funnels are still financial promotion. Every lesson, post and email that leads to a broker must follow the same rules as an ad. Look at the warning. Keep risk warnings, no income claims and no trading calls, in every step. Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current policies, the law in your users' country, and the broker's licence there before you run. This is education, not legal or financial advice."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for an education funnel",
+          "p": "Starting rules to adapt as your data grows. They protect you from judging a slow funnel too early or keeping a weak one too long.",
+          "d": [
+            "Start with one format and one geo",
+            "Judge on qualified FTDs by click date, not on registrations",
+            "Kill at 2 × target CPA of matured spend with 0 FTDs",
+            "Kill if CPA > lower of 1.5 × target and break-even after 3 × target matured spend",
+            "Scale +20% every ≥ 48 hours at CPA ≤ 0.8 × target with ≥ 3 qualified FTDs",
+            "Fails any line of the honesty test = fix before spending"
+          ],
+          "say": "Here are your starting rules, to adapt as your data grows. Start with one format and one geo. Judge on qualified F T Ds by click date, not on registrations. Kill at two times your target C P A of matured spend with zero F T Ds. Kill if C P A is above the lower of one point five times target and break-even, after three times target of matured spend. Scale by twenty percent every forty eight hours or more, at C P A of point eight times target or better, with at least three qualified F T Ds. And if it fails any line of the honesty test, fix it before spending."
+        }
+      ],
+      "takeaways": [
+        "Education funnels often bring fewer FTDs but more qualified, longer-lasting clients.",
+        "Every learning step should be useful on its own.",
+        "Disclose that you are paid and teach risk with numbers.",
+        "Judge education funnels on mature cohorts and qualified FTDs."
+      ],
+      "action": "Write the outline of five short lessons for one format. Each lesson needs one skill, one risk point with a number and the disclosure line.",
+      "glossary": [
+        {
+          "term": "Education-led funnel",
+          "def": "A funnel that teaches users something useful before inviting them to open an account."
+        },
+        {
+          "term": "Direct link",
+          "def": "Sending ad clicks straight to the broker's sign-up page with no step in between."
+        },
+        {
+          "term": "Affiliate disclosure",
+          "def": "A statement telling users you may earn a commission from links."
+        },
+        {
+          "term": "90-day activity",
+          "def": "The share of depositors still trading 90 days after their first deposit."
+        },
+        {
+          "term": "Matured spend",
+          "def": "Spend on users old enough that most of their FTDs have had time to arrive."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Funnel A: 40 FTDs, 50% qualify. Funnel B: 30 FTDs, 80% qualify. Which brings more qualified FTDs?",
+          "options": [
+            "A, 20",
+            "B, 24",
+            "They are equal",
+            "A, 40"
+          ],
+          "answer": 1,
+          "why": "A: 40 × 50% = 20. B: 30 × 80% = 24."
+        },
+        {
+          "q": "Which is a sign of a disguised sales pitch?",
+          "options": [
+            "Teaching how spreads work",
+            "Showing the broker's loss percentage",
+            "'Only 10 spots left' on a recorded class",
+            "Saying you earn a commission"
+          ],
+          "answer": 2,
+          "why": "Fake scarcity is manipulative and misleading. The others are honest practices."
+        },
+        {
+          "q": "Why does 90-day activity matter more on RevShare than on CPA?",
+          "options": [
+            "It does not matter on RevShare",
+            "Active users keep generating RevShare, while CPA pays once",
+            "CPA pays monthly",
+            "Brokers ban inactive users"
+          ],
+          "answer": 1,
+          "why": "On RevShare you earn from ongoing activity, so retention drives value."
+        },
+        {
+          "q": "Spend $900, 30 FTDs, 70% qualify, payout $50. What is the profit?",
+          "options": [
+            "$150",
+            "$600",
+            "$1,050",
+            "$600 loss"
+          ],
+          "answer": 0,
+          "why": "30 × 70% = 21 qualified; 21 × $50 = $1,050; $1,050 − $900 = $150."
+        },
+        {
+          "q": "Is a free lesson that links to a broker exempt from financial promotion rules?",
+          "options": [
+            "Yes, education is always exempt",
+            "Yes, if it is free",
+            "Only on Telegram",
+            "No, it is usually still a financial promotion"
+          ],
+          "answer": 3,
+          "why": "Content that leads people to a broker is usually treated as promotion, so the same rules apply."
+        }
+      ],
+      "say_intro": "In this lesson you'll see why teaching first can pay more than sending people straight to a broker. You'll compare the two funnels with real maths, learn the main education formats, and learn a simple test for whether your funnel is honest.",
+      "say_outro": "You've seen how an education funnel trades fewer F T Ds for better, longer-lasting clients, the main formats, the honesty test and the starting rules. Your task: write the outline of five short lessons for one format, each with one skill, one risk point with a number, and the disclosure line. Now take the quiz."
+    },
+    {
+      "slug": "demo-first-funnels",
+      "title": "Demo-first funnels",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can build a demo-first funnel and track demo sign-ups and live FTDs as separate events.",
+        "You can calculate cost per demo, CPA and a target cost per demo from your own rates.",
+        "You can explain honestly how demo trading differs from live trading.",
+        "You can apply proxy and full decision rules to a demo funnel."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why a demo is the safest first step",
+          "p": "A demo account lets people try trading with virtual money before risking their own. Users learn how leverage and spreads feel, and many decide trading is not for them, which is a good outcome. Those who move to a live account do so with more understanding, which tends to mean better qualification.",
+          "d": {
+            "b": "Practise before you pay",
+            "s": "A demo filters for understanding, not just curiosity."
+          },
+          "say": "A demo account lets people try trading with virtual money before risking their own. They learn how leverage and spreads feel. And many decide trading isn't for them, which is a good outcome. Those who move to a live account do it with more understanding, and that tends to mean better qualification. As the slide says: practise before you pay. A demo filters for understanding, not just curiosity."
+        },
+        {
+          "v": "funnel",
+          "h": "Worked example: a month of a demo funnel",
+          "p": "Example. 4,000 clicks became 500 demo sign-ups. 300 placed at least one demo trade, 60 registered a live account, 30 deposited and 24 qualified. The step from demo to live is where you will spend most of your effort.",
+          "d": [
+            [
+              "Clicks",
+              4000
+            ],
+            [
+              "Demo sign-ups",
+              500
+            ],
+            [
+              "Active demo users",
+              300
+            ],
+            [
+              "Live registrations",
+              60
+            ],
+            [
+              "FTDs",
+              30
+            ],
+            [
+              "Qualified FTDs",
+              24
+            ]
+          ],
+          "say": "Here's a month of a demo funnel, as an example. Follow it down. Four thousand clicks became five hundred demo sign-ups. Three hundred placed at least one demo trade. Sixty registered a live account. Thirty made an F T D, a first time deposit, and twenty four qualified. Notice the big drop from demo to live. That step is where you'll spend most of your effort."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: the money",
+          "p": "Example. You paid $2 per demo sign-up, $1,000 in total. The offer pays $50 per qualified FTD and 80% qualify, so the effective payout is $40 per raw FTD and the target, at 25% margin, is $30.",
+          "more": "Example result: CPA $33.33 is above the $30 target but below the $40 break-even. Under the starting rules this funnel is a Keep: it makes a small profit, but you would not scale it. Your next work is the demo-to-live step, because a small improvement there lowers CPA without more spend.",
+          "d": {
+            "cols": [
+              "Metric",
+              "Formula",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Spend",
+                "500 × $2",
+                "$1,000"
+              ],
+              [
+                "CPA per raw FTD",
+                "$1,000 ÷ 30",
+                "$33.33"
+              ],
+              [
+                "Revenue",
+                "24 × $50",
+                "$1,200"
+              ],
+              [
+                "Profit",
+                "$1,200 − $1,000",
+                "$200"
+              ],
+              [
+                "Target per raw FTD",
+                "$50 × 80% × 0.75",
+                "$30"
+              ]
+            ]
+          },
+          "say": "Now the money, in the same example. You paid two dollars per demo sign-up, one thousand dollars in total. Read the table. C P A, cost per acquisition, per raw F T D is about thirty three dollars. Revenue is twenty four times fifty, twelve hundred dollars, so profit is two hundred. The offer pays fifty per qualified F T D, and eighty percent qualify, so the effective payout is forty, and your target at twenty five percent margin is thirty. So this is a Keep: a small profit, but not one you'd scale."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: a target cost per demo",
+          "p": "Example. Over past cohorts, 6% of demo sign-ups became FTDs. With a $30 target per FTD, the most you should pay per demo sign-up is $1.80. You paid $2, slightly too much.",
+          "more": "Example maths: $30 × 6% = $1.80. 30 FTDs from 500 demos is 6%, which is where the rate comes from. Use your own rate once you have at least 20 FTDs from the funnel; before that, use a cautious guess and treat the result as rough. This number lets you judge ad sets in days, using demo sign-ups, instead of waiting a month for FTDs.",
+          "d": [
+            "$30 target CPA",
+            "×",
+            "6% demo to FTD",
+            "=",
+            "$1.80 per demo"
+          ],
+          "say": "Here's a useful trick: a target cost per demo. In past cohorts, six percent of demo sign-ups became F T Ds. Read the sum on screen: a thirty dollar target C P A, times six percent, equals one dollar eighty per demo. That's the most you should pay. You paid two dollars, slightly too much. The value of this number is that you can judge ad sets in days, using demo sign-ups, instead of waiting a month. Use your own rate once you have at least twenty F T Ds; before that, treat it as rough."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: the most you can pay per demo",
+          "p": "Your turn. Treat the effective payout of $40 as the payout, the demo-to-FTD rate of 6% as the conversion rate and a 25% margin. Find the most you can pay per demo sign-up.",
+          "d": {
+            "kind": "breakeven",
+            "task": "Effective payout $40 per FTD, 6% of demo sign-ups become FTDs, 25% margin. Most you can pay per demo sign-up?",
+            "preset": {
+              "payout": 40,
+              "cr_pct": 6,
+              "margin_pct": 25
+            },
+            "answer": {
+              "field": "max_cpl",
+              "value": 1.8,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Your turn. Use an effective payout of forty dollars per F T D. Six percent of demo sign-ups become F T Ds. And you want a twenty five percent margin. Find the most you can pay per demo sign-up. Hint: think about how much each sign-up is worth, then keep your margin. Pause and try it, then check your answer."
+        },
+        {
+          "v": "curve",
+          "h": "Example: demo users go live slowly",
+          "p": "Example from the same cohort. Demo users take days or weeks to open a live account. On day 7 only about a third of the eventual FTDs have arrived, so judging the funnel on FTDs that early would kill it.",
+          "d": {
+            "a": [
+              2,
+              6,
+              11,
+              17,
+              22,
+              27,
+              30
+            ],
+            "la": "FTDs, cumulative",
+            "b": [
+              7,
+              20,
+              37,
+              57,
+              73,
+              90,
+              100
+            ],
+            "lb": "% of day-30 FTDs",
+            "x": [
+              "D1",
+              "D3",
+              "D7",
+              "D10",
+              "D14",
+              "D21",
+              "D30"
+            ]
+          },
+          "say": "This curve shows how slowly demo users go live, in the same example cohort. Read along the bottom from day one to day thirty. On day seven, only about a third of the eventual F T Ds have arrived. By day fourteen, it's around seventy percent. So if you judged this funnel on F T Ds after a week, you'd kill a funnel that actually works."
+        },
+        {
+          "v": "phone",
+          "h": "Demo follow-up messages",
+          "p": "Short, useful messages help demo users learn and remind them that demo results are not live results. This example is a Telegram-style bot that users started themselves.",
+          "d": {
+            "app": "bot",
+            "title": "Demo coach",
+            "subtitle": "bot",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Day 1: Your demo is ready. Try one trade with a stop loss. Here is a 2-minute guide.",
+                "buttons": [
+                  "Open guide"
+                ]
+              },
+              {
+                "from": "them",
+                "text": "Day 3: How spreads and overnight fees affect a trade, with numbers."
+              },
+              {
+                "from": "them",
+                "text": "Day 7: Demo results do not predict live results. Real money brings real emotions and real losses. Only trade what you can afford to lose.",
+                "buttons": [
+                  "Learn about risk",
+                  "Stay on demo"
+                ]
+              }
+            ]
+          },
+          "say": "Short, useful messages help demo users learn. In this example, a bot that users started themselves sends three messages. Day one: try one trade with a stop loss, with a short guide. Day three: how spreads and overnight fees affect a trade, with numbers. And day seven: demo results don't predict live results. Real money brings real emotions and real losses. Only trade what you can afford to lose. Notice the buttons give the user a real choice, including staying on demo."
+        },
+        {
+          "v": "compare",
+          "h": "Demo versus live: say it honestly",
+          "p": "Users often feel confident after a good demo week. Your messages must be clear that demo trading is practice, not proof, and that most retail CFD accounts lose money.",
+          "d": {
+            "a": {
+              "title": "Demo account",
+              "items": [
+                "Virtual money, no real loss",
+                "Calm decisions",
+                "Fills may differ from live",
+                "Large virtual balance"
+              ]
+            },
+            "b": {
+              "title": "Live account",
+              "items": [
+                "Real money, real loss",
+                "Fear and greed affect choices",
+                "Real spreads, fees and slippage",
+                "Your actual savings"
+              ]
+            }
+          },
+          "say": "Users often feel confident after a good demo week, so your messages must be honest about the difference. Compare the columns. A demo account uses virtual money, with no real loss, calm decisions and a large virtual balance. A live account means real money and real loss, fear and greed affecting choices, real spreads, fees and slippage, and your actual savings. Say clearly that demo trading is practice, not proof, and that most retail C F D accounts lose money."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: track demo and live separately",
+          "p": "You need two events: demo sign-up as an early signal and live FTD as what you are paid on. Ask your network which events it can send. Screens are illustrative mock-ups.",
+          "d": {
+            "steps": [
+              {
+                "title": "Demo link with click ID",
+                "text": "Ask the network for a demo sign-up link that carries your click ID.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/offers/812/links",
+                  "title": "Tracking links",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Demo link",
+                      "value": "partner.example/demo?aff=10457&click_id={click_id}"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Ask for a demo event",
+                "text": "Ask if they can fire a postback for demo sign-ups. Many cannot; then use your lander's own form event.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Network manager",
+                  "subtitle": "online",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "Can you send a postback for demo sign-ups as well as FTD and qualified?"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Demo yes, as event 'demo'. FTD and qftd too."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Map the events",
+                "text": "In your tracker, map demo, ftd and qftd to separate conversions with their own names.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "tracker.example/conversions",
+                  "title": "Conversion types",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Event",
+                        "Counts as",
+                        "Payout"
+                      ],
+                      "rows": [
+                        [
+                          "demo",
+                          "Signal",
+                          "$0"
+                        ],
+                        [
+                          "ftd",
+                          "FTD",
+                          "$0"
+                        ],
+                        [
+                          "qftd",
+                          "Revenue",
+                          "$50"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "You need two events: the demo sign-up as an early signal, and the live F T D, which is what you're paid on. Tap Next to follow each step. First, ask the network for a demo sign-up link that carries your click I D. Second, ask if they can fire a postback for demo sign-ups. Many can't, and then you use your lander's own form event. Third, in your tracker, map demo, F T D and qualified F T D to separate conversions with their own names. These screens are illustrative mock-ups."
+        },
+        {
+          "v": "product",
+          "h": "A lander for the demo step",
+          "p": "The demo lander should teach one thing, show the risk line next to the button and load fast on a phone. Any honest page builder works; use one where you control the text and placement.",
+          "d": {
+            "slug": "landvoo",
+            "why": "Build a fast demo lander where you control the lesson, the risk line and the button placement."
+          },
+          "say": "The demo lander should teach one thing, show the risk line right next to the button, and load fast on a phone. Any honest page builder works, as long as you control the text and placement. The card on screen shows Landvoo, one option for building a fast demo lander where you control the lesson, the risk line and the button."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "These mistakes either push people to go live before they are ready or mislead them about what demo results mean. Both lower qualification and raise complaints.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "'You made $4,000 on demo, go live now'",
+                "Demo profit screenshots in ads",
+                "Counting demo sign-ups as conversions",
+                "Killing the funnel on day 5"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Remind users demo is practice",
+                "Show the product, not demo results",
+                "Use demo as a signal, pay on qualified FTD",
+                "Use a proxy target and mature cohorts"
+              ]
+            }
+          },
+          "say": "These mistakes either push people to go live before they're ready, or mislead them about what demo results mean. Both lower qualification and raise complaints. Read across. Telling users they made four thousand dollars on demo, so go live now: remind them demo is practice. Demo profit screenshots in ads: show the product, not demo results. Counting demo sign-ups as conversions: use demo as a signal, and pay on qualified F T D. And killing the funnel on day five: use a proxy target and mature cohorts."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance warning",
+          "p": "Demo results are not evidence of future live results. Using them as proof in ads or messages is a misleading claim in many places. Say plainly in every message that demo results are practice, not proof.",
+          "d": {
+            "kind": "warn",
+            "text": "Never use demo profits as proof in ads, posts or messages, and never pressure demo users to go live. Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country and the broker's licence for that country before you run. Education, not legal or financial advice."
+          },
+          "say": "Demo results aren't evidence of future live results. Using them as proof in ads or messages is a misleading claim in many places. Look at the warning. Never use demo profits as proof in ads, posts or messages, and never pressure demo users to go live. Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current policies, the law in your users' country and the broker's licence there. This is education, not legal or financial advice."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for demo funnels",
+          "p": "Starting rules to adapt. The proxy rule lets you act early; the full rules confirm on mature cohorts. A proxy alone never justifies scaling. Write the proxy target into your plan before launch so the early calls are made on numbers, not on mood.",
+          "d": [
+            "Target per demo = target CPA × your demo-to-FTD rate",
+            "After 50+ demo sign-ups: cost per demo > 1.5 × target per demo = kill or fix",
+            "Kill at 2 × target CPA of matured spend with 0 FTDs",
+            "Scale +20% every ≥ 48 hours only on mature data: CPA ≤ 0.8 × target with ≥ 3 qualified FTDs",
+            "Demo-to-FTD rate falls by half in a month = review messages and the offer"
+          ],
+          "say": "Here are your starting rules for demo funnels. Your target per demo is your target C P A times your demo to F T D rate. After fifty or more demo sign-ups, if cost per demo is over one point five times that target, kill or fix. Kill at two times target C P A of matured spend with zero F T Ds. Scale by twenty percent every forty eight hours or more, only on mature data, at C P A of point eight times target or better, with at least three qualified F T Ds. If your demo to F T D rate halves in a month, review your messages and the offer. A proxy alone never justifies scaling."
+        }
+      ],
+      "takeaways": [
+        "A demo filters for understanding and tends to improve qualification.",
+        "Track demo sign-ups as a signal and qualified FTDs as revenue.",
+        "Target per demo = target CPA × demo-to-FTD rate.",
+        "Tell users plainly that demo results are not live results."
+      ],
+      "action": "Ask your network whether it can fire a demo sign-up postback. Then write three demo follow-up messages, one of which explains the difference between demo and live trading.",
+      "glossary": [
+        {
+          "term": "Demo account",
+          "def": "A practice account with virtual money offered by a broker."
+        },
+        {
+          "term": "Demo-to-FTD rate",
+          "def": "The share of demo sign-ups that later make a first deposit on a live account."
+        },
+        {
+          "term": "Proxy target",
+          "def": "A target for an early step, worked out from the target CPA and the step's conversion rate."
+        },
+        {
+          "term": "Slippage",
+          "def": "The difference between the price a user expects and the price their trade actually fills at."
+        },
+        {
+          "term": "Signal event",
+          "def": "An event tracked for decisions but not paid on, such as a demo sign-up."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Target CPA $36, demo-to-FTD rate 5%. What is the target cost per demo sign-up?",
+          "options": [
+            "$7.20",
+            "$1.80",
+            "$0.72",
+            "$3.60"
+          ],
+          "answer": 1,
+          "why": "$36 × 5% = $1.80."
+        },
+        {
+          "q": "Which message is honest?",
+          "options": [
+            "'Your demo profits prove you are ready'",
+            "'Go live now before the bonus ends'",
+            "'Demo results do not predict live results; only trade what you can afford to lose'",
+            "'Most users double their demo balance'"
+          ],
+          "answer": 2,
+          "why": "It tells users the truth about demo versus live and about risk."
+        },
+        {
+          "q": "Spend $800, 25 FTDs, 80% qualify, payout $50. What is the profit?",
+          "options": [
+            "$200",
+            "$450",
+            "$1,000",
+            "$0"
+          ],
+          "answer": 0,
+          "why": "25 × 80% = 20 qualified; 20 × $50 = $1,000; $1,000 − $800 = $200."
+        },
+        {
+          "q": "After 60 demo sign-ups, cost per demo is $3.00 and the target per demo is $1.80. What does the proxy rule say?",
+          "options": [
+            "Scale +20%",
+            "Hold for a month",
+            "Kill or fix: $3.00 is above 1.5 × $1.80 ($2.70)",
+            "Nothing; proxies cannot kill"
+          ],
+          "answer": 2,
+          "why": "1.5 × $1.80 = $2.70. $3.00 is above it with enough data."
+        },
+        {
+          "q": "Why should a proxy target never be the only reason to scale?",
+          "options": [
+            "Proxies are illegal",
+            "Platforms block proxies",
+            "Proxies are always wrong",
+            "Scaling should be confirmed on qualified FTDs from mature cohorts"
+          ],
+          "answer": 3,
+          "why": "Proxies are early estimates. Money decisions to scale need the real, paid outcome."
+        }
+      ],
+      "say_intro": "In this lesson you'll build a demo-first funnel, where people practise with virtual money before risking their own. You'll learn to track demo sign-ups and live deposits separately, and to judge the funnel early without fooling yourself.",
+      "say_outro": "You can now build a demo-first funnel, track demo and live events separately, work out a target cost per demo, and explain demo versus live honestly. Your task: ask your network whether it can fire a demo sign-up postback, then write three demo follow-up messages, one explaining the difference between demo and live trading. Now take the quiz."
+    },
+    {
+      "slug": "webinars-and-live-classes",
+      "title": "Webinars and live classes",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can plan a live class funnel from registration to replay and follow-up.",
+        "You can calculate cost per registration, per attendee and per FTD for a class.",
+        "You can run a live Q&A without giving advice or making claims.",
+        "You can apply proxy and full rules to judge a class funnel."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why a live class works for trading",
+          "p": "A live class lets people see a real person explain markets, risk and costs, and ask their own questions. It builds trust that a page cannot. It also lets you show the risk honestly, with numbers, to people who chose to spend an hour learning.",
+          "d": {
+            "b": "An hour of teaching builds real trust",
+            "s": "People who attend understand more before they decide."
+          },
+          "say": "A live class lets people see a real person explain markets, risk and costs, and ask their own questions. That builds trust a page simply can't. It also lets you show the risk honestly, with numbers, to people who chose to spend an hour learning. As the slide says, an hour of teaching builds real trust, and people who attend understand more before they decide."
+        },
+        {
+          "v": "flow",
+          "h": "The class funnel",
+          "p": "Each step loses people, and each step is a place to help them. The reminder and replay steps are cheap and often decide whether a class pays for itself.",
+          "d": [
+            "Ad",
+            "Registration page",
+            "Reminders",
+            "Live class",
+            "Replay",
+            "Follow-up lessons"
+          ],
+          "say": "Here's the class funnel, step by step. The ad. The registration page. Reminders. The live class. The replay. And follow-up lessons. Each step loses people, but each step is also a place to help them. Notice the reminder and replay steps. They're cheap, and they often decide whether a class pays for itself."
+        },
+        {
+          "v": "funnel",
+          "h": "Worked example: one class",
+          "p": "Example. 1,000 people registered and 350 attended live. 21 attendees opened and funded an account within 30 days, and 6 more came from the replay. Figures are illustrative; attendance varies widely.",
+          "d": [
+            [
+              "Registrations",
+              1000
+            ],
+            [
+              "Attended live",
+              350
+            ],
+            [
+              "FTDs from attendees",
+              21
+            ],
+            [
+              "FTDs from replay",
+              6
+            ]
+          ],
+          "say": "Here's one class, as an example. Follow the funnel down. One thousand people registered, and three hundred and fifty attended live. Twenty one attendees opened and funded an account within thirty days, that's twenty one F T Ds, or first time deposits. And six more came from the replay. These figures are illustrative, and attendance varies widely."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: the money",
+          "p": "Example. Registrations cost $1.50 each. The offer pays $80 per qualified FTD and 23 of the 27 FTDs qualified. The class made a profit, but CPA sits above the target, so this is a Keep, not a Scale.",
+          "more": "Example maths: 23 ÷ 27 is about 85% qualified, so effective payout is $80 × 85% = $68 and the target at 25% margin is $51. CPA $55.56 is above $51 but below the $68 break-even. Under the starting rules you keep the funnel and work on it, but do not scale. Raising attendance or the replay step would lower CPA with no extra ad spend.",
+          "d": {
+            "cols": [
+              "Metric",
+              "Formula",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Spend",
+                "1,000 × $1.50",
+                "$1,500"
+              ],
+              [
+                "Cost per attendee",
+                "$1,500 ÷ 350",
+                "$4.29"
+              ],
+              [
+                "CPA per raw FTD",
+                "$1,500 ÷ 27",
+                "$55.56"
+              ],
+              [
+                "Revenue",
+                "23 × $80",
+                "$1,840"
+              ],
+              [
+                "Profit",
+                "$1,840 − $1,500",
+                "$340"
+              ],
+              [
+                "Target per raw FTD",
+                "$80 × 85% × 0.75",
+                "$51"
+              ]
+            ]
+          },
+          "say": "Now the money. Registrations cost one dollar fifty each, so fifteen hundred dollars of spend. Read down the table. Cost per attendee is about four dollars twenty nine. C P A, cost per acquisition, per raw F T D is about fifty five dollars fifty six. Twenty three of the twenty seven qualified, at eighty dollars each, so revenue is eighteen forty, and profit three forty. The target at twenty five percent margin is fifty one dollars. So C P A sits above target, but below break-even. That makes it a Keep, not a Scale. Better attendance or replay would lower C P A with no extra ad spend."
+        },
+        {
+          "v": "cards",
+          "h": "A class outline that teaches and protects",
+          "p": "About 45 to 60 minutes. Each part teaches something useful on its own. The risk section is not a footnote: it is a full part of the class, with numbers.",
+          "d": [
+            "How markets move|What moves prices, in plain words",
+            "How a broker works|Spreads, fees, overnight costs, licences",
+            "Leverage and risk|A worked example of a 1% move",
+            "Demo walkthrough|Place a practice trade with a stop loss",
+            "Questions|General answers only, no personal calls",
+            "Next steps|Demo first, disclosure, risk warning"
+          ],
+          "say": "Here's a class outline that teaches and protects, about forty five to sixty minutes. How markets move, in plain words. How a broker works, with spreads, fees, overnight costs and licences. Leverage and risk, with a worked example of a one percent move. A demo walkthrough, placing a practice trade with a stop loss. Questions, with general answers only. And next steps: demo first, disclosure, and the risk warning. Notice the risk section isn't a footnote. It's a full part of the class, with numbers."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: the registration page",
+          "p": "Keep the page simple: what people will learn, when, who teaches, and the risk and disclosure lines. Ask only for what you need to send the link and reminders. Screen is an illustrative mock-up.",
+          "d": {
+            "kind": "browser",
+            "url": "learn.example/class",
+            "title": "Free class: how currency prices move",
+            "blocks": [
+              {
+                "type": "text",
+                "value": "Thursday 7pm WAT. 50 minutes. Taught by the VooSquare Academy team."
+              },
+              {
+                "type": "field",
+                "label": "First name",
+                "value": ""
+              },
+              {
+                "type": "field",
+                "label": "Email or Telegram",
+                "value": ""
+              },
+              {
+                "type": "toggle",
+                "label": "Send me reminders about this class",
+                "on": false
+              },
+              {
+                "type": "text",
+                "value": "Trading carries a high risk of losing money. We may earn a commission from broker links."
+              },
+              {
+                "type": "button",
+                "label": "Save my seat"
+              }
+            ],
+            "highlight": 3
+          },
+          "say": "Here's a registration page, as an illustrative mock-up. Keep it simple: what people will learn, when, and who teaches. Ask only for what you need, here a first name and an email or Telegram. Look at the highlighted toggle for reminders: it starts switched off, so people choose it. And notice the risk and disclosure lines sit right above the button: trading carries a high risk of losing money, and we may earn a commission from broker links."
+        },
+        {
+          "v": "phone",
+          "h": "Reminder messages",
+          "p": "Reminders sent at sensible times help people who meant to attend. Each one repeats what they will learn and carries the risk line. This example uses a Telegram-style bot users started themselves.",
+          "d": {
+            "app": "bot",
+            "title": "Class reminders",
+            "subtitle": "bot",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Tomorrow 7pm WAT: how currency prices move, with a live demo walkthrough."
+              },
+              {
+                "from": "them",
+                "text": "Starting in 1 hour. Bring questions. We teach skills, not trading calls.",
+                "buttons": [
+                  "Add to calendar"
+                ]
+              },
+              {
+                "from": "them",
+                "text": "We are live now. Trading carries a high risk of losing money.",
+                "buttons": [
+                  "Join class"
+                ]
+              }
+            ]
+          },
+          "say": "Reminders sent at sensible times help people who actually meant to attend. In this example, a bot that users started themselves sends three. The day before: what they'll learn. One hour before: bring questions, we teach skills, not trading calls. And when the class starts: we're live now, with the risk line. Each one repeats what they'll learn and carries the risk line."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: a proxy target per attendee",
+          "p": "Example. In past classes, 6% of attendees became FTDs. With a $51 target CPA, the target cost per attendee is about $3.06. This class paid $4.29 per attendee, which is too high but under the 1.5 × kill line.",
+          "more": "Example maths: $51 × 6% = $3.06. The proxy kill line is 1.5 × $3.06 = $4.59, and $4.29 is below it, so you would fix rather than kill: better reminders, a clearer registration page or a better time slot. 21 FTDs from 350 attendees is 6%, which is where the rate comes from. Use your own rate after several classes.",
+          "d": [
+            "$51 target CPA",
+            "×",
+            "6% attendee to FTD",
+            "=",
+            "$3.06 per attendee"
+          ],
+          "say": "Here's a proxy target per attendee. In past classes, six percent of attendees became F T Ds. Read the sum on screen: a fifty one dollar target C P A, times six percent, equals about three dollars and six cents per attendee. This class paid four twenty nine, too high. But the kill line is one point five times the target, about four fifty nine, and four twenty nine is under it. So you fix rather than kill: better reminders, a clearer page, or a better time slot. Use your own rate after several classes."
+        },
+        {
+          "v": "cards",
+          "h": "Running live Q&A safely",
+          "p": "Questions are where live classes go wrong. Agree these rules with every presenter before the class and keep a recording in your compliance file. A presenter who breaks them once should not present again until briefed.",
+          "d": [
+            "No personal calls|'Should I buy?' gets a lesson, not an answer",
+            "No results|Never share personal profits or screenshots",
+            "Redirect|Point to the risk lesson and the demo",
+            "Record|Keep the recording and chat log",
+            "Disclose|Say you may earn a commission"
+          ],
+          "say": "Questions are where live classes go wrong. Agree these rules with every presenter before the class. No personal calls: should I buy gets a lesson, not an answer. No results: never share personal profits or screenshots. Redirect: point to the risk lesson and the demo. Record: keep the recording and chat log in your compliance file. And disclose: say you may earn a commission. A presenter who breaks them once shouldn't present again until briefed."
+        },
+        {
+          "v": "compare",
+          "h": "Honest class versus hype class",
+          "p": "Hype classes sell a lifestyle and a deadline. Honest classes teach a skill and the risk, and let people decide in their own time. The honest version also brings users who qualify and stay.",
+          "d": {
+            "a": {
+              "title": "Hype class",
+              "items": [
+                "'Watch me make $500 live'",
+                "'Only 10 spots' on a recording",
+                "'Deposit tonight for a bonus'",
+                "Signals for attendees"
+              ]
+            },
+            "b": {
+              "title": "Honest class",
+              "items": [
+                "Teach on a demo account",
+                "Open replay, no fake scarcity",
+                "Demo first, decide later",
+                "Education only, no calls"
+              ]
+            }
+          },
+          "say": "Compare these two columns. A hype class says watch me make five hundred dollars live, claims only ten spots on a recording, pushes deposit tonight for a bonus, and hands out signals. An honest class teaches on a demo account, offers an open replay with no fake scarcity, says demo first and decide later, and gives education only, no calls. Hype sells a lifestyle and a deadline. The honest version also brings users who qualify and stay."
+        },
+        {
+          "v": "product",
+          "h": "Sending reminders and replays",
+          "p": "Reminders and replay links are broadcasts to people who asked for them. A broadcast tool can schedule them with the risk line built in, so no message goes out without it.",
+          "d": {
+            "slug": "castvoo",
+            "why": "Schedule class reminders and the replay to people who opted in, with the risk line in every message."
+          },
+          "say": "Reminders and replay links are broadcasts to people who asked for them. A broadcast tool can schedule them with the risk line built in, so no message ever goes out without it. The card on screen shows Castvoo, which can schedule class reminders and the replay to people who opted in, with the risk line in every message."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance warning",
+          "p": "A live class about trading is a financial promotion when it leads to a broker. Presenters must follow the same rules as your ads, live and in the replay.",
+          "d": {
+            "kind": "warn",
+            "text": "No trading calls, no live profit demonstrations, no income claims and no fake scarcity in classes or replays. Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country and the broker's licence for that country before you run. Education, not legal or financial advice."
+          },
+          "say": "A live class about trading is a financial promotion when it leads to a broker. Presenters must follow the same rules as your ads, both live and in the replay. Look at the warning. No trading calls, no live profit demonstrations, no income claims and no fake scarcity. Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current policies, the law in your users' country and the broker's licence there. This is education, not legal or financial advice."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for classes",
+          "p": "Starting rules to adapt. Use the proxy after each class and the full rules once FTDs from that class have had 30 days to arrive.",
+          "d": [
+            "Target per attendee = target CPA × attendee-to-FTD rate",
+            "After 100+ attendees: cost per attendee > 1.5 × target = kill or fix the funnel",
+            "Judge FTDs 30 days after the class, by registration date",
+            "Kill if CPA > lower of 1.5 × target and break-even after 3 × target spend",
+            "Scale +20% per class cycle only at CPA ≤ 0.8 × target with ≥ 3 qualified FTDs"
+          ],
+          "say": "Here are your starting rules for classes. Target per attendee equals target C P A times your attendee to F T D rate. After a hundred or more attendees, if cost per attendee is over one point five times target, kill or fix the funnel. Judge F T Ds thirty days after the class, by registration date. Kill if C P A is above the lower of one point five times target and break-even, after three times target spend. And scale by twenty percent per class cycle only at C P A of point eight times target or better, with at least three qualified F T Ds."
+        }
+      ],
+      "takeaways": [
+        "A live class builds trust and teaches risk with numbers.",
+        "Reminders and replays are cheap steps that often decide profit.",
+        "Use cost per attendee as a proxy; confirm with 30-day qualified FTDs.",
+        "No calls, no live profits, no fake scarcity."
+      ],
+      "action": "Write a 50-minute class outline with the six parts from this lesson, including a worked leverage example. Then write the three reminder messages with the risk line.",
+      "glossary": [
+        {
+          "term": "Webinar",
+          "def": "A live online class, usually with slides, a presenter and questions."
+        },
+        {
+          "term": "Attendance rate",
+          "def": "The share of registrants who join the live class."
+        },
+        {
+          "term": "Replay",
+          "def": "A recording of the class sent to people who registered."
+        },
+        {
+          "term": "Cost per attendee",
+          "def": "Spend divided by the number of people who attended live."
+        },
+        {
+          "term": "Opt-in",
+          "def": "A person's clear choice to receive messages, such as reminders."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Spend $1,200, 300 attendees. What is the cost per attendee?",
+          "options": [
+            "$4.00",
+            "$0.25",
+            "$40.00",
+            "$3.60"
+          ],
+          "answer": 0,
+          "why": "$1,200 ÷ 300 = $4.00."
+        },
+        {
+          "q": "Target CPA $45, attendee-to-FTD rate 8%. What is the target cost per attendee?",
+          "options": [
+            "$5.63",
+            "$3.60",
+            "$0.36",
+            "$4.50"
+          ],
+          "answer": 1,
+          "why": "$45 × 8% = $3.60."
+        },
+        {
+          "q": "A presenter is asked 'should I buy gold now?'. What should they say?",
+          "options": [
+            "'Yes, buy now'",
+            "'Wait for my signal'",
+            "'Ask in private chat'",
+            "'We do not give personal calls; here is how to read what moves gold, and practise on a demo'"
+          ],
+          "answer": 3,
+          "why": "General education and a demo suggestion, never a personal call."
+        },
+        {
+          "q": "Which is fake scarcity?",
+          "options": [
+            "An open replay link",
+            "A reminder 1 hour before",
+            "'Only 10 spots left' on a recorded class",
+            "A start time in WAT"
+          ],
+          "answer": 2,
+          "why": "Claiming limited spots on a recording is a false urgency tactic."
+        },
+        {
+          "q": "When should you judge a class's FTDs under the starting rules?",
+          "options": [
+            "30 days after the class, by registration date",
+            "During the class",
+            "The next morning",
+            "Never"
+          ],
+          "answer": 0,
+          "why": "FTDs from a class arrive over weeks, so judge after 30 days by registration date."
+        }
+      ],
+      "say_intro": "In this lesson you'll plan a live class funnel, from registration through reminders, the class itself, the replay and follow-up. A live class builds trust that a page can't, and lets you show the risk honestly to people who chose to learn.",
+      "say_outro": "You can now plan a class funnel, calculate cost per registration, per attendee and per F T D, run a Q and A safely, and apply the proxy and full rules. Your task: write a fifty minute class outline with the six parts from this lesson, including a worked leverage example, then write the three reminder messages with the risk line. Now take the quiz."
+    },
+    {
+      "slug": "telegram-education-channels",
+      "title": "Telegram education channels",
+      "minutes": 20,
+      "objectives": [
+        "By the end you can set up a Telegram education channel with join requests and a welcome bot.",
+        "You can plan a weekly content calendar that teaches skills and risk, not calls.",
+        "You can calculate cost per join request, per retained member and per FTD.",
+        "You can apply decision rules on retention and FTD cost."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why a channel can be an education funnel",
+          "p": "Many people in our core markets already use Telegram every day. A channel lets you teach steadily, build trust over weeks and invite people to a demo or a licensed broker when they are ready. It can also turn into a signals channel, which is the line you must not cross.",
+          "d": {
+            "b": "A classroom, not a signals room",
+            "s": "Teach steadily; never tell people what to trade."
+          },
+          "say": "Many people in our core markets already use Telegram every day. A channel lets you teach steadily, build trust over weeks, and invite people to a demo or a licensed broker when they're ready. But a channel can also drift into a signals channel, and that's the line you must not cross. As the slide says: a classroom, not a signals room. Teach steadily, and never tell people what to trade."
+        },
+        {
+          "v": "map",
+          "h": "The channel funnel",
+          "p": "People click an ad, read a short lander, request to join, and a bot welcomes them while their request is pending. Lessons in the channel lead, over time, to a demo or a licensed broker.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Ad",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Lander",
+                "kind": "page"
+              },
+              {
+                "id": "jr",
+                "label": "Join request",
+                "kind": "telegram"
+              },
+              {
+                "id": "bot",
+                "label": "Welcome bot",
+                "kind": "bot"
+              },
+              {
+                "id": "ch",
+                "label": "Education channel",
+                "kind": "telegram"
+              },
+              {
+                "id": "br",
+                "label": "Demo or broker",
+                "kind": "offer"
+              },
+              {
+                "id": "pb",
+                "label": "Postback",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "lp",
+                "click"
+              ],
+              [
+                "lp",
+                "jr",
+                "request"
+              ],
+              [
+                "jr",
+                "bot",
+                "update"
+              ],
+              [
+                "bot",
+                "ch",
+                "approve"
+              ],
+              [
+                "ch",
+                "br",
+                "learn, then decide"
+              ],
+              [
+                "br",
+                "pb",
+                "FTD"
+              ]
+            ]
+          },
+          "say": "Here's the channel funnel. Follow the map from the ad. People click, read a short lander, and send a join request. A welcome bot greets them while the request is pending, then approves them into the education channel. Over time, the lessons lead them to a demo or a licensed broker, and a first deposit fires the postback."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: set up join requests and a bot",
+          "p": "The steps below follow Telegram's features at the time of writing. Names and limits can change; check Telegram's current documentation. Screens are illustrative mock-ups. Test the whole flow yourself with a second account before any ad sends people to it.",
+          "d": {
+            "steps": [
+              {
+                "title": "Create the bot",
+                "text": "Open the official @BotFather chat and send /newbot. The username must end in 'bot'. Keep the token secret.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "BotFather",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "/newbot"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Choose a username. It must end in 'bot'."
+                    },
+                    {
+                      "from": "me",
+                      "text": "learn_markets_bot"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Done. Use this token to access the HTTP API. Keep it secure."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Add the bot as admin",
+                "text": "In the channel settings, add the bot as an administrator with permission to invite users.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Channel admins",
+                  "subtitle": "settings",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "Add admin: @learn_markets_bot"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Permissions: Invite users via link",
+                      "buttons": [
+                        "Save"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Create a request link",
+                "text": "Create an invite link with 'Request admin approval' switched on. Use one link per campaign.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Invite links",
+                  "subtitle": "channel",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "New link: ng_demo_angle"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Request admin approval: On",
+                      "buttons": [
+                        "Create link"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Approve and welcome",
+                "text": "Your bot receives chat_join_request updates, can message the user briefly while the request is pending, then approves.",
+                "screen": {
+                  "v": "phone",
+                  "app": "bot",
+                  "title": "learn_markets_bot",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "Welcome. This channel teaches how markets work. We do not give trading calls. Trading carries a high risk of losing money.",
+                      "buttons": [
+                        "I understand, let me in"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "say": "Let's set up join requests and a bot. These steps follow Telegram's features at the time of writing, so check the current docs. First, open the official BotFather chat, create a new bot with a username ending in bot, and keep the token secret. Second, add the bot to your channel as an administrator, with permission to invite users. Third, create an invite link with request admin approval switched on, one link per campaign. Finally, your bot receives each join request, can message the person briefly while it's pending, then approves. Test the whole flow with a second account before any ad sends people to it."
+        },
+        {
+          "v": "code",
+          "h": "The approval call",
+          "p": "Your bot approves a pending request with one Bot API method. At the time of writing, the bot may message the person privately for a short window while the request is pending, about 5 minutes. Check Telegram's current Bot API documentation.",
+          "d": {
+            "lang": "url",
+            "text": "https://api.telegram.org/bot<TOKEN>/approveChatJoinRequest?chat_id=-1001234567890&user_id=123456789",
+            "note": "Never share or commit the token. Bots get updates by getUpdates or a webhook (setWebhook)."
+          },
+          "say": "Your bot approves a pending request with one Bot A P I method, the call shown on screen. You don't need to read it out. At the time of writing, the bot may message the person privately for a short window while the request is pending, about five minutes. Check Telegram's current Bot A P I documentation. And as the note says, never share or commit the token."
+        },
+        {
+          "v": "table",
+          "h": "A weekly content calendar",
+          "p": "Example. One lesson a day, each useful on its own. Risk appears every week, not once. No post tells anyone what to buy or sell.",
+          "d": {
+            "cols": [
+              "Day",
+              "Post",
+              "Purpose"
+            ],
+            "rows": [
+              [
+                "Mon",
+                "Lesson: what moves a currency",
+                "Skill"
+              ],
+              [
+                "Tue",
+                "Word of the day: spread",
+                "Vocabulary"
+              ],
+              [
+                "Wed",
+                "Past chart explained",
+                "Reading charts"
+              ],
+              [
+                "Thu",
+                "Risk: leverage with numbers",
+                "Protection"
+              ],
+              [
+                "Fri",
+                "Questions answered",
+                "Trust"
+              ],
+              [
+                "Sat",
+                "Demo task for the weekend",
+                "Practice"
+              ],
+              [
+                "Sun",
+                "Week recap",
+                "Memory"
+              ]
+            ]
+          },
+          "say": "Here's an example weekly calendar. One lesson a day, each useful on its own. Monday, what moves a currency. Tuesday, a word of the day, like spread. Wednesday, a past chart explained. Thursday, risk, with leverage in numbers. Friday, questions answered. Saturday, a demo task for the weekend. Sunday, a week recap. Notice risk appears every week, not once. And no post tells anyone what to buy or sell."
+        },
+        {
+          "v": "funnel",
+          "h": "Worked example: a month of a channel",
+          "p": "Example. 2,000 join requests were approved after the welcome. 1,600 stayed past the first day, 1,120 were still members on day 7, 240 clicked a demo or broker link and 24 made an FTD within 30 days. Figures are illustrative.",
+          "d": [
+            [
+              "Join requests",
+              2000
+            ],
+            [
+              "Members after day 1",
+              1600
+            ],
+            [
+              "Members on day 7",
+              1120
+            ],
+            [
+              "Clicked broker link",
+              240
+            ],
+            [
+              "FTDs",
+              24
+            ]
+          ],
+          "say": "Here's a month of a channel, as an example. Follow the funnel down. Two thousand join requests approved. Sixteen hundred stayed past day one. Eleven hundred and twenty were still members on day seven. Two hundred and forty clicked a demo or broker link. And twenty four made an F T D, a first time deposit, within thirty days. These figures are illustrative."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: the money",
+          "p": "Example. You paid $0.50 per join request, $1,000 in total. The offer pays $70 per qualified FTD and 18 of 24 qualified. The channel made a small profit and keeps the members for future lessons.",
+          "more": "Example maths: 18 ÷ 24 = 75% qualified, so effective payout is $70 × 75% = $52.50 and the target at 25% margin is about $39.38. CPA $41.67 is above target but below break-even, so this is a Keep. The members who stay are an asset: later lessons can bring more FTDs at no extra ad cost, which is why retention matters.",
+          "d": {
+            "cols": [
+              "Metric",
+              "Formula",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Cost per join request",
+                "$1,000 ÷ 2,000",
+                "$0.50"
+              ],
+              [
+                "Cost per day-7 member",
+                "$1,000 ÷ 1,120",
+                "$0.89"
+              ],
+              [
+                "CPA per raw FTD",
+                "$1,000 ÷ 24",
+                "$41.67"
+              ],
+              [
+                "Revenue",
+                "18 × $70",
+                "$1,260"
+              ],
+              [
+                "Profit",
+                "$1,260 − $1,000",
+                "$260"
+              ]
+            ]
+          },
+          "say": "Now the money. You paid fifty cents per join request, one thousand dollars in total. Read down the table. Cost per day seven member is eighty nine cents. C P A, cost per acquisition, per raw F T D is about forty one sixty seven. Eighteen of twenty four qualified at seventy dollars, so revenue is twelve sixty, and profit two sixty. That's above the target of about thirty nine dollars, but below break-even, so it's a Keep. And the members who stay are an asset: later lessons can bring more F T Ds at no extra ad cost."
+        },
+        {
+          "v": "curve",
+          "h": "Example: members over 30 days",
+          "p": "Example. Membership falls fastest in the first week, then steadies. A strong welcome and useful first lessons flatten the early drop. Compare two welcome flows you tested.",
+          "d": {
+            "a": [
+              2000,
+              1600,
+              1250,
+              1120,
+              1060,
+              1010,
+              980
+            ],
+            "la": "Welcome flow A",
+            "b": [
+              2000,
+              1700,
+              1420,
+              1330,
+              1280,
+              1240,
+              1220
+            ],
+            "lb": "Welcome flow B, lesson-first",
+            "x": [
+              "D0",
+              "D1",
+              "D3",
+              "D7",
+              "D14",
+              "D21",
+              "D30"
+            ]
+          },
+          "say": "This curve compares two welcome flows over thirty days. Look how membership falls fastest in the first week, then steadies. Flow A ends around nine hundred and eighty members. Flow B, which leads with a lesson, ends around twelve hundred and twenty. A strong welcome and useful first lessons flatten that early drop. This is an example, so compare flows you've tested yourself."
+        },
+        {
+          "v": "product",
+          "h": "Tracking which ad brought each join",
+          "p": "With one request link per campaign you can see joins by link, but matching joins to ad sets and to later FTDs takes tracking. A join tracker can attribute each join to its source.",
+          "d": {
+            "slug": "joinvoo",
+            "why": "Attributes each channel join to its campaign and link, so you can judge ad sets on joins and retention."
+          },
+          "say": "With one request link per campaign, you can see joins by link. But matching joins to ad sets, and to later F T Ds, takes tracking. A join tracker can attribute each join to its source. The card on screen shows Joinvoo, which attributes each channel join to its campaign and link, so you can judge ad sets on joins and retention."
+        },
+        {
+          "v": "compare",
+          "h": "Education channel versus signals channel",
+          "p": "The two can look alike from the outside. The difference is whether you teach people to think or tell them what to do. Only one of them is education.",
+          "d": {
+            "a": {
+              "title": "Signals channel",
+              "items": [
+                "'BUY GOLD NOW' posts",
+                "Screenshots of winning trades",
+                "'VIP' paid calls",
+                "Countdowns and bonuses"
+              ]
+            },
+            "b": {
+              "title": "Education channel",
+              "items": [
+                "Lessons on how markets work",
+                "Risk posts with numbers",
+                "Demo tasks and quizzes",
+                "Calm, steady schedule"
+              ]
+            }
+          },
+          "say": "From the outside, these two can look alike. Compare the columns. A signals channel posts buy gold now, screenshots of winning trades, V I P paid calls, countdowns and bonuses. An education channel posts lessons on how markets work, risk posts with numbers, demo tasks and quizzes, on a calm, steady schedule. The difference is whether you teach people to think, or tell them what to do. Only one of them is education."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "These mistakes either break Telegram's rules, break the law or fill the channel with people who will never trade responsibly. All of them hurt the numbers in the end.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Buying members or fake views",
+                "Mass messaging people who never started the bot",
+                "Posting calls to boost activity",
+                "Leaking the bot token in a screenshot"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Grow only through real ads and content",
+                "Message only people who started the bot or are in the request window",
+                "Teach skills instead",
+                "Keep the token secret; revoke if exposed"
+              ]
+            }
+          },
+          "say": "These mistakes break Telegram's rules, break the law, or fill the channel with people who'll never trade responsibly. Read across. Buying members or fake views: grow only through real ads and content. Mass messaging people who never started the bot: message only people who started it, or are in the request window. Posting calls to boost activity: teach skills instead. Leaking the bot token in a screenshot: keep it secret, and revoke it if exposed."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance warning",
+          "p": "A channel that leads to a broker is a financial promotion. Telegram's own rules also apply: no spam, respect rate limits and only message people who started your bot, apart from the join-request window. Pin the rules for admins so everyone posting knows them.",
+          "d": {
+            "kind": "warn",
+            "text": "No trading calls, no profit screenshots and a risk line in every post that links to a broker. Bots cannot message people who never started them, except during the join-request window. Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country and the broker's licence for that country before you run. Education, not legal or financial advice."
+          },
+          "say": "A channel that leads to a broker is a financial promotion, and Telegram's own rules apply too: no spam, respect rate limits, and only message people who started your bot, apart from the join request window. Look at the warning. No trading calls, no profit screenshots, and a risk line in every post that links to a broker. Trading ads usually need platform authorization and must follow local law. Check the platform's current policies, local law and the broker's licence. This is education, not legal or financial advice. Pin these rules for every admin."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for channels",
+          "p": "Starting rules to adapt. Retention rules fix the channel; FTD rules decide spend. Never scale on joins alone. Judge FTD rules only on cohorts at least 30 days old, because channel members often deposit weeks after joining.",
+          "d": [
+            "Day-7 retention below 50% = fix the welcome and first lessons before more spend",
+            "Kill an ad set at 2 × target CPA of matured spend (30+ days) with 0 FTDs",
+            "Kill if CPA > lower of 1.5 × target and break-even after 3 × target matured spend",
+            "Scale +20% every ≥ 48 hours at CPA ≤ 0.8 × target with ≥ 3 qualified FTDs",
+            "Any post with a call or a profit claim = delete it and review the posting process"
+          ],
+          "say": "Here are your starting rules for channels. If day seven retention is below fifty percent, fix the welcome and first lessons before spending more. Kill an ad set at two times target C P A of matured spend, thirty days or more, with zero F T Ds. Kill if C P A is above the lower of one point five times target and break-even, after three times target matured spend. Scale by twenty percent every forty eight hours or more at C P A of point eight times target or better, with at least three qualified F T Ds. And any post with a call or a profit claim: delete it and review your posting process. Never scale on joins alone."
+        }
+      ],
+      "takeaways": [
+        "A Telegram channel can be a classroom that leads people to a demo or licensed broker over time.",
+        "Use join requests and a bot to welcome people, with the risk line and 'no calls' up front.",
+        "Track cost per join, per retained member and per FTD.",
+        "Retention fixes the channel; qualified FTDs decide spend."
+      ],
+      "action": "Create a request-approval invite link for your channel, write the bot's welcome message with the risk line and 'no calls' rule, and plan one week of posts using the calendar.",
+      "glossary": [
+        {
+          "term": "Join request",
+          "def": "A request to enter a channel or group that an admin or bot must approve."
+        },
+        {
+          "term": "BotFather",
+          "def": "Telegram's official bot for creating and managing bots."
+        },
+        {
+          "term": "Bot token",
+          "def": "The secret key that controls a bot through the Bot API. Never share it."
+        },
+        {
+          "term": "Day-7 retention",
+          "def": "The share of people who joined who are still members seven days later."
+        },
+        {
+          "term": "Signals channel",
+          "def": "A channel that tells members what to buy or sell. Often regulated advice."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "2,000 join requests cost $900. What is the cost per join request?",
+          "options": [
+            "$0.45",
+            "$2.22",
+            "$0.90",
+            "$4.50"
+          ],
+          "answer": 0,
+          "why": "$900 ÷ 2,000 = $0.45."
+        },
+        {
+          "q": "Which permission does the bot need to approve join requests in a channel?",
+          "options": [
+            "Post messages",
+            "Delete messages",
+            "Invite users",
+            "Change channel info"
+          ],
+          "answer": 2,
+          "why": "The bot must be an admin with permission to invite users."
+        },
+        {
+          "q": "Day-7 retention is 40%. What does the starting rule say?",
+          "options": [
+            "Scale to fill the channel",
+            "Fix the welcome and first lessons before more spend",
+            "Buy members",
+            "Kill the channel"
+          ],
+          "answer": 1,
+          "why": "Below 50% day-7 retention, fix the experience before spending more."
+        },
+        {
+          "q": "Which post belongs in an education channel?",
+          "options": [
+            "'BUY EUR/USD NOW'",
+            "A screenshot of a winning trade",
+            "'VIP calls, $20 a month'",
+            "'Leverage explained: a 1% move on 1:100'"
+          ],
+          "answer": 3,
+          "why": "Teaching how leverage works, with numbers, is education."
+        },
+        {
+          "q": "Your bot token appears in a screenshot you posted. What do you do?",
+          "options": [
+            "Nothing; nobody will notice",
+            "Revoke and replace the token in BotFather right away",
+            "Delete the screenshot only",
+            "Rename the bot"
+          ],
+          "answer": 1,
+          "why": "Anyone with the token controls the bot. Revoke and replace it immediately."
+        }
+      ],
+      "say_intro": "In this lesson you'll set up a Telegram education channel with join requests and a welcome bot, and plan a weekly calendar that teaches skills and risk. You'll also learn the line between education and signals, and why you must never cross it.",
+      "say_outro": "You can now set up a channel with join requests and a bot, plan a week of teaching posts, work out cost per join, per retained member and per F T D, and apply the retention and F T D rules. Your task: create a request-approval invite link, write the bot's welcome message with the risk line and the no calls rule, and plan one week of posts using the calendar. Now take the quiz."
+    },
+    {
+      "slug": "email-and-lifecycle-sequences",
+      "title": "Email and lifecycle sequences",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can collect email consent that meets the basic rules in our core markets.",
+        "You can write a two-week education sequence that leads honestly to a demo or broker.",
+        "You can calculate cost per confirmed subscriber, CPA and revenue per subscriber.",
+        "You can keep a list healthy and apply decision rules to lead sources."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why your own list matters",
+          "p": "Ad accounts can be restricted and channels can be lost. An email list built with real consent is an asset you control. Many people do not open an account in the first week; a steady sequence helps them learn and decide in their own time.",
+          "d": {
+            "b": "A list you own, built with consent",
+            "s": "Email reaches people who chose to hear from you."
+          },
+          "say": "Ad accounts can be restricted and channels can be lost. But an email list built with real consent is an asset you control. Many people don't open an account in their first week. A steady sequence helps them learn and decide in their own time. As the slide says: a list you own, built with consent. Email reaches people who chose to hear from you."
+        },
+        {
+          "v": "cards",
+          "h": "Consent laws in our core markets",
+          "p": "Examples at the time of writing. Each law has details and a regulator; read the official guidance. Most share the same core: clear purpose, real consent for marketing, easy opt-out and data kept safe.",
+          "more": "We are confident about the Nigerian, Kenyan, South African and Ghanaian laws named here, but not about how each regulator applies them to affiliate email today. For Cameroon we are not certain of the current law or its start date; check before collecting data there. If you collect data from people in the EU or UK, their rules also apply. When unsure, ask a data protection adviser.",
+          "d": [
+            "Nigeria|Nigeria Data Protection Act 2023",
+            "Kenya|Data Protection Act 2019",
+            "South Africa|POPIA; consent for electronic direct marketing to non-customers",
+            "Ghana|Data Protection Act 2012",
+            "Cameroon|We believe a personal data law was adopted in 2024; check"
+          ],
+          "say": "Here are the consent laws in our core markets, as examples at the time of writing. Nigeria, the Nigeria Data Protection Act twenty twenty three. Kenya, the Data Protection Act twenty nineteen. South Africa, POPIA, with consent for electronic direct marketing to non-customers. Ghana, the Data Protection Act twenty twelve. And for Cameroon, we believe a personal data law was adopted in twenty twenty four, but check. Most share the same core: clear purpose, real consent for marketing, easy opt-out and safe data. Read the official guidance, and when unsure, ask a data protection adviser."
+        },
+        {
+          "v": "flow",
+          "h": "The sequence flow",
+          "p": "Double opt-in means people confirm their address by clicking a link. It keeps fake and mistyped addresses off your list and gives you a clear record of consent.",
+          "d": [
+            "Sign-up form",
+            "Confirm email",
+            "Welcome",
+            "Lessons over 2 weeks",
+            "Demo invite",
+            "Ongoing newsletter"
+          ],
+          "say": "Here's the sequence flow. Sign-up form, confirm email, welcome, lessons over two weeks, a demo invite, and then an ongoing newsletter. That confirm step is called double opt-in: people confirm their address by clicking a link. It keeps fake and mistyped addresses off your list, and gives you a clear record of consent."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: a consent form",
+          "p": "Ask only for what you need, say who you are and what you will send, and leave marketing consent unticked. Link to your privacy notice. Screen is an illustrative mock-up.",
+          "d": {
+            "kind": "browser",
+            "url": "learn.example/course",
+            "title": "Free 2-week forex basics course",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "First name",
+                "value": ""
+              },
+              {
+                "type": "field",
+                "label": "Email",
+                "value": ""
+              },
+              {
+                "type": "toggle",
+                "label": "Send me the course and occasional emails about trading education. I can unsubscribe at any time.",
+                "on": false
+              },
+              {
+                "type": "text",
+                "value": "Run by [your business]. Privacy notice. We may earn a commission from broker links. Trading carries a high risk of loss."
+              },
+              {
+                "type": "button",
+                "label": "Start the course"
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "Here's a consent form, as an illustrative mock-up. Ask only for what you need, here a first name and email. Look at the highlighted consent toggle. It says exactly what you'll send, that they can unsubscribe at any time, and it starts unticked. Below it, say who runs the course, link to your privacy notice, disclose that you may earn a commission, and include the risk line."
+        },
+        {
+          "v": "table",
+          "h": "A two-week sequence",
+          "p": "Example sequence. Each email teaches one thing and works on its own. The broker invitation comes only after costs, risk and how to check a licence have been taught.",
+          "d": {
+            "cols": [
+              "Day",
+              "Email",
+              "Includes"
+            ],
+            "rows": [
+              [
+                "0",
+                "Welcome and what to expect",
+                "Disclosure, unsubscribe"
+              ],
+              [
+                "1",
+                "How currency prices move",
+                "One example"
+              ],
+              [
+                "3",
+                "Leverage and risk",
+                "A 1% move, in numbers"
+              ],
+              [
+                "5",
+                "Practise on a demo",
+                "Demo link, demo is not live"
+              ],
+              [
+                "8",
+                "Costs: spreads and overnight fees",
+                "Worked example"
+              ],
+              [
+                "12",
+                "How to check a broker's licence",
+                "Register steps"
+              ],
+              [
+                "15",
+                "If you decide to open an account",
+                "Risk warning, no pressure"
+              ]
+            ]
+          },
+          "say": "Here's an example two-week sequence. Each email teaches one thing and works on its own. Day zero, welcome, with your disclosure and unsubscribe. Day one, how prices move. Day three, leverage and risk, with a one percent move in numbers. Day five, practise on a demo, and demo is not live. Day eight, costs. Day twelve, how to check a broker's licence. And only on day fifteen, if you decide to open an account, with a risk warning and no pressure. The broker invitation comes only after costs, risk and licences have been taught."
+        },
+        {
+          "v": "funnel",
+          "h": "Worked example: one month of sign-ups",
+          "p": "Example. 1,000 people signed up from ads at $1 each. 500 confirmed their email. Over the following month, 20 of the confirmed subscribers made an FTD and 16 qualified. Figures are illustrative.",
+          "d": [
+            [
+              "Sign-ups",
+              1000
+            ],
+            [
+              "Confirmed",
+              500
+            ],
+            [
+              "FTDs",
+              20
+            ],
+            [
+              "Qualified",
+              16
+            ]
+          ],
+          "say": "Here's one month of sign-ups, as an example. Follow the funnel down. One thousand people signed up from ads at one dollar each. Five hundred confirmed their email. Over the next month, twenty confirmed subscribers made an F T D, a first time deposit, and sixteen of those qualified. These figures are illustrative."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: the money",
+          "p": "Example. The offer pays $80 per qualified FTD. The list made a small profit in its first month, and the 480 confirmed subscribers who have not deposited can still learn and decide later.",
+          "more": "Example maths: effective payout is $80 × 80% = $64, target at 25% margin is $48, and CPA $50 is just above target but below break-even, so this is a Keep. Revenue per confirmed subscriber, $2.56, tells you the most a confirmed subscriber has been worth so far. It is a first-month figure only; later months may add more or very little. Never promise yourself the later months.",
+          "d": {
+            "cols": [
+              "Metric",
+              "Formula",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Cost per confirmed",
+                "$1,000 ÷ 500",
+                "$2.00"
+              ],
+              [
+                "CPA per raw FTD",
+                "$1,000 ÷ 20",
+                "$50.00"
+              ],
+              [
+                "Revenue",
+                "16 × $80",
+                "$1,280"
+              ],
+              [
+                "Profit",
+                "$1,280 − $1,000",
+                "$280"
+              ],
+              [
+                "Revenue per confirmed",
+                "$1,280 ÷ 500",
+                "$2.56"
+              ]
+            ]
+          },
+          "say": "Now the money. The offer pays eighty dollars per qualified F T D. Read down the table. Cost per confirmed subscriber is two dollars. C P A, cost per acquisition, is fifty dollars. Revenue is twelve eighty, so profit is two eighty. And revenue per confirmed subscriber is two dollars fifty six. With a target of forty eight, fifty is just above target but below break-even, so it's a Keep. That two fifty six is a first month figure only. Later months may add more, or very little, so never promise yourself the later months."
+        },
+        {
+          "v": "code",
+          "h": "Tag links without leaking personal data",
+          "p": "Tag every email link so you know which email and campaign brought each click. Use an internal subscriber ID, never the email address or name, because URLs end up in logs and analytics tools.",
+          "d": {
+            "lang": "url",
+            "text": "https://learn.example/demo?utm_source=email&utm_medium=sequence&utm_campaign=day5_demo&sub1=sub_48213",
+            "note": "Illustrative. sub1 is an internal ID, not personal data."
+          },
+          "say": "Tag every email link so you know which email and campaign brought each click. Look at the example link on screen; you don't need to read it. It uses U T M tags for source, medium and campaign, and sub one for the subscriber. Here's the key rule: use an internal subscriber I D, never the email address or name, because U R Ls end up in logs and analytics tools."
+        },
+        {
+          "v": "compare",
+          "h": "Honest emails versus manipulative emails",
+          "p": "Manipulative emails can lift clicks for a week and then lift complaints and unsubscribes. They also break consumer and financial promotion rules in many places.",
+          "d": {
+            "a": {
+              "title": "Manipulative",
+              "items": [
+                "'Your account expires tonight'",
+                "'Last chance' every week",
+                "'You have won $200'",
+                "Fake replies: 'Re: your profits'"
+              ]
+            },
+            "b": {
+              "title": "Honest",
+              "items": [
+                "Clear subject: what the lesson teaches",
+                "Real dates only",
+                "No prizes that do not exist",
+                "Plain sender name and reason for the email"
+              ]
+            }
+          },
+          "say": "Compare these two columns. Manipulative emails say your account expires tonight, last chance every week, you have won two hundred dollars, or fake replies about your profits. Honest emails have a clear subject saying what the lesson teaches, real dates only, no prizes that don't exist, and a plain sender name and reason for the email. Manipulative emails can lift clicks for a week, then lift complaints and unsubscribes. They also break consumer and financial promotion rules in many places."
+        },
+        {
+          "v": "cards",
+          "h": "Keeping the list healthy",
+          "p": "A healthy list reaches inboxes and respects people. These habits protect deliverability and keep you within data protection rules. Put a monthly reminder in your calendar to clean bounces and check unsubscribe handling.",
+          "d": [
+            "Unsubscribe|One click, honoured promptly",
+            "Bounces|Remove addresses that bounce",
+            "Never buy lists|They break consent and harm deliverability",
+            "Never sell or share|Without clear, specific consent",
+            "Delete on request|And when no longer needed",
+            "Segment|Demo users and depositors get different emails"
+          ],
+          "say": "A healthy list reaches inboxes and respects people. Here are the habits. Unsubscribe in one click, honoured promptly. Remove addresses that bounce. Never buy lists, because they break consent and harm deliverability. Never sell or share data without clear, specific consent. Delete on request, and when it's no longer needed. And segment, so demo users and depositors get different emails. Put a monthly reminder in your calendar to clean bounces and check unsubscribes."
+        },
+        {
+          "v": "product",
+          "h": "Answering replies and questions",
+          "p": "Good sequences get replies with real questions. Answer them from an approved script so answers stay consistent, general and never turn into personal trading advice.",
+          "d": {
+            "slug": "replyvoo",
+            "why": "Answers repeated questions from leads using your approved, risk-aware script."
+          },
+          "say": "Good sequences get replies with real questions. Answer them from an approved script, so answers stay consistent and general, and never turn into personal trading advice. The card on screen shows Replyvoo, which answers repeated questions from leads using your approved, risk-aware script."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "Most list problems come from rushing growth. Each fix keeps the list legal and useful for longer. Check your own form and first three emails against the left column today.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Pre-ticked consent boxes",
+                "Sending the broker link in email one",
+                "No unsubscribe link",
+                "Judging the source on day 3"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Unticked box, clear wording",
+                "Teach costs and risk first",
+                "One-click unsubscribe in every email",
+                "Judge after the 15-day sequence plus 15 days"
+              ]
+            }
+          },
+          "say": "Most list problems come from rushing growth. Read across. Pre-ticked consent boxes: use an unticked box with clear wording. Sending the broker link in email one: teach costs and risk first. No unsubscribe link: one-click unsubscribe in every email. Judging the source on day three: judge after the fifteen day sequence, plus fifteen days. Check your own form and your first three emails against the left column today."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance warning",
+          "p": "Email that leads to a broker is a financial promotion and personal data processing at the same time. Both sets of rules apply. Check the data protection law in each geo, not only the advertising rules.",
+          "d": {
+            "kind": "warn",
+            "text": "Collect consent clearly, keep records, honour unsubscribes and never sell data without consent. Every email that links to a broker needs the risk line. Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country and the broker's licence for that country before you run. Education, not legal or financial advice."
+          },
+          "say": "Email that leads to a broker is two things at once: a financial promotion, and personal data processing. Both sets of rules apply. Look at the warning. Collect consent clearly, keep records, honour unsubscribes, and never sell data without consent. Every email that links to a broker needs the risk line. Trading ads usually need platform authorization and must follow local law. Check the data protection law in each geo, not only the advertising rules. This is education, not legal or financial advice."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for email",
+          "p": "Starting rules to adapt. Rates such as unsubscribe levels vary by list and geo, so treat the thresholds as a rough guide and adjust once you have your own history.",
+          "d": [
+            "Judge a lead source 30 days after sign-up, by sign-up date",
+            "Kill a source at 2 × target CPA of matured spend with 0 FTDs",
+            "Kill if CPA > lower of 1.5 × target and break-even after 3 × target matured spend",
+            "Unsubscribes above 2% on one email = review that email before sending it again",
+            "Scale a source +20% every ≥ 48 hours at CPA ≤ 0.8 × target with ≥ 3 qualified FTDs"
+          ],
+          "say": "Here are your starting rules for email. Judge a lead source thirty days after sign-up, by sign-up date. Kill a source at two times target C P A of matured spend with zero F T Ds. Kill if C P A is above the lower of one point five times target and break-even, after three times target matured spend. If unsubscribes go above two percent on one email, review that email before sending it again. And scale a source by twenty percent every forty eight hours or more at C P A of point eight times target or better, with at least three qualified F T Ds. Treat these thresholds as a rough guide and adjust with your own history."
+        }
+      ],
+      "takeaways": [
+        "A consented email list is an asset you control.",
+        "Teach costs, risk and how to check a licence before inviting anyone to a broker.",
+        "Tag links with internal IDs, never personal data.",
+        "Judge sources on 30-day cohorts and keep the list healthy."
+      ],
+      "action": "Write the welcome email and the day-3 risk email from the sequence, including the disclosure, the risk line and the unsubscribe link. Check your form's consent box is unticked.",
+      "glossary": [
+        {
+          "term": "Double opt-in",
+          "def": "Sign-up where people confirm their email by clicking a link before they are added."
+        },
+        {
+          "term": "Consent record",
+          "def": "Proof of what a person agreed to, when and through which form."
+        },
+        {
+          "term": "Deliverability",
+          "def": "How reliably your emails reach inboxes rather than spam folders."
+        },
+        {
+          "term": "Unsubscribe rate",
+          "def": "The share of recipients of an email who unsubscribe from it."
+        },
+        {
+          "term": "Segment",
+          "def": "A part of your list grouped by behaviour, such as demo users or depositors."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "1,200 sign-ups cost $1,200 and 600 confirm. What is the cost per confirmed subscriber?",
+          "options": [
+            "$1.00",
+            "$0.50",
+            "$2.00",
+            "$6.00"
+          ],
+          "answer": 2,
+          "why": "$1,200 ÷ 600 = $2.00."
+        },
+        {
+          "q": "Which consent setup is right?",
+          "options": [
+            "Pre-ticked marketing box",
+            "Unticked box with clear wording and a privacy link",
+            "Consent hidden in the terms",
+            "No box; signing up means consent"
+          ],
+          "answer": 1,
+          "why": "Consent should be a clear, active choice."
+        },
+        {
+          "q": "Which link is safe to use in an email?",
+          "options": [
+            "...&email=ama@example.com",
+            "...&name=Ama+Mensah",
+            "...&phone=0244...",
+            "...&sub1=sub_48213"
+          ],
+          "answer": 3,
+          "why": "An internal ID tracks the click without putting personal data in the URL."
+        },
+        {
+          "q": "Revenue $1,280 from 500 confirmed subscribers. What is revenue per confirmed subscriber?",
+          "options": [
+            "$2.56",
+            "$0.39",
+            "$1.28",
+            "$25.60"
+          ],
+          "answer": 0,
+          "why": "$1,280 ÷ 500 = $2.56."
+        },
+        {
+          "q": "An email has a 3% unsubscribe rate. What does the starting rule say?",
+          "options": [
+            "Send it twice more",
+            "Review that email before sending it again",
+            "Delete the whole list",
+            "Ignore unsubscribes"
+          ],
+          "answer": 1,
+          "why": "Above 2% on one email, review it before reuse."
+        }
+      ],
+      "say_intro": "In this lesson you'll build an email list with real consent and write a two-week education sequence that leads honestly to a demo or broker. A list you own is an asset you control, even when ad accounts or channels are lost.",
+      "say_outro": "You can now collect email consent properly, write a two-week education sequence, calculate cost per confirmed subscriber and revenue per subscriber, and keep your list healthy. Your task: write the welcome email and the day three risk email, with the disclosure, the risk line and the unsubscribe link, and check your form's consent box is unticked. Now take the quiz."
+    },
+    {
+      "slug": "measuring-slow-funnels",
+      "title": "Measuring and deciding on slow funnels",
+      "minutes": 20,
+      "objectives": [
+        "By the end you can build a cohort table by click date and read how mature a cohort is.",
+        "You can project a cohort's final FTDs from its age and your maturity curve.",
+        "You can set proxy targets for each education step and use them safely.",
+        "You can apply the kill and scale rules to funnels whose results arrive late."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why slow funnels need different timing",
+          "p": "Education funnels bring FTDs days or weeks after the click. Judge them on day 3 and you kill good funnels. Wait forever and you keep bad ones. The fix is to judge by cohort, know how mature each cohort is and use early signals carefully.",
+          "d": {
+            "b": "Same rules, better timing",
+            "s": "Judge cohorts when they are mature enough to judge."
+          },
+          "say": "Education funnels bring F T Ds, first time deposits, days or weeks after the click. Judge them on day three and you kill good funnels. Wait forever and you keep bad ones. The fix is to judge by cohort, know how mature each cohort is, and use early signals carefully. As the slide says: same rules, better timing."
+        },
+        {
+          "v": "curve",
+          "h": "Example: when FTDs arrive",
+          "p": "Example. A weekly cohort from an education funnel, counted by days since click. By day 7, half of its eventual FTDs have arrived. By day 30, almost all. Your curve will differ; build it from your own data.",
+          "d": {
+            "a": [
+              2,
+              5,
+              9,
+              13,
+              15,
+              17,
+              18
+            ],
+            "la": "FTDs, cumulative",
+            "b": [
+              11,
+              28,
+              50,
+              72,
+              83,
+              94,
+              100
+            ],
+            "lb": "% of day-45 total",
+            "x": [
+              "D1",
+              "D3",
+              "D7",
+              "D14",
+              "D21",
+              "D30",
+              "D45"
+            ]
+          },
+          "say": "This curve shows when F T Ds arrive, for an example weekly cohort, counted by days since click. Read along the bottom. By day seven, half of its eventual F T Ds have arrived. By day fourteen, about seventy two percent. By day thirty, almost all. Your curve will differ, so build it from your own data."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: a maturity table",
+          "p": "Example built from the curve. Divide each day's cumulative FTDs by the day-45 total. This table tells you how much of a cohort's result you can see at each age.",
+          "d": {
+            "cols": [
+              "Cohort age",
+              "FTDs so far",
+              "Share of final"
+            ],
+            "rows": [
+              [
+                "Day 3",
+                "5 of 18",
+                "28%"
+              ],
+              [
+                "Day 7",
+                "9 of 18",
+                "50%"
+              ],
+              [
+                "Day 14",
+                "13 of 18",
+                "72%"
+              ],
+              [
+                "Day 30",
+                "17 of 18",
+                "94%"
+              ]
+            ]
+          },
+          "say": "Here's a maturity table, built from that curve. Divide each day's cumulative F T Ds by the day forty five total, which is eighteen. Read down. Day three, five of eighteen, twenty eight percent. Day seven, nine of eighteen, fifty percent. Day fourteen, seventy two percent. Day thirty, ninety four percent. This table tells you how much of a cohort's result you can actually see at each age."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: projecting a young cohort",
+          "p": "Example. A cohort is 7 days old and shows 6 FTDs on $400 of spend. At day 7 you usually see 50% of the final result, so the projected total is 12 FTDs and the projected CPA is about $33.",
+          "more": "Example maths: 6 ÷ 0.5 = 12. $400 ÷ 12 = $33.33 projected CPA. A projection is an estimate, not a result, and small numbers swing a lot: 6 FTDs could easily have been 4 or 8. Use projections to decide what to watch and when to hold, not to scale. Scaling waits for real, mature, qualified numbers.",
+          "d": [
+            "6 FTDs",
+            "÷",
+            "50% maturity",
+            "=",
+            "12 projected"
+          ],
+          "say": "Now let's project a young cohort. It's seven days old, and shows six F T Ds on four hundred dollars of spend. At day seven, you usually see fifty percent of the final result. So read the sum on screen: six F T Ds divided by fifty percent equals twelve projected. That gives a projected C P A, cost per acquisition, of about thirty three dollars. But a projection is an estimate, not a result. Six could easily have been four or eight. Use projections to decide what to watch, not to scale."
+        },
+        {
+          "v": "cards",
+          "h": "Proxy signals for each education step",
+          "p": "Each format has an early step you can count within days. Turn each into a target by multiplying your target CPA by that step's rate to FTD, from your own history.",
+          "d": [
+            "Demo funnel|Cost per demo sign-up",
+            "Class funnel|Cost per attendee",
+            "Channel funnel|Cost per day-7 member",
+            "Email funnel|Cost per confirmed subscriber",
+            "All funnels|Reg-to-FTD rate by ad set"
+          ],
+          "say": "Each format has an early step you can count within days. For a demo funnel, it's cost per demo sign-up. For a class, cost per attendee. For a channel, cost per day seven member. For email, cost per confirmed subscriber. And for all funnels, the registration to F T D rate by ad set. Turn each into a target by multiplying your target C P A by that step's rate to F T D, from your own history."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: proxy targets",
+          "p": "Example with a $30 target CPA and step rates from past cohorts. Each proxy target is the most you should pay for that step. Rates are illustrative; use your own.",
+          "d": {
+            "cols": [
+              "Step",
+              "Rate to FTD",
+              "Proxy target"
+            ],
+            "rows": [
+              [
+                "Demo sign-up",
+                "6%",
+                "$1.80"
+              ],
+              [
+                "Class attendee",
+                "6%",
+                "$1.80"
+              ],
+              [
+                "Day-7 channel member",
+                "2%",
+                "$0.60"
+              ],
+              [
+                "Confirmed subscriber",
+                "4%",
+                "$1.20"
+              ]
+            ]
+          },
+          "say": "Here are proxy targets, with a thirty dollar target C P A. Read down the table. Demo sign-up at six percent: one dollar eighty. Class attendee at six percent: also one eighty. Day seven channel member at two percent: sixty cents. Confirmed subscriber at four percent: one dollar twenty. Each proxy target is the most you should pay for that step. These rates are illustrative, so use your own."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: a matured zero",
+          "p": "Use matured spend: spend on cohorts at least 30 days old. An ad set has $65 of matured spend and 0 FTDs from those cohorts. Target $30. Apply the starting rules.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $30. Matured spend $65 over 7 days of cohorts, 0 FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 65,
+              "conversions": 0,
+              "target_cpa": 30,
+              "days": 7
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "kill",
+              "tolerance": 0
+            }
+          },
+          "say": "Your turn. Use matured spend, meaning spend on cohorts at least thirty days old. An ad set has sixty five dollars of matured spend and zero F T Ds from those cohorts. Your target is thirty dollars. Apply the starting rules and decide: kill, hold or scale. Think about how many times your target that spend is. Pause and try it, then check your answer."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: build a cohort sheet",
+          "p": "Your network report must include the click date or sign-up date for each FTD. If it only shows the deposit date, ask your manager or use your tracker. Screens are illustrative mock-ups.",
+          "d": {
+            "steps": [
+              {
+                "title": "Export with click dates",
+                "text": "Export conversions with click date, conversion date, sub IDs and status.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/conversions/export",
+                  "title": "Export",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Include click date",
+                      "on": true
+                    },
+                    {
+                      "type": "button",
+                      "label": "Export CSV"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Add days to FTD",
+                "text": "In your sheet, add a column: conversion date minus click date.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/cohorts",
+                  "title": "Raw data",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Click",
+                        "FTD",
+                        "Days"
+                      ],
+                      "rows": [
+                        [
+                          "01 Sep",
+                          "04 Sep",
+                          "3"
+                        ],
+                        [
+                          "01 Sep",
+                          "15 Sep",
+                          "14"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Pivot by cohort week",
+                "text": "Rows: click week. Columns: days-to-FTD buckets. Values: count of FTDs.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/cohorts",
+                  "title": "Cohort pivot",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Week",
+                        "0-7 d",
+                        "8-14 d",
+                        "15-30 d"
+                      ],
+                      "rows": [
+                        [
+                          "W36",
+                          "9",
+                          "4",
+                          "4"
+                        ],
+                        [
+                          "W37",
+                          "8",
+                          "5",
+                          "-"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Let's build a cohort sheet. Your network report needs the click date or sign-up date for each F T D. If it only shows the deposit date, ask your manager or use your tracker. Tap Next to follow each step. First, export conversions with click date, conversion date, sub I Ds and status. Second, in your sheet, add a column for conversion date minus click date. Third, pivot by cohort week: click week in rows, days to F T D buckets in columns, and a count of F T Ds as values. Screens are illustrative mock-ups."
+        },
+        {
+          "v": "screen",
+          "h": "Your weekly cohort view",
+          "p": "One table, updated weekly, shows each cohort's age, spend, FTDs so far and whether it is mature enough to judge. Only mature rows feed the kill and scale rules. Screen is an illustrative mock-up.",
+          "d": {
+            "kind": "browser",
+            "url": "sheet.example/cohort-view",
+            "title": "Cohort view: demo funnel",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Cohort",
+                  "Age",
+                  "Spend",
+                  "FTDs"
+                ],
+                "rows": [
+                  [
+                    "W36",
+                    "31 d",
+                    "$400",
+                    "17"
+                  ],
+                  [
+                    "W37",
+                    "24 d",
+                    "$420",
+                    "13"
+                  ],
+                  [
+                    "W38",
+                    "17 d",
+                    "$450",
+                    "9"
+                  ],
+                  [
+                    "W39",
+                    "10 d",
+                    "$460",
+                    "5"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Only W36 is mature (30+ days). W37 to W39: watch proxies, do not scale."
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "Here's your weekly cohort view, an illustrative mock-up. One table, updated weekly, shows each cohort's age, spend and F T Ds so far. Look at the age column. Only week thirty six is mature, at thirty one days. Weeks thirty seven to thirty nine are too young, so watch their proxies, and don't scale on them. Only mature rows feed the kill and scale rules."
+        },
+        {
+          "v": "tip",
+          "h": "Attribution windows and late FTDs",
+          "p": "Ad platforms count conversions inside an attribution window, such as a number of days after a click. FTDs that arrive later may not be credited to your ads in the platform, even though the network pays for them.",
+          "d": {
+            "kind": "tip",
+            "text": "Use network data by click date as the truth for money. Window names and lengths change; check the current Ads Manager."
+          },
+          "say": "Here's something that confuses many buyers. Ad platforms count conversions inside an attribution window, a number of days after a click. F T Ds that arrive later may not be credited to your ads in the platform, even though the network pays for them. So, as the tip says, use network data by click date as the truth for money. Window names and lengths change, so check the current Ads Manager."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "These mistakes are behind most wrong calls on education funnels. They make good funnels look bad early and bad funnels look fine for too long.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Count FTDs by deposit date",
+                "Scale on a projection or a proxy",
+                "Never update the maturity curve",
+                "Mix funnels in one cohort table"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Count by click or sign-up date",
+                "Scale only on mature qualified FTDs",
+                "Rebuild the curve monthly",
+                "One table per funnel and geo"
+              ]
+            }
+          },
+          "say": "These mistakes are behind most wrong calls on education funnels. Read across. Counting F T Ds by deposit date: count by click or sign-up date. Scaling on a projection or a proxy: scale only on mature qualified F T Ds. Never updating the maturity curve: rebuild it monthly. Mixing funnels in one cohort table: one table per funnel and geo. Each one makes good funnels look bad early, or bad funnels look fine for too long."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance warning",
+          "p": "Pressure to speed up a slow funnel often leads to hype, urgency and calls. Patience is part of compliance in education funnels. If a funnel cannot pay without those tactics, it does not pay.",
+          "d": {
+            "kind": "warn",
+            "text": "Never add fake urgency, bonus pressure or trading calls to make a slow funnel convert faster. Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country and the broker's licence for that country before you run. Education, not legal or financial advice."
+          },
+          "say": "Pressure to speed up a slow funnel often leads to hype, urgency and calls. Patience is part of compliance here. If a funnel can't pay without those tactics, it doesn't pay. Look at the warning: never add fake urgency, bonus pressure or trading calls to make a slow funnel convert faster. Trading ads usually need platform authorization and must follow local law. Check the platform's current policies, local law and the broker's licence. This is education, not legal or financial advice."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for slow funnels",
+          "p": "Starting rules to adapt. Proxies can kill or trigger a fix early; only mature, network-confirmed, qualified FTDs can scale. Write these into your plan before launch.",
+          "d": [
+            "Matured spend = spend on cohorts at least 30 days old (adjust to your curve)",
+            "Kill at 2 × target CPA of matured spend with 0 FTDs",
+            "Kill if CPA > lower of 1.5 × target and break-even after 3 × target matured spend",
+            "Proxy cost > 1.5 × proxy target after 50+ step events = kill or fix early",
+            "Scale +20% every ≥ 48 hours only at mature CPA ≤ 0.8 × target with ≥ 3 qualified FTDs",
+            "Rebuild the maturity curve monthly"
+          ],
+          "say": "Here are your starting rules for slow funnels. Matured spend means spend on cohorts at least thirty days old, adjusted to your curve. Kill at two times target C P A of matured spend with zero F T Ds. Kill if C P A is above the lower of one point five times target and break-even, after three times target matured spend. If a proxy cost is over one point five times its target after fifty or more step events, kill or fix early. Scale twenty percent every forty eight hours or more, only at mature C P A of point eight times target or better, with at least three qualified F T Ds. And rebuild your maturity curve monthly."
+        }
+      ],
+      "takeaways": [
+        "Judge education funnels by cohort, counted by click or sign-up date.",
+        "A maturity table tells you how much of a cohort's result you can see.",
+        "Proxies can kill or trigger fixes early; only mature qualified FTDs can scale.",
+        "Use network data by click date as the truth for money."
+      ],
+      "action": "Export the last 60 days of conversions with click dates, build a cohort pivot for one funnel and calculate your own maturity share at days 7, 14 and 30.",
+      "glossary": [
+        {
+          "term": "Cohort",
+          "def": "A group of users who clicked or signed up in the same period, tracked together over time."
+        },
+        {
+          "term": "Maturity",
+          "def": "How much of a cohort's eventual result has arrived at a given age."
+        },
+        {
+          "term": "Projection",
+          "def": "An estimate of a cohort's final result from its current result and maturity."
+        },
+        {
+          "term": "Attribution window",
+          "def": "The time after a click or view in which an ad platform credits a conversion to an ad."
+        },
+        {
+          "term": "Click date",
+          "def": "The date of the original click, used to group conversions into cohorts."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A cohort is 14 days old with 9 FTDs. At day 14 you usually see 75% of the final result. What is the projected total?",
+          "options": [
+            "12",
+            "9",
+            "6.75",
+            "15"
+          ],
+          "answer": 0,
+          "why": "9 ÷ 0.75 = 12."
+        },
+        {
+          "q": "Target CPA $40, step rate to FTD 5%. What is the proxy target for that step?",
+          "options": [
+            "$8.00",
+            "$0.20",
+            "$2.00",
+            "$4.00"
+          ],
+          "answer": 2,
+          "why": "$40 × 5% = $2.00."
+        },
+        {
+          "q": "A 10-day-old cohort projects a CPA of $20 against a $30 target. What do you do?",
+          "options": [
+            "Scale +50%",
+            "Scale +20% now",
+            "Kill",
+            "Hold and watch; scale only on mature qualified FTDs"
+          ],
+          "answer": 3,
+          "why": "Projections are estimates. Scaling waits for mature, confirmed numbers."
+        },
+        {
+          "q": "Why count FTDs by click date rather than deposit date?",
+          "options": [
+            "Deposit dates are secret",
+            "So each FTD is credited to the cohort and spend that produced it",
+            "Platforms require it",
+            "It makes CPA lower"
+          ],
+          "answer": 1,
+          "why": "Grouping by click date matches results to the spend that caused them."
+        },
+        {
+          "q": "Matured spend $70, 0 FTDs, target $30. What do the rules say?",
+          "options": [
+            "Hold",
+            "Scale",
+            "Kill: matured spend is above 2 × target with 0 FTDs",
+            "Keep"
+          ],
+          "answer": 2,
+          "why": "2 × $30 = $60, and $70 of matured spend with 0 FTDs passes the kill line."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn how to judge slow funnels, where deposits arrive days or weeks after the click. You'll build cohort tables, project young cohorts carefully, and use early proxy signals without fooling yourself.",
+      "say_outro": "You can now build a cohort table by click date, read how mature a cohort is, project its final F T Ds, set proxy targets, and apply the kill and scale rules to late results. Your task: export the last sixty days of conversions with click dates, build a cohort pivot for one funnel, and calculate your maturity share at days seven, fourteen and thirty. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "Direct link: 60 FTDs, 45% qualify. Education funnel: 40 FTDs, 80% qualify. Same spend and payout. Which earns more?",
+      "options": [
+        "Direct, 27 qualified",
+        "Education, 32 qualified",
+        "Equal",
+        "Cannot tell"
+      ],
+      "answer": 1,
+      "why": "Direct 60 × 45% = 27; education 40 × 80% = 32."
+    },
+    {
+      "q": "Target CPA $35. 5% of demo sign-ups become FTDs. After 80 demo sign-ups, cost per demo is $2.80. What do you do?",
+      "options": [
+        "Scale +20%",
+        "Hold for a month",
+        "Kill or fix: $2.80 is above 1.5 × $1.75 ($2.63)",
+        "Nothing; proxies cannot act"
+      ],
+      "answer": 2,
+      "why": "Proxy target $35 × 5% = $1.75. 1.5 × $1.75 = $2.625, and $2.80 is above it."
+    },
+    {
+      "q": "A class had 400 attendees from $1,600 spend. Target per attendee is $3.06. What is the reading?",
+      "options": [
+        "$4.00 per attendee: above target, below 1.5 × ($4.59), so fix rather than kill",
+        "$4.00, kill now",
+        "$0.25, scale",
+        "$6.40, kill"
+      ],
+      "answer": 0,
+      "why": "$1,600 ÷ 400 = $4.00, between target and the 1.5 × line."
+    },
+    {
+      "q": "A channel's day-7 retention is 35%. The CPA on mature cohorts is $5 under target with 2 qualified FTDs. What do you do first?",
+      "options": [
+        "Scale +20%",
+        "Kill the channel",
+        "Buy members to lift retention",
+        "Fix the welcome and first lessons; you also lack the 3 qualified FTDs to scale"
+      ],
+      "answer": 3,
+      "why": "Retention below 50% means fix first, and scaling needs ≥ 3 qualified FTDs."
+    },
+    {
+      "q": "A presenter wants to show a live trade making money to 'prove it works'. What do you say?",
+      "options": [
+        "Yes, if it wins",
+        "No: live profit demonstrations are misleading; teach on a demo with risk",
+        "Yes, with a disclaimer",
+        "Only for the replay"
+      ],
+      "answer": 1,
+      "why": "Showing profits as proof is an income claim, whatever the disclaimer."
+    },
+    {
+      "q": "A 7-day-old cohort shows 4 FTDs on $300. Your curve says day 7 is 50% mature. Target $40. What is the right call?",
+      "options": [
+        "Scale now: projected CPA is $37.50",
+        "Kill: CPA is $75",
+        "Hold and watch; projected CPA $37.50 is an estimate",
+        "Pause the whole account"
+      ],
+      "answer": 2,
+      "why": "4 ÷ 0.5 = 8 projected; $300 ÷ 8 = $37.50. A projection means watch, not scale."
+    },
+    {
+      "q": "Your email form has the marketing box pre-ticked. What is the fix?",
+      "options": [
+        "Leave it; more sign-ups",
+        "Hide it lower on the page",
+        "Untick it and make the wording clear",
+        "Remove the privacy link"
+      ],
+      "answer": 2,
+      "why": "Consent must be an active, clear choice."
+    },
+    {
+      "q": "Which link is the safe way to tag an email click?",
+      "options": [
+        "?email=user@example.com",
+        "?sub1=sub_10233",
+        "?phone=0712...",
+        "?name=Wanjiru"
+      ],
+      "answer": 1,
+      "why": "Use an internal ID, never personal data in URLs."
+    },
+    {
+      "q": "Matured spend on an email source is $100, with 0 FTDs. Target $45. What do the rules say?",
+      "options": [
+        "Hold",
+        "Scale",
+        "Keep",
+        "Kill: $100 is above 2 × $45 with 0 FTDs"
+      ],
+      "answer": 3,
+      "why": "2 × $45 = $90. Matured spend of $100 with 0 FTDs passes the kill line."
+    },
+    {
+      "q": "Your bot wants to message 5,000 people who joined last year but never started the bot. What is right?",
+      "options": [
+        "Send it; they are members",
+        "Do not: bots cannot message people who never started them, apart from the join-request window",
+        "Send it from a second bot",
+        "Ask the network to send it"
+      ],
+      "answer": 1,
+      "why": "Telegram bots can only message people who started them, except during the join-request window."
+    }
+  ]
+}

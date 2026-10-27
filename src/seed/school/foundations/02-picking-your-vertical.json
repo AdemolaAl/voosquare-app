@@ -1,0 +1,2921 @@
+{
+  "school": "foundations",
+  "order": 2,
+  "slug": "picking-your-vertical",
+  "title": "Picking your vertical",
+  "summary": "How the money really flows in eight common verticals, how to match one to your budget, geo, skills and risk, how to read offer pages and talk to affiliate managers. You finish with a scored, written first-vertical decision and a 7-day plan.",
+  "lessons": [
+    {
+      "slug": "verticals-and-money-flow",
+      "title": "What a vertical is and how its money flows",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can say who pays, for what action and when, in eight common verticals.",
+        "You can name the event that triggers your payout in each vertical and why some take weeks to confirm.",
+        "You can state which verticals are regulated and what that means before you spend a single dollar."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "A vertical is a buyer, an action and a rulebook",
+          "p": "The How the money works module gave you the list of verticals. Now go one level deeper. Every vertical answers three questions in its own way: who pays you, which user action they pay for, and which rules decide whether that action counts. Learn those three answers and any new offer becomes easy to read.",
+          "more": "Beginners often pick a vertical by its payout headline. Experienced buyers pick it by its money flow. The money flow tells you how long you wait for cash, how much a single mistake costs, how many results you need before you learn anything, and how likely an ad platform is to stop you. Two offers can both say \"$50 CPA\" and behave completely differently: one pays on a delivered parcel after two weeks, the other pays on a verified deposit after a 30 day hold. In this lesson we walk through eight verticals and trace the money in each, so that in lesson 2 you can match one to your budget, geo and skills.",
+          "d": {
+            "b": "Who pays, for what, under which rules",
+            "s": "Three answers define every vertical"
+          },
+          "say": "In the How the money works module, you met the list of verticals. Now we go one level deeper. Look at the line on screen: who pays, for what, under which rules. Every vertical answers those three questions in its own way. Beginners often pick a vertical by its payout headline. Experienced buyers pick it by its money flow, because two offers can both say fifty dollars C P A, cost per acquisition, and behave completely differently. In this lesson we trace the money in eight verticals."
+        },
+        {
+          "v": "map",
+          "h": "Follow the money in a trading offer",
+          "p": "Here is one full money flow, using a trading offer as the example. The user deposits with the broker. The broker reports the deposit to the network. The network checks it against the offer rules and pays you. You paid the ad platform days or weeks earlier.",
+          "more": "Notice where the delays sit. The ad platform charges you as the impressions happen. The broker only reports a first time deposit (FTD) after the user has verified identity (KYC) and funded the account, which can take days. The network then holds the conversion for a validation period to catch fraud and chargebacks, and pays on its schedule. So the cash you spent on Monday might come back as payout three to six weeks later. Every vertical has a version of this map. The steps change, but the question is always the same: at which box does the money finally reach you?",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Your ad",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Prelander",
+                "kind": "page"
+              },
+              {
+                "id": "user",
+                "label": "User signs up",
+                "kind": "person"
+              },
+              {
+                "id": "offer",
+                "label": "Broker: KYC + deposit",
+                "kind": "offer"
+              },
+              {
+                "id": "pb",
+                "label": "Postback to network",
+                "kind": "data"
+              },
+              {
+                "id": "net",
+                "label": "Network checks rules",
+                "kind": "tool"
+              },
+              {
+                "id": "pay",
+                "label": "Your payout",
+                "kind": "money"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "lp",
+                "click"
+              ],
+              [
+                "lp",
+                "user",
+                "sign-up"
+              ],
+              [
+                "user",
+                "offer",
+                "deposit"
+              ],
+              [
+                "offer",
+                "pb",
+                "FTD event"
+              ],
+              [
+                "pb",
+                "net",
+                "report"
+              ],
+              [
+                "net",
+                "pay",
+                "after hold"
+              ]
+            ]
+          },
+          "say": "Here's one full money flow, using a trading offer as the example. Follow the map from your ad. The click goes to a prelander, the user signs up, then passes K Y C, know your customer checks, and deposits with the broker. The broker reports the F T D, the first time deposit, to the network by postback. The network checks it against the offer rules, and pays you after a hold. Notice where the delays sit: you paid the ad platform days or weeks earlier. Money spent on Monday might come back three to six weeks later."
+        },
+        {
+          "v": "table",
+          "h": "How the money verticals pay",
+          "p": "Four verticals pay on financial actions. Payouts tend to be larger, approval checks stricter and confirmation slower. This is a rough guide; every offer page sets its own terms, so read the actual page before you trust any row here.",
+          "d": {
+            "cols": [
+              "Vertical",
+              "Usual model",
+              "Paid when"
+            ],
+            "rows": [
+              [
+                "Trading",
+                "CPA, RevShare, hybrid",
+                "Verified first deposit"
+              ],
+              [
+                "iGaming",
+                "CPA, RevShare, hybrid",
+                "First deposit above baseline"
+              ],
+              [
+                "Finance, loans",
+                "CPL or CPA",
+                "Lead, approval or funded account"
+              ],
+              [
+                "Sweepstakes",
+                "CPL (SOI or DOI)",
+                "Valid entry, sometimes confirmed"
+              ]
+            ]
+          },
+          "say": "Four verticals pay on financial actions. Look down the table. Trading usually pays C P A, RevShare or a hybrid, on a verified first deposit. iGaming pays the same ways, on a first deposit above a baseline. Finance and loans pay per lead or per acquisition, on a lead, an approval or a funded account. Sweepstakes pay per lead, single or double opt-in, on a valid entry. Payouts here tend to be larger, checks stricter, and confirmation slower. This is a rough guide, so read the actual offer page before you trust any row."
+        },
+        {
+          "v": "table",
+          "h": "How the product verticals pay",
+          "p": "The other four pay on purchases, installs or sign-ups. Payouts are usually smaller per result, but each result is often cheaper and faster to get, which matters a lot when your budget is small. Again, treat this as a rough guide and check each offer.",
+          "d": {
+            "cols": [
+              "Vertical",
+              "Usual model",
+              "Paid when"
+            ],
+            "rows": [
+              [
+                "Nutra",
+                "CPA, often COD",
+                "Order approved or delivered"
+              ],
+              [
+                "E-commerce",
+                "CPS or % commission",
+                "Sale not returned"
+              ],
+              [
+                "Apps, utilities",
+                "CPI or CPA",
+                "Install or in-app event"
+              ],
+              [
+                "Dating",
+                "SOI, DOI or CPS",
+                "Sign-up or paid subscription"
+              ]
+            ]
+          },
+          "say": "The other verticals pay on purchases, installs or sign-ups. Look at the table. Nutra is C P A, often cash on delivery, paid when the order is approved or delivered. E-commerce pays a commission on a sale that isn't returned. Apps and utilities pay per install or in-app event. Dating pays per sign-up or paid subscription. Payouts are usually smaller per result, but each result is often cheaper and faster to get, which matters a lot when your budget is small. Again, treat this as a rough guide, and check each offer."
+        },
+        {
+          "v": "big",
+          "h": "Trading: paid on verified deposits",
+          "p": "Trading offers pay when a new user opens an account with a broker, passes identity checks and makes a first deposit. Many offers add a minimum deposit, called the baseline. Some also pay a share of what the broker earns from that user over time. Trading products are high risk and many users lose money.",
+          "more": "Who pays: the broker, through the network. What for: a qualified first time deposit, sometimes with extra conditions such as a number of trades. When: after the network's hold, often weekly or monthly. Brokers and their marketing are regulated in many countries, for example by a securities or financial conduct regulator. Ad platforms usually treat trading and investment as restricted financial services, which can require verification or written approval before ads run. Be careful with wording: no promises of profit, no \"easy money\", and a clear risk message where the law or the advertiser requires it.",
+          "d": {
+            "b": "FTD after KYC",
+            "s": "Big payouts, strict checks, slow confirmation"
+          },
+          "say": "Trading offers pay when a new user opens an account with a broker, passes identity checks, and makes a first deposit. Many offers add a minimum deposit, called the baseline. Some also pay a share of what the broker earns from that user over time. Brokers are regulated in many countries, and ad platforms usually treat trading as a restricted financial service. So be careful with wording: no promises of profit, no easy money, and a clear risk message where required. Trading products are high risk, and many users lose money."
+        },
+        {
+          "v": "tip",
+          "h": "Regulated means checked before you spend",
+          "p": "Trading, iGaming, many finance products and some dating offers are restricted. Ads usually need platform authorization, and the advertiser usually needs a licence in the user's country. You must check the current platform policy and local law for every geo before you run. If either says no, you do not run.",
+          "d": {
+            "kind": "warn",
+            "text": "Check three things for each geo: advertiser licence, platform authorization, local ad law. No to any one means no."
+          },
+          "say": "This is an important warning. Trading, iGaming, many finance products and some dating offers are restricted. Ads usually need platform authorization, and the advertiser usually needs a licence in the user's country. Read the warning on screen: check three things for each geo. The advertiser licence, platform authorization, and local ad law. No to any one means no. You must check the current platform policy and local law for every geo before you run."
+        },
+        {
+          "v": "big",
+          "h": "iGaming: paid on depositing players",
+          "p": "iGaming means online sports betting and casino. The operator pays when a new player deposits above a baseline amount, by RevShare on net gaming revenue, or both. Gambling is licensed in some countries, banned in others, and always has a legal age, usually 18 or older.",
+          "more": "Who pays: the licensed operator. What for: a new player who deposits at least the baseline, sometimes with a wagering condition. RevShare pays a percentage of net gaming revenue (NGR), which is what the operator keeps after winnings, bonuses and fees. When: after a hold, and RevShare monthly. In Nigeria, Kenya, Ghana and South Africa gambling is regulated by national or state bodies with their own licences and ad rules; the details differ and change, so check the current position for each geo. Ad platforms usually require written permission or a certification process before gambling ads run; at the time of writing this applies on the major platforms, so check each one's current policy. Responsible gambling messages and age targeting are normal requirements, not optional extras.",
+          "d": {
+            "b": "Deposit above baseline",
+            "s": "Licensed operator, legal age, platform approval"
+          },
+          "say": "iGaming means online sports betting and casino. The licensed operator pays when a new player deposits above a baseline, or through RevShare on net gaming revenue, which is what the operator keeps after winnings, bonuses and fees, or both. Gambling is licensed in some countries, banned in others, and always has a legal age, usually eighteen or older. Ad platforms usually require written permission or certification first, so check each one's current policy. Responsible gambling messages and age targeting are normal requirements, not optional extras."
+        },
+        {
+          "v": "big",
+          "h": "Finance and loans: careful users, careful rules",
+          "p": "Finance covers loans, cards, savings, payment and banking apps. Offers pay per lead, per approved application or per funded account. Lenders are usually licensed or registered, and ads for credit often must show costs clearly. Users compare carefully, so honest, specific ads beat hype.",
+          "more": "Example of why the paid action matters: a loan app offer that pays $2 per completed application will get paid quickly but may push you toward volume. An offer that pays $15 per approved and disbursed loan pays only when the lender says yes, so your approval rate depends on whether you reached people who actually qualify. In several African markets digital lenders must be registered or licensed (for example with a consumer protection or central bank regulator) and some have been penalised for harsh collection practices. Before promoting a lender, check that it appears on the current official list for that country. Never write \"guaranteed approval\" or \"no checks\"; it is misleading and often illegal.",
+          "d": {
+            "b": "Lead, approval or funded account",
+            "s": "Licensed lenders, clear cost wording"
+          },
+          "say": "Finance covers loans, cards, savings, payment and banking apps. Offers pay per lead, per approved application, or per funded account. Lenders are usually licensed or registered, and credit ads often must show costs clearly. Users compare carefully, so honest, specific ads beat hype. Before promoting a lender, check that it appears on the current official list for that country. And never write guaranteed approval or no checks. It's misleading and often illegal."
+        },
+        {
+          "v": "compare",
+          "h": "Sweepstakes: honest entry or hidden charge",
+          "p": "Sweepstakes offers pay per entry, usually a single opt-in (SOI: one form) or a double opt-in (DOI: the user confirms by email or SMS). Leads are cheap and fast. The risk is the funnel behind the entry, which on some offers leads to subscriptions the user did not clearly agree to.",
+          "d": {
+            "a": {
+              "title": "Skip offers like this",
+              "items": [
+                "Prize is the only thing shown",
+                "Hidden SMS or carrier billing",
+                "Terms hard to find",
+                "\"You have won\" style ads"
+              ]
+            },
+            "b": {
+              "title": "Run offers like this",
+              "items": [
+                "Real prize and real draw",
+                "Clear entry terms and dates",
+                "No charge to enter",
+                "Ad says \"Enter a prize draw\""
+              ]
+            }
+          },
+          "say": "Sweepstakes offers pay per entry, either a single opt-in, one form, or a double opt-in, where the user confirms by email or S M S. Leads are cheap and fast. The risk is the funnel behind the entry. Compare the two sides. Skip offers where the prize is the only thing shown, with hidden S M S or carrier billing, hard-to-find terms, or you have won style ads. Run offers with a real prize and draw, clear entry terms and dates, no charge to enter, and an ad that says enter a prize draw."
+        },
+        {
+          "v": "big",
+          "h": "Nutra and COD: paid on approved orders",
+          "p": "Nutra offers in Africa often run cash on delivery (COD). The user leaves a name and phone number, a call centre confirms the order, and you are paid per approved order. Some offers only count delivered parcels. Health claims are where most nutra campaigns break the rules and the law.",
+          "more": "The flow: your ad, an order form, a call from the advertiser's call centre, then approval and delivery. The approval rate is the share of leads the call centre confirms. A low approval rate kills your profit even when leads look cheap. Health products are regulated: in many countries supplements cannot claim to treat, cure or prevent disease, and food and drug regulators can act against misleading ads. Platforms reject before-and-after images, weight-loss figures and \"doctors hate this\" style copy. If you choose nutra, choose products you can describe honestly, such as a skincare item, and leave out medical claims entirely.",
+          "d": {
+            "b": "Lead, call, approve, deliver",
+            "s": "Only approved orders pay"
+          },
+          "say": "Nutra offers in Africa often run C O D, cash on delivery. Look at the line on screen: lead, call, approve, deliver. The user leaves a name and phone number, a call centre confirms the order, and you're paid per approved order. Some offers only count delivered parcels. Health claims are where most nutra campaigns break the rules and the law. If you choose nutra, choose products you can describe honestly, like a skincare item, and leave out medical claims entirely."
+        },
+        {
+          "v": "eq",
+          "h": "Example: what one COD lead is really worth",
+          "p": "This is the single most useful COD calculation. The payout only arrives on approved orders, so the value of each lead is the payout multiplied by the approval rate. That number, not the payout, is your ceiling for cost per lead. Example figures only.",
+          "more": "Example: a COD offer pays $10 per approved order. Of every 100 leads you send, the call centre approves 40. So 100 leads earn 40 × $10 = $400, or $4 per lead. If your ads produce leads at $3, you keep $1 per lead before any other costs. If they cost $5, you lose $1 on every lead even though $5 looks small next to a $10 payout. If an offer also requires delivery, multiply again by the delivery rate. At 80% delivery, $10 × 40% × 80% = $3.20 per lead.",
+          "d": [
+            "$10 payout",
+            "×",
+            "40% approval",
+            "=",
+            "$4 per lead"
+          ],
+          "say": "This is the single most useful C O D calculation. Read the equation: a ten dollar payout, times forty percent approval, equals four dollars per lead. The payout only arrives on approved orders, so that four dollars, not the ten, is your ceiling for cost per lead. If your leads cost three dollars, you keep one dollar each. If they cost five, you lose a dollar on every lead. And if delivery is required too, multiply again: at eighty percent delivery, it's three dollars twenty per lead. These are example figures only."
+        },
+        {
+          "v": "big",
+          "h": "E-commerce: a share of the sale",
+          "p": "E-commerce offers pay a commission per sale (CPS), either a fixed amount or a percentage of the basket. Returned or cancelled orders are removed. Legal risk is low when products are real and described honestly, which makes it a good place to learn the craft.",
+          "more": "Example: a shop pays 8% commission. A $50 basket earns you $4. If one sale needs about 25 clicks and clicks cost $0.10, a sale costs you $2.50 in traffic and you keep $1.50. Small numbers, but you get many results per dollar, so you learn faster. Watch for cookie windows (how long after the click a sale still counts), return periods (commission is often confirmed only after the return window closes) and banned methods such as bidding on the shop's brand name in search when the offer forbids it.",
+          "d": {
+            "b": "Commission on kept sales",
+            "s": "Low legal risk, thin margins"
+          },
+          "say": "E-commerce offers pay a commission per sale, either a fixed amount or a percentage of the basket. Returned or cancelled orders are removed. Legal risk is low when products are real and described honestly, which makes it a good place to learn the craft. For example, at eight percent commission, a fifty dollar basket earns you four dollars. The margins are thin, as the screen says, but you get many results per dollar, so you learn faster. Watch for cookie windows, return periods, and banned methods like brand bidding."
+        },
+        {
+          "v": "big",
+          "h": "Apps and utilities: installs and events",
+          "p": "App offers pay per install (CPI) or per in-app event such as registration, first top-up or subscription. Payouts are small. Apps are usually not heavily regulated unless they handle money, health or gambling. Fraud checks are strict: fake or bot installs are found and removed.",
+          "more": "Many app offers have moved from pure installs to events, because installs alone are easy to fake. An example offer might pay $0.40 per install in one geo or $3 per completed registration. Store rules also matter: the app store, not just the ad platform, has policies on how apps may be promoted. If the app is a wallet, loan app or betting app, it is a finance or iGaming offer wearing app clothes, and all the rules of that vertical apply.",
+          "d": {
+            "b": "Install or in-app event",
+            "s": "Small payouts, strict fraud checks"
+          },
+          "say": "App offers pay per install, or per in-app event like a registration, a first top-up or a subscription. Payouts are small. Apps aren't usually heavily regulated, unless they handle money, health or gambling. Fraud checks are strict, so fake or bot installs are found and removed. And here's a key point: if the app is a wallet, loan app or betting app, it's a finance or iGaming offer wearing app clothes, and all the rules of that vertical apply."
+        },
+        {
+          "v": "big",
+          "h": "Dating: sign-ups and subscriptions",
+          "p": "Dating offers pay per sign-up (SOI or DOI) or per paid subscription. Many ad platforms restrict dating ads and may need prior approval. Adult content is banned on mainstream platforms at the time of writing; check each platform's current policy. Fake profiles, sexualised images and misleading \"matches near you\" claims break policy and trust.",
+          "more": "Dating is often sold to beginners as easy, cheap leads. The reality: mainstream platforms usually list dating as restricted and ask the advertiser to be approved, and adult dating is usually not allowed at all. Offers must target adults only. Ads with stock photos implying a real person is waiting for the user are misleading. If you consider dating, start with the platform policy page for dating ads and the offer's own allowed traffic list, and confirm both before writing a single ad.",
+          "d": {
+            "b": "Sign-up or subscription",
+            "s": "Restricted on many platforms"
+          },
+          "say": "Dating offers pay per sign-up, single or double opt-in, or per paid subscription. As the screen says, dating is restricted on many platforms, and may need prior approval. Adult content is banned on mainstream platforms at the time of writing, so check each platform's current policy. Fake profiles, sexualised images and misleading matches near you claims break policy and trust. Offers must target adults only. If you consider dating, start with the platform's policy page and the offer's allowed traffic list."
+        },
+        {
+          "v": "phone",
+          "h": "What an honest finance page looks like",
+          "p": "This is an example mobile page for a fictional loan app. Notice what it shows: who the lender is, the real cost range, the eligibility rules and a plain call to action. Pages like this convert fewer curious clickers and more people who actually qualify.",
+          "d": {
+            "app": "browser",
+            "url": "loans.example/apply",
+            "page": {
+              "h": "Personal loans from a registered lender",
+              "p": "Example only. Borrow 20,000 to 200,000. Repay in 3 to 6 months. Total cost shown before you accept. You must be 18+, employed and have a valid ID. Approval is not guaranteed.",
+              "cta": "Check if you qualify"
+            }
+          },
+          "say": "Here's an example mobile page for a fictional loan app. Look at what it shows. It names a registered lender. It gives the real range: borrow twenty thousand to two hundred thousand, repay in three to six months, with the total cost shown before you accept. It states the eligibility rules: eighteen plus, employed, with a valid I D. It says approval is not guaranteed. And the button is plain: check if you qualify. Pages like this convert fewer curious clickers, and more people who actually qualify."
+        },
+        {
+          "v": "bars",
+          "h": "Rough guide: how long until the cash arrives",
+          "p": "Payment speed changes how much cash you need. Bar length shows a typical wait from result to money in your account. This is a rough guide only; it varies by network, offer and geo, and your own network's terms are what count.",
+          "d": [
+            [
+              "Apps, CPI",
+              30,
+              "often weekly"
+            ],
+            [
+              "Sweepstakes",
+              35,
+              "weekly to biweekly"
+            ],
+            [
+              "E-commerce",
+              65,
+              "after return window"
+            ],
+            [
+              "Nutra COD",
+              60,
+              "after delivery"
+            ],
+            [
+              "Trading",
+              80,
+              "after hold"
+            ],
+            [
+              "iGaming RevShare",
+              100,
+              "monthly, ongoing"
+            ]
+          ],
+          "say": "Payment speed changes how much cash you need. Each bar shows a typical wait from result to money in your account. Apps on install pay often weekly. Sweepstakes, weekly to biweekly. Nutra C O D pays after delivery. E-commerce pays after the return window. Trading pays after a hold. And iGaming RevShare pays monthly, on an ongoing basis. This is a rough guide only. It varies by network, offer and geo, and your own network's terms are what count."
+        },
+        {
+          "v": "cards",
+          "h": "Common money-flow mistakes, and the fix",
+          "p": "These mistakes all come from reading a vertical by its payout instead of its money flow. Each fix is a question you can answer from the offer page or your manager before you spend anything.",
+          "d": [
+            "Valuing a lead at the full payout|multiply by the approval rate",
+            "Forgetting the hold|count weeks to cash, not days",
+            "Treating an app as unregulated|a loan or betting app keeps its vertical's rules",
+            "Running dating or finance unchecked|confirm platform approval first",
+            "Skipping the delivery rate on COD|multiply by delivery too"
+          ],
+          "say": "These mistakes all come from reading a vertical by its payout instead of its money flow. Look at the cards and their fixes. Valuing a lead at the full payout: multiply by the approval rate. Forgetting the hold: count weeks to cash, not days. Treating an app as unregulated: a loan or betting app keeps its vertical's rules. Running dating or finance unchecked: confirm platform approval first. Skipping the delivery rate on C O D: multiply by delivery too."
+        },
+        {
+          "v": "check",
+          "h": "Five questions for any vertical",
+          "p": "Before you spend time on a vertical, answer these five in writing. If you cannot answer one, ask the network or read further. You will use these answers in lesson 2 to match a vertical to your own situation.",
+          "d": [
+            "Who pays me, and who do they answer to?",
+            "Which user action triggers my payout?",
+            "How long until that payout is cash?",
+            "Which regulator and platform rules apply?",
+            "What will make a result get rejected?"
+          ],
+          "say": "Before you spend time on any vertical, answer these five questions in writing. Who pays me, and who do they answer to? Which user action triggers my payout? How long until that payout is cash? Which regulator and platform rules apply? And what will make a result get rejected? If you can't answer one, ask the network or read further. You'll use these answers in the next lesson, to match a vertical to your own situation."
+        }
+      ],
+      "takeaways": [
+        "A vertical is defined by who pays, which action they pay for and the rules that decide if it counts.",
+        "The real value of a result is the payout times the approval rate, not the payout headline.",
+        "Trading, iGaming, many finance offers and dating are restricted: check advertiser licence, platform authorization and local law for each geo.",
+        "Faster, smaller payouts (apps, e-commerce, honest lead gen) give more results per dollar and faster learning."
+      ],
+      "action": "Pick two verticals from this lesson and write their money flow as a five-box map (ad, page, action, confirmation, payout), with the wait at each step.",
+      "glossary": [
+        {
+          "term": "Money flow",
+          "def": "The path from your ad spend to the payout reaching you, including who pays, for which action and after which delays."
+        },
+        {
+          "term": "SOI",
+          "def": "Single opt-in. A lead that counts after one form submission."
+        },
+        {
+          "term": "DOI",
+          "def": "Double opt-in. A lead that counts only after the user confirms, usually by clicking an email link or entering an SMS code."
+        },
+        {
+          "term": "Approval rate",
+          "def": "The share of your leads or orders the advertiser confirms as valid. Payout times approval rate is the true value per lead."
+        },
+        {
+          "term": "CPS",
+          "def": "Cost per sale. You are paid a fixed amount or a percentage of each completed sale."
+        },
+        {
+          "term": "NGR",
+          "def": "Net gaming revenue. What a gambling operator keeps after player winnings, bonuses and fees; the base for iGaming RevShare."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A COD offer pays $12 per approved order. The call centre approves 25% of your leads. What is each lead worth to you?",
+          "options": [
+            "$12",
+            "$3",
+            "$4.80",
+            "$9"
+          ],
+          "answer": 1,
+          "why": "$12 × 25% = $3. Only approved orders pay, so a lead is worth the payout times the approval rate."
+        },
+        {
+          "q": "Which statement about a trading offer's money flow is accurate?",
+          "options": [
+            "You are paid when the user clicks your ad",
+            "You are paid when the user registers, before any checks",
+            "You are paid by the ad platform",
+            "You are usually paid after a verified first deposit and a hold period"
+          ],
+          "answer": 3,
+          "why": "Trading offers usually pay on a qualified first deposit after KYC, and networks hold conversions before paying."
+        },
+        {
+          "q": "A sweepstakes offer's funnel leads to an SMS subscription the user is not clearly told about. What should you do?",
+          "options": [
+            "Skip it",
+            "Run it but use softer ad wording",
+            "Run it only on cheap traffic",
+            "Run it and hide the terms on a second page"
+          ],
+          "answer": 0,
+          "why": "A hidden charge misleads users. No wording fixes the offer itself, so you skip it."
+        },
+        {
+          "q": "Before running an iGaming offer in a new country, which check is required?",
+          "options": [
+            "Only that the payout is above $50",
+            "That your friends like the brand",
+            "That the operator is licensed there, the platform has authorised the ads and local ad law allows it",
+            "Only that the network accepts the geo"
+          ],
+          "answer": 2,
+          "why": "Gambling is regulated. You need the advertiser licence, platform authorization and local law to all say yes before you run."
+        },
+        {
+          "q": "Why do e-commerce and app offers suit learning, despite small payouts?",
+          "options": [
+            "They pay more per result",
+            "They give more results per dollar, so you get feedback faster",
+            "They have no rules at all",
+            "They never reject conversions"
+          ],
+          "answer": 1,
+          "why": "Cheaper results mean more data points from the same budget, so you learn which ads work sooner. They still have rules and rejections."
+        }
+      ],
+      "say_intro": "In this lesson you'll trace how the money flows in eight common verticals: who pays you, for what action, and when. Once you can read a money flow, any new offer becomes easy to judge, long before you spend a dollar.",
+      "say_outro": "You've seen who pays, for which action and when in eight verticals, which ones are regulated, and how holds and approval rates change what a result is worth. Your task: pick two verticals from this lesson and write each money flow as a five-box map, ad, page, action, confirmation, payout, with the wait at each step. Now take the quiz."
+    },
+    {
+      "slug": "matching-vertical-to-you",
+      "title": "Matching a vertical to your budget, geo, skills and risk",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can work out how many test results your budget can actually buy in each vertical.",
+        "You can filter verticals by what is legal and practical in your geo, and by the skills you already have.",
+        "You can use the vertical picker and explain its suggestions with your own numbers."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Fit beats payout",
+          "p": "The best vertical for you is not the one with the biggest numbers in someone else's screenshot. It is the one where your budget buys enough results to learn, your geo allows the offer, your skills make good ads, and a bad week does not end your career.",
+          "d": {
+            "b": "Your vertical, not theirs",
+            "s": "Budget, geo, skills, risk"
+          },
+          "say": "Here's the big idea of this lesson: fit beats payout. The best vertical for you isn't the one with the biggest numbers in someone else's screenshot. It's the one where your budget buys enough results to learn, your geo allows the offer, your skills make good ads, and a bad week doesn't end your career. Look at the screen: your vertical, not theirs. Budget, geo, skills and risk."
+        },
+        {
+          "v": "cards",
+          "h": "The four fit filters",
+          "p": "Run every vertical through four filters in this order. Budget and geo remove options fast. Skills and risk then choose between what is left. A vertical must pass all four, so one hard no is enough to drop it for now.",
+          "d": [
+            "Budget|can you afford enough test results?",
+            "Geo|is it legal and practical where you target?",
+            "Skills|can you make honest ads for it?",
+            "Risk|can you survive holds, bans and losses?"
+          ],
+          "say": "So run every vertical through four filters, in this order. Look at the cards. Budget: can you afford enough test results? Geo: is it legal and practical where you target? Skills: can you make honest ads for it? Risk: can you survive holds, bans and losses? Budget and geo remove options fast. Skills and risk then choose between what's left. A vertical must pass all four, so one hard no is enough to drop it for now."
+        },
+        {
+          "v": "eq",
+          "h": "Rough guide: the minimum test budget",
+          "p": "You cannot judge an offer from one result. A common rough guide is to plan for at least three to five times your target cost per result as a test budget for one offer. It varies by geo and vertical, but it stops you from testing with money that only buys luck.",
+          "more": "Why three to five? With zero or one result you cannot tell a bad offer from bad luck. A few results at or near your target tell you whether the numbers are in reach. Example: if your target CPA is $40, plan $120 to $200 for one test. If you have $300 in total, that means one or two real tests, not ten. This is why budget is the first filter: a $300 budget simply cannot test a vertical where one result costs $80 to $150, however good the payout looks.",
+          "d": [
+            "Target CPA",
+            "×",
+            "3 to 5",
+            "=",
+            "Test budget per offer"
+          ],
+          "say": "You can't judge an offer from one result. Read the equation: target C P A, cost per acquisition, times three to five, equals your test budget per offer. That's a common rough guide, and it varies by geo and vertical. For example, with a forty dollar target, plan one hundred and twenty to two hundred dollars for one test. If you have three hundred dollars in total, that's one or two real tests, not ten. It stops you testing with money that only buys luck."
+        },
+        {
+          "v": "table",
+          "h": "Example: what $300 buys in each vertical",
+          "p": "Here is the same $300 spent at break-even in five verticals. These are illustrative figures, not market rates; yours will differ by geo, offer and creative. The point is the gap in data points: some verticals give you hundreds of signals, others give you a handful.",
+          "more": "Example walk-through: with trading at $60 per FTD, $300 at break-even buys five deposits, and that assumes you are already performing at break-even on day one, which beginners rarely are. A more realistic first test might produce one or two. With sweepstakes leads at $1.50, the same $300 produces around 200 leads, enough to compare two or three ads and see real differences. Fewer results per dollar is not bad in itself. It just needs a bigger budget and more patience.",
+          "d": {
+            "cols": [
+              "Vertical",
+              "Example cost per result",
+              "Results for $300"
+            ],
+            "rows": [
+              [
+                "Trading FTD",
+                "$60",
+                "5"
+              ],
+              [
+                "Nutra COD order",
+                "$12",
+                "25"
+              ],
+              [
+                "E-commerce sale",
+                "$5",
+                "60"
+              ],
+              [
+                "Sweeps SOI lead",
+                "$1.50",
+                "200"
+              ],
+              [
+                "App install",
+                "$0.40",
+                "750"
+              ]
+            ]
+          },
+          "say": "Here's the same three hundred dollars, spent at break-even across five verticals. These are illustrative figures, not market rates. Look down the last column. A trading F T D, first time deposit, at sixty dollars buys five. A nutra C O D order at twelve buys twenty five. An e-commerce sale at five buys sixty. A sweepstakes lead at one fifty buys two hundred. An app install at forty cents buys seven hundred and fifty. Some verticals give you hundreds of signals, others a handful. Fewer results just needs a bigger budget and more patience."
+        },
+        {
+          "v": "stat",
+          "h": "One number to remember",
+          "p": "Divide your test budget by the cost of one result. If the answer is below five, you are not testing; you are gambling on a small sample. Either raise the budget, choose a cheaper event, or choose another vertical.",
+          "d": {
+            "n": 5,
+            "pre": "",
+            "suf": "",
+            "dec": 0,
+            "label": "results: rough minimum before you judge",
+            "note": "Rough guide, varies by geo and vertical."
+          },
+          "say": "Here's one number to remember: five. Divide your test budget by the cost of one result. If the answer is below five, you're not testing. You're gambling on a small sample. So either raise the budget, choose a cheaper event, or choose another vertical. As the note says, this is a rough guide, and it varies by geo and vertical."
+        },
+        {
+          "v": "tip",
+          "h": "Starting rules for a test budget",
+          "p": "Example: target CPA $40, payout $50. Kill an ad set at $80 spend with 0 conversions. From $120 spend, kill it if CPA is above $50, the lower of $60 and break-even. Scale +20% at most every 48 hours at CPA $32 or less with 3+ conversions.",
+          "more": "These are starting rules, the same ones taught in the Budget and kill rules module, worked out for a $40 target. 2 × $40 = $80 is the zero-conversion kill line. 3 × $40 = $120 is the point where CPA is judged. 1.5 × $40 = $60, but the $50 payout is lower, so $50 is the CPA kill line. 0.8 × $40 = $32 is the scale line, and it needs at least 3 network-confirmed conversions. Notice what this means for budget: a test that cannot reach $120 on one ad set can only ever trigger the first rule. Adapt the rules as you gain data.",
+          "d": {
+            "kind": "example",
+            "text": "Target $40: kill at $80 with 0. Judge CPA from $120: kill above $50. Scale at ≤ $32 with 3+."
+          },
+          "say": "Here are the starting rules, worked out for a forty dollar target and a fifty dollar payout. Kill an ad set at eighty dollars spend with zero conversions. From one hundred and twenty dollars of spend, kill it if C P A is above fifty, the lower of sixty and your break-even. Scale by twenty percent, at most every forty eight hours, when C P A is thirty two dollars or less with three or more conversions. Notice what this means: a test that can't reach one hundred and twenty dollars on one ad set can only ever trigger the first rule. These are starting rules from the Budget and kill rules module."
+        },
+        {
+          "v": "big",
+          "h": "Geo: legal first, then practical",
+          "p": "For every geo ask, in order: is this vertical legal here, can ads for it run here on my traffic source, and can users here actually pay or sign up? Payment methods, language, device type and data costs all change what works.",
+          "more": "Example: a trading offer may accept Nigeria on the network page, but you still need the broker to be allowed to serve Nigerian clients, the ad platform to allow the ads for that country and your copy to meet local rules. Then the practical layer: if the offer requires card deposits but most of your audience pays with bank transfer or mobile money, conversion rates drop. If the landing page is only in English and you target Francophone Cameroon, expect poor results. Write these checks down per geo; they rarely change week to week, so you do it once.",
+          "d": {
+            "b": "Legal, allowed, practical",
+            "s": "Three checks for every geo"
+          },
+          "say": "For every geo, ask three questions in order. Look at the screen: legal, allowed, practical. Is this vertical legal here? Can ads for it run here on my traffic source? And can users here actually pay or sign up? Payment methods, language, device type and data costs all change what works. For example, if an offer needs card deposits but your audience pays by mobile money, conversions drop. Write these checks down per geo. They rarely change week to week, so you do it once."
+        },
+        {
+          "v": "table",
+          "h": "Rough guide: five African geos",
+          "p": "A starting snapshot for the five main geos in VooSquare Academy. Payment habits and rules change, and every country has more than one language, so confirm details for your audience and check the current law for any regulated vertical.",
+          "d": {
+            "cols": [
+              "Geo",
+              "Common payments",
+              "Ad languages"
+            ],
+            "rows": [
+              [
+                "Nigeria",
+                "Bank transfer, cards, USSD",
+                "English, Pidgin, local"
+              ],
+              [
+                "Kenya",
+                "M-Pesa mobile money, cards",
+                "English, Swahili"
+              ],
+              [
+                "Ghana",
+                "Mobile money, cards",
+                "English, Twi and others"
+              ],
+              [
+                "South Africa",
+                "Cards, EFT",
+                "English and others"
+              ],
+              [
+                "Cameroon",
+                "Mobile money",
+                "French, English"
+              ]
+            ]
+          },
+          "say": "Here's a starting snapshot of the five main geos in VooSquare Academy. Look down the table. Nigeria: bank transfer, cards and U S S D, with ads in English, Pidgin and local languages. Kenya: M-Pesa mobile money and cards, English and Swahili. Ghana: mobile money and cards, English, Twi and others. South Africa: cards and E F T, English and others. Cameroon: mobile money, French and English. Payment habits and rules change, so confirm details for your audience, and check current law for any regulated vertical."
+        },
+        {
+          "v": "cards",
+          "h": "Skills map to verticals",
+          "p": "You already have skills. Use them. A good writer has an edge where people read before acting. A good video maker has an edge where products must be shown. A good analyst has an edge where small margins need tight numbers.",
+          "d": [
+            "Writing|finance, lead gen, prelanders",
+            "Short video|e-commerce, apps, COD products",
+            "Local language|any vertical, in your home geo",
+            "Numbers|CPI, e-commerce, thin margins",
+            "Customer service|Telegram funnels, finance"
+          ],
+          "say": "You already have skills, so use them. Look at the cards. Writing fits finance, lead gen and prelanders, where people read before acting. Short video fits e-commerce, apps and C O D products, where products must be shown. A local language gives you an edge in any vertical in your home geo. Numbers suit installs, e-commerce and thin margins. And customer service fits Telegram funnels and finance. Which of these is your strongest?"
+        },
+        {
+          "v": "bars",
+          "h": "Rough guide: risk by vertical",
+          "p": "Risk here means the chance of rejected ads, account restrictions, long holds, scrubbed results and legal trouble. Longer bars mean more risk for a beginner. This is a rough guide, not data, and it varies by geo, offer and how carefully you work.",
+          "d": [
+            [
+              "E-commerce",
+              25,
+              "low"
+            ],
+            [
+              "Apps",
+              30,
+              "low"
+            ],
+            [
+              "Sweeps (honest)",
+              45,
+              "medium"
+            ],
+            [
+              "Nutra COD",
+              60,
+              "medium-high"
+            ],
+            [
+              "Finance, loans",
+              70,
+              "high"
+            ],
+            [
+              "Trading, iGaming",
+              90,
+              "high, authorization needed"
+            ]
+          ],
+          "say": "Risk here means the chance of rejected ads, account restrictions, long holds, scrubbed results and legal trouble. Longer bars mean more risk for a beginner. E-commerce and apps are low. Honest sweepstakes are medium. Nutra C O D is medium to high. Finance and loans are high. And trading and iGaming are high, with authorization needed. This is a rough guide, not data, and it varies by geo, offer and how carefully you work."
+        },
+        {
+          "v": "screen",
+          "h": "Write your fit profile first",
+          "p": "Before you use the picker, fill in a short fit profile like this example. Being honest here matters more than any suggestion. If you write $300 but only $150 is truly spare, the advice will be wrong.",
+          "d": {
+            "kind": "browser",
+            "url": "voosquare.example/school/fit-profile",
+            "title": "My fit profile (example)",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Spare budget I can lose",
+                "value": "$300"
+              },
+              {
+                "type": "select",
+                "label": "Main geo",
+                "value": "Nigeria"
+              },
+              {
+                "type": "select",
+                "label": "Strongest skill",
+                "value": "Short phone videos"
+              },
+              {
+                "type": "radio",
+                "label": "Risk I can carry",
+                "options": [
+                  "Low",
+                  "Medium",
+                  "High"
+                ],
+                "value": 0
+              },
+              {
+                "type": "toggle",
+                "label": "I have ad authorization for regulated verticals",
+                "on": false
+              },
+              {
+                "type": "text",
+                "value": "Spare means money you could lose without missing rent, food or school fees."
+              },
+              {
+                "type": "button",
+                "label": "Save profile"
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Before you use the picker, fill in a short fit profile like this example. Look at the highlighted field: spare budget I can lose, three hundred dollars. Then main geo, strongest skill, the risk you can carry, and whether you have ad authorization for regulated verticals. Notice the note: spare means money you could lose without missing rent, food or school fees. Being honest here matters more than any suggestion. If you write three hundred but only one fifty is truly spare, the advice will be wrong."
+        },
+        {
+          "v": "lab",
+          "h": "Try it: the vertical picker",
+          "p": "Enter your real budget, geo, skills and risk level. The picker suggests verticals and explains why. Treat the result as a shortlist to check, not an answer. Then run each suggestion through the regulation check from lesson 1 for your exact geo.",
+          "d": {
+            "kind": "verticalpicker",
+            "task": "Enter your own budget, geo, skills and risk level. Write down the top two suggestions and the reason given for each.",
+            "preset": {}
+          },
+          "say": "Now try the vertical picker. Your task is to enter your own real budget, geo, skills and risk level, then write down the top two suggestions and the reason given for each. Treat the result as a shortlist to check, not an answer. Then run each suggestion through the regulation check from the first lesson, for your exact geo. Pause and try it, then check your answer against your fit profile."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example: Kwame in Accra, $150",
+          "p": "Kwame has $150 spare, writes well, has no ad authorization and low risk tolerance. Budget rules out trading, iGaming and most nutra. Writing points to lead gen. His shortlist: an honest sweepstakes SOI offer or an e-commerce offer with a written prelander.",
+          "more": "Kwame's numbers (example): an SOI lead at around $1.50 gives him roughly 100 leads, enough to test two angles. A trading FTD at $60 gives him two or three at best, and only if he is already at break-even, which is unlikely. Trading and iGaming also need platform authorization he does not have. So his decision is easy: lead gen or e-commerce now, regulated verticals later when he has budget, a track record and the paperwork.",
+          "d": {
+            "kind": "example",
+            "text": "Example: $150 ÷ $1.50 per lead = 100 leads. $150 ÷ $60 per FTD = 2.5 FTDs. Only one of those is a test."
+          },
+          "say": "Here's a worked example. Kwame, in Accra, has one hundred and fifty dollars spare. He writes well, has no ad authorization, and low risk tolerance. Look at the maths: one fifty divided by one fifty per lead gives one hundred leads. One fifty divided by sixty per F T D gives two and a half. Only one of those is a test. Budget rules out trading, iGaming and most nutra, and writing points to lead gen. So his shortlist is an honest sweepstakes offer, or an e-commerce offer with a written prelander."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example: Wanjiru in Nairobi, $800",
+          "p": "Wanjiru has $800, makes strong short videos, speaks Swahili and English, and accepts medium risk. Her budget could test a $40 event several times. Video skill and M-Pesa familiarity point to apps or e-commerce for Kenyan buyers.",
+          "more": "Why not iGaming, which is large in Kenya? It is licensed and regulated there, and at the time of writing ads need operator licensing, platform permission and compliance with local advertising rules; check the current position before relying on this. Wanjiru could get there, but as a first vertical it adds paperwork and account risk before she has learned the basics. A fintech or utility app paying on registration lets her use her video skill, test in two languages and get dozens of results quickly. If she later works with a licensed operator and gets authorization, her Swahili video skill will still be an edge.",
+          "d": {
+            "kind": "example",
+            "text": "Example: app offer at $3 per registration. Test budget 5 × $3 = $15 minimum; she can run several creative tests from $800."
+          },
+          "say": "Another example. Wanjiru, in Nairobi, has eight hundred dollars. She makes strong short videos, speaks Swahili and English, and accepts medium risk. Her video skill and M-Pesa familiarity point to apps or e-commerce for Kenyan buyers. Why not iGaming? It's licensed and regulated in Kenya, and as a first vertical it adds paperwork and account risk before she's learned the basics. An app paying three dollars per registration needs a test budget of at least fifteen dollars, so she can run several creative tests."
+        },
+        {
+          "v": "tip",
+          "h": "Spare money only, and regulated verticals wait",
+          "p": "Never borrow to test, and never test with money meant for rent, food or school fees. Trading, iGaming and many finance offers stay on your later list until you hold the platform authorization they need and the advertiser is licensed for your geo.",
+          "more": "Full detail: Compliance for finance, trading and gambling offers module.",
+          "d": {
+            "kind": "warn",
+            "text": "Spare money only. No authorization means the regulated vertical waits, whatever its payout."
+          },
+          "say": "This one matters. Never borrow to test, and never test with money meant for rent, food or school fees. Trading, iGaming and many finance offers stay on your later list until you hold the platform authorization they need, and the advertiser is licensed for your geo. As the warning says: spare money only. No authorization means the regulated vertical waits, whatever its payout. The full detail is in the Compliance for finance, trading and gambling offers module."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistake: choosing by greed",
+          "p": "Most beginners who quit in the first month chose by greed. They copied a payout from a screenshot and could afford two results. Choosing by fit feels slower, but it keeps you in the game long enough to learn.",
+          "d": {
+            "a": {
+              "title": "Choosing by greed",
+              "items": [
+                "Highest payout wins",
+                "Ignores authorization",
+                "Two results per budget",
+                "Switches every week"
+              ]
+            },
+            "b": {
+              "title": "Choosing by fit",
+              "items": [
+                "Most results per dollar",
+                "Legal and allowed in geo",
+                "Uses a skill you have",
+                "Commits for a month"
+              ]
+            }
+          },
+          "say": "Most beginners who quit in the first month chose by greed. Compare the two columns. Choosing by greed: the highest payout wins, authorization is ignored, the budget buys two results, and they switch every week. Choosing by fit: the most results per dollar, legal and allowed in the geo, using a skill you have, and committing for a month. Choosing by fit feels slower, but it keeps you in the game long enough to learn."
+        },
+        {
+          "v": "check",
+          "h": "Fit checklist",
+          "p": "Before moving to lesson 3, make sure your shortlist of one to three verticals passes every line. Anything that fails goes on a \"later\" list with the reason, so you know what would need to change.",
+          "d": [
+            "Budget buys at least 5 results at target",
+            "Legal in my geo, and ads allowed",
+            "I can make honest ads with my skills",
+            "I can wait for the hold period",
+            "A total loss would not hurt my basics"
+          ],
+          "say": "Before you move on, check your shortlist of one to three verticals against every line. Your budget buys at least five results at target. It's legal in your geo, and ads are allowed. You can make honest ads with your skills. You can wait for the hold period. And a total loss wouldn't hurt your basics. Anything that fails goes on a later list, with the reason, so you know what would need to change."
+        }
+      ],
+      "takeaways": [
+        "Run verticals through four filters: budget, geo, skills, risk. One hard no drops a vertical for now.",
+        "Divide your test budget by the cost of one result. Below about five, you cannot judge the offer.",
+        "Geo checks go legal first, then platform rules, then payment methods and language.",
+        "Regulated verticals are a \"later\" option until you have the authorization, budget and track record they need."
+      ],
+      "action": "Fill in your fit profile honestly, run the vertical picker, and write a shortlist of two verticals with one sentence each on why they pass all four filters.",
+      "glossary": [
+        {
+          "term": "Fit filter",
+          "def": "One of four checks (budget, geo, skills, risk) a vertical must pass before you test it."
+        },
+        {
+          "term": "Data point",
+          "def": "One measured result, such as a lead, sale or install. You need several before a decision means anything."
+        },
+        {
+          "term": "Spare budget",
+          "def": "Money you could lose completely without affecting rent, food, school fees or other essentials."
+        },
+        {
+          "term": "Risk tolerance",
+          "def": "How much loss, delay and account trouble you can carry without having to stop."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Your spare budget is $200. One FTD on a trading offer would cost you about $70. What does the rough guide suggest?",
+          "options": [
+            "It is not a real test; choose a cheaper event or vertical",
+            "Test it: one FTD is enough to judge",
+            "Double the bid to get results faster",
+            "Borrow money to reach five FTDs"
+          ],
+          "answer": 0,
+          "why": "$200 ÷ $70 is under 3 results, well below the rough minimum of about 5. Pick a cheaper event or vertical. Never borrow to test."
+        },
+        {
+          "q": "What is the right order for the geo checks?",
+          "options": [
+            "Payment methods, then language, then law",
+            "Payout, then law",
+            "Legal status, then platform rules, then practical factors like payments and language",
+            "Only check whether the network accepts the geo"
+          ],
+          "answer": 2,
+          "why": "Legality and platform permission come first because they are hard stops. Practical factors only matter once those pass."
+        },
+        {
+          "q": "Kwame has $150, no ad authorization and writes well. Which shortlist fits best?",
+          "options": [
+            "iGaming and trading",
+            "Dating with adult creatives",
+            "Nutra with weight-loss claims",
+            "Honest sweepstakes SOI or e-commerce with a written prelander"
+          ],
+          "answer": 3,
+          "why": "Lead gen and e-commerce give many results per dollar, need no special authorization and reward writing. The others fail budget, rules or honesty."
+        },
+        {
+          "q": "What should you do with the vertical picker's suggestions?",
+          "options": [
+            "Follow the first one without checking",
+            "Treat them as a shortlist and run each through the regulation check for your geo",
+            "Ignore them and pick the highest payout",
+            "Run all of them at once"
+          ],
+          "answer": 1,
+          "why": "The picker narrows options. You still confirm legal status, platform rules and offer terms yourself."
+        },
+        {
+          "q": "Which is the best definition of spare budget?",
+          "options": [
+            "All the money in your account",
+            "Money you expect to double",
+            "Money you could lose completely without affecting essentials",
+            "Money borrowed from friends"
+          ],
+          "answer": 2,
+          "why": "Test spend can be lost. Only use money whose loss would not touch rent, food, school fees or debts."
+        }
+      ],
+      "say_intro": "In this lesson you'll match verticals to your own budget, geo, skills and risk. The best vertical for you isn't the one with the biggest payout, it's the one where your money buys enough results to actually learn.",
+      "say_outro": "You now know the four fit filters, how to work out the results your budget can buy, the geo checks, and why regulated verticals wait. Your task: fill in your fit profile honestly, run the vertical picker, and write a shortlist of two verticals, with one sentence each on why they pass all four filters. Now take the quiz."
+    },
+    {
+      "slug": "reading-offer-pages",
+      "title": "Reading real offer pages and spotting red flags",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can read every field of an offer page and say what it means for your money and your traffic.",
+        "You can turn a headline payout into an effective payout and a maximum cost per registration.",
+        "You can spot red flags on an offer page before you send a single click."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Read the page before the payout",
+          "p": "The payout is the first thing your eye goes to and the last thing you should judge. Above and below it sit the geos, allowed traffic, KPIs, caps, hold and restrictions. Each one can cut the real value of that payout, or make the offer impossible for you to run.",
+          "d": {
+            "b": "Payout last",
+            "s": "Everything else changes what it is worth"
+          },
+          "say": "Read the page before the payout. The payout is the first thing your eye goes to, and the last thing you should judge. Above and below it sit the geos, the allowed traffic, the K P Is, key performance indicators, the caps, the hold and the restrictions. As the screen says, everything else changes what the payout is worth. Each field can cut its real value, or make the offer impossible for you to run."
+        },
+        {
+          "v": "screen",
+          "h": "A typical offer page",
+          "p": "This is a generic example of a trading offer page on a network. Every network lays it out differently, but these fields appear almost everywhere. Look at the restrictions block first: it decides how you are allowed to advertise.",
+          "d": {
+            "kind": "browser",
+            "url": "network.example/offers/1042",
+            "title": "Example Broker: CPA, Africa",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Offer",
+                "value": "Example Broker | CPA | #1042"
+              },
+              {
+                "type": "field",
+                "label": "Payout",
+                "value": "$80 per qualified FTD"
+              },
+              {
+                "type": "field",
+                "label": "Geos",
+                "value": "NG, KE, GH, ZA"
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "Traffic",
+                  "Allowed"
+                ],
+                "rows": [
+                  [
+                    "Social (Meta, TikTok)",
+                    "Yes, with authorization"
+                  ],
+                  [
+                    "Telegram",
+                    "Yes"
+                  ],
+                  [
+                    "Incent",
+                    "No"
+                  ],
+                  [
+                    "Brand bidding",
+                    "No"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "KPI: baseline deposit $50. 30% of FTDs must place 5+ trades in 14 days."
+              },
+              {
+                "type": "text",
+                "value": "Cap: 10 FTD per day. Hold: 30 days. Payment: net 15 after hold."
+              },
+              {
+                "type": "text",
+                "value": "Restrictions: no profit promises, no celebrity images, risk warning required, 18+ only."
+              },
+              {
+                "type": "button",
+                "label": "Request access"
+              }
+            ],
+            "highlight": 6
+          },
+          "say": "This is a generic example of a trading offer page. Every network lays it out differently, but these fields appear almost everywhere. You can see the payout, eighty dollars per qualified F T D, first time deposit, the geos, and the allowed traffic. Now look at the highlighted restrictions block: no profit promises, no celebrity images, a risk warning required, eighteen plus only. Read that first, because it decides how you're allowed to advertise."
+        },
+        {
+          "v": "walk",
+          "h": "Read it top to bottom in five passes",
+          "p": "Walk through the same page one field at a time. For each, ask one question: does this change what I earn, or what I am allowed to do? Tap Next to move through the fields.",
+          "d": {
+            "steps": [
+              {
+                "title": "Payout and model",
+                "text": "$80 per qualified FTD. Qualified means it must also meet the KPI below, so not every deposit pays.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/offers/1042",
+                  "title": "Payout",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Offer",
+                      "value": "Example Broker | CPA | #1042"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Payout",
+                      "value": "$80 per qualified FTD"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Geos",
+                      "value": "NG, KE, GH, ZA"
+                    },
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Traffic",
+                        "Allowed"
+                      ],
+                      "rows": [
+                        [
+                          "Social (Meta, TikTok)",
+                          "Yes, with authorization"
+                        ],
+                        [
+                          "Telegram",
+                          "Yes"
+                        ],
+                        [
+                          "Incent",
+                          "No"
+                        ],
+                        [
+                          "Brand bidding",
+                          "No"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "KPI: baseline deposit $50. 30% of FTDs must place 5+ trades in 14 days."
+                    },
+                    {
+                      "type": "text",
+                      "value": "Cap: 10 FTD per day. Hold: 30 days. Payment: net 15 after hold."
+                    },
+                    {
+                      "type": "text",
+                      "value": "Restrictions: no profit promises, no celebrity images, risk warning required, 18+ only."
+                    },
+                    {
+                      "type": "button",
+                      "label": "Request access"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Geos",
+                "text": "Four countries. Users outside them are not paid, even if they deposit. Each geo also needs its own legal and platform check.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/offers/1042",
+                  "title": "Geos",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Offer",
+                      "value": "Example Broker | CPA | #1042"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Payout",
+                      "value": "$80 per qualified FTD"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Geos",
+                      "value": "NG, KE, GH, ZA"
+                    },
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Traffic",
+                        "Allowed"
+                      ],
+                      "rows": [
+                        [
+                          "Social (Meta, TikTok)",
+                          "Yes, with authorization"
+                        ],
+                        [
+                          "Telegram",
+                          "Yes"
+                        ],
+                        [
+                          "Incent",
+                          "No"
+                        ],
+                        [
+                          "Brand bidding",
+                          "No"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "KPI: baseline deposit $50. 30% of FTDs must place 5+ trades in 14 days."
+                    },
+                    {
+                      "type": "text",
+                      "value": "Cap: 10 FTD per day. Hold: 30 days. Payment: net 15 after hold."
+                    },
+                    {
+                      "type": "text",
+                      "value": "Restrictions: no profit promises, no celebrity images, risk warning required, 18+ only."
+                    },
+                    {
+                      "type": "button",
+                      "label": "Request access"
+                    }
+                  ],
+                  "highlight": 2
+                }
+              },
+              {
+                "title": "Allowed traffic",
+                "text": "Social is allowed only with authorization. Incent and brand bidding are banned. Results from banned sources are rejected.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/offers/1042",
+                  "title": "Traffic",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Offer",
+                      "value": "Example Broker | CPA | #1042"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Payout",
+                      "value": "$80 per qualified FTD"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Geos",
+                      "value": "NG, KE, GH, ZA"
+                    },
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Traffic",
+                        "Allowed"
+                      ],
+                      "rows": [
+                        [
+                          "Social (Meta, TikTok)",
+                          "Yes, with authorization"
+                        ],
+                        [
+                          "Telegram",
+                          "Yes"
+                        ],
+                        [
+                          "Incent",
+                          "No"
+                        ],
+                        [
+                          "Brand bidding",
+                          "No"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "KPI: baseline deposit $50. 30% of FTDs must place 5+ trades in 14 days."
+                    },
+                    {
+                      "type": "text",
+                      "value": "Cap: 10 FTD per day. Hold: 30 days. Payment: net 15 after hold."
+                    },
+                    {
+                      "type": "text",
+                      "value": "Restrictions: no profit promises, no celebrity images, risk warning required, 18+ only."
+                    },
+                    {
+                      "type": "button",
+                      "label": "Request access"
+                    }
+                  ],
+                  "highlight": 3
+                }
+              },
+              {
+                "title": "KPIs",
+                "text": "A $50 baseline and an activity rule. If too few of your users trade, the network can reduce or reject payouts.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/offers/1042",
+                  "title": "KPIs",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Offer",
+                      "value": "Example Broker | CPA | #1042"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Payout",
+                      "value": "$80 per qualified FTD"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Geos",
+                      "value": "NG, KE, GH, ZA"
+                    },
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Traffic",
+                        "Allowed"
+                      ],
+                      "rows": [
+                        [
+                          "Social (Meta, TikTok)",
+                          "Yes, with authorization"
+                        ],
+                        [
+                          "Telegram",
+                          "Yes"
+                        ],
+                        [
+                          "Incent",
+                          "No"
+                        ],
+                        [
+                          "Brand bidding",
+                          "No"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "KPI: baseline deposit $50. 30% of FTDs must place 5+ trades in 14 days."
+                    },
+                    {
+                      "type": "text",
+                      "value": "Cap: 10 FTD per day. Hold: 30 days. Payment: net 15 after hold."
+                    },
+                    {
+                      "type": "text",
+                      "value": "Restrictions: no profit promises, no celebrity images, risk warning required, 18+ only."
+                    },
+                    {
+                      "type": "button",
+                      "label": "Request access"
+                    }
+                  ],
+                  "highlight": 4
+                }
+              },
+              {
+                "title": "Cap, hold, payment",
+                "text": "At most 10 paid FTDs a day. Money arrives about 45 days after the deposit: 30 day hold, then net 15.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/offers/1042",
+                  "title": "Cap and hold",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Offer",
+                      "value": "Example Broker | CPA | #1042"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Payout",
+                      "value": "$80 per qualified FTD"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Geos",
+                      "value": "NG, KE, GH, ZA"
+                    },
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Traffic",
+                        "Allowed"
+                      ],
+                      "rows": [
+                        [
+                          "Social (Meta, TikTok)",
+                          "Yes, with authorization"
+                        ],
+                        [
+                          "Telegram",
+                          "Yes"
+                        ],
+                        [
+                          "Incent",
+                          "No"
+                        ],
+                        [
+                          "Brand bidding",
+                          "No"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "KPI: baseline deposit $50. 30% of FTDs must place 5+ trades in 14 days."
+                    },
+                    {
+                      "type": "text",
+                      "value": "Cap: 10 FTD per day. Hold: 30 days. Payment: net 15 after hold."
+                    },
+                    {
+                      "type": "text",
+                      "value": "Restrictions: no profit promises, no celebrity images, risk warning required, 18+ only."
+                    },
+                    {
+                      "type": "button",
+                      "label": "Request access"
+                    }
+                  ],
+                  "highlight": 5
+                }
+              }
+            ]
+          },
+          "say": "Let's read the same page in five passes. Tap Next to move through the fields. First, payout and model: eighty dollars per qualified F T D, and qualified means it must also meet the K P I, so not every deposit pays. Second, geos: four countries, and users outside them aren't paid. Third, allowed traffic: social only with authorization, and incent and brand bidding are banned. Fourth, K P Is: a fifty dollar baseline and an activity rule. Fifth, cap, hold and payment: at most ten paid F T Ds a day, with money arriving about forty five days after the deposit."
+        },
+        {
+          "v": "table",
+          "h": "Fine print decoder",
+          "p": "Offer pages use short labels that hide real conditions. Here is what the common ones usually mean in practice. Wording varies by network, so when a term is unclear, ask your affiliate manager in writing and keep the answer.",
+          "d": {
+            "cols": [
+              "Label",
+              "What it usually means"
+            ],
+            "rows": [
+              [
+                "Baseline $50",
+                "Deposits under $50 do not pay"
+              ],
+              [
+                "Qualified FTD",
+                "Deposit plus extra conditions"
+              ],
+              [
+                "Hold 30 days",
+                "Paid at least 30 days later"
+              ],
+              [
+                "Net 15",
+                "Paid 15 days after period closes"
+              ],
+              [
+                "Cap 10/day",
+                "Result 11 onwards may not pay"
+              ],
+              [
+                "No incent",
+                "No rewards for signing up"
+              ],
+              [
+                "Brand bidding: no",
+                "No search ads on brand name"
+              ]
+            ]
+          },
+          "say": "Offer pages use short labels that hide real conditions. Here's what they usually mean. A fifty dollar baseline: deposits under fifty don't pay. Qualified F T D: deposit plus extra conditions. Hold thirty days: paid at least thirty days later. Net fifteen: paid fifteen days after the period closes. Cap ten a day: result eleven onwards may not pay. No incent: no rewards for signing up. Brand bidding no: no search ads on the brand name. Wording varies, so when a term is unclear, ask your affiliate manager in writing, and keep the answer."
+        },
+        {
+          "v": "eq",
+          "h": "Effective payout: the number that matters",
+          "p": "Not every result you send is approved. If past offers or the manager tell you roughly 70% of FTDs end up qualified, the effective payout is lower than the headline. Plan with the effective number, not the advertised one. Example figures only.",
+          "more": "Example: you send 10 deposits. Seven meet the baseline and activity KPI; three fall short. You are paid 7 × $80 = $560, which is $56 per deposit sent, not $80. If you had planned your bids around $80, you would have been losing money while thinking you were profitable. Ask the affiliate manager what a typical qualification rate looks like for new affiliates in your geo, and treat the answer as a guide, not a promise.",
+          "d": [
+            "$80 payout",
+            "×",
+            "70% qualified",
+            "=",
+            "$56 effective"
+          ],
+          "say": "Not every result you send is approved. Read the equation: an eighty dollar payout, times seventy percent qualified, equals fifty six dollars effective. For example, you send ten deposits, seven qualify, and you're paid five hundred and sixty dollars. That's fifty six per deposit sent, not eighty. If you'd planned your bids around eighty, you'd lose money while thinking you were profitable. So plan with the effective number. These are example figures only."
+        },
+        {
+          "v": "lab",
+          "h": "Try it: max cost per registration",
+          "p": "This offer pays $40 per FTD. About 25% of your registrations go on to deposit. You want to keep a 20% margin. Work out the most you can pay per registration, then check your answer.",
+          "more": "Break-even per registration: $40 × 25% = $10. At $10 you make nothing. To keep 20% margin you can pay at most 80% of that: $10 × 0.8 = $8. If your registrations cost $9, the campaign looks close to fine on the platform but quietly loses your margin. This is why you calculate this before you launch, from the offer page and honest estimates.",
+          "d": {
+            "kind": "breakeven",
+            "task": "What is the most you can pay per registration and keep a 20% margin?",
+            "preset": {
+              "payout": 40,
+              "cr_pct": 25,
+              "margin_pct": 20
+            },
+            "answer": {
+              "field": "max_cpl",
+              "value": 8,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Now it's your turn. This is a lab. The offer pays forty dollars per F T D. About twenty five percent of your registrations go on to deposit. You want to keep a twenty percent margin. Your task is to work out the most you can pay per registration and still keep that margin. Think about break-even first, then the margin. Pause and try it, then check your answer."
+        },
+        {
+          "v": "tip",
+          "h": "Example: comparing two offers properly",
+          "p": "Offer A pays $80 with a 30 day hold and an activity KPI. Offer B pays $55 with only a $20 baseline and weekly payment. On paper A wins. With a 60% qualification rate on A and 90% on B, they are almost equal, and B pays you much sooner.",
+          "d": {
+            "kind": "example",
+            "text": "Example: A = $80 × 60% = $48. B = $55 × 90% = $49.50. B also pays weekly."
+          },
+          "say": "Here's how to compare two offers properly. Offer A pays eighty dollars, with a thirty day hold and an activity K P I. Offer B pays fifty five, with only a twenty dollar baseline and weekly payment. On paper, A wins. But read the example: with a sixty percent qualification rate, A is worth forty eight dollars. With ninety percent, B is worth forty nine fifty. They're almost equal, and B pays you much sooner."
+        },
+        {
+          "v": "bars",
+          "h": "Example: headline versus effective payout",
+          "p": "The same two offers, side by side. The headline payouts look far apart. The effective payouts are nearly the same. Bar length shows the effective payout; the label shows both. Illustrative figures only.",
+          "d": [
+            [
+              "Offer A headline",
+              100,
+              "$80"
+            ],
+            [
+              "Offer A effective",
+              60,
+              "$48"
+            ],
+            [
+              "Offer B headline",
+              69,
+              "$55"
+            ],
+            [
+              "Offer B effective",
+              62,
+              "$49.50"
+            ]
+          ],
+          "say": "Here are those two offers side by side. The bar length shows the effective payout, and the label shows the amount. Offer A's headline is eighty dollars, but its effective payout is forty eight. Offer B's headline is fifty five, and its effective payout is forty nine fifty. The headlines look far apart, but the effective payouts are nearly the same. These are illustrative figures only."
+        },
+        {
+          "v": "code",
+          "h": "Your tracking link from the offer page",
+          "p": "Once approved, the offer page gives you a tracking link. It carries your affiliate ID and lets you add sub IDs so you can see which campaign and ad produced each result. This is an example format; every network names its parameters differently.",
+          "d": {
+            "lang": "url",
+            "text": "https://track.network.example/click?offer=1042&aff=5531&sub1=NG_fb_test01&sub2=adset_a&sub3=ad_video1",
+            "note": "Example only. Never edit the offer or affiliate ID by hand."
+          },
+          "say": "Once you're approved, the offer page gives you a tracking link. You can see an example on screen. It carries your affiliate I D, and it lets you add sub I Ds, so you can see which campaign and ad produced each result. This is only an example format, because every network names its parameters differently. And notice the note: never edit the offer or affiliate I D by hand."
+        },
+        {
+          "v": "big",
+          "h": "Restrictions are part of the deal",
+          "p": "The restrictions block is not small print to skim. Break it and the network can reject every result, hold your balance or close your account. More importantly, many restrictions exist because the advertiser is regulated and must follow the law.",
+          "more": "Common restrictions on regulated offers: no promises of profit or winnings, no fake news formats, no celebrity images without permission, a risk or responsible gambling message, 18+ only, no incentivised sign-ups, no search ads on the brand name, and approved creatives only. If a restriction makes the offer impossible for your traffic source, the offer is not for you. Do not look for workarounds; the honest move is to find an offer whose rules fit how you work.",
+          "d": {
+            "b": "Break a rule, lose the payout",
+            "s": "Restrictions protect users and the advertiser's licence"
+          },
+          "say": "The restrictions block isn't small print to skim. As the screen says: break a rule, lose the payout. The network can reject every result, hold your balance or close your account. More importantly, many restrictions exist because the advertiser is regulated and must follow the law. If a restriction makes the offer impossible for your traffic source, the offer isn't for you. Don't look for workarounds. The honest move is to find an offer whose rules fit how you work."
+        },
+        {
+          "v": "screen",
+          "h": "Spot the red flags on this page",
+          "p": "Here is a different example offer page. Several things on it should stop you. Look at each block and decide which ones are warnings before reading the next slide. The highlighted block is the loudest one.",
+          "d": {
+            "kind": "browser",
+            "url": "quickcash-network.example/offer/77",
+            "title": "Mega Crypto Profit: CPA",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Payout",
+                "value": "$450 per registration"
+              },
+              {
+                "type": "field",
+                "label": "Geos",
+                "value": "All countries"
+              },
+              {
+                "type": "text",
+                "value": "All traffic allowed. Use any celebrity, any claim."
+              },
+              {
+                "type": "text",
+                "value": "100% approval guaranteed. Earn $3,000 a week."
+              },
+              {
+                "type": "text",
+                "value": "Minimum withdrawal $5,000. Payment on request."
+              },
+              {
+                "type": "text",
+                "value": "Terms: none."
+              },
+              {
+                "type": "button",
+                "label": "Get link now"
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "Here's a different example offer page. Several things on it should stop you. Look at each block: the payout, the geos, the traffic rules, the claims about approval and earnings, the withdrawal terms, and the terms section. The highlighted block is the loudest warning. Pause here and decide which blocks are red flags before you move to the next slide."
+        },
+        {
+          "v": "check",
+          "h": "Red flags on any offer page",
+          "p": "Any one of these is a reason to stop and ask questions. Two or more usually mean walk away. The first page of a scam is designed to look generous; the generosity is the warning.",
+          "d": [
+            "Payout far above every similar offer",
+            "Any claim or celebrity allowed",
+            "No geos, no KPIs, no terms",
+            "Guaranteed approval or earnings",
+            "Huge minimum withdrawal",
+            "Advertiser not named or not licensed"
+          ],
+          "say": "Here are the red flags to watch for on any offer page. A payout far above every similar offer. Any claim or celebrity allowed. No geos, no K P Is, no terms. Guaranteed approval or earnings. A huge minimum withdrawal. And an advertiser that isn't named or isn't licensed. Any one of these is a reason to stop and ask questions. Two or more usually mean walk away. The first page of a scam is designed to look generous, and the generosity is the warning."
+        },
+        {
+          "v": "compare",
+          "h": "Green flags and red flags",
+          "p": "Healthy offers feel slightly strict. They name the advertiser, limit traffic, set KPIs and tell you exactly when you will be paid. Unhealthy offers feel loose and generous. Strict rules mean the advertiser expects to pay real affiliates for real users.",
+          "d": {
+            "a": {
+              "title": "Green flags",
+              "items": [
+                "Advertiser named and licensed",
+                "Clear geos and KPIs",
+                "Restrictions listed",
+                "Hold and payment dates stated"
+              ]
+            },
+            "b": {
+              "title": "Red flags",
+              "items": [
+                "Payout too good to be true",
+                "Anything allowed",
+                "No terms, vague payment",
+                "Pressure to start now"
+              ]
+            }
+          },
+          "say": "Compare the two columns. Green flags: the advertiser is named and licensed, geos and K P Is are clear, restrictions are listed, and hold and payment dates are stated. Red flags: a payout too good to be true, anything allowed, no terms or vague payment, and pressure to start now. Healthy offers feel slightly strict. Strict rules mean the advertiser expects to pay real affiliates for real users."
+        },
+        {
+          "v": "cards",
+          "h": "Common offer-page mistakes, and the fix",
+          "p": "Red flags are about bad offers. These mistakes are about good offers read badly. Every one of them has cost buyers a month of payouts on a perfectly legitimate offer.",
+          "d": [
+            "Planning on the headline payout|use the effective payout",
+            "Missing the baseline deposit|small deposits do not pay",
+            "Ignoring the hold|cash arrives weeks later",
+            "Editing the tracking link by hand|copy it exactly, add only sub IDs",
+            "Requesting access before reading|applying means agreeing"
+          ],
+          "say": "Red flags are about bad offers. These mistakes are about good offers read badly. Look at the cards. Planning on the headline payout: use the effective payout. Missing the baseline deposit: small deposits don't pay. Ignoring the hold: cash arrives weeks later. Editing the tracking link by hand: copy it exactly, and add only sub I Ds. Requesting access before reading: applying means agreeing. Each of these has cost buyers a month of payouts on a perfectly legitimate offer."
+        },
+        {
+          "v": "flow",
+          "h": "Your six-step offer read",
+          "p": "Use the same order on every offer page until it becomes habit. Restrictions and geos first, because they can end the review in seconds. Payout and effective value last, because they only matter once the offer is possible for you.",
+          "d": [
+            "Restrictions",
+            "Geos and traffic",
+            "KPIs",
+            "Cap and hold",
+            "Effective payout",
+            "Max cost per result"
+          ],
+          "say": "Here's your six-step offer read. Follow it from the left. Restrictions, then geos and traffic, then K P Is, then cap and hold, then effective payout, then maximum cost per result. Restrictions and geos come first, because they can end the review in seconds. Payout and effective value come last, because they only matter once the offer is possible for you. Use the same order every time, until it becomes habit."
+        },
+        {
+          "v": "product",
+          "h": "Compare offers side by side",
+          "p": "Reading offers is easier when you can see several at once. You can do this with a spreadsheet and the network pages. If you prefer, a deals listing collects offers in one place so you can compare payouts, geos and terms before you apply.",
+          "d": {
+            "slug": "affleego",
+            "why": "Lists affiliate deals in one place, so you can shortlist offers and then read each offer page properly."
+          },
+          "say": "Reading offers is easier when you can see several at once. You can do this with a spreadsheet and the network pages. If you prefer, a deals listing like Affleego, shown on this card, collects affiliate deals in one place, so you can shortlist offers by payout, geo and terms. Then read each offer page properly, using your six-step read."
+        },
+        {
+          "v": "partner",
+          "h": "Partners to start your offer read with",
+          "p": "These are the networks and advertisers the VooSquare Academy team lists. Run the six-step read on every offer you find there. A listing is a starting point: the restrictions, KPIs and payment terms on each page are still yours to check.",
+          "d": {
+            "vertical": "general",
+            "note": "Prefer partners whose offer pages state restrictions, KPIs, caps and hold periods in writing."
+          },
+          "say": "These are the networks and advertisers the VooSquare Academy team lists. Run the six-step read on every offer you find there. A listing is only a starting point. The restrictions, K P Is and payment terms on each page are still yours to check. As the note says, prefer partners whose offer pages state restrictions, K P Is, caps and hold periods in writing."
+        },
+        {
+          "v": "tip",
+          "h": "Only accept terms you can meet",
+          "p": "Clicking \"Request access\" usually means you accept the offer terms. If you cannot meet the KPI, the traffic rules or the restrictions, do not apply and hope. Ask the manager first, or choose another offer.",
+          "d": {
+            "kind": "warn",
+            "text": "Applying for an offer is agreeing to its rules. Read them before you click."
+          },
+          "say": "One last warning. Clicking request access usually means you accept the offer terms. So if you can't meet the K P I, the traffic rules or the restrictions, don't apply and hope. Ask the manager first, or choose another offer. As the warning says, applying for an offer is agreeing to its rules, so read them before you click."
+        }
+      ],
+      "takeaways": [
+        "Read restrictions, geos, traffic rules and KPIs before you look at the payout.",
+        "Effective payout = headline payout × qualification rate. Plan with the effective number.",
+        "Max cost per registration = payout × registration-to-FTD rate × (1 − your margin).",
+        "Generous, loose, rule-free offer pages are a warning sign, not an opportunity."
+      ],
+      "action": "Open two real offers in your vertical on a network you are considering. For each, write the effective payout, the hold, the cap and every restriction, and note any red flag.",
+      "glossary": [
+        {
+          "term": "Offer page",
+          "def": "The network page that lists an offer's payout, geos, allowed traffic, KPIs, caps, hold and restrictions. Applying usually means accepting it."
+        },
+        {
+          "term": "Effective payout",
+          "def": "The headline payout multiplied by the share of results that actually qualify and get paid."
+        },
+        {
+          "term": "Brand bidding",
+          "def": "Running search ads on the advertiser's own brand name. Many offers ban it."
+        },
+        {
+          "term": "Tracking link",
+          "def": "The network link that records your clicks and conversions, carrying your affiliate ID and optional sub IDs."
+        },
+        {
+          "term": "Red flag",
+          "def": "A sign on an offer page or in a conversation that suggests a scam, unpaid results or rule-breaking."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "An offer pays $100 per FTD. About 55% of FTDs qualify under the KPI. What is the effective payout?",
+          "options": [
+            "$100",
+            "$45",
+            "$155",
+            "$55"
+          ],
+          "answer": 3,
+          "why": "$100 × 55% = $55. Only qualified FTDs pay, so plan with $55."
+        },
+        {
+          "q": "A $60 CPA offer. 20% of registrations deposit. You want a 25% margin. What is your max cost per registration?",
+          "options": [
+            "$12",
+            "$9",
+            "$15",
+            "$45"
+          ],
+          "answer": 1,
+          "why": "Break-even is $60 × 20% = $12. Keeping 25% margin: $12 × 0.75 = $9."
+        },
+        {
+          "q": "Which field should you read first on an offer page?",
+          "options": [
+            "Restrictions and allowed traffic",
+            "Payout",
+            "The advertiser logo",
+            "The cap"
+          ],
+          "answer": 0,
+          "why": "Restrictions and traffic rules can make the offer impossible for you, so they end the review fastest."
+        },
+        {
+          "q": "An offer page says \"All countries, any traffic, any claim, 100% approval\". What is the best reading?",
+          "options": [
+            "A generous offer for beginners",
+            "A normal trading offer",
+            "Several red flags; likely a scam or rule-breaking offer",
+            "Fine as long as the payout is high"
+          ],
+          "answer": 2,
+          "why": "Real advertisers set geos, rules and KPIs. Unlimited claims and guaranteed approval are classic warning signs."
+        },
+        {
+          "q": "An offer has a 30 day hold and net 15 payment terms. A user deposits on 1 March. Roughly when should you expect the money?",
+          "options": [
+            "Mid-April or later",
+            "1 March",
+            "The next day",
+            "1 April exactly"
+          ],
+          "answer": 0,
+          "why": "The 30 day hold ends around 31 March; net 15 adds about 15 days after the period closes, so mid-April or later."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn to read a real offer page field by field, turn a headline payout into an effective payout, and spot red flags before you send a single click. The payout is the first thing you see and the last thing you should judge.",
+      "say_outro": "You now know how to read every field of an offer page, work out an effective payout and a maximum cost per registration, and spot red flags. Your task: open two real offers in your vertical on a network you're considering, and for each, write the effective payout, the hold, the cap and every restriction, noting any red flag. Now take the quiz."
+    },
+    {
+      "slug": "talking-to-your-affiliate-manager",
+      "title": "Talking to your affiliate manager",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can write a first message that gets a useful reply instead of a template.",
+        "You can list the questions to ask before you run any offer, and get the answers in writing.",
+        "You can ask for a better payout or a test agreement using numbers, and recognise advice you must refuse."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "A partner, not a vending machine",
+          "p": "Your affiliate manager (AM) looks after many affiliates and is judged on the quality and volume they bring. Help them see you as someone who will send real users and follow the rules, and you get better answers, offers and terms.",
+          "more": "Managers receive a flood of messages that say \"hi bro, best offer?\" with nothing else. Those get a link and nothing more. A message that says who you are, which geo and source you plan to use, your budget and what you need to know tells the manager you are serious. It also lets them protect you: a good manager will warn you that a source is banned on an offer, or that a geo has a low qualification rate, before you lose money finding out.",
+          "d": {
+            "b": "Be the affiliate they want to help",
+            "s": "Clear, honest, specific, patient"
+          },
+          "say": "Your affiliate manager, or A M, looks after many affiliates, and is judged on the quality and volume they bring. As the screen says, be the affiliate they want to help: clear, honest, specific and patient. Managers get a flood of messages saying hi bro, best offer, and those get a link and nothing more. A message that says who you are, your geo, source and budget tells them you're serious, and lets them warn you about problems before you lose money."
+        },
+        {
+          "v": "phone",
+          "h": "A first message that gets a real reply",
+          "p": "Here is an example first chat with a manager on a network. The affiliate is clear and honest about being new. Notice that the manager answers with specifics, because the question was specific.",
+          "d": {
+            "app": "chat",
+            "title": "Ada · Affiliate manager",
+            "subtitle": "online",
+            "messages": [
+              {
+                "from": "me",
+                "text": "Hi Ada, I am Tobi, new affiliate from Lagos. Approved yesterday. I plan to test COD e-commerce in Nigeria with Meta traffic, about $250 test budget."
+              },
+              {
+                "from": "me",
+                "text": "Which 2 or 3 COD offers have the best approval rates for new affiliates in NG right now?"
+              },
+              {
+                "from": "them",
+                "text": "Welcome Tobi. For NG COD on Meta, look at #2210 (kitchen set) and #2231 (phone accessories). Approval has been around 40 to 50% recently. Don't use health claims; those get rejected."
+              },
+              {
+                "from": "me",
+                "text": "Thanks. Is a prelander allowed on both, or direct to the order form only?"
+              },
+              {
+                "from": "them",
+                "text": "Both allow prelanders. Send me the link before you launch and I will check it."
+              }
+            ]
+          },
+          "say": "Here's an example first chat with a manager. Look at Tobi's messages. He says who he is, that he's new, and that he's approved. He names his plan: C O D e-commerce, cash on delivery, in Nigeria, with Meta traffic, and about two hundred and fifty dollars to test. Then he asks one specific question. Notice how the manager answers with specifics: two offer numbers, recent approval rates, and a warning about health claims. A specific question gets a specific answer."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes in messages to managers",
+          "p": "The difference is not politeness. It is information. The manager can only help with what you tell them. A good message also shows you have already read the offer page, so you are not asking what is written there.",
+          "d": {
+            "a": {
+              "title": "Gets ignored",
+              "items": [
+                "\"Hi bro, best offer?\"",
+                "No geo, no source",
+                "Asks what the page says",
+                "Demands a higher payout on day one"
+              ]
+            },
+            "b": {
+              "title": "Gets answered",
+              "items": [
+                "Name, geo, source, budget",
+                "One or two specific questions",
+                "Shows you read the terms",
+                "Asks for advice, not favours"
+              ]
+            }
+          },
+          "say": "The difference between these columns isn't politeness. It's information. On the left, messages that get ignored: hi bro, best offer, no geo or source, asking what the page already says, and demanding a higher payout on day one. On the right, messages that get answered: name, geo, source and budget, one or two specific questions, showing you've read the terms, and asking for advice, not favours. The manager can only help with what you tell them."
+        },
+        {
+          "v": "check",
+          "h": "Ask these before you run",
+          "p": "Get these answers in writing before you spend. Some are on the offer page but are worth confirming, because pages are not always up to date. Save the chat; if there is a dispute later, written answers protect you.",
+          "d": [
+            "Is my traffic source allowed on this offer?",
+            "Is my geo active and is the cap open?",
+            "What is a typical approval or qualification rate?",
+            "Can you check my prelander and ads first?",
+            "When exactly will I be paid?",
+            "How do I see rejected results and why?"
+          ],
+          "say": "Get these answers in writing before you spend. Is my traffic source allowed on this offer? Is my geo active, and is the cap open? What's a typical approval or qualification rate? Can you check my prelander and ads first? When exactly will I be paid? And how do I see rejected results, and why? Some of this is on the offer page, but confirm it, because pages aren't always up to date. Save the chat. If there's a dispute later, written answers protect you."
+        },
+        {
+          "v": "phone",
+          "h": "Asking about KPIs and holds",
+          "p": "This example chat shows an affiliate clarifying a trading offer before applying. The manager confirms the authorization requirement directly. If a manager ever says the opposite, that is a problem with the manager, not a loophole.",
+          "d": {
+            "app": "chat",
+            "title": "Musa · Affiliate manager",
+            "subtitle": "last seen recently",
+            "messages": [
+              {
+                "from": "me",
+                "text": "Hi Musa. On offer #1042, the KPI says 30% of FTDs must make 5+ trades in 14 days. If I miss it, is the whole batch rejected or only the shortfall?"
+              },
+              {
+                "from": "them",
+                "text": "We review per week. If you are below 30% we usually adjust the payout for that week, not reject everything. Repeated misses can pause your access."
+              },
+              {
+                "from": "me",
+                "text": "Clear. And for Meta, the page says social with authorization. Does the broker hold a licence for NG, and do I need my own ad authorization?"
+              },
+              {
+                "from": "them",
+                "text": "Yes, the broker is licensed for the geos listed. You need to meet Meta's financial ads rules and authorization for your account and country. No authorization, no Meta traffic."
+              }
+            ]
+          },
+          "say": "This example chat shows an affiliate clarifying a trading offer before applying. First, he asks about the K P I, the key performance indicator: if he misses it, is the whole batch rejected? The manager explains it's reviewed per week. Then he asks about Meta. Look at the manager's last reply: the broker is licensed for the listed geos, and the affiliate needs Meta's financial ads authorization. No authorization, no Meta traffic. If a manager ever says the opposite, that's a problem with the manager, not a loophole."
+        },
+        {
+          "v": "table",
+          "h": "What you can negotiate, and when",
+          "p": "As a new affiliate you can negotiate less than you think. After you have sent consistent, quality results, much more opens up. Rough guide only; every network has its own policy.",
+          "d": {
+            "cols": [
+              "Item",
+              "As a beginner",
+              "After proven quality"
+            ],
+            "rows": [
+              [
+                "Payout",
+                "Rarely",
+                "Often, with data"
+              ],
+              [
+                "Cap",
+                "Small test cap",
+                "Raised step by step"
+              ],
+              [
+                "Payment terms",
+                "Standard terms",
+                "Faster or weekly"
+              ],
+              [
+                "Private offers",
+                "No",
+                "Sometimes"
+              ],
+              [
+                "Creative or page review",
+                "Yes, ask",
+                "Yes"
+              ]
+            ]
+          },
+          "say": "As a new affiliate, you can negotiate less than you think. Look at the two columns. As a beginner, payout changes are rare, you get a small test cap, standard payment terms, and no private offers. But you can ask for a creative or page review. After proven quality, payouts often move with data, caps rise step by step, payment can be faster or weekly, and private offers sometimes open up. This is a rough guide, and every network has its own policy."
+        },
+        {
+          "v": "big",
+          "h": "Earn a raise with data, not pressure",
+          "p": "Payout increases come from results the advertiser likes: steady volume, high qualification rates, low fraud and few complaints. Bring those numbers and ask clearly. Threatening to leave for a network you have never tested rarely works.",
+          "d": {
+            "b": "Quality first, then the ask",
+            "s": "Volume, approval rate, consistency"
+          },
+          "say": "So how do you earn a better payout? With data, not pressure. Look at the screen: quality first, then the ask. Payout increases come from results the advertiser likes: steady volume, high qualification rates, low fraud and few complaints. Bring those numbers and ask clearly. Threatening to leave for a network you've never tested rarely works."
+        },
+        {
+          "v": "phone",
+          "h": "Negotiating a payout bump",
+          "p": "Example of a payout request done well, after four weeks of results. The affiliate leads with data, makes a specific ask and offers something in return. The manager gives a partial yes with a condition, which is normal.",
+          "d": {
+            "app": "chat",
+            "title": "Ada · Affiliate manager",
+            "subtitle": "online",
+            "messages": [
+              {
+                "from": "me",
+                "text": "Hi Ada. Last 4 weeks on #2231: 212 orders, 51% approved, no fraud flags. Daily volume has been steady at 7 to 9 approved."
+              },
+              {
+                "from": "me",
+                "text": "Could you move me from $6 to $7 per approved order? With that I can push to 12 to 15 a day."
+              },
+              {
+                "from": "them",
+                "text": "Good numbers. I can do $6.50 now, and $7 if you hold above 45% approval at 12+ a day for two weeks."
+              },
+              {
+                "from": "me",
+                "text": "Deal. Please confirm the new rate on the offer page so my reports match."
+              }
+            ]
+          },
+          "say": "Here's a payout request done well, after four weeks of results. Read the affiliate's first message: two hundred and twelve orders, fifty one percent approved, no fraud flags, steady daily volume. Then a specific ask: move from six dollars to seven, and in return push volume higher. The manager gives a partial yes, six fifty now, and seven if approval holds above forty five percent at twelve or more a day for two weeks. That's normal. And notice the last message: confirm the new rate on the offer page, so reports match."
+        },
+        {
+          "v": "eq",
+          "h": "Example: what a small bump is worth",
+          "p": "A payout increase looks small per result. Multiply it by your volume to see what it is worth over a month. This also tells you how much effort a negotiation deserves. Example figures only.",
+          "more": "Example: at 10 approved orders a day for 30 days you have 300 orders. A $0.50 increase adds $150 a month with no extra ad spend. At 3 orders a day, the same bump is worth $45, which is why managers say no to beginners: the difference is too small to justify for the advertiser, and too small to be worth much to you. Focus on approval rate first; raising approval from 40% to 50% on the same leads often beats any payout bump.",
+          "d": [
+            "+$0.50 per order",
+            "×",
+            "300 orders a month",
+            "=",
+            "+$150 a month"
+          ],
+          "say": "A payout bump looks small per result. Read the equation: plus fifty cents per order, times three hundred orders a month, equals plus one hundred and fifty dollars a month, with no extra ad spend. But at three orders a day, the same bump is worth only forty five dollars. That's why managers say no to beginners. So focus on approval rate first. Raising approval from forty to fifty percent on the same leads often beats any payout bump. These are example figures."
+        },
+        {
+          "v": "phone",
+          "h": "Agreeing a test before you scale",
+          "p": "Some managers will agree a test: a small cap, a clear time frame and the numbers that decide what happens next. Write it down in chat. It sets expectations on both sides and protects you if results are questioned later.",
+          "d": {
+            "app": "chat",
+            "title": "Musa · Affiliate manager",
+            "subtitle": "online",
+            "messages": [
+              {
+                "from": "me",
+                "text": "Could we agree a 7 day test on #1042 for KE: cap 3 FTD a day, and you share qualification rate after day 7?"
+              },
+              {
+                "from": "them",
+                "text": "Yes. Cap 3/day for 7 days. I will send the KPI report on day 8. If quality is good we raise to 6/day."
+              },
+              {
+                "from": "me",
+                "text": "Perfect. I will send creatives and the prelander for review before launch."
+              }
+            ]
+          },
+          "say": "Some managers will agree a test. In this example chat, the affiliate proposes a seven day test on one offer in Kenya, with a cap of three F T Ds, first time deposits, a day, and asks the manager to share the qualification rate after day seven. The manager agrees, and says that if quality is good, the cap goes to six a day. Write tests like this down in chat. It sets expectations on both sides, and protects you if results are questioned later."
+        },
+        {
+          "v": "tip",
+          "h": "Put your rule card into the test agreement",
+          "p": "Example: target CPA $30 on a $40 payout. Tell the manager your rules in the same chat. Kill an ad set at $60 with 0 FTDs. From $90 spend, kill above $40 CPA. Scale +20% at most every 48 hours at $24 or less with 3+ network-confirmed FTDs.",
+          "more": "Sharing your rules does two things. The manager knows when you will ask for a cap increase, because your scale rule says so. And if the network's numbers arrive late, you can agree when the confirmed count for each day is final. These are starting rules; the full set is in the Budget and kill rules module.",
+          "d": {
+            "kind": "example",
+            "text": "Target $30: kill at $60 with 0. From $90, kill above $40. Scale at ≤ $24 with 3+ FTDs."
+          },
+          "say": "You can put your rule card into the test agreement. In this example, the target C P A, cost per acquisition, is thirty dollars on a forty dollar payout. Tell the manager your rules in the same chat. Kill an ad set at sixty dollars with zero F T Ds. From ninety dollars of spend, kill above forty dollars C P A. Scale by twenty percent, at most every forty eight hours, at twenty four dollars or less with three or more network-confirmed F T Ds. Then the manager knows when you'll ask for a cap increase. These are starting rules."
+        },
+        {
+          "v": "phone",
+          "h": "Advice you must refuse",
+          "p": "Sometimes a manager, a \"mentor\" or a group admin suggests breaking a rule. This example shows how to say no politely. Advice to hide a landing page from reviewers or ignore a restriction puts your accounts and your payouts at risk, whoever suggests it.",
+          "d": {
+            "app": "chat",
+            "title": "Unknown network rep",
+            "subtitle": "online",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Just run it without authorization, use a cloaker so the reviewer sees a cooking page. Everyone does it."
+              },
+              {
+                "from": "me",
+                "text": "No thanks. That breaks platform rules and the offer terms. I will only run where I am authorised."
+              },
+              {
+                "from": "them",
+                "text": "Your loss."
+              },
+              {
+                "from": "me",
+                "text": "Understood. Please send the written terms for the offer anyway; I will review them."
+              }
+            ]
+          },
+          "say": "Sometimes a manager, a mentor or a group admin suggests breaking a rule. In this example chat, an unknown rep says to run without authorization and use a cloaker, so the reviewer sees a cooking page. Look at the reply: no thanks, that breaks platform rules and the offer terms, I'll only run where I'm authorised. Then the affiliate still asks for the written terms. Advice like this puts your accounts and payouts at risk, whoever suggests it."
+        },
+        {
+          "v": "tip",
+          "h": "A manager's OK is not authorization",
+          "p": "A manager can tell you what the offer allows. Only the ad platform can authorize your ads, and only local law decides what is legal in a geo. If a manager says a rule does not apply, get the platform's answer yourself before you run.",
+          "more": "Full detail: Compliance for finance, trading and gambling offers module.",
+          "d": {
+            "kind": "warn",
+            "text": "Get rules in writing, and check platform policy and local law yourself. A chat message is not permission."
+          },
+          "say": "Remember this. A manager can tell you what the offer allows. Only the ad platform can authorize your ads, and only local law decides what's legal in a geo. If a manager says a rule doesn't apply, get the platform's answer yourself before you run. As the warning says, get rules in writing, and check platform policy and local law yourself. A chat message is not permission."
+        },
+        {
+          "v": "flow",
+          "h": "A weekly rhythm with your manager",
+          "p": "Short, regular contact beats long silences and sudden demands. Once a week is enough for most beginners. Each message should carry your numbers and one clear question or update.",
+          "d": [
+            "Send weekly numbers",
+            "Ask about rejections",
+            "Share next week's plan",
+            "Agree any cap change",
+            "Save the chat"
+          ],
+          "say": "Short, regular contact beats long silences and sudden demands. Follow this weekly rhythm. Send your weekly numbers. Ask about rejections. Share next week's plan. Agree any cap change. And save the chat. Once a week is enough for most beginners. Each message should carry your numbers and one clear question or update."
+        },
+        {
+          "v": "partner",
+          "h": "Networks with managers who answer",
+          "p": "These are the networks the VooSquare Academy team lists. When you apply, use the first-message checklist from this lesson. A good manager answers specific questions in writing within a day or two; that is worth more than a slightly higher payout.",
+          "d": {
+            "vertical": "general",
+            "note": "Pick partners whose managers answer specific questions in writing and explain rejections."
+          },
+          "say": "These are the networks the VooSquare Academy team lists. When you apply, use the first-message checklist from this lesson. A good manager answers specific questions in writing within a day or two, and that's worth more than a slightly higher payout. As the note says, pick partners whose managers answer specific questions in writing and explain rejections."
+        },
+        {
+          "v": "quote",
+          "h": "A word from Dchessking",
+          "p": "The managers who helped me most were the ones I sent clean numbers to every week, good weeks and bad weeks. Trust is built in the boring messages.",
+          "d": "The managers who helped me most were the ones I sent clean numbers to every week, good weeks and bad weeks. Trust is built in the boring messages.",
+          "by": "dchessking",
+          "say": "Here's how Dchessking puts it: The managers who helped me most were the ones I sent clean numbers to every week, good weeks and bad weeks. Trust is built in the boring messages."
+        },
+        {
+          "v": "tip",
+          "h": "Example: handling a scrub with data",
+          "p": "You sent 40 FTDs; only 26 were paid. Do not accuse. Ask for the rejected IDs and reasons, compare with your tracker by sub ID, and look for a pattern such as one ad set or one geo. Then decide: fix the source, or ask for a review.",
+          "d": {
+            "kind": "example",
+            "text": "Example: 14 rejected, 11 from one ad set with a $5 average deposit below the $50 baseline. Fix the targeting, not the manager."
+          },
+          "say": "Here's how to handle a scrub with data. In this example, you sent forty F T Ds, and only twenty six were paid. Don't accuse. Ask for the rejected I Ds and reasons, compare with your tracker by sub I D, and look for a pattern, like one ad set or one geo. Read the example: fourteen rejected, eleven from one ad set, with a five dollar average deposit, below the fifty dollar baseline. Fix the targeting, not the manager."
+        },
+        {
+          "v": "check",
+          "h": "Before you hit send",
+          "p": "A quick check for any message to a manager. It takes ten seconds and saves days of back and forth. If any answer is no, fix the message before you send it.",
+          "d": [
+            "Did I give geo, source and offer ID?",
+            "Is there one clear question?",
+            "Did I include numbers if I am asking for something?",
+            "Is anything I am asking for against the rules?",
+            "Will I save this chat?"
+          ],
+          "say": "Before you hit send on any message to a manager, run this ten-second check. Did I give the geo, source and offer I D? Is there one clear question? Did I include numbers, if I'm asking for something? Is anything I'm asking for against the rules? And will I save this chat? If any answer is no, fix the message before you send it. It saves days of back and forth."
+        }
+      ],
+      "takeaways": [
+        "A clear first message with geo, source, budget and one question gets real help.",
+        "Confirm traffic rules, caps, approval rates, payment dates and rejection reasons in writing before you run.",
+        "Payout bumps follow proven quality and volume; bring numbers and offer something in return.",
+        "Refuse any advice to cloak, skip authorization or ignore restrictions, whoever gives it."
+      ],
+      "action": "Write your first message to an affiliate manager using the checklist: who you are, geo, source, budget, offer ID and two specific questions. Send it only after you have read the offer page.",
+      "glossary": [
+        {
+          "term": "Payout bump",
+          "def": "An increase in your payout per result, usually agreed after you prove quality and volume."
+        },
+        {
+          "term": "Test cap",
+          "def": "A small, agreed limit on paid results for a set period while the advertiser checks your traffic quality."
+        },
+        {
+          "term": "Private offer",
+          "def": "An offer or payout not shown publicly, given to trusted affiliates."
+        },
+        {
+          "term": "Rejection reason",
+          "def": "The network's stated cause for not paying a result, such as below baseline, duplicate or wrong geo."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which first message is most likely to get a useful reply?",
+          "options": [
+            "\"Hi, best offer?\"",
+            "\"I need $10 more per FTD or I leave\"",
+            "\"New affiliate, Lagos, Meta, $250 test, COD NG. Which 2 offers have the best approval now?\"",
+            "\"Send all your offers\""
+          ],
+          "answer": 2,
+          "why": "It gives geo, source, budget and vertical and asks one specific question the manager can answer."
+        },
+        {
+          "q": "You send 300 approved orders a month. A manager offers +$0.40 per order. What is it worth monthly?",
+          "options": [
+            "$120",
+            "$40",
+            "$300",
+            "$400"
+          ],
+          "answer": 0,
+          "why": "300 × $0.40 = $120 a month without extra ad spend."
+        },
+        {
+          "q": "A rep suggests running a gambling offer without platform authorization using a cloaker. What do you do?",
+          "options": [
+            "Try it on a small budget",
+            "Ask for a higher payout first",
+            "Use a friend's ad account",
+            "Refuse and only run where you are authorised"
+          ],
+          "answer": 3,
+          "why": "Cloaking and skipping authorization break platform rules and often the law. No payout makes it acceptable."
+        },
+        {
+          "q": "You sent 40 FTDs and 26 were paid. What is the best first step?",
+          "options": [
+            "Accuse the network of shaving",
+            "Ask for rejected IDs and reasons and compare with your tracker by sub ID",
+            "Stop all campaigns forever",
+            "Double your budget to make up the difference"
+          ],
+          "answer": 1,
+          "why": "Data first. Rejection reasons and sub IDs usually reveal a fixable pattern, or give you evidence for a fair review."
+        },
+        {
+          "q": "When is a payout increase most realistic?",
+          "options": [
+            "On your first day",
+            "After you threaten to leave",
+            "When you join several networks at once",
+            "After weeks of steady volume and high approval rates"
+          ],
+          "answer": 3,
+          "why": "Advertisers pay more for proven, consistent quality. Data earns raises; pressure rarely does."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn how to talk to your affiliate manager: how to write a first message that gets a real reply, what to ask before you run, and how to negotiate with numbers. A good manager can save you money before you lose it.",
+      "say_outro": "You now know how to write a clear first message, which questions to get answered in writing, how to negotiate with data, and which advice you must refuse. Your task: write your first message to an affiliate manager using the checklist, who you are, geo, source, budget, offer I D and two specific questions, and send it only after you've read the offer page. Now take the quiz."
+    },
+    {
+      "slug": "your-first-vertical-decision",
+      "title": "Your first-vertical decision",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can score candidate verticals on a simple weighted sheet, with legal fit as a gate.",
+        "You can follow a full worked decision for a Lagos beginner with $300 and adapt it to your own numbers.",
+        "You can write a one-page decision card and a 7-day plan, then commit to it."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Decide on paper, then commit",
+          "p": "You now know how verticals pay, how to check fit, how to read offers and how to talk to managers. The last step is a decision you write down, score honestly and then stick with long enough to learn from. A written decision is harder to abandon on a bad day.",
+          "d": {
+            "b": "One vertical, written down",
+            "s": "Scored, planned, committed for 30 days"
+          },
+          "say": "You now know how verticals pay, how to check fit, how to read offers and how to talk to managers. The last step is a decision. Look at the screen: one vertical, written down, scored, planned, and committed for thirty days. You write it down, score it honestly, and stick with it long enough to learn. A written decision is harder to abandon on a bad day."
+        },
+        {
+          "v": "table",
+          "h": "The scoring sheet",
+          "p": "Score each candidate vertical from 1 to 5 on these criteria, multiply by the weight and add up. Legal and platform fit is not scored: it is a gate. A vertical that fails the gate is not on the sheet at all.",
+          "more": "Why these weights? Budget fit carries the most weight because without enough results you learn nothing, whatever else is true. Feedback speed and cash speed matter almost as much for a beginner: slow feedback means slow learning, and slow cash means your budget runs out while you wait. Skill fit decides how good your ads will be. Honest angle matters for everyone, but by the time a vertical reaches this sheet it has already passed the legal gate, so here it measures how easy it is to write a clear, truthful ad. Maximum total: 5 × (3+2+2+2+1) = 50.",
+          "d": {
+            "cols": [
+              "Criterion",
+              "Weight",
+              "A 5 means"
+            ],
+            "rows": [
+              [
+                "Legal and platform fit",
+                "Gate",
+                "Pass or fail, no score"
+              ],
+              [
+                "Budget fit",
+                "×3",
+                "20+ results from test budget"
+              ],
+              [
+                "Feedback speed",
+                "×2",
+                "Results within 1 to 2 days"
+              ],
+              [
+                "Cash speed",
+                "×2",
+                "Paid weekly"
+              ],
+              [
+                "Skill fit",
+                "×2",
+                "Uses your strongest skill"
+              ],
+              [
+                "Honest ad angle",
+                "×1",
+                "Easy to describe truthfully"
+              ]
+            ]
+          },
+          "say": "Here's the scoring sheet. Score each candidate from one to five on each criterion, multiply by the weight, and add up. Look down the table. Budget fit has the biggest weight, times three, because without enough results you learn nothing. Feedback speed, cash speed and skill fit are times two. Honest ad angle is times one. The maximum total is fifty. And notice the first row: legal and platform fit isn't scored at all. It's a gate. A vertical that fails it isn't on the sheet."
+        },
+        {
+          "v": "tip",
+          "h": "Legal fit is a gate, not a score",
+          "p": "Never let a high score on budget or payout make up for a failed legal check. If the vertical needs authorization you do not have, or the product is not legal in your geo, it does not go on the sheet. Put it on a \"later\" list with what would need to change.",
+          "d": {
+            "kind": "warn",
+            "text": "No authorization, no licence, or not legal in your geo: the vertical is out, whatever it scores elsewhere."
+          },
+          "say": "This rule matters. Legal fit is a gate, not a score. Never let a high score on budget or payout make up for a failed legal check. If the vertical needs authorization you don't have, or the product isn't legal in your geo, it doesn't go on the sheet. Put it on a later list, with what would need to change. As the warning says, no authorization, no licence, or not legal in your geo, and the vertical is out, whatever it scores."
+        },
+        {
+          "v": "big",
+          "h": "Worked example: Tobi in Lagos, $300",
+          "p": "Tobi is a fictional beginner in Lagos. He has $300 spare, makes decent phone videos, speaks English and Pidgin, has no ad authorization for financial or gambling ads and can wait about two weeks for money. Let us score his options.",
+          "more": "Tobi's candidate list starts with six verticals. The gate removes three at once. Trading and iGaming usually need platform authorization and an advertiser licensed for Nigeria, and he has no authorization yet. Dating is restricted on his traffic source and he has no approved advertiser. Loans pass the legal gate only for registered lenders, and the offers his network has for Nigeria are lenders he cannot verify on the current official list, so he leaves them out too. That leaves three: COD e-commerce (non-health physical products), app installs and registrations, and an honest sweepstakes SOI offer.",
+          "d": {
+            "b": "Tobi: $300, Lagos, video, low risk",
+            "s": "Example learner, fictional"
+          },
+          "say": "Let's work through an example. Tobi is a fictional beginner in Lagos. He has three hundred dollars spare, makes decent phone videos, speaks English and Pidgin, has no ad authorization for financial or gambling ads, and can wait about two weeks for money. His list starts with six verticals, and the gate removes three at once: trading, iGaming, dating, and the loan offers he can't verify. That leaves C O D e-commerce, cash on delivery, app installs and registrations, and an honest sweepstakes offer."
+        },
+        {
+          "v": "table",
+          "h": "Tobi's scores",
+          "p": "Here are Tobi's scores after the gate, using the weights from the sheet. Scores are his honest judgement, not facts, and your scores for the same verticals could be different. That is the point: the sheet is about you.",
+          "more": "How to read the \"Others\" column: feedback speed × 2, cash speed × 2, skill fit × 2, honest angle × 1. App registrations: 5×2 + 4×2 + 3×2 + 4×1 = 28. COD: 4×2 + 3×2 + 5×2 + 4×1 = 28. Sweeps: 5×2 + 4×2 + 2×2 + 3×1 = 25. Apps edge ahead on budget fit and speed. COD wins on skill fit, because Tobi's phone videos show physical products well. The totals are close, which is normal. When totals are within a few points, choose the one where your strongest skill is used, because skill is the hardest thing to buy.",
+          "d": {
+            "cols": [
+              "Vertical",
+              "Budget ×3",
+              "Others",
+              "Total /50"
+            ],
+            "rows": [
+              [
+                "COD e-commerce",
+                "4 → 12",
+                "4,3,5,4 → 28",
+                "40"
+              ],
+              [
+                "App registrations",
+                "5 → 15",
+                "5,4,3,4 → 28",
+                "43"
+              ],
+              [
+                "Sweeps SOI",
+                "5 → 15",
+                "5,4,2,3 → 25",
+                "40"
+              ],
+              [
+                "Trading",
+                "Gate: fail",
+                "n/a",
+                "Later"
+              ]
+            ]
+          },
+          "say": "Here are Tobi's scores after the gate. Look at the table. C O D e-commerce scores twelve on budget and twenty eight on the others, for forty. App registrations score fifteen and twenty eight, for forty three. Sweepstakes score fifteen and twenty five, for forty. Trading failed the gate, so it goes on the later list. These are his honest judgements, not facts, and your scores could be different. That's the point. The sheet is about you."
+        },
+        {
+          "v": "bars",
+          "h": "Example: Tobi's totals",
+          "p": "The totals side by side. Apps lead by three points, COD and sweepstakes tie. Trading is not on the chart because it failed the gate. Bar length is the score out of 50; illustrative example only.",
+          "d": [
+            [
+              "App registrations",
+              86,
+              "43"
+            ],
+            [
+              "COD e-commerce",
+              80,
+              "40"
+            ],
+            [
+              "Sweeps SOI",
+              80,
+              "40"
+            ]
+          ],
+          "say": "Here are the totals side by side. Bar length is the score out of fifty. App registrations lead with forty three. C O D e-commerce and sweepstakes tie at forty. Trading isn't on the chart, because it failed the gate. The totals are close, which is normal. When totals are within a few points, choose the one that uses your strongest skill, because skill is the hardest thing to buy. This is an illustrative example only."
+        },
+        {
+          "v": "big",
+          "h": "The decision: COD e-commerce, Nigeria",
+          "p": "Tobi chooses COD e-commerce in Nigeria, with app registrations as his backup. The scores were close, and COD uses his video skill fully. He writes down why, and what would make him switch, before spending a dollar.",
+          "more": "His written reason (example): \"COD physical products. No health claims. Short phone videos showing the product working. Payout on approved order, about $6 to $8 on the offers my manager suggested, approval reported around 40 to 50%. Results within a day of launch. Paid after delivery, about two weeks. I can make honest ads: show the product, the price and cash on delivery.\" He also writes when he would switch: if after 30 days and his full test budget he cannot get the effective cost per approved order near break-even on two different products, he moves to app registrations. Not before.",
+          "d": {
+            "b": "COD e-commerce, NG",
+            "s": "Backup: app registrations"
+          },
+          "say": "So Tobi chooses C O D e-commerce in Nigeria, with app registrations as his backup. The scores were close, and C O D uses his video skill fully: short phone videos showing a physical product working, with no health claims. He writes down why, and what would make him switch, before spending a dollar. His switch rule: only after thirty days and his full test budget, on two different products. Not before."
+        },
+        {
+          "v": "eq",
+          "h": "Splitting the $300",
+          "p": "Tobi does not put all $300 into ads. He keeps a reserve for a second test, tools and surprises such as a failed payment. The split below is his choice, not a rule. Example figures only.",
+          "d": [
+            "$300 spare",
+            "−",
+            "$60 reserve",
+            "=",
+            "$240 test budget"
+          ],
+          "say": "Tobi doesn't put all three hundred dollars into ads. Read the equation: three hundred dollars spare, minus a sixty dollar reserve, equals a two hundred and forty dollar test budget. The reserve covers a second test, tools, and surprises like a failed payment. This split is his choice, not a rule. These are example figures only."
+        },
+        {
+          "v": "lab",
+          "h": "Try it: Tobi's daily budget",
+          "p": "Tobi wants 24 approved orders as his first data set. He budgets $10 per approved order for this learning phase and plans 8 days of spend. Work out the daily budget, then check whether it fits his $240 test budget.",
+          "more": "24 orders × $10 = $240 total, spread over 8 days = $30 a day. That uses exactly his test budget, which is why he kept the $60 reserve separate. Why $10 when the payout is $7? It is a planning cost, not a target: first tests usually cost more per result than later ones. His real target, the one his rules use, is $5.60: the $7 payout minus a 20% margin. If his cost per approved order stays near $10, his rules will stop those ad sets long before the $240 is gone.",
+          "d": {
+            "kind": "budget",
+            "task": "What daily budget does 24 approved orders at a $10 planning cost each over 8 days need?",
+            "preset": {
+              "goal": 24,
+              "target_cpa": 10,
+              "days": 8
+            },
+            "answer": {
+              "field": "daily_budget",
+              "value": 30,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Now it's your turn. This is a lab. Tobi wants twenty four approved orders as his first data set. He budgets ten dollars per approved order as a planning cost for this learning phase, and plans eight days of spend. Your task is to work out the daily budget, then check whether it fits his two hundred and forty dollar test budget. Pause and try it, then check your answer."
+        },
+        {
+          "v": "screen",
+          "h": "The decision card",
+          "p": "This is Tobi's one-page decision card, as an example. Every field is filled before launch. The highlighted field, the kill rules, is the one beginners most often leave empty, and it is the one that saves the most money.",
+          "d": {
+            "kind": "browser",
+            "url": "voosquare.example/school/decision-card",
+            "title": "My first vertical (example)",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Vertical and geo",
+                "value": "COD e-commerce, Nigeria"
+              },
+              {
+                "type": "field",
+                "label": "Offer",
+                "value": "#2231 phone accessories, $7 per approved"
+              },
+              {
+                "type": "field",
+                "label": "Test budget",
+                "value": "$240 over 8 days, $60 reserve"
+              },
+              {
+                "type": "field",
+                "label": "Kill rules (target $5.60)",
+                "value": "Kill at $11.20 spend with 0 approved. From $16.80 spend, kill if CPA is over $7"
+              },
+              {
+                "type": "field",
+                "label": "Scale rule",
+                "value": "+20% at most every 48 h at CPA ≤ $4.48 with 3+ approved"
+              },
+              {
+                "type": "field",
+                "label": "Review date",
+                "value": "Day 8, then every Sunday"
+              },
+              {
+                "type": "field",
+                "label": "Switch rule",
+                "value": "After 30 days and 2 products, move to app registrations"
+              },
+              {
+                "type": "button",
+                "label": "Save and commit"
+              }
+            ],
+            "highlight": 3
+          },
+          "more": "How Tobi got the numbers: target $5.60. Zero-conversion kill: 2 × $5.60 = $11.20. CPA kill applies from 3 × $5.60 = $16.80 of spend, at the lower of 1.5 × $5.60 = $8.40 and his $7 break-even, so $7. Scale: 0.8 × $5.60 = $4.48 with at least 3 approved orders. Starting rules from the Budget and kill rules module; COD approvals arrive a day or more late, so he judges only spend whose leads the call centre has finished checking.",
+          "say": "This is Tobi's one-page decision card, as an example. Every field is filled before launch: vertical and geo, the offer at seven dollars per approved order, the test budget, the scale rule, a review date and a switch rule. Look at the highlighted field, the kill rules, with a target of five dollars sixty. Kill at eleven dollars twenty spend with zero approved. From sixteen dollars eighty spend, kill if C P A, cost per acquisition, is over seven dollars. This is the field beginners most often leave empty, and the one that saves the most money."
+        },
+        {
+          "v": "walk",
+          "h": "Tobi's 7-day plan",
+          "p": "A first week does not start with spending. It starts with setup, reading and checking. Tap through Tobi's plan day by day. Your days can differ; what matters is that tracking and permissions are checked before money goes out.",
+          "d": {
+            "steps": [
+              {
+                "title": "Day 1: Network and offer",
+                "text": "Apply to one network, read two COD offers line by line and note geos, approval rates, caps and restrictions.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/offers?vertical=cod&geo=NG",
+                  "title": "COD offers, NG",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Offer",
+                        "Payout",
+                        "Approval"
+                      ],
+                      "rows": [
+                        [
+                          "#2210 Kitchen set",
+                          "$8",
+                          "~40%"
+                        ],
+                        [
+                          "#2231 Accessories",
+                          "$7",
+                          "~50%"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "Example figures. Approval rates are recent averages, not promises."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Day 2: Talk to the manager",
+                "text": "Send the first message with geo, source, budget and two questions. Ask for a creative and page check.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Ada · Affiliate manager",
+                  "subtitle": "online",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "Hi Ada, Tobi from Lagos. Testing #2231 on Meta, $240 over 8 days. Can you check my video and order page before launch?"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Yes, send them over. No health claims and show the real price."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Day 3: Make three videos",
+                "text": "Film three short videos of the real product: one demo, one unboxing, one problem and solution. Real price and COD stated.",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "shop.example/accessories",
+                  "page": {
+                    "h": "Fast charger and cable set",
+                    "p": "Example only. Pay on delivery. Lagos 1 to 3 days. Price shown at checkout before you confirm.",
+                    "cta": "Order, pay on delivery"
+                  }
+                }
+              },
+              {
+                "title": "Day 4: Tracking check",
+                "text": "Build the tracking link with sub IDs, place one test order with the manager's agreement and confirm it appears in the network stats.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/stats",
+                  "title": "Conversions (test)",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Time",
+                        "Sub1",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "10:42",
+                          "NG_cod_test01",
+                          "Test, approved"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "If the test does not appear, fix tracking before you spend."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Day 5: Launch",
+                "text": "Launch one campaign, three ads, $30 a day. Check policy approval of each ad. Do not touch anything for 24 hours.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/create",
+                  "title": "Create campaign",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Campaign name",
+                      "value": "NG_COD_2231_Test01"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Daily budget",
+                      "value": "$30"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Names change; check the current Ads Manager."
+                    },
+                    {
+                      "type": "button",
+                      "label": "Publish"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Day 6: Read the data",
+                "text": "Compare leads by ad, then ask the manager for approval numbers. Apply the rules only to spend whose leads have been checked: $11.20+ with 0 approved is a kill.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "tracker.example/report",
+                  "title": "Day 6 report (example)",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Ad",
+                        "Spend",
+                        "Leads",
+                        "Approved"
+                      ],
+                      "rows": [
+                        [
+                          "Demo",
+                          "$12",
+                          "9",
+                          "2"
+                        ],
+                        [
+                          "Unboxing",
+                          "$11",
+                          "3",
+                          "0"
+                        ],
+                        [
+                          "Problem",
+                          "$12",
+                          "7",
+                          "2"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "Unboxing: $11 spent, 0 approved, just under the $11.20 line. Hold one more day."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Day 7: Write the review",
+                "text": "Write what you learned in five lines: best ad, cost per approved order, approval rate, problems, next test. Keep spending to day 8 as planned.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "voosquare.example/school/review",
+                  "title": "Week 1 review",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Best ad",
+                      "value": "Demo video"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Cost per approved order",
+                      "value": "$8.75 so far, many leads still pending (example)"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Next test",
+                      "value": "Two new demo hooks"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              }
+            ]
+          },
+          "say": "Here's Tobi's seven-day plan. Tap through it day by day. Day one: apply to one network and read two C O D offers line by line. Day two: send the manager a first message, and ask for a creative and page check. Day three: film three short videos of the real product, with the real price and C O D stated. Day four: build the tracking link and confirm a test order appears. Day five: launch one campaign, three ads, thirty dollars a day, and don't touch it for twenty four hours. Day six: read the data, applying rules only to checked leads. Day seven: write a five-line review."
+        },
+        {
+          "v": "lab",
+          "h": "Try it: day 8 for the unboxing ad",
+          "p": "On day 8, its fourth day live (launch was day 5), the unboxing ad set has spent $14 and the call centre has checked all its leads: 0 approved orders. Tobi's target is $5.60 per approved order. Apply the starting rules and make the call.",
+          "more": "$14 ÷ $5.60 = 2.5 times the target, with no approved orders. That is past the 2 × target zero-conversion line of $11.20, so the rule says kill. He does not restart it; a new hook goes in as a new ad set.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $5.60. Day 8, its 4th day live: spent $14, 0 approved orders, all leads checked. Kill, hold or scale?",
+            "preset": {
+              "spend": 14,
+              "conversions": 0,
+              "target_cpa": 5.6,
+              "days": 4
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "kill"
+            }
+          },
+          "say": "Now it's your turn again. This is a lab. On day eight, its fourth day live, since launch was day five, the unboxing ad set has spent fourteen dollars, and the call centre has checked all its leads: zero approved orders. Tobi's target is five dollars sixty per approved order. Your task is to apply the starting rules and make the call: kill, hold or scale? Compare the spend with the zero-conversion line on his decision card. Pause and try it, then check your answer."
+        },
+        {
+          "v": "compare",
+          "h": "When to switch and when to stay",
+          "p": "A written switch rule protects you from two mistakes: quitting a good vertical after one bad day, and holding on to a dead one for months. Switch for structural reasons, not for feelings.",
+          "d": {
+            "a": {
+              "title": "Reasons to stay",
+              "items": [
+                "A few bad days",
+                "One ad failed",
+                "Someone else posted bigger numbers",
+                "Approval dipped once"
+              ]
+            },
+            "b": {
+              "title": "Reasons to switch",
+              "items": [
+                "Switch rule met after full test",
+                "Law or platform policy changed",
+                "Offers paused with no replacement",
+                "Network not paying"
+              ]
+            }
+          },
+          "say": "A written switch rule protects you from two mistakes: quitting a good vertical after one bad day, and holding on to a dead one for months. Compare the columns. Reasons to stay: a few bad days, one ad failed, someone else posted bigger numbers, approval dipped once. Reasons to switch: your switch rule was met after a full test, law or platform policy changed, offers were paused with no replacement, or the network isn't paying. Switch for structural reasons, not for feelings."
+        },
+        {
+          "v": "cards",
+          "h": "Common decision mistakes, and the fix",
+          "p": "The decision card exists to stop these. Each mistake feels sensible on a bad day. Writing the rule before launch is what makes the right choice easy when it matters.",
+          "d": [
+            "Deciding in your head|write the card before spending",
+            "No kill rule|2 × target with 0 conversions",
+            "Using the planning cost as the target|rules use payout minus margin",
+            "Judging leads not yet checked|wait for the call centre count",
+            "Switching after a bad week|follow the written switch rule"
+          ],
+          "say": "The decision card exists to stop these mistakes. Look at the cards. Deciding in your head: write the card before spending. No kill rule: kill at two times target with zero conversions. Using the planning cost as the target: your rules use payout minus margin. Judging leads not yet checked: wait for the call centre count. Switching after a bad week: follow the written switch rule. Each mistake feels sensible on a bad day."
+        },
+        {
+          "v": "check",
+          "h": "Your commitment rules",
+          "p": "Copy these into your decision card. They turn a choice into a habit. Thirty days is long enough to see a pattern and short enough that a wrong choice does not cost you a year.",
+          "d": [
+            "Stay with this vertical for 30 days",
+            "Spend only from the test budget",
+            "Log every day's numbers",
+            "Follow kill rules without arguing",
+            "Review every Sunday in writing"
+          ],
+          "say": "Copy these commitment rules into your decision card. Stay with this vertical for thirty days. Spend only from the test budget. Log every day's numbers. Follow kill rules without arguing. And review every Sunday, in writing. They turn a choice into a habit. Thirty days is long enough to see a pattern, and short enough that a wrong choice doesn't cost you a year."
+        },
+        {
+          "v": "tip",
+          "h": "Regulated verticals stay on the later list",
+          "p": "If your top score is trading, iGaming, dating or a lender, check the gate again before you write the card. Ads usually need platform authorization and the advertiser needs a licence in your geo, and local law must allow it. If any answer is no, pick the next vertical.",
+          "d": {
+            "kind": "warn",
+            "text": "The gate comes before the score, every time you revisit the decision."
+          },
+          "say": "One more check. If your top score is trading, iGaming, dating or a lender, check the gate again before you write the card. Ads usually need platform authorization, the advertiser needs a licence in your geo, and local law must allow it. If any answer is no, pick the next vertical. As the warning says, the gate comes before the score, every time you revisit the decision."
+        },
+        {
+          "v": "big",
+          "h": "Your turn: make the decision this week",
+          "p": "Take your shortlist from lesson 2. Run each vertical through the gate, then the scoring sheet. Pick the top one, write your decision card and your 7-day plan. Then begin day 1. The Traffic 101 module teaches traffic sources in depth.",
+          "d": {
+            "b": "Shortlist, gate, score, write, start",
+            "s": "One decision, made properly"
+          },
+          "say": "Now it's your turn to decide, this week. Look at the screen: shortlist, gate, score, write, start. Take your shortlist from the fit lesson. Run each vertical through the gate, then the scoring sheet. Pick the top one, and write your decision card and your seven-day plan. Then begin day one. The Traffic 101 module teaches traffic sources in depth."
+        }
+      ],
+      "takeaways": [
+        "Legal and platform fit is a gate. Everything else is scored and weighted.",
+        "When totals are close, pick the vertical that uses your strongest skill.",
+        "Split your money into a test budget and a reserve, and set the daily budget from goal × target CPA ÷ days.",
+        "A first week is mostly setup: offer, manager, creatives and a tracking test before any spend."
+      ],
+      "action": "Fill in your scoring sheet for your two or three shortlisted verticals, choose one, and write your decision card with a kill rule, review date and switch rule.",
+      "glossary": [
+        {
+          "term": "Scoring sheet",
+          "def": "A table where you rate candidate verticals on weighted criteria to make a written, comparable decision."
+        },
+        {
+          "term": "Gate criterion",
+          "def": "A pass or fail check, such as legal and platform fit, that removes an option no matter how well it scores elsewhere."
+        },
+        {
+          "term": "Decision card",
+          "def": "A one-page record of your chosen vertical, offer, budget, kill rule, review date and switch rule."
+        },
+        {
+          "term": "Switch rule",
+          "def": "A condition written in advance that tells you when to change vertical, so the decision is not made on emotion."
+        },
+        {
+          "term": "Reserve",
+          "def": "Money set aside from your budget for a second test, tools or surprises, not spent in the first test."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A vertical scores 46/50 on your sheet, but you have no ad authorization it requires. What do you do?",
+          "options": [
+            "Run it anyway because the score is high",
+            "Remove it from the sheet and put it on a \"later\" list",
+            "Lower its score a little",
+            "Run it on a small budget"
+          ],
+          "answer": 1,
+          "why": "Legal and platform fit is a gate. A failed gate removes the vertical whatever it scores elsewhere."
+        },
+        {
+          "q": "You want 30 approved orders at a $8 target CPA over 10 days. What daily budget does that need?",
+          "options": [
+            "$30",
+            "$80",
+            "$240",
+            "$24"
+          ],
+          "answer": 3,
+          "why": "30 × $8 = $240 total, ÷ 10 days = $24 a day."
+        },
+        {
+          "q": "Two verticals finish within two points of each other. What is the sensible tie-breaker?",
+          "options": [
+            "The higher headline payout",
+            "The one a friend is running",
+            "The one that uses your strongest skill",
+            "Flip a coin each week"
+          ],
+          "answer": 2,
+          "why": "Skill is the hardest input to buy. Using your strongest skill usually produces better ads and faster learning."
+        },
+        {
+          "q": "Which is a good reason to switch vertical?",
+          "options": [
+            "Your pre-written switch rule was met after the full test",
+            "You had two bad days",
+            "Someone posted bigger results",
+            "One ad was rejected"
+          ],
+          "answer": 0,
+          "why": "Switch for structural reasons written in advance, not short-term noise or envy."
+        },
+        {
+          "q": "What should happen on the days before your first spend?",
+          "options": [
+            "Nothing; just launch",
+            "Buy followers",
+            "Read offers, message the manager, make creatives and test tracking",
+            "Apply to ten networks at once"
+          ],
+          "answer": 2,
+          "why": "Setup and a tracking test before spend prevent paying for clicks you cannot measure or offers you cannot run."
+        }
+      ],
+      "say_intro": "In this lesson you'll make your first-vertical decision: score your shortlist on a simple sheet, with legal fit as a gate, then write a decision card and a seven-day plan. A written decision is much harder to abandon on a bad day.",
+      "say_outro": "You've scored verticals behind a legal gate, followed Tobi's full decision, split a budget, and written a decision card with kill, scale and switch rules. Your task: fill in your scoring sheet for your two or three shortlisted verticals, choose one, and write your decision card with a kill rule, review date and switch rule. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "Your spare budget is $250. You are choosing between a trading offer (about $70 per FTD, needs ad authorization you do not have) and an e-commerce offer (about $4 per sale). What is the sound first choice?",
+      "options": [
+        "Trading, because one FTD pays more than many sales",
+        "E-commerce: it passes the legal gate and $250 buys enough results to learn",
+        "Both at once, $125 each",
+        "Trading, using a friend's authorised ad account"
+      ],
+      "answer": 1,
+      "why": "Trading fails the gate (no authorization) and $250 buys under 4 FTDs. E-commerce gives about 60 results, enough to learn."
+    },
+    {
+      "q": "A COD offer pays $9 per approved order. Approval is 35% and the offer also requires delivery, which runs at 80%. Your leads cost $3. What happens?",
+      "options": [
+        "You lose about $0.48 per lead",
+        "You profit $6 per lead",
+        "You break even exactly",
+        "You profit $0.15 per lead"
+      ],
+      "answer": 0,
+      "why": "$9 × 35% × 80% = $2.52 per lead. At $3 per lead you lose about $0.48 on each one."
+    },
+    {
+      "q": "Offer A: $90 per FTD, about 50% qualify, paid monthly after a 30 day hold. Offer B: $60 per FTD, about 85% qualify, paid weekly. With a small budget, which is better and why?",
+      "options": [
+        "A, because $90 is higher",
+        "They are identical",
+        "B: higher effective payout ($51 vs $45) and faster cash",
+        "A, because monthly payment is safer"
+      ],
+      "answer": 2,
+      "why": "A = $90 × 50% = $45. B = $60 × 85% = $51, and weekly payment recycles a small budget faster."
+    },
+    {
+      "q": "An offer pays $50 per FTD. 20% of registrations deposit. You want a 30% margin. Your registrations currently cost $8. What should you conclude?",
+      "options": [
+        "You are profitable with room to spare",
+        "You are above your max of $7 per registration, so you are giving up margin",
+        "You need a 50% margin instead",
+        "Nothing until you have 100 FTDs"
+      ],
+      "answer": 1,
+      "why": "Break-even is $50 × 20% = $10; with 30% margin the max is $7. At $8 you are still under break-even but below your target margin."
+    },
+    {
+      "q": "A rep tells you a sportsbook offer works great in Ghana and you \"do not need to worry about authorization, just use a cloaker\". What is the right response?",
+      "options": [
+        "Test it with a small budget",
+        "Use a different traffic source that does not check",
+        "Ask for a higher payout to cover the risk",
+        "Refuse; check the operator licence, platform authorization and local law yourself"
+      ],
+      "answer": 3,
+      "why": "Gambling ads need a licensed operator, platform permission and compliance with local law. Cloaking is circumvention and is never acceptable."
+    },
+    {
+      "q": "Payout $7 per approved COD order, 20% margin, so target $5.60. An ad set has spent $12 and the call centre has checked all its leads: 0 approved. What do the starting rules say?",
+      "options": [
+        "Hold until it reaches $16.80",
+        "Kill: spend is past 2 × target ($11.20) with 0 conversions",
+        "Scale, because leads are coming in",
+        "Lower the target to $4"
+      ],
+      "answer": 1,
+      "why": "2 × $5.60 = $11.20. At $12 with 0 approved orders and no leads still pending, the zero-conversion kill applies. Leads that never get approved do not count."
+    },
+    {
+      "q": "After 4 weeks you send about 240 approved orders a month at 52% approval. You ask for +$0.75 per order. What is that worth monthly, and how should you ask?",
+      "options": [
+        "$75; threaten to leave",
+        "$180; lead with your volume and approval data and offer more volume",
+        "$240; ask on day one",
+        "$0.75; it is not worth asking"
+      ],
+      "answer": 1,
+      "why": "240 × $0.75 = $180 a month. Managers respond to proven quality, so lead with data and offer something in return."
+    },
+    {
+      "q": "An offer page lists: payout $500 per registration, all countries, any traffic, \"100% approval\", minimum withdrawal $5,000, no terms. How many red flags is that?",
+      "options": [
+        "None; it is generous",
+        "One: the high payout",
+        "Two",
+        "Several; walk away"
+      ],
+      "answer": 3,
+      "why": "Unrealistic payout, no geos, anything allowed, guaranteed approval, a huge withdrawal minimum and no terms are each red flags. Together they point to a scam."
+    },
+    {
+      "q": "Your scoring sheet totals: apps 41, COD 39, sweepstakes 34. Your strongest skill is product videos, which suits COD. What does the lesson suggest?",
+      "options": [
+        "Apps, because 41 is the top score",
+        "Sweepstakes, because leads are cheapest",
+        "COD is reasonable: the scores are close and it uses your strongest skill",
+        "Run all three to see"
+      ],
+      "answer": 2,
+      "why": "When totals are within a few points, skill fit is the best tie-breaker. Running all three splits a small budget too thin."
+    },
+    {
+      "q": "You want 20 approved results at a $12 target CPA over 6 days, and you have $300 spare. What daily budget is needed, and what remains for reserve?",
+      "options": [
+        "$40 a day, $60 reserve",
+        "$50 a day, nothing left",
+        "$20 a day, $180 reserve",
+        "$60 a day, $0 reserve"
+      ],
+      "answer": 0,
+      "why": "20 × $12 = $240, ÷ 6 days = $40 a day. $300 − $240 leaves $60 in reserve."
+    }
+  ]
+}

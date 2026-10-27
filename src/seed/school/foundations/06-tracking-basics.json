@@ -1,0 +1,2382 @@
+{
+  "school": "foundations",
+  "order": 6,
+  "slug": "tracking-basics",
+  "title": "Tracking basics",
+  "summary": "How a click becomes a number you can trust: UTMs, click IDs, pixels, the Conversions API, postbacks and attribution windows. By the end you can build a simple tracking setup and explain why your ad platform and your network never show exactly the same numbers.",
+  "lessons": [
+    {
+      "slug": "why-tracking-matters",
+      "title": "Why tracking decides everything",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can explain what tracking is in one sentence.",
+        "By the end you can list the steps between an ad view and a deposit.",
+        "By the end you can name the three places your numbers come from."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Tracking is how you see",
+          "p": "When you run ads, money leaves your account every hour. Tracking is the system that tells you which ad, which audience and which creative brought back a real result. Without it you are guessing, and guessing with a budget gets expensive very quickly.",
+          "d": {
+            "b": "No tracking, no decisions",
+            "s": "You cannot fix what you cannot see"
+          },
+          "say": "When you run ads, money leaves your account every hour. Tracking is the system that tells you which ad, which audience and which creative brought back a real result. Without it, you're guessing, and guessing with a budget gets expensive very quickly. No tracking, no decisions. You can't fix what you can't see."
+        },
+        {
+          "v": "flow",
+          "h": "The journey of one user",
+          "p": "Every conversion is a chain of small events. A person sees your ad, clicks it, lands on a page, signs up with the advertiser and maybe deposits days later. Tracking means recording each link in that chain and tying it back to the ad that started it.",
+          "d": [
+            "Sees ad",
+            "Clicks",
+            "Lands on page",
+            "Signs up",
+            "Deposits"
+          ],
+          "more": "Notice that the first three steps happen on the ad platform and your page, while the last two happen on the advertiser's website. That split is the whole reason tracking feels hard at first. You need a way to carry a label from your ad all the way to the advertiser, then get the result back. The rest of this module is about building that bridge.",
+          "say": "Every conversion is a chain of small events. Follow the flow on screen. A person sees your ad, clicks it, lands on a page, signs up with the advertiser, and maybe deposits days later. Notice the split. The first three steps happen on the ad platform and your page. The last two happen on the advertiser's website. That's why tracking feels hard at first. You need to carry a label from your ad to the advertiser, then get the result back. This module builds that bridge."
+        },
+        {
+          "v": "cards",
+          "h": "Three questions tracking answers",
+          "p": "A good setup answers three questions for every conversion. If you cannot answer all three for a sale or a deposit, your tracking has a gap somewhere and your decisions will be weaker.",
+          "d": [
+            "Where|which source, campaign, ad set and ad",
+            "What|which action happened: sign-up, FTD, deposit",
+            "How much|what that action paid you"
+          ],
+          "say": "A good setup answers three questions for every conversion. Look at the cards. Where: which source, campaign, ad set and ad. What: which action happened, a sign-up, an F T D, meaning a first time deposit, or another deposit. And how much: what that action paid you. If you can't answer all three for a sale or a deposit, your tracking has a gap, and your decisions will be weaker."
+        },
+        {
+          "v": "compare",
+          "h": "Guessing versus tracking",
+          "p": "Two buyers can spend the same money and learn completely different things. The difference is not talent. It is whether they set up tracking before the first dollar went out.",
+          "d": {
+            "a": {
+              "title": "Guessing",
+              "items": [
+                "Scale the ad with most clicks",
+                "Blame the offer when it fails",
+                "Cannot repeat a good day",
+                "Argue with the network over numbers"
+              ]
+            },
+            "b": {
+              "title": "Tracking",
+              "items": [
+                "Scale the ad with most deposits",
+                "See exactly where people drop",
+                "Copy what worked on purpose",
+                "Match numbers to the click"
+              ]
+            }
+          },
+          "say": "Two buyers can spend the same money and learn completely different things. On the left, guessing: scale the ad with the most clicks, blame the offer when it fails, can't repeat a good day, and argue with the network over numbers. On the right, tracking: scale the ad with the most deposits, see exactly where people drop, copy what worked on purpose, and match numbers to the click. The difference isn't talent. It's whether tracking was set up before the first dollar went out."
+        },
+        {
+          "v": "funnel",
+          "h": "A funnel in numbers",
+          "p": "Example: an ad sends 1,000 clicks. Only 820 load the landing page, 90 register and 9 make a first deposit. Each drop tells you something different, and you only see the drops if each step is recorded.",
+          "d": [
+            [
+              "Clicks",
+              1000
+            ],
+            [
+              "Page views",
+              820
+            ],
+            [
+              "Registrations",
+              90
+            ],
+            [
+              "First deposits",
+              9
+            ]
+          ],
+          "more": "Example figures. The gap between 1,000 clicks and 820 page views is common: some people tap by accident, some leave before a slow page loads, and some clicks come from bots. The gap from 820 to 90 is about your page and the offer. The gap from 90 to 9 is about lead quality and the advertiser's sign-up and deposit process. Three gaps, three different fixes.",
+          "say": "Here's a funnel in numbers. These are example figures. One thousand clicks. Only eight hundred and twenty load the landing page. Ninety register, and nine make a first deposit. Each drop tells you something different. Clicks to page views is about accidental taps, slow pages and bots. Page views to registrations is about your page and the offer. Registrations to deposits is about lead quality and the advertiser's process. Three gaps, three different fixes. And you only see them if each step is recorded."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: two ad sets",
+          "p": "Example: two ad sets each spent $50. The ad platform says ad set A is the winner because it has more clicks. The network report, matched by click, tells a different story.",
+          "d": {
+            "cols": [
+              "Ad set",
+              "Spend",
+              "Clicks",
+              "FTDs"
+            ],
+            "rows": [
+              [
+                "A",
+                "$50",
+                "400",
+                "1"
+              ],
+              [
+                "B",
+                "$50",
+                "220",
+                "4"
+              ]
+            ]
+          },
+          "more": "Example. Cost per FTD is spend divided by FTDs. Ad set A: $50 ÷ 1 = $50 per FTD. Ad set B: $50 ÷ 4 = $12.50 per FTD. A buyer who only reads the ad platform would raise the budget on A and slowly lose money. A buyer with click-level tracking raises B and pauses A. Same spend, opposite decision.",
+          "say": "Here's a worked example. Two ad sets each spent fifty dollars. The ad platform says ad set A is the winner, because it has four hundred clicks against two hundred and twenty. But look at the F T D column, from the network report matched by click. A has one F T D. B has four. So A costs fifty dollars per F T D, and B costs twelve dollars fifty. A buyer reading only the platform would raise A and slowly lose money. With click-level tracking, you raise B and pause A. Same spend, opposite decision."
+        },
+        {
+          "v": "stat",
+          "h": "The number that changes the decision",
+          "p": "Example: ad set B brings first deposits at $12.50 each, four times cheaper than ad set A. You only see this number when FTDs from the network are matched to the ad set that produced them.",
+          "d": {
+            "n": 12.5,
+            "pre": "$",
+            "suf": "",
+            "dec": 2,
+            "label": "cost per FTD for ad set B",
+            "note": "Example. Use your own numbers."
+          },
+          "say": "This is the number that changes the decision. Twelve dollars and fifty cents, the cost per F T D for ad set B. That's four times cheaper than ad set A. And you only see this number when F T Ds from the network are matched to the ad set that produced them. It's an example, so use your own numbers."
+        },
+        {
+          "v": "cards",
+          "h": "Where your numbers come from",
+          "p": "You will read numbers from three places. Each sees part of the journey. Learning which one to trust for which question is a core skill for a media buyer.",
+          "d": [
+            "Ad platform|spend, impressions, clicks, its own conversion count",
+            "Network or advertiser|registrations, FTDs, payouts",
+            "Your tracker or sheet|joins them together by click"
+          ],
+          "say": "You'll read numbers from three places, and each sees part of the journey. Look at the cards. The ad platform shows spend, impressions, clicks, and its own conversion count. The network or advertiser shows registrations, F T Ds and payouts. And your tracker or sheet joins them together by click. Learning which one to trust for which question is a core skill for a media buyer."
+        },
+        {
+          "v": "big",
+          "h": "Money is counted on the network side",
+          "p": "The ad platform reports what it believes happened. The network decides what you are actually paid. When the two disagree, the network report is the one that pays your bills, so it is the one you reconcile against.",
+          "d": {
+            "b": "Platform guides, network pays",
+            "s": "Reconcile to the source of payment"
+          },
+          "say": "Here's the key idea. The ad platform reports what it believes happened. The network decides what you're actually paid. When the two disagree, the network report is the one that pays your bills, so that's the one you reconcile against. Platform guides, network pays."
+        },
+        {
+          "v": "map",
+          "h": "The tracking system on one page",
+          "p": "This is the whole system you will build. The click leaves your ad with labels attached, passes your page and reaches the advertiser. The network records the result against your click ID and reports it back. Your sheet joins spend and results by ad set.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Meta ad",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Your lander",
+                "kind": "page"
+              },
+              {
+                "id": "offer",
+                "label": "Advertiser sign-up",
+                "kind": "offer"
+              },
+              {
+                "id": "net",
+                "label": "Network report",
+                "kind": "data"
+              },
+              {
+                "id": "pb",
+                "label": "Postback",
+                "kind": "data"
+              },
+              {
+                "id": "sheet",
+                "label": "Your daily sheet",
+                "kind": "tool"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "lp",
+                "click + UTMs"
+              ],
+              [
+                "lp",
+                "offer",
+                "click ID in sub1"
+              ],
+              [
+                "offer",
+                "net",
+                "sign-up, FTD"
+              ],
+              [
+                "net",
+                "pb",
+                "fires"
+              ],
+              [
+                "pb",
+                "sheet",
+                "FTD by ad set"
+              ],
+              [
+                "ad",
+                "sheet",
+                "spend"
+              ]
+            ]
+          },
+          "say": "This map is the whole system you'll build. Follow the arrows. The click leaves your Meta ad with labels attached, called U T Ms, and reaches your lander. From there, a click I D travels in a sub ID slot to the advertiser's sign-up. The sign-up and F T D are recorded in the network report, which fires a postback. The postback sends F T Ds by ad set into your daily sheet. And spend comes straight from the ad into the same sheet, where spend and results are joined."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: find your sub ID report",
+          "p": "Most networks have a report you can group by sub ID. Open your network dashboard, find the statistics or reports area and group by sub1 to sub3. Every network names this differently, so ask your manager if you cannot find it.",
+          "d": {
+            "kind": "browser",
+            "url": "network.example/stats",
+            "title": "Statistics",
+            "blocks": [
+              {
+                "type": "select",
+                "label": "Date range",
+                "value": "Yesterday"
+              },
+              {
+                "type": "select",
+                "label": "Group by",
+                "value": "sub3 (ad set)"
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "sub3",
+                  "Clicks",
+                  "Regs",
+                  "FTDs"
+                ],
+                "rows": [
+                  [
+                    "hook1",
+                    "310",
+                    "22",
+                    "3"
+                  ],
+                  [
+                    "hook2",
+                    "290",
+                    "18",
+                    "0"
+                  ],
+                  [
+                    "hook3",
+                    "300",
+                    "30",
+                    "5"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Example. Menu names differ by network."
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "Most networks have a report you can group by sub ID. Look at this example screen. The date range is yesterday, and the highlighted menu groups by sub three, which holds the ad set. Now each row is a hook. Hook one has three F T Ds, hook two has none, and hook three has five. Open your network dashboard, find the statistics or reports area, and group by sub one to sub three. Every network names this differently, so ask your manager if you can't find it."
+        },
+        {
+          "v": "check",
+          "h": "What you must see before launch",
+          "p": "Before spending on any campaign, make sure you can see these numbers broken down by ad set and, ideally, by ad. If one is missing, fix it first.",
+          "d": [
+            "Spend per ad set",
+            "Clicks per ad set",
+            "Registrations per ad set",
+            "FTDs per ad set",
+            "Payout per FTD"
+          ],
+          "say": "Before you spend on any campaign, make sure you can see these numbers broken down by ad set, and ideally by ad. Spend per ad set. Clicks per ad set. Registrations per ad set. F T Ds per ad set. And payout per F T D. If one is missing, fix it first."
+        },
+        {
+          "v": "tip",
+          "h": "Rules need tracked numbers",
+          "p": "The Budget and kill rules module gives exact starting rules, such as kill an ad set at spend of 2 × target CPA with 0 network-confirmed FTDs. You can only apply a rule like that if each FTD is matched to the ad set that produced it.",
+          "d": {
+            "kind": "example",
+            "text": "Example: target CPA $25. Ad set A spent $50 and the network shows 0 FTDs for its sub ID. Starting rule: kill. Without sub IDs you could not tell which ad set had 0."
+          },
+          "say": "The Budget and kill rules module gives exact starting rules, such as: kill an ad set at spend of two times target C P A, cost per acquisition, with zero network-confirmed F T Ds. You can only apply that if each F T D is matched to its ad set. Here's the example. Target C P A twenty five dollars. Ad set A spent fifty, and the network shows zero F T Ds for its sub ID. Starting rule: kill. Without sub IDs, you couldn't tell which ad set had zero."
+        },
+        {
+          "v": "cards",
+          "h": "Common tracking mistakes",
+          "p": "These four mistakes cost beginners the most money in their first month. Each one has a simple fix that takes minutes before launch, and each fix is taught in the lessons that follow.",
+          "d": [
+            "Deciding on clicks|decide on network FTDs instead",
+            "Launching untested|send one test click first",
+            "One link for every ad set|fill sub IDs per ad set",
+            "Trusting one report|reconcile platform and network daily"
+          ],
+          "say": "These four mistakes cost beginners the most money in their first month. Deciding on clicks: decide on network F T Ds instead. Launching untested: send one test click first. One link for every ad set: fill sub IDs per ad set. And trusting one report: reconcile platform and network daily. Each fix takes minutes before launch, and each one is taught in the lessons that follow."
+        },
+        {
+          "v": "tip",
+          "h": "A test without tracking",
+          "p": "Running a test without tracking is like taking an exam and never getting the results back. You pay the full price and learn almost nothing you can use.",
+          "d": {
+            "kind": "warn",
+            "text": "Do not launch until a test click shows up in both your ad platform and your network report."
+          },
+          "say": "Running a test without tracking is like taking an exam and never getting the results back. You pay the full price and learn almost nothing you can use. So here's the warning on screen: don't launch until a test click shows up in both your ad platform and your network report."
+        },
+        {
+          "v": "flow",
+          "h": "What you will build in this module",
+          "p": "Each lesson adds one piece of the chain. By lesson 5 you will have a minimum setup that a beginner can run with a free spreadsheet and the tools your network already gives you. Full setup, click by click: Tracking setup lab module.",
+          "d": [
+            "UTMs",
+            "Click IDs",
+            "Pixel and CAPI",
+            "Postbacks",
+            "Daily report"
+          ],
+          "say": "Here's what you'll build in this module, one piece per lesson. Follow the flow. U T Ms. Click I Ds. The pixel and C A P I, the Conversions A P I. Postbacks. And a daily report. By lesson five, you'll have a minimum setup a beginner can run with a free spreadsheet and the tools your network already gives you. For the full setup, click by click, see the Tracking setup lab module."
+        }
+      ],
+      "takeaways": [
+        "Tracking ties every result back to the ad that caused it.",
+        "Clicks are not results. Decide on registrations and deposits.",
+        "The network report is the money report. Reconcile against it."
+      ],
+      "action": "Open your network dashboard and find where it shows conversions by sub ID or click ID. Write down the name of that report.",
+      "glossary": [
+        {
+          "term": "Tracking",
+          "def": "Recording each step a user takes after seeing your ad, and linking it back to the ad that started it."
+        },
+        {
+          "term": "Conversion",
+          "def": "An action you care about, such as a registration or a first deposit."
+        },
+        {
+          "term": "FTD",
+          "def": "First-time deposit. The first time a referred user puts money into the advertiser's platform."
+        },
+        {
+          "term": "Reconcile",
+          "def": "Compare two sets of numbers, explain the differences and agree on the correct figure."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the main job of tracking?",
+          "options": [
+            "Making ads cheaper",
+            "Linking each result back to the ad that caused it",
+            "Getting ads approved faster",
+            "Increasing click-through rate"
+          ],
+          "answer": 1,
+          "why": "Tracking connects results to their source so you can decide what to scale or pause. It does not change prices or approvals."
+        },
+        {
+          "q": "Ad set A: $50 spend, 1 FTD. Ad set B: $50 spend, 4 FTDs. What is B's cost per FTD?",
+          "options": [
+            "$50",
+            "$4",
+            "$12.50",
+            "$200"
+          ],
+          "answer": 2,
+          "why": "$50 ÷ 4 = $12.50. Cost per FTD is spend divided by the number of FTDs."
+        },
+        {
+          "q": "Which report decides what you are actually paid?",
+          "options": [
+            "The network or advertiser report",
+            "The ad platform report",
+            "Your landing page analytics",
+            "Your bank app"
+          ],
+          "answer": 0,
+          "why": "The network pays you based on its own records, so it is the report you reconcile against."
+        },
+        {
+          "q": "1,000 clicks became 820 page views. Which is NOT a likely reason for the gap?",
+          "options": [
+            "Accidental taps",
+            "Slow page loading",
+            "Bot clicks",
+            "The advertiser rejected the deposits"
+          ],
+          "answer": 3,
+          "why": "Deposit rejections happen much later in the funnel. The click to page view gap is about loading, accidents and bots."
+        },
+        {
+          "q": "Which ad should you scale first?",
+          "options": [
+            "The one with the most likes",
+            "The one with the cheapest clicks",
+            "The one with the most comments",
+            "The one with the lowest cost per FTD that pays out"
+          ],
+          "answer": 3,
+          "why": "Scale on results that earn money. Likes and cheap clicks can look good while returning nothing."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn what tracking is, follow one user from ad view to deposit, and meet the three places your numbers come from. Without tracking, every budget decision is a guess.",
+      "say_outro": "You've learned that tracking answers where, what and how much for every conversion, and that numbers come from the ad platform, the network and your sheet, with the network deciding what you're paid. Your task: open your network dashboard, find where it shows conversions by sub ID or click ID, and write down the name of that report. Now take the quiz."
+    },
+    {
+      "slug": "utms-and-click-ids",
+      "title": "UTMs and click IDs",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can read every part of a tracked link.",
+        "By the end you can write UTMs with a clean naming system.",
+        "By the end you can explain the difference between a UTM and a click ID."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Labels on every link",
+          "p": "A URL parameter is extra information added to the end of a link after a question mark. The page still opens normally, but the label travels with the visitor so tools can read where they came from.",
+          "d": {
+            "b": "Every click carries a label",
+            "s": "Parameters ride along at the end of the link"
+          },
+          "say": "A URL parameter is extra information added to the end of a link, after a question mark. The page still opens normally, but the label travels with the visitor, so tools can read where they came from. Every click carries a label. The parameters just ride along at the end of the link."
+        },
+        {
+          "v": "table",
+          "h": "Anatomy of a tracked link",
+          "p": "Example link: example.com/start?utm_source=facebook&utm_medium=paid. Each part has a job. Once you can read these four parts, every tracking link you meet from now on will make sense.",
+          "d": {
+            "cols": [
+              "Part",
+              "Example",
+              "Meaning"
+            ],
+            "rows": [
+              [
+                "Base URL",
+                "example.com/start",
+                "The page that opens"
+              ],
+              [
+                "?",
+                "?",
+                "Parameters start here"
+              ],
+              [
+                "Key=value",
+                "utm_source=facebook",
+                "One label"
+              ],
+              [
+                "&",
+                "&",
+                "Joins the next label"
+              ]
+            ]
+          },
+          "say": "Let's take a tracked link apart. Look at the table. It has four parts, each with a job. The base U R L is the page that opens. The question mark is where parameters start. Then comes a key and value, like source equals facebook, which is one label. And the ampersand, the and sign, joins the next label. Once you can read these four parts, every tracking link you meet will make sense."
+        },
+        {
+          "v": "table",
+          "h": "The five standard UTMs",
+          "p": "UTM parameters are a common standard first made popular by Google Analytics. Most analytics tools read them. You choose the values yourself, so consistency matters more than the exact words.",
+          "d": {
+            "cols": [
+              "Parameter",
+              "Answers",
+              "Example value"
+            ],
+            "rows": [
+              [
+                "utm_source",
+                "Which site or app",
+                "facebook"
+              ],
+              [
+                "utm_medium",
+                "What kind of traffic",
+                "paid_social"
+              ],
+              [
+                "utm_campaign",
+                "Which campaign",
+                "ke_trading_t1"
+              ],
+              [
+                "utm_content",
+                "Which ad or creative",
+                "video_hook3"
+              ],
+              [
+                "utm_term",
+                "Keyword or audience",
+                "broad_25_45"
+              ]
+            ]
+          },
+          "say": "U T M parameters are a common standard, first made popular by Google Analytics, and most analytics tools read them. There are five. Look at the table. U T M source answers which site or app, like facebook. Medium answers what kind of traffic, like paid social. Campaign answers which campaign. Content answers which ad or creative, like video hook three. And term answers keyword or audience. You choose the values yourself, so consistency matters more than the exact words."
+        },
+        {
+          "v": "tip",
+          "h": "A full example link",
+          "p": "Here is a complete tracked link for one ad. Read it left to right and you can tell the source, the campaign, the geo and the exact creative without opening Ads Manager.",
+          "d": {
+            "kind": "example",
+            "text": "example.com/start?utm_source=facebook&utm_medium=paid_social&utm_campaign=ke_trading_t1&utm_content=video_hook3"
+          },
+          "say": "Here's a complete tracked link for one ad, shown on screen. I won't read it out, but read it left to right yourself. From the labels alone, you can tell the source is facebook, the medium is paid social, the campaign is a Kenya trading test, number one, and the creative is video hook three. All that, without opening Ads Manager."
+        },
+        {
+          "v": "code",
+          "h": "The same link with dynamic placeholders",
+          "p": "Instead of typing names into every link, you can paste one link with placeholders and let the platform fill them in at the moment of the click. This is the link you would paste into the URL parameters field of an ad.",
+          "d": {
+            "lang": "url",
+            "text": "https://yourlander.example/start?utm_source=facebook&utm_medium=paid_social&utm_campaign={{campaign.name}}&utm_content={{ad.name}}&utm_term={{adset.name}}",
+            "note": "Meta placeholder names at the time of writing; check the current Ads Manager help before relying on them."
+          },
+          "say": "Typing names into every link is slow and easy to get wrong. Instead, paste one link with placeholders, the parts in double curly brackets on screen, and the platform fills them in at the moment of the click. Here, the campaign, ad and ad set names are filled automatically. This is the link you'd paste into the URL parameters field of an ad. These are Meta's placeholder names at the time of writing, so check the current Ads Manager help before relying on them."
+        },
+        {
+          "v": "check",
+          "h": "Naming rules that save you later",
+          "p": "Names you choose today become the filters you use for months. Messy names make reports useless. Pick a system now, write it down and use it on every campaign.",
+          "d": [
+            "One letter case, used every time",
+            "No spaces: use underscores",
+            "Same order every time: geo, vertical, test",
+            "Add a test number: t1, t2, t3",
+            "Keep a naming key in your sheet"
+          ],
+          "more": "Many buyers use lowercase for UTM values, because some analytics tools treat Kenya and kenya as two different sources. Campaign names in Ads Manager can use capitals, as in the First campaign module, as long as you use the same pattern every time.",
+          "say": "Names you choose today become the filters you use for months. Messy names make reports useless. So pick a system, write it down and use it everywhere. Look at the list. One letter case, used every time. No spaces, use underscores. The same order every time: geo, vertical, test. A test number, like t one, t two, t three. And a naming key in your sheet. Many buyers use lowercase for U T M values, because some tools treat Kenya with a capital K and kenya in lowercase as two different sources."
+        },
+        {
+          "v": "compare",
+          "h": "Messy versus clean naming",
+          "p": "Both columns describe the same three campaigns. Only one can be sorted, filtered and understood by a teammate, or by you, three months from now.",
+          "d": {
+            "a": {
+              "title": "Messy",
+              "items": [
+                "Kenya Test NEW",
+                "kenya-test-final2",
+                "KE trading (copy)"
+              ]
+            },
+            "b": {
+              "title": "Clean",
+              "items": [
+                "ke_trading_t1",
+                "ke_trading_t2",
+                "ke_trading_t3"
+              ]
+            }
+          },
+          "say": "Both columns describe the same three campaigns. On the left, messy: Kenya Test NEW, kenya dash test dash final two, and K E trading copy. On the right, clean: k e trading t one, t two and t three. Only the clean column can be sorted, filtered and understood by a teammate, or by you, three months from now."
+        },
+        {
+          "v": "big",
+          "h": "UTMs label the group. Click IDs label the person.",
+          "p": "A UTM says this visitor came from campaign ke_trading_t1. A click ID is a unique code for one single click. It lets you match one click to one registration and one deposit.",
+          "d": {
+            "b": "Group label vs single click",
+            "s": "You need both"
+          },
+          "say": "Here's an important difference. U T Ms label the group. Click I Ds label the person. A U T M says this visitor came from a certain campaign. A click I D is a unique code for one single click. It lets you match one click to one registration and one deposit. Group label versus single click. You need both."
+        },
+        {
+          "v": "flow",
+          "h": "How a click ID travels",
+          "p": "The click ID is created at the moment of the click and has to survive every hop. If any step drops it, the conversion arrives with no way to link it back to your ad.",
+          "d": [
+            "Click on ad",
+            "Unique ID created",
+            "ID added to the link",
+            "Advertiser saves it at sign-up",
+            "ID returns with the conversion"
+          ],
+          "more": "Two kinds of click ID exist side by side. The ad platform adds its own, such as fbclid on Meta clicks, which the platform uses for its own matching. Your tracker or the network creates a second one, often called click_id or sub ID, which you control. When you hear \"pass the click ID\", people usually mean the second one: put it in the offer link so the network can send it back to you with the conversion.",
+          "say": "The click I D is created at the moment of the click and has to survive every hop. Follow the flow. Click on the ad. A unique I D is created. The I D is added to the link. The advertiser saves it at sign-up. And the I D returns with the conversion. If any step drops it, the conversion has no way back to your ad. There are two kinds. The platform adds its own, like f b c l i d on Meta. Your tracker or network creates a second one, which you control. Pass the click I D usually means put that second one in the offer link."
+        },
+        {
+          "v": "cards",
+          "h": "Click IDs you will meet",
+          "p": "You do not need to memorise these, but you should recognise them in a URL. Names change over time and differ by platform and network, so check the current documentation.",
+          "d": [
+            "fbclid|added by Meta to ad clicks",
+            "gclid|added by Google Ads",
+            "ttclid|added by TikTok ads",
+            "click_id or sub_id|created by your tracker or network"
+          ],
+          "say": "You don't need to memorise these, but you should recognise them in a URL. Look at the cards. f b c l i d is added by Meta to ad clicks. g c l i d is added by Google Ads. t t c l i d is added by TikTok ads. And click I D or sub I D is created by your tracker or network. Names change over time and differ by platform and network, so check the current documentation."
+        },
+        {
+          "v": "eq",
+          "h": "How the offer link carries your ID",
+          "p": "Networks give you an offer link with empty slots called sub IDs. You fill one slot with your click ID. When a conversion happens, the network reports that value back.",
+          "d": [
+            "Offer link",
+            "+",
+            "Your click ID in sub1",
+            "=",
+            "Traceable conversion"
+          ],
+          "more": "Sub ID slot names vary: sub1, aff_sub, s1, subid and others. Many networks give you several slots. A simple pattern: sub1 = click ID, sub2 = campaign, sub3 = ad set, sub4 = ad. Even without a paid tracker, filling sub2 to sub4 lets you group network conversions by campaign and ad set inside the network's own report.",
+          "say": "Networks give you an offer link with empty slots called sub IDs. Look at the equation. Offer link, plus your click I D in sub one, equals a traceable conversion. When a conversion happens, the network reports that value back. Slot names vary, like sub one, aff sub, s one or subid. A simple pattern: sub one is the click I D, sub two the campaign, sub three the ad set, sub four the ad. Even without a paid tracker, filling sub two to four lets you group conversions inside the network's own report."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: reading sub IDs",
+          "p": "Example: you put the ad set name in sub3. After two days the network report, grouped by sub3, shows this. The answer to which ad set to keep is now obvious.",
+          "d": {
+            "cols": [
+              "sub3 (ad set)",
+              "Clicks",
+              "Regs",
+              "FTDs"
+            ],
+            "rows": [
+              [
+                "hook1",
+                "310",
+                "22",
+                "3"
+              ],
+              [
+                "hook2",
+                "290",
+                "18",
+                "0"
+              ],
+              [
+                "hook3",
+                "300",
+                "30",
+                "5"
+              ]
+            ]
+          },
+          "more": "Example figures. Each ad set spent about the same. hook3 has the most registrations and the most FTDs, so it gets more budget. hook2 has 18 registrations but zero deposits, which can mean the angle attracts curious people who never intended to deposit. Without sub3 you would only see 70 registrations and 8 FTDs in total, with no idea where they came from.",
+          "say": "Here's a worked example. You put the ad set name in sub three, and after two days the network report, grouped by sub three, shows this. Hook three has the most registrations, thirty, and the most F T Ds, first time deposits, five. So it gets more budget. Hook two has eighteen registrations but zero deposits, which can mean the angle attracts curious people who never intended to deposit. Without sub three, you'd only see seventy registrations and eight F T Ds in total, with no idea where they came from."
+        },
+        {
+          "v": "tip",
+          "h": "Let the platform fill names in",
+          "p": "Many ad platforms can insert values for you with dynamic parameters. On Meta, placeholders such as {{campaign.name}}, {{adset.name}} and {{ad.id}} fill in automatically when someone clicks.",
+          "d": {
+            "kind": "tip",
+            "text": "Placeholder names change. Check the current Ads Manager help for URL parameters before you rely on them."
+          },
+          "say": "Many ad platforms can insert values for you, using dynamic parameters. On Meta, placeholders for the campaign name, the ad set name and the ad I D fill in automatically when someone clicks. You saw them on screen earlier. But here's the tip: placeholder names change, so check the current Ads Manager help for URL parameters before you rely on them."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: add URL parameters to an ad",
+          "p": "Here is where the parameters usually go on Meta. We are not certain the menu names below are current, because Ads Manager changes often. Look for the same idea: a tracking section at ad level with a URL parameters field.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open the ad",
+                "text": "In Ads Manager, open the ad (not the ad set) and scroll to the Tracking section.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/edit/ad",
+                  "title": "Ad: video_hook3",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Website URL",
+                      "value": "https://yourlander.example/start"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Tracking"
+                    },
+                    {
+                      "type": "field",
+                      "label": "URL parameters",
+                      "value": ""
+                    }
+                  ],
+                  "highlight": 2
+                }
+              },
+              {
+                "title": "Paste your parameters",
+                "text": "Paste everything after the ? from your naming key. Do not add a second ? to the website URL.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/edit/ad",
+                  "title": "Ad: video_hook3",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "URL parameters",
+                      "value": "utm_source=facebook&utm_medium=paid_social&utm_campaign={{campaign.name}}&utm_content={{ad.name}}"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Preview URL"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Check the preview",
+                "text": "Open the preview on your phone and confirm the parameters are still in the address bar after the page loads.",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "yourlander.example/start?utm_source=facebook&utm_campaign=ke_trading_t1",
+                  "page": {
+                    "h": "See how the app works",
+                    "p": "Example lander. Check the address bar, not the page.",
+                    "cta": "Continue"
+                  }
+                }
+              }
+            ]
+          },
+          "say": "Here's where the parameters usually go on Meta. Tap Next to follow each step. First, in Ads Manager, open the ad, not the ad set, and scroll to the Tracking section. You'll see the URL parameters field. Second, paste everything after the question mark from your naming key. Don't add a second question mark to the website URL. Third, open the preview on your phone, and confirm the parameters are still in the address bar after the page loads. Check the address bar, not the page. Ads Manager changes often, so look for the same idea: a tracking section at ad level, with a URL parameters field."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: build a tracked link",
+          "p": "Try it. Type a base URL, a source, a medium and a campaign name from your naming key, and watch the full link build itself. Then check it follows your rules: one case, no spaces and the same order every time.",
+          "d": {
+            "kind": "utm",
+            "task": "Build the link for your first test campaign using your naming key.",
+            "preset": {
+              "base": "https://yourlander.example/start",
+              "source": "facebook",
+              "medium": "paid_social",
+              "campaign": "ng_trading_t1"
+            }
+          },
+          "say": "Lab time. Type a base URL, a source, a medium and a campaign name from your naming key, and watch the full link build itself. Your task is to build the link for your first test campaign. Then check it follows your rules: one case, no spaces, and the same order every time. Pause and try it, then check your answer."
+        },
+        {
+          "v": "check",
+          "h": "Test every link before you spend",
+          "p": "A broken link wastes the whole test. Thirty seconds of checking before launch saves you from finding out the problem three days and $60 later.",
+          "d": [
+            "Click the ad preview link yourself",
+            "Check the parameters are still in the address bar",
+            "Register a test account if the network allows it",
+            "Confirm the click appears in the network report",
+            "Confirm sub IDs show the right values"
+          ],
+          "say": "A broken link wastes the whole test. Thirty seconds of checking before launch saves you finding out three days and sixty dollars later. Go down the list. Click the ad preview link yourself. Check the parameters are still in the address bar. Register a test account, if the network allows it. Confirm the click appears in the network report. And confirm the sub IDs show the right values."
+        },
+        {
+          "v": "cards",
+          "h": "Common link mistakes",
+          "p": "Most broken links come from a handful of small typing mistakes. Each one silently breaks tracking, so the ads still run and you only find out days later, when the network report is empty or grouped under one blank value.",
+          "d": [
+            "A second ?|use & after the first one",
+            "Spaces or mixed case|lowercase_with_underscores",
+            "Old link reused|rebuild it for each campaign",
+            "Empty sub IDs|test one click before spend"
+          ],
+          "say": "Most broken links come from a few small typing mistakes. Look at the cards. A second question mark: use an ampersand after the first one. Spaces or mixed case: use lowercase with underscores. An old link reused: rebuild it for each campaign. Empty sub IDs: test one click before spend. Each one silently breaks tracking. The ads still run, and you only find out days later, when the network report is empty or grouped under one blank value."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: no personal data in links",
+          "p": "Links are copied into logs, reports and analytics tools that many people can see. Ad platform terms usually forbid sending personal data in URLs, and privacy law in many countries limits it too.",
+          "d": {
+            "kind": "warn",
+            "text": "Never put names, phone numbers, emails or ID numbers in UTMs or sub IDs. Use click IDs and campaign names only."
+          },
+          "say": "Links get copied into logs, reports and analytics tools that many people can see. Ad platform terms usually forbid sending personal data in URLs, and privacy law in many countries limits it too. So here's the warning on screen. Never put names, phone numbers, emails or I D numbers in U T Ms or sub IDs. Use click I Ds and campaign names only."
+        }
+      ],
+      "takeaways": [
+        "UTMs label groups of traffic. Click IDs label single clicks.",
+        "Pick one naming system and use it everywhere.",
+        "Put your own IDs into the network's sub ID slots and test before spending."
+      ],
+      "action": "Write your naming key: one line each for how you will name campaigns, ad sets and ads, plus which sub ID slot holds which value.",
+      "glossary": [
+        {
+          "term": "URL parameter",
+          "def": "A key=value label added after the ? in a link, such as utm_source=facebook."
+        },
+        {
+          "term": "UTM",
+          "def": "A standard set of five URL parameters (source, medium, campaign, content, term) used to label traffic."
+        },
+        {
+          "term": "Click ID",
+          "def": "A unique code created for one single click, used to match that click to a later conversion."
+        },
+        {
+          "term": "Sub ID",
+          "def": "A slot in a network offer link where you place your own values, such as a click ID or ad set name."
+        },
+        {
+          "term": "Dynamic parameter",
+          "def": "A placeholder the ad platform fills in automatically when someone clicks, such as the ad's name or ID."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "In example.com/start?utm_source=facebook, what does the ? do?",
+          "options": [
+            "Ends the link",
+            "Marks where parameters begin",
+            "Hides the page",
+            "Joins two pages together"
+          ],
+          "answer": 1,
+          "why": "The question mark starts the list of parameters. The & sign joins one parameter to the next."
+        },
+        {
+          "q": "Which UTM is the best place to record which creative was clicked?",
+          "options": [
+            "utm_source",
+            "utm_medium",
+            "utm_content",
+            "utm_term"
+          ],
+          "answer": 2,
+          "why": "utm_content is used to tell ads and creatives apart within one campaign."
+        },
+        {
+          "q": "What can a click ID do that a UTM cannot?",
+          "options": [
+            "Match one specific click to one specific conversion",
+            "Show which traffic source was used",
+            "Make the page load faster",
+            "Replace the need for a network"
+          ],
+          "answer": 0,
+          "why": "UTMs describe groups. A click ID is unique per click, so it can be matched to a single registration or deposit."
+        },
+        {
+          "q": "Network report by sub3: hook1 3 FTDs, hook2 0 FTDs, hook3 5 FTDs, similar spend. What do you do first?",
+          "options": [
+            "Pause all three and start again",
+            "Raise budget on hook2",
+            "Delete sub IDs from the link",
+            "Give more budget to hook3 and review hook2"
+          ],
+          "answer": 3,
+          "why": "hook3 produced the most deposits at similar spend. hook2 brings no deposits and needs review or pausing."
+        },
+        {
+          "q": "Which name follows a clean naming system?",
+          "options": [
+            "Kenya Test FINAL",
+            "ke_trading_t2",
+            "kenya-test (copy)",
+            "New campaign 14"
+          ],
+          "answer": 1,
+          "why": "Lowercase, no spaces, a fixed order and a test number make names easy to filter and sort."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn to read every part of a tracked link, write U T Ms, which are link labels, with a clean naming system, and understand how a click I D differs from a U T M.",
+      "say_outro": "You've learned to read a tracked link, name U T Ms with a clean system, and use click I Ds in sub ID slots to match one click to one deposit. Your task: write your naming key, with one line each for how you'll name campaigns, ad sets and ads, plus which sub ID slot holds which value. Now take the quiz."
+    },
+    {
+      "slug": "pixels-and-conversions-api",
+      "title": "Pixels and the Conversions API",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can explain what a pixel does and why platforms need it.",
+        "By the end you can describe how the Conversions API differs from a browser pixel.",
+        "By the end you can explain deduplication with an example."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "The pixel is the platform's eyes",
+          "p": "A pixel is a small piece of code on your web page. When someone loads the page or completes an action, it sends a message called an event back to the ad platform. Meta, TikTok, Snapchat and Google all have their own version.",
+          "d": {
+            "b": "A pixel reports events",
+            "s": "From your page back to the ad platform"
+          },
+          "say": "A pixel is a small piece of code on your web page. When someone loads the page or completes an action, it sends a message called an event back to the ad platform. Think of it as the platform's eyes on your page. Meta, TikTok, Snapchat and Google all have their own version."
+        },
+        {
+          "v": "flow",
+          "h": "How a pixel event travels",
+          "p": "Everything happens in the visitor's browser in a fraction of a second. The platform then tries to match the event to a person who saw or clicked your ad.",
+          "d": [
+            "Page loads",
+            "Pixel code runs",
+            "Event sent to platform",
+            "Matched to an ad click",
+            "Shown in reports"
+          ],
+          "say": "Here's how a pixel event travels. Follow the flow. The page loads. The pixel code runs. An event is sent to the platform. The platform matches it to an ad click. And it's shown in reports. Everything happens in the visitor's browser, in a fraction of a second. Then the platform tries to match the event to a person who saw or clicked your ad."
+        },
+        {
+          "v": "cards",
+          "h": "Common standard events",
+          "p": "Platforms offer a menu of standard events. Pick the ones that match real steps in your funnel. Event names differ between platforms and change over time, so check the current list.",
+          "d": [
+            "PageView|someone loaded the page",
+            "ViewContent|someone viewed key content",
+            "Lead|someone left contact details",
+            "CompleteRegistration|someone signed up",
+            "Purchase|someone paid; can carry a value"
+          ],
+          "say": "Platforms offer a menu of standard events. Look at the cards. Page View, someone loaded the page. View Content, someone viewed key content. Lead, someone left contact details. Complete Registration, someone signed up. And Purchase, someone paid, which can carry a value. Pick the ones that match real steps in your funnel. Event names differ between platforms and change over time, so check the current list."
+        },
+        {
+          "v": "code",
+          "h": "What a standard event looks like",
+          "p": "Once the base pixel code is on your page, one line fires an event. This is the shape of Meta's browser call at the time of writing. You do not need to write it by hand yet; the point is to recognise it.",
+          "d": {
+            "lang": "js",
+            "text": "// fires when the sign-up form is submitted\nfbq('track', 'CompleteRegistration', {}, { eventID: 'reg_8812' });",
+            "note": "Syntax at the time of writing; check Meta's developer docs. Full setup: Tracking setup lab module."
+          },
+          "say": "Once the base pixel code is on your page, one line fires an event. The code on screen is the shape of Meta's browser call at the time of writing. It fires when the sign-up form is submitted, and it carries an event I D. You don't need to write it by hand yet. The point is to recognise it. Check Meta's developer docs for current syntax, and see the Tracking setup lab module for the full setup."
+        },
+        {
+          "v": "big",
+          "h": "Events do two jobs",
+          "p": "Events are not only for reports. The platform's delivery system learns from them. If you tell it to find people who register, it studies who registered and shows your ad to more people like them.",
+          "d": {
+            "b": "Reporting and learning",
+            "s": "The event you feed is the customer you get"
+          },
+          "say": "Events do two jobs: reporting and learning. They're not only for reports. The platform's delivery system learns from them. If you tell it to find people who register, it studies who registered and shows your ad to more people like them. So the event you feed is the customer you get."
+        },
+        {
+          "v": "bars",
+          "h": "Volume versus signal quality",
+          "p": "Events near the top of the funnel happen often but say little about money. Events near deposits say a lot but happen rarely. Bar length here shows how often each event happens in an example funnel.",
+          "d": [
+            [
+              "Link click",
+              100,
+              "many, weak signal"
+            ],
+            [
+              "Page view",
+              82,
+              "many, weak signal"
+            ],
+            [
+              "Registration",
+              9,
+              "fewer, better signal"
+            ],
+            [
+              "First deposit",
+              1,
+              "rare, strongest signal"
+            ]
+          ],
+          "more": "Example proportions, not a benchmark. The skill is choosing the deepest event that still happens often enough for the platform to learn. A beginner on a small budget often optimises for registrations first, while sending FTDs as a separate event so they can be reported and used later when volume grows.",
+          "say": "Look at the bars. They show how often each event happens in an example funnel, not a benchmark. Link clicks and page views happen a lot, but they're weak signals about money. Registrations are fewer, with a better signal. First deposits are rare, but the strongest signal. The skill is choosing the deepest event that still happens often enough for the platform to learn. On a small budget, beginners often optimise for registrations first, while sending F T Ds, first time deposits, as a separate event for later."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: can it learn on FTDs?",
+          "p": "Example: $20 a day budget. Platforms need a steady flow of optimisation events to learn. At the time of writing, Meta's guidance has long been around 50 events per ad set per week. We are not certain it is current; check.",
+          "d": {
+            "cols": [
+              "Event",
+              "Cost each",
+              "Events per week"
+            ],
+            "rows": [
+              [
+                "Registration",
+                "$4",
+                "35"
+              ],
+              [
+                "FTD",
+                "$40",
+                "3.5"
+              ]
+            ]
+          },
+          "more": "Example. $20 × 7 days = $140 a week. At $4 per registration that is $140 ÷ 4 = 35 registrations a week. At $40 per FTD it is $140 ÷ 40 = 3.5 FTDs a week. Neither hits 50, but 35 registrations gives the system far more to learn from than 3.5 deposits. The learning threshold is a rough guide and it changes, so read the current help pages for your platform.",
+          "say": "Here's a worked example: a twenty dollar a day budget. That's one hundred and forty dollars a week. At four dollars per registration, you get thirty five registrations a week. At forty dollars per F T D, just three and a half. At the time of writing, Meta's guidance has long been around fifty events per ad set per week, but we're not certain it's current, so check. Neither hits fifty, but thirty five registrations give the system far more to learn from than three and a half deposits."
+        },
+        {
+          "v": "compare",
+          "h": "Browser pixel versus server events",
+          "p": "A browser pixel depends on the visitor's phone and browser. Some block it, some clear cookies, and privacy features limit what it can see. Server events come from your server, not the browser.",
+          "d": {
+            "a": {
+              "title": "Browser pixel",
+              "items": [
+                "Runs on the visitor's device",
+                "Ad blockers can stop it",
+                "Only sees actions on your page",
+                "Quick to install"
+              ]
+            },
+            "b": {
+              "title": "Server events (CAPI)",
+              "items": [
+                "Sent from your server or tool",
+                "Not stopped by browser blockers",
+                "Can send off-site events like deposits",
+                "Needs more setup"
+              ]
+            }
+          },
+          "say": "Compare the two sides. A browser pixel runs on the visitor's device. Ad blockers can stop it, it only sees actions on your page, but it's quick to install. Server events, called C A P I, are sent from your server or tool. They're not stopped by browser blockers, and they can send off-site events like deposits, but they need more setup. The browser pixel depends on the visitor's phone and browser, and privacy features limit what it can see."
+        },
+        {
+          "v": "big",
+          "h": "The Conversions API in one line",
+          "p": "The Conversions API, often called CAPI, lets your server tell the ad platform directly that a conversion happened. Meta calls it the Conversions API. TikTok and Snapchat have their own versions with similar ideas.",
+          "d": {
+            "b": "Your server tells the platform",
+            "s": "No browser in the middle"
+          },
+          "say": "Here's the Conversions A P I in one line: your server tells the platform. It's often called C A P I. It lets your server tell the ad platform directly that a conversion happened, with no browser in the middle. Meta calls it the Conversions A P I. TikTok and Snapchat have their own versions with similar ideas."
+        },
+        {
+          "v": "flow",
+          "h": "How a server event travels",
+          "p": "Server events are how deposits that happen on the advertiser's site, days after the click, can still reach Meta and help it learn who your best users are.",
+          "d": [
+            "Conversion happens",
+            "Your tool receives it",
+            "Sends event plus click data",
+            "Platform matches it",
+            "Reports and learns"
+          ],
+          "more": "For affiliates the usual path is: the network sends a postback to your tracker or tool, and the tool sends a server event to the ad platform. You will learn postbacks in the next lesson. Tools that sit in the middle, such as trackers or Joinvoo for Telegram funnels, exist to do this step for you without writing code.",
+          "say": "Server events are how deposits on the advertiser's site, days after the click, can still reach Meta and help it learn who your best users are. Follow the flow. A conversion happens. Your tool receives it. It sends an event plus click data. The platform matches it, then reports and learns. For affiliates, the usual path is: the network sends a postback to your tool, and the tool sends a server event. Tools in the middle, like trackers or Joinvoo for Telegram funnels, do this step without code."
+        },
+        {
+          "v": "cards",
+          "h": "What helps the platform match",
+          "p": "A server event is only useful if the platform can match it to someone who clicked your ad. These details improve matching. Send personal data only with consent and as the platform's rules require.",
+          "d": [
+            "Click ID|such as the fbc value made from fbclid",
+            "Browser ID|such as the fbp value",
+            "Hashed contact data|email or phone, scrambled, with consent",
+            "Event time|when it actually happened"
+          ],
+          "say": "A server event is only useful if the platform can match it to someone who clicked your ad. These details improve matching. Look at the cards. The click I D, such as the f b c value made from f b c l i d. The browser I D, such as the f b p value. Hashed contact data, an email or phone that's scrambled, sent with consent. And the event time, when it actually happened. Send personal data only with consent, and as the platform's rules require."
+        },
+        {
+          "v": "big",
+          "h": "Count each conversion once",
+          "p": "If your pixel and your server both send the same registration, the platform could count it twice. Deduplication means sending a shared event ID so the platform knows they are the same event.",
+          "d": {
+            "b": "Same event, same ID",
+            "s": "That is how deduplication works"
+          },
+          "say": "Here's a problem. If your pixel and your server both send the same registration, the platform could count it twice. Deduplication fixes that. You send a shared event I D, so the platform knows they're the same event. Same event, same I D. That's how deduplication works."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: deduplication",
+          "p": "Example: one person registers. The pixel and the server both report it with the same event name and the same event ID. The platform keeps one and drops the duplicate.",
+          "d": {
+            "cols": [
+              "Event",
+              "Sent from",
+              "Event ID",
+              "Counted"
+            ],
+            "rows": [
+              [
+                "CompleteRegistration",
+                "Browser pixel",
+                "reg_8812",
+                "Yes"
+              ],
+              [
+                "CompleteRegistration",
+                "Server",
+                "reg_8812",
+                "No, duplicate"
+              ]
+            ]
+          },
+          "say": "Here's a worked example. One person registers. Look at the table. The browser pixel sends Complete Registration with an event I D. The server sends Complete Registration with the same event I D. The platform counts the first one and drops the second as a duplicate. One person, one registration, counted once."
+        },
+        {
+          "v": "tip",
+          "h": "Privacy comes first",
+          "p": "Hashed data is still personal data. Only collect and send what your privacy notice covers and what the person agreed to. The Compliance and safety module covers privacy and consent in detail.",
+          "d": {
+            "kind": "warn",
+            "text": "Never send personal data you were not allowed to collect, even hashed. Follow privacy law and platform terms."
+          },
+          "say": "Privacy comes first. Hashed data is still personal data. Only collect and send what your privacy notice covers, and what the person agreed to. The Compliance and safety module covers privacy and consent in detail. Read the warning: never send personal data you weren't allowed to collect, even hashed. Follow privacy law and platform terms."
+        },
+        {
+          "v": "check",
+          "h": "Pixel sanity checks",
+          "p": "Run these checks after every install or page change. Most platforms have a test events tool that shows events arriving live. Its name and location change, so look in the current events manager.",
+          "d": [
+            "Events show in the test tool",
+            "Only one pixel per platform per page",
+            "Each event fires once, not twice",
+            "The right event on the right page",
+            "Server and pixel share event IDs"
+          ],
+          "say": "Run these checks after every install or page change. Events show in the test tool. Only one pixel per platform per page. Each event fires once, not twice. The right event on the right page. And server and pixel share event I Ds. Most platforms have a test events tool that shows events arriving live. Its name and location change, so look in the current events manager."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: watch events arrive",
+          "p": "The test events tool shows events from your own visit in real time. Open your page through it, tap the button, then watch the events land. We are not certain of current tab names; look for test events in Events Manager.",
+          "d": {
+            "kind": "browser",
+            "url": "business.example/events_manager/test_events",
+            "title": "Test events",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Test your website",
+                "value": "https://yourlander.example/start"
+              },
+              {
+                "type": "button",
+                "label": "Open website"
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "Event",
+                  "Source",
+                  "Status"
+                ],
+                "rows": [
+                  [
+                    "PageView",
+                    "Browser",
+                    "Received"
+                  ],
+                  [
+                    "CompleteRegistration",
+                    "Browser",
+                    "Received"
+                  ],
+                  [
+                    "CompleteRegistration",
+                    "Server",
+                    "Deduplicated"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Example. One sign-up, counted once."
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "Here's the test events tool, which shows events from your own visit in real time. Enter your page, open it through the tool, tap the button, then watch the events land. Look at the table in this example. Page View from the browser, received. Complete Registration from the browser, received. Complete Registration from the server, deduplicated. One sign-up, counted once. We're not certain of the current tab names, so look for test events in Events Manager."
+        },
+        {
+          "v": "compare",
+          "h": "Common pixel mistakes",
+          "p": "Pixel mistakes rarely stop your ads. They quietly feed the platform wrong signals, so it learns from the wrong people. Check for these after every install and every page change.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Two pixels on one page",
+                "Lead fires on page load",
+                "Pixel and server with no shared ID",
+                "Optimising for FTDs at $20 a day"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "One pixel per platform per page",
+                "Fire on the real action only",
+                "Same event_id from both",
+                "Shallower event until volume grows"
+              ]
+            }
+          },
+          "say": "Pixel mistakes rarely stop your ads. They quietly feed the platform wrong signals, so it learns from the wrong people. Look at the mistakes and fixes. Two pixels on one page: one pixel per platform per page. Lead firing on page load: fire on the real action only. Pixel and server with no shared I D: the same event I D from both. Optimising for F T Ds at twenty dollars a day: use a shallower event until volume grows."
+        }
+      ],
+      "takeaways": [
+        "A pixel reports events from the browser. CAPI reports them from a server.",
+        "Feed the deepest event that still has enough volume to learn.",
+        "Use a shared event ID so the same conversion is counted once."
+      ],
+      "action": "Open your ad platform's events manager and find the test events tool. Load your landing page and confirm a PageView arrives.",
+      "glossary": [
+        {
+          "term": "Pixel",
+          "def": "Code on your web page that sends events from the visitor's browser to an ad platform."
+        },
+        {
+          "term": "Event",
+          "def": "A recorded action such as PageView, Lead, CompleteRegistration or Purchase."
+        },
+        {
+          "term": "Conversions API (CAPI)",
+          "def": "A way for your server to send events directly to an ad platform without relying on the browser."
+        },
+        {
+          "term": "Deduplication",
+          "def": "Making sure the same conversion sent by pixel and server is only counted once, using a shared event ID."
+        },
+        {
+          "term": "Hashing",
+          "def": "Scrambling data such as an email into a fixed code before sending it. It is still treated as personal data."
+        },
+        {
+          "term": "Optimisation event",
+          "def": "The event you tell the platform to find more of when it delivers your ads."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Where does a browser pixel run?",
+          "options": [
+            "On the ad platform's servers",
+            "On the network's servers",
+            "In your bank app",
+            "In the visitor's browser on your page"
+          ],
+          "answer": 3,
+          "why": "A pixel is code that runs in the visitor's browser when they load your page, which is why blockers can stop it."
+        },
+        {
+          "q": "Budget $140 a week, cost per registration $4. About how many registrations per week?",
+          "options": [
+            "14",
+            "35",
+            "56",
+            "4"
+          ],
+          "answer": 1,
+          "why": "$140 ÷ $4 = 35 registrations a week."
+        },
+        {
+          "q": "Why do affiliates use server events for deposits?",
+          "options": [
+            "Deposits happen off-site, often days later, where your pixel cannot see them",
+            "Server events are free and pixels are paid",
+            "Pixels are banned on landing pages",
+            "Server events make ads cheaper by default"
+          ],
+          "answer": 0,
+          "why": "Deposits happen on the advertiser's site. A postback brings them to your tool, which can send them to the platform as server events."
+        },
+        {
+          "q": "Pixel and server both send a registration with event ID reg_501. What happens?",
+          "options": [
+            "It is counted twice",
+            "Both are rejected",
+            "It is counted once",
+            "The ad is paused"
+          ],
+          "answer": 2,
+          "why": "A matching event name and event ID lets the platform deduplicate and keep one."
+        },
+        {
+          "q": "Which statement about hashed email is correct?",
+          "options": [
+            "Hashed data is no longer personal data",
+            "It is still personal data and needs consent and a lawful basis",
+            "Hashing is only needed on TikTok",
+            "You can send any email list once it is hashed"
+          ],
+          "answer": 1,
+          "why": "Hashing protects data in transit, but it is still treated as personal data under privacy rules."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn what a pixel does, how the Conversions A P I sends events from your server instead of the browser, and how deduplication makes sure each conversion is counted once.",
+      "say_outro": "You've learned that a pixel reports browser events, the Conversions A P I sends events from your server, and a shared event I D stops double counting. Your task: open your ad platform's events manager, find the test events tool, load your landing page and confirm a Page View arrives. Now take the quiz."
+    },
+    {
+      "slug": "postbacks-s2s",
+      "title": "Postbacks: the network reports back",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can explain what a postback is and why affiliates use it.",
+        "By the end you can read a postback URL and its macros.",
+        "By the end you can test a postback and diagnose common problems."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "One server calling another",
+          "p": "When a conversion happens at the advertiser, the network's server sends a web request to an address you gave it. That request is called a postback. It is also called server-to-server, or S2S, tracking.",
+          "d": {
+            "b": "Postback = S2S",
+            "s": "The network calls your URL when someone converts"
+          },
+          "say": "When a conversion happens at the advertiser, the network's server sends a web request to an address you gave it. That request is called a postback. It's also called server to server, or S 2 S, tracking. In short, the network calls your URL when someone converts."
+        },
+        {
+          "v": "flow",
+          "h": "How a postback works",
+          "p": "The click ID you passed in the offer link is the thread that ties everything together. The network stores it at sign-up and sends it back with every conversion.",
+          "d": [
+            "Click with your ID",
+            "Network stores the ID",
+            "User registers or deposits",
+            "Network fires postback",
+            "Your tool records it"
+          ],
+          "say": "Here's how a postback works. Follow the flow. A click arrives with your I D. The network stores the I D. The user registers or deposits. The network fires the postback. And your tool records it. The click I D you passed in the offer link is the thread that ties everything together. The network stores it at sign-up, and sends it back with every conversion."
+        },
+        {
+          "v": "table",
+          "h": "Anatomy of a postback URL",
+          "p": "Example postback URL: track.example.com/pb?cid={sub1}&event={goal}&payout={payout}. Your tracker gives you the base receiving address. The network fills in the values in curly brackets each time a conversion fires.",
+          "d": {
+            "cols": [
+              "Part",
+              "Example",
+              "Meaning"
+            ],
+            "rows": [
+              [
+                "Base address",
+                "track.example.com/pb",
+                "Your tracker's receiver"
+              ],
+              [
+                "cid={sub1}",
+                "cid=ab12x",
+                "The click ID you sent"
+              ],
+              [
+                "event={goal}",
+                "event=ftd",
+                "What happened"
+              ],
+              [
+                "payout={payout}",
+                "payout=40",
+                "What it paid"
+              ]
+            ]
+          },
+          "say": "Let's take a postback URL apart. Look at the table. The base address is your tracker's receiver, and your tracker gives you that. Then come the parts in curly brackets. The c i d part carries the click I D you sent. The event part says what happened, like an F T D, a first time deposit. And the payout part says what it paid, like forty. Each time a conversion fires, the network fills in the values in curly brackets."
+        },
+        {
+          "v": "tip",
+          "h": "Macros are placeholders",
+          "p": "The words in curly brackets are macros. The network swaps each one for the real value at the moment it fires. Every network names its macros differently.",
+          "d": {
+            "kind": "tip",
+            "text": "Copy macro names from your network's documentation or manager. Never guess them. A wrong macro sends the literal text {sub1} instead of the ID."
+          },
+          "say": "The words in curly brackets are called macros. They're placeholders. The network swaps each one for the real value at the moment it fires, and every network names its macros differently. So here's the tip on screen. Copy macro names from your network's documentation or manager. Never guess them. A wrong macro sends the literal placeholder text instead of the I D."
+        },
+        {
+          "v": "code",
+          "h": "A postback URL, ready to paste",
+          "p": "This is what you paste into the network panel. Your tracker gives you the start of the address. The network fills in each macro when it fires. The macro names here are examples only; your network will have its own.",
+          "d": {
+            "lang": "url",
+            "text": "https://track.example.com/pb?cid={sub1}&event={goal}&payout={payout}&status={status}",
+            "note": "Example macros. Copy the real names from your network's documentation."
+          },
+          "say": "This is what you paste into the network panel, shown on screen. Your tracker gives you the start of the address. Then come the click I D, the event, the payout and the status, each as a macro. The network fills in each macro when it fires. The macro names here are examples only. Your network will have its own, so copy the real names from its documentation."
+        },
+        {
+          "v": "cards",
+          "h": "Events you might receive",
+          "p": "Depending on the offer and network, you may get one postback or several for the same user. Ask your affiliate manager which events they fire and what each one means.",
+          "d": [
+            "Registration|the user signed up",
+            "FTD|first deposit made",
+            "Qualified FTD|met the payout rules",
+            "Deposit or revenue|for RevShare deals",
+            "Rejection|a conversion reversed"
+          ],
+          "say": "Depending on the offer and network, you may get one postback or several for the same user. Look at the cards. Registration, the user signed up. F T D, first deposit made. Qualified F T D, it met the payout rules. Deposit or revenue, for RevShare deals. And rejection, a conversion reversed. Ask your affiliate manager which events they fire, and what each one means."
+        },
+        {
+          "v": "compare",
+          "h": "Pixel on the offer page versus postback",
+          "p": "Some beginners ask to put their pixel on the advertiser's site. Most advertisers will not allow it, and even when they do, it misses deposits that happen later. Postbacks are the standard way.",
+          "d": {
+            "a": {
+              "title": "Your pixel on their site",
+              "items": [
+                "Usually not allowed",
+                "Browser-based, easy to block",
+                "Misses later deposits",
+                "Hard to tie to payouts"
+              ]
+            },
+            "b": {
+              "title": "Postback",
+              "items": [
+                "Standard for networks",
+                "Server-based",
+                "Fires whenever the deposit happens",
+                "Carries payout value"
+              ]
+            }
+          },
+          "say": "Some beginners ask to put their pixel on the advertiser's site. Compare the two sides. Your pixel on their site is usually not allowed. It's browser-based and easy to block, misses later deposits and is hard to tie to payouts. A postback is standard for networks. It's server-based, fires whenever the deposit happens, and carries the payout value. Even when advertisers allow a pixel, it misses deposits that happen later. That's why postbacks are the standard way."
+        },
+        {
+          "v": "flow",
+          "h": "From postback to the ad platform",
+          "p": "A postback alone only updates your tracker. To help the ad platform learn, your tool turns the postback into a server event, using the click data saved when the user first clicked.",
+          "d": [
+            "Network postback",
+            "Your tracker or tool",
+            "Server event to Meta",
+            "Meta learns from FTDs"
+          ],
+          "say": "A postback alone only updates your tracker. To help the ad platform learn, there's one more step. Follow the flow. The network postback goes to your tracker or tool. Your tool turns it into a server event to Meta, using the click data saved when the user first clicked. And Meta learns from F T Ds."
+        },
+        {
+          "v": "funnel",
+          "h": "Worked example: a week of postbacks",
+          "p": "Example: over seven days you send 1,500 clicks. Postbacks report 120 registrations and 14 FTDs. The network later marks 10 of them as qualified under the offer rules.",
+          "d": [
+            [
+              "Clicks",
+              1500
+            ],
+            [
+              "Registrations",
+              120
+            ],
+            [
+              "FTDs",
+              14
+            ],
+            [
+              "Qualified FTDs",
+              10
+            ]
+          ],
+          "more": "Example figures. A qualified FTD is one that meets the offer's rules, such as a minimum deposit amount or a check that the user is real and in an allowed country. Only qualified FTDs are paid on many CPA deals. That is why you track both: FTDs tell you about your traffic, qualified FTDs tell you about your income.",
+          "say": "Here's a week of postbacks, with example figures. Over seven days you send one thousand five hundred clicks. Postbacks report one hundred and twenty registrations and fourteen F T Ds. Later, the network marks ten of them as qualified under the offer rules. A qualified F T D meets those rules, such as a minimum deposit, or a check that the user is real and in an allowed country. On many C P A deals, cost per acquisition deals, only qualified F T Ds are paid. F T Ds tell you about your traffic. Qualified F T Ds tell you about your income."
+        },
+        {
+          "v": "eq",
+          "h": "Revenue from postbacks",
+          "p": "Example: 10 qualified FTDs at a $40 payout. Postbacks that carry the payout value let your tracker do this sum for you, per ad set, every hour.",
+          "d": [
+            "10 qualified FTDs",
+            "×",
+            "$40 payout",
+            "=",
+            "$400 revenue"
+          ],
+          "say": "Now the revenue. Look at the equation. Ten qualified F T Ds, times a forty dollar payout, equals four hundred dollars revenue. That's an example. Postbacks that carry the payout value let your tracker do this sum for you, per ad set, every hour."
+        },
+        {
+          "v": "stat",
+          "h": "Return on the test",
+          "p": "Example: you spent $300 on those 1,500 clicks and earned $400. ROI is profit divided by spend: ($400 minus $300) ÷ $300 = 0.333, so about 33%.",
+          "d": {
+            "n": 33.3,
+            "pre": "",
+            "suf": "%",
+            "dec": 1,
+            "label": "ROI on the test week",
+            "note": "Example. Not a benchmark."
+          },
+          "say": "And the return on the test. In this example, you spent three hundred dollars on those one thousand five hundred clicks, and earned four hundred. R O I, return on investment, is profit divided by spend. So four hundred minus three hundred, divided by three hundred, is about thirty three percent. That's the number on screen, thirty three point three. It's an example, not a benchmark."
+        },
+        {
+          "v": "check",
+          "h": "Test a postback before spending",
+          "p": "Never assume a postback works. Many networks offer a test conversion button, or your manager can fire one for you. Check each line before real money goes in.",
+          "d": [
+            "Postback URL saved in the network",
+            "Test conversion fired",
+            "Conversion shows in your tracker",
+            "Click ID matches a real click",
+            "Payout value is correct"
+          ],
+          "say": "Never assume a postback works. Many networks offer a test conversion button, or your manager can fire one for you. Before real money goes in, check each line. The postback URL is saved in the network. A test conversion was fired. The conversion shows in your tracker. The click I D matches a real click. And the payout value is correct."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: add and test a postback",
+          "p": "Network panels differ, but the steps are the same idea everywhere. We are not certain of any network's current menu names; if you cannot find the postback settings, ask your affiliate manager.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open postback settings",
+                "text": "In the network panel, find postbacks, often under tools, settings or the offer page.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/tools/postbacks",
+                  "title": "Postbacks",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Offer",
+                      "value": "Trading KE, CPA"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Event",
+                      "value": "FTD"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Postback URL",
+                      "value": "https://track.example.com/pb?cid={sub1}&event={goal}&payout={payout}"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Save"
+                    }
+                  ],
+                  "highlight": 2
+                }
+              },
+              {
+                "title": "Fire a test conversion",
+                "text": "Use the test button, or ask your manager to fire one, with a made-up click ID you will recognise.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/tools/postbacks/test",
+                  "title": "Test postback",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "sub1 (click ID)",
+                      "value": "test_0410"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Send test"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Find it in your tracker",
+                "text": "Open your tracker or receiving log. The test should show your click ID, the event and the payout.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "track.example.com/log",
+                  "title": "Postback log",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Time",
+                        "cid",
+                        "event",
+                        "payout"
+                      ],
+                      "rows": [
+                        [
+                          "10:42",
+                          "test_0410",
+                          "ftd",
+                          "40"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "Example. A literal {sub1} here means a wrong macro."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Here's how to add and test a postback. Tap Next to follow each step. First, in the network panel, find postbacks, often under tools, settings or the offer page. Choose the offer and event, paste your postback URL and save. Second, fire a test conversion. Use the test button, or ask your manager, with a made-up click I D you'll recognise. Third, find it in your tracker or receiving log. It should show your click I D, the event and the payout. If you see the literal macro text there, the macro is wrong. Panels differ, so if you can't find the settings, ask your affiliate manager."
+        },
+        {
+          "v": "tip",
+          "h": "Postbacks can arrive late",
+          "p": "A deposit can happen hours or days after a click, so its postback arrives late too. Judging an ad set on FTDs a few hours after launch will mislead you. The Budget and kill rules module turns this into a matured-spend rule.",
+          "d": {
+            "kind": "warn",
+            "text": "Give FTD postbacks time to arrive before you kill an ad set. Judge only spend old enough for its FTDs to have arrived, and use registrations as the early signal."
+          },
+          "say": "Postbacks can arrive late. A deposit can happen hours or days after a click, so its postback arrives late too. Judging an ad set on F T Ds a few hours after launch will mislead you. Read the warning. Give F T D postbacks time to arrive before you kill an ad set. Judge only spend old enough for its F T Ds to have arrived, and use registrations as the early signal. The Budget and kill rules module turns this into a matured-spend rule."
+        },
+        {
+          "v": "table",
+          "h": "Common postback problems",
+          "p": "Most postback problems come from a few simple setup mistakes. When numbers look wrong, check this list first, before you blame the network or the ad platform.",
+          "d": {
+            "cols": [
+              "Symptom",
+              "Likely cause"
+            ],
+            "rows": [
+              [
+                "Network shows FTDs, tracker shows none",
+                "Postback not set or wrong URL"
+              ],
+              [
+                "Conversions with empty click ID",
+                "Click ID not passed in sub ID"
+              ],
+              [
+                "Every conversion counted twice",
+                "Postback added twice"
+              ],
+              [
+                "Payout always 0",
+                "Missing or wrong payout macro"
+              ],
+              [
+                "Literal {sub1} in reports",
+                "Macro name is wrong"
+              ]
+            ]
+          },
+          "say": "When numbers look wrong, check this table before you blame anyone. Network shows F T Ds but the tracker shows none: the postback isn't set, or the URL is wrong. Conversions with an empty click I D: the click I D wasn't passed in the sub ID. Every conversion counted twice: the postback was added twice. Payout always zero: the payout macro is missing or wrong. And the literal macro text in reports: the macro name is wrong."
+        },
+        {
+          "v": "cards",
+          "h": "Common postback mistakes",
+          "p": "The table above lists symptoms. These are the habits behind them. Avoid these four habits and most postback problems never happen, which means you never have to rebuild a week of data from screenshots.",
+          "d": [
+            "Guessing macro names|copy them from the docs",
+            "Adding the postback twice|one postback per event",
+            "Judging FTDs too soon|wait for matured spend",
+            "No test before spend|fire a test conversion first"
+          ],
+          "say": "The table showed symptoms. These cards show the habits behind them. Guessing macro names: copy them from the docs. Adding the postback twice: one postback per event. Judging F T Ds too soon: wait for matured spend. No test before spend: fire a test conversion first. Avoid these four habits, and most postback problems never happen. You'll never have to rebuild a week of data from screenshots."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: what a postback should carry",
+          "p": "A postback needs your click ID, the event and the payout. It does not need the user's name, phone or email. For trading and gambling offers the advertiser holds identity checks and that data should stay with them.",
+          "d": {
+            "kind": "warn",
+            "text": "Never ask a network to send personal data in postbacks. If one arrives, stop storing it and tell your manager."
+          },
+          "say": "A postback needs your click I D, the event and the payout. It doesn't need the user's name, phone or email. For trading and gambling offers, the advertiser holds identity checks, and that data should stay with them. Read the warning. Never ask a network to send personal data in postbacks. If one arrives, stop storing it and tell your manager."
+        }
+      ],
+      "takeaways": [
+        "A postback is the network's server telling your tool a conversion happened.",
+        "The click ID you pass in the offer link is what ties it back to your ad.",
+        "Test with a test conversion first and give FTD postbacks time to arrive."
+      ],
+      "action": "Ask your affiliate manager three questions: which events do you fire as postbacks, what are your macro names, and how do I fire a test conversion.",
+      "glossary": [
+        {
+          "term": "Postback",
+          "def": "A web request the network's server sends to your tracker when a conversion happens."
+        },
+        {
+          "term": "S2S",
+          "def": "Server-to-server tracking. Another name for postback tracking."
+        },
+        {
+          "term": "Macro",
+          "def": "A placeholder like {sub1} or {payout} that the network replaces with a real value when it fires."
+        },
+        {
+          "term": "Qualified FTD",
+          "def": "A first deposit that meets the offer's payout rules, such as a minimum amount."
+        },
+        {
+          "term": "ROI",
+          "def": "Return on investment: (revenue minus spend) divided by spend."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is a postback?",
+          "options": [
+            "A pixel on the advertiser's page",
+            "A request the network's server sends to your tool when a conversion happens",
+            "A message the user posts back to your ad",
+            "An email report sent each morning"
+          ],
+          "answer": 1,
+          "why": "A postback is server-to-server: the network calls your tracker's URL with the conversion details."
+        },
+        {
+          "q": "Your tracker shows the literal text {sub1} instead of click IDs. What is wrong?",
+          "options": [
+            "The ad is rejected",
+            "The pixel is missing",
+            "The macro name does not match the network's",
+            "The budget is too low"
+          ],
+          "answer": 2,
+          "why": "If the network does not recognise the macro, it sends the text unchanged. Copy the exact macro names from the network."
+        },
+        {
+          "q": "10 qualified FTDs at $40, spend $300. What is the ROI?",
+          "options": [
+            "About 33%",
+            "About 133%",
+            "About 25%",
+            "$100"
+          ],
+          "answer": 0,
+          "why": "Profit is $400 minus $300 = $100. $100 ÷ $300 = about 33%. $100 is the profit, not the ROI."
+        },
+        {
+          "q": "Three hours after launch an ad set has 12 registrations and 0 FTDs. Best move?",
+          "options": [
+            "Kill it now",
+            "Double the budget",
+            "Delete the postback",
+            "Keep it running and wait for FTD postbacks to arrive"
+          ],
+          "answer": 3,
+          "why": "Deposits often come hours or days later. Registrations are the early signal; judge FTDs once they have had time to arrive."
+        },
+        {
+          "q": "The network shows 8 FTDs but your tracker shows none. What should you check first?",
+          "options": [
+            "Whether the postback URL is set correctly in the network",
+            "Your ad creative",
+            "Your audience age range",
+            "Your UTM source name"
+          ],
+          "answer": 0,
+          "why": "If the network records conversions but your tracker gets nothing, the postback is missing or pointing to the wrong URL."
+        }
+      ],
+      "say_intro": "This lesson covers postbacks, the way a network reports conversions back to you, server to server. You'll learn to read a postback URL and its macros, and how to test one before you spend.",
+      "say_outro": "You've learned that a postback is the network calling your URL when someone converts, how macros fill in the click I D, event and payout, and why you test before spending and wait for late deposits. Your task: ask your affiliate manager which events they fire as postbacks, what their macro names are, and how to fire a test conversion. Now take the quiz."
+    },
+    {
+      "slug": "attribution-and-minimum-setup",
+      "title": "Attribution and your minimum setup",
+      "minutes": 20,
+      "objectives": [
+        "By the end you can explain attribution windows in plain words.",
+        "By the end you can list the main reasons platform and network numbers differ.",
+        "By the end you can set up and run a minimum tracking system with a daily sheet."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Attribution means who gets the credit",
+          "p": "Attribution is the set of rules that decides which ad gets credit for a conversion. A person might see three ads and click one, then deposit four days later. The rules decide which ad, if any, is credited.",
+          "d": {
+            "b": "Attribution = credit rules",
+            "s": "Every tool uses its own"
+          },
+          "say": "Attribution is the set of rules that decides which ad gets credit for a conversion. A person might see three ads, click one, then deposit four days later. The rules decide which ad, if any, gets the credit. And every tool uses its own rules."
+        },
+        {
+          "v": "cards",
+          "h": "The parts of an attribution window",
+          "p": "An attribution window is how long after a click or a view a conversion can still be credited to an ad. Each platform sets its own windows and some let you change them.",
+          "d": [
+            "Click window|days after a click that still count",
+            "View window|days after only seeing the ad",
+            "Conversion time|when the action actually happened",
+            "Report time|when it shows in your dashboard"
+          ],
+          "say": "An attribution window is how long after a click or a view a conversion can still be credited to an ad. Look at the cards. The click window is the days after a click that still count. The view window is the days after only seeing the ad. Conversion time is when the action actually happened. And report time is when it shows in your dashboard. Each platform sets its own windows, and some let you change them."
+        },
+        {
+          "v": "tip",
+          "h": "Defaults change",
+          "p": "At the time of writing, a common Meta default is a 7-day click and 1-day view window. We are not certain this is still the default for your account, and names change, so check the current Ads Manager before you compare reports.",
+          "d": {
+            "kind": "tip",
+            "text": "Write the attribution setting you used next to every report you save, so you compare like with like."
+          },
+          "say": "Defaults change. At the time of writing, a common Meta default is a seven day click and one day view window. We're not certain that's still the default for your account, and names change, so check the current Ads Manager before you compare reports. And here's the tip: write the attribution setting you used next to every report you save, so you compare like with like."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: see your attribution setting",
+          "p": "In Meta's reporting you can usually show the attribution setting as a column and compare windows side by side. We are not certain of the current menu names; look under columns or a compare attribution settings option.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/reporting",
+            "title": "Ad sets",
+            "blocks": [
+              {
+                "type": "select",
+                "label": "Columns",
+                "value": "Customise columns"
+              },
+              {
+                "type": "select",
+                "label": "Attribution setting",
+                "value": "7-day click or 1-day view"
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "Ad set",
+                  "Spend",
+                  "Results",
+                  "Attribution"
+                ],
+                "rows": [
+                  [
+                    "hook1",
+                    "$20",
+                    "7",
+                    "7d click, 1d view"
+                  ],
+                  [
+                    "hook3",
+                    "$20",
+                    "9",
+                    "7d click, 1d view"
+                  ]
+                ]
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "In Meta's reporting, you can usually show the attribution setting as a column. Look at this example screen. Under columns, the highlighted attribution setting reads seven day click or one day view. In the table, hook one shows seven results and hook three shows nine, both on the same setting, so they're fair to compare. We're not certain of the current menu names, so look under columns, or a compare attribution settings option."
+        },
+        {
+          "v": "curve",
+          "h": "Why yesterday's numbers keep moving",
+          "p": "Example: FTDs from one day of traffic, counted day by day afterwards. Both sources keep rising as late deposits arrive, and they never end at exactly the same number.",
+          "d": {
+            "a": [
+              5,
+              8,
+              10,
+              11,
+              12,
+              12,
+              12
+            ],
+            "la": "Ad platform FTDs",
+            "b": [
+              3,
+              6,
+              9,
+              11,
+              13,
+              14,
+              14
+            ],
+            "lb": "Network FTDs",
+            "x": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7"
+            ]
+          },
+          "more": "Example figures. The platform may report sooner because it includes modelled or view-through conversions. The network may finish higher because it counts deposits outside the platform's window, such as day 9. The lesson: judge yesterday's traffic carefully, and look again after a few days before making big decisions.",
+          "say": "Why do yesterday's numbers keep moving? Look at the two lines. These are example F T Ds, first time deposits, from one day of traffic, counted day by day. The platform starts higher, five on day one, and stops at twelve. The network starts at three and finishes at fourteen. The platform may report sooner because it includes modelled or view-through conversions. The network may finish higher because it counts deposits outside the window, like day nine. So look again after a few days before big decisions."
+        },
+        {
+          "v": "table",
+          "h": "Why the numbers never match",
+          "p": "Platforms and networks count differently, so a gap is normal. Your job is to know the reasons, keep the gap steady and notice when it suddenly changes.",
+          "d": {
+            "cols": [
+              "Reason",
+              "What happens"
+            ],
+            "rows": [
+              [
+                "Different windows",
+                "One counts day 9, one does not"
+              ],
+              [
+                "View-through credit",
+                "Platform credits people who never clicked"
+              ],
+              [
+                "Time zones",
+                "A conversion lands on different days"
+              ],
+              [
+                "Blocked tracking",
+                "Some browser events never arrive"
+              ],
+              [
+                "Modelled conversions",
+                "Platform estimates some it cannot see"
+              ],
+              [
+                "Qualification",
+                "Network rejects some conversions"
+              ],
+              [
+                "Bots and duplicates",
+                "Junk events inflate one side"
+              ]
+            ]
+          },
+          "say": "Platforms and networks count differently, so a gap is normal. Look at the reasons. Different windows: one counts day nine, one doesn't. View-through credit for people who never clicked. Time zones, so a conversion lands on different days. Blocked tracking, so some browser events never arrive. Modelled conversions, where the platform estimates what it can't see. Qualification, where the network rejects some. And bots and duplicates inflating one side. Your job is to know the reasons, keep the gap steady, and notice when it suddenly changes."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example: which number to use",
+          "p": "Example: Meta shows 18 registrations for yesterday. The network shows 14. The gap is 4, which is 4 ÷ 18 = about 22% fewer on the network side.",
+          "d": {
+            "kind": "example",
+            "text": "Pay attention to the 14 for profit maths, because that is what the network counts. Use Meta's 18 to compare ad sets against each other, since the same rules apply to all of them."
+          },
+          "say": "Here's a worked example. Meta shows eighteen registrations for yesterday. The network shows fourteen. The gap is four, and four divided by eighteen is about twenty two percent fewer on the network side. So which number do you use? Use the fourteen for profit maths, because that's what the network counts. Use Meta's eighteen to compare ad sets against each other, since the same rules apply to all of them."
+        },
+        {
+          "v": "big",
+          "h": "Network for money, platform for direction",
+          "p": "Use the network number when you calculate cost per FTD, ROI and profit. Use the platform number to compare ads inside the same platform, because the bias applies equally to all of them.",
+          "d": {
+            "b": "Two reports, two jobs",
+            "s": "Money from the network, comparisons from the platform"
+          },
+          "say": "Two reports, two jobs. Use the network number when you calculate cost per F T D, R O I, return on investment, and profit. Use the platform number to compare ads inside the same platform, because its bias applies equally to all of them. Money from the network, comparisons from the platform."
+        },
+        {
+          "v": "compare",
+          "h": "A gap to watch versus a gap to fix",
+          "p": "A small, steady gap is normal. A sudden change usually means something broke. Learn the difference so you do not panic over noise or ignore a real fault.",
+          "d": {
+            "a": {
+              "title": "Normal, keep watching",
+              "items": [
+                "Gap similar day after day",
+                "Both sides move together",
+                "Explained by windows or time zones"
+              ]
+            },
+            "b": {
+              "title": "Broken, fix now",
+              "items": [
+                "One side drops to zero",
+                "Gap suddenly doubles",
+                "Conversions with no click ID"
+              ]
+            }
+          },
+          "say": "A small, steady gap is normal. A sudden change usually means something broke. On the left, normal, keep watching: the gap is similar day after day, both sides move together, and it's explained by windows or time zones. On the right, broken, fix now: one side drops to zero, the gap suddenly doubles, or conversions arrive with no click I D. Learn the difference, so you don't panic over noise or ignore a real fault."
+        },
+        {
+          "v": "cards",
+          "h": "Common attribution mistakes",
+          "p": "These mistakes make good ad sets look bad and bad ones look good. Each one is fixed by a simple habit, not by a new tool, so you can fix all four today with the sheet you already have.",
+          "d": [
+            "Profit from platform numbers|use network FTDs",
+            "Judging yesterday too early|look again after 2 to 3 days",
+            "Mixing time zones|note both at the top of the sheet",
+            "Changing windows mid-test|keep one setting per test"
+          ],
+          "say": "These mistakes make good ad sets look bad, and bad ones look good. Look at the cards. Profit from platform numbers: use network F T Ds. Judging yesterday too early: look again after two to three days. Mixing time zones: note both at the top of the sheet. Changing windows mid-test: keep one setting per test. Each is fixed by a simple habit, not a new tool, so you can fix all four today."
+        },
+        {
+          "v": "flow",
+          "h": "Your minimum beginner setup",
+          "p": "You do not need expensive tools to start. These five pieces, set up properly, are enough to run your first tests and make real decisions.",
+          "d": [
+            "Offer link with sub IDs",
+            "UTMs on ad links",
+            "Pixel with key events",
+            "Postback or network report",
+            "Daily sheet"
+          ],
+          "more": "If you have no paid tracker yet, the network's own report grouped by sub ID can stand in for one: fill sub2 to sub4 with campaign, ad set and ad names, and export or read the report daily. Add a tracker and server events once you are spending enough that better signals clearly pay for the tool. Each tool has a cost, so add one when it solves a real problem you have.",
+          "say": "You don't need expensive tools to start. Follow the flow. An offer link with sub IDs. U T Ms, your link labels, on ad links. A pixel with key events. A postback or network report. And a daily sheet. Those five pieces are enough for your first tests. With no paid tracker yet, the network's report grouped by sub ID can stand in for one. Add a tracker and server events once better signals clearly pay for the tool. Add each tool when it solves a real problem."
+        },
+        {
+          "v": "check",
+          "h": "Pre-launch tracking checklist",
+          "p": "Go through this list before every new campaign, not just the first one. A link copied from an old campaign with the wrong sub IDs is one of the most common beginner mistakes.",
+          "d": [
+            "Sub IDs filled with campaign, ad set, ad",
+            "UTMs follow your naming key",
+            "Pixel events seen in the test tool",
+            "Test conversion seen in your report",
+            "Ad account and report time zones noted"
+          ],
+          "say": "Go through this checklist before every new campaign, not just the first. Sub IDs filled with campaign, ad set and ad. U T Ms that follow your naming key. Pixel events seen in the test tool. A test conversion seen in your report. And the ad account and report time zones noted. A link copied from an old campaign with the wrong sub IDs is one of the most common beginner mistakes."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: the daily sheet",
+          "p": "Example: one row per ad set per day. Spend comes from the ad platform. Registrations and FTDs come from the network. Cost per FTD is the column you decide on.",
+          "d": {
+            "cols": [
+              "Ad set",
+              "Spend",
+              "Network regs",
+              "FTDs"
+            ],
+            "rows": [
+              [
+                "hook1",
+                "$20",
+                "6",
+                "1"
+              ],
+              [
+                "hook3",
+                "$20",
+                "9",
+                "2"
+              ],
+              [
+                "Total",
+                "$40",
+                "15",
+                "3"
+              ]
+            ]
+          },
+          "more": "Example. Cost per FTD: hook1 is $20 ÷ 1 = $20, hook3 is $20 ÷ 2 = $10, and the total is $40 ÷ 3 = about $13.33. Add a column for platform registrations if you want to track the gap. Keep one row per ad set per day and never overwrite old rows: the history is how you spot a slow decline or a broken postback.",
+          "say": "Here's the daily sheet, as an example. One row per ad set per day. Spend comes from the ad platform. Registrations and F T Ds come from the network. Hook one spent twenty dollars for one F T D, so twenty dollars each. Hook three spent twenty for two, so ten dollars each. The total, forty dollars for three, is about thirteen dollars thirty three. Cost per F T D is the column you decide on. Never overwrite old rows. The history is how you spot a slow decline or a broken postback."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: build the daily sheet",
+          "p": "Open a blank spreadsheet. Type spend from Ads Manager and registrations and FTDs from the network. Let a formula work out cost per FTD so you never do it in your head. Add a gap column to spot broken tracking early.",
+          "d": {
+            "kind": "browser",
+            "url": "sheets.example/daily",
+            "title": "Daily sheet (ad account time zone: Africa/Lagos)",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Ad set",
+                  "Spend",
+                  "Net FTDs",
+                  "CPA"
+                ],
+                "rows": [
+                  [
+                    "hook1",
+                    "$20",
+                    "1",
+                    "$20.00"
+                  ],
+                  [
+                    "hook3",
+                    "$20",
+                    "2",
+                    "$10.00"
+                  ],
+                  [
+                    "Total",
+                    "$40",
+                    "3",
+                    "$13.33"
+                  ]
+                ]
+              },
+              {
+                "type": "field",
+                "label": "CPA formula",
+                "value": "=IF(C2=0,\"no FTD\",B2/C2)"
+              },
+              {
+                "type": "field",
+                "label": "Gap formula",
+                "value": "=(Platform regs - Network regs) / Platform regs"
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "Let's build it. Open a blank spreadsheet. Type spend from Ads Manager, and registrations and F T Ds from the network. Notice the title notes the ad account time zone. Look at the highlighted formula field. A formula works out cost per F T D, and shows no F T D when there are none, so you never do it in your head. The formula is on screen. Then add a gap column, comparing platform and network registrations, to spot broken tracking early."
+        },
+        {
+          "v": "table",
+          "h": "Decision rules you apply to the sheet",
+          "p": "Example with a $40 payout and $30 target. These are the starting rules from the Budget and kill rules module; adapt them to your vertical and data. Check rows from the top and count only network-confirmed FTDs.",
+          "d": {
+            "cols": [
+              "Decision",
+              "Starting rule",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Kill",
+                "0 FTDs at spend ≥ 2 × target",
+                "$60, 0 FTDs"
+              ],
+              [
+                "Kill",
+                "Spend ≥ 3 × target, CPA over kill line",
+                "$90+, CPA over $40"
+              ],
+              [
+                "Scale +20%",
+                "3+ FTDs, CPA ≤ 0.8 × target",
+                "CPA ≤ $24"
+              ],
+              [
+                "Hold",
+                "Anything else",
+                "e.g. $45, 1 FTD"
+              ]
+            ]
+          },
+          "more": "The CPA kill line is the lower of 1.5 × target and break-even. Here 1.5 × $30 = $45, but the $40 payout is lower, so the line is $40. Scale steps are +20%, at least 48 hours apart. The full card, including Keep, is taught in the Budget and kill rules module.",
+          "say": "Here are the decision rules you apply to the sheet. Example: a forty dollar payout and a thirty dollar target. Check rows from the top, and count only network-confirmed F T Ds. Kill at zero F T Ds once spend reaches two times target, sixty dollars. Kill once spend reaches three times target, ninety dollars, if C P A, cost per acquisition, is over the kill line. That line is the lower of one point five times target and break-even, so forty dollars here. Scale twenty percent with three or more F T Ds at a C P A of twenty four dollars or less. Anything else, hold. These are starting rules, so adapt them."
+        },
+        {
+          "v": "quote",
+          "h": "From the founder",
+          "p": "Dchessking on the daily habit that made his reports trustworthy. Read it as a routine, not a rule: one short check each morning, comparing what the platform says with what the network says.",
+          "d": "Every number I trust today, I once got wrong. Reconcile your ad platform and your network every day until it becomes boring. Boring numbers are the ones you can scale on.",
+          "by": "dchessking",
+          "say": "Here's Dchessking on the daily habit that made his reports trustworthy. Read it as a routine, not a rule. Here's how he puts it: Every number I trust today, I once got wrong. Reconcile your ad platform and your network every day until it becomes boring. Boring numbers are the ones you can scale on."
+        },
+        {
+          "v": "tip",
+          "h": "When tracking breaks mid-campaign",
+          "p": "If a postback stops or a pixel breaks, avoid making scaling or kill decisions on broken data. Fix the setup first, then rebuild the missing days from the network report.",
+          "d": {
+            "kind": "warn",
+            "text": "Never scale or kill an ad set based on data from a day when tracking was broken."
+          },
+          "say": "Sometimes tracking breaks mid-campaign. A postback stops, or a pixel breaks. When that happens, avoid making scaling or kill decisions on broken data. Fix the setup first, then rebuild the missing days from the network report. Read the warning: never scale or kill an ad set based on data from a day when tracking was broken."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: keep the sheet clean and true",
+          "p": "Your sheet is a business record. It may be shared with a teammate, an accountant or a network manager, so keep personal data out of it and never adjust numbers to make a test look better than it was.",
+          "d": {
+            "kind": "warn",
+            "text": "No names, phones or emails in your sheet. Record numbers exactly as the platform and network report them."
+          },
+          "say": "Your sheet is a business record. It may be shared with a teammate, an accountant or a network manager. So keep personal data out of it, and never adjust numbers to make a test look better than it was. Read the warning: no names, phones or emails in your sheet. Record numbers exactly as the platform and network report them."
+        }
+      ],
+      "takeaways": [
+        "Attribution windows decide which conversions an ad gets credit for.",
+        "Platform and network numbers always differ. Watch for sudden changes in the gap.",
+        "Start with sub IDs, UTMs, a pixel, postbacks or network reports, and a daily sheet."
+      ],
+      "action": "Create your daily sheet with columns for date, ad set, spend, platform registrations, network registrations and FTDs, and note your ad account time zone at the top.",
+      "glossary": [
+        {
+          "term": "Attribution",
+          "def": "The rules that decide which ad gets credit for a conversion."
+        },
+        {
+          "term": "Attribution window",
+          "def": "How many days after a click or view a conversion can still be credited to an ad."
+        },
+        {
+          "term": "View-through conversion",
+          "def": "A conversion credited to an ad the person saw but did not click."
+        },
+        {
+          "term": "Modelled conversion",
+          "def": "A conversion the platform estimates when it cannot observe it directly."
+        },
+        {
+          "term": "Discrepancy",
+          "def": "The gap between two reports that should describe the same conversions."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is an attribution window?",
+          "options": [
+            "The hours your ads are allowed to run",
+            "The time after a click or view during which a conversion can be credited to an ad",
+            "The time a network takes to pay you",
+            "The size of your landing page"
+          ],
+          "answer": 1,
+          "why": "It is the credit period. Conversions outside it are not credited to the ad by that tool."
+        },
+        {
+          "q": "Meta shows 18 registrations and the network shows 14. Which do you use to calculate profit?",
+          "options": [
+            "Meta's 18",
+            "The average, 16",
+            "The network's 14",
+            "Neither, wait a month"
+          ],
+          "answer": 2,
+          "why": "You are paid on the network's count, so profit maths uses the network number."
+        },
+        {
+          "q": "Which is a sign that tracking is broken, not just a normal gap?",
+          "options": [
+            "The network side suddenly drops to zero",
+            "The gap is similar every day",
+            "Numbers differ by a few conversions",
+            "Yesterday's numbers rise slightly today"
+          ],
+          "answer": 0,
+          "why": "A sudden drop to zero or a sudden jump in the gap points to a fault. Steady small gaps are normal."
+        },
+        {
+          "q": "Daily sheet: ad set spent $20 and got 2 FTDs; another spent $20 and got 1. Total cost per FTD?",
+          "options": [
+            "$20",
+            "$10",
+            "$40",
+            "About $13.33"
+          ],
+          "answer": 3,
+          "why": "Total spend $40 ÷ total FTDs 3 = about $13.33."
+        },
+        {
+          "q": "Your postback was broken for one day. What should you do about that day's data?",
+          "options": [
+            "Scale the ad sets that looked best that day",
+            "Fix the postback, then rebuild the day from the network report before deciding",
+            "Kill every ad set with zero FTDs that day",
+            "Ignore it, data always evens out"
+          ],
+          "answer": 1,
+          "why": "Decisions on broken data are guesses. Repair the setup and fill the gap from the network report first."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn what attribution windows are, why platform and network numbers never quite match, and how to run a simple minimum tracking setup with a daily sheet.",
+      "say_outro": "You've learned how attribution windows work, why platform and network numbers differ, which one to use for money and which for comparisons, and how to run a minimum setup with a daily sheet. Your task: create your daily sheet with columns for date, ad set, spend, platform registrations, network registrations and F T Ds, and note your ad account time zone at the top. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "You spent $60 on a new ad set. Meta shows 9 registrations; the network shows 0 clicks from your sub IDs. What is the most likely problem?",
+      "options": [
+        "The offer is bad",
+        "The audience is too broad",
+        "The offer link is wrong or missing your sub IDs",
+        "Meta is overcounting"
+      ],
+      "answer": 2,
+      "why": "Zero clicks recorded by the network means traffic is not reaching the offer link with your IDs. Check the link before judging the offer."
+    },
+    {
+      "q": "Target CPA $30. An ad set has spent $65. Meta reports 3 conversions, but the network confirms 0 FTDs for its sub ID after postbacks have had time to arrive. What do you do?",
+      "options": [
+        "Scale it, Meta shows 3 conversions",
+        "Hold it until Meta and the network agree",
+        "Kill it: spend is past 2 × target with 0 network-confirmed FTDs",
+        "Double the budget to get more data"
+      ],
+      "answer": 2,
+      "why": "Decisions use network-confirmed conversions. $65 is past the $60 zero-conversion kill line (2 × $30), so the starting rule says kill."
+    },
+    {
+      "q": "You put ad set names in sub3, but the network report groups everything under \"(empty)\". What happened?",
+      "options": [
+        "The pixel is not installed",
+        "The postback has the wrong payout macro",
+        "The attribution window is too short",
+        "The sub3 value is not reaching the network, so the link or placeholder is wrong"
+      ],
+      "answer": 3,
+      "why": "An empty sub ID means the value never arrived in the offer link. Check the link and any dynamic placeholder."
+    },
+    {
+      "q": "Your budget is $15 a day. Registrations cost about $3 and FTDs about $45. Which event is the more practical optimisation goal to start with?",
+      "options": [
+        "Registration",
+        "FTD",
+        "PageView",
+        "Link click"
+      ],
+      "answer": 0,
+      "why": "At $105 a week you get about 35 registrations but only about 2 FTDs. Registrations give the system far more to learn from, while link clicks and page views say little about value."
+    },
+    {
+      "q": "Your pixel and server both send Lead for the same person but the platform counts two leads. What is the fix?",
+      "options": [
+        "Remove the pixel completely",
+        "Change the event name on the server",
+        "Send the same event ID from both so they deduplicate",
+        "Shorten the attribution window"
+      ],
+      "answer": 2,
+      "why": "Deduplication relies on the same event name and a shared event ID."
+    },
+    {
+      "q": "Postback test: the tracker shows a conversion but payout reads 0. What do you check?",
+      "options": [
+        "Your UTM medium",
+        "The payout macro in the postback URL",
+        "Your ad creative",
+        "The pixel base code"
+      ],
+      "answer": 1,
+      "why": "A zero payout with a working postback usually means the payout macro is missing or misnamed."
+    },
+    {
+      "q": "One week: 12 qualified FTDs at $35 payout, $360 spend. What is the ROI?",
+      "options": [
+        "About 17%",
+        "About 117%",
+        "$60",
+        "About 33%"
+      ],
+      "answer": 0,
+      "why": "Revenue 12 × $35 = $420. Profit $420 minus $360 = $60. $60 ÷ $360 = about 17%."
+    },
+    {
+      "q": "Meta and the network have differed by about 20% every day for two weeks. Today Meta shows 25 registrations and the network shows 3. What do you do?",
+      "options": [
+        "Accept it as normal variance",
+        "Scale, because Meta looks strong",
+        "Change the attribution window to match",
+        "Treat it as a likely tracking or traffic fault and investigate before deciding"
+      ],
+      "answer": 3,
+      "why": "A steady gap is normal. A sudden jump from about 20% to nearly 90% points to a broken link, postback or junk traffic."
+    },
+    {
+      "q": "A teammate wants to put your Meta pixel directly on the advertiser's deposit page. What is the better standard approach?",
+      "options": [
+        "Ask the advertiser for their password",
+        "Use a postback from the network and send a server event from your tool",
+        "Copy the advertiser's page and host it yourself",
+        "Skip tracking deposits"
+      ],
+      "answer": 1,
+      "why": "Advertisers rarely allow your pixel. Postbacks plus server events are the standard, honest way to get deposit data."
+    },
+    {
+      "q": "A teammate wants to put each lead's phone number in sub2 so the network report shows who converted. What is the right answer?",
+      "options": [
+        "Fine, as long as the numbers are hashed in a sheet later",
+        "Fine for trading offers only",
+        "Yes, it improves matching",
+        "No: keep personal data out of links and sub IDs; use a click ID instead"
+      ],
+      "answer": 3,
+      "why": "Links and sub IDs end up in logs and reports. Platform terms and privacy law usually forbid personal data there. A click ID matches the conversion without exposing anyone."
+    }
+  ]
+}

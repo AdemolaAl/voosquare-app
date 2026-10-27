@@ -1,0 +1,2795 @@
+{
+  "school": "operator",
+  "order": 8,
+  "slug": "tracking-advanced",
+  "title": "Tracking, advanced",
+  "summary": "How serious operators connect every click to the deposit it produced: trackers, click IDs, server-side events, the conversions API, deduplication and postback mapping. Clean, consented data is what lets the ad platform find more people who actually deposit.",
+  "lessons": [
+    {
+      "slug": "trackers-and-click-ids",
+      "title": "Trackers and click IDs",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can explain what an ad tracker does and when you need one",
+        "By the end you can follow a click ID from ad to postback",
+        "By the end you can set up sub IDs so every conversion carries its campaign, ad set and ad",
+        "By the end you can choose between redirect and direct tracking"
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "One ID follows the person",
+          "p": "Advanced tracking rests on one idea. When someone clicks, you give that click a unique ID and carry it through every step: lander, offer, Telegram, deposit. When a conversion happens, the ID tells you exactly which ad paid for it. Without it, every kill or scale call is a guess with real money behind it.",
+          "d": {
+            "b": "Click ID in, click ID out",
+            "s": "The thread that ties spend to revenue"
+          },
+          "say": "Advanced tracking rests on one simple idea. When someone clicks your ad, you give that click its own unique I D, and you carry it through every step: the lander, the offer, Telegram, the deposit. Look at the line on screen: click I D in, click I D out. When a conversion happens, that I D tells you exactly which ad paid for it. Without it, every kill or scale call is a guess, with real money behind it."
+        },
+        {
+          "v": "cards",
+          "h": "What a tracker does",
+          "p": "A tracker is software that sits between your ads and your offers. It can be cloud-hosted or self-hosted on your own server. Its core jobs are the same everywhere.",
+          "more": "Common examples include Keitaro, Binom, RedTrack and Voluum. Named only as examples, not endorsements; features and prices change. A spreadsheet plus network reports works at small scale. Once you run several offers, geos or landers at once, a tracker saves you hours and shows profit in one place.",
+          "d": [
+            "Counts clicks|with a unique ID each",
+            "Routes traffic|to landers and offers you choose",
+            "Receives postbacks|conversions from the network",
+            "Reports|profit by campaign, ad, geo, device"
+          ],
+          "say": "So what is a tracker? It's software that sits between your ads and your offers. It can live in the cloud, or on your own server. Look at the four cards. It counts clicks, giving each one a unique I D. It routes traffic to the landers and offers you choose. It receives postbacks, the conversions from the network. And it reports profit by campaign, ad, geo and device. Keitaro, Binom, RedTrack and Voluum are common examples, named only as examples, not endorsements. A spreadsheet works at small scale, but once you run several offers, geos or landers, a tracker saves you hours."
+        },
+        {
+          "v": "flow",
+          "h": "The path of a click ID",
+          "p": "Example path for one trading-offer click. Each arrow is a handover where the ID can get lost, for example when a link is rebuilt by hand or a redirect drops parameters. Test every handover before launch.",
+          "d": [
+            "Ad click",
+            "Tracker makes ID",
+            "Lander keeps ID",
+            "Offer link carries ID",
+            "Network stores ID",
+            "Postback returns ID"
+          ],
+          "say": "Follow this path from left to right. It's an example for one trading-offer click. The ad is clicked, the tracker makes an I D, the lander keeps it, the offer link carries it, the network stores it, and the postback returns it. Each arrow is a handover, and each handover is a place where the I D can get lost, for example when someone rebuilds a link by hand, or a redirect drops parameters. That's why you test every handover before launch."
+        },
+        {
+          "v": "table",
+          "h": "Click IDs you will meet",
+          "p": "Each party in the chain creates its own ID. The ad platform has one, your tracker has one, the network stores yours, and Telegram has its own user ID. Your tracker's job is to link them together.",
+          "d": {
+            "cols": [
+              "ID",
+              "Created by",
+              "Where you see it"
+            ],
+            "rows": [
+              [
+                "fbclid",
+                "Meta",
+                "URL after an ad click"
+              ],
+              [
+                "ttclid",
+                "TikTok",
+                "URL after an ad click"
+              ],
+              [
+                "Tracker click ID",
+                "Your tracker",
+                "Every link you build"
+              ],
+              [
+                "Network sub ID",
+                "You, via sub1 etc.",
+                "Offer link and postback"
+              ],
+              [
+                "Telegram user ID",
+                "Telegram",
+                "Your bot's updates"
+              ]
+            ]
+          },
+          "say": "Here's something that confuses beginners. Every party in the chain makes its own I D. Look down the table. Meta adds f b clid to the U R L after an ad click. TikTok adds t t clid. Your tracker makes its own click I D for every link you build. The network sub I D is something you fill, through sub one and so on. And Telegram has its own user I D in your bot's updates. Your tracker's job is to link all of these together."
+        },
+        {
+          "v": "eq",
+          "h": "A tracked offer link",
+          "p": "Most networks give you sub ID slots in the offer link. You fill them with tracker values so they come back in the postback. Slot names differ by network.",
+          "d": [
+            "Offer URL",
+            "+",
+            "sub1 = click ID",
+            "+",
+            "sub2 = campaign",
+            "+",
+            "sub3 = ad"
+          ],
+          "say": "Now, how does your click I D get into the network? Most networks give you sub I D slots in the offer link. Read the equation: the offer U R L, plus sub one equals click I D, plus sub two equals campaign, plus sub three equals ad. You fill these slots with tracker values, so they come back to you in the postback. One thing to watch: slot names differ by network, so check yours."
+        },
+        {
+          "v": "code",
+          "h": "Worked example: a tracked offer link",
+          "p": "Example: your tracker gives this click the ID 8f3k2a. The ad came from campaign NG_TRD_Broad, ad H2. The offer link carries all three, so a deposit next week comes back in the postback with the exact ad attached, and your report can credit H2.",
+          "d": {
+            "lang": "url",
+            "text": "Template in your tracker:\nhttps://track.network.example/click?offer=88&aff=5678&sub1={clickid}&sub2={campaign}&sub3={ad}\n\nFilled at click time:\nhttps://track.network.example/click?offer=88&aff=5678&sub1=8f3k2a&sub2=NG_TRD_Broad&sub3=H2",
+            "note": "Example network and tracker. Macro names such as {clickid} vary by tracker; slot names such as sub1 vary by network."
+          },
+          "say": "Here's a worked example. The code on screen shows a template in your tracker, and then the same link filled at click time. Say your tracker gives this click the I D eight f three k two a. The ad came from the campaign N G, T R D, Broad, ad H two. The offer link carries all three. So if that person deposits next week, the postback comes back with the exact ad attached, and your report credits H two. This is an example network and tracker, and macro and slot names vary."
+        },
+        {
+          "v": "compare",
+          "h": "Redirect or direct tracking",
+          "p": "Redirect tracking sends the click through the tracker's domain before the page. Direct tracking loads your page first and records the visit with a script. Both are legitimate. Neither should ever show reviewers a different page from users.",
+          "more": "Meta and other platforms prefer that the ad's link and the final page share a clear, consistent domain and that everyone sees the same page. Using a tracker to show reviewers a safe page and users a different one is cloaking. It breaks every major platform's policy and leads to bans.",
+          "d": {
+            "a": {
+              "title": "Redirect",
+              "items": [
+                "Click goes via tracker URL",
+                "Very reliable counting",
+                "Adds a small delay",
+                "Ad shows tracker domain unless set up well"
+              ]
+            },
+            "b": {
+              "title": "Direct",
+              "items": [
+                "Ad links straight to your page",
+                "Script records the visit",
+                "Faster, cleaner for ad review",
+                "Can miss visits if script blocked"
+              ]
+            }
+          },
+          "say": "There are two ways to track. Look at the left side: redirect tracking sends the click through the tracker's domain before the page. It counts very reliably, but adds a small delay. On the right, direct tracking: the ad links straight to your page, and a script records the visit. It's faster and cleaner for ad review, but can miss visits if the script is blocked. Both are legitimate. But neither should ever show reviewers a different page from users. That's cloaking, it breaks every major platform's policy, and it leads to bans."
+        },
+        {
+          "v": "check",
+          "h": "Sub ID naming rules",
+          "p": "Messy names make reports useless, because you cannot filter or group results. Agree a naming pattern with your whole team, write it down and use exactly the same pattern in ads, tracker and sheets.",
+          "d": [
+            "Geo first: NG, KE, ZA, GH, CM",
+            "Then vertical and audience",
+            "No spaces; use underscores",
+            "Keep each value short",
+            "Same pattern in ads, tracker and sheet"
+          ],
+          "say": "Messy names make reports useless, because you can't filter or group your results. So go down this checklist. Geo first: N G, K E, Z A, G H, C M. Then vertical and audience. No spaces, use underscores. Keep each value short. And use exactly the same pattern in your ads, your tracker and your sheet. Agree this pattern with your whole team and write it down, so everyone's reports mean the same thing."
+        },
+        {
+          "v": "funnel",
+          "h": "Where IDs get lost",
+          "p": "Example: 1,000 clicks where we checked how many still carried the click ID at each step. Losses usually come from links rebuilt by hand or redirects that drop parameters.",
+          "d": [
+            [
+              "Ad clicks",
+              1000
+            ],
+            [
+              "Lander with ID",
+              960
+            ],
+            [
+              "Offer click with ID",
+              380
+            ],
+            [
+              "Registrations with sub1",
+              120
+            ],
+            [
+              "FTDs with sub1",
+              18
+            ]
+          ],
+          "say": "This funnel shows where I Ds get lost. It's an example: one thousand ad clicks, and we checked how many still carried the click I D at each step. Nine hundred and sixty reached the lander with the I D. Three hundred and eighty offer clicks still had it. One hundred and twenty registrations carried sub one, and eighteen F T Ds, first time deposits, did. Losses usually come from links rebuilt by hand, or redirects that drop parameters."
+        },
+        {
+          "v": "screen",
+          "h": "Reading a tracker report",
+          "p": "A tracker report puts spend, conversions and profit on one row per sub ID. Example, $40 payout: grouping by sub3, the ad, shows which ads paid for which deposits. The total looks fine, but two of the three ads lose money. Column names differ by tracker; check yours.",
+          "more": "Check: H1 6 × $40 = $240 − $262 = −$22. H2 14 × $40 = $560 − $372 = $188. H3 3 × $40 = $120 − $191 = −$71. Together: $825 spend, 23 FTDs, $920 revenue, $95 profit, all of it carried by H2. Without sub3 you would only see the total and keep paying for H1 and H3.",
+          "d": {
+            "kind": "browser",
+            "url": "tracker.example/reports/ng-trd",
+            "title": "Report: NG_TRD_Broad, last 7 days",
+            "blocks": [
+              {
+                "type": "select",
+                "label": "Group by",
+                "value": "sub3 (ad)"
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "Ad (sub3)",
+                  "Spend",
+                  "FTDs",
+                  "Profit"
+                ],
+                "rows": [
+                  [
+                    "H1",
+                    "$262",
+                    "6",
+                    "−$22"
+                  ],
+                  [
+                    "H2",
+                    "$372",
+                    "14",
+                    "$188"
+                  ],
+                  [
+                    "H3",
+                    "$191",
+                    "3",
+                    "−$71"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Example data. Profit = FTDs × $40 − spend."
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "Here's a tracker report, grouped by sub three, the ad. The payout is forty dollars, and this is example data. Look at the highlighted table. H one spent two hundred and sixty two dollars for six F T Ds, a loss of twenty two dollars. H two spent three hundred and seventy two for fourteen F T Ds, a profit of one hundred and eighty eight. H three lost seventy one. Together that's a ninety five dollar profit, all of it carried by H two. Without sub three, you'd only see the total, and keep paying for H one and H three."
+        },
+        {
+          "v": "tip",
+          "h": "Test before you spend",
+          "p": "Before every launch, click your own ad preview, register on the offer as a test if the network allows it, and check that the conversion appears in your tracker with the right sub IDs. Ask your network manager how to run a test conversion.",
+          "d": {
+            "kind": "tip",
+            "text": "One test conversion before launch saves days of untracked spend."
+          },
+          "say": "Here's a habit that pays for itself. Before every launch, click your own ad preview. Register on the offer as a test, if the network allows it. Then check that the conversion appears in your tracker with the right sub I Ds. Your network manager can tell you how to run a test conversion. As the tip says, one test conversion before launch saves days of untracked spend."
+        },
+        {
+          "v": "stat",
+          "h": "Tracked share of conversions",
+          "p": "A key health number: the share of the network's conversions that your tracker can match to a click. Below this, your optimisation decisions are guesses.",
+          "d": {
+            "n": 95,
+            "pre": "",
+            "suf": "%",
+            "dec": 0,
+            "label": "of network conversions matched to a click",
+            "note": "Example target. Rough guide, varies by setup."
+          },
+          "say": "This is a key health number: the share of the network's conversions that your tracker can match to a click. Look at the figure on screen, ninety five percent. That's an example target, and a rough guide that varies by setup. The point is simple. If too many conversions can't be matched to a click, your optimisation decisions are guesses."
+        },
+        {
+          "v": "tip",
+          "h": "Starting rule: the matched-share gate",
+          "p": "Use the matched share as a gate. At 90% or more, trust ad-level numbers and apply the rule card from the Budget and kill rules module. Below 90%, stop making ad-level kill or scale calls and fix the lost IDs first. Starting rules; adapt them to your setup.",
+          "d": {
+            "kind": "example",
+            "text": "Example: network 50 FTDs, tracker matches 46: 92%, decide on ads. Tracker matches 35: 70%, fix tracking first."
+          },
+          "say": "So use the matched share as a gate. At ninety percent or more, trust your ad-level numbers, and apply the rule card from the Budget and kill rules module. Below ninety percent, stop making ad-level kill or scale calls, and fix the lost I Ds first. Read the example: the network shows fifty F T Ds and your tracker matches forty six. That's ninety two percent, so you decide on ads. If it matches thirty five, that's seventy percent, so you fix tracking first. These are starting rules, adapt them to your setup."
+        },
+        {
+          "v": "compare",
+          "h": "Common tracking mistakes",
+          "p": "These mistakes cause most lost click IDs. None of them shows an error message. You only see them as a widening gap between what the network pays you for and what your tracker can trace to an ad.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Rebuilding links by hand",
+                "Different names in ads and tracker",
+                "A redirect that drops parameters",
+                "Optimising below 90% matched",
+                "Never testing a conversion"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Copy links from the tracker",
+                "One naming pattern everywhere",
+                "Test every redirect hop",
+                "Fix matching before decisions",
+                "One test conversion per launch"
+              ]
+            }
+          },
+          "say": "These mistakes cause most lost click I Ds. Read the left column, then the fix beside it. Rebuilding links by hand: instead, copy links from the tracker. Different names in ads and tracker: use one naming pattern everywhere. A redirect that drops parameters: test every redirect hop. Optimising below ninety percent matched: fix matching before decisions. Never testing a conversion: do one test conversion per launch. None of these shows an error message. You only see a widening gap between what the network pays and what your tracker can trace."
+        },
+        {
+          "v": "tip",
+          "h": "Trackers never hide pages from reviewers",
+          "p": "A tracker can route traffic, and that power is sometimes abused to show reviewers a safe page and users a different one. That is cloaking: it breaks every major platform's policy and gets accounts banned. Use routing only for real tests that everyone can see. More in the Ad account bans module.",
+          "d": {
+            "kind": "warn",
+            "text": "If a tool sells \"reviewer filtering\" or \"safe pages for moderators\", it is a cloaking tool. Do not use it."
+          },
+          "say": "One important warning. A tracker can route traffic, and that power is sometimes abused to show reviewers a safe page and users a different one. That's cloaking. It breaks every major platform's policy and gets accounts banned. Use routing only for real tests that everyone can see. And as the warning on screen says, if a tool sells reviewer filtering, or safe pages for moderators, it is a cloaking tool. Do not use it. There's more in the Ad account bans module."
+        }
+      ],
+      "takeaways": [
+        "Give every click a unique ID and carry it through every step",
+        "Use the network's sub ID slots to send campaign, ad set and ad",
+        "Redirect and direct tracking both work; never show reviewers a different page",
+        "Test one conversion end to end before every launch"
+      ],
+      "action": "Write your team's sub ID naming pattern on one line, then build one offer link with sub1, sub2 and sub3 filled from your tracker or by hand.",
+      "glossary": [
+        {
+          "term": "Tracker",
+          "def": "Software that records clicks, routes traffic and receives conversions to report profit per campaign."
+        },
+        {
+          "term": "Click ID",
+          "def": "A unique code given to one click so later events can be matched to it."
+        },
+        {
+          "term": "Sub ID",
+          "def": "A slot in a network's offer link, such as sub1, that you fill and get back in the postback."
+        },
+        {
+          "term": "Redirect tracking",
+          "def": "Sending the click through the tracker's URL before the page loads."
+        },
+        {
+          "term": "Cloaking",
+          "def": "Showing ad reviewers a different page than real users. Banned on all major platforms."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the main job of a click ID?",
+          "options": [
+            "Make the URL look professional",
+            "Link a later conversion back to the exact click and ad",
+            "Speed up the page",
+            "Hide the offer from reviewers"
+          ],
+          "answer": 1,
+          "why": "The ID is the thread that ties revenue back to spend."
+        },
+        {
+          "q": "Which is cloaking?",
+          "options": [
+            "Showing reviewers a safe page and users a different page",
+            "Using a tracker redirect",
+            "Adding sub IDs to an offer link",
+            "Using direct tracking"
+          ],
+          "answer": 0,
+          "why": "Different pages for reviewers and users is cloaking and banned."
+        },
+        {
+          "q": "Your network reports 50 FTDs; your tracker matches 20 of them to clicks. Using the matched-share gate, what do you do?",
+          "options": [
+            "Apply the rule card to each ad as normal",
+            "Decide the network is wrong",
+            "Stop ad-level kill and scale calls and find where the click ID is lost",
+            "Increase budget to get more data"
+          ],
+          "answer": 2,
+          "why": "20 ÷ 50 = 40% matched, far under the 90% gate. Ad-level numbers are guesses until matching is fixed."
+        },
+        {
+          "q": "Why use a consistent sub ID naming pattern?",
+          "options": [
+            "Networks require it",
+            "So reports can be filtered and compared reliably",
+            "It improves CTR",
+            "It hides data from competitors"
+          ],
+          "answer": 1,
+          "why": "Consistent names let you group and compare results."
+        },
+        {
+          "q": "What should you do before every launch?",
+          "options": [
+            "Nothing; tracking works by default",
+            "Turn off the pixel",
+            "Delete old campaigns",
+            "Run one test conversion end to end"
+          ],
+          "answer": 3,
+          "why": "A test confirms the ID survives every step."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn what an ad tracker does and how one click I D can follow a person from your ad all the way to a deposit. This is the thread that ties your spend to your revenue, so every kill or scale call you make later depends on it.",
+      "say_outro": "You've seen what a tracker does, how a click I D travels from ad to postback, how to fill sub I Ds, and why trackers never hide pages from reviewers. Your task: write your team's sub I D naming pattern on one line, then build one offer link with sub one, sub two and sub three filled, from your tracker or by hand. Now take the quiz."
+    },
+    {
+      "slug": "server-side-events-and-capi",
+      "title": "Server-side events and the conversions API",
+      "minutes": 19,
+      "objectives": [
+        "By the end you can explain the difference between browser and server events",
+        "By the end you can list the fields that make a server event match a person",
+        "By the end you can send a server event for a Telegram join or deposit",
+        "By the end you can handle consent and hashing correctly"
+      ],
+      "steps": [
+        {
+          "v": "compare",
+          "h": "Browser events and server events",
+          "p": "A browser event is sent by the pixel script in the visitor's browser. A server event is sent by your server straight to the platform's API. Browser events are easy but can be blocked. Server events are reliable but need setup.",
+          "d": {
+            "a": {
+              "title": "Browser (pixel)",
+              "items": [
+                "Runs in the visitor's browser",
+                "Blocked by some ad blockers",
+                "Limited by browser privacy rules",
+                "Only sees what happens on the page"
+              ]
+            },
+            "b": {
+              "title": "Server (CAPI)",
+              "items": [
+                "Sent from your server",
+                "Not affected by ad blockers",
+                "Can send events after the visit",
+                "Can report Telegram joins and deposits"
+              ]
+            }
+          },
+          "say": "Let's start with the two ways an event reaches the platform. On the left, a browser event, sent by the pixel script in the visitor's browser. It's easy, but some ad blockers and browser privacy rules can stop it, and it only sees what happens on the page. On the right, a server event, sent from your server straight to the platform's A P I, through C A P I, the Conversions A P I. It isn't affected by ad blockers, it can send events after the visit, and it can report Telegram joins and deposits. The trade-off is that it needs setup."
+        },
+        {
+          "v": "big",
+          "h": "Why server events matter here",
+          "p": "Your most valuable events, a Telegram join, a registration at the broker, a first deposit, happen away from your page. A pixel never sees them. Only a server event can tell the ad platform that a specific ad click turned into a depositor.",
+          "d": {
+            "b": "The pixel cannot see a deposit",
+            "s": "Your server can tell the platform"
+          },
+          "say": "Here's why this matters for you. Your most valuable events, a Telegram join, a registration at the broker, a first deposit, all happen away from your page. As the screen says, the pixel cannot see a deposit. Only a server event can tell the ad platform that a specific ad click turned into a depositor. And that's the signal you want the algorithm to learn from."
+        },
+        {
+          "v": "flow",
+          "h": "How a server event reaches Meta",
+          "p": "Example flow for a deposit sent to Meta. The key is storing the fbclid with your own click ID at the moment of the click. Names change; check Meta's current Conversions API documentation before you build.",
+          "d": [
+            "Ad click with fbclid",
+            "Store fbclid with click ID",
+            "Network postback: FTD",
+            "Your server builds event",
+            "Send to Conversions API",
+            "Meta matches to a user"
+          ],
+          "say": "Follow this flow for a deposit sent to Meta. It's an example. The ad click arrives with an f b clid. You store that f b clid together with your own click I D, right at the moment of the click. Later the network sends a postback for an F T D, a first time deposit. Your server builds the event, sends it to the Conversions A P I, and Meta matches it to a user. The key step is storing the f b clid at click time. Names change, so check Meta's current Conversions A P I documentation before you build."
+        },
+        {
+          "v": "table",
+          "h": "Fields that help matching",
+          "p": "The platform needs enough information to know which person the event belongs to. More good fields mean better matching and better optimisation. Personal fields such as email and phone must be hashed before sending.",
+          "more": "The fbc value is built from the fbclid in the ad click URL, in a format like fb.1.<timestamp>.<fbclid>; the pixel creates it automatically, or your server can build it. At the time of writing, Meta shows an Event Match Quality score for each event in Events Manager. Field names and formats change, so copy them from the current Meta documentation, not from old blog posts.",
+          "d": {
+            "cols": [
+              "Field",
+              "What it is",
+              "Hashed?"
+            ],
+            "rows": [
+              [
+                "fbc",
+                "Click ID cookie built from fbclid",
+                "No"
+              ],
+              [
+                "fbp",
+                "Browser ID cookie from the pixel",
+                "No"
+              ],
+              [
+                "em / ph",
+                "Email / phone",
+                "Yes, SHA-256"
+              ],
+              [
+                "external_id",
+                "Your own user ID",
+                "Recommended"
+              ],
+              [
+                "client IP + user agent",
+                "From the visit",
+                "No"
+              ]
+            ]
+          },
+          "say": "The platform needs enough information to know which person an event belongs to. Look at the table. F B C is the click I D cookie built from the f b clid, not hashed. F B P is the browser I D cookie from the pixel, not hashed. Email and phone must be hashed with S H A two fifty six. External I D is your own user I D, and hashing is recommended. Client I P and user agent come from the visit, not hashed. More good fields mean better matching and better optimisation. Copy field names from Meta's current docs, not old blog posts."
+        },
+        {
+          "v": "check",
+          "h": "Hashing done right",
+          "p": "Hashing turns an email or phone into a fixed code the platform can compare without you sending the raw value. It only works if everyone prepares the data the same way.",
+          "more": "Example: ' Ada@Mail.com ' becomes 'ada@mail.com' before hashing. Phone '0803 123 4567' in Nigeria becomes '2348031234567'. Hashing protects data in transit and storage, but it is not anonymisation: a hashed email is still personal data under most data protection laws, so you still need a lawful basis and consent where required.",
+          "d": [
+            "Trim spaces",
+            "Lowercase emails",
+            "Phone with country code, digits only",
+            "Hash with SHA-256",
+            "Never hash fbc, fbp, IP or user agent"
+          ],
+          "say": "Hashing turns an email or phone into a fixed code the platform can compare, without you sending the raw value. It only works if everyone prepares the data the same way. Go down the list: trim spaces, lowercase emails, phone with country code and digits only, then hash with S H A two fifty six. And never hash F B C, F B P, I P or user agent. One more thing: hashing is not anonymisation. A hashed email is still personal data under most data protection laws, so you still need a lawful basis, and consent where required."
+        },
+        {
+          "v": "eq",
+          "h": "Event payload in one line",
+          "p": "Every server event carries the same core pieces: what happened, when, a unique ID, who it was and where it happened. Miss one and the event is rejected or cannot be used for optimisation.",
+          "d": [
+            "event_name",
+            "+",
+            "event_time",
+            "+",
+            "event_id",
+            "+",
+            "user_data",
+            "+",
+            "action_source"
+          ],
+          "say": "Every server event carries the same core pieces. Read the line on screen: event name, plus event time, plus event I D, plus user data, plus action source. In plain words: what happened, when, a unique I D, who it was, and where it happened. Miss one, and the event is rejected, or it can't be used for optimisation."
+        },
+        {
+          "v": "code",
+          "h": "A server event for a deposit",
+          "p": "This is the shape of one server event for a first deposit. Your server fills it from the stored click row and the postback. Personal fields are hashed; fbc, IP and user agent are sent as they are. Field names follow Meta's docs at the time of writing; copy from the current docs.",
+          "more": "Which action_source fits a deposit that happened on the advertiser's site is set by Meta's rules, and the options have changed before. We are not certain which value Meta expects for every off-site case today; check the current Conversions API docs. The event_id here is the network's transaction ID, which the next lesson explains.",
+          "d": {
+            "lang": "json",
+            "text": "{\n  \"data\": [{\n    \"event_name\": \"Purchase\",\n    \"event_time\": 1759821600,\n    \"event_id\": \"tx_99812\",\n    \"action_source\": \"website\",\n    \"user_data\": {\n      \"fbc\": \"fb.1.1759561180000.IwAR2xYz...\",\n      \"client_ip_address\": \"102.89.0.10\",\n      \"client_user_agent\": \"Mozilla/5.0 (Linux; Android 13) ...\",\n      \"external_id\": \"<SHA-256 of your user ID>\"\n    },\n    \"custom_data\": { \"value\": 40, \"currency\": \"USD\" }\n  }]\n}",
+            "note": "Simplified. Sent with your access token to your dataset's Conversions API endpoint. Never put the token in a page."
+          },
+          "say": "The code on screen shows the shape of one server event for a first deposit. Your server fills it from the stored click row and the postback. Notice that personal fields are hashed, while F B C, I P and user agent are sent as they are. The value is forty, in U S dollars. Field names follow Meta's docs at the time of writing, so copy from the current docs. We're not certain which action source value Meta expects for every off-site case today, so check that too. And never put your access token in a page."
+        },
+        {
+          "v": "tip",
+          "h": "Event time matters",
+          "p": "Meta accepts server events with an event_time up to 7 days in the past at the time of writing. Deposits that arrive later cannot be sent. Send events as soon as the postback arrives; do not batch them weekly. Check the current docs.",
+          "d": {
+            "kind": "warn",
+            "text": "Late events are rejected or ignored, and they teach the algorithm nothing."
+          },
+          "say": "Timing matters. At the time of writing, Meta accepts server events with an event time up to seven days in the past. Deposits that arrive later can't be sent. So send each event as soon as the postback arrives, and don't batch them weekly. As the warning says, late events are rejected or ignored, and they teach the algorithm nothing. Check the current docs for the exact limit."
+        },
+        {
+          "v": "compare",
+          "h": "Telegram join as a server event",
+          "p": "Meta cannot see a Telegram join, because it happens inside Telegram. A join tracking tool links each join back to the click that caused it and sends it to the platform as a server event.",
+          "more": "Tools such as Joinvoo do this by tying each join, via a per-click invite link or a join request, to the stored click, then sending a server event to Meta, TikTok or Snapchat. Whatever tool you use, check that it sends only real joins and that your privacy notice covers it.",
+          "d": {
+            "a": {
+              "title": "Without server events",
+              "items": [
+                "Ad optimises for link clicks",
+                "Meta finds people who click",
+                "Many never join",
+                "Cost per join guessed"
+              ]
+            },
+            "b": {
+              "title": "With server events",
+              "items": [
+                "Join sent as a conversion",
+                "Meta finds people who join",
+                "Deposits sent too",
+                "Cost per join and per FTD measured"
+              ]
+            }
+          },
+          "say": "Meta can't see a Telegram join, because it happens inside Telegram. Compare the two sides. Without server events, your ad optimises for link clicks, Meta finds people who click, many never join, and your cost per join is a guess. With server events, the join is sent as a conversion, Meta finds people who join, deposits can be sent too, and cost per join and per F T D are measured. A join tracking tool, such as Joinvoo, links each join to its click. Whatever tool you use, check it sends only real joins, and that your privacy notice covers it."
+        },
+        {
+          "v": "bars",
+          "h": "Example: events received",
+          "p": "Illustration of how many of 100 real registrations the ad platform receives with each setup. Browser events miss some people; server events fill most of the gap. Real numbers depend on your audience, devices and browsers.",
+          "d": [
+            [
+              "Pixel only",
+              70,
+              "Example: 70"
+            ],
+            [
+              "Server only",
+              92,
+              "Example: 92"
+            ],
+            [
+              "Pixel + server, deduplicated",
+              97,
+              "Example: 97"
+            ]
+          ],
+          "say": "This chart is an illustration of how many of one hundred real registrations the platform receives with each setup. Look at the bars. Pixel only, an example of seventy. Server only, ninety two. Pixel plus server, deduplicated, ninety seven. Browser events miss some people, and server events fill most of the gap. Your real numbers will depend on your audience, devices and browsers."
+        },
+        {
+          "v": "check",
+          "h": "Consent and privacy",
+          "p": "Sending people's data to an ad platform is processing personal data, whether it leaves from a browser or your server. Do it lawfully and openly, and make sure your privacy notice tells people what you do.",
+          "more": "Laws differ: GDPR in the EU and UK, Nigeria's NDPA 2023, Kenya's Data Protection Act 2019, South Africa's POPIA and Ghana's Data Protection Act 2012 all cover this kind of processing in different ways. Platforms also have their own terms on what data you may send, including bans on sensitive data. This is not legal advice; check with a professional for each geo.",
+          "d": [
+            "Privacy notice names the ad platforms you share with",
+            "Ask for consent where the law requires it",
+            "Respect a refusal: no pixel, no server event",
+            "Send only fields you need",
+            "Keep a record of your setup"
+          ],
+          "say": "Sending people's data to an ad platform is processing personal data, whether it leaves from a browser or your server. So go through this checklist. Your privacy notice names the ad platforms you share with. Ask for consent where the law requires it. Respect a refusal: no pixel, no server event. Send only the fields you need. And keep a record of your setup. Laws differ by country, including Nigeria, Kenya, South Africa and Ghana. This is not legal advice, so check with a professional for each geo."
+        },
+        {
+          "v": "product",
+          "h": "Telegram joins as server events",
+          "p": "A join is the event most Telegram funnels need and the hardest to send yourself, because it happens inside Telegram. A join tracker ties each join request to the stored click and sends it as a server event. Check that it sends real joins only and that your privacy notice names it.",
+          "d": {
+            "slug": "joinvoo",
+            "why": "Sends each real Telegram join to the ad platform as a server event, tied to the click that caused it."
+          },
+          "say": "A join is the event most Telegram funnels need, and the hardest to send yourself, because it happens inside Telegram. This card shows Joinvoo, a join tracker. It ties each join request to the stored click and sends each real Telegram join to the ad platform as a server event. As with any tool, check that it sends real joins only, and that your privacy notice names it."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example",
+          "p": "Example: you get 400 registrations a week. The pixel alone reports 260 to Meta. Adding server events with good matching raises it to 380. The algorithm now learns from 380 signals a week instead of 260, about 46% more data to optimise on.",
+          "d": {
+            "kind": "example",
+            "text": "380 ÷ 260 ≈ 1.46, so about 46% more signals. Example figures."
+          },
+          "say": "Here's a worked example. You get four hundred registrations a week. The pixel alone reports two hundred and sixty to Meta. Adding server events with good matching raises that to three hundred and eighty. Look at the maths on screen: three hundred and eighty divided by two hundred and sixty is about one point four six. So the algorithm learns from about forty six percent more signals each week. These are example figures."
+        },
+        {
+          "v": "tip",
+          "h": "Test events first",
+          "p": "Meta's Events Manager has a test events tool. Send a test code with your server events and watch them arrive before you switch to live. Fix any error it shows. Names change; check the current Events Manager.",
+          "d": {
+            "kind": "warn",
+            "text": "Never send fake or test conversions into a live dataset. They mislead the algorithm."
+          },
+          "say": "Before you go live, test. Meta's Events Manager has a test events tool. You send a test code with your server events and watch them arrive before you switch to live, then fix any error it shows. And notice the warning: never send fake or test conversions into a live dataset, because they mislead the algorithm. Names change, so check the current Events Manager."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: send a test event",
+          "p": "Before live events, send one test event and watch it arrive. The flow below follows an Events Manager-style screen. Names and layouts change; check the current Events Manager. The steps stay the same: get a test code, send with it, check what arrived.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open the test tool",
+                "text": "In Events Manager, open your dataset and the Test events tab. Copy the test code shown there.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "events.example/dataset/test",
+                  "title": "Test events",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "value": "Send events with this code to see them here."
+                    },
+                    {
+                      "type": "field",
+                      "label": "Test code",
+                      "value": "TEST48213"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Copy"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Send with the code",
+                "text": "Add test_event_code to the payload from your server, then trigger one test deposit or postback.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "server.example/capi/send",
+                  "title": "Server event",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "event_name",
+                      "value": "Purchase"
+                    },
+                    {
+                      "type": "field",
+                      "label": "event_id",
+                      "value": "tx_test_001"
+                    },
+                    {
+                      "type": "field",
+                      "label": "test_event_code",
+                      "value": "TEST48213"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Send"
+                    }
+                  ],
+                  "highlight": 2
+                }
+              },
+              {
+                "title": "Check what arrived",
+                "text": "The event should appear within a minute or so with its matching fields. Fix any warning, then remove the test code before going live.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "events.example/dataset/test",
+                  "title": "Test events",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Event",
+                        "Source",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "Purchase",
+                          "Server",
+                          "Received"
+                        ],
+                        [
+                          "Lead",
+                          "Browser",
+                          "Received"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "Example. Check fbc, IP and user agent were received."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Let's walk through sending one test event. Tap Next to follow each step. First, open the test tool: in Events Manager, open your dataset and the Test events tab, and copy the test code shown there. Second, send with the code: add the test event code to the payload from your server, then trigger one test deposit or postback. Third, check what arrived: the event should appear within a minute or so, with its matching fields. Check that F B C, I P and user agent came through, fix any warning, then remove the test code before going live."
+        },
+        {
+          "v": "cards",
+          "h": "Common server event mistakes",
+          "p": "Server events fail quietly. The platform accepts the call, but matching is poor or the event teaches the wrong thing. These five mistakes cause most of it, and each has a simple fix you can check in an afternoon.",
+          "d": [
+            "Hashing fbc, IP or agent|send these as they are",
+            "Raw email or phone|trim, lowercase, SHA-256",
+            "Deposits batched weekly|send as each postback arrives",
+            "Test events in the live dataset|use the test code only",
+            "Ignoring consent|server-side is not exempt"
+          ],
+          "say": "Server events fail quietly. The platform accepts the call, but matching is poor, or the event teaches the wrong thing. Look at the five cards. Hashing F B C, I P or user agent: send these as they are. Raw email or phone: trim, lowercase, then S H A two fifty six. Deposits batched weekly: send them as each postback arrives. Test events in the live dataset: use the test code only. And ignoring consent: server-side is not exempt. Each of these is a simple fix you can check in an afternoon."
+        }
+      ],
+      "takeaways": [
+        "Pixel events come from the browser; server events come from your server",
+        "Off-page events like joins and deposits can only be sent server-side",
+        "Good matching needs fbc, fbp, IP, user agent and hashed personal fields",
+        "Hashing is not anonymisation; you still need consent where required"
+      ],
+      "action": "List the events in your funnel and mark each one browser, server or both. For each server event, write which matching fields you can collect honestly.",
+      "glossary": [
+        {
+          "term": "Conversions API",
+          "def": "Meta's server-to-server API for sending events. Often called CAPI."
+        },
+        {
+          "term": "Server event",
+          "def": "An event sent from your server to the ad platform, not from the visitor's browser."
+        },
+        {
+          "term": "fbc",
+          "def": "A value built from the fbclid in the ad click, used to match a server event to the click."
+        },
+        {
+          "term": "SHA-256",
+          "def": "A hashing method that turns text like an email into a fixed code. Required for personal fields."
+        },
+        {
+          "term": "Event Match Quality",
+          "def": "Meta's score for how well an event's data can be matched to a person."
+        },
+        {
+          "term": "action_source",
+          "def": "A field telling the platform where the event happened, such as website or chat."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why can a pixel not report a first deposit at the broker?",
+          "options": [
+            "Pixels are banned for trading",
+            "Deposits are too large",
+            "The deposit happens off your page, where the pixel is not installed",
+            "The pixel only works on desktop"
+          ],
+          "answer": 2,
+          "why": "The pixel only sees events on pages where it runs. Deposits happen on the advertiser's site."
+        },
+        {
+          "q": "Which field must be hashed before sending?",
+          "options": [
+            "Email",
+            "Client IP address",
+            "fbc",
+            "User agent"
+          ],
+          "answer": 0,
+          "why": "Personal identifiers like email and phone are hashed with SHA-256. fbc, fbp, IP and user agent are sent as they are."
+        },
+        {
+          "q": "A deposit postback arrives 10 days after the click. Under the 7-day rule described, what happens?",
+          "options": [
+            "Send it; it always counts",
+            "Send it twice",
+            "Send it with today's date to make it fit",
+            "It is too old to send as a Meta event"
+          ],
+          "answer": 3,
+          "why": "Events older than the accepted window are rejected. Faking the time misleads the algorithm."
+        },
+        {
+          "q": "A visitor refuses tracking consent where consent is required. What do you do?",
+          "options": [
+            "Send server events anyway",
+            "Send no pixel or server event for them",
+            "Hash their data and send it",
+            "Send only their IP"
+          ],
+          "answer": 1,
+          "why": "Server-side does not bypass consent. Respect the refusal."
+        },
+        {
+          "q": "Registrations reported to Meta go from 200 to 300 after adding server events. How much more signal?",
+          "options": [
+            "25%",
+            "33%",
+            "100%",
+            "50%"
+          ],
+          "answer": 3,
+          "why": "300 ÷ 200 = 1.5, a 50% increase."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn the difference between browser events and server events, and how to send a Telegram join or a deposit back to the ad platform. Your most valuable events happen away from your page, so this is how the platform finally learns who actually pays.",
+      "say_outro": "You now know why server events matter, which fields help matching, how to hash correctly, and how to handle consent and test events. Your task: list the events in your funnel and mark each one browser, server or both, then for each server event write which matching fields you can collect honestly. Now take the quiz."
+    },
+    {
+      "slug": "deduplication-and-event-id",
+      "title": "Deduplication and event_id",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can explain why sending the same event twice is a problem",
+        "By the end you can generate and share an event_id between pixel and server",
+        "By the end you can find duplicate events in your reports",
+        "By the end you can decide which events need both browser and server sending"
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Two messages, one event",
+          "p": "When you send a registration from both the pixel and the server, the platform gets two messages about one real event. Unless it knows they are the same, it counts two registrations. Your cost per result looks half what it really is.",
+          "d": {
+            "b": "Same event, sent twice",
+            "s": "Counted once only if you say so"
+          },
+          "say": "Here's the problem. When you send a registration from both the pixel and the server, the platform gets two messages about one real event. Unless it knows they're the same, it counts two registrations. As the screen says: same event, sent twice, counted once only if you say so. And when results are doubled, your cost per result looks half of what it really is."
+        },
+        {
+          "v": "eq",
+          "h": "The deduplication key",
+          "p": "Meta treats a browser event and a server event as duplicates when they share the same event name and the same event ID, and they arrive within its window. Then it keeps one.",
+          "more": "At the time of writing, Meta's docs describe deduplication when matching events arrive within 48 hours of each other. Meta also documents a fallback using fbp or external_id, but event_id is the reliable method. Other platforms, such as TikTok, use a similar event ID. Always check the current docs.",
+          "d": [
+            "Same event_name",
+            "+",
+            "Same event_id",
+            "=",
+            "Counted once"
+          ],
+          "say": "So how does the platform know two messages are one event? Read the equation. Same event name, plus same event I D, equals counted once. Meta treats a browser event and a server event as duplicates when they share both, and arrive within its window. At the time of writing, Meta's docs describe that window as forty eight hours. There's a fallback, but the event I D is the reliable method. Other platforms, such as TikTok, use a similar I D. Always check the current docs."
+        },
+        {
+          "v": "flow",
+          "h": "How to share an event_id",
+          "p": "The trick is simple: create the ID once, at the moment the event happens, and give that same ID to both the pixel and the server. Any later step that makes a new ID breaks the match.",
+          "d": [
+            "Page creates ID: reg_8f3k2a",
+            "Pixel sends with eventID",
+            "ID saved with the lead",
+            "Server sends same event_id",
+            "Platform keeps one"
+          ],
+          "say": "The trick is simple. Follow the flow. The page creates the I D once, for example reg underscore eight f three k two a. The pixel sends with that event I D. The I D is saved with the lead. The server sends the same event I D. And the platform keeps one. Create the I D once, at the moment the event happens, and share it. Any later step that makes a new I D breaks the match."
+        },
+        {
+          "v": "code",
+          "h": "One ID, two senders",
+          "p": "In code the idea is short. The page creates the ID once, gives it to the pixel and sends it to your server with the form. The server uses the same value as event_id. Field names are from Meta's docs at the time of writing; check the current docs.",
+          "d": {
+            "lang": "js",
+            "text": "// Browser, on form submit\nconst eventId = 'reg_' + clickId + '_' + Date.now();\nfbq('track', 'Lead', {}, { eventID: eventId });\nfetch('/api/lead', {\n  method: 'POST',\n  headers: { 'Content-Type': 'application/json' },\n  body: JSON.stringify({ clickId, eventId }),\n});\n\n// Server, same request\nsendServerEvent({ event_name: 'Lead', event_id: eventId /* , user_data ... */ });",
+            "note": "The pixel option is eventID; the server field is event_id. Same value, same event name."
+          },
+          "say": "In code, the idea is short. Look at the code on screen. In the browser, on form submit, the page creates the I D once. It gives it to the pixel, and sends it to your server with the form. Then the server uses the same value as its event I D. Notice the note at the bottom: the pixel option and the server field are spelled slightly differently, but they hold the same value, with the same event name. Field names are from Meta's docs at the time of writing, so check the current docs."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example",
+          "p": "Example: a registration form. On submit, the page creates reg_8f3k2a_1712345678. The pixel fires Lead with eventID reg_8f3k2a_1712345678. The form also posts that ID to your server, which sends a Lead server event with event_id reg_8f3k2a_1712345678.",
+          "d": {
+            "kind": "example",
+            "text": "Use something unique per event: the click ID plus a timestamp or an order number. Example IDs."
+          },
+          "say": "Here's a worked example, a registration form. On submit, the page creates one I D: reg, then the click I D, then a timestamp. The pixel fires Lead with that I D. The form also posts the same I D to your server, which sends a Lead server event with the very same event I D. As the tip says, use something unique per event, like the click I D plus a timestamp, or an order number. These are example I Ds."
+        },
+        {
+          "v": "compare",
+          "h": "Common event ID mistakes",
+          "p": "The ID must be unique per real event and identical in both messages about that event. Most deduplication bugs come from breaking one of those two rules, or from event names that differ slightly.",
+          "d": {
+            "a": {
+              "title": "Bad",
+              "items": [
+                "Same ID for every event",
+                "New random ID in pixel and another in server",
+                "Missing in one of the two",
+                "Different event names: Lead vs lead_form"
+              ]
+            },
+            "b": {
+              "title": "Good",
+              "items": [
+                "Unique per real event",
+                "Created once, shared",
+                "Present in both sends",
+                "Exactly matching event names"
+              ]
+            }
+          },
+          "say": "There are two rules: the I D must be unique per real event, and identical in both messages about that event. Look at the bad column. Using the same I D for every event. A new random I D in the pixel and another in the server. The I D missing in one of the two. Or different event names, like Lead versus lead form. Now the good column: unique per real event, created once and shared, present in both sends, and exactly matching event names."
+        },
+        {
+          "v": "stat",
+          "h": "What double counting looks like",
+          "p": "Example: 100 real registrations sent by pixel and server without event_id. The platform reports nearly double, and your CPL looks far better than it is.",
+          "d": {
+            "n": 185,
+            "pre": "",
+            "suf": "",
+            "dec": 0,
+            "label": "registrations reported for 100 real ones",
+            "note": "Example. Not every browser event fires, so it is less than 200."
+          },
+          "say": "Here's what double counting looks like. Look at the number on screen, one hundred and eighty five. That's an example: one hundred real registrations, sent by pixel and server without an event I D. The platform reports nearly double. It's less than two hundred only because not every browser event fires. And your C P L, cost per lead, looks far better than it really is."
+        },
+        {
+          "v": "table",
+          "h": "Which events to send where",
+          "p": "Not every event needs both senders. Send both only when the event can be seen in the browser and you want the server as a backup. Off-page events like deposits go server-only, with their own unique ID.",
+          "d": {
+            "cols": [
+              "Event",
+              "Browser",
+              "Server"
+            ],
+            "rows": [
+              [
+                "Page view",
+                "Yes",
+                "Optional"
+              ],
+              [
+                "Registration on your form",
+                "Yes",
+                "Yes, with event_id"
+              ],
+              [
+                "Telegram join",
+                "No",
+                "Yes"
+              ],
+              [
+                "First deposit",
+                "No",
+                "Yes"
+              ],
+              [
+                "Repeat deposit",
+                "No",
+                "Yes, own unique ID"
+              ]
+            ]
+          },
+          "say": "Not every event needs both senders. Look down the table. Page view: browser yes, server optional. Registration on your form: both, with a shared event I D. Telegram join: server only. First deposit: server only. Repeat deposit: server only, with its own unique I D. The rule is, send both only when the event can be seen in the browser and you want the server as a backup. Off-page events go server only."
+        },
+        {
+          "v": "tip",
+          "h": "Server-only events still need IDs",
+          "p": "A deposit sent only by your server can still be sent twice, for example if a network fires the same postback twice. Give each deposit a unique event_id, such as the network's transaction ID, so a retry does not count as a new deposit.",
+          "d": {
+            "kind": "tip",
+            "text": "Use the network's transaction or conversion ID as the event_id for postback-driven events."
+          },
+          "say": "Even server-only events can be sent twice. For example, a network might fire the same postback twice. So give each deposit a unique event I D, such as the network's transaction I D. Then a retry won't count as a new deposit. As the tip says, use the network's transaction or conversion I D as the event I D for postback-driven events."
+        },
+        {
+          "v": "check",
+          "h": "Finding duplicates",
+          "p": "Check these points in your platform's events tool and your own server logs at least once a week. Deduplication can break silently after a page update or a tool change, so do not assume it still works.",
+          "d": [
+            "Server events show as deduplicated in Events Manager",
+            "Platform count close to tracker count",
+            "No two server events with the same event_id",
+            "Event names spelled the same everywhere",
+            "Spike in results with no spike in revenue"
+          ],
+          "say": "Go through this checklist at least once a week, in your platform's events tool and your own server logs. Server events show as deduplicated in Events Manager. The platform count is close to your tracker count. No two server events share the same event I D. Event names are spelled the same everywhere. And watch for a spike in results with no spike in revenue. Deduplication can break silently after a page update or a tool change, so don't assume it still works."
+        },
+        {
+          "v": "screen",
+          "h": "Checking deduplication in an events tool",
+          "p": "An events overview shows each event with its browser and server counts. Example: Lead arrives from both and is marked deduplicated, so about 100 real leads count once. Purchase arrives from the server only. Names and layouts change; check the current Events Manager.",
+          "d": {
+            "kind": "browser",
+            "url": "events.example/dataset/overview",
+            "title": "Events overview: last 7 days",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Event",
+                  "Browser",
+                  "Server",
+                  "Deduplicated"
+                ],
+                "rows": [
+                  [
+                    "Lead",
+                    "96",
+                    "100",
+                    "Yes"
+                  ],
+                  [
+                    "Purchase",
+                    "0",
+                    "14",
+                    "Server only"
+                  ],
+                  [
+                    "CompleteRegistration",
+                    "88",
+                    "0",
+                    "Browser only"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Example. CompleteRegistration has no server copy: add one with a shared event_id."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Here's an events overview, an example. Look at the highlighted Lead row: ninety six from the browser, one hundred from the server, marked deduplicated. So about one hundred real leads count once. Purchase arrives from the server only, fourteen. And notice CompleteRegistration: eighty eight from the browser and nothing from the server. The note says to add a server copy with a shared event I D. Names and layouts change, so check the current Events Manager."
+        },
+        {
+          "v": "tip",
+          "h": "Starting rule: the double-count check",
+          "p": "Compare the platform's count for an event with your own database each week. If the platform shows more than 1.2 × your count, treat it as a deduplication failure: fix it before you judge CPA or make kill and scale calls. Starting rule; adapt it to your setup.",
+          "d": {
+            "kind": "example",
+            "text": "Example: platform 190 leads, database 100: 1.9 ×, fix first. Platform 104, database 100: 1.04 ×, fine."
+          },
+          "say": "Here's a starting rule. Each week, compare the platform's count for an event with your own database. If the platform shows more than one point two times your count, treat it as a deduplication failure, and fix it before you judge C P A, cost per acquisition, or make kill and scale calls. Read the example: one hundred and ninety leads against one hundred in your database is one point nine times, so fix it first. One hundred and four against one hundred is fine. Adapt this rule to your setup."
+        },
+        {
+          "v": "curve",
+          "h": "Reported vs real, before and after the fix",
+          "p": "Illustration of reported registrations over one week. Before the fix, the platform counts many registrations twice. After a shared event_id is added on day 4, reported numbers drop to match the real ones.",
+          "d": {
+            "a": [
+              92,
+              95,
+              90,
+              52,
+              50,
+              51,
+              49
+            ],
+            "la": "Reported",
+            "b": [
+              50,
+              51,
+              49,
+              52,
+              50,
+              51,
+              49
+            ],
+            "lb": "Real",
+            "x": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7"
+            ]
+          },
+          "say": "This chart is an illustration of reported registrations over one week. Look at the two lines. In the first three days, the reported line sits around ninety, while the real line sits around fifty, because many registrations are counted twice. On day four, a shared event I D is added. From then on, the reported line drops and matches the real one."
+        },
+        {
+          "v": "tip",
+          "h": "Do not panic at the drop",
+          "p": "When deduplication starts working, reported results fall and cost per result rises. Nothing got worse. You are now seeing the truth, and the algorithm is now optimising on real numbers.",
+          "d": {
+            "kind": "warn",
+            "text": "Tell your team before you fix deduplication, so nobody kills a good campaign because the numbers 'dropped'."
+          },
+          "say": "When deduplication starts working, reported results fall, and cost per result rises. Nothing got worse. You're now seeing the truth, and the algorithm is optimising on real numbers. Notice the warning: tell your team before you fix deduplication, so nobody kills a good campaign because the numbers dropped."
+        },
+        {
+          "v": "tip",
+          "h": "Double counting is false data",
+          "p": "Leaving a known double count in place because it makes results look cheaper means knowingly reporting false data. It misleads the platform, your team and any partner who sees your reports. Fix it, tell your team why the numbers moved and reset targets on true numbers.",
+          "d": {
+            "kind": "warn",
+            "text": "Report true numbers to clients, partners and your team, even when they look worse."
+          },
+          "say": "One more thing about honesty. Leaving a known double count in place, because it makes results look cheaper, means knowingly reporting false data. It misleads the platform, your team and any partner who sees your reports. So fix it, tell your team why the numbers moved, and reset targets on true numbers. As the warning says, report true numbers to clients, partners and your team, even when they look worse."
+        }
+      ],
+      "takeaways": [
+        "Pixel and server sending the same event without a shared ID double counts",
+        "Same event_name plus same event_id lets the platform keep one",
+        "Create the ID once and pass it to both senders",
+        "Use the network's transaction ID for server-only events"
+      ],
+      "action": "Open your platform's events tool and check whether your browser and server events for the same action are being deduplicated. Write down any event without an event_id.",
+      "glossary": [
+        {
+          "term": "Deduplication",
+          "def": "Recognising two messages about the same event and counting it once."
+        },
+        {
+          "term": "event_id",
+          "def": "A unique ID for one real event, sent in both the browser and server messages so they can be matched."
+        },
+        {
+          "term": "Transaction ID",
+          "def": "A network's unique ID for one conversion, useful as an event_id for deposits."
+        },
+        {
+          "term": "Double counting",
+          "def": "Counting one real event twice, which makes costs look lower than they are."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What does Meta need to deduplicate a pixel event and a server event?",
+          "options": [
+            "Same IP only",
+            "Same event_name and same event_id",
+            "Same ad set",
+            "Same day only"
+          ],
+          "answer": 1,
+          "why": "Matching event name and event ID within the window lets the platform keep one."
+        },
+        {
+          "q": "The pixel sends a random ID and the server sends a different random ID. What happens?",
+          "options": [
+            "Counted twice",
+            "Deduplicated correctly",
+            "Both rejected",
+            "Counted zero times"
+          ],
+          "answer": 0,
+          "why": "Different IDs look like two different events."
+        },
+        {
+          "q": "A network fires the same FTD postback twice. How do you avoid counting two deposits?",
+          "options": [
+            "Send the pixel too",
+            "Use the current time as event_id",
+            "Use the network transaction ID as event_id",
+            "Ignore postbacks"
+          ],
+          "answer": 2,
+          "why": "A stable unique ID per deposit makes the retry recognisable as the same event."
+        },
+        {
+          "q": "After fixing deduplication, reported leads fall from 180 to 100 a day. What do you do?",
+          "options": [
+            "Kill the campaign",
+            "Recognise you now see true numbers and re-check your targets",
+            "Undo the fix",
+            "Double the budget"
+          ],
+          "answer": 1,
+          "why": "The drop is the correction. Real performance did not change."
+        },
+        {
+          "q": "Which event should normally be sent server-side only?",
+          "options": [
+            "Page view",
+            "Form registration on your page",
+            "Button click",
+            "First deposit at the broker"
+          ],
+          "answer": 3,
+          "why": "Deposits happen off your page, so only the server can send them."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn deduplication: how to make sure an event sent by both the pixel and your server is counted once, not twice. Double counting makes your costs look far better than they are, so this protects every decision you make.",
+      "say_outro": "You now know the deduplication key, how to share one event I D between pixel and server, how to spot duplicates, and why true numbers matter even when they look worse. Your task: open your platform's events tool, check whether your browser and server events for the same action are being deduplicated, and write down any event without an event I D. Now take the quiz."
+    },
+    {
+      "slug": "postbacks-and-event-mapping",
+      "title": "Postbacks, event mapping and what to optimise for",
+      "minutes": 19,
+      "objectives": [
+        "By the end you can read a network postback and its macros",
+        "By the end you can map network statuses to ad platform events",
+        "By the end you can decide whether to optimise for lead, registration or FTD",
+        "By the end you can send conversion values and handle rejected conversions"
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "A postback is the network calling you",
+          "p": "A postback, or S2S call, is a request the network's server makes to your tracker's URL when something happens: a registration, a first deposit, a rejection. Macros in the URL are replaced with the details of that conversion.",
+          "d": {
+            "b": "Network to tracker, server to server",
+            "s": "No browser involved"
+          },
+          "say": "A postback is the network calling you. It's also called an S two S call, server to server. When something happens, a registration, a first deposit or a rejection, the network's server makes a request to your tracker's U R L. Macros in that U R L are replaced with the details of the conversion. As the screen says, there's no browser involved."
+        },
+        {
+          "v": "eq",
+          "h": "Anatomy of a postback URL",
+          "p": "You give the network a URL with placeholders. The network fills them at conversion time. Macro names and brackets differ by network; copy them from your network's docs.",
+          "d": [
+            "Tracker URL",
+            "+",
+            "cid={sub1}",
+            "+",
+            "status={status}",
+            "+",
+            "payout={payout}"
+          ],
+          "say": "Here's the anatomy of a postback U R L. Read the equation: your tracker U R L, plus a click I D slot filled from sub one, plus a status, plus a payout. You give the network a U R L with placeholders, and the network fills them in at conversion time. Macro names and brackets differ by network, so copy them from your network's docs."
+        },
+        {
+          "v": "table",
+          "h": "Common macro meanings",
+          "p": "Every network names these macros differently, for example {sub1}, [sub_id] or {aff_sub}. The meanings are similar across networks. Copy the exact syntax from your network's documentation; a wrong bracket means an empty value.",
+          "more": "Some networks send one postback per event type; others send one URL with an event macro. Some only send approved conversions; others send pending, approved and rejected. Ask your manager exactly which events and statuses fire, how often, and whether a conversion can change status later. Write the answers down in your tracking notes.",
+          "d": {
+            "cols": [
+              "Means",
+              "Typical macro",
+              "Example value"
+            ],
+            "rows": [
+              [
+                "Your click ID",
+                "{sub1} or {clickid}",
+                "8f3k2a"
+              ],
+              [
+                "Event or goal",
+                "{event} or {goal}",
+                "ftd"
+              ],
+              [
+                "Status",
+                "{status}",
+                "approved"
+              ],
+              [
+                "Payout",
+                "{payout}",
+                "40.00"
+              ],
+              [
+                "Currency",
+                "{currency}",
+                "USD"
+              ],
+              [
+                "Transaction ID",
+                "{transaction_id}",
+                "tx_99812"
+              ]
+            ]
+          },
+          "say": "Every network names its macros differently, but the meanings are similar. Look down the table. Your click I D. The event or goal, like F T D, first time deposit. The status, like approved. The payout, like forty. The currency, like U S D. And the transaction I D. Copy the exact syntax from your network's documentation, because a wrong bracket means an empty value. Also ask your manager which events and statuses fire, and whether a conversion can change status later. Write the answers down."
+        },
+        {
+          "v": "screen",
+          "h": "Setting the postback in a network dashboard",
+          "p": "In most network dashboards the postback sits under tracking or postback settings, per offer or for all offers. Pick the event, paste the URL, then send a test. Names and layouts differ by network; ask your manager where yours is.",
+          "d": {
+            "kind": "browser",
+            "url": "network.example/settings/postbacks",
+            "title": "Postback settings",
+            "blocks": [
+              {
+                "type": "select",
+                "label": "Offer",
+                "value": "88: Broker NG, CPA"
+              },
+              {
+                "type": "select",
+                "label": "Event",
+                "value": "FTD (approved)"
+              },
+              {
+                "type": "field",
+                "label": "Postback URL",
+                "value": "https://trk.example.com/postback?cid={sub1}&event={goal}&status={status}&payout={payout}&tx={transaction_id}&key=<SECRET>"
+              },
+              {
+                "type": "button",
+                "label": "Send test postback"
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "Here's a network dashboard, a mock-up. In most networks, the postback sits under tracking or postback settings, per offer or for all offers. Look at the screen. You pick the offer, then the event, here F T D, approved. Then you paste your postback U R L into the highlighted field, and send a test. Notice the U R L ends with a secret key, which you never share. Names and layouts differ by network, so ask your manager where yours is."
+        },
+        {
+          "v": "code",
+          "h": "Worked example: one postback",
+          "p": "Example: you paste the template into the network's postback field once. When click 8f3k2a deposits, the network fills in the macros and calls your tracker. The tracker checks the key, matches the click, records $40 and forwards one Purchase event to Meta with event_id tx_99812.",
+          "d": {
+            "lang": "url",
+            "text": "Template you give the network:\nhttps://trk.example.com/postback?cid={sub1}&event={goal}&status={status}&payout={payout}&tx={transaction_id}&key=<SECRET>\n\nCall the network makes:\nhttps://trk.example.com/postback?cid=8f3k2a&event=ftd&status=approved&payout=40.00&tx=tx_99812&key=<SECRET>",
+            "note": "Example macros. Copy your network's exact macro syntax; never share the key."
+          },
+          "say": "Here's one postback, worked through. The code on screen shows the template you give the network, and below it, the call the network makes. You paste the template once. When click eight f three k two a deposits, the network fills in the macros and calls your tracker. The tracker checks the key, matches the click, records forty dollars, and forwards one Purchase event to Meta, using the transaction I D as its event I D. These are example macros, and you never share the key."
+        },
+        {
+          "v": "table",
+          "h": "Mapping network events to ad events",
+          "p": "You decide which ad platform event each network event becomes. Write this event map down, share it with your team and use it on every campaign, so reports mean the same thing everywhere.",
+          "more": "Standard event names, such as Lead, CompleteRegistration and Purchase, are understood by the platform's systems. Custom events give you clearer names but may need to be set up as custom conversions before you can optimise for them. Event names and options change; check the current Events Manager.",
+          "d": {
+            "cols": [
+              "Network event",
+              "Ad platform event",
+              "Value"
+            ],
+            "rows": [
+              [
+                "Telegram join",
+                "Lead or custom Join",
+                "None"
+              ],
+              [
+                "Registration",
+                "CompleteRegistration",
+                "None"
+              ],
+              [
+                "FTD (approved)",
+                "Purchase or custom FTD",
+                "Payout"
+              ],
+              [
+                "Qualified FTD",
+                "Custom QFTD",
+                "Payout"
+              ],
+              [
+                "Rejected",
+                "Do not send",
+                "-"
+              ]
+            ]
+          },
+          "say": "You decide which ad platform event each network event becomes. That's your event map. Look down the table. A Telegram join becomes Lead or a custom Join, with no value. Registration becomes CompleteRegistration. An approved F T D becomes Purchase or a custom F T D, with the payout as its value. A qualified F T D becomes a custom Q F T D, with the payout. And rejected conversions? Do not send them. Write this map down, share it with your team, and use it on every campaign."
+        },
+        {
+          "v": "compare",
+          "h": "Lead, registration or FTD",
+          "p": "You optimise for the deepest event that still gives the algorithm enough data to learn. Deeper events bring people more likely to pay, but there are fewer of them, so learning is slower and less stable.",
+          "d": {
+            "a": {
+              "title": "Shallow (lead, join)",
+              "items": [
+                "Many signals, learns fast",
+                "Cheaper results",
+                "Can bring low-intent people",
+                "Good for new accounts and tests"
+              ]
+            },
+            "b": {
+              "title": "Deep (FTD)",
+              "items": [
+                "Few signals, learns slowly",
+                "Expensive results",
+                "Brings people who pay",
+                "Good once volume is steady"
+              ]
+            }
+          },
+          "say": "Which event should you optimise for? Compare the two sides. Shallow events, like a lead or a join, give many signals, learn fast and are cheaper, but can bring low-intent people. They're good for new accounts and tests. Deep events, like an F T D, give few signals, learn slowly and cost more, but bring people who pay. They're good once volume is steady. So you optimise for the deepest event that still gives the algorithm enough data to learn."
+        },
+        {
+          "v": "tip",
+          "h": "The volume rule of thumb",
+          "p": "Meta's guidance at the time of writing is that an ad set needs around 50 optimisation events in 7 days to leave the learning phase. If you cannot reach that on FTDs, optimise for a shallower event that strongly predicts deposits. Check the current guidance.",
+          "d": {
+            "kind": "tip",
+            "text": "Rough guide only. Platforms change learning rules; read the current help pages."
+          },
+          "say": "Here's the volume rule of thumb. Meta's guidance at the time of writing is that an ad set needs around fifty optimisation events in seven days to leave the learning phase. If you can't reach that on F T Ds, optimise for a shallower event that strongly predicts deposits. As the tip says, this is a rough guide only. Platforms change their learning rules, so read the current help pages."
+        },
+        {
+          "v": "bars",
+          "h": "Example: events per week by depth",
+          "p": "Illustration for a $1,000 weekly budget in one ad set. Joins are plentiful, FTDs are scarce. Only events that reach the learning threshold give the algorithm enough examples to find more people like them.",
+          "d": [
+            [
+              "Joins",
+              100,
+              "Example: 1,400"
+            ],
+            [
+              "Registrations",
+              28,
+              "Example: 390"
+            ],
+            [
+              "FTDs",
+              4,
+              "Example: 55"
+            ],
+            [
+              "Qualified FTDs",
+              2,
+              "Example: 22"
+            ]
+          ],
+          "say": "This chart is an illustration for a one thousand dollar weekly budget in one ad set. Look at the labels on the bars. Joins, an example of fourteen hundred. Registrations, three hundred and ninety. F T Ds, fifty five. Qualified F T Ds, twenty two. Joins are plentiful, and F T Ds are scarce. Only events that reach the learning threshold give the algorithm enough examples to find more people like them."
+        },
+        {
+          "v": "eq",
+          "h": "Choosing the deepest usable event",
+          "p": "Work out how many events each depth gives you per ad set per week. Then pick the deepest event that stays above about 50. Splitting budget across many ad sets lowers the count in each one.",
+          "d": [
+            "Weekly budget",
+            "÷",
+            "Cost per event",
+            "÷",
+            "Ad sets",
+            "=",
+            "Events per ad set"
+          ],
+          "say": "Here's how to choose the deepest usable event. Read the equation: weekly budget, divided by cost per event, divided by the number of ad sets, equals events per ad set. Work that out for each depth, then pick the deepest event that stays above about fifty. And notice: splitting budget across many ad sets lowers the count in each one."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example",
+          "p": "Example: $1,400 a week across 2 ad sets. Cost per registration $3: 1,400 ÷ 3 ÷ 2 ≈ 233 per ad set. Cost per FTD $25: 1,400 ÷ 25 ÷ 2 = 28 per ad set. Registration is the deepest usable event here; FTD needs more budget or fewer ad sets.",
+          "d": {
+            "kind": "example",
+            "text": "With 1 ad set, FTDs would be 56 a week, enough to try FTD optimisation. Example figures."
+          },
+          "say": "Here's a worked example. Fourteen hundred dollars a week across two ad sets. With a cost per registration of three dollars, that's about two hundred and thirty three registrations per ad set. With a cost per F T D of twenty five dollars, it's only twenty eight per ad set. So registration is the deepest usable event here. F T D needs more budget or fewer ad sets. As the note says, with one ad set, F T Ds would be fifty six a week, enough to try F T D optimisation. Example figures."
+        },
+        {
+          "v": "check",
+          "h": "Sending values",
+          "p": "Sending the payout as the event value lets value-based bidding favour people who bring you more money. It only works when values are consistent, honest and in the same currency.",
+          "more": "With RevShare, your income per depositor grows over weeks, so the true value is unknown at the first deposit. Many operators send the first deposit with a fixed estimated value and track the real value in their tracker. Whatever you choose, apply it consistently, so the platform compares like with like.",
+          "d": [
+            "Send value and currency on deposit events",
+            "Use your payout, not the user's deposit, unless you choose otherwise",
+            "Same currency every time",
+            "No value on events that pay nothing",
+            "Do not inflate values"
+          ],
+          "say": "Sending the payout as the event value lets value-based bidding favour people who bring you more money. But it only works when values are consistent and honest. Go down the checklist. Send value and currency on deposit events. Use your payout, not the user's deposit, unless you choose otherwise. Use the same currency every time. Send no value on events that pay nothing. And do not inflate values. With RevShare, many operators send a fixed estimated value and track the real value in their tracker. Whatever you choose, apply it consistently."
+        },
+        {
+          "v": "compare",
+          "h": "Rejected and reversed conversions",
+          "p": "Networks may reject a conversion days or weeks later, for example for failed KYC, duplicate accounts or fraud. Plan in advance what happens to that conversion in your tracker and in your ad platform.",
+          "d": {
+            "a": {
+              "title": "Ignore it",
+              "items": [
+                "Platform keeps learning from bad events",
+                "Tracker profit overstated",
+                "Same bad source keeps getting budget",
+                "Surprise at payout time"
+              ]
+            },
+            "b": {
+              "title": "Handle it",
+              "items": [
+                "Tracker marks the conversion rejected",
+                "Rejected events never sent onward",
+                "Rejection rate tracked per source",
+                "Sources with high rejections cut"
+              ]
+            }
+          },
+          "say": "Networks may reject a conversion days or weeks later, for example for failed K Y C, know your customer checks, duplicate accounts or fraud. Compare the two sides. If you ignore it, the platform keeps learning from bad events, your tracker profit is overstated, the same bad source keeps getting budget, and you get a surprise at payout time. If you handle it, your tracker marks it rejected, rejected events are never sent onward, you track rejection rate per source, and you cut sources with high rejections. Plan this in advance."
+        },
+        {
+          "v": "tip",
+          "h": "Optimise on volume, decide on money",
+          "p": "Optimise on whatever event has enough volume, but make kill and scale calls on network-confirmed, approved conversions. The rule card in the Budget and kill rules module uses those: kill at 2 × target CPA with 0 conversions; scale +20% at 3+ conversions and CPA ≤ 0.8 × target. Starting rules.",
+          "d": {
+            "kind": "example",
+            "text": "Example: optimising on registrations, judged on approved FTDs. Target $30, $70 spent, 40 registrations, 0 FTDs: kill, after a plumbing check."
+          },
+          "say": "Here's the principle: optimise on volume, decide on money. Optimise on whatever event has enough volume, but make kill and scale calls on network-confirmed, approved conversions. The rule card from the Budget and kill rules module says: kill at two times target C P A, cost per acquisition, with zero conversions. Scale by twenty percent at three or more conversions, with C P A at or below zero point eight times target. In the example, target thirty dollars, seventy spent, forty registrations, zero F T Ds: kill, after a plumbing check. These are starting rules."
+        },
+        {
+          "v": "cards",
+          "h": "Common postback mistakes",
+          "p": "Postback mistakes are expensive because they hide in plain sight. Reports keep filling with numbers, but the numbers are empty, doubled or wrong. Check your setup against these five before every new offer.",
+          "d": [
+            "Wrong macro brackets|values arrive empty",
+            "Pending sent as deposits|rejections train the algorithm",
+            "No transaction ID|retries count twice",
+            "No secret key|anyone can fake conversions",
+            "Event map not written down|each buyer maps differently"
+          ],
+          "say": "Postback mistakes hide in plain sight. Reports keep filling with numbers, but the numbers are empty, doubled or wrong. Look at the five cards. Wrong macro brackets, so values arrive empty. Pending sent as deposits, so rejections train the algorithm. No transaction I D, so retries count twice. No secret key, so anyone can fake conversions. And an event map that isn't written down, so each buyer maps differently. Check your setup against these five before every new offer."
+        },
+        {
+          "v": "tip",
+          "h": "Values must be what you earn",
+          "p": "Value-based bidding trusts the numbers you send. Inflating values, or sending a player's deposit amount as if it were your income, misleads the platform and your own reports. Send the payout you will actually be paid, in one currency, and fix any value you know is wrong.",
+          "d": {
+            "kind": "warn",
+            "text": "Never send a value you were not paid, and never send rejected or test conversions to a live dataset."
+          },
+          "say": "A final warning about values. Value-based bidding trusts the numbers you send. Inflating values, or sending a player's deposit amount as if it were your income, misleads the platform and your own reports. Send the payout you'll actually be paid, in one currency, and fix any value you know is wrong. As the warning says, never send a value you were not paid, and never send rejected or test conversions to a live dataset."
+        }
+      ],
+      "takeaways": [
+        "A postback is the network's server calling your tracker with macros filled in",
+        "Macro names differ by network; copy them from the network's docs",
+        "Map each network event to one ad event and write the map down",
+        "Optimise for the deepest event that still reaches about 50 a week per ad set"
+      ],
+      "action": "Ask your network manager for the full list of postback events, statuses and macros, then write your event map: network event, ad event, value.",
+      "glossary": [
+        {
+          "term": "Postback",
+          "def": "A server-to-server request from the network to your tracker when a conversion happens. Also called S2S."
+        },
+        {
+          "term": "Macro",
+          "def": "A placeholder in a URL, such as {payout}, that a system replaces with a real value."
+        },
+        {
+          "term": "Event mapping",
+          "def": "Your rule for which ad platform event each network event becomes."
+        },
+        {
+          "term": "Qualified FTD",
+          "def": "A first deposit that meets the advertiser's conditions, such as a minimum amount or activity."
+        },
+        {
+          "term": "Value-based bidding",
+          "def": "Bidding that uses the value sent with events to favour higher-value people."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is a postback?",
+          "options": [
+            "A browser pixel fire",
+            "An email from your manager",
+            "A server-to-server request from the network to your tracker when a conversion happens",
+            "A Telegram message"
+          ],
+          "answer": 2,
+          "why": "Postbacks are S2S calls with conversion details in macros."
+        },
+        {
+          "q": "Your network's docs use [sub_id] but you wrote {sub1} in the postback. What happens?",
+          "options": [
+            "The macro is not replaced, so the click ID is missing",
+            "It works anyway",
+            "The network fixes it",
+            "The conversion doubles"
+          ],
+          "answer": 0,
+          "why": "Macros must match the network's exact syntax."
+        },
+        {
+          "q": "$700 a week, 1 ad set, cost per FTD $20. FTDs per week?",
+          "options": [
+            "70",
+            "50",
+            "14",
+            "35"
+          ],
+          "answer": 3,
+          "why": "700 ÷ 20 = 35, below about 50, so FTD optimisation may struggle."
+        },
+        {
+          "q": "A conversion is later rejected for failed KYC. What do you do?",
+          "options": [
+            "Keep it in the ad platform as a deposit",
+            "Mark it rejected and do not send it onward",
+            "Send it twice",
+            "Delete your tracker"
+          ],
+          "answer": 1,
+          "why": "Rejected events should not train the algorithm or count as profit."
+        },
+        {
+          "q": "Which value do most operators send with a CPA FTD event?",
+          "options": [
+            "The user's deposit amount",
+            "Zero always",
+            "A random number",
+            "Their payout for that FTD"
+          ],
+          "answer": 3,
+          "why": "Sending the payout ties optimisation to what you actually earn."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn to read a network postback, map network events to ad platform events, and choose which event to optimise for. These choices decide what the algorithm learns to buy for you.",
+      "say_outro": "You now know how postbacks and macros work, how to write an event map, how to pick the deepest event with enough volume, and how to handle values and rejections honestly. Your task: ask your network manager for the full list of postback events, statuses and macros, then write your event map, with network event, ad event and value. Now take the quiz."
+    },
+    {
+      "slug": "data-quality-and-fraud",
+      "title": "Data quality, bots and fraud",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can reconcile platform, tracker and network numbers",
+        "By the end you can spot bot and fraud patterns in your traffic",
+        "By the end you can filter bad events before they reach the ad platform",
+        "By the end you can run a weekly data quality check"
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Garbage in, garbage out",
+          "p": "The ad platform learns from what you send it. Send fake joins, duplicate deposits or bot clicks and it will go and find more of the same. Clean data is the cheapest optimisation you will ever do.",
+          "d": {
+            "b": "The algorithm copies your signal",
+            "s": "Bad signal buys more bad traffic"
+          },
+          "say": "Garbage in, garbage out. The ad platform learns from what you send it. Send fake joins, duplicate deposits or bot clicks, and it will go and find more of the same. Look at the line on screen: the algorithm copies your signal, and bad signal buys more bad traffic. That's why clean data is the cheapest optimisation you'll ever do."
+        },
+        {
+          "v": "table",
+          "h": "Three sources, three numbers",
+          "p": "The ad platform, your tracker and the network will never match exactly, because each counts in its own way. Your job is to know the normal gap between them and to notice quickly when that gap changes.",
+          "more": "Platforms report conversions inside their attribution window, by default often 7-day click and 1-day view on Meta at the time of writing, and may include modelled conversions. Networks count by their own approval rules and may report a deposit days later. The network is usually the number you get paid on, so treat it as the source of truth for money and the platform as the source for ad-level signals.",
+          "d": {
+            "cols": [
+              "Source",
+              "Counts",
+              "Why it differs"
+            ],
+            "rows": [
+              [
+                "Ad platform",
+                "Attributed results",
+                "Attribution window, modelling"
+              ],
+              [
+                "Tracker",
+                "Clicks and matched conversions",
+                "Lost IDs, blocked scripts"
+              ],
+              [
+                "Network",
+                "Approved conversions",
+                "Holds, rejections, timing"
+              ]
+            ]
+          },
+          "say": "You have three sources, and they'll never match exactly. Look at the table. The ad platform counts attributed results, and differs because of its attribution window and modelling. Your tracker counts clicks and matched conversions, and loses some to lost I Ds and blocked scripts. The network counts approved conversions, and differs because of holds, rejections and timing. The network is usually the number you get paid on, so treat it as the source of truth for money, and the platform as the source for ad-level signals."
+        },
+        {
+          "v": "stat",
+          "h": "A normal gap",
+          "p": "Example: the platform reports 100 FTDs and the network approves 82. If this gap is steady week to week, you can work with it. If it suddenly widens, investigate.",
+          "d": {
+            "n": 18,
+            "pre": "",
+            "suf": "%",
+            "dec": 0,
+            "label": "gap between platform and network FTDs",
+            "note": "Example. Know your own normal range."
+          },
+          "say": "So what's normal? Look at the figure, eighteen percent. In this example, the platform reports one hundred F T Ds, first time deposits, and the network approves eighty two. If that gap stays steady week to week, you can work with it. If it suddenly widens, investigate. The key is to know your own normal range."
+        },
+        {
+          "v": "screen",
+          "h": "A weekly reconciliation sheet",
+          "p": "Put the three counts for the same event side by side each week. Example: platform, tracker and network FTDs. The normal gap holds for two weeks, then the tracker count falls while the network holds steady. That points at your postback or click IDs, not at your ads.",
+          "d": {
+            "kind": "browser",
+            "url": "sheet.example/reconcile",
+            "title": "FTDs by source: example",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Week",
+                  "Platform",
+                  "Tracker",
+                  "Network"
+                ],
+                "rows": [
+                  [
+                    "W38",
+                    "100",
+                    "88",
+                    "82"
+                  ],
+                  [
+                    "W39",
+                    "96",
+                    "85",
+                    "80"
+                  ],
+                  [
+                    "W40",
+                    "110",
+                    "60",
+                    "81"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "W40: tracker dropped from about 106% of network to 74%. Check the postback first."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Here's a weekly reconciliation sheet, an example. Each row puts the platform, tracker and network F T Ds side by side. Look at weeks thirty eight and thirty nine: the gap is steady. Now week forty: the platform says one hundred and ten, the network holds at eighty one, but the tracker falls to sixty. The note says the tracker dropped from about one hundred and six percent of network to seventy four. That points at your postback or click I Ds, not your ads. Check the postback first."
+        },
+        {
+          "v": "cards",
+          "h": "Signs of bot or fraud traffic",
+          "p": "No single sign proves fraud; a good creative can have a high CTR. Several signs together, in the same placement or source, are a strong warning that deserves a closer look before you spend more.",
+          "d": [
+            "Odd timing|clicks at 3 a.m. in bursts",
+            "Same fingerprint|one IP or device, many joins",
+            "Data centre IPs|cloud servers, not phones",
+            "Zero engagement|join, no reads, leave fast",
+            "Impossible rates|CTR or CR far above normal"
+          ],
+          "say": "Here are the signs of bot or fraud traffic. Look at the five cards. Odd timing, like clicks at three a.m. in bursts. The same fingerprint, one I P or device with many joins. Data centre I Ps, cloud servers instead of phones. Zero engagement: they join, read nothing, and leave fast. And impossible rates, a C T R, click-through rate, or conversion rate far above normal. No single sign proves fraud. But several together, in the same placement or source, are a strong warning."
+        },
+        {
+          "v": "funnel",
+          "h": "Example: a suspicious placement",
+          "p": "One placement in an example campaign. Huge click volume, almost nothing at the end. The drop between clicks and page loads is the first red flag.",
+          "d": [
+            [
+              "Clicks",
+              5000
+            ],
+            [
+              "Page loads",
+              900
+            ],
+            [
+              "Telegram joins",
+              60
+            ],
+            [
+              "Registrations",
+              4
+            ],
+            [
+              "FTDs",
+              0
+            ]
+          ],
+          "say": "This funnel shows one suspicious placement in an example campaign. Five thousand clicks. Nine hundred page loads. Sixty Telegram joins. Four registrations. Zero F T Ds. Huge click volume, almost nothing at the end. Look at the first drop, from clicks to page loads. That's the first red flag."
+        },
+        {
+          "v": "check",
+          "h": "Filters before you send events",
+          "p": "Filter at your server so suspect events never reach the ad platform. Keep the raw data, including what you filtered and why, so you can review your rules and share evidence with your network if needed.",
+          "more": "Telegram joins are a common weak point. Some joiners are bots or accounts that leave within minutes. A short hold, for example only sending a join event if the person is still a member after a set time, filters many of them. The cost is a slower signal, so find the balance for your funnel.",
+          "d": [
+            "Drop events with no valid click ID",
+            "Drop repeat events with the same event_id",
+            "Hold joins that leave within minutes",
+            "Flag many conversions from one IP or device",
+            "Never send rejected or test conversions"
+          ],
+          "say": "So filter at your server, so suspect events never reach the ad platform. Go down the checklist. Drop events with no valid click I D. Drop repeat events with the same event I D. Hold joins that leave within minutes. Flag many conversions from one I P or device. And never send rejected or test conversions. Keep the raw data, including what you filtered and why. A short hold on joins filters many bots, but it slows your signal, so find the balance for your funnel."
+        },
+        {
+          "v": "map",
+          "h": "Where the filter sits",
+          "p": "Every event goes through one filter on your server before anything is sent onward. Everything is written to a raw log, including what was filtered and why. Only clean events reach the ad platform, and the log becomes your evidence when you talk to your network.",
+          "d": {
+            "nodes": [
+              {
+                "id": "net",
+                "label": "Network postbacks",
+                "kind": "data"
+              },
+              {
+                "id": "bot",
+                "label": "Join events",
+                "kind": "bot"
+              },
+              {
+                "id": "srv",
+                "label": "Server filter",
+                "kind": "tool"
+              },
+              {
+                "id": "raw",
+                "label": "Raw log, kept",
+                "kind": "data"
+              },
+              {
+                "id": "ad",
+                "label": "Ad platform",
+                "kind": "ad"
+              },
+              {
+                "id": "rep",
+                "label": "Network manager",
+                "kind": "person"
+              }
+            ],
+            "edges": [
+              [
+                "net",
+                "srv",
+                "FTDs"
+              ],
+              [
+                "bot",
+                "srv",
+                "joins"
+              ],
+              [
+                "srv",
+                "raw",
+                "everything"
+              ],
+              [
+                "srv",
+                "ad",
+                "clean events only"
+              ],
+              [
+                "raw",
+                "rep",
+                "evidence"
+              ]
+            ]
+          },
+          "say": "This map shows where the filter sits. Follow it. Network postbacks and join events both flow into one server filter. From there, everything is written to a raw log, which you keep. Only clean events go on to the ad platform. And the raw log becomes your evidence when you talk to your network manager."
+        },
+        {
+          "v": "compare",
+          "h": "Fraud response: mistakes and fixes",
+          "p": "When you suspect fraud, act on evidence, write down what you saw and keep it honest with your partners. Your network manager is more likely to help when you bring clear data instead of complaints.",
+          "d": {
+            "a": {
+              "title": "Wrong response",
+              "items": [
+                "Hide it and hope payouts clear",
+                "Blame the network without data",
+                "Keep sending the events",
+                "Ignore placements"
+              ]
+            },
+            "b": {
+              "title": "Right response",
+              "items": [
+                "Pause the source or placement",
+                "Share evidence with your manager",
+                "Stop sending those events",
+                "Request credits where the platform allows"
+              ]
+            }
+          },
+          "say": "When you suspect fraud, act on evidence. Compare the two columns. The wrong response: hide it and hope payouts clear, blame the network without data, keep sending the events, and ignore placements. The right response: pause the source or placement, share evidence with your manager, stop sending those events, and request credits where the platform allows. Your network manager is more likely to help when you bring clear data instead of complaints."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example",
+          "p": "Example: Audience Network placement, $200 spend, 300 joins, 270 left within 1 hour, 0 FTDs. Feed placement, $200 spend, 180 joins, 160 still in after 7 days, 6 FTDs. Exclude the first placement and stop sending its joins as events.",
+          "d": {
+            "kind": "example",
+            "text": "Cost per retained join: $200 ÷ 30 ≈ $6.67 vs $200 ÷ 160 = $1.25. Example figures."
+          },
+          "say": "Here's a worked example. An Audience Network placement: two hundred dollars spent, three hundred joins, but two hundred and seventy left within one hour, and zero F T Ds. A Feed placement: two hundred dollars, one hundred and eighty joins, one hundred and sixty still in after seven days, and six F T Ds. Look at the maths: about six dollars sixty seven per retained join, against one dollar twenty five. So exclude the first placement, and stop sending its joins as events. Example figures."
+        },
+        {
+          "v": "quote",
+          "h": "From the founder",
+          "p": "Dchessking on what clean data is worth in a live operation. Filtering bad events looks like losing results on the dashboard, but it changes what the ad account learns to buy.",
+          "d": "When we started filtering bad joins before sending them, our reported numbers went down and our deposits went up. The ad account learned from real people.",
+          "by": "dchessking",
+          "say": "Here's how Dchessking puts it, on what clean data is worth in a live operation: When we started filtering bad joins before sending them, our reported numbers went down and our deposits went up. The ad account learned from real people. Filtering looks like losing results on the dashboard, but it changes what the ad account learns to buy."
+        },
+        {
+          "v": "check",
+          "h": "Weekly data quality review",
+          "p": "Spend fifteen minutes every week on these checks and put the time in the calendar. Most tracking problems are cheap to fix when caught in the first week and expensive when found a month later.",
+          "d": [
+            "Platform vs tracker vs network gap",
+            "Share of conversions with a click ID",
+            "Duplicate event_ids found",
+            "Rejection rate per source",
+            "Retention of joins per placement",
+            "Consent and privacy notice still accurate"
+          ],
+          "say": "Spend fifteen minutes every week on these checks, and put the time in your calendar. The gap between platform, tracker and network. The share of conversions with a click I D. Any duplicate event I Ds. Rejection rate per source. Retention of joins per placement. And whether your consent and privacy notice are still accurate. Most tracking problems are cheap to fix in the first week, and expensive when found a month later."
+        },
+        {
+          "v": "table",
+          "h": "Data quality: starting rules",
+          "p": "Turn the warning signs into rules you apply every week, so a data problem stops decisions before it costs money. These are starting rules, not platform numbers; adapt them to your setup and vertical.",
+          "more": "Example: your normal platform-to-network gap is 18%. This week it is 31%, a move of 13 points, so you hold all kill and scale calls until you find the cause. A placement that keeps 20% of joins at 7 days when your normal is 60% is under half your normal, so you exclude it and stop sending its joins.",
+          "d": {
+            "cols": [
+              "Signal",
+              "Starting rule",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Platform vs network gap",
+                "Moves 10+ points from normal",
+                "Investigate before decisions"
+              ],
+              [
+                "Matched share",
+                "Under 90%",
+                "No ad-level kill or scale calls"
+              ],
+              [
+                "7-day join retention",
+                "Under half your normal",
+                "Exclude placement, stop its events"
+              ],
+              [
+                "Rejection rate per source",
+                "Double your normal",
+                "Pause source, ask the network"
+              ]
+            ]
+          },
+          "say": "Now turn those warning signs into starting rules. Look at the table. If the platform to network gap moves ten or more points from normal, investigate before decisions. If matched share is under ninety percent, no ad-level kill or scale calls. If seven-day join retention is under half your normal, exclude the placement and stop its events. If a source's rejection rate doubles, pause it and ask the network. For example, a normal gap of eighteen percent jumping to thirty one is a thirteen point move, so you hold all calls. Adapt these to your setup."
+        },
+        {
+          "v": "tip",
+          "h": "Never fake the fix",
+          "p": "When numbers look bad, do not buy joins, deposit yourself or send events for people who never converted to \"teach\" the algorithm. That is fraud against the network and false data to the platform, and it ends accounts and payouts. Find and cut the source of bad traffic instead.",
+          "d": {
+            "kind": "warn",
+            "text": "Send only real events from real people. Report suspected fraud to your network with evidence."
+          },
+          "say": "When numbers look bad, there's a temptation. Do not buy joins, deposit yourself, or send events for people who never converted, to teach the algorithm. That's fraud against the network and false data to the platform, and it ends accounts and payouts. Find and cut the source of bad traffic instead. As the warning says, send only real events from real people, and report suspected fraud to your network with evidence."
+        },
+        {
+          "v": "curve",
+          "h": "Signal quality after filtering",
+          "p": "Illustration: cost per FTD over seven weeks after filtering fast leavers and duplicates. Short-term reported results fall; cost per real FTD improves as the algorithm learns.",
+          "d": {
+            "a": [
+              42,
+              44,
+              40,
+              36,
+              33,
+              31,
+              30
+            ],
+            "la": "Cost per FTD, filtered",
+            "b": [
+              42,
+              43,
+              44,
+              45,
+              44,
+              46,
+              47
+            ],
+            "lb": "Cost per FTD, unfiltered",
+            "x": [
+              "W1",
+              "W2",
+              "W3",
+              "W4",
+              "W5",
+              "W6",
+              "W7"
+            ]
+          },
+          "say": "This chart is an illustration of cost per F T D over seven weeks. Look at the two lines. Both start at forty two dollars. The unfiltered line drifts up, to forty seven. The filtered line, after removing fast leavers and duplicates, comes down to thirty. In the short term, reported results fall. But cost per real F T D improves, as the algorithm learns from real people."
+        }
+      ],
+      "takeaways": [
+        "The ad platform learns from what you send, so send only real events",
+        "Platform, tracker and network numbers differ; know your normal gap",
+        "Several bot signs together are a strong warning; act on evidence",
+        "Run a 15-minute data quality review every week"
+      ],
+      "action": "Pull last week's numbers from the ad platform, your tracker and your network for one campaign. Write down the gap between each pair.",
+      "glossary": [
+        {
+          "term": "Reconciliation",
+          "def": "Comparing numbers from different sources and explaining the differences."
+        },
+        {
+          "term": "Data centre IP",
+          "def": "An IP address belonging to a cloud server, often a sign of bot traffic."
+        },
+        {
+          "term": "Attribution window",
+          "def": "The period after a click or view during which the platform credits a conversion to an ad."
+        },
+        {
+          "term": "Fast leaver",
+          "def": "Someone who joins a Telegram chat and leaves within minutes. Often a bot or low-quality join."
+        },
+        {
+          "term": "Source of truth",
+          "def": "The data source you trust for a given decision, such as the network for payouts."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why should you not send bot joins to the ad platform as conversions?",
+          "options": [
+            "They cost extra to send",
+            "The algorithm learns to find more of the same traffic",
+            "They are always rejected",
+            "Telegram blocks them"
+          ],
+          "answer": 1,
+          "why": "The platform optimises toward whatever you report as success."
+        },
+        {
+          "q": "Platform says 100 FTDs, network approves 80. Last month the gap was also about 20%. What does this mean?",
+          "options": [
+            "A steady, known gap you can work with",
+            "Fraud",
+            "Your pixel is broken",
+            "The network is lying"
+          ],
+          "answer": 0,
+          "why": "A steady gap is normal. A sudden change needs investigation."
+        },
+        {
+          "q": "Which set of signs most strongly suggests bot traffic?",
+          "options": [
+            "Clicks at lunchtime",
+            "High CTR on a great creative alone",
+            "Data centre IPs, bursts at 3 a.m., joins that leave in minutes",
+            "Users from a big city"
+          ],
+          "answer": 2,
+          "why": "Several signs together are a strong warning. One high number alone is not proof."
+        },
+        {
+          "q": "Which number do you usually treat as the source of truth for money?",
+          "options": [
+            "The ad platform's results",
+            "The network's approved conversions",
+            "Page views",
+            "Telegram members"
+          ],
+          "answer": 1,
+          "why": "You get paid on what the network approves."
+        },
+        {
+          "q": "$300 on a placement, 400 joins, 40 still in after 7 days. Cost per retained join?",
+          "options": [
+            "$0.75",
+            "$0.13",
+            "$3.00",
+            "$7.50"
+          ],
+          "answer": 3,
+          "why": "$300 ÷ 40 = $7.50 per retained join."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn to reconcile your three sets of numbers, spot bot and fraud patterns, and filter bad events before they reach the ad platform. The algorithm copies whatever signal you send, so clean data is the cheapest optimisation you'll ever do.",
+      "say_outro": "You now know why platform, tracker and network numbers differ, the signs of bot and fraud traffic, where to filter, and how to run a weekly data quality check. Your task: pull last week's numbers from the ad platform, your tracker and your network for one campaign, and write down the gap between each pair. Now take the quiz."
+    },
+    {
+      "slug": "tracker-setup-walkthrough",
+      "title": "Set up a tracker campaign, step by step",
+      "minutes": 19,
+      "objectives": [
+        "By the end you can add a traffic source, an offer and a campaign in a tracker in the right order",
+        "By the end you can set and test a network postback before launch",
+        "By the end you can check the matched share and apply the rule card to your first week"
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "One setup, every decision after it",
+          "p": "Everything in this module comes together in one setup: a traffic source, an offer, a campaign link and a postback. Set it up carefully once and every later report is trustworthy. Set it up carelessly and every kill or scale call is a guess with real money behind it.",
+          "d": {
+            "b": "Set up once, trust every report after",
+            "s": "Source, offer, campaign, postback, test"
+          },
+          "say": "Everything in this module comes together in one setup. Look at the screen: source, offer, campaign, postback, test. Set it up carefully once, and every later report is trustworthy. Set it up carelessly, and every kill or scale call is a guess with real money behind it. So in this lesson we'll go slowly, in order."
+        },
+        {
+          "v": "map",
+          "h": "The pieces you are connecting",
+          "p": "This is the whole setup. The ad sends people through your tracker's campaign link to the lander and offer. The network calls your tracker back with a postback. Your tracker forwards clean events to the ad platform. Each arrow must carry the click ID.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Meta ad",
+                "kind": "ad"
+              },
+              {
+                "id": "trk",
+                "label": "Tracker campaign link",
+                "kind": "tool"
+              },
+              {
+                "id": "lp",
+                "label": "Lander",
+                "kind": "page"
+              },
+              {
+                "id": "off",
+                "label": "Network offer",
+                "kind": "offer"
+              },
+              {
+                "id": "ftd",
+                "label": "First deposit",
+                "kind": "money"
+              },
+              {
+                "id": "pb",
+                "label": "Postback",
+                "kind": "data"
+              },
+              {
+                "id": "ev",
+                "label": "Server event",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "trk",
+                "click + ad IDs"
+              ],
+              [
+                "trk",
+                "lp",
+                "click ID"
+              ],
+              [
+                "lp",
+                "off",
+                "sub1"
+              ],
+              [
+                "off",
+                "ftd",
+                "deposit"
+              ],
+              [
+                "ftd",
+                "pb",
+                "network"
+              ],
+              [
+                "pb",
+                "trk",
+                "sub1 back"
+              ],
+              [
+                "trk",
+                "ev",
+                "clean events"
+              ],
+              [
+                "ev",
+                "ad",
+                "learns"
+              ]
+            ]
+          },
+          "say": "This map is the whole setup. Follow the arrows. The Meta ad sends the click, with ad I Ds, to your tracker's campaign link. The tracker passes a click I D to the lander. The lander sends sub one to the network offer. The person deposits. The network sends a postback, carrying sub one back to your tracker. And the tracker sends clean server events to the ad platform, so it learns. Each arrow must carry the click I D."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: source, offer, campaign",
+          "p": "Most trackers use the same three building blocks in the same order. Screens below are tracker-style mock-ups; your tracker will name them differently. The order stays the same: tell the tracker about the source, then the offer, then join them in a campaign.",
+          "d": {
+            "steps": [
+              {
+                "title": "Add the traffic source",
+                "text": "Create a source called Meta and map its URL parameters to tracker fields.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "tracker.example/sources/new",
+                  "title": "New traffic source",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Name",
+                      "value": "Meta"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Campaign param",
+                      "value": "cmp = {{campaign.id}}"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Ad set param",
+                      "value": "as = {{adset.id}}"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Ad param",
+                      "value": "ad = {{ad.id}}"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Save source"
+                    }
+                  ],
+                  "highlight": 3
+                }
+              },
+              {
+                "title": "Add the offer",
+                "text": "Paste the network's offer link and put the tracker's click ID macro in sub1.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "tracker.example/offers/new",
+                  "title": "New offer",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Offer name",
+                      "value": "Broker NG CPA $40"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Offer URL",
+                      "value": "https://track.network.example/click?offer=88&aff=5678&sub1={clickid}&sub2={campaign}&sub3={ad}"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Payout",
+                      "value": "40.00 USD"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Save offer"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Create the campaign",
+                "text": "Pick the source, the geo and the path: lander, then offer. Copy the campaign link.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "tracker.example/campaigns/new",
+                  "title": "New campaign",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Name",
+                      "value": "NG_TRD_Broad_01"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Source",
+                      "value": "Meta"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Path",
+                      "value": "Lander NG v2 → Broker NG CPA $40"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Save and copy link"
+                    }
+                  ],
+                  "highlight": 2
+                }
+              }
+            ]
+          },
+          "say": "Let's walk through it. Tap Next to follow each step. These are tracker-style mock-ups, and your tracker will name things differently. First, add the traffic source: create a source called Meta, and map its U R L parameters, campaign, ad set and ad, to tracker fields. Second, add the offer: paste the network's offer link, and put the tracker's click I D macro in sub one. The payout here is forty dollars. Third, create the campaign: pick the source, the geo and the path, lander then offer, and copy the campaign link. The order stays the same: source, then offer, then campaign."
+        },
+        {
+          "v": "code",
+          "h": "The link that goes in the ad",
+          "p": "The tracker gives you one campaign link. In the ad, the website URL is the campaign link and the URL parameters field carries Meta's dynamic values. Meta fills them at click time. Dynamic parameter names can change; check the current Ads Manager help.",
+          "d": {
+            "lang": "url",
+            "text": "Website URL:\nhttps://trk.example.com/c/ng-trd-broad-01\n\nURL parameters:\ncmp={{campaign.id}}&as={{adset.id}}&ad={{ad.id}}",
+            "note": "Example domain. Use your own tracker domain and keep it the same page for every visitor."
+          },
+          "say": "Now the link that goes in your ad. The tracker gives you one campaign link. Look at the code on screen. In the ad, the website U R L is your campaign link, and the U R L parameters field carries Meta's dynamic values for campaign, ad set and ad. Meta fills them in at click time. This is an example domain. Use your own tracker domain, and keep it the same page for every visitor. Dynamic parameter names can change, so check the current Ads Manager help."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: set and test the postback",
+          "p": "Now close the loop. Copy the postback template from the tracker, adapt it to your network's macros, paste it in the network dashboard and fire a test. Ask your manager how test conversions work on your network; some do it for you.",
+          "d": {
+            "steps": [
+              {
+                "title": "Copy the template",
+                "text": "Your tracker shows a postback URL with its own placeholders. Copy it.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "tracker.example/settings/postback",
+                  "title": "Postback URL",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Template",
+                      "value": "https://trk.example.com/postback?cid=REPLACE&payout=REPLACE&tx=REPLACE"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Replace each REPLACE with your network's macro."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Swap in network macros",
+                "text": "Use the macro names from your network's docs, exactly as written, then paste.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/settings/postbacks",
+                  "title": "Postback settings",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Event",
+                      "value": "FTD (approved)"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Postback URL",
+                      "value": "https://trk.example.com/postback?cid={sub1}&payout={payout}&tx={transaction_id}"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Send test postback"
+                    }
+                  ],
+                  "highlight": 2
+                }
+              },
+              {
+                "title": "See it arrive",
+                "text": "The test conversion should appear in the tracker against a real test click ID.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "tracker.example/conversions",
+                  "title": "Conversions log",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Time",
+                        "Click ID",
+                        "Status",
+                        "Payout"
+                      ],
+                      "rows": [
+                        [
+                          "10:42:07",
+                          "8f3k2a",
+                          "test",
+                          "$40.00"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "Matched to a click. Now send one test event to the ad platform with a test code."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Now close the loop. Tap Next to follow each step. First, copy the template: your tracker shows a postback U R L with its own placeholders. Second, swap in network macros: replace each placeholder with your network's macro names, exactly as written in their docs, paste it into the network's postback settings, and send a test postback. Third, see it arrive: the test conversion should appear in your tracker's conversions log, against a real test click I D. Then send one test event to the ad platform with a test code. Ask your manager how test conversions work on your network."
+        },
+        {
+          "v": "check",
+          "h": "Before any ad goes live",
+          "p": "Run every line with your own phone and a test click. If one fails, fix it and run the whole list again from the top. This is the same habit as the Tracking setup lab module, now with a tracker in the middle.",
+          "d": [
+            "Test click appears in the tracker",
+            "Lander keeps the click ID",
+            "Offer link shows sub1 filled",
+            "Test postback matched to the click",
+            "Test event received by the ad platform",
+            "Same time zone in ads, tracker and network"
+          ],
+          "say": "Before any ad goes live, run every line of this checklist with your own phone and a test click. The test click appears in the tracker. The lander keeps the click I D. The offer link shows sub one filled. The test postback is matched to the click. The test event is received by the ad platform. And you use the same time zone in ads, tracker and network. If one line fails, fix it and run the whole list again from the top."
+        },
+        {
+          "v": "eq",
+          "h": "Your health number: matched share",
+          "p": "After launch, check one number daily: the share of the network's conversions your tracker matched to a click. Example: the network shows 50 FTDs and the tracker matches 46. That is 92%, above the 90% gate, so ad-level numbers can be trusted.",
+          "d": [
+            "Tracker-matched FTDs",
+            "÷",
+            "Network FTDs",
+            "=",
+            "Matched share"
+          ],
+          "say": "After launch, check one number daily: matched share. Read the equation. Tracker-matched F T Ds, first time deposits, divided by network F T Ds, equals matched share. For example, the network shows fifty F T Ds, and the tracker matches forty six. That's ninety two percent. It's above the ninety percent gate, so your ad-level numbers can be trusted."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: the first week",
+          "p": "Example: payout $40, target $30, break-even $40, so the CPA kill line is $40. Network-confirmed FTDs per ad set after 5 days, matched share 92%. Apply the rule card from the top row down. Starting rules; adapt them to your vertical.",
+          "more": "Check: AS01 $66 ÷ $30 = 2.2 × target with 0 FTDs: kill. AS02 $95 is past 3 × target ($90), CPA $47.50 is over $40: kill. AS03 $96 ÷ 5 = $19.20, 0.64 × target with 5 FTDs: scale +20%, then wait at least 48 hours. AS04 $50 with 1 FTD is under 2 × target and has too little data: hold.",
+          "d": {
+            "cols": [
+              "Ad set",
+              "Spend / FTDs",
+              "CPA",
+              "Call"
+            ],
+            "rows": [
+              [
+                "AS01",
+                "$66 / 0",
+                "None",
+                "Kill"
+              ],
+              [
+                "AS02",
+                "$95 / 2",
+                "$47.50",
+                "Kill"
+              ],
+              [
+                "AS03",
+                "$96 / 5",
+                "$19.20",
+                "Scale +20%"
+              ],
+              [
+                "AS04",
+                "$50 / 1",
+                "$50.00",
+                "Hold"
+              ]
+            ]
+          },
+          "say": "Here's a worked first week. The payout is forty dollars and the target is thirty, so the C P A kill line, cost per acquisition, is forty. Matched share is ninety two percent. Apply the rule card from the top row down. A S zero one spent sixty six dollars with no F T Ds, over two times target: kill. A S zero two spent ninety five with a C P A of forty seven fifty, over forty: kill. A S zero three has a C P A of nineteen twenty with five F T Ds: scale by twenty percent, then wait at least forty eight hours. A S zero four has too little data: hold. These are starting rules."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: your call on AS05",
+          "p": "One more ad set from the same week. Work out the CPA first, then compare it with the scale line and the target. The lab tool shows Keep as Hold, because the action is the same: no budget change.",
+          "more": "Answer: hold (Keep). $84 ÷ 3 = $28, which is 0.93 × target. That is under the $30 target with 3 FTDs, so it is working, but it is above the $24 scale line. Leave the budget and check again at the next checkpoint.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $30. AS05 spent $84 over 4 days with 3 network-confirmed FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 84,
+              "conversions": 3,
+              "target_cpa": 30,
+              "days": 4
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "hold",
+              "tolerance": 0
+            }
+          },
+          "say": "Now it's your turn. This is a lab. The target is thirty dollars. Ad set A S zero five spent eighty four dollars over four days, with three network-confirmed F T Ds. Your job is to decide: kill, hold or scale? Work out the C P A first, then compare it with the scale line and the target. Note that the lab tool shows Keep as Hold, because the action is the same, no budget change. Pause and try it, then check your answer."
+        },
+        {
+          "v": "compare",
+          "h": "Common setup mistakes",
+          "p": "These are the setup mistakes that cost beginners the most. They are all made before launch, and they all show up later as a week of spend you cannot read. Each fix takes minutes.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Ad links straight to the offer",
+                "Postback added after launch",
+                "Macros typed from memory",
+                "Different time zones in each tool",
+                "Testing with real deposits"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Ad links to the tracker or lander",
+                "Postback tested before launch",
+                "Macros copied from network docs",
+                "One time zone everywhere",
+                "Test postbacks and test codes"
+              ]
+            }
+          },
+          "say": "These setup mistakes cost beginners the most. Compare the two columns. The ad links straight to the offer: instead, link to the tracker or lander. The postback is added after launch: test it before launch. Macros typed from memory: copy them from the network docs. Different time zones in each tool: use one everywhere. Testing with real deposits: use test postbacks and test codes. They're all made before launch, and they all show up later as a week of spend you can't read."
+        },
+        {
+          "v": "tip",
+          "h": "Same page for everyone",
+          "p": "A tracker campaign can route traffic by geo or device for real tests. It must never route reviewers to one page and users to another. Trading and gambling offers usually need platform authorization and must follow local law. Full guide: Compliance for finance, trading and gambling offers module.",
+          "d": {
+            "kind": "warn",
+            "text": "Check platform policy, authorization and local law before the first click. Routing never replaces any of them."
+          },
+          "say": "A tracker campaign can route traffic by geo or device, for real tests. But it must never route reviewers to one page and users to another. Trading and gambling offers usually need platform authorization, and must follow local law. As the warning says, check platform policy, authorization and local law before the first click. Routing never replaces any of them. The full guide is in the Compliance for finance, trading and gambling offers module."
+        },
+        {
+          "v": "tip",
+          "h": "Field names: check your own tools",
+          "p": "Every tracker names these screens differently, and Meta's dynamic parameters can change. We are not certain the names shown here match your tools today. The order stays the same: source, offer, campaign, postback, test. Check your tracker's setup guide and the current Ads Manager help.",
+          "d": {
+            "kind": "tip",
+            "text": "Save your tracker's official setup guide next to your campaign log, and re-read it when a screen looks different."
+          },
+          "say": "A word of caution about names. Every tracker names these screens differently, and Meta's dynamic parameters can change. We're not certain the names shown here match your tools today. But the order stays the same: source, offer, campaign, postback, test. Check your tracker's setup guide and the current Ads Manager help. As the tip says, save your tracker's official setup guide next to your campaign log, and re-read it when a screen looks different."
+        },
+        {
+          "v": "check",
+          "h": "Your setup log",
+          "p": "Write these down the day you launch and keep them in one place. When something breaks in three weeks, this log tells you what was set, where and when, so you can find the change instead of guessing.",
+          "d": [
+            "Campaign link and URL parameters",
+            "Postback URL with the network's macros",
+            "Event map: network event to ad event",
+            "Time zone used in every tool",
+            "Date of the last successful test"
+          ],
+          "say": "Finally, your setup log. Write these down the day you launch, and keep them in one place. Your campaign link and U R L parameters. Your postback U R L with the network's macros. Your event map, network event to ad event. The time zone used in every tool. And the date of your last successful test. When something breaks in three weeks, this log tells you what was set, where and when, so you can find the change instead of guessing."
+        }
+      ],
+      "takeaways": [
+        "Build in order: traffic source, offer, campaign, then postback.",
+        "Test a click, a postback and an ad platform event before any ad goes live.",
+        "Check the matched share daily; at 90% or more, apply the rule card on network-confirmed FTDs.",
+        "Routing is for real tests only; every visitor and reviewer sees the same page."
+      ],
+      "action": "Set up one campaign in your tracker (or a free trial): add the source, offer and campaign, set the postback in your network, fire one test conversion and write your setup log.",
+      "glossary": [
+        {
+          "term": "Traffic source template",
+          "def": "A tracker setting that maps an ad platform's URL parameters, such as ad ID, to tracker fields."
+        },
+        {
+          "term": "Campaign link",
+          "def": "The tracker URL you put in the ad. It records the click, creates the click ID and sends the person on."
+        },
+        {
+          "term": "Test postback",
+          "def": "A fake conversion a network fires on request so you can check your postback works before launch."
+        },
+        {
+          "term": "Matched share",
+          "def": "Tracker-matched conversions divided by network conversions. A health number for your tracking."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "In which order do you usually build a tracker campaign?",
+          "options": [
+            "Postback, campaign, offer, source",
+            "Traffic source, offer, campaign, then postback",
+            "Campaign, then ads, then source",
+            "Offer only; the rest is optional"
+          ],
+          "answer": 1,
+          "why": "The campaign joins a source and an offer, so both must exist first. The postback closes the loop once the campaign link exists."
+        },
+        {
+          "q": "Where does the tracker's click ID macro go in the offer link?",
+          "options": [
+            "In a sub ID slot such as sub1",
+            "In the ad headline",
+            "In the lander's title",
+            "Nowhere; the network creates it"
+          ],
+          "answer": 0,
+          "why": "The network returns sub1 in the postback, so the tracker can match the conversion to the click."
+        },
+        {
+          "q": "Network: 40 FTDs. Tracker matched: 30. What is the matched share and what does it mean?",
+          "options": [
+            "133%: tracking is fine",
+            "90%: decide on ads",
+            "75%: below the 90% gate, fix tracking before ad-level calls",
+            "40%: ignore it"
+          ],
+          "answer": 2,
+          "why": "30 ÷ 40 = 75%. Below the 90% starting gate, ad-level decisions are unreliable."
+        },
+        {
+          "q": "Target $30, payout $40. An ad set spent $95 with 2 network-confirmed FTDs. What is the call?",
+          "options": [
+            "Hold: it has FTDs",
+            "Scale: FTDs are arriving",
+            "Keep: close to target",
+            "Kill: past 3 × target spend with CPA $47.50 over the $40 kill line"
+          ],
+          "answer": 3,
+          "why": "$95 ≥ $90 (3 × target). CPA $47.50 is above the kill line, the lower of $45 and break-even $40."
+        },
+        {
+          "q": "A colleague suggests a tracker rule that sends visitors from reviewer IP ranges to a different page. What do you say?",
+          "options": [
+            "Fine if the other page is similar",
+            "Fine for a test week",
+            "No: that is cloaking, it breaks platform policy and gets accounts banned",
+            "Only for trading offers"
+          ],
+          "answer": 2,
+          "why": "Showing reviewers a different page from users is cloaking, banned on every major platform."
+        }
+      ],
+      "say_intro": "In this lesson you'll set up a tracker campaign step by step: the traffic source, the offer, the campaign link and the postback. Set it up carefully once, and every report after it can be trusted.",
+      "say_outro": "You've connected the source, offer, campaign and postback, tested the loop, checked the matched share, and applied the rule card to a first week. Your task: set up one campaign in your tracker, or a free trial, add the source, offer and campaign, set the postback in your network, fire one test conversion and write your setup log. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "You see 60 FTDs in the network but only 25 in your tracker. Spend is $1,500. What is the first step?",
+      "options": [
+        "Optimise on the 25 you see",
+        "Raise budget on the best ad",
+        "Find where the click ID is lost and fix it before judging campaigns",
+        "Turn off the network postback"
+      ],
+      "answer": 2,
+      "why": "25 ÷ 60 is about 42% matched, far under the 90% gate, so ad-level decisions are guesses. Fix tracking first."
+    },
+    {
+      "q": "Pixel and server both send Lead for form submissions. Meta shows 190 leads; your database has 100. Most likely cause?",
+      "options": [
+        "Missing or mismatched event_id between pixel and server",
+        "Bots",
+        "Attribution window",
+        "Too many ad sets"
+      ],
+      "answer": 0,
+      "why": "Nearly double counts point to failed deduplication."
+    },
+    {
+      "q": "You want Meta to optimise for Telegram joins. What do you need?",
+      "options": [
+        "The pixel on t.me",
+        "More interests in targeting",
+        "A public channel link",
+        "A server event for each real join tied to the original click"
+      ],
+      "answer": 3,
+      "why": "Meta cannot see joins; only a server event linked to the click can report them."
+    },
+    {
+      "q": "Budget $2,000 a week, 4 ad sets, cost per FTD $30. Should you optimise for FTD?",
+      "options": [
+        "Yes, about 67 per ad set",
+        "No, about 17 per ad set is well below about 50",
+        "Yes, cost is low",
+        "Only on weekends"
+      ],
+      "answer": 1,
+      "why": "2,000 ÷ 30 ÷ 4 ≈ 17 per ad set, too few to learn well. Consolidate or use a shallower event."
+    },
+    {
+      "q": "Your network sends pending, approved and rejected statuses. Which should become ad platform conversions?",
+      "options": [
+        "All three",
+        "Pending only",
+        "Rejected only",
+        "Approved only, per your event map"
+      ],
+      "answer": 3,
+      "why": "Send only events you count as real success; never send rejected ones."
+    },
+    {
+      "q": "You launched with the postback \"to add later\". Day 3: your tracker shows 0 FTDs, the network shows 4. Target $30, one ad set has spent $70. What do you do?",
+      "options": [
+        "Kill the ad set: $70 is past 2 × target with 0 FTDs",
+        "Set and test the postback, then judge the ad set on network-confirmed FTDs, not the tracker zero",
+        "Scale it because the network shows FTDs",
+        "Delete the tracker campaign"
+      ],
+      "answer": 1,
+      "why": "The tracker zero is a plumbing failure, not a result. Kill rules need network-confirmed data, so fix the postback first and judge on the network numbers."
+    },
+    {
+      "q": "A visitor in a country that requires consent declines tracking. Your server could still send a CAPI event. Should it?",
+      "options": [
+        "No, respect the refusal for pixel and server",
+        "Yes, server events are exempt",
+        "Yes, if hashed",
+        "Only for deposits"
+      ],
+      "answer": 0,
+      "why": "Consent covers the processing, not the technology. Hashing does not remove the need for consent."
+    },
+    {
+      "q": "A placement brings 5,000 clicks, 900 page loads, 0 FTDs, mostly from data centre IPs. Best action?",
+      "options": [
+        "Scale it; clicks are cheap",
+        "Change the creative only",
+        "Exclude the placement, stop sending its events and share evidence with your rep",
+        "Hide it from your team"
+      ],
+      "answer": 2,
+      "why": "Strong bot signals: pause, filter and document."
+    },
+    {
+      "q": "Target $30, payout $40. After 5 days an ad set has $96 spend and 5 network-confirmed FTDs, with a 92% matched share. What is the call?",
+      "options": [
+        "Hold: wait for 10 FTDs",
+        "Kill: spend is past 3 × target",
+        "Scale +20%: CPA $19.20 is 0.64 × target with 5 FTDs, then wait at least 48 hours",
+        "Keep: no change"
+      ],
+      "answer": 2,
+      "why": "Matching is above the 90% gate, so the numbers can be trusted. $96 ÷ 5 = $19.20, under the $24 scale line with 3+ FTDs."
+    },
+    {
+      "q": "After you start filtering fast leavers, reported joins drop 30% while network FTDs stay flat. A teammate wants to undo it. What do you say?",
+      "options": [
+        "Undo it; joins fell",
+        "Double the budget to recover joins",
+        "Turn off all tracking",
+        "Keep it; you removed noise and deposits held, so cost per real result is clearer"
+      ],
+      "answer": 3,
+      "why": "Reported joins fell because noise was removed. Real results held, and the algorithm now learns from better signal."
+    }
+  ]
+}

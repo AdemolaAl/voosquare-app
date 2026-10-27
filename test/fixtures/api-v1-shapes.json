@@ -1,0 +1,14 @@
+{
+  "$about": "The frozen contract of the /api/v1 API that Zedapex tools call (docs/API_VERSIONING.md). Every key listed here must keep existing with the same type. New keys may be ADDED to responses at any time; keys here may never be removed, renamed or change type. Tested by test/safety.js. Only ever add to this file.",
+  "POST /api/v1/events": { "ok": "boolean", "stored": "number" },
+  "GET /api/v1/users/:voo_id": {
+    "sub": "string", "voo_id": "string", "email": "string", "email_verified": "boolean", "name": "string", "country": "string",
+    "voo_ref": "string", "premium": "boolean", "picture": "string", "aud": "string|null", "iss": "string"
+  },
+  "POST /api/v1/support/messages": { "ok": "boolean", "ticket_id": "number" },
+  "GET /api/v1/support/tickets/:id/messages": {
+    "ticket": { "id": "number", "status": "string", "subject": "string" },
+    "messages": { "id": "number", "author_type": "string", "body": "string", "created_at": "number", "author_name": "string|null" }
+  },
+  "error": { "error": "string" }
+}

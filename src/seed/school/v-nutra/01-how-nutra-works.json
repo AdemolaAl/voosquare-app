@@ -1,0 +1,2345 @@
+{
+  "school": "v-nutra",
+  "order": 1,
+  "slug": "how-nutra-works",
+  "title": "How nutra works",
+  "summary": "How health and beauty offers make money: offer types, the cash-on-delivery pipeline from call centre to doorstep, approval and buyout maths, geos and network terms. You learn to judge every test on cost per approved lead and to plan the cash a COD hold period needs.",
+  "lessons": [
+    {
+      "slug": "what-nutra-is",
+      "title": "What nutra is and who gets paid",
+      "minutes": 15,
+      "objectives": [
+        "By the end you can define nutra and name the product groups it covers.",
+        "By the end you can name every player in a nutra deal and what each one earns.",
+        "By the end you can explain why nutra is treated as a regulated, high-risk vertical."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why this vertical needs care",
+          "p": "Nutra means health and beauty products sold through direct response ads: supplements, skincare, hair care and similar items. Money moves fast because the products are cheap to make and sell well. People also get hurt by false promises, so regulators and ad platforms watch this vertical closely.",
+          "d": {
+            "b": "Health products, sold by ads",
+            "s": "Easy to start, easy to break the law"
+          },
+          "say": "Nutra means health and beauty products sold through direct response ads: supplements, skincare, hair care and similar items. Money moves fast, because the products are cheap to make and sell well. But people also get hurt by false promises, so regulators and ad platforms watch this vertical closely. As the screen says, it's easy to start, and easy to break the law. That's why we take care from the very first lesson."
+        },
+        {
+          "v": "cards",
+          "h": "What counts as nutra",
+          "p": "Networks group many products under the nutra label. The group matters, because the rules differ. A moisturiser is mostly a cosmetic. A capsule for blood sugar touches medicine law in most countries. Learn which box a product sits in before you write one word of an ad.",
+          "d": [
+            "Supplements|vitamins, herbal capsules, powders",
+            "Beauty|skin creams, serums, anti-ageing",
+            "Hair|shampoos, hair growth products",
+            "Weight|diet products, the most restricted group",
+            "Joint and mobility|creams, capsules, gels",
+            "Men's and women's health|sensitive, often banned in ads"
+          ],
+          "say": "Here's what counts as nutra. Supplements, like vitamins, herbal capsules and powders. Beauty, like skin creams, serums and anti-ageing. Hair, like shampoos and hair growth products. Weight, diet products, the most restricted group. Joint and mobility, creams, capsules and gels. And men's and women's health, sensitive, and often banned in ads. The group matters because the rules differ. A moisturiser is mostly a cosmetic, but a capsule for blood sugar touches medicine law in most countries. Learn which box a product sits in before you write a word."
+        },
+        {
+          "v": "map",
+          "h": "Who is in a nutra deal",
+          "p": "A typical deal has more players than other verticals. The advertiser owns the product. The network connects you to it and tracks leads. A call centre phones each buyer to confirm. A courier delivers and often collects cash. You, the affiliate, buy the ads.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Your ad",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Lander + order form",
+                "kind": "page"
+              },
+              {
+                "id": "net",
+                "label": "Network tracking",
+                "kind": "data"
+              },
+              {
+                "id": "cc",
+                "label": "Call centre",
+                "kind": "person"
+              },
+              {
+                "id": "cour",
+                "label": "Courier",
+                "kind": "person"
+              },
+              {
+                "id": "buyer",
+                "label": "Buyer pays",
+                "kind": "money"
+              },
+              {
+                "id": "adv",
+                "label": "Advertiser",
+                "kind": "offer"
+              },
+              {
+                "id": "you",
+                "label": "Your payout",
+                "kind": "money"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "lp",
+                "click"
+              ],
+              [
+                "lp",
+                "net",
+                "lead"
+              ],
+              [
+                "net",
+                "cc",
+                "call"
+              ],
+              [
+                "cc",
+                "cour",
+                "approved"
+              ],
+              [
+                "cour",
+                "buyer",
+                "delivery"
+              ],
+              [
+                "buyer",
+                "adv",
+                "cash"
+              ],
+              [
+                "adv",
+                "net",
+                "pays"
+              ],
+              [
+                "net",
+                "you",
+                "payout"
+              ]
+            ]
+          },
+          "say": "A nutra deal has more players than most. Follow the map. Your ad sends a click to the lander and order form. The lead goes into network tracking. A call centre phones each buyer to confirm. If approved, a courier delivers, and the buyer pays, often in cash. That cash goes to the advertiser, who owns the product. The advertiser pays the network, and the network pays you, the affiliate. Your part is buying the ads."
+        },
+        {
+          "v": "table",
+          "h": "Who earns what",
+          "p": "Example: one Nigerian cash-on-delivery order for a joint cream that sells at $40. Every number here is illustrative and varies by product and geo. The point is the shape: the affiliate is paid a fixed fee per approved lead, long before the cash comes in.",
+          "more": "Example only. The advertiser pays your $20 and the network's margin whether or not the parcel is collected, so a buyer who refuses the parcel is a loss for them. That is why advertisers watch buyout rate so closely, and why your traffic quality decides how long a network keeps working with you.",
+          "d": {
+            "cols": [
+              "Player",
+              "Gets",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Buyer",
+                "Product at the door",
+                "Pays $40"
+              ],
+              [
+                "Courier",
+                "Delivery fee",
+                "$5"
+              ],
+              [
+                "Call centre",
+                "Fee per lead handled",
+                "$2"
+              ],
+              [
+                "Network",
+                "Margin on each lead",
+                "$4"
+              ],
+              [
+                "Affiliate",
+                "Payout per approved lead",
+                "$20"
+              ],
+              [
+                "Advertiser",
+                "What is left after costs",
+                "Varies"
+              ]
+            ]
+          },
+          "say": "Here's who earns what, in an example cash on delivery order in Nigeria, for a joint cream selling at forty dollars. The buyer gets the product at the door and pays forty. The courier gets about five dollars. The call centre, two dollars per lead handled. The network, about four dollars margin. You, the affiliate, twenty dollars per approved lead. And the advertiser keeps what's left. Every number is illustrative. The point is the shape: you're paid a fixed fee per approved lead, long before the cash comes in."
+        },
+        {
+          "v": "stat",
+          "h": "Your payout in this example",
+          "p": "In this example you are paid $20 for each lead that the call centre approves. You never touch the product or the cash. Your whole job is to bring real, interested buyers at a cost below that number, and to do it within the law and platform rules.",
+          "d": {
+            "n": 20,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "per approved lead",
+            "note": "Example. Real payouts vary by offer and geo."
+          },
+          "say": "In this example, your payout is twenty dollars, the number on screen, for each lead the call centre approves. You never touch the product or the cash. Your whole job is to bring real, interested buyers at a cost below that number, and to do it within the law and platform rules. Remember, it's an example. Real payouts vary by offer and geo."
+        },
+        {
+          "v": "compare",
+          "h": "Nutra vs other verticals",
+          "p": "Compared with trading or iGaming, nutra has a lower payout per conversion but needs no deposit and no account verification. It is a physical product with a phone call in the middle, so lead quality is judged by real humans within hours, not by a pixel.",
+          "d": {
+            "a": {
+              "title": "Trading / iGaming",
+              "items": [
+                "Payout per first deposit",
+                "KYC and deposits",
+                "Licences per country",
+                "Revenue share possible"
+              ]
+            },
+            "b": {
+              "title": "Nutra (COD)",
+              "items": [
+                "Payout per approved lead",
+                "Phone confirmation",
+                "Health claims law",
+                "Buyout decides your future"
+              ]
+            }
+          },
+          "say": "Let's compare nutra with trading and iGaming. On the left, trading and iGaming: paid per first deposit, with K Y C and deposits, licences per country, and revenue share possible. On the right, nutra on C O D, cash on delivery: paid per approved lead, with phone confirmation, health claims law, and buyout that decides your future. Nutra has a lower payout per conversion, but needs no deposit and no account verification. And lead quality is judged by real humans, within hours, not by a pixel."
+        },
+        {
+          "v": "tip",
+          "h": "Regulated in practice",
+          "p": "Health products sit under health, food, cosmetics and advertising law almost everywhere. Ads usually face extra review on Meta and TikTok, and some products cannot be advertised at all. Check the product's legal status and the platform's current policy before you spend.",
+          "d": {
+            "kind": "warn",
+            "text": "Nutra is a regulated vertical. Check local health and advertising law and the current platform policy before running any ad."
+          },
+          "say": "Nutra is regulated in practice. Health products sit under health, food, cosmetics and advertising law almost everywhere. Ads usually face extra review on Meta and TikTok, and some products can't be advertised at all. As the warning says, nutra is a regulated vertical. Check local health and advertising law, and the current platform policy, before running any ad, and check the product's legal status before you spend."
+        },
+        {
+          "v": "check",
+          "h": "Signs of a safe product to promote",
+          "p": "Before you look at the payout, look at the product. You will spend money and put your ad account behind it. A product that fails these checks will get your ads rejected, your account restricted or your buyers harmed, whatever the payout.",
+          "more": "Example: a network lists a 'diabetes cure' capsule for Kenya with a high payout. It fails the third check at once. A claim to cure a disease makes the product a medicine in most countries, so selling it as a supplement is likely illegal and Meta and TikTok will reject the ads. Skip it.",
+          "d": [
+            "Registered with the local regulator where required",
+            "Ingredients listed and believable",
+            "No cure or treatment promise in the offer pack",
+            "Real customer support and return route",
+            "Advertiser can show evidence for its claims"
+          ],
+          "say": "Before you look at the payout, look at the product. Here are signs of a safe product to promote. Registered with the local regulator where required. Ingredients listed and believable. No cure or treatment promise in the offer pack. Real customer support and a return route. And an advertiser who can show evidence for its claims. For example, a diabetes cure capsule fails the third check at once. A cure claim makes it a medicine in most countries, so it's likely illegal to sell as a supplement. Skip it."
+        },
+        {
+          "v": "phone",
+          "h": "What the buyer sees",
+          "p": "From the buyer's side, nutra looks simple: an ad, a page, a short form and a phone call. Keep that view in mind. Every promise on the page is repeated or contradicted by the call centre, and the buyer decides at the door whether you told the truth.",
+          "d": {
+            "app": "browser",
+            "url": "joint-care.example/ng",
+            "page": {
+              "h": "Stiff knees in the morning?",
+              "p": "A cooling cream with menthol and arnica. Pay when it arrives. Not a medicine; results vary.",
+              "cta": "Order, pay on delivery"
+            }
+          },
+          "say": "Here's what the buyer sees, an example page on a phone. The headline asks, stiff knees in the morning? It describes a cooling cream with menthol and arnica, pay when it arrives, and it says plainly, not a medicine, results vary. The button says order, pay on delivery. From the buyer's side, it's an ad, a page, a short form and a phone call. Every promise here is repeated or contradicted by the call centre, and the buyer decides at the door whether you told the truth."
+        },
+        {
+          "v": "cards",
+          "h": "Common beginner mistakes",
+          "p": "Each of these mistakes looks small on day one and expensive by day ten. Most of them come from treating nutra like any other product, when it is closer to a regulated health category with a phone call in the middle.",
+          "d": [
+            "Picking by payout|check the product and claims first",
+            "Copying a rival's claims|their claims may be illegal",
+            "Ignoring the call|the call centre approves or rejects",
+            "Counting form fills|you are paid on approvals",
+            "One geo for all|law and language change per country"
+          ],
+          "say": "These beginner mistakes look small on day one and expensive by day ten. Picking by payout, instead of checking the product and claims first. Copying a rival's claims, which may be illegal. Ignoring the call, when the call centre approves or rejects. Counting form fills, when you're paid on approvals. And using one geo plan for all, when law and language change per country. Most come from treating nutra like any other product."
+        },
+        {
+          "v": "quote",
+          "h": "From Dchessking",
+          "p": "A short note from the founder on how to think about this vertical before your first test. Keep it in mind when a network manager pushes an aggressive offer or creative.",
+          "d": "In nutra the buyer judges you twice: once on the ad, once at the door. Sell what will still look true when the parcel arrives.",
+          "by": "dchessking",
+          "say": "Here's a short note from Dchessking on how to think about this vertical before your first test. Keep it in mind when a network manager pushes an aggressive offer or creative. In his words: In nutra the buyer judges you twice: once on the ad, once at the door. Sell what will still look true when the parcel arrives."
+        },
+        {
+          "v": "flow",
+          "h": "How this school runs",
+          "p": "This school follows the order you will work in. You learn the money first, then the law, then angles and creatives, then landers and the COD funnel, then traffic and tracking, and finally scaling. Do not skip the compliance module, because it decides what you are allowed to say in every later step.",
+          "d": [
+            "How nutra works",
+            "Compliance",
+            "Angles and creatives",
+            "Landers and COD",
+            "Traffic and tracking",
+            "Scaling"
+          ],
+          "say": "This school follows the order you'll work in. First, how nutra works, the money. Then compliance. Then angles and creatives. Then landers and the C O D funnel. Then traffic and tracking. And finally, scaling. Please don't skip the compliance module, because it decides what you're allowed to say in every later step."
+        }
+      ],
+      "takeaways": [
+        "Nutra covers supplements, beauty, hair, weight and similar health products sold by direct response.",
+        "In COD nutra you are usually paid per lead the call centre approves, not per form fill.",
+        "It is a regulated vertical: check product status, local law and platform policy before spending."
+      ],
+      "action": "Open one nutra offer list on any network you have access to and sort five offers into the groups from this lesson (supplement, beauty, hair, weight, joint, men's or women's health). Mark any that promise to cure or treat a disease.",
+      "glossary": [
+        {
+          "term": "Nutra",
+          "def": "Short for nutraceuticals. Health and beauty products such as supplements and creams sold through direct response ads."
+        },
+        {
+          "term": "COD",
+          "def": "Cash on delivery. The buyer pays the courier when the parcel arrives."
+        },
+        {
+          "term": "Call centre",
+          "def": "The team that phones each lead to confirm the order, address and quantity."
+        },
+        {
+          "term": "Approved lead",
+          "def": "A lead the call centre has confirmed as a real order. This is what you are usually paid for."
+        },
+        {
+          "term": "Direct response",
+          "def": "Advertising that asks for an action now, such as ordering, rather than building a brand slowly."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "In a typical COD nutra offer, what are you usually paid for?",
+          "options": [
+            "Each click on your ad",
+            "Each lead the call centre approves",
+            "Each parcel that is delivered and paid",
+            "Each impression of your ad"
+          ],
+          "answer": 1,
+          "why": "Most COD offers pay per approved lead. Some pay on buyout, but clicks and impressions are not paid events."
+        },
+        {
+          "q": "A network lists a capsule that 'cures diabetes'. What should you do?",
+          "options": [
+            "Run it with softer wording",
+            "Run it only on TikTok",
+            "Skip it, because a cure claim makes it an illegal medicine claim in most countries",
+            "Run it in a different geo"
+          ],
+          "answer": 2,
+          "why": "A cure claim turns a supplement into a medicine claim almost everywhere and breaks platform policy. Softer ad wording does not fix the product."
+        },
+        {
+          "q": "Which player phones the buyer to confirm the order?",
+          "options": [
+            "The courier",
+            "The affiliate",
+            "The ad platform",
+            "The call centre"
+          ],
+          "answer": 3,
+          "why": "The call centre confirms the order, address and quantity. Its decision turns a lead into an approved lead."
+        },
+        {
+          "q": "Why does an advertiser care about buyers who refuse the parcel?",
+          "options": [
+            "They already paid your payout and the delivery costs",
+            "They get a refund from the network",
+            "It improves their approval rate",
+            "It does not affect them"
+          ],
+          "answer": 0,
+          "why": "The advertiser has paid the affiliate payout, network margin and shipping, so a refused parcel is a loss. That is why buyout is watched closely."
+        },
+        {
+          "q": "Which product group is usually the most restricted in ads?",
+          "options": [
+            "Hair shampoo",
+            "Weight loss products",
+            "Moisturiser",
+            "Lip balm"
+          ],
+          "answer": 1,
+          "why": "Weight loss products face the tightest platform rules, including age limits and bans on before-and-after images."
+        }
+      ],
+      "say_intro": "Welcome to the nutra school. In this lesson you'll learn what nutra is, the product groups it covers, who gets paid in a nutra deal, and why it's treated as a regulated, high-risk vertical.",
+      "say_outro": "So, nutra is health and beauty products sold by ads, with more players than most deals, and with health law sitting over everything you say. Your task: open one nutra offer list on any network you can access, sort five offers into the groups from this lesson, and mark any that promise to cure or treat a disease. Now take the quiz."
+    },
+    {
+      "slug": "offer-types",
+      "title": "Offer types: COD, trial, straight sale, subscription",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can explain how COD, trial, straight sale and subscription offers work.",
+        "By the end you can say which conversion event pays on each type.",
+        "By the end you can spot the legal risks of trial and subscription offers and choose a safer first offer."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "The offer type decides your funnel",
+          "p": "Before you build anything, know how the buyer pays and when you get paid. The offer type changes your lander, your tracking, your risk and even which countries make sense. Picking the wrong type for your geo or skill level wastes the first test budget.",
+          "d": {
+            "b": "How the buyer pays decides everything",
+            "s": "Four common types"
+          },
+          "say": "Before you build anything, know how the buyer pays, and when you get paid. As the screen says, how the buyer pays decides everything. The offer type changes your lander, your tracking, your risk, and even which countries make sense. Picking the wrong type for your geo or skill level wastes your first test budget. There are four common types, and we'll go through each."
+        },
+        {
+          "v": "cards",
+          "h": "The four types",
+          "p": "Networks label offers with short codes. COD is cash on delivery. SS is straight sale, paid online in full. Trial means a small first charge followed by more charges. Subscription means a repeat order on a schedule. Each pays you on a different event.",
+          "d": [
+            "COD|form fill, call, pay at the door",
+            "Straight sale (SS)|card payment online, one order",
+            "Trial|small first charge, then rebills",
+            "Subscription|repeat order on a schedule"
+          ],
+          "say": "Networks label offers with short codes. C O D is cash on delivery: a form fill, a call, and payment at the door. S S is straight sale, a card payment online for one order. Trial means a small first charge, followed by more charges, called rebills. And subscription means a repeat order on a schedule. Each one pays you on a different event."
+        },
+        {
+          "v": "table",
+          "h": "When you get paid",
+          "p": "This table shows the usual paid event for each type. Networks differ, so always read the offer page. The paid event matters because it decides what you optimise for in your ad platform and how long you wait before you can judge a test.",
+          "d": {
+            "cols": [
+              "Type",
+              "Usually paid on",
+              "Wait to know"
+            ],
+            "rows": [
+              [
+                "COD",
+                "Approved lead",
+                "Hours to 2 days"
+              ],
+              [
+                "COD, buyout deal",
+                "Paid delivery",
+                "Days to weeks"
+              ],
+              [
+                "Straight sale",
+                "Completed card sale",
+                "Minutes"
+              ],
+              [
+                "Trial",
+                "First charge, sometimes rebill",
+                "Minutes to a month"
+              ],
+              [
+                "Subscription",
+                "First order or each order",
+                "Minutes to months"
+              ]
+            ]
+          },
+          "say": "This table shows the usual paid event for each type. C O D is usually paid on an approved lead, known in hours to two days. A C O D buyout deal pays on paid delivery, known in days to weeks. Straight sale pays on a completed card sale, known in minutes. Trial pays on the first charge, sometimes the rebill, minutes to a month. Subscription pays on the first order or each order, minutes to months. Networks differ, so read the offer page. The paid event decides what you optimise for, and how long you wait to judge a test."
+        },
+        {
+          "v": "map",
+          "h": "How a COD order flows",
+          "p": "COD dominates in markets where many people do not pay online by card: much of Africa, South and Southeast Asia, parts of Latin America and Eastern and Southern Europe. The buyer only shares a name and phone number, so the form converts well, but the call centre filters a lot out.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Ad",
+                "kind": "ad"
+              },
+              {
+                "id": "form",
+                "label": "Name + phone form",
+                "kind": "page"
+              },
+              {
+                "id": "cc",
+                "label": "Call centre confirms",
+                "kind": "person"
+              },
+              {
+                "id": "ship",
+                "label": "Courier delivers",
+                "kind": "person"
+              },
+              {
+                "id": "cash",
+                "label": "Cash at the door",
+                "kind": "money"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "form",
+                "click"
+              ],
+              [
+                "form",
+                "cc",
+                "lead"
+              ],
+              [
+                "cc",
+                "ship",
+                "approved"
+              ],
+              [
+                "ship",
+                "cash",
+                "buyout"
+              ]
+            ]
+          },
+          "say": "Here's how a C O D order flows. The ad brings a click to a name and phone form. The lead goes to a call centre, which confirms. Approved orders go to the courier, who delivers. And the buyer pays cash at the door, which is the buyout. C O D dominates where many people don't pay online by card: much of Africa, South and Southeast Asia, parts of Latin America, and Eastern and Southern Europe. The form converts well, but the call centre filters a lot out."
+        },
+        {
+          "v": "phone",
+          "h": "A COD order form",
+          "p": "A COD form is short on purpose: name, phone, sometimes city. No card. That low effort is why COD forms convert well and also why many leads are fake, mistyped or impulsive. Your job is to send people who meant to order.",
+          "d": {
+            "app": "browser",
+            "url": "joint-care.example/order",
+            "page": {
+              "h": "Order now, pay on delivery",
+              "p": "Name. Phone number. City. Our team will call you to confirm before anything is sent.",
+              "cta": "Send my order"
+            }
+          },
+          "say": "Here's an example C O D order form. Order now, pay on delivery. It asks for name, phone number and city, and says the team will call to confirm before anything is sent. No card. It's short on purpose. That low effort is why C O D forms convert well, and also why many leads are fake, mistyped or impulsive. Your job is to send people who meant to order."
+        },
+        {
+          "v": "compare",
+          "h": "Straight sale vs COD",
+          "p": "A straight sale asks for card details, so far fewer people complete it, but almost every sale is real. COD gets more leads at a lower cost each, but you only get paid for the share the call centre approves.",
+          "d": {
+            "a": {
+              "title": "Straight sale",
+              "items": [
+                "Card checkout",
+                "Low conversion rate",
+                "Paid on the sale",
+                "Needs card-paying geos"
+              ]
+            },
+            "b": {
+              "title": "COD",
+              "items": [
+                "Name and phone only",
+                "High conversion rate",
+                "Paid on approval",
+                "Works where cash rules"
+              ]
+            }
+          },
+          "say": "Straight sale versus C O D. On the left, straight sale: a card checkout, a low conversion rate, paid on the sale, and it needs card-paying geos. On the right, C O D: name and phone only, a high conversion rate, paid on approval, and it works where cash rules. A straight sale asks for card details, so far fewer people complete it, but almost every sale is real. C O D gets more leads, cheaper, but you're only paid for the share the call centre approves."
+        },
+        {
+          "v": "eq",
+          "h": "Same traffic, two offer types",
+          "p": "Example: 1,000 clicks on each offer. The COD form gets 8% leads, 50% approved, $20 payout. The straight sale gets 1.5% sales at a $45 payout. Work out revenue for each before deciding which one fits your traffic.",
+          "more": "Example only. COD: 1,000 × 8% = 80 leads, × 50% approval = 40 approved, × $20 = $800. Straight sale: 1,000 × 1.5% = 15 sales, × $45 = $675. On these numbers COD wins, but change one rate and the answer flips. If approval falls to 40%, COD earns 32 × $20 = $640, less than the straight sale. Always run the sums for your geo.",
+          "d": [
+            "1,000 × 8% × 50% × $20",
+            "=",
+            "$800",
+            "vs",
+            "1,000 × 1.5% × $45 = $675"
+          ],
+          "say": "Same traffic, two offer types. Example: one thousand clicks on each. The C O D form gets eight percent leads, so eighty. Fifty percent approved, so forty, at twenty dollars, gives eight hundred dollars. The straight sale gets one and a half percent, fifteen sales, at forty five dollars, gives six hundred and seventy five. On these numbers C O D wins. But change one rate, and the answer flips. If approval falls to forty percent, C O D earns six hundred and forty. Always run the sums for your geo."
+        },
+        {
+          "v": "big",
+          "h": "Trial offers: the risky one",
+          "p": "A trial charges a small amount, such as shipping, then rebills the full price later unless the buyer cancels. When the terms are hidden, buyers feel tricked, chargebacks pile up and regulators act. Many affiliates have lost accounts and money on trials.",
+          "d": {
+            "b": "Hidden rebills are a trap",
+            "s": "For buyers, for you and for your ad account"
+          },
+          "say": "Trial offers are the risky one. A trial charges a small amount, such as shipping, then rebills the full price later unless the buyer cancels. When those terms are hidden, buyers feel tricked, chargebacks pile up, and regulators act. Many affiliates have lost accounts and money on trials. As the screen says, hidden rebills are a trap, for buyers, for you, and for your ad account."
+        },
+        {
+          "v": "tip",
+          "h": "Trial and subscription law",
+          "p": "In the US, the Restore Online Shoppers' Confidence Act requires clear terms, express consent and a simple way to cancel for online recurring charges. A 2024 FTC cancellation rule was struck down by a US court in 2025. Card networks have their own trial rules. Check the current law in your geo.",
+          "d": {
+            "kind": "warn",
+            "text": "Never run a trial or subscription that hides the rebill. Terms must be clear before payment, consent explicit, cancelling easy. We are not certain of the current status of every rule; check before running."
+          },
+          "say": "Here's what the slide says about the law. In the U S, the Restore Online Shoppers' Confidence Act requires clear terms, express consent and a simple way to cancel for online recurring charges. A twenty twenty four F T C cancellation rule was struck down by a U S court in twenty twenty five. Card networks have their own trial rules too. As the warning says, never run a trial or subscription that hides the rebill. We're not certain of the current status of every rule, so check before running."
+        },
+        {
+          "v": "check",
+          "h": "If you ever run a subscription offer",
+          "p": "Some subscription offers are honest: a monthly box of vitamins with the price shown and a cancel button. If you promote one, check all of these on the advertiser's checkout before you spend a single dollar.",
+          "d": [
+            "Full price and schedule shown before payment",
+            "Buyer ticks a clear consent box",
+            "Cancel online in a few clicks",
+            "Confirmation email shows terms",
+            "No 'free' in the ad if a rebill follows"
+          ],
+          "say": "Some subscription offers are honest, like a monthly box of vitamins with the price shown and a cancel button. If you promote one, check all of these on the advertiser's checkout first. The full price and schedule shown before payment. The buyer ticks a clear consent box. They can cancel online in a few clicks. The confirmation email shows the terms. And no free in the ad if a rebill follows. Check before you spend a single dollar."
+        },
+        {
+          "v": "cards",
+          "h": "Mistakes when choosing a type",
+          "p": "These are the choices that cost beginners most. Most come from looking only at the payout figure, without checking how the buyer pays in that country and how long the money takes to confirm.",
+          "d": [
+            "SS offer in a cash geo|few people pay by card there",
+            "Trial for the high payout|chargebacks and bans follow",
+            "Judging COD at once|approvals take hours",
+            "'Free' in the ad|misleading when a charge follows",
+            "Ignoring returns|refusals hurt your standing"
+          ],
+          "say": "These choices cost beginners most. A straight sale offer in a cash geo, where few people pay by card. A trial chosen for the high payout, when chargebacks and bans follow. Judging C O D at once, when approvals take hours. Saying free in the ad, which is misleading when a charge follows. And ignoring returns, when refusals hurt your standing. Most come from looking only at the payout figure."
+        },
+        {
+          "v": "flow",
+          "h": "Pick your first type",
+          "p": "For a beginner in Africa, Asia or Latin America, COD is usually the most practical first type, because it matches how people pay. Straight sale suits card-paying geos. Leave trials alone until you can verify the terms yourself, and many affiliates never touch them.",
+          "d": [
+            "Check how buyers pay in the geo",
+            "Cash first: choose COD",
+            "Cards common: consider SS",
+            "Skip hidden-rebill trials",
+            "Read the paid event on the offer"
+          ],
+          "say": "Pick your first type. Check how buyers pay in the geo. If cash comes first, choose C O D. If cards are common, consider straight sale. Skip hidden-rebill trials. And read the paid event on the offer. For a beginner in Africa, Asia or Latin America, C O D is usually the most practical first type, because it matches how people pay. Leave trials alone until you can verify the terms yourself. Many affiliates never touch them."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: what can a COD lead cost",
+          "p": "Use the calculator. Enter the payout per approved lead, the approval rate (the share of leads that turn into a paid event) and keep a 25% margin.",
+          "more": "Example: $20 × 50% = $10 break-even cost per lead. Keep 25%: $10 × 0.75 = $7.50 target cost per lead. If your ads bring leads at $9, you are under break-even but above target, so you are earning less than planned.",
+          "d": {
+            "kind": "breakeven",
+            "task": "Payout $20 per approved lead, approval rate 50%, margin 25%. What is the most you can pay per lead (form fill)?",
+            "preset": {
+              "payout": 20,
+              "cr_pct": 50,
+              "margin_pct": 25
+            },
+            "answer": {
+              "field": "max_cpl",
+              "value": 7.5,
+              "tolerance": 0.05
+            },
+            "labels": {
+              "unit": "approved lead",
+              "rate": "Approval rate",
+              "answer": "Your answer: max cost per lead (form fill)"
+            }
+          },
+          "say": "Lab time. The payout is twenty dollars per approved lead, the approval rate is fifty percent, and you want to keep a twenty five percent margin. What's the most you can pay per lead, per form fill? Enter the approval rate in the calculator, the share of leads that become a paid event. Pause and try it, then check your answer."
+        }
+      ],
+      "takeaways": [
+        "COD pays on approved leads, straight sale on completed card sales, trials and subscriptions on charges.",
+        "COD fits cash-first geos and needs the call centre's approval before you earn.",
+        "Hidden rebills are illegal in many places and dangerous for your accounts; avoid them."
+      ],
+      "action": "Pick one geo you want to run. Write down how most people there pay online (card, mobile money, cash). Then find two offers for that geo and note their type and paid event.",
+      "glossary": [
+        {
+          "term": "Straight sale (SS)",
+          "def": "An offer where the buyer pays the full price online in one go and you are paid on that sale."
+        },
+        {
+          "term": "Trial offer",
+          "def": "An offer with a small first charge followed by a larger rebill unless the buyer cancels."
+        },
+        {
+          "term": "Rebill",
+          "def": "A later charge to the same card, often monthly."
+        },
+        {
+          "term": "Chargeback",
+          "def": "A payment reversed by the buyer's bank after a dispute."
+        },
+        {
+          "term": "ROSCA",
+          "def": "Restore Online Shoppers' Confidence Act, a US law on online recurring charges."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which offer type usually pays on an approved lead?",
+          "options": [
+            "Straight sale",
+            "COD",
+            "Trial",
+            "Subscription"
+          ],
+          "answer": 1,
+          "why": "COD offers usually pay when the call centre approves the lead."
+        },
+        {
+          "q": "Example: 1,000 clicks, 8% leads, 40% approval, $20 payout. COD revenue?",
+          "options": [
+            "$800",
+            "$320",
+            "$640",
+            "$1,600"
+          ],
+          "answer": 2,
+          "why": "1,000 × 8% = 80 leads, × 40% = 32 approved, × $20 = $640."
+        },
+        {
+          "q": "Why is COD common in many African and Asian markets?",
+          "options": [
+            "Card payment is less common there",
+            "Networks pay more there",
+            "Ads are cheaper",
+            "No call centre is needed"
+          ],
+          "answer": 0,
+          "why": "COD matches how many people pay. It removes the need for a card."
+        },
+        {
+          "q": "What makes a trial offer risky?",
+          "options": [
+            "It needs a call centre",
+            "Its payout is low",
+            "It only works in Africa",
+            "Hidden rebills lead to chargebacks, complaints and legal action"
+          ],
+          "answer": 3,
+          "why": "Buyers who are rebilled without clear consent dispute charges and complain to regulators."
+        },
+        {
+          "q": "Approval 50%, payout $20, margin 25%. Target cost per lead?",
+          "options": [
+            "$10.00",
+            "$15.00",
+            "$7.50",
+            "$5.00"
+          ],
+          "answer": 2,
+          "why": "$20 × 50% = $10 break-even per lead, × 0.75 = $7.50 target."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn the four common nutra offer types: cash on delivery, straight sale, trial and subscription. You'll see which event pays on each, spot the legal risks of trials and subscriptions, and choose a safer first offer.",
+      "say_outro": "So, how the buyer pays decides your funnel, your paid event and your risk, and for most beginners in cash-first geos, C O D is the practical first type. Your task: pick one geo, write down how most people there pay online, then find two offers for that geo and note their type and paid event. Now take the quiz."
+    },
+    {
+      "slug": "inside-a-cod-order",
+      "title": "Inside a COD order: call centre to doorstep",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can follow one lead through every status in a COD network.",
+        "By the end you can calculate approval rate and buyout rate from raw counts.",
+        "By the end you can explain why trash leads and duplicates are removed before approval rate is counted."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Your money is decided on the phone",
+          "p": "In COD, a form fill is only a promise. A call centre operator rings the buyer, confirms the order and the address, and marks the lead approved or rejected. Then a courier tries to deliver. Every step loses some people, and your payout depends on how many survive.",
+          "d": {
+            "b": "A lead is not an order yet",
+            "s": "The call decides"
+          },
+          "say": "In C O D, cash on delivery, a form fill is only a promise. As the screen says, a lead is not an order yet. A call centre operator rings the buyer, confirms the order and the address, and marks the lead approved or rejected. Then a courier tries to deliver. Every step loses some people, and your payout depends on how many survive."
+        },
+        {
+          "v": "funnel",
+          "h": "Where 200 leads go",
+          "p": "Example: 200 leads from one ad set in one day. Some are fake or duplicates and are removed as trash. The call centre cannot reach some people. Some say no. The rest are approved. Of those, most take the parcel and pay, a few refuse.",
+          "d": [
+            [
+              "Leads",
+              200
+            ],
+            [
+              "Valid (not trash)",
+              170
+            ],
+            [
+              "Reached by phone",
+              140
+            ],
+            [
+              "Approved",
+              85
+            ],
+            [
+              "Delivered and paid",
+              68
+            ]
+          ],
+          "say": "Here's where two hundred leads go, in an example from one ad set in one day. Follow the funnel. Some are fake or duplicates, removed as trash, leaving one hundred and seventy valid. The call centre reaches one hundred and forty. Eighty five are approved. And of those, sixty eight take the parcel and pay. A few refuse at the door."
+        },
+        {
+          "v": "table",
+          "h": "The lead statuses you will see",
+          "p": "Networks use slightly different words, but the same ideas. Learn them, because your stats page will show each lead in one of these states. Names change between networks; ask your manager what each status means on theirs.",
+          "d": {
+            "cols": [
+              "Status",
+              "Means",
+              "Paid?"
+            ],
+            "rows": [
+              [
+                "New / hold",
+                "Waiting for the call",
+                "Not yet"
+              ],
+              [
+                "Approved",
+                "Order confirmed",
+                "Yes, on most deals"
+              ],
+              [
+                "Rejected / cancelled",
+                "Buyer said no",
+                "No"
+              ],
+              [
+                "Trash",
+                "Fake, wrong number, joke",
+                "No"
+              ],
+              [
+                "Duplicate",
+                "Same person again",
+                "No"
+              ],
+              [
+                "Bought out",
+                "Paid at delivery",
+                "Only on buyout deals"
+              ]
+            ]
+          },
+          "say": "Here are the lead statuses you'll see. New or hold, waiting for the call, not paid yet. Approved, the order is confirmed, paid on most deals. Rejected or cancelled, the buyer said no, not paid. Trash, a fake, a wrong number or a joke, not paid. Duplicate, the same person again, not paid. And bought out, paid at delivery, which is paid only on buyout deals. Names change between networks, so ask your manager what each status means on theirs."
+        },
+        {
+          "v": "eq",
+          "h": "Approval rate",
+          "p": "Approval rate is the share of your leads that the call centre approves. Networks usually count it on valid leads, after trash and duplicates are removed, but some count it on all leads. Ask which one your network uses, because the two can differ a lot.",
+          "more": "Example: 85 approved ÷ 170 valid leads = 50%. On all 200 leads it would be 85 ÷ 200 = 42.5%. Same traffic, two very different numbers. Write down which base your network uses next to every approval figure you record.",
+          "d": [
+            "Approved",
+            "÷",
+            "Valid leads",
+            "=",
+            "Approval rate"
+          ],
+          "say": "Approval rate is approved divided by valid leads. It's the share of your leads the call centre approves. Networks usually count it on valid leads, after trash and duplicates are removed, but some count it on all leads. Example: eighty five approved out of one hundred and seventy valid is fifty percent. On all two hundred leads, it's forty two and a half percent. Same traffic, two very different numbers. So ask which base your network uses, and write it down next to every figure."
+        },
+        {
+          "v": "eq",
+          "h": "Buyout rate",
+          "p": "Buyout rate is the share of approved orders that are delivered and paid. It is the advertiser's real income. You may not be paid on it directly, but networks track it per affiliate, and low buyout gets your payout cut or your traffic stopped.",
+          "more": "Example: 68 paid ÷ 85 approved = 80%. If another affiliate's leads buy out at 55%, the advertiser earns far less from them for the same payout. Rough guide only, and it varies widely by geo, product and courier: ask your manager what buyout their advertiser expects.",
+          "d": [
+            "Delivered and paid",
+            "÷",
+            "Approved",
+            "=",
+            "Buyout rate"
+          ],
+          "say": "Buyout rate is delivered and paid, divided by approved. It's the advertiser's real income. You may not be paid on it directly, but networks track it per affiliate, and low buyout gets your payout cut or your traffic stopped. Example: sixty eight paid out of eighty five approved is eighty percent. This varies widely by geo, product and courier, so ask your manager what buyout their advertiser expects."
+        },
+        {
+          "v": "walk",
+          "h": "One lead, step by step",
+          "p": "Follow a single lead from the form to cash. Tap through each step. Notice how much time passes and how many places it can fail. The times shown are examples and vary by network and country.",
+          "d": {
+            "steps": [
+              {
+                "title": "Form sent",
+                "text": "Ada enters her name and phone at 10:02. The network records a new lead with your click ID.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/stats/leads",
+                  "title": "Leads",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Lead",
+                        "Time",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "#48812",
+                          "10:02",
+                          "New"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "The call",
+                "text": "An operator calls at 10:20, confirms the product, quantity and address.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Order desk",
+                  "subtitle": "call notes",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "Good morning, you ordered the joint cream. One tube or the pack of two?"
+                    },
+                    {
+                      "from": "me",
+                      "text": "One tube. Can I pay when it comes?"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Yes, you pay the rider. Delivery in Lagos is two to four days."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Approved",
+                "text": "The status changes to Approved. On a per-approval deal, your payout is now earned, subject to the hold period.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/stats/leads",
+                  "title": "Leads",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Lead",
+                        "Time",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "#48812",
+                          "10:21",
+                          "Approved"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Delivery",
+                "text": "The courier calls before arriving. Ada pays cash. The advertiser marks the order bought out days later.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Rider",
+                  "subtitle": "delivery",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "I am outside with your parcel, the amount is as agreed on the call."
+                    },
+                    {
+                      "from": "me",
+                      "text": "Coming down now."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "say": "Let's follow one lead, from form to cash. Tap through each step. First, the form is sent. Ada enters her name and phone at two minutes past ten, and the network records a new lead with your click I D. Second, the call. At ten twenty, an operator confirms the product, quantity and address, and that she can pay the rider. Third, approved. On a per-approval deal, your payout is now earned, subject to the hold period. Fourth, delivery. The courier calls, Ada pays cash, and days later it's marked bought out. Times are examples."
+        },
+        {
+          "v": "phone",
+          "h": "Answering questions before the order",
+          "p": "Many buyers want to ask a question before they leave a number: is it safe, how long is delivery, can I pay at the door. A chat that answers honestly can lift real orders and cut impulse leads that later refuse the parcel.",
+          "d": {
+            "app": "chat",
+            "title": "Joint care help",
+            "subtitle": "online",
+            "messages": [
+              {
+                "from": "me",
+                "text": "Will this cure my arthritis?"
+              },
+              {
+                "from": "them",
+                "text": "No. It is a cooling cream, not a medicine. Some people find it soothing. For arthritis, please see a doctor."
+              },
+              {
+                "from": "me",
+                "text": "OK. Can I pay on delivery in Abuja?"
+              },
+              {
+                "from": "them",
+                "text": "Yes, cash on delivery. Our team will call to confirm first."
+              }
+            ]
+          },
+          "say": "Many buyers want to ask a question before they leave a number. In this example chat, the buyer asks, will this cure my arthritis? The answer is honest. No, it's a cooling cream, not a medicine. Some people find it soothing, and for arthritis, please see a doctor. Then they ask about paying on delivery in Abuja, and the answer is yes, with a confirming call first. Honest answers like this can lift real orders and cut impulse leads that later refuse the parcel."
+        },
+        {
+          "v": "product",
+          "h": "Honest answers at speed",
+          "p": "If your funnel includes a chat before the form, a tool can answer common questions on delivery, payment and ingredients at any hour. Load it only with claims the advertiser can prove, and check that your network allows affiliates to talk to leads.",
+          "d": {
+            "slug": "replyvoo",
+            "why": "Replyvoo can answer pre-order questions in Telegram chats with approved, honest wording so buyers order knowing what they get."
+          },
+          "say": "If your funnel includes a chat before the form, a tool can answer common questions on delivery, payment and ingredients at any hour. Replyvoo can answer pre-order questions in Telegram chats with approved, honest wording, so buyers order knowing what they get. Load it only with claims the advertiser can prove, and check that your network allows affiliates to talk to leads."
+        },
+        {
+          "v": "tip",
+          "h": "Who may contact the lead",
+          "p": "Many networks forbid affiliates from calling or messaging leads after the form, because the call centre owns that contact. Collecting phone numbers also brings data protection duties such as Nigeria's NDPA or Kenya's Data Protection Act.",
+          "d": {
+            "kind": "warn",
+            "text": "Check your network's rules before contacting any lead, get consent for messages, and handle personal data under local data protection law."
+          },
+          "say": "Who may contact the lead? Many networks forbid affiliates from calling or messaging leads after the form, because the call centre owns that contact. And collecting phone numbers brings data protection duties, such as Nigeria's N D P A, or Kenya's Data Protection Act. As the warning says, check your network's rules before contacting any lead, get consent for messages, and handle personal data under local data protection law."
+        },
+        {
+          "v": "compare",
+          "h": "Mistakes reading your lead stats",
+          "p": "Beginners misread the stats page in the same few ways. Each one leads to a wrong kill or scale decision. Fix them by reading statuses carefully and waiting for the call centre to finish its work before you judge.",
+          "more": "The 15% trash line is a rough guide, varies by geo and offer. If trash jumps on one ad set but not others, that ad set's audience, placement or creative is bringing poor leads. Look for bots, accidental clicks or a page that tricks people into the form.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Counting new leads as income",
+                "Judging approval in the first hour",
+                "Mixing all-leads and valid-leads rates",
+                "Ignoring trash share"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Count approved only",
+                "Wait until most leads are processed",
+                "Ask which base the network uses",
+                "Trash over about 15%: check traffic"
+              ]
+            }
+          },
+          "say": "Beginners misread the stats page in the same few ways. Counting new leads as income, instead of counting approved only. Judging approval in the first hour, instead of waiting until most leads are processed. Mixing all-leads and valid-leads rates, instead of asking which base the network uses. And ignoring the trash share. If trash goes over about fifteen percent, check your traffic. That's a rough guide, and it varies by geo and offer."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: find the weak step",
+          "p": "Here are one day's numbers. Find the step with the lowest pass-through rate. That is where you would look first: the ad's promise, the lander, the call script or the delivery.",
+          "more": "Example: Reached 150 ÷ 200 = 75%. Approved 54 ÷ 150 = 36%. Shipped 52 ÷ 54 = 96%. Paid 40 ÷ 52 = 77%. Approval is the weak step. People were reached and then said no, which usually means the ad or page promised something the product does not match.",
+          "d": {
+            "kind": "funnel",
+            "task": "Which step loses the biggest share of people?",
+            "preset": {
+              "steps": [
+                [
+                  "Leads",
+                  200
+                ],
+                [
+                  "Reached by phone",
+                  150
+                ],
+                [
+                  "Approved",
+                  54
+                ],
+                [
+                  "Shipped",
+                  52
+                ],
+                [
+                  "Paid on delivery",
+                  40
+                ]
+              ]
+            },
+            "answer": {
+              "field": "worst_step",
+              "value": 2
+            }
+          },
+          "say": "Lab time. Here are one day's numbers. Two hundred leads, one hundred and fifty reached by phone, fifty four approved, fifty two shipped, and forty paid on delivery. Work out the pass-through rate at each step, and find the step that loses the biggest share of people. That's where you'd look first, whether it's the ad's promise, the lander, the call script or the delivery. Pause and try it, then check your answer."
+        },
+        {
+          "v": "check",
+          "h": "Your daily COD stats routine",
+          "p": "Look at the same numbers at the same time each day. Approvals arrive over hours, so a fixed time keeps days comparable. Use the network's numbers, not your ad platform's lead count, because the network count is what you get paid on.",
+          "d": [
+            "Leads, valid leads, trash by ad set",
+            "Approved and approval rate",
+            "Leads still in hold",
+            "Buyout rate if the network shares it",
+            "Cost per approved lead vs target"
+          ],
+          "say": "Here's your daily C O D stats routine. Look at the same numbers at the same time each day. Leads, valid leads and trash, by ad set. Approved, and approval rate. Leads still in hold. Buyout rate, if the network shares it. And cost per approved lead against your target. Approvals arrive over hours, so a fixed time keeps days comparable. Use the network's numbers, not your ad platform's lead count, because that's what you're paid on."
+        }
+      ],
+      "takeaways": [
+        "A COD lead passes through call, approval, delivery and payment, and loses people at every step.",
+        "Approval rate = approved ÷ valid leads (check your network's base). Buyout rate = paid ÷ approved.",
+        "Trash and duplicates are not paid; a rising trash share points at a traffic problem."
+      ],
+      "action": "Ask a nutra network manager (or read the offer FAQ) three questions: which lead statuses they use, whether approval rate is counted on all or valid leads, and how long the call centre usually takes to process a lead.",
+      "glossary": [
+        {
+          "term": "Approval rate",
+          "def": "Approved leads divided by valid leads (or all leads, depending on the network)."
+        },
+        {
+          "term": "Buyout rate",
+          "def": "Delivered and paid orders divided by approved orders."
+        },
+        {
+          "term": "Trash lead",
+          "def": "A lead that is fake, has a wrong number or is not a real order request."
+        },
+        {
+          "term": "Duplicate",
+          "def": "A second lead from the same person, usually not paid."
+        },
+        {
+          "term": "Hold (status)",
+          "def": "A lead waiting for the call centre to process it."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Example: 170 valid leads, 85 approved. Approval rate on valid leads?",
+          "options": [
+            "42.5%",
+            "50%",
+            "85%",
+            "17%"
+          ],
+          "answer": 1,
+          "why": "85 ÷ 170 = 50%."
+        },
+        {
+          "q": "Example: 85 approved, 68 delivered and paid. Buyout rate?",
+          "options": [
+            "68%",
+            "85%",
+            "50%",
+            "80%"
+          ],
+          "answer": 3,
+          "why": "68 ÷ 85 = 80%."
+        },
+        {
+          "q": "Your stats show 60 leads still in hold at 11:00. What do you do?",
+          "options": [
+            "Count them as approved",
+            "Kill the ad set",
+            "Wait for processing before judging approval",
+            "Ask the call centre to approve them"
+          ],
+          "answer": 2,
+          "why": "Hold leads are not processed yet. Judging before they are called gives a false approval rate."
+        },
+        {
+          "q": "Leads reached 75%, approved 36%, shipped 96%, paid 77%. Weakest step?",
+          "options": [
+            "Approved",
+            "Reached",
+            "Shipped",
+            "Paid"
+          ],
+          "answer": 0,
+          "why": "36% is the lowest pass-through, so approval is where people are lost."
+        },
+        {
+          "q": "Why do many networks forbid affiliates from contacting leads?",
+          "options": [
+            "To hide payouts",
+            "The call centre owns the contact and data rules apply",
+            "Leads prefer email",
+            "It is always illegal"
+          ],
+          "answer": 1,
+          "why": "The call centre handles confirmation, and personal data must be handled under consent and data protection law."
+        }
+      ],
+      "say_intro": "In this lesson we follow a cash on delivery order from the call centre to the doorstep. You'll learn every lead status, how to calculate approval rate and buyout rate, and why trash and duplicates are removed before approval is counted.",
+      "say_outro": "So, in C O D a lead is only a promise. The call decides approval, the doorstep decides buyout, and you read your stats on the network's numbers. Your task: ask a nutra network manager, or read the offer F A Q, which lead statuses they use, whether approval is counted on all or valid leads, and how long the call centre usually takes to process a lead. Now take the quiz."
+    },
+    {
+      "slug": "payout-maths",
+      "title": "Payout maths: approval, buyout and your real CPA",
+      "minutes": 19,
+      "objectives": [
+        "By the end you can turn a payout and an approval rate into a target cost per lead.",
+        "By the end you can apply the school's kill, hold and scale rules to cost per approved lead.",
+        "By the end you can show how a fall in approval or buyout changes your profit."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Two costs, one decision",
+          "p": "Your ad platform shows cost per lead. Your network pays per approved lead. Those are different numbers, and the gap between them is the approval rate. If you judge on cost per lead alone, a cheap lead that never gets approved looks like a winner.",
+          "d": {
+            "b": "Judge on cost per approved lead",
+            "s": "Cost per lead is only a signal"
+          },
+          "say": "Two costs, one decision. Your ad platform shows cost per lead. Your network pays per approved lead. Those are different numbers, and the gap between them is the approval rate. If you judge on cost per lead alone, a cheap lead that never gets approved looks like a winner. As the screen says, judge on cost per approved lead. Cost per lead is only a signal."
+        },
+        {
+          "v": "eq",
+          "h": "Cost per approved lead",
+          "p": "This is the number your rule card uses. Divide what you spent by the approved leads the network confirms. You can also get it from cost per lead and approval rate, which is useful before all approvals are in.",
+          "more": "Example: leads cost $6 each and 50% are approved. $6 ÷ 0.5 = $12 per approved lead. Check the other way: $300 spent, 50 leads, 25 approved. $300 ÷ 25 = $12. Same answer.",
+          "d": [
+            "Cost per lead",
+            "÷",
+            "Approval rate",
+            "=",
+            "Cost per approved lead"
+          ],
+          "say": "Here's the number your rule card uses: cost per approved lead. Cost per lead, divided by approval rate. Example: leads cost six dollars each and fifty percent are approved. Six divided by zero point five is twelve dollars per approved lead. Check it the other way. Three hundred dollars spent, fifty leads, twenty five approved. Three hundred divided by twenty five is also twelve. You can also just divide spend by the approved leads the network confirms."
+        },
+        {
+          "v": "screen",
+          "h": "Your daily COD sheet",
+          "p": "Put platform spend and network approvals side by side for each ad set. The last column is the one you decide with. Platform leads and network leads rarely match exactly, so take leads and approvals from the network.",
+          "more": "Example: JC_02 has the cheapest leads ($3.57) and the worst cost per approved lead. JC_03 has the same $25 per approved lead but has spent less than 2 × target, so it is still a Hold. The next slides show how the rule card treats each.",
+          "d": {
+            "kind": "browser",
+            "url": "sheet.example/nutra-ng-daily",
+            "title": "NG joint cream, day 3",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Ad set",
+                  "Spend",
+                  "Leads / approved",
+                  "Per approved"
+                ],
+                "rows": [
+                  [
+                    "JC_01",
+                    "$48",
+                    "9 / 4",
+                    "$12.00"
+                  ],
+                  [
+                    "JC_02",
+                    "$50",
+                    "14 / 2",
+                    "$25.00"
+                  ],
+                  [
+                    "JC_03",
+                    "$25",
+                    "4 / 1",
+                    "$25.00"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Example. Approved counts from the network after most leads left hold."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Here's an example daily C O D sheet, day three for a Nigerian joint cream. Platform spend and network approvals sit side by side for each ad set, and the last column is the one you decide with. J C one: forty eight dollars, nine leads, four approved, twelve dollars per approved. J C two: fifty dollars, fourteen leads, but only two approved, so twenty five. It had the cheapest leads, and the worst cost per approved. J C three: twenty five per approved, but it's spent less, so it's still a hold."
+        },
+        {
+          "v": "table",
+          "h": "Set your numbers before launch",
+          "p": "Example offer: $20 per approved lead, 25% margin, expected approval 50%. Write these numbers on your plan before any ad goes live. They come from the same rules the Foundations school taught, applied to approved leads.",
+          "more": "Example: 1.5 × $15 = $22.50, which is above the $20 payout, so the CPA kill line is the lower one, $20. Keeping an ad set at $21 per approved lead loses $1 on every approved order.",
+          "d": {
+            "cols": [
+              "Number",
+              "How",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Break-even CPA",
+                "Payout",
+                "$20"
+              ],
+              [
+                "Target CPA",
+                "Payout × (1 − 25%)",
+                "$15"
+              ],
+              [
+                "Scale line",
+                "0.8 × target",
+                "$12"
+              ],
+              [
+                "CPA kill line",
+                "Lower of 1.5 × target and break-even",
+                "$20"
+              ],
+              [
+                "Target CPL",
+                "Target CPA × approval",
+                "$7.50"
+              ],
+              [
+                "Zero-approval kill",
+                "Spend ≥ 2 × target",
+                "$30"
+              ]
+            ]
+          },
+          "say": "Set your numbers before launch. Example: twenty dollars per approved lead, a twenty five percent margin, and fifty percent expected approval. Break-even C P A, cost per acquisition, is the payout, twenty. Target C P A, fifteen. Scale line, zero point eight times target, twelve. The C P A kill line is the lower of one point five times target and break-even, so twenty. Target C P L, cost per lead, is target times approval, seven fifty. And the zero-approval kill is thirty dollars spent."
+        },
+        {
+          "v": "table",
+          "h": "The nutra rule card",
+          "p": "Check the rows from the top and stop at the first one that is true. Count approved leads from the network, after the call centre has processed most leads. Starting rules; adapt to your offer, geo and data.",
+          "more": "Scale steps are +20% at most, at least 48 hours apart, so the platform's delivery settles and new approvals arrive before the next step. If approvals take more than a day on your network, judge the previous day only after most of its leads have left hold.",
+          "d": {
+            "cols": [
+              "Decision",
+              "Rule",
+              "Example, $15 target"
+            ],
+            "rows": [
+              [
+                "Kill",
+                "0 approved at spend ≥ 2 × target",
+                "$30 spent, 0 approved"
+              ],
+              [
+                "Kill",
+                "Spend ≥ 3 × target, CPA over kill line",
+                "$45+ spent, CPA over $20"
+              ],
+              [
+                "Scale +20%",
+                "≥ 3 approved, CPA ≤ 0.8 × target",
+                "3+ approved, CPA ≤ $12"
+              ],
+              [
+                "Keep",
+                "≥ 3 approved, CPA ≤ target",
+                "CPA $12 to $15"
+              ],
+              [
+                "Hold",
+                "Anything else",
+                "e.g. $25 spent, 1 approved"
+              ]
+            ]
+          },
+          "say": "Here's the nutra rule card, with a fifteen dollar target. Check the rows from the top, and stop at the first one that's true. Kill at thirty dollars spent with zero approved. Kill once spend passes forty five, if C P A is over twenty. Scale by twenty percent with three or more approved at a C P A of twelve or less. Keep with three or more approved between twelve and fifteen. Anything else, hold. Count approvals from the network after most leads are processed. These are starting rules, so adapt them."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: no approvals yet",
+          "p": "Apply the card. The call centre has processed this ad set's leads and none were approved. Compare the spend with two times the target first.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $15 per approved lead. Spent $31 in 2 days, 0 approved leads after processing. Kill, hold or scale?",
+            "preset": {
+              "spend": 31,
+              "conversions": 0,
+              "target_cpa": 15,
+              "days": 2
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "kill"
+            }
+          },
+          "say": "Lab time. Your target is fifteen dollars per approved lead. This ad set spent thirty one dollars in two days, and after processing, it has zero approved leads. Apply the card. Compare the spend with two times the target first. Kill, hold or scale? Pause and try it, then check your answer."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: a strong ad set",
+          "p": "Work out cost per approved lead, then compare it with the 0.8 × target scale line. Check that there are at least 3 approved leads before you scale.",
+          "more": "Example: $48 ÷ 4 = $12, exactly the 0.8 × $15 scale line, with 4 approved. Scale by +20%, then wait at least 48 hours before the next step.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $15. Spent $48 in 3 days, 4 approved leads. Kill, hold or scale?",
+            "preset": {
+              "spend": 48,
+              "conversions": 4,
+              "target_cpa": 15,
+              "days": 3
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "scale"
+            }
+          },
+          "say": "Here's a strong ad set. Target fifteen dollars. It spent forty eight dollars in three days, with four approved leads. Work out the cost per approved lead, then compare it with the scale line, zero point eight times target. And check that there are at least three approved leads before you scale. Kill, hold or scale? Pause and try it, then check your answer."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: cheap leads, poor approval",
+          "p": "This one has plenty of leads but few approvals. Work out cost per approved lead and check how much has been spent against 3 × target.",
+          "more": "Example: $50 ÷ 2 = $25 per approved lead. Spend is $50, above 3 × $15 = $45. $25 is above the $20 kill line (and above 1.5 × target, which the calculator uses). Kill. Leads cost only $50 ÷ 14 = $3.57, which looked great on the platform, but approval was 2 ÷ 14 = 14%.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $15. Spent $50 in 3 days, 2 approved leads from 14 leads. Kill, hold or scale?",
+            "preset": {
+              "spend": 50,
+              "conversions": 2,
+              "target_cpa": 15,
+              "days": 3
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "kill"
+            }
+          },
+          "say": "This one has cheap leads but poor approval. Target fifteen dollars. It spent fifty dollars in three days, and got two approved leads from fourteen leads. Work out the cost per approved lead, and check the spend against three times target. Notice how cheap the leads looked on the platform. Kill, hold or scale? Pause and try it, then check your answer."
+        },
+        {
+          "v": "curve",
+          "h": "Approval drop, same ad cost",
+          "p": "Example: an ad set holds a steady $6 cost per lead for a week, but approval slides as the audience fatigues. Cost per approved lead climbs from $12 to $20 without any change on the platform dashboard. Only the network numbers show it.",
+          "more": "Example: approval 50%, 50%, 47%, 44%, 40%, 35%, 30%. $6 ÷ 0.30 = $20 on day 7, which is the kill line. If you only watched cost per lead, you would still think this ad set was fine.",
+          "d": {
+            "a": [
+              12,
+              12,
+              12.8,
+              13.6,
+              15,
+              17.1,
+              20
+            ],
+            "la": "Cost per approved lead ($)",
+            "b": [
+              6,
+              6,
+              6,
+              6,
+              6,
+              6,
+              6
+            ],
+            "lb": "Cost per lead ($)",
+            "x": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7"
+            ]
+          },
+          "say": "Here's an example of an approval drop with the same ad cost. Look at the flat line, cost per lead, steady at six dollars all week. Now the other line, cost per approved lead. As the audience fatigues, approval slides from fifty percent to thirty, and cost per approved climbs from twelve dollars to twenty, right at the kill line. Nothing changed on the platform dashboard. Only the network numbers show it."
+        },
+        {
+          "v": "eq",
+          "h": "When you are paid on buyout",
+          "p": "Some offers pay only for parcels that are delivered and paid. Then you multiply by buyout too. A higher payout per buyout can be worth less than a lower payout per approval, so compare offers on payout per lead.",
+          "more": "Example: Offer A pays $20 per approved lead, 50% approval. Value per lead: $20 × 0.5 = $10. Offer B pays $24 per bought-out order, 50% approval, 75% buyout. $24 × 0.5 × 0.75 = $9. Offer A is worth more per lead even though B's headline payout is higher, and B pays you later.",
+          "d": [
+            "Payout",
+            "×",
+            "Approval",
+            "×",
+            "Buyout",
+            "=",
+            "Value per lead"
+          ],
+          "say": "Some offers pay only for parcels that are delivered and paid. Then you multiply by buyout too. Payout, times approval, times buyout, equals value per lead. Example: offer A pays twenty dollars per approved lead, at fifty percent approval, so ten dollars per lead. Offer B pays twenty four per bought-out order, at fifty percent approval and seventy five percent buyout, so nine dollars. A is worth more per lead, even though B's headline payout is higher, and B pays you later."
+        },
+        {
+          "v": "compare",
+          "h": "Mistakes with nutra maths",
+          "p": "Each of these mistakes makes a losing ad set look fine or a fine one look bad. The fix is the same every time: use network-confirmed approved leads, wait for processing, and compare offers on value per lead.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Judging on platform CPL",
+                "Kill at 2 hours, leads in hold",
+                "Comparing headline payouts",
+                "Ignoring falling approval"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Use cost per approved lead",
+                "Wait until most leads are processed",
+                "Compare value per lead",
+                "Track approval per ad set daily"
+              ]
+            }
+          },
+          "say": "Each of these mistakes makes a losing ad set look fine, or a fine one look bad. Judging on platform C P L, instead of cost per approved lead. Killing at two hours with leads in hold, instead of waiting until most are processed. Comparing headline payouts, instead of value per lead. And ignoring falling approval, instead of tracking approval per ad set daily. The fix is the same every time: network-confirmed approvals, patience, and value per lead."
+        },
+        {
+          "v": "tip",
+          "h": "Cheap leads from bad promises",
+          "p": "The fastest way to get cheap leads is an exaggerated health promise. It usually ends with poor approval, refused parcels, ad rejections and possible legal trouble. The maths and the law point the same way: honest ads bring buyers who stay.",
+          "d": {
+            "kind": "warn",
+            "text": "Never lower your cost per lead with cure claims, fake urgency or false prices. It breaks health claims law and platform policy, and approval and buyout usually fall too."
+          },
+          "say": "The fastest way to get cheap leads is an exaggerated health promise. It usually ends with poor approval, refused parcels, ad rejections, and possible legal trouble. As the warning says, never lower your cost per lead with cure claims, fake urgency or false prices. It breaks health claims law and platform policy, and approval and buyout usually fall too. The maths and the law point the same way. Honest ads bring buyers who stay."
+        }
+      ],
+      "takeaways": [
+        "Cost per approved lead = cost per lead ÷ approval rate. Your rules use the approved figure.",
+        "Example card: payout $20, target $15, scale at $12, kill line $20, zero-approval kill at $30 spend.",
+        "Compare offers on value per lead: payout × approval (× buyout if paid on buyout)."
+      ],
+      "action": "Take one nutra offer you are considering. Using its payout and an approval rate from the network, write your break-even CPA, target CPA, scale line, CPA kill line, target CPL and zero-approval kill spend on one page.",
+      "glossary": [
+        {
+          "term": "Cost per approved lead",
+          "def": "Ad spend divided by approved leads. The CPA your rule card uses in COD."
+        },
+        {
+          "term": "Target CPL",
+          "def": "The most you aim to pay per lead (form fill): target CPA × expected approval rate."
+        },
+        {
+          "term": "Value per lead",
+          "def": "What one lead is worth on average: payout × approval rate, and × buyout rate if paid on buyout."
+        },
+        {
+          "term": "CPA kill line",
+          "def": "The lower of 1.5 × target CPA and break-even CPA."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Cost per lead $8, approval 40%. Cost per approved lead?",
+          "options": [
+            "$3.20",
+            "$12",
+            "$20",
+            "$32"
+          ],
+          "answer": 2,
+          "why": "$8 ÷ 0.40 = $20."
+        },
+        {
+          "q": "Payout $20, margin 25%. What is the CPA kill line?",
+          "options": [
+            "$15",
+            "$20",
+            "$22.50",
+            "$30"
+          ],
+          "answer": 1,
+          "why": "1.5 × $15 = $22.50 and break-even is $20. The lower one, $20, is the kill line."
+        },
+        {
+          "q": "Target $15. Spent $46, 3 approved. Decision?",
+          "options": [
+            "Kill",
+            "Scale +20%",
+            "Keep",
+            "Hold"
+          ],
+          "answer": 3,
+          "why": "CPA $15.33 is above target but below the $20 kill line, so it is not keep or scale; spend is over 3 × target but CPA is under the kill line, so hold."
+        },
+        {
+          "q": "Offer A: $20 per approval, 50% approval. Offer B: $24 per buyout, 50% approval, 70% buyout. Value per lead?",
+          "options": [
+            "A $10, B $8.40",
+            "A $10, B $12",
+            "A $20, B $24",
+            "A $10, B $16.80"
+          ],
+          "answer": 0,
+          "why": "A: $20 × 0.5 = $10. B: $24 × 0.5 × 0.7 = $8.40."
+        },
+        {
+          "q": "Cost per lead stays at $6 but approval falls from 50% to 30%. What happens?",
+          "options": [
+            "Nothing, cost is stable",
+            "Cost per approved lead falls",
+            "Cost per approved lead rises from $12 to $20",
+            "Payout rises"
+          ],
+          "answer": 2,
+          "why": "$6 ÷ 0.5 = $12, $6 ÷ 0.3 = $20."
+        }
+      ],
+      "say_intro": "This lesson is about the payout maths. You'll turn a payout and approval rate into a target cost per lead, apply the kill, hold and scale rules to cost per approved lead, and see how falling approval or buyout changes your profit.",
+      "say_outro": "So, judge on cost per approved lead from the network, set your numbers before launch, and compare offers on value per lead. Your task: take one nutra offer you're considering and, using its payout and an approval rate from the network, write your break-even C P A, target C P A, scale line, C P A kill line, target C P L and zero-approval kill spend on one page. Now take the quiz."
+    },
+    {
+      "slug": "geos-and-offers",
+      "title": "Geos and reading a nutra offer",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can describe what changes between COD geos in Africa, Asia, Latin America and Europe.",
+        "By the end you can read a nutra offer page and pull out the numbers that matter.",
+        "By the end you can shortlist a first offer with a checklist and questions for the network."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "The same product, different countries",
+          "p": "A joint cream that does well in one country can fail next door. Language, prices, delivery coverage, buyer trust, law and ad costs all change at the border. Choosing the geo is half of choosing the offer, and a cheap geo is not automatically a profitable one.",
+          "d": {
+            "b": "Geo first, then offer",
+            "s": "Each border changes the maths"
+          },
+          "say": "A joint cream that does well in one country can fail next door. Language, prices, delivery coverage, buyer trust, law and ad costs all change at the border. As the screen says, geo first, then offer. Choosing the geo is half of choosing the offer, and a cheap geo is not automatically a profitable one."
+        },
+        {
+          "v": "cards",
+          "h": "COD regions at a glance",
+          "p": "These are broad patterns, not rules, and they change. Use them to decide where to look, then check with networks and current data. Rough guide only, varies by geo and vertical.",
+          "d": [
+            "West Africa|Nigeria, Ghana, Côte d'Ivoire; English, Pidgin, French",
+            "East Africa|Kenya, Uganda, Tanzania; English, Swahili",
+            "Central Africa|Cameroon; French and English",
+            "Southeast Asia|Philippines, Indonesia, Thailand, Malaysia",
+            "Latin America|Mexico, Colombia, Peru, Chile; Spanish",
+            "Europe|Eastern and Southern EU; strict EU claims law"
+          ],
+          "say": "Here are C O D, cash on delivery, regions at a glance. West Africa: Nigeria, Ghana and Côte d'Ivoire, in English, Pidgin and French. East Africa: Kenya, Uganda and Tanzania, in English and Swahili. Central Africa: Cameroon, in French and English. Southeast Asia: the Philippines, Indonesia, Thailand and Malaysia. Latin America: Mexico, Colombia, Peru and Chile, in Spanish. And Europe, Eastern and Southern, with strict E U claims law. These are broad patterns, not rules, and they change."
+        },
+        {
+          "v": "phone",
+          "h": "Localised for Cameroon",
+          "p": "Example: the same cream on a French lander for Douala. Language, currency and delivery promise all match the buyer. The call centre must speak French too, or approval drops however good the ad is.",
+          "d": {
+            "app": "browser",
+            "url": "soin-articulations.example/cm",
+            "page": {
+              "h": "Genoux raides le matin ?",
+              "p": "Crème rafraîchissante au menthol. Paiement à la livraison à Douala et Yaoundé. Ce n'est pas un médicament ; les résultats varient.",
+              "cta": "Commander, payer à la livraison"
+            }
+          },
+          "say": "Here's the same cream, localised for Cameroon, on a French lander for Douala. Notice it's in French, with payment on delivery in Douala and Yaoundé, and it still says clearly that it's not a medicine and results vary. Language, currency and the delivery promise all match the buyer. And the call centre must speak French too, or approval drops, however good the ad is."
+        },
+        {
+          "v": "table",
+          "h": "What to compare per geo",
+          "p": "Example comparison for the same cream in three geos. All figures are illustrative; real ones come from your network and your own tests. Note how the geo with the cheapest leads is not the one with the best value per lead.",
+          "more": "Example: value per lead = payout × approval. Geo A $20 × 0.5 = $10. Geo B $14 × 0.6 = $8.40. Geo C $28 × 0.35 = $9.80. If Geo B leads cost $4 and Geo A leads cost $7, Geo B leaves $4.40 per lead and Geo A $3. Cost and value together decide, never one alone.",
+          "d": {
+            "cols": [
+              "Geo",
+              "Payout",
+              "Approval",
+              "Value per lead"
+            ],
+            "rows": [
+              [
+                "Geo A",
+                "$20",
+                "50%",
+                "$10.00"
+              ],
+              [
+                "Geo B",
+                "$14",
+                "60%",
+                "$8.40"
+              ],
+              [
+                "Geo C",
+                "$28",
+                "35%",
+                "$9.80"
+              ]
+            ]
+          },
+          "say": "Here's an example comparison of the same cream in three geos. Geo A pays twenty dollars at fifty percent approval, so ten dollars value per lead. Geo B pays fourteen at sixty percent, so eight forty. Geo C pays twenty eight, but at thirty five percent, so nine eighty. Now add cost. If Geo B leads cost four dollars and Geo A leads cost seven, B leaves four forty per lead and A leaves three. Cost and value together decide, never one alone. All figures are illustrative."
+        },
+        {
+          "v": "screen",
+          "h": "Reading an offer page",
+          "p": "Most nutra offer pages show the same blocks. The highlighted line is the one beginners skip: the conditions that decide whether a lead counts. Read every line, then ask the manager about anything vague.",
+          "d": {
+            "kind": "browser",
+            "url": "network.example/offers/joint-cream-ng",
+            "title": "Joint cream, NG, COD",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Payout",
+                "value": "$20 per approved lead"
+              },
+              {
+                "type": "field",
+                "label": "Price to buyer",
+                "value": "Local price shown on lander"
+              },
+              {
+                "type": "field",
+                "label": "Approval / buyout (last 30 days)",
+                "value": "48% / 76%"
+              },
+              {
+                "type": "text",
+                "value": "Conditions: no medical claims, no doctors or celebrities, no before-and-after. Duplicates within 30 days not paid. Buyout below 60% may reduce payout."
+              },
+              {
+                "type": "field",
+                "label": "Allowed traffic",
+                "value": "Facebook, TikTok, native. No SMS, no incentivised."
+              },
+              {
+                "type": "field",
+                "label": "Hold",
+                "value": "7 days"
+              },
+              {
+                "type": "button",
+                "label": "Request access"
+              }
+            ],
+            "highlight": 3
+          },
+          "say": "Here's how to read an offer page. This example is a joint cream for Nigeria, on C O D. A twenty dollar payout per approved lead. Approval forty eight percent and buyout seventy six percent over thirty days. Now the highlighted line, the conditions beginners skip. No medical claims, no doctors or celebrities, no before and after. Duplicates within thirty days not paid. Buyout below sixty percent may reduce payout. Then allowed traffic, and a seven day hold. Read every line, and ask about anything vague."
+        },
+        {
+          "v": "check",
+          "h": "Your offer checklist",
+          "p": "Run every offer through this list before requesting access. An offer that fails one line is not always a no, but each failed line needs an answer from the manager in writing.",
+          "d": [
+            "Product legal in the geo, registered where required",
+            "Conditions allow your traffic source",
+            "Approval and buyout figures shown, with a base",
+            "Hold period and payment schedule stated",
+            "Claims in the provided landers are honest",
+            "Call centre speaks the buyer's language"
+          ],
+          "say": "Run every offer through this checklist before requesting access. The product is legal in the geo, and registered where required. The conditions allow your traffic source. Approval and buyout figures are shown, with a base. The hold period and payment schedule are stated. The claims in the provided landers are honest. And the call centre speaks the buyer's language. A failed line isn't always a no, but each one needs an answer from the manager in writing."
+        },
+        {
+          "v": "partner",
+          "h": "Nutra partners",
+          "p": "These are networks and advertisers the VooSquare team works with or has reviewed. Use them as a starting list, then run the same checks: product status, call centre quality, transparent statuses and fair holds.",
+          "d": {
+            "vertical": "nutra",
+            "note": "Look for in-house call centres in your geo, clear lead statuses, honest landers and written hold and payment terms."
+          },
+          "say": "These are nutra networks and advertisers the VooSquare team works with or has reviewed. Use them as a starting list, then run the same checks on each. Look for in-house call centres in your geo, clear lead statuses, honest landers, and written hold and payment terms."
+        },
+        {
+          "v": "chat",
+          "h": "Questions for the manager",
+          "p": "A good manager answers these quickly and in writing. Vague answers about approval base, trash rules or hold periods are a warning sign. Keep the chat; you will need it if a payment dispute ever comes up.",
+          "d": [
+            {
+              "from": "buyer",
+              "text": "Is approval counted on all leads or valid leads?"
+            },
+            {
+              "from": "ai",
+              "text": "Valid leads. Trash and duplicates are removed first."
+            },
+            {
+              "from": "buyer",
+              "text": "What counts as trash, and can I see the reason per lead?"
+            },
+            {
+              "from": "ai",
+              "text": "Wrong number, fake name, test orders. Yes, there is a reason column."
+            },
+            {
+              "from": "buyer",
+              "text": "Is the product registered with NAFDAC, and can you share the number?"
+            },
+            {
+              "from": "ai",
+              "text": "Yes, I will send the registration details."
+            }
+          ],
+          "say": "Here are questions for the manager, in an example chat. Is approval counted on all leads or valid leads? Valid leads, with trash and duplicates removed first. What counts as trash, and can I see the reason per lead? Wrong number, fake name, test orders, and yes, there's a reason column. Is the product registered with NAFDAC, and can you share the number? Yes, the details will be sent. A good manager answers quickly and in writing. Vague answers are a warning sign. Keep the chat for any future dispute."
+        },
+        {
+          "v": "tip",
+          "h": "Check the law in each geo",
+          "p": "Every country has its own health product and advertising rules, and some require ads for regulated products to be approved before they run. In Nigeria, for example, NAFDAC regulates many of these products and ARCON vets ads. Confirm the current rules for your product in each geo.",
+          "d": {
+            "kind": "warn",
+            "text": "Before running a new geo, check product registration and ad rules with the local regulator, not only the network. We are not certain how each rule applies to online affiliate ads; check current guidance."
+          },
+          "say": "Every country has its own health product and advertising rules, and some require ads for regulated products to be approved before they run. In Nigeria, for example, NAFDAC regulates many of these products, and ARCON vets ads. As the warning says, before running a new geo, check product registration and ad rules with the local regulator, not only the network. We're not certain how each rule applies to online affiliate ads, so check current guidance."
+        },
+        {
+          "v": "cards",
+          "h": "Common geo and offer mistakes",
+          "p": "These come up again and again with new nutra buyers. Most are solved by doing the maths per geo and reading the offer conditions before you request access.",
+          "d": [
+            "Cheapest CPM wins|value per lead decides",
+            "English ad in a French geo|localise for Cameroon or Côte d'Ivoire",
+            "Trusting the network's lander|check its claims yourself",
+            "No registration check|unregistered products are a legal risk",
+            "Skipping conditions|your leads may not be paid"
+          ],
+          "say": "These mistakes come up again and again with new nutra buyers. Thinking the cheapest C P M wins, when value per lead decides. Running an English ad in a French geo, instead of localising for Cameroon or Côte d'Ivoire. Trusting the network's lander, instead of checking its claims yourself. Skipping the registration check, when unregistered products are a legal risk. And skipping the conditions, so your leads may not be paid."
+        },
+        {
+          "v": "flow",
+          "h": "Shortlist a first offer",
+          "p": "Use this order to go from a long offer list to one test. It keeps you from falling for the biggest payout before you know whether the product, the call centre and the terms make sense for your traffic.",
+          "d": [
+            "Pick one geo you understand",
+            "Filter offers by product group",
+            "Read conditions and claims",
+            "Compute value per lead",
+            "Ask the manager in writing",
+            "Pick one offer to test"
+          ],
+          "say": "Here's how to shortlist a first offer. Pick one geo you understand. Filter offers by product group. Read the conditions and claims. Compute value per lead. Ask the manager in writing. Then pick one offer to test. This order keeps you from falling for the biggest payout before you know whether the product, the call centre and the terms make sense for your traffic."
+        }
+      ],
+      "takeaways": [
+        "Language, payment habits, delivery, law and ad costs all change by geo; compare on value per lead.",
+        "Read the offer's conditions line: claims rules, duplicates, buyout clauses, allowed traffic and hold.",
+        "Confirm product registration and ad rules per geo before running."
+      ],
+      "action": "Shortlist three nutra offers for one geo. For each, write payout, approval (and its base), buyout, hold period and value per lead, and send the manager the three questions from the chat slide.",
+      "glossary": [
+        {
+          "term": "Geo",
+          "def": "The country (or region) an offer accepts traffic from."
+        },
+        {
+          "term": "Offer conditions",
+          "def": "The rules that decide whether a lead is paid, such as banned claims, traffic sources and duplicate windows."
+        },
+        {
+          "term": "NAFDAC",
+          "def": "Nigeria's National Agency for Food and Drug Administration and Control, which regulates many health products."
+        },
+        {
+          "term": "ARCON",
+          "def": "Advertising Regulatory Council of Nigeria, which vets adverts."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Geo A: $20 payout, 50% approval. Geo B: $14 payout, 60% approval. Value per lead?",
+          "options": [
+            "A $10, B $8.40",
+            "A $20, B $14",
+            "A $10, B $14",
+            "A $40, B $23"
+          ],
+          "answer": 0,
+          "why": "$20 × 0.5 = $10. $14 × 0.6 = $8.40."
+        },
+        {
+          "q": "Which part of an offer page decides whether your leads are paid?",
+          "options": [
+            "The product photo",
+            "The offer name",
+            "The conditions",
+            "The request access button"
+          ],
+          "answer": 2,
+          "why": "Conditions set banned claims, traffic sources, duplicate windows and buyout clauses."
+        },
+        {
+          "q": "You run an offer in Cameroon. What should you check about language?",
+          "options": [
+            "English only is fine",
+            "Only the price matters",
+            "Language does not affect approval",
+            "Ads, lander and call centre should match the buyer's language, often French"
+          ],
+          "answer": 3,
+          "why": "Cameroon has French and English speakers; a mismatch hurts trust and approval."
+        },
+        {
+          "q": "A manager gives vague answers about trash rules and hold. What is that?",
+          "options": [
+            "Normal, ignore it",
+            "A warning sign; get terms in writing or choose another network",
+            "A sign of a high payout",
+            "A reason to scale faster"
+          ],
+          "answer": 1,
+          "why": "Clear statuses and terms protect your money. Vague answers are a risk."
+        },
+        {
+          "q": "What should you confirm before running a new geo?",
+          "options": [
+            "Product registration and ad rules with the local regulator",
+            "Only the payout",
+            "Only the CPM",
+            "Only the courier name"
+          ],
+          "answer": 0,
+          "why": "Law changes per country; the network's word is not enough."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn how nutra changes from country to country, and how to read a nutra offer page. By the end you'll be able to shortlist a first offer with a checklist and the right questions for the network.",
+      "say_outro": "So, choose the geo first, compare offers on value per lead, read every condition, and get answers in writing. Your task: shortlist three nutra offers for one geo, write each one's payout, approval and its base, buyout, hold period and value per lead, and send the manager the three questions from the chat slide. Now take the quiz."
+    },
+    {
+      "slug": "network-terms-and-cash",
+      "title": "Network terms: holds, caps, trash and cash flow",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can explain holds, caps, payment schedules and minimum payouts.",
+        "By the end you can plan the cash you need while payouts are on hold.",
+        "By the end you can handle a trash or payout dispute with evidence."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Earned is not the same as paid",
+          "p": "You pay the ad platform today. The network pays you after a hold period and on a schedule. In between, your money is tied up. Many new nutra buyers run out of cash while their stats look profitable, because they did not plan for that gap.",
+          "d": {
+            "b": "Plan for the gap",
+            "s": "Ad spend today, payout later"
+          },
+          "say": "Earned is not the same as paid. You pay the ad platform today. The network pays you after a hold period, and on a schedule. In between, your money is tied up. Many new nutra buyers run out of cash while their stats look profitable, because they didn't plan for that gap. As the screen says, plan for the gap."
+        },
+        {
+          "v": "cards",
+          "h": "Terms to know",
+          "p": "Every network sets these terms. Ask for them in writing before your first test. They change how much cash you need and how fast you can scale.",
+          "d": [
+            "Hold|days before an approval becomes payable",
+            "Payment schedule|weekly, twice a month, monthly",
+            "Minimum payout|smallest amount they will send",
+            "Cap|maximum approved leads per day",
+            "Trash policy|what is not paid and why",
+            "Payout cut|reduction if buyout drops"
+          ],
+          "say": "Here are the terms to know. Hold, the days before an approval becomes payable. Payment schedule, weekly, twice a month, or monthly. Minimum payout, the smallest amount they'll send. Cap, the maximum approved leads per day. Trash policy, what isn't paid and why. And payout cut, a reduction if buyout drops. Ask for them in writing before your first test. They change how much cash you need, and how fast you can scale."
+        },
+        {
+          "v": "curve",
+          "h": "Cash out vs cash in",
+          "p": "Example: you spend $100 a day from day 1. Approvals have a 7-day hold and the network pays weekly. Spend climbs every day while cash received stays at zero until the first payment run. That gap is the cash you must have ready.",
+          "more": "Example: at $100 a day and a $15 cost per approved lead, you earn about 6.7 approvals a day × $20 = $133 a day, but none of it is paid in week one. By day 7 you are $700 out of pocket. If payments come every two weeks, you may be $1,400 or more out before the first payment. Results vary; this is a planning sketch.",
+          "d": {
+            "a": [
+              100,
+              200,
+              300,
+              400,
+              500,
+              600,
+              700
+            ],
+            "la": "Cumulative spend ($)",
+            "b": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "lb": "Cash received ($)",
+            "x": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7"
+            ]
+          },
+          "say": "Here's cash out versus cash in. Example: you spend one hundred dollars a day from day one. Approvals have a seven day hold, and the network pays weekly. Look at the two lines. Cumulative spend climbs every day, to seven hundred by day seven. Cash received stays flat at zero. You may be earning around one hundred and thirty three dollars a day on paper, but none of it is paid in week one. That gap is the cash you must have ready. This is a planning sketch."
+        },
+        {
+          "v": "stat",
+          "h": "Cash needed before first payout",
+          "p": "Example: daily spend × (hold days + days until the next payment run). With $100 a day, a 7-day hold and a weekly payment run that can add up to 7 more days, plan for up to $1,400. Keep this money separate from your living costs.",
+          "d": {
+            "n": 1400,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "cash to have ready",
+            "note": "Example: $100/day × (7 + 7) days."
+          },
+          "say": "Here's the cash needed before your first payout. Daily spend, times the hold days plus the days until the next payment run. With one hundred dollars a day, a seven day hold, and a weekly payment run that can add up to seven more days, plan for up to one thousand four hundred dollars, the number on screen. It's an example. And keep this money separate from your living costs."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: daily budget for a test",
+          "p": "You want 10 approved leads to judge an offer, at a $15 target cost per approved lead, over 5 days. What daily budget does that need? Then check that you can carry the hold on top.",
+          "d": {
+            "kind": "budget",
+            "task": "Goal 10 approved leads, target $15 each, over 5 days. Daily budget?",
+            "preset": {
+              "goal": 10,
+              "target_cpa": 15,
+              "days": 5
+            },
+            "answer": {
+              "field": "daily_budget",
+              "value": 30,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Lab time. You want ten approved leads to judge an offer, at a fifteen dollar target cost per approved lead, over five days. What daily budget does that need? Once you have it, check that you can also carry the hold on top of it. Pause and try it, then check your answer."
+        },
+        {
+          "v": "screen",
+          "h": "A payout dispute, done right",
+          "p": "When many leads are marked trash, ask for reasons per lead and check them against your own data: click times, countries, devices. Send the manager facts, not anger. Networks fix real errors faster when you bring evidence.",
+          "d": {
+            "kind": "browser",
+            "url": "network.example/stats/leads?status=trash",
+            "title": "Trash leads, ad set NG_JC_02",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Lead",
+                  "Reason",
+                  "Your click data"
+                ],
+                "rows": [
+                  [
+                    "#50231",
+                    "Wrong number",
+                    "NG, mobile, 14:02"
+                  ],
+                  [
+                    "#50240",
+                    "Duplicate",
+                    "Same phone as #50112"
+                  ],
+                  [
+                    "#50266",
+                    "Not reachable",
+                    "NG, mobile, 14:40"
+                  ],
+                  [
+                    "#50271",
+                    "Fake name",
+                    "Click from outside NG"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "'Not reachable' after one call attempt may be worth asking about. How many attempts does the call centre make?"
+              },
+              {
+                "type": "button",
+                "label": "Send to manager"
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "Here's a payout dispute done right. This example shows trash leads for one ad set, with the network's reason next to your own click data. Wrong number, but the click was from Nigeria, on mobile. A duplicate, with the same phone as an earlier lead. Now the highlighted row, not reachable. After one call attempt, that may be worth asking about. And a fake name, where your click came from outside Nigeria, so that one is likely real trash. Send the manager facts, not anger."
+        },
+        {
+          "v": "check",
+          "h": "Before you send a dispute",
+          "p": "Disputes go better when you have done your homework. Check your own side first. Often the trash is real, and the fix is in your targeting or your page, not the network.",
+          "d": [
+            "Compare lead times with your click log",
+            "Check geo and device of each click",
+            "Look for duplicates from retargeting",
+            "Ask how many call attempts are made",
+            "Keep everything in writing"
+          ],
+          "say": "Before you send a dispute, check your own side first. Compare lead times with your click log. Check the geo and device of each click. Look for duplicates from retargeting. Ask how many call attempts are made. And keep everything in writing. Disputes go better when you've done your homework. Often the trash is real, and the fix is in your targeting or your page, not the network."
+        },
+        {
+          "v": "compare",
+          "h": "Mistakes with terms and cash",
+          "p": "These mistakes cause most early cash problems in COD nutra. They are avoidable with a simple cash plan and terms agreed in writing before you scale.",
+          "more": "Example: an affiliate scales from $100 to $400 a day in one week because cost per approved lead is good. The cap is 30 approved a day. Above the cap, leads may not be paid at all, and the extra spend is lost. Always confirm the cap before raising budget.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Scaling past what you can carry",
+                "Ignoring the cap",
+                "No written terms",
+                "Arguing without data"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Budget for hold plus payment run",
+                "Ask for a cap raise before scaling",
+                "Save terms and chats",
+                "Dispute with lead-level evidence"
+              ]
+            }
+          },
+          "say": "These mistakes cause most early cash problems in C O D nutra. Scaling past what you can carry, fixed by budgeting for the hold plus the payment run. Ignoring the cap, fixed by asking for a cap raise before scaling. For example, above a cap of thirty approved a day, leads may not be paid at all. No written terms, fixed by saving terms and chats. And arguing without data, fixed by disputing with lead-level evidence."
+        },
+        {
+          "v": "tip",
+          "h": "Watch for scam networks",
+          "p": "Some networks show good numbers and then mark most leads as trash at payout time, or stop paying altogether. Start small, get paid at least once before scaling, and look for reviews from affiliates you can verify.",
+          "d": {
+            "kind": "warn",
+            "text": "Do not scale with a network until you have received at least one payment. Shave and non-payment are real risks."
+          },
+          "say": "Watch for scam networks. Some show good numbers, then mark most leads as trash at payout time, or stop paying altogether. Start small, get paid at least once before scaling, and look for reviews from affiliates you can verify. As the warning says, don't scale with a network until you've received at least one payment. Shaving and non-payment are real risks."
+        },
+        {
+          "v": "table",
+          "h": "Starting rules for terms",
+          "p": "Use these as starting rules for how you work with any new nutra network. They protect your cash while you learn who you can trust. Adapt them as a network proves itself over several payment runs.",
+          "more": "Starting rules; adapt to your offer, geo and data.",
+          "d": {
+            "cols": [
+              "Situation",
+              "Starting rule"
+            ],
+            "rows": [
+              [
+                "New network",
+                "Test budget only until first payment"
+              ],
+              [
+                "Trash share over about 15%",
+                "Check traffic, then ask for reasons"
+              ],
+              [
+                "Approval drops 10+ points in a day",
+                "Ask the manager before blaming traffic"
+              ],
+              [
+                "Near the cap",
+                "Ask for a raise before scaling"
+              ],
+              [
+                "Payment late twice",
+                "Stop new spend with that network"
+              ]
+            ]
+          },
+          "say": "Here are starting rules for terms, to adapt. With a new network, test budget only, until the first payment. If trash share goes over about fifteen percent, check your traffic, then ask for reasons. If approval drops ten or more points in a day, ask the manager before blaming your traffic. When you're near the cap, ask for a raise before scaling. And if payment is late twice, stop new spend with that network."
+        }
+      ],
+      "takeaways": [
+        "Holds and payment schedules mean you pay for ads weeks before you are paid.",
+        "Cash needed is roughly daily spend × (hold days + days to the next payment run).",
+        "Dispute trash with lead-level evidence, and do not scale with a network before its first payment."
+      ],
+      "action": "For your shortlisted offer, write the hold period, payment schedule, minimum payout and cap. Calculate the cash you would need at your planned daily budget before the first payout.",
+      "glossary": [
+        {
+          "term": "Hold period",
+          "def": "Days an approved lead waits before it becomes payable."
+        },
+        {
+          "term": "Cap",
+          "def": "The maximum number of leads or approvals a network will accept from you per day."
+        },
+        {
+          "term": "Payment run",
+          "def": "The scheduled day a network sends affiliate payments."
+        },
+        {
+          "term": "Shave",
+          "def": "When a network wrongly marks valid leads as trash or rejected to avoid paying."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Spend $100/day, 7-day hold, payments weekly. Cash to plan for?",
+          "options": [
+            "$700",
+            "$100",
+            "Up to $1,400",
+            "$2,800"
+          ],
+          "answer": 2,
+          "why": "$100 × (7 + up to 7) = up to $1,400."
+        },
+        {
+          "q": "You are near the network's daily cap and want to scale. What first?",
+          "options": [
+            "Raise budget 50%",
+            "Ask the manager for a cap raise",
+            "Switch geo",
+            "Ignore the cap"
+          ],
+          "answer": 1,
+          "why": "Leads above the cap may not be paid. Agree a higher cap before scaling."
+        },
+        {
+          "q": "Many leads marked trash. Best first step?",
+          "options": [
+            "Publicly accuse the network",
+            "Kill all ad sets",
+            "Stop tracking",
+            "Check your click data and ask for reasons per lead"
+          ],
+          "answer": 3,
+          "why": "Evidence first. Often the problem is in your traffic; if not, data makes the dispute stronger."
+        },
+        {
+          "q": "Goal 10 approved leads at $15 over 5 days. Daily budget?",
+          "options": [
+            "$30",
+            "$15",
+            "$150",
+            "$50"
+          ],
+          "answer": 0,
+          "why": "10 × $15 = $150 total ÷ 5 days = $30 a day."
+        },
+        {
+          "q": "When is it reasonable to scale with a new network?",
+          "options": [
+            "After the first day of good stats",
+            "After receiving at least one payment",
+            "When the manager says so",
+            "Never"
+          ],
+          "answer": 1,
+          "why": "Being paid once proves the network pays. Stats alone do not."
+        }
+      ],
+      "say_intro": "This lesson covers network terms: holds, caps, payment schedules, trash and cash flow. You'll learn to plan the cash you need while payouts are on hold, and to handle a trash or payout dispute with evidence.",
+      "say_outro": "So, earned is not paid. Plan cash for the hold and the payment run, respect the cap, keep terms in writing, and get paid once before you scale. Your task: for your shortlisted offer, write the hold period, payment schedule, minimum payout and cap, and calculate the cash you'd need at your planned daily budget before the first payout. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "Target $15 per approved lead. Spent $32, leads processed, 0 approved. What do you do?",
+      "options": [
+        "Hold",
+        "Kill",
+        "Scale",
+        "Raise the bid"
+      ],
+      "answer": 1,
+      "why": "Spend is over 2 × target with 0 approved, so the zero-approval kill rule applies."
+    },
+    {
+      "q": "Leads cost $5, approval 25%, payout $20, target CPA $15. Is this ad set on target?",
+      "options": [
+        "Yes, $5 is cheap",
+        "Yes, $20 per approved equals payout",
+        "No, $5 ÷ 0.25 = $20 per approved, at break-even and above target",
+        "Cannot tell"
+      ],
+      "answer": 2,
+      "why": "Cost per approved lead is $20, equal to break-even and well above the $15 target."
+    },
+    {
+      "q": "Offer A $18 per approval at 55%. Offer B $26 per buyout at 50% approval, 70% buyout. Which is worth more per lead?",
+      "options": [
+        "B, higher payout",
+        "A: $9.90 vs B: $9.10",
+        "Equal",
+        "B: $13 vs A: $9.90"
+      ],
+      "answer": 1,
+      "why": "A: $18 × 0.55 = $9.90. B: $26 × 0.5 × 0.7 = $9.10."
+    },
+    {
+      "q": "Spend $60 over 3 days, 5 approved, target $15. Decision?",
+      "options": [
+        "Kill",
+        "Hold",
+        "Keep",
+        "Scale +20%"
+      ],
+      "answer": 3,
+      "why": "$60 ÷ 5 = $12, at the 0.8 × target line with 5 approved."
+    },
+    {
+      "q": "A network counts approval on all leads, another on valid leads. Same traffic. What should you expect?",
+      "options": [
+        "Same number",
+        "The all-leads rate looks lower",
+        "The valid-leads rate looks lower",
+        "Neither includes trash"
+      ],
+      "answer": 1,
+      "why": "All leads includes trash and duplicates in the base, so the rate is lower."
+    },
+    {
+      "q": "An offer offers a $4.95 'free trial' with a monthly rebill hidden in small print. What do you do?",
+      "options": [
+        "Run it, the payout is high",
+        "Run it with 'free' in the ad",
+        "Skip it: hidden rebills break consumer law and platform rules",
+        "Run it only in Africa"
+      ],
+      "answer": 2,
+      "why": "Hidden recurring charges are illegal in many places and lead to chargebacks and bans."
+    },
+    {
+      "q": "You spend $150/day. Hold is 10 days and payment runs are every 14 days. Rough worst-case cash before first payout?",
+      "options": [
+        "$1,500",
+        "$2,100",
+        "$3,600",
+        "$1,050"
+      ],
+      "answer": 2,
+      "why": "$150 × (10 + up to 14) = up to $3,600."
+    },
+    {
+      "q": "Approval is fine but buyout has fallen to 50% on your traffic. What is the risk?",
+      "options": [
+        "None, you are paid on approval",
+        "The network may cut your payout or stop your traffic",
+        "Your CPM rises",
+        "Approval will rise"
+      ],
+      "answer": 1,
+      "why": "Networks track buyout per affiliate; low buyout costs the advertiser money and often triggers payout cuts."
+    },
+    {
+      "q": "Your trash share jumped from 8% to 30% on one ad set only. Most likely cause?",
+      "options": [
+        "The call centre is closed",
+        "The payout changed",
+        "The network is broke",
+        "That ad set's audience, placement or creative brings poor leads"
+      ],
+      "answer": 3,
+      "why": "A jump on one ad set points at that traffic. Check placements, geo, devices and the creative's promise."
+    },
+    {
+      "q": "Target $15, break-even $20. Spent $47, 2 approved. Decision on the nutra card?",
+      "options": [
+        "Kill",
+        "Hold",
+        "Keep",
+        "Scale"
+      ],
+      "answer": 0,
+      "why": "$47 ÷ 2 = $23.50 per approved, above the $20 kill line, with spend over 3 × $15 = $45. Kill."
+    }
+  ]
+}

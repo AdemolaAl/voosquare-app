@@ -1,0 +1,2462 @@
+{
+  "school": "v-igaming",
+  "order": 2,
+  "slug": "licensing-and-authorization",
+  "title": "Licensing and authorization",
+  "summary": "How gambling licences work per country and why platform permission is a separate gate, then the duties that come with them: age and audience protection, responsible gambling, self-exclusion and honest bonus copy. You finish with a geo dossier and a go/no-go gate you run before every launch. Education, not legal advice.",
+  "lessons": [
+    {
+      "slug": "licensing-models",
+      "title": "Licensing models: national, state and offshore",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can explain the difference between a licence where the player lives and an offshore licence.",
+        "You can tell which entity of a brand holds the licence for your geo and product.",
+        "You can check whether your geo licenses operators, affiliates or both.",
+        "You can apply a go/no-go rule to a brand's licence claim."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the licence decides whether you are paid",
+          "p": "In iGaming the licence is not paperwork. If the operator is not licensed where your players live, its marketing may be illegal there, the regulator can block it, payment providers can stop deposits and your network can reverse payouts. Every campaign rests on this one question, so this lesson goes deeper than the overview in School 2.",
+          "d": {
+            "b": "No licence for the geo, no campaign",
+            "s": "Check it before the first click, not after the first FTD."
+          },
+          "say": "In iGaming, the licence isn't paperwork. If the operator isn't licensed where your players live, its marketing may be illegal there. The regulator can block it, payment providers can stop deposits, and your network can reverse payouts. As the screen says, no licence for the geo, no campaign. Check it before the first click, not after the first F T D, first-time deposit."
+        },
+        {
+          "v": "cards",
+          "h": "Three licensing models you will meet",
+          "p": "A rough guide at the time of writing. Most countries use one of these models, and some mix them. The model tells you whose licence to look for and where to check it.",
+          "d": [
+            "Where the player lives|The country or state issues licences; only its licensees may serve its residents",
+            "State or provincial|Licences come from a state or province, so the region you target matters",
+            "Offshore licence|Issued by a hub such as Curacao or Malta; may not permit marketing into your geo",
+            "Monopoly|One state-owned or chosen operator; private brands may be banned"
+          ],
+          "say": "Here are the licensing models you'll meet, as a rough guide at the time of writing. Where the player lives: the country or state issues licences, and only its licensees may serve its residents. State or provincial: licences come from a region, so the region you target matters. Offshore: issued by a hub such as Curacao or Malta, and it may not permit marketing into your geo. And monopoly: one state-owned or chosen operator, where private brands may be banned. The model tells you whose licence to look for."
+        },
+        {
+          "v": "table",
+          "h": "Licensing examples in our core markets",
+          "p": "Examples at the time of writing. Several of these are changing, which is exactly why you check on the regulator's own site each time. We are not certain this is current; check the regulator's site and the platform's Help Center before relying on it.",
+          "more": "Nigeria: at the time of writing, a November 2024 Supreme Court ruling left most lottery and gaming regulation to the states, so a Lagos licence from the Lagos State Lotteries and Gaming Authority does not automatically cover another state. Kenya: a new gambling law and regulator were being introduced at the time of writing; check whether the Betting Control and Licensing Board or a successor body issues licences. South Africa: sports betting is licensed by provincial boards; online casino was generally not permitted at the time of writing. We could not confirm Cameroon's current licensing body.",
+          "d": {
+            "cols": [
+              "Geo",
+              "Model",
+              "Note"
+            ],
+            "rows": [
+              [
+                "Nigeria",
+                "Mainly state",
+                "2024 court ruling moved most powers to states"
+              ],
+              [
+                "Kenya",
+                "National",
+                "Law under reform; check the current body"
+              ],
+              [
+                "Ghana",
+                "National",
+                "Gaming Commission publishes licensees"
+              ],
+              [
+                "South Africa",
+                "Provincial",
+                "Online casino generally not permitted"
+              ],
+              [
+                "Cameroon",
+                "Not confirmed",
+                "Ask network; check locally"
+              ]
+            ]
+          },
+          "say": "Here are examples in our core markets at the time of writing. Nigeria is mainly state-licensed, after a twenty twenty four court ruling moved most powers to states, so a Lagos licence doesn't automatically cover another state. Kenya is national, but the law is under reform, so check the current body. Ghana is national, and the Gaming Commission publishes licensees. South Africa is provincial, and online casino is generally not permitted. Cameroon isn't confirmed, so ask your network and check locally. Several of these are changing, so always check the regulator's own site."
+        },
+        {
+          "v": "table",
+          "h": "Offshore and international licences",
+          "p": "Big brands often hold an offshore licence and serve many countries from it. That licence lets them operate under the hub's rules. It does not, by itself, make marketing legal in a country that licenses its own operators. We are not certain this is current; check the regulator's site and the platform's Help Center before relying on it.",
+          "more": "Curacao reformed its licensing at around 2023 to 2024, replacing the old master licence and sublicence system with direct licences from a new authority; at the time of writing older sublicence claims may no longer be valid. We are not certain of the current state of every hub, so verify each licence number on the official site of the hub's regulator. Then ask the separate question: does my target country allow an operator with only this licence to market to its residents?",
+          "d": {
+            "cols": [
+              "Licence",
+              "Example hub",
+              "What to check"
+            ],
+            "rows": [
+              [
+                "Curacao",
+                "Reformed regime",
+                "New licence number and list"
+              ],
+              [
+                "Malta",
+                "MGA",
+                "Which games, which markets"
+              ],
+              [
+                "Isle of Man",
+                "GSC",
+                "Licensee list"
+              ],
+              [
+                "Anjouan, others",
+                "Smaller hubs",
+                "Treat with extra caution"
+              ]
+            ]
+          },
+          "say": "Big brands often hold an offshore licence and serve many countries from it. That licence lets them operate under the hub's rules. But it doesn't, by itself, make marketing legal in a country that licenses its own operators. Look at the table. Curacao reformed its regime, so check the new licence number and list, since older sublicence claims may no longer be valid. Malta, the M G A, check which games and markets. Isle of Man, check the licensee list. And treat smaller hubs, like Anjouan, with extra caution."
+        },
+        {
+          "v": "map",
+          "h": "One brand, several entities",
+          "p": "Groups often run a different company per market. The logo is the same, but the company that holds player accounts in Kenya may differ from the one in Ghana. Your question is always: which entity, which licence, for this geo and product.",
+          "d": {
+            "nodes": [
+              {
+                "id": "g",
+                "label": "Brand group",
+                "kind": "offer"
+              },
+              {
+                "id": "e1",
+                "label": "Kenya entity",
+                "kind": "offer"
+              },
+              {
+                "id": "e2",
+                "label": "Ghana entity",
+                "kind": "offer"
+              },
+              {
+                "id": "e3",
+                "label": "Offshore entity",
+                "kind": "offer"
+              },
+              {
+                "id": "l1",
+                "label": "Kenya licence",
+                "kind": "data"
+              },
+              {
+                "id": "l2",
+                "label": "Ghana licence",
+                "kind": "data"
+              },
+              {
+                "id": "l3",
+                "label": "Curacao licence",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "g",
+                "e1",
+                "owns"
+              ],
+              [
+                "g",
+                "e2",
+                "owns"
+              ],
+              [
+                "g",
+                "e3",
+                "owns"
+              ],
+              [
+                "e1",
+                "l1",
+                "holds"
+              ],
+              [
+                "e2",
+                "l2",
+                "holds"
+              ],
+              [
+                "e3",
+                "l3",
+                "holds"
+              ]
+            ]
+          },
+          "say": "Look at this map. Groups often run a different company for each market. Here, one brand group owns a Kenya entity, a Ghana entity, and an offshore entity. Each entity holds its own licence: Kenya, Ghana, and Curacao. The logo is the same, but the company holding player accounts in Kenya may differ from the one in Ghana. So your question is always: which entity, which licence, for this geo and product?"
+        },
+        {
+          "v": "table",
+          "h": "Worked example: a broad Africa campaign",
+          "p": "Example. A buyer targets five countries in one ad set with one offshore brand. The network later rejects FTDs from geos the deal does not cover. The campaign looked profitable in Ads Manager and lost money in reality.",
+          "more": "Example maths: had all 200 FTDs been payable, revenue would have been 200 × $40 = $8,000 and profit $3,000. Because 70 came from geos the deal does not cover, the profit falls to $200, before any qualified-rate losses, and the buyer may also have advertised an unlicensed operator in those countries. The fix is simple: one geo per campaign, only geos the licence and deal cover.",
+          "d": {
+            "cols": [
+              "Item",
+              "Working",
+              "Result"
+            ],
+            "rows": [
+              [
+                "Spend",
+                "",
+                "$5,000"
+              ],
+              [
+                "FTDs reported",
+                "",
+                "200"
+              ],
+              [
+                "From covered geos",
+                "",
+                "130"
+              ],
+              [
+                "Paid at $40",
+                "130 × $40",
+                "$5,200"
+              ],
+              [
+                "Rejected",
+                "70 FTDs",
+                "$0"
+              ],
+              [
+                "Real result",
+                "$5,200 - $5,000",
+                "+$200 at best"
+              ]
+            ]
+          },
+          "say": "Here's an example of what goes wrong. A buyer targets five countries in one ad set with one offshore brand. They spend five thousand dollars and get two hundred F T Ds reported. But only one hundred and thirty come from geos the deal covers. Those pay forty dollars each, fifty two hundred dollars. The other seventy are rejected. So the real result is plus two hundred dollars at best, and the buyer may also have advertised an unlicensed operator. The fix: one geo per campaign, only covered geos."
+        },
+        {
+          "v": "walk",
+          "h": "Check a brand's licence for your geo",
+          "p": "Do this for every brand and every geo, and again whenever the brand changes its company details. It takes about ten minutes. Screens are illustrative mock-ups; every regulator's site looks different.",
+          "d": {
+            "steps": [
+              {
+                "title": "Get the claim in writing",
+                "text": "Ask the manager for the entity name, licence number and issuing body for your geo and product.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Affiliate manager",
+                  "subtitle": "online",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "For Ghana sportsbook: which entity, licence number and regulator?"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Example Gaming Ltd, licence GC-0000, Gaming Commission of Ghana."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Open the regulator yourself",
+                "text": "Go to the regulator's official site directly, not via a link on the offer page.",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "regulator.example/licensees",
+                  "page": {
+                    "h": "Licensed operators",
+                    "p": "Search by company name or licence number.",
+                    "cta": "Search"
+                  }
+                }
+              },
+              {
+                "title": "Match every detail",
+                "text": "Company name, licence number, product and status must all match. Note the date you checked.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "regulator.example/licensees?q=GC-0000",
+                  "title": "Search result",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Company",
+                        "Licence",
+                        "Product",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "Example Gaming Ltd",
+                          "GC-0000",
+                          "Sports betting",
+                          "Active"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Save the proof",
+                "text": "Screenshot the result with the date and store it in your geo dossier.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "drive.example/dossier/GH",
+                  "title": "GH dossier",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Licence proof",
+                      "value": "GH_licence_2026-10-04.png"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Upload"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Let's check a brand's licence. Tap Next to follow each step. First, get the claim in writing: ask the manager for the entity name, licence number and issuing body for your geo and product. Second, open the regulator's official site yourself, not through a link on the offer page. Third, match every detail: company name, licence number, product and status, and note the date you checked. Fourth, save a dated screenshot in your geo dossier. It takes about ten minutes. Do it for every brand and geo."
+        },
+        {
+          "v": "cards",
+          "h": "Do affiliates need a licence too?",
+          "p": "Some places register or license affiliates, not just operators. At the time of writing, examples include several US states and Ontario in Canada. In our core African markets we are not certain of affiliate rules; check locally before you run.",
+          "d": [
+            "Operator-only|Only the brand needs a licence; you follow its rules",
+            "Affiliate registration|You register with the regulator before promoting",
+            "Affiliate licence|A full licence, often for revenue-share deals",
+            "Unknown|Ask the network and a local adviser"
+          ],
+          "say": "Some places license or register affiliates too, not just operators. Look at the cards. Operator-only, where only the brand needs a licence and you follow its rules. Affiliate registration, where you register with the regulator before promoting. Affiliate licence, a full licence, often for revenue-share deals. And unknown, where you ask the network and a local adviser. At the time of writing, examples include several U S states and Ontario in Canada. In our core African markets, we're not certain of affiliate rules, so check locally before you run."
+        },
+        {
+          "v": "cards",
+          "h": "Red flags in a licence claim",
+          "p": "Any of these is a reason to stop and check harder before you spend. None proves fraud on its own, but together they usually mean the deal is not safe to run in your geo.",
+          "d": [
+            "Number not on the register|Or listed under another company",
+            "Vague answer on entity|'Our group is licensed'",
+            "Badge, no number|A seal image with no checkable details",
+            "Old regime claim|A sublicence that may no longer be valid",
+            "Pressure to start now|'Launch first, paperwork later'"
+          ],
+          "say": "Here are red flags in a licence claim. A number that's not on the register, or listed under another company. A vague answer on the entity, like our group is licensed. A badge with no number, just a seal image. An old regime claim, like a sublicence that may no longer be valid. And pressure to start now, launch first, paperwork later. None proves fraud alone, but together they usually mean the deal isn't safe to run in your geo."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and fixes",
+          "p": "These mistakes come from trusting a logo or a badge instead of checking the entity and the geo. Each fix takes minutes and saves you from spending on a campaign that can never be paid.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "'They are licensed' with no geo",
+                "Clicking the register link on the offer page",
+                "Multi-country ad sets",
+                "Old Curacao sublicence claims"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Entity + licence + geo + product",
+                "Type the regulator's address yourself",
+                "One geo per campaign",
+                "Verify on the current register"
+              ]
+            }
+          },
+          "say": "These mistakes come from trusting a logo or badge. Saying they're licensed with no geo. Clicking the register link on the offer page. Running multi-country ad sets. Trusting old Curacao sublicence claims. The fixes: check entity, licence, geo and product together. Type the regulator's address yourself. One geo per campaign. And verify on the current register. Each fix takes minutes and saves you from a campaign that can never be paid."
+        },
+        {
+          "v": "tip",
+          "h": "Not legal advice",
+          "p": "This lesson is education, not legal advice. Gambling law is local and changes often. Where the answer matters, and it usually does, confirm with the regulator or a local lawyer.",
+          "d": {
+            "kind": "warn",
+            "text": "Gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission; check the current policy and local law before you run."
+          },
+          "say": "This lesson is education, not legal advice. Gambling law is local and it changes often. Where the answer matters, and it usually does, confirm with the regulator or a local lawyer. As the warning says, gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing, Meta requires prior written permission, so check the current policy and local law before you run."
+        },
+        {
+          "v": "check",
+          "h": "Starting go/no-go rules for licences",
+          "p": "Starting rules to adapt with your adviser. Every line is a no-go until it is a clear yes, so you never launch on a maybe.",
+          "d": [
+            "Licence verified on the official register for this geo and product",
+            "Entity named in the deal matches the register",
+            "One geo per campaign, only covered geos",
+            "Affiliate rules checked for this geo",
+            "Re-check every licence monthly and when the brand changes entity"
+          ],
+          "say": "Here are starting go or no-go rules to adapt with your adviser. The licence is verified on the official register for this geo and product. The entity named in the deal matches the register. One geo per campaign, only covered geos. Affiliate rules checked for this geo. And re-check every licence monthly, and when the brand changes entity. Every line is a no-go until it's a clear yes, so you never launch on a maybe."
+        }
+      ],
+      "takeaways": [
+        "Find out which licensing model your geo uses before you look at any brand.",
+        "An offshore licence does not by itself make marketing legal in a country that licenses its own operators.",
+        "Verify entity, licence, product and status on the official register and save dated proof."
+      ],
+      "action": "Pick one brand and one geo. Get the entity name and licence number in writing, verify them on the regulator's own website and save a dated screenshot.",
+      "glossary": [
+        {
+          "term": "Point of consumption",
+          "def": "The principle that the licence must come from where the player is."
+        },
+        {
+          "term": "Offshore licence",
+          "def": "A licence from a hub such as Curacao or Malta, used to serve many countries."
+        },
+        {
+          "term": "Entity",
+          "def": "The legal company that holds player accounts and the licence for a market."
+        },
+        {
+          "term": "Affiliate registration",
+          "def": "A requirement in some places for affiliates to register with the regulator before promoting."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A brand says it holds a Curacao licence. Your geo licenses its own operators. Is that enough to run?",
+          "options": [
+            "Not by itself; check whether the geo permits that operator",
+            "Yes, any licence is enough",
+            "Yes if the payout is high",
+            "Only on Telegram"
+          ],
+          "answer": 0,
+          "why": "An offshore licence does not by itself permit marketing into a country with its own licensing."
+        },
+        {
+          "q": "Under the 2024 Nigerian ruling, what matters most at the time of writing?",
+          "options": [
+            "Only a federal licence",
+            "A Curacao licence",
+            "The state you target",
+            "Nothing; betting is unregulated"
+          ],
+          "answer": 2,
+          "why": "Most gaming regulation sits with the states, so the target state matters. Check the current position."
+        },
+        {
+          "q": "200 FTDs, 70 from geos the deal does not cover, payout $40, spend $5,000. Result?",
+          "options": [
+            "+$3,000",
+            "+$200",
+            "-$200",
+            "+$8,000"
+          ],
+          "answer": 1,
+          "why": "130 × $40 = $5,200 minus $5,000 spend = $200."
+        },
+        {
+          "q": "Where should you open the regulator's register?",
+          "options": [
+            "From the link on the offer page",
+            "From a Telegram post",
+            "From the network's chat",
+            "By typing the official address yourself"
+          ],
+          "answer": 3,
+          "why": "Fake registers exist; go to the official site yourself."
+        },
+        {
+          "q": "Which details must match on the register?",
+          "options": [
+            "Logo and colours",
+            "Only the brand name",
+            "Company, licence number, product and status",
+            "Only the country"
+          ],
+          "answer": 2,
+          "why": "Match the entity, licence number, product and active status."
+        }
+      ],
+      "say_intro": "This lesson is about licensing, the question every iGaming campaign rests on. You'll learn the main licensing models, how to check which company holds the licence for your geo, and a simple go or no-go rule before you spend.",
+      "say_outro": "To recap: the licence must cover your players' geo and product, so check the exact entity on the official register, and run one geo per campaign. Your task: pick one brand and one geo, get the entity name and licence number in writing, verify them on the regulator's own website, and save a dated screenshot. Now take the quiz."
+    },
+    {
+      "slug": "platform-authorization",
+      "title": "Platform authorization: Meta and beyond",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can explain what platform authorization for gambling ads is and why it is separate from a licence.",
+        "You can prepare a clean application dossier.",
+        "You can say why disguising a gambling funnel as something else is circumvention.",
+        "You can plan budget and timing around approval."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why a licence is not permission to advertise",
+          "p": "A licensed operator still needs the ad platform's permission before gambling ads can run. Platforms decide this per account and per country. Running gambling ads without it is the fastest way to lose an ad account, a business manager and sometimes every account linked to you.",
+          "d": {
+            "b": "Licence: may operate. Authorization: may advertise",
+            "s": "You need both, from different owners."
+          },
+          "say": "A licensed operator still needs the ad platform's permission before gambling ads can run. Platforms decide this per account and per country. As the screen says, licence means may operate, authorization means may advertise, and you need both, from different owners. Running gambling ads without authorization is the fastest way to lose an ad account, a business manager, and sometimes every account linked to you."
+        },
+        {
+          "v": "table",
+          "h": "Platform positions at the time of writing",
+          "p": "A rough guide only. These policies change, differ by country and are not always public in detail. We are not certain this is current; check the regulator's site and the platform's Help Center before relying on it.",
+          "more": "We describe positions, not exact rules, because the details move. For example, at the time of writing Meta asks for prior written permission for online gambling and gaming ads and limits them to approved countries and adults; Google runs a gambling certification by country. We are not certain about TikTok's and Telegram's current gambling rules in each African market, so check their current ad policies before you plan anything there.",
+          "d": {
+            "cols": [
+              "Platform",
+              "Position",
+              "Check"
+            ],
+            "rows": [
+              [
+                "Meta",
+                "Prior written permission, approved countries",
+                "Help Center: gambling"
+              ],
+              [
+                "Google",
+                "Certification per country, limited list",
+                "Ads policy: gambling"
+              ],
+              [
+                "TikTok",
+                "Very restricted; often not allowed",
+                "Ad policy by region"
+              ],
+              [
+                "Telegram Ads",
+                "Restricted; terms differ",
+                "Telegram Ad Platform rules"
+              ],
+              [
+                "Native, push",
+                "Varies by network",
+                "Network terms"
+              ]
+            ]
+          },
+          "say": "Here's a rough guide to platform positions at the time of writing. Meta asks for prior written permission, in approved countries. Google runs a certification per country, with a limited list. TikTok is very restricted, and often doesn't allow it. Telegram Ads is restricted, with differing terms. Native and push vary by network. We're not certain about TikTok's and Telegram's current rules in each African market. These policies change, so check the regulator's site and each platform's Help Center before relying on this."
+        },
+        {
+          "v": "cards",
+          "h": "What an application usually asks for",
+          "p": "Based on public guidance at the time of writing. The exact form changes; treat this as a checklist to prepare, not a copy of the form.",
+          "d": [
+            "Business details|Legal name, website, contact",
+            "Licence proof|Per country you will target",
+            "Countries|Only the ones the licence covers",
+            "Landing pages|Final URLs users will see",
+            "Age and RG|How you keep ads to adults and show help",
+            "Relationship|If you are an affiliate, your link to the operator"
+          ],
+          "say": "Here's what an application usually asks for, based on public guidance. Business details: legal name, website and contact. Licence proof for each country you'll target. Countries, only the ones the licence covers. Landing pages, the final pages users will see. Age and responsible gambling, how you keep ads to adults and show help. And your relationship, if you're an affiliate, to the operator. Treat this as a checklist to prepare, not a copy of the form."
+        },
+        {
+          "v": "screen",
+          "h": "Example: the application screen",
+          "p": "An illustrative mock-up of the kind of form you fill in. The real form and its location change; look for the gambling section in the platform's Help Center rather than relying on this layout.",
+          "d": {
+            "kind": "browser",
+            "url": "business.example/restricted/gambling",
+            "title": "Request permission: online gambling",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Business name",
+                "value": "Your registered business"
+              },
+              {
+                "type": "select",
+                "label": "Your role",
+                "value": "Affiliate of a licensed operator"
+              },
+              {
+                "type": "field",
+                "label": "Operator licence(s)",
+                "value": "Ghana: GC-0000 (example)"
+              },
+              {
+                "type": "select",
+                "label": "Countries",
+                "value": "Ghana"
+              },
+              {
+                "type": "field",
+                "label": "Landing page",
+                "value": "https://yourdomain.example/gh"
+              },
+              {
+                "type": "button",
+                "label": "Submit request"
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "This is an illustrative mock-up of the kind of form you'll fill in. Notice the fields: your registered business name, your role, here an affiliate of a licensed operator, the operator's licence for Ghana, the countries, here only Ghana, and your landing page. Then submit. The real form and its location change, so look for the gambling section in the platform's Help Center, rather than relying on this layout."
+        },
+        {
+          "v": "big",
+          "h": "Affiliates: an open question per platform",
+          "p": "Whether an affiliate can be approved, and with what proof from the operator, is not always clear. Some operators give affiliates a letter of authorization; some programmes run ads only from their own accounts. Ask your network how its affiliates get approved for your geo.",
+          "d": {
+            "b": "Ask how other affiliates are approved",
+            "s": "We are not certain of the current affiliate rules; check."
+          },
+          "say": "Whether an affiliate can be approved, and with what proof from the operator, isn't always clear. Some operators give affiliates a letter of authorization. Some programmes run ads only from their own accounts. So ask your network how its affiliates get approved for your geo. As the screen says, we're not certain of the current affiliate rules, so check."
+        },
+        {
+          "v": "walk",
+          "h": "Build your application dossier",
+          "p": "Prepare everything before you submit, so the reviewer sees one clear story: who you are, which licensed operator you promote, where and to whom. Screens are mock-ups.",
+          "d": {
+            "steps": [
+              {
+                "title": "Licence proofs",
+                "text": "Dated screenshots from the register for each country, plus the operator's licence documents.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "drive.example/auth-dossier",
+                  "title": "Authorization dossier",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "GH licence proof",
+                      "value": "GH_licence_2026-10-04.png"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Operator letter",
+                      "value": "Letter_of_authorization.pdf"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Final landing pages",
+                "text": "Live pages with 18+, the operator name, licence line, key terms and help resources.",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "yourdomain.example/gh",
+                  "page": {
+                    "h": "This weekend's fixtures, with a licensed bookmaker",
+                    "p": "18+ only. Operator: Example Gaming Ltd, licensed in Ghana. Terms apply. Gamble responsibly.",
+                    "cta": "See terms and continue"
+                  }
+                }
+              },
+              {
+                "title": "Targeting plan",
+                "text": "Write the countries, minimum age and exclusions you will use.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "drive.example/auth-dossier",
+                  "title": "Targeting plan",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Country",
+                      "value": "Ghana only"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Age",
+                      "value": "18+ (or higher if required)"
+                    },
+                    {
+                      "type": "text",
+                      "value": "No interests linked to debt or addiction."
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Submit and wait",
+                "text": "Submit once, with everything. Do not run gambling ads while waiting.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/restricted/gambling",
+                  "title": "Request status",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Status",
+                      "value": "In review"
+                    },
+                    {
+                      "type": "text",
+                      "value": "No gambling ads until approved."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Let's build your application dossier. Tap Next to follow each step. First, licence proofs: dated register screenshots for each country, plus the operator's letter of authorization. Second, final landing pages, live, with eighteen plus, the operator name, the licence line, key terms and help resources. Third, a targeting plan: Ghana only, age eighteen plus or higher if required, and no interests linked to debt or addiction. Fourth, submit once, with everything, and don't run gambling ads while you wait."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: budget while you wait",
+          "p": "Example. You plan $3,000 for the first month of a Ghana campaign. Approval timing is uncertain, so you plan for a delay instead of hoping. We do not have a reliable figure for how long approval takes.",
+          "more": "The point of the example: money not spent while waiting is not lost. Money spent on unauthorized gambling ads can cost the account, the pixel history and every campaign attached to it. If you need income while waiting, build the non-ad parts of your funnel, or work a different, non-regulated offer on a separate, honest campaign.",
+          "d": {
+            "cols": [
+              "Week",
+              "Plan if approved",
+              "Plan if waiting"
+            ],
+            "rows": [
+              [
+                "1",
+                "$500 test",
+                "$0 ads; build funnel"
+              ],
+              [
+                "2",
+                "$700",
+                "$0 ads; warm channel organically"
+              ],
+              [
+                "3",
+                "$900",
+                "Resubmit fixes if asked"
+              ],
+              [
+                "4",
+                "$900",
+                "Start only once approved"
+              ],
+              [
+                "Total",
+                "$3,000",
+                "$0 lost to bans"
+              ]
+            ]
+          },
+          "say": "Here's an example of budgeting while you wait. You plan three thousand dollars for the first month in Ghana. If approved, you'd spend five hundred, then seven hundred, then nine hundred twice. If you're still waiting, you spend zero on ads, build your funnel, warm your channel organically, resubmit fixes if asked, and start only once approved. Total lost to bans: zero. We don't have a reliable figure for how long approval takes. Money not spent while waiting isn't lost."
+        },
+        {
+          "v": "compare",
+          "h": "Circumvention versus honest options",
+          "p": "Hiding what a funnel is about from a reviewer is circumvention, whatever it is called. Platforms ban it and we never teach it. The honest options are slower and they keep your business alive.",
+          "d": {
+            "a": {
+              "title": "Circumvention: never",
+              "items": [
+                "Ad says 'football news', page sells betting",
+                "Showing reviewers a different page",
+                "Spelling words oddly to dodge review",
+                "Using someone else's approved account"
+              ]
+            },
+            "b": {
+              "title": "Honest options",
+              "items": [
+                "Apply for permission with real proof",
+                "Same page for reviewers and users",
+                "Clear, plain wording",
+                "Your own accounts, your own approval"
+              ]
+            }
+          },
+          "say": "Hiding what a funnel is about from a reviewer is circumvention, whatever it's called. Compare the columns. Never: an ad that says football news while the page sells betting, showing reviewers a different page, spelling words oddly to dodge review, or using someone else's approved account. Honest options: apply for permission with real proof, the same page for reviewers and users, clear plain wording, and your own accounts with your own approval. Platforms ban circumvention, and we never teach it."
+        },
+        {
+          "v": "big",
+          "h": "Tipster channel ads count as gambling",
+          "p": "An ad for a betting tips channel that earns from betting links is, in practice, gambling advertising. Treat it as gambling: get authorization, target adults in approved countries and say what the channel is. We are not certain how each platform classifies these; check and ask.",
+          "d": {
+            "b": "If the money comes from betting, it is gambling",
+            "s": "Plan for authorization, not around it."
+          },
+          "say": "Here's one many people miss. An ad for a betting tips channel that earns from betting links is, in practice, gambling advertising. So treat it as gambling: get authorization, target adults in approved countries, and say what the channel is. As the screen says, if the money comes from betting, it's gambling. We're not certain how each platform classifies these, so check and ask."
+        },
+        {
+          "v": "cards",
+          "h": "Common mistakes and fixes",
+          "p": "Each of these costs accounts. Platforms link accounts by business, payment method and people, so one mistake can affect everything you run, including campaigns for other offers.",
+          "d": [
+            "Mistake: 'testing' before approval|Fix: no gambling ads until approved",
+            "Mistake: applying for countries the licence lacks|Fix: only covered countries",
+            "Mistake: changing the page after approval|Fix: resubmit when pages change",
+            "Mistake: borrowing approved accounts|Fix: your own approval only"
+          ],
+          "say": "These mistakes cost accounts. Testing before approval: the fix is no gambling ads until approved. Applying for countries the licence lacks: only apply for covered countries. Changing the page after approval: resubmit when pages change. Borrowing approved accounts: your own approval only. Remember, platforms link accounts by business, payment method and people, so one mistake can affect everything you run."
+        },
+        {
+          "v": "tip",
+          "h": "Authorization is per platform, per country",
+          "p": "Approval on one platform does not carry over to another, and approval for one country does not cover a new one. Every new geo is a new check.",
+          "d": {
+            "kind": "warn",
+            "text": "Gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission; check the current policy and local law before you run."
+          },
+          "say": "Approval on one platform doesn't carry over to another. And approval for one country doesn't cover a new one. Every new geo is a new check. As the warning says, gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing, Meta requires prior written permission, so check the current policy and local law before you run."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for authorization",
+          "p": "Starting rules to adapt. They are deliberately strict because the cost of an account ban is much higher than the cost of waiting a few more days for the right answer.",
+          "d": [
+            "No written permission: no gambling ads, including tipster channels",
+            "Target only countries named in the approval",
+            "Ad rejected twice for the same reason: stop and rewrite, do not resubmit",
+            "Landing page changes: check whether approval still covers it",
+            "Any warning on the account: pause gambling ads and review within 24 h"
+          ],
+          "say": "Here are starting decision rules, deliberately strict. No written permission, no gambling ads, including tipster channels. Target only the countries named in the approval. If an ad's rejected twice for the same reason, stop and rewrite, don't resubmit. If the landing page changes, check whether approval still covers it. And any warning on the account: pause gambling ads and review within twenty four hours. A ban costs far more than waiting a few more days."
+        }
+      ],
+      "takeaways": [
+        "A licence lets the operator operate; platform authorization lets the ad run. You need both.",
+        "Prepare a full dossier before you apply and run no gambling ads while waiting.",
+        "Disguising a gambling funnel is circumvention; treat tipster channel ads as gambling ads."
+      ],
+      "action": "Find the current gambling advertising policy in your main platform's Help Center, list what it asks for, and ask your network how its affiliates get approved for your geo.",
+      "glossary": [
+        {
+          "term": "Platform authorization",
+          "def": "A platform's written permission to run ads in a restricted category such as gambling."
+        },
+        {
+          "term": "Letter of authorization",
+          "def": "A document from an operator confirming you may promote it; sometimes used in applications."
+        },
+        {
+          "term": "Circumvention",
+          "def": "Hiding what an ad or page is really about to get past review; banned."
+        },
+        {
+          "term": "Approved countries",
+          "def": "The countries a platform permission covers; ads may target only these."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "An operator is licensed in Ghana. Can you run Meta gambling ads there straight away?",
+          "options": [
+            "Yes, the licence is enough",
+            "Yes, if the budget is small",
+            "Yes, if you avoid the word 'bet'",
+            "Only after the platform grants permission for that account"
+          ],
+          "answer": 3,
+          "why": "A licence and platform permission are separate; you need both."
+        },
+        {
+          "q": "Your ad promotes a betting tips channel that earns from betting links. How should you treat it?",
+          "options": [
+            "As news content",
+            "As gambling advertising needing authorization",
+            "As education",
+            "As a sweepstakes"
+          ],
+          "answer": 1,
+          "why": "If the money comes from betting, plan for gambling authorization."
+        },
+        {
+          "q": "Approval is pending. What do the starting rules allow?",
+          "options": [
+            "No gambling ads; build the funnel",
+            "Small gambling ads to test",
+            "Run ads from a friend's approved account",
+            "Run ads in a different country"
+          ],
+          "answer": 0,
+          "why": "No gambling ads until approved; use the time to build."
+        },
+        {
+          "q": "Your approval covers Ghana. You want to add Kenya. What do you do?",
+          "options": [
+            "Add Kenya to the ad set",
+            "Use the Ghana page in Kenya",
+            "Check the licence for Kenya and seek approval for Kenya",
+            "Nothing; Africa is one region"
+          ],
+          "answer": 2,
+          "why": "Approval is per country; Kenya needs its own licence check and permission."
+        },
+        {
+          "q": "Which is circumvention?",
+          "options": [
+            "Applying with licence proof",
+            "Showing reviewers a different page from users",
+            "Targeting adults only",
+            "Using plain wording"
+          ],
+          "answer": 1,
+          "why": "Showing reviewers a different page from users hides the real content and is banned."
+        }
+      ],
+      "say_intro": "A licence lets an operator operate, but it doesn't let you advertise. In this lesson you'll learn what platform authorization for gambling ads is, how to prepare a clean application, and why disguising a gambling funnel is never an option.",
+      "say_outro": "To recap: you need both a licence and platform authorization, you apply with a clean dossier, and you never disguise a gambling funnel. Your task: find the current gambling advertising policy in your main platform's Help Center, list what it asks for, and ask your network how its affiliates get approved for your geo. Now take the quiz."
+    },
+    {
+      "slug": "age-and-audience-protection",
+      "title": "Age, targeting and audience protection",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can set age and location targeting to the strictest rule that applies.",
+        "You can spot creative elements that appeal to young people.",
+        "You can add age confirmation to landers and Telegram bots.",
+        "You can build clean exclusion and lookalike rules."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why age and audience rules are where accounts die",
+          "p": "Most gambling ad bans start with who saw the ad, not what it said. A lookalike built from the wrong list, a cartoon mascot or a broad location can put your ad in front of minors or vulnerable people. That harms people and ends accounts. This lesson shows you how to close those gaps.",
+          "d": {
+            "b": "Who sees it matters as much as what it says",
+            "s": "Protect the audience and you protect the account."
+          },
+          "say": "Most gambling ad bans start with who saw the ad, not what it said. A lookalike built from the wrong list, a cartoon mascot, or a broad location can put your ad in front of minors or vulnerable people. That harms people, and it ends accounts. As the screen says, who sees it matters as much as what it says. Protect the audience, and you protect the account."
+        },
+        {
+          "v": "table",
+          "h": "Age floors to apply",
+          "p": "Take the highest age from the law, the platform and the brand. Examples at the time of writing; check each one for your geo, and write the result and its source in your dossier.",
+          "d": {
+            "cols": [
+              "Source",
+              "Typical floor",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Law in core African markets",
+                "18",
+                "Nigeria, Kenya, Ghana, SA"
+              ],
+              [
+                "Some US states, casino",
+                "21",
+                "Varies by state"
+              ],
+              [
+                "Brand terms",
+                "18 or higher",
+                "Some brands set 21+"
+              ],
+              [
+                "Your setting",
+                "Highest of all",
+                "e.g. 21 if any says 21"
+              ]
+            ]
+          },
+          "say": "Take the highest age from the law, the platform and the brand. Look at the table. The law in our core African markets is typically eighteen, in Nigeria, Kenya, Ghana and South Africa. Some U S states set twenty one for casino. Brand terms are eighteen or higher, and some brands set twenty one plus. So your setting is the highest of all, for example twenty one if any source says twenty one. These are examples at the time of writing, so check each for your geo and record the source in your dossier."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: the cost of a higher age floor",
+          "p": "Example. A brand asks for 21+ in Kenya instead of 18+. Your reach shrinks and CPM rises. Work out what it does to your cost per FTD before you complain, and then follow the brand's rule anyway.",
+          "more": "Example maths: if click and conversion rates stay the same, cost per FTD scales with CPM. $24 × ($1.70 ÷ $1.50) = $27.20, a 13% rise. If your target CPA is $28, the campaign still works but with less room. In practice conversion rates may also change, sometimes upwards because older users deposit more. Test, measure and keep the floor the brand requires.",
+          "d": {
+            "cols": [
+              "Setting",
+              "Reach",
+              "CPM",
+              "Cost per FTD"
+            ],
+            "rows": [
+              [
+                "18+",
+                "1.2m",
+                "$1.50",
+                "$24"
+              ],
+              [
+                "21+",
+                "0.9m",
+                "$1.70",
+                "$27.20"
+              ]
+            ]
+          },
+          "say": "Here's an example of the cost of a higher age floor. A brand asks for twenty one plus in Kenya instead of eighteen plus. Reach shrinks from one point two million to point nine million, and C P M, cost per thousand impressions, rises from one fifty to one seventy. If other rates stay the same, cost per F T D, first-time deposit, goes from twenty four dollars to twenty seven twenty, about thirteen percent more. Work it out, then follow the brand's rule anyway."
+        },
+        {
+          "v": "cards",
+          "h": "Creative elements that appeal to young people",
+          "p": "Many codes ban gambling ads with strong appeal to under-18s. Some, such as the UK's at the time of writing, also restrict people who are or look under 25. Even where not required, avoid these.",
+          "d": [
+            "Cartoons and mascots|Characters children recognise or like",
+            "Youth idols|Young players, influencers, gamers",
+            "School settings|Uniforms, classrooms, campus life",
+            "Youth slang and memes|Trends mostly used by teenagers",
+            "Esports and games|Without care, can skew young",
+            "Young-looking actors|Use clearly adult people"
+          ],
+          "say": "Many codes ban gambling ads with strong appeal to under eighteens. Some, like the U K's at the time of writing, also restrict people who are or look under twenty five. Even where it isn't required, avoid these. Cartoons and mascots. Youth idols, like young players, influencers and gamers. School settings. Youth slang and memes. Esports and games, which can skew young without care. And young-looking actors. Use clearly adult people instead."
+        },
+        {
+          "v": "screen",
+          "h": "Ad set settings for protection",
+          "p": "Set these in every gambling ad set and recheck them whenever you duplicate. A wrong setting here reaches the wrong people no matter how good the creative is. Setting names change; check the current Ads Manager. Mock-up.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/adset/edit",
+            "title": "Ad set: GH_SB_Matchday_01",
+            "blocks": [
+              {
+                "type": "select",
+                "label": "Location",
+                "value": "Ghana: people living in this location"
+              },
+              {
+                "type": "field",
+                "label": "Age",
+                "value": "18 - 65+ (21 if brand requires)"
+              },
+              {
+                "type": "toggle",
+                "label": "Interests: debt, loans, addiction recovery",
+                "on": false
+              },
+              {
+                "type": "select",
+                "label": "Custom audience exclusions",
+                "value": "Opt-outs and self-excluded list"
+              },
+              {
+                "type": "text",
+                "value": "Recheck all four after duplicating."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Set these in every gambling ad set, and recheck them whenever you duplicate. In this mock-up, location is people living in Ghana. Age is eighteen to sixty five plus, or twenty one if the brand requires. Interests linked to debt, loans and addiction recovery are off. And the custom audience exclusions include your opt-outs and self-excluded list. A wrong setting here reaches the wrong people, no matter how good the creative is. Setting names change, so check the current Ads Manager."
+        },
+        {
+          "v": "big",
+          "h": "'Living in' is not the same as 'in'",
+          "p": "Location settings often let you choose people living in a place or people recently there. For a country-licensed product, target people who live there. Travellers and people near borders can otherwise see ads for an operator not licensed where they live. Option names change; check.",
+          "d": {
+            "b": "Target residents of licensed geos",
+            "s": "Borders and travellers create accidental reach."
+          },
+          "say": "Location settings often let you choose people living in a place, or people recently there. For a country-licensed product, target people who live there. Otherwise, travellers and people near borders can see ads for an operator that isn't licensed where they live. As the screen says, target residents of licensed geos, because borders and travellers create accidental reach. Option names change, so check."
+        },
+        {
+          "v": "phone",
+          "h": "Age confirmation in a Telegram bot",
+          "p": "If your funnel uses a bot or channel, confirm age before any betting content. A self-declared button is not proof of age, but it adds a clear gate, a record and a moment for the user to stop.",
+          "d": {
+            "app": "bot",
+            "title": "Matchday Notes",
+            "subtitle": "bot",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Welcome. This channel is about sports betting and is for adults only. Are you 18 or older?",
+                "buttons": [
+                  "Yes, I am 18+",
+                  "No"
+                ]
+              },
+              {
+                "from": "me",
+                "text": "Yes, I am 18+"
+              },
+              {
+                "from": "them",
+                "text": "Thanks. Bet only what you can afford to lose. You can type STOP at any time to leave our messages."
+              }
+            ]
+          },
+          "say": "If your funnel uses a bot or channel, confirm age before any betting content. Look at this bot. It welcomes the user, says the channel is about sports betting and is for adults only, and asks, are you eighteen or older, with yes and no buttons. After yes, it says bet only what you can afford to lose, and you can type STOP at any time. A self-declared button isn't proof of age, but it adds a clear gate, a record, and a moment for the user to stop."
+        },
+        {
+          "v": "compare",
+          "h": "Lookalike sources: clean versus risky",
+          "p": "Lookalikes copy the people in your source list. If the source contains vulnerable people, the platform finds more of them. Build sources from neutral, consenting adult lists only.",
+          "d": {
+            "a": {
+              "title": "Risky sources",
+              "items": [
+                "Heaviest depositors",
+                "Players who lost the most",
+                "Lists including self-excluded users",
+                "Lists bought from others"
+              ]
+            },
+            "b": {
+              "title": "Clean sources",
+              "items": [
+                "Adult channel members who opted in",
+                "Lander visitors who passed the age gate",
+                "Broad targeting in approved geos",
+                "Your own consented lists"
+              ]
+            }
+          },
+          "say": "Lookalikes copy the people in your source list. So if the source contains vulnerable people, the platform finds more of them. Compare the columns. Risky sources: heaviest depositors, players who lost the most, lists including self-excluded users, and lists bought from others. Clean sources: adult channel members who opted in, lander visitors who passed the age gate, broad targeting in approved geos, and your own consented lists."
+        },
+        {
+          "v": "flow",
+          "h": "Check a creative for youth appeal",
+          "p": "Run every gambling creative through these four questions before upload. If any answer is yes, change the creative. Ask someone outside the campaign to answer them too; fresh eyes catch more.",
+          "d": [
+            "Could a child like this character or style?",
+            "Does anyone look under 25?",
+            "Is the setting school, campus or teen life?",
+            "Is the slang mostly used by teenagers?",
+            "All no: upload"
+          ],
+          "say": "Run every gambling creative through these four questions before upload. Could a child like this character or style? Does anyone look under twenty five? Is the setting school, campus or teen life? Is the slang mostly used by teenagers? If all answers are no, upload. If any answer is yes, change the creative. And ask someone outside the campaign to answer too, because fresh eyes catch more."
+        },
+        {
+          "v": "cards",
+          "h": "Common mistakes and fixes",
+          "p": "These mistakes usually happen during duplication and scaling, when settings get copied without being read. Make the recheck part of your scaling routine, so it happens every time without anyone remembering.",
+          "d": [
+            "Mistake: duplicating without checking age|Fix: four-point recheck every time",
+            "Mistake: multi-country location|Fix: one licensed geo per ad set",
+            "Mistake: mascot creatives|Fix: clearly adult people and real settings",
+            "Mistake: lookalikes of big losers|Fix: neutral, consented sources only"
+          ],
+          "say": "These mistakes usually happen during duplication and scaling. Duplicating without checking age: do a four-point recheck every time. A multi-country location: one licensed geo per ad set. Mascot creatives: clearly adult people and real settings. Lookalikes of big losers: neutral, consented sources only. Make the recheck part of your scaling routine, so it happens without anyone needing to remember."
+        },
+        {
+          "v": "tip",
+          "h": "Protection is also a policy requirement",
+          "p": "Platforms usually require gambling ads to target adults in approved countries only, and regulators expect you not to appeal to minors or exploit vulnerable people. Breaking either is a policy and legal problem, not just an ethical one.",
+          "d": {
+            "kind": "warn",
+            "text": "Gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission; check the current policy and local law before you run."
+          },
+          "say": "Platforms usually require gambling ads to target adults in approved countries only. And regulators expect you not to appeal to minors or exploit vulnerable people. Breaking either is a policy and legal problem, not just an ethical one. As the warning says, gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing, Meta requires prior written permission, so check the current policy and local law before you run."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for audiences",
+          "p": "Starting rules to adapt. Use them as a checklist at launch and after every duplicate, and ask a second person to check a new ad set before it goes live.",
+          "d": [
+            "Age: highest floor from law, platform and brand",
+            "Location: residents of one licensed geo",
+            "No interests linked to debt, loans or addiction",
+            "Exclude opt-outs and any self-exclusion list you hold",
+            "Lookalikes only from neutral, consented adult sources",
+            "Creative shows a youth element: reject before upload"
+          ],
+          "say": "Here are starting audience rules. Age: the highest floor from law, platform and brand. Location: residents of one licensed geo. No interests linked to debt, loans or addiction. Exclude opt-outs and any self-exclusion list you hold. Lookalikes only from neutral, consented adult sources. And if a creative shows a youth element, reject it before upload. Use this at launch and after every duplicate, and have a second person check new ad sets."
+        }
+      ],
+      "takeaways": [
+        "Apply the highest age floor from law, platform and brand.",
+        "Avoid creative elements that appeal to young people and target residents of licensed geos only.",
+        "Build lookalikes from neutral, consented adult sources, never from heavy losers."
+      ],
+      "action": "Open your gambling ad set template and set age, location, interests and exclusions to the starting rules, then write the four-point recheck into your duplication routine.",
+      "glossary": [
+        {
+          "term": "Age floor",
+          "def": "The minimum age you target, set to the highest of law, platform and brand rules."
+        },
+        {
+          "term": "Youth appeal",
+          "def": "Creative elements that are likely to attract under-18s, such as cartoons or teen idols."
+        },
+        {
+          "term": "Lookalike source",
+          "def": "The list a platform copies to find similar people."
+        },
+        {
+          "term": "Exclusion list",
+          "def": "People you must never target, such as opt-outs and self-excluded users."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Law says 18, the brand says 21. What age do you target?",
+          "options": [
+            "18",
+            "25",
+            "21",
+            "Any"
+          ],
+          "answer": 2,
+          "why": "Use the highest floor that applies."
+        },
+        {
+          "q": "At 18+ cost per FTD is $24 at $1.50 CPM. At 21+ CPM is $1.70. Expected cost per FTD if rates stay equal?",
+          "options": [
+            "$24.00",
+            "$27.20",
+            "$25.50",
+            "$30.00"
+          ],
+          "answer": 1,
+          "why": "$24 × 1.70 ÷ 1.50 = $27.20."
+        },
+        {
+          "q": "Which lookalike source is clean?",
+          "options": [
+            "Adult channel members who opted in",
+            "Players who lost the most",
+            "A bought list",
+            "Heaviest depositors"
+          ],
+          "answer": 0,
+          "why": "Use neutral, consented adult sources only."
+        },
+        {
+          "q": "Which creative element should you remove?",
+          "options": [
+            "An adult fan watching a match",
+            "Fixture times",
+            "The 18+ marker",
+            "A cartoon mascot"
+          ],
+          "answer": 3,
+          "why": "Cartoons appeal to children and are banned or restricted in many codes."
+        },
+        {
+          "q": "You duplicated a winning ad set. What must you do?",
+          "options": [
+            "Nothing; settings copy",
+            "Recheck age, location, interests and exclusions",
+            "Raise the budget first",
+            "Remove the exclusions to grow reach"
+          ],
+          "answer": 1,
+          "why": "Duplication is when settings slip; recheck all four."
+        }
+      ],
+      "say_intro": "Most gambling ad bans start with who saw the ad. In this lesson you'll set age and location targeting to the strictest rule, spot creatives that appeal to young people, add age confirmation, and build clean exclusion and lookalike rules.",
+      "say_outro": "To recap: use the highest age floor, target residents of one licensed geo, avoid youth appeal, and build lookalikes only from clean sources. Your task: open your gambling ad set template, set age, location, interests and exclusions to the starting rules, and write the four-point recheck into your duplication routine. Now take the quiz."
+    },
+    {
+      "slug": "responsible-gambling-and-self-exclusion",
+      "title": "Responsible gambling and self-exclusion",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can name the responsible gambling tools operators provide.",
+        "You can run suppression lists so opt-outs and self-excluded people never get your messages.",
+        "You can answer a user who shows signs of harm.",
+        "You can set rules for automated replies and broadcasts."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why responsible gambling is your job too",
+          "p": "As an affiliate you are often the first voice a player hears and the one who keeps messaging them on Telegram. Regulators and brands increasingly hold affiliates to the same standards as operators. A single complaint about a message that pushed someone in trouble can end a deal.",
+          "d": {
+            "b": "You are part of the player's experience",
+            "s": "Act like it, in every message you send."
+          },
+          "say": "As an affiliate, you're often the first voice a player hears, and the one who keeps messaging them on Telegram. Regulators and brands increasingly hold affiliates to the same standards as operators. And a single complaint about a message that pushed someone in trouble can end a deal. As the screen says, you're part of the player's experience, so act like it in every message."
+        },
+        {
+          "v": "cards",
+          "h": "Tools operators usually offer",
+          "p": "A rough guide; tools differ by brand and regulator. Learn what your brands offer so you can point players to them. Pointing a user to these tools is a normal, expected message.",
+          "d": [
+            "Deposit limits|A cap per day, week or month",
+            "Loss limits|A cap on net losses",
+            "Time-outs|A short break from the account",
+            "Reality checks|Pop-ups showing time and spend",
+            "Self-exclusion|Blocking the account for months or years",
+            "Help links|Local support services"
+          ],
+          "say": "Here are tools operators usually offer, as a rough guide. Deposit limits, a cap per day, week or month. Loss limits, a cap on net losses. Time-outs, a short break from the account. Reality checks, pop-ups showing time and spend. Self-exclusion, blocking the account for months or years. And help links to local support services. Tools differ by brand and regulator, so learn what yours offer. Pointing a user to these tools is a normal, expected message."
+        },
+        {
+          "v": "eq",
+          "h": "Example: how a deposit limit works",
+          "p": "Example. A player sets a $50 weekly deposit limit. Whatever happens that week, deposits stop at $50. Show players where to set this, without implying they should deposit up to the limit.",
+          "d": [
+            "$50 weekly limit",
+            "−",
+            "$50 deposited",
+            "=",
+            "No more deposits this week"
+          ],
+          "say": "Here's an example of a deposit limit. A player sets a fifty dollar weekly limit. Once they've deposited fifty dollars, deposits stop for the rest of that week, whatever happens. Show players where to set this, but don't imply they should deposit up to the limit."
+        },
+        {
+          "v": "map",
+          "h": "Where self-exclusion must reach you",
+          "p": "When someone self-excludes with an operator or a national scheme, the operator blocks them. But your channel, bot and broadcast lists may still hold them. A suppression list closes that gap.",
+          "d": {
+            "nodes": [
+              {
+                "id": "p",
+                "label": "Player self-excludes",
+                "kind": "person"
+              },
+              {
+                "id": "op",
+                "label": "Operator blocks account",
+                "kind": "offer"
+              },
+              {
+                "id": "you",
+                "label": "Your Telegram and lists",
+                "kind": "telegram"
+              },
+              {
+                "id": "sup",
+                "label": "Suppression list",
+                "kind": "data"
+              },
+              {
+                "id": "bc",
+                "label": "Broadcasts and ads",
+                "kind": "bot"
+              }
+            ],
+            "edges": [
+              [
+                "p",
+                "op",
+                "request"
+              ],
+              [
+                "p",
+                "you",
+                "STOP or tells you"
+              ],
+              [
+                "you",
+                "sup",
+                "add same day"
+              ],
+              [
+                "sup",
+                "bc",
+                "excluded"
+              ]
+            ]
+          },
+          "say": "Look at this map. When a player self-excludes, the operator blocks their account. But the player may still be on your Telegram and lists. Follow the arrows. When they type STOP or tell you, you add them to your suppression list the same day. And the suppression list is excluded from your broadcasts and ads. That closes the gap the operator's block doesn't cover."
+        },
+        {
+          "v": "walk",
+          "h": "Run a suppression list",
+          "p": "Keep one list of everyone who must not get your marketing. Apply it everywhere you market: bot, channel broadcasts, email and ad audiences. Screens are mock-ups; tools differ.",
+          "d": {
+            "steps": [
+              {
+                "title": "Capture STOP",
+                "text": "Any user who types STOP, says they want out, or mentions self-exclusion is added the same day.",
+                "screen": {
+                  "v": "phone",
+                  "app": "bot",
+                  "title": "Matchday Notes",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "STOP"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Done. You will not get further messages from us. If gambling is a problem, help is available: see the help link in our profile."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Add to the list",
+                "text": "Store the user ID and date. Never delete entries.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "crm.example/suppression",
+                  "title": "Suppression list",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "User ID",
+                        "Reason",
+                        "Date"
+                      ],
+                      "rows": [
+                        [
+                          "58...21",
+                          "STOP",
+                          "2026-10-04"
+                        ],
+                        [
+                          "91...07",
+                          "Self-excluded",
+                          "2026-10-02"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Apply everywhere",
+                "text": "Exclude the list from broadcasts, drips, retargeting and custom audiences.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "crm.example/broadcast/new",
+                  "title": "New broadcast",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Exclude suppression list",
+                      "on": true
+                    },
+                    {
+                      "type": "button",
+                      "label": "Schedule"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Let's run a suppression list. Tap Next to follow each step. First, capture STOP. Any user who types STOP, says they want out, or mentions self-exclusion is added the same day, and the bot confirms and points to help. Second, add them to the list with their user I D, reason and date, and never delete entries. Third, apply it everywhere: exclude the list from broadcasts, drips, retargeting and custom audiences. Tools differ, but the steps are the same."
+        },
+        {
+          "v": "chat",
+          "h": "Answering a user in trouble",
+          "p": "When a user shows signs of harm, stop selling. Do not suggest tips or bonuses, do not argue. Point them to help and the operator's tools, offer to remove them, and flag it for a human to review.",
+          "d": [
+            {
+              "from": "lead",
+              "text": "I lost my rent this week. Which tip can win it back tonight?"
+            },
+            {
+              "from": "ai",
+              "text": "I'm sorry you're dealing with this. We won't send you tips to win money back; chasing losses usually makes it worse."
+            },
+            {
+              "from": "ai",
+              "text": "Your account has deposit limits and self-exclusion in its settings, and the help link in our profile lists free local support."
+            },
+            {
+              "from": "ai",
+              "text": "Would you like me to stop all our messages to you? A team member will also check in on this chat."
+            }
+          ],
+          "say": "Look at this chat. A user says they lost their rent and asks which tip can win it back tonight. Notice the reply. It's kind, and it refuses to send tips to win money back, because chasing losses usually makes it worse. It points to deposit limits and self-exclusion in their account, and the help link with free local support. Then it offers to stop all messages, and says a team member will check in. Stop selling, point to help, offer removal, and flag it for a human."
+        },
+        {
+          "v": "product",
+          "h": "Answering inboxes safely at scale",
+          "p": "When your channel grows, you need help answering messages quickly and consistently. Set any assistant to stop selling and escalate when it sees signs of harm, and review its replies.",
+          "d": {
+            "slug": "replyvoo",
+            "why": "An AI inbox agent can answer routine questions and hand harm signals to a human using rules you write."
+          },
+          "say": "As your channel grows, you need help answering messages quickly and consistently. An A I inbox agent like Replyvoo can answer routine questions, and hand harm signals to a human using rules you write. Set any assistant to stop selling and escalate when it sees signs of harm, and review its replies."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: what one complaint can cost",
+          "p": "Example. A channel sends 'win back your losses' messages. One user complains to the brand. The brand ends the deal. Compare that cost with the cost of a suppression list and a human review step.",
+          "more": "The figures are examples, but the shape is common: the cost of losing a deal is far higher than the cost of doing it right. More importantly, a message that pushes someone to chase losses can cause real harm. That is the reason the rules exist, and the reason to follow them even when nobody is checking.",
+          "d": {
+            "cols": [
+              "Item",
+              "Working",
+              "Result"
+            ],
+            "rows": [
+              [
+                "Monthly CPA income",
+                "60 FTDs × $40",
+                "$2,400"
+              ],
+              [
+                "Months lost",
+                "Deal ends",
+                "Example: 6"
+              ],
+              [
+                "Lost income",
+                "$2,400 × 6",
+                "$14,400"
+              ],
+              [
+                "Cost of safeguards",
+                "2 h a week",
+                "Your time"
+              ]
+            ]
+          },
+          "say": "Here's an example of what one complaint can cost. A channel sends win back your losses messages, one user complains, and the brand ends the deal. Monthly C P A, cost per acquisition, income was sixty F T Ds at forty dollars, twenty four hundred a month. Over an example six months lost, that's fourteen thousand four hundred dollars. Safeguards cost about two hours a week of your time. More importantly, a message that pushes someone to chase losses can cause real harm. That's why the rules exist."
+        },
+        {
+          "v": "cards",
+          "h": "Signs of harm to watch for in messages",
+          "p": "These signals in chats and comments mean a person may be in trouble. Train your team and any assistant to recognise them and switch from selling to helping. A rough guide, not a diagnosis.",
+          "d": [
+            "Chasing|'I need to win it back'",
+            "Borrowing|Using loans, rent or school fees to bet",
+            "Loss of control|'I can't stop', betting through the night",
+            "Hiding|Gambling secretly from family",
+            "Distress|Anger, panic or despair after losses"
+          ],
+          "say": "These signals in chats and comments mean a person may be in trouble. Chasing, like I need to win it back. Borrowing, using loans, rent or school fees to bet. Loss of control, like I can't stop, or betting through the night. Hiding, gambling secretly from family. And distress, anger, panic or despair after losses. This is a rough guide, not a diagnosis. Train your team and any assistant to recognise these, and switch from selling to helping."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and fixes",
+          "p": "Most responsible gambling failures in affiliate funnels come from automation that keeps selling no matter what the user says. Fix the automation and most of the risk goes away.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Bot keeps sending tips after STOP",
+                "'Win it back' or 'recover losses' posts",
+                "Late-night broadcasts pushing bets",
+                "Deleting old suppression entries"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "STOP ends all messages the same day",
+                "Never mention recovering losses",
+                "Reasonable hours, no pressure",
+                "Keep the list forever"
+              ]
+            }
+          },
+          "say": "Most responsible gambling failures in affiliate funnels come from automation that keeps selling. The mistakes: a bot that keeps sending tips after STOP, win it back or recover losses posts, late-night broadcasts pushing bets, and deleting old suppression entries. The fixes: STOP ends all messages the same day, never mention recovering losses, post at reasonable hours with no pressure, and keep the list forever."
+        },
+        {
+          "v": "tip",
+          "h": "Never market to excluded people",
+          "p": "Never target, message or retarget anyone who self-excluded or asked to stop. Never help anyone get around limits or exclusion. These are bright lines with brands and regulators.",
+          "d": {
+            "kind": "warn",
+            "text": "Gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission; check the current policy and local law before you run."
+          },
+          "say": "These are bright lines with brands and regulators. Never target, message or retarget anyone who self-excluded or asked to stop. And never help anyone get around limits or exclusion. As the warning says, gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing, Meta requires prior written permission, so check the current policy and local law before you run."
+        },
+        {
+          "v": "check",
+          "h": "Starting rules for responsible gambling",
+          "p": "Starting rules to adapt with each brand's requirements. Write them into your bot settings and broadcast checklist so they run even when you are not watching.",
+          "d": [
+            "STOP or opt-out: suppress the same day, all channels",
+            "Harm signal in a message: stop selling, signpost help, human review within 24 h",
+            "No messages about chasing or recovering losses, ever",
+            "Broadcasts only at reasonable local hours",
+            "Responsible gambling line in every promotional post"
+          ],
+          "say": "Here are starting rules to adapt with each brand. STOP or opt-out: suppress the same day, on all channels. A harm signal in a message: stop selling, signpost help, and get human review within twenty four hours. No messages about chasing or recovering losses, ever. Broadcasts only at reasonable local hours. And a responsible gambling line in every promotional post. Write them into your bot settings, so they run even when you're not watching."
+        }
+      ],
+      "takeaways": [
+        "Know the tools your brands offer and point players to them.",
+        "Keep one permanent suppression list and apply it to every channel.",
+        "When a user shows harm, stop selling, signpost help and escalate to a human."
+      ],
+      "action": "Create a suppression list today, add a STOP command to your bot or channel process and write the reply your team or assistant must send when a user shows signs of harm.",
+      "glossary": [
+        {
+          "term": "Suppression list",
+          "def": "A permanent list of people who must never receive your marketing."
+        },
+        {
+          "term": "Self-exclusion",
+          "def": "A player's request to be blocked from gambling with an operator or scheme for a period."
+        },
+        {
+          "term": "Deposit limit",
+          "def": "A cap a player sets on how much they can deposit per period."
+        },
+        {
+          "term": "Chasing losses",
+          "def": "Gambling more to win back money already lost; a common sign of harm."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A user writes STOP. When should they be suppressed?",
+          "options": [
+            "Next month",
+            "The same day, on all channels",
+            "After one more promo",
+            "Only on the channel they wrote in"
+          ],
+          "answer": 1,
+          "why": "Suppress the same day across every channel."
+        },
+        {
+          "q": "A user says they lost their rent and asks for a tip. What do you do?",
+          "options": [
+            "Send the safest tip",
+            "Offer a bonus",
+            "Stop selling, signpost help and escalate to a human",
+            "Ignore the message"
+          ],
+          "answer": 2,
+          "why": "Harm signals end the sale; point to help and escalate."
+        },
+        {
+          "q": "Which message is never acceptable?",
+          "options": [
+            "Kick-off times for tonight",
+            "How to set a deposit limit",
+            "18+ only, gamble responsibly",
+            "Win back what you lost tonight"
+          ],
+          "answer": 3,
+          "why": "Messages about recovering losses encourage chasing and harm."
+        },
+        {
+          "q": "60 FTDs a month at $40. A complaint ends the deal for 6 months. Lost income?",
+          "options": [
+            "$14,400",
+            "$2,400",
+            "$7,200",
+            "$24,000"
+          ],
+          "answer": 0,
+          "why": "$2,400 × 6 = $14,400."
+        },
+        {
+          "q": "Where should the suppression list apply?",
+          "options": [
+            "Broadcasts only",
+            "Ads only",
+            "Broadcasts, drips, retargeting and custom audiences",
+            "Nowhere; it is a record"
+          ],
+          "answer": 2,
+          "why": "It must apply everywhere you market."
+        }
+      ],
+      "say_intro": "As an affiliate, responsible gambling is part of your job too. In this lesson you'll learn the tools operators offer, how to run a suppression list, and how to answer a user who shows signs of harm.",
+      "say_outro": "To recap: point players to operator tools, suppress opt-outs and self-excluded people everywhere, and switch from selling to helping at any sign of harm. Your task: create a suppression list today, add a STOP command to your bot or channel process, and write the reply your team or assistant must send when a user shows signs of harm. Now take the quiz."
+    },
+    {
+      "slug": "claims-and-bonus-messaging",
+      "title": "Banned claims and honest bonus messaging",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can work out what a bonus really costs a player to clear.",
+        "You can write bonus copy with the key terms next to the offer.",
+        "You can spot and rewrite the claims most codes ban.",
+        "You can research how compliant competitors word offers without copying them."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why bonus copy is the riskiest line you write",
+          "p": "Bonuses are the most common hook in iGaming and the most common reason for rejected ads and complaints. A bonus that looks like free money but needs heavy wagering misleads people. Honest bonus copy keeps ads running and brings players who stay.",
+          "d": {
+            "b": "A bonus is a deal with conditions",
+            "s": "Say the conditions where the offer is."
+          },
+          "say": "Bonuses are the most common hook in iGaming, and the most common reason for rejected ads and complaints. A bonus that looks like free money but needs heavy wagering misleads people. As the screen says, a bonus is a deal with conditions, so say the conditions where the offer is. Honest bonus copy keeps ads running, and brings players who stay."
+        },
+        {
+          "v": "cards",
+          "h": "Terms that change a bonus's value",
+          "p": "These are the terms to find in every bonus before you write a word. Ask the brand for the current terms in writing; they change often.",
+          "d": [
+            "Wagering|How many times bonus, or deposit plus bonus, must be bet",
+            "Minimum odds|Bets below these odds may not count",
+            "Expiry|Days to complete wagering",
+            "Max win or cash-out|Caps on what can be withdrawn",
+            "Free bet stake|Often not returned with winnings",
+            "Eligible games|Some games count less or not at all"
+          ],
+          "say": "Find these terms in every bonus before you write a word. Wagering, how many times the bonus, or deposit plus bonus, must be bet. Minimum odds, because bets below them may not count. Expiry, the days to complete wagering. Max win or cash-out, caps on what can be withdrawn. Free bet stake, which is often not returned with winnings. And eligible games, since some count less or not at all. Ask the brand for current terms in writing, because they change often."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: what clearing a bonus costs",
+          "p": "Example. 100% bonus up to $100, wagering 10x deposit plus bonus. The player deposits $50 and gets $50. The bonus looks like $50 of value, but the bets needed to clear it carry an expected cost.",
+          "more": "Example maths only; real margins differ by bet type, and results vary player by player. The point is that a bonus with heavy wagering can be worth close to nothing on average, which is why codes require the key terms to be clear. When your copy says '$50 bonus' without '10x wagering on deposit plus bonus', you are describing it as something it is not.",
+          "d": {
+            "cols": [
+              "Step",
+              "Working",
+              "Result"
+            ],
+            "rows": [
+              [
+                "Deposit + bonus",
+                "$50 + $50",
+                "$100"
+              ],
+              [
+                "Bets required",
+                "$100 × 10",
+                "$1,000"
+              ],
+              [
+                "Margin on bets",
+                "Example 5%",
+                ""
+              ],
+              [
+                "Expected cost",
+                "$1,000 × 5%",
+                "$50"
+              ],
+              [
+                "Bonus value",
+                "$50 - $50",
+                "About $0 on average"
+              ]
+            ]
+          },
+          "say": "Here's an example. A one hundred percent bonus up to one hundred dollars, with ten times wagering on deposit plus bonus. The player deposits fifty and gets fifty, so a hundred in total. They must bet a hundred times ten, one thousand dollars. At an example margin of five percent, the expected cost is fifty dollars. So the bonus is worth about zero on average. Real margins differ and results vary player by player. That's why codes require key terms to be clear."
+        },
+        {
+          "v": "eq",
+          "h": "Example: a free bet is not cash",
+          "p": "Example. A $10 free bet at odds of 3.00 wins. Many free bets pay winnings without returning the stake. So the player receives $20, not the $30 a cash bet would return. Say 'stake not returned' if that is the term.",
+          "d": [
+            "$10 × 3.00 = $30",
+            "−",
+            "$10 stake not returned",
+            "=",
+            "$20 paid"
+          ],
+          "say": "A free bet isn't cash. In this example, a ten dollar free bet at odds of three point zero wins. Ten times three is thirty dollars. But many free bets pay winnings without returning the stake. So you subtract the ten dollar stake, and the player receives twenty dollars, not thirty. If that's the term, say stake not returned in your copy."
+        },
+        {
+          "v": "compare",
+          "h": "Rewrite: bonus copy",
+          "p": "Same bonus, same brand. The left side is the kind of copy that gets rejected or causes complaints. The right side is still attractive and carries the terms people need.",
+          "d": {
+            "a": {
+              "title": "Banned style",
+              "items": [
+                "Free $100, no catch",
+                "Risk-free first bet",
+                "Double your money today",
+                "Bonus! (terms hidden at the bottom)"
+              ]
+            },
+            "b": {
+              "title": "Honest style",
+              "items": [
+                "100% bonus up to $100. 10x wagering, 30 days",
+                "First bet refunded as a free bet up to $10, stake not returned",
+                "Welcome offer for new adult customers",
+                "Key terms next to the offer. 18+"
+              ]
+            }
+          },
+          "say": "Here's the same bonus, written two ways. On the left, the banned style: free one hundred dollars, no catch. Risk-free first bet. Double your money today. Bonus, with terms hidden at the bottom. On the right, the honest style: one hundred percent bonus up to one hundred dollars, ten times wagering, thirty days. First bet refunded as a free bet up to ten dollars, stake not returned. Welcome offer for new adult customers. Key terms next to the offer, eighteen plus. Still attractive, and it carries what people need."
+        },
+        {
+          "v": "cards",
+          "h": "Claims most codes ban",
+          "p": "These go beyond bonus copy. Many are banned outright in gambling codes; all of them mislead. Rewrite them before the reviewer or a regulator has to.",
+          "d": [
+            "Sure wins|'Guaranteed', 'fixed', 'can't lose'",
+            "Income|Betting as a job, salary or way out of debt",
+            "Skill overclaims|'Our system beats the bookies'",
+            "Urgency pressure|'Bet now or miss out forever'",
+            "Social success|Gambling linked to wealth, status, attraction",
+            "False odds|Boosts or odds not actually available"
+          ],
+          "say": "These claims go beyond bonus copy. Many are banned outright in gambling codes, and all of them mislead. Sure wins, like guaranteed, fixed or can't lose. Income, betting as a job, salary or way out of debt. Skill overclaims, like our system beats the bookies. Urgency pressure, bet now or miss out forever. Social success, linking gambling to wealth, status or attraction. And false odds, boosts or odds that aren't actually available. Rewrite them before a reviewer or regulator has to."
+        },
+        {
+          "v": "phone",
+          "h": "Bonus box on a compliant lander",
+          "p": "Put the key terms next to the offer, in readable size, before the button. Full terms stay one tap away. On a phone, this box should be visible without scrolling past the offer.",
+          "d": {
+            "app": "browser",
+            "url": "yourdomain.example/gh/welcome",
+            "page": {
+              "h": "100% welcome bonus up to GH₵ 500",
+              "p": "New customers 18+. Min deposit GH₵ 20. 10x wagering on deposit plus bonus within 30 days, min odds 1.50. Max bonus GH₵ 500. Operator licensed in Ghana. Gamble responsibly.",
+              "cta": "Read full terms"
+            }
+          },
+          "say": "Here's a bonus box on a compliant lander, on a phone. The headline is a hundred percent welcome bonus up to five hundred Ghana cedis. Right underneath are the key terms: new customers eighteen plus, minimum deposit twenty cedis, ten times wagering on deposit plus bonus within thirty days, minimum odds one point five, max bonus five hundred cedis, operator licensed in Ghana, gamble responsibly. All before the button, readable, with full terms one tap away."
+        },
+        {
+          "v": "product",
+          "h": "Research honest wording in your geo",
+          "p": "Before writing, look at how established, licensed brands in your geo word their bonus ads. Learn the structure and required lines. Never copy their creatives, logos or text.",
+          "d": {
+            "slug": "spyvoo",
+            "why": "Search live ads by geo and keyword to see how licensed brands place terms and responsible gambling lines."
+          },
+          "say": "Before writing, look at how established, licensed brands in your geo word their bonus ads. A tool like Spyvoo lets you search live ads by geo and keyword, to see how licensed brands place terms and responsible gambling lines. Learn the structure and the required lines. But never copy their creatives, logos or text."
+        },
+        {
+          "v": "flow",
+          "h": "Write bonus copy in five steps",
+          "p": "Use this order every time. It forces the terms in before the creativity, which is the order reviewers and regulators read in too. Keep the approved version on file.",
+          "d": [
+            "Get current terms in writing",
+            "Pick the 3 to 4 key terms",
+            "Write the offer with terms beside it",
+            "Add 18+, licence and RG line",
+            "Brand approves before launch"
+          ],
+          "say": "Use this five-step order every time. Get the current terms in writing. Pick the three to four key terms. Write the offer with the terms beside it. Add eighteen plus, the licence, and the responsible gambling line. And get the brand's approval before launch. This order forces the terms in before the creativity, which is the same order reviewers and regulators read in. Keep the approved version on file."
+        },
+        {
+          "v": "cards",
+          "h": "Common mistakes and fixes",
+          "p": "These are the bonus-copy mistakes that cause most rejections and complaints. Each fix is a habit you apply to every creative, including quick edits made late at night.",
+          "d": [
+            "Mistake: old terms in new ads|Fix: re-confirm terms monthly",
+            "Mistake: 'free' with wagering|Fix: say 'bonus' and state wagering",
+            "Mistake: terms only in small print|Fix: key terms next to the offer",
+            "Mistake: copying a rival's ad|Fix: learn structure, write your own"
+          ],
+          "say": "These mistakes cause most rejections and complaints. Old terms in new ads: re-confirm terms monthly. Saying free when there's wagering: say bonus and state the wagering. Terms only in small print: put key terms next to the offer. And copying a rival's ad: learn the structure and write your own. Apply each fix to every creative, including quick edits made late at night."
+        },
+        {
+          "v": "tip",
+          "h": "Bonus copy is regulated copy",
+          "p": "Many regulators set rules on how bonuses are described, and platforms reject misleading offers. Bonus abuse, such as multiple accounts to claim bonuses, is never something you teach, suggest or tolerate.",
+          "d": {
+            "kind": "warn",
+            "text": "Gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission; check the current policy and local law before you run."
+          },
+          "say": "Many regulators set rules on how bonuses are described, and platforms reject misleading offers. Bonus abuse, such as using multiple accounts to claim bonuses, is never something you teach, suggest or tolerate. As the warning says, gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing, Meta requires prior written permission, so check the current policy and local law before you run."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for claims",
+          "p": "Starting rules to adapt with the brand's requirements. They turn a judgment call into a checklist that a junior buyer can follow without asking you every time.",
+          "d": [
+            "Any 'free', 'risk-free' or 'guaranteed': rewrite before upload",
+            "Wagering, minimum deposit and expiry next to the offer",
+            "Brand written approval on every bonus creative",
+            "Terms older than 30 days: re-confirm before reuse",
+            "Two rejections for the same claim: retire the angle"
+          ],
+          "say": "Here are starting rules for claims, to adapt with the brand. Any free, risk-free or guaranteed: rewrite before upload. Wagering, minimum deposit and expiry go next to the offer. Brand written approval on every bonus creative. Terms older than thirty days: re-confirm before reuse. And two rejections for the same claim: retire the angle. These turn a judgment call into a checklist a junior buyer can follow."
+        }
+      ],
+      "takeaways": [
+        "Work out what a bonus costs to clear before you describe it.",
+        "Put the key terms next to the offer, not only in the small print.",
+        "Rewrite banned claims and get brand approval before upload."
+      ],
+      "action": "Take one bonus you could promote, get its current terms in writing, calculate the bets needed to clear it and write one honest ad line with the key terms beside the offer.",
+      "glossary": [
+        {
+          "term": "Wagering requirement",
+          "def": "How many times a bonus, or deposit plus bonus, must be bet before withdrawal."
+        },
+        {
+          "term": "Free bet",
+          "def": "A bet placed with the operator's money; winnings are often paid without the stake."
+        },
+        {
+          "term": "Key terms",
+          "def": "The terms that change an offer's value, shown next to the offer."
+        },
+        {
+          "term": "Bonus abuse",
+          "def": "Exploiting bonuses against the terms, for example with multiple accounts."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "$50 deposit, $50 bonus, 10x wagering on deposit plus bonus. Bets needed?",
+          "options": [
+            "$500",
+            "$100",
+            "$50",
+            "$1,000"
+          ],
+          "answer": 3,
+          "why": "($50 + $50) × 10 = $1,000."
+        },
+        {
+          "q": "A $10 free bet at 3.00 wins, stake not returned. How much is paid?",
+          "options": [
+            "$20",
+            "$30",
+            "$10",
+            "$13"
+          ],
+          "answer": 0,
+          "why": "$10 × 3.00 = $30 minus the $10 stake = $20."
+        },
+        {
+          "q": "Which line is honest?",
+          "options": [
+            "Free $100, no catch",
+            "Risk-free first bet",
+            "100% bonus up to $100. 10x wagering, 30 days",
+            "Double your money today"
+          ],
+          "answer": 2,
+          "why": "It states the offer with its key terms."
+        },
+        {
+          "q": "Where should key terms appear?",
+          "options": [
+            "Only in full T&Cs",
+            "Next to the offer, readable, before the button",
+            "Only in the footer",
+            "Only after registration"
+          ],
+          "answer": 1,
+          "why": "Key terms belong beside the offer where people decide."
+        },
+        {
+          "q": "Terms you used are 45 days old. What do the rules say?",
+          "options": [
+            "Re-confirm with the brand before reuse",
+            "Reuse them",
+            "Remove all terms",
+            "Use a competitor's terms"
+          ],
+          "answer": 0,
+          "why": "Terms older than 30 days must be re-confirmed."
+        }
+      ],
+      "say_intro": "Bonus copy is the riskiest line you'll write in iGaming. In this lesson you'll work out what a bonus really costs to clear, write copy with the key terms beside the offer, and spot the claims most codes ban.",
+      "say_outro": "To recap: a bonus is a deal with conditions, so work out what it costs to clear, put the key terms beside the offer, and drop banned claims. Your task: take one bonus you could promote, get its current terms in writing, calculate the bets needed to clear it, and write one honest ad line with the key terms beside the offer. Now take the quiz."
+    },
+    {
+      "slug": "geo-dossier-and-gate",
+      "title": "Your geo dossier and the go/no-go gate",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can build a compliance dossier for one iGaming geo.",
+        "You can run a go/no-go gate before every launch and every new geo.",
+        "You can respond to incidents with set timelines.",
+        "You can keep the dossier current with a monthly routine."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why a dossier beats memory",
+          "p": "By the time you run three brands in four geos you will have dozens of licences, wordings, approvals and terms to remember. Memory fails, and staff change. A dossier per geo keeps the proof in one place, lets anyone on your team run the gate and protects you when a brand or platform asks questions.",
+          "d": {
+            "b": "One folder per geo, all the proof",
+            "s": "If it is not in the dossier, it is not checked."
+          },
+          "say": "Once you run three brands in four geos, you'll have dozens of licences, wordings, approvals and terms to remember. Memory fails, and staff change. A dossier for each geo keeps the proof in one place, lets anyone on your team run the gate, and protects you when a brand or platform asks questions. As the screen says, if it's not in the dossier, it's not checked."
+        },
+        {
+          "v": "check",
+          "h": "What goes in a geo dossier",
+          "p": "One folder per geo, one subfolder per brand. Every item has a date. Use this list as the folder's index page. If an item is missing, the gate for that geo is a no.",
+          "d": [
+            "Licence proof from the register, dated",
+            "Product scope: sportsbook, casino or both",
+            "Age floor and where it came from",
+            "Required RG wording and local help link",
+            "Platform permission proof for this country",
+            "Network approval of source and creatives, bonus terms snapshot"
+          ],
+          "say": "Here's what goes in a geo dossier, with one subfolder per brand, and a date on every item. Licence proof from the register. Product scope: sportsbook, casino or both. The age floor and where it came from. Required responsible gambling wording and the local help link. Platform permission proof for this country. And network approval of your source and creatives, plus a bonus terms snapshot. If any item is missing, the gate for that geo is a no."
+        },
+        {
+          "v": "code",
+          "h": "Example dossier index",
+          "p": "A plain text index at the top of each folder. Anyone can read it in a minute and see what is current and what has expired.",
+          "d": {
+            "lang": "text",
+            "text": "GEO: Ghana   BRAND: Example Gaming   PRODUCT: Sportsbook only\nLicence: GC-0000, verified 2026-10-04 (screenshot)\nAge floor: 18 (law) / 18 (brand) -> 18\nRG wording: brand PDF v3, 2026-09-28\nMeta permission: approved for GH, 2026-09-30 (email)\nTraffic + creatives approved: network email 2026-10-01\nBonus terms: snapshot 2026-10-01, re-check by 2026-10-31\nGATE: GO (all items current)",
+            "note": "Example. Dates and numbers are illustrative."
+          },
+          "say": "Here's an example dossier index, a plain text file at the top of each folder. You don't need to read it word for word, it's on screen. It shows the geo, brand and product, then each item with its date: the licence verified, the age floor, the responsible gambling wording, Meta permission, network approval, and a bonus terms snapshot with a re-check date. At the bottom, the gate, GO, because all items are current. Anyone can read it in a minute."
+        },
+        {
+          "v": "flow",
+          "h": "The go/no-go gate",
+          "p": "Run this before every launch, every new geo and every new brand. Any no stops the launch until it becomes a yes. Nobody may skip a step because a campaign is urgent.",
+          "d": [
+            "Licence current for geo and product",
+            "Platform permission for this country",
+            "Network approved source and creatives",
+            "Ad, lander and bot carry 18+ and RG wording",
+            "Suppression list applied",
+            "GO"
+          ],
+          "say": "Here's the go or no-go gate. Follow the flow. Licence current for the geo and product. Platform permission for this country. Network approved the source and creatives. Ad, lander and bot carry eighteen plus and responsible gambling wording. Suppression list applied. Then, and only then, GO. Run it before every launch, every new geo and every new brand. Any no stops the launch. And nobody skips a step because a campaign is urgent."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: gate cost versus risk",
+          "p": "Example. The gate takes about two hours per new geo and 20 minutes a month to keep current. Compare that with what a single failure can cost a small operation.",
+          "more": "The money figures reuse the example from the responsible gambling lesson: 60 FTDs a month at $40 is $2,400 a month. The point is not the exact numbers but the ratio: hours of checking against months of income. The gate also protects players, which is the reason the rules exist.",
+          "d": {
+            "cols": [
+              "Item",
+              "Example",
+              "Cost"
+            ],
+            "rows": [
+              [
+                "Gate, new geo",
+                "2 h",
+                "Your time"
+              ],
+              [
+                "Monthly upkeep",
+                "20 min per geo",
+                "Your time"
+              ],
+              [
+                "Frozen payouts",
+                "1 month withheld",
+                "$2,400"
+              ],
+              [
+                "Lost ad account",
+                "Rebuild, lost history",
+                "Weeks of income"
+              ],
+              [
+                "Ended deal",
+                "6 months",
+                "$14,400"
+              ]
+            ]
+          },
+          "say": "Here's the cost of the gate versus the risk, in an example. The gate takes about two hours per new geo, and about twenty minutes a month to keep current. Now compare. Frozen payouts, one month withheld, twenty four hundred dollars. A lost ad account means rebuilding, with lost history, and weeks of income. An ended deal, six months, fourteen thousand four hundred dollars. The point is the ratio: hours of checking against months of income. And the gate also protects players."
+        },
+        {
+          "v": "walk",
+          "h": "Monthly dossier routine",
+          "p": "Put this on the same day each month, for example the first working day. Terms, licences and policies change without notice, and this routine catches the changes before a reviewer does. Screens are mock-ups.",
+          "d": {
+            "steps": [
+              {
+                "title": "Re-verify licences",
+                "text": "Search each licence on the register again and save a new dated screenshot.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "regulator.example/licensees?q=GC-0000",
+                  "title": "Search result",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Company",
+                        "Licence",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "Example Gaming Ltd",
+                          "GC-0000",
+                          "Active"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Re-confirm terms",
+                "text": "Ask the manager for current bonus terms and RG wording; replace old files.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Affiliate manager",
+                  "subtitle": "online",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "Monthly check: any changes to Ghana bonus terms or RG wording?"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Wagering moved to 8x from the 15th. New PDF attached."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Update creatives",
+                "text": "Change any live ad or lander that uses old terms the same day.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/ads",
+                  "title": "Ads using old terms",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Ad",
+                        "Terms",
+                        "Action"
+                      ],
+                      "rows": [
+                        [
+                          "GH_Bonus_02",
+                          "10x",
+                          "Edit"
+                        ],
+                        [
+                          "GH_Bonus_05",
+                          "10x",
+                          "Edit"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Mark the gate",
+                "text": "Update the index with today's date and GO or NO-GO.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "drive.example/dossier/GH",
+                  "title": "GH index",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Gate",
+                      "value": "GO, 2026-11-01"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Here's a monthly dossier routine, on the same day each month. Tap Next to follow each step. First, re-verify licences on the register and save a new dated screenshot. Second, re-confirm terms with the manager. Here, wagering moved to eight times from the fifteenth, with a new P D F. Third, update any live ad or lander using old terms the same day, so two ads still showing ten times get edited. Fourth, mark the gate in the index with today's date and GO or NO-GO."
+        },
+        {
+          "v": "table",
+          "h": "Incident playbook",
+          "p": "Starting timelines to adapt. Decide them now, when you are calm, so you do not improvise when something goes wrong. Share them with everyone on your team.",
+          "d": {
+            "cols": [
+              "Incident",
+              "First action",
+              "Within"
+            ],
+            "rows": [
+              [
+                "Regulator or legal notice",
+                "Pause geo, get adviser",
+                "Same day"
+              ],
+              [
+                "Brand complaint",
+                "Pause the ad, reply with facts",
+                "24 h"
+              ],
+              [
+                "Ad rejected",
+                "Read reason, rewrite, no blind resubmit",
+                "48 h"
+              ],
+              [
+                "User harm report",
+                "Stop selling, signpost, suppress",
+                "Same day"
+              ],
+              [
+                "Licence not found",
+                "NO-GO for that geo",
+                "Immediately"
+              ]
+            ]
+          },
+          "say": "Decide incident timelines now, while you're calm. Look at the table. A regulator or legal notice: pause the geo and get an adviser, same day. A brand complaint: pause the ad and reply with facts, within twenty four hours. An ad rejected: read the reason and rewrite, no blind resubmit, within forty eight hours. A user harm report: stop selling, signpost help, and suppress, same day. And a licence not found: NO-GO for that geo, immediately. Share these with your whole team."
+        },
+        {
+          "v": "quote",
+          "h": "On the gate",
+          "p": "A short note from the founder on why the gate is run even on the busiest days, when a campaign is ready and the team wants to launch.",
+          "d": "The gate feels slow on the day you launch. It is the fastest thing in the business on the day someone asks you for proof.",
+          "by": "dchessking",
+          "say": "Here's a short note from the founder, Dchessking, on why the gate is run even on the busiest days, when a campaign is ready and the team wants to launch. Here's how he puts it: The gate feels slow on the day you launch. It is the fastest thing in the business on the day someone asks you for proof."
+        },
+        {
+          "v": "cards",
+          "h": "Who owns what on a team",
+          "p": "Once more than one person runs campaigns, give each dossier task an owner. Shared tasks without owners are the ones that get skipped in a busy month.",
+          "d": [
+            "Owner|Signs the GO for each geo",
+            "Buyer|Runs the gate before every launch",
+            "Creative lead|Checks terms and RG lines in every asset",
+            "Community lead|Runs the suppression list and harm replies",
+            "Everyone|Reports incidents the same day"
+          ],
+          "say": "Once more than one person runs campaigns, give each dossier task an owner. The owner signs the GO for each geo. The buyer runs the gate before every launch. The creative lead checks terms and responsible gambling lines in every asset. The community lead runs the suppression list and harm replies. And everyone reports incidents the same day. Shared tasks without owners are the ones that get skipped in a busy month."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and fixes",
+          "p": "Dossiers fail when they are built once and never updated, or when the gate becomes a box you tick without checking. Both are easy to prevent.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Dossier built once, never updated",
+                "Gate ticked from memory",
+                "Terms changed, ads not",
+                "Only the owner knows where proof is"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Monthly routine, same day",
+                "Gate needs dated proof per line",
+                "Same-day creative updates",
+                "Shared folder, written index"
+              ]
+            }
+          },
+          "say": "Dossiers fail when they're built once and never updated, or when the gate becomes a box you tick. The mistakes: a dossier never updated, a gate ticked from memory, terms changed but ads not, and only the owner knowing where proof is. The fixes: a monthly routine on the same day, dated proof for every gate line, same-day creative updates, and a shared folder with a written index."
+        },
+        {
+          "v": "tip",
+          "h": "The gate never overrides the law",
+          "p": "A GO in your own dossier is your internal decision, not a legal opinion. If a regulator, platform or brand says otherwise, they win. Education, not legal advice.",
+          "d": {
+            "kind": "warn",
+            "text": "Gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission; check the current policy and local law before you run."
+          },
+          "say": "A GO in your own dossier is your internal decision, not a legal opinion. If a regulator, platform or brand says otherwise, they win. This is education, not legal advice. As the warning says, gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing, Meta requires prior written permission, so check the current policy and local law before you run."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for the gate",
+          "p": "Starting rules to adapt with your adviser and brands. Write them on the first page of your dossier so every launch starts by reading them.",
+          "d": [
+            "Any gate line without dated proof: NO-GO",
+            "Proof older than 31 days: re-check before launch",
+            "New geo or brand: full gate, no shortcuts",
+            "Incident: follow the playbook timeline",
+            "Two incidents in a geo in 30 days: pause the geo and review"
+          ],
+          "say": "Here are starting gate rules to adapt with your adviser and brands. Any gate line without dated proof: NO-GO. Proof older than thirty one days: re-check before launch. A new geo or brand: full gate, no shortcuts. An incident: follow the playbook timeline. And two incidents in a geo within thirty days: pause the geo and review. Write these on the first page of your dossier, so every launch starts by reading them."
+        }
+      ],
+      "takeaways": [
+        "Keep one dossier per geo with dated proof for every rule.",
+        "Run the go/no-go gate before every launch; any no stops it.",
+        "Set incident timelines now and keep the dossier current monthly."
+      ],
+      "action": "Create a dossier folder for your main iGaming geo, write the index file using the example format and run the gate: mark GO only if every line has dated proof.",
+      "glossary": [
+        {
+          "term": "Geo dossier",
+          "def": "A folder of dated proof for one country: licences, wording, permissions, approvals and terms."
+        },
+        {
+          "term": "Go/no-go gate",
+          "def": "A fixed checklist where any no stops a launch."
+        },
+        {
+          "term": "Incident playbook",
+          "def": "Pre-agreed first actions and timelines for problems such as complaints or notices."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which item belongs in a geo dossier?",
+          "options": [
+            "Competitor ad screenshots to copy",
+            "Players' passwords",
+            "Dated licence proof from the register",
+            "Your ad account login"
+          ],
+          "answer": 2,
+          "why": "Dossiers hold dated proof such as licence screenshots."
+        },
+        {
+          "q": "Your licence screenshot is 40 days old. You want to launch today. What do you do?",
+          "options": [
+            "Re-check the licence first",
+            "Launch",
+            "Use last month's GO",
+            "Skip the gate"
+          ],
+          "answer": 0,
+          "why": "Proof older than 31 days must be re-checked."
+        },
+        {
+          "q": "The brand changed wagering from 10x to 8x. What happens to live ads using 10x?",
+          "options": [
+            "Leave them",
+            "Update them the same day",
+            "Update at month end",
+            "Delete the dossier"
+          ],
+          "answer": 1,
+          "why": "Creatives must match current terms; update the same day."
+        },
+        {
+          "q": "A regulator sends a notice about your Kenya campaign. First action?",
+          "options": [
+            "Reply defending the ad",
+            "Increase budget elsewhere",
+            "Ignore it",
+            "Pause the geo and get an adviser the same day"
+          ],
+          "answer": 3,
+          "why": "Pause the geo and get qualified advice the same day."
+        },
+        {
+          "q": "Your gate says GO but the platform rejects the ad. Who wins?",
+          "options": [
+            "Your gate",
+            "The platform's rule",
+            "Whoever is newer",
+            "The network"
+          ],
+          "answer": 1,
+          "why": "Your gate is internal; platform, regulator and brand rules override it."
+        }
+      ],
+      "say_intro": "This lesson brings everything together in a geo dossier and a go or no-go gate. You'll learn what goes in the dossier, how to run the gate before every launch, how to respond to incidents, and how to keep it current each month.",
+      "say_outro": "To recap: keep one dated dossier per geo, run the go or no-go gate before every launch, follow the incident timelines, and refresh it monthly. Your task: create a dossier folder for your main iGaming geo, write the index file using the example format, and run the gate, marking GO only if every line has dated proof. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "A brand shows a Curacao licence and asks you to run Meta ads in a country that licenses its own operators. The brand has no local licence. What do you do?",
+      "options": [
+        "Run small tests",
+        "No-go until a licence covering the geo is verified",
+        "Run on Telegram instead",
+        "Target travellers only"
+      ],
+      "answer": 1,
+      "why": "An offshore licence alone does not permit marketing into a country with its own licensing."
+    },
+    {
+      "q": "You run a Nigeria campaign targeting Lagos and Abuja with a Lagos-only licence. What is the problem?",
+      "options": [
+        "None",
+        "Abuja needs no licence",
+        "Lagos licences are invalid",
+        "Under the state model at the time of writing, Abuja may need a different licence"
+      ],
+      "answer": 3,
+      "why": "With state-level regulation, each targeted area needs its own check."
+    },
+    {
+      "q": "Your platform permission is pending. A manager says 'others just run it'. What do you do?",
+      "options": [
+        "Run nothing gambling-related until approved",
+        "Run it with a small budget",
+        "Use a friend's approved account",
+        "Rename the ad 'football news'"
+      ],
+      "answer": 0,
+      "why": "No gambling ads before written permission; anything else is a policy breach or circumvention."
+    },
+    {
+      "q": "You build a lookalike from your 500 biggest depositors. What is wrong?",
+      "options": [
+        "Nothing",
+        "500 is too few",
+        "It risks finding more heavy, possibly vulnerable gamblers",
+        "Lookalikes are banned"
+      ],
+      "answer": 2,
+      "why": "Clean sources only; never build audiences from the heaviest gamblers."
+    },
+    {
+      "q": "At 18+ your CPFTD is $30 at a $2.00 CPM. The brand requires 21+ and CPM becomes $2.40. Target CPA $35. What happens if rates stay the same?",
+      "options": [
+        "CPFTD $36; above target, rethink before launching",
+        "CPFTD $30; no change",
+        "CPFTD $24; better",
+        "Ignore the brand rule"
+      ],
+      "answer": 0,
+      "why": "$30 × 2.40 ÷ 2.00 = $36, above the $35 target. Keep the floor and rethink angle or offer."
+    },
+    {
+      "q": "A user writes 'I need to win back what I lost'. Your bot is set to send tonight's tips. Correct handling?",
+      "options": [
+        "Send the tips",
+        "Stop selling, signpost help, offer to stop messages, escalate to a human",
+        "Send a bonus",
+        "Block without replying"
+      ],
+      "answer": 1,
+      "why": "Harm signals end the sale and trigger help and human review."
+    },
+    {
+      "q": "$40 deposit, $40 bonus, 12x wagering on deposit plus bonus. How much must be bet?",
+      "options": [
+        "$480",
+        "$1,200",
+        "$80",
+        "$960"
+      ],
+      "answer": 3,
+      "why": "($40 + $40) × 12 = $960."
+    },
+    {
+      "q": "Which ad line passes the rules in this module?",
+      "options": [
+        "Risk-free first bet",
+        "Guaranteed weekend winners",
+        "100% bonus up to $100. 10x wagering, 30 days. 18+",
+        "Quit your job with our tips"
+      ],
+      "answer": 2,
+      "why": "It states the offer with key terms and age."
+    },
+    {
+      "q": "Your geo dossier has all items, but the platform permission email is 45 days old and you are launching a new brand. What do you do?",
+      "options": [
+        "Launch; the permission exists",
+        "Run the full gate for the new brand and re-check anything older than 31 days",
+        "Skip the gate for new brands",
+        "Use the old GO"
+      ],
+      "answer": 1,
+      "why": "New brand means full gate; proof older than 31 days must be re-checked."
+    },
+    {
+      "q": "A brand complaint arrives about one of your ads. What is the first action and timeline?",
+      "options": [
+        "Pause the ad and reply with facts within 24 h",
+        "Delete the account immediately",
+        "Ignore until month end",
+        "Resubmit the same ad"
+      ],
+      "answer": 0,
+      "why": "The playbook says pause the ad and reply with facts within 24 hours."
+    }
+  ]
+}

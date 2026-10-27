@@ -1,0 +1,2512 @@
+{
+  "school": "v-trading",
+  "order": 2,
+  "slug": "regulation-and-risk-warnings",
+  "title": "Regulation and risk warnings",
+  "summary": "How licences, entities, marketing permission, platform policies and influencer rules apply to trading offers, with a country-by-country map of our core African markets. You finish able to verify any broker or exchange, place warnings people actually see, and apply exact go/no-go gates per geo. Education, not legal advice.",
+  "lessons": [
+    {
+      "slug": "how-trading-regulation-works",
+      "title": "How trading regulation really works",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can explain the difference between a licence to operate and permission to market.",
+        "You can explain passporting, offshore entities and reverse solicitation, and why ads change the picture.",
+        "You can build an entity map for every geo you target.",
+        "You can apply a go/no-go rule to a broker's cross-border marketing."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why a licence is not the whole answer",
+          "p": "In the Operator school you learned that a broker must be licensed. Here we go one level deeper. A broker can hold a real licence and still not be allowed to market to people in your country. Your ad is the marketing, so that gap becomes your problem.",
+          "d": {
+            "b": "A licence to operate is not a licence to market",
+            "s": "Your ad decides which rules apply."
+          },
+          "say": "In the Operator school you learned that a broker must be licensed. Here we go one level deeper. Look at the headline: a licence to operate is not a licence to market. A broker can hold a real licence and still not be allowed to market to people in your country. And since your ad is the marketing, that gap becomes your problem. Your ad decides which rules apply."
+        },
+        {
+          "v": "cards",
+          "h": "Four ideas behind every trading rule",
+          "p": "Most confusion about trading regulation comes from mixing these four ideas. Keep them separate when you ask questions, and you will get clearer answers from networks, brokers and advisers.",
+          "d": [
+            "Authorisation|Permission to run the business, from a regulator",
+            "Financial promotion|Rules on who may advertise and how",
+            "Entity per geo|Which company in the group serves each country",
+            "Cross-border rules|Whether a foreign firm may approach residents"
+          ],
+          "say": "Most confusion about trading regulation comes from mixing four ideas. Look at the cards. Authorisation, permission to run the business, from a regulator. Financial promotion, the rules on who may advertise and how. Entity per geo, which company in the group serves each country. And cross-border rules, whether a foreign firm may approach residents. Keep these separate when you ask questions, and you'll get clearer answers from networks, brokers and advisers."
+        },
+        {
+          "v": "map",
+          "h": "One brand, several companies",
+          "p": "Large brokers often run one brand through several legal entities, each licensed somewhere different. Users in each country are sent to a different entity with different protections. Your ad decides which one your users meet.",
+          "d": {
+            "nodes": [
+              {
+                "id": "grp",
+                "label": "Brand group",
+                "kind": "offer"
+              },
+              {
+                "id": "eu",
+                "label": "EU entity",
+                "kind": "offer"
+              },
+              {
+                "id": "za",
+                "label": "South Africa entity",
+                "kind": "offer"
+              },
+              {
+                "id": "off",
+                "label": "Offshore entity",
+                "kind": "offer"
+              },
+              {
+                "id": "ad",
+                "label": "Your ad",
+                "kind": "ad"
+              },
+              {
+                "id": "u",
+                "label": "User in Kenya",
+                "kind": "person"
+              }
+            ],
+            "edges": [
+              [
+                "grp",
+                "eu",
+                "owns"
+              ],
+              [
+                "grp",
+                "za",
+                "owns"
+              ],
+              [
+                "grp",
+                "off",
+                "owns"
+              ],
+              [
+                "ad",
+                "u",
+                "reaches"
+              ],
+              [
+                "u",
+                "off",
+                "signs with"
+              ]
+            ]
+          },
+          "say": "This map shows one brand, several companies. Follow the lines. The brand group owns an E U entity, a South Africa entity and an offshore entity, each licensed somewhere different. Now look at the bottom: your ad reaches a user in Kenya, and that user signs with the offshore entity. Users in each country are sent to a different entity, with different protections. Your ad decides which one your users meet."
+        },
+        {
+          "v": "table",
+          "h": "Example: the same brand in four countries",
+          "p": "Illustrative example, not a real broker. The protections a user gets, such as leverage limits, negative balance protection and complaint routes, depend on the entity, not the brand on your ad.",
+          "d": {
+            "cols": [
+              "User in",
+              "Entity",
+              "Regulator",
+              "Risk warning"
+            ],
+            "rows": [
+              [
+                "UK",
+                "Brand UK Ltd",
+                "FCA",
+                "Standard CFD warning"
+              ],
+              [
+                "EU",
+                "Brand EU Ltd",
+                "CySEC",
+                "Standard CFD warning"
+              ],
+              [
+                "South Africa",
+                "Brand ZA (Pty) Ltd",
+                "FSCA",
+                "Ask the broker"
+              ],
+              [
+                "Kenya",
+                "Brand Global Ltd",
+                "Offshore",
+                "Ask, and check local rules"
+              ]
+            ]
+          },
+          "say": "Here's an illustrative example, not a real broker. The same brand in four countries. A user in the U K meets Brand U K Limited, regulated by the F C A, with the standard C F D, contract for difference, warning. In the E U, Brand E U Limited, regulated by CySEC. In South Africa, a local company regulated by the F S C A, so ask the broker about the warning. In Kenya, an offshore entity, so ask, and check local rules. Protections like leverage limits, negative balance protection and complaint routes depend on the entity, not the brand."
+        },
+        {
+          "v": "cards",
+          "h": "Passporting, offshore and reverse solicitation",
+          "p": "These three ideas explain most cross-border questions. Rules below are a rough guide at the time of writing; they differ by country and some are changing, so confirm with the regulator or an adviser.",
+          "more": "Reverse solicitation is narrow where it exists. European regulators have said that firms cannot rely on it when they or their partners actively market to clients. As an affiliate, your ad is active marketing, so an offshore broker that relies on users 'finding it themselves' may not be able to rely on that for your traffic. We are not certain how each African regulator treats these situations; when the answer is unclear, treat it as a no until you have advice.",
+          "d": [
+            "Passporting|An EU-licensed firm can serve other EU states after notifying. Not Africa",
+            "Offshore entity|Licensed in a small jurisdiction; may lack permission in your users' country",
+            "Reverse solicitation|Some regimes let a firm serve a client who came on their own initiative",
+            "Why ads break it|If you advertise to them, they did not come on their own"
+          ],
+          "say": "These three ideas explain most cross-border questions. Passporting: an E U-licensed firm can serve other E U states after notifying, but not Africa. Offshore entity: licensed in a small jurisdiction, and it may lack permission in your users' country. Reverse solicitation: some regimes let a firm serve a client who came on their own initiative. And here's why ads break it: if you advertise to them, they didn't come on their own. We're not certain how each African regulator treats this, so when it's unclear, treat it as a no until you have advice."
+        },
+        {
+          "v": "big",
+          "h": "In many places, promoting is itself regulated",
+          "p": "In the UK, a financial promotion must be made or approved by an authorised firm, and breaking that rule can be a criminal offence. Other countries have their own rules on who may promote investments. An affiliate can be caught by these rules, not only the broker.",
+          "more": "At the time of writing, the UK's rule sits in section 21 of the Financial Services and Markets Act 2000. Many countries have similar ideas in their securities or consumer protection laws, though the details differ. We are not certain of the exact promotion rules in each of our core African markets; check the regulator's website and, before you scale, get local advice.",
+          "d": {
+            "b": "You can be the one breaking the rule",
+            "s": "Promotion rules can apply to affiliates and influencers."
+          },
+          "say": "In many places, promoting is itself regulated. In the U K, a financial promotion must be made or approved by an authorised firm, and breaking that rule can be a criminal offence. Other countries have their own rules on who may promote investments. Look at the headline: you can be the one breaking the rule. Promotion rules can apply to affiliates and influencers, not only the broker. We're not certain of the exact rules in each of our core African markets, so check the regulator's website and get local advice before you scale."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: the cost of the wrong entity",
+          "p": "Example. You send 40 qualified FTDs at $65 each from a geo where the broker's entity turns out not to be permitted. The network withholds the payout for a non-permitted geo. Instead of a $600 profit, you are down $2,000 of spend.",
+          "more": "Example maths: 40 × $65 = $2,600 expected. $2,600 − $2,000 = $600 profit if paid. If withheld, the result is −$2,000. The figures are illustrative and many networks would not behave this way, but most terms give them the right to refuse payment for traffic that breaks rules. Users also lose: they may have signed with an entity that gives them fewer protections than they assumed.",
+          "d": [
+            "40 × $65",
+            "−",
+            "$2,000 spend",
+            "=",
+            "$600 at risk"
+          ],
+          "say": "Here's an example of the cost of the wrong entity. You send forty qualified F T Ds, first time deposits, at sixty five dollars each, so two thousand six hundred dollars expected. Your spend was two thousand dollars, so that's six hundred dollars profit if paid. But the broker's entity turns out not to be permitted in that geo, and the network withholds the payout. Instead of six hundred dollars profit, you're down two thousand dollars. The figures are illustrative, but most terms let networks refuse payment for traffic that breaks rules. And users lose protections too."
+        },
+        {
+          "v": "flow",
+          "h": "Walkthrough: build an entity map",
+          "p": "Do this once per offer and keep it up to date. It takes under an hour and answers most questions a platform, network or adviser will ask you later.",
+          "d": [
+            "List your target geos",
+            "Get the entity per geo in writing",
+            "Find each on its regulator's register",
+            "Ask if it may market in the geo",
+            "Record it in your entity map",
+            "Recheck monthly"
+          ],
+          "say": "Here's how to build an entity map. Follow the flow. List your target geos. Get the entity per geo in writing. Find each one on its regulator's register. Ask if it may market in the geo. Record it in your entity map. And recheck monthly. Do this once per offer and keep it up to date. It takes under an hour, and it answers most questions a platform, network or adviser will ask you later."
+        },
+        {
+          "v": "screen",
+          "h": "Your entity map",
+          "p": "Keep one sheet per offer. Every live geo needs a verified entity and a written answer on marketing permission. A blank cell means that geo does not go live. Screen is an illustrative mock-up.",
+          "d": {
+            "kind": "browser",
+            "url": "sheet.example/entity-map",
+            "title": "Entity map: Offer 812",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Geo",
+                  "Entity",
+                  "Register",
+                  "May market?"
+                ],
+                "rows": [
+                  [
+                    "ZA",
+                    "Brand ZA (Pty) Ltd",
+                    "FSCA, checked 02 Oct",
+                    "Yes, in writing"
+                  ],
+                  [
+                    "KE",
+                    "Brand Global Ltd",
+                    "Offshore only",
+                    "Unclear"
+                  ],
+                  [
+                    "NG",
+                    "Not named yet",
+                    "-",
+                    "-"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Only ZA may go live. KE and NG stay off until answered."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "This is an illustrative mock-up of an entity map, one sheet per offer. Look at the rows. South Africa: the local entity, checked on the F S C A register, and yes in writing, it may market. Kenya: an offshore entity only, and marketing permission unclear. Nigeria: no entity named yet. The note at the bottom says it all: only South Africa may go live. Kenya and Nigeria stay off until answered. A blank cell means that geo doesn't go live."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "These mistakes all come from treating a famous brand name as proof. Brands are marketing. Entities are what regulators license and what users sign contracts with.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "'It is a big brand, so it is fine'",
+                "Assume an EU licence covers Africa",
+                "Rely on 'users find us themselves'",
+                "Check once and never again"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Verify the entity for each geo",
+                "Ask about permission in your users' country",
+                "Remember your ads are active marketing",
+                "Recheck the map every month"
+              ]
+            }
+          },
+          "say": "These mistakes all come from treating a famous brand name as proof. On the left: it's a big brand so it's fine, assuming an E U licence covers Africa, relying on users finding us themselves, and checking once and never again. On the right, the fixes: verify the entity for each geo, ask about permission in your users' country, remember your ads are active marketing, and recheck the map every month. Brands are marketing. Entities are what regulators license and what users sign contracts with."
+        },
+        {
+          "v": "quote",
+          "h": "From the founder",
+          "p": "Dchessking on the question he asks before any new trading geo. It is a simple test, and it saves weeks of spend on campaigns that can never be defended.",
+          "d": "If I cannot explain to a regulator why this broker may serve this user, I am not ready to buy the click.",
+          "by": "dchessking",
+          "say": "Here's the simple test Dchessking uses before any new trading geo. It saves weeks of spend on campaigns that can never be defended. Here's how he puts it: If I cannot explain to a regulator why this broker may serve this user, I am not ready to buy the click."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance warning",
+          "p": "This lesson is a map of what to ask, not legal advice. Regulators and laws change, and some African markets are reforming their rules on trading and crypto right now.",
+          "d": {
+            "kind": "warn",
+            "text": "Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country and the broker's licence for that country before you run. Education, not legal or financial advice."
+          },
+          "say": "This lesson is a map of what to ask, not legal advice. Regulators and laws change, and some African markets are reforming their trading and crypto rules right now. Read the warning: trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country, and the broker's licence for that country before you run. Education, not legal or financial advice."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules: cross-border marketing",
+          "p": "Starting rules to adapt with your adviser. They turn the ideas in this lesson into stop lines you can apply in minutes for each geo.",
+          "d": [
+            "No entity named for the geo = no-go",
+            "Entity not found on its regulator's register = no-go",
+            "Marketing permission in the geo unclear = treat as no until answered in writing",
+            "Offer relies on reverse solicitation for your traffic = no-go",
+            "Recheck every live geo monthly; any change = pause that geo until reverified"
+          ],
+          "say": "These starting rules turn the lesson into stop lines you can apply in minutes. No entity named for the geo means no-go. Entity not found on its regulator's register, no-go. Marketing permission unclear, treat it as no until answered in writing. An offer that relies on reverse solicitation for your traffic, no-go. And recheck every live geo monthly. Any change means pause that geo until it's reverified. Adapt these with your adviser."
+        }
+      ],
+      "takeaways": [
+        "A licence to operate is not permission to market in every country.",
+        "One brand can mean several entities with different protections.",
+        "Your ads are active marketing, which removes the 'users came on their own' argument.",
+        "Keep an entity map and treat unclear answers as no."
+      ],
+      "action": "Build an entity map for one offer you run or plan to run. Fill every geo you target, and send the network a written question for every blank cell.",
+      "glossary": [
+        {
+          "term": "Authorisation",
+          "def": "Permission from a regulator to carry out a regulated business, such as dealing in CFDs."
+        },
+        {
+          "term": "Financial promotion",
+          "def": "Any communication that invites people to engage in investment activity. Regulated in many countries."
+        },
+        {
+          "term": "Passporting",
+          "def": "An EU system that lets a firm licensed in one member state serve others after notifying."
+        },
+        {
+          "term": "Reverse solicitation",
+          "def": "Serving a client who approached the firm on their own initiative, without marketing. Narrow where allowed."
+        },
+        {
+          "term": "Entity map",
+          "def": "A sheet listing which licensed company serves each geo and whether it may market there."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A broker holds a real CySEC licence. Does that mean you may advertise it to users in Ghana?",
+          "options": [
+            "Yes, any licence covers all countries",
+            "Yes, if the payout is approved",
+            "Not necessarily; check which entity serves Ghana and whether it may market there",
+            "Only on Telegram"
+          ],
+          "answer": 2,
+          "why": "A licence covers the entity's home permissions. Marketing to another country depends on that country's rules."
+        },
+        {
+          "q": "Why does your ad weaken a reverse solicitation argument?",
+          "options": [
+            "Ads are always illegal",
+            "Because the user did not approach the firm on their own initiative",
+            "Because ads are paid in dollars",
+            "It does not; ads have no effect"
+          ],
+          "answer": 1,
+          "why": "Reverse solicitation needs the client's own initiative. Active marketing is the opposite."
+        },
+        {
+          "q": "Example: 30 qualified FTDs at $70, spend $1,800. The payout is withheld for a non-permitted geo. What is your result?",
+          "options": [
+            "+$300",
+            "+$2,100",
+            "$0",
+            "−$1,800"
+          ],
+          "answer": 3,
+          "why": "If nothing is paid, you lose the full $1,800 of spend."
+        },
+        {
+          "q": "Which fact belongs in an entity map?",
+          "options": [
+            "The broker's slogan",
+            "The entity that serves each geo and whether it may market there",
+            "Your favourite creative",
+            "The broker's logo colours"
+          ],
+          "answer": 1,
+          "why": "The map records the licensed entity per geo and its marketing permission."
+        },
+        {
+          "q": "Marketing permission for Kenya is 'probably fine' according to a manager's voice note. What does the rule say?",
+          "options": [
+            "Treat as no until answered in writing",
+            "Go live with a small budget",
+            "Go live, a voice note is enough",
+            "Ask users in Kenya"
+          ],
+          "answer": 0,
+          "why": "Unclear answers count as no until you have a written, specific answer."
+        }
+      ],
+      "say_intro": "A broker can hold a real licence and still not be allowed to market to people in your country. In this lesson you'll learn how licences, promotion rules and cross-border marketing fit together, and you'll build an entity map for every geo you target.",
+      "say_outro": "A licence to operate is not a licence to market, and your ad decides which rules apply, so verify the entity and the marketing permission for every geo. Your task: build an entity map for one offer you run or plan to run, fill every geo you target, and send the network a written question for every blank cell. Now take the quiz."
+    },
+    {
+      "slug": "verifying-brokers-and-exchanges",
+      "title": "Verifying brokers and exchanges",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can check a broker or exchange on a register, including status, permissions and websites.",
+        "You can use warning lists to spot unlicensed and clone firms.",
+        "You can tell an AML registration from a full licence for crypto firms.",
+        "You can apply exact verification gates before sending traffic."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why a network listing is not proof",
+          "p": "Networks list offers; they do not guarantee them. Clone firms copy real brokers' names and licence numbers, and unlicensed firms can pay affiliates well for months before users find they cannot withdraw. Ten minutes on a register protects your users, your account and your payouts.",
+          "d": {
+            "b": "Verify it yourself, every time",
+            "s": "A listing, a logo or a licence number on a website proves nothing."
+          },
+          "say": "Networks list offers, they don't guarantee them. Clone firms copy real brokers' names and licence numbers, and unlicensed firms can pay affiliates well for months before users find they can't withdraw. Look at the headline: verify it yourself, every time. A listing, a logo, or a licence number on a website proves nothing. Ten minutes on a register protects your users, your account and your payouts."
+        },
+        {
+          "v": "flow",
+          "h": "The verification order",
+          "p": "Do the checks in this order. Each one can end the process, so later checks are not wasted on a firm that fails early. Save a dated screenshot at each step as you go.",
+          "d": [
+            "Get the legal name",
+            "Search the register",
+            "Check status and permissions",
+            "Match websites and contacts",
+            "Search warning lists",
+            "Record and date it"
+          ],
+          "say": "Do the checks in this order. Follow the flow. Get the legal name. Search the register. Check status and permissions. Match websites and contacts. Search warning lists. Then record and date it. Each check can end the process, so later checks aren't wasted on a firm that fails early. Save a dated screenshot at each step as you go."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: a deeper register check",
+          "p": "Registers show more than a yes or no. Read the status, the permissions and the websites the firm has told the regulator about. Screens are illustrative mock-ups; every register looks different.",
+          "d": {
+            "steps": [
+              {
+                "title": "Search the legal name",
+                "text": "Use the entity name from the client agreement, not the brand name on the ad.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "regulator.example/register",
+                  "title": "Register search",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Firm name",
+                      "value": "Example Markets Ltd"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Search"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Read the status",
+                "text": "Look for authorised or licensed. Suspended, revoked or no longer authorised means stop.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "regulator.example/firm/12345",
+                  "title": "Example Markets Ltd",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Status",
+                      "value": "Authorised"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Since",
+                      "value": "2014"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Read the permissions",
+                "text": "Check the firm may deal in the product you will promote, for example CFDs, and with retail clients.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "regulator.example/firm/12345/permissions",
+                  "title": "Permissions",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Activity",
+                        "Clients"
+                      ],
+                      "rows": [
+                        [
+                          "Dealing in CFDs",
+                          "Retail, professional"
+                        ],
+                        [
+                          "Holding client money",
+                          "Yes"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Match the websites",
+                "text": "Compare the domains and contacts on the register with the offer's landing page.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "regulator.example/firm/12345/names",
+                  "title": "Trading names and websites",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Website",
+                      "value": "examplemarkets.example"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Offer lands on examplemarkets-pro.example: not listed. Ask."
+                    }
+                  ],
+                  "highlight": 1
+                }
+              }
+            ]
+          },
+          "say": "Registers show more than a yes or no. These screens are illustrative mock-ups. Tap Next to follow each step. First, search the legal name, using the entity name from the client agreement, not the brand on the ad. Second, read the status. Look for authorised or licensed. Suspended, revoked, or no longer authorised means stop. Third, read the permissions, and check the firm may deal in your product, for example C F Ds, contracts for difference, and with retail clients. Fourth, match the websites and contacts on the register with the offer's landing page."
+        },
+        {
+          "v": "cards",
+          "h": "What register statuses mean",
+          "p": "Wording differs by regulator, but these are the common meanings. If you are unsure what a status means, read the regulator's help page or ask them; most publish a short guide.",
+          "d": [
+            "Authorised or licensed|May carry out the listed activities",
+            "Suspended|Temporarily not allowed. Stop",
+            "Revoked or no longer authorised|Licence ended. Stop",
+            "Registered for AML only|Not the same as a full licence",
+            "Tied agent or appointed representative|Acts under another firm's licence",
+            "Not found|Treat as unlicensed until proven"
+          ],
+          "say": "Here's what register statuses usually mean. Wording differs by regulator. Authorised or licensed, may carry out the listed activities. Suspended, temporarily not allowed, so stop. Revoked or no longer authorised, the licence ended, so stop. Registered for A M L, anti-money-laundering, only, which is not the same as a full licence. Tied agent or appointed representative, acting under another firm's licence. And not found, treat it as unlicensed until proven. If unsure, read the regulator's help page or ask them."
+        },
+        {
+          "v": "cards",
+          "h": "Warning lists and where to look",
+          "p": "Regulators publish lists of firms they believe are unlicensed or are clones. Search the brand name, the legal name and the domain. Lists are not complete, so a clean search is a pass, not a guarantee.",
+          "d": [
+            "FCA Warning List|UK regulator's list of unauthorised and clone firms",
+            "CySEC warnings|Cyprus regulator's investor alerts",
+            "IOSCO I-SCAN|Searches warnings from many regulators at once",
+            "Local regulators|SEC Nigeria, CMA Kenya, FSCA, SEC Ghana alerts",
+            "Court and news|Search the name plus 'withdrawal' or 'scam'"
+          ],
+          "say": "Regulators publish lists of firms they believe are unlicensed or clones. Look at the cards. The F C A Warning List, the U K regulator's list. CySEC warnings, the Cyprus regulator's investor alerts. IOSCO I-SCAN, which searches warnings from many regulators at once. Local regulators, like S E C Nigeria, C M A Kenya, the F S C A, and S E C Ghana alerts. And court and news, searching the name plus withdrawal or scam. Search the brand, legal name and domain. Lists aren't complete, so a clean search is a pass, not a guarantee."
+        },
+        {
+          "v": "compare",
+          "h": "Clone firm versus the real firm",
+          "p": "A clone uses a real firm's name and licence number but its own website and contact details. The giveaway is almost always a mismatch between what the register shows and what the offer page shows.",
+          "d": {
+            "a": {
+              "title": "Clone signs",
+              "items": [
+                "Domain not listed on the register",
+                "Gmail or messaging-app contact only",
+                "Phone and address differ from register",
+                "Very new website for an old firm"
+              ]
+            },
+            "b": {
+              "title": "Real firm signs",
+              "items": [
+                "Domain listed or confirmed by the firm",
+                "Company email on the listed domain",
+                "Contacts match the register",
+                "Consistent history"
+              ]
+            }
+          },
+          "say": "A clone uses a real firm's name and licence number, but its own website and contacts. On the left, clone signs: a domain not listed on the register, a Gmail or messaging-app contact only, a phone and address that differ from the register, and a very new website for an old firm. On the right, real firm signs: a domain listed or confirmed by the firm, company email on that domain, contacts that match, and a consistent history. The giveaway is almost always a mismatch between the register and the offer page."
+        },
+        {
+          "v": "code",
+          "h": "Check a domain's age",
+          "p": "A firm authorised for ten years with a website registered three weeks ago is a clone warning sign. A WHOIS lookup shows when a domain was created. Many free WHOIS websites do the same if you do not use a terminal.",
+          "d": {
+            "lang": "bash",
+            "text": "whois examplemarkets-pro.example | grep -i 'creation date'\n# Creation Date: 2026-09-13",
+            "note": "Illustrative. Privacy services hide owners, but creation dates usually show."
+          },
+          "say": "A firm authorised for ten years with a website registered three weeks ago is a clone warning sign. A who is lookup shows when a domain was created. You can see the command on screen, and in this illustrative result, the creation date is very recent. If you don't use a terminal, many free who is websites do the same. Privacy services hide owners, but creation dates usually show."
+        },
+        {
+          "v": "stat",
+          "h": "Worked example: one number that ends a check",
+          "p": "Example. The register says the firm has been authorised since 2014. The domain on the offer was created 21 days ago and is not listed on the register. That single mismatch is enough to stop until the firm confirms the domain through its listed contacts.",
+          "d": {
+            "n": 21,
+            "pre": "",
+            "suf": " days",
+            "dec": 0,
+            "label": "age of the offer's domain",
+            "note": "Example. Firm authorised since 2014."
+          },
+          "say": "Here's one number that ends a check. In this example, the register says the firm has been authorised since twenty fourteen. But the domain on the offer was created twenty one days ago, the number on screen, and it isn't listed on the register. That single mismatch is enough to stop, until the firm confirms the domain through its listed contacts."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: a verification sheet",
+          "p": "Example for one fictional broker. Each line is pass or fail, and every line is a gate. Seven passes and one fail is a fail.",
+          "more": "Example result: one failed gate, so the offer does not go live. Your next step is to write to the firm using the email or phone number on the register, not the one on the offer page, and ask whether the domain is theirs. If they confirm in writing, record it and recheck. If they deny it or do not reply, report the clone to the regulator and tell your network.",
+          "d": {
+            "cols": [
+              "Check",
+              "Result",
+              "Pass?"
+            ],
+            "rows": [
+              [
+                "Legal name on agreement",
+                "Example Markets Ltd",
+                "Yes"
+              ],
+              [
+                "Found on register",
+                "Yes",
+                "Yes"
+              ],
+              [
+                "Status",
+                "Authorised",
+                "Yes"
+              ],
+              [
+                "Permission for CFDs, retail",
+                "Yes",
+                "Yes"
+              ],
+              [
+                "Offer domain listed",
+                "No, 21 days old",
+                "No"
+              ],
+              [
+                "Warning lists",
+                "None found",
+                "Yes"
+              ]
+            ]
+          },
+          "say": "This is an example verification sheet for one fictional broker. Read down the pass column. Legal name, yes. Found on register, yes. Status authorised, yes. Permission for C F Ds with retail clients, yes. Warning lists, none found, yes. But the offer domain isn't listed and is twenty one days old, so no. Every line is a gate. Seven passes and one fail is a fail. Next, write to the firm using contacts on the register, not the offer page. If they deny it or don't reply, report the clone to the regulator and tell your network."
+        },
+        {
+          "v": "cards",
+          "h": "Crypto exchanges: extra checks",
+          "p": "Crypto firms are regulated differently in each country, and many regimes are new. The checks below are a starting list at the time of writing; confirm the current rules for your geo.",
+          "more": "For example, at the time of writing the UK's FCA keeps a register of crypto firms registered for anti-money-laundering purposes, and says that registration does not mean the firm is authorised for other activities or that users are protected. South Africa treats crypto assets as financial products and requires crypto asset service providers to hold a licence. Other African markets are building their frameworks now; check the current position before you promote any exchange.",
+          "d": [
+            "Licence or registration|Know which one the law requires in the geo",
+            "AML registration|In some places this is registration only, not full authorisation",
+            "Platform permission|Many crypto ads need prior written permission",
+            "Custody|Who holds users' assets and where",
+            "Proof of reserves|Helpful, but not a guarantee or an audit"
+          ],
+          "say": "Crypto firms are regulated differently in each country, and many regimes are new. Here's a starting list. Licence or registration, know which the law requires in the geo. A M L registration, which in some places is registration only, not full authorisation. Platform permission, since many crypto ads need prior written permission. Custody, who holds users' assets and where. And proof of reserves, helpful, but not a guarantee or an audit. Confirm the current rules for your geo before you promote any exchange."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "Most verification failures happen because a buyer checked something, just not the right thing. Each fix below closes a gap clone firms use. Check your last verification against the left column.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Search the brand, not the legal name",
+                "Trust the licence number on the site",
+                "Stop at 'found on register'",
+                "Contact the firm through the offer page"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Search the entity from the agreement",
+                "Look it up yourself on the register",
+                "Read status, permissions and websites",
+                "Use contacts listed on the register"
+              ]
+            }
+          },
+          "say": "Most verification failures happen because a buyer checked something, just not the right thing. On the left, the mistakes: searching the brand, not the legal name, trusting the licence number on the site, stopping at found on register, and contacting the firm through the offer page. On the right, the fixes: search the entity from the agreement, look it up yourself on the register, read status, permissions and websites, and use contacts listed on the register. Check your last verification against the left column."
+        },
+        {
+          "v": "partner",
+          "h": "Trading partners we list",
+          "p": "These are the trading partners listed by VooSquare. Listing is a starting point, not a verification. Run the full check in this lesson on every offer and every geo, whoever the partner is.",
+          "d": {
+            "vertical": "trading",
+            "note": "Ask for the legal entity per geo and confirm its domain appears on, or is confirmed through, the register."
+          },
+          "say": "These are the trading partners listed by VooSquare. A listing is a starting point, not a verification. Run the full check in this lesson on every offer and every geo, whoever the partner is. As the note says, ask for the legal entity per geo, and confirm its domain appears on, or is confirmed through, the register."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance warning",
+          "p": "Sending traffic to an unlicensed or clone firm can cost users their savings. If you find a clone, stop, report it to the regulator through its official channel and tell your network in writing.",
+          "d": {
+            "kind": "warn",
+            "text": "Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country and the broker's licence for that country before you run. Education, not legal or financial advice."
+          },
+          "say": "Sending traffic to an unlicensed or clone firm can cost users their savings. If you find a clone, stop, report it to the regulator through its official channel, and tell your network in writing. Read the warning: trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country, and the broker's licence for that country before you run. Education, not legal or financial advice."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules: verification gates",
+          "p": "Starting rules to adapt with your adviser. Every line is a gate. One fail means no traffic until it is fixed and rechecked. Write the results in your offer folder so anyone on the team can see why an offer is live.",
+          "d": [
+            "Entity not found on its regulator's register = no-go",
+            "Status other than authorised or licensed = no-go",
+            "Offer domain not listed and not confirmed via register contacts = no-go",
+            "Any match on a warning list = no-go and report",
+            "Crypto firm without the licence or registration the geo requires = no-go",
+            "Recheck every live offer monthly and save a dated screenshot"
+          ],
+          "say": "These are your verification gates, starting rules to adapt with your adviser. Entity not on its regulator's register, no-go. Status other than authorised or licensed, no-go. Offer domain not listed and not confirmed through register contacts, no-go. Any match on a warning list, no-go, and report it. A crypto firm without the licence or registration the geo requires, no-go. And recheck every live offer monthly with a dated screenshot. One fail means no traffic until it's fixed and rechecked."
+        }
+      ],
+      "takeaways": [
+        "Verify the legal entity yourself on the regulator's register.",
+        "Read status, permissions and listed websites, not just 'found'.",
+        "Search warning lists and check domain age to catch clones.",
+        "For crypto, know whether the geo needs a licence or a registration, and which the firm holds."
+      ],
+      "action": "Run the full verification sheet on one broker or exchange you plan to promote. Save dated screenshots of the register, the warning list searches and the WHOIS result in your offer folder.",
+      "glossary": [
+        {
+          "term": "Register",
+          "def": "A regulator's official public list of firms it licenses or registers, with status and permissions."
+        },
+        {
+          "term": "Clone firm",
+          "def": "A fraud that copies a real firm's name and licence details but uses its own website and contacts."
+        },
+        {
+          "term": "Warning list",
+          "def": "A regulator's published list of firms it believes are unlicensed, clones or scams."
+        },
+        {
+          "term": "WHOIS",
+          "def": "A lookup that shows when and, sometimes, by whom a domain name was registered."
+        },
+        {
+          "term": "AML registration",
+          "def": "Registration for anti-money-laundering purposes only. In some countries it is not full authorisation."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What name should you search on the register?",
+          "options": [
+            "The brand name on the ad",
+            "The legal entity name from the client agreement",
+            "The network's name",
+            "The manager's name"
+          ],
+          "answer": 1,
+          "why": "Registers list legal entities. Brands can cover several entities, and clones copy brand names."
+        },
+        {
+          "q": "A firm is on the register with status 'no longer authorised'. What do you do?",
+          "options": [
+            "Stop; the licence has ended",
+            "Run a small test",
+            "Use an older screenshot",
+            "Ask users to check"
+          ],
+          "answer": 0,
+          "why": "Only an authorised or licensed status passes the gate."
+        },
+        {
+          "q": "The register lists examplemarkets.example. The offer lands on examplemarkets-pro.example, created last month. Best next step?",
+          "options": [
+            "Run it; the names are close",
+            "Confirm with the firm using contacts listed on the register, and do not run until confirmed",
+            "Ask the offer page's live chat",
+            "Report the network to the police"
+          ],
+          "answer": 1,
+          "why": "An unlisted new domain is a clone sign. Confirm through the register's contacts."
+        },
+        {
+          "q": "What does a clean search on a warning list mean?",
+          "options": [
+            "The firm is licensed",
+            "The firm is safe",
+            "One check passed; it is not a guarantee",
+            "You can skip the register"
+          ],
+          "answer": 2,
+          "why": "Warning lists are incomplete. Treat a clean result as one pass among several gates."
+        },
+        {
+          "q": "Your verification sheet shows 7 passes and 1 fail. What is the result?",
+          "options": [
+            "Pass, 7 out of 8 is good",
+            "Pass with a smaller budget",
+            "Retest next month",
+            "Fail: every line is a gate"
+          ],
+          "answer": 3,
+          "why": "Each check is a gate, so one fail stops the offer until it is fixed."
+        }
+      ],
+      "say_intro": "A network listing isn't proof that a broker is real or licensed. In this lesson you'll check a broker or exchange on a register, use warning lists to spot clone firms, and apply exact verification gates before you send any traffic.",
+      "say_outro": "Verify it yourself every time: legal name, register status, permissions, websites and warning lists, with every line as a gate. Your task: run the full verification sheet on one broker or exchange you plan to promote, and save dated screenshots of the register, the warning list searches and the who is result in your offer folder. Now take the quiz."
+    },
+    {
+      "slug": "risk-warnings-that-work",
+      "title": "Risk warnings that people actually see",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can tell required wording from platform and broker requirements and your own honest lines.",
+        "You can place a warning correctly in static, video, carousel, lander, Telegram and influencer formats.",
+        "You can explain what a loss percentage means in a cohort of real users.",
+        "You can keep warnings current and translated with a simple routine."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why a hidden warning does not count",
+          "p": "Regulators often judge whether a warning is prominent, not only whether it exists. A warning in grey text below the fold, or cut off on mobile, can fail a review even if it is technically present. A warning people see also brings you users who understand the risk.",
+          "d": {
+            "b": "Prominent, not just present",
+            "s": "If people cannot see it, it does not protect them or you."
+          },
+          "say": "Regulators often judge whether a warning is prominent, not only whether it exists. Look at the headline: prominent, not just present. A warning in grey text below the fold, or cut off on mobile, can fail a review even if it's technically there. If people can't see it, it doesn't protect them or you. And a warning people see also brings you users who understand the risk."
+        },
+        {
+          "v": "cards",
+          "h": "Four sources of warning text",
+          "p": "Several parties may require a warning, and they can ask for different things. Collect all of them for each geo and format before you design anything. Where none is required, add your own honest line anyway.",
+          "d": [
+            "Regulator|Fixed wording in some regions, such as UK and EU CFDs",
+            "Platform|Disclaimers some ad platforms require",
+            "Broker|Lines your agreement says you must show",
+            "Your own|A plain line when nothing is required"
+          ],
+          "say": "Several parties may require a warning, and they can ask for different things. Look at the cards. The regulator, with fixed wording in some regions, such as U K and E U C F Ds, contracts for difference. The platform, with disclaimers some ad platforms require. The broker, with lines your agreement says you must show. And your own, a plain line when nothing is required. Collect all of them for each geo and format before you design anything."
+        },
+        {
+          "v": "code",
+          "h": "Example: the UK crypto risk warning",
+          "p": "At the time of writing, promotions of many crypto assets to UK consumers must carry a set risk warning. Check the FCA's current rules before using it; wording and formats can change, and other countries have their own requirements.",
+          "d": {
+            "lang": "text",
+            "text": "Don't invest unless you're prepared to lose all the money you invest. This is a high-risk investment and you should not expect to be protected if something goes wrong. Take 2 mins to learn more.",
+            "note": "UK wording at the time of writing. 'Take 2 mins to learn more' links to a risk summary."
+          },
+          "say": "At the time of writing, promotions of many crypto assets to U K consumers must carry a set risk warning. Here's the wording on screen, read word for word: Don't invest unless you're prepared to lose all the money you invest. This is a high-risk investment and you should not expect to be protected if something goes wrong. Take two mins to learn more. That last part links to a risk summary. Check the F C A's current rules before using it, because wording can change."
+        },
+        {
+          "v": "table",
+          "h": "Where the warning goes in each format",
+          "p": "Our starting placement rules, at the time of writing. Required rules for your geo or platform come first; where they say more, follow them. Where nothing is required, these keep you honest and usually pass review.",
+          "d": {
+            "cols": [
+              "Format",
+              "Placement"
+            ],
+            "rows": [
+              [
+                "Static image",
+                "On the image, readable on a phone, and in the text"
+              ],
+              [
+                "Video",
+                "On screen for the whole clip"
+              ],
+              [
+                "Carousel",
+                "On every card"
+              ],
+              [
+                "Lander",
+                "Above the fold and next to the button"
+              ],
+              [
+                "Telegram post",
+                "In the post itself, not only pinned"
+              ],
+              [
+                "Influencer content",
+                "On screen and in the caption"
+              ]
+            ]
+          },
+          "say": "Here are our starting placement rules, at the time of writing. On a static image, put it on the image, readable on a phone, and in the text. In video, on screen for the whole clip. In a carousel, on every card. On a lander, above the fold and next to the button. In a Telegram post, inside the post itself, not only pinned. And in influencer content, on screen and in the caption. Required rules for your geo or platform come first."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: what the percentage means",
+          "p": "Example. A broker's published figure is 72% of retail CFD accounts losing money. If you send 100 users who open accounts, about 72 of them would be expected to lose money if they are like the broker's other clients. Write your funnel knowing that.",
+          "more": "Example maths: 100 × 72% = 72. This is not a prediction for any one person, and it is the broker's figure, not yours. Use it to keep your messages honest: you are inviting people to learn about a product that most retail users lose money on. That is why education-led, demo-first funnels and plain risk lines are the right approach, and why income claims are both banned and wrong.",
+          "d": [
+            "100 accounts",
+            "×",
+            "72%",
+            "=",
+            "72 lose money"
+          ],
+          "say": "Here's what a loss percentage means. In this example, a broker's published figure is seventy two percent of retail C F D accounts losing money. If you send one hundred users who open accounts, about seventy two would be expected to lose money, if they're like the broker's other clients. It's not a prediction for any one person, and it's the broker's figure, not yours. Write your funnel knowing that. It's why education-led, demo-first funnels and plain risk lines are right, and why income claims are both banned and wrong."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: a warning band you can read",
+          "p": "Example of our house rule for static images. On a 1080 × 1350 image, reserve at least 10% of the height for the warning band. That is 135 pixels, enough for two lines that stay readable on a phone screen.",
+          "more": "This is our starting rule, not a regulator's rule. Some regions set their own size or prominence requirements, and the broker may give you a template. Test it by looking at the ad on a phone at normal distance. If you have to zoom to read the warning, it is too small, whatever the pixel count says.",
+          "d": [
+            "1,350 px tall",
+            "×",
+            "10%",
+            "=",
+            "135 px band"
+          ],
+          "say": "Here's our house rule for static images, as an example. On a ten eighty by thirteen fifty image, reserve at least ten percent of the height for the warning band. Thirteen fifty times ten percent is one hundred and thirty five pixels, enough for two lines that stay readable on a phone. This is our starting rule, not a regulator's rule. Test it on a phone at normal distance. If you have to zoom to read the warning, it's too small, whatever the pixel count says."
+        },
+        {
+          "v": "phone",
+          "h": "A lander with the warning above the fold",
+          "p": "On a phone, the first screen is all many users see. The warning sits next to the main button, in readable text, with the entity named. Example page, illustrative only.",
+          "d": {
+            "app": "browser",
+            "url": "learn.example/forex-basics",
+            "page": {
+              "h": "Learn how currency prices move",
+              "p": "Practise on a free demo first. CFDs are complex and carry a high risk of losing money rapidly due to leverage. [XX]% of retail accounts lose money with this provider. Example Markets Ltd, licensed by [regulator].",
+              "cta": "Open a demo account"
+            }
+          },
+          "say": "On a phone, the first screen is all many users see. In this illustrative example page, look at the text near the button. Practise on a free demo first. C F Ds are complex and carry a high risk of losing money rapidly due to leverage. Then the percentage of retail accounts that lose money with this provider, and the entity named with its regulator. The warning sits right next to the main button, in readable text."
+        },
+        {
+          "v": "compare",
+          "h": "Hidden versus prominent",
+          "p": "Each item on the left is technically a warning. Each one would likely fail a prominence test. The right side keeps the same words but puts them where people actually look.",
+          "d": {
+            "a": {
+              "title": "Hidden",
+              "items": [
+                "Grey 8px text at the page bottom",
+                "Shown for 1 second at the end of a video",
+                "Only in a pinned Telegram post",
+                "Cut off after 'See more'"
+              ]
+            },
+            "b": {
+              "title": "Prominent",
+              "items": [
+                "Next to the main button",
+                "On screen for the whole video",
+                "Inside every post",
+                "In the first lines of text"
+              ]
+            }
+          },
+          "say": "Compare hidden and prominent. Each item on the left is technically a warning: grey eight pixel text at the page bottom, shown for one second at the end of a video, only in a pinned Telegram post, or cut off after See more. Each would likely fail a prominence test. The right side keeps the same words but puts them where people look: next to the main button, on screen for the whole video, inside every post, and in the first lines of text."
+        },
+        {
+          "v": "cards",
+          "h": "Translating warnings",
+          "p": "Many of your users read best in their own language. A warning must be accurate in every language you run, and a loose translation can change its meaning.",
+          "d": [
+            "Ask the broker|Many have approved translations",
+            "Keep the number|The percentage stays exact",
+            "Languages|French for Cameroon; Swahili, Hausa, Yoruba, Pidgin, Zulu and more",
+            "Plain words|Short sentences, no jargon",
+            "Do not shorten|Unless a short form is approved"
+          ],
+          "say": "Many of your users read best in their own language, and a loose translation can change a warning's meaning. Look at the cards. Ask the broker, because many have approved translations. Keep the number, so the percentage stays exact. Languages include French for Cameroon, and Swahili, Hausa, Yoruba, Pidgin, Zulu and more. Use plain words, short sentences, no jargon. And don't shorten it, unless a short form is approved."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: check a warning before publishing",
+          "p": "Run this on every creative, including duplicates and small edits. Screens are illustrative; preview tools and names change, so check the current Ads Manager. It takes a few minutes per ad and catches most problems before a reviewer or a user does.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open the preview",
+                "text": "Open the ad preview for each placement you plan to use.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/preview",
+                  "title": "Ad preview",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Placement",
+                      "value": "Mobile feed"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Learn how currency prices move. CFDs carry a high risk of losing money... See more"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Find the warning",
+                "text": "Is the full warning visible without tapping? If it is cut, move it up or exclude the placement.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/preview",
+                  "title": "Ad preview",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Placement",
+                      "value": "Stories"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Warning band covered by the caption area. Fix needed."
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Match the broker's latest",
+                "text": "Compare the percentage and wording with the broker's most recent version.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Network manager",
+                  "subtitle": "online",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "Is 72% still the current figure for Example Markets?"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Updated last week to 71%. New file attached."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "say": "Run this check on every creative, including duplicates and small edits. Screens are illustrative, so check the current Ads Manager. Tap Next to follow each step. First, open the ad preview for each placement you plan to use. Second, find the warning. Is it fully visible without tapping? In the Stories example, the band is covered by the caption area, so fix it or exclude that placement. Third, match the broker's latest. In this chat, the figure was updated from seventy two to seventy one percent last week."
+        },
+        {
+          "v": "product",
+          "h": "Templates with the warning built in",
+          "p": "When you produce many creative variants, a fixed template with the warning band already in place stops it from being dropped. Whatever tool you use, check every export on a phone.",
+          "d": {
+            "slug": "vooads",
+            "why": "Build variants from a template that keeps the warning band in the same readable place."
+          },
+          "say": "When you produce many creative variants, a fixed template with the warning band already in place stops it from being dropped. Vooads is one option, building variants from a template that keeps the warning band in the same readable place. Whatever tool you use, check every export on a phone."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance warning",
+          "p": "A warning does not make a misleading ad acceptable. 'Earn $300 a day' with a risk warning underneath is still an income claim. Fix the message first, then add the warning.",
+          "d": {
+            "kind": "warn",
+            "text": "Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country and the broker's licence for that country before you run. Education, not legal or financial advice."
+          },
+          "say": "A warning doesn't make a misleading ad acceptable. Earn three hundred dollars a day, with a risk warning underneath, is still an income claim. Fix the message first, then add the warning. Read the warning on screen: trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country, and the broker's licence for that country before you run. Education, not legal or financial advice."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for warnings",
+          "p": "Starting rules to adapt. Apply them at creation and again at every weekly review, because figures and wording change. Put the quarterly reminder in your calendar today, so the check happens even in a busy month.",
+          "more": "In the UK and EU, at the time of writing, CFD providers update their loss percentage regularly, often each quarter. Ask your broker how often their figure changes and set a reminder to match.",
+          "d": [
+            "No warning wording for the geo and format = do not publish",
+            "Broker's figure updated = replace in every live ad within 7 days or pause them",
+            "Warning cut off in any placement = fix or exclude that placement",
+            "Translation not approved = do not run that language",
+            "Ask the broker for its latest figure at least every quarter"
+          ],
+          "say": "These are starting rules for warnings. No warning wording for the geo and format, don't publish. Broker's figure updated, replace it in every live ad within seven days, or pause them. Warning cut off in any placement, fix or exclude that placement. Translation not approved, don't run that language. And ask the broker for its latest figure at least every quarter. In the U K and E U, at the time of writing, C F D providers often update their figure each quarter. Put the reminder in your calendar today."
+        }
+      ],
+      "takeaways": [
+        "Regulators often judge prominence, not just presence.",
+        "Collect warning text from the regulator, platform and broker; add your own where none is required.",
+        "Place warnings where people look in every format, and check every placement on a phone.",
+        "Keep figures current and translations approved."
+      ],
+      "action": "Take your last three creatives and one lander. Check each on a phone for a visible, current warning. Fix or pause any that fail.",
+      "glossary": [
+        {
+          "term": "Risk warning",
+          "def": "A statement that explains the risk of a financial product, sometimes with set wording."
+        },
+        {
+          "term": "Prominence",
+          "def": "How visible a statement is in practice: size, contrast, position and timing."
+        },
+        {
+          "term": "Above the fold",
+          "def": "The part of a page visible on the first screen before scrolling."
+        },
+        {
+          "term": "Loss percentage",
+          "def": "The share of a provider's retail accounts that lost money over a recent period, published by the provider."
+        },
+        {
+          "term": "Approved translation",
+          "def": "A translation of a warning that the broker or regulator has confirmed is accurate."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Where should the warning go in a 20-second video ad?",
+          "options": [
+            "On the last frame only",
+            "In the comments",
+            "On screen for the whole clip",
+            "Nowhere, video is exempt"
+          ],
+          "answer": 2,
+          "why": "Our starting rule is on screen throughout, so people who stop watching early still see it."
+        },
+        {
+          "q": "A broker's figure is 70%. You send 200 users who open accounts. How many would be expected to lose money if they are like the broker's clients?",
+          "options": [
+            "70",
+            "140",
+            "200",
+            "60"
+          ],
+          "answer": 1,
+          "why": "200 × 70% = 140. It is not a prediction for any one person."
+        },
+        {
+          "q": "Using our house rule, how tall should the warning band be on a 1080 × 1920 image?",
+          "options": [
+            "192 px",
+            "108 px",
+            "1,080 px",
+            "19 px"
+          ],
+          "answer": 0,
+          "why": "1,920 × 10% = 192 pixels."
+        },
+        {
+          "q": "Your ad says 'Earn $300 a day' with a full risk warning below. Is it acceptable?",
+          "options": [
+            "Yes, the warning covers it",
+            "Yes, if the warning is large",
+            "Only in some countries",
+            "No, it is still an income claim"
+          ],
+          "answer": 3,
+          "why": "A warning never fixes a misleading claim. Remove the claim first."
+        },
+        {
+          "q": "The broker updates its percentage. What do the starting rules say?",
+          "options": [
+            "Update it next year",
+            "Replace in every live ad within 7 days or pause them",
+            "Keep the old one, it was approved",
+            "Remove the percentage"
+          ],
+          "answer": 1,
+          "why": "An outdated figure is inaccurate. Update quickly or pause."
+        }
+      ],
+      "say_intro": "A risk warning only protects people if they can actually see it. In this lesson you'll learn where warning text comes from, where to place it in each format, what a loss percentage really means, and how to keep warnings current and translated.",
+      "say_outro": "Warnings must be prominent, not just present, accurate in every language, and matched to the broker's latest figure. Your task: take your last three creatives and one lander, check each on a phone for a visible, current warning, and fix or pause any that fail. Now take the quiz."
+    },
+    {
+      "slug": "platform-policies-for-trading-ads",
+      "title": "Platform policies for trading ads",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can find and read the current financial and crypto policies of the platforms you use.",
+        "You can explain what reviewers look at and why the landing page matters as much as the ad.",
+        "You can calculate what an account restriction costs and why circumvention is never the answer.",
+        "You can apply exact rules after a rejection or restriction."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the policy page is part of your plan",
+          "p": "Each ad platform writes its own rules for financial and crypto ads, and they change. An account restricted for a policy breach can take weeks to recover, if it recovers at all. Reading the current policy before every new campaign type costs minutes; skipping it can cost the business.",
+          "d": {
+            "b": "Read the current policy, every time",
+            "s": "Last year's rule may not be this year's."
+          },
+          "say": "Each ad platform writes its own rules for financial and crypto ads, and they change. An account restricted for a policy breach can take weeks to recover, if it recovers at all. Look at the headline: read the current policy, every time. Last year's rule may not be this year's. Reading the policy before every new campaign type costs minutes. Skipping it can cost the business."
+        },
+        {
+          "v": "table",
+          "h": "Platform positions at the time of writing",
+          "p": "A rough guide only. We are not certain every line is current, and positions differ by country. Check each platform's current Help Center or advertising policies before relying on this table.",
+          "more": "Meta also lists initial coin offerings as prohibited at the time of writing, and asks financial services advertisers in some countries, such as the UK and Australia, to verify. We are not certain of the current list of countries or how CFDs are treated in each one. Google requires advertisers of complex speculative financial products to be verified in many countries, and its crypto rules vary by country. Treat every line as something to look up, not as the rule itself.",
+          "d": {
+            "cols": [
+              "Platform",
+              "Our understanding, check it"
+            ],
+            "rows": [
+              [
+                "Meta",
+                "Financial ads restricted; crypto often needs written permission or an accepted licence; binary options prohibited"
+              ],
+              [
+                "Google",
+                "Financial services verification in many countries; crypto rules by country; binary options prohibited"
+              ],
+              [
+                "TikTok",
+                "Financial trading ads heavily restricted; not certain of current rules"
+              ],
+              [
+                "Telegram Ads",
+                "Own policy; not certain of current rules"
+              ],
+              [
+                "Snapchat and others",
+                "Not certain; read the policy"
+              ]
+            ]
+          },
+          "say": "This table is a rough guide only, at the time of writing, and we're not certain every line is current. Our understanding: Meta restricts financial ads, crypto often needs written permission or an accepted licence, and binary options are prohibited. Google has financial services verification in many countries, crypto rules by country, and prohibits binary options. TikTok heavily restricts financial trading ads, but we're not certain of current rules. For Telegram Ads, Snapchat and others, we're not certain either. Treat every line as something to look up, not as the rule itself."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: find and save the current policy",
+          "p": "Do this before each new campaign type, product or geo. Screens are illustrative mock-ups; page names and menus change, so search the platform's Help Center for the current pages.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open the policy pages",
+                "text": "Search the Help Center for the financial products and cryptocurrency policies.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "help.example/policies",
+                  "title": "Advertising policies",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Search",
+                      "value": "financial products cryptocurrency"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Search"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Read the country notes",
+                "text": "Many rules differ by country. Read the section for each geo you target.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "help.example/policies/financial",
+                  "title": "Financial products and services",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "value": "Some countries require advertiser verification. See country list."
+                    },
+                    {
+                      "type": "button",
+                      "label": "Country requirements"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Save a dated copy",
+                "text": "Save the page as a PDF with today's date in your compliance folder.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "files.example/compliance/meta",
+                  "title": "Compliance folder",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "File",
+                      "value": "2026-10-04_meta_financial_policy.pdf"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Request permission if needed",
+                "text": "If the policy needs prior permission, apply through the official form with real documents.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/permissions",
+                  "title": "Request permission",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Category",
+                      "value": "Cryptocurrency"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Licence evidence",
+                      "value": "Upload"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Submit"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              }
+            ]
+          },
+          "say": "Do this before each new campaign type, product or geo. Screens are illustrative, and menus change. Tap Next to follow each step. First, open the policy pages, searching the Help Center for the financial products and cryptocurrency policies. Second, read the country notes for each geo you target, because many rules differ by country. Third, save a dated copy as a P D F in your compliance folder. Fourth, if the policy needs prior permission, apply through the official form with real documents."
+        },
+        {
+          "v": "cards",
+          "h": "What reviewers look at",
+          "p": "Reviews cover more than the ad text. Anything a user can reach from your ad, and your history as an advertiser, can be part of the decision. Fix the whole chain, not just the words.",
+          "d": [
+            "Ad text|Claims, promises, warnings",
+            "Image and video|Text on image, lifestyle bait, logos",
+            "Landing page|Claims, entity, warnings, products offered",
+            "Destination domain|History and consistency",
+            "Advertiser identity|Verification, page, past breaches",
+            "Targeting|Age, countries, sensitive audiences"
+          ],
+          "say": "Reviews cover more than the ad text. Look at the cards. The ad text, with its claims, promises and warnings. Image and video, including text on image, lifestyle bait and logos. The landing page, with its claims, entity, warnings and products. The destination domain, its history and consistency. Your advertiser identity, verification, page and past breaches. And targeting, including age, countries and sensitive audiences. Anything a user can reach from your ad can be part of the decision, so fix the whole chain."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: what a restriction costs",
+          "p": "Example. Your account spends $100 a day at a 20% return, about $20 a day of profit. A restriction stops it for 21 days. You lose about $420 of profit, before the cost of restarting learning and rebuilding.",
+          "more": "Example maths: 20% of $100 is $20. $20 × 21 = $420. Some restrictions are permanent, and then the loss is the whole future of that account, plus the pixel history and audiences built inside it. Figures are illustrative; your return will differ and is never guaranteed. The point is that a minute of policy reading is worth a great deal compared with any restriction.",
+          "d": [
+            "$20 profit a day",
+            "×",
+            "21 days",
+            "=",
+            "$420 lost"
+          ],
+          "say": "Here's what a restriction costs, as an example. Your account spends one hundred dollars a day at a twenty percent return, about twenty dollars a day of profit. A restriction stops it for twenty one days. Twenty dollars times twenty one is about four hundred and twenty dollars of lost profit, before the cost of restarting learning. Some restrictions are permanent, and then you lose the account's whole future. Figures are illustrative, and your return will differ and is never guaranteed."
+        },
+        {
+          "v": "compare",
+          "h": "After a rejection: the right way and the wrong way",
+          "p": "Rejections happen to careful advertisers too. What you do next decides whether the account stays healthy. Circumvention turns a single rejection into a permanent ban and can break the law.",
+          "d": {
+            "a": {
+              "title": "Wrong way",
+              "items": [
+                "Resubmit the same ad unchanged",
+                "Change words to dodge filters",
+                "Show reviewers a different page",
+                "Open new accounts to get around it"
+              ]
+            },
+            "b": {
+              "title": "Right way",
+              "items": [
+                "Read the reason and the policy",
+                "Fix the claim or the page honestly",
+                "Request a review once, with facts",
+                "Accept the decision if it stands"
+              ]
+            }
+          },
+          "say": "Rejections happen to careful advertisers too. What you do next decides whether the account stays healthy. On the left, the wrong way: resubmitting the same ad unchanged, changing words to dodge filters, showing reviewers a different page, and opening new accounts to get around it. On the right, the right way: read the reason and the policy, fix the claim or page honestly, request a review once with facts, and accept the decision if it stands. Circumvention turns a single rejection into a permanent ban and can break the law."
+        },
+        {
+          "v": "cards",
+          "h": "Targeting rules for trading ads",
+          "p": "Targeting is part of compliance. Starting rules at the time of writing; the platform's current rules and the broker's terms come first. Setting names change; check the current Ads Manager.",
+          "d": [
+            "Age|Adults only; follow the broker if it sets a higher age",
+            "Countries|Only geos where the entity may market",
+            "Sensitive audiences|Never target financial hardship or debt",
+            "Custom audiences|Only data you have consent to use",
+            "Lookalikes|Built from consented, compliant sources only"
+          ],
+          "say": "Targeting is part of compliance. These are starting rules at the time of writing, and the platform's current rules and the broker's terms come first. Age, adults only, and follow the broker if it sets a higher age. Countries, only geos where the entity may market. Sensitive audiences, never target financial hardship or debt. Custom audiences, only data you have consent to use. And lookalikes, built from consented, compliant sources only."
+        },
+        {
+          "v": "flow",
+          "h": "Before each new campaign type",
+          "p": "A short routine that catches most policy problems before a reviewer does. It takes about twenty minutes and should be repeated for each new product, geo or format.",
+          "d": [
+            "Read the current policy",
+            "Check account quality status",
+            "Get permission if required",
+            "Pre-check creatives and lander",
+            "Launch small",
+            "Watch rejections daily"
+          ],
+          "say": "Here's a short routine before each new campaign type. Follow the flow. Read the current policy. Check your account quality status. Get permission if required. Pre-check creatives and the lander. Launch small. And watch rejections daily. It takes about twenty minutes, and it catches most policy problems before a reviewer does. Repeat it for each new product, geo or format."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example: a rejection rate signal",
+          "p": "Example. You launch 10 ads and 3 are rejected for the same reason. That is a 30% rejection rate on one issue, a sign the problem is in your approach, not in one ad.",
+          "d": {
+            "kind": "example",
+            "text": "Example: 3 rejections ÷ 10 ads = 30%. Pause new launches, fix the shared cause in every ad and on the lander, then relaunch."
+          },
+          "say": "Here's a rejection rate signal, as an example. You launch ten ads, and three are rejected for the same reason. Three divided by ten is thirty percent on one issue. That's a sign the problem is in your approach, not in one ad. So pause new launches, fix the shared cause in every ad and on the lander, and then relaunch."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "These mistakes usually come from treating policy as something that applies to other people's ads. Platforms treat repeat breaches more seriously than first ones, so patterns matter.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Rely on what worked last year",
+                "Fix the ad but not the lander",
+                "Ignore account quality warnings",
+                "Copy competitors' risky ads"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Read the current policy each time",
+                "Fix the whole chain",
+                "Check status before every launch",
+                "Write your own compliant version"
+              ]
+            }
+          },
+          "say": "These mistakes usually come from treating policy as something that applies to other people's ads. On the left: relying on what worked last year, fixing the ad but not the lander, ignoring account quality warnings, and copying competitors' risky ads. On the right, the fixes: read the current policy each time, fix the whole chain, check status before every launch, and write your own compliant version. Platforms treat repeat breaches more seriously than first ones, so patterns matter."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance and uncertainty",
+          "p": "Platform policies change often and differ by country. We have tried to describe them accurately, but we are not certain every detail is current. When a line here and the platform's current page disagree, the platform's page wins.",
+          "d": {
+            "kind": "warn",
+            "text": "We are not certain the platform details in this lesson are current. Check each platform's Help Center and policy pages before relying on them. Never use cloaking, policy circumvention or new accounts to get around a decision. Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country and the broker's licence for that country before you run. Education, not legal or financial advice."
+          },
+          "say": "Platform policies change often and differ by country. We've tried to describe them accurately, but we're not certain every detail is current. When this lesson and the platform's current page disagree, the platform's page wins. Read the warning: never use cloaking, policy circumvention or new accounts to get around a decision. Trading ads usually need platform authorization and must follow local law in each geo. Check the current policies, your users' local law and the broker's licence before you run. Education, not legal or financial advice."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for policy events",
+          "p": "Starting rules to adapt. They make sure each policy event gets the same calm, honest response, whatever the pressure to keep spending. Write each event and your response in your compliance file with the date.",
+          "d": [
+            "Permission required and not granted = no-go",
+            "One rejection = read reason, fix, never resubmit unchanged",
+            "2+ rejections for the same reason in 7 days = pause launches and review every live ad and lander",
+            "Account restriction = stop spend, request review once with facts, never open new accounts to evade",
+            "Policy page changed since your saved copy = reread before any new launch"
+          ],
+          "say": "These starting rules make sure each policy event gets the same calm, honest response. Permission required and not granted, no-go. One rejection, read the reason and fix it, never resubmit unchanged. Two or more rejections for the same reason in seven days, pause launches and review every live ad and lander. An account restriction, stop spend, request review once with facts, and never open new accounts to evade. And if the policy page changed since your saved copy, reread it before any new launch. Log each event with the date."
+        }
+      ],
+      "takeaways": [
+        "Each platform has its own, changing rules for financial and crypto ads.",
+        "Reviewers look at the whole chain: ad, page, domain, identity and targeting.",
+        "Restrictions are expensive; circumvention makes them permanent and can be illegal.",
+        "Respond to rejections with fixes and one honest review request."
+      ],
+      "action": "Find, read and save today's financial and crypto policy pages for the platform you use most, including the country notes for your geos. Write three lines on what they require for your offer.",
+      "glossary": [
+        {
+          "term": "Advertiser verification",
+          "def": "A platform process that confirms who is behind financial ads, required in some countries."
+        },
+        {
+          "term": "Written permission",
+          "def": "Prior approval some platforms require before certain ads, such as crypto, may run."
+        },
+        {
+          "term": "Account quality",
+          "def": "A platform area that shows policy warnings and restrictions on an ad account. Names change."
+        },
+        {
+          "term": "Circumvention",
+          "def": "Trying to get around a platform's review or decision, such as cloaking or new accounts. Banned."
+        },
+        {
+          "term": "Rejection rate",
+          "def": "The share of submitted ads that are rejected in a period."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Your crypto exchange ad is rejected because permission is needed. What do you do?",
+          "options": [
+            "Rewrite it to avoid the word crypto",
+            "Apply for permission through the official process and wait",
+            "Run it from a new account",
+            "Show reviewers a blank page"
+          ],
+          "answer": 1,
+          "why": "Permission is the honest route. The others are circumvention."
+        },
+        {
+          "q": "Spend $150 a day at a 20% return. A 14-day restriction costs about how much profit?",
+          "options": [
+            "$420",
+            "$2,100",
+            "$300",
+            "$30"
+          ],
+          "answer": 0,
+          "why": "20% × $150 = $30 a day. $30 × 14 = $420."
+        },
+        {
+          "q": "Which is NOT usually part of an ad review?",
+          "options": [
+            "The landing page",
+            "Text on the image",
+            "The advertiser's history",
+            "Your personal phone wallpaper"
+          ],
+          "answer": 3,
+          "why": "Reviews cover the ad, page, domain, identity and targeting, not unrelated personal items."
+        },
+        {
+          "q": "3 of 12 new ads are rejected for the same reason in 5 days. What do the rules say?",
+          "options": [
+            "Resubmit all three",
+            "Ignore it, 9 passed",
+            "Pause launches and review every live ad and lander",
+            "Open a second account"
+          ],
+          "answer": 2,
+          "why": "Two or more rejections for one reason within 7 days means a shared cause to fix first."
+        },
+        {
+          "q": "Which statement about platform policies is correct?",
+          "options": [
+            "They are the same in every country",
+            "They never change",
+            "They differ by country and change; check the current pages",
+            "They only apply to big advertisers"
+          ],
+          "answer": 2,
+          "why": "Policies vary and change, which is why you read and save them before each new campaign type."
+        }
+      ],
+      "say_intro": "Every ad platform writes its own rules for financial and crypto ads, and they change. In this lesson you'll find and read the current policies, learn what reviewers look at, see what a restriction costs, and apply calm, honest rules after a rejection.",
+      "say_outro": "Read the current policy every time, fix the whole chain from ad to lander, and never circumvent a decision. Your task: find, read and save today's financial and crypto policy pages for the platform you use most, including the country notes for your geos, and write three lines on what they require for your offer. Now take the quiz."
+    },
+    {
+      "slug": "finfluencers-signals-and-copy-trading",
+      "title": "Finfluencers, signals and copy trading",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can place any piece of trading content on the line between education and advice.",
+        "You can explain why signals, copy trading and managed accounts carry licence and scam risks.",
+        "You can run the numbers on an influencer deal and judge it with the normal rules.",
+        "You can brief, review and record influencer content so it stays compliant."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why content can become regulated advice",
+          "p": "Teaching how markets work is education. Telling people what to buy, when and at what price starts to look like investment advice, and advice usually needs a licence. Signals channels, copy trading and 'we trade for you' offers sit close to that line or over it.",
+          "d": {
+            "b": "Education, not calls",
+            "s": "Tell people how markets work, never what to trade."
+          },
+          "say": "Teaching how markets work is education. Telling people what to buy, when, and at what price starts to look like investment advice, and advice usually needs a licence. Signals channels, copy trading and we trade for you offers sit close to that line, or over it. Look at the headline: education, not calls. Tell people how markets work, never what to trade."
+        },
+        {
+          "v": "table",
+          "h": "The line from education to advice",
+          "p": "A rough guide at the time of writing. Where something sits depends on the country and the details, so treat the right-hand column as a signal to check, not a ruling.",
+          "d": {
+            "cols": [
+              "Content",
+              "Typical position"
+            ],
+            "rows": [
+              [
+                "How leverage and spreads work",
+                "Education, usually fine with care"
+              ],
+              [
+                "Market news and general commentary",
+                "Care: no buy or sell steer"
+              ],
+              [
+                "'Buy gold now at 2,410'",
+                "Often regulated advice"
+              ],
+              [
+                "Copy trading links",
+                "May be regulated"
+              ],
+              [
+                "'Send money, we trade for you'",
+                "Needs a licence; common scam pattern"
+              ]
+            ]
+          },
+          "say": "Here's the line from education to advice, a rough guide at the time of writing. How leverage and spreads work is education, usually fine with care. Market news and general commentary needs care, with no buy or sell steer. A post like buy gold now at twenty four ten is often regulated advice. Copy trading links may be regulated. And send money, we trade for you needs a licence, and it's a common scam pattern. Treat the right column as a signal to check, not a ruling."
+        },
+        {
+          "v": "cards",
+          "h": "What regulators have said",
+          "p": "Examples at the time of writing. Regulators are paying more attention to social media promotion of trading. Check the current position for your geo. Expect more rules, not fewer.",
+          "more": "In 2024 the FCA brought criminal charges against several individuals over social media promotion of an unauthorised trading scheme, and it has published guidance on financial promotions on social media. ASIC has an information sheet on discussing financial products and services online. We are not certain whether SEC Nigeria, CMA Kenya, the FSCA, SEC Ghana or COSUMAF have issued specific influencer rules as of today; search their sites and ask an adviser before running influencer campaigns.",
+          "d": [
+            "UK FCA|Promotions need an authorised firm; has charged finfluencers",
+            "Australia ASIC|Guidance on discussing financial products online",
+            "General rule|Paid posts must be clearly labelled as ads",
+            "Africa|We are not certain of specific finfluencer rules; securities and advertising laws still apply"
+          ],
+          "say": "Regulators are paying more attention to social media promotion of trading. Examples at the time of writing. The U K's F C A says promotions need an authorised firm, and it has charged finfluencers. Australia's A S I C has guidance on discussing financial products online. The general rule: paid posts must be clearly labelled as ads. And in Africa, we're not certain of specific finfluencer rules, but securities and advertising laws still apply. Search the regulators' sites and ask an adviser before running influencer campaigns."
+        },
+        {
+          "v": "compare",
+          "h": "Rewrite: a signal post into an education post",
+          "p": "The education post still gives readers something useful and a reason to come back. It drops the call, adds the risk and points to practice on a demo.",
+          "d": {
+            "a": {
+              "title": "Signal post",
+              "items": [
+                "GOLD BUY NOW 2,410",
+                "TP 2,450, SL 2,395",
+                "Who's in? Easy pips today",
+                "Join VIP for more calls"
+              ]
+            },
+            "b": {
+              "title": "Education post",
+              "items": [
+                "What moves gold prices: 3 factors",
+                "How a stop loss works, with a demo example",
+                "Most retail CFD accounts lose money",
+                "Practise on a demo first"
+              ]
+            }
+          },
+          "say": "Here's how to rewrite a signal post into an education post. On the left, the signal post: gold buy now at twenty four ten, take profit twenty four fifty, stop loss twenty three ninety five, who's in, easy pips today, join V I P for more calls. On the right, the education post: what moves gold prices, three factors. How a stop loss works, with a demo example. Most retail C F D accounts lose money. Practise on a demo first. It still gives readers something useful, drops the call, and adds the risk."
+        },
+        {
+          "v": "phone",
+          "h": "Answering 'should I buy now?' in a channel",
+          "p": "People will ask for calls. A consistent, polite answer protects them and you. This example shows a Telegram-style education channel's support chat. Save the answer as a saved reply so every admin uses the same words.",
+          "d": {
+            "app": "chat",
+            "title": "Forex Learning Desk",
+            "subtitle": "support",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Should I buy EUR/USD now?"
+              },
+              {
+                "from": "me",
+                "text": "We do not give personal trading calls. Today's lesson explains how to read the economic calendar so you can form your own view."
+              },
+              {
+                "from": "me",
+                "text": "Practise on a demo first. Trading carries a high risk of losing money."
+              },
+              {
+                "from": "them",
+                "text": "Okay, where is the lesson?",
+                "buttons": [
+                  "Open lesson"
+                ]
+              }
+            ]
+          },
+          "say": "People will ask for calls. In this example support chat, someone asks: should I buy euro dollar now? The reply: we don't give personal trading calls. Today's lesson explains how to read the economic calendar so you can form your own view. Then: practise on a demo first. Trading carries a high risk of losing money. And they're pointed to the lesson. Save this as a saved reply, so every admin uses the same words."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: influencer deal numbers",
+          "p": "Example. A creator charges $400 for one video. It gets 40,000 views, 0.6% click, 10% of clickers register and 25% of those deposit. That is 6 FTDs, a CPA of about $66.67. Figures are illustrative.",
+          "d": {
+            "cols": [
+              "Step",
+              "Formula",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Clicks",
+                "40,000 × 0.6%",
+                "240"
+              ],
+              [
+                "Registrations",
+                "240 × 10%",
+                "24"
+              ],
+              [
+                "FTDs",
+                "24 × 25%",
+                "6"
+              ],
+              [
+                "CPA",
+                "$400 ÷ 6",
+                "$66.67"
+              ]
+            ]
+          },
+          "say": "Let's run the numbers on an influencer deal, as an example. A creator charges four hundred dollars for one video. It gets forty thousand views, and zero point six percent click, so two hundred and forty clicks. Ten percent register, so twenty four. Twenty five percent of those deposit, so six F T Ds, first time deposits. Four hundred divided by six is a C P A, cost per acquisition, of about sixty six dollars sixty seven. Figures are illustrative."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: judge it with the normal rules",
+          "p": "Example. The offer pays $80 per qualified FTD and 70% qualify, so the effective payout is $56 and the target at 25% margin is $42. The deal's $66.67 CPA is above break-even.",
+          "more": "Example maths: $80 × 70% = $56 effective payout. $56 × 0.75 = $42 target. Kill line on CPA after 3 × target spend is the lower of 1.5 × $42 = $63 and $56, so $56. A flat-fee deal is all spent at once, so you cannot kill it mid-way; the rules apply to whether you book that creator again. Negotiate a lower fee, a CPA deal or a better-matched audience before repeating.",
+          "d": [
+            "$66.67 CPA",
+            ">",
+            "$56 break-even",
+            "=",
+            "Do not repeat as is"
+          ],
+          "say": "Now judge it with the normal rules. In this example, the offer pays eighty dollars per qualified F T D and seventy percent qualify, so the effective payout is fifty six dollars. At a twenty five percent margin, the target is forty two dollars. The deal's sixty six sixty seven C P A is above break-even, so don't repeat it as is. A flat-fee deal is spent all at once, so the rules decide whether you book that creator again. Negotiate a lower fee, a C P A deal, or a better-matched audience first."
+        },
+        {
+          "v": "check",
+          "h": "Your influencer brief",
+          "p": "Send this in writing before filming, require a draft for review and keep the full exchange in your compliance file. Deeper than a simple brief: it also covers takedown and records.",
+          "d": [
+            "Label it as a paid partnership in the post",
+            "No income, profit or lifestyle claims",
+            "No buy or sell calls, no 'my trade today'",
+            "Risk warning on screen and in the caption",
+            "Draft sent for review before posting",
+            "You may ask for removal if rules change"
+          ],
+          "say": "Here's your influencer brief. Send it in writing before filming. Label it as a paid partnership in the post. No income, profit or lifestyle claims. No buy or sell calls, no my trade today. A risk warning on screen and in the caption. A draft sent for review before posting. And you may ask for removal if rules change. Require a draft for review, and keep the full exchange in your compliance file."
+        },
+        {
+          "v": "cards",
+          "h": "Copy trading, bots and managed accounts",
+          "p": "These products sit close to the line. Some are legal and licensed, many are not. Check carefully before promoting any of them. If a product promises a fixed monthly return, treat it as a scam until a regulator's register proves otherwise.",
+          "d": [
+            "Copy trading|Automatically copying others; may be regulated portfolio management",
+            "Trading bots|Legal to sell in many places; performance claims are the risk",
+            "Managed accounts|'Send money, we trade for you' needs a licence and is a common scam",
+            "Account flipping|Promises to multiply deposits. Always a scam"
+          ],
+          "say": "These products sit close to the line. Copy trading, automatically copying others, may be regulated portfolio management. Trading bots are legal to sell in many places, but performance claims are the risk. Managed accounts, send money, we trade for you, need a licence and are a common scam. And account flipping, promising to multiply deposits, is always a scam. If a product promises a fixed monthly return, treat it as a scam until a regulator's register proves otherwise."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: a content review tracker",
+          "p": "Track every influencer post from brief to live. Anyone on the team can see what was approved, when and by whom. Screen is an illustrative mock-up.",
+          "d": {
+            "kind": "browser",
+            "url": "sheet.example/creator-reviews",
+            "title": "Creator content reviews",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Creator",
+                  "Draft",
+                  "Issues",
+                  "Status"
+                ],
+                "rows": [
+                  [
+                    "Ama",
+                    "Video 1",
+                    "None",
+                    "Approved 03 Oct"
+                  ],
+                  [
+                    "Kofi",
+                    "Video 1",
+                    "Said 'easy profit'",
+                    "Changes requested"
+                  ],
+                  [
+                    "Zanele",
+                    "Post 2",
+                    "No #ad label",
+                    "Changes requested"
+                  ]
+                ]
+              },
+              {
+                "type": "button",
+                "label": "Add review"
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "This illustrative mock-up is a content review tracker. Track every influencer post from brief to live. Look at the rows. Ama's video one, no issues, approved on the third of October. Kofi's video one said easy profit, so changes requested. Zanele's post two had no hashtag ad label, so changes requested. Anyone on the team can see what was approved, when, and by whom."
+        },
+        {
+          "v": "product",
+          "h": "Scheduling education posts",
+          "p": "Education channels work best on a steady schedule. A broadcast tool lets you plan lessons ahead with the risk line already inside every post, so nothing goes out without it.",
+          "d": {
+            "slug": "castvoo",
+            "why": "Schedule education broadcasts with a fixed risk line, so no post goes out without it."
+          },
+          "say": "Education channels work best on a steady schedule. A broadcast tool lets you plan lessons ahead with the risk line already inside every post. Castvoo is one option. It schedules education broadcasts with a fixed risk line, so no post goes out without it."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "These mistakes are common because calls and lifestyle content get more engagement. They also attract regulator attention and users who leave after their first loss.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Run a 'free signals' channel",
+                "Let creators post without review",
+                "Pay a creator who flashes profits",
+                "Promote a 'we trade for you' service"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Teach skills and risk, not calls",
+                "Review every draft in writing",
+                "Brief on banned claims before filming",
+                "Decline unlicensed management offers"
+              ]
+            }
+          },
+          "say": "These mistakes are common, because calls and lifestyle content get more engagement. On the left: running a free signals channel, letting creators post without review, paying a creator who flashes profits, and promoting a we trade for you service. On the right, the fixes: teach skills and risk, not calls. Review every draft in writing. Brief on banned claims before filming. And decline unlicensed management offers. These mistakes attract regulator attention and users who leave after their first loss."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance warning",
+          "p": "Signals, copy trading and account management can be regulated activities. Running them without a licence can be a criminal offence in some countries, and they are the most common shape of trading scams.",
+          "d": {
+            "kind": "warn",
+            "text": "Do not give trading calls or run signals unless you hold the right licence, and never offer to trade for others. Influencer posts for you can count as your promotion. Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country and the broker's licence for that country before you run. Education, not legal or financial advice."
+          },
+          "say": "Signals, copy trading and account management can be regulated activities. Running them without a licence can be a criminal offence in some countries, and they're the most common shape of trading scams. Read the warning: don't give trading calls or run signals unless you hold the right licence, and never offer to trade for others. Influencer posts made for you can count as your promotion. Check the platform's current policies, local law and the broker's licence before you run. Education, not legal or financial advice."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for content and creators",
+          "p": "Starting rules to adapt with your adviser. Apply them to your own channels and to every creator you pay. Each line is a clear stop, so you never have to argue about a borderline post under pressure from a creator or a manager.",
+          "d": [
+            "Post tells people what to buy or sell = do not publish",
+            "Creator refuses review before posting = do not pay or post",
+            "Flat-fee deal: rebook only if CPA ≤ target; book more posts only at CPA ≤ 0.8 × target with ≥ 3 qualified FTDs",
+            "Creator CPA above break-even = renegotiate or stop",
+            "Offer involves managing users' money without a licence = no-go"
+          ],
+          "say": "These are starting rules for content and creators. A post that tells people what to buy or sell, don't publish. A creator who refuses review, don't pay or post. For a flat-fee deal, rebook only if C P A is at or below target, and book more posts only at zero point eight times target or better with at least three qualified F T Ds. Creator C P A above break-even, renegotiate or stop. And an offer managing users' money without a licence is a no-go."
+        }
+      ],
+      "takeaways": [
+        "Education is usually fine with care; calls and managed accounts often need a licence.",
+        "Regulators are watching finfluencers; paid posts must be labelled.",
+        "Judge influencer deals with the same target, break-even and kill lines.",
+        "Brief, review and record every creator post."
+      ],
+      "action": "Audit your last 10 channel posts or creator posts. Mark each as education, commentary or call. Rewrite or delete any calls, and add the risk line where it is missing.",
+      "glossary": [
+        {
+          "term": "Finfluencer",
+          "def": "A social media creator who talks about money, trading or investing."
+        },
+        {
+          "term": "Trading signal",
+          "def": "A specific suggestion to buy or sell an instrument, often with entry and exit prices."
+        },
+        {
+          "term": "Copy trading",
+          "def": "A service that automatically copies another trader's positions into a user's account."
+        },
+        {
+          "term": "Managed account",
+          "def": "An account where someone else trades the user's money. Usually needs a licence."
+        },
+        {
+          "term": "Paid partnership label",
+          "def": "A clear marker such as '#ad' showing a post is paid promotion."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which post is closest to regulated advice?",
+          "options": [
+            "How spreads work",
+            "Three factors that move gold",
+            "BUY GOLD NOW at 2,410, TP 2,450",
+            "How a stop loss works on a demo"
+          ],
+          "answer": 2,
+          "why": "A specific buy call with prices tells people what to trade, which is often regulated advice."
+        },
+        {
+          "q": "A creator charges $300 and brings 5 FTDs. Target is $42, break-even $56. What do you do?",
+          "options": [
+            "Book again at the same fee",
+            "Renegotiate or stop: $60 CPA is above break-even",
+            "Scale to three videos",
+            "Pay a bonus"
+          ],
+          "answer": 1,
+          "why": "$300 ÷ 5 = $60, above the $56 break-even."
+        },
+        {
+          "q": "A service says 'send us $500 and we trade for you, 10% a month'. What is it?",
+          "options": [
+            "A normal affiliate offer",
+            "Copy trading",
+            "Education",
+            "A no-go: unlicensed management with a guaranteed return is a scam pattern"
+          ],
+          "answer": 3,
+          "why": "Managing money needs a licence, and guaranteed returns are a classic scam sign."
+        },
+        {
+          "q": "A creator refuses to send a draft for review. What do the rules say?",
+          "options": [
+            "Do not pay or post",
+            "Post it with a disclaimer",
+            "Pay half",
+            "Ask a friend to check after"
+          ],
+          "answer": 0,
+          "why": "Review before posting is a gate. No review, no payment and no post."
+        },
+        {
+          "q": "Why does a flat-fee creator deal not use the mid-flight kill rule?",
+          "options": [
+            "Rules do not apply to creators",
+            "The fee is spent at once, so the rules decide whether to rebook",
+            "Creators always profit",
+            "Kill rules are only for Telegram"
+          ],
+          "answer": 1,
+          "why": "You cannot stop a paid post halfway; use the rules on the result to decide the next booking."
+        }
+      ],
+      "say_intro": "Teaching how markets work is education, but telling people what to trade can become regulated advice. In this lesson you'll place content on that line, understand the risks of signals and copy trading, and run influencer deals through your normal rules.",
+      "say_outro": "Teach how markets work, never what to trade, and brief, review and record every creator post. Your task: audit your last ten channel or creator posts, mark each as education, commentary or call, rewrite or delete any calls, and add the risk line where it's missing. Now take the quiz."
+    },
+    {
+      "slug": "africa-trading-regulation-map",
+      "title": "The regulation map for our core African markets",
+      "minutes": 20,
+      "objectives": [
+        "By the end you can name the main regulators for trading and crypto in Nigeria, Kenya, South Africa, Ghana and Cameroon.",
+        "You can say which parts of each country's rules we are confident about and which you must check.",
+        "You can compare geos on effective payout and regulatory readiness.",
+        "You can apply a geo go/no-go rule and a recheck routine."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why each country needs its own check",
+          "p": "Rules for trading and crypto differ a lot across our core markets, and several countries changed or proposed new laws recently. A plan that is fine in South Africa can be a no-go in Cameroon. Check each geo on its own, and expect the answers to change.",
+          "d": {
+            "b": "Africa is not one rulebook",
+            "s": "Check every geo separately, and recheck often."
+          },
+          "say": "Rules for trading and crypto differ a lot across our core markets, and several countries changed or proposed new laws recently. A plan that's fine in South Africa can be a no-go in Cameroon. Look at the headline: Africa is not one rulebook. Check every geo separately, and expect the answers to change."
+        },
+        {
+          "v": "table",
+          "h": "Overview at the time of writing",
+          "p": "Our best summary at the time of writing, with uncertain points marked 'check'. Several of these frameworks are new or still being built. Confirm every line on the regulator's official website before relying on it.",
+          "more": "Our confidence varies. We are fairly confident about South Africa's 2022 declaration of crypto assets as financial products. We believe Nigeria's Investments and Securities Act 2025 brings digital assets under SEC Nigeria and that Kenya passed a Virtual Asset Service Providers Act in 2025, but we are not certain of commencement dates or details. We are not certain of Ghana's current status or of any crypto framework for Cameroon. Check each one.",
+          "d": {
+            "cols": [
+              "Country",
+              "Markets regulator",
+              "Crypto position"
+            ],
+            "rows": [
+              [
+                "Nigeria",
+                "SEC Nigeria",
+                "Digital assets treated as securities under 2025 law; check"
+              ],
+              [
+                "Kenya",
+                "Capital Markets Authority",
+                "VASP law passed 2025; licensing being set up; check"
+              ],
+              [
+                "South Africa",
+                "FSCA",
+                "Crypto assets are a financial product; providers need a licence"
+              ],
+              [
+                "Ghana",
+                "SEC Ghana, Bank of Ghana",
+                "Framework in progress; check"
+              ],
+              [
+                "Cameroon",
+                "COSUMAF (CEMAC region)",
+                "We cannot confirm a clear framework; check"
+              ]
+            ]
+          },
+          "say": "This is our best summary at the time of writing, with uncertain points marked check. Nigeria, S E C Nigeria, with digital assets treated as securities under a twenty twenty five law, check. Kenya, the Capital Markets Authority, with a V A S P law passed in twenty twenty five and licensing being set up, check. South Africa, the F S C A, where crypto assets are a financial product and providers need a licence. Ghana, S E C Ghana and the Bank of Ghana, framework in progress. Cameroon, COSUMAF for the CEMAC region, where we can't confirm a clear framework. Confirm every line on the regulator's site."
+        },
+        {
+          "v": "cards",
+          "h": "Nigeria and Kenya: what to know",
+          "p": "Points at the time of writing. Both regulators publish lists of registered or licensed firms and public warnings about unregistered platforms. Search them for every broker or exchange you promote.",
+          "more": "Kenya's Capital Markets Authority licenses online foreign exchange brokers under regulations it introduced in 2017, and publishes the list on its website. We are not certain how SEC Nigeria currently treats offshore forex and CFD brokers marketing to Nigerians; it has issued warnings about unregistered investment platforms. Ask your network for the entity per country and look for it on the local list, not only abroad.",
+          "d": [
+            "Nigeria, SEC|Registers capital market operators; warns about unregistered platforms",
+            "Nigeria, payments|FX and card limits have affected funding offshore accounts; check current rules",
+            "Kenya, CMA|Licenses online forex brokers under its own regulations",
+            "Kenya, payments|Mobile money is a common way to fund accounts"
+          ],
+          "say": "Here's Nigeria and Kenya, at the time of writing. In Nigeria, the S E C registers capital market operators and warns about unregistered platforms. F X and card limits have affected funding offshore accounts, so check current rules. In Kenya, the C M A licenses online forex brokers under its own regulations, and mobile money is a common way to fund accounts. We're not certain how S E C Nigeria treats offshore brokers marketing to Nigerians. Search both regulators' lists for every broker you promote."
+        },
+        {
+          "v": "cards",
+          "h": "South Africa, Ghana and Cameroon: what to know",
+          "p": "Points at the time of writing. South Africa has the most developed framework of the five. Ghana's and Cameroon's are less clear to us, so treat them with extra care.",
+          "more": "In South Africa, firms that issue over-the-counter derivatives such as CFDs may also need authorisation as an OTC derivative provider; we are not certain of every detail, so check the FSCA's site. For Ghana, we are not certain whether a virtual asset law is in force today. For Cameroon, foreign exchange rules across the CEMAC region can affect how users fund foreign accounts. In unclear geos, treat the answer as no until you have local advice.",
+          "d": [
+            "South Africa, FSCA|FSP licence for advice and intermediary services; check CFD provider rules",
+            "South Africa, crypto|Crypto asset service providers need an FSP licence",
+            "Ghana|SEC Ghana and Bank of Ghana; check current crypto and forex rules",
+            "Cameroon|COSUMAF for markets, CEMAC foreign exchange rules; French-language users"
+          ],
+          "say": "Now South Africa, Ghana and Cameroon. South Africa has the most developed framework of the five. The F S C A issues the F S P licence for advice and intermediary services, so check the C F D provider rules, and crypto asset service providers need an F S P licence. Ghana has S E C Ghana and the Bank of Ghana, so check current crypto and forex rules. Cameroon has COSUMAF for markets, CEMAC foreign exchange rules, and French-language users. Ghana's and Cameroon's rules are less clear to us, so treat them with extra care."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: check a local register",
+          "p": "Each regulator's site is different, but the steps are the same. Screens are illustrative mock-ups; search the regulator's official site for its current list. Save a dated screenshot of the result in your offer folder.",
+          "d": {
+            "steps": [
+              {
+                "title": "Find the official site",
+                "text": "Search the regulator's name and confirm the official domain. Avoid look-alike sites.",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "regulator.example",
+                  "page": {
+                    "h": "Capital Markets Regulator",
+                    "p": "Licensed persons, public notices, investor alerts.",
+                    "cta": "Licensed persons"
+                  }
+                }
+              },
+              {
+                "title": "Open the right list",
+                "text": "Pick the list for the activity: online forex brokers, CFD providers or crypto providers.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "regulator.example/licensees",
+                  "title": "Licensed persons",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Category",
+                      "value": "Online forex brokers"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Search the entity",
+                "text": "Search the legal name from the client agreement. Note the status and date.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "regulator.example/licensees",
+                  "title": "Search results",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Firm",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "Example Markets KE Ltd",
+                          "Licensed"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Check public alerts",
+                "text": "Search the same name and domain in the regulator's investor alerts.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "regulator.example/alerts",
+                  "title": "Investor alerts",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Search",
+                      "value": "Example Markets"
+                    },
+                    {
+                      "type": "text",
+                      "value": "No results"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              }
+            ]
+          },
+          "say": "Each regulator's site is different, but the steps are the same. Screens are illustrative mock-ups. Tap Next to follow each step. First, find the official site, search the regulator's name, confirm the official domain, and avoid look-alike sites. Second, open the right list for the activity: online forex brokers, C F D providers, or crypto providers. Third, search the legal name from the client agreement, and note the status and date. Fourth, check public alerts for the same name and domain. Save a dated screenshot."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: effective payout by geo",
+          "p": "Example. Headline payouts differ by geo, and so do qualification rates. Compare on effective payout per raw FTD before you even look at compliance. All figures are illustrative.",
+          "d": {
+            "cols": [
+              "Geo",
+              "Payout",
+              "Qualify",
+              "Per raw FTD"
+            ],
+            "rows": [
+              [
+                "ZA",
+                "$110",
+                "55%",
+                "$60.50"
+              ],
+              [
+                "NG",
+                "$70",
+                "65%",
+                "$45.50"
+              ],
+              [
+                "KE",
+                "$65",
+                "70%",
+                "$45.50"
+              ],
+              [
+                "GH",
+                "$60",
+                "60%",
+                "$36.00"
+              ],
+              [
+                "CM",
+                "$55",
+                "60%",
+                "$33.00"
+              ]
+            ]
+          },
+          "say": "Here's an example of effective payout by geo. Multiply the payout by the qualification rate. South Africa, one hundred and ten dollars at fifty five percent, sixty dollars fifty per raw F T D, first time deposit. Nigeria, seventy dollars at sixty five percent, forty five fifty. Kenya, sixty five at seventy percent, also forty five fifty. Ghana, thirty six dollars. Cameroon, thirty three dollars. Compare on effective payout before you even look at compliance. All figures are illustrative."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: geo readiness",
+          "p": "Example. Now add the gates. A geo goes live only if every gate passes. In this example, only South Africa and Kenya are ready, whatever the payouts say.",
+          "d": {
+            "cols": [
+              "Geo",
+              "Entity verified locally",
+              "May market",
+              "Decision"
+            ],
+            "rows": [
+              [
+                "ZA",
+                "Yes",
+                "Yes, in writing",
+                "Go"
+              ],
+              [
+                "KE",
+                "Yes",
+                "Yes, in writing",
+                "Go"
+              ],
+              [
+                "NG",
+                "Offshore only",
+                "Unclear",
+                "No-go for now"
+              ],
+              [
+                "GH",
+                "Not named",
+                "-",
+                "No-go"
+              ],
+              [
+                "CM",
+                "Offshore only",
+                "Unclear",
+                "No-go for now"
+              ]
+            ]
+          },
+          "say": "Now add the gates, in this example. A geo goes live only if every gate passes. South Africa: entity verified locally, may market in writing, go. Kenya: the same, go. Nigeria: offshore only, unclear, no-go for now. Ghana: entity not named, no-go. Cameroon: offshore only, unclear, no-go for now. So only South Africa and Kenya are ready, whatever the payouts say."
+        },
+        {
+          "v": "cards",
+          "h": "Payment realities by market",
+          "p": "Users must be able to fund an account legally and easily. Payment problems show up as registrations that never deposit, so check them before you blame your creatives.",
+          "d": [
+            "Mobile money|Common in Kenya and Ghana; ask if the broker supports it",
+            "Cards|International limits have applied in some markets",
+            "Bank transfer|Slow; fees can eat small deposits",
+            "Crypto funding|Extra risk; check legality and the broker's rules",
+            "FX controls|Can limit funding foreign accounts, e.g. in CEMAC"
+          ],
+          "say": "Users must be able to fund an account legally and easily. Mobile money is common in Kenya and Ghana, so ask if the broker supports it. Cards, where international limits have applied in some markets. Bank transfer, which is slow, and fees can eat small deposits. Crypto funding, which adds risk, so check legality and the broker's rules. And F X controls, which can limit funding foreign accounts, for example in CEMAC. Payment problems show up as registrations that never deposit, so check them before you blame your creatives."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "These mistakes come from treating the continent as one market or trusting old information. Rules here have moved quickly, so a two-year-old article can be wrong today.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Use one rulebook for all five geos",
+                "Trust a 2023 blog post",
+                "Run ZA through an offshore entity unchecked",
+                "Ignore French for Cameroon"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Check each geo separately",
+                "Use the regulator's current site",
+                "Ask for the FSCA-licensed entity",
+                "Localise warnings and pages"
+              ]
+            }
+          },
+          "say": "These mistakes come from treating the continent as one market or trusting old information. On the left: using one rulebook for all five geos, trusting a twenty twenty three blog post, running South Africa through an offshore entity unchecked, and ignoring French for Cameroon. On the right, the fixes: check each geo separately, use the regulator's current site, ask for the F S C A-licensed entity, and localise warnings and pages. Rules here have moved quickly, so a two year old article can be wrong today."
+        },
+        {
+          "v": "partner",
+          "h": "Asking partners about African geos",
+          "p": "Use the partners we list as a starting point. For each African geo, ask which entity serves users there, whether it is licensed or registered locally and which payment methods users can use.",
+          "d": {
+            "vertical": "trading",
+            "note": "Prefer partners with locally licensed entities and local payment methods for your target geos."
+          },
+          "say": "Use the partners we list as a starting point. For each African geo, ask which entity serves users there, whether it's licensed or registered locally, and which payment methods users can use. As the note says, prefer partners with locally licensed entities and local payment methods for your target geos."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance warning",
+          "p": "This lesson summarises fast-moving rules and marks what we are unsure of. It is education, not legal advice. Before you run or scale in any geo, check the regulator's current website and, where possible, get local legal advice.",
+          "d": {
+            "kind": "warn",
+            "text": "Rules for trading and crypto in Nigeria, Kenya, Ghana and Cameroon were changing at the time of writing. We are not certain every point here is current. Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country and the broker's licence for that country before you run. Education, not legal or financial advice."
+          },
+          "say": "This lesson summarises fast-moving rules and marks what we're unsure of. It's education, not legal advice. Read the warning: rules for trading and crypto in Nigeria, Kenya, Ghana and Cameroon were changing at the time of writing, and we're not certain every point is current. Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current policies, your users' local law, and the broker's licence for that country before you run. Where possible, get local legal advice."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules per geo",
+          "p": "Starting rules to adapt with a local adviser. Apply them to each geo before launch and again at every recheck. Write the result for each geo in your entity map, with the date and the source you checked.",
+          "d": [
+            "Entity not licensed or registered locally and marketing permission unclear = no-go",
+            "Crypto offer in a geo whose licensing is in transition = only providers already licensed or registered there",
+            "Before spending more than $1,000 a month in a geo, get local legal advice",
+            "Recheck each live geo every quarter and after any regulatory news",
+            "Then apply the normal kill and scale rules on effective payout per raw FTD"
+          ],
+          "say": "These are starting rules per geo, to adapt with a local adviser. An entity not licensed or registered locally, with marketing permission unclear, no-go. A crypto offer in a geo whose licensing is in transition, only providers already licensed or registered there. Before spending more than one thousand dollars a month in a geo, get local legal advice. Recheck each live geo every quarter and after any regulatory news. Then apply the normal kill and scale rules on effective payout per raw F T D."
+        }
+      ],
+      "takeaways": [
+        "Each of our core markets has different regulators and different crypto rules.",
+        "South Africa's framework is the most developed; Nigeria, Kenya and Ghana changed or proposed laws recently; Cameroon is least clear to us.",
+        "Compare geos on effective payout, then apply the gates.",
+        "Recheck each geo quarterly and after any news."
+      ],
+      "action": "For the geo you plan to run first, find the regulator's official website, locate the list of licensed firms for your product and search your broker's local entity. Save a dated screenshot.",
+      "glossary": [
+        {
+          "term": "FSCA",
+          "def": "South Africa's Financial Sector Conduct Authority, which licenses financial services providers."
+        },
+        {
+          "term": "CMA",
+          "def": "Kenya's Capital Markets Authority, which licenses online forex brokers among others."
+        },
+        {
+          "term": "COSUMAF",
+          "def": "The financial markets regulator for the CEMAC region, which includes Cameroon."
+        },
+        {
+          "term": "VASP",
+          "def": "Virtual asset service provider. A crypto business that many new laws require to be licensed or registered."
+        },
+        {
+          "term": "Geo readiness",
+          "def": "Whether a country passes every compliance gate for an offer, regardless of payout."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which geo has, in our summary, the most developed framework for crypto providers?",
+          "options": [
+            "Cameroon",
+            "South Africa",
+            "Ghana",
+            "None of them"
+          ],
+          "answer": 1,
+          "why": "South Africa declared crypto assets a financial product in 2022 and requires providers to be licensed."
+        },
+        {
+          "q": "ZA pays $110 with 55% qualifying. NG pays $70 with 65% qualifying. Which pays more per raw FTD?",
+          "options": [
+            "NG, $45.50",
+            "They are equal",
+            "ZA, $60.50",
+            "ZA, $110"
+          ],
+          "answer": 2,
+          "why": "ZA: $110 × 55% = $60.50. NG: $70 × 65% = $45.50."
+        },
+        {
+          "q": "Ghana's offer has the highest payout, but the entity is not named. What is the decision?",
+          "options": [
+            "Go with a small test",
+            "No-go until the entity is named and verified",
+            "Go if users can pay with mobile money",
+            "Go on Telegram only"
+          ],
+          "answer": 1,
+          "why": "The entity gate fails, so the geo stays off whatever the payout."
+        },
+        {
+          "q": "How often do the starting rules say to recheck a live geo?",
+          "options": [
+            "Never",
+            "Once a year",
+            "Only when ads are rejected",
+            "Every quarter and after regulatory news"
+          ],
+          "answer": 3,
+          "why": "Rules are changing quickly, so recheck quarterly and after any news."
+        },
+        {
+          "q": "Many Kenyan registrations never deposit. What should you check before blaming the creatives?",
+          "options": [
+            "Whether users can fund the account with local methods such as mobile money",
+            "The colour of the button",
+            "The broker's logo",
+            "The time zone"
+          ],
+          "answer": 0,
+          "why": "Payment problems often show up as registrations that never deposit."
+        }
+      ],
+      "say_intro": "Rules for trading and crypto differ a lot across Nigeria, Kenya, South Africa, Ghana and Cameroon, and several are changing. In this lesson you'll learn the main regulators, what we're confident about and what you must check, and how to apply a go or no-go rule per geo.",
+      "say_outro": "Africa is not one rulebook: check every geo separately, verify the local entity, and recheck often. Your task: for the geo you plan to run first, find the regulator's official website, locate the list of licensed firms for your product, search your broker's local entity, and save a dated screenshot. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "A broker with a CySEC licence wants your Nigerian traffic through its offshore entity. The manager says users 'find us themselves'. What do you do?",
+      "options": [
+        "Run it; reverse solicitation covers it",
+        "Run it with a smaller budget",
+        "No-go: your ads are active marketing, and permission for Nigeria is unclear",
+        "Run it only on weekends"
+      ],
+      "answer": 2,
+      "why": "Advertising removes the own-initiative argument, and unclear permission counts as no."
+    },
+    {
+      "q": "A register shows the entity as authorised, but the offer domain was created 3 weeks ago and is not listed. What next?",
+      "options": [
+        "Confirm the domain through contacts listed on the register before any traffic",
+        "Launch; the entity is authorised",
+        "Ask the offer page's chat",
+        "Launch and check later"
+      ],
+      "answer": 0,
+      "why": "An unlisted new domain is a clone sign. Confirm via the register's own contacts."
+    },
+    {
+      "q": "A broker's loss figure is 74%. You send 50 users who open accounts. How many would be expected to lose money if they are like its clients?",
+      "options": [
+        "74",
+        "50",
+        "26",
+        "37"
+      ],
+      "answer": 3,
+      "why": "50 × 74% = 37."
+    },
+    {
+      "q": "Using the 10% house rule, how tall should the warning band be on a 1080 × 1080 image?",
+      "options": [
+        "108 px",
+        "10 px",
+        "1,080 px",
+        "54 px"
+      ],
+      "answer": 0,
+      "why": "1,080 × 10% = 108 pixels."
+    },
+    {
+      "q": "Four of your ads are rejected for income claims in one week. What do you do?",
+      "options": [
+        "Resubmit them unchanged",
+        "Pause launches, fix the shared cause in every ad and lander, then relaunch",
+        "Open a new ad account",
+        "Change 'earn' to 'e@rn'"
+      ],
+      "answer": 1,
+      "why": "Repeated rejections for one reason point to a shared cause. Disguising words is circumvention."
+    },
+    {
+      "q": "A creator charges $500 and brings 8 qualified FTDs. Target $42, break-even $56. What do the rules say about rebooking?",
+      "options": [
+        "Rebook and scale to three videos",
+        "Rebook at the same fee: CPA is close enough",
+        "Pay a bonus for the 8 FTDs",
+        "Renegotiate or stop: CPA $62.50 is above break-even"
+      ],
+      "answer": 3,
+      "why": "$500 ÷ 8 = $62.50, which is above the $56 break-even."
+    },
+    {
+      "q": "Which is the honest answer when a channel member asks 'should I buy now?'",
+      "options": [
+        "'Yes, buy now'",
+        "'We do not give personal calls; here is a lesson on reading the calendar; practise on a demo'",
+        "'Join VIP for the answer'",
+        "'Ask the broker'"
+      ],
+      "answer": 1,
+      "why": "Education, not calls, with a risk line and a demo suggestion."
+    },
+    {
+      "q": "A crypto exchange is registered with a regulator for anti-money-laundering only. What does that tell you?",
+      "options": [
+        "It is fully authorised for everything",
+        "It is a scam",
+        "It passed one requirement; check whether the geo needs a full licence",
+        "It needs no platform permission"
+      ],
+      "answer": 2,
+      "why": "AML registration is not always full authorisation. Check what the geo requires."
+    },
+    {
+      "q": "Your plan is to spend $1,500 a month in Kenya. What do the starting rules add?",
+      "options": [
+        "Nothing",
+        "Use a VPN",
+        "Double the budget",
+        "Get local legal advice before spending above $1,000 a month in a geo"
+      ],
+      "answer": 3,
+      "why": "Our starting rule is local advice before spending more than $1,000 a month in a geo."
+    },
+    {
+      "q": "The broker updated its loss percentage 10 days ago and your ads show the old figure. What do you do?",
+      "options": [
+        "Leave them; they were approved",
+        "Remove the percentage",
+        "Pause the ads until updated, since the 7-day window has passed",
+        "Round the figure"
+      ],
+      "answer": 2,
+      "why": "The rule is to replace within 7 days or pause."
+    }
+  ]
+}

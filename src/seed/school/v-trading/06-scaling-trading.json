@@ -1,0 +1,2505 @@
+{
+  "school": "v-trading",
+  "order": 6,
+  "slug": "scaling-trading",
+  "title": "Scaling trading",
+  "summary": "How to scale trading campaigns without outrunning late data, cash or compliance: readiness gates, geo and language expansion, market and seasonal calendars, a RevShare portfolio across brokers and the routines that run a trading operation at scale. Results vary and nothing here promises income; the rules keep growth controlled.",
+  "lessons": [
+    {
+      "slug": "ready-to-scale",
+      "title": "Is a trading campaign ready to scale?",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can run a readiness gate before any budget increase.",
+        "By the end you can work out the cash a scale-up ties up while you wait to be paid.",
+        "By the end you can scale in steps and know when to step back."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why scaling trading is different",
+          "p": "In trading, the numbers you scale on arrive late. Qualified FTDs can take weeks to confirm, payouts come after net terms, and clawbacks come later still. Scale too early or too fast and you multiply a loss you cannot see yet, with cash you have not been paid.",
+          "d": {
+            "b": "Scale on confirmed numbers, in small steps",
+            "s": "Late data plus fast scaling is how good campaigns go broke."
+          },
+          "say": "Here's why scaling trading is different. The numbers you scale on arrive late. Qualified F T Ds, first time deposits, can take weeks to confirm. Payouts come after net terms, and clawbacks come later still. Scale too early or too fast, and you multiply a loss you can't see yet, with cash you haven't been paid. So the rule on screen: scale on confirmed numbers, in small steps."
+        },
+        {
+          "v": "check",
+          "h": "The readiness gate",
+          "p": "Every line must be true before you raise a budget. If one fails, fix it first. This is a starting gate to adapt; it combines the rule card with the quality, tracking and compliance checks from Modules 4 and 5.",
+          "d": [
+            "Rule card says scale on network-confirmed qualified FTDs",
+            "No quality flag on the source or ad set",
+            "Tracker gap under 10% this week",
+            "Cap room confirmed in writing by the network",
+            "Every live creative approved in the compliance log",
+            "Cash buffer covers the extra spend until you are paid"
+          ],
+          "say": "Before you raise any budget, every line of this readiness gate must be true. The rule card says scale, on network-confirmed qualified F T Ds. There's no quality flag on the source or ad set. The tracker gap is under ten percent this week. Cap room is confirmed in writing by the network. Every live creative is approved in the compliance log. And your cash buffer covers the extra spend until you're paid. If one fails, fix it first. Adapt this starting gate to your setup."
+        },
+        {
+          "v": "eq",
+          "h": "How much cash does scaling tie up?",
+          "p": "You pay for ads today and get paid weeks later. The money in between is your working capital. Multiply daily spend by the longest wait from spend to payout to see how much cash you need on hand.",
+          "more": "Example: you spend $200 a day. The network pays net 30 after month end. A conversion on the 1st of the month is paid about 60 days later. $200 × 60 = $12,000 that can be out of your account at once, before any reserve. Raise the daily budget to $300 and that becomes $18,000. If you do not have it, do not scale to it. Your network's terms decide the real wait; ask for them in writing.",
+          "d": [
+            "Daily spend",
+            "×",
+            "Days until paid",
+            "=",
+            "Cash tied up"
+          ],
+          "say": "You pay for ads today, and get paid weeks later. The money in between is your working capital. The equation: daily spend times days until paid equals cash tied up. Example: you spend two hundred dollars a day, and the network pays net thirty after month end, so a conversion on the first is paid about sixty days later. Two hundred times sixty is twelve thousand dollars out at once. Raise to three hundred a day, and it's eighteen thousand. If you don't have it, don't scale to it."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: a scaling ladder",
+          "p": "Example: a winning ad set starts at $100 a day. Following the standard rule, +20% at most every 48 hours while the rule card keeps saying scale. Notice how quickly the steps add up.",
+          "d": {
+            "cols": [
+              "Day",
+              "Daily budget",
+              "Working"
+            ],
+            "rows": [
+              [
+                "0",
+                "$100.00",
+                "Start"
+              ],
+              [
+                "2",
+                "$120.00",
+                "$100 × 1.2"
+              ],
+              [
+                "4",
+                "$144.00",
+                "$120 × 1.2"
+              ],
+              [
+                "6",
+                "$172.80",
+                "$144 × 1.2"
+              ],
+              [
+                "8",
+                "$207.36",
+                "$172.80 × 1.2"
+              ],
+              [
+                "10",
+                "$248.83",
+                "$207.36 × 1.2"
+              ]
+            ]
+          },
+          "say": "Here's a scaling ladder, as an example. A winning ad set starts at one hundred dollars a day. Following the standard rule, it rises at most twenty percent every forty eight hours, while the rule card keeps saying scale. Follow the rows. Day two, one hundred and twenty. Day four, one forty four. Day six, about one seventy three. Day eight, about two hundred and seven. And day ten, about two hundred and forty nine. Notice how quickly small steps add up."
+        },
+        {
+          "v": "curve",
+          "h": "Cost rises as budget rises",
+          "p": "Example: as budget climbs, the platform reaches less responsive people and cost per qualified FTD often creeps up. Scaling stops making sense when CPA moves above the scale line and keeps rising. Target here is $60, scale line $48.",
+          "d": {
+            "a": [
+              100,
+              120,
+              144,
+              173,
+              207,
+              249,
+              299
+            ],
+            "la": "Daily budget $",
+            "b": [
+              40,
+              41,
+              43,
+              45,
+              48,
+              53,
+              58
+            ],
+            "lb": "Cost per qualified FTD $",
+            "x": [
+              "D0",
+              "D2",
+              "D4",
+              "D6",
+              "D8",
+              "D10",
+              "D12"
+            ]
+          },
+          "say": "This chart is an example of cost rising as budget rises. As the budget line climbs from one hundred to about three hundred dollars a day, the platform reaches less responsive people, and cost per qualified F T D creeps up, from forty dollars to fifty eight. The target here is sixty, and the scale line forty eight. Scaling stops making sense when C P A, cost per acquisition, moves above the scale line and keeps rising. Here, that happens after day eight."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: a strong ad set",
+          "p": "Apply the rule card, including the bigger step for very strong results: CPA ≤ 0.6 × target with ≥ 10 conversions. Work out the CPA first.",
+          "more": "Example: $500 ÷ 14 ≈ $35.71. 0.6 × $60 = $36. $35.71 ≤ $36 with 14 conversions, so the bigger step of +30% to +50% is allowed. On trading offers, +30% is the cautious end of that range, because confirmation and clawbacks lag.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $60. Spent $500 in 8 days, 14 network-confirmed qualified FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 500,
+              "conversions": 14,
+              "target_cpa": 60,
+              "days": 8
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "scale"
+            }
+          },
+          "say": "Lab time. Apply the rule card, including the bigger step for very strong results: C P A at or under point six times target, with ten or more conversions. The target is sixty dollars. The ad set spent five hundred dollars in eight days, with fourteen network-confirmed qualified F T Ds. Work out the C P A first, then decide: kill, hold or scale? Pause and try it, then check your answer."
+        },
+        {
+          "v": "cards",
+          "h": "The lag trap",
+          "p": "Trading data arrives in layers. If you scale on the first layer, you may be scaling on numbers that will shrink. Build your decisions around matured cohorts.",
+          "d": [
+            "FTDs land first|most within a week",
+            "Qualification lags|often 2 to 4 weeks",
+            "Clawbacks lag more|sometimes months",
+            "Use cohorts|judge each week's FTDs once mature",
+            "Discount early reads|apply historic qualification rates",
+            "Step size stays small|+20% unless data is mature and strong"
+          ],
+          "say": "Trading data arrives in layers, which is the lag trap. F T Ds land first, most within a week. Qualification lags, often two to four weeks. Clawbacks lag more, sometimes months. So use cohorts, and judge each week's F T Ds once they're mature. Discount early reads by applying historic qualification rates. And keep the step size small, twenty percent, unless data is mature and strong. Scale on the first layer, and you may be scaling on numbers that will shrink."
+        },
+        {
+          "v": "walk",
+          "h": "One scaling step, done properly",
+          "p": "The same routine every time. It keeps a record of every change, so if CPA moves you know exactly which step caused it. Names change; check your current Ads Manager.",
+          "d": {
+            "steps": [
+              {
+                "title": "Check the card and the gate",
+                "text": "Confirm the rule card says scale and every readiness line is true.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/scorecard",
+                  "title": "Ad set X",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Confirmed CPA",
+                      "value": "$45 (target $60)"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Qualified FTDs",
+                      "value": "6"
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Readiness gate passed",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 2
+                }
+              },
+              {
+                "title": "Raise the budget",
+                "text": "Increase the daily budget by 20%. Do not change audience, creative or optimisation at the same time.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/adset",
+                  "title": "Edit ad set",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Daily budget",
+                      "value": "$120"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Was $100. Only the budget changes."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Log the change",
+                "text": "Write the date, old budget, new budget and reason in your change log.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/changes",
+                  "title": "Change log",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Date",
+                        "Ad set",
+                        "Change"
+                      ],
+                      "rows": [
+                        [
+                          "2026-10-04",
+                          "X",
+                          "$100 → $120, card: scale"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Wait 48 hours",
+                "text": "No further budget changes for at least 48 hours, then check again.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/changes",
+                  "title": "Next check",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Next check",
+                      "value": "2026-10-06"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Here's one scaling step, done properly. Tap Next to follow each step. First, check the card and the gate. In the example, confirmed C P A is forty five against a sixty target, with six qualified F T Ds, and the gate passed. Second, raise the daily budget by twenty percent, from one hundred to one twenty, changing nothing else. Third, log the date, old budget, new budget and reason. Fourth, wait forty eight hours before any further change, then check again. That record tells you exactly which step caused any move in C P A."
+        },
+        {
+          "v": "phone",
+          "h": "Ask for cap room before you need it",
+          "p": "Most trading offers have caps. Running past a cap means unpaid FTDs. Ask before you scale, with numbers, and get the answer in writing. A verbal 'should be fine' is not cap room.",
+          "d": {
+            "app": "chat",
+            "title": "Affiliate manager",
+            "subtitle": "network",
+            "messages": [
+              {
+                "from": "me",
+                "text": "Ad set X is converting well in NG. I plan to go from 40 to about 70 qualified FTDs a month. Is there cap room?"
+              },
+              {
+                "from": "them",
+                "text": "Current cap is 60. I can ask the broker for 80 if quality holds."
+              },
+              {
+                "from": "me",
+                "text": "Thanks. I will stay under 60 until you confirm 80 in writing."
+              }
+            ]
+          },
+          "say": "Most trading offers have caps, and running past a cap means unpaid F T Ds. So ask before you scale, with numbers. In this chat, the buyer says ad set X is converting well in Nigeria, and plans to go from forty to about seventy qualified F T Ds a month. The manager says the current cap is sixty, and they can ask the broker for eighty if quality holds. The buyer replies: I'll stay under sixty until you confirm eighty in writing. A verbal should-be-fine is not cap room."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "Scaling mistakes in trading are expensive because you often find them a month later. Each fix below is cheap compared with the loss it prevents.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Doubling budget after one good day",
+                "Scaling on raw FTDs",
+                "Changing budget and creative together",
+                "Running past the cap"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "+20% at most every 48 hours",
+                "Scale on confirmed qualified FTDs",
+                "One change at a time, logged",
+                "Confirm cap room in writing first"
+              ]
+            }
+          },
+          "say": "Scaling mistakes in trading are expensive, because you often find them a month later. Doubling budget after one good day, scale twenty percent at most every forty eight hours. Scaling on raw F T Ds, scale on confirmed qualified F T Ds. Changing budget and creative together, make one change at a time, logged. Running past the cap, confirm cap room in writing first. Each fix is cheap compared with the loss it prevents."
+        },
+        {
+          "v": "tip",
+          "h": "More spend, more scrutiny",
+          "p": "Bigger budgets draw more attention from platforms, networks and regulators. Scale only inside the authorizations you hold for each geo. Never open extra ad accounts or use other people's identities to get around spend limits or restrictions.",
+          "d": {
+            "kind": "warn",
+            "text": "Scale within platform authorization and local law for every geo. No extra accounts to evade limits, no borrowed identities. We are not certain this is current; check the platform's Help Center, your network and your broker before relying on it."
+          },
+          "say": "Bigger budgets draw more attention from platforms, networks and regulators. Scale only inside the authorizations you hold for each geo. Never open extra ad accounts, or use other people's identities, to get around spend limits or restrictions. The warning also says we're not certain this is current, so check the platform's Help Center, your network and your broker before relying on it."
+        },
+        {
+          "v": "check",
+          "h": "Starting rules for scaling and stepping back",
+          "p": "Starting rules to adapt. Scaling has a brake as well as an accelerator; write both down before you start, so a bad week does not turn into a debate.",
+          "d": [
+            "Scale +20% at most every ≥ 48h when CPA ≤ 0.8 × target with ≥ 3 qualified FTDs",
+            "Scale +30–50% only when CPA ≤ 0.6 × target with ≥ 10 and data is mature",
+            "CPA above target at two checks in a row: step back to the last good budget",
+            "CPA above the kill line after 3 × target spend: kill",
+            "Never scale past confirmed cap room or your cash buffer"
+          ],
+          "say": "Scaling has a brake as well as an accelerator, so write both down before you start. Scale twenty percent at most every forty eight hours, when C P A is at or under point eight times target with three or more qualified F T Ds. Scale thirty to fifty percent only when C P A is at or under point six times target, with ten or more, and data is mature. C P A above target at two checks in a row, step back to the last good budget. Above the kill line after three times target spend, kill. And never scale past confirmed cap room or your cash buffer."
+        }
+      ],
+      "takeaways": [
+        "Scale on confirmed qualified FTDs, after the readiness gate passes.",
+        "Work out the cash tied up: daily spend × days until paid.",
+        "Step +20% every 48 hours or more, log each change, and step back when CPA rises above target twice."
+      ],
+      "action": "Work out the cash your best campaign would tie up at 1.5 × its current daily budget, using your network's real payment terms, and write down whether you can afford that step.",
+      "glossary": [
+        {
+          "term": "Readiness gate",
+          "def": "A short list of checks that must all pass before any budget increase."
+        },
+        {
+          "term": "Working capital",
+          "def": "Cash you need on hand to pay for ads while waiting to be paid."
+        },
+        {
+          "term": "Change log",
+          "def": "A record of every budget or setup change with date and reason."
+        },
+        {
+          "term": "Cap",
+          "def": "The most conversions a network will pay for in a period, per offer or geo."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Daily spend $250, about 60 days from spend to payout. Cash tied up?",
+          "options": [
+            "$2,500",
+            "$7,500",
+            "$15,000",
+            "$25,000"
+          ],
+          "answer": 2,
+          "why": "$250 × 60 = $15,000."
+        },
+        {
+          "q": "A budget of $100 stepped up +20% four times is about:",
+          "options": [
+            "$180.00",
+            "$207.36",
+            "$240.00",
+            "$148.00"
+          ],
+          "answer": 1,
+          "why": "$100 × 1.2⁴ ≈ $207.36."
+        },
+        {
+          "q": "Target $60. Spent $500, 14 qualified FTDs. Which step is allowed?",
+          "options": [
+            "Kill",
+            "Hold",
+            "+20% only",
+            "+30–50%"
+          ],
+          "answer": 3,
+          "why": "CPA ≈ $35.71 ≤ $36 (0.6 × target) with ≥ 10 conversions."
+        },
+        {
+          "q": "After a scale step, CPA is above target at two checks in a row. Starting rule?",
+          "options": [
+            "Scale again",
+            "Step back to the last good budget",
+            "Kill the whole campaign",
+            "Change creative and audience together"
+          ],
+          "answer": 1,
+          "why": "The brake rule: step back to the budget where it worked."
+        },
+        {
+          "q": "Your cap is 60 qualified FTDs a month and you plan 70. What first?",
+          "options": [
+            "Scale and ask later",
+            "Split into a second network account",
+            "Ask for cap room and get it in writing",
+            "Ignore caps on CPA deals"
+          ],
+          "answer": 2,
+          "why": "FTDs over the cap may not be paid. Confirm cap room first."
+        }
+      ],
+      "say_intro": "Scaling a trading campaign is where good campaigns often go broke, because the numbers arrive late. In this lesson you'll learn a readiness gate, the cash a scale-up ties up, and how to scale in steps and step back.",
+      "say_outro": "You scale trading only through the readiness gate, on confirmed qualified F T Ds, in small logged steps, with cap room and cash in place, and you step back when C P A rises. Your task: work out the cash your best campaign would tie up at one and a half times its current daily budget, using your network's real payment terms, and write down whether you can afford that step. Now take the quiz."
+    },
+    {
+      "slug": "geo-expansion",
+      "title": "Expanding to new geos",
+      "minutes": 19,
+      "objectives": [
+        "By the end you can score a new geo with gates first and economics second.",
+        "By the end you can work out the most you can pay per 1,000 impressions in a new geo.",
+        "By the end you can launch one new geo as a controlled test."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why each geo is a new business",
+          "p": "A new country is not just a new targeting box. The broker may use a different entity or not serve it at all, the platform may need a different authorization, people pay with different methods and speak different languages, and the payout and ad costs change. Treat every geo as a fresh test.",
+          "d": {
+            "b": "New geo, new test",
+            "s": "Gates first, economics second, creatives third."
+          },
+          "say": "Every geo is a new business. The broker may use a different entity, or not serve it at all. The platform may need a different authorization. People pay with different methods and speak different languages. And the payout and ad costs change. So treat every geo as a fresh test. The order on screen: gates first, economics second, creatives third."
+        },
+        {
+          "v": "table",
+          "h": "The geo scoring sheet",
+          "p": "Gates are yes or no: if any is no, the geo is out. Only then score the economics. Fill this sheet with answers in writing from your network, broker and the platform.",
+          "d": {
+            "cols": [
+              "Item",
+              "Type",
+              "Question"
+            ],
+            "rows": [
+              [
+                "Broker allowed",
+                "Gate",
+                "Licensed or allowed to serve this country?"
+              ],
+              [
+                "Platform permission",
+                "Gate",
+                "Do I hold the authorization needed here?"
+              ],
+              [
+                "Warning and wording",
+                "Gate",
+                "Do I have the approved local warning?"
+              ],
+              [
+                "Payout",
+                "Score",
+                "Qualified FTD payout for this geo"
+              ],
+              [
+                "Ad cost",
+                "Score",
+                "CPM from a small test"
+              ],
+              [
+                "Deposit methods",
+                "Score",
+                "Can people pay in ways they use?"
+              ],
+              [
+                "Language and support",
+                "Score",
+                "Does the broker support the language?"
+              ]
+            ]
+          },
+          "say": "Here's the geo scoring sheet. The first three rows are gates, yes or no. Is the broker licensed or allowed to serve this country? Do I hold the platform authorization needed here? Do I have the approved local warning? If any is no, the geo is out. Only then do you score the economics: the qualified F T D, first time deposit, payout. Ad cost, as C P M, cost per thousand impressions, from a small test. Deposit methods people use. And language and support. Get the answers in writing."
+        },
+        {
+          "v": "eq",
+          "h": "The most you can pay per 1,000 impressions",
+          "p": "Work out a max CPM from your funnel. It tells you quickly whether a geo's ad costs can ever work for the payout on offer.",
+          "more": "Example: payout $50. CTR 1.2%, so 1,000 impressions give 12 clicks. 1.5% of clicks become qualified FTDs: 12 × 1.5% = 0.18 qualified FTDs per 1,000 impressions. $50 × 0.18 = $9. With a 25% margin, $9 × 0.75 = $6.75 max CPM. If the geo's CPM in your test is $8, this funnel cannot work there until conversion improves or the payout rises. Use your own rates; these are examples.",
+          "d": [
+            "Payout × qualified per 1,000 impressions",
+            "×",
+            "(1 − margin)",
+            "=",
+            "Max CPM"
+          ],
+          "say": "This equation tells you the most you can pay per thousand impressions. Payout, times qualified F T Ds per thousand impressions, times one minus your margin, equals max C P M. Example: payout fifty dollars. A one point two percent C T R, click through rate, gives twelve clicks per thousand. One and a half percent of clicks qualify, so point one eight F T Ds. Fifty times point one eight is nine dollars. Keep a twenty five percent margin, and max C P M is six seventy five. If the geo's test C P M is eight dollars, this funnel can't work there yet. Use your own rates."
+        },
+        {
+          "v": "cards",
+          "h": "Africa: what changes geo by geo",
+          "p": "Starting notes for planning, not a regulatory guide. Licensing and broker availability differ in each country and change over time; we are not certain any broker serves a geo until you check. Confirm everything with Module 2's register checks.",
+          "d": [
+            "Nigeria|English and Pidgin; bank transfer and cards; naira volatility",
+            "Kenya|English and Swahili; mobile money is common",
+            "Ghana|English; mobile money widely used",
+            "South Africa|English and other languages; strong regulator; EFT and cards",
+            "Cameroon|French and English; mobile money; check broker support",
+            "Check per geo|which deposit methods the broker really accepts"
+          ],
+          "say": "These are starting notes for African geos, not a regulatory guide. Nigeria: English and Pidgin, bank transfer and cards, and naira volatility. Kenya: English and Swahili, with mobile money common. Ghana: English, with mobile money widely used. South Africa: English and other languages, a strong regulator, E F T and cards. Cameroon: French and English, mobile money, and check broker support. And in every geo, check which deposit methods the broker really accepts. Licensing and availability change, so confirm everything with Module two's register checks."
+        },
+        {
+          "v": "cards",
+          "h": "Global examples",
+          "p": "Rough notes for planning. Several regions restrict or ban marketing some trading products to retail users, and rules change; check the regulator and your broker for each country before you plan anything.",
+          "d": [
+            "UK, EU, Australia|strict rules, leverage limits, standard warnings, high ad costs",
+            "Latin America|Spanish and Portuguese; local payments such as PIX in Brazil",
+            "Southeast Asia|many languages; local e-wallets; rules vary widely",
+            "Middle East|Arabic; right-to-left design; rules vary by country",
+            "Everywhere|confirm entity, permission and warning first"
+          ],
+          "say": "And some rough global notes for planning. The U K, E U and Australia have strict rules, leverage limits, standard warnings and high ad costs. Latin America uses Spanish and Portuguese, with local payments such as PIX in Brazil. Southeast Asia has many languages, local e-wallets, and rules that vary widely. The Middle East uses Arabic with right-to-left design, and rules vary by country. Everywhere, confirm entity, permission and warning first. Several regions restrict or ban marketing some trading products to retail users."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: scoring three geos",
+          "p": "Example values to show the method, not market data. Ghana passes the gates and the maths. Geo C fails a gate, so its good economics do not matter.",
+          "more": "Example: Kenya's payout is $45. With the same funnel rates, $45 × 0.18 × 0.75 ≈ $6.08 max CPM. Its test CPM of $6.40 is above that, so the funnel must convert better before Kenya can work. Ghana's $4.10 is well under its $6.75 line.",
+          "d": {
+            "cols": [
+              "",
+              "Ghana",
+              "Kenya",
+              "Geo C"
+            ],
+            "rows": [
+              [
+                "Gates passed",
+                "Yes",
+                "Yes",
+                "No (no permission)"
+              ],
+              [
+                "Payout",
+                "$50",
+                "$45",
+                "$90"
+              ],
+              [
+                "Max CPM (from funnel)",
+                "$6.75",
+                "$6.08",
+                "-"
+              ],
+              [
+                "Test CPM",
+                "$4.10",
+                "$6.40",
+                "-"
+              ],
+              [
+                "Decision",
+                "Test",
+                "Fix funnel first",
+                "Out"
+              ]
+            ]
+          },
+          "say": "Let's score three geos. Example values, not market data. Ghana passes the gates, with a fifty dollar payout, a max C P M of six seventy five, and a test C P M of four ten. Decision: test. Kenya passes the gates, but its forty five dollar payout gives a max of about six oh eight, and its test C P M is six forty. Decision: fix the funnel first. Geo C has a ninety dollar payout, but fails a gate, with no permission. Decision: out. Its good economics don't matter."
+        },
+        {
+          "v": "flow",
+          "h": "Expanding one geo at a time",
+          "p": "A simple order that keeps risk small. Each step has a written output. One new geo per buyer at a time means you always know what caused a result.",
+          "d": [
+            "Shortlist",
+            "Pass the gates",
+            "Localise creatives and lander",
+            "Small test",
+            "Apply the rule card",
+            "Scale or stop"
+          ],
+          "say": "Here's the order for expanding, one geo at a time. Follow the line. Shortlist. Pass the gates. Localise creatives and lander. Run a small test. Apply the rule card. Then scale or stop. Each step has a written output. And one new geo per buyer at a time means you always know what caused a result."
+        },
+        {
+          "v": "walk",
+          "h": "Launch a new geo test",
+          "p": "A new geo gets its own campaign, its own approved creatives and its own test budget, so its results never mix with your existing geo. Names change; check your current Ads Manager.",
+          "d": {
+            "steps": [
+              {
+                "title": "Confirm the gates",
+                "text": "Save the broker's entity, the platform authorization and the local warning in your compliance file.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/geo-gh",
+                  "title": "Ghana gates",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Broker allowed (in writing)",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Platform authorization",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Local warning approved",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Create the campaign",
+                "text": "New campaign for the geo, with names that show geo and offer.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/create",
+                  "title": "Create campaign",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Campaign name",
+                      "value": "GH_Trading_Demo_Test_01"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Location",
+                      "value": "Ghana"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Set the test budget",
+                "text": "Three ad sets, about 3 × target each, over 6 days.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/adset",
+                  "title": "Ad set budget",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Daily budget",
+                      "value": "$19"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Target $37.50 × 3 = $112.50 ÷ 6 days ≈ $19"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Tag the links",
+                "text": "Use a geo label in your sub IDs so the network report splits by geo.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "tracker.example/campaign",
+                  "title": "Offer link",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "sub2",
+                      "value": "GH_Demo_01"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Here's how to launch a new geo test. Tap Next to follow each step. First, confirm the gates, saving the broker's entity, the platform authorization and the local warning in your compliance file. Second, create a new campaign whose name shows the geo and offer, here for Ghana. Third, set the test budget: three ad sets, about three times target each, over six days. With a thirty seven fifty target, that's about nineteen dollars a day. Fourth, tag the links with a geo label in your sub I Ds, so the network report splits by geo."
+        },
+        {
+          "v": "partner",
+          "h": "Ask partners about each geo",
+          "p": "These are our listed trading partners. For each new geo, ask which entity serves it, whether it is licensed or allowed there, the payout and cap, and the local warning, in writing.",
+          "d": {
+            "vertical": "trading",
+            "note": "Per geo: serving entity, licence or permission, payout, cap, deposit methods and the approved local warning."
+          },
+          "say": "These are our listed trading partners. For each new geo, ask them, in writing, which entity serves it, whether it's licensed or allowed there, the payout and cap, the deposit methods, and the approved local warning. Those written answers are what fill in your scoring sheet."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "Geo expansion goes wrong when people copy the old geo and hope. Each of these mistakes has cost affiliates whole budgets, and each is avoided by doing the gates and the maths first.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Assuming the broker serves every country",
+                "Same creative and warning in every geo",
+                "Launching five geos at once",
+                "Judging a geo on CPM alone"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Check the entity and permission per geo",
+                "Localised creative and the local approved warning",
+                "One new geo per buyer at a time",
+                "Compare test CPM with your max CPM"
+              ]
+            }
+          },
+          "say": "Geo expansion goes wrong when people copy the old geo and hope. Assuming the broker serves every country, check the entity and permission per geo. The same creative and warning everywhere, use localised creative and the local approved warning. Launching five geos at once, one new geo per buyer at a time. Judging a geo on C P M alone, compare test C P M with your max C P M. Each of these has cost affiliates whole budgets."
+        },
+        {
+          "v": "tip",
+          "h": "Never advertise where it is not allowed",
+          "p": "If a broker is not allowed to serve a country, or you lack the platform authorization there, the geo is out, whatever the payout. Do not use VPN tricks, wrong-country targeting or other workarounds.",
+          "d": {
+            "kind": "warn",
+            "text": "No launch without the broker's permission to serve the geo, platform authorization where required and the approved local warning. We are not certain this is current; check the platform's Help Center, your network and your broker before relying on it."
+          },
+          "say": "If a broker isn't allowed to serve a country, or you lack the platform authorization there, the geo is out, whatever the payout. Don't use V P N tricks, wrong-country targeting or other workarounds. The warning: no launch without the broker's permission to serve the geo, platform authorization where required, and the approved local warning. We're not certain this is current, so check the platform's Help Center, your network and your broker."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for geos",
+          "p": "Starting rules to adapt. They make a new geo a small, contained bet rather than a leap. A geo earns more budget only through the same rule card as everything else.",
+          "d": [
+            "Any gate fails: the geo is out",
+            "Test CPM above your max CPM: fix the funnel before spending more",
+            "Test budget: about 3 × target per ad set, 3 ad sets",
+            "Apply the standard rule card per ad set, on confirmed qualified FTDs",
+            "One new geo per buyer at a time"
+          ],
+          "say": "Here are starting decision rules for geos. Any gate fails, the geo is out. Test C P M above your max C P M, fix the funnel before spending more. Test budget, about three times target per ad set, across three ad sets. Apply the standard rule card per ad set, on confirmed qualified F T Ds. And one new geo per buyer at a time. These make a new geo a small, contained bet, rather than a leap."
+        }
+      ],
+      "takeaways": [
+        "Every geo is a new test: gates first, then economics.",
+        "Max CPM = payout × qualified per 1,000 impressions × (1 − margin).",
+        "Launch one geo at a time with its own campaign, warning and test budget."
+      ],
+      "action": "Score two new geos on the sheet from this lesson, get the gate answers in writing from your network, and work out the max CPM for each from your current funnel.",
+      "glossary": [
+        {
+          "term": "Gate",
+          "def": "A yes-or-no check that must pass before a geo is considered at all."
+        },
+        {
+          "term": "Max CPM",
+          "def": "The most you can pay per 1,000 impressions and still keep your margin."
+        },
+        {
+          "term": "Serving entity",
+          "def": "The broker company that users in a given country actually sign up with."
+        },
+        {
+          "term": "Mobile money",
+          "def": "Payment via a phone-based wallet, common in several African markets."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Payout $50, 0.18 qualified FTDs per 1,000 impressions, margin 25%. Max CPM?",
+          "options": [
+            "$9.00",
+            "$6.75",
+            "$4.50",
+            "$12.00"
+          ],
+          "answer": 1,
+          "why": "$50 × 0.18 = $9; × 0.75 = $6.75."
+        },
+        {
+          "q": "A geo has a great payout but you lack the platform authorization there. Decision?",
+          "options": [
+            "Test small",
+            "Target a neighbour country",
+            "Out: a gate failed",
+            "Use a VPN to check"
+          ],
+          "answer": 2,
+          "why": "Gates are yes or no. No permission, no geo."
+        },
+        {
+          "q": "Test CPM is $8, your max CPM is $6.75. What do you do?",
+          "options": [
+            "Scale to bring CPM down",
+            "Fix the funnel or payout before spending more",
+            "Ignore CPM",
+            "Double the bid"
+          ],
+          "answer": 1,
+          "why": "Above the max CPM, the funnel cannot work at that payout."
+        },
+        {
+          "q": "How many new geos should one buyer test at a time, as a starting rule?",
+          "options": [
+            "One",
+            "Three",
+            "Five",
+            "All available"
+          ],
+          "answer": 0,
+          "why": "One at a time keeps results clear and risk small."
+        },
+        {
+          "q": "Target $37.50, 3 × target per ad set over 6 days. Daily budget per ad set?",
+          "options": [
+            "About $6",
+            "About $37",
+            "About $113",
+            "About $19"
+          ],
+          "answer": 3,
+          "why": "$37.50 × 3 = $112.50 ÷ 6 ≈ $18.75."
+        }
+      ],
+      "say_intro": "A new country isn't just a new targeting box. In this lesson you'll score a new geo with gates first and economics second, work out the most you can pay for impressions there, and launch it as a controlled test.",
+      "say_outro": "Every new geo passes the yes-or-no gates first, then the max C P M maths, then a small separate test under the same rule card. Your task: score two new geos on this lesson's sheet, get the gate answers in writing from your network, and work out the max C P M for each from your current funnel. Now take the quiz."
+    },
+    {
+      "slug": "languages-and-localisation",
+      "title": "Languages and localisation at scale",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can plan a localisation pipeline with native review and broker approval.",
+        "By the end you can tell translation from localisation.",
+        "By the end you can budget and test a new language as its own test."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why language decides trust",
+          "p": "People trust and understand messages in their own language. For trading, that matters twice: the offer must be clear, and the risk warning must be understood. A warning in a language the reader does not read well protects nobody, and may not count with a regulator.",
+          "d": {
+            "b": "If they cannot read the warning, it is not a warning",
+            "s": "Localise the whole journey, not just the ad."
+          },
+          "say": "Language decides trust. People understand and trust messages in their own language. For trading, that matters twice. The offer must be clear, and the risk warning must be understood. A warning in a language the reader doesn't read well protects nobody, and may not count with a regulator. As the screen says, if they can't read the warning, it's not a warning. So localise the whole journey, not just the ad."
+        },
+        {
+          "v": "cards",
+          "h": "Languages you will meet",
+          "p": "A rough map for planning. Many countries are multilingual, and the right language can differ by region or age group. Ask local people, and check which languages your broker supports in its app and support team.",
+          "d": [
+            "French|Cameroon, Côte d'Ivoire, Senegal",
+            "Portuguese|Mozambique, Angola, Brazil",
+            "Arabic|North Africa and the Gulf",
+            "Swahili|Kenya and Tanzania",
+            "Spanish|most of Latin America",
+            "Local English|Nigeria, Ghana, Kenya, South Africa"
+          ],
+          "say": "Here's a rough map of languages you'll meet. French in Cameroon, Côte d'Ivoire and Senegal. Portuguese in Mozambique, Angola and Brazil. Arabic across North Africa and the Gulf. Swahili in Kenya and Tanzania. Spanish in most of Latin America. And local English in Nigeria, Ghana, Kenya and South Africa. Many countries are multilingual, and the right language can differ by region or age group. Ask local people, and check which languages your broker supports in its app and support team."
+        },
+        {
+          "v": "compare",
+          "h": "Translation versus localisation",
+          "p": "Translation changes the words. Localisation changes everything the viewer needs to feel the ad was made for them, while keeping every claim and warning exactly as approved.",
+          "d": {
+            "a": {
+              "title": "Translation only",
+              "items": [
+                "Words changed, examples kept",
+                "Dollar amounts from another geo",
+                "Payment methods people do not use",
+                "Faces and settings from elsewhere"
+              ]
+            },
+            "b": {
+              "title": "Localisation",
+              "items": [
+                "Examples that make sense locally",
+                "Local currency where the broker allows",
+                "Deposit methods the broker accepts there",
+                "Local presenter and setting, with consent"
+              ]
+            }
+          },
+          "say": "Translation changes the words. Localisation changes everything the viewer needs to feel the ad was made for them. On the left, translation only: words changed but examples kept, dollar amounts from another geo, payment methods people don't use, faces and settings from elsewhere. On the right, localisation: examples that make sense locally, local currency where the broker allows, deposit methods the broker accepts there, and a local presenter and setting, with consent. And it keeps every claim and warning exactly as approved."
+        },
+        {
+          "v": "flow",
+          "h": "The localisation pipeline",
+          "p": "Every localised creative follows this order. The broker approves the final text, including the warning, before anything is recorded or designed. That avoids paying twice for voice-overs.",
+          "d": [
+            "Approved source script",
+            "Native translation",
+            "Back-check by second speaker",
+            "Broker approves text and warning",
+            "Record and design",
+            "Prominence test"
+          ],
+          "say": "Every localised creative follows this pipeline. Follow the line. An approved source script. A native translation. A back-check by a second speaker. The broker approves the text and warning. Then record and design. Then a prominence test. Notice where broker approval sits, before anything is recorded or designed. That avoids paying twice for voice-overs."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: localising five scripts",
+          "p": "Example costs for planning, not market prices. Rates vary widely by language and country. Get quotes in writing, and include usage rights for any voice or face you record.",
+          "d": {
+            "cols": [
+              "Item",
+              "Working",
+              "Example cost"
+            ],
+            "rows": [
+              [
+                "Translation",
+                "5 × $15",
+                "$75"
+              ],
+              [
+                "Native review",
+                "5 × $10",
+                "$50"
+              ],
+              [
+                "Voice-over",
+                "5 × $25",
+                "$125"
+              ],
+              [
+                "Total",
+                "",
+                "$250"
+              ]
+            ]
+          },
+          "say": "Let's price localising five scripts. These are example costs for planning, not market prices. Translation, five at fifteen dollars, seventy five. Native review, five at ten, fifty. Voice-over, five at twenty five, one hundred and twenty five. Total, two hundred and fifty dollars. Rates vary widely by language and country, so get quotes in writing, and include usage rights for any voice or face you record."
+        },
+        {
+          "v": "bars",
+          "h": "Example: same ad, two languages",
+          "p": "Example only, not a statistic: a Cameroon test in English and French with the same angle. The French version cost less per qualified FTD. Your result may differ; that is why a new language is tested, not assumed.",
+          "d": [
+            [
+              "English version",
+              100,
+              "$64 per qualified FTD"
+            ],
+            [
+              "French version",
+              73,
+              "$47 per qualified FTD"
+            ]
+          ],
+          "say": "Here's an example, not a statistic. A Cameroon test in English and French, with the same angle. Look at the bars. The English version cost sixty four dollars per qualified F T D, first time deposit. The French version cost forty seven. In this example, French was cheaper. Your result may differ. And that's exactly why a new language is tested, not assumed."
+        },
+        {
+          "v": "phone",
+          "h": "A French lander, warning included",
+          "p": "A localised lander keeps the same structure as the approved original. The warning shown here is a placeholder; you use the broker's own French text for that geo, never your own translation.",
+          "d": {
+            "app": "browser",
+            "url": "apprendre.example/demo",
+            "page": {
+              "h": "Apprenez sur un compte démo gratuit",
+              "p": "[Avertissement sur les risques fourni par le courtier, en français.] Entraînez-vous avec des fonds virtuels avant de décider.",
+              "cta": "Ouvrir un compte démo"
+            }
+          },
+          "say": "Here's a French lander on a phone. It keeps the same structure as the approved original. The headline invites people to learn on a free demo account, and the button opens a demo account. At the top of the text is a placeholder in brackets, standing in for the broker's risk warning in French. That's the key point. You use the broker's own French text for that geo, never your own translation."
+        },
+        {
+          "v": "product",
+          "h": "Build localised landers",
+          "p": "Once the text is approved, you need a lander per language with the warning in the right place. A builder you control makes that quick and keeps every version consistent.",
+          "d": {
+            "slug": "landvoo",
+            "why": "Duplicate an approved lander into each language and keep the warning above the fold and beside the button."
+          },
+          "say": "Once the text is approved, you need a lander for each language, with the warning in the right place. A builder you control makes that quick and keeps every version consistent. This card shows Landvoo, which lets you duplicate an approved lander into each language, keeping the warning above the fold and beside the button."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "Localisation mistakes often look small but break compliance or trust. These are the ones we see most, and every one of them can turn an approved ad into a non-compliant one.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Machine-translating the risk warning",
+                "Slang that hints at easy money",
+                "English support for a French audience",
+                "Local 'testimonials' from paid actors"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Use the broker's approved translation",
+                "Native review for tone and implied claims",
+                "Check broker support speaks the language",
+                "Real users with consent, or a labelled presenter"
+              ]
+            }
+          },
+          "say": "Localisation mistakes often look small, but they can turn an approved ad into a non-compliant one. Machine-translating the risk warning, use the broker's approved translation. Slang that hints at easy money, get native review for tone and implied claims. English support for a French audience, check the broker's support speaks the language. Local testimonials from paid actors, use real users with consent, or a labelled presenter."
+        },
+        {
+          "v": "tip",
+          "h": "Warnings and support in the user's language",
+          "p": "A user who cannot read the warning or talk to support in their language is more likely to be misled or stuck at KYC. Check both before you scale a language.",
+          "d": {
+            "kind": "warn",
+            "text": "Use only the broker's approved warning in each language, and never machine-translate it. Trading ads need platform authorization where required and must follow local law. We are not certain this is current; check the platform's Help Center, your network and your broker before relying on it."
+          },
+          "say": "A user who can't read the warning, or talk to support in their language, is more likely to be misled, or stuck at K Y C, the identity check. So check both before you scale a language. The warning on screen: use only the broker's approved warning in each language, and never machine-translate it. Trading ads need platform authorization where required and must follow local law. We're not certain this is current, so check the platform's Help Center, your network and your broker."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for languages",
+          "p": "Starting rules to adapt. They treat a new language like a new geo: a fresh test with its own budget and rules. A winner in English proves nothing about French.",
+          "d": [
+            "A new language is a new test with its own test budget",
+            "Warnings come only from the broker, per language",
+            "Every script gets native review before recording",
+            "No broker support in the language: test only, do not scale",
+            "Apply the standard rule card per language, on confirmed qualified FTDs"
+          ],
+          "say": "These starting rules treat a new language like a new geo. A new language is a new test, with its own test budget. Warnings come only from the broker, per language. Every script gets native review before recording. No broker support in the language, test only, don't scale. And apply the standard rule card per language, on confirmed qualified F T Ds. Remember, a winner in English proves nothing about French."
+        },
+        {
+          "v": "check",
+          "h": "Your localisation checklist",
+          "p": "Run this on every localised creative and lander before it goes live, alongside the claim audit and the prominence test from Module 4. If a line fails, the creative waits.",
+          "d": [
+            "Approved source text, unchanged in meaning",
+            "Native translation and a second-speaker check",
+            "Broker-approved warning in that language",
+            "Local deposit methods named only if the broker accepts them",
+            "Presenter and setting fit the audience, with consent",
+            "Lander, bot and support in the same language"
+          ],
+          "say": "Run this checklist on every localised creative and lander before it goes live, alongside the claim audit and prominence test from Module four. Approved source text, unchanged in meaning. Native translation and a second-speaker check. A broker-approved warning in that language. Local deposit methods named only if the broker accepts them. A presenter and setting that fit the audience, with consent. And lander, bot and support all in the same language. If a line fails, the creative waits."
+        }
+      ],
+      "takeaways": [
+        "Localise the whole journey: ad, lander, bot, warning and support.",
+        "Warnings come only from the broker, in each language; never machine-translate them.",
+        "Test a new language like a new geo, with its own budget and rule card."
+      ],
+      "action": "Choose one language you could add, ask your broker for its approved warning and support details in that language, and price five localised scripts using the pipeline in this lesson.",
+      "glossary": [
+        {
+          "term": "Localisation",
+          "def": "Adapting an ad's language, examples, currency and visuals to a local audience while keeping claims approved."
+        },
+        {
+          "term": "Back-check",
+          "def": "A second native speaker reads the translation to catch errors and implied claims."
+        },
+        {
+          "term": "Native review",
+          "def": "A check by someone who speaks the language as a first language."
+        },
+        {
+          "term": "Placeholder",
+          "def": "Temporary text marking where approved wording must go."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the safest source of a French risk warning?",
+          "options": [
+            "The broker's approved French text for that geo",
+            "An online translator",
+            "Your own translation",
+            "The English version"
+          ],
+          "answer": 0,
+          "why": "Wording and translation must come from the broker for that geo."
+        },
+        {
+          "q": "Example: 5 scripts, $15 translation, $10 review and $25 voice-over each. Total?",
+          "options": [
+            "$125",
+            "$200",
+            "$250",
+            "$375"
+          ],
+          "answer": 2,
+          "why": "5 × ($15 + $10 + $25) = $250."
+        },
+        {
+          "q": "Your broker has no French support. Starting rule for a French campaign?",
+          "options": [
+            "Scale it anyway",
+            "Test only; do not scale",
+            "Offer support yourself on KYC documents",
+            "Use English support links"
+          ],
+          "answer": 1,
+          "why": "Users stuck without support hurt quality. Test only until support exists."
+        },
+        {
+          "q": "Which is localisation, not just translation?",
+          "options": [
+            "Changing words only",
+            "Keeping dollar examples from another geo",
+            "Using deposit methods the broker accepts locally",
+            "Machine-translating the warning"
+          ],
+          "answer": 2,
+          "why": "Localisation adapts examples and payment methods to what is real locally."
+        },
+        {
+          "q": "A native reviewer says a slang word implies easy money. What do you do?",
+          "options": [
+            "Keep it, it converts",
+            "Add a disclaimer",
+            "Only use it in captions",
+            "Replace it and re-run the claim audit"
+          ],
+          "answer": 3,
+          "why": "Implied claims are claims. Change it and recheck."
+        }
+      ],
+      "say_intro": "People trust messages in their own language, and in trading the risk warning has to be understood. In this lesson you'll learn the difference between translation and localisation, a pipeline with native review and broker approval, and how to test a new language.",
+      "say_outro": "Localisation keeps every approved claim and the broker's own warning while making the whole journey fit the reader, and each new language is its own test. Your task: choose one language you could add, ask your broker for its approved warning and support details in that language, and price five localised scripts using this lesson's pipeline. Now take the quiz."
+    },
+    {
+      "slug": "seasonality-and-market-events",
+      "title": "Seasonality and market events",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can build a market and local calendar for your geos.",
+        "By the end you can shift budget across the month without breaking your rules.",
+        "By the end you can use market news for honest education, never for pressure."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why timing moves your numbers",
+          "p": "Interest in trading rises when markets move and when people have money, and ad costs rise in busy seasons. The same campaign can cost very different amounts in different weeks. Planning around a calendar lets you spend more when it works better, without chasing hype.",
+          "d": {
+            "b": "Same campaign, different month, different cost",
+            "s": "Plan the calendar; do not chase the news."
+          },
+          "say": "Timing moves your numbers. Interest in trading rises when markets move and when people have money, and ad costs rise in busy seasons. So the same campaign can cost very different amounts in different weeks. Planning around a calendar lets you spend more when it works better, without chasing hype. Same campaign, different month, different cost. Plan the calendar. Don't chase the news."
+        },
+        {
+          "v": "cards",
+          "h": "What moves trading campaigns",
+          "p": "Starting list of drivers to watch. Their effect differs by geo and product, so check them against your own data before you rely on any of them.",
+          "d": [
+            "Market moves|big price swings raise interest",
+            "Scheduled data|jobs reports, central bank decisions",
+            "Crypto cycles|interest follows big price moves",
+            "Paydays|month-end salaries in many geos",
+            "Holidays|Christmas, Ramadan, Easter change behaviour",
+            "Busy ad seasons|costs often rise in Q4, rough guide"
+          ],
+          "say": "Here's a starting list of drivers to watch. Market moves, where big price swings raise interest. Scheduled data, like jobs reports and central bank decisions. Crypto cycles, where interest follows big price moves. Paydays, with month-end salaries in many geos. Holidays, like Christmas, Ramadan and Easter, which change behaviour. And busy ad seasons, with costs often rising in the fourth quarter, as a rough guide. Their effect differs by geo and product, so check them against your own data."
+        },
+        {
+          "v": "curve",
+          "h": "Example: a year of costs and interest",
+          "p": "Example shape only, not data: an index of CPM and registrations across a year. CPM climbs in the last quarter as many advertisers compete; registrations rise with market activity. Your own geos will look different.",
+          "d": {
+            "a": [
+              100,
+              95,
+              100,
+              95,
+              105,
+              130,
+              145
+            ],
+            "la": "CPM index",
+            "b": [
+              100,
+              110,
+              95,
+              90,
+              105,
+              115,
+              100
+            ],
+            "lb": "Registrations index",
+            "x": [
+              "Jan",
+              "Mar",
+              "May",
+              "Jul",
+              "Sep",
+              "Nov",
+              "Dec"
+            ]
+          },
+          "say": "This is an example shape only, not data, showing an index of C P M, cost per thousand impressions, and registrations across a year. Follow the C P M line. It stays near a hundred for most of the year, then climbs to one thirty in November and one forty five in December, as many advertisers compete. Registrations move more with market activity, rising and falling through the year. Your own geos will look different."
+        },
+        {
+          "v": "stat",
+          "h": "When ad costs rise and nothing else does",
+          "p": "Example: if CPM rises 50% in December and your click and conversion rates stay the same, your cost per qualified FTD also rises 50%. A $40 CPA becomes $60. Season planning starts with this simple maths.",
+          "d": {
+            "n": 50,
+            "pre": "+",
+            "suf": "%",
+            "dec": 0,
+            "label": "cost per qualified FTD when CPM rises 50% and rates stay flat",
+            "note": "Example."
+          },
+          "say": "Here's the simple maths season planning starts with. The big number is plus fifty percent. If C P M rises fifty percent in December, and your click and conversion rates stay the same, your cost per qualified F T D, first time deposit, also rises fifty percent. So a forty dollar C P A, cost per acquisition, becomes sixty. That's an example, but the logic holds."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: weighting the month",
+          "p": "Example: a $6,000 monthly budget. You give the 8 days around payday a higher daily budget and the other 22 days a lower one. Only do this if your own data shows payday days convert better.",
+          "more": "Example: 22 × $180 = $3,960. 8 × $255 = $2,040. $3,960 + $2,040 = $6,000. Moving from $180 to $255 is a 42% jump, which is more than the +20% step rule. So you do not jump overnight: you step up across the days before payday, for example $180 → $216 → $255, with each step at least 48 hours apart, and only while the rule card allows.",
+          "d": [
+            "22 × $180",
+            "+",
+            "8 × $255",
+            "=",
+            "$6,000"
+          ],
+          "say": "Here's how to weight the month. Example: a six thousand dollar monthly budget. You give the eight days around payday a higher daily budget, and the other twenty two days a lower one. Twenty two times one hundred and eighty, plus eight times two hundred and fifty five, equals six thousand. But going from one eighty to two fifty five is a forty two percent jump, more than the twenty percent step rule. So you step up across the days before payday, forty eight hours apart. And only do this if your own data shows payday days convert better."
+        },
+        {
+          "v": "compare",
+          "h": "Market news: pressure versus education",
+          "p": "Big market days attract attention. You can use that attention honestly by explaining what happened. Using it to create fear or urgency is misleading, and on many platforms banned.",
+          "d": {
+            "a": {
+              "title": "Pressure (never)",
+              "items": [
+                "'Gold is exploding, get in now'",
+                "'Last chance before the crash'",
+                "Telling people what to trade",
+                "Fake breaking-news layouts"
+              ]
+            },
+            "b": {
+              "title": "Education",
+              "items": [
+                "'What moved gold this week, in three charts'",
+                "'What a central bank decision is'",
+                "'How a stop-loss behaves in fast markets'",
+                "Clearly labelled as an ad"
+              ]
+            }
+          },
+          "say": "Big market days attract attention. You can use that attention honestly, by explaining what happened. On the left, pressure, which you never use: gold is exploding, get in now. Last chance before the crash. Telling people what to trade. Fake breaking-news layouts. On the right, education: what moved gold this week, in three charts. What a central bank decision is. How a stop-loss behaves in fast markets. And clearly labelled as an ad. Using fear or urgency is misleading, and on many platforms banned."
+        },
+        {
+          "v": "phone",
+          "h": "An honest post on a volatile day",
+          "p": "An example educational post for a Telegram channel after a big market move. It explains, it warns, it does not tell anyone what to do.",
+          "d": {
+            "app": "chat",
+            "title": "Learn Markets NG",
+            "subtitle": "channel",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Gold moved sharply today after US data. Here is what that data measures and why markets react."
+              },
+              {
+                "from": "them",
+                "text": "Fast markets can make stop-losses fill at worse prices. That is called slippage; here is how it works."
+              },
+              {
+                "from": "them",
+                "text": "This is education, not advice. CFDs are high risk; use the broker's current warning."
+              }
+            ]
+          },
+          "say": "Here's an honest post for a Telegram channel after a big market move. In this channel, the first post says gold moved sharply today after U S data, and explains what that data measures and why markets react. The second explains that fast markets can make stop-losses fill at worse prices, which is called slippage. The third says this is education, not advice, C F Ds are high risk, use the broker's current warning. It explains, it warns, and it doesn't tell anyone what to do."
+        },
+        {
+          "v": "walk",
+          "h": "Build your market calendar",
+          "p": "One sheet per quarter. Fill it before the quarter starts and review it at the end. It turns surprises into plans, and gives you time to get event creatives approved before the event arrives.",
+          "d": {
+            "steps": [
+              {
+                "title": "Add scheduled events",
+                "text": "Copy big scheduled releases from a public economic calendar: central bank meetings, jobs data, inflation data.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/calendar",
+                  "title": "Q4 calendar",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Date",
+                        "Event",
+                        "Type"
+                      ],
+                      "rows": [
+                        [
+                          "First Fri",
+                          "US jobs report",
+                          "Market"
+                        ],
+                        [
+                          "Mid-month",
+                          "Central bank decision",
+                          "Market"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Add local dates",
+                "text": "Mark paydays, public holidays and festive periods for each of your geos.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/calendar",
+                  "title": "Local dates",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Geo",
+                        "Date",
+                        "Note"
+                      ],
+                      "rows": [
+                        [
+                          "NG",
+                          "25th–31st",
+                          "Payday window"
+                        ],
+                        [
+                          "KE",
+                          "Dec",
+                          "Festive spending"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Plan budget and creatives",
+                "text": "Set budget weights from your data and plan explainer creatives for big events, approved in advance.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/calendar",
+                  "title": "Plan",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Payday weight",
+                      "value": "1.4 × base, stepped up"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Event creative",
+                      "value": "Explainer, pre-approved"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Review after",
+                "text": "At quarter end, compare planned and actual cost per qualified FTD for each event and adjust next quarter.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/calendar",
+                  "title": "Review",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Period",
+                        "Planned CPA",
+                        "Actual"
+                      ],
+                      "rows": [
+                        [
+                          "Payday",
+                          "$45",
+                          "$42"
+                        ],
+                        [
+                          "December",
+                          "$55",
+                          "$61"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Build your market calendar, one sheet per quarter. Tap Next to follow each step. First, add scheduled events from a public economic calendar, like central bank meetings, jobs data and inflation data. Second, add local dates, paydays, public holidays and festive periods for each geo. Third, plan budget weights from your data, and explainer creatives for big events, approved in advance. Fourth, at quarter end, compare planned and actual cost per qualified F T D for each event, and adjust next quarter."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "Seasonal mistakes are mostly about reacting too fast or too much. The rules you use every day still apply on big days. These are the most common ways operators break them.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Doubling budget on a big news day",
+                "Running event ads after the event",
+                "Assuming last year's pattern holds",
+                "Same plan for every geo"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Same +20% step rule, every day",
+                "Pull event ads within 24 hours after it passes",
+                "Check against this year's data",
+                "Separate calendar per geo"
+              ]
+            }
+          },
+          "say": "Seasonal mistakes are mostly about reacting too fast or too much. Doubling budget on a big news day, use the same twenty percent step rule, every day. Running event ads after the event, pull them within twenty four hours after it passes. Assuming last year's pattern holds, check against this year's data. The same plan for every geo, keep a separate calendar per geo. The rules you use every day still apply on big days."
+        },
+        {
+          "v": "tip",
+          "h": "Never use fear or urgency",
+          "p": "Market events are exactly when people are most likely to act on emotion. Ads that use fear, urgency or 'act now' framing around volatility are misleading and often banned. Keep it educational and keep the warning prominent.",
+          "d": {
+            "kind": "warn",
+            "text": "No urgency, no fear, no trading calls around market events. Trading ads need platform authorization where required and must follow local law. We are not certain this is current; check the platform's Help Center, your network and your broker before relying on it."
+          },
+          "say": "Market events are exactly when people are most likely to act on emotion. Ads that use fear, urgency, or act-now framing around volatility are misleading, and often banned. Keep it educational, and keep the warning prominent. The warning: no urgency, no fear, no trading calls around market events. Trading ads need platform authorization where required and must follow local law. We're not certain this is current, so check the platform's Help Center, your network and your broker."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for seasons and events",
+          "p": "Starting rules to adapt. They let you use the calendar without letting it override your rule card. Write your budget weights into the plan before the quarter begins.",
+          "d": [
+            "Budget changes for events follow the same +20% every ≥ 48h rule",
+            "Weight payday windows only if your data shows better CPA there",
+            "Event creatives are pre-approved; pull them within 24 hours after the event",
+            "In costly seasons, recheck max CPM before keeping budgets",
+            "The rule card does not change for any season"
+          ],
+          "say": "Here are starting rules for seasons and events. Budget changes for events follow the same twenty percent every forty eight hours rule. Weight payday windows only if your data shows better C P A there. Event creatives are pre-approved, and pulled within twenty four hours after the event. In costly seasons, recheck your max C P M before keeping budgets. And the rule card doesn't change for any season. Write your budget weights into the plan before the quarter begins."
+        },
+        {
+          "v": "big",
+          "h": "Calendars beat reactions",
+          "p": "The operators who do well in trading are rarely the ones who react fastest to news. They are the ones who planned their budgets, creatives and approvals before the quarter started and then followed their own rules.",
+          "d": {
+            "b": "Plan the quarter before it starts",
+            "s": "Your rule card stays the same on every day of the year."
+          },
+          "say": "Calendars beat reactions. The operators who do well in trading are rarely the ones who react fastest to news. They're the ones who planned their budgets, creatives and approvals before the quarter started, and then followed their own rules. Plan the quarter before it starts. Your rule card stays the same on every day of the year."
+        }
+      ],
+      "takeaways": [
+        "Market moves, paydays, holidays and busy ad seasons all change your costs.",
+        "Shift budget using your own data and the normal step rule; never jump on a news day.",
+        "Use market events for honest education, never for fear or urgency."
+      ],
+      "action": "Build a calendar for next quarter for one geo with scheduled market events, paydays and holidays, and write one pre-approved explainer idea for the biggest event.",
+      "glossary": [
+        {
+          "term": "Seasonality",
+          "def": "Regular changes in costs and results at certain times of year or month."
+        },
+        {
+          "term": "Economic calendar",
+          "def": "A public list of scheduled data releases and central bank meetings."
+        },
+        {
+          "term": "Slippage",
+          "def": "When an order fills at a worse price than expected, often in fast markets."
+        },
+        {
+          "term": "Budget weight",
+          "def": "A multiplier that raises or lowers budget for certain days in a plan."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "CPM rises 50% and nothing else changes. Your $40 CPA becomes:",
+          "options": [
+            "$40",
+            "$50",
+            "$60",
+            "$80"
+          ],
+          "answer": 2,
+          "why": "Cost per result scales with CPM when rates are flat: $40 × 1.5 = $60."
+        },
+        {
+          "q": "Gold moves sharply. Which ad is acceptable?",
+          "options": [
+            "'Gold is exploding, get in now'",
+            "'Last chance before the crash'",
+            "'Buy gold today'",
+            "'What moved gold this week, in three charts'"
+          ],
+          "answer": 3,
+          "why": "Education with no urgency or trading call."
+        },
+        {
+          "q": "Your plan raises budget from $180 to $255 for payday. How do you get there?",
+          "options": [
+            "Step up 20% at a time, 48 hours apart, while the card allows",
+            "Jump overnight",
+            "Double it",
+            "Create a second campaign"
+          ],
+          "answer": 0,
+          "why": "The step rule still applies on special days."
+        },
+        {
+          "q": "An event-based ad is still running two days after the event. Starting rule?",
+          "options": [
+            "Leave it",
+            "Raise its budget",
+            "Pull it within 24 hours after the event",
+            "Change the date in the copy"
+          ],
+          "answer": 2,
+          "why": "Event ads go stale and can mislead once the event has passed."
+        },
+        {
+          "q": "Does your kill and scale rule card change in December?",
+          "options": [
+            "No, the rule card stays the same",
+            "Yes, loosen it",
+            "Yes, tighten kill only",
+            "Only for crypto"
+          ],
+          "answer": 0,
+          "why": "The card stays fixed; you recheck max CPM and budget instead."
+        }
+      ],
+      "say_intro": "The same trading campaign can cost very different amounts in different weeks. In this lesson you'll build a market and local calendar, shift budget across the month within your rules, and use market news for education, never pressure.",
+      "say_outro": "You plan the quarter with market and local dates, weight budgets only where your data supports it and only in twenty percent steps, and use market news for education, never pressure. Your task: build next quarter's calendar for one geo with scheduled market events, paydays and holidays, and write one pre-approved explainer idea for the biggest event. Now take the quiz."
+    },
+    {
+      "slug": "revshare-portfolio",
+      "title": "Building a RevShare portfolio",
+      "minutes": 19,
+      "objectives": [
+        "By the end you can design a mix of CPA, hybrid and RevShare deals across brokers.",
+        "By the end you can work out blended value per FTD and payback.",
+        "By the end you can set concentration and cash rules for long-term deals."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why a portfolio, not one deal",
+          "p": "The Scale school showed how RevShare cohorts stack. At volume, the next risk is concentration: one broker, one deal, one geo. If that broker leaves your geo, changes terms or delays payment, your income stops. A portfolio of deals spreads that risk and balances cash now against value later.",
+          "d": {
+            "b": "One broker is a single point of failure",
+            "s": "Spread deals so one change cannot stop your income."
+          },
+          "say": "Why a portfolio, not one deal? The Scale school showed how RevShare cohorts stack. At volume, the next risk is concentration: one broker, one deal, one geo. If that broker leaves your geo, changes terms, or delays payment, your income stops. One broker is a single point of failure. A portfolio of deals spreads that risk, and balances cash now against value later."
+        },
+        {
+          "v": "cards",
+          "h": "Risks a portfolio protects against",
+          "p": "Each of these has ended affiliate income streams. None can be fully prevented, but a spread of brokers and deal types limits how much any one of them can hurt you.",
+          "d": [
+            "Broker leaves a geo|new users stop, old ones may move",
+            "Terms change|lower share or new deductions",
+            "Payment delays|cash flow breaks",
+            "Negative carryover|losses deducted from future months",
+            "Licence trouble|broker restricted by a regulator",
+            "Cap cuts|volume you cannot place"
+          ],
+          "say": "Each of these risks has ended affiliate income streams. A broker leaves a geo, so new users stop, and old ones may move. Terms change, with a lower share or new deductions. Payment delays break cash flow. Negative carryover means losses deducted from future months. Licence trouble, where a regulator restricts the broker. And cap cuts, leaving volume you can't place. None can be fully prevented, but a spread of brokers and deal types limits how much any one can hurt you."
+        },
+        {
+          "v": "table",
+          "h": "Example: a three-deal portfolio",
+          "p": "Example deals, not market rates. Broker A pays CPA, Broker B a hybrid, Broker C pure RevShare. You split new qualified FTDs between them. The six-month values are forecasts from cohort data and can be wrong.",
+          "d": {
+            "cols": [
+              "Broker",
+              "Deal",
+              "Share of FTDs",
+              "6-month value per FTD"
+            ],
+            "rows": [
+              [
+                "A",
+                "$60 CPA",
+                "50%",
+                "$60"
+              ],
+              [
+                "B",
+                "$30 CPA + RevShare",
+                "30%",
+                "$30 + $25 = $55"
+              ],
+              [
+                "C",
+                "RevShare only",
+                "20%",
+                "$70"
+              ]
+            ]
+          },
+          "say": "Here's an example three-deal portfolio, not market rates. Broker A pays a sixty dollar C P A, cost per acquisition, and gets fifty percent of your F T Ds, first time deposits. Six-month value, sixty dollars. Broker B pays a hybrid, thirty dollars C P A plus RevShare, on thirty percent, worth about fifty five. Broker C is pure RevShare, on twenty percent, worth about seventy. Those six-month values are forecasts from cohort data, and they can be wrong."
+        },
+        {
+          "v": "eq",
+          "h": "Blended value per FTD",
+          "p": "Weight each deal's value by its share of your FTDs. Do it twice: for month one, to see your cash, and for six months, to see total value.",
+          "more": "Example, six months: 0.5 × $60 = $30; 0.3 × $55 = $16.50; 0.2 × $70 = $14; total $60.50 per FTD. Month one only: A pays $60; B pays $30 + $7 first-month RevShare = $37; C pays $18. 0.5 × $60 + 0.3 × $37 + 0.2 × $18 = $30 + $11.10 + $3.60 = $44.70. If an FTD costs you $45 in ads, month one is just short of payback; month two passes it.",
+          "d": [
+            "0.5 × $60",
+            "+ 0.3 × $55",
+            "+ 0.2 × $70",
+            "=",
+            "$60.50"
+          ],
+          "say": "To get blended value per F T D, weight each deal's value by its share of your F T Ds. On screen: point five times sixty, plus point three times fifty five, plus point two times seventy, equals sixty dollars fifty over six months. Do it again for month one, to see your cash. In month one, that's forty four seventy. If an F T D costs forty five dollars in ads, month one is just short of payback, and month two passes it."
+        },
+        {
+          "v": "curve",
+          "h": "Cash per FTD over time",
+          "p": "Example: cumulative value per FTD, all-CPA versus the portfolio. The portfolio starts lower, overtakes CPA in month six and keeps earning while players stay active. Real curves depend on your players and the terms.",
+          "more": "Example working, per FTD. B's RevShare by month: $7, $5, $4, $4, $3, $2, $2. C's: $18, $15, $12, $10, $8, $7, $6. Month 2: A $30 + B 0.3 × ($30 + $12) = $12.60 + C 0.2 × $33 = $6.60, total $49.20. Month 6: $30 + 0.3 × $55 + 0.2 × $70 = $60.50. Month 7: $30 + 0.3 × $57 + 0.2 × $76 = $62.30.",
+          "d": {
+            "a": [
+              60,
+              60,
+              60,
+              60,
+              60,
+              60,
+              60
+            ],
+            "la": "All CPA $",
+            "b": [
+              44.7,
+              49.2,
+              52.8,
+              56.0,
+              58.5,
+              60.5,
+              62.3
+            ],
+            "lb": "Portfolio $",
+            "x": [
+              "M1",
+              "M2",
+              "M3",
+              "M4",
+              "M5",
+              "M6",
+              "M7"
+            ]
+          },
+          "say": "This example chart shows cumulative value per F T D, all C P A against the portfolio. The all C P A line is flat at sixty dollars. The portfolio starts lower, at forty four seventy in month one, then climbs, forty nine twenty, fifty two eighty, fifty six, fifty eight fifty. It reaches sixty fifty in month six, and passes C P A at sixty two thirty in month seven, and keeps earning while players stay active. Real curves depend on your players and terms."
+        },
+        {
+          "v": "eq",
+          "h": "The cash buffer for RevShare",
+          "p": "RevShare FTDs pay back slowly, so you fund them from your own cash until they do. Multiply the monthly ad cost of your RevShare volume by its payback months.",
+          "more": "Example: 20 RevShare FTDs a month at $45 each is $900 a month. Broker C's cumulative value reaches $45 in month 3 ($18 + $15 + $12). $900 × 3 = $2,700 buffer just for the RevShare part. If you do not have it, keep more volume on CPA or hybrid.",
+          "d": [
+            "Monthly RevShare ad cost",
+            "×",
+            "Payback months",
+            "=",
+            "Cash buffer"
+          ],
+          "say": "RevShare F T Ds pay back slowly, so you fund them from your own cash until they do. The equation: monthly RevShare ad cost, times payback months, equals your cash buffer. Example: twenty RevShare F T Ds a month at forty five dollars each is nine hundred a month. Broker C's value reaches forty five in month three. So nine hundred times three is a two thousand seven hundred dollar buffer, just for RevShare. If you don't have it, keep more volume on C P A or hybrid."
+        },
+        {
+          "v": "table",
+          "h": "Concentration check",
+          "p": "Example: share of month-six value per FTD from each broker. Broker A is close to half of your income, which is right at the starting limit. Any growth should go to B or C, or to a new broker.",
+          "d": {
+            "cols": [
+              "Broker",
+              "Value per FTD",
+              "Share of income"
+            ],
+            "rows": [
+              [
+                "A",
+                "$30.00",
+                "49.6%"
+              ],
+              [
+                "B",
+                "$16.50",
+                "27.3%"
+              ],
+              [
+                "C",
+                "$14.00",
+                "23.1%"
+              ],
+              [
+                "Total",
+                "$60.50",
+                "100%"
+              ]
+            ]
+          },
+          "say": "Now the concentration check, an example. Look at each broker's share of month-six value per F T D. Broker A contributes thirty dollars, forty nine point six percent of income. Broker B, sixteen fifty, twenty seven point three percent. Broker C, fourteen dollars, twenty three point one percent. Broker A is close to half your income, right at the starting limit. So any growth should go to B or C, or to a new broker."
+        },
+        {
+          "v": "walk",
+          "h": "Track cohorts by broker",
+          "p": "A cohort sheet shows whether each RevShare deal is earning what you expected. Update it monthly from the network's reports. Without it, a weak deal can hide inside your total income for months.",
+          "d": {
+            "steps": [
+              {
+                "title": "One row per monthly cohort",
+                "text": "For each broker, list each month's qualified FTDs as a cohort.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/cohorts",
+                  "title": "Broker C cohorts",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Cohort",
+                        "FTDs",
+                        "M1",
+                        "M2"
+                      ],
+                      "rows": [
+                        [
+                          "July",
+                          "20",
+                          "$360",
+                          "$300"
+                        ],
+                        [
+                          "August",
+                          "22",
+                          "$374",
+                          "-"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Compare with forecast",
+                "text": "Divide actual by forecast for each cohort month.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/cohorts",
+                  "title": "Vs forecast",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "July M1 forecast",
+                      "value": "20 × $18 = $360"
+                    },
+                    {
+                      "type": "field",
+                      "label": "August M1",
+                      "value": "$374 vs $396 = 94%"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Flag weak cohorts",
+                "text": "Mark any broker where cohorts run under 70% of forecast for two months in a row.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/cohorts",
+                  "title": "Flags",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Under 70% two months",
+                      "on": false
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "A cohort sheet shows whether each RevShare deal earns what you expected. Tap Next to follow each step. First, one row per monthly cohort per broker, like July's twenty F T Ds earning three sixty in month one and three hundred in month two. Second, compare with forecast, dividing actual by forecast. August's month one was three seventy four against three ninety six, ninety four percent. Third, flag any broker whose cohorts run under seventy percent of forecast two months in a row. Without this, a weak deal can hide in your total for months."
+        },
+        {
+          "v": "check",
+          "h": "Due diligence for long-term deals",
+          "p": "Before you put volume on a long-term deal, ask these in writing. The answers matter more than the headline percentage, because you are trusting the broker to pay you for months or years.",
+          "d": [
+            "Licence history and serving entity per geo",
+            "Payment track record: ask other affiliates you trust",
+            "Can terms change, and with how much notice?",
+            "Negative carryover: yes or no?",
+            "Player-level or cohort reports available?",
+            "What happens to your players if the deal ends?"
+          ],
+          "say": "Before you put volume on a long-term deal, ask these in writing. The broker's licence history and serving entity per geo. Their payment track record, so ask other affiliates you trust. Can terms change, and with how much notice? Is there negative carryover, yes or no? Are player-level or cohort reports available? And what happens to your players if the deal ends? The answers matter more than the headline percentage, because you're trusting the broker to pay you for months or years."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "Portfolio mistakes usually come from chasing the highest headline number. A slightly lower share from a reliable broker beats a high share you never receive.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "All volume on the highest RevShare %",
+                "RevShare volume with no cash buffer",
+                "Never checking cohorts against forecast",
+                "Ignoring negative carryover"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Spread across brokers and deal types",
+                "Buffer = monthly RevShare cost × payback months",
+                "Monthly cohort review per broker",
+                "Read and price carryover before signing"
+              ]
+            }
+          },
+          "say": "Portfolio mistakes usually come from chasing the highest headline number. All volume on the highest RevShare percentage, spread across brokers and deal types. RevShare volume with no cash buffer, set the buffer as monthly RevShare cost times payback months. Never checking cohorts against forecast, review cohorts monthly per broker. Ignoring negative carryover, read and price it before signing. A slightly lower share from a reliable broker beats a high share you never receive."
+        },
+        {
+          "v": "tip",
+          "h": "The conflict in RevShare",
+          "p": "On many trading RevShare deals, your income grows when clients trade more or lose more. That is a real conflict of interest. Your marketing must stay educational and never encourage people to trade more, deposit more or chase losses.",
+          "d": {
+            "kind": "warn",
+            "text": "Never push activity to raise RevShare. Keep messaging educational and opt-in. Trading ads need platform authorization where required and must follow local law. We are not certain this is current; check the platform's Help Center, your network and your broker before relying on it."
+          },
+          "say": "Here's an honest point about RevShare. On many trading RevShare deals, your income grows when clients trade more, or lose more. That's a real conflict of interest. So your marketing must stay educational, and never encourage people to trade more, deposit more or chase losses. The warning: never push activity to raise RevShare, and keep messaging educational and opt-in. Trading ads need platform authorization where required and must follow local law. We're not certain this is current, so check the Help Center, your network and your broker."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for the portfolio",
+          "p": "Starting rules to adapt with your accountant. They keep your income spread out and your cash safe while long-term deals mature. Review them at every monthly operating review.",
+          "d": [
+            "No single broker above 50% of monthly income",
+            "RevShare volume only up to what your cash buffer covers",
+            "Cohorts under 70% of forecast for 2 months: move new volume to CPA or hybrid",
+            "Review every deal's terms every 6 months",
+            "New broker: start on CPA or hybrid until payments are proven"
+          ],
+          "say": "Here are starting rules for the portfolio, to adapt with your accountant. No single broker above fifty percent of monthly income. RevShare volume only up to what your cash buffer covers. Cohorts under seventy percent of forecast for two months, move new volume to C P A or hybrid. Review every deal's terms every six months. And a new broker starts on C P A or hybrid until payments are proven. Review these at every monthly operating review."
+        }
+      ],
+      "takeaways": [
+        "Spread volume across brokers and deal types so one change cannot stop your income.",
+        "Work out blended value for month one (cash) and six months (value), and the payback point.",
+        "Keep a cash buffer for RevShare and cap any one broker at about half your income."
+      ],
+      "action": "List your current deals with share of FTDs, month-one value and six-month value, calculate your blended value per FTD and your largest broker's share of income.",
+      "glossary": [
+        {
+          "term": "Portfolio",
+          "def": "A spread of deals across brokers and deal types."
+        },
+        {
+          "term": "Blended value",
+          "def": "Average value per FTD across deals, weighted by each deal's share of volume."
+        },
+        {
+          "term": "Concentration",
+          "def": "How much of your income depends on one broker or deal."
+        },
+        {
+          "term": "Payback",
+          "def": "The point where earnings from an FTD cover what you paid to get it."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "50% at $60, 30% at $55, 20% at $70. Blended six-month value per FTD?",
+          "options": [
+            "$61.67",
+            "$60.50",
+            "$62.00",
+            "$58.50"
+          ],
+          "answer": 1,
+          "why": "0.5 × 60 + 0.3 × 55 + 0.2 × 70 = 30 + 16.5 + 14 = $60.50."
+        },
+        {
+          "q": "20 RevShare FTDs a month at $45, payback in month 3. Cash buffer?",
+          "options": [
+            "$900",
+            "$1,800",
+            "$2,700",
+            "$4,500"
+          ],
+          "answer": 2,
+          "why": "$900 a month × 3 months = $2,700."
+        },
+        {
+          "q": "One broker brings 62% of your monthly income. Starting rule?",
+          "options": [
+            "Fine, it pays best",
+            "Stop all other brokers",
+            "Ask it for a lower share",
+            "Over 50%: send new volume to other brokers"
+          ],
+          "answer": 3,
+          "why": "Above 50% is concentrated. Grow elsewhere."
+        },
+        {
+          "q": "A RevShare broker's cohorts run at 60% of forecast for two months. What do you do?",
+          "options": [
+            "Add more volume",
+            "Move new volume to CPA or hybrid",
+            "Push players to trade more",
+            "Ignore it"
+          ],
+          "answer": 1,
+          "why": "Under 70% for two months triggers a shift. Never push players."
+        },
+        {
+          "q": "Which is an acceptable way to raise RevShare income?",
+          "options": [
+            "Encourage clients to trade more often",
+            "Remind clients to top up after losses",
+            "Send better-matched users through honest education",
+            "Offer bonuses for volume"
+          ],
+          "answer": 2,
+          "why": "Better-matched users stay longer. Pushing activity is harmful."
+        }
+      ],
+      "say_intro": "At volume, the next risk is relying on one broker or one deal. In this lesson you'll design a mix of C P A, hybrid and RevShare deals, work out blended value and payback, and set concentration and cash rules.",
+      "say_outro": "A portfolio spreads volume across brokers and deal types, balances month-one cash against six-month value, and keeps any one broker under half your income. Your task: list your current deals with share of F T Ds, month-one value and six-month value, then calculate your blended value per F T D and your largest broker's share of income. Now take the quiz."
+    },
+    {
+      "slug": "running-trading-at-scale",
+      "title": "Running trading at scale",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can run a monthly operating review across brokers and geos.",
+        "By the end you can negotiate payouts and caps with data.",
+        "By the end you can tell when to stop scaling and protect what you have."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why operations decide profit at scale",
+          "p": "At small budgets, a good creative can carry a campaign. At scale, profit depends on operations: caps, cash, team, compliance and reporting. A few percent saved on clawbacks or won on payout is worth more than a lucky week.",
+          "d": {
+            "b": "At scale, systems beat hunches",
+            "s": "Same rules, more people, written down."
+          },
+          "say": "At small budgets, a good creative can carry a campaign. At scale, profit depends on operations: caps, cash, team, compliance and reporting. A few percent saved on clawbacks, or won on payout, is worth more than a lucky week. As the screen says, at scale, systems beat hunches. Same rules, more people, written down."
+        },
+        {
+          "v": "cards",
+          "h": "The operating system",
+          "p": "Six routines that run every week or month. Each has one owner. If a routine has no owner, it does not happen. When you are alone, you own all six; write them down anyway.",
+          "d": [
+            "Weekly scorecard|quality per source and ad set",
+            "Weekly reconciliation|network, tracker, platform",
+            "Compliance log|every live creative approved",
+            "Monthly broker review|terms, payments, cohorts",
+            "Cap and cash plan|room and buffer for next month",
+            "Team SOPs|written steps for each routine"
+          ],
+          "say": "Here's the operating system, six routines that run every week or month. A weekly scorecard of quality per source and ad set. A weekly reconciliation of network, tracker and platform. A compliance log, with every live creative approved. A monthly broker review of terms, payments and cohorts. A cap and cash plan for next month. And team S O Ps, standard operating procedures, with written steps for each routine. Each has one owner. If a routine has no owner, it doesn't happen. Working alone, you own all six, so write them down anyway."
+        },
+        {
+          "v": "phone",
+          "h": "Negotiating with data",
+          "p": "Managers respond to evidence. Bring quality numbers, not just volume, and ask for something specific. Keep it polite and in writing, and only ask for terms you can support with at least 60 days of data.",
+          "d": {
+            "app": "chat",
+            "title": "Affiliate manager",
+            "subtitle": "network",
+            "messages": [
+              {
+                "from": "me",
+                "text": "Last 60 days in NG: 420 qualified FTDs, 38% active at 30 days, clawbacks 2%."
+              },
+              {
+                "from": "me",
+                "text": "Could we discuss $75 CPA (from $70) and a 300 a month cap?"
+              },
+              {
+                "from": "them",
+                "text": "Strong numbers. I can do $73 now and $75 if the next 60 days hold."
+              },
+              {
+                "from": "me",
+                "text": "Agreed. Please confirm the terms by email."
+              }
+            ]
+          },
+          "say": "Managers respond to evidence. In this chat, the buyer shares the last sixty days in Nigeria: four hundred and twenty qualified F T Ds, first time deposits, thirty eight percent active at thirty days, clawbacks two percent. Then asks to discuss a seventy five dollar C P A, up from seventy, and a three hundred a month cap. The manager offers seventy three now, and seventy five if the next sixty days hold. The buyer agrees, and asks for the terms by email. Be polite, specific, in writing, and back it with at least sixty days of data."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: what a payout change is worth",
+          "p": "Example: small payout changes add up at volume. Work the number before you negotiate so you know what you are asking for and what you can give in return.",
+          "d": {
+            "cols": [
+              "Change",
+              "Working",
+              "Per month"
+            ],
+            "rows": [
+              [
+                "$70 → $73",
+                "300 × $3",
+                "+$900"
+              ],
+              [
+                "$70 → $75",
+                "300 × $5",
+                "+$1,500"
+              ],
+              [
+                "Clawbacks 4% → 2%",
+                "300 × $70 × 2%",
+                "+$420"
+              ]
+            ]
+          },
+          "say": "Small payout changes add up at volume. Example figures, at three hundred F T Ds a month. Going from seventy to seventy three dollars, three hundred times three, adds nine hundred dollars a month. Going to seventy five, three hundred times five, adds fifteen hundred. And cutting clawbacks from four percent to two, three hundred times seventy times two percent, adds four hundred and twenty. Work the number before you negotiate, so you know what you're asking for and what you can give in return."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: one month's real profit",
+          "p": "Example: revenue kept is what the network actually pays after reserves and clawbacks. Subtract every cost, not just ad spend. This is the number that tells you whether scaling is working.",
+          "more": "Example: $28,000 − $19,500 − $600 − $4,000 = $3,900 profit. $3,900 ÷ $28,000 ≈ 13.9% margin. On ad spend alone the month looked like $8,500 profit, which hid the real costs. Taxes and accounting differ by country; consult a professional.",
+          "d": [
+            "$28,000 kept",
+            "− $19,500 ads",
+            "− $600 tools",
+            "− $4,000 team",
+            "= $3,900"
+          ],
+          "say": "Here's one month's real profit. Example figures. Start with revenue kept, what the network actually pays after reserves and clawbacks: twenty eight thousand dollars. Subtract nineteen thousand five hundred in ads, six hundred in tools, and four thousand for the team. That leaves three thousand nine hundred, about a fourteen percent margin. On ad spend alone, the month looked like eight thousand five hundred profit, which hid the real costs. Taxes and accounting differ by country, so consult a professional."
+        },
+        {
+          "v": "table",
+          "h": "Who owns what",
+          "p": "Example roles for a small trading team. One person can hold several roles at first. What matters is that every routine has a named owner and a written SOP.",
+          "d": {
+            "cols": [
+              "Role",
+              "Owns"
+            ],
+            "rows": [
+              [
+                "Media buyer",
+                "Campaigns, rule card, change log"
+              ],
+              [
+                "Creative lead",
+                "Briefs, drafts, localisation"
+              ],
+              [
+                "Compliance reviewer",
+                "Claim audit, approvals, log"
+              ],
+              [
+                "Analyst",
+                "Tracking, reconciliation, scorecard"
+              ],
+              [
+                "Partner manager",
+                "Deals, caps, payments, cohorts"
+              ]
+            ]
+          },
+          "say": "Here are example roles for a small trading team. The media buyer owns campaigns, the rule card and the change log. The creative lead owns briefs, drafts and localisation. The compliance reviewer owns the claim audit, approvals and log. The analyst owns tracking, reconciliation and the scorecard. And the partner manager owns deals, caps, payments and cohorts. One person can hold several roles at first. What matters is a named owner and a written S O P for every routine."
+        },
+        {
+          "v": "walk",
+          "h": "The monthly operating review",
+          "p": "About two hours, first week of each month. The output is a one-page plan for next month that everyone on the team can see. Keep last month's plan next to it to check what you said you would do.",
+          "d": {
+            "steps": [
+              {
+                "title": "Profit by broker and geo",
+                "text": "Revenue kept minus all costs, split by broker and geo.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/monthly",
+                  "title": "P&L",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Geo",
+                        "Kept",
+                        "Ads",
+                        "Profit"
+                      ],
+                      "rows": [
+                        [
+                          "NG",
+                          "$16,000",
+                          "$11,000",
+                          "$5,000"
+                        ],
+                        [
+                          "KE",
+                          "$12,000",
+                          "$8,500",
+                          "$3,500"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Quality and cohorts",
+                "text": "Review the scorecards and RevShare cohorts against forecast.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/monthly",
+                  "title": "Quality",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Flags",
+                      "value": "KE_TG_03 on watch"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Compliance sample",
+                "text": "Pick 10% of live creatives at random and run the claim audit and prominence test again.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/compliance",
+                  "title": "Audit sample",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Live creatives",
+                      "value": "40"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Sample",
+                      "value": "4"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Caps and cash",
+                "text": "Confirm cap room and the cash buffer for next month's planned spend.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/monthly",
+                  "title": "Next month",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Planned spend",
+                      "value": "$22,000"
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Cash buffer covers it",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 1
+                }
+              }
+            ]
+          },
+          "say": "Here's the monthly operating review, about two hours in the first week of each month. Tap Next to follow each step. First, profit by broker and geo, revenue kept minus all costs. In the example, Nigeria made five thousand and Kenya three thousand five hundred. Second, review quality scorecards and RevShare cohorts against forecast, noting any flags. Third, pick ten percent of live creatives at random, four out of forty here, and rerun the claim audit and prominence test. Fourth, confirm cap room and the cash buffer for next month's planned spend. The output is a one-page plan."
+        },
+        {
+          "v": "cards",
+          "h": "When to stop scaling",
+          "p": "Scaling is not always the right move. These are signals to hold your budget, or step back, even if some numbers still look good. Any one of them is enough to pause growth until it clears.",
+          "d": [
+            "CPA creeps up|above target after recent steps",
+            "Quality flags|activity or clawbacks worsening",
+            "Caps reached|no confirmed room",
+            "Cash tight|buffer below your rule",
+            "Compliance strain|reviews falling behind",
+            "Platform signals|rejections or account warnings rising"
+          ],
+          "say": "Scaling isn't always the right move. These are signals to hold your budget, or step back. C P A creeping up above target after recent steps. Quality flags, with activity or clawbacks worsening. Caps reached, with no confirmed room. Cash tight, with the buffer below your rule. Compliance strain, with reviews falling behind. And platform signals, with rejections or account warnings rising. Any one of them is enough to pause growth until it clears, even if some numbers still look good."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "At scale, small gaps in routine become big losses. These are the gaps we see most often in growing trading teams, and most are fixed by naming an owner.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Founder approves every ad alone",
+                "Profit counted before clawbacks",
+                "Asking for a payout rise with no data",
+                "Scaling because the team needs bigger numbers"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Named compliance reviewer and a log",
+                "Count only revenue kept",
+                "Bring quality and volume numbers",
+                "Scale only when the gate passes"
+              ]
+            }
+          },
+          "say": "At scale, small gaps in routine become big losses. The founder approving every ad alone, name a compliance reviewer and keep a log. Profit counted before clawbacks, count only revenue kept. Asking for a payout rise with no data, bring quality and volume numbers. Scaling because the team needs bigger numbers, scale only when the gate passes. Most of these are fixed by naming an owner."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance grows with you",
+          "p": "More ads, more geos and more people mean more chances for a bad claim to slip through. Keep authorizations current per geo, audit samples monthly and never use extra accounts or other people's identities to get around limits.",
+          "d": {
+            "kind": "warn",
+            "text": "Keep authorization per geo current, audit 10% of live ads monthly, and never circumvent platform limits. Follow local law in every geo. We are not certain this is current; check the platform's Help Center, your network and your broker before relying on it."
+          },
+          "say": "More ads, more geos and more people mean more chances for a bad claim to slip through. Keep authorizations current per geo, audit samples monthly, and never use extra accounts or other people's identities to get around limits. The warning: keep authorization per geo current, audit ten percent of live ads monthly, never circumvent platform limits, and follow local law in every geo. We're not certain this is current, so check the platform's Help Center, your network and your broker."
+        },
+        {
+          "v": "quote",
+          "h": "From the founder",
+          "p": "A short note from Dchessking on running a trading operation over years rather than weeks. Use it when a fast month tempts you to cut corners.",
+          "d": "The campaigns that paid me the longest were the ones I could explain line by line to a broker, a platform and a regulator. Build like someone will ask.",
+          "by": "dchessking",
+          "say": "Here's how Dchessking puts it, on running a trading operation over years rather than weeks. The campaigns that paid me the longest were the ones I could explain line by line to a broker, a platform and a regulator. Build like someone will ask."
+        },
+        {
+          "v": "check",
+          "h": "Starting rules for operating at scale",
+          "p": "Starting rules to adapt. They make sure growth comes from the same rules you started with, applied by more people. Print them for every team member.",
+          "d": [
+            "Every routine has one named owner and a written SOP",
+            "Decide on revenue kept, after reserves and clawbacks",
+            "Audit 10% of live creatives every month",
+            "Any stop-scaling signal: hold budgets until it clears",
+            "Negotiate with 60 days of quality data, in writing"
+          ],
+          "say": "Finally, starting rules for operating at scale. Every routine has one named owner and a written S O P. Decide on revenue kept, after reserves and clawbacks. Audit ten percent of live creatives every month. Any stop-scaling signal, hold budgets until it clears. And negotiate with sixty days of quality data, in writing. These make sure growth comes from the same rules you started with, applied by more people. Print them for every team member."
+        }
+      ],
+      "takeaways": [
+        "At scale, profit comes from routines with owners: scorecards, reconciliation, compliance, broker reviews.",
+        "Count profit on revenue kept minus every cost, and negotiate with quality data.",
+        "Know the stop-scaling signals and hold budgets until they clear."
+      ],
+      "action": "Write the owner and a one-paragraph SOP for each of the six routines in this lesson, and book your first monthly operating review in your calendar.",
+      "glossary": [
+        {
+          "term": "SOP",
+          "def": "Standard operating procedure: written steps for a routine task."
+        },
+        {
+          "term": "Revenue kept",
+          "def": "What the network actually pays after reserves and clawbacks."
+        },
+        {
+          "term": "Operating review",
+          "def": "A monthly meeting that turns results into next month's plan."
+        },
+        {
+          "term": "Audit sample",
+          "def": "A random share of live ads rechecked for compliance."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "300 FTDs a month, payout rises from $70 to $75. Extra per month?",
+          "options": [
+            "$300",
+            "$900",
+            "$1,500",
+            "$2,100"
+          ],
+          "answer": 2,
+          "why": "300 × $5 = $1,500."
+        },
+        {
+          "q": "Kept $28,000; ads $19,500; tools $600; team $4,000. Profit?",
+          "options": [
+            "$8,500",
+            "$3,900",
+            "$4,500",
+            "$7,900"
+          ],
+          "answer": 1,
+          "why": "$28,000 − $19,500 − $600 − $4,000 = $3,900."
+        },
+        {
+          "q": "Rejections and account warnings are rising. What does that signal?",
+          "options": [
+            "Scale faster",
+            "Stop scaling and review compliance",
+            "Open another account",
+            "Ignore it"
+          ],
+          "answer": 1,
+          "why": "Platform signals are a stop-scaling sign. Fix the cause first."
+        },
+        {
+          "q": "You have 50 live creatives. Monthly audit sample at 10%?",
+          "options": [
+            "1",
+            "2",
+            "4",
+            "5"
+          ],
+          "answer": 3,
+          "why": "10% of 50 is 5."
+        },
+        {
+          "q": "Best way to ask a network for a better payout?",
+          "options": [
+            "Threaten to leave",
+            "Ask without numbers",
+            "Inflate your FTD count",
+            "Bring 60 days of quality and volume data"
+          ],
+          "answer": 3,
+          "why": "Evidence of quality earns better terms."
+        }
+      ],
+      "say_intro": "At scale, profit depends on operations, not lucky creatives. In this lesson you'll learn a monthly operating review, how to negotiate payouts and caps with data, and when to stop scaling and protect what you have.",
+      "say_outro": "At scale, named owners, written routines, revenue kept after clawbacks, and data-backed negotiation decide your profit, and stop-scaling signals tell you when to hold. Your task: write the owner and a one-paragraph S O P for each of the six routines in this lesson, and book your first monthly operating review in your calendar. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "Spend $300 a day, about 60 days until paid, plus a 10% reserve on $20,000 monthly revenue. Rough cash needed before reserve?",
+      "options": [
+        "$3,000",
+        "$9,000",
+        "$18,000",
+        "$30,000"
+      ],
+      "answer": 2,
+      "why": "$300 × 60 = $18,000; the reserve adds more on top."
+    },
+    {
+      "q": "Target $50. Ad set: $280 spend, 8 qualified FTDs, tracker gap 6%, no quality flags, cap room confirmed. Decision?",
+      "options": [
+        "Scale +20%",
+        "Kill",
+        "Hold",
+        "Scale +50%"
+      ],
+      "answer": 0,
+      "why": "CPA $35 ≤ 0.8 × $50 = $40 with ≥ 3 FTDs; not ≥ 10 FTDs for the bigger step. Gate passes."
+    },
+    {
+      "q": "Same ad set, but tracker gap is 18%. What changes?",
+      "options": [
+        "Nothing",
+        "Scale +50%",
+        "Kill it",
+        "No scaling until tracking is fixed"
+      ],
+      "answer": 3,
+      "why": "The readiness gate requires a tracker gap under 10%."
+    },
+    {
+      "q": "Payout $60, 0.15 qualified FTDs per 1,000 impressions, margin 25%. Max CPM?",
+      "options": [
+        "$9.00",
+        "$6.75",
+        "$4.50",
+        "$12.00"
+      ],
+      "answer": 1,
+      "why": "$60 × 0.15 = $9; × 0.75 = $6.75."
+    },
+    {
+      "q": "A new geo has a high payout, but the broker cannot confirm it may serve that country. Decision?",
+      "options": [
+        "Test small",
+        "Target it via a neighbour",
+        "Out until confirmed in writing",
+        "Run without the warning"
+      ],
+      "answer": 2,
+      "why": "Broker permission is a gate; no answer means no launch."
+    },
+    {
+      "q": "Your French ad needs a risk warning. Where does the text come from?",
+      "options": [
+        "Machine translation",
+        "Your French-speaking buyer",
+        "Leave it in English",
+        "The broker's approved French version"
+      ],
+      "answer": 3,
+      "why": "Only the broker's approved warning per language."
+    },
+    {
+      "q": "A huge market move happens today. Which plan follows the rules?",
+      "options": [
+        "Run a pre-approved explainer and keep the +20% step rule",
+        "Double budget and run 'act now' ads",
+        "Post trading calls in your channel",
+        "Copy a news site layout"
+      ],
+      "answer": 0,
+      "why": "Education, pre-approved, within normal budget rules."
+    },
+    {
+      "q": "Deals: 60% CPA at $55, 40% RevShare at $80 over six months. Blended six-month value?",
+      "options": [
+        "$62",
+        "$65",
+        "$67.50",
+        "$70"
+      ],
+      "answer": 1,
+      "why": "0.6 × 55 + 0.4 × 80 = 33 + 32 = $65."
+    },
+    {
+      "q": "One broker is 58% of monthly income. Starting rule?",
+      "options": [
+        "Send new volume to other brokers until under 50%",
+        "Put all new volume there",
+        "Stop the broker",
+        "Nothing"
+      ],
+      "answer": 0,
+      "why": "Concentration above 50% is too much single-broker risk."
+    },
+    {
+      "q": "Kept $40,000; ads $30,000; tools $1,000; team $6,000. Margin on revenue kept?",
+      "options": [
+        "25%",
+        "7.5%",
+        "10%",
+        "15%"
+      ],
+      "answer": 1,
+      "why": "Profit $3,000 ÷ $40,000 = 7.5%."
+    }
+  ]
+}

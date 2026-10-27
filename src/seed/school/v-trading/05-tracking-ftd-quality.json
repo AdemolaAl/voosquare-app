@@ -1,0 +1,2795 @@
+{
+  "school": "v-trading",
+  "order": 5,
+  "slug": "tracking-ftd-quality",
+  "title": "Tracking FTD quality",
+  "summary": "How to measure a trading campaign all the way from click to a paid, kept FTD: stage targets, quality by segment, deposit quality and baselines, retention, chargebacks and clawbacks, postbacks and weekly reconciliation. You finish with a quality scorecard and rules that stop you scaling traffic the network will not pay for.",
+  "lessons": [
+    {
+      "slug": "the-conversion-chain",
+      "title": "The trading conversion chain",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can name every stage from click to qualified FTD and who reports each one.",
+        "By the end you can work out the most you can pay at each stage from the payout.",
+        "By the end you can choose which event to optimise for and why."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the chain matters",
+          "p": "Module 1 walked through the user journey. Here you measure it: click, registration, identity check, first deposit, then the broker's baseline. Each stage loses people and reports at a different speed. If you optimise for the wrong stage, you buy cheap registrations that never become paid FTDs.",
+          "d": {
+            "b": "You are paid at the end of the chain",
+            "s": "Measure every link, decide on the last one."
+          },
+          "say": "Module one walked through the user journey. Here, you measure it. Click, registration, identity check, first deposit, then the broker's baseline. Each stage loses people, and each reports at a different speed. If you optimise for the wrong stage, you buy cheap registrations that never become paid F T Ds, first-time deposits. You're paid at the end of the chain, so measure every link, and decide on the last one."
+        },
+        {
+          "v": "map",
+          "h": "From ad to paid FTD",
+          "p": "This is the full system most trading campaigns run on. The dots show data moving. Notice that the postback travels back to your tracker, and only then can you send a quality signal to the ad platform.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Ad",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Lander",
+                "kind": "page"
+              },
+              {
+                "id": "reg",
+                "label": "Broker sign-up",
+                "kind": "offer"
+              },
+              {
+                "id": "kyc",
+                "label": "KYC check",
+                "kind": "person"
+              },
+              {
+                "id": "ftd",
+                "label": "First deposit",
+                "kind": "money"
+              },
+              {
+                "id": "net",
+                "label": "Network",
+                "kind": "data"
+              },
+              {
+                "id": "trk",
+                "label": "Your tracker",
+                "kind": "tool"
+              },
+              {
+                "id": "capi",
+                "label": "Conversions API",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "lp",
+                "click"
+              ],
+              [
+                "lp",
+                "reg",
+                "register"
+              ],
+              [
+                "reg",
+                "kyc",
+                "verify"
+              ],
+              [
+                "kyc",
+                "ftd",
+                "deposit"
+              ],
+              [
+                "ftd",
+                "net",
+                "report"
+              ],
+              [
+                "net",
+                "trk",
+                "postback"
+              ],
+              [
+                "trk",
+                "capi",
+                "event"
+              ],
+              [
+                "capi",
+                "ad",
+                "signal"
+              ]
+            ]
+          },
+          "say": "This map shows the full system most trading campaigns run on. Follow the dots. The ad sends a click to the lander. People register with the broker, go through the K Y C check, know your customer, and make a first deposit. The network reports it, and a postback travels back to your tracker. Only then can your tracker send an event through the conversions A P I, application programming interface, back to the ad platform as a quality signal."
+        },
+        {
+          "v": "table",
+          "h": "Who reports each stage, and when",
+          "p": "Rough guide only; it varies a lot by broker and network. The deeper the stage, the later you hear about it. Ask your manager for the real timings and which stages they can send by postback.",
+          "d": {
+            "cols": [
+              "Stage",
+              "Reported by",
+              "Typical delay"
+            ],
+            "rows": [
+              [
+                "Registration",
+                "Broker, via network",
+                "Minutes"
+              ],
+              [
+                "KYC approved",
+                "Broker",
+                "Hours to days"
+              ],
+              [
+                "FTD",
+                "Broker, via network",
+                "Minutes to days"
+              ],
+              [
+                "Qualified FTD",
+                "Network",
+                "Days to weeks"
+              ],
+              [
+                "Active after 30 days",
+                "Broker report",
+                "30+ days"
+              ]
+            ]
+          },
+          "say": "Here's who reports each stage, and when. This is a rough guide, and it varies a lot by broker and network. Registrations come from the broker via the network, within minutes. K Y C approval, from the broker, in hours to days. The F T D, minutes to days. A qualified F T D, from the network, days to weeks. And active after thirty days, from a broker report, thirty plus days. The deeper the stage, the later you hear. Ask your manager for the real timings, and which stages they can send by postback."
+        },
+        {
+          "v": "funnel",
+          "h": "Example: one test, every stage",
+          "p": "Example only. A test on one geo sends 2,000 clicks. Watch where the biggest drops are. Registration to KYC approval loses most people, and FTD to qualified FTD quietly removes almost a third of deposits.",
+          "d": [
+            [
+              "Clicks",
+              2000
+            ],
+            [
+              "Registrations",
+              260
+            ],
+            [
+              "KYC submitted",
+              120
+            ],
+            [
+              "KYC approved",
+              90
+            ],
+            [
+              "FTDs",
+              40
+            ],
+            [
+              "Qualified FTDs",
+              28
+            ]
+          ],
+          "say": "Here's an example test on one geo, sending two thousand clicks. Watch the funnel narrow. Two hundred and sixty registrations. One hundred and twenty submitted K Y C. Ninety approved. Forty F T Ds. And just twenty eight qualified F T Ds. Look where the biggest drops are. Registration to K Y C approval loses most people. And F T D to qualified F T D quietly removes almost a third of deposits."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: cost at each stage",
+          "p": "Example: the test above spent $1,400. Divide spend by the count at each stage. The cost per qualified FTD is the only one you are paid against, and it is ten times the cost per registration.",
+          "d": {
+            "cols": [
+              "Stage",
+              "Count",
+              "Cost each"
+            ],
+            "rows": [
+              [
+                "Registration",
+                "260",
+                "$1,400 ÷ 260 = $5.38"
+              ],
+              [
+                "KYC approved",
+                "90",
+                "$1,400 ÷ 90 = $15.56"
+              ],
+              [
+                "FTD",
+                "40",
+                "$1,400 ÷ 40 = $35.00"
+              ],
+              [
+                "Qualified FTD",
+                "28",
+                "$1,400 ÷ 28 = $50.00"
+              ]
+            ]
+          },
+          "say": "The test above spent one thousand four hundred dollars, in this example. Divide spend by the count at each stage. Cost per registration: five dollars thirty eight. Per K Y C approval: fifteen fifty six. Per F T D: thirty five dollars. And per qualified F T D: fifty dollars. The cost per qualified F T D is the only one you're paid against, and notice it's about ten times the cost per registration."
+        },
+        {
+          "v": "eq",
+          "h": "The most you can pay per registration",
+          "p": "Work backwards from the payout. Multiply the payout by the share of registrations that become qualified FTDs, then keep your margin. That gives a target cost per registration you can watch early, while deposits are still arriving.",
+          "more": "Example: payout $70 per qualified FTD. From the test, 28 of 260 registrations became qualified: 28 ÷ 260 ≈ 10.8%. Margin 25%. $70 × 10.8% × 75% ≈ $5.65 per registration. The test paid $5.38, under the line, so the early signal agrees with the final $50 cost per qualified FTD against a $52.50 target ($70 × 75%). This early line is only as good as the rate behind it: if a new source qualifies at half the rate, its real line is half as high.",
+          "d": [
+            "Payout",
+            "×",
+            "Reg → qualified rate",
+            "×",
+            "(1 − margin)"
+          ],
+          "say": "So what's the most you can pay per registration? Work backwards from the payout. Look at the equation: the payout, times the share of registrations that become qualified F T Ds, times one minus your margin. That gives a target cost per registration you can watch early, while deposits are still arriving. But this early line is only as good as the rate behind it. If a new source qualifies at half the rate, its real line is half as high."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: max cost per registration",
+          "p": "Use the break-even lab. Treat the conversion rate as registrations that become qualified FTDs. Enter the numbers and check the most you can pay per registration with your margin kept.",
+          "d": {
+            "kind": "breakeven",
+            "task": "Payout $70 per qualified FTD. 10% of registrations become qualified FTDs. Margin 25%. Most you can pay per registration?",
+            "preset": {
+              "payout": 70,
+              "cr_pct": 10,
+              "margin_pct": 25
+            },
+            "answer": {
+              "field": "max_cpl",
+              "value": 5.25,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Your turn, in the break-even lab. The payout is seventy dollars per qualified F T D. Ten percent of registrations become qualified F T Ds, so treat that as the conversion rate. And you want to keep a twenty five percent margin. Enter the numbers and work out the most you can pay per registration. Pause and try it, then check your answer."
+        },
+        {
+          "v": "compare",
+          "h": "Which event should the ad platform optimise for?",
+          "p": "Shallow events give the platform lots of data but attract people who never deposit. Deep events attract better users but there are fewer of them, so delivery can struggle. The usual answer is the deepest event you get often enough.",
+          "more": "Meta has described needing roughly 50 optimisation events per ad set per week to leave the learning phase. We are not certain this figure is current; check Meta's Help Center. If your deepest event is far below that, optimise one stage shallower but keep judging every ad set on network-confirmed qualified FTDs.",
+          "d": {
+            "a": {
+              "title": "Optimise for registration",
+              "items": [
+                "Many events, delivery learns fast",
+                "Cheap, but quality can be poor",
+                "Fine for a first test of an angle",
+                "Must still be judged on qualified FTDs"
+              ]
+            },
+            "b": {
+              "title": "Optimise for FTD or qualified FTD",
+              "items": [
+                "Fewer events, slower learning",
+                "Users closer to what you are paid for",
+                "Needs a working postback and conversions API",
+                "Best once volume allows it"
+              ]
+            }
+          },
+          "say": "Which event should the ad platform optimise for? On the left, registration: many events, so delivery learns fast, and it's cheap, but quality can be poor. Fine for a first test of an angle, but still judged on qualified F T Ds. On the right, F T D or qualified F T D: fewer events and slower learning, but users closer to what you're paid for. It needs a working postback and conversions A P I. The usual answer is the deepest event you get often enough. Meta has described roughly fifty events per ad set per week, but we're not certain that's current, so check its Help Center."
+        },
+        {
+          "v": "walk",
+          "h": "Map the stages in your tracker",
+          "p": "Set this up once per offer. Each stage becomes its own event in the tracker, but only the paid stage carries revenue. Tracker names differ; the steps are the same in any tracker.",
+          "d": {
+            "steps": [
+              {
+                "title": "Create the events",
+                "text": "Add one event per stage: reg, kyc, ftd, qftd. Use the same names the network sends if you can.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "tracker.example/events",
+                  "title": "Conversion events",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Event",
+                        "Revenue"
+                      ],
+                      "rows": [
+                        [
+                          "reg",
+                          "No"
+                        ],
+                        [
+                          "kyc",
+                          "No"
+                        ],
+                        [
+                          "ftd",
+                          "No"
+                        ],
+                        [
+                          "qftd",
+                          "Yes"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Put revenue on one event",
+                "text": "Set the payout only on qftd, so revenue is never counted twice.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "tracker.example/events/qftd",
+                  "title": "qftd",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Revenue",
+                      "value": "From postback {payout}"
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Count revenue",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Choose what goes to the ad platform",
+                "text": "Pick the event you will optimise for and send it through the conversions API. Keep the others for your own reports.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "tracker.example/integrations",
+                  "title": "Send to ad platform",
+                  "blocks": [
+                    {
+                      "type": "radio",
+                      "label": "Optimisation event",
+                      "options": [
+                        "reg",
+                        "ftd",
+                        "qftd"
+                      ],
+                      "value": 1
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Send value",
+                      "on": false
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Let's map the stages in your tracker. Tap Next to follow each step. First, create the events: one per stage, registration, K Y C, F T D and qualified F T D, using the same names the network sends if you can. Second, put the payout on the qualified F T D only, so revenue is never counted twice. Third, choose the event you'll optimise for and send it through the conversions A P I, keeping the others for your own reports. Tracker names differ, but the steps are the same in any tracker."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "These mistakes all come from treating the first stage as if it were the last. They make tests look better than they are, and you find out weeks later when the payout report arrives.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Counting revenue on registration and FTD",
+                "Judging tests on platform-reported results",
+                "Using one stage rate for every source",
+                "Ignoring the delay before qualification"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Revenue on the paid event only",
+                "Decide on network-confirmed qualified FTDs",
+                "Track stage rates per source and geo",
+                "Wait for the delay before final judgement"
+              ]
+            }
+          },
+          "say": "These mistakes all come from treating the first stage as if it were the last. On the left: counting revenue on registration and F T D. Judging tests on platform-reported results. Using one stage rate for every source. Ignoring the delay before qualification. On the right, the fixes: revenue on the paid event only. Decide on network-confirmed qualified F T Ds. Track stage rates per source and geo. And wait for the delay before final judgement. Otherwise you only find out weeks later, when the payout report arrives."
+        },
+        {
+          "v": "tip",
+          "h": "Personal data in the chain",
+          "p": "The chain passes through identity checks and deposits. You never need, and should never ask for, users' ID documents or card details. Data protection laws apply in many markets, such as Nigeria, Kenya, Ghana and South Africa.",
+          "d": {
+            "kind": "warn",
+            "text": "Send ad platforms only the data their terms allow, hashed where required, and only with valid consent. Never handle ID documents or payment data. Trading ads need platform authorization where required and must follow local law. We are not certain this is current; check the platform's Help Center, your network and your broker before relying on it."
+          },
+          "say": "The chain passes through identity checks and deposits, so be careful with personal data. You never need, and should never ask for, users' I D documents or card details. Data protection laws apply in many markets, such as Nigeria, Kenya, Ghana and South Africa. Send ad platforms only the data their terms allow, hashed where required, and only with valid consent. Trading ads need platform authorization where required and must follow local law. We're not certain this is current, so check the platform, your network and your broker."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for the chain",
+          "p": "Starting rules to adapt. They stop you from trusting early stages too much while still letting you act before the final numbers land. Write them on your plan before launch.",
+          "d": [
+            "Optimise for the deepest stage with enough weekly events; otherwise one stage shallower",
+            "Kill, keep and scale only on network-confirmed qualified FTDs",
+            "Use stage targets (like max cost per registration) for early warnings only",
+            "Source's reg → qualified rate under half your average over ≥ 100 registrations: stop optimising it for registrations",
+            "Recalculate stage targets every month from fresh data"
+          ],
+          "say": "Here are starting decision rules for the chain, to adapt. Optimise for the deepest stage with enough weekly events, otherwise one stage shallower. Kill, keep and scale only on network-confirmed qualified F T Ds. Use stage targets, like max cost per registration, for early warnings only. If a source's registration to qualified rate is under half your average over at least one hundred registrations, stop optimising it for registrations. And recalculate stage targets every month. Write these on your plan before launch."
+        }
+      ],
+      "takeaways": [
+        "You are paid at the end of the chain: registration, KYC, FTD, qualified FTD.",
+        "Work backwards from the payout to get early targets for each stage, but decide on qualified FTDs.",
+        "Optimise for the deepest stage that gets enough events, and put revenue on the paid event only."
+      ],
+      "action": "Ask your network manager which stages they can send by postback and the typical delay for each, then create one tracker event per stage with revenue only on the paid one.",
+      "glossary": [
+        {
+          "term": "Conversion chain",
+          "def": "The stages from click to paid FTD: registration, KYC, FTD, qualified FTD."
+        },
+        {
+          "term": "Optimisation event",
+          "def": "The event an ad platform is told to find more of."
+        },
+        {
+          "term": "Stage target",
+          "def": "The most you can pay at an earlier stage, worked back from the payout."
+        },
+        {
+          "term": "Learning phase",
+          "def": "The early period when an ad platform is still learning who converts; results are unstable."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Example: $1,400 spend, 28 qualified FTDs. Cost per qualified FTD?",
+          "options": [
+            "$35",
+            "$50",
+            "$15.56",
+            "$5.38"
+          ],
+          "answer": 1,
+          "why": "$1,400 ÷ 28 = $50. The others are cost per FTD, KYC approval and registration."
+        },
+        {
+          "q": "Which stage are you usually paid on in a trading CPA deal?",
+          "options": [
+            "Qualified FTD",
+            "Registration",
+            "KYC submitted",
+            "Click"
+          ],
+          "answer": 0,
+          "why": "The network pays when a deposit meets the broker's baseline: the qualified FTD."
+        },
+        {
+          "q": "Payout $70, 10% of registrations qualify, margin 25%. Most per registration?",
+          "options": [
+            "$7.00",
+            "$5.25",
+            "$17.50",
+            "$52.50"
+          ],
+          "answer": 1,
+          "why": "$70 × 10% × 75% = $5.25."
+        },
+        {
+          "q": "Your qualified FTD event fires only 8 times a week per ad set. What is the usual approach?",
+          "options": [
+            "Optimise for it anyway, no matter what",
+            "Optimise one stage shallower but judge on qualified FTDs",
+            "Stop tracking qualified FTDs",
+            "Optimise for clicks"
+          ],
+          "answer": 1,
+          "why": "Too few events can stall delivery. Use a shallower event for delivery, but keep decisions on the paid stage."
+        },
+        {
+          "q": "Where should revenue be counted in your tracker?",
+          "options": [
+            "On every stage",
+            "On registration",
+            "On the paid event only",
+            "On clicks"
+          ],
+          "answer": 2,
+          "why": "Counting revenue on several stages double counts and inflates results."
+        }
+      ],
+      "say_intro": "In this lesson you'll measure the whole trading conversion chain, from click to qualified F T D, and learn who reports each stage. You'll work out the most you can pay at each stage, and choose which event the ad platform should optimise for.",
+      "say_outro": "So, you're paid at the end of the chain: measure every stage, put revenue on the paid event only, and decide on network-confirmed qualified F T Ds. Your task: ask your network manager which stages they can send by postback and the typical delay for each, then create one tracker event per stage, with revenue only on the paid one. Now take the quiz."
+    },
+    {
+      "slug": "quality-by-segment",
+      "title": "Finding quality by segment",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can break a campaign's results down by device, placement, age and region.",
+        "By the end you can pass segment labels into your offer links so qualified FTDs can be split.",
+        "By the end you can decide when a segment is big enough to cut or to give its own ad set."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why averages hide money",
+          "p": "Module 1 showed how to find drop-off in the journey. This lesson finds it inside your audience. A campaign at target CPA can contain one segment at twice the target and another well under it. Until you split the results, you are paying for both.",
+          "d": {
+            "b": "One average, several businesses",
+            "s": "Split before you scale."
+          },
+          "say": "Module one showed how to find drop-off in the journey. This lesson finds it inside your audience. A campaign running at target C P A, cost per acquisition, can contain one segment at twice the target, and another well under it. Until you split the results, you're paying for both. One average can hide several businesses. Split before you scale."
+        },
+        {
+          "v": "stat",
+          "h": "Example: budget spent where it could not pay",
+          "p": "Example from the placement report below: partner apps took $400 of a $1,400 week and returned 3 qualified FTDs at $133 each. That is almost 29% of the budget in a segment far above the kill line, hidden inside an average that looked close to target.",
+          "d": {
+            "n": 28.6,
+            "pre": "",
+            "suf": "%",
+            "dec": 1,
+            "label": "of spend went to a placement above the kill line",
+            "note": "Example. $400 ÷ $1,400."
+          },
+          "say": "Here's an example from the placement report you'll see later. Partner apps took four hundred dollars of a one thousand four hundred dollar week, and returned three qualified F T Ds, first-time deposits, at one hundred and thirty three dollars each. That's the number on screen: almost twenty nine percent of the budget went to a placement above the kill line, hidden inside an average that looked close to target."
+        },
+        {
+          "v": "cards",
+          "h": "Segments worth splitting",
+          "p": "Start with the segments the ad platform can report and you can control. Each one can change cost per qualified FTD a lot, and each points to a different action.",
+          "d": [
+            "Device|Android, iOS, older phones",
+            "Placement|feeds, stories, reels, partner apps",
+            "Age band|within the minimum age you are allowed",
+            "Region|cities and states within a country",
+            "Time|hour of day, day of week",
+            "Creative|angle and format"
+          ],
+          "say": "Start with segments the ad platform can report and you can control. Look at the cards. Device: Android, i O S, older phones. Placement: feeds, stories, reels, partner apps. Age band, within the minimum age you're allowed. Region: cities and states within a country. Time: hour of day and day of week. And creative: angle and format. Each one can change your cost per qualified F T D a lot, and each points to a different action."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: split by device",
+          "p": "Example: one campaign averages $58.33 per qualified FTD against a $55 target. Split by device, iOS is well under target and Android well over. The average hid both.",
+          "more": "Example: $900 ÷ 12 = $75; $500 ÷ 12 ≈ $41.67; $1,400 ÷ 24 ≈ $58.33. Before you cut Android, ask why: is the broker's app slower on older Android phones, is the deposit method harder, or does the creative suit one group? Sometimes the fix is in the funnel, not the targeting. Your numbers will differ.",
+          "d": {
+            "cols": [
+              "Device",
+              "Spend",
+              "Qualified",
+              "CPA"
+            ],
+            "rows": [
+              [
+                "Android",
+                "$900",
+                "12",
+                "$75.00"
+              ],
+              [
+                "iOS",
+                "$500",
+                "12",
+                "$41.67"
+              ],
+              [
+                "Total",
+                "$1,400",
+                "24",
+                "$58.33"
+              ]
+            ]
+          },
+          "say": "Here's a worked example, split by device. One campaign averages fifty eight dollars thirty three per qualified F T D, against a fifty five dollar target. Looks close. Now look at the split. Android: nine hundred dollars spend, twelve qualified, seventy five dollars each. i O S: five hundred dollars, twelve qualified, about forty one sixty seven. The average hid both. But before you cut Android, ask why. Is the broker's app slower on older phones, or the deposit method harder? Sometimes the fix is in the funnel, not the targeting."
+        },
+        {
+          "v": "bars",
+          "h": "Example: cost per qualified FTD by age band",
+          "p": "Example only, not a statistic. Shorter bars are cheaper. Age patterns differ by geo and product, so build this chart from your own network data, never from someone else's.",
+          "d": [
+            [
+              "21–24",
+              100,
+              "$92"
+            ],
+            [
+              "25–34",
+              52,
+              "$48"
+            ],
+            [
+              "35–44",
+              48,
+              "$44"
+            ],
+            [
+              "45+",
+              76,
+              "$70"
+            ]
+          ],
+          "say": "This bar chart shows cost per qualified F T D by age band. It's an example only, not a statistic. Shorter bars are cheaper. Twenty one to twenty four, ninety two dollars. Twenty five to thirty four, forty eight. Thirty five to forty four, forty four. And forty five plus, seventy dollars. Age patterns differ by geo and product, so build this chart from your own network data, never from someone else's."
+        },
+        {
+          "v": "eq",
+          "h": "How much data before you trust a segment?",
+          "p": "Small segments swing wildly. Use the same threshold as the CPA kill rule: judge a segment only after it has spent at least 3 × target CPA. Below that, keep watching.",
+          "more": "Example: target $55. 3 × $55 = $165. A placement that has spent $90 with 0 qualified FTDs is not yet proof of anything, even though it looks bad. A placement that has spent $400 with 3 qualified FTDs ($133 each) has enough spend to act on: it is above the kill line, the lower of 1.5 × $55 = $82.50 and break-even.",
+          "d": [
+            "3",
+            "×",
+            "Target CPA",
+            "=",
+            "Minimum spend per segment"
+          ],
+          "say": "Small segments swing wildly. So how much data before you trust one? Use the same threshold as the C P A kill rule. Look at the equation: three, times target C P A, equals the minimum spend per segment. With a fifty five dollar target, that's one hundred and sixty five dollars. A placement that spent ninety dollars with zero qualified F T Ds isn't proof yet. One that spent four hundred with three qualified has enough spend to act on. Below the line, keep watching."
+        },
+        {
+          "v": "code",
+          "h": "Pass segments into your offer link",
+          "p": "Platform reports split results by segment, but only for platform-reported events. To split network-confirmed qualified FTDs, pass labels into your sub IDs. Meta offers URL parameters such as placement and ad names at the time of writing; we are not certain the exact names are current, so check Meta's Help Center.",
+          "d": {
+            "lang": "url",
+            "text": "https://tracker.example/go?sub2={{adset.name}}&sub3={{placement}}&sub4={{ad.name}}",
+            "note": "Example. The platform fills the double-brace values; your tracker passes them on to the network's sub IDs."
+          },
+          "say": "Platform reports split results by segment, but only for platform-reported events. To split network-confirmed qualified F T Ds, you pass labels into your sub I Ds. The link on screen is an example: the platform fills in the values in double braces, like ad set name, placement and ad name, and your tracker passes them on to the network's sub I Ds. Meta offers these U R L parameters at the time of writing, but we're not certain the exact names are current, so check Meta's Help Center."
+        },
+        {
+          "v": "walk",
+          "h": "Build a segment report",
+          "p": "Once labels flow through, the network's report can be split the same way as the platform's. Then you judge each segment on what you are paid for.",
+          "d": {
+            "steps": [
+              {
+                "title": "Add the parameters",
+                "text": "Put the segment parameters in the ad's URL parameters field, then preview a click.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/ad",
+                  "title": "Ad",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "URL parameters",
+                      "value": "sub3={{placement}}"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Names change; check the current Ads Manager."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Check one click",
+                "text": "Click your own ad preview link and confirm the label appears in the tracker.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "tracker.example/clicks",
+                  "title": "Clicks",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Click ID",
+                        "sub3"
+                      ],
+                      "rows": [
+                        [
+                          "c_91ab",
+                          "Facebook_Mobile_Feed"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Export from the network",
+                "text": "After a week, export qualified FTDs by sub3 and add spend per segment from the platform report.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/segments",
+                  "title": "By placement",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Placement",
+                        "Spend",
+                        "Qualified",
+                        "CPA"
+                      ],
+                      "rows": [
+                        [
+                          "Feed",
+                          "$700",
+                          "15",
+                          "$46.67"
+                        ],
+                        [
+                          "Stories",
+                          "$300",
+                          "4",
+                          "$75.00"
+                        ],
+                        [
+                          "Partner apps",
+                          "$400",
+                          "3",
+                          "$133.33"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Apply the rules",
+                "text": "Mark each segment keep, watch or exclude, with the reason.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/segments",
+                  "title": "Decisions",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Partner apps",
+                      "value": "Exclude: $133 > kill line after $400 spend"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Let's build a segment report. Tap Next to follow each step. First, add the segment parameters to the ad's U R L parameters field, then preview a click. Second, click your own ad preview link and confirm the label appears in the tracker. Third, after a week, export qualified F T Ds by that label from the network, and add spend per segment from the platform report. Here, partner apps cost one hundred and thirty three dollars per qualified F T D. Fourth, mark each segment keep, watch or exclude, with the reason."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "Segment cutting is powerful and easy to overdo. Each cut shrinks your audience, so make every cut on enough data and for a reason you can explain.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Cutting a segment after $40 of spend",
+                "Judging segments on platform-reported results",
+                "Cutting ten segments at once",
+                "Never retesting excluded segments"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Wait for 3 × target spend per segment",
+                "Split network-confirmed qualified FTDs",
+                "One or two changes at a time, logged",
+                "Retest exclusions every quarter"
+              ]
+            }
+          },
+          "say": "Segment cutting is powerful, and easy to overdo. On the left: cutting a segment after forty dollars of spend. Judging segments on platform-reported results. Cutting ten segments at once. Never retesting excluded segments. On the right, the fixes: wait for three times target spend per segment. Split network-confirmed qualified F T Ds. Make one or two changes at a time, logged. And retest exclusions every quarter. Each cut shrinks your audience, so make it on enough data, for a reason you can explain."
+        },
+        {
+          "v": "tip",
+          "h": "Targeting limits for financial ads",
+          "p": "In some regions, financial ads fall under special ad categories that limit targeting by age, gender or location. We are not certain which rules apply to your geo today. Never target under-age people or groups who may be vulnerable, such as people searching for debt help.",
+          "d": {
+            "kind": "warn",
+            "text": "Respect minimum ages and any special ad category rules for financial products in each geo. Trading ads need platform authorization where required and must follow local law. We are not certain this is current; check the platform's Help Center, your network and your broker before relying on it."
+          },
+          "say": "In some regions, financial ads fall under special ad categories that limit targeting by age, gender or location. We're not certain which rules apply to your geo today. Never target under-age people, or groups who may be vulnerable, such as people searching for debt help. Respect minimum ages and any special category rules in each geo. Trading ads need platform authorization where required and must follow local law. Check the platform's Help Center, your network and your broker before relying on this."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for segments",
+          "p": "Starting rules to adapt. They use the same lines as your rule card, applied to each segment instead of each ad set. Log every exclusion with its date and reason.",
+          "d": [
+            "Judge a segment only after ≥ 3 × target spend",
+            "Segment CPA above the kill line after that spend: exclude it, if the platform and the category rules allow",
+            "Segment CPA ≤ 0.8 × target with ≥ 3 qualified FTDs: consider its own ad set",
+            "Look for a funnel cause before cutting a large segment",
+            "Retest every exclusion once a quarter with a small budget"
+          ],
+          "say": "Here are starting decision rules for segments, to adapt. Judge a segment only after at least three times target spend. If its C P A is above the kill line after that, exclude it, if the platform and category rules allow. If it's at or under zero point eight times target with at least three qualified F T Ds, consider giving it its own ad set. Look for a funnel cause before cutting a large segment. And retest every exclusion once a quarter with a small budget. Log every exclusion with its date and reason."
+        },
+        {
+          "v": "table",
+          "h": "Your segment review sheet",
+          "p": "Example layout for a weekly sheet. One tab per segment type. Keep the decision and the reason on the same row so anyone on the team can see why a segment was cut.",
+          "d": {
+            "cols": [
+              "Segment",
+              "Spend",
+              "Qualified",
+              "Decision"
+            ],
+            "rows": [
+              [
+                "iOS",
+                "$500",
+                "12",
+                "Keep"
+              ],
+              [
+                "Android",
+                "$900",
+                "12",
+                "Watch: check app speed"
+              ],
+              [
+                "Partner apps",
+                "$400",
+                "3",
+                "Exclude"
+              ],
+              [
+                "Age 21–24",
+                "$460",
+                "5",
+                "Watch"
+              ]
+            ]
+          },
+          "say": "Here's an example layout for your weekly segment review sheet, one tab per segment type. i O S: keep. Android: watch, and check app speed. Partner apps: exclude. Age twenty one to twenty four: watch. Notice the decision and the reason sit on the same row. That way, anyone on the team can see why a segment was cut."
+        }
+      ],
+      "takeaways": [
+        "Averages hide segments that cost far more or far less than target.",
+        "Pass segment labels into sub IDs so you can split network-confirmed qualified FTDs.",
+        "Judge a segment only after 3 × target spend, look for funnel causes first, and retest exclusions."
+      ],
+      "action": "Add placement and ad-name parameters to your offer links, check that one test click carries them into the tracker, and set a date one week from now to build your first segment report.",
+      "glossary": [
+        {
+          "term": "Segment",
+          "def": "A slice of your audience, such as a device, placement, age band or region."
+        },
+        {
+          "term": "Breakdown",
+          "def": "A platform report that splits results by segment."
+        },
+        {
+          "term": "URL parameter",
+          "def": "A value the platform adds to your link, such as the placement name."
+        },
+        {
+          "term": "Exclusion",
+          "def": "Removing a segment from targeting or placements so no more budget goes there."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Android $900 → 12 qualified; iOS $500 → 12 qualified. Android CPA?",
+          "options": [
+            "$41.67",
+            "$58.33",
+            "$75.00",
+            "$90.00"
+          ],
+          "answer": 2,
+          "why": "$900 ÷ 12 = $75."
+        },
+        {
+          "q": "Target $55. A placement spent $90 with 0 qualified FTDs. Starting rule?",
+          "options": [
+            "Exclude it now",
+            "Scale it",
+            "Keep watching; it is under 3 × target spend",
+            "Change the offer"
+          ],
+          "answer": 2,
+          "why": "3 × $55 = $165. $90 is not enough data to judge a segment."
+        },
+        {
+          "q": "Why pass {{placement}} into a sub ID?",
+          "options": [
+            "To change the bid",
+            "So network-confirmed qualified FTDs can be split by placement",
+            "To hide the placement from reviewers",
+            "It is required by law"
+          ],
+          "answer": 1,
+          "why": "Platform reports cannot see qualified FTDs; sub IDs bring the label back with the network data."
+        },
+        {
+          "q": "A big segment is above target. What do you check before cutting it?",
+          "options": [
+            "Whether a funnel cause such as app speed or deposit method explains it",
+            "Nothing, cut it",
+            "Whether a competitor targets it",
+            "The colour of the ad"
+          ],
+          "answer": 0,
+          "why": "Large segments often have a fixable funnel cause."
+        },
+        {
+          "q": "How often should you retest excluded segments, as a starting rule?",
+          "options": [
+            "Never",
+            "Daily",
+            "Only after an account ban",
+            "Every quarter with a small budget"
+          ],
+          "answer": 3,
+          "why": "Audiences and funnels change; retest exclusions quarterly."
+        }
+      ],
+      "say_intro": "In this lesson you'll split your results by segment, such as device, placement, age and region, to find where your money really works. You'll pass segment labels into your links, and learn when a segment is big enough to cut or give its own ad set.",
+      "say_outro": "So, averages hide money: split by segment, judge each one on network-confirmed qualified F T Ds after enough spend, and log every cut. Your task: add placement and ad-name parameters to your offer links, check that one test click carries them into the tracker, and set a date one week from now to build your first segment report. Now take the quiz."
+    },
+    {
+      "slug": "qualified-ftds-and-baselines",
+      "title": "Qualified FTDs and baselines in depth",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can read a baseline and estimate how many of your FTDs will qualify.",
+        "By the end you can compare sources on cost per qualified FTD and project early results.",
+        "By the end you can check whether a baseline change is worth negotiating."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the baseline decides your margin",
+          "p": "Module 1 covered the baseline and effective payout. At this level, the gap between FTDs and qualified FTDs is where most of your margin is won or lost. Two sources with the same cost per FTD can differ by half on what you are paid.",
+          "d": {
+            "b": "Same FTDs, different pay",
+            "s": "The qualification rate is a source's real quality score."
+          },
+          "say": "Module one covered the baseline and effective payout. At this level, the gap between F T Ds, first-time deposits, and qualified F T Ds is where most of your margin is won or lost. Two sources with the same cost per F T D can differ by half on what you're actually paid. Same F T Ds, different pay. The qualification rate is a source's real quality score."
+        },
+        {
+          "v": "table",
+          "h": "What baselines are made of",
+          "p": "Example conditions. Every network writes its own, and many combine several. Read the exact words in your deal and ask for anything vague in writing.",
+          "d": {
+            "cols": [
+              "Condition",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Minimum deposit",
+                "$100 or local equivalent"
+              ],
+              [
+                "Trading activity",
+                "At least 5 trades or 1 lot"
+              ],
+              [
+                "Time window",
+                "Met within 30 days of FTD"
+              ],
+              [
+                "Unique user",
+                "One per person, household or device"
+              ],
+              [
+                "Geo",
+                "User resident in an allowed country"
+              ],
+              [
+                "Not reversed",
+                "No chargeback or refund in the window"
+              ]
+            ]
+          },
+          "say": "Baselines are made of conditions. These are examples, because every network writes its own, and many combine several. A minimum deposit, like one hundred dollars or local equivalent. Trading activity, like at least five trades or one lot. A time window, met within thirty days of the F T D. A unique user, one per person, household or device. Geo, meaning resident in an allowed country. And not reversed, with no chargeback or refund in the window. Read the exact words in your deal, and ask for anything vague in writing."
+        },
+        {
+          "v": "bars",
+          "h": "Example: how deposits spread out",
+          "p": "Example: 50 FTDs from one test, grouped by deposit size. With a $100 minimum, only the two bigger groups can qualify. That is 24 of 50 before any trading condition is even checked.",
+          "d": [
+            [
+              "Under $50",
+              56,
+              "14 FTDs"
+            ],
+            [
+              "$50–99",
+              48,
+              "12 FTDs"
+            ],
+            [
+              "$100–249",
+              60,
+              "15 FTDs"
+            ],
+            [
+              "$250 and over",
+              36,
+              "9 FTDs"
+            ]
+          ],
+          "say": "Here's an example of how deposits spread out, across fifty F T Ds from one test. Under fifty dollars, fourteen. Fifty to ninety nine, twelve. One hundred to two forty nine, fifteen. And two fifty and over, nine. With a one hundred dollar minimum, only the two bigger groups can qualify. That's twenty four of fifty, before any trading condition is even checked."
+        },
+        {
+          "v": "eq",
+          "h": "What a raw FTD is really worth",
+          "p": "Multiply the payout by the share of FTDs that qualify. This is the number to bid against when you see a raw FTD in your tracker, long before the network confirms it.",
+          "more": "Example: 24 of 50 FTDs meet the $100 minimum, which is 48%. $70 × 48% = $33.60. If the trading condition removes a few more, the real figure is lower still. Use your own historic rate per source and geo, recalculated each month.",
+          "d": [
+            "$70 payout",
+            "×",
+            "48% qualify",
+            "=",
+            "$33.60 per raw FTD"
+          ],
+          "say": "So what's a raw F T D really worth? Multiply the payout by the share of F T Ds that qualify. Look at the equation: a seventy dollar payout, times forty eight percent qualifying, equals thirty three dollars sixty per raw F T D. That's the number to bid against when you see a raw F T D in your tracker, long before the network confirms it. If the trading condition removes a few more, the real figure is lower. Use your own rate per source and geo, recalculated monthly."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: two sources compared",
+          "p": "Example: Source B looks cheaper per FTD. Measured on what you are paid for, Source A is cheaper. This is the most common mistake in trading tracking, and it only shows up when you split qualification by source.",
+          "more": "Example: A: $1,400 ÷ 40 = $35; $1,400 ÷ 26 ≈ $53.85. B: $700 ÷ 30 ≈ $23.33; $700 ÷ 12 ≈ $58.33. B's cheap FTDs are mostly small deposits that miss the baseline. Before you shift budget to B, look at why: audience, angle and deposit methods all play a part.",
+          "d": {
+            "cols": [
+              "",
+              "Source A (Meta)",
+              "Source B (Telegram)"
+            ],
+            "rows": [
+              [
+                "Spend",
+                "$1,400",
+                "$700"
+              ],
+              [
+                "FTDs",
+                "40",
+                "30"
+              ],
+              [
+                "Cost per FTD",
+                "$35.00",
+                "$23.33"
+              ],
+              [
+                "Qualified",
+                "26 (65%)",
+                "12 (40%)"
+              ],
+              [
+                "Cost per qualified",
+                "$53.85",
+                "$58.33"
+              ]
+            ]
+          },
+          "say": "Here's a worked example of two sources. Source B, Telegram, looks cheaper per F T D: twenty three thirty three against thirty five dollars for Source A, Meta. But look at the qualified row. A qualifies sixty five percent, B only forty. So per qualified F T D, A costs fifty three eighty five, and B costs fifty eight thirty three. Measured on what you're paid for, A is cheaper. This is the most common mistake in trading tracking. Before shifting budget, look at why: audience, angle and deposit methods all play a part."
+        },
+        {
+          "v": "table",
+          "h": "Example: deposit spread by source",
+          "p": "Example: deposit groups split by source for the two sources above. More than half of Source B's FTDs are under the $100 minimum, which explains most of its low qualification rate before you even look at trading activity.",
+          "d": {
+            "cols": [
+              "Deposit",
+              "Source A",
+              "Source B"
+            ],
+            "rows": [
+              [
+                "Under $50",
+                "4",
+                "10"
+              ],
+              [
+                "$50–99",
+                "8",
+                "6"
+              ],
+              [
+                "$100–249",
+                "17",
+                "10"
+              ],
+              [
+                "$250 and over",
+                "11",
+                "4"
+              ],
+              [
+                "Meets $100 minimum",
+                "28 of 40 (70%)",
+                "14 of 30 (47%)"
+              ]
+            ]
+          },
+          "say": "This table splits the deposit groups by source, for the same two sources. Look at the bottom row. Source A: twenty eight of forty meet the one hundred dollar minimum, seventy percent. Source B: fourteen of thirty, forty seven percent. More than half of B's F T Ds are under the minimum. That explains most of its low qualification rate, before you even look at trading activity."
+        },
+        {
+          "v": "eq",
+          "h": "Projecting early results",
+          "p": "While qualification is still arriving, project it from your history. Multiply raw FTDs by the source's historic qualification rate to estimate final qualified FTDs. Use this to hold or watch, not to kill or scale.",
+          "more": "Example: an ad set spent $330 and has 10 raw FTDs. Its source historically qualifies 60%, so expect about 6 qualified. $330 ÷ 6 = $55 projected. If the target is $52.50, it is close: hold and wait for confirmed numbers. Never scale on a projection alone; projections assume the new traffic behaves like the old.",
+          "d": [
+            "Spend",
+            "÷",
+            "(raw FTDs × historic rate)",
+            "=",
+            "Projected CPA"
+          ],
+          "say": "While qualification is still arriving, you can project it from your history. Look at the equation: spend, divided by raw F T Ds times the source's historic qualification rate, gives a projected C P A, cost per acquisition. For example, three hundred and thirty dollars spend and ten raw F T Ds, at a sixty percent historic rate, means about six qualified, so fifty five dollars projected. Use this to hold or watch, not to kill or scale. Projections assume new traffic behaves like the old."
+        },
+        {
+          "v": "walk",
+          "h": "Build a deposit view by source",
+          "p": "Module 1 showed how to read conversion statuses and rejection reasons. This view goes one step further: it shows whether a source's deposits can meet the baseline at all.",
+          "d": {
+            "steps": [
+              {
+                "title": "Export FTDs with deposit size",
+                "text": "Ask the network for FTDs with deposit amount and sub ID. Some networks show amounts only in bands; that is enough.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/reports/ftd",
+                  "title": "FTD export",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Sub2",
+                        "Deposit band"
+                      ],
+                      "rows": [
+                        [
+                          "NG_Demo_01",
+                          "$100–249"
+                        ],
+                        [
+                          "NG_TG_02",
+                          "Under $50"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Count by band and source",
+                "text": "Put deposit bands in rows and sources in columns, and add a row for 'meets minimum'.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/deposits",
+                  "title": "Deposits by source",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Source A meets minimum",
+                      "value": "28 of 40 = 70%"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Source B meets minimum",
+                      "value": "14 of 30 = 47%"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Find the cause",
+                "text": "If a source brings mostly small deposits, check whether its angle or audience attracts people for whom the minimum is too much. Fix targeting and message; never pressure anyone to deposit more.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/deposits",
+                  "title": "Action",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Source B",
+                      "value": "Review audience and angle"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Let's build a deposit view by source. Tap Next to follow each step. First, ask the network for an export of F T Ds with deposit amount and sub I D. Some networks show amounts only in bands, and that's enough. Second, count by band and source: bands in rows, sources in columns, and a row for meets minimum. Third, find the cause. If a source brings mostly small deposits, check whether its angle or audience attracts people for whom the minimum is too much. Fix targeting and message. Never pressure anyone to deposit more."
+        },
+        {
+          "v": "phone",
+          "h": "Is a lower baseline worth asking for?",
+          "p": "Do the maths before you negotiate. In this example the manager offers a lower minimum for a lower payout. On these numbers both deals pay almost the same per raw FTD, so the change is not worth much.",
+          "more": "Example using the deposit spread above: at $100 minimum, 24 of 50 qualify: $70 × 48% = $33.60 per raw FTD. At $50 minimum, 12 + 15 + 9 = 36 of 50 qualify: $45 × 72% = $32.40. Almost the same. The lower baseline would only win if it also brought more volume or cut chargebacks. Run your own numbers every time.",
+          "d": {
+            "app": "chat",
+            "title": "Affiliate manager",
+            "subtitle": "network",
+            "messages": [
+              {
+                "from": "me",
+                "text": "Most NG deposits are $50–99. Could we do a $50 minimum?"
+              },
+              {
+                "from": "them",
+                "text": "We can do $45 CPA at a $50 minimum, or keep $70 at $100."
+              },
+              {
+                "from": "me",
+                "text": "Thanks, checking the maths on my last 50 FTDs and will reply today."
+              }
+            ]
+          },
+          "say": "Is a lower baseline worth asking for? Look at this chat. The buyer asks for a fifty dollar minimum. The manager offers forty five dollars at a fifty dollar minimum, or keep seventy at one hundred. The buyer checks the maths first. At one hundred dollars, twenty four of fifty qualify, so thirty three sixty per raw F T D. At fifty dollars, thirty six of fifty qualify, so forty five times seventy two percent, thirty two forty. Almost the same. So the change isn't worth much, unless it brings more volume. Run your own numbers every time."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "These mistakes either hide the true cost of a source or push users in ways that harm them. Both end up costing you, through wasted budget, clawbacks or a lost deal.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Moving budget to the cheapest cost per FTD",
+                "Killing ad sets in week one on unconfirmed data",
+                "Urging users to deposit more to hit the minimum",
+                "Accepting a baseline you have not read"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Compare sources on cost per qualified FTD",
+                "Project early, decide on confirmed numbers",
+                "Never suggest an amount; let users choose",
+                "Get every baseline condition in writing"
+              ]
+            }
+          },
+          "say": "These mistakes either hide the true cost of a source, or push users in ways that harm them. On the left: moving budget to the cheapest cost per F T D. Killing ad sets in week one on unconfirmed data. Urging users to deposit more to hit the minimum. Accepting a baseline you haven't read. On the right, the fixes: compare sources on cost per qualified F T D. Project early, decide on confirmed numbers. Never suggest an amount; let users choose. And get every baseline condition in writing."
+        },
+        {
+          "v": "tip",
+          "h": "Never push deposits",
+          "p": "Telling people how much to deposit, offering cash-back for deposits or paying users to trade creates harm and is banned by most networks as incentivised traffic. It also leads to complaints and clawbacks.",
+          "d": {
+            "kind": "warn",
+            "text": "No deposit amounts, no deposit rewards, no 'top up to qualify'. People should only deposit what they can afford to lose. Trading ads need platform authorization where required and must follow local law. We are not certain this is current; check the platform's Help Center, your network and your broker before relying on it."
+          },
+          "say": "Never push deposits. Telling people how much to deposit, offering cash-back for deposits, or paying users to trade creates harm, and most networks ban it as incentivised traffic. It also leads to complaints and clawbacks. So no deposit amounts, no deposit rewards, no top up to qualify. People should only deposit what they can afford to lose. Trading ads need platform authorization where required and must follow local law. We're not certain this is current, so check the platform, your network and your broker."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for qualification",
+          "p": "Starting rules to adapt with your network data. They keep early projections useful without letting them drive big decisions. Confirmed numbers always overrule projections, however confident they look.",
+          "d": [
+            "Decide kill and scale on confirmed qualified FTDs only",
+            "Use projected CPA to hold, never to scale",
+            "Source qualifies under half your average over ≥ 20 FTDs: pause it and read the reasons",
+            "Check any baseline offer with your last 50 FTDs before accepting",
+            "Recalculate each source's qualification rate monthly"
+          ],
+          "say": "Here are starting decision rules for qualification, to adapt with your network data. Decide kill and scale on confirmed qualified F T Ds only. Use projected C P A to hold, never to scale. If a source qualifies under half your average over at least twenty F T Ds, pause it and read the reasons. Check any baseline offer against your last fifty F T Ds before accepting. And recalculate each source's qualification rate monthly. Confirmed numbers always overrule projections."
+        }
+      ],
+      "takeaways": [
+        "The FTD-to-qualified rate is a source's real quality score.",
+        "Compare sources on cost per qualified FTD, and project early results without deciding on them.",
+        "Do the maths before negotiating a baseline, and never push anyone to deposit more."
+      ],
+      "action": "Export your last 50 FTDs with deposit size and qualification status, group them like the deposit chart in this lesson, and calculate what a raw FTD is worth for each of your sources.",
+      "glossary": [
+        {
+          "term": "Qualification rate",
+          "def": "The share of FTDs that meet the broker's baseline and are paid."
+        },
+        {
+          "term": "Projected CPA",
+          "def": "Spend divided by expected qualified FTDs, using a historic qualification rate."
+        },
+        {
+          "term": "Incentivised traffic",
+          "def": "Users rewarded for signing up or depositing. Banned by most trading networks."
+        },
+        {
+          "term": "Raw FTD",
+          "def": "Any first deposit, before the network checks the baseline."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Payout $70, 48% of FTDs qualify. What is a raw FTD worth?",
+          "options": [
+            "$70.00",
+            "$33.60",
+            "$48.00",
+            "$36.40"
+          ],
+          "answer": 1,
+          "why": "$70 × 48% = $33.60."
+        },
+        {
+          "q": "Source A costs $53.85 per qualified FTD, Source B $58.33, but B is cheaper per FTD. Which is cheaper on what you are paid for?",
+          "options": [
+            "Source B",
+            "They are equal",
+            "Cannot tell",
+            "Source A"
+          ],
+          "answer": 3,
+          "why": "You are paid on qualified FTDs, where A costs less."
+        },
+        {
+          "q": "An ad set has $330 spend and 10 raw FTDs; history says 60% qualify. Target $52.50. What do you do now?",
+          "options": [
+            "Scale, it looks good",
+            "Hold and wait for confirmed numbers",
+            "Kill, it is over target",
+            "Change the baseline"
+          ],
+          "answer": 1,
+          "why": "Projected CPA is $55, close to target. Projections support hold, not kill or scale."
+        },
+        {
+          "q": "A source qualifies 25% against a 55% average over 30 FTDs. Starting rule?",
+          "options": [
+            "Scale it",
+            "Ask users to deposit more",
+            "Pause it and read the rejection reasons",
+            "Ignore it for a month"
+          ],
+          "answer": 2,
+          "why": "Under half the average over at least 20 FTDs: pause and investigate the reasons."
+        },
+        {
+          "q": "Which action is never acceptable?",
+          "options": [
+            "Comparing sources on qualified CPA",
+            "Asking for baseline terms in writing",
+            "Projecting early results",
+            "Telling users to top up to reach the minimum deposit"
+          ],
+          "answer": 3,
+          "why": "Pushing deposits harms users and is banned by most networks."
+        }
+      ],
+      "say_intro": "In this lesson you'll go deep on baselines and qualified F T Ds, because the gap between them is where most of your margin is won or lost. You'll compare sources on what you're actually paid for, and check whether a baseline change is worth negotiating.",
+      "say_outro": "So, the qualification rate is a source's real quality score: compare sources on cost per qualified F T D, project early but decide on confirmed numbers, and never push deposits. Your task: export your last fifty F T Ds with deposit size and qualification status, group them like the deposit chart in this lesson, and calculate what a raw F T D is worth for each source. Now take the quiz."
+    },
+    {
+      "slug": "retention-chargebacks-and-clawbacks",
+      "title": "Retention, chargebacks and clawbacks",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can explain holds, reserves, chargebacks and clawbacks with numbers.",
+        "By the end you can adjust your target CPA for expected clawbacks.",
+        "By the end you can track retention and fraud signals per source."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why paid is not the same as kept",
+          "p": "A qualified FTD can still be taken back. Card disputes, refunds, fraud flags and duplicate accounts can all reverse a payout weeks or months later. If you spend every dollar the network pays you, a clawback can arrive when your bank balance is empty.",
+          "d": {
+            "b": "A payout can be reversed",
+            "s": "Plan cash and targets for what you keep, not what you were paid."
+          },
+          "say": "A qualified F T D, first-time deposit, can still be taken back. Card disputes, refunds, fraud flags and duplicate accounts can all reverse a payout, weeks or months later. If you spend every dollar the network pays you, a clawback can arrive when your bank balance is empty. A payout can be reversed. So plan cash and targets for what you keep, not what you were paid."
+        },
+        {
+          "v": "cards",
+          "h": "The words you need",
+          "p": "Networks use these words in their terms and statements. Read how your network defines each one, because the details decide how much you keep and when.",
+          "d": [
+            "Hold period|days before a conversion is approved for payout",
+            "Reserve|share of earnings kept back for a time",
+            "Chargeback|a card payment reversed after a dispute",
+            "Clawback|network deducts an earlier payout",
+            "Fraud flag|conversion rejected as fake or duplicate",
+            "Net terms|how long after month end you are paid"
+          ],
+          "say": "Here are the words you need. Hold period: days before a conversion is approved for payout. Reserve: a share of earnings kept back for a time. Chargeback: a card payment reversed after a dispute. Clawback: the network deducts an earlier payout. Fraud flag: a conversion rejected as fake or duplicate. And net terms: how long after month end you're paid. Read how your own network defines each one, because the details decide how much you keep, and when."
+        },
+        {
+          "v": "flow",
+          "h": "The life of one payout",
+          "p": "A typical order of events. Timings are rough and vary by network and payment method; card dispute windows can run for months. Ask your network for its exact hold, reserve and clawback terms in writing.",
+          "d": [
+            "Day 0: FTD",
+            "Days 7–30: baseline check",
+            "Month end + net terms: paid",
+            "Months later: dispute window closes"
+          ],
+          "say": "Here's the life of one payout, in a typical order. Day zero, the F T D. Days seven to thirty, the baseline check. Month end plus net terms, you're paid. And months later, the dispute window closes. Timings are rough and vary by network and payment method. Card dispute windows can run for months. Ask your network for its exact hold, reserve and clawback terms, in writing."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: a month with a reserve",
+          "p": "Example: 100 qualified FTDs at $60. The network keeps a 10% reserve for 90 days. Later, 4 FTDs are charged back and clawed from the reserve. The rest of the reserve is released.",
+          "d": {
+            "cols": [
+              "Line",
+              "Working",
+              "Amount"
+            ],
+            "rows": [
+              [
+                "Earned",
+                "100 × $60",
+                "$6,000"
+              ],
+              [
+                "Reserve held",
+                "10% × $6,000",
+                "$600"
+              ],
+              [
+                "Paid now",
+                "$6,000 − $600",
+                "$5,400"
+              ],
+              [
+                "Clawbacks",
+                "4 × $60",
+                "$240"
+              ],
+              [
+                "Reserve released",
+                "$600 − $240",
+                "$360"
+              ],
+              [
+                "Total kept",
+                "$5,400 + $360",
+                "$5,760"
+              ]
+            ]
+          },
+          "say": "Here's a worked example of a month with a reserve. One hundred qualified F T Ds at sixty dollars, so six thousand earned. The network keeps a ten percent reserve, six hundred dollars, for ninety days. So five thousand four hundred is paid now. Later, four F T Ds are charged back, two hundred and forty dollars, clawed from the reserve. The remaining three hundred and sixty is released. In total, you keep five thousand seven hundred and sixty."
+        },
+        {
+          "v": "eq",
+          "h": "Adjust your target for clawbacks",
+          "p": "If a share of your FTDs is reversed later, each one is really worth less. Reduce the payout by your clawback rate before you work out your target CPA.",
+          "more": "Example: $60 × 0.96 = $57.60. With a 25% margin, the target becomes $57.60 × 0.75 = $43.20 instead of $45. Small difference per FTD, but on 100 FTDs a month it is $180 of margin you would otherwise think you had. Use your own clawback rate per source, from at least a few months of statements.",
+          "d": [
+            "$60",
+            "×",
+            "(1 − 4% clawback)",
+            "=",
+            "$57.60 effective"
+          ],
+          "say": "If a share of your F T Ds is reversed later, each one is really worth less. So reduce the payout by your clawback rate before you work out your target C P A, cost per acquisition. Look at the equation: sixty dollars, times one minus a four percent clawback rate, gives fifty seven sixty effective. With a twenty five percent margin, your target becomes forty three twenty instead of forty five. Small per F T D, but on one hundred F T Ds a month, it's one hundred and eighty dollars of margin."
+        },
+        {
+          "v": "cards",
+          "h": "Traffic you must never send",
+          "p": "These are the patterns networks look for and claw back. Several are fraud. If anyone on your team or any partner suggests one, stop working with them.",
+          "d": [
+            "Incentivised|users paid or rewarded to deposit",
+            "Self-deposits|you or your team depositing to trigger payouts",
+            "Duplicates|one person, several accounts",
+            "Bots and click farms|fake users and fake clicks",
+            "Wrong geo|users hidden behind VPNs in banned countries",
+            "Stolen cards|deposits that will be charged back"
+          ],
+          "say": "These are patterns networks look for and claw back, and several are fraud. Incentivised traffic, where users are paid or rewarded to deposit. Self-deposits, where you or your team deposit to trigger payouts. Duplicates, one person with several accounts. Bots and click farms, fake users and clicks. Wrong geo, users hidden behind V P Ns in banned countries. And stolen cards, deposits that will be charged back. If anyone on your team or any partner suggests one, stop working with them."
+        },
+        {
+          "v": "table",
+          "h": "Retention metrics per source",
+          "p": "Example values. Retention shows whether users stay after the first deposit. Brokers and networks watch it closely, and on RevShare it decides your income. Ask your network which of these it can report.",
+          "d": {
+            "cols": [
+              "Metric",
+              "Source A",
+              "Source B"
+            ],
+            "rows": [
+              [
+                "Active after 30 days",
+                "42%",
+                "19%"
+              ],
+              [
+                "Second deposit within 30 days",
+                "31%",
+                "12%"
+              ],
+              [
+                "Withdrew all within 7 days",
+                "9%",
+                "27%"
+              ],
+              [
+                "Clawback rate",
+                "2%",
+                "7%"
+              ]
+            ]
+          },
+          "say": "Retention shows whether users stay after the first deposit. Brokers and networks watch it closely, and on rev share it decides your income. Compare the example values. Active after thirty days: forty two percent for Source A, nineteen for B. Second deposit within thirty days: thirty one against twelve. Withdrew everything within seven days: nine percent against twenty seven. And clawback rate: two percent against seven. Ask your network which of these it can report."
+        },
+        {
+          "v": "walk",
+          "h": "Track clawbacks every month",
+          "p": "Clawbacks often arrive as a single line on a statement. Match them back to sources, or you will never know which traffic causes them. Ask your manager for the detail behind every adjustment line.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open the statement",
+                "text": "Download the monthly statement with conversion IDs and any adjustments.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/payments",
+                  "title": "Statement",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Item",
+                        "Amount"
+                      ],
+                      "rows": [
+                        [
+                          "Approved conversions",
+                          "$6,000"
+                        ],
+                        [
+                          "Reserve",
+                          "-$600"
+                        ],
+                        [
+                          "Adjustments",
+                          "-$240"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Match to sub IDs",
+                "text": "Ask for the adjustment detail and match each reversed conversion to its sub ID.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/clawbacks",
+                  "title": "Clawbacks",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Conversion",
+                        "Sub2",
+                        "Reason"
+                      ],
+                      "rows": [
+                        [
+                          "88213",
+                          "NG_TG_02",
+                          "Chargeback"
+                        ],
+                        [
+                          "88240",
+                          "NG_TG_02",
+                          "Duplicate"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Rate per source",
+                "text": "Divide clawbacks by qualified FTDs per source and compare with your average.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/clawbacks",
+                  "title": "Rates",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Account average",
+                      "value": "4 ÷ 100 = 4%"
+                    },
+                    {
+                      "type": "field",
+                      "label": "NG_TG_02",
+                      "value": "3 ÷ 30 = 10% (flag)"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              }
+            ]
+          },
+          "say": "Clawbacks often arrive as a single line on a statement, so match them back to sources. Tap Next to follow each step. First, open and download the monthly statement, with conversion I Ds and any adjustments. Second, ask for the adjustment detail and match each reversed conversion to its sub I D. Here, both reversals trace to the same source. Third, divide clawbacks by qualified F T Ds per source and compare with your average. Here the account averages four percent, but that source is at ten, so it's flagged."
+        },
+        {
+          "v": "product",
+          "h": "Keep users engaged honestly",
+          "p": "Retention grows when users keep learning, not when they are pushed to trade. Regular, useful educational broadcasts to people who opted in are an honest way to stay in touch.",
+          "d": {
+            "slug": "castvoo",
+            "why": "Send scheduled, opt-in educational broadcasts to your Telegram audience, without deposit pressure."
+          },
+          "say": "Retention grows when users keep learning, not when they're pushed to trade. Regular, useful educational broadcasts to people who opted in are an honest way to stay in touch. On screen is one option, Castvoo, for scheduled, opt-in educational broadcasts to your Telegram audience, without deposit pressure."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "These mistakes leave you short of cash or blind to bad traffic. All of them are fixed by reading the terms and keeping simple monthly records.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Spending the full payout as soon as it lands",
+                "Using headline payout to set targets",
+                "Not reading the reserve terms",
+                "Blaming the network without matching sub IDs"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Keep a cash buffer for expected clawbacks",
+                "Use payout × (1 − clawback rate)",
+                "Get hold, reserve and clawback terms in writing",
+                "Match every adjustment to a source"
+              ]
+            }
+          },
+          "say": "These mistakes leave you short of cash, or blind to bad traffic. On the left: spending the full payout as soon as it lands. Using the headline payout to set targets. Not reading the reserve terms. And blaming the network without matching sub I Ds. On the right, the fixes: keep a cash buffer for expected clawbacks. Use payout times one minus clawback rate. Get hold, reserve and clawback terms in writing. And match every adjustment to a source."
+        },
+        {
+          "v": "tip",
+          "h": "Retention without pressure",
+          "p": "Retention must come from users finding real value, such as learning and tools. Pushing people to trade more, deposit again or chase losses causes harm and complaints. Avoid targeting anyone who may be vulnerable.",
+          "d": {
+            "kind": "warn",
+            "text": "Never pressure users to trade or deposit, and never reward deposits. Report any fraud you find. Trading ads need platform authorization where required and must follow local law. We are not certain this is current; check the platform's Help Center, your network and your broker before relying on it."
+          },
+          "say": "Retention must come from users finding real value, like learning and tools. Pushing people to trade more, deposit again or chase losses causes harm and complaints. Avoid targeting anyone who may be vulnerable. Never pressure users to trade or deposit, never reward deposits, and report any fraud you find. Trading ads need platform authorization where required and must follow local law. We're not certain this is current, so check the platform's Help Center, your network and your broker."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for quality and cash",
+          "p": "Starting rules to adapt with your accountant and network terms. They protect your cash and your relationship with the network. The cash rule matters most in your first months, when one bad statement can stop your campaigns.",
+          "d": [
+            "Source clawback rate over 2 × your average across ≥ 30 FTDs: pause and investigate",
+            "Any sign of incentives or self-deposits: stop the source and tell the network",
+            "Keep cash for expected clawbacks plus one month of ad spend",
+            "Set targets on payout × (1 − clawback rate)",
+            "Reconcile statements to sub IDs every month"
+          ],
+          "say": "Here are starting decision rules for quality and cash, to adapt with your accountant and network terms. If a source's clawback rate is over two times your average across at least thirty F T Ds, pause and investigate. Any sign of incentives or self-deposits, stop the source and tell the network. Keep cash for expected clawbacks plus one month of ad spend. Set targets on payout times one minus clawback rate. And reconcile statements to sub I Ds every month. The cash rule matters most in your first months."
+        }
+      ],
+      "takeaways": [
+        "A payout can be reversed; plan on what you keep, not what you were paid.",
+        "Adjust targets for clawbacks and keep a cash buffer for reserves and reversals.",
+        "Track retention and clawbacks per source; never send incentivised or fraudulent traffic."
+      ],
+      "action": "Read your network's terms for hold, reserve and clawbacks, write the numbers down, and recalculate your target CPA using payout × (1 − your clawback rate).",
+      "glossary": [
+        {
+          "term": "Reserve",
+          "def": "A share of earnings a network holds back for a set time to cover reversals."
+        },
+        {
+          "term": "Chargeback",
+          "def": "A card payment reversed by the bank after a dispute."
+        },
+        {
+          "term": "Clawback",
+          "def": "A network deducting an earlier payout because the conversion was reversed or rejected."
+        },
+        {
+          "term": "Retention",
+          "def": "Whether users stay active after their first deposit."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Example: earned $6,000, 10% reserve, later $240 clawed back. Total kept?",
+          "options": [
+            "$5,400",
+            "$5,760",
+            "$6,000",
+            "$5,160"
+          ],
+          "answer": 1,
+          "why": "$5,400 paid now plus $600 − $240 = $360 released: $5,760."
+        },
+        {
+          "q": "Payout $60, clawback rate 4%. Effective payout?",
+          "options": [
+            "$57.60",
+            "$56.00",
+            "$62.40",
+            "$60.00"
+          ],
+          "answer": 0,
+          "why": "$60 × 0.96 = $57.60."
+        },
+        {
+          "q": "A source's clawback rate is 10% vs a 4% average, over 30 FTDs. Starting rule?",
+          "options": [
+            "Pause it and investigate",
+            "Scale it",
+            "Ignore it",
+            "Ask users not to dispute"
+          ],
+          "answer": 0,
+          "why": "10% is more than 2 × 4% over at least 30 FTDs."
+        },
+        {
+          "q": "A partner offers to 'boost FTDs' by paying users $10 to deposit. What is this?",
+          "options": [
+            "A clever growth tactic",
+            "Fine if users agree",
+            "Incentivised traffic, banned and harmful; refuse it",
+            "Allowed on RevShare only"
+          ],
+          "answer": 2,
+          "why": "Rewarding deposits is incentivised traffic. Networks claw it back and it harms users."
+        },
+        {
+          "q": "Which is an honest way to improve retention?",
+          "options": [
+            "Opt-in educational broadcasts",
+            "Daily 'deposit now' messages",
+            "Bonus for every trade",
+            "Targeting people who recently lost money"
+          ],
+          "answer": 0,
+          "why": "Real value, such as learning, keeps users without pressure."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn why a payout you've been paid isn't always a payout you keep. We'll cover holds, reserves, chargebacks and clawbacks with numbers, adjust your target for clawbacks, and track retention per source.",
+      "say_outro": "So, plan cash and targets for what you keep, not what you were paid: read the terms, set targets on payout times one minus your clawback rate, and match every adjustment to a source. Your task: read your network's terms for hold, reserve and clawbacks, write the numbers down, and recalculate your target C P A using payout times one minus your clawback rate. Now take the quiz."
+    },
+    {
+      "slug": "postbacks-capi-and-reconciliation",
+      "title": "Postbacks, conversions API and reconciliation",
+      "minutes": 19,
+      "objectives": [
+        "By the end you can build a tracking link and a postback URL with the right IDs.",
+        "By the end you can map network events to tracker and ad platform events.",
+        "By the end you can reconcile network, tracker and platform numbers each week."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why your data must agree",
+          "p": "Every rule in this school depends on counting qualified FTDs correctly. If the network, your tracker and the ad platform disagree and you do not know why, you will kill winners and scale losers. A weekly check that the three agree is one of the highest-value habits in trading.",
+          "d": {
+            "b": "Wrong data, wrong decisions",
+            "s": "Reconcile weekly; fix gaps before you scale."
+          },
+          "say": "Every rule in this school depends on counting qualified F T Ds, first-time deposits, correctly. If the network, your tracker and the ad platform disagree, and you don't know why, you'll kill winners and scale losers. A weekly check that the three agree is one of the highest-value habits in trading. Wrong data, wrong decisions. Reconcile weekly, and fix gaps before you scale."
+        },
+        {
+          "v": "map",
+          "h": "How the IDs travel",
+          "p": "A click ID is created at the click, carried into the broker link as a sub ID, and returned by the network in the postback. That is how a qualified FTD finds its way back to the exact ad that caused it.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Ad click",
+                "kind": "ad"
+              },
+              {
+                "id": "trk",
+                "label": "Tracker: click ID",
+                "kind": "tool"
+              },
+              {
+                "id": "lp",
+                "label": "Lander",
+                "kind": "page"
+              },
+              {
+                "id": "off",
+                "label": "Broker link + sub1",
+                "kind": "offer"
+              },
+              {
+                "id": "net",
+                "label": "Network",
+                "kind": "data"
+              },
+              {
+                "id": "pb",
+                "label": "Postback",
+                "kind": "data"
+              },
+              {
+                "id": "capi",
+                "label": "Conversions API",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "trk",
+                "click"
+              ],
+              [
+                "trk",
+                "lp",
+                "redirect"
+              ],
+              [
+                "lp",
+                "off",
+                "sign up"
+              ],
+              [
+                "off",
+                "net",
+                "FTD"
+              ],
+              [
+                "net",
+                "pb",
+                "fires"
+              ],
+              [
+                "pb",
+                "trk",
+                "match ID"
+              ],
+              [
+                "trk",
+                "capi",
+                "send event"
+              ]
+            ]
+          },
+          "say": "Look at how the I Ds travel on this map. An ad click creates a click I D in your tracker. The tracker redirects to the lander, and the click I D is carried into the broker link as a sub I D. When the user deposits, the network fires a postback that returns that I D, so your tracker can match it. Then the tracker sends the event on through the conversions A P I, application programming interface. That's how a qualified F T D finds its way back to the exact ad that caused it."
+        },
+        {
+          "v": "code",
+          "h": "The tracking link",
+          "p": "Your tracker passes its click ID into the broker link. Use one sub ID for the click ID and others for things you want to report on, such as geo and ad name. Parameter names differ by network; check yours.",
+          "d": {
+            "lang": "url",
+            "text": "https://network.example/click?offer=812&aff=1234&sub1={click_id}&sub2=NG_Demo_04&sub3=meta",
+            "note": "Example only. sub1 carries the click ID; sub2 and sub3 are for your reports."
+          },
+          "say": "This is the tracking link, shown on screen as an example. Your tracker passes its click I D into the broker link. Use one sub I D for the click I D, and others for things you want to report on, such as geo and ad name. In this example, sub one carries the click I D, while sub two and sub three are for your reports. Parameter names differ by network, so check yours."
+        },
+        {
+          "v": "code",
+          "h": "The postback URL",
+          "p": "The postback is a URL the network calls on your tracker when something happens. The network fills the placeholders. Macro names differ by network, so copy them from its postback page and test before going live.",
+          "d": {
+            "lang": "url",
+            "text": "https://tracker.example/postback?cid={sub1}&event={event_name}&payout={payout}&txid={transaction_id}&status={status}",
+            "note": "Example only. Placeholders in braces are filled by the network."
+          },
+          "say": "This is the postback U R L, shown on screen as an example. A postback is a U R L the network calls on your tracker when something happens. The network fills in the placeholders in braces, such as the click I D, the event, the payout, the transaction I D and the status. Macro names differ by network, so copy them from its postback page, and test before going live."
+        },
+        {
+          "v": "table",
+          "h": "Map each event",
+          "p": "Decide once how each network event maps to your tracker and to the ad platform. Value goes only on the paid event. Reversed conversions update the tracker but are not sent to the platform as new events.",
+          "more": "Standard event names such as CompleteRegistration and Purchase are Meta's names at the time of writing; other platforms use different names. Whether you send 'Purchase' for a qualified FTD is a choice: it tells the platform which users are worth most. Some advertisers send the FTD instead because it arrives sooner. Names change; check the current documentation.",
+          "d": {
+            "cols": [
+              "Network event",
+              "Tracker",
+              "Ad platform"
+            ],
+            "rows": [
+              [
+                "registration",
+                "reg",
+                "CompleteRegistration (optional)"
+              ],
+              [
+                "ftd",
+                "ftd",
+                "Custom event, no value"
+              ],
+              [
+                "qualified",
+                "qftd",
+                "Purchase, value = payout"
+              ],
+              [
+                "rejected / chargeback",
+                "status update",
+                "Not sent"
+              ]
+            ]
+          },
+          "say": "Decide once how each network event maps to your tracker and to the ad platform. Look at the table. Registration becomes reg, and optionally CompleteRegistration on the platform. F T D becomes a custom event with no value. Qualified becomes Purchase, with value equal to the payout. And rejected or charged back updates the status in the tracker, but isn't sent to the platform. Value goes only on the paid event. These are Meta's names at the time of writing, and names change, so check the current documentation."
+        },
+        {
+          "v": "code",
+          "h": "A simplified conversions API event",
+          "p": "This is a simplified example of a server event sent for a qualified FTD. The event_id lets the platform remove duplicates if the same event also arrives from the browser. We are not certain every field is current; check Meta's conversions API documentation.",
+          "d": {
+            "lang": "json",
+            "text": "{\n  \"event_name\": \"Purchase\",\n  \"event_time\": 1790000000,\n  \"event_id\": \"qftd_88213\",\n  \"action_source\": \"website\",\n  \"user_data\": { \"em\": \"<sha256 hash>\", \"fbc\": \"<click id cookie>\" },\n  \"custom_data\": { \"value\": 70, \"currency\": \"USD\" }\n}",
+            "note": "Simplified. Hash personal data as required and send only with valid consent."
+          },
+          "say": "This is a simplified example of a server event sent for a qualified F T D, shown on screen. It names the event, the time, a unique event I D, the source, hashed user data, and the value and currency. The event I D matters: it lets the platform remove duplicates if the same event also arrives from the browser. Hash personal data as required, and send only with valid consent. We're not certain every field is current, so check Meta's conversions A P I documentation."
+        },
+        {
+          "v": "walk",
+          "h": "Set up and test a postback",
+          "p": "Do this for every new offer and after every link change. A postback that silently fails is the most common reason tests look worse than they are.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open the postback page",
+                "text": "In the network dashboard, find postbacks or S2S and add a new one for the offer.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/postbacks",
+                  "title": "Postbacks",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Offer",
+                      "value": "812 Broker NG"
+                    },
+                    {
+                      "type": "field",
+                      "label": "URL",
+                      "value": "https://tracker.example/postback?cid={sub1}..."
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Choose events",
+                "text": "Tick the events you want: registration, FTD and qualified, so you see every stage.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/postbacks",
+                  "title": "Events",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Registration",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "FTD",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Qualified FTD",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 2
+                }
+              },
+              {
+                "title": "Fire a test",
+                "text": "Click your own tracking link, then use the network's test button, or ask your manager to fire a test conversion.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/postbacks",
+                  "title": "Test",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Test click ID",
+                      "value": "t_7f3a"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Send test postback"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Confirm in the tracker",
+                "text": "Check that the test conversion appears on the right click, with the right event and payout.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "tracker.example/conversions",
+                  "title": "Conversions",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Click ID",
+                        "Event",
+                        "Payout"
+                      ],
+                      "rows": [
+                        [
+                          "t_7f3a",
+                          "qftd",
+                          "$70"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Let's set up and test a postback. Tap Next to follow each step. First, in the network dashboard, open the postbacks page, sometimes called S 2 S, server to server, and add one for the offer. Second, tick the events you want: registration, F T D and qualified, so you see every stage. Third, fire a test: click your own tracking link, then use the network's test button, or ask your manager. Fourth, confirm in the tracker that the test lands on the right click, with the right event and payout. A postback that silently fails makes tests look worse than they are."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: a weekly reconciliation",
+          "p": "Example: one week, one offer. The network is the source of truth for what you are paid. The tracker should be close to it. The ad platform often reports a different number because of attribution windows and modelling.",
+          "d": {
+            "cols": [
+              "Source",
+              "Qualified FTDs",
+              "Gap vs network"
+            ],
+            "rows": [
+              [
+                "Network",
+                "28",
+                "-"
+              ],
+              [
+                "Tracker",
+                "26",
+                "2 ÷ 28 = 7.1%"
+              ],
+              [
+                "Ad platform",
+                "35",
+                "Different method; compare trend"
+              ]
+            ]
+          },
+          "say": "Here's an example weekly reconciliation, one week, one offer. The network is the source of truth for what you're paid: twenty eight qualified F T Ds. The tracker shows twenty six, a gap of two, about seven point one percent. And the ad platform shows thirty five, but it uses a different method, attribution windows and modelling, so compare its trend rather than the exact number."
+        },
+        {
+          "v": "eq",
+          "h": "The tracker gap",
+          "p": "Measure how far your tracker is from the network each week. A small gap is normal. A growing gap means something is broken: a missing sub ID, a failed postback or a changed link.",
+          "more": "Example: (28 − 26) ÷ 28 ≈ 7.1%. Under the 10% starting line, so normal. If next week the network shows 30 and the tracker 24, the gap is 6 ÷ 30 = 20%, and you stop scaling until you find the cause.",
+          "d": [
+            "(Network − Tracker)",
+            "÷",
+            "Network",
+            "=",
+            "Tracker gap %"
+          ],
+          "say": "Measure how far your tracker is from the network each week. Look at the equation: network minus tracker, divided by network, equals your tracker gap percent. In the example, twenty eight minus twenty six, over twenty eight, is about seven point one percent, under the ten percent starting line, so normal. But if next week the network shows thirty and the tracker twenty four, that's twenty percent, and you stop scaling until you find the cause. A growing gap means something's broken."
+        },
+        {
+          "v": "cards",
+          "h": "Why numbers differ",
+          "p": "Before you assume a network is shaving, check these common causes. Most gaps are setup problems on your side and can be fixed in an afternoon.",
+          "d": [
+            "Missing sub ID|link edited and click ID lost",
+            "Time zones|network day ends at a different hour",
+            "Timing|postback fired before final status",
+            "Duplicates|same event counted twice",
+            "Attribution windows|platform counts by its own rules",
+            "Blocked browsers|pixel lost, no server event"
+          ],
+          "say": "Before you assume a network is shaving, check these common causes. Missing sub I D, when a link was edited and the click I D lost. Time zones, when the network's day ends at a different hour. Timing, when a postback fired before the final status. Duplicates, the same event counted twice. Attribution windows, where the platform counts by its own rules. And blocked browsers, where the pixel is lost and there's no server event. Most gaps are setup problems on your side, fixable in an afternoon."
+        },
+        {
+          "v": "product",
+          "h": "Track Telegram joins too",
+          "p": "If your funnel goes through a Telegram channel, the click ID can be lost at the join. A join tracker connects each join back to the ad that caused it, so the chain stays unbroken.",
+          "d": {
+            "slug": "joinvoo",
+            "why": "Keep the link between an ad and a Telegram join, so later FTDs can be traced back to the right campaign."
+          },
+          "say": "If your funnel goes through a Telegram channel, the click I D can be lost at the join. A join tracker connects each join back to the ad that caused it, so the chain stays unbroken and later F T Ds can be traced to the right campaign. On screen is one option, Joinvoo."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "Tracking mistakes are invisible until the payout report. These are the ones that cost the most, and each has a simple fix you can build into your routine.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Never testing the postback",
+                "Sending FTD and Purchase for the same user without event IDs",
+                "Trusting the ad platform's count for decisions",
+                "Editing links without retesting"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Test every new offer and link change",
+                "Use a unique event_id per event",
+                "Decide on network numbers; use platform for trend",
+                "Retest after any link or lander change"
+              ]
+            }
+          },
+          "say": "Tracking mistakes are invisible until the payout report. On the left: never testing the postback. Sending F T D and Purchase for the same user without event I Ds. Trusting the ad platform's count for decisions. And editing links without retesting. On the right, the fixes: test every new offer and link change. Use a unique event I D per event. Decide on network numbers, and use the platform for trend. And retest after any link or lander change."
+        },
+        {
+          "v": "tip",
+          "h": "Data and consent",
+          "p": "Only send ad platforms what their terms allow, with valid consent, hashed where required. Never send ID numbers, document data or card details. Data protection laws apply in many markets, including Nigeria, Kenya, Ghana and South Africa.",
+          "d": {
+            "kind": "warn",
+            "text": "Send the minimum data needed, with consent, hashed as required. Follow platform terms and local data law. Trading ads need platform authorization where required. We are not certain this is current; check the platform's Help Center, your network and your broker before relying on it."
+          },
+          "say": "On data and consent: only send ad platforms what their terms allow, with valid consent, hashed where required. Never send I D numbers, document data or card details. Data protection laws apply in many markets, including Nigeria, Kenya, Ghana and South Africa. Send the minimum data needed, and follow platform terms and local data law. Trading ads need platform authorization where required. We're not certain this is current, so check the platform's Help Center, your network and your broker."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for tracking",
+          "p": "Starting rules to adapt. They tell you when your data is good enough to act on, and when it is not. Fixing tracking always comes before scaling.",
+          "d": [
+            "Tracker gap over 10%: no scaling until fixed",
+            "Tracker gap over 20%: decide on network numbers only and fix this week",
+            "Retest the postback after any link, lander or offer change",
+            "Reconcile network, tracker and platform every week",
+            "Every server event carries a unique event_id"
+          ],
+          "say": "Here are starting decision rules for tracking, to adapt. A tracker gap over ten percent: no scaling until it's fixed. Over twenty percent: decide on network numbers only, and fix it this week. Retest the postback after any link, lander or offer change. Reconcile network, tracker and platform every week. And every server event carries a unique event I D. Fixing tracking always comes before scaling."
+        }
+      ],
+      "takeaways": [
+        "The click ID travels into the broker link as a sub ID and returns in the postback.",
+        "Map each network event once; value only on the paid event; reversals are status updates.",
+        "Reconcile weekly; over a 10% tracker gap, stop scaling until it is fixed."
+      ],
+      "action": "Fire a test postback for your current offer and confirm it lands on the right click with the right event and payout. Then fill in a reconciliation table for last week.",
+      "glossary": [
+        {
+          "term": "Postback",
+          "def": "A server-to-server message from the network to your tracker when a conversion happens."
+        },
+        {
+          "term": "Sub ID",
+          "def": "A parameter in the offer link that carries your click ID or report labels."
+        },
+        {
+          "term": "Reconciliation",
+          "def": "Comparing network, tracker and platform numbers to find and fix gaps."
+        },
+        {
+          "term": "event_id",
+          "def": "A unique ID for each event so the ad platform can remove duplicates."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Network shows 30 qualified FTDs, tracker 24. Tracker gap?",
+          "options": [
+            "6%",
+            "20%",
+            "25%",
+            "80%"
+          ],
+          "answer": 1,
+          "why": "(30 − 24) ÷ 30 = 20%."
+        },
+        {
+          "q": "Which number decides what you are paid?",
+          "options": [
+            "Network count",
+            "Ad platform count",
+            "Tracker count",
+            "Click count"
+          ],
+          "answer": 0,
+          "why": "The network's confirmed count is what it pays on."
+        },
+        {
+          "q": "Where does the click ID go in the broker link?",
+          "options": [
+            "In the lander headline",
+            "In the ad text",
+            "Nowhere",
+            "In a sub ID parameter"
+          ],
+          "answer": 3,
+          "why": "A sub ID carries it so the postback can return it."
+        },
+        {
+          "q": "A conversion is charged back. What do you send to the ad platform?",
+          "options": [
+            "A new Purchase event",
+            "Nothing new; update the status in your tracker",
+            "A negative event",
+            "Two events to balance it"
+          ],
+          "answer": 1,
+          "why": "Reversals update your records; they are not sent as new events."
+        },
+        {
+          "q": "Your tracker gap is 14%. Starting rule?",
+          "options": [
+            "Scale anyway",
+            "Delete the tracker",
+            "No scaling until fixed",
+            "Ignore gaps under 50%"
+          ],
+          "answer": 2,
+          "why": "Over 10% means stop scaling until you find the cause."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn how tracking links, postbacks and the conversions A P I carry a qualified F T D back to the exact ad that caused it. You'll also learn to reconcile network, tracker and platform numbers every week.",
+      "say_outro": "So, wrong data means wrong decisions: test every postback, map each event once, put value on the paid event, and reconcile weekly before you scale. Your task: fire a test postback for your current offer and confirm it lands on the right click with the right event and payout, then fill in a reconciliation table for last week. Now take the quiz."
+    },
+    {
+      "slug": "the-quality-scorecard",
+      "title": "The quality scorecard",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can build a weekly quality scorecard per source and ad set.",
+        "By the end you can calculate a quality-adjusted CPA.",
+        "By the end you can turn network feedback into clear decisions."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why CPA alone is not enough",
+          "p": "Two ad sets can show the same cost per qualified FTD while one brings users who stay and the other brings users who leave or get reversed. Networks see the difference and cut caps, lower payouts or drop affiliates whose traffic is weak. A scorecard shows you what they see, before they act.",
+          "d": {
+            "b": "See your traffic the way the network sees it",
+            "s": "One page, every source, every week."
+          },
+          "say": "Two ad sets can show the same cost per qualified F T D, first-time deposit, while one brings users who stay, and the other brings users who leave or get reversed. Networks see that difference, and they cut caps, lower payouts or drop affiliates whose traffic is weak. A scorecard shows you what they see, before they act. One page, every source, every week."
+        },
+        {
+          "v": "table",
+          "h": "The scorecard metrics",
+          "p": "Six numbers per source or ad set, once a week. Each one points to a different part of the chain, so a drop tells you where to look.",
+          "d": {
+            "cols": [
+              "Metric",
+              "Formula"
+            ],
+            "rows": [
+              [
+                "Reg → KYC approved",
+                "Approved ÷ registrations"
+              ],
+              [
+                "KYC → FTD",
+                "FTDs ÷ approved"
+              ],
+              [
+                "FTD → qualified",
+                "Qualified ÷ FTDs"
+              ],
+              [
+                "30-day active",
+                "Active at day 30 ÷ qualified"
+              ],
+              [
+                "Clawback rate",
+                "Reversed ÷ qualified"
+              ],
+              [
+                "Cost per qualified",
+                "Spend ÷ qualified"
+              ]
+            ]
+          },
+          "say": "Here are the six scorecard metrics, once a week per source or ad set. Registration to K Y C approved, know your customer: approved divided by registrations. K Y C to F T D: F T Ds divided by approved. F T D to qualified: qualified divided by F T Ds. Thirty-day active: active at day thirty divided by qualified. Clawback rate: reversed divided by qualified. And cost per qualified: spend divided by qualified. Each one points to a different part of the chain, so a drop tells you where to look."
+        },
+        {
+          "v": "eq",
+          "h": "Quality-adjusted CPA",
+          "p": "Take clawbacks into the cost. Divide spend by the qualified FTDs you expect to keep. This is the number that compares sources fairly once you have a few months of data.",
+          "more": "Example: $1,500 spend, 30 qualified FTDs, 5% clawback rate. 30 × 0.95 = 28.5 kept. $1,500 ÷ 28.5 ≈ $52.63. Plain CPA is $1,500 ÷ 30 = $50. A source with a 15% clawback rate at the same spend and count would be $1,500 ÷ 25.5 ≈ $58.82.",
+          "d": [
+            "Spend",
+            "÷",
+            "(Qualified × (1 − clawback rate))",
+            "=",
+            "Quality-adjusted CPA"
+          ],
+          "say": "Here's the quality-adjusted C P A, cost per acquisition. It takes clawbacks into the cost. Look at the equation: spend, divided by qualified F T Ds times one minus the clawback rate. For example, one thousand five hundred dollars spend, thirty qualified F T Ds and a five percent clawback rate. Twenty eight and a half kept, so about fifty two sixty three, against a plain C P A of fifty. This is the number that compares sources fairly, once you have a few months of data."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: two ad sets, one week",
+          "p": "Example: both ad sets cost $50 per qualified FTD. The scorecard shows they are not equal. Ad set Y has weak 30-day activity and three times the clawbacks.",
+          "more": "Example: X: $50 ÷ 0.97 ≈ $51.55. Y: $50 ÷ 0.91 ≈ $54.95. Y is about 7% more expensive once clawbacks count, and its low activity means it will earn far less on any RevShare part of the deal. If you can only scale one, scale X.",
+          "d": {
+            "cols": [
+              "Metric",
+              "Ad set X",
+              "Ad set Y"
+            ],
+            "rows": [
+              [
+                "Cost per qualified",
+                "$50",
+                "$50"
+              ],
+              [
+                "FTD → qualified",
+                "65%",
+                "48%"
+              ],
+              [
+                "30-day active",
+                "41%",
+                "17%"
+              ],
+              [
+                "Clawback rate",
+                "3%",
+                "9%"
+              ],
+              [
+                "Quality-adj. CPA",
+                "$51.55",
+                "$54.95"
+              ]
+            ]
+          },
+          "say": "Here's a worked example of two ad sets in one week. Both cost fifty dollars per qualified F T D. But read down the columns. F T D to qualified: sixty five percent for X, forty eight for Y. Thirty-day active: forty one against seventeen. Clawback rate: three against nine percent. So the quality-adjusted C P A is fifty one fifty five for X, and fifty four ninety five for Y. They're not equal. If you can only scale one, scale X."
+        },
+        {
+          "v": "cards",
+          "h": "What the network watches",
+          "p": "Networks report to brokers, and brokers judge networks on the same things. If your traffic hurts these numbers, your caps and payout are at risk, whatever your CPA says.",
+          "d": [
+            "Qualification|share of FTDs that meet the baseline",
+            "Activity|users still trading after 30 days",
+            "Reversals|chargebacks and refunds",
+            "Fraud flags|duplicates, bots, wrong geo",
+            "Complaints|users saying they were misled",
+            "Compliance|ads and landers that follow the rules"
+          ],
+          "say": "Networks report to brokers, and brokers judge networks on the same things. Look at the cards. Qualification, the share of F T Ds that meet the baseline. Activity, users still trading after thirty days. Reversals, chargebacks and refunds. Fraud flags, like duplicates, bots and wrong geo. Complaints, users saying they were misled. And compliance, ads and landers that follow the rules. If your traffic hurts these numbers, your caps and payout are at risk, whatever your C P A says."
+        },
+        {
+          "v": "phone",
+          "h": "Turning feedback into action",
+          "p": "When a manager flags your traffic, reply quickly with facts and a plan. It protects the relationship and often saves the deal. Keep the exchange in your records.",
+          "d": {
+            "app": "chat",
+            "title": "Affiliate manager",
+            "subtitle": "network",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Your sub2 NG_TG_02 traffic: 30-day active 18% vs 35% average. Please review."
+              },
+              {
+                "from": "me",
+                "text": "Thanks. Paused NG_TG_02 today. Checking the angle and audience; will send findings by Friday."
+              },
+              {
+                "from": "them",
+                "text": "Appreciated. Other sources look good, keep going."
+              }
+            ]
+          },
+          "say": "Look at this chat. The manager flags a source: its thirty-day active rate is eighteen percent, against a thirty five percent average. Notice the reply. It's quick and factual, with a plan: paused that source today, checking the angle and audience, findings by Friday. And the manager appreciates it. Replying quickly with facts and a plan protects the relationship, and often saves the deal. Keep the exchange in your records."
+        },
+        {
+          "v": "walk",
+          "h": "Your weekly quality review",
+          "p": "About 30 minutes a week. Same day, same order, so it becomes a habit rather than a reaction to a bad statement. Report names differ by network; ask your manager where each one lives.",
+          "d": {
+            "steps": [
+              {
+                "title": "Pull the reports",
+                "text": "Download the network stage report, FTD status report and clawbacks, plus spend by ad set.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/reports",
+                  "title": "Reports",
+                  "blocks": [
+                    {
+                      "type": "button",
+                      "label": "Export stages"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Export FTD status"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Fill the scorecard",
+                "text": "One row per source or ad set, six metrics each, and the quality-adjusted CPA.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/scorecard",
+                  "title": "Scorecard",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Ad set",
+                        "Q-adj CPA",
+                        "30d active",
+                        "Flag"
+                      ],
+                      "rows": [
+                        [
+                          "X",
+                          "$51.55",
+                          "41%",
+                          "-"
+                        ],
+                        [
+                          "Y",
+                          "$54.95",
+                          "17%",
+                          "Watch"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Apply the rules",
+                "text": "Mark each row kill, watch, keep or scale using the rule card. Write the reason next to it.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/scorecard",
+                  "title": "Decisions",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Y",
+                      "value": "Watch: no scaling, activity under 70% of average"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Tell the network",
+                "text": "Send a short note on what you changed. Networks trust affiliates who report problems first.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Affiliate manager",
+                  "subtitle": "network",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "Weekly note: paused Y for low activity, scaling X +20%."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "say": "Here's your weekly quality review, about thirty minutes. Tap Next to follow each step. First, pull the reports: the network stage report, F T D status report and clawbacks, plus spend by ad set. Second, fill the scorecard, one row per source or ad set, six metrics each, plus the quality-adjusted C P A. Third, apply the rules: mark each row kill, watch, keep or scale, and write the reason next to it. Fourth, tell the network with a short note on what you changed. Same day, same order, every week."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: an ad set near target",
+          "p": "Apply the standard rule card. Work out the CPA and compare it with target. It is not cheap enough to scale and not bad enough to kill, so think about which verdict fits.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $55. Spent $180 in 6 days, 3 network-confirmed qualified FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 180,
+              "conversions": 3,
+              "target_cpa": 55,
+              "days": 6
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "hold"
+            }
+          },
+          "say": "Lab time. Apply the standard rule card to this ad set. The target is fifty five dollars. It spent one hundred and eighty dollars in six days, with three network-confirmed qualified F T Ds. Work out the C P A and compare it with target. As the slide hints, it isn't cheap enough to scale and isn't bad enough to kill, so think about which verdict fits. Pause and try it, then check your answer."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "A scorecard only helps if you act on it. These are the habits that turn it into paperwork instead of decisions. Each fix is a small change to your weekly routine.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Scaling on CPA while activity collapses",
+                "Waiting for the network to complain",
+                "Looking at totals, not sources",
+                "Changing several things after a bad week"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "No scaling when a quality flag is on",
+                "Review weekly and report problems first",
+                "Score every source and ad set separately",
+                "Change one thing, note it, measure again"
+              ]
+            }
+          },
+          "say": "A scorecard only helps if you act on it. On the left: scaling on C P A while activity collapses. Waiting for the network to complain. Looking at totals, not sources. Changing several things after a bad week. On the right, the fixes: no scaling when a quality flag is on. Review weekly and report problems first. Score every source and ad set separately. And change one thing, note it, and measure again."
+        },
+        {
+          "v": "quote",
+          "h": "From the founder",
+          "p": "A short note from Dchessking on why quality is worth protecting even when it slows growth down. Keep it in mind when a cheap source tempts you.",
+          "d": "Networks remember the affiliate whose users were still trading six months later. That reputation got me better caps than any argument about payout ever did.",
+          "by": "dchessking",
+          "say": "Here's a short note from Dchessking on why quality is worth protecting, even when it slows growth down. Keep it in mind when a cheap source tempts you: Networks remember the affiliate whose users were still trading six months later. That reputation got me better caps than any argument about payout ever did."
+        },
+        {
+          "v": "tip",
+          "h": "Quality includes honesty",
+          "p": "Weak activity and high complaints often trace back to an ad that promised too much. Before blaming the network or the audience, reread your creative with the claims list from Module 4.",
+          "d": {
+            "kind": "warn",
+            "text": "If a source shows high complaints or reversals, check your ads and landers for misleading claims first. Trading ads need platform authorization where required and must follow local law. We are not certain this is current; check the platform's Help Center, your network and your broker before relying on it."
+          },
+          "say": "Quality includes honesty. Weak activity and high complaints often trace back to an ad that promised too much. Before blaming the network or the audience, reread your creative with the claims list from Module four. If a source shows high complaints or reversals, check your ads and landers for misleading claims first. Trading ads need platform authorization where required and must follow local law. We're not certain this is current, so check the platform's Help Center, your network and your broker."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for quality",
+          "p": "Starting rules to adapt. Use them with the standard kill and scale card: a source must pass both to be scaled. Quality flags are checked first, every week.",
+          "d": [
+            "FTD → qualified under half your average over ≥ 20 FTDs: pause and investigate",
+            "30-day active under 70% of your average: watch, no scaling",
+            "Clawback rate over 2 × average over ≥ 30 FTDs: pause",
+            "Network flags a source: pause within 24 hours and reply with a plan",
+            "Scale only when the rule card says scale and no quality flag is on"
+          ],
+          "say": "Here are starting decision rules for quality, to use with the standard kill and scale card. F T D to qualified under half your average over at least twenty F T Ds: pause and investigate. Thirty-day active under seventy percent of your average: watch, no scaling. Clawback rate over two times average over at least thirty F T Ds: pause. A network flags a source: pause within twenty four hours and reply with a plan. And scale only when the rule card says scale and no quality flag is on."
+        }
+      ],
+      "takeaways": [
+        "Score every source weekly on six metrics, not just CPA.",
+        "Quality-adjusted CPA = spend ÷ (qualified × (1 − clawback rate)).",
+        "A source must pass both the rule card and the quality checks before you scale it."
+      ],
+      "action": "Build a scorecard sheet with the six metrics and quality-adjusted CPA, fill it for every source you ran in the last 30 days, and mark each row kill, watch, keep or scale with a reason.",
+      "glossary": [
+        {
+          "term": "Scorecard",
+          "def": "A weekly table of quality metrics per source or ad set."
+        },
+        {
+          "term": "Quality-adjusted CPA",
+          "def": "Spend divided by the qualified FTDs you expect to keep after clawbacks."
+        },
+        {
+          "term": "30-day active",
+          "def": "The share of qualified users still trading 30 days after their first deposit."
+        },
+        {
+          "term": "Quality flag",
+          "def": "A warning on a source that blocks scaling until it is fixed."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "$1,500 spend, 30 qualified FTDs, 5% clawback rate. Quality-adjusted CPA?",
+          "options": [
+            "$50.00",
+            "$52.63",
+            "$47.50",
+            "$57.69"
+          ],
+          "answer": 1,
+          "why": "30 × 0.95 = 28.5. $1,500 ÷ 28.5 ≈ $52.63."
+        },
+        {
+          "q": "Two ad sets both cost $50 per qualified FTD. X has 41% 30-day activity, Y 17%. Which do you scale?",
+          "options": [
+            "Y",
+            "Both equally",
+            "X",
+            "Neither, CPA is the same"
+          ],
+          "answer": 2,
+          "why": "Same CPA, but X's users stay. Y is on watch, no scaling."
+        },
+        {
+          "q": "A network flags a source for low activity. Starting rule?",
+          "options": [
+            "Argue about the data first",
+            "Pause within 24 hours and reply with a plan",
+            "Scale other sources to hide it",
+            "Ignore until the statement"
+          ],
+          "answer": 1,
+          "why": "Act fast and communicate; it protects the relationship."
+        },
+        {
+          "q": "Target $55, $180 spend, 3 qualified FTDs. Rule card verdict?",
+          "options": [
+            "Hold or keep",
+            "Kill",
+            "Scale +20%",
+            "Scale +50%"
+          ],
+          "answer": 0,
+          "why": "CPA $60, above the $44 scale line and below the $82.50 kill line. No change."
+        },
+        {
+          "q": "When can you scale a source?",
+          "options": [
+            "When CPA is below target, whatever the quality",
+            "When the network asks for more volume",
+            "Every Monday",
+            "When the rule card says scale and no quality flag is on"
+          ],
+          "answer": 3,
+          "why": "A source must pass both the rule card and quality checks."
+        }
+      ],
+      "say_intro": "In this lesson you'll build a weekly quality scorecard for every source and ad set, and calculate a quality-adjusted C P A. It shows you your traffic the way the network sees it, before they act on it.",
+      "say_outro": "So, C P A alone isn't enough: score six metrics plus quality-adjusted C P A for every source each week, check quality flags first, and scale only when both the rule card and the scorecard agree. Your task: build a scorecard sheet, fill it for every source you ran in the last thirty days, and mark each row kill, watch, keep or scale with a reason. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "Example: $2,100 spend, 300 registrations, 42 qualified FTDs. Cost per qualified FTD?",
+      "options": [
+        "$7",
+        "$50",
+        "$42",
+        "$70"
+      ],
+      "answer": 1,
+      "why": "$2,100 ÷ 42 = $50."
+    },
+    {
+      "q": "Payout $80, 12% of registrations become qualified FTDs, margin 25%. Most per registration?",
+      "options": [
+        "$9.60",
+        "$7.20",
+        "$60.00",
+        "$12.00"
+      ],
+      "answer": 1,
+      "why": "$80 × 12% × 75% = $7.20."
+    },
+    {
+      "q": "Target $50, break-even $70. The Stories placement has spent $210 with 2 qualified FTDs. Starting rule for the segment?",
+      "options": [
+        "Keep watching, too little data",
+        "Give it its own ad set",
+        "Scale it",
+        "Exclude it if allowed: $105 CPA is above the $70 kill line after 3 × target spend"
+      ],
+      "answer": 3,
+      "why": "3 × $50 = $150 spent, so judge it. Kill line is the lower of $75 and $70, so $70. $210 ÷ 2 = $105 is above it."
+    },
+    {
+      "q": "Source A: $1,200, 30 FTDs, 21 qualified. Source B: $900, 36 FTDs, 12 qualified. Cheaper on what you are paid for?",
+      "options": [
+        "B, $25 per FTD",
+        "A, about $57 vs $75 per qualified",
+        "They are equal",
+        "B, more FTDs"
+      ],
+      "answer": 1,
+      "why": "A: $1,200 ÷ 21 ≈ $57.14. B: $900 ÷ 12 = $75."
+    },
+    {
+      "q": "Day 4: an ad set has $300 spend, 8 raw FTDs, source history 50% qualify, target $70. What do you do?",
+      "options": [
+        "Scale, projected CPA is great",
+        "Kill: over target",
+        "Hold: projected $75 is close; wait for confirmed data",
+        "Change the baseline"
+      ],
+      "answer": 2,
+      "why": "8 × 50% = 4 expected; $300 ÷ 4 = $75. Projections support hold only."
+    },
+    {
+      "q": "Payout $50, clawback rate 6%, margin 25%. New target CPA?",
+      "options": [
+        "$37.50",
+        "$35.25",
+        "$47.00",
+        "$40.00"
+      ],
+      "answer": 1,
+      "why": "$50 × 0.94 = $47; × 0.75 = $35.25."
+    },
+    {
+      "q": "Network shows 40 qualified FTDs, tracker shows 31. What do you do?",
+      "options": [
+        "Gap is 22.5%: decide on network numbers and fix tracking this week",
+        "Scale, the network number is higher",
+        "Ignore, gaps are normal",
+        "Switch networks"
+      ],
+      "answer": 0,
+      "why": "(40 − 31) ÷ 40 = 22.5%, over the 20% line."
+    },
+    {
+      "q": "A teammate suggests depositing on test accounts to 'warm up' an offer. What is this?",
+      "options": [
+        "Smart testing",
+        "Fine if small",
+        "Self-deposit fraud; refuse and stop it",
+        "Allowed on demo accounts"
+      ],
+      "answer": 2,
+      "why": "Self-deposits to trigger payouts are fraud and get clawed back."
+    },
+    {
+      "q": "Which mapping is correct for a chargeback in your setup?",
+      "options": [
+        "Update status in the tracker; send nothing new",
+        "Send a new Purchase",
+        "Send a negative Purchase",
+        "Delete the click"
+      ],
+      "answer": 0,
+      "why": "Reversals update your records; they are not new platform events."
+    },
+    {
+      "q": "Ad set: $480 spend, 12 qualified FTDs, target $55, but 30-day active is 40% of your average. What do you do?",
+      "options": [
+        "Scale +20%",
+        "Scale +30–50%",
+        "Kill",
+        "Watch: no scaling until the quality flag clears"
+      ],
+      "answer": 3,
+      "why": "CPA $40 passes the +20% line (0.8 × $55 = $44), but activity under 70% of average is a quality flag, which blocks scaling."
+    }
+  ]
+}

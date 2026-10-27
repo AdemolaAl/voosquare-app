@@ -1,0 +1,2966 @@
+{
+  "school": "scale",
+  "order": 5,
+  "slug": "retention-and-ltv",
+  "title": "Retention and LTV",
+  "summary": "CRM, consent, lifecycle messaging, reactivation, RevShare compounding, community building and moderation, and honest LTV measurement. Retention is where paid leads keep paying you back, and it only works when every message respects the person receiving it.",
+  "lessons": [
+    {
+      "slug": "crm-and-lead-data",
+      "title": "CRM and lead data",
+      "minutes": 19,
+      "objectives": [
+        "By the end you can explain what a CRM is and which fields an affiliate operator needs.",
+        "You can map leads to lifecycle stages and calculate stage conversion rates.",
+        "You can collect and use lead data in a way that respects consent and data protection law."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "A lead is a relationship",
+          "p": "Most buyers stop thinking about a lead once the join or sign-up is counted. Retention starts by treating each lead as a person you have a relationship with, recorded in one place, with their history and their choices about contact.",
+          "d": {
+            "b": "A lead is a relationship, not a click",
+            "s": "Retention starts with knowing who you have"
+          },
+          "say": "Let's start with a mindset shift. Most buyers stop thinking about a lead the moment the join or sign-up is counted. But retention starts when you treat each lead as a person you have a relationship with. Look at the headline: a lead is a relationship, not a click. That means one place where you keep their history and their choices about contact. Everything else in this lesson builds on that idea."
+        },
+        {
+          "v": "cards",
+          "h": "What a CRM does",
+          "p": "A CRM, or customer relationship management system, is simply a structured record of every person and every interaction. It can start as a careful spreadsheet. What matters is that each person has one record that stays up to date.",
+          "d": [
+            "One record|per person, never duplicated",
+            "Source|which campaign brought them",
+            "Stage|where they are in the lifecycle",
+            "Consent|how and when they agreed to contact",
+            "History|messages, replies, deposits"
+          ],
+          "say": "So what is a C R M? It stands for customer relationship management, and it's simply a structured record of every person and every interaction. It can start as a careful spreadsheet. Look at the cards. One record per person, never duplicated. The source, meaning which campaign brought them. Their stage in the lifecycle. Their consent, how and when they agreed to contact. And their history, messages, replies and deposits. What matters most is that each record stays up to date."
+        },
+        {
+          "v": "table",
+          "h": "The core fields",
+          "p": "Start with these fields and add more only when you will actually use them. Every extra field is data you must protect, so collect the minimum that lets you message people well and measure results.",
+          "d": {
+            "cols": [
+              "Field",
+              "Example",
+              "Why it matters"
+            ],
+            "rows": [
+              [
+                "Source / campaign",
+                "Meta KE broad v3",
+                "LTV by source"
+              ],
+              [
+                "First seen",
+                "3 Oct",
+                "Builds cohorts"
+              ],
+              [
+                "Stage",
+                "Registered",
+                "Picks the message"
+              ],
+              [
+                "Language",
+                "Swahili",
+                "Right copy"
+              ],
+              [
+                "Consent",
+                "Opted in 3 Oct, bot",
+                "Lawful contact"
+              ],
+              [
+                "Last active",
+                "12 Oct",
+                "Spots lapsing"
+              ]
+            ]
+          },
+          "say": "Here are the core fields. Read down the table: source or campaign, which lets you see lifetime value by source. First seen, which builds your cohorts. Stage, which picks the right message. Language, so you send the right copy. Consent, for lawful contact. And last active, which spots people who are lapsing. Start with these and add more only when you'll actually use them. Every extra field is data you must protect, so collect the minimum."
+        },
+        {
+          "v": "screen",
+          "h": "What the CRM sheet looks like",
+          "p": "Example of a CRM kept as a sheet. One row per person, the same columns for everyone, and a filter by stage so each segment can be messaged on its own. Exports are limited to admins.",
+          "d": {
+            "kind": "browser",
+            "url": "sheets.example/crm",
+            "title": "CRM: leads",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Lead",
+                  "Source",
+                  "Stage",
+                  "Consent"
+                ],
+                "rows": [
+                  [
+                    "@amina_k",
+                    "Meta KE v3",
+                    "Registered",
+                    "Bot, 3 Oct"
+                  ],
+                  [
+                    "@kwame_a",
+                    "Meta GH v1",
+                    "First deposit",
+                    "Bot, 4 Oct"
+                  ],
+                  [
+                    "@tunde_o",
+                    "Organic",
+                    "Lapsed",
+                    "Join request, 2 Sep"
+                  ]
+                ]
+              },
+              {
+                "type": "select",
+                "label": "Filter: stage",
+                "value": "Registered"
+              },
+              {
+                "type": "button",
+                "label": "Export (admins only)"
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "This is an example of a C R M kept as a sheet. Notice one row per person, with the same columns for everyone. Look at the filter by stage, set here to Registered. That lets you message each segment on its own. And notice the export button is limited to admins only. That small detail matters, because it controls who can take your whole list out of the sheet."
+        },
+        {
+          "v": "walk",
+          "h": "Set up your CRM in four steps",
+          "p": "Follow these steps in any spreadsheet before your next campaign. The consent step happens inside your bot, at the moment someone agrees, so the record is made automatically rather than from memory later.",
+          "d": {
+            "steps": [
+              {
+                "title": "Create the columns",
+                "text": "Add the six core fields as columns, plus a unique ID for each person.",
+                "screen": {
+                  "v": "screen",
+                  "d": {
+                    "kind": "browser",
+                    "url": "sheets.example/crm",
+                    "title": "New sheet",
+                    "blocks": [
+                      {
+                        "type": "field",
+                        "label": "Columns",
+                        "value": "ID, Source, First seen, Stage, Language, Consent, Last active"
+                      },
+                      {
+                        "type": "text",
+                        "value": "Use the Telegram user ID as the unique ID, so nobody gets two rows."
+                      }
+                    ],
+                    "highlight": 0
+                  }
+                }
+              },
+              {
+                "title": "Lock the stage values",
+                "text": "Make Stage a drop-down so everyone uses the same words.",
+                "screen": {
+                  "v": "screen",
+                  "d": {
+                    "kind": "browser",
+                    "url": "sheets.example/crm",
+                    "title": "Data validation",
+                    "blocks": [
+                      {
+                        "type": "select",
+                        "label": "Stage options",
+                        "value": "New lead, Registered, First deposit, Active, Lapsed, Churned"
+                      },
+                      {
+                        "type": "toggle",
+                        "label": "Reject other values",
+                        "on": true
+                      }
+                    ],
+                    "highlight": 1
+                  }
+                }
+              },
+              {
+                "title": "Record consent in the bot",
+                "text": "Ask clearly, and save the answer and date to the Consent column.",
+                "screen": {
+                  "v": "phone",
+                  "d": {
+                    "app": "bot",
+                    "title": "Academy Bot",
+                    "subtitle": "bot",
+                    "messages": [
+                      {
+                        "from": "them",
+                        "text": "Want our weekly beginner lessons here? You can stop any time by sending STOP.",
+                        "buttons": [
+                          "Yes, send lessons",
+                          "No thanks"
+                        ]
+                      },
+                      {
+                        "from": "me",
+                        "text": "Yes, send lessons"
+                      },
+                      {
+                        "from": "them",
+                        "text": "Done. First lesson arrives Monday at 7pm."
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "title": "Restrict access",
+                "text": "Share the sheet by name only, and limit who can export.",
+                "screen": {
+                  "v": "screen",
+                  "d": {
+                    "kind": "browser",
+                    "url": "sheets.example/crm",
+                    "title": "Share settings",
+                    "blocks": [
+                      {
+                        "type": "toggle",
+                        "label": "Anyone with the link can view",
+                        "on": false
+                      },
+                      {
+                        "type": "field",
+                        "label": "Editors",
+                        "value": "2 named team members"
+                      },
+                      {
+                        "type": "toggle",
+                        "label": "Viewers can download",
+                        "on": false
+                      }
+                    ],
+                    "highlight": 0
+                  }
+                }
+              }
+            ]
+          },
+          "say": "Let's walk through setting it up in four steps. Tap Next to follow each one. First, create the columns: the six core fields, plus a unique I D for each person, such as their Telegram user I D, so nobody gets two rows. Second, lock the stage values with a drop-down, so everyone uses the same words. Third, record consent in the bot. Ask clearly, and save the answer and date. Fourth, restrict access. Share the sheet by name only, and limit who can export."
+        },
+        {
+          "v": "flow",
+          "h": "Lifecycle stages",
+          "p": "Every lead sits in one stage at a time. Moving people forward is the job of your funnel and your messaging. Naming the stages lets you count how many people are in each and where they get stuck.",
+          "d": [
+            "New lead",
+            "Registered",
+            "First deposit",
+            "Active",
+            "Lapsed",
+            "Churned"
+          ],
+          "say": "Every lead sits in one stage at a time. Follow the flow from left to right: new lead, registered, first deposit, active, lapsed, and churned. Moving people forward is the job of your funnel and your messaging. Why name the stages at all? Because once they have names, you can count how many people are in each one, and see exactly where they get stuck."
+        },
+        {
+          "v": "funnel",
+          "h": "Example: one month of leads",
+          "p": "Example funnel for one month of Telegram traffic. Reading it as a CRM report tells you where retention work will pay most: here, many registered people never deposit, and over half of depositors are no longer active after 30 days.",
+          "d": [
+            [
+              "Telegram joins",
+              2000
+            ],
+            [
+              "Registered",
+              600
+            ],
+            [
+              "First deposit",
+              120
+            ],
+            [
+              "Active after 30 days",
+              54
+            ]
+          ],
+          "say": "Here's an example funnel for one month of Telegram traffic. Two thousand joins, six hundred registered, one hundred and twenty first deposits, and fifty four still active after thirty days. Read it like a C R M report. Many registered people never deposit, and over half of depositors are no longer active after thirty days. Those two gaps show where retention work will pay most."
+        },
+        {
+          "v": "eq",
+          "h": "Stage-to-stage conversion",
+          "p": "Divide the people who reached a stage by the people in the stage before it. Track these rates weekly. A drop in one rate tells you exactly which part of the lifecycle needs attention.",
+          "more": "Example, from the funnel above. Registration rate: 600 ÷ 2,000 = 30%. Registration to FTD: 120 ÷ 600 = 20%. 30-day activity: 54 ÷ 120 = 45%. If next month registration to FTD drops to 12% while the others hold, the problem is between sign-up and deposit, such as a confusing verification step, not the ads.",
+          "d": [
+            "Reached next stage",
+            "÷",
+            "In previous stage",
+            "=",
+            "Stage rate"
+          ],
+          "say": "To find stage conversion, divide the people who reached a stage by the people in the stage before it. Using the funnel: six hundred divided by two thousand is thirty percent registration. One hundred and twenty divided by six hundred is twenty percent from registration to F T D, first time deposit. Fifty four divided by one hundred and twenty is forty five percent still active. If registration to F T D falls to twelve percent while the others hold, the problem sits between sign-up and deposit, not in the ads."
+        },
+        {
+          "v": "compare",
+          "h": "Blast everyone or segment",
+          "p": "Sending one message to everyone is easy and usually wasteful. Segmenting means grouping people by stage, language or behaviour and sending each group what it actually needs. It respects people's time and lowers opt-outs.",
+          "d": {
+            "a": {
+              "title": "Blast",
+              "items": [
+                "Same message to all",
+                "Depositors get sign-up nudges",
+                "Wrong language for many",
+                "More leaves and mutes"
+              ]
+            },
+            "b": {
+              "title": "Segment",
+              "items": [
+                "Message by stage",
+                "Depositors get education",
+                "Each language gets its copy",
+                "Fewer leaves, more replies"
+              ]
+            }
+          },
+          "say": "Now compare two ways of messaging. On the left, the blast: the same message to everyone. Depositors get sign-up nudges they don't need, many people get the wrong language, and you see more leaves and mutes. On the right, segmenting: messages by stage, education for depositors, copy in each language, and fewer leaves with more replies. Segmenting respects people's time, and that's why it lowers opt-outs."
+        },
+        {
+          "v": "cards",
+          "h": "Common mistakes and fixes",
+          "p": "These mistakes cost operators channels, bots and sometimes legal trouble. Each fix is cheap to put in place on day one and expensive to add after you have thousands of records.",
+          "d": [
+            "Duplicate records|one row per person, keyed on user ID",
+            "No consent record|log how and when they opted in",
+            "Collecting ID or card data|never; KYC is the operator's job",
+            "Open sharing links|share by name, limit exports",
+            "Fields nobody uses|collect the minimum"
+          ],
+          "say": "These are the common mistakes, each with its fix. Duplicate records, so keep one row per person, keyed on user I D. No consent record, so log how and when people opted in. Collecting I D or card data, never do it, because K Y C, know your customer, is the operator's job. Open sharing links, so share by name and limit exports. And fields nobody uses, so collect the minimum. Each fix is cheap on day one and expensive later."
+        },
+        {
+          "v": "table",
+          "h": "Starting rules: using the CRM",
+          "p": "Starting rules to adapt. They turn the CRM from a record into decisions. The 30% trigger is an example; with small numbers, wait for at least a few dozen people in a stage before reading a drop.",
+          "d": {
+            "cols": [
+              "Signal",
+              "Rule"
+            ],
+            "rows": [
+              [
+                "Stage rate 30%+ below 4-week average",
+                "Fix that stage before changing ads"
+              ],
+              [
+                "STOP or opt-out",
+                "Suppress in every tool the same day"
+              ],
+              [
+                "No consent recorded",
+                "Do not message"
+              ],
+              [
+                "Deletion request",
+                "Act within the legal deadline; check it"
+              ]
+            ]
+          },
+          "say": "These starting rules turn the C R M from a record into decisions. If a stage rate falls thirty percent or more below its four week average, fix that stage before changing ads. A stop or opt-out means suppress the person in every tool the same day. No consent recorded means do not message. A deletion request means act within the legal deadline, and check what it is. The thirty percent trigger is an example, and with small numbers, wait for a few dozen people in a stage first."
+        },
+        {
+          "v": "big",
+          "h": "Consent is the foundation",
+          "p": "You may only message people in ways they agreed to, about what they agreed to, until they say stop. Consent is a legal requirement in many countries and it is also what keeps your channels and bots healthy over time.",
+          "d": {
+            "b": "Consent first, always",
+            "s": "Record it, respect it, honour every stop"
+          },
+          "say": "Here's the foundation of everything: consent first, always. You may only message people in ways they agreed to, about what they agreed to, until they say stop. Consent is a legal requirement in many countries. And it's also what keeps your channels and bots healthy over time. Record it, respect it, and honour every stop."
+        },
+        {
+          "v": "check",
+          "h": "Consent rules for every operator",
+          "p": "Build these rules into your tools and your SOPs so they do not depend on anyone remembering. A single complaint about ignored opt-outs can cost you a channel, a bot or an ad account.",
+          "d": [
+            "Record how and when each person opted in",
+            "Give a simple way to stop in every flow",
+            "Honour stop at once and permanently",
+            "Only message about what they signed up for",
+            "Never buy, sell or share lead lists",
+            "Delete data on request where the law requires"
+          ],
+          "say": "Here are the consent rules for every operator. Record how and when each person opted in. Give a simple way to stop in every flow. Honour stop at once and permanently. Only message about what they signed up for. Never buy, sell or share lead lists. And delete data on request where the law requires. Build these into your tools so they don't depend on memory, because one complaint about ignored opt-outs can cost you a channel, a bot or an ad account."
+        },
+        {
+          "v": "cards",
+          "h": "Data protection laws to know",
+          "p": "These laws cover how you collect, store and use personal data. Each has its own rules on consent, security and people's rights. This list is correct as far as we know at the time of writing, but laws are amended; check the regulator's current guidance or ask a lawyer. It is not legal advice.",
+          "d": [
+            "Nigeria|Nigeria Data Protection Act 2023",
+            "Kenya|Data Protection Act 2019",
+            "South Africa|POPIA",
+            "Ghana|Data Protection Act 2012",
+            "Elsewhere|check local law, e.g. GDPR in the EU"
+          ],
+          "say": "These are data protection laws to know. Nigeria has the Nigeria Data Protection Act twenty twenty three. Kenya has the Data Protection Act twenty nineteen. South Africa has POPIA. Ghana has the Data Protection Act twenty twelve. Elsewhere, check local law, for example G D P R in the E U. Each law has its own rules on consent, security and people's rights. This list is correct as far as we know at the time of writing, but laws change, so check the regulator's current guidance or ask a lawyer. It is not legal advice."
+        },
+        {
+          "v": "tip",
+          "h": "Collect less, protect more",
+          "p": "The safest data is data you never collected. Do not ask leads for ID documents or banking details; KYC belongs to the broker or operator, not to you. Limit who on your team can export the CRM.",
+          "d": {
+            "kind": "warn",
+            "text": "Never collect ID documents, passwords or card details from leads. Restrict CRM exports to the people who truly need them."
+          },
+          "say": "The safest data is data you never collected. Read the warning: never collect I D documents, passwords or card details from leads. K Y C belongs to the broker or operator, not to you. And restrict C R M exports to the people who truly need them. If you never hold sensitive data, you can never leak it."
+        },
+        {
+          "v": "tip",
+          "h": "Start simple",
+          "p": "You do not need an expensive system to begin. A well-kept sheet with the fields above works for the first few thousand leads. Move to a tool when the sheet slows you down, and bring the same fields with you.",
+          "d": {
+            "kind": "tip",
+            "text": "Tools like a Telegram join tracker and a broadcast tool can fill stage and source fields automatically. Check what each tool stores and where."
+          },
+          "say": "You don't need an expensive system to begin. A well-kept sheet with the fields from this lesson works for the first few thousand leads. Move to a tool when the sheet slows you down, and bring the same fields with you. As the tip says, tools like a Telegram join tracker and a broadcast tool can fill stage and source fields automatically. Just check what each tool stores, and where."
+        },
+        {
+          "v": "product",
+          "h": "Filling source fields automatically",
+          "p": "Typing the source of every join by hand breaks down after a few hundred leads. A join tracker records which invite link, and so which campaign, each person came from. Check what any tool stores before you connect it.",
+          "d": {
+            "slug": "joinvoo",
+            "why": "Joinvoo records which campaign each Telegram join came from, which fills your Source and First seen fields."
+          },
+          "say": "Typing the source of every join by hand breaks down after a few hundred leads. A join tracker records which invite link, and so which campaign, each person came from. Joinvoo is one example. It records which campaign each Telegram join came from, which fills your source and first seen fields. As always, check what any tool stores before you connect it."
+        }
+      ],
+      "takeaways": [
+        "A CRM is one up-to-date record per person: source, stage, language, consent and history.",
+        "Stage rates show exactly where the lifecycle leaks.",
+        "Segmenting beats blasting for both results and opt-outs.",
+        "Consent and data protection law apply to every message you send."
+      ],
+      "action": "Set up a CRM sheet with the six core fields and fill it for your last 50 leads, including how each one opted in.",
+      "glossary": [
+        {
+          "term": "CRM",
+          "def": "Customer relationship management: a structured record of every person and interaction."
+        },
+        {
+          "term": "Lifecycle stage",
+          "def": "Where a person currently is, from new lead to churned."
+        },
+        {
+          "term": "Segment",
+          "def": "A group of people sharing a stage, language or behaviour, messaged together."
+        },
+        {
+          "term": "Consent",
+          "def": "A person's clear agreement to be contacted in a specific way."
+        },
+        {
+          "term": "Opt-out",
+          "def": "A person's request to stop receiving messages, which must be honoured."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Example: 1,500 joins, 450 registered, 90 FTDs. What is the registration to FTD rate?",
+          "options": [
+            "6%",
+            "30%",
+            "20%",
+            "18%"
+          ],
+          "answer": 2,
+          "why": "90 ÷ 450 = 20%. Using joins as the base would give 6%, which is a different rate."
+        },
+        {
+          "q": "A lead replies STOP to your bot. What should happen?",
+          "options": [
+            "They stop receiving messages at once and permanently",
+            "They get one last offer first",
+            "They are moved to a different bot",
+            "They stop for one week"
+          ],
+          "answer": 0,
+          "why": "An opt-out must be honoured immediately and kept, in every tool you use."
+        },
+        {
+          "q": "Which field lets you calculate LTV by campaign later?",
+          "options": [
+            "Language",
+            "Source / campaign",
+            "Last active",
+            "Consent"
+          ],
+          "answer": 1,
+          "why": "Recording the source campaign on each person lets you group their later value by where they came from."
+        },
+        {
+          "q": "A teammate wants to collect leads' ID photos to \"help with KYC\". What do you say?",
+          "options": [
+            "Yes, it speeds things up",
+            "Yes, if stored in the CRM",
+            "Only for depositors",
+            "No; KYC belongs to the broker or operator and you should not hold that data"
+          ],
+          "answer": 3,
+          "why": "Collecting ID documents creates legal and security risk you do not need; the regulated operator handles KYC."
+        },
+        {
+          "q": "Why is segmenting better than one message to everyone?",
+          "options": [
+            "It sends more messages",
+            "It is required by Meta",
+            "Each group gets what it needs, so replies rise and opt-outs fall",
+            "It removes the need for consent"
+          ],
+          "answer": 2,
+          "why": "Relevant messages respect people's time, which improves response and reduces leaves and mutes."
+        }
+      ],
+      "say_intro": "In this lesson you'll set up a C R M, a customer relationship management system, and learn which fields an affiliate operator really needs. You'll also learn to read lifecycle stages and to handle lead data with consent and care, because retention starts with knowing who you have.",
+      "say_outro": "So, a lead is a relationship, recorded once, with a source, a stage and a consent record, and you measure how people move from stage to stage. Your task: set up a C R M sheet with the six core fields and fill it for your last fifty leads, including how each one opted in. Now take the quiz."
+    },
+    {
+      "slug": "lifecycle-messaging-and-broadcasts",
+      "title": "Lifecycle messaging and broadcasts",
+      "minutes": 20,
+      "objectives": [
+        "By the end you can match a message goal to each lifecycle stage.",
+        "You can design a welcome drip and a broadcast that are honest and useful.",
+        "You can measure opt-outs and set a sensible sending frequency."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "The right message at the right stage",
+          "p": "Lifecycle messaging means each person gets the message that fits where they are. A new lead needs orientation. A depositor needs education and support. A quiet member needs a reason to come back, or the freedom to leave.",
+          "d": {
+            "b": "Message the stage, not the list",
+            "s": "Each stage has one job"
+          },
+          "say": "Lifecycle messaging means each person gets the message that fits where they are. Look at the headline: message the stage, not the list. A new lead needs orientation. A depositor needs education and support. And a quiet member needs a reason to come back, or the freedom to leave. Each stage has one job."
+        },
+        {
+          "v": "table",
+          "h": "Stage, goal and example",
+          "p": "Use this table to plan your flows. Each stage has a single goal. If a message does not serve that goal, it probably belongs to another stage or should not be sent at all.",
+          "d": {
+            "cols": [
+              "Stage",
+              "Goal",
+              "Example message"
+            ],
+            "rows": [
+              [
+                "New lead",
+                "Set expectations",
+                "What you will get here"
+              ],
+              [
+                "Registered",
+                "Help finish sign-up",
+                "How to verify, step by step"
+              ],
+              [
+                "First deposit",
+                "Onboard safely",
+                "Risk basics and the platform tour"
+              ],
+              [
+                "Active",
+                "Keep giving value",
+                "Weekly education"
+              ],
+              [
+                "Lapsed",
+                "Check in honestly",
+                "Anything we can help with?"
+              ]
+            ]
+          },
+          "say": "Use this table to plan your flows. Read across each row. A new lead: set expectations, like what you'll get here. Registered: help finish sign-up, with how to verify, step by step. First deposit: onboard safely, with risk basics and a platform tour. Active: keep giving value, with weekly education. Lapsed: check in honestly. If a message doesn't serve the stage's goal, it probably belongs somewhere else, or shouldn't be sent at all."
+        },
+        {
+          "v": "flow",
+          "h": "A simple welcome drip",
+          "p": "A drip is a series of messages sent on each person's own timeline, starting when they join. Keep it short. Four messages over a week, each with one idea and one easy next step, is a strong start.",
+          "d": [
+            "Day 0: welcome and what to expect",
+            "Day 1: pinned beginner guide",
+            "Day 3: answer the top question",
+            "Day 7: invite a reply or a choice"
+          ],
+          "say": "A drip is a series of messages sent on each person's own timeline, starting when they join. Follow the flow. Day zero, welcome and what to expect. Day one, the pinned beginner guide. Day three, answer the top question. Day seven, invite a reply or a choice. Four messages over a week, each with one idea and one easy next step, is a strong start. Keep it short."
+        },
+        {
+          "v": "chat",
+          "h": "An honest welcome",
+          "p": "Example for a trading education channel. Short messages, a clear schedule, a risk reminder and an easy way to stop. Nothing in it promises results, because no honest operator can.",
+          "d": [
+            {
+              "from": "ai",
+              "text": "Welcome, Wanjiru. You joined for weekly beginner lessons. They go out Mondays at 7pm."
+            },
+            {
+              "from": "ai",
+              "text": "Trading carries real risk of loss. Only use money you can afford to lose. Reply STOP any time to stop messages."
+            },
+            {
+              "from": "lead",
+              "text": "Ok. Where do I start?"
+            },
+            {
+              "from": "ai",
+              "text": "Start with the pinned guide. It takes about 5 minutes. Want it in Swahili or English?"
+            }
+          ],
+          "say": "Here's an example welcome for a trading education channel. In this chat, notice the short messages and the clear schedule: Mondays at seven p m. Then a plain risk reminder: trading carries real risk of loss, only use money you can afford to lose. Then an easy way to stop, by replying STOP. When Wanjiru asks where to start, she's pointed to the pinned guide and offered a language. Nothing here promises results, because no honest operator can."
+        },
+        {
+          "v": "phone",
+          "h": "Day 7: let them choose",
+          "p": "Example of the last message in the welcome drip, sent by a bot the person started. It asks what they want, so later messages fit them. Giving a choice also lowers opt-outs, because people control what they get.",
+          "d": {
+            "app": "bot",
+            "title": "Academy Bot",
+            "subtitle": "bot",
+            "messages": [
+              {
+                "from": "them",
+                "text": "You have been with us a week, Wanjiru. What would you like more of?",
+                "buttons": [
+                  "Beginner lessons",
+                  "Platform how-tos",
+                  "Fewer messages",
+                  "Stop all messages"
+                ]
+              },
+              {
+                "from": "me",
+                "text": "Fewer messages"
+              },
+              {
+                "from": "them",
+                "text": "Done. You will now get one lesson a week, Mondays at 7pm."
+              }
+            ]
+          },
+          "say": "This is an example of the last message in the welcome drip, on day seven, sent by a bot the person started. Look at the buttons: beginner lessons, platform how-tos, fewer messages, or stop all messages. Wanjiru picks fewer messages, and the bot confirms one lesson a week. Asking what people want makes later messages fit them, and giving a choice lowers opt-outs, because people control what they get."
+        },
+        {
+          "v": "walk",
+          "h": "Set up the drip in a bot tool",
+          "p": "Tool names and screens differ; the steps are the same. On Telegram, at the time of writing, a bot can only message people who started it, and a channel post goes to every subscriber, so segmented sends need a bot. Check Telegram's current rules.",
+          "d": {
+            "steps": [
+              {
+                "title": "Create the sequence",
+                "text": "Name it by geo and language, and set the trigger.",
+                "screen": {
+                  "v": "screen",
+                  "d": {
+                    "kind": "browser",
+                    "url": "bot-tool.example/sequences/new",
+                    "title": "New sequence",
+                    "blocks": [
+                      {
+                        "type": "field",
+                        "label": "Sequence name",
+                        "value": "Welcome_KE_EN"
+                      },
+                      {
+                        "type": "select",
+                        "label": "Trigger",
+                        "value": "User starts the bot"
+                      },
+                      {
+                        "type": "toggle",
+                        "label": "Respect quiet hours, 21:00-08:00 local",
+                        "on": true
+                      }
+                    ],
+                    "highlight": 1
+                  }
+                }
+              },
+              {
+                "title": "Add the messages",
+                "text": "One idea per message, with the delay counted from the trigger.",
+                "screen": {
+                  "v": "screen",
+                  "d": {
+                    "kind": "browser",
+                    "url": "bot-tool.example/sequences/welcome",
+                    "title": "Messages",
+                    "blocks": [
+                      {
+                        "type": "table",
+                        "cols": [
+                          "Day",
+                          "Message"
+                        ],
+                        "rows": [
+                          [
+                            "0",
+                            "Welcome and what to expect"
+                          ],
+                          [
+                            "1",
+                            "Pinned beginner guide"
+                          ],
+                          [
+                            "3",
+                            "Answer to the top question"
+                          ],
+                          [
+                            "7",
+                            "Choose topics or frequency"
+                          ]
+                        ]
+                      }
+                    ],
+                    "highlight": 0
+                  }
+                }
+              },
+              {
+                "title": "Set up stop handling",
+                "text": "STOP must work in every message and remove the person from every sequence.",
+                "screen": {
+                  "v": "screen",
+                  "d": {
+                    "kind": "browser",
+                    "url": "bot-tool.example/settings",
+                    "title": "Opt-out",
+                    "blocks": [
+                      {
+                        "type": "field",
+                        "label": "Stop keyword",
+                        "value": "STOP"
+                      },
+                      {
+                        "type": "toggle",
+                        "label": "Remove from all sequences",
+                        "on": true
+                      },
+                      {
+                        "type": "toggle",
+                        "label": "Write opt-out date to CRM",
+                        "on": true
+                      }
+                    ],
+                    "highlight": 1
+                  }
+                }
+              },
+              {
+                "title": "Test on yourself",
+                "text": "Start the bot from your own account and read every message before going live.",
+                "screen": {
+                  "v": "phone",
+                  "d": {
+                    "app": "bot",
+                    "title": "Academy Bot",
+                    "subtitle": "bot",
+                    "messages": [
+                      {
+                        "from": "me",
+                        "text": "/start"
+                      },
+                      {
+                        "from": "them",
+                        "text": "Welcome. Lessons go out Mondays at 7pm. Send STOP any time to stop."
+                      },
+                      {
+                        "from": "me",
+                        "text": "STOP"
+                      },
+                      {
+                        "from": "them",
+                        "text": "You will not get any more messages from us."
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "say": "Let's set up the drip in a bot tool. Tool names differ, but the steps are the same. Tap Next to follow each one. First, create the sequence, name it by geo and language, and set the trigger, here, when a user starts the bot, with quiet hours on. Second, add the messages, one idea each, with the delay counted from the trigger. Third, set up stop handling, so STOP works everywhere and removes the person from every sequence. Fourth, test on yourself before going live. One note: on Telegram, at the time of writing, a bot can only message people who started it, and a channel post goes to every subscriber, so segmented sends need a bot. Check Telegram's current rules."
+        },
+        {
+          "v": "compare",
+          "h": "Drip versus broadcast",
+          "p": "Both have a place. Drips run automatically for each new person. Broadcasts go to a whole segment at one moment. Most operators use drips for onboarding and broadcasts for news, education and timely updates.",
+          "d": {
+            "a": {
+              "title": "Drip",
+              "items": [
+                "Starts when the person joins",
+                "Same journey for everyone in a stage",
+                "Runs without you",
+                "Best for onboarding"
+              ]
+            },
+            "b": {
+              "title": "Broadcast",
+              "items": [
+                "Sent at one time",
+                "To a chosen segment",
+                "Written for the moment",
+                "Best for news and education"
+              ]
+            }
+          },
+          "say": "Drip versus broadcast. Both have a place. On the left, the drip starts when the person joins, gives everyone in a stage the same journey, runs without you, and is best for onboarding. On the right, the broadcast is sent at one time to a chosen segment, written for the moment, and best for news and education. Most operators use drips for onboarding and broadcasts for news, education and timely updates."
+        },
+        {
+          "v": "cards",
+          "h": "What useful content looks like",
+          "p": "People stay where they keep learning something. Build a weekly mix from these types. Every claim must be honest, and any results you share must be real and shared with the person's consent.",
+          "d": [
+            "Education|one concept explained simply",
+            "How-to|platform steps with screenshots",
+            "Market notes|context, never guarantees",
+            "Risk reminders|regular and plain",
+            "Community voices|real, with consent"
+          ],
+          "say": "People stay where they keep learning something. Build a weekly mix from these card types. Education, one concept explained simply. How-to, platform steps with screenshots. Market notes, which give context, never guarantees. Risk reminders, regular and plain. And community voices, real ones, shared with consent. Every claim must be honest, and any results you share must be real."
+        },
+        {
+          "v": "tip",
+          "h": "Lines you never cross",
+          "p": "Retention built on pressure or false claims ends in complaints, bans and lost trust. These rules apply to every broadcast and every drip, whoever writes it and whatever tool sends it.",
+          "d": {
+            "kind": "warn",
+            "text": "No income promises, no fake scarcity, no invented countdowns, no edited screenshots, no messages to people who opted out."
+          },
+          "say": "Here are the lines you never cross. Read the warning carefully: no income promises, no fake scarcity, no invented countdowns, no edited screenshots, and no messages to people who opted out. These rules apply to every broadcast and every drip, whoever writes it and whatever tool sends it. Retention built on pressure or false claims ends in complaints, bans and lost trust."
+        },
+        {
+          "v": "check",
+          "h": "Setting frequency",
+          "p": "There is no single right frequency. Start low, watch how people react, and adjust by segment. The goal is that people are glad to see your message, not that you send as many as possible.",
+          "d": [
+            "Start with about one message a day or less",
+            "Watch leaves and mutes after each send",
+            "Send less to people who never open",
+            "Respect quiet hours in each local time zone",
+            "Let people choose topics or frequency"
+          ],
+          "say": "There's no single right frequency. Go down the checklist. Start with about one message a day or less. Watch leaves and mutes after each send. Send less to people who never open. Respect quiet hours in each local time zone. And let people choose topics or frequency. The goal is that people are glad to see your message, not that you send as many as possible."
+        },
+        {
+          "v": "eq",
+          "h": "Measuring the cost of a send",
+          "p": "Every broadcast has a cost: some people leave or mute. Measure it each time. A rising unsubscribe rate is an early warning that your content or frequency is wrong for that segment.",
+          "d": [
+            "Leaves after send",
+            "÷",
+            "Members reached",
+            "=",
+            "Unsubscribe rate"
+          ],
+          "say": "Every broadcast has a cost, because some people leave or mute. Here's how to measure it. Take the leaves after the send, divide by the members reached, and you get the unsubscribe rate. Measure it every time. A rising unsubscribe rate is an early warning that your content or frequency is wrong for that segment."
+        },
+        {
+          "v": "stat",
+          "h": "Worked example: one broadcast",
+          "p": "Example: a broadcast reached 3,000 members and 18 left within 24 hours. Compare this with your own previous sends to the same segment, not with other people's numbers, because channels differ widely.",
+          "d": {
+            "n": 0.6,
+            "pre": "",
+            "suf": "%",
+            "dec": 1,
+            "label": "unsubscribe rate for one broadcast",
+            "note": "Example. 18 ÷ 3,000."
+          },
+          "say": "Here's a worked example. A broadcast reached three thousand members and eighteen left within twenty four hours. Eighteen divided by three thousand is zero point six percent, the number you see on screen. This is an example. Compare it with your own previous sends to the same segment, not with other people's numbers, because channels differ widely."
+        },
+        {
+          "v": "check",
+          "h": "Before you press send",
+          "p": "Run this quick check before every broadcast. It takes a minute and catches most of the mistakes that cause complaints or opt-outs, especially when several people on a team write messages.",
+          "d": [
+            "Right segment and language",
+            "One clear idea and next step",
+            "Every claim true and checkable",
+            "Risk reminder where the topic needs it",
+            "Stop option still works"
+          ],
+          "say": "Run this quick check before every broadcast. Is it the right segment and language? Does it have one clear idea and next step? Is every claim true and checkable? Is there a risk reminder where the topic needs it? And does the stop option still work? It takes a minute, and it catches most of the mistakes that cause complaints, especially when several people on a team write messages."
+        },
+        {
+          "v": "cards",
+          "h": "Common mistakes and fixes",
+          "p": "Most broadcast problems come from a few repeated mistakes. They are easy to spot once you know them, and fixing them usually lowers opt-outs and raises replies at the same time.",
+          "d": [
+            "Same message to all|segment by stage and language",
+            "Sending too often|start at one a day or less",
+            "Hidden stop option|STOP works in every message",
+            "Hype and countdowns|useful, honest content",
+            "Never testing|send every flow to yourself first"
+          ],
+          "say": "Here are the common broadcast mistakes and their fixes. Same message to all, so segment by stage and language. Sending too often, so start at one a day or less. A hidden stop option, so make STOP work in every message. Hype and countdowns, so send useful, honest content. And never testing, so send every flow to yourself first. Fixing these usually lowers opt-outs and raises replies at the same time."
+        },
+        {
+          "v": "table",
+          "h": "Starting rules: frequency",
+          "p": "Starting rules to adapt. Compare each send with your own average for the same segment, not with other operators. Small segments are noisy, so judge on several sends, not one.",
+          "d": {
+            "cols": [
+              "Signal",
+              "Rule"
+            ],
+            "rows": [
+              [
+                "Unsubscribe rate at or below your average",
+                "Keep frequency"
+              ],
+              [
+                "Rate 2× your average",
+                "Halve frequency for that segment"
+              ],
+              [
+                "Rate up 3 sends in a row",
+                "Pause broadcasts; review content"
+              ],
+              [
+                "No opens or replies for 30 days",
+                "Move to win-back, then suppress"
+              ]
+            ]
+          },
+          "say": "These are starting rules for frequency, to adapt. If the unsubscribe rate is at or below your average, keep frequency. If it's two times your average, halve frequency for that segment. If it rises three sends in a row, pause broadcasts and review content. If someone has no opens or replies for thirty days, move them to win-back, then suppress. Compare against your own average for the same segment, and judge small segments on several sends, not one."
+        },
+        {
+          "v": "product",
+          "h": "Scheduling drips and broadcasts",
+          "p": "Once you have several segments and languages, sending by hand gets error-prone. A broadcast tool keeps sequences, schedules and opt-outs in one place. It is a convenience; the rules in this lesson matter more than the tool.",
+          "d": {
+            "slug": "castvoo",
+            "why": "Castvoo is built for Telegram broadcasts and drips like the welcome sequence in this lesson."
+          },
+          "say": "Once you have several segments and languages, sending by hand gets error-prone. A broadcast tool keeps sequences, schedules and opt-outs in one place. Castvoo is one example, built for Telegram broadcasts and drips like the welcome sequence in this lesson. It's a convenience, though. The rules in this lesson matter more than the tool."
+        },
+        {
+          "v": "tip",
+          "h": "Write in their language",
+          "p": "Messages in a person's own language usually feel more personal. Use a fluent speaker to check translations, especially for risk wording, which must stay accurate in every language.",
+          "d": {
+            "kind": "example",
+            "text": "Example: a Kenya segment gets Swahili and English versions; a Cameroon segment gets French and English. Same facts, checked by a fluent speaker."
+          },
+          "say": "Messages in a person's own language usually feel more personal. Here's the example: a Kenya segment gets Swahili and English versions, and a Cameroon segment gets French and English, with the same facts, checked by a fluent speaker. Use a fluent speaker to check translations, especially risk wording, which must stay accurate in every language."
+        },
+        {
+          "v": "big",
+          "h": "Useful, honest, easy to leave",
+          "p": "Those three words are the whole lesson. If every message is useful, every claim honest and leaving is always easy, retention takes care of itself far better than pressure ever could.",
+          "d": {
+            "b": "Useful, honest, easy to leave",
+            "s": "The three tests for every message"
+          },
+          "say": "Here's the whole lesson in three words: useful, honest, easy to leave. Those are the three tests for every message. If every message is useful, every claim is honest, and leaving is always easy, retention takes care of itself far better than pressure ever could."
+        }
+      ],
+      "takeaways": [
+        "Each lifecycle stage has one message goal.",
+        "Drips handle onboarding; broadcasts handle timely news and education.",
+        "Track the unsubscribe rate after every send and adjust frequency by segment.",
+        "No income promises, fake scarcity or messages to people who opted out."
+      ],
+      "action": "Write a four-message welcome drip for your main channel, with a risk reminder and a working stop option, and check it against the before-you-send list.",
+      "glossary": [
+        {
+          "term": "Lifecycle messaging",
+          "def": "Sending each person messages that match their current stage."
+        },
+        {
+          "term": "Drip",
+          "def": "A series of messages sent automatically on each person's own timeline."
+        },
+        {
+          "term": "Broadcast",
+          "def": "A message sent to a whole segment at one time."
+        },
+        {
+          "term": "Unsubscribe rate",
+          "def": "People who leave or opt out after a send ÷ people reached."
+        },
+        {
+          "term": "Quiet hours",
+          "def": "Local times when you do not send, such as late night."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Example: a broadcast reaches 5,000 people and 40 leave. What is the unsubscribe rate?",
+          "options": [
+            "0.8%",
+            "8%",
+            "0.08%",
+            "4%"
+          ],
+          "answer": 0,
+          "why": "40 ÷ 5,000 = 0.008, which is 0.8%."
+        },
+        {
+          "q": "What is the main goal of messages to registered people who have not deposited?",
+          "options": [
+            "Push them to deposit today",
+            "Help them finish sign-up and understand the product",
+            "Send them market tips",
+            "Remove them from the list"
+          ],
+          "answer": 1,
+          "why": "Registered people often stop at verification or confusion; helping them finish is the honest, effective goal."
+        },
+        {
+          "q": "Which message breaks the rules in this lesson?",
+          "options": [
+            "A weekly lesson on risk management",
+            "A how-to with platform screenshots",
+            "\"Only 3 spots left\" when there is no real limit",
+            "A reminder that trading carries risk"
+          ],
+          "answer": 2,
+          "why": "Fake scarcity is misleading and must never be used."
+        },
+        {
+          "q": "Your unsubscribe rate doubles after you move from one to three broadcasts a day. What do you do?",
+          "options": [
+            "Add a fourth broadcast",
+            "Remove the stop option",
+            "Ignore it, leaves are normal",
+            "Reduce frequency for that segment and review the content"
+          ],
+          "answer": 3,
+          "why": "A rising unsubscribe rate signals too much or the wrong content; reduce and review."
+        },
+        {
+          "q": "When does a drip message send?",
+          "options": [
+            "On each person's own timeline, counted from when they joined",
+            "At the same moment for the whole channel",
+            "Only when you press send",
+            "Only to people who opted out"
+          ],
+          "answer": 0,
+          "why": "Drips are triggered by each person's own start date, which is what makes them right for onboarding."
+        }
+      ],
+      "say_intro": "This lesson is about lifecycle messaging: sending each person the message that fits their stage. You'll design an honest welcome drip and broadcasts, and learn to measure opt-outs so you send at a pace people welcome.",
+      "say_outro": "Message the stage, not the list, keep it useful and honest, and make leaving easy. Your task: write a four message welcome drip for your main channel, with a risk reminder and a working stop option, and check it against the before-you-send list. Now take the quiz."
+    },
+    {
+      "slug": "reactivation-and-churn",
+      "title": "Reactivation and churn",
+      "minutes": 19,
+      "objectives": [
+        "By the end you can calculate a churn rate and read a retention curve.",
+        "You can design an honest win-back sequence for lapsed people.",
+        "You can decide when to stop messaging someone."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Most people go quiet",
+          "p": "In every channel and every offer, many people stop engaging. That is normal. Some of them would come back with a useful, honest message at the right time. The rest deserve to be left alone. This lesson teaches both.",
+          "d": {
+            "b": "Most leads go quiet",
+            "s": "Some come back if you ask well; the rest you let go"
+          },
+          "say": "In every channel and every offer, many people stop engaging. That's normal. Look at the line under the headline: some come back if you ask well, and the rest you let go. Some quiet people would return with a useful, honest message at the right time. The others deserve to be left alone. This lesson teaches both."
+        },
+        {
+          "v": "eq",
+          "h": "Churn rate",
+          "p": "Churn rate is the share of active people who stop being active during a period. Measure it the same way every month so you can see whether your retention work is helping.",
+          "d": [
+            "Active people lost in period",
+            "÷",
+            "Active at start",
+            "=",
+            "Churn rate"
+          ],
+          "say": "Churn rate is the share of active people who stop being active during a period. Here's the formula: take the active people lost in the period, divide by the number active at the start, and you get your churn rate. Measure it the same way every month, so you can see whether your retention work is actually helping."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example: monthly churn",
+          "p": "Example: you start the month with 200 active depositors. During the month, 46 of them stop trading and do not return. Calculate the churn, then the retention, which is the opposite side of the same number.",
+          "d": {
+            "kind": "example",
+            "text": "Example: 46 ÷ 200 = 23% monthly churn, so 77% retention for the month."
+          },
+          "say": "Let's work an example. You start the month with two hundred active depositors. During the month, forty six of them stop trading and don't return. Forty six divided by two hundred is twenty three percent monthly churn. And retention is the other side of the same number, so that's seventy seven percent retention for the month."
+        },
+        {
+          "v": "curve",
+          "h": "Two retention curves",
+          "p": "Illustration: share of one month's depositors still active, month by month. Both cohorts lose people. The cohort with useful lifecycle messaging loses them more slowly, and that gap is where retention earns its money.",
+          "d": {
+            "a": [
+              100,
+              70,
+              55,
+              47,
+              41,
+              37,
+              34
+            ],
+            "la": "With lifecycle messaging %",
+            "b": [
+              100,
+              62,
+              45,
+              36,
+              30,
+              26,
+              23
+            ],
+            "lb": "No follow-up %",
+            "x": [
+              "M0",
+              "M1",
+              "M2",
+              "M3",
+              "M4",
+              "M5",
+              "M6"
+            ]
+          },
+          "say": "This is an illustration of two retention curves, showing the share of one month's depositors still active, month by month. Both start at one hundred percent and both lose people. The upper line, with lifecycle messaging, falls more slowly, to thirty four percent by month six. The lower line, with no follow-up, falls to twenty three percent. That gap between the two lines is where retention earns its money."
+        },
+        {
+          "v": "cards",
+          "h": "Why people churn",
+          "p": "Before you write a win-back message, understand why people left. The reason decides the message. Asking them, in a short and optional question, is often the fastest way to find out.",
+          "d": [
+            "Lost money|expectations were wrong",
+            "Confused|the product felt hard",
+            "Too many messages|you became noise",
+            "Wrong promise|the ad did not match reality",
+            "Life changed|nothing to do with you"
+          ],
+          "say": "Before you write a win-back message, understand why people left, because the reason decides the message. Look at the cards. Some lost money, because expectations were wrong. Some were confused, because the product felt hard. Some got too many messages, and you became noise. Some saw a wrong promise, where the ad didn't match reality. And for some, life changed, nothing to do with you. Asking them, in a short optional question, is often the fastest way to find out."
+        },
+        {
+          "v": "table",
+          "h": "Lapsed segments and approach",
+          "p": "Not every quiet person needs the same message. Split lapsed people by how long they have been quiet, and change your approach as the time grows. Days are an example; set your own by product.",
+          "d": {
+            "cols": [
+              "Quiet for",
+              "Approach",
+              "Tone"
+            ],
+            "rows": [
+              [
+                "7-14 days",
+                "Helpful nudge",
+                "Light"
+              ],
+              [
+                "15-30 days",
+                "Useful content or update",
+                "Helpful"
+              ],
+              [
+                "31-90 days",
+                "One honest check-in",
+                "Respectful"
+              ],
+              [
+                "90+ days",
+                "Final message, then suppress",
+                "Clear"
+              ]
+            ]
+          },
+          "say": "Not every quiet person needs the same message. Read down the table. Quiet for seven to fourteen days, a light, helpful nudge. Fifteen to thirty days, useful content or an update. Thirty one to ninety days, one honest, respectful check-in. Over ninety days, a clear final message, then suppress. The days are an example, so set your own by product."
+        },
+        {
+          "v": "flow",
+          "h": "A win-back sequence",
+          "p": "Keep win-back sequences short. Two or three messages are usually enough. The last one should make it easy to leave. After that, stop messaging people who have not responded.",
+          "d": [
+            "Notice inactivity",
+            "Helpful check-in",
+            "Useful update or guide",
+            "Last message with easy opt-out",
+            "Suppress if silent"
+          ],
+          "say": "Here's a win-back sequence. Follow the flow: notice inactivity, send a helpful check-in, share a useful update or guide, send a last message with an easy opt-out, and then suppress if they stay silent. Keep it short. Two or three messages are usually enough, and after that, stop messaging people who haven't responded."
+        },
+        {
+          "v": "chat",
+          "h": "An honest check-in",
+          "p": "Example. The message asks a real question, offers something useful and makes leaving easy. It does not invent urgency or dangle a bonus to pull the person back into depositing.",
+          "d": [
+            {
+              "from": "ai",
+              "text": "Hi Kwame, we have not seen you in a while. Was anything confusing on the platform?"
+            },
+            {
+              "from": "lead",
+              "text": "I lost some money and stopped"
+            },
+            {
+              "from": "ai",
+              "text": "That is hard, and stepping back is a sensible choice. If it helps, our risk guide covers position sizing. Or reply STOP and I will not message again."
+            }
+          ],
+          "say": "Here's an example of an honest check-in. In this chat, the message asks Kwame a real question: was anything confusing? He says he lost some money and stopped. Notice the reply. It says stepping back is a sensible choice, offers the risk guide on position sizing, and makes leaving easy with STOP. It doesn't invent urgency or dangle a bonus to pull him back into depositing."
+        },
+        {
+          "v": "phone",
+          "h": "The last message: easy to leave",
+          "p": "Example of the final message in a win-back sequence. It offers one clear choice and honours it straight away. People who tap Stop are suppressed in every tool, and the record of their choice is kept.",
+          "d": {
+            "app": "bot",
+            "title": "Academy Bot",
+            "subtitle": "bot",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Hi Kwame, this is our last check-in. Want to keep getting the weekly guide?",
+                "buttons": [
+                  "Keep the guide",
+                  "Stop messages"
+                ]
+              },
+              {
+                "from": "me",
+                "text": "Stop messages"
+              },
+              {
+                "from": "them",
+                "text": "Done. You will not get any more messages from us. Take care."
+              }
+            ]
+          },
+          "say": "This is an example of the final message in a win-back sequence. Look at the two buttons: keep the guide, or stop messages. Kwame taps stop, and the bot confirms he won't get any more messages. That choice is honoured straight away. People who tap stop are suppressed in every tool, and the record of their choice is kept."
+        },
+        {
+          "v": "compare",
+          "h": "Bad and good reactivation",
+          "p": "The difference is respect. Bad reactivation tries to pull people back however it can. Good reactivation offers real help and accepts no for an answer. Only the second builds a list that lasts.",
+          "d": {
+            "a": {
+              "title": "Bad reactivation",
+              "items": [
+                "Bonus bait every few days",
+                "Guilt or fake urgency",
+                "Ignores past opt-outs",
+                "Messages forever"
+              ]
+            },
+            "b": {
+              "title": "Good reactivation",
+              "items": [
+                "Real help or real news",
+                "Honest and calm",
+                "Respects every opt-out",
+                "Stops after a set number"
+              ]
+            }
+          },
+          "say": "Now compare bad and good reactivation. On the left, bad reactivation: bonus bait every few days, guilt or fake urgency, ignoring past opt-outs, and messaging forever. On the right, good reactivation: real help or real news, an honest and calm tone, respect for every opt-out, and stopping after a set number. The difference is respect. Only the second builds a list that lasts."
+        },
+        {
+          "v": "tip",
+          "h": "Protect vulnerable people",
+          "p": "In gambling and trading, some people who go quiet have done so on purpose to protect themselves. Respect self-exclusion and responsible gambling tools, and never target anyone showing signs of harm.",
+          "d": {
+            "kind": "warn",
+            "text": "Never message people who self-excluded, opted out or show signs of problem gambling or harmful trading. Follow the operator's responsible gambling rules and local law."
+          },
+          "say": "This one matters a lot. In gambling and trading, some people who go quiet have done so on purpose to protect themselves. Read the warning: never message people who self-excluded, opted out, or show signs of problem gambling or harmful trading. Follow the operator's responsible gambling rules and local law. Respecting self-exclusion is not optional."
+        },
+        {
+          "v": "stat",
+          "h": "Worked example: a win-back result",
+          "p": "Example: you send a two-message check-in to 400 people quiet for 15-30 days. 28 become active again within two weeks. Compare with a holdout group that got no message to see what the messages really added.",
+          "more": "Example, why a holdout? Some people come back on their own. Keep a small random group, about 10% of the segment, out of the sequence. Here 50 people were held out and 2 came back anyway, which is 4%. So the messages added about 3 points (7% − 4%), not 7. That is the true effect to judge the sequence by.",
+          "d": {
+            "n": 7,
+            "pre": "",
+            "suf": "%",
+            "dec": 0,
+            "label": "reactivated from one win-back sequence",
+            "note": "Example. 28 ÷ 400."
+          },
+          "say": "Here's a worked example. You send a two message check-in to four hundred people quiet for fifteen to thirty days, and twenty eight become active again within two weeks. That's the seven percent on screen. But some people come back on their own. So keep a random holdout of about ten percent. Here, fifty were held out and two came back anyway, which is four percent. So the messages added about three points, not seven. That's the true effect to judge by."
+        },
+        {
+          "v": "screen",
+          "h": "Measuring against a holdout",
+          "p": "Example of how the result looks in a segment report. The holdout was chosen at random before anything was sent. The lift is the difference between the two groups, and that is the number to judge the sequence by.",
+          "d": {
+            "kind": "browser",
+            "url": "crm.example/segments/quiet-15-30",
+            "title": "Segment: quiet 15-30 days",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Members in segment",
+                "value": "450"
+              },
+              {
+                "type": "toggle",
+                "label": "Random holdout, about 10%",
+                "on": true
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "Group",
+                  "People",
+                  "Active again"
+                ],
+                "rows": [
+                  [
+                    "Win-back sequence",
+                    "400",
+                    "28 (7%)"
+                  ],
+                  [
+                    "Holdout, no message",
+                    "50",
+                    "2 (4%)"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Example. Lift = 7% − 4% = 3 points."
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "This is an example of how the result looks in a segment report. The segment has four hundred and fifty members, with a random holdout of about ten percent, chosen before anything was sent. Look at the table. The win-back group: four hundred people, twenty eight active again, seven percent. The holdout: fifty people, two active again, four percent. The lift is seven minus four, three points. That's the number to judge the sequence by."
+        },
+        {
+          "v": "check",
+          "h": "Reactivation rules",
+          "p": "Agree these rules once and build them into your tools. They keep win-back work effective, legal and respectful, and they protect your channel and bot from complaints.",
+          "d": [
+            "Segment lapsed people by time quiet",
+            "Send at most two or three win-back messages",
+            "Always include an easy opt-out",
+            "Suppress anyone who stays silent",
+            "Measure against a holdout group"
+          ],
+          "say": "Agree these reactivation rules once and build them into your tools. Segment lapsed people by time quiet. Send at most two or three win-back messages. Always include an easy opt-out. Suppress anyone who stays silent. And measure against a holdout group. They keep win-back work effective, legal and respectful, and they protect your channel and bot from complaints."
+        },
+        {
+          "v": "cards",
+          "h": "Common mistakes and fixes",
+          "p": "These mistakes waste money, annoy people and can break the law in regulated verticals. Each fix is already in this lesson; the card puts them side by side so you can check your own sequence.",
+          "d": [
+            "Bonus bait|real help or real news",
+            "Messaging forever|stop after 2-3 messages",
+            "No holdout|keep about 10% unmessaged",
+            "Ignoring why they left|ask, then match the message",
+            "Messaging the self-excluded|suppress permanently"
+          ],
+          "say": "Here are the common mistakes with their fixes, side by side, so you can check your own sequence. Bonus bait, so offer real help or real news. Messaging forever, so stop after two or three messages. No holdout, so keep about ten percent unmessaged. Ignoring why they left, so ask, then match the message. Messaging the self-excluded, so suppress permanently. These mistakes waste money, annoy people, and can break the law in regulated verticals."
+        },
+        {
+          "v": "table",
+          "h": "Starting rules: win-back",
+          "p": "Starting rules to adapt; the lift threshold is an example. With small segments, run the sequence two or three times before judging it, because a handful of people can swing the result.",
+          "d": {
+            "cols": [
+              "Signal",
+              "Rule"
+            ],
+            "rows": [
+              [
+                "Quiet 7-14 days",
+                "One helpful nudge only"
+              ],
+              [
+                "No reply to 2-3 messages",
+                "Suppress"
+              ],
+              [
+                "Lift under 1 point after 2 runs",
+                "Rewrite or stop the sequence"
+              ],
+              [
+                "Self-exclusion or sign of harm",
+                "Suppress permanently"
+              ]
+            ]
+          },
+          "say": "These are starting rules for win-back, to adapt. Quiet seven to fourteen days, one helpful nudge only. No reply to two or three messages, suppress. A lift under one point after two runs, rewrite or stop the sequence. And self-exclusion or any sign of harm, suppress permanently. The lift threshold is an example. With small segments, run the sequence two or three times before judging it, because a handful of people can swing the result."
+        },
+        {
+          "v": "product",
+          "h": "Answering replies quickly",
+          "p": "Win-back messages get replies, some of them sensitive, like Kwame's. Answering fast and kindly matters. An AI inbox can handle simple questions, but a person should review anything about losses, harm or complaints.",
+          "d": {
+            "slug": "replyvoo",
+            "why": "Replyvoo can answer simple replies to check-ins quickly, while your team handles sensitive ones."
+          },
+          "say": "Win-back messages get replies, and some of them are sensitive, like Kwame's. Answering fast and kindly matters. An A I inbox can handle simple questions. Replyvoo is one example, answering simple replies to check-ins quickly while your team handles the sensitive ones. But a person should review anything about losses, harm or complaints."
+        }
+      ],
+      "takeaways": [
+        "Churn rate = active people lost ÷ active at start of the period.",
+        "Match the win-back approach to how long someone has been quiet.",
+        "Keep sequences short, honest and easy to leave; then stop.",
+        "Use a holdout group to measure what your messages really added."
+      ],
+      "action": "Calculate last month's churn rate for your depositors and draft a two-message check-in for people quiet for 15-30 days, with an easy opt-out.",
+      "glossary": [
+        {
+          "term": "Churn rate",
+          "def": "The share of active people who stop being active in a period."
+        },
+        {
+          "term": "Retention rate",
+          "def": "The share of active people who stay active; 100% minus churn."
+        },
+        {
+          "term": "Win-back",
+          "def": "Messages aimed at bringing lapsed people back."
+        },
+        {
+          "term": "Suppression",
+          "def": "Removing someone from future sends while keeping the record that they should not be contacted."
+        },
+        {
+          "term": "Holdout group",
+          "def": "A random group left out of a campaign to measure its true effect."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Example: 300 active at month start, 75 stop during the month. What is churn?",
+          "options": [
+            "75%",
+            "30%",
+            "25%",
+            "20%"
+          ],
+          "answer": 2,
+          "why": "75 ÷ 300 = 25% churn, so 75% retention."
+        },
+        {
+          "q": "Someone has been quiet for 120 days and ignored two check-ins. What do you do?",
+          "options": [
+            "Send weekly bonus offers",
+            "Send a final clear message, then suppress",
+            "Add them to every broadcast",
+            "Message them from a new bot"
+          ],
+          "answer": 1,
+          "why": "After a short sequence with no response, stop and suppress; continuing becomes unwanted contact."
+        },
+        {
+          "q": "Your win-back group reactivated 8%; the holdout reactivated 5%. What did the messages add?",
+          "options": [
+            "About 3 percentage points",
+            "8%",
+            "13%",
+            "Nothing"
+          ],
+          "answer": 0,
+          "why": "The holdout shows natural returns, so the true effect is 8% − 5% = 3 points."
+        },
+        {
+          "q": "A lapsed member had used a self-exclusion tool. What is right?",
+          "options": [
+            "Send a special offer",
+            "Message once to check",
+            "Move them to a VIP group",
+            "Do not message them; respect the exclusion"
+          ],
+          "answer": 3,
+          "why": "Self-exclusion is a protective choice; marketing to them is harmful and often unlawful."
+        },
+        {
+          "q": "Which is a sign of good reactivation?",
+          "options": [
+            "Fake deadlines",
+            "Bonus messages every few days",
+            "Real help, an honest tone and an easy opt-out",
+            "Ignoring past opt-outs"
+          ],
+          "answer": 2,
+          "why": "Good reactivation offers value and respects the person's choice to leave."
+        }
+      ],
+      "say_intro": "Most people go quiet at some point, and that's normal. In this lesson you'll calculate churn, read a retention curve, design an honest win-back sequence, and learn when to stop messaging someone.",
+      "say_outro": "Measure churn the same way every month, win people back with real help, keep a holdout to see the true effect, and let silent people go. Your task: calculate last month's churn rate for your depositors and draft a two message check-in for people quiet for fifteen to thirty days, with an easy opt-out. Now take the quiz."
+    },
+    {
+      "slug": "revshare-compounding",
+      "title": "RevShare compounding",
+      "minutes": 20,
+      "objectives": [
+        "By the end you can calculate monthly RevShare income as cohorts stack.",
+        "You can compare the cash profile of CPA and RevShare for the same volume.",
+        "You can read RevShare terms for the risks that break the maths."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Cohorts stack",
+          "p": "On RevShare, every month's new depositors keep earning for you in later months. Next month's depositors add on top. Income from many cohorts stacks up, which is why RevShare can grow even when your monthly volume stays flat.",
+          "d": {
+            "b": "RevShare stacks cohorts on top of each other",
+            "s": "Old depositors keep paying while new ones join"
+          },
+          "say": "Here's the big idea of RevShare, or revenue share. Every month's new depositors keep earning for you in later months, and next month's depositors add on top. Look at the headline: RevShare stacks cohorts on top of each other. Old depositors keep paying while new ones join. That's why RevShare income can grow even when your monthly volume stays flat."
+        },
+        {
+          "v": "table",
+          "h": "Commission per FTD by month of life",
+          "p": "Example: what one average FTD earns you on a RevShare deal in each month after depositing. It falls as people churn and activity slows. Your real curve comes from your own cohort data.",
+          "d": {
+            "cols": [
+              "Month of life",
+              "Commission per FTD",
+              "Running total"
+            ],
+            "rows": [
+              [
+                "M1",
+                "$12",
+                "$12"
+              ],
+              [
+                "M2",
+                "$7",
+                "$19"
+              ],
+              [
+                "M3",
+                "$5",
+                "$24"
+              ],
+              [
+                "M4",
+                "$4",
+                "$28"
+              ],
+              [
+                "M5",
+                "$3",
+                "$31"
+              ],
+              [
+                "M6",
+                "$3",
+                "$34"
+              ],
+              [
+                "M7",
+                "$2",
+                "$36"
+              ]
+            ]
+          },
+          "say": "This example table shows what one average F T D, first time deposit, earns you in each month after depositing. Month one, twelve dollars. Month two, seven dollars. Then five, four, three, three and two dollars. Look at the running total on the right: thirty six dollars by month seven. The amount falls as people churn and activity slows. Your real curve comes from your own cohort data."
+        },
+        {
+          "v": "flow",
+          "h": "How stacking works",
+          "p": "Follow one calendar month. Its income is the sum of every cohort's commission at that cohort's current age. The oldest cohort earns the least per person; the newest earns the most.",
+          "d": [
+            "Cohort 1 at age 3",
+            "Cohort 2 at age 2",
+            "Cohort 3 at age 1",
+            "Add them up",
+            "That is this month's income"
+          ],
+          "say": "Here's how stacking works. Follow one calendar month through the flow. Cohort one is at age three, cohort two at age two, and cohort three at age one. Add them up, and that's this month's income. In other words, each cohort pays at its own current age. The oldest cohort earns the least per person, and the newest earns the most."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example: month three",
+          "p": "Example: you add 100 new RevShare FTDs every month, using the commission table above. In month three you have three cohorts at ages three, two and one.",
+          "more": "Example, the full run. M1: $1,200. M2: $1,200 + $700 = $1,900. M3: $2,400. M4: $2,400 + $400 = $2,800. M5: $2,800 + $300 = $3,100. M6: $3,100 + $300 = $3,400. M7: $3,400 + $200 = $3,600. Each month adds the newest cohort's $1,200 and every older cohort steps one age down the table. Total over seven months: $18,400.",
+          "d": {
+            "kind": "example",
+            "text": "Example: (100 × $5) + (100 × $7) + (100 × $12) = $500 + $700 + $1,200 = $2,400 in month three."
+          },
+          "say": "Let's work the example. You add one hundred new RevShare F T Ds every month, using the commission table. In month three you have three cohorts at ages three, two and one. So one hundred times five dollars, plus one hundred times seven dollars, plus one hundred times twelve dollars. That's five hundred plus seven hundred plus twelve hundred, two thousand four hundred dollars in month three. Run it on and month seven reaches three thousand six hundred dollars, with eighteen thousand four hundred dollars over seven months."
+        },
+        {
+          "v": "screen",
+          "h": "The stack in a sheet",
+          "p": "The example as a sheet. The new cohort column is the same every month, $1,200 from 100 new FTDs. The older cohorts column grows as each earlier cohort keeps earning at a lower rate.",
+          "d": {
+            "kind": "browser",
+            "url": "sheets.example/revshare-stack",
+            "title": "RevShare stack: 100 FTDs a month",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Month",
+                  "New cohort",
+                  "Older cohorts",
+                  "Total"
+                ],
+                "rows": [
+                  [
+                    "M1",
+                    "$1,200",
+                    "$0",
+                    "$1,200"
+                  ],
+                  [
+                    "M2",
+                    "$1,200",
+                    "$700",
+                    "$1,900"
+                  ],
+                  [
+                    "M3",
+                    "$1,200",
+                    "$1,200",
+                    "$2,400"
+                  ],
+                  [
+                    "M4",
+                    "$1,200",
+                    "$1,600",
+                    "$2,800"
+                  ],
+                  [
+                    "M5",
+                    "$1,200",
+                    "$1,900",
+                    "$3,100"
+                  ],
+                  [
+                    "M6",
+                    "$1,200",
+                    "$2,200",
+                    "$3,400"
+                  ],
+                  [
+                    "M7",
+                    "$1,200",
+                    "$2,400",
+                    "$3,600"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Example. Older cohorts = sum of earlier cohorts at their current age."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Here's the example as a sheet. Look at the new cohort column. It's the same every month, twelve hundred dollars from one hundred new F T Ds. Now look at the older cohorts column. It grows each month, from zero, to seven hundred, up to two thousand four hundred dollars in month seven, because every earlier cohort keeps earning at a lower rate. The total climbs from twelve hundred to three thousand six hundred dollars."
+        },
+        {
+          "v": "curve",
+          "h": "CPA flat, RevShare stacking",
+          "p": "Illustration, in thousands of dollars per month, for 100 FTDs a month. A $25 CPA pays $2.5k every month. RevShare starts at $1.2k and climbs as cohorts stack, passing the CPA line in month four.",
+          "d": {
+            "a": [
+              2.5,
+              2.5,
+              2.5,
+              2.5,
+              2.5,
+              2.5,
+              2.5
+            ],
+            "la": "CPA $25 ($k)",
+            "b": [
+              1.2,
+              1.9,
+              2.4,
+              2.8,
+              3.1,
+              3.4,
+              3.6
+            ],
+            "lb": "RevShare ($k)",
+            "x": [
+              "M1",
+              "M2",
+              "M3",
+              "M4",
+              "M5",
+              "M6",
+              "M7"
+            ]
+          },
+          "say": "This illustration is in thousands of dollars per month, for one hundred F T Ds a month. The flat line is a twenty five dollar C P A, cost per acquisition deal, paying two point five thousand every month. The rising line is RevShare. It starts at one point two thousand and climbs as cohorts stack. Watch where they cross: RevShare passes the C P A line in month four."
+        },
+        {
+          "v": "compare",
+          "h": "The cash profile matters",
+          "p": "Example: cost per FTD is $22, so spend is $2,200 a month in both cases. Over seven months RevShare earns more, but in month one it loses cash while CPA is already positive. RevShare needs a cash buffer.",
+          "more": "Example, the maths. Spend: 7 × $2,200 = $15,400. CPA: $17,500 − $15,400 = $2,100. RevShare: $18,400 − $15,400 = $3,000. Month one cash: CPA $2,500 − $2,200 = +$300; RevShare $1,200 − $2,200 = −$1,000. If you stop buying after month seven, CPA income stops too, while the seven RevShare cohorts keep earning a falling tail, as long as the program and the customers remain.",
+          "d": {
+            "a": {
+              "title": "CPA $25",
+              "items": [
+                "Month 1: +$300",
+                "Seven months: $17,500 earned",
+                "Profit: $2,100",
+                "Stops when spend stops"
+              ]
+            },
+            "b": {
+              "title": "RevShare",
+              "items": [
+                "Month 1: −$1,000",
+                "Seven months: $18,400 earned",
+                "Profit: $3,000",
+                "Tail keeps paying after"
+              ]
+            }
+          },
+          "say": "Now the cash profile, which really matters. In this example, cost per F T D is twenty two dollars, so spend is twenty two hundred dollars a month either way. On the left, C P A: plus three hundred dollars in month one, seventeen thousand five hundred earned over seven months, two thousand one hundred profit, and it stops when spend stops. On the right, RevShare: minus one thousand dollars in month one, eighteen thousand four hundred earned, three thousand profit, and a tail that keeps paying, as long as the program and customers remain. RevShare needs a cash buffer."
+        },
+        {
+          "v": "lab",
+          "h": "Practice: seven-month profit",
+          "p": "Try it with the example. Seven months of RevShare earned $18,400 on $15,400 of media spend. Work out the profit before overheads, then compare it with the $2,100 from CPA.",
+          "d": {
+            "kind": "roas",
+            "task": "Example: spend $15,400, RevShare earned $18,400. What is the profit?",
+            "preset": {
+              "spend": 15400,
+              "revenue": 18400
+            },
+            "answer": {
+              "field": "profit",
+              "value": 3000,
+              "tolerance": 0.01
+            }
+          },
+          "say": "Time to practise with the example. Seven months of RevShare earned eighteen thousand four hundred dollars on fifteen thousand four hundred dollars of media spend. Work out the profit before overheads, then compare it with the two thousand one hundred dollars from C P A. Pause and try it, then check your answer."
+        },
+        {
+          "v": "bars",
+          "h": "Retention raises every cohort",
+          "p": "Example: if better lifecycle messaging lifts commission from month two onward by 20%, seven-month value per FTD rises from $36 to $40.80. That lift applies to every cohort you ever buy, which is why retention compounds.",
+          "more": "Example, the maths. Months two to seven in the table sum to $7 + $5 + $4 + $3 + $3 + $2 = $24. A 20% lift makes that $28.80. Add month one's $12: $40.80 per FTD. At 100 FTDs a month the same media spend now earns $480 more from each cohort over seven months.",
+          "d": [
+            [
+              "Base, 7-month value",
+              88,
+              "$36.00"
+            ],
+            [
+              "With +20% retention",
+              100,
+              "$40.80"
+            ]
+          ],
+          "say": "Look at the two bars. In this example, better lifecycle messaging lifts commission from month two onward by twenty percent. Months two to seven add up to twenty four dollars, and a twenty percent lift makes that twenty eight dollars eighty. Add month one's twelve dollars, and seven month value per F T D rises from thirty six dollars to forty dollars eighty. That lift applies to every cohort you ever buy, which is why retention compounds."
+        },
+        {
+          "v": "cards",
+          "h": "Risks that break the maths",
+          "p": "RevShare maths only works if the stream keeps flowing. Each risk below has ended affiliate income streams in the past. Read your terms and keep enough CPA or hybrid income to survive if one hits.",
+          "d": [
+            "Negative carryover|player wins can cancel your earnings",
+            "Term changes|rates or definitions altered",
+            "Program closure|broker or operator exits a market",
+            "Tracking loss|players not attributed to you",
+            "Churn|customers leave faster than planned"
+          ],
+          "say": "RevShare maths only works if the stream keeps flowing. Here are the risks. Negative carryover, where player wins can cancel your earnings. Term changes, where rates or definitions are altered. Program closure, where a broker or operator exits a market. Tracking loss, where players aren't attributed to you. And churn, where customers leave faster than planned. Each has ended income streams before, so read your terms and keep enough C P A or hybrid income to survive if one hits."
+        },
+        {
+          "v": "check",
+          "h": "Read the RevShare terms for",
+          "p": "Ask the network manager to answer each point in writing before you send volume. Vague answers on these points are a reason to choose CPA or hybrid instead.",
+          "d": [
+            "How net revenue is defined and what is deducted",
+            "Whether negative balances carry over",
+            "Lifetime or limited period",
+            "Payment schedule and minimums",
+            "What happens if the program changes"
+          ],
+          "say": "Before you send volume, read the RevShare terms for these points. How net revenue is defined, and what's deducted. Whether negative balances carry over. Whether it's lifetime or a limited period. The payment schedule and minimums. And what happens if the program changes. Ask the network manager to answer each point in writing. Vague answers are a reason to choose C P A or hybrid instead."
+        },
+        {
+          "v": "partner",
+          "h": "Choosing a RevShare partner",
+          "p": "If you choose RevShare, the partner matters more than the rate, because you depend on them for months. Look for licensed operators, clear net revenue definitions and a payment history you can check.",
+          "d": {
+            "vertical": "trading",
+            "note": "Ask for the net revenue definition, carryover rules and payment terms in writing before you send volume."
+          },
+          "say": "If you choose RevShare, the partner matters more than the rate, because you depend on them for months. Look for licensed operators, clear net revenue definitions, and a payment history you can check. As the note on screen says, ask for the net revenue definition, the carryover rules and the payment terms in writing before you send volume."
+        },
+        {
+          "v": "tip",
+          "h": "The honest side of RevShare",
+          "p": "In many trading and gambling programs, net revenue grows when customers lose money. That makes honest marketing more important, not less. Never push people to deposit more than they can afford to lose.",
+          "d": {
+            "kind": "warn",
+            "text": "RevShare must never tempt you to encourage losses. Keep risk warnings clear, respect deposit limits and follow the operator's responsible gambling and trading rules."
+          },
+          "say": "Here's the honest side of RevShare. In many trading and gambling programs, net revenue grows when customers lose money. That makes honest marketing more important, not less. Read the warning: RevShare must never tempt you to encourage losses. Keep risk warnings clear, respect deposit limits, and follow the operator's responsible gambling and trading rules. Never push people to deposit more than they can afford to lose."
+        },
+        {
+          "v": "cards",
+          "h": "When hybrid makes sense",
+          "p": "A hybrid deal pays a smaller CPA plus a smaller RevShare. It shortens payback and keeps some of the compounding upside. It suits operators whose cash is growing but who want long-term income too.",
+          "d": [
+            "Smaller CPA|covers part of the cost quickly",
+            "Smaller RevShare|keeps upside from retention",
+            "Shorter payback|less cash tied up",
+            "Less risk|not all income depends on one stream"
+          ],
+          "say": "A hybrid deal pays a smaller C P A plus a smaller RevShare. Look at the cards. The smaller C P A covers part of the cost quickly. The smaller RevShare keeps upside from retention. Payback is shorter, so less cash is tied up. And there's less risk, because not all income depends on one stream. It suits operators whose cash is growing but who want long-term income too."
+        },
+        {
+          "v": "cards",
+          "h": "Common mistakes and fixes",
+          "p": "These mistakes have ended affiliate businesses that looked healthy on paper. Every one of them is about either cash, terms or honesty, the three things RevShare depends on.",
+          "d": [
+            "Scaling on month-one data|wait for several cohort months",
+            "Ignoring carryover|get it in writing first",
+            "All income on one RevShare|keep CPA or hybrid too",
+            "No cash for payback|size the buffer first",
+            "Pushing deposits|never encourage losses"
+          ],
+          "say": "These mistakes have ended affiliate businesses that looked healthy on paper. Scaling on month one data, so wait for several cohort months. Ignoring carryover, so get it in writing first. All income on one RevShare deal, so keep C P A or hybrid too. No cash for payback, so size the buffer first. And pushing deposits, so never encourage losses. Every one of them is about cash, terms or honesty."
+        },
+        {
+          "v": "table",
+          "h": "Starting rules: CPA, hybrid or RevShare",
+          "p": "Starting rules to adapt. For kill and scale decisions on a RevShare campaign, set a target CPA from value you have measured, such as 90-day commission per FTD, then use the Budget and kill rules module as normal.",
+          "d": {
+            "cols": [
+              "Situation",
+              "Choose"
+            ],
+            "rows": [
+              [
+                "Cash under 3 months of spend",
+                "CPA or hybrid"
+              ],
+              [
+                "Payback longer than cash lasts",
+                "CPA"
+              ],
+              [
+                "Carryover or terms unclear",
+                "CPA or hybrid"
+              ],
+              [
+                "Cash, retention and clear terms",
+                "RevShare can fit"
+              ]
+            ]
+          },
+          "say": "These are starting rules to adapt. Cash under three months of spend, choose C P A or hybrid. Payback longer than your cash lasts, choose C P A. Carryover or terms unclear, C P A or hybrid. Only with cash, retention and clear terms can RevShare fit. And for kill and scale decisions on a RevShare campaign, set a target C P A from value you've measured, such as ninety day commission per F T D, then use the Budget and kill rules module as normal."
+        },
+        {
+          "v": "big",
+          "h": "Compounding needs cash and trust",
+          "p": "RevShare rewards operators who can fund the early months, who retain customers honestly and who choose trustworthy partners. Without all three, the stack never builds, and CPA or hybrid is the wiser choice.",
+          "d": {
+            "b": "Compounding needs cash, retention and trust",
+            "s": "Miss one and choose CPA or hybrid"
+          },
+          "say": "Here's the takeaway: compounding needs cash, retention and trust. RevShare rewards operators who can fund the early months, who retain customers honestly, and who choose trustworthy partners. Miss one of the three, and the stack never builds. In that case, C P A or hybrid is the wiser choice."
+        }
+      ],
+      "takeaways": [
+        "Monthly RevShare income is the sum of every cohort's commission at its current age.",
+        "RevShare can out-earn CPA over time but costs more cash early.",
+        "Better retention lifts every cohort, so it compounds.",
+        "Read net revenue definitions, carryover and term-change clauses before sending volume."
+      ],
+      "action": "Build a seven-month cohort stack for your own RevShare deal using your real commission per FTD by month, and compare it with the CPA alternative.",
+      "glossary": [
+        {
+          "term": "Cohort",
+          "def": "Everyone who became an FTD in the same period, tracked together over time."
+        },
+        {
+          "term": "Net revenue",
+          "def": "The operator's revenue from a customer after the deductions in the contract; RevShare is a % of it."
+        },
+        {
+          "term": "Negative carryover",
+          "def": "When losses on your players reduce future RevShare earnings until they are covered."
+        },
+        {
+          "term": "Hybrid deal",
+          "def": "A deal that pays a smaller CPA plus a smaller RevShare."
+        },
+        {
+          "term": "Tail",
+          "def": "Income from older cohorts that continues after you stop buying new ones."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Example: commission per FTD is $10 in M1, $6 in M2, $4 in M3. You add 50 FTDs a month. What is income in month three?",
+          "options": [
+            "$500",
+            "$1,000",
+            "$600",
+            "$1,500"
+          ],
+          "answer": 1,
+          "why": "(50 × $4) + (50 × $6) + (50 × $10) = $200 + $300 + $500 = $1,000."
+        },
+        {
+          "q": "Why can RevShare grow while monthly FTD volume stays flat?",
+          "options": [
+            "Payouts rise each month",
+            "Older cohorts keep earning while new ones are added",
+            "Networks add bonuses",
+            "Spend falls over time"
+          ],
+          "answer": 1,
+          "why": "Income stacks across cohorts of different ages, so the total grows even with steady volume."
+        },
+        {
+          "q": "Example: cost per FTD $22, CPA $25, RevShare M1 commission $12. 100 FTDs. What is month one cash on RevShare?",
+          "options": [
+            "−$1,000",
+            "+$300",
+            "+$1,200",
+            "−$2,200"
+          ],
+          "answer": 0,
+          "why": "100 × $12 = $1,200 earned, minus $2,200 spent = −$1,000."
+        },
+        {
+          "q": "What is negative carryover?",
+          "options": [
+            "A bonus for high volume",
+            "A fee for late payment",
+            "Losses on your players reducing future RevShare earnings",
+            "A cap on FTDs"
+          ],
+          "answer": 2,
+          "why": "With carryover, a negative month must be covered before you earn again, which changes the maths."
+        },
+        {
+          "q": "Which situation best suits a hybrid deal?",
+          "options": [
+            "You have no cash and need full payment now",
+            "You never retain customers",
+            "The network will not explain terms",
+            "Cash is growing and you want some upside with a shorter payback"
+          ],
+          "answer": 3,
+          "why": "Hybrid shortens payback with a CPA part and keeps some compounding with a RevShare part."
+        }
+      ],
+      "say_intro": "On RevShare, each month's depositors keep earning for you while new ones join on top. In this lesson you'll calculate how those cohorts stack, compare the cash profile with C P A, and read the terms that can break the maths.",
+      "say_outro": "RevShare stacks cohorts, but it needs cash for the early months, honest retention and trustworthy terms, otherwise C P A or hybrid is wiser. Your task: build a seven month cohort stack for your own RevShare deal using your real commission per F T D by month, and compare it with the C P A alternative. Now take the quiz."
+    },
+    {
+      "slug": "community-and-measuring-ltv",
+      "title": "Community and measuring LTV",
+      "minutes": 19,
+      "objectives": [
+        "By the end you can describe the pillars of a healthy, safe community.",
+        "You can calculate cohort LTV to date and the LTV to CAC ratio.",
+        "You can avoid the common mistakes that make LTV look better than it is."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Community is retention you do not have to send",
+          "p": "A good community keeps people engaged between your messages. Members answer each other, share what they learned and come back because the place is useful. That does more for retention than any single broadcast.",
+          "d": {
+            "b": "Community keeps people between messages",
+            "s": "Useful places get revisited"
+          },
+          "say": "A good community is retention you don't have to send. Members answer each other, share what they've learned, and come back because the place is useful. Look at the line under the headline: useful places get revisited. That does more for retention than any single broadcast, because it keeps people engaged between your messages."
+        },
+        {
+          "v": "cards",
+          "h": "Pillars of a healthy community",
+          "p": "Communities that last share these traits. Notice that none of them depend on hype. They depend on being useful, safe and consistent for long enough that people trust the place.",
+          "d": [
+            "Value|real education every week",
+            "Rules|clear, pinned, enforced",
+            "Real voices|members helping members",
+            "Consistency|a schedule people can rely on",
+            "Safety|scams removed quickly"
+          ],
+          "say": "Communities that last share these pillars. Value, meaning real education every week. Rules that are clear, pinned and enforced. Real voices, with members helping members. Consistency, a schedule people can rely on. And safety, with scams removed quickly. Notice that none of these depend on hype. They depend on being useful, safe and consistent long enough for people to trust the place."
+        },
+        {
+          "v": "check",
+          "h": "Moderation basics",
+          "p": "Moderation is not optional. Scammers target busy groups, and one ignored scam can destroy trust built over months. Assign a named person to moderate every day and give them clear rules.",
+          "d": [
+            "Pin the rules and the official admin list",
+            "Remove scam and impersonator accounts fast",
+            "Delete posts that promise returns",
+            "Answer complaints openly and calmly",
+            "Keep a log of actions taken"
+          ],
+          "say": "Moderation is not optional. Scammers target busy groups, and one ignored scam can destroy trust built over months. Here are the basics. Pin the rules and the official admin list. Remove scam and impersonator accounts fast. Delete posts that promise returns. Answer complaints openly and calmly. And keep a log of actions taken. Assign a named person to moderate every day, with clear rules."
+        },
+        {
+          "v": "tip",
+          "h": "Warn about impersonators",
+          "p": "Scammers copy admin names and photos and message members privately asking for money. Tell members plainly and often how your real team behaves, so they can spot a fake.",
+          "d": {
+            "kind": "warn",
+            "text": "Pin this: our admins never message you first and never ask you to send money or log-in details. Report anyone who does."
+          },
+          "say": "Scammers copy admin names and photos and message members privately asking for money. So tell members plainly and often how your real team behaves. Here's the message to pin, word for word: our admins never message you first and never ask you to send money or log-in details. Report anyone who does. That one line helps every member spot a fake."
+        },
+        {
+          "v": "phone",
+          "h": "The pinned rules in practice",
+          "p": "Example of how a well-run group looks to a member. The rules and the official admin list are pinned, and a moderator answers a safety question in the open, so everyone reading learns the same thing.",
+          "d": {
+            "app": "chat",
+            "title": "Beginners Group",
+            "subtitle": "group",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Pinned: 1. Be respectful. 2. No promises of returns. 3. Admins never message you first or ask for money. Official admins: @academy_amina, @academy_tunde."
+              },
+              {
+                "from": "me",
+                "text": "Someone called Academy Support just messaged me. Is that you?"
+              },
+              {
+                "from": "them",
+                "text": "No. They are not on the pinned list, so it is a fake. Please report and block them. Thanks for asking here."
+              }
+            ]
+          },
+          "say": "Here's an example of how a well-run group looks to a member. At the top, the pinned rules and the official admin list. Then a member asks: someone called Academy Support just messaged me, is that you? Notice the moderator answers in the open. No, they're not on the pinned list, so it's a fake, please report and block them. Because it's public, everyone reading learns the same thing."
+        },
+        {
+          "v": "big",
+          "h": "Measure LTV by cohort",
+          "p": "LTV, lifetime value, is what a customer earns you over time. The honest way to measure it is by cohort: take everyone who deposited in one month and track what that group has earned you, month by month.",
+          "d": {
+            "b": "Measure LTV by cohort, not by blend",
+            "s": "Same start month, same clock"
+          },
+          "say": "Now to measurement. L T V, lifetime value, is what a customer earns you over time. The honest way to measure it is by cohort. Take everyone who deposited in one month and track what that group has earned you, month by month. Look at the line under the headline: same start month, same clock. Measure by cohort, not by one blended number."
+        },
+        {
+          "v": "eq",
+          "h": "LTV to date",
+          "p": "For each cohort, divide the total commission it has earned so far by the number of FTDs in it. Label the result with its age, such as 90-day LTV, because the number keeps growing as the cohort ages.",
+          "d": [
+            "Cohort commission to date",
+            "÷",
+            "Cohort FTDs",
+            "=",
+            "LTV to date"
+          ],
+          "say": "Here's the formula for L T V to date. Take the cohort's commission to date, divide by the number of F T Ds, first time deposits, in that cohort, and you get L T V to date. Always label it with its age, such as ninety day L T V, because the number keeps growing as the cohort ages."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example: a July cohort",
+          "p": "Example: 150 people made a first deposit in July. By the end of September, 90 days later, they have earned you $4,050 in total commission. Your cost per FTD for that month was $30.",
+          "more": "Example, continued. By 180 days the same cohort has earned $5,400 in total, so LTV is $5,400 ÷ 150 = $36. The LTV to CAC ratio is $36 ÷ $30 = 1.2. The cohort paid back between day 90 and day 180. Its profit so far is 150 × ($36 − $30) = $900 before overheads. Remember the lesson on overheads: if overhead per FTD is $5, true profit is only 150 × $1 = $150.",
+          "d": {
+            "kind": "example",
+            "text": "Example: $4,050 ÷ 150 = $27 LTV at 90 days. Against $30 CAC, the cohort has not yet paid back."
+          },
+          "say": "Let's work the example. One hundred and fifty people made a first deposit in July. By the end of September, ninety days later, they've earned four thousand and fifty dollars in commission. Divide by one hundred and fifty, and ninety day L T V is twenty seven dollars. Cost per F T D was thirty dollars, so the cohort hasn't paid back yet. By one hundred and eighty days it earns fifty four hundred dollars, an L T V of thirty six dollars. That's nine hundred dollars profit before overheads, but with five dollars overhead per F T D, true profit is only one hundred and fifty dollars."
+        },
+        {
+          "v": "stat",
+          "h": "LTV to CAC ratio",
+          "p": "The ratio compares what a customer earns with what it cost. Below 1, you have not yet earned back your cost. Always state the age with the ratio, because a 90-day ratio and a 180-day ratio are very different numbers.",
+          "d": {
+            "n": 1.2,
+            "pre": "",
+            "suf": "×",
+            "dec": 1,
+            "label": "LTV to CAC at 180 days",
+            "note": "Example. $36 ÷ $30."
+          },
+          "say": "The L T V to C A C ratio compares what a customer earns with what it cost. C A C means customer acquisition cost. Here it's one point two, from thirty six dollars divided by thirty dollars, at one hundred and eighty days. This is an example. Below one, you haven't yet earned back your cost. Always state the age with the ratio, because a ninety day ratio and a one hundred and eighty day ratio are very different numbers."
+        },
+        {
+          "v": "table",
+          "h": "A cohort table",
+          "p": "Example. Each row is one month's FTDs. Read across to see how a cohort grows; read down a column to compare cohorts at the same age. A blank means the cohort is not old enough yet.",
+          "d": {
+            "cols": [
+              "Cohort",
+              "FTDs",
+              "30-day LTV",
+              "90-day LTV"
+            ],
+            "rows": [
+              [
+                "July",
+                "150",
+                "$16",
+                "$27"
+              ],
+              [
+                "August",
+                "180",
+                "$14",
+                "$24"
+              ],
+              [
+                "September",
+                "120",
+                "$18",
+                "-"
+              ]
+            ]
+          },
+          "say": "This example is a cohort table. Each row is one month's F T Ds. Read across to see a cohort grow: July goes from sixteen dollars at thirty days to twenty seven dollars at ninety days. Read down a column to compare cohorts at the same age: at thirty days, July is sixteen, August fourteen, September eighteen dollars. The dash for September means that cohort isn't old enough yet."
+        },
+        {
+          "v": "screen",
+          "h": "Calculating cohort LTV in a sheet",
+          "p": "Example of the July and August cohorts with the numbers behind the LTV. Use only paid, approved commission, and count each cohort's age from its own deposit month, not from today.",
+          "d": {
+            "kind": "browser",
+            "url": "sheets.example/cohorts",
+            "title": "Cohorts: 90-day LTV",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Cohort",
+                  "FTDs",
+                  "Paid to day 90",
+                  "90-day LTV"
+                ],
+                "rows": [
+                  [
+                    "July",
+                    "150",
+                    "$4,050",
+                    "$27"
+                  ],
+                  [
+                    "August",
+                    "180",
+                    "$4,320",
+                    "$24"
+                  ]
+                ]
+              },
+              {
+                "type": "field",
+                "label": "CAC, July",
+                "value": "$30"
+              },
+              {
+                "type": "field",
+                "label": "LTV to CAC at 90 days",
+                "value": "$27 ÷ $30 = 0.9"
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "Here's an example sheet with the numbers behind the L T V. July: one hundred and fifty F T Ds, four thousand and fifty dollars paid to day ninety, so twenty seven dollars. August: one hundred and eighty F T Ds, four thousand three hundred and twenty dollars, so twenty four dollars. Look at the highlighted field: L T V to C A C at ninety days for July is twenty seven over thirty, zero point nine. Use only paid, approved commission, and count each cohort's age from its own deposit month, not from today."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes when measuring LTV",
+          "p": "Most LTV mistakes make the number look better than it is. Each one leads to paying too much for traffic. Check your own reports against this list before you use LTV to set a target CPA.",
+          "d": {
+            "a": {
+              "title": "Misleading",
+              "items": [
+                "One blended LTV for all months",
+                "Counting reported, not paid, earnings",
+                "Using old cohorts' tails for new ones",
+                "Judging a cohort at 30 days"
+              ]
+            },
+            "b": {
+              "title": "Reliable",
+              "items": [
+                "LTV per cohort at fixed ages",
+                "Using paid, approved earnings",
+                "Comparing cohorts at the same age",
+                "Waiting for enough months"
+              ]
+            }
+          },
+          "say": "Most L T V mistakes make the number look better than it is. On the left, the misleading way: one blended L T V for all months, counting reported rather than paid earnings, using old cohorts' tails for new ones, and judging a cohort at thirty days. On the right, the reliable way: L T V per cohort at fixed ages, paid and approved earnings, comparing cohorts at the same age, and waiting for enough months. Each mistake leads to paying too much for traffic."
+        },
+        {
+          "v": "bars",
+          "h": "LTV by source",
+          "p": "Example: 90-day LTV for the same offer from three sources. If you add the source field from your CRM, you can compare like this and move budget toward the traffic that keeps paying, not just the cheapest.",
+          "d": [
+            [
+              "Meta broad",
+              68,
+              "$27"
+            ],
+            [
+              "Meta lookalike",
+              78,
+              "$31"
+            ],
+            [
+              "Organic Telegram",
+              100,
+              "$40"
+            ]
+          ],
+          "say": "Look at these bars. In this example, ninety day L T V for the same offer from three sources: Meta broad at twenty seven dollars, Meta lookalike at thirty one dollars, and organic Telegram at forty dollars. When you add the source field from your C R M, you can compare like this and move budget toward the traffic that keeps paying, not just the cheapest."
+        },
+        {
+          "v": "table",
+          "h": "Starting rules: LTV and budget",
+          "p": "Starting rules to adapt; thresholds are examples. Any budget shift still follows the Budget and kill rules module: +20% at most every 48 hours, with 3 or more network-confirmed conversions at CPA ≤ 0.8 × target.",
+          "d": {
+            "cols": [
+              "Signal",
+              "Rule"
+            ],
+            "rows": [
+              [
+                "90-day LTV:CAC under 1 on 2+ cohorts",
+                "Lower target CPA or fix retention"
+              ],
+              [
+                "Source 20%+ higher LTV on 2+ cohorts",
+                "Shift budget to it in +20% steps"
+              ],
+              [
+                "Cohort under 50 FTDs",
+                "Too thin to decide on"
+              ],
+              [
+                "Setting target CPA",
+                "90-day paid LTV minus overhead per FTD"
+              ]
+            ]
+          },
+          "say": "These are starting rules to adapt, and the thresholds are examples. Ninety day L T V to C A C under one on two or more cohorts, lower your target C P A or fix retention. A source with twenty percent or more higher L T V on two or more cohorts, shift budget to it in twenty percent steps. A cohort under fifty F T Ds is too thin to decide on. Set target C P A from ninety day paid L T V minus overhead per F T D. Budget shifts still follow the Budget and kill rules module: up twenty percent at most every forty eight hours, with three or more network-confirmed conversions at a C P A of zero point eight times target or better."
+        },
+        {
+          "v": "check",
+          "h": "The monthly LTV review",
+          "p": "Run this after the monthly close, once payouts are confirmed. The output is a simple decision: which sources and cohorts deserve more budget, and which target CPAs need to change.",
+          "d": [
+            "Update every cohort's LTV to date",
+            "Compare cohorts at the same age",
+            "Split LTV by source and geo",
+            "Check LTV to CAC at 90 and 180 days",
+            "Adjust target CPAs from the results"
+          ],
+          "say": "Run this monthly L T V review after the monthly close, once payouts are confirmed. Update every cohort's L T V to date. Compare cohorts at the same age. Split L T V by source and geo. Check L T V to C A C at ninety and one hundred and eighty days. Then adjust target C P As from the results. The output is a simple decision: which sources and cohorts deserve more budget, and which targets need to change."
+        },
+        {
+          "v": "big",
+          "h": "Keep people well, measure honestly",
+          "p": "This lesson closes the measurement loop. A safe, useful community keeps people longer. Honest cohort measurement shows you what that is worth. Together they tell you how much you can afford to pay for the next customer.",
+          "d": {
+            "b": "Retain well, measure honestly",
+            "s": "Then you know what the next customer is worth"
+          },
+          "say": "This lesson closes the measurement loop. A safe, useful community keeps people longer. Honest cohort measurement shows you what that's worth. Retain well, measure honestly, and then you know what the next customer is worth, and how much you can afford to pay for them."
+        }
+      ],
+      "takeaways": [
+        "A safe, useful, consistent community keeps people engaged between messages.",
+        "Measure LTV by cohort and always state its age, such as 90-day LTV.",
+        "LTV to CAC below 1 means the cohort has not paid back yet.",
+        "Use paid earnings and same-age comparisons, never one blended number."
+      ],
+      "action": "Build a cohort table for your last three months of FTDs, with 30-day and 90-day LTV where the cohorts are old enough.",
+      "glossary": [
+        {
+          "term": "LTV",
+          "def": "Lifetime value: what a customer earns you over time; always state the age measured."
+        },
+        {
+          "term": "Cohort LTV",
+          "def": "Total commission from one cohort ÷ its number of FTDs, at a given age."
+        },
+        {
+          "term": "LTV to CAC ratio",
+          "def": "LTV divided by customer acquisition cost; above 1 means paid back."
+        },
+        {
+          "term": "Impersonator",
+          "def": "A scammer copying an admin's name or photo to trick members."
+        },
+        {
+          "term": "Moderation",
+          "def": "Enforcing community rules and removing harmful posts and accounts."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Example: a cohort of 200 FTDs has earned $6,000 after 90 days. What is the 90-day LTV?",
+          "options": [
+            "$20",
+            "$30",
+            "$60",
+            "$300"
+          ],
+          "answer": 1,
+          "why": "$6,000 ÷ 200 = $30 LTV at 90 days."
+        },
+        {
+          "q": "Example: 90-day LTV is $27 and CAC is $30. What does that mean?",
+          "options": [
+            "The cohort has paid back",
+            "The cohort is losing money forever",
+            "The cohort has not paid back yet at 90 days",
+            "LTV and CAC cannot be compared"
+          ],
+          "answer": 2,
+          "why": "A ratio of 0.9 means earnings so far are below cost; it may still pay back later."
+        },
+        {
+          "q": "Which is the most reliable way to compare cohorts?",
+          "options": [
+            "At the same age, such as 90-day LTV for each",
+            "Using one blended LTV",
+            "Comparing a new cohort's 30 days to an old cohort's 180",
+            "Using reported, not paid, earnings"
+          ],
+          "answer": 0,
+          "why": "Only same-age comparisons show whether newer cohorts are better or worse."
+        },
+        {
+          "q": "A member reports that an \"admin\" messaged them asking for money. What do you do?",
+          "options": [
+            "Ignore it",
+            "Ask the member to pay to verify",
+            "Delete the member",
+            "Remove the impersonator, warn the group and repin the admin list"
+          ],
+          "answer": 3,
+          "why": "Fast action and a clear reminder protect members and the community's trust."
+        },
+        {
+          "q": "Organic Telegram leads show $40 90-day LTV and Meta broad shows $27. What should you do first?",
+          "options": [
+            "Stop all Meta spend at once",
+            "Check both use the same age and paid earnings, then shift budget gradually",
+            "Ignore it",
+            "Raise the CPA target for all sources"
+          ],
+          "answer": 1,
+          "why": "Confirm the comparison is fair, then move budget step by step toward higher-value sources."
+        }
+      ],
+      "say_intro": "A useful, safe community keeps people engaged between your messages. In this lesson you'll learn the pillars of a healthy community, then measure L T V, lifetime value, by cohort and compare it with what each customer cost.",
+      "say_outro": "Retain people well with a safe, useful community, and measure honestly with cohort L T V at fixed ages and paid earnings only. Your task: build a cohort table for your last three months of F T Ds, with thirty day and ninety day L T V where the cohorts are old enough. Now take the quiz."
+    },
+    {
+      "slug": "running-a-safe-telegram-community",
+      "title": "Running a safe Telegram community",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can choose between a channel, a group or both, and set up roles and permissions.",
+        "You can write pinned rules, a weekly content calendar and a moderator routine.",
+        "You can apply clear moderation rules to scams, spam and complaints."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "An unmoderated group becomes a scam market",
+          "p": "A busy Telegram group attracts scammers within days. If nobody removes them, members lose money, complaints follow and trust in your whole funnel disappears. A community is only an asset if someone looks after it every day.",
+          "d": {
+            "b": "No moderator, no community",
+            "s": "Scammers arrive as soon as people do"
+          },
+          "say": "Here's a hard truth. A busy Telegram group attracts scammers within days. If nobody removes them, members lose money, complaints follow, and trust in your whole funnel disappears. Look at the headline: no moderator, no community. Scammers arrive as soon as people do. A community is only an asset if someone looks after it every day."
+        },
+        {
+          "v": "compare",
+          "h": "Channel, group or both",
+          "p": "A channel is for one-way posts from you. A group is where members talk. Many operators run both and link them, so channel posts get comments in the group. Features change; check Telegram's current help pages.",
+          "d": {
+            "a": {
+              "title": "Channel",
+              "items": [
+                "Only admins post",
+                "Good for lessons and news",
+                "Little moderation needed",
+                "Members cannot help each other"
+              ]
+            },
+            "b": {
+              "title": "Group",
+              "items": [
+                "Members post and reply",
+                "Good for questions and support",
+                "Needs daily moderation",
+                "Scammers can reach members"
+              ]
+            }
+          },
+          "say": "Channel, group, or both? On the left, a channel: only admins post, it's good for lessons and news, it needs little moderation, but members can't help each other. On the right, a group: members post and reply, it's good for questions and support, but it needs daily moderation, and scammers can reach members. Many operators run both and link them, so channel posts get comments in the group. Features change, so check Telegram's current help pages."
+        },
+        {
+          "v": "cards",
+          "h": "Roles in the community",
+          "p": "Write down who holds each role before you open the group. Give each admin only the permissions they need. Fewer people with full rights means fewer ways for an account takeover to damage the group.",
+          "d": [
+            "Owner|you; keep two-step verification on",
+            "Admins|post, pin and set rules",
+            "Moderators|remove spam and scams",
+            "Bot|welcome, filters, logs",
+            "Members|ask, answer, report"
+          ],
+          "say": "Write down who holds each role before you open the group. The owner is you, with two-step verification kept on. Admins post, pin and set rules. Moderators remove spam and scams. A bot handles welcomes, filters and logs. And members ask, answer and report. Give each admin only the permissions they need, because fewer people with full rights means fewer ways for an account takeover to damage the group."
+        },
+        {
+          "v": "walk",
+          "h": "Set up the group safely",
+          "p": "Setting names differ between Telegram apps and versions, so look for the closest match; we are not certain these labels are current. The aim is the same everywhere: limit what new members can do until they have shown they are real.",
+          "d": {
+            "steps": [
+              {
+                "title": "Create and link",
+                "text": "Create the group and link it to your channel as its discussion group, if you run both.",
+                "screen": {
+                  "v": "screen",
+                  "d": {
+                    "kind": "browser",
+                    "url": "telegram.example/group/settings",
+                    "title": "Group settings",
+                    "blocks": [
+                      {
+                        "type": "field",
+                        "label": "Group name",
+                        "value": "Academy Beginners KE"
+                      },
+                      {
+                        "type": "select",
+                        "label": "Linked channel",
+                        "value": "Academy Lessons KE"
+                      },
+                      {
+                        "type": "toggle",
+                        "label": "Chat history visible to new members",
+                        "on": true
+                      }
+                    ],
+                    "highlight": 1
+                  }
+                }
+              },
+              {
+                "title": "Limit member permissions",
+                "text": "Turn off what new members do not need, such as sending links or adding people.",
+                "screen": {
+                  "v": "screen",
+                  "d": {
+                    "kind": "browser",
+                    "url": "telegram.example/group/permissions",
+                    "title": "Permissions",
+                    "blocks": [
+                      {
+                        "type": "toggle",
+                        "label": "Members can send messages",
+                        "on": true
+                      },
+                      {
+                        "type": "toggle",
+                        "label": "Members can send links",
+                        "on": false
+                      },
+                      {
+                        "type": "toggle",
+                        "label": "Members can add members",
+                        "on": false
+                      },
+                      {
+                        "type": "toggle",
+                        "label": "Members can pin messages",
+                        "on": false
+                      }
+                    ],
+                    "highlight": 1
+                  }
+                }
+              },
+              {
+                "title": "Turn on slow mode when needed",
+                "text": "Slow mode limits how often each member can post. Use it during spam waves or busy events.",
+                "screen": {
+                  "v": "screen",
+                  "d": {
+                    "kind": "browser",
+                    "url": "telegram.example/group/permissions",
+                    "title": "Slow mode",
+                    "blocks": [
+                      {
+                        "type": "select",
+                        "label": "Slow mode",
+                        "value": "30 seconds"
+                      },
+                      {
+                        "type": "text",
+                        "value": "Turn it off again when things calm down."
+                      }
+                    ],
+                    "highlight": 0
+                  }
+                }
+              },
+              {
+                "title": "Add admins with limited rights",
+                "text": "Moderators need to delete and ban, not to change group info or add admins.",
+                "screen": {
+                  "v": "screen",
+                  "d": {
+                    "kind": "browser",
+                    "url": "telegram.example/group/admins",
+                    "title": "Admin rights: moderator",
+                    "blocks": [
+                      {
+                        "type": "toggle",
+                        "label": "Delete messages",
+                        "on": true
+                      },
+                      {
+                        "type": "toggle",
+                        "label": "Ban users",
+                        "on": true
+                      },
+                      {
+                        "type": "toggle",
+                        "label": "Add new admins",
+                        "on": false
+                      },
+                      {
+                        "type": "toggle",
+                        "label": "Change group info",
+                        "on": false
+                      }
+                    ],
+                    "highlight": 2
+                  }
+                }
+              },
+              {
+                "title": "Pin the rules",
+                "text": "Post the rules and the official admin list, then pin them.",
+                "screen": {
+                  "v": "phone",
+                  "d": {
+                    "app": "chat",
+                    "title": "Academy Beginners KE",
+                    "subtitle": "group",
+                    "messages": [
+                      {
+                        "from": "me",
+                        "text": "Rules: be respectful, no promises of returns, no links without permission. Admins never message you first. Official admins: @academy_amina, @academy_tunde."
+                      },
+                      {
+                        "from": "them",
+                        "text": "Message pinned."
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "say": "Let's set up the group safely. Setting names differ between Telegram apps and versions, and we're not certain these labels are current, so look for the closest match. Tap Next to follow each step. First, create the group and link it to your channel as its discussion group. Second, limit member permissions, turning off links and adding people. Third, use slow mode during spam waves or busy events. Fourth, add admins with limited rights, so moderators can delete and ban but not change group info. Fifth, pin the rules and the official admin list."
+        },
+        {
+          "v": "table",
+          "h": "A weekly content calendar",
+          "p": "Example calendar for a beginner trading education community. A steady rhythm gives people reasons to come back and gives moderators predictable busy times. Adjust days and times to your members' local time zone.",
+          "d": {
+            "cols": [
+              "Day",
+              "Post",
+              "Owner"
+            ],
+            "rows": [
+              [
+                "Monday 7pm",
+                "Weekly lesson",
+                "Admin"
+              ],
+              [
+                "Wednesday 7pm",
+                "Open Q&A, 1 hour",
+                "Admin + moderator"
+              ],
+              [
+                "Friday",
+                "Risk reminder and recap",
+                "Admin"
+              ],
+              [
+                "Daily",
+                "Spam and scam check, 3 times",
+                "Moderator"
+              ],
+              [
+                "Sunday",
+                "No posts",
+                "-"
+              ]
+            ]
+          },
+          "say": "Here's an example weekly calendar for a beginner trading education community. Monday at seven p m, the weekly lesson. Wednesday at seven, an open Q and A for one hour, with an admin and a moderator. Friday, a risk reminder and recap. Daily, a spam and scam check, three times. And Sunday, no posts. A steady rhythm gives people reasons to come back and gives moderators predictable busy times. Adjust to your members' local time zone."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example: moderator time",
+          "p": "Example: a group of 2,000 members posts about 150 messages a day. A moderator checks three times a day, about 10 minutes each, and spends 30 minutes on the Wednesday Q&A.",
+          "more": "Example, the maths. Daily checks: 3 × 10 minutes = 30 minutes, so 7 × 30 = 210 minutes a week. Add the 30-minute Q&A shift: 240 minutes, or 4 hours a week. If you pay a part-time moderator $3 an hour (Example only; pay fairly for your market), that is $12 a week, about $52 a month. Compare that with one scam that robs members and gets your channel reported. As the group grows, add a second moderator in a different time zone rather than stretching one person.",
+          "d": {
+            "kind": "example",
+            "text": "Example: (3 × 10 min × 7 days) + 30 min Q&A = 4 hours of moderation a week."
+          },
+          "say": "Let's work out moderator time, as an example. A group of two thousand members posts about one hundred and fifty messages a day. The moderator checks three times a day, ten minutes each, so thirty minutes a day, two hundred and ten minutes a week. Add the thirty minute Q and A, and it's four hours a week. At three dollars an hour, which is only an example, so pay fairly for your market, that's about fifty two dollars a month. As the group grows, add a second moderator in a different time zone."
+        },
+        {
+          "v": "eq",
+          "h": "A simple health number",
+          "p": "Count members who posted or reacted in the last 7 days and divide by total members. Track it weekly. A falling rate tells you the content or schedule needs work before people start leaving.",
+          "more": "Example: 260 active members in a group of 2,000 is 260 ÷ 2,000 = 13% weekly engagement. There is no universal good number; compare with your own past weeks. If it drops from 13% to 8% over a month while membership holds, people are drifting, and a content review is due.",
+          "d": [
+            "Members active this week",
+            "÷",
+            "Total members",
+            "=",
+            "Weekly engagement"
+          ],
+          "say": "Here's a simple health number. Count members who posted or reacted in the last seven days, divide by total members, and you get weekly engagement. For example, two hundred and sixty active in a group of two thousand is thirteen percent. There's no universal good number, so compare with your own past weeks. If it drops from thirteen to eight percent while membership holds, people are drifting, and a content review is due."
+        },
+        {
+          "v": "cards",
+          "h": "Common mistakes and fixes",
+          "p": "These mistakes appear in most groups that fail. Each is easy to avoid if you set things up properly before inviting anyone, rather than reacting after damage is done.",
+          "d": [
+            "No moderator|name one before launch",
+            "Everyone is an admin|give only the rights needed",
+            "Rules not pinned|pin rules and admin list",
+            "Members can post links|turn links off by default",
+            "Ignoring complaints|answer openly within a day"
+          ],
+          "say": "These mistakes appear in most groups that fail. No moderator, so name one before launch. Everyone is an admin, so give only the rights needed. Rules not pinned, so pin the rules and admin list. Members can post links, so turn links off by default. Ignoring complaints, so answer openly within a day. Each is easy to avoid if you set things up before inviting anyone."
+        },
+        {
+          "v": "tip",
+          "h": "Keep the group honest and lawful",
+          "p": "A community about trading or gambling is still marketing for a regulated product. Keep posts educational, never let anyone promise returns and follow the rules of the operator and your local regulator.",
+          "d": {
+            "kind": "warn",
+            "text": "No posts promising returns, no signals sold as sure wins, no pressure to deposit. Remove such posts, including from members, and follow local law and platform rules."
+          },
+          "say": "A community about trading or gambling is still marketing for a regulated product. Read the warning: no posts promising returns, no signals sold as sure wins, no pressure to deposit. Remove such posts, including posts from members, and follow local law and platform rules. Keep posts educational, and follow the rules of the operator and your local regulator."
+        },
+        {
+          "v": "table",
+          "h": "Starting rules: moderation",
+          "p": "Starting rules to adapt to your group. Write them down so every moderator makes the same call. The spam threshold is an example; set yours from what your group normally looks like.",
+          "d": {
+            "cols": [
+              "Signal",
+              "Rule"
+            ],
+            "rows": [
+              [
+                "Scam or impersonator",
+                "Remove and ban at once; warn the group"
+              ],
+              [
+                "Post promising returns",
+                "Delete; warn once; ban on repeat"
+              ],
+              [
+                "5+ spam posts in an hour",
+                "Slow mode on; links off"
+              ],
+              [
+                "A member complaint",
+                "Reply in the open within 24 hours"
+              ],
+              [
+                "Self-harm or abuse",
+                "Remove; point to local help; tell the owner"
+              ]
+            ]
+          },
+          "say": "These are starting moderation rules to adapt. A scam or impersonator, remove and ban at once, and warn the group. A post promising returns, delete it, warn once, and ban on repeat. Five or more spam posts in an hour, slow mode on and links off. A member complaint, reply in the open within twenty four hours. Self-harm or abuse, remove it, point to local help, and tell the owner. The spam threshold is an example. Write the rules down so every moderator makes the same call."
+        },
+        {
+          "v": "phone",
+          "h": "A scam, handled in the open",
+          "p": "Example of the first starting rule in action. The moderator removes the impersonator, then tells the group what happened and how to spot the next one. Handling it in public teaches every member at once.",
+          "d": {
+            "app": "chat",
+            "title": "Academy Beginners KE",
+            "subtitle": "group",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Heads up: an account called \"Academy Support\" has been messaging members asking for a fee to \"verify\" accounts. It is a scam. We removed and banned it."
+              },
+              {
+                "from": "them",
+                "text": "Reminder: our admins never message you first and never ask for money. Check the pinned admin list. Report anyone else."
+              },
+              {
+                "from": "me",
+                "text": "Thanks, they messaged me too. Reported."
+              }
+            ]
+          },
+          "say": "Here's an example of the first rule in action. In this group, the moderator posts a heads up: an account called Academy Support has been messaging members asking for a fee to verify accounts. It's a scam, and it's been removed and banned. Then a reminder: admins never message you first and never ask for money. Notice a member replies that they were messaged too, and reported it. Handling it in public teaches every member at once."
+        },
+        {
+          "v": "check",
+          "h": "The moderator's daily routine",
+          "p": "Give this list to every moderator. It takes about ten minutes, three times a day. Keeping a short log means you can see patterns, such as the same scam returning under new names.",
+          "d": [
+            "Read new messages since the last check",
+            "Remove scams, impersonators and return promises",
+            "Answer or route open questions",
+            "Check the pinned rules are still pinned",
+            "Log actions taken in the moderation sheet"
+          ],
+          "say": "Give this daily routine to every moderator. Read new messages since the last check. Remove scams, impersonators and return promises. Answer or route open questions. Check the pinned rules are still pinned. And log actions taken in the moderation sheet. It takes about ten minutes, three times a day. The short log lets you see patterns, such as the same scam returning under new names."
+        },
+        {
+          "v": "big",
+          "h": "Safe places keep people",
+          "p": "People stay where they feel safe and keep learning. A moderated group, pinned rules, a steady calendar and honest content do more for retention than any single message. Look after the community and it looks after your LTV.",
+          "d": {
+            "b": "Safe, useful, steady",
+            "s": "The community that lasts is the one someone looks after"
+          },
+          "say": "Here's the takeaway: safe, useful, steady. People stay where they feel safe and keep learning. A moderated group, pinned rules, a steady calendar and honest content do more for retention than any single message. The community that lasts is the one someone looks after. Look after it, and it looks after your L T V."
+        }
+      ],
+      "takeaways": [
+        "Use a channel for one-way lessons and a group for conversation; many operators link both.",
+        "Give each role only the permissions it needs, and limit what new members can do.",
+        "Pin rules and the admin list, keep a weekly calendar and moderate every day.",
+        "Remove scams and return promises at once; answer complaints openly."
+      ],
+      "action": "Write your group's pinned rules, official admin list and a one-week content calendar, and name the moderator for each day.",
+      "glossary": [
+        {
+          "term": "Channel",
+          "def": "A Telegram broadcast where only admins post and members read."
+        },
+        {
+          "term": "Discussion group",
+          "def": "A group linked to a channel where members can comment on posts."
+        },
+        {
+          "term": "Slow mode",
+          "def": "A group setting that limits how often each member can post."
+        },
+        {
+          "term": "Weekly engagement",
+          "def": "Members active in the last 7 days ÷ total members."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "You want to post lessons and also let members ask questions. What setup fits best?",
+          "options": [
+            "A channel only",
+            "A group only, with every member an admin",
+            "A channel for lessons, linked to a moderated group for questions",
+            "Private messages to every member"
+          ],
+          "answer": 2,
+          "why": "The channel carries one-way lessons; the linked, moderated group handles conversation."
+        },
+        {
+          "q": "Which right should a moderator usually not have?",
+          "options": [
+            "Delete messages",
+            "Ban users",
+            "Read the group",
+            "Add new admins"
+          ],
+          "answer": 3,
+          "why": "Moderators need to delete and ban; adding admins is kept to the owner to limit damage from a compromised account."
+        },
+        {
+          "q": "Example: 300 members active this week in a group of 2,500. What is weekly engagement?",
+          "options": [
+            "12%",
+            "8.3%",
+            "30%",
+            "25%"
+          ],
+          "answer": 0,
+          "why": "300 ÷ 2,500 = 0.12, which is 12%."
+        },
+        {
+          "q": "A member posts \"Join my signals, guaranteed 20% a week\". What do you do?",
+          "options": [
+            "Leave it, members can post freely",
+            "Delete it and warn them; ban on repeat",
+            "Pin it",
+            "Reply asking for proof"
+          ],
+          "answer": 1,
+          "why": "Promises of returns are misleading and must be removed; the starting rule is delete, warn once, ban on repeat."
+        },
+        {
+          "q": "Spam floods the group: 12 link posts in an hour. What is the starting rule?",
+          "options": [
+            "Close the group",
+            "Ignore it",
+            "Turn on slow mode and switch off member links",
+            "Make every member an admin"
+          ],
+          "answer": 2,
+          "why": "Slow mode and turning off links stop the wave while moderators clean up."
+        }
+      ],
+      "say_intro": "A Telegram community is only an asset if someone looks after it. In this lesson you'll choose between a channel and a group, set up roles and permissions, and build pinned rules, a content calendar and a moderator routine.",
+      "say_outro": "Name a moderator, limit permissions, pin your rules and admin list, keep a steady calendar and handle scams in the open. Your task: write your group's pinned rules, official admin list and a one week content calendar, and name the moderator for each day. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "You have 3,000 joins, 750 registrations and 60 FTDs. Registration-to-FTD fell from 15% to 8% this month while other rates held. Where do you look first?",
+      "options": [
+        "Ad creative",
+        "The step between sign-up and first deposit",
+        "Targeting",
+        "Payout terms"
+      ],
+      "answer": 1,
+      "why": "60 ÷ 750 = 8%. Only that stage dropped, so the problem lies between registration and deposit, such as verification or onboarding."
+    },
+    {
+      "q": "A teammate wants to import a purchased list of 10,000 Telegram users into your broadcasts. What do you do?",
+      "options": [
+        "Import it to test",
+        "Import only the Nigerian numbers",
+        "Refuse: those people never consented and buying lists breaks data protection rules",
+        "Import it but add a stop option"
+      ],
+      "answer": 2,
+      "why": "You may only message people who opted in to you. Bought lists have no valid consent."
+    },
+    {
+      "q": "A broadcast reached 4,000 people and 60 left. Your usual rate for that segment is 0.75%. What does your starting frequency rule say?",
+      "options": [
+        "1.5% is normal; keep frequency",
+        "0.15%; send more",
+        "1.5% is 2× your average, so halve frequency for that segment and review content",
+        "15%; delete the channel"
+      ],
+      "answer": 2,
+      "why": "60 ÷ 4,000 = 1.5%, twice the usual 0.75%, which triggers halving frequency for that segment."
+    },
+    {
+      "q": "A depositor who lost money tells your bot they are stepping back. What is the right reply?",
+      "options": [
+        "Offer a bonus to redeposit today",
+        "Tell them losses are temporary",
+        "Ignore and keep broadcasting",
+        "Acknowledge it, offer an optional risk guide and an easy way to stop messages"
+      ],
+      "answer": 3,
+      "why": "Respectful, honest support with a clear opt-out is the only acceptable approach."
+    },
+    {
+      "q": "A scammer copying your admin's name messages members asking for a \"verification fee\". Two members have already paid. What does your moderation rule say?",
+      "options": [
+        "Remove and ban the account at once, warn the group openly and repin the official admin list",
+        "Wait to see if it happens again",
+        "Message the scammer to ask them to stop",
+        "Delete the group and start a new one"
+      ],
+      "answer": 0,
+      "why": "Impersonators are removed and banned immediately, and the group is warned openly so others can spot the fake."
+    },
+    {
+      "q": "Your win-back sequence reactivated 9% of a segment; a 10% holdout reactivated 6%. How do you report the result?",
+      "options": [
+        "9% reactivation",
+        "15% reactivation",
+        "About 3 points added by the messages",
+        "The sequence failed"
+      ],
+      "answer": 2,
+      "why": "The holdout shows natural returns; the true lift is 9% − 6% = 3 points."
+    },
+    {
+      "q": "Commission per FTD: M1 $15, M2 $9, M3 $6. You add 80 FTDs a month. What is income in month three?",
+      "options": [
+        "$1,200",
+        "$2,400",
+        "$1,920",
+        "$2,880"
+      ],
+      "answer": 1,
+      "why": "(80 × $6) + (80 × $9) + (80 × $15) = $480 + $720 + $1,200 = $2,400."
+    },
+    {
+      "q": "Your cash is thin, you need payouts within weeks, and the RevShare terms include negative carryover you cannot model. Which deal fits?",
+      "options": [
+        "Full RevShare",
+        "No deal, stop buying",
+        "Lifetime RevShare with carryover",
+        "CPA, or a hybrid with a meaningful CPA part"
+      ],
+      "answer": 3,
+      "why": "Tight cash and unclear carryover risk favour fast, fixed income."
+    },
+    {
+      "q": "Better onboarding lifts commission from month two onward by 25%. Base per-FTD values: M1 $12, months 2-7 total $24. What is the new 7-month value?",
+      "options": [
+        "$42",
+        "$45",
+        "$36",
+        "$30"
+      ],
+      "answer": 0,
+      "why": "$24 × 1.25 = $30, plus $12 = $42 per FTD."
+    },
+    {
+      "q": "Your report shows one blended LTV of $40 across all cohorts, and you want to raise the target CPA to $38. What do you check first?",
+      "options": [
+        "Nothing, $40 is above $38",
+        "Cohort LTV at the same age, using paid earnings, and overheads per FTD",
+        "Only the newest cohort's 7-day LTV",
+        "Competitors' CPAs"
+      ],
+      "answer": 1,
+      "why": "Blended LTVs mix old tails with new cohorts and can overstate value; check same-age cohorts and overheads first."
+    }
+  ]
+}

@@ -1,0 +1,2838 @@
+{
+  "school": "v-igaming",
+  "order": 3,
+  "slug": "funnels",
+  "title": "iGaming funnels",
+  "summary": "How to choose and build honest iGaming funnels: prelanders that pass review, official app installs, Telegram tipster channels with age gates and full records, retention broadcasts without pressure and bonus messaging that keeps terms clear. You finish able to measure every step and fix the one that earns the most.",
+  "lessons": [
+    {
+      "slug": "choosing-a-funnel",
+      "title": "Choosing an iGaming funnel",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can name the four main iGaming funnel types and what each is good for.",
+        "You can compare funnels on cost per FTD and on value over time.",
+        "You can match a funnel to your deal type.",
+        "You can set up a fair test between two funnels."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the funnel decides your cost per FTD",
+          "p": "The same ad, budget and offer can produce very different costs per FTD depending on what happens after the click. A funnel that warms people up can lower your cost, and one that builds a channel can keep paying for months. A badly matched funnel wastes both.",
+          "d": {
+            "b": "Same click, different journey, different result",
+            "s": "Choose the funnel to fit the deal."
+          },
+          "say": "Here's something that surprises beginners. The same ad, budget and offer can produce very different costs per F T D, first time deposit, depending on what happens after the click. A funnel that warms people up can lower your cost. One that builds a channel can keep paying for months. A badly matched funnel wastes both. Same click, different journey, different result. So choose the funnel to fit the deal."
+        },
+        {
+          "v": "cards",
+          "h": "The four main funnel types",
+          "p": "A rough guide. Each type can be done honestly or badly; the rest of this module teaches the honest version of each. Start with one type, learn it well, and add a second only when you have data.",
+          "d": [
+            "Direct link|Ad straight to the operator's page",
+            "Prelander|Your page first: fixtures, preview, terms, then the operator",
+            "App install|Ad to the brand's official app in a store",
+            "Telegram channel|Ad to a channel or bot, then content and links over time"
+          ],
+          "say": "Here are the four main types, as a rough guide. Direct link sends the ad straight to the operator's page. A prelander puts your page first, with fixtures, a preview and terms, then the operator. App install sends the ad to the brand's official app in a store. And Telegram channel sends people to a channel or bot, then content and links over time. Each can be done honestly or badly, and this module teaches the honest version. Start with one type and add a second only when you have data."
+        },
+        {
+          "v": "map",
+          "h": "How the funnels connect",
+          "p": "All four end at the same place: an adult registers and deposits with a licensed operator, and the network reports it. What changes is how many steps there are, and how many chances you get to reach the person again.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Meta ad",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Prelander",
+                "kind": "page"
+              },
+              {
+                "id": "app",
+                "label": "Official app",
+                "kind": "tool"
+              },
+              {
+                "id": "tg",
+                "label": "Join request",
+                "kind": "telegram"
+              },
+              {
+                "id": "bot",
+                "label": "Age gate bot",
+                "kind": "bot"
+              },
+              {
+                "id": "op",
+                "label": "Operator sign-up",
+                "kind": "offer"
+              },
+              {
+                "id": "pb",
+                "label": "Postback",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "op",
+                "direct"
+              ],
+              [
+                "ad",
+                "lp",
+                "click"
+              ],
+              [
+                "lp",
+                "op",
+                "CTA"
+              ],
+              [
+                "ad",
+                "app",
+                "install"
+              ],
+              [
+                "app",
+                "op",
+                "register"
+              ],
+              [
+                "ad",
+                "tg",
+                "join"
+              ],
+              [
+                "tg",
+                "bot",
+                "approve"
+              ],
+              [
+                "bot",
+                "op",
+                "link"
+              ],
+              [
+                "op",
+                "pb",
+                "FTD"
+              ]
+            ]
+          },
+          "say": "This map shows how they connect. Follow the lines from the Meta ad on the left. One goes direct to the operator sign up. One goes through a prelander. One goes through the official app. And one goes through a join request and an age gate bot. But look where they all end: an adult registers and deposits with a licensed operator, and the postback reports the F T D. What changes is the number of steps, and how many chances you get to reach the person again."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: 1,000 clicks through each funnel",
+          "p": "Example. Same ad, $600 spend for 1,000 clicks at $0.60 CPC. Rates are illustrative and vary by geo and angle. The Telegram FTDs arrive over 30 days rather than on the day.",
+          "more": "Working. Direct: 1,000 × 12% = 120 registrations × 20% = 24 FTDs; $600 ÷ 24 = $25.00. Prelander: 1,000 × 60% = 600 clicks to the operator × 22% = 132 registrations × 22% = 29 FTDs (29.04); $600 ÷ 29 = $20.69. Telegram: 1,000 × 35% = 350 joins × 8% within 30 days = 28 FTDs; $600 ÷ 28 = $21.43. The Telegram funnel's real advantage is not in the first 30 days but in the members you can still reach next month, and the FTDs they bring later.",
+          "d": {
+            "cols": [
+              "Funnel",
+              "Path",
+              "FTDs",
+              "CPFTD"
+            ],
+            "rows": [
+              [
+                "Direct",
+                "12% reg, 20% FTD",
+                "24",
+                "$25.00"
+              ],
+              [
+                "Prelander",
+                "60% CTR, 22%, 22%",
+                "29",
+                "$20.69"
+              ],
+              [
+                "Telegram",
+                "35% join, 8% FTD in 30 d",
+                "28",
+                "$21.43"
+              ]
+            ]
+          },
+          "say": "Here's an example with one thousand clicks through each funnel, six hundred dollars of spend at sixty cents a click. The rates are illustrative and vary by geo and angle. Direct gives twenty four F T Ds, twenty five dollars each. The prelander gives twenty nine, about twenty dollars seventy each. Telegram gives twenty eight over thirty days, about twenty one forty three each. But Telegram's real advantage isn't in the first thirty days. It's the members you can still reach next month, and the F T Ds they bring later."
+        },
+        {
+          "v": "table",
+          "h": "Match the funnel to the deal",
+          "p": "A rough guide. CPA deals reward fast, cheap FTDs. RevShare rewards players who stay, which favours funnels where you can keep providing useful content. Treat this as a starting point, then let your own numbers decide.",
+          "d": {
+            "cols": [
+              "Deal",
+              "Good fit",
+              "Why"
+            ],
+            "rows": [
+              [
+                "CPA",
+                "Prelander or direct",
+                "Fast FTDs, simple tracking"
+              ],
+              [
+                "RevShare",
+                "Telegram or prelander",
+                "Ongoing contact, retention"
+              ],
+              [
+                "Hybrid",
+                "Prelander + Telegram",
+                "Cash now, value later"
+              ],
+              [
+                "App-only brand",
+                "Official app",
+                "Brand's best journey"
+              ]
+            ]
+          },
+          "say": "Now match the funnel to your deal, as a rough guide. On a C P A deal, cost per acquisition, you're rewarded for fast, cheap F T Ds, so a prelander or direct link fits. RevShare, revenue share, rewards players who stay, so Telegram or a prelander fits, because you keep in contact. A hybrid deal suits a prelander plus Telegram, cash now and value later. And an app only brand suits the official app. Treat this as a starting point, then let your own numbers decide."
+        },
+        {
+          "v": "partner",
+          "h": "Ask partners what their funnels support",
+          "p": "Before you build, ask each partner which funnels they allow, whether they have a store-listed app for your geo and whether Telegram traffic is accepted. The answers narrow your choice.",
+          "d": {
+            "vertical": "igaming",
+            "note": "Prefer partners who say in writing which funnel types and traffic sources they accept per geo."
+          },
+          "say": "Before you build anything, ask your partners some questions. Which funnels do they allow? Do they have a store listed app for your geo? Is Telegram traffic accepted? The answers narrow your choice quickly. And prefer partners who say in writing which funnel types and traffic sources they accept for each geo."
+        },
+        {
+          "v": "flow",
+          "h": "Pick your first funnel",
+          "p": "Follow this order. It keeps your first funnel simple and trackable, and adds complexity only when you have data and a reason. Write your choice and the reason in your log.",
+          "d": [
+            "Check the deal type and allowed sources",
+            "CPA: start with a prelander",
+            "RevShare: prelander plus Telegram",
+            "App-first brand: official app only",
+            "Test one change at a time"
+          ],
+          "say": "Here's the order for picking your first funnel. First, check the deal type and the allowed sources. If it's C P A, start with a prelander. If it's RevShare, use a prelander plus Telegram. If it's an app first brand, use the official app only. And then test one change at a time. This keeps your first funnel simple and trackable. Write your choice, and the reason, in your log."
+        },
+        {
+          "v": "table",
+          "h": "A fair test between two funnels",
+          "p": "Example. Testing a prelander against direct link for a $28 target CPA. Equal budgets, same ad, same audience, same days. Decide only when each side has spent at least 3 × target.",
+          "more": "Example: 3 × $28 = $84 per side. At $28 a day that is three days. Judge on projected or confirmed qualified CPA, not on clicks or registrations. If both are within 10% of each other, keep the simpler funnel; fewer steps means fewer things to break.",
+          "d": {
+            "cols": [
+              "Setting",
+              "Funnel A",
+              "Funnel B"
+            ],
+            "rows": [
+              [
+                "Ad and audience",
+                "Same",
+                "Same"
+              ],
+              [
+                "Daily budget",
+                "$28",
+                "$28"
+              ],
+              [
+                "Minimum spend each",
+                "$84",
+                "$84"
+              ],
+              [
+                "Decide on",
+                "Qualified CPA",
+                "Qualified CPA"
+              ]
+            ]
+          },
+          "say": "Here's an example of a fair test: a prelander against a direct link, with a twenty eight dollar target C P A. Look at the table. Same ad and audience on both sides. Twenty eight dollars a day each. And a minimum spend of eighty four dollars each, that's three times target, so about three days. Decide on qualified C P A, not clicks or registrations. And if both end up within ten percent of each other, keep the simpler funnel, because fewer steps means fewer things to break."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: daily budget for a fair test",
+          "p": "Plan the test budget. You want each arm to reach 3 × target spend of $84 in 3 days. Work out the daily budget for one arm.",
+          "d": {
+            "kind": "budget",
+            "task": "Each arm needs 3 conversions' worth of spend at a $28 target over 3 days. What daily budget per arm?",
+            "preset": {
+              "goal": 3,
+              "target_cpa": 28,
+              "days": 3
+            },
+            "answer": {
+              "field": "daily_budget",
+              "value": 28,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Time for a lab. You want each arm of your test to reach three times target spend, eighty four dollars, in three days, with a twenty eight dollar target. Work out the daily budget for one arm. Pause and try it, then check your answer."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and fixes",
+          "p": "Most funnel mistakes are about building too much too early, or comparing funnels on the wrong number. Each fix keeps your test clean, so the result you get is one you can trust and act on.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Building all four funnels at once",
+                "Comparing on registrations",
+                "Telegram judged after 3 days",
+                "Different ads in each test arm"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "One funnel, then test one alternative",
+                "Compare on qualified CPA",
+                "Judge Telegram over 30 days",
+                "Same ad, audience and days"
+              ]
+            }
+          },
+          "say": "Most funnel mistakes come from building too much too early, or comparing on the wrong number. On the left: building all four funnels at once, comparing on registrations, judging Telegram after three days, and using different ads in each test arm. On the right, the fixes: one funnel, then test one alternative. Compare on qualified C P A. Judge Telegram over thirty days. And keep the same ad, audience and days. Clean tests give results you can trust."
+        },
+        {
+          "v": "tip",
+          "h": "Every funnel step carries the rules",
+          "p": "The 18+ line, the operator's identity, key terms and responsible gambling wording must appear wherever the user decides: ad, prelander, bot and channel. A compliant ad with a non-compliant page is a non-compliant campaign.",
+          "d": {
+            "kind": "warn",
+            "text": "Gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission; check the current policy and local law before you run."
+          },
+          "say": "Here's a rule for every step of every funnel. The eighteen plus line, the operator's identity, key terms and responsible gambling wording must appear wherever the user decides: the ad, the prelander, the bot and the channel. A compliant ad with a non compliant page is a non compliant campaign. And remember, gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission, so check the current policy and local law before you run."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for funnel tests",
+          "p": "Starting rules to adapt. They keep tests fair and stop you from switching funnels on noise. Write them at the top of your test sheet before the test starts, not after you see the first numbers.",
+          "d": [
+            "One variable per test: the funnel, nothing else",
+            "Each arm spends at least 3 × target before a decision",
+            "Telegram arms: judge at 30 days, not 3",
+            "Within 10% of each other: keep the simpler funnel",
+            "Winner must also pass the compliance gate"
+          ],
+          "say": "Finally, some starting decision rules to adapt. One variable per test, the funnel and nothing else. Each arm spends at least three times target before a decision. Telegram arms are judged at thirty days, not three. Within ten percent of each other, keep the simpler funnel. And the winner must also pass the compliance gate. Write these at the top of your test sheet before the test starts, not after you see the first numbers."
+        }
+      ],
+      "takeaways": [
+        "Direct link, prelander, app install and Telegram each fit different deals.",
+        "Compare funnels on qualified CPA with equal budgets and the same ad.",
+        "Telegram's value shows over weeks; judge it over 30 days."
+      ],
+      "action": "Write down your deal type and allowed traffic sources, pick your first funnel with the flow in this lesson and plan a fair test against one alternative.",
+      "glossary": [
+        {
+          "term": "Direct link",
+          "def": "An ad that sends people straight to the operator's page."
+        },
+        {
+          "term": "Prelander",
+          "def": "Your own page between the ad and the operator."
+        },
+        {
+          "term": "Test arm",
+          "def": "One side of a test, such as funnel A or funnel B."
+        },
+        {
+          "term": "Join request",
+          "def": "A Telegram request to join a channel that an admin or bot approves."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "$600 spend, 1,000 clicks, 12% register, 20% of those deposit. CPFTD?",
+          "options": [
+            "$20.00",
+            "$25.00",
+            "$50.00",
+            "$5.00"
+          ],
+          "answer": 1,
+          "why": "120 registrations × 20% = 24 FTDs; $600 ÷ 24 = $25."
+        },
+        {
+          "q": "Which funnel usually fits a RevShare deal best?",
+          "options": [
+            "Direct link only",
+            "Whatever is cheapest on day 1",
+            "None",
+            "One that lets you keep reaching players, such as Telegram"
+          ],
+          "answer": 3,
+          "why": "RevShare rewards retention, so ongoing contact helps."
+        },
+        {
+          "q": "Target CPA $28. Minimum spend per arm before deciding?",
+          "options": [
+            "$28",
+            "$56",
+            "$84",
+            "$280"
+          ],
+          "answer": 2,
+          "why": "3 × $28 = $84 per arm."
+        },
+        {
+          "q": "Two funnels finish within 10% on qualified CPA. Which do you keep?",
+          "options": [
+            "The simpler one",
+            "The more complex one",
+            "Both forever",
+            "Neither"
+          ],
+          "answer": 0,
+          "why": "Fewer steps means fewer things to break."
+        },
+        {
+          "q": "When should a Telegram funnel arm be judged?",
+          "options": [
+            "After 3 days",
+            "After 30 days",
+            "After 1 hour",
+            "Never"
+          ],
+          "answer": 1,
+          "why": "FTDs from a channel arrive over weeks; judge at 30 days."
+        }
+      ],
+      "say_intro": "In this lesson you'll meet the four main iGaming funnel types and learn how to pick the right one for your deal. You'll also learn to run a fair test between two funnels, because the funnel often decides your cost per F T D, first time deposit.",
+      "say_outro": "So, there are four funnel types, they all end at a licensed operator, you match the funnel to the deal, and you test one change at a time on qualified C P A. Your task: write down your deal type and allowed traffic sources, pick your first funnel with the flow from this lesson, and plan a fair test against one alternative. Now take the quiz."
+    },
+    {
+      "slug": "prelanders-that-pass-review",
+      "title": "Prelanders that pass review",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can build a prelander with the six blocks an iGaming page needs.",
+        "You can work out how prelander click-through changes your cost per FTD.",
+        "You can pass click IDs and sub-IDs through the page.",
+        "You can find the weakest step in a funnel and fix it first."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why a prelander earns its place",
+          "p": "A good prelander gives people a reason to click that matches the ad, shows who the operator is and puts the terms in plain sight. That raises intent before the operator's page, which usually raises the share of FTDs. A bad one adds a step, slows the page and loses people.",
+          "d": {
+            "b": "Warm the click, show the terms",
+            "s": "A prelander must add value or it only adds a step."
+          },
+          "say": "Why use a prelander at all? A good one gives people a reason to click that matches the ad, shows who the operator is, and puts the terms in plain sight. That raises intent before the operator's page, which usually raises the share of F T Ds, first time deposits. A bad one just adds a step, slows the page and loses people. So warm the click and show the terms. A prelander must add value, or it only adds a step."
+        },
+        {
+          "v": "check",
+          "h": "The six blocks of an iGaming prelander",
+          "p": "Build every page from these blocks, in this order on a phone. Keep it short: one screen for the offer, one for the content. Missing any block is a reason to fix the page before you send traffic.",
+          "d": [
+            "Headline that matches the ad",
+            "Real content: fixtures, odds preview, game info",
+            "Operator name and licence line",
+            "Bonus box with key terms",
+            "One clear button to the operator",
+            "Footer: 18+, gamble responsibly, help link"
+          ],
+          "say": "Here are the six blocks, in order, on a phone. A headline that matches the ad. Real content, like fixtures, an odds preview or game info. The operator name and licence line. A bonus box with key terms. One clear button to the operator. And a footer with eighteen plus, gamble responsibly, and a help link. Keep it short, one screen for the offer and one for the content. If any block is missing, fix the page before you send traffic."
+        },
+        {
+          "v": "phone",
+          "h": "A prelander on a phone",
+          "p": "This mock-up shows the blocks on a small screen. The terms and the 18+ marker are visible before the button, not hidden at the bottom. The content is the reason to be here.",
+          "d": {
+            "app": "browser",
+            "url": "yourdomain.example/ke/matchday",
+            "page": {
+              "h": "Saturday's top 5 fixtures, with odds",
+              "p": "Kick-off times and prices from a bookmaker licensed in Kenya. Welcome offer for new customers 18+: key terms below. Gamble responsibly.",
+              "cta": "See odds and full terms"
+            }
+          },
+          "say": "Here's a mock up of those blocks on a small screen. The headline promises Saturday's top five fixtures, with odds. Underneath, it says the prices come from a bookmaker licensed in Kenya, mentions the welcome offer for new customers eighteen plus with key terms below, and says gamble responsibly. Notice the terms and the eighteen plus marker are visible before the button, not hidden at the bottom. And the content is the reason to be here."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: prelander click-through",
+          "p": "Example. $600 spend brings 1,000 visitors. Registration and FTD rates after the click stay the same. Only the prelander's click-through changes, from 55% to 65%.",
+          "more": "Working: 550 × 22% = 121, × 22% = 26.62 FTDs; $600 ÷ 26.62 = $22.54. 650 × 22% = 143, × 22% = 31.46; $600 ÷ 31.46 = $19.07. A ten-point rise in click-through cut CPFTD by about 15%. That is why the prelander is often the cheapest place to improve a funnel: you control it fully and can test it quickly.",
+          "d": {
+            "cols": [
+              "Step",
+              "At 55%",
+              "At 65%"
+            ],
+            "rows": [
+              [
+                "Clicks to operator",
+                "550",
+                "650"
+              ],
+              [
+                "Registrations, 22%",
+                "121",
+                "143"
+              ],
+              [
+                "FTDs, 22%",
+                "26.6",
+                "31.5"
+              ],
+              [
+                "CPFTD",
+                "$22.54",
+                "$19.07"
+              ]
+            ]
+          },
+          "say": "Let's see what click through is worth. In this example, six hundred dollars brings one thousand visitors, and only the prelander's click through changes, from fifty five percent to sixty five. At fifty five percent you get about twenty six and a half F T Ds, at about twenty two dollars fifty each. At sixty five percent you get about thirty one and a half, at about nineteen dollars. So a ten point rise cut the cost per F T D by about fifteen percent. The prelander is often the cheapest place to improve, because you control it fully and can test it quickly."
+        },
+        {
+          "v": "code",
+          "h": "Pass the click ID and sub-IDs through",
+          "p": "Your prelander must carry the tracking from the ad to the operator, or the network cannot tell you which ad produced which FTD. Read the parameters from the page address and add them to the button link.",
+          "d": {
+            "lang": "js",
+            "text": "const q = new URLSearchParams(location.search);\nconst out = new URL('https://track.network.example/c/123');\n['sub1','sub2','sub3','fbclid'].forEach(k => { if (q.get(k)) out.searchParams.set(k, q.get(k)); });\ndocument.querySelector('#cta').href = out.toString();",
+            "note": "Example. Parameter names differ by network; ask yours which to use."
+          },
+          "say": "Your prelander must carry the tracking from the ad to the operator, or the network can't tell you which ad produced which F T D. The code on screen reads the parameters from the page address, like the sub I Ds and the click I D, and adds them to the button link. This is an example, and parameter names differ by network, so ask yours which to use."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: find the weakest step",
+          "p": "Here is a week of prelander data. Find the step with the lowest pass-through rate. That is usually the first place to test a change.",
+          "d": {
+            "kind": "funnel",
+            "task": "Which step loses the biggest share of people?",
+            "preset": {
+              "steps": [
+                [
+                  "Ad clicks",
+                  1000
+                ],
+                [
+                  "Lander views",
+                  820
+                ],
+                [
+                  "Offer clicks",
+                  180
+                ],
+                [
+                  "Registrations",
+                  70
+                ],
+                [
+                  "FTDs",
+                  20
+                ]
+              ],
+              "payout": 40
+            },
+            "answer": {
+              "field": "worst_step",
+              "value": 2
+            }
+          },
+          "say": "Time for a lab. Here's a week of prelander data: one thousand ad clicks, eight hundred and twenty lander views, one hundred and eighty offer clicks, seventy registrations, and twenty F T Ds. Find the step with the lowest pass through rate, the step that loses the biggest share of people. That's usually the first place to test a change. Pause and try it, then check your answer."
+        },
+        {
+          "v": "cards",
+          "h": "Fixes by weak step",
+          "p": "A rough guide to where to look first. Change one thing at a time and give each version enough traffic before you judge. Write down what you changed and when.",
+          "d": [
+            "Clicks to views low|Page too slow or broken on mobile",
+            "Views to offer clicks low|Headline does not match the ad, weak content",
+            "Offer clicks to registrations low|Mismatch between promise and operator page",
+            "Registrations to FTD low|Terms unclear, payment methods missing"
+          ],
+          "say": "Here's where to look first for each weak step, as a rough guide. If clicks to views are low, the page is probably too slow or broken on mobile. Views to offer clicks low? The headline doesn't match the ad, or the content is weak. Offer clicks to registrations low? There's a mismatch between your promise and the operator page. Registrations to F T D low? Terms are unclear, or payment methods are missing. Change one thing at a time, give it enough traffic, and write down what you changed and when."
+        },
+        {
+          "v": "product",
+          "h": "Research angles before you write",
+          "p": "Look at what licensed brands and affiliates in your geo are running now to understand angles and page structures. Learn from them and write your own. Never copy pages, creatives or logos.",
+          "d": {
+            "slug": "spyvoo",
+            "why": "See live gambling ads and landers by geo so you can spot angles and compliant structures to learn from."
+          },
+          "say": "Before you write, research. Look at what licensed brands and affiliates in your geo are running now, to understand angles and page structures. On screen is Spyvoo, which shows live gambling ads and landers by geo, so you can spot angles and compliant structures to learn from. Learn from them and write your own. Never copy pages, creatives or logos."
+        },
+        {
+          "v": "compare",
+          "h": "Advertorials: honest versus banned",
+          "p": "Pages styled as news or reviews must be honest about what they are. Fake news sites and fake endorsements are banned by platforms and mislead people.",
+          "d": {
+            "a": {
+              "title": "Banned",
+              "items": [
+                "Fake news site with invented story",
+                "Celebrity 'endorsement' they never gave",
+                "Invented winner testimonials",
+                "Countdown timers that reset"
+              ]
+            },
+            "b": {
+              "title": "Honest",
+              "items": [
+                "Clearly labelled preview or guide",
+                "Real fixtures and published odds",
+                "No testimonials you cannot verify",
+                "Real deadlines from the brand's terms"
+              ]
+            }
+          },
+          "say": "Pages styled as news or reviews must be honest about what they are. On the left, banned: a fake news site with an invented story, a celebrity endorsement they never gave, invented winner testimonials, and countdown timers that reset. These are banned by platforms and mislead people. On the right, honest: a clearly labelled preview or guide, real fixtures and published odds, no testimonials you can't verify, and real deadlines from the brand's terms."
+        },
+        {
+          "v": "cards",
+          "h": "Common mistakes and fixes",
+          "p": "These mistakes cost click-through, tracking or approval. Each fix is quick once you know to look for it. Check for all four on every new page before launch.",
+          "d": [
+            "Mistake: heavy images, slow page|Fix: compress, test on a mid-range phone on mobile data",
+            "Mistake: tracking lost at the button|Fix: pass sub-IDs and click ID",
+            "Mistake: terms in the footer only|Fix: bonus box above the button",
+            "Mistake: several buttons to different brands|Fix: one action per page"
+          ],
+          "say": "Four common mistakes, each with a quick fix. Heavy images and a slow page, so compress and test on a mid range phone on mobile data. Tracking lost at the button, so pass the sub I Ds and click I D. Terms only in the footer, so put the bonus box above the button. And several buttons to different brands, so keep one action per page. Check all four on every new page before launch."
+        },
+        {
+          "v": "tip",
+          "h": "Prelanders are reviewed too",
+          "p": "Platforms review where an ad sends people. The page must match the ad, show the operator and carry 18+ and responsible gambling lines. The same page must be shown to reviewers and to users.",
+          "d": {
+            "kind": "warn",
+            "text": "Gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission; check the current policy and local law before you run."
+          },
+          "say": "Remember, platforms review where an ad sends people. The page must match the ad, show the operator, and carry the eighteen plus and responsible gambling lines. And the same page must be shown to reviewers and to users. Gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission, so check the current policy and local law before you run."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for prelanders",
+          "p": "Starting rules to adapt; benchmarks are rough guides that vary by geo and angle. Judge versions only after enough visitors. Write the result of every version in your log so you do not test the same idea twice.",
+          "d": [
+            "Page slower than about 3 s on mobile data: fix before spending more",
+            "Click-through under 30% after 500 views: rewrite headline or content",
+            "Each version needs 300+ offer clicks before you call a winner",
+            "Winner must beat the old one on qualified CPA, not just CTR",
+            "Any change to terms: update the bonus box the same day"
+          ],
+          "say": "Here are starting decision rules to adapt. Benchmarks are rough guides that vary by geo and angle. If the page is slower than about three seconds on mobile data, fix it before spending more. Click through under thirty percent after five hundred views, rewrite the headline or content. Each version needs three hundred or more offer clicks before you call a winner. The winner must beat the old one on qualified C P A, cost per acquisition, not just C T R. And any change to terms means updating the bonus box the same day."
+        }
+      ],
+      "takeaways": [
+        "A prelander needs six blocks: matching headline, real content, operator, bonus box, one button, footer.",
+        "Click-through on the prelander is often the cheapest lever on cost per FTD.",
+        "Carry sub-IDs and the click ID through the page or lose your data."
+      ],
+      "action": "Build or audit one prelander against the six-block checklist, test it on a phone over mobile data and confirm sub-IDs reach the network by clicking through and checking the report.",
+      "glossary": [
+        {
+          "term": "Click-through rate (prelander)",
+          "def": "Share of page visitors who click the button to the operator."
+        },
+        {
+          "term": "Pass-through rate",
+          "def": "Share of people at one funnel step who reach the next."
+        },
+        {
+          "term": "Advertorial",
+          "def": "A page styled like an article; must be honest about being promotional."
+        },
+        {
+          "term": "Click ID",
+          "def": "A unique ID for a click, passed along so conversions can be matched to ads."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "$600, 1,000 visitors, 65% click-through, 22% register, 22% deposit. CPFTD?",
+          "options": [
+            "$22.54",
+            "$19.07",
+            "$27.27",
+            "$13.99"
+          ],
+          "answer": 1,
+          "why": "650 × 22% × 22% = 31.46 FTDs; $600 ÷ 31.46 = $19.07."
+        },
+        {
+          "q": "Views 820, offer clicks 180, registrations 70, FTDs 20. Which step has the lowest pass-through?",
+          "options": [
+            "Views to offer clicks",
+            "Offer clicks to registrations",
+            "Registrations to FTDs",
+            "Clicks to views"
+          ],
+          "answer": 0,
+          "why": "180 ÷ 820 = 22%, lower than 39% and 29%."
+        },
+        {
+          "q": "Which is an honest advertorial element?",
+          "options": [
+            "A celebrity quote they never gave",
+            "An invented big winner",
+            "A timer that resets",
+            "A clearly labelled fixtures preview"
+          ],
+          "answer": 3,
+          "why": "Real content, clearly labelled, is honest."
+        },
+        {
+          "q": "Why pass sub-IDs through the prelander?",
+          "options": [
+            "To raise CPM",
+            "Platforms require it",
+            "So the network can report which ad produced each FTD",
+            "To hide traffic"
+          ],
+          "answer": 2,
+          "why": "Without them, the data linking ads to FTDs is lost."
+        },
+        {
+          "q": "A new version has a higher CTR but a worse qualified CPA. Which wins?",
+          "options": [
+            "The new version",
+            "The old version",
+            "Neither; average them",
+            "The one with more clicks"
+          ],
+          "answer": 1,
+          "why": "Winners are judged on qualified CPA, not CTR."
+        }
+      ],
+      "say_intro": "This lesson is about prelanders, the page you control between the ad and the operator. You'll learn the six blocks every iGaming prelander needs, how click through changes your cost, and how to keep tracking intact.",
+      "say_outro": "So, a prelander must add value, it carries six blocks with terms visible before the button, it passes your tracking through, and you fix the weakest step first. Your task: build or audit one prelander against the six block checklist, test it on a phone over mobile data, and confirm your sub I Ds reach the network by clicking through and checking the report. Now take the quiz."
+    },
+    {
+      "slug": "app-install-funnels",
+      "title": "App install funnels",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can tell store apps, web apps and sideloaded files apart, and why only official routes are safe.",
+        "You can calculate cost per FTD from cost per install.",
+        "You can describe how installs and deposits are tracked.",
+        "You can set rules for app campaigns."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why app funnels can be strong, and risky",
+          "p": "Players who install a brand's app often come back more, because the app sits on their home screen. That can raise value per player. But app stores, platforms and laws have strict rules for real-money gambling apps, and unofficial download files are a security and policy risk.",
+          "d": {
+            "b": "Official apps only",
+            "s": "Store-listed or the brand's own official web app."
+          },
+          "say": "App funnels can be strong. Players who install a brand's app often come back more, because the app sits on their home screen, and that can raise value per player. But they're also risky. App stores, platforms and laws have strict rules for real money gambling apps, and unofficial download files are a security and policy risk. So the rule is simple: official apps only. That means store listed, or the brand's own official web app."
+        },
+        {
+          "v": "cards",
+          "h": "Three kinds of 'app' you will be offered",
+          "p": "A rough guide at the time of writing. Store rules for gambling apps vary by country and change; check the current store policies and ask the brand how its app is distributed in your geo.",
+          "d": [
+            "Store app|Listed in an official app store, by the licensed operator",
+            "Web app (PWA)|A website that can be added to the home screen",
+            "Sideloaded file|An APK downloaded outside a store; avoid promoting"
+          ],
+          "say": "You'll be offered three kinds of app. A store app, listed in an official app store by the licensed operator. A web app, sometimes called a P W A, which is a website that can be added to the home screen. And a sideloaded file, an A P K downloaded outside a store, which you should avoid promoting. This is a rough guide at the time of writing. Store rules for gambling apps vary by country and change, so check current policies and ask the brand how its app is distributed in your geo."
+        },
+        {
+          "v": "table",
+          "h": "Store and platform positions",
+          "p": "Positions as we understand them at the time of writing. We are not certain these are current for every country; check the store's and the ad platform's own policy pages before you rely on them.",
+          "d": {
+            "cols": [
+              "Area",
+              "Position",
+              "Check"
+            ],
+            "rows": [
+              [
+                "Google Play",
+                "Real-money gambling apps only in some countries, with approval",
+                "Play policy: gambling"
+              ],
+              [
+                "Apple App Store",
+                "Licensed operators, permitted geos",
+                "App Review guidelines"
+              ],
+              [
+                "APK links in ads",
+                "Often restricted or risky",
+                "Ad platform policy"
+              ],
+              [
+                "Your role",
+                "Promote the operator's own app",
+                "Deal terms"
+              ]
+            ]
+          },
+          "say": "Here are the store and platform positions as we understand them at the time of writing. Google Play allows real money gambling apps only in some countries, with approval. Apple's App Store allows licensed operators in permitted geos. A P K links in ads are often restricted or risky. And your role is to promote the operator's own app. We're not certain these are current for every country, so check the store's and the ad platform's own policy pages, listed in the last column, before you rely on them."
+        },
+        {
+          "v": "eq",
+          "h": "From cost per install to cost per FTD",
+          "p": "Each step after the install loses people. Divide the cost per install by both pass-through rates to get cost per FTD. Ask the brand for typical install-to-registration rates in your geo before you launch.",
+          "more": "Example. CPI $0.80. 25% of installs register, 20% of registrations deposit. $0.80 ÷ (0.25 × 0.20) = $0.80 ÷ 0.05 = $16 per FTD. If install to registration drops to 15%, CPFTD becomes $0.80 ÷ 0.03 = $26.67. Small changes in onboarding move your cost a lot.",
+          "d": [
+            "CPI",
+            "÷",
+            "(install to reg × reg to FTD)",
+            "=",
+            "CPFTD"
+          ],
+          "say": "Each step after the install loses people. So to get cost per F T D, take the cost per install and divide it by both pass through rates multiplied together, install to registration and registration to F T D. For example, eighty cents per install, twenty five percent register, and twenty percent of those deposit. Eighty cents divided by zero point zero five is sixteen dollars. If registrations drop to fifteen percent, it becomes about twenty six dollars sixty seven. Small changes in onboarding move your cost a lot, so ask the brand for typical rates first."
+        },
+        {
+          "v": "stat",
+          "h": "Example: cost per FTD from installs",
+          "p": "Example. $0.80 per install, 25% register, 20% of those deposit. Compare this with your web funnel's qualified CPA before you move budget, and remember app FTDs also need to qualify.",
+          "d": {
+            "n": 16,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "cost per FTD",
+            "note": "Example: $0.80 ÷ (25% × 20%)."
+          },
+          "say": "So in that example, the cost per F T D is sixteen dollars, from eighty cents per install, twenty five percent registering and twenty percent depositing. Before you move budget, compare this with your web funnel's qualified C P A, cost per acquisition. And remember, app F T Ds also need to qualify."
+        },
+        {
+          "v": "map",
+          "h": "How app conversions are tracked",
+          "p": "Apps are usually tracked by a mobile measurement partner, which matches installs to clicks and sends events onward. Ask the brand which partner and events they use, and how FTDs reach your network.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "App ad",
+                "kind": "ad"
+              },
+              {
+                "id": "store",
+                "label": "Official store",
+                "kind": "page"
+              },
+              {
+                "id": "app",
+                "label": "Brand app",
+                "kind": "tool"
+              },
+              {
+                "id": "mmp",
+                "label": "Measurement partner",
+                "kind": "data"
+              },
+              {
+                "id": "net",
+                "label": "Network",
+                "kind": "data"
+              },
+              {
+                "id": "you",
+                "label": "Your report",
+                "kind": "money"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "store",
+                "tap"
+              ],
+              [
+                "store",
+                "app",
+                "install"
+              ],
+              [
+                "app",
+                "mmp",
+                "events"
+              ],
+              [
+                "mmp",
+                "net",
+                "FTD"
+              ],
+              [
+                "net",
+                "you",
+                "postback"
+              ]
+            ]
+          },
+          "say": "Apps are usually tracked by a mobile measurement partner. Follow the map. The app ad leads to the official store, then the install opens the brand app. The app sends events to the measurement partner, which matches installs to clicks and passes the F T D to the network. The network then sends a postback to your report. Ask the brand which partner and events they use, and how F T Ds reach your network."
+        },
+        {
+          "v": "walk",
+          "h": "Set up an app campaign the safe way",
+          "p": "Steps at principle level; setting names change, so check the current Ads Manager. Screens are mock-ups. Do every step before the first dollar of spend, and repeat the last one whenever the brand updates its app.",
+          "d": {
+            "steps": [
+              {
+                "title": "Confirm the official app",
+                "text": "Get the store link from the brand in writing and confirm the developer name matches the licensed operator.",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "store.example/app/examplebet-gh",
+                  "page": {
+                    "h": "ExampleBet Ghana",
+                    "p": "Developer: Example Gaming Ltd. 18+. Licensed in Ghana.",
+                    "cta": "Install"
+                  }
+                }
+              },
+              {
+                "title": "Get your tracking link",
+                "text": "Ask for a tracking link that carries your affiliate ID and sub-IDs into the measurement partner.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/offers/gh-app",
+                  "title": "GH app offer",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Tracking link",
+                      "value": "https://app-track.example/abc?aff=123&sub1={campaign}"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Copy"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Build the campaign",
+                "text": "Use an app promotion objective, the approved country and age floor, and the store link.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/create",
+                  "title": "Create campaign",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Objective",
+                      "value": "App promotion"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Country",
+                      "value": "Ghana (approved)"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Age",
+                      "value": "18+"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Check events arrive",
+                "text": "Install from your own test device, register, and confirm the events reach the network report.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/reports",
+                  "title": "Test events",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Event",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "Install",
+                          "Received"
+                        ],
+                        [
+                          "Registration",
+                          "Received"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Here's how to set up an app campaign safely. These steps are at principle level, setting names change, and the screens are mock ups. Step one, confirm the official app: get the store link from the brand in writing and check the developer name matches the licensed operator. Step two, get a tracking link that carries your affiliate I D and sub I Ds into the measurement partner. Step three, build the campaign with an app promotion objective, the approved country, the age floor and the store link. Step four, install from your own test device, register, and confirm events reach the network report."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: app versus web on true CPA",
+          "p": "Example. The app funnel looks cheaper per FTD, but app players in this example qualify at a different rate. Compare on true CPA, which is CPFTD divided by qualified rate.",
+          "more": "Working: $20.69 ÷ 0.70 = $29.56. $16.00 ÷ 0.65 = $24.62. Here the app wins even with a lower qualified rate. If app players qualified at only 50%, the true CPA would be $32.00 and the web funnel would win. Ask the brand for qualified rates by funnel type, and confirm with your own data.",
+          "d": {
+            "cols": [
+              "Funnel",
+              "CPFTD",
+              "Qualified %",
+              "True CPA"
+            ],
+            "rows": [
+              [
+                "Web prelander",
+                "$20.69",
+                "70%",
+                "$29.56"
+              ],
+              [
+                "App install",
+                "$16.00",
+                "65%",
+                "$24.62"
+              ]
+            ]
+          },
+          "say": "Here's an example comparing app and web on true C P A, which is cost per F T D divided by the qualified rate. The web prelander costs about twenty dollars seventy per F T D, with seventy percent qualifying, so a true C P A of about twenty nine fifty six. The app costs sixteen dollars, with sixty five percent qualifying, so about twenty four sixty two. Here the app wins. But if app players qualified at only fifty percent, the true C P A would be thirty two dollars, and web would win. Ask the brand for qualified rates, and confirm with your own data."
+        },
+        {
+          "v": "cards",
+          "h": "What the brand should give you",
+          "p": "Before an app campaign, collect these from the brand in writing. Without them you cannot track or judge the campaign, and you cannot show a reviewer the app is official.",
+          "d": [
+            "Store link|For each geo, from the brand",
+            "Developer name|Matches the licensed operator",
+            "Tracking link|Carries your ID and sub-IDs",
+            "Events|Which events reach the network",
+            "Creative rules|Approved screenshots and wording"
+          ],
+          "say": "Before an app campaign, collect these from the brand in writing. The store link for each geo. The developer name, which must match the licensed operator. A tracking link that carries your I D and sub I Ds. Which events reach the network. And the creative rules, meaning approved screenshots and wording. Without these, you can't track or judge the campaign, and you can't show a reviewer the app is official."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and fixes",
+          "p": "App funnels add a store and a measurement partner to the chain. Most mistakes come from skipping checks on either. Each fix takes minutes and protects users and your account.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Promoting an APK file from a chat",
+                "Judging on installs",
+                "No test install before launch",
+                "Assuming store approval covers ads"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Official store or brand web app only",
+                "Judge on qualified CPA",
+                "Test install, register, check report",
+                "Platform authorization still needed"
+              ]
+            }
+          },
+          "say": "App funnels add a store and a measurement partner to the chain, and most mistakes come from skipping checks on either. On the left: promoting an A P K file from a chat, judging on installs, no test install before launch, and assuming store approval covers ads. On the right: official store or brand web app only, judge on qualified C P A, test install, register and check the report, and remember platform authorization is still needed."
+        },
+        {
+          "v": "tip",
+          "h": "Never distribute modified apps",
+          "p": "Never host, share or promote modified or unofficial gambling app files. They can carry malware, they bypass store protections and they may be illegal. Promote only the operator's official app or site.",
+          "d": {
+            "kind": "warn",
+            "text": "Gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission; check the current policy and local law before you run."
+          },
+          "say": "This one is serious. Never host, share or promote modified or unofficial gambling app files. They can carry malware, they bypass store protections, and they may be illegal. Promote only the operator's official app or site. And as always, gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission, so check the current policy and local law before you run."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for app campaigns",
+          "p": "Starting rules to adapt, using the same kill and scale lines as web campaigns, on qualified FTDs. Add one app-specific rule for onboarding, because that step is where app funnels most often leak.",
+          "d": [
+            "Kill at 2 × target spend with 0 FTDs",
+            "Kill above the lower of 1.5 × target and payout after 3 × target spend",
+            "Install to registration under 15% after 200 installs: raise with the brand",
+            "Scale +20% at CPA ≤ 0.8 × target with ≥ 3 FTDs, ≥ 48 h apart",
+            "Events missing in the report: pause until fixed"
+          ],
+          "say": "Here are starting rules to adapt, using the same kill and scale lines as web, on qualified F T Ds. Kill at two times target spend with zero F T Ds. After three times target spend, kill if C P A is above the lower of one point five times target and the payout. If install to registration is under fifteen percent after two hundred installs, raise it with the brand. Scale by twenty percent at a C P A of zero point eight times target or better, with at least three F T Ds, forty eight hours apart. And if events go missing in the report, pause until fixed."
+        }
+      ],
+      "takeaways": [
+        "Promote only official store apps or the brand's own web app.",
+        "CPFTD = CPI ÷ (install-to-registration × registration-to-FTD).",
+        "Test the full event chain from your own device before launch."
+      ],
+      "action": "Ask your brand whether it has an official store app for your geo, who the developer is and which measurement partner it uses, and calculate CPFTD from a CPI estimate.",
+      "glossary": [
+        {
+          "term": "CPI",
+          "def": "Cost per install."
+        },
+        {
+          "term": "PWA",
+          "def": "Progressive web app: a website that can be added to a phone's home screen."
+        },
+        {
+          "term": "Sideloading",
+          "def": "Installing an app file from outside an official store."
+        },
+        {
+          "term": "Measurement partner",
+          "def": "A service that matches app installs and events to the ads that drove them."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "CPI $0.80, 25% register, 20% deposit. CPFTD?",
+          "options": [
+            "$4.00",
+            "$3.20",
+            "$16.00",
+            "$8.00"
+          ],
+          "answer": 2,
+          "why": "$0.80 ÷ (0.25 × 0.20) = $16."
+        },
+        {
+          "q": "Install to registration falls to 15%; CPI $0.80, reg to FTD 20%. New CPFTD?",
+          "options": [
+            "$26.67",
+            "$16.00",
+            "$12.00",
+            "$5.33"
+          ],
+          "answer": 0,
+          "why": "$0.80 ÷ 0.03 = $26.67."
+        },
+        {
+          "q": "A partner offers an APK link to share in ads. What do you do?",
+          "options": [
+            "Promote it",
+            "Rename the file",
+            "Host it yourself",
+            "Decline; promote only the official store app or site"
+          ],
+          "answer": 3,
+          "why": "Unofficial files carry security, policy and legal risks."
+        },
+        {
+          "q": "What should you check about a store listing?",
+          "options": [
+            "Star rating only",
+            "That the developer matches the licensed operator",
+            "The icon colour",
+            "Nothing"
+          ],
+          "answer": 1,
+          "why": "The developer should be the licensed operator."
+        },
+        {
+          "q": "Events are not showing in the network report. What do the rules say?",
+          "options": [
+            "Scale anyway",
+            "Switch to installs as the KPI",
+            "Pause until fixed",
+            "Ignore for a week"
+          ],
+          "answer": 2,
+          "why": "Without events you cannot judge; pause until fixed."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn how app install funnels work, why only official apps are safe to promote, and how to turn a cost per install into a cost per F T D, first time deposit.",
+      "say_outro": "So, promote official apps only, convert cost per install into cost per F T D, compare funnels on true C P A, and test the events before you spend. Your task: ask your brand whether it has an official store app for your geo, who the developer is and which measurement partner it uses, then calculate cost per F T D from a cost per install estimate. Now take the quiz."
+    },
+    {
+      "slug": "ethical-telegram-tipster-channels",
+      "title": "Telegram tipster channels, done ethically",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can describe what separates an ethical tips channel from a harmful one.",
+        "You can set up a join-request funnel with an age gate and clear disclosure.",
+        "You can keep an honest public record of every tip, including losses.",
+        "You can apply posting rules that keep the channel safe and compliant."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why tipster channels need the strictest standards",
+          "p": "Tips channels sit next to people's money and hopes every day. Many channels in the market claim sure wins, sell 'fixed matches' or push people to bet more. That causes harm and attracts regulators and fraud reports. An honest channel is rarer, more trusted and lasts longer.",
+          "d": {
+            "b": "Analysis, not promises",
+            "s": "No guaranteed wins. No fixed matches. Adults only."
+          },
+          "say": "Tips channels sit next to people's money and hopes every day. Many channels claim sure wins, sell fixed matches, or push people to bet more. That causes harm, and it attracts regulators and fraud reports. An honest channel is rarer, more trusted, and lasts longer. So the standard here is analysis, not promises. No guaranteed wins. No fixed matches. Adults only."
+        },
+        {
+          "v": "compare",
+          "h": "Harmful channel versus ethical channel",
+          "p": "Read the left column as a list of things you will never do. The right column is the standard this school teaches. If a post would fit on the left, it does not get published.",
+          "d": {
+            "a": {
+              "title": "Harmful",
+              "items": [
+                "'100% sure odds', 'fixed match'",
+                "Paid VIP for 'guaranteed' tips",
+                "Only winning slips posted",
+                "'Win back your losses tonight'"
+              ]
+            },
+            "b": {
+              "title": "Ethical",
+              "items": [
+                "Opinions with reasons and risks",
+                "No paid certainty products",
+                "Full record, wins and losses",
+                "18+, limits, help links, no pressure"
+              ]
+            }
+          },
+          "say": "Compare these two columns. Read the left as a list of things you'll never do: one hundred percent sure odds or fixed match claims, a paid VIP for guaranteed tips, posting only winning slips, and win back your losses tonight. The right is the standard this school teaches: opinions with reasons and risks, no paid certainty products, a full record of wins and losses, and eighteen plus, limits, help links and no pressure. If a post would fit on the left, it doesn't get published."
+        },
+        {
+          "v": "big",
+          "h": "Fixed-match offers are scams",
+          "p": "Anyone selling 'fixed matches' is either lying or describing match-fixing, which is a crime in many countries. Never post, sell, forward or hint at fixed results. If members ask, say plainly that the channel does not deal in them.",
+          "d": {
+            "b": "There is no such product to sell",
+            "s": "Refuse, explain, and never hint at it."
+          },
+          "say": "Let's be completely clear. Anyone selling fixed matches is either lying, or describing match fixing, which is a crime in many countries. Never post, sell, forward or hint at fixed results. There's no such product to sell. If members ask, say plainly that the channel doesn't deal in them. Refuse, explain, and never hint at it."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: an honest tips record",
+          "p": "Example. A channel posts 120 tips in three months at average odds of 2.00, one unit each. 54 win. Publishing this honestly shows members what tipping usually looks like: even decent analysis often loses over time.",
+          "more": "Example maths: 54 of 120 is a 45% strike rate. At odds of 2.00 you need over 50% to break even, so the record loses 10% of stakes. Many channels hide records like this and post only winning slips. You publish the full record, pinned and updated weekly, because members deserve to see it and because it protects you from making claims you cannot support.",
+          "d": {
+            "cols": [
+              "Item",
+              "Working",
+              "Result"
+            ],
+            "rows": [
+              [
+                "Staked",
+                "120 × 1 unit",
+                "120 units"
+              ],
+              [
+                "Returned",
+                "54 × 2.00",
+                "108 units"
+              ],
+              [
+                "Net",
+                "108 - 120",
+                "-12 units"
+              ],
+              [
+                "Return on stakes",
+                "-12 ÷ 120",
+                "-10%"
+              ]
+            ]
+          },
+          "say": "Here's an example of an honest tips record. A channel posts one hundred and twenty tips in three months, at average odds of two point zero, one unit each. Fifty four win, a forty five percent strike rate. That returns one hundred and eight units, so the net is minus twelve units, minus ten percent of stakes. At those odds you'd need over fifty percent just to break even. Many channels hide records like this. You publish the full record, pinned and updated weekly, because members deserve to see it, and it stops you making claims you can't support."
+        },
+        {
+          "v": "map",
+          "h": "An ethical tipster funnel",
+          "p": "The ad brings an adult to a join request. A bot asks for age confirmation and explains what the channel is, then approves. Content, links and records follow, with opt-out at every step.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Ad: what the channel is",
+                "kind": "ad"
+              },
+              {
+                "id": "jr",
+                "label": "Join request",
+                "kind": "telegram"
+              },
+              {
+                "id": "bot",
+                "label": "Bot: 18+ and disclosure",
+                "kind": "bot"
+              },
+              {
+                "id": "ch",
+                "label": "Channel: analysis, record",
+                "kind": "telegram"
+              },
+              {
+                "id": "op",
+                "label": "Licensed operator",
+                "kind": "offer"
+              },
+              {
+                "id": "pb",
+                "label": "Postback",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "jr",
+                "tap"
+              ],
+              [
+                "jr",
+                "bot",
+                "pending"
+              ],
+              [
+                "bot",
+                "ch",
+                "approve"
+              ],
+              [
+                "ch",
+                "op",
+                "link"
+              ],
+              [
+                "op",
+                "pb",
+                "FTD"
+              ]
+            ]
+          },
+          "say": "Here's an ethical tipster funnel. Follow the map. The ad explains what the channel is, and a tap sends a join request. The request waits while a bot asks for eighteen plus confirmation and gives the disclosure. Only then is the person approved into the channel, which carries analysis and the record. From there, links go to a licensed operator, and the postback reports the F T D, first time deposit. And there's an opt out at every step."
+        },
+        {
+          "v": "walk",
+          "h": "Set up the join-request gate",
+          "p": "At the time of writing these are the Telegram mechanics; check the current Bot API documentation. Screens are mock-ups. One invite link per campaign lets you see which ad brought which members.",
+          "d": {
+            "steps": [
+              {
+                "title": "Create the bot",
+                "text": "In @BotFather, send /newbot. The username must end in 'bot'. Keep the token secret.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "BotFather",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "/newbot"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Alright, a new bot. How are we going to call it?"
+                    },
+                    {
+                      "from": "me",
+                      "text": "Matchday Notes Gate"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Now choose a username. It must end in 'bot'."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Make it an admin",
+                "text": "Add the bot to your channel as an admin with permission to invite users.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Channel admins",
+                  "subtitle": "settings",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "Matchday Notes Gate: Invite users via link, on"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Request-approval link",
+                "text": "Create an invite link with 'request admin approval' on, one link per campaign so joins can be tracked.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Invite links",
+                  "subtitle": "settings",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "New link: Request admin approval, on. Name: GH_Matchday_01"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Gate, then approve",
+                "text": "The bot receives the join request, messages the person with the age question and disclosure, and approves only after a yes.",
+                "screen": {
+                  "v": "phone",
+                  "app": "bot",
+                  "title": "Matchday Notes Gate",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "You asked to join Matchday Notes. It is a sports betting channel for adults. We earn a commission if you sign up with brands we link to. Are you 18 or older?",
+                      "buttons": [
+                        "Yes, I am 18+",
+                        "No"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "say": "Here's how to set up the join request gate. These are the Telegram mechanics at the time of writing, so check the current Bot A P I documentation, and the screens are mock ups. Step one, create the bot in BotFather, with a username ending in bot, and keep the token secret. Step two, make the bot a channel admin with permission to invite users. Step three, create an invite link with request admin approval switched on, one link per campaign so joins can be tracked. Step four, the bot messages each person with the age question and disclosure, and approves only after a yes."
+        },
+        {
+          "v": "code",
+          "h": "The Bot API pieces involved",
+          "p": "For whoever builds your bot. The bot gets a chat_join_request update and approves with approveChatJoinRequest. While the request is pending, the bot may message the person for a short window, about 5 minutes at the time of writing; check the current docs.",
+          "d": {
+            "lang": "text",
+            "text": "update: chat_join_request {chat, from, invite_link}\nsendMessage(chat_id = from.id, text = age + disclosure)\non 'Yes, I am 18+': approveChatJoinRequest(chat_id, user_id)\non 'No': declineChatJoinRequest(chat_id, user_id)",
+            "note": "Updates arrive by getUpdates or a webhook. Respect rate limits."
+          },
+          "say": "This slide is for whoever builds your bot. The code on screen shows the pieces. The bot receives a join request update, sends the person a message with the age question and disclosure, approves the request on a yes, and declines it on a no. While the request is pending, the bot may message the person for a short window, about five minutes at the time of writing, so check the current docs. Updates arrive by polling or a webhook, and respect rate limits."
+        },
+        {
+          "v": "product",
+          "h": "Track which ad brought each join",
+          "p": "Once you have one invite link per campaign, you need to know which ad and which link produced each join, and which joins later deposit. That is how you judge a Telegram funnel on money, not member count.",
+          "d": {
+            "slug": "joinvoo",
+            "why": "Tracks Telegram join requests per link and ad so you can compare campaigns on joins and later FTDs."
+          },
+          "say": "Once you have one invite link per campaign, you need to know which ad and link produced each join, and which joins later deposit. That's how you judge a Telegram funnel on money, not member count. On screen is Joinvoo, which tracks Telegram join requests per link and ad, so you can compare campaigns on joins and later F T Ds."
+        },
+        {
+          "v": "cards",
+          "h": "Posting rules for an ethical channel",
+          "p": "Write these into the channel description and follow them in every post. They are what make the channel trustworthy, and they keep you clear of the claims regulators and platforms ban.",
+          "d": [
+            "Opinion, not certainty|Say why, and what could go wrong",
+            "Full record|Pinned, updated weekly, wins and losses",
+            "Disclosure|Say you earn from brand links",
+            "No stake pressure|Never 'all in', never 'bet more'",
+            "RG line|18+, limits, help link in promo posts",
+            "Opt-out|How to mute or leave, stated clearly"
+          ],
+          "say": "Here are the six posting rules. Opinion, not certainty: say why, and what could go wrong. A full record, pinned and updated weekly, wins and losses. Disclosure: say you earn from brand links. No stake pressure: never all in, never bet more. An R G line, responsible gambling, with eighteen plus, limits and a help link in promo posts. And opt out: say clearly how to mute or leave. Write these into the channel description and follow them in every post."
+        },
+        {
+          "v": "quote",
+          "h": "On building a channel people trust",
+          "p": "A short note from the founder on why the honest record is the channel's most valuable post. Read it as a working habit, not a promise about results.",
+          "d": "Post your losses as clearly as your wins. The members who stay for that are the ones who stay for years.",
+          "by": "dchessking",
+          "say": "Here's a short note from the founder on why the honest record is the channel's most valuable post. Read it as a working habit, not a promise about results: Post your losses as clearly as your wins. The members who stay for that are the ones who stay for years."
+        },
+        {
+          "v": "cards",
+          "h": "Common mistakes and fixes",
+          "p": "These mistakes turn a tips channel into the kind regulators and platforms act against. Each fix costs a little growth and buys a lot of trust.",
+          "d": [
+            "Mistake: posting only winning slips|Fix: full pinned record",
+            "Mistake: 'sure', 'banker', 'fixed'|Fix: confidence levels with reasons",
+            "Mistake: paid VIP certainty|Fix: no paid certainty products",
+            "Mistake: no age gate|Fix: bot gate before approval"
+          ],
+          "say": "These mistakes turn a tips channel into the kind regulators and platforms act against. Posting only winning slips, so keep a full pinned record. Words like sure, banker or fixed, so use confidence levels with reasons. Paid VIP certainty, so offer no paid certainty products. And no age gate, so put a bot gate before approval. Each fix costs a little growth and buys a lot of trust."
+        },
+        {
+          "v": "tip",
+          "h": "Treat the channel as gambling marketing",
+          "p": "A tips channel that earns from betting links is gambling marketing. Ads for it usually need gambling authorization, members must be adults and every promotional post needs the responsible gambling line.",
+          "d": {
+            "kind": "warn",
+            "text": "Gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission; check the current policy and local law before you run."
+          },
+          "say": "A tips channel that earns from betting links is gambling marketing. Ads for it usually need gambling authorization, members must be adults, and every promotional post needs the responsible gambling line. Gambling ads must also follow the law where the user lives. At the time of writing Meta requires prior written permission, so check the current policy and local law before you run."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for a tips channel",
+          "p": "Starting rules to adapt. They are deliberately strict, because a channel's reputation is hard to rebuild. Pin them for your admins and moderators so everyone applies them the same way.",
+          "d": [
+            "Any post with 'sure', 'guaranteed', 'fixed': delete and correct within 1 h",
+            "Record updated every week, even in a losing month",
+            "No approval without a yes to the age question",
+            "Harm signal from a member: stop selling, signpost help",
+            "Monthly: judge joins by 30-day FTDs per link, not member count"
+          ],
+          "say": "These starting rules are deliberately strict, because a channel's reputation is hard to rebuild. Any post with sure, guaranteed or fixed is deleted and corrected within an hour. The record is updated every week, even in a losing month. No approval without a yes to the age question. If a member shows signs of harm, stop selling and signpost help. And each month, judge joins by thirty day F T Ds per link, not member count. Pin these for your admins and moderators."
+        }
+      ],
+      "takeaways": [
+        "Ethical channels give analysis with risks, never guaranteed wins or fixed matches.",
+        "Gate every join with an age question and a clear disclosure, using join requests.",
+        "Publish the full record, wins and losses, and judge links on 30-day FTDs."
+      ],
+      "action": "Write your channel's description with the six posting rules, set up a request-approval invite link per campaign and draft the age and disclosure message your bot will send.",
+      "glossary": [
+        {
+          "term": "Tipster channel",
+          "def": "A channel that posts betting opinions and earns from links to operators."
+        },
+        {
+          "term": "Strike rate",
+          "def": "Share of tips that win."
+        },
+        {
+          "term": "Unit",
+          "def": "A fixed notional stake used to report a record, not a stake suggestion."
+        },
+        {
+          "term": "Fixed match",
+          "def": "A claim that a result is pre-arranged; either a scam or a crime."
+        },
+        {
+          "term": "Join request",
+          "def": "A request to join a channel that a bot or admin approves or declines."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "120 tips at odds 2.00, one unit each, 54 win. Net result?",
+          "options": [
+            "+12 units",
+            "+54 units",
+            "0 units",
+            "-12 units"
+          ],
+          "answer": 3,
+          "why": "54 × 2 = 108 returned; 108 − 120 = −12 units."
+        },
+        {
+          "q": "At odds of 2.00, what strike rate do you need to break even?",
+          "options": [
+            "Above 50%",
+            "Above 25%",
+            "Above 75%",
+            "Any"
+          ],
+          "answer": 0,
+          "why": "1 ÷ 2.00 = 50%; you need to win more than half."
+        },
+        {
+          "q": "A member asks for fixed-match tips. Correct reply?",
+          "options": [
+            "Offer a VIP group",
+            "Say plainly the channel does not deal in them",
+            "Ignore and block",
+            "Send a 'banker' instead"
+          ],
+          "answer": 1,
+          "why": "Refuse clearly; fixed-match offers are scams or crimes."
+        },
+        {
+          "q": "Which Bot API method approves a join request?",
+          "options": [
+            "sendMessage",
+            "setWebhook",
+            "approveChatJoinRequest",
+            "getMe"
+          ],
+          "answer": 2,
+          "why": "approveChatJoinRequest approves a pending request."
+        },
+        {
+          "q": "How do you judge a Telegram invite link's performance?",
+          "options": [
+            "30-day FTDs per link",
+            "Member count",
+            "Message views only",
+            "Reactions"
+          ],
+          "answer": 0,
+          "why": "Judge on money: FTDs from that link within 30 days."
+        }
+      ],
+      "say_intro": "This lesson covers Telegram tipster channels, and how to run one ethically. You'll learn what separates an honest channel from a harmful one, how to set up an age gated join funnel, and how to keep a full public record.",
+      "say_outro": "So, offer analysis, not promises, refuse anything to do with fixed matches, publish the full record including losses, and gate every join with an age question and disclosure. Your task: write your channel's description with the six posting rules, set up a request approval invite link per campaign, and draft the age and disclosure message your bot will send. Now take the quiz."
+    },
+    {
+      "slug": "broadcasts-and-retention",
+      "title": "Broadcasts and retention without pressure",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can plan a weekly content mix for an iGaming channel.",
+        "You can measure a broadcast by clicks, leaves and FTDs per 1,000 members.",
+        "You can work out what retention is worth on RevShare.",
+        "You can set frequency and content rules that avoid pressure."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why retention is where RevShare is earned",
+          "p": "On RevShare you earn while players stay active. A channel that people keep reading brings repeat visits and new FTDs from members who were not ready on day one. But pushy broadcasts drive people away and can cause harm. The goal is useful, steady content, not volume.",
+          "d": {
+            "b": "Keep members by being useful",
+            "s": "Pressure loses members and trust."
+          },
+          "say": "On RevShare, revenue share, you earn while players stay active. A channel people keep reading brings repeat visits, and new F T Ds, first time deposits, from members who weren't ready on day one. But pushy broadcasts drive people away and can cause harm. So the goal is useful, steady content, not volume. Keep members by being useful. Pressure loses members and trust."
+        },
+        {
+          "v": "table",
+          "h": "A weekly content mix",
+          "p": "Example for a football tips channel. Most posts give value without a link. Promotional posts carry the responsible gambling line. Adjust to your sport calendar and audience.",
+          "d": {
+            "cols": [
+              "Post type",
+              "Per week",
+              "Link?"
+            ],
+            "rows": [
+              [
+                "Fixture previews",
+                "5",
+                "Sometimes"
+              ],
+              [
+                "Analysis with risks",
+                "5",
+                "Sometimes"
+              ],
+              [
+                "Weekly record update",
+                "1",
+                "No"
+              ],
+              [
+                "Brand offer, key terms",
+                "2",
+                "Yes"
+              ],
+              [
+                "RG reminder, tools",
+                "1",
+                "No"
+              ]
+            ]
+          },
+          "say": "Here's an example weekly content mix for a football tips channel. Five fixture previews and five pieces of analysis with risks, some with links. One weekly record update, no link. Two brand offer posts with key terms, with links. And one responsible gambling reminder about tools, no link. Notice most posts give value without a link, and promotional posts carry the responsible gambling line. Adjust it to your sport calendar and audience."
+        },
+        {
+          "v": "phone",
+          "h": "A good broadcast",
+          "p": "This is the shape of a promotional post that respects members: useful content first, the offer with key terms, then the 18+ line and an easy way to stop.",
+          "d": {
+            "app": "chat",
+            "title": "Matchday Notes",
+            "subtitle": "channel",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Saturday preview: 3 matches we looked at, with the risks in each. Full notes below."
+              },
+              {
+                "from": "them",
+                "text": "New customers 18+: our partner's welcome offer, 100% up to GH₵ 500, 10x wagering, 30 days. Full terms on the link."
+              },
+              {
+                "from": "them",
+                "text": "Bet only what you can afford to lose. Set limits in your account. Mute this channel any time."
+              }
+            ]
+          },
+          "say": "Here's the shape of a promotional post that respects members. First, useful content: a Saturday preview of three matches, with the risks in each. Then the offer, for new customers eighteen plus, with key terms right there: a hundred percent up to five hundred Ghana cedis, ten times wagering, thirty days, full terms on the link. Then the closing line: bet only what you can afford to lose, set limits, and mute this channel any time."
+        },
+        {
+          "v": "product",
+          "h": "Schedule broadcasts and drips",
+          "p": "As the channel grows, schedule posts around the fixture calendar and send welcome drips to new members. Keep the suppression list applied to every send.",
+          "d": {
+            "slug": "castvoo",
+            "why": "Schedules Telegram broadcasts and drip sequences so your content mix runs on time and respects opt-outs."
+          },
+          "say": "As the channel grows, you'll want to schedule posts around the fixture calendar and send welcome drips to new members. On screen is Castvoo, which schedules Telegram broadcasts and drip sequences, so your content mix runs on time and respects opt outs. Whatever tool you use, keep the suppression list applied to every send."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: what retention is worth",
+          "p": "Example. 5,000 members. Each month 2% make a first deposit through your links. You are on 35% RevShare and each FTD produces $55 NGR over three months. Compare keeping 96% of members a month with keeping 90%.",
+          "more": "Working: 5,000 × 0.96³ = 4,423.7, rounded 4,424; 5,000 × 0.90³ = 3,645. 2% of each gives 88 and 73 FTDs (72.9). Your share per FTD over 3 months: $55 × 35% = $19.25. 88 × $19.25 = $1,694; 73 × $19.25 = $1,405. Assumes no new joins, to isolate the effect. Every month of better retention widens the gap. Example figures only.",
+          "d": {
+            "cols": [
+              "Item",
+              "96% kept",
+              "90% kept"
+            ],
+            "rows": [
+              [
+                "Members after 3 months",
+                "4,424",
+                "3,645"
+              ],
+              [
+                "FTDs in month 3 (2%)",
+                "88",
+                "73"
+              ],
+              [
+                "Your share per FTD",
+                "$19.25",
+                "$19.25"
+              ],
+              [
+                "Month-3 FTD value",
+                "$1,694",
+                "$1,405"
+              ]
+            ]
+          },
+          "say": "Here's an example of what retention is worth. Five thousand members, two percent making a first deposit each month, on thirty five percent RevShare, with each F T D producing fifty five dollars of N G R, net gaming revenue, over three months. Keep ninety six percent a month, and after three months you have about four thousand four hundred and twenty four members and eighty eight F T Ds. Keep ninety percent, and you have three thousand six hundred and forty five, and seventy three F T Ds. At nineteen twenty five each, that's about one thousand six hundred and ninety four dollars against one thousand four hundred and five. Example figures only, with no new joins."
+        },
+        {
+          "v": "eq",
+          "h": "Measure every broadcast the same way",
+          "p": "Compare posts per 1,000 members so channels of different sizes can be compared. Track clicks, leaves and, through your links, FTDs. Example: 210 clicks from 5,000 members is 42 per 1,000.",
+          "d": [
+            "Result",
+            "÷",
+            "Members",
+            "×",
+            "1,000",
+            "=",
+            "Per 1,000"
+          ],
+          "say": "Measure every broadcast the same way, per thousand members, so channels of different sizes can be compared. The formula on screen: the result, divided by members, times one thousand. Track clicks, leaves and, through your links, F T Ds. For example, two hundred and ten clicks from five thousand members is forty two per thousand."
+        },
+        {
+          "v": "table",
+          "h": "Example broadcast report",
+          "p": "Example from one week, 5,000 members. The offer post with pressure wording drove clicks but also many leaves. Leaves are a cost: those members are gone for every future post.",
+          "d": {
+            "cols": [
+              "Post",
+              "Clicks/1k",
+              "Leaves/1k",
+              "FTDs"
+            ],
+            "rows": [
+              [
+                "Preview + analysis",
+                "42",
+                "1",
+                "3"
+              ],
+              [
+                "Offer, key terms",
+                "55",
+                "2",
+                "5"
+              ],
+              [
+                "'Last chance, bet now'",
+                "70",
+                "11",
+                "4"
+              ],
+              [
+                "Record update",
+                "18",
+                "0",
+                "0"
+              ]
+            ]
+          },
+          "say": "Here's an example broadcast report from one week, with five thousand members. The preview and analysis post got forty two clicks per thousand, one leave, and three F T Ds. The offer with key terms got fifty five clicks, two leaves, and five F T Ds. Now look at the last chance, bet now post. Seventy clicks, but eleven leaves per thousand, and only four F T Ds. Leaves are a cost, because those members are gone for every future post."
+        },
+        {
+          "v": "cards",
+          "h": "Words that turn retention into pressure",
+          "p": "These phrases push people to act against their own interest. Never use them, even when a post is not getting clicks. Low clicks mean the content needs work, not more pressure.",
+          "d": [
+            "'Last chance'|Unless the brand's real deadline",
+            "'Don't miss out'|Fear-based pressure",
+            "'Bet more to win more'|Encourages bigger stakes",
+            "'Win back'|Chasing losses",
+            "Late-night pushes|Sending offers at 2 am"
+          ],
+          "say": "These phrases turn retention into pressure, pushing people to act against their own interest. Last chance, unless it's the brand's real deadline. Don't miss out, which is fear based pressure. Bet more to win more, which encourages bigger stakes. Win back, which is chasing losses. And late night pushes, like sending offers at two in the morning. Never use them, even when a post isn't getting clicks. Low clicks mean the content needs work, not more pressure."
+        },
+        {
+          "v": "walk",
+          "h": "Set up a welcome drip for new members",
+          "p": "A short drip helps new members understand the channel before they see any offer. Keep it to three messages over three days. Screens are mock-ups.",
+          "d": {
+            "steps": [
+              {
+                "title": "Day 0: what this is",
+                "text": "Explain the channel, the disclosure, the record and how to mute or leave.",
+                "screen": {
+                  "v": "phone",
+                  "app": "bot",
+                  "title": "Matchday Notes",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "Welcome. We post previews and analysis, never guarantees. Our full record is pinned. We earn from brand links. Mute any time."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Day 1: how to read posts",
+                "text": "Show how confidence levels and risks are written, so members read opinions as opinions.",
+                "screen": {
+                  "v": "phone",
+                  "app": "bot",
+                  "title": "Matchday Notes",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "Each preview lists what could go wrong. Treat every pick as an opinion, not a promise."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Day 3: staying in control",
+                "text": "Point to deposit limits and help resources before any offer is sent.",
+                "screen": {
+                  "v": "phone",
+                  "app": "bot",
+                  "title": "Matchday Notes",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "If you bet, set a deposit limit in your account first. Help links are in our profile. 18+ only."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "say": "A short welcome drip helps new members understand the channel before they see any offer. Keep it to three messages over three days. The screens are mock ups. Day zero, what this is: explain the channel, the disclosure, the record, and how to mute or leave. Day one, how to read posts: show how confidence levels and risks are written, so members read opinions as opinions. Day three, staying in control: point to deposit limits and help resources before any offer is sent."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and fixes",
+          "p": "Most retention mistakes come from treating members like a list to be squeezed rather than readers to be kept. Each fix protects your future reach as well as your members.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "10 offer posts a day",
+                "Judging posts on clicks only",
+                "Same post for every geo",
+                "No opt-out reminder"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Cap promo posts, lead with content",
+                "Count leaves and FTDs too",
+                "Geo-specific offers and terms",
+                "Mute and leave stated regularly"
+              ]
+            }
+          },
+          "say": "Most retention mistakes come from treating members like a list to be squeezed, rather than readers to be kept. On the left: ten offer posts a day, judging posts on clicks only, the same post for every geo, and no opt out reminder. On the right: cap promo posts and lead with content, count leaves and F T Ds too, use geo specific offers and terms, and state mute and leave regularly. Each fix protects your future reach as well as your members."
+        },
+        {
+          "v": "tip",
+          "h": "Broadcasts are advertising",
+          "p": "Each promotional broadcast is gambling marketing and follows the same rules as an ad: adults, licensed operator for the geo, honest terms, responsible gambling line, suppression list applied.",
+          "d": {
+            "kind": "warn",
+            "text": "Gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission; check the current policy and local law before you run."
+          },
+          "say": "Each promotional broadcast is gambling marketing, and follows the same rules as an ad: adults only, a licensed operator for the geo, honest terms, the responsible gambling line, and the suppression list applied. Gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission, so check the current policy and local law before you run."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for broadcasts",
+          "p": "Starting rules to adapt. Review them monthly against your leave rate and FTDs per 1,000. Share them with anyone who can post in the channel, including any scheduling tool you set up.",
+          "d": [
+            "At most 2 promotional posts a day, none late at night",
+            "Post type with leaves above 5 per 1,000 twice: drop it",
+            "Monthly leave rate above 8%: cut promo frequency by half",
+            "Every promo post: key terms + 18+ + RG line",
+            "Suppression list applied to every send"
+          ],
+          "say": "Here are starting rules to adapt. At most two promotional posts a day, none late at night. If a post type gets more than five leaves per thousand twice, drop it. If the monthly leave rate goes above eight percent, cut promo frequency by half. Every promo post carries key terms, eighteen plus and the R G line. And the suppression list is applied to every send. Review these monthly, and share them with anyone who can post, including any scheduling tool you set up."
+        }
+      ],
+      "takeaways": [
+        "On RevShare, retention is income; useful content keeps members.",
+        "Measure posts per 1,000 members on clicks, leaves and FTDs.",
+        "Cap promotional posts and never use pressure wording."
+      ],
+      "action": "Plan next week's content mix for your channel using the example table, and add leaves per 1,000 to your broadcast report.",
+      "glossary": [
+        {
+          "term": "Retention",
+          "def": "The share of members or players still active after a period."
+        },
+        {
+          "term": "Leave rate",
+          "def": "Share of members who leave or unsubscribe in a period."
+        },
+        {
+          "term": "Per 1,000",
+          "def": "A way to compare results across channels of different sizes."
+        },
+        {
+          "term": "Drip",
+          "def": "A scheduled series of messages sent to new members over days."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "5,000 members, 96% kept each month. Members after 3 months, roughly?",
+          "options": [
+            "4,800",
+            "4,424",
+            "3,645",
+            "4,000"
+          ],
+          "answer": 1,
+          "why": "5,000 × 0.96³ ≈ 4,424."
+        },
+        {
+          "q": "73 FTDs worth $19.25 each to you. Total?",
+          "options": [
+            "$1,405",
+            "$1,694",
+            "$1,925",
+            "$730"
+          ],
+          "answer": 0,
+          "why": "73 × $19.25 = $1,405.25."
+        },
+        {
+          "q": "A post gets the most clicks but 11 leaves per 1,000. What do the rules say if it repeats?",
+          "options": [
+            "Post it more",
+            "Ignore leaves",
+            "Send it at night",
+            "Drop that post type"
+          ],
+          "answer": 3,
+          "why": "Leaves above 5 per 1,000 twice: drop the post type."
+        },
+        {
+          "q": "Which wording is acceptable?",
+          "options": [
+            "Win back your losses",
+            "Bet more to win more",
+            "Welcome offer, 10x wagering, 30 days. 18+",
+            "Last chance, bet now"
+          ],
+          "answer": 2,
+          "why": "It states the offer, key terms and age without pressure."
+        },
+        {
+          "q": "How many promotional posts a day do the starting rules allow?",
+          "options": [
+            "Unlimited",
+            "At most 2, none late at night",
+            "At least 5",
+            "Exactly 10"
+          ],
+          "answer": 1,
+          "why": "Cap promo posts at 2 a day and avoid late hours."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn how to keep channel members without pressuring them. You'll plan a weekly content mix, measure every broadcast per thousand members, and see what retention is worth on RevShare.",
+      "say_outro": "So, retention is where RevShare is earned, lead with useful content, measure clicks, leaves and F T Ds per thousand members, and never use pressure wording. Your task: plan next week's content mix for your channel using the example table, and add leaves per thousand to your broadcast report. Now take the quiz."
+    },
+    {
+      "slug": "bonus-messaging-in-funnels",
+      "title": "Bonus messaging across the funnel",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can decide where in the funnel to mention a bonus.",
+        "You can compare bonus-led and product-led angles on true CPA.",
+        "You can answer bonus questions accurately in chats.",
+        "You can keep terms consistent across ad, page, bot and channel."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why bonus placement changes player quality",
+          "p": "Lead with the bonus and you often get cheap FTDs who deposit the minimum, use the bonus and leave. Lead with the product and terms and you may pay more per FTD but get players who qualify and stay. The cheapest FTD is not always the cheapest qualified FTD.",
+          "d": {
+            "b": "Cheap FTDs can be expensive",
+            "s": "Judge angles on true CPA."
+          },
+          "say": "Where you place the bonus changes player quality. Lead with the bonus, and you often get cheap F T Ds, first time deposits, who deposit the minimum, use the bonus and leave. Lead with the product and terms, and you may pay more per F T D, but you get players who qualify and stay. The cheapest F T D isn't always the cheapest qualified F T D. Cheap F T Ds can be expensive, so judge angles on true C P A."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: bonus-led versus product-led",
+          "p": "Example. Two angles, same offer and geo. The bonus-led angle wins on cost per FTD. The product-led angle wins on cost per qualified FTD, which is what you are paid on.",
+          "more": "Working: true CPA = CPFTD ÷ qualified rate. $18 ÷ 0.45 = $40.00. $24 ÷ 0.75 = $32.00. With a $40 payout, the bonus-led angle breaks even at best, while the product-led angle keeps $8 per qualified FTD. Bonus-led traffic also tends to show higher bonus cost for the operator, which can lead to quality warnings.",
+          "d": {
+            "cols": [
+              "Angle",
+              "CPFTD",
+              "Qualified %",
+              "True CPA"
+            ],
+            "rows": [
+              [
+                "Bonus-led",
+                "$18",
+                "45%",
+                "$40.00"
+              ],
+              [
+                "Product-led",
+                "$24",
+                "75%",
+                "$32.00"
+              ]
+            ]
+          },
+          "say": "Here's an example with two angles, same offer and geo. True C P A, cost per acquisition, is cost per F T D divided by the qualified rate. The bonus led angle costs eighteen dollars per F T D, but only forty five percent qualify, so true C P A is forty dollars. The product led angle costs twenty four dollars, with seventy five percent qualifying, so thirty two. With a forty dollar payout, bonus led breaks even at best, while product led keeps eight dollars per qualified F T D. Bonus led traffic can also lead to quality warnings."
+        },
+        {
+          "v": "table",
+          "h": "Where the bonus belongs",
+          "p": "A rough guide. Mention the bonus where people decide, with its key terms beside it. Do not make it the only reason to click. Players who join for the product tend to stay.",
+          "d": {
+            "cols": [
+              "Step",
+              "Bonus?",
+              "How"
+            ],
+            "rows": [
+              [
+                "Ad",
+                "Optional",
+                "Short, with 'T&Cs apply, 18+'"
+              ],
+              [
+                "Prelander",
+                "Yes",
+                "Bonus box with key terms"
+              ],
+              [
+                "Bot welcome",
+                "If asked",
+                "Key terms + full terms link"
+              ],
+              [
+                "Channel",
+                "Occasionally",
+                "Promo post rules apply"
+              ],
+              [
+                "Operator page",
+                "Brand's own",
+                "Matches your wording"
+              ]
+            ]
+          },
+          "say": "Here's where the bonus belongs, as a rough guide. In the ad, it's optional, short, with T and Cs apply and eighteen plus. On the prelander, yes, in a bonus box with key terms. In the bot welcome, only if asked, with key terms and the full terms link. In the channel, occasionally, and promo post rules apply. And on the operator page, it's the brand's own, matching your wording. Mention it where people decide, but don't make it the only reason to click."
+        },
+        {
+          "v": "chat",
+          "h": "Answering a bonus question accurately",
+          "p": "Members will ask what a bonus really means. Answer from the current terms, plainly, and point to the full terms. Never round wagering down or call a bonus free.",
+          "d": [
+            {
+              "from": "lead",
+              "text": "So if I deposit 100 I get 100 free to withdraw?"
+            },
+            {
+              "from": "ai",
+              "text": "Not quite. You get a 100 bonus, but it is not cash yet. Under the current terms you need to bet 10 times deposit plus bonus, so 2,000 in total, within 30 days, at odds of 1.50 or more."
+            },
+            {
+              "from": "ai",
+              "text": "Full terms are on the brand's page. It's for adults 18+, and it's fine to skip the bonus if those terms don't suit you."
+            }
+          ],
+          "say": "Members will ask what a bonus really means. In this chat, someone asks: if I deposit a hundred, do I get a hundred free to withdraw? Notice the answer. Not quite. It's a bonus, not cash yet. Under the current terms they need to bet ten times deposit plus bonus, so two thousand in total, within thirty days, at odds of one point five or more. Then it points to the full terms, says it's for adults eighteen plus, and that it's fine to skip the bonus. Never round wagering down, or call a bonus free."
+        },
+        {
+          "v": "product",
+          "h": "Answer bonus questions consistently",
+          "p": "As questions grow, a reply assistant can give the same accurate answer every time, as long as you load the current terms and update them when they change.",
+          "d": {
+            "slug": "replyvoo",
+            "why": "An AI inbox agent answers repeated bonus questions from the current terms you give it and hands unusual cases to you."
+          },
+          "say": "As questions grow, a reply assistant can give the same accurate answer every time, as long as you load the current terms and update them when they change. On screen is Replyvoo, an A I inbox agent that answers repeated bonus questions from the current terms you give it, and hands unusual cases to you."
+        },
+        {
+          "v": "walk",
+          "h": "Keep terms consistent everywhere",
+          "p": "When a brand changes its bonus, every place you mention it must change the same day. Screens are mock-ups. Scheduled posts are the easiest to forget, so check them first.",
+          "d": {
+            "steps": [
+              {
+                "title": "Log the change",
+                "text": "Save the new terms with a date in your geo dossier.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "drive.example/dossier/GH",
+                  "title": "Bonus terms",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Wagering",
+                      "value": "8x (was 10x), from 2026-10-15"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Find every mention",
+                "text": "List ads, prelanders, bot replies, pinned posts and scheduled broadcasts that mention the bonus.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheets.example/bonus-mentions",
+                  "title": "Where the bonus appears",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Place",
+                        "Item",
+                        "Updated"
+                      ],
+                      "rows": [
+                        [
+                          "Ad",
+                          "GH_Bonus_02",
+                          "No"
+                        ],
+                        [
+                          "Lander",
+                          "/gh/welcome",
+                          "No"
+                        ],
+                        [
+                          "Bot",
+                          "Bonus FAQ",
+                          "No"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Update and confirm",
+                "text": "Edit each item, tick it off and check the live versions on a phone.",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "yourdomain.example/gh/welcome",
+                  "page": {
+                    "h": "100% welcome bonus up to GH₵ 500",
+                    "p": "8x wagering on deposit plus bonus, 30 days, min odds 1.50. 18+. T&Cs apply.",
+                    "cta": "Read full terms"
+                  }
+                }
+              }
+            ]
+          },
+          "say": "When a brand changes its bonus, every mention must change the same day. The screens are mock ups. Step one, log the change: save the new terms with a date in your geo dossier, here wagering going from ten times to eight times. Step two, find every mention: list the ads, prelanders, bot replies, pinned posts and scheduled broadcasts. Scheduled posts are the easiest to forget, so check them first. Step three, update and confirm: edit each item, tick it off, and check the live versions on a phone."
+        },
+        {
+          "v": "compare",
+          "h": "Rewrite: bonus mentions across the funnel",
+          "p": "The same bonus, mentioned at three funnel steps. The left side creates the mismatch that causes complaints. The right side matches the terms at every step.",
+          "d": {
+            "a": {
+              "title": "Mismatched",
+              "items": [
+                "Ad: 'Free GH₵ 500'",
+                "Lander: '100% bonus' with no terms",
+                "Bot: 'Just deposit and withdraw'"
+              ]
+            },
+            "b": {
+              "title": "Consistent",
+              "items": [
+                "Ad: 'Welcome bonus. T&Cs apply. 18+'",
+                "Lander: bonus box with wagering, expiry, min odds",
+                "Bot: key terms and the full terms link"
+              ]
+            }
+          },
+          "say": "Here's the same bonus mentioned at three funnel steps. On the left, mismatched: the ad says free five hundred cedis, the lander says hundred percent bonus with no terms, and the bot says just deposit and withdraw. That mismatch causes complaints. On the right, consistent: the ad says welcome bonus, T and Cs apply, eighteen plus. The lander has a bonus box with wagering, expiry and minimum odds. And the bot gives key terms and the full terms link."
+        },
+        {
+          "v": "funnel",
+          "h": "Example: where bonus-led traffic drops",
+          "p": "Example. A bonus-led funnel for one week. Many people register for the bonus, fewer deposit enough to meet baseline, and fewer still qualify. Watch the last two steps, not the first.",
+          "d": [
+            [
+              "Offer clicks",
+              600
+            ],
+            [
+              "Registrations",
+              150
+            ],
+            [
+              "FTDs",
+              33
+            ],
+            [
+              "Qualified FTDs",
+              15
+            ]
+          ],
+          "say": "Here's an example of where bonus led traffic drops, over one week. Six hundred offer clicks, one hundred and fifty registrations, thirty three F T Ds, and only fifteen qualified F T Ds. Many people register for the bonus, fewer deposit enough to meet baseline, and fewer still qualify. So watch the last two steps, not the first."
+        },
+        {
+          "v": "cards",
+          "h": "Common mistakes and fixes",
+          "p": "These mistakes create mismatches between what you said and what the player gets, which is the root of most bonus complaints. Each fix makes your words match the operator's terms.",
+          "d": [
+            "Mistake: bonus is the whole ad|Fix: product first, bonus with terms",
+            "Mistake: old terms in the bot|Fix: one terms source, updated same day",
+            "Mistake: 'free' in replies|Fix: 'bonus, with wagering'",
+            "Mistake: judging angles on CPFTD|Fix: judge on true CPA"
+          ],
+          "say": "These mistakes create gaps between what you said and what the player gets, the root of most bonus complaints. The bonus is the whole ad, so put the product first and the bonus with terms. Old terms in the bot, so keep one terms source, updated the same day. Saying free in replies, so say bonus, with wagering. And judging angles on cost per F T D, so judge on true C P A instead."
+        },
+        {
+          "v": "tip",
+          "h": "Never help bonus abuse",
+          "p": "Never suggest multiple accounts, using someone else's ID, or other ways to claim bonuses against the terms. It is fraud under the deal, harms the operator and gets your traffic rejected.",
+          "d": {
+            "kind": "warn",
+            "text": "Never encourage bonus abuse. Gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission; check the current policy and local law before you run."
+          },
+          "say": "A firm warning. Never suggest multiple accounts, using someone else's I D, or other ways to claim bonuses against the terms. It's fraud under the deal, it harms the operator, and it gets your traffic rejected. Never encourage bonus abuse. And gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission, so check the current policy and local law before you run."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for bonus angles",
+          "p": "Starting rules to adapt. They stop a cheap-looking angle from quietly losing money. Review them whenever a brand changes its welcome offer, and at every month close.",
+          "d": [
+            "Compare angles on true CPA = CPFTD ÷ qualified rate",
+            "Bonus-led angle with qualified rate under 50%: retire it",
+            "Terms change: every mention updated within 24 h",
+            "Bonus wording in ads: brand-approved only",
+            "Member asks how to get around terms: refuse and explain"
+          ],
+          "say": "Here are starting rules to adapt. Compare angles on true C P A, cost per F T D divided by qualified rate. Retire a bonus led angle with a qualified rate under fifty percent. When terms change, update every mention within twenty four hours. Use brand approved bonus wording only in ads. And if a member asks how to get around the terms, refuse and explain. Review these whenever a brand changes its welcome offer, and at every month close."
+        },
+        {
+          "v": "big",
+          "h": "Make the bonus optional",
+          "p": "Say plainly that players can decline a bonus. Some prefer to play without wagering conditions. Saying so builds trust, reduces complaints and attracts players who understand what they signed up for.",
+          "d": {
+            "b": "A bonus is a choice, not a must",
+            "s": "Saying so is honest and good for quality."
+          },
+          "say": "One last point. Say plainly that players can decline a bonus. Some prefer to play without wagering conditions. A bonus is a choice, not a must. Saying so is honest, it builds trust, it reduces complaints, and it attracts players who understand what they signed up for."
+        }
+      ],
+      "takeaways": [
+        "Judge angles on true CPA: CPFTD ÷ qualified rate.",
+        "Mention bonuses where people decide, with key terms beside them.",
+        "Keep one source of terms and update every mention the same day."
+      ],
+      "action": "Calculate true CPA for each angle you are running, list every place your current bonus is mentioned and check each one matches the current terms.",
+      "glossary": [
+        {
+          "term": "Bonus-led angle",
+          "def": "A creative that leads with the bonus as the main reason to sign up."
+        },
+        {
+          "term": "Product-led angle",
+          "def": "A creative that leads with the product, such as fixtures, markets or games."
+        },
+        {
+          "term": "True CPA",
+          "def": "Cost per FTD divided by qualified rate: cost per FTD you are actually paid for."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "CPFTD $18, 45% qualify. True CPA?",
+          "options": [
+            "$18.00",
+            "$8.10",
+            "$40.00",
+            "$26.10"
+          ],
+          "answer": 2,
+          "why": "$18 ÷ 0.45 = $40."
+        },
+        {
+          "q": "Bonus-led true CPA $40, product-led $32, payout $40. Which angle do you keep?",
+          "options": [
+            "Bonus-led",
+            "Product-led",
+            "Both equally",
+            "Neither"
+          ],
+          "answer": 1,
+          "why": "Product-led keeps $8 per qualified FTD; bonus-led breaks even."
+        },
+        {
+          "q": "Deposit 100, bonus 100, 10x wagering on deposit plus bonus. Bets required?",
+          "options": [
+            "1,000",
+            "100",
+            "200",
+            "2,000"
+          ],
+          "answer": 3,
+          "why": "(100 + 100) × 10 = 2,000."
+        },
+        {
+          "q": "Terms change today. When must every mention be updated?",
+          "options": [
+            "Within 24 h",
+            "Next month",
+            "Only ads",
+            "Never"
+          ],
+          "answer": 0,
+          "why": "All mentions within 24 hours."
+        },
+        {
+          "q": "A member asks how to claim the bonus twice. What do you do?",
+          "options": [
+            "Explain using a second account",
+            "Refuse and explain it is against the terms",
+            "Send them to another channel",
+            "Ignore"
+          ],
+          "answer": 1,
+          "why": "Never help bonus abuse."
+        }
+      ],
+      "say_intro": "This lesson is about where and how you mention a bonus. You'll see why bonus led angles can look cheap but cost more, how to answer bonus questions accurately, and how to keep terms consistent everywhere.",
+      "say_outro": "So, judge angles on true C P A, mention the bonus with its key terms where people decide, answer questions plainly from current terms, update every mention the same day, and never help bonus abuse. Your task: calculate true C P A for each angle you're running, list every place your current bonus is mentioned, and check each one matches the current terms. Now take the quiz."
+    },
+    {
+      "slug": "measuring-and-fixing-funnels",
+      "title": "Measuring and fixing iGaming funnels",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can track every funnel step from ad to qualified FTD.",
+        "You can find the step where a fix earns the most money, not just the weakest rate.",
+        "You can run a weekly funnel review with fixed rules.",
+        "You can decide when to fix, when to replace and when to stop a funnel."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why you measure every step",
+          "p": "A funnel with five steps has five places to lose money. If you only see spend and FTDs, you cannot tell whether the ad, the page, the bot or the operator page is the problem. Step data turns guessing into a list of fixes in order of value.",
+          "d": {
+            "b": "Measure each step, fix the costliest one",
+            "s": "Spend and FTDs alone hide the cause."
+          },
+          "say": "A funnel with five steps has five places to lose money. If you only see spend and F T Ds, first time deposits, you can't tell whether the ad, the page, the bot or the operator page is the problem. Step data turns guessing into a list of fixes, in order of value. Measure each step, and fix the costliest one. Spend and F T Ds alone hide the cause."
+        },
+        {
+          "v": "table",
+          "h": "What to record at each step",
+          "p": "One row per campaign per day in your sheet. Pull each number from the place that measures it best. Keep the same date range and time zone for every source, or the steps will not line up.",
+          "d": {
+            "cols": [
+              "Step",
+              "Source",
+              "Metric"
+            ],
+            "rows": [
+              [
+                "Ad",
+                "Ads Manager",
+                "Spend, clicks, CPC"
+              ],
+              [
+                "Prelander",
+                "Your analytics",
+                "Views, button clicks"
+              ],
+              [
+                "Telegram",
+                "Join tracker",
+                "Join requests, approvals"
+              ],
+              [
+                "Operator",
+                "Network",
+                "Registrations, FTDs"
+              ],
+              [
+                "Quality",
+                "Network",
+                "Qualified, rejected"
+              ]
+            ]
+          },
+          "say": "Here's what to record at each step, one row per campaign per day. From Ads Manager: spend, clicks and C P C, cost per click. From your analytics: prelander views and button clicks. From your join tracker: Telegram join requests and approvals. From the network: registrations and F T Ds, then qualified and rejected. Pull each number from the place that measures it best. And keep the same date range and time zone everywhere, or the steps won't line up."
+        },
+        {
+          "v": "funnel",
+          "h": "Example: one week of a prelander funnel",
+          "p": "Example. 1,000 ad clicks for $600. Use this funnel for the next slides. The weakest pass-through is not always where the biggest money gain is.",
+          "d": [
+            [
+              "Ad clicks",
+              1000
+            ],
+            [
+              "Lander views",
+              900
+            ],
+            [
+              "Offer clicks",
+              450
+            ],
+            [
+              "Registrations",
+              81
+            ],
+            [
+              "FTDs",
+              18
+            ],
+            [
+              "Qualified",
+              13
+            ]
+          ],
+          "say": "Here's an example week of a prelander funnel, one thousand ad clicks for six hundred dollars. Look at the bars narrowing. Nine hundred lander views, four hundred and fifty offer clicks, eighty one registrations, eighteen F T Ds, and thirteen qualified. We'll use this funnel for the next slides. And keep this in mind: the weakest pass through isn't always where the biggest money gain is."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: which fix earns most",
+          "p": "Example. Imagine you can lift one step's rate by 5 percentage points. Work out the extra FTDs each fix would bring with everything else unchanged. Then pick the biggest gain you can actually achieve.",
+          "more": "Working: base 900 × 50% = 450 × 18% = 81 × 22.2% = 18 FTDs; $600 ÷ 18 = $33.33. Views to offer at 55%: 495 × 18% = 89.1 × 22.2% = 19.8. Offer to registration at 23%: 450 × 23% = 103.5 × 22.2% = 23.0. Registration to FTD at 27.2%: 81 × 27.2% = 22.0. The same 5 points is worth most where the rate is lowest relative to its size, here offer clicks to registrations, which usually means the promise on your page does not match the operator's page.",
+          "d": {
+            "cols": [
+              "Fix",
+              "Rate change",
+              "FTDs",
+              "CPFTD"
+            ],
+            "rows": [
+              [
+                "None",
+                "",
+                "18",
+                "$33.33"
+              ],
+              [
+                "Views to offer",
+                "50% to 55%",
+                "19.8",
+                "$30.30"
+              ],
+              [
+                "Offer to reg",
+                "18% to 23%",
+                "23.0",
+                "$26.09"
+              ],
+              [
+                "Reg to FTD",
+                "22.2% to 27.2%",
+                "22.0",
+                "$27.27"
+              ]
+            ]
+          },
+          "say": "Now imagine you could lift one step's rate by five percentage points. With no fix, you get eighteen F T Ds at about thirty three dollars each. Lift views to offer from fifty to fifty five percent, and you get about nineteen point eight. Lift offer to registration from eighteen to twenty three percent, and you get about twenty three, at about twenty six dollars each. Lift registration to F T D by five points, and you get about twenty two. So here, offer clicks to registrations wins, which usually means your page's promise doesn't match the operator's page."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: find the leakiest step",
+          "p": "Use the same funnel. Find the step with the lowest pass-through rate, then compare your answer with the worked example on the last slide. The lowest rate is a good first suspect.",
+          "d": {
+            "kind": "funnel",
+            "task": "Which step has the lowest pass-through rate?",
+            "preset": {
+              "steps": [
+                [
+                  "Ad clicks",
+                  1000
+                ],
+                [
+                  "Lander views",
+                  900
+                ],
+                [
+                  "Offer clicks",
+                  450
+                ],
+                [
+                  "Registrations",
+                  81
+                ],
+                [
+                  "FTDs",
+                  18
+                ]
+              ],
+              "payout": 40
+            },
+            "answer": {
+              "field": "worst_step",
+              "value": 3
+            }
+          },
+          "say": "Time for a lab with the same funnel: one thousand ad clicks, nine hundred views, four hundred and fifty offer clicks, eighty one registrations, and eighteen F T Ds. Find the step with the lowest pass through rate. The lowest rate is a good first suspect. Then compare your answer with the worked example on the last slide. Pause and try it, then check your answer."
+        },
+        {
+          "v": "cards",
+          "h": "Fixes by step",
+          "p": "A rough guide. Pick one, test it as a new version and give it enough traffic. Never change several steps at once, or you will not know which change worked.",
+          "d": [
+            "Ad to view|Speed, broken links, wrong country redirects",
+            "View to offer click|Headline match, content, button clarity",
+            "Offer click to registration|Promise matches operator page, language, geo",
+            "Registration to FTD|Payment methods, minimum deposit clarity",
+            "FTD to qualified|Angle quality, bonus-led traffic"
+          ],
+          "say": "Here's a rough guide to fixes by step. Ad to view: speed, broken links, or wrong country redirects. View to offer click: headline match, content, and button clarity. Offer click to registration: does the promise match the operator page, the language and the geo? Registration to F T D: payment methods and minimum deposit clarity. F T D to qualified: angle quality and bonus led traffic. Pick one, test it as a new version, and never change several steps at once, or you won't know which change worked."
+        },
+        {
+          "v": "product",
+          "h": "Track the Telegram steps too",
+          "p": "For Telegram funnels, the join request and approval are steps like any other. Measure them per invite link so you can see whether the ad, the gate or the channel is losing people.",
+          "d": {
+            "slug": "joinvoo",
+            "why": "Shows join requests, approvals and later conversions per invite link, so Telegram steps sit in the same funnel report."
+          },
+          "say": "For Telegram funnels, the join request and approval are steps like any other. Measure them per invite link, so you can see whether the ad, the gate, or the channel is losing people. On screen is Joinvoo, which shows join requests, approvals and later conversions per invite link, so Telegram steps sit in the same funnel report."
+        },
+        {
+          "v": "flow",
+          "h": "Weekly funnel review",
+          "p": "Same day each week, about 30 minutes. Use confirmed network numbers for the last steps and the same date range for every source. Skipping a week loses the trend.",
+          "d": [
+            "Fill the step sheet for 7 days",
+            "Calculate each pass-through rate",
+            "Estimate extra FTDs per realistic fix",
+            "Pick one fix, launch it as a version",
+            "Log the result next week"
+          ],
+          "say": "Here's the weekly funnel review, same day each week, about thirty minutes. Fill the step sheet for seven days. Calculate each pass through rate. Estimate the extra F T Ds for each realistic fix. Pick one fix and launch it as a version. Then log the result next week. Use confirmed network numbers for the last steps and the same date range for every source. Skipping a week loses the trend."
+        },
+        {
+          "v": "screen",
+          "h": "A step sheet that makes the review easy",
+          "p": "A mock-up of the sheet. Rates are calculated automatically; the column that matters most is the last one, qualified CPA, because it decides whether the funnel is worth fixing at all.",
+          "d": {
+            "kind": "browser",
+            "url": "sheets.example/funnel-review",
+            "title": "Funnel review: GH_SB_Prelander",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Week",
+                  "View→Offer",
+                  "Offer→Reg",
+                  "Qual. CPA"
+                ],
+                "rows": [
+                  [
+                    "W40",
+                    "50%",
+                    "18%",
+                    "$46.15"
+                  ],
+                  [
+                    "W41",
+                    "51%",
+                    "23%",
+                    "$37.50"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "W41: new headline matched the operator page. Example."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Here's a mock up of a step sheet that makes the review easy. Rates are calculated automatically. In week forty, view to offer was fifty percent, offer to registration eighteen, and qualified C P A, cost per acquisition, about forty six dollars. In week forty one, after a new headline matched the operator page, offer to registration rose to twenty three percent, and qualified C P A fell to thirty seven fifty. These are example figures. The last column matters most, because it decides whether the funnel is worth fixing at all."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and fixes",
+          "p": "Funnel fixing goes wrong when people change too much at once or judge a fix too early. Both waste traffic and hide what actually works. The fixes are simple rules you apply to every version.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Changing ad, page and bot together",
+                "Judging a fix after one day",
+                "Fixing the prettiest step",
+                "Mixing date ranges"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "One change per version",
+                "Same rules: 3 × target spend",
+                "Fix the biggest money gain",
+                "Same 7 days everywhere"
+              ]
+            }
+          },
+          "say": "Funnel fixing goes wrong when people change too much at once, or judge too early. On the left: changing ad, page and bot together, judging a fix after one day, fixing the prettiest step, and mixing date ranges. On the right: one change per version, the same rule of three times target spend, fix the biggest money gain, and use the same seven days everywhere. Simple rules, applied to every version."
+        },
+        {
+          "v": "tip",
+          "h": "Fixes must stay compliant",
+          "p": "A fix that lifts conversion by hiding terms, adding false urgency or removing the 18+ line is not a fix. Run every change through your go/no-go gate before it goes live.",
+          "d": {
+            "kind": "warn",
+            "text": "Gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission; check the current policy and local law before you run."
+          },
+          "say": "A fix that lifts conversion by hiding terms, adding false urgency, or removing the eighteen plus line is not a fix. Run every change through your go, no go gate before it goes live. And gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission, so check the current policy and local law before you run."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for funnels",
+          "p": "Starting rules to adapt. They decide when a funnel deserves more work and when to stop. Adapt the numbers to your payout and how fast your data arrives.",
+          "d": [
+            "Fix the step with the biggest estimated FTD gain first",
+            "Each version spends at least 3 × target before judging",
+            "Three fixes in a row with no gain: replace the funnel",
+            "Qualified CPA above payout for 3 weeks: stop the funnel",
+            "Every change passes the compliance gate first"
+          ],
+          "say": "Finally, starting decision rules to adapt. Fix the step with the biggest estimated F T D gain first. Each version spends at least three times target before judging. Three fixes in a row with no gain, replace the funnel. Qualified C P A above the payout for three weeks, stop the funnel. And every change passes the compliance gate first. Adapt the numbers to your payout and how fast your data arrives."
+        }
+      ],
+      "takeaways": [
+        "Track every step from ad click to qualified FTD in one sheet.",
+        "Fix the step where a realistic improvement earns the most FTDs.",
+        "One change per version, judged with the same spend rules."
+      ],
+      "action": "Build a one-week step sheet for your main funnel, calculate every pass-through rate and estimate the extra FTDs from a 5-point lift at each step.",
+      "glossary": [
+        {
+          "term": "Step sheet",
+          "def": "A daily or weekly table of counts at each funnel step."
+        },
+        {
+          "term": "Version",
+          "def": "A copy of a funnel step with one change, tested against the original."
+        },
+        {
+          "term": "Leak",
+          "def": "A funnel step where an unusually large share of people drop off."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "900 views, 450 offer clicks, 81 registrations, 18 FTDs. Offer to registration rate?",
+          "options": [
+            "18%",
+            "50%",
+            "22%",
+            "9%"
+          ],
+          "answer": 0,
+          "why": "81 ÷ 450 = 18%."
+        },
+        {
+          "q": "Raise offer to registration from 18% to 23% with 450 offer clicks and 22.2% reg to FTD. New FTDs?",
+          "options": [
+            "18",
+            "20",
+            "23",
+            "25"
+          ],
+          "answer": 2,
+          "why": "450 × 23% = 103.5 × 22.2% ≈ 23."
+        },
+        {
+          "q": "Three fixes in a row produced no gain. What do the rules say?",
+          "options": [
+            "Try a fourth",
+            "Raise the budget",
+            "Remove the 18+ line",
+            "Replace the funnel"
+          ],
+          "answer": 3,
+          "why": "Three failed fixes: replace the funnel."
+        },
+        {
+          "q": "Why change one step per version?",
+          "options": [
+            "It is faster",
+            "So you know which change caused the result",
+            "Platforms require it",
+            "It lowers CPM"
+          ],
+          "answer": 1,
+          "why": "Several changes at once hide the cause."
+        },
+        {
+          "q": "Qualified CPA has been above payout for 3 weeks. Action?",
+          "options": [
+            "Keep testing",
+            "Double the budget",
+            "Stop the funnel",
+            "Switch to platform data"
+          ],
+          "answer": 2,
+          "why": "A funnel losing money for 3 weeks stops."
+        }
+      ],
+      "say_intro": "In this final lesson you'll learn to measure every step of an iGaming funnel and fix the one that earns the most. You'll also learn when to fix a funnel, when to replace it, and when to stop.",
+      "say_outro": "So, measure every step with the same date range, estimate the money gain of each fix, change one thing per version, and stop a funnel when the rules say so. Your task: build a one week step sheet for your main funnel, calculate every pass through rate, and estimate the extra F T Ds from a five point lift at each step. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "1,000 clicks at $0.60. Prelander CTR 60%, 22% register, 22% deposit. CPFTD?",
+      "options": [
+        "$25.00",
+        "$20.69",
+        "$21.43",
+        "$18.00"
+      ],
+      "answer": 1,
+      "why": "600 × 22% × 22% ≈ 29 FTDs; $600 ÷ 29 = $20.69."
+    },
+    {
+      "q": "You test a Telegram funnel against a prelander. After 3 days Telegram has fewer FTDs. What do you do?",
+      "options": [
+        "Kill Telegram",
+        "Move all budget to Telegram",
+        "Change the ad in the Telegram arm",
+        "Keep both running and judge Telegram at 30 days"
+      ],
+      "answer": 3,
+      "why": "Telegram FTDs arrive over weeks; judge at 30 days with the same ad."
+    },
+    {
+      "q": "A partner offers an APK download link for your ads, saying the store version is 'slow to approve'. What do you do?",
+      "options": [
+        "Decline; only the official store app or brand site",
+        "Use the APK",
+        "Host a modified version",
+        "Send the APK in Telegram"
+      ],
+      "answer": 0,
+      "why": "Unofficial files are a security, policy and legal risk."
+    },
+    {
+      "q": "CPI $1.00, install to registration 20%, registration to FTD 25%. CPFTD?",
+      "options": [
+        "$5.00",
+        "$45.00",
+        "$20.00",
+        "$4.00"
+      ],
+      "answer": 2,
+      "why": "$1.00 ÷ (0.20 × 0.25) = $20."
+    },
+    {
+      "q": "Your channel posted 80 tips at 2.00 average odds, one unit each, 38 won. What should the pinned record show?",
+      "options": [
+        "+4 units",
+        "-4 units",
+        "Only the 38 wins",
+        "+38 units"
+      ],
+      "answer": 1,
+      "why": "38 × 2 = 76 returned; 76 − 80 = −4 units. Publish it in full."
+    },
+    {
+      "q": "A join request arrives. The person taps 'No' to the 18+ question. What does the bot do?",
+      "options": [
+        "Decline the request",
+        "Approve anyway",
+        "Ask again until yes",
+        "Send a bonus link"
+      ],
+      "answer": 0,
+      "why": "No age confirmation means decline."
+    },
+    {
+      "q": "5,000 members. Leave rate goes from 4% to 10% a month after you add hourly offer posts. What do the rules say?",
+      "options": [
+        "Add more posts",
+        "Ignore leaves",
+        "Move posts to 2 am",
+        "Cut promo frequency by half and drop high-leave post types"
+      ],
+      "answer": 3,
+      "why": "Leave rate above 8% means cutting promo frequency; post types with high leaves are dropped."
+    },
+    {
+      "q": "Angle A: CPFTD $20, 50% qualify. Angle B: CPFTD $27, 80% qualify. Payout $40. Which do you keep?",
+      "options": [
+        "A, true CPA $40",
+        "A, cheaper FTDs",
+        "B, true CPA $33.75",
+        "Both, they are equal"
+      ],
+      "answer": 2,
+      "why": "A: $20 ÷ 0.5 = $40, break-even. B: $27 ÷ 0.8 = $33.75."
+    },
+    {
+      "q": "Your funnel: 450 offer clicks, 81 registrations, 18 FTDs. Which realistic +5 point fix adds the most FTDs?",
+      "options": [
+        "Offer to registration, 18% to 23%",
+        "View to offer, 50% to 55%",
+        "Registration to FTD, 22.2% to 27.2%",
+        "None"
+      ],
+      "answer": 0,
+      "why": "Offer to registration adds about 5 FTDs, more than the other two."
+    },
+    {
+      "q": "A test page lifts conversions 20% by moving wagering terms into the footer. Do you keep it?",
+      "options": [
+        "Yes, conversions rose",
+        "Yes, for one week",
+        "Only on weekends",
+        "No; it fails the compliance gate"
+      ],
+      "answer": 3,
+      "why": "Hiding key terms is not a fix; every change must pass the gate."
+    }
+  ]
+}

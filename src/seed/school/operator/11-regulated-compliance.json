@@ -1,0 +1,2714 @@
+{
+  "school": "operator",
+  "order": 11,
+  "slug": "regulated-compliance",
+  "title": "Compliance for finance, trading and gambling offers",
+  "summary": "How law, advertiser licences, platform authorization and network rules stack for trading, gambling and loan offers, and how to check each one in Nigeria, Kenya, Ghana, South Africa, Cameroon and beyond. You finish with honest creatives, a compliance file and an exact go/no-go gate, so you never launch a regulated campaign you cannot defend. Education, not legal advice.",
+  "lessons": [
+    {
+      "slug": "how-the-rules-stack",
+      "title": "How regulation and platform policy stack",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can name the four layers of rules that apply to every regulated campaign.",
+        "You can explain why passing one layer never means you passed the others.",
+        "You can verify an advertiser's licence on a regulator's official register.",
+        "You can apply a simple go/no-go rule: every layer must be a clear yes."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why this is the one module you cannot fail",
+          "p": "Trading, gambling and loan offers pay well because they are risky for the people who use them. That is why they are regulated. A mistake here does not only waste ad spend. It can get your ad account banned, your payouts withheld and, in some countries, expose you to fines or criminal charges.",
+          "more": "Most modules teach you how to earn more. This one teaches you how to keep what you earn. In regulated verticals the rules come from several places at once, and each one can stop your campaign on its own. You do not need to be a lawyer to follow this module. You need to know which questions to ask, where to check the answers and when to say no. Everything here is education, not legal advice. Where we are not certain a rule is current, we say so, and you must check the official source.",
+          "d": {
+            "b": "Regulated offers: high payouts, high stakes",
+            "s": "One careless ad can cost the account, the payouts and the business."
+          },
+          "say": "Trading, gambling and loan offers pay well because they're risky for the people who use them. That's exactly why they're regulated. A mistake here doesn't just waste ad spend. It can get your ad account banned, your payouts withheld, and in some countries, expose you to fines or criminal charges. Most modules teach you to earn more. This one teaches you to keep what you earn. You don't need to be a lawyer. You need to know which questions to ask, where to check, and when to say no. And remember, this is education, not legal advice."
+        },
+        {
+          "v": "map",
+          "h": "The four layers every campaign sits inside",
+          "p": "Picture four filters stacked on top of each other. The law where the user lives decides if the product may be offered. The advertiser's licence proves they are allowed. The platform's authorization decides if the ad may run. The network's rules decide if you get paid. Your ad reaches people only if all four say yes.",
+          "more": "Read the map from left to right. If the law in Kenya does not allow an unlicensed broker to market there, it does not matter that Meta approved your ad. If Meta has not authorized gambling ads for your account, it does not matter that the casino holds a licence. If the network bans a certain type of traffic, your conversions can be rejected even when everything else is legal. Each layer is a separate question with a separate answer, and you must collect all four answers before you spend.",
+          "d": {
+            "nodes": [
+              {
+                "id": "law",
+                "label": "Law in user's country",
+                "kind": "data"
+              },
+              {
+                "id": "lic",
+                "label": "Advertiser licence",
+                "kind": "offer"
+              },
+              {
+                "id": "auth",
+                "label": "Platform authorization",
+                "kind": "tool"
+              },
+              {
+                "id": "net",
+                "label": "Network rules",
+                "kind": "data"
+              },
+              {
+                "id": "ad",
+                "label": "Your ad",
+                "kind": "ad"
+              },
+              {
+                "id": "user",
+                "label": "Adult user",
+                "kind": "person"
+              },
+              {
+                "id": "pay",
+                "label": "Your payout",
+                "kind": "money"
+              }
+            ],
+            "edges": [
+              [
+                "law",
+                "lic",
+                "permits"
+              ],
+              [
+                "lic",
+                "auth",
+                "proves"
+              ],
+              [
+                "auth",
+                "ad",
+                "allows"
+              ],
+              [
+                "net",
+                "ad",
+                "terms"
+              ],
+              [
+                "ad",
+                "user",
+                "reaches"
+              ],
+              [
+                "user",
+                "pay",
+                "if all pass"
+              ]
+            ]
+          },
+          "say": "Picture four filters stacked on top of each other, like the map on screen. The law where the user lives decides if the product may be offered. The advertiser's licence proves they're allowed. The platform's authorization decides if the ad may run. And the network's rules decide if you get paid. Your ad reaches people only if all four say yes. For example, if the law in Kenya doesn't allow an unlicensed broker to market there, it doesn't matter that Meta approved your ad. Each layer is a separate question, and you collect all four answers before you spend."
+        },
+        {
+          "v": "cards",
+          "h": "What each layer covers",
+          "p": "Each layer has a different owner and asks a different question. Learn the question each one asks, because that tells you who to ask and what proof to collect.",
+          "d": [
+            "Law|Can this product be offered and advertised to people in this country?",
+            "Licence|Is this advertiser authorised by the regulator for this exact country?",
+            "Platform|Has the ad platform given permission for this category and account?",
+            "Network|Do the offer terms allow this traffic source, geo and message?"
+          ],
+          "say": "Look at these four cards. Each layer has a different owner and asks a different question. Law asks, can this product be offered and advertised to people in this country? Licence asks, is this advertiser authorised by the regulator for this exact country? Platform asks, has the ad platform given permission for this category and account? And network asks, do the offer terms allow this traffic source, geo and message? Learn the question each one asks, because it tells you who to ask and what proof to collect."
+        },
+        {
+          "v": "table",
+          "h": "Who sets each layer and what breaking it costs",
+          "p": "A rough guide. The cost of breaking a layer depends on the country, the platform and your contract, so treat this as a map of risk, not a list of exact penalties.",
+          "more": "Notice that the most expensive consequences come from the layers you cannot see in Ads Manager. A rejected ad is visible and cheap. A regulator's order or a network clawback can arrive weeks later, after you have spent and reinvested. That delay is why you check everything before launch, not after.",
+          "d": {
+            "cols": [
+              "Layer",
+              "Set by",
+              "If you break it"
+            ],
+            "rows": [
+              [
+                "Law",
+                "Government, regulators",
+                "Fines, orders, possible charges"
+              ],
+              [
+                "Licence",
+                "Regulator",
+                "Offer is illegal there; payouts at risk"
+              ],
+              [
+                "Platform",
+                "Meta, TikTok, Google",
+                "Ad rejected, account restricted"
+              ],
+              [
+                "Network",
+                "Network, advertiser",
+                "Leads rejected, payouts withheld"
+              ]
+            ]
+          },
+          "say": "This table is a rough guide to who sets each layer and what breaking it can cost. Law is set by government and regulators, and breaking it can mean fines, orders or possible charges. Licence is set by the regulator, and without it the offer is illegal there. Platform rules from Meta, TikTok or Google can get ads rejected and accounts restricted. Network rules can mean rejected leads and withheld payouts. Notice the most expensive consequences come from layers you can't see in Ads Manager, and they can arrive weeks later. Treat this as a map of risk, not exact penalties."
+        },
+        {
+          "v": "big",
+          "h": "The strictest rule wins",
+          "p": "When two layers disagree, follow the stricter one. If local law says 18 and the advertiser's terms say 21, use 21. If the platform allows a claim but the regulator forbids it, do not make it. You never get to pick the softer rule because it suits your campaign.",
+          "d": {
+            "b": "Always follow the strictest layer",
+            "s": "Softer rules elsewhere do not protect you here."
+          },
+          "say": "Here's a simple rule to remember. When two layers disagree, follow the stricter one. If local law says eighteen and the advertiser's terms say twenty one, use twenty one. If the platform allows a claim but the regulator forbids it, don't make it. You never get to pick the softer rule just because it suits your campaign. Softer rules somewhere else don't protect you here."
+        },
+        {
+          "v": "table",
+          "h": "Regulator examples in our core markets",
+          "p": "Examples at the time of writing. Names, powers and the split between bodies change, and some areas are under reform. Always confirm on the regulator's official website before relying on this table.",
+          "more": "Some notes. In Nigeria, a 2024 Supreme Court ruling placed most lottery and gaming regulation with the states, so the state you target matters; check the current position. Kenya's gambling law was being reformed at the time of writing, so check whether the Betting Control and Licensing Board or a successor body now issues licences. For Cameroon we could not confirm the current gambling licensing body; ask your network for the licence and check it with a local adviser. COSUMAF and COBAC are regional bodies for the CEMAC zone. Treat every cell as a starting point for your own check.",
+          "d": {
+            "cols": [
+              "Country",
+              "Investments",
+              "Gambling",
+              "Lending"
+            ],
+            "rows": [
+              [
+                "Nigeria",
+                "SEC Nigeria",
+                "Mainly state bodies, e.g. Lagos",
+                "CBN; FCCPC for digital lenders"
+              ],
+              [
+                "Kenya",
+                "Capital Markets Authority",
+                "BCLB (under reform; check)",
+                "Central Bank of Kenya"
+              ],
+              [
+                "Ghana",
+                "SEC Ghana",
+                "Gaming Commission of Ghana",
+                "Bank of Ghana"
+              ],
+              [
+                "South Africa",
+                "FSCA",
+                "Provincial boards, NGB",
+                "National Credit Regulator"
+              ],
+              [
+                "Cameroon",
+                "COSUMAF (regional)",
+                "Not confirmed; check",
+                "COBAC (regional)"
+              ]
+            ]
+          },
+          "say": "This table shows example regulators in our core markets, at the time of writing. For investments, Nigeria has the S E C, Kenya the Capital Markets Authority, Ghana its own S E C, South Africa the F S C A, and Cameroon the regional body COSUMAF. Gambling and lending have their own bodies, shown in the other columns. A few notes. In Nigeria, a twenty twenty four Supreme Court ruling moved most gaming regulation to the states. Kenya's gambling law was being reformed. For Cameroon gambling, we couldn't confirm the licensing body. Names and powers change, so confirm every cell on the regulator's official website."
+        },
+        {
+          "v": "table",
+          "h": "Global examples you will meet",
+          "p": "Many brokers and betting brands you promote in Africa are licensed in other countries too. These are common examples. A licence in one of these places does not by itself permit marketing in Nigeria, Kenya or anywhere else.",
+          "more": "Big brands often run several legal entities. A group may hold an FCA licence for its UK company while customers in Africa are signed up by a different company registered offshore. When an offer page says \"regulated by the FCA\", ask which entity will hold your users' accounts and which licence covers your target country. Verify each claim on the official register: the FCA Register, CySEC's list of regulated entities and ASIC's professional registers are all public at the time of writing.",
+          "d": {
+            "cols": [
+              "Region",
+              "Investments",
+              "Gambling"
+            ],
+            "rows": [
+              [
+                "United Kingdom",
+                "FCA",
+                "Gambling Commission"
+              ],
+              [
+                "EU (e.g. Cyprus)",
+                "CySEC; national regulators",
+                "National regulators"
+              ],
+              [
+                "Australia",
+                "ASIC",
+                "State bodies; ACMA online"
+              ],
+              [
+                "Offshore hubs",
+                "Varies; often light rules",
+                "Varies; e.g. Curacao"
+              ]
+            ]
+          },
+          "say": "Many brands you promote in Africa are licensed in other countries too. Here are common examples: the F C A and the Gambling Commission in the United Kingdom, CySEC and national regulators in the E U, ASIC and state bodies in Australia, and offshore hubs with lighter rules. But a licence in one of these places doesn't by itself permit marketing in Nigeria, Kenya or anywhere else. Big brands often run several legal entities. So when an offer says regulated by the F C A, ask which entity will hold your users' accounts, and which licence covers your target country."
+        },
+        {
+          "v": "walk",
+          "h": "How to verify a licence on an official register",
+          "p": "Never trust a licence number on a sales page alone. Check it yourself on the regulator's own site. This takes ten minutes and protects weeks of spend. Screens here are illustrative mock-ups; every register looks different.",
+          "d": {
+            "steps": [
+              {
+                "title": "Go to the regulator yourself",
+                "text": "Type the regulator's address or find it via a search you trust. Do not click the link on the offer page; fake registers exist.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "regulator.example",
+                  "title": "Regulator home",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "value": "Official site of the financial regulator"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Search the register"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Search the firm",
+                "text": "Search by the legal company name and the licence number the advertiser gave you, not only the brand name.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "regulator.example/register",
+                  "title": "Public register",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Firm name or number",
+                      "value": "Example Markets Ltd"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Search"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Check status and scope",
+                "text": "Status should be current or authorised. Check what the firm is permitted to do, for example dealing in CFDs or offering consumer credit.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "regulator.example/firm/123456",
+                  "title": "Firm details",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Field",
+                        "Value"
+                      ],
+                      "rows": [
+                        [
+                          "Status",
+                          "Authorised"
+                        ],
+                        [
+                          "Permissions",
+                          "Dealing in investments"
+                        ],
+                        [
+                          "Websites",
+                          "examplemarkets.example"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Match the website",
+                "text": "The register should list the same website domain your offer sends users to. A different domain is a warning sign of a clone.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "regulator.example/firm/123456",
+                  "title": "Trading names and websites",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Registered domain",
+                      "value": "examplemarkets.example"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Offer domain",
+                      "value": "examplemarkets.example"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Match. Save a dated screenshot."
+                    }
+                  ],
+                  "highlight": 2
+                }
+              },
+              {
+                "title": "Save the proof",
+                "text": "Take a screenshot showing the date, the URL and the status. File it in your compliance folder from lesson 6.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "drive.example/compliance/NG_broker",
+                  "title": "Compliance folder",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "File",
+                      "value": "2026-10-04_register_examplemarkets.png"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Upload"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              }
+            ]
+          },
+          "say": "Never trust a licence number on a sales page alone. Check it yourself. Tap Next to follow each step. First, go to the regulator's site yourself, by typing the address or using a search you trust. Don't click the link on the offer page, because fake registers exist. Second, search by the legal company name and the licence number, not just the brand. Third, check the status is current or authorised, and what the firm is permitted to do. Fourth, make sure the register lists the same website domain your offer uses. Fifth, save a dated screenshot to your compliance folder. These screens are illustrative mock-ups."
+        },
+        {
+          "v": "tip",
+          "h": "Watch for clone firms",
+          "p": "A clone firm copies the name, licence number and look of a real licensed company, then uses its own website to take people's money. Regulators publish warning lists about clones and unlicensed firms. If the domain on the register does not match the offer, stop and ask the network in writing.",
+          "d": {
+            "kind": "warn",
+            "text": "Licence number matches but website does not? Treat it as a clone until proven otherwise."
+          },
+          "say": "Watch out for clone firms. A clone copies the name, licence number and look of a real licensed company, then uses its own website to take people's money. Regulators publish warning lists about clones and unlicensed firms. So if the domain on the register doesn't match the offer, stop, and ask the network in writing. As the warning says, if the licence number matches but the website doesn't, treat it as a clone until proven otherwise."
+        },
+        {
+          "v": "flow",
+          "h": "The order of checks before you build anything",
+          "p": "Do the checks in this order, because each one can end the plan and later checks are wasted if an earlier one fails. Building creatives first and checking the law last is the most expensive way round.",
+          "d": [
+            "Law allows it in this geo",
+            "Advertiser licensed for this geo",
+            "Platform authorization granted",
+            "Network terms allow your source",
+            "Then build ads and landers"
+          ],
+          "say": "Follow this flow, in order, before you build anything. First, the law allows it in this geo. Second, the advertiser is licensed for this geo. Third, platform authorization is granted. Fourth, the network terms allow your source. Only then, build ads and landers. Why this order? Because each check can end the plan, and later checks are wasted if an earlier one fails. Building creatives first and checking the law last is the most expensive way round."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: skipping one layer",
+          "p": "Example. You run a casino offer into a country where online casino is not permitted. Ads get approved, sign-ups come in, and the network reviews the geo at month end. Every figure is illustrative, not a statistic.",
+          "more": "Example maths: 10 days at $40 is $400. Twelve FTDs at $50 would have paid $600, so you expected a $200 profit. Instead the network rejects everything because the brand cannot legally accept players from that geo, so you lose the $400 you spent and never see the $600. The gap between plan and reality is $1,000, and that is before you count the risk to your ad account and to your relationship with the network. Ten minutes on a register and one written question to the network would have prevented all of it.",
+          "d": {
+            "cols": [
+              "Item",
+              "Figure",
+              "Result"
+            ],
+            "rows": [
+              [
+                "Ad spend",
+                "$40 x 10 days",
+                "$400 spent"
+              ],
+              [
+                "FTDs reported",
+                "12 at $50 CPA",
+                "$600 expected"
+              ],
+              [
+                "Network review",
+                "Geo not allowed",
+                "$0 paid"
+              ],
+              [
+                "Cash lost",
+                "$400",
+                "Plus account risk"
+              ],
+              [
+                "Total gap vs plan",
+                "$400 + $600",
+                "$1,000"
+              ]
+            ]
+          },
+          "say": "Here's an example of skipping one layer. Every figure is illustrative. You run a casino offer into a country where online casino isn't permitted. You spend forty dollars a day for ten days, so four hundred dollars. Twelve F T Ds, first-time deposits, at fifty dollars should pay six hundred. But at month end the network reviews the geo and pays zero, because the brand can't legally accept players there. You lose the four hundred, never see the six hundred, and the gap versus plan is one thousand dollars, plus risk to your account. Ten minutes on a register would have prevented it."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "These mistakes are common among new buyers in regulated verticals. Each one comes from checking only the layer that feels most urgent, usually the platform, and assuming the others are fine.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Ad approved, so it must be legal",
+                "Licensed in Cyprus, so fine in Ghana",
+                "Network said it is OK on a call",
+                "Copying a competitor's ad because it runs"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Check law and licence separately",
+                "Check the licence covers your exact geo",
+                "Get every answer in writing and file it",
+                "Running ads can still be breaking rules"
+              ]
+            }
+          },
+          "say": "These mistakes are common among new buyers in regulated verticals. Thinking the ad was approved, so it must be legal. Licensed in Cyprus, so fine in Ghana. The network said it's OK on a call. Copying a competitor's ad because it runs. And the fixes on the right: check law and licence separately, check the licence covers your exact geo, get every answer in writing and file it, and remember running ads can still be breaking rules. Each mistake comes from checking only the layer that feels most urgent."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rule: go or no-go",
+          "p": "Use this as a starting rule and adapt it with your adviser. One unclear answer counts as a no. You only launch when every line is a clear, written yes.",
+          "d": [
+            "Law: offering and advertising allowed in this geo (yes, with source)",
+            "Licence: verified on official register for this geo (yes, screenshot)",
+            "Platform: authorization granted where required (yes, in writing)",
+            "Network: source, geo and copy allowed (yes, in writing)",
+            "Any line unknown = no-go until answered"
+          ],
+          "say": "Here's your starting go or no-go rule. Adapt it with your adviser. Law: offering and advertising allowed in this geo, yes, with a source. Licence: verified on the official register for this geo, yes, with a screenshot. Platform: authorization granted where required, yes, in writing. Network: source, geo and copy allowed, yes, in writing. And if any line is unknown, it's a no-go until answered. One unclear answer counts as a no. You only launch when every line is a clear, written yes."
+        },
+        {
+          "v": "cards",
+          "h": "You are the advertiser in the platform's eyes",
+          "p": "The ad runs from your account, your card and your page. Platforms hold you responsible for it, even when the brand, network or a teammate wrote the copy. That is why you cannot hand compliance to anyone else.",
+          "d": [
+            "Your account|Restrictions land on you, not the brand",
+            "Your page|Claims on it are yours",
+            "Your traffic|Networks judge you by its quality",
+            "Your records|Only you can prove what you checked"
+          ],
+          "say": "Here's something many beginners miss. In the platform's eyes, you are the advertiser. The ad runs from your account, your card and your page. Look at these cards. Restrictions land on your account, not the brand. Claims on your page are yours. Networks judge you by your traffic's quality. And only your records can prove what you checked. Platforms hold you responsible even when the brand, network or a teammate wrote the copy. That's why you can't hand compliance to anyone else."
+        },
+        {
+          "v": "tip",
+          "h": "Not legal advice",
+          "p": "This module is education, not legal advice. Laws, licences and platform policies differ by country and change often. Before you run or scale a regulated offer, check the current rules yourself and, where money or your accounts are at stake, speak to a qualified local lawyer.",
+          "d": {
+            "kind": "warn",
+            "text": "Education only. Check current law and policy, and use a qualified local lawyer before scaling."
+          },
+          "say": "One last but important point. This module is education, not legal advice. Laws, licences and platform policies differ by country and change often. Before you run or scale a regulated offer, check the current rules yourself, and where money or your accounts are at stake, speak to a qualified local lawyer. As the warning says, education only. Check current law and policy, and use a qualified local lawyer before scaling."
+        }
+      ],
+      "takeaways": [
+        "Every regulated campaign sits inside four layers: local law, advertiser licence, platform authorization and network rules.",
+        "Passing one layer never proves you passed another; ad approval is not legal approval.",
+        "When layers disagree, the strictest rule applies.",
+        "Verify licences on the regulator's own register, match the website and save dated proof.",
+        "Launch only when all four layers are a clear, written yes."
+      ],
+      "action": "Pick one regulated offer you run or want to run. Fill in the four layers for one geo with a source for each answer, and verify the advertiser on the official register, saving a dated screenshot.",
+      "glossary": [
+        {
+          "term": "Regulator",
+          "def": "A government body that licenses and supervises an industry, such as SEC Nigeria or the FCA."
+        },
+        {
+          "term": "Licence",
+          "def": "Official permission from a regulator to offer a product, usually limited to certain countries and activities."
+        },
+        {
+          "term": "Authorization (platform)",
+          "def": "Written permission from an ad platform to advertise a restricted category from a specific account."
+        },
+        {
+          "term": "Public register",
+          "def": "A regulator's official online list of licensed firms, with status, permissions and websites."
+        },
+        {
+          "term": "Clone firm",
+          "def": "A fraudster copying a real licensed firm's name and details to look legitimate."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Meta approved your betting ad for Ghana. What does that prove?",
+          "options": [
+            "The offer is legal in Ghana",
+            "Only that the ad passed Meta's review at that moment",
+            "The brand is licensed in Ghana",
+            "The network will pay for the leads"
+          ],
+          "answer": 1,
+          "why": "Ad approval is one layer only. Law, licence and network rules are separate checks and can each fail on their own."
+        },
+        {
+          "q": "Local law sets 18 as the minimum age. The advertiser's terms say 21. What age do you target?",
+          "options": [
+            "18, because the law allows it",
+            "Whatever gets the cheapest CPM",
+            "21, because the strictest rule wins",
+            "No age limit, the brand checks later"
+          ],
+          "answer": 2,
+          "why": "When layers disagree you follow the stricter one. Targeting 18 to 20 breaks the advertiser's terms and gets leads rejected."
+        },
+        {
+          "q": "A broker's page says \"Licence no. 123456\". What is the best way to check it?",
+          "options": [
+            "Click the register link on the broker's page",
+            "Ask in a Telegram group",
+            "Trust it if the page looks professional",
+            "Go to the regulator's own site, search the firm and match the website"
+          ],
+          "answer": 3,
+          "why": "Fake registers and clone firms exist. Only the regulator's official register, reached independently, is reliable."
+        },
+        {
+          "q": "The register lists the firm as authorised, but under a different website domain from your offer. What do you do?",
+          "options": [
+            "Stop and ask the network in writing; it may be a clone",
+            "Run it, the licence number matches",
+            "Run it at a lower budget",
+            "Change the domain in your ad"
+          ],
+          "answer": 0,
+          "why": "A mismatched domain is a classic clone sign. Do not spend until the network explains it in writing and you can verify the answer."
+        },
+        {
+          "q": "Which order of checks wastes the least money?",
+          "options": [
+            "Build ads, launch, then check the law",
+            "Check platform policy, launch, then ask the network",
+            "Law, licence, platform authorization, network terms, then build",
+            "Network terms only, they cover everything"
+          ],
+          "answer": 2,
+          "why": "Each earlier check can end the plan. Doing them first means you never pay for creatives or spend on a campaign that was never allowed."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn the four layers of rules that sit around every regulated campaign, and why passing one never means you passed the others. You'll also learn to verify a licence yourself and use a simple go or no-go rule.",
+      "say_outro": "So, law, licence, platform and network are four separate questions, the strictest rule wins, and one unclear answer means no-go. Your task: pick one regulated offer, fill in the four layers for one geo with a source for each answer, and verify the advertiser on the official register, saving a dated screenshot. Now take the quiz."
+    },
+    {
+      "slug": "gambling-and-igaming",
+      "title": "Gambling and iGaming: licences, age and honest ads",
+      "minutes": 20,
+      "objectives": [
+        "By the end you can check whether a betting or casino brand may legally take players from your target country.",
+        "You can set age targeting that meets the strictest applicable rule.",
+        "You can explain what platform authorization for gambling ads means and how to request it.",
+        "You can write gambling ads that carry responsible gambling messages and avoid banned claims."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why gambling is the strictest vertical",
+          "p": "Gambling can cause real harm: debt, addiction and family breakdown. Regulators and platforms respond with the tightest rules in advertising. A single ad that appeals to children or promises easy money can end your account and, in some countries, break the law.",
+          "more": "This lesson covers sports betting, online casino, lotteries and other games where people stake money to win money. Some sweepstakes and skill games can fall under gambling rules too, depending on the platform and country. If you are not sure whether your offer counts as gambling, assume it does until the platform's current policy and the local law say otherwise.",
+          "d": {
+            "b": "Gambling ads are judged on harm",
+            "s": "Every rule exists because someone was hurt."
+          },
+          "say": "Gambling can cause real harm: debt, addiction and family breakdown. So regulators and platforms respond with the tightest rules in advertising. A single ad that appeals to children or promises easy money can end your account, and in some countries, break the law. This lesson covers sports betting, online casino, lotteries and other games where people stake money to win money. If you're not sure whether your offer counts as gambling, assume it does until the platform's current policy and local law say otherwise. Every rule here exists because someone was hurt."
+        },
+        {
+          "v": "cards",
+          "h": "What usually counts as gambling",
+          "p": "Platforms and laws define gambling broadly. A rough guide at the time of writing: if a user pays or stakes something of value for a chance to win something of value, treat it as gambling and check the rules.",
+          "d": [
+            "Sports betting|Bets on matches and events",
+            "Online casino|Slots, roulette, live dealer games",
+            "Lotteries|Including some private lotteries",
+            "Skill games for money|Fantasy, poker, paid tournaments",
+            "Some sweepstakes|Where entry costs money"
+          ],
+          "say": "What counts as gambling? Platforms and laws define it broadly. A rough guide at the time of writing: if a user pays or stakes something of value for a chance to win something of value, treat it as gambling and check the rules. Look at the cards. Sports betting. Online casino, like slots, roulette and live dealer games. Lotteries, including some private ones. Skill games for money, like fantasy, poker and paid tournaments. And some sweepstakes where entry costs money."
+        },
+        {
+          "v": "table",
+          "h": "Who licenses gambling: examples",
+          "p": "Examples at the time of writing. Gambling law changes often and is split between national and local bodies in several countries. Confirm the licence and the body on the official website before you run.",
+          "more": "Some detail, with the uncertainty stated. In South Africa, at the time of writing, online sports betting can be licensed by provincial boards while online casino games are generally not permitted under national law; reform has been discussed, so check. In Australia, offering online casino games to Australians is prohibited under federal law, and ACMA blocks illegal sites, while licensed sports betting is allowed. In Nigeria, a 2024 Supreme Court ruling moved most gaming regulation to the states. In Kenya, a new gambling law and regulator were being introduced; we are not certain of the current status. For Cameroon we could not confirm the licensing body.",
+          "d": {
+            "cols": [
+              "Country",
+              "Licensing body (example)",
+              "Note"
+            ],
+            "rows": [
+              [
+                "Nigeria",
+                "State bodies, e.g. Lagos (LSLGA)",
+                "State you target matters"
+              ],
+              [
+                "Kenya",
+                "BCLB",
+                "Law under reform; check"
+              ],
+              [
+                "Ghana",
+                "Gaming Commission of Ghana",
+                "Check brand's licence list"
+              ],
+              [
+                "South Africa",
+                "Provincial gambling boards",
+                "Online casino generally not allowed"
+              ],
+              [
+                "Cameroon",
+                "Not confirmed",
+                "Ask network; check locally"
+              ],
+              [
+                "UK",
+                "Gambling Commission",
+                "Strict ad codes"
+              ],
+              [
+                "Australia",
+                "State bodies; ACMA",
+                "Online casino banned"
+              ]
+            ]
+          },
+          "say": "This table shows example gambling licensing bodies, at the time of writing. In Nigeria, state bodies, such as Lagos, so the state you target matters. In Kenya, the B C L B, with the law under reform. Ghana has its Gaming Commission. South Africa has provincial boards, and online casino is generally not allowed there. For Cameroon, the body isn't confirmed, so ask the network and check locally. The U K has the Gambling Commission with strict ad codes, and in Australia online casino is banned. Gambling law changes often, so confirm the licence and the body on the official website before you run."
+        },
+        {
+          "v": "big",
+          "h": "18+ is the floor, and sometimes higher",
+          "p": "Gambling is adults only. In most of our core markets the legal age is 18. Some places set it higher; many US states, for example, set 21 for casino gambling. Your targeting, creatives and landers must all respect the highest age that applies.",
+          "more": "Age rules reach further than targeting. In the UK, for example, the advertising codes at the time of writing say people shown in a significant role in gambling ads must not be, or seem to be, under 25, and ads must not strongly appeal to under-18s. Even outside the UK this is a sensible standard: no school uniforms, cartoon characters, youth slang aimed at teenagers or young-looking actors. Age targeting in Ads Manager uses the age people state on their profile, which is not perfect, so your creative must also not attract children.",
+          "d": {
+            "b": "Target the highest age that applies",
+            "s": "Law, platform and advertiser terms: take the strictest."
+          },
+          "say": "Gambling is adults only. In most of our core markets, the legal age is eighteen. Some places set it higher. Many U S states, for example, set twenty one for casino gambling. Your targeting, creatives and landers must all respect the highest age that applies. And age rules reach further than targeting. In the U K, at the time of writing, people shown in a significant role in gambling ads must not be, or seem to be, under twenty five. So no school uniforms, cartoon characters, teen slang or young-looking actors. Law, platform and advertiser terms: take the strictest."
+        },
+        {
+          "v": "screen",
+          "h": "Platform authorization for gambling ads",
+          "p": "At the time of writing, Meta requires prior written permission before an account may run online gambling ads, and ads may only target approved countries and adults. We are not certain how the current form looks; this screen is an illustrative mock-up. Check Meta's Help Center for the current process.",
+          "more": "Platforms usually want proof of a licence for each country you target and may ask whether you are the licensed operator or an affiliate. Affiliates are not always eligible on their own account; some brands run ads through their own authorized accounts instead. Do not run gambling ads while an application is pending, and never try to slip them through as a different category. Names and steps change; check the current Meta Help Center and, for TikTok, Google or Snapchat, each platform's own gambling policy.",
+          "d": {
+            "kind": "browser",
+            "url": "business.example/gambling-application",
+            "title": "Request permission: online gambling",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Business name",
+                "value": "Your registered business"
+              },
+              {
+                "type": "field",
+                "label": "Licence number(s)",
+                "value": "Per country you will target"
+              },
+              {
+                "type": "select",
+                "label": "Countries to target",
+                "value": "Kenya"
+              },
+              {
+                "type": "field",
+                "label": "Website",
+                "value": "Licensed brand's site"
+              },
+              {
+                "type": "text",
+                "value": "Illustrative only. Fields and eligibility change; check the current Help Center."
+              },
+              {
+                "type": "button",
+                "label": "Submit for review"
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "Now, platform authorization. At the time of writing, Meta requires prior written permission before an account may run online gambling ads, and ads may only target approved countries and adults. This screen is an illustrative mock-up, and we're not certain how the current form looks, so check Meta's Help Center. Platforms usually want proof of a licence for each country you target. Affiliates aren't always eligible on their own account. Don't run gambling ads while an application is pending, and never try to slip them through as a different category. Check TikTok, Google and Snapchat's own policies too."
+        },
+        {
+          "v": "screen",
+          "h": "Set the age floor in the ad set",
+          "p": "In the ad set, set the minimum age to the highest rule that applies, and target only the approved countries. Do not use interests that suggest vulnerability. Setting names change; check the current Ads Manager.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/adset/edit",
+            "title": "Ad set: KE_Sportsbook_Test_01",
+            "blocks": [
+              {
+                "type": "select",
+                "label": "Location",
+                "value": "Kenya (approved)"
+              },
+              {
+                "type": "field",
+                "label": "Age",
+                "value": "18 - 65+"
+              },
+              {
+                "type": "text",
+                "value": "Use 21 or higher where law or the brand requires it."
+              },
+              {
+                "type": "toggle",
+                "label": "Detailed targeting: interests",
+                "on": false
+              },
+              {
+                "type": "button",
+                "label": "Save"
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "In the ad set, look at the age field on screen. Set the minimum age to the highest rule that applies. The mock-up shows eighteen and up, with a note to use twenty one or higher where law or the brand requires it. Target only the approved countries, here Kenya. And notice detailed interest targeting is switched off. Don't use interests that suggest vulnerability. Setting names change, so check the current Ads Manager."
+        },
+        {
+          "v": "cards",
+          "h": "Responsible gambling messages",
+          "p": "Many regulators require specific messages in gambling ads and on landers, and the exact wording differs by country. Ask the brand for the required wording for each geo. Where none is required, include these anyway.",
+          "d": [
+            "18+ marker|Clear on the ad and the page",
+            "Gamble responsibly|Or the locally required tagline",
+            "Help line or site|Where the regulator names one",
+            "Terms apply|With key bonus terms near the offer",
+            "Licence line|Licensing body and number where required"
+          ],
+          "say": "Many regulators require specific messages in gambling ads and on landers, and the wording differs by country. So ask the brand for the required wording for each geo. Where none is required, include these anyway. An eighteen plus marker, clear on the ad and the page. Gamble responsibly, or the locally required tagline. A help line or site, where the regulator names one. Terms apply, with key bonus terms near the offer. And a licence line, with the licensing body and number where required."
+        },
+        {
+          "v": "cards",
+          "h": "Claims you must never make",
+          "p": "These are banned or restricted in many countries and on most platforms. Even where one is not explicitly banned, it misleads people and invites rejection.",
+          "d": [
+            "Income|Betting as a way to earn or pay bills",
+            "Certainty|Sure wins, fixed odds tips, guaranteed profit",
+            "Rescue|Gambling as a fix for money problems",
+            "Status|Linking gambling to success, sex or popularity",
+            "Youth appeal|Cartoons, teen idols, school settings",
+            "Fake free|\"Free\" or \"risk-free\" offers that are not"
+          ],
+          "say": "These claims are banned or restricted in many countries and on most platforms. Income: betting as a way to earn or pay bills. Certainty: sure wins, fixed odds tips, guaranteed profit. Rescue: gambling as a fix for money problems. Status: linking gambling to success, sex or popularity. Youth appeal: cartoons, teen idols, school settings. And fake free: free or risk-free offers that aren't. Even where one isn't explicitly banned, it misleads people and invites rejection."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: honest bonus terms",
+          "p": "Example. A bonus says \"100% up to KSh 5,000\" with 10x wagering on the bonus. A user deposits KSh 1,000 and gets KSh 1,000 bonus. Before they can withdraw bonus winnings they must place KSh 10,000 in bets. Your ad must not hide that.",
+          "more": "Example maths: bonus KSh 1,000 multiplied by a 10x wagering requirement equals KSh 10,000 of bets. Some brands apply wagering to deposit plus bonus, which would double it to KSh 20,000; read the real terms. An ad that says \"Get KSh 1,000 free\" without the wagering is misleading in many places and drives users who feel tricked, complain and churn. Show the key terms near the offer, such as \"18+. Min deposit KSh 100. 10x wagering. T&Cs apply.\", and link the full terms on the lander.",
+          "d": [
+            "KSh 1,000 bonus",
+            "x",
+            "10x wagering",
+            "=",
+            "KSh 10,000 in bets"
+          ],
+          "say": "Let's look at honest bonus terms. This is an example. A bonus says one hundred percent up to five thousand Kenyan shillings, with ten times wagering on the bonus. A user deposits one thousand shillings and gets a one thousand shilling bonus. Follow the equation: one thousand times ten means they must place ten thousand shillings in bets before withdrawing bonus winnings. Some brands apply wagering to deposit plus bonus, which doubles it, so read the real terms. An ad saying get one thousand free, without the wagering, is misleading. Show the key terms near the offer and link the full terms on the lander."
+        },
+        {
+          "v": "compare",
+          "h": "Rewrite: hype ad versus compliant ad",
+          "p": "Same offer, same geo. The left version is the kind of ad that gets rejected and causes harm. The right version can still be attractive while staying honest and carrying the required messages.",
+          "d": {
+            "a": {
+              "title": "Rejected style",
+              "items": [
+                "Turn KSh 100 into KSh 50,000 tonight",
+                "Sure odds from our VIP tipster",
+                "Broke? One bet can change your life",
+                "Young actor in school jersey"
+              ]
+            },
+            "b": {
+              "title": "Compliant style",
+              "items": [
+                "Bet on the weekend's matches, licensed in Kenya",
+                "Odds on 40+ leagues. 18+ only",
+                "Set deposit limits in your account",
+                "Adult fan watching a match. Gamble responsibly"
+              ]
+            }
+          },
+          "say": "Same offer, same geo, two styles. On the left, the kind of ad that gets rejected and causes harm. Turn one hundred shillings into fifty thousand tonight. Sure odds from our V I P tipster. Broke? One bet can change your life. A young actor in a school jersey. On the right, the compliant style. Bet on the weekend's matches, licensed in Kenya. Odds on forty plus leagues, eighteen plus only. Set deposit limits in your account. An adult fan watching a match, gamble responsibly. The right side can still be attractive while staying honest."
+        },
+        {
+          "v": "check",
+          "h": "Targeting restrictions to follow",
+          "p": "Targeting is where many gambling accounts get into trouble, because a wrong setting can reach minors or vulnerable people. These are starting rules; adapt them to the current platform policy and local law, and recheck them whenever you duplicate an ad set.",
+          "d": [
+            "Only approved countries and regions",
+            "Minimum age at the strictest rule",
+            "No interests linked to debt, addiction or recovery",
+            "No lookalikes built from users who self-excluded",
+            "Exclude anyone who asked not to be contacted"
+          ],
+          "say": "Targeting is where many gambling accounts get into trouble, because one wrong setting can reach minors or vulnerable people. Here are starting rules. Only approved countries and regions. Minimum age at the strictest rule. No interests linked to debt, addiction or recovery. No lookalikes built from users who self-excluded. And exclude anyone who asked not to be contacted. Adapt these to current platform policy and local law, and recheck them every time you duplicate an ad set."
+        },
+        {
+          "v": "phone",
+          "h": "A compliant lander, top to bottom",
+          "p": "The page must carry the same honesty as the ad: who the operator is, that it is for adults, the key terms and where to get help. Keep these visible on a phone, not hidden at the bottom in tiny grey text.",
+          "d": {
+            "app": "browser",
+            "url": "brand.example/ke/welcome",
+            "page": {
+              "h": "Weekend football, licensed in Kenya",
+              "p": "18+ only. Bonus: 100% up to KSh 5,000, 10x wagering, T&Cs apply. Licensed by the regulator, licence no. on file. Gamble responsibly; set limits in your account.",
+              "cta": "See the full terms"
+            }
+          },
+          "say": "Here's a compliant lander on a phone. The page must carry the same honesty as the ad. Look at the screen. The headline says weekend football, licensed in Kenya. Then, eighteen plus only, the bonus with its ten times wagering and terms, the licence line, and gamble responsibly, set limits in your account. And the button leads to the full terms. Keep all of this visible on a phone, not hidden at the bottom in tiny grey text."
+        },
+        {
+          "v": "partner",
+          "h": "Choosing an iGaming partner",
+          "p": "The partners below are the networks and advertisers we list for this vertical. Whoever you work with, ask for proof of licence for each geo and the required responsible gambling wording before you build anything.",
+          "d": {
+            "vertical": "igaming",
+            "note": "Pick partners who show a licence per geo and give you approved ad wording in writing."
+          },
+          "say": "These are the networks and advertisers we list for iGaming. Whoever you work with, ask for proof of licence for each geo, and the required responsible gambling wording, before you build anything. Pick partners who show a licence per geo and give you approved ad wording in writing."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for gambling",
+          "p": "Starting rules to adapt with your adviser. Each one is an exact stop line, so you do not have to make the call under pressure from a manager, a high payout or a campaign that is finally converting.",
+          "d": [
+            "No licence proof for the geo = no-go",
+            "No written platform permission = no gambling ads",
+            "Same rejection reason twice = stop and rewrite, do not resubmit",
+            "Network asks for under-21 creatives in a 21+ geo = refuse",
+            "User complaint about harm = pause ad and review within 24 hours"
+          ],
+          "say": "Here are starting decision rules for gambling, to adapt with your adviser. No licence proof for the geo means no-go. No written platform permission means no gambling ads. The same rejection reason twice means stop and rewrite, don't resubmit. A network asking for under twenty one creatives in a twenty one plus geo, refuse. And a user complaint about harm means pause the ad and review within twenty four hours. Each is an exact stop line, so you don't make the call under pressure."
+        },
+        {
+          "v": "tip",
+          "h": "Self-exclusion and bonus abuse",
+          "p": "Never market to people who have self-excluded, never help users get around limits, and never teach or encourage bonus abuse such as multi-accounting. It harms people, breaks the brand's terms and is a fast way to have all your traffic rejected.",
+          "d": {
+            "kind": "warn",
+            "text": "Gambling ads usually need platform authorization and must follow local law. Check both before you run."
+          },
+          "say": "Finally, self-exclusion and bonus abuse. Never market to people who have self-excluded. Never help users get around limits. And never teach or encourage bonus abuse, such as multi-accounting. It harms people, breaks the brand's terms, and it's a fast way to have all your traffic rejected. As the warning says, gambling ads usually need platform authorization and must follow local law. Check both before you run."
+        }
+      ],
+      "takeaways": [
+        "Treat any stake-to-win product as gambling until the platform policy and local law say otherwise.",
+        "Check that the brand is licensed for your exact geo; in some countries the rules sit with states or provinces.",
+        "Target the highest applicable age and make sure creatives do not appeal to children.",
+        "At the time of writing Meta needs prior written permission for online gambling ads; check the current process.",
+        "Carry responsible gambling messages and honest bonus terms in ads and landers."
+      ],
+      "action": "Choose one betting or casino offer and one geo. Collect in writing the brand's licence for that geo, the required responsible gambling wording and the minimum age, then check whether your ad account has platform permission for gambling ads.",
+      "glossary": [
+        {
+          "term": "Wagering requirement",
+          "def": "How many times a bonus (or deposit plus bonus) must be bet before winnings can be withdrawn."
+        },
+        {
+          "term": "Self-exclusion",
+          "def": "A user's request to be blocked from gambling with an operator or across licensed operators."
+        },
+        {
+          "term": "Responsible gambling message",
+          "def": "A required or recommended line such as 18+, gamble responsibly or a help line."
+        },
+        {
+          "term": "Prior written permission",
+          "def": "A platform's formal approval, granted before ads run, to advertise a restricted category."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A casino brand holds a Curacao licence. You want to target South Africa. What is the right first step?",
+          "options": [
+            "Run it, Curacao covers Africa",
+            "Check whether the brand may legally take South African players for casino games",
+            "Target 21+ to be safe and run",
+            "Use a lander without the brand name"
+          ],
+          "answer": 1,
+          "why": "A licence elsewhere does not authorise a geo. At the time of writing online casino is generally not permitted in South Africa, so check the law and licence first."
+        },
+        {
+          "q": "Which ad line is acceptable for a betting offer?",
+          "options": [
+            "Bet smart and pay your rent this month",
+            "Our tipster never loses",
+            "Odds on 40+ leagues. 18+. Gamble responsibly",
+            "Broke? One bet changes everything"
+          ],
+          "answer": 2,
+          "why": "It describes the product, carries the age marker and a responsible gambling message, and promises no income."
+        },
+        {
+          "q": "Bonus: KSh 2,000 with 10x wagering on the bonus. How much must the user bet before withdrawing bonus winnings?",
+          "options": [
+            "KSh 2,000",
+            "KSh 12,000",
+            "KSh 10,000",
+            "KSh 20,000"
+          ],
+          "answer": 3,
+          "why": "KSh 2,000 x 10 = KSh 20,000 in bets. That is why the ad must not present the bonus as free money."
+        },
+        {
+          "q": "Your gambling permission request is still pending with the platform. What do you do?",
+          "options": [
+            "Wait and do not run gambling ads",
+            "Run them as a gaming app category",
+            "Run them with a neutral lander",
+            "Run on a different account"
+          ],
+          "answer": 0,
+          "why": "Running before permission, or disguising the category, is circumvention. It can get every account involved restricted."
+        },
+        {
+          "q": "A creative shows a young-looking actor in a school-style jersey. What is the issue?",
+          "options": [
+            "None if age targeting is 18+",
+            "It can appeal to minors, which many codes and platforms ban",
+            "Only the jersey colour",
+            "It needs a bigger 18+ marker only"
+          ],
+          "answer": 1,
+          "why": "Creatives must not appeal to children, whatever the targeting. Some codes, such as the UK's, also require people shown to be clearly adults."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn the rules for gambling and iGaming offers. You'll check whether a brand may legally take players from your country, set the right age floor, understand platform authorization, and write ads that carry responsible gambling messages.",
+      "say_outro": "So, check the licence per geo, target the highest age that applies, get platform permission first, and write honest ads with the required messages. Your task: choose one betting or casino offer and one geo, collect in writing the brand's licence for that geo, the required responsible gambling wording and the minimum age, then check whether your ad account has permission for gambling ads. Now take the quiz."
+    },
+    {
+      "slug": "trading-offers",
+      "title": "Trading offers: forex, CFDs and crypto",
+      "minutes": 20,
+      "objectives": [
+        "By the end you can check a broker's licence and which entity will hold your users' accounts.",
+        "You can explain why risk warnings are required in some regions and how to place them.",
+        "You can describe Meta's restrictions on financial and crypto ads, and say which parts you must check.",
+        "You can brief an influencer so their content stays within the rules."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why trading ads are watched closely",
+          "p": "Most retail traders of leveraged products lose money. That is not our statistic; regulators in several regions require brokers to publish their own loss figure. Ads that hide that risk mislead people who often cannot afford the loss, and regulators treat them seriously.",
+          "d": {
+            "b": "Trading ads sell risk, so show the risk",
+            "s": "Hiding it misleads people and breaks rules in many places."
+          },
+          "say": "Most retail traders of leveraged products lose money. That's not our statistic. Regulators in several regions require brokers to publish their own loss figure. Ads that hide that risk mislead people who often can't afford the loss, and regulators treat them seriously. So here's the principle for this lesson: trading ads sell risk, so show the risk. Hiding it misleads people and breaks rules in many places."
+        },
+        {
+          "v": "cards",
+          "h": "Products and how risky they are to promote",
+          "p": "Not every trading product is treated the same. Know which one you are promoting before you write a word. Rules below are at the time of writing; check the current policy and law.",
+          "more": "Binary options deserve a clear line. At the time of writing, Meta's policy does not allow ads for binary options, and regulators in the UK, the EU and Australia have banned selling them to retail clients. Many other regulators have issued warnings. This school steers you away from them. If an offer looks like a binary or \"digital\" option with a fixed payout for guessing direction over a short time, check carefully and expect platforms to treat it as prohibited.",
+          "d": [
+            "Forex and CFDs|Leveraged; licensed brokers only; risk warnings often required",
+            "Crypto exchanges|Often need platform authorization and local registration",
+            "Copy trading and signals|Can count as investment advice needing a licence",
+            "Binary options|Prohibited by Meta and banned for retail in UK, EU, Australia"
+          ],
+          "say": "Not every trading product is treated the same, so know which one you're promoting. Forex and C F Ds, contracts for difference, are leveraged, for licensed brokers only, and often need risk warnings. Crypto exchanges often need platform authorization and local registration. Copy trading and signals can count as investment advice needing a licence. And binary options are prohibited by Meta and banned for retail clients in the U K, the E U and Australia, at the time of writing. If an offer looks like a fixed payout for guessing direction over a short time, expect platforms to treat it as prohibited."
+        },
+        {
+          "v": "table",
+          "h": "Broker regulators: examples to verify",
+          "p": "Examples at the time of writing. Every broker claim must be checked on the official register of the named regulator. Search the legal entity, not just the brand.",
+          "more": "For Cameroon and the wider CEMAC region, check COSUMAF, the regional market regulator, and confirm locally. The page names above are descriptions, not exact titles, and sites change, so search the regulator's own website. Many international brokers serve African clients through an offshore entity even when the group holds a UK or EU licence. Ask the network which entity will open your users' accounts and whether it is allowed to market in your geo. In some of our core markets the rules on offering offshore brokers to residents are unclear or in development; when the answer is unclear, treat it as a no until you have advice.",
+          "d": {
+            "cols": [
+              "Place",
+              "Regulator",
+              "Where to check"
+            ],
+            "rows": [
+              [
+                "UK",
+                "FCA",
+                "FCA Register"
+              ],
+              [
+                "EU (Cyprus)",
+                "CySEC",
+                "CySEC regulated entities list"
+              ],
+              [
+                "Australia",
+                "ASIC",
+                "ASIC professional registers"
+              ],
+              [
+                "South Africa",
+                "FSCA",
+                "FSCA FSP search"
+              ],
+              [
+                "Kenya",
+                "Capital Markets Authority",
+                "CMA licensee list"
+              ],
+              [
+                "Nigeria",
+                "SEC Nigeria",
+                "SEC registered operators"
+              ],
+              [
+                "Ghana",
+                "SEC Ghana",
+                "SEC licensed firms list"
+              ]
+            ]
+          },
+          "say": "Every broker claim must be checked on the official register of the named regulator. This table gives examples at the time of writing. The F C A Register in the U K. CySEC's regulated entities list for Cyprus. ASIC's professional registers in Australia. The F S C A in South Africa. The Capital Markets Authority in Kenya. The S E C in Nigeria and Ghana. For Cameroon, check COSUMAF. Search the legal entity, not just the brand. Many brokers serve African clients through an offshore entity even when the group holds a U K or E U licence. When the answer is unclear, treat it as a no until you have advice."
+        },
+        {
+          "v": "walk",
+          "h": "Check which entity your users will sign with",
+          "p": "The brand name on the ad is not enough. Follow the sign-up path as a user would and read the small print at each step. Screens are illustrative mock-ups.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open the offer as a user",
+                "text": "Use your tracking link from your target country, or ask the network which page users there see.",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "broker.example/ke/register",
+                  "page": {
+                    "h": "Open an account",
+                    "p": "Trading involves risk.",
+                    "cta": "Register"
+                  }
+                }
+              },
+              {
+                "title": "Scroll to the footer",
+                "text": "Find the legal entity name, its registered country and licence number for your geo.",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "broker.example/ke/register#footer",
+                  "page": {
+                    "h": "Legal",
+                    "p": "Services for this region provided by Example Global Ltd, registered offshore, licence no. on file.",
+                    "cta": "Read legal documents"
+                  }
+                }
+              },
+              {
+                "title": "Read the client agreement",
+                "text": "Check the same entity name is in the terms users agree to. Note the governing law.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "broker.example/legal/client-agreement",
+                  "title": "Client agreement",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Contracting entity",
+                      "value": "Example Global Ltd"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Regulator",
+                      "value": "Offshore regulator"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Verify on the register",
+                "text": "Search that entity on the named regulator's register and match the domain. Save a dated screenshot.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "regulator.example/register",
+                  "title": "Register search",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Entity",
+                      "value": "Example Global Ltd"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Search"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Ask the geo question in writing",
+                "text": "Email the network: is this entity permitted to market to residents of my target country? File the reply.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Network manager",
+                  "subtitle": "online",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "Which entity onboards Kenyan users, and is it allowed to market in Kenya? Please confirm in writing."
+                    },
+                    {
+                      "from": "them",
+                      "text": "Sending the licence details by email now."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "say": "The brand name on the ad isn't enough. Follow the sign-up path as a user would. Tap Next to follow each step. First, open the offer as a user, with your tracking link from your target country, or ask the network which page users there see. Second, scroll to the footer and find the legal entity name, its country and licence number. Third, read the client agreement, check the same entity name appears, and note the governing law. Fourth, verify that entity on the regulator's register, match the domain, and save a dated screenshot. Fifth, email the network asking if this entity may market to your target country, and file the reply."
+        },
+        {
+          "v": "code",
+          "h": "The standard CFD risk warning in the UK and EU",
+          "p": "In the UK and EU, CFD providers must show a standard risk warning with their own up-to-date percentage. Requirements differ elsewhere: some regions require other wording and some none. Always ask the broker for the exact wording for your geo and format.",
+          "more": "The percentage changes, usually every quarter, and belongs to the provider, so never copy a figure from another broker's ad or an old creative. For crypto, the UK at the time of writing requires its own risk warning on promotions to UK consumers, starting \"Don't invest unless you're prepared to lose all the money you invest.\" Other countries may require their own lines. If a broker cannot tell you what warning applies in your geo, that is a sign they have not thought about compliance there either.",
+          "d": {
+            "lang": "text",
+            "text": "CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. [XX]% of retail investor accounts lose money when trading CFDs with this provider. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.",
+            "note": "UK/EU format at the time of writing. [XX] is the provider's own current figure. Shorter versions exist for space-limited ads; ask the broker."
+          },
+          "say": "On screen is the standard C F D risk warning used in the U K and E U at the time of writing. Let me read it. C F Ds are complex instruments and come with a high risk of losing money rapidly due to leverage. A percentage of retail investor accounts lose money when trading C F Ds with this provider. You should consider whether you understand how C F Ds work and whether you can afford to take the high risk of losing your money. That percentage is the provider's own current figure, so never copy it from another ad. Requirements differ elsewhere, so always ask the broker for the exact wording for your geo."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: where the percentage comes from",
+          "p": "Example only. The percentage is the share of the provider's retail client accounts that lost money over a recent period. You do not calculate it yourself; you use the figure the broker publishes. This shows the maths so you understand what it means.",
+          "more": "Example maths: 7,400 divided by 10,000 is 0.74, or 74%. If a broker's figure is 74%, about three in four retail accounts lost money over the measured period. That is why claims like \"most of our clients profit\" are not only misleading but often contradicted by the broker's own published number. Use the broker's current figure, put it where users will read it, and update creatives when it changes.",
+          "d": [
+            "7,400 losing accounts",
+            "/",
+            "10,000 retail accounts",
+            "=",
+            "74% lose money"
+          ],
+          "say": "Where does that percentage come from? This is an example only. It's the share of the provider's retail client accounts that lost money over a recent period. Follow the equation: seven thousand four hundred losing accounts, divided by ten thousand retail accounts, is seventy four percent. So about three in four accounts lost money. You don't calculate this yourself. You use the figure the broker publishes. And notice, a claim like most of our clients profit is often contradicted by the broker's own number."
+        },
+        {
+          "v": "screen",
+          "h": "Meta's financial and crypto policies",
+          "p": "At the time of writing, Meta restricts financial products, requires written permission or an accepted licence for many crypto ads, prohibits binary options, and asks financial advertisers to verify in some countries such as the UK and Australia. We are not certain of the current country list. Check Meta's Help Center.",
+          "more": "Policies on financial ads change often and vary by country. Read Meta's current advertising standards for financial and insurance products and for cryptocurrency before every new campaign type, and do the same for TikTok, Google and Snapchat, which each have their own rules. We have not listed exact eligibility criteria because they change and we are not certain they are current; treat this slide as a reminder of what to look up, not as the rule itself.",
+          "d": {
+            "kind": "browser",
+            "url": "business.example/settings/financial-verification",
+            "title": "Financial services: advertiser status",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Item",
+                  "Status"
+                ],
+                "rows": [
+                  [
+                    "Crypto ads permission",
+                    "Not requested"
+                  ],
+                  [
+                    "Financial services verification",
+                    "Required in some countries"
+                  ],
+                  [
+                    "Binary options",
+                    "Not allowed"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Illustrative mock-up. Policies, names and country lists change; check the current Help Center."
+              },
+              {
+                "type": "button",
+                "label": "Request permission"
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "Now, Meta's financial and crypto policies. At the time of writing, Meta restricts financial products, requires written permission or an accepted licence for many crypto ads, prohibits binary options, and asks financial advertisers to verify in some countries, such as the U K and Australia. We're not certain of the current country list. This screen is an illustrative mock-up. Treat this slide as a reminder of what to look up, not as the rule itself. Check Meta's Help Center, and check TikTok, Google and Snapchat's own rules too."
+        },
+        {
+          "v": "cards",
+          "h": "Claims you must never make",
+          "p": "These claims are banned by most platforms and misleading under consumer and financial promotion rules in many countries. None of them can be made honest with a disclaimer.",
+          "d": [
+            "Guaranteed returns|Or any fixed daily or monthly profit",
+            "Get rich|Quit your job, financial freedom fast",
+            "No risk|Or \"capital protected\" when it is not",
+            "Lifestyle bait|Cars, cash stacks, villas as results",
+            "Fake endorsement|Celebrities, banks, news logos",
+            "Robot magic|Bots or AI that never lose"
+          ],
+          "say": "These claims are banned by most platforms and misleading in many countries. Guaranteed returns, or any fixed daily or monthly profit. Get rich, quit your job, financial freedom fast. No risk, or capital protected when it isn't. Lifestyle bait, like cars, cash stacks and villas as results. Fake endorsements from celebrities, banks or news logos. And robot magic, bots or A I that never lose. None of these can be made honest with a disclaimer."
+        },
+        {
+          "v": "compare",
+          "h": "Rewrite: hype versus compliant",
+          "p": "The compliant version still gives people a reason to click: learning, tools, a demo, a clear product. It simply stops promising outcomes that nobody can promise, and it carries the warning the broker gives you for your geo.",
+          "d": {
+            "a": {
+              "title": "Rejected style",
+              "items": [
+                "Make $300 a day trading gold",
+                "Our AI bot wins 95% of trades",
+                "Turn $50 into $5,000 this month",
+                "No experience, no risk"
+              ]
+            },
+            "b": {
+              "title": "Compliant style",
+              "items": [
+                "Learn how gold prices move, free demo account",
+                "Try strategies on a demo before using real money",
+                "Licensed broker. Trading involves risk of loss",
+                "[XX]% of retail CFD accounts lose money"
+              ]
+            }
+          },
+          "say": "Compare the two columns. On the left, rejected style. Make three hundred dollars a day trading gold. Our A I bot wins ninety five percent of trades. Turn fifty dollars into five thousand this month. No experience, no risk. On the right, compliant style. Learn how gold prices move, free demo account. Try strategies on a demo before using real money. Licensed broker, trading involves risk of loss. And the broker's loss percentage. The compliant version still gives a reason to click. It just stops promising outcomes nobody can promise."
+        },
+        {
+          "v": "cards",
+          "h": "Influencer and finfluencer rules",
+          "p": "Influencers who talk about trading are under growing scrutiny. In the UK, the FCA has warned that promoting financial products without approval can be a criminal offence. In Australia, ASIC has guidance on influencers and unlicensed advice. Expect similar attention elsewhere.",
+          "d": [
+            "Disclose|Paid posts labelled clearly, e.g. #ad",
+            "No advice|Do not tell people what to buy or sell",
+            "Same rules|No guarantees, risk warnings included",
+            "Approved copy|You give the brief; you review before posting",
+            "Your liability|What they say for you can count as your promotion"
+          ],
+          "say": "Influencers who talk about trading are under growing scrutiny. In the U K, the F C A has warned that promoting financial products without approval can be a criminal offence. In Australia, ASIC has guidance on influencers and unlicensed advice. Look at the rules on the cards. Disclose paid posts clearly. No advice on what to buy or sell. Same rules, no guarantees, risk warnings included. You give the brief and review before posting. And remember, what they say for you can count as your promotion."
+        },
+        {
+          "v": "phone",
+          "h": "Briefing an influencer the right way",
+          "p": "A short written brief prevents most problems. Send it before they film, ask to review the draft before it is posted, and keep the whole exchange in your compliance file as proof of what you asked for.",
+          "d": {
+            "app": "chat",
+            "title": "Creator: Ama",
+            "subtitle": "online",
+            "messages": [
+              {
+                "from": "me",
+                "text": "Brief: show the demo account and the education section. Say it is a paid partnership."
+              },
+              {
+                "from": "them",
+                "text": "Can I say I made $2k last week?"
+              },
+              {
+                "from": "me",
+                "text": "No income claims please, and no buy or sell calls. Keep the risk warning on screen for the whole clip."
+              },
+              {
+                "from": "them",
+                "text": "Understood. I will send the draft for review first."
+              }
+            ]
+          },
+          "say": "Here's a brief done the right way. In this chat, notice how it goes. You ask the creator, Ama, to show the demo account and the education section, and to say it's a paid partnership. She asks if she can say she made two thousand dollars last week. You reply, no income claims, no buy or sell calls, and keep the risk warning on screen for the whole clip. She agrees to send the draft for review first. Send a short brief before filming, review the draft, and keep the whole exchange in your compliance file."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: what non-compliant traffic can cost",
+          "p": "Example. Many network terms let them withhold or claw back payouts for traffic that breaks rules. Figures are illustrative, not a statistic about any network.",
+          "more": "Example maths: 10 FTDs at $60 is $600. With compliant ads at the same cost, profit would be $600 - $500 = $100. With income claims found in an audit, the whole $600 is withheld under the terms and you are down $500, before any account or legal risk. In reality hype ads often have a lower FTD rate as well, because they attract people looking for easy money who leave after the first loss.",
+          "d": {
+            "cols": [
+              "Item",
+              "Figure",
+              "Result"
+            ],
+            "rows": [
+              [
+                "Spend on hype ads",
+                "$500",
+                "Cash out"
+              ],
+              [
+                "FTDs",
+                "10 at $60",
+                "$600 expected"
+              ],
+              [
+                "Broker audit finds income claims",
+                "All 10 flagged",
+                "$0 paid"
+              ],
+              [
+                "Net result",
+                "-$500",
+                "Plus a warning"
+              ],
+              [
+                "Compliant version, same CPA",
+                "$600 paid",
+                "+$100"
+              ]
+            ]
+          },
+          "say": "Here's an example of what non-compliant traffic can cost. Figures are illustrative. You spend five hundred dollars on hype ads and get ten F T Ds, first-time deposits, at sixty dollars, so six hundred expected. But a broker audit finds income claims, all ten are flagged, and you're paid zero. Your net result is minus five hundred, plus a warning. The compliant version, at the same C P A, or cost per acquisition, would have paid six hundred, a profit of one hundred. Many network terms let them withhold or claw back payouts for traffic that breaks rules."
+        },
+        {
+          "v": "partner",
+          "h": "Choosing a trading partner",
+          "p": "These are the partners we list for trading. Before you run, ask each one for the licensed entity per geo, the required risk warning and their list of banned claims in writing.",
+          "d": {
+            "vertical": "trading",
+            "note": "Prefer brokers who name the entity per geo and give you current risk warning wording."
+          },
+          "say": "These are the partners we list for trading. Before you run, ask each one for the licensed entity per geo, the required risk warning, and their list of banned claims, all in writing. Prefer brokers who name the entity per geo and give you current risk warning wording."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for trading offers",
+          "p": "Starting rules to adapt with your adviser. Each one is a clear stop line. If any line applies, the campaign does not launch, however good the payout looks or however hard the network pushes.",
+          "d": [
+            "Entity for your geo not verified on a register = no-go",
+            "Product is binary options = no-go",
+            "No risk warning wording for the geo = do not publish",
+            "Crypto ad without platform permission where required = no-go",
+            "Influencer refuses review before posting = do not pay or post"
+          ],
+          "say": "Here are starting decision rules for trading offers, to adapt with your adviser. Entity for your geo not verified on a register means no-go. The product is binary options means no-go. No risk warning wording for the geo means don't publish. A crypto ad without platform permission where required means no-go. And an influencer who refuses review before posting means don't pay or post. If any line applies, the campaign doesn't launch, however good the payout looks."
+        },
+        {
+          "v": "tip",
+          "h": "Signals and copy trading can be regulated advice",
+          "p": "Running a Telegram channel that tells people what to buy, or linking them to copy trading, can count as investment advice in many countries. Advice usually needs a licence. Teach education, not calls, unless you hold the right licence.",
+          "d": {
+            "kind": "warn",
+            "text": "Trading ads usually need platform authorization and must follow local law. Check both before you run."
+          },
+          "say": "One more risk. Running a Telegram channel that tells people what to buy, or linking them to copy trading, can count as investment advice in many countries, and advice usually needs a licence. So teach education, not calls, unless you hold the right licence. As the warning says, trading ads usually need platform authorization and must follow local law. Check both before you run."
+        }
+      ],
+      "takeaways": [
+        "Verify the exact entity that onboards users in your geo, not just the brand's best-known licence.",
+        "Risk warnings are required in some regions with fixed wording; use the broker's current figure.",
+        "At the time of writing Meta restricts financial ads, needs permission for many crypto ads and prohibits binary options; check current policy.",
+        "Never promise returns, income or no risk; no disclaimer fixes those claims.",
+        "Influencers who promote for you are part of your compliance: brief, review and file."
+      ],
+      "action": "For one trading offer, follow the sign-up path from your target geo, write down the entity name and licence, verify it on the register, and ask the network in writing for the required risk warning for that geo.",
+      "glossary": [
+        {
+          "term": "CFD",
+          "def": "Contract for difference: a leveraged product that tracks a price without owning the asset."
+        },
+        {
+          "term": "Leverage",
+          "def": "Borrowed exposure that multiplies gains and losses on a small deposit."
+        },
+        {
+          "term": "Risk warning",
+          "def": "Required text telling users the product can lose them money, sometimes with a set wording."
+        },
+        {
+          "term": "Binary options",
+          "def": "Fixed-payout bets on price direction over short periods; banned for retail in several regions."
+        },
+        {
+          "term": "Finfluencer",
+          "def": "A social media creator who talks about money, trading or investing."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A broker group is FCA-licensed, but Nigerian users sign with an offshore company. What do you check?",
+          "options": [
+            "Nothing, the FCA licence covers the group",
+            "Whether the offshore entity may market to Nigerian residents, verified in writing",
+            "Only that the app works in Nigeria",
+            "Whether the brand logo matches"
+          ],
+          "answer": 1,
+          "why": "The licence that matters is the one held by the entity your users sign with, for your geo. The UK licence covers the UK company."
+        },
+        {
+          "q": "Which product should you refuse to advertise on Meta at the time of writing?",
+          "options": [
+            "A licensed forex broker with risk warning",
+            "A trading education course without income claims",
+            "Binary options",
+            "A crypto exchange holding platform permission"
+          ],
+          "answer": 2,
+          "why": "Meta's policy does not allow binary options ads at the time of writing, and several regulators ban them for retail clients."
+        },
+        {
+          "q": "Where does the percentage in a UK or EU CFD risk warning come from?",
+          "options": [
+            "The broker's own current published figure",
+            "An industry average you choose",
+            "Your own campaign results",
+            "Any figure under 50%"
+          ],
+          "answer": 0,
+          "why": "Each provider calculates and publishes its own figure. Using another figure is misleading."
+        },
+        {
+          "q": "An influencer wants to say \"I made $2,000 last week with this broker\". What do you do?",
+          "options": [
+            "Allow it if true",
+            "Allow it with #ad",
+            "Allow it in Stories only",
+            "Refuse income claims and require a review before posting"
+          ],
+          "answer": 3,
+          "why": "Income claims mislead even when true for one person, and the post is your promotion. Brief, review and keep records."
+        },
+        {
+          "q": "Example: 10 FTDs at $60, spend $500, payouts withheld for banned claims. What is your result?",
+          "options": [
+            "+$100",
+            "-$500",
+            "$0",
+            "+$600"
+          ],
+          "answer": 1,
+          "why": "You spent $500 and were paid nothing, so you are down $500. Compliant ads at the same cost would have made +$100."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn the rules for trading offers like forex, C F Ds and crypto. You'll check which entity holds your users' accounts, place risk warnings properly, understand platform restrictions, and brief influencers safely.",
+      "say_outro": "So, verify the exact entity per geo, show the broker's current risk warning, stay away from banned products and claims, and brief influencers in writing. Your task: for one trading offer, follow the sign-up path from your target geo, write down the entity name and licence, verify it on the register, and ask the network in writing for the required risk warning for that geo. Now take the quiz."
+    },
+    {
+      "slug": "finance-and-loans",
+      "title": "Finance and loan offers: licences, costs and consent",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can check that a lender or financial brand is licensed for your geo.",
+        "You can work out and show the cost of a loan honestly, including a simple annualised rate.",
+        "You can explain what Meta's special ad category for credit does and what you still need to check.",
+        "You can set up a lead form that collects clear consent and keeps a record of it."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why loan ads can hurt people",
+          "p": "A loan ad reaches people who often need money now. Hidden fees, rolling debt and aggressive collection can turn a small loan into a crisis. Regulators in our core markets have acted against lenders and apps over these harms, so lending ads are watched closely.",
+          "more": "This lesson covers loans, credit cards, buy now pay later, insurance, savings and banking lead generation. Each has its own licence type and disclosure rules. Lending has the clearest harms, so it gets the most attention here. Regulators in Nigeria and Kenya, for example, have acted against digital lenders over practices such as shaming borrowers by contacting people in their phone book; this matters to you because the apps you promote reflect on your account and your name.",
+          "d": {
+            "b": "A loan ad sells debt",
+            "s": "Show the full cost, and never target desperation."
+          },
+          "say": "A loan ad reaches people who often need money now. Hidden fees, rolling debt and aggressive collection can turn a small loan into a crisis. Regulators in our core markets have acted against lenders and apps over these harms, including, in Nigeria and Kenya, shaming borrowers by contacting people in their phone book. The apps you promote reflect on your account and your name. So remember: a loan ad sells debt. Show the full cost, and never target desperation."
+        },
+        {
+          "v": "cards",
+          "h": "Financial offers you may run",
+          "p": "Each financial product has a licence behind it and its own rules about how it can be sold and what must be disclosed. Know exactly which one you are promoting before you write a single line of copy.",
+          "d": [
+            "Personal and digital loans|Lending licence and cost disclosure",
+            "Credit cards and BNPL|Credit rules and fee disclosure",
+            "Insurance|Insurer or broker licence; no misleading cover claims",
+            "Bank and savings accounts|Banking licence; rates must be accurate",
+            "Lead generation|You collect data for lenders: consent is key"
+          ],
+          "say": "Each financial product has a licence behind it and its own rules. Look at the cards. Personal and digital loans need a lending licence and cost disclosure. Credit cards and buy now pay later have credit rules and fee disclosure. Insurance needs an insurer or broker licence and no misleading cover claims. Bank and savings accounts need a banking licence and accurate rates. And lead generation, where you collect data for lenders, depends on consent. Know exactly which one you're promoting before you write a line."
+        },
+        {
+          "v": "table",
+          "h": "Who licenses lenders: examples",
+          "p": "Examples at the time of writing. Lending rules change, especially for digital lenders. Confirm on the regulator's official site and search the lender's legal name.",
+          "more": "In Nigeria, the FCCPC has kept a register of approved digital lenders and introduced dedicated rules for digital lending; check the current list and rules. In Kenya, digital credit providers have needed a Central Bank licence since 2022, and the Central Bank publishes the licensed list. In South Africa, credit providers above certain thresholds must register with the National Credit Regulator. For Cameroon, microfinance and banks fall under the regional COBAC regime, but check with a local adviser. Cells marked \"check\" are places where we are not certain.",
+          "d": {
+            "cols": [
+              "Place",
+              "Regulator (example)",
+              "Note"
+            ],
+            "rows": [
+              [
+                "Nigeria",
+                "CBN; FCCPC for digital lenders",
+                "Digital lenders need FCCPC approval"
+              ],
+              [
+                "Kenya",
+                "Central Bank of Kenya",
+                "Licenses digital credit providers"
+              ],
+              [
+                "Ghana",
+                "Bank of Ghana",
+                "Check the licensed list"
+              ],
+              [
+                "South Africa",
+                "National Credit Regulator",
+                "Credit providers must register"
+              ],
+              [
+                "Cameroon",
+                "COBAC (regional)",
+                "Check locally"
+              ],
+              [
+                "UK",
+                "FCA",
+                "Consumer credit permissions"
+              ],
+              [
+                "Australia",
+                "ASIC",
+                "Credit licence required"
+              ]
+            ]
+          },
+          "say": "This table shows example lending regulators, at the time of writing. In Nigeria, the C B N, and the F C C P C for digital lenders, which need its approval. In Kenya, the Central Bank licenses digital credit providers. Ghana, the Bank of Ghana. South Africa, the National Credit Regulator, where credit providers must register. Cameroon falls under the regional COBAC, but check locally. The U K has the F C A, and Australia requires an ASIC credit licence. Lending rules change, especially for digital lenders, so confirm on the official site and search the lender's legal name."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: the real cost of a short loan",
+          "p": "Example. A user borrows NGN 50,000 for 30 days and repays NGN 57,500. The fee is NGN 7,500, which is 15% for one month. Over a year that is a much bigger number, which is why many rules require an annualised rate.",
+          "more": "Example maths: 7,500 divided by 50,000 is 0.15, or 15% for 30 days. Multiply by 365 / 30 (about 12.17) and you get about 182.5% per year as a simple annualised rate. Official APR formulas differ by country and often include compounding and all mandatory fees, which can make the figure higher. Do not calculate the official APR yourself for an ad; ask the lender for the figure and the representative example their regulator requires, and show it as given.",
+          "d": [
+            "15% per 30 days",
+            "x",
+            "365 / 30",
+            "=",
+            "about 182.5% a year"
+          ],
+          "say": "Here's the real cost of a short loan. This is an example. A user borrows fifty thousand naira for thirty days and repays fifty seven thousand five hundred. The fee is seven thousand five hundred, which is fifteen percent for one month. Follow the equation: fifteen percent times three hundred sixty five over thirty gives about one hundred eighty two point five percent a year, as a simple annualised rate. Official A P R formulas differ by country and can be higher. So don't calculate the official A P R yourself. Ask the lender for the figure and show it as given."
+        },
+        {
+          "v": "table",
+          "h": "What a cost disclosure usually includes",
+          "p": "A rough guide. Exact requirements differ by country; the UK, for example, sets rules for when a representative APR and representative example are needed. Ask the lender for the required wording for your geo.",
+          "d": {
+            "cols": [
+              "Item",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Annual rate (APR or equivalent)",
+                "Lender's official figure"
+              ],
+              [
+                "Total amount repayable",
+                "NGN 57,500"
+              ],
+              [
+                "Fees",
+                "NGN 7,500 service fee"
+              ],
+              [
+                "Term",
+                "30 days"
+              ],
+              [
+                "Late payment costs",
+                "As stated in terms"
+              ],
+              [
+                "Lender and licence",
+                "Legal name, licence no."
+              ]
+            ]
+          },
+          "say": "What does a cost disclosure usually include? This table is a rough guide. The annual rate, A P R or equivalent, using the lender's official figure. The total amount repayable, in the example fifty seven thousand five hundred naira. The fees, seven thousand five hundred. The term, thirty days. Late payment costs, as stated in the terms. And the lender's legal name and licence number. Exact requirements differ by country, so ask the lender for the required wording for your geo."
+        },
+        {
+          "v": "screen",
+          "h": "Special ad category for credit",
+          "p": "On Meta, credit ads must be declared in a special ad category in many regions, which limits targeting such as age, gender and location detail. We are not sure of the current rules in each African market or the current category names. Check Meta's Help Center.",
+          "more": "The special ad category was introduced to stop discrimination in credit, housing and employment ads. Where it applies, you typically cannot narrow by age or gender, location targeting has a minimum radius, and some audience tools are limited or unavailable. Meta has changed the scope of this category over time and has introduced a broader financial products category in some regions; we are not certain which rules apply in Nigeria, Kenya, Ghana, South Africa or Cameroon right now. When in doubt, declare the category. Failing to declare it where required is a policy breach.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/create",
+            "title": "Create campaign",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Campaign name",
+                "value": "KE_Loans_Leads_Test_01"
+              },
+              {
+                "type": "select",
+                "label": "Special ad categories",
+                "value": "Credit (or Financial products and services)"
+              },
+              {
+                "type": "select",
+                "label": "Countries",
+                "value": "Kenya"
+              },
+              {
+                "type": "text",
+                "value": "Names, regions and targeting limits change; check the current Ads Manager."
+              },
+              {
+                "type": "button",
+                "label": "Continue"
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "On Meta, credit ads must be declared in a special ad category in many regions. Look at the select box on screen. Where it applies, it limits targeting such as age, gender and location detail. It was introduced to stop discrimination in credit, housing and employment ads. Meta has changed its scope over time, and we're not certain which rules apply in Nigeria, Kenya, Ghana, South Africa or Cameroon right now, or the current category names. Check Meta's Help Center. When in doubt, declare the category, because failing to declare it where required is a policy breach."
+        },
+        {
+          "v": "screen",
+          "h": "A lead form that collects real consent",
+          "p": "If you collect leads for lenders, the form must say who will use the data and why. On Meta lead forms a privacy policy link is required at the time of writing; add your own consent checkboxes for marketing and for sharing with named partners.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/leadform/edit",
+            "title": "Instant form: Loan enquiry",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Privacy policy URL",
+                "value": "yourbrand.example/privacy"
+              },
+              {
+                "type": "field",
+                "label": "Custom disclaimer",
+                "value": "Your details go to Example Lender Ltd (licence no. on file) to assess your request."
+              },
+              {
+                "type": "toggle",
+                "label": "Consent: contact me about this request",
+                "on": true
+              },
+              {
+                "type": "toggle",
+                "label": "Consent: marketing from partners (optional, unticked)",
+                "on": false
+              },
+              {
+                "type": "button",
+                "label": "Publish form"
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "If you collect leads for lenders, the form must say who will use the data and why. Look at this lead form. There's a privacy policy link, which Meta requires on lead forms at the time of writing. There's a custom disclaimer naming the lender. Then two separate consent toggles. Contact me about this request is on. Marketing from partners is optional and left unticked. Add your own consent boxes for marketing and for sharing with named partners."
+        },
+        {
+          "v": "cards",
+          "h": "Data protection laws to know",
+          "p": "Examples at the time of writing. Each law has its own regulator and details; read the official guidance. Most share the same core ideas: a clear purpose, real consent where needed, minimal data, security and rights to access and deletion.",
+          "d": [
+            "Nigeria|Nigeria Data Protection Act 2023, NDPC",
+            "Kenya|Data Protection Act 2019, ODPC",
+            "Ghana|Data Protection Act 2012, DPC",
+            "South Africa|POPIA, Information Regulator",
+            "Cameroon|Data law adopted 2024 as far as we know; check",
+            "UK and EU|UK GDPR and GDPR"
+          ],
+          "say": "Here are example data protection laws, at the time of writing. Nigeria's Data Protection Act twenty twenty three. Kenya's Data Protection Act twenty nineteen. Ghana's Data Protection Act twenty twelve. South Africa's POPIA, with the Information Regulator. Cameroon adopted a data law in twenty twenty four as far as we know, so check. And in the U K and E U, G D P R. Each has its own details, but most share core ideas: a clear purpose, real consent where needed, minimal data, security, and rights to access and deletion."
+        },
+        {
+          "v": "funnel",
+          "h": "Worked example: consent shrinks the list, honestly",
+          "p": "Example. Only leads who agreed to sharing can be sold to partners. Plan your numbers on consented leads, not on all form submissions. Figures are illustrative.",
+          "more": "Example maths: 60 consented leads at a $5 CPL is $300 of revenue. If your ad spend was $250, profit is $50. If you had counted all 90 submissions, you would have planned on $450 and believed you had $200 profit. Selling the other 30 without consent breaks data protection law in many countries and most network terms. Budget on what you may legally sell.",
+          "d": [
+            [
+              "Clicks",
+              1000
+            ],
+            [
+              "Form opens",
+              300
+            ],
+            [
+              "Submitted",
+              90
+            ],
+            [
+              "Consented to partner sharing",
+              60
+            ]
+          ],
+          "say": "Watch this funnel. It's an example, and the figures are illustrative. One thousand clicks, three hundred form opens, ninety submitted, and sixty consented to partner sharing. Only those sixty can be sold to partners. At a five dollar C P L, cost per lead, that's three hundred dollars of revenue. With two hundred fifty in ad spend, profit is fifty. Count all ninety and you'd wrongly believe you'd made two hundred. Selling the other thirty without consent breaks data law in many countries and most network terms. Budget on what you may legally sell."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and fixes in finance ads",
+          "p": "These are frequent reasons for rejected ads, rejected leads and regulator interest in finance campaigns. Each fix takes minutes and protects both the people who apply and your account.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "\"Guaranteed approval, no checks\"",
+                "Monthly fee shown, APR hidden",
+                "Pre-ticked consent box",
+                "Not declaring the special ad category"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "\"Apply in minutes. Approval depends on checks\"",
+                "Total cost and official rate near the offer",
+                "Unticked, separate box per purpose",
+                "Declare it whenever credit is promoted"
+              ]
+            }
+          },
+          "say": "These are frequent reasons for rejected ads and leads in finance. Guaranteed approval, no checks. A monthly fee shown with the A P R hidden. A pre-ticked consent box. Not declaring the special ad category. And the fixes: apply in minutes, approval depends on checks. Show the total cost and official rate near the offer. Use unticked, separate boxes for each purpose. And declare the category whenever credit is promoted. Each fix takes minutes and protects both the applicants and your account."
+        },
+        {
+          "v": "cards",
+          "h": "Claims to avoid in finance ads",
+          "p": "Some are banned outright in some places; all are misleading or harmful. If the lender's own site uses them, that is a warning about the lender, not permission for you.",
+          "d": [
+            "Guaranteed approval|Lenders must assess applications",
+            "Free money|Loans are repaid with interest",
+            "No credit check|Often untrue or restricted",
+            "Debt rescue|\"Clear all your debts today\"",
+            "Shame or pressure|Exploiting fear or urgency"
+          ],
+          "say": "Avoid these claims in finance ads. Guaranteed approval, because lenders must assess applications. Free money, because loans are repaid with interest. No credit check, which is often untrue or restricted. Debt rescue, like clear all your debts today. And shame or pressure, exploiting fear or urgency. Some are banned outright in some places, and all are misleading or harmful. If the lender's own site uses them, that's a warning about the lender, not permission for you."
+        },
+        {
+          "v": "partner",
+          "h": "Choosing a finance partner",
+          "p": "These are the finance partners we list. Before you send traffic, ask for the lender's licence for your geo, the required cost disclosure and how they use lead data.",
+          "d": {
+            "vertical": "finance",
+            "note": "Prefer lenders who give you the licence, official rate and a written data processing agreement."
+          },
+          "say": "These are the finance partners we list. Before you send traffic, ask for the lender's licence for your geo, the required cost disclosure, and how they use lead data. Prefer lenders who give you the licence, the official rate, and a written data processing agreement."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for finance offers",
+          "p": "Starting rules to adapt with your adviser. Each line is a stop rule: if it applies, the campaign or the lead form does not go live until it is fixed, whatever the payout.",
+          "d": [
+            "Lender not on the regulator's list for the geo = no-go",
+            "No official rate or total cost to show = do not publish",
+            "Credit ad without the special ad category where required = stop and fix",
+            "Consent text missing a named recipient = do not collect leads",
+            "Lender known for shaming or harassment = walk away"
+          ],
+          "say": "Here are starting decision rules for finance, to adapt with your adviser. Lender not on the regulator's list for the geo means no-go. No official rate or total cost to show means don't publish. A credit ad without the special ad category where required means stop and fix. Consent text missing a named recipient means don't collect leads. And a lender known for shaming or harassment means walk away. If a line applies, nothing goes live until it's fixed, whatever the payout."
+        },
+        {
+          "v": "tip",
+          "h": "Data is a responsibility, not inventory",
+          "p": "Never buy lead lists, never sell leads without consent, and delete data when you no longer need it or when a person asks. Keep consent records so you can prove what each person agreed to and when.",
+          "d": {
+            "kind": "warn",
+            "text": "Finance ads usually need special ad settings and must follow local lending and data law. Check both before you run."
+          },
+          "say": "Data is a responsibility, not inventory. Never buy lead lists. Never sell leads without consent. And delete data when you no longer need it, or when a person asks. Keep consent records so you can prove what each person agreed to, and when. As the warning says, finance ads usually need special ad settings and must follow local lending and data law. Check both before you run."
+        }
+      ],
+      "takeaways": [
+        "Lending and other financial products need a licence for your geo; verify it on the regulator's list.",
+        "Show the real cost: official rate, total repayable and fees, as the lender's regulator requires.",
+        "Declare Meta's special ad category for credit where required; we are not certain of current rules per African market, so check.",
+        "Collect clear, separate, unticked consent that names who gets the data and why.",
+        "Plan your revenue on consented leads only."
+      ],
+      "action": "For one finance offer, get the lender's licence for your geo, the official rate and total cost example, and a draft lead form with separate consent boxes. Check whether the special ad category applies in your geo on Meta's Help Center.",
+      "glossary": [
+        {
+          "term": "APR",
+          "def": "Annual percentage rate: the yearly cost of credit including required fees, calculated by rules set in each country."
+        },
+        {
+          "term": "Representative example",
+          "def": "A required worked example of a loan's cost, used in some countries' credit ads."
+        },
+        {
+          "term": "Special ad category",
+          "def": "A Meta setting for credit, housing, employment and some financial ads that limits targeting."
+        },
+        {
+          "term": "Consent record",
+          "def": "Proof of what a person agreed to, when, and with which wording."
+        },
+        {
+          "term": "Digital credit provider",
+          "def": "A lender that offers loans mainly through apps or online, licensed separately in some countries."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A user borrows KSh 10,000 for 30 days and repays KSh 11,500. What is the cost for the month?",
+          "options": [
+            "10%",
+            "11.5%",
+            "1.5%",
+            "15%"
+          ],
+          "answer": 3,
+          "why": "The fee is KSh 1,500. 1,500 divided by 10,000 is 15% for 30 days, before any annualising."
+        },
+        {
+          "q": "Which line is acceptable in a loan ad?",
+          "options": [
+            "Apply in minutes. Approval depends on checks",
+            "Guaranteed approval for everyone",
+            "Free cash today, no questions",
+            "Clear all your debts with one loan"
+          ],
+          "answer": 0,
+          "why": "It is accurate and sets the right expectation. The others promise outcomes the lender cannot or should not promise."
+        },
+        {
+          "q": "On a lead form for a lender, how should marketing consent work?",
+          "options": [
+            "One pre-ticked box covering everything",
+            "No box; the privacy policy is enough",
+            "A separate, unticked box naming the purpose and recipients",
+            "Ask by phone later"
+          ],
+          "answer": 2,
+          "why": "Consent needs to be clear and freely given. Separate, unticked boxes with named recipients are the safe standard."
+        },
+        {
+          "q": "90 form submissions, 60 agreed to partner sharing, CPL $5, spend $250. What is your honest profit?",
+          "options": [
+            "$200",
+            "$50",
+            "$450",
+            "$300"
+          ],
+          "answer": 1,
+          "why": "Only the 60 consented leads can be sold: 60 x $5 = $300, minus $250 spend = $50."
+        },
+        {
+          "q": "You are not sure if the special ad category for credit applies in your geo. What do you do?",
+          "options": [
+            "Check Meta's Help Center and declare it when in doubt",
+            "Skip it to keep age targeting",
+            "Run it as a general lead ad",
+            "Ask a Telegram group"
+          ],
+          "answer": 0,
+          "why": "Not declaring it where required is a policy breach. Check the current rules and declare it when unsure."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn the rules for finance and loan offers. You'll check a lender's licence, show the real cost of a loan honestly, understand the special ad category for credit, and set up lead forms with clear consent.",
+      "say_outro": "So, verify the lender, show the full cost, declare the special category where required, and plan only on consented leads. Your task: for one finance offer, get the lender's licence for your geo, the official rate and total cost example, and a draft lead form with separate consent boxes, then check whether the special ad category applies in your geo on Meta's Help Center. Now take the quiz."
+    },
+    {
+      "slug": "compliant-creatives-and-landers",
+      "title": "Writing compliant creatives and landers",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can rewrite a non-compliant hook into an honest one that still earns clicks.",
+        "You can place disclaimers where people actually see them on a phone.",
+        "You can add an age gate and basic data protection to a lander.",
+        "You can run a creative through a pre-submit checklist before review."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the rewrite pays for itself",
+          "p": "A compliant creative is not a weaker creative. It is one that survives review, keeps the account healthy and attracts users who stay after the first deposit. The rewrite takes minutes. A rejected ad, a restricted account or a clawed-back payout takes weeks to recover from.",
+          "d": {
+            "b": "Honest copy is copy that lasts",
+            "s": "Write for the user, the reviewer and the regulator at once."
+          },
+          "say": "A compliant creative isn't a weaker creative. It's one that survives review, keeps the account healthy, and attracts users who stay after the first deposit. The rewrite takes minutes. A rejected ad, a restricted account or a clawed-back payout takes weeks to recover from. So the rewrite pays for itself. Honest copy is copy that lasts. Write for the user, the reviewer and the regulator at once."
+        },
+        {
+          "v": "compare",
+          "h": "Rewrite 1: trading hook",
+          "p": "Keep the curiosity, drop the promise. Point to something the product really does, such as a demo account, an education section or a charting tool. Users who click for that reason are also more likely to stay.",
+          "d": {
+            "a": {
+              "title": "Before",
+              "items": [
+                "I turned $100 into $3,000 in a week",
+                "Copy my trades and get rich",
+                "Zero risk, start now"
+              ]
+            },
+            "b": {
+              "title": "After",
+              "items": [
+                "How gold moves after big news, explained in 60 seconds",
+                "Practise on a free demo before using real money",
+                "Trading involves risk. [XX]% of retail CFD accounts lose money"
+              ]
+            }
+          },
+          "say": "Here's the first rewrite, a trading hook. Before: I turned one hundred dollars into three thousand in a week. Copy my trades and get rich. Zero risk, start now. After: How gold moves after big news, explained in sixty seconds. Practise on a free demo before using real money. Trading involves risk, with the broker's loss percentage. Keep the curiosity, drop the promise. Point to something the product really does, like a demo or a charting tool. People who click for that reason are more likely to stay."
+        },
+        {
+          "v": "compare",
+          "h": "Rewrite 2: betting hook",
+          "p": "Sell the experience of following a match, not the dream of winning money. Carry the age marker, the key bonus terms and the responsible gambling line the brand gives you for the geo.",
+          "d": {
+            "a": {
+              "title": "Before",
+              "items": [
+                "Win big tonight, sure odds",
+                "Pay your rent with one bet",
+                "Free KSh 1,000, no catch"
+              ]
+            },
+            "b": {
+              "title": "After",
+              "items": [
+                "Odds on every Premier League match this weekend",
+                "Set your own deposit limits in the app",
+                "18+. Bonus with 10x wagering. T&Cs apply"
+              ]
+            }
+          },
+          "say": "Rewrite two, a betting hook. Before: Win big tonight, sure odds. Pay your rent with one bet. Free one thousand shillings, no catch. After: Odds on every Premier League match this weekend. Set your own deposit limits in the app. Eighteen plus, bonus with ten times wagering, terms and conditions apply. Sell the experience of following a match, not the dream of winning money. And carry the age marker, key bonus terms and the responsible gambling line the brand gives you for the geo."
+        },
+        {
+          "v": "compare",
+          "h": "Rewrite 3: loan hook",
+          "p": "Be clear about speed and process, and show the cost. Never suggest approval is certain or that the loan is free. People who understand the cost before they apply are less likely to complain later.",
+          "d": {
+            "a": {
+              "title": "Before",
+              "items": [
+                "Instant cash, guaranteed approval",
+                "No credit check, no questions",
+                "Borrow free money today"
+              ]
+            },
+            "b": {
+              "title": "After",
+              "items": [
+                "Apply in about 5 minutes. Approval depends on checks",
+                "See the full cost before you accept",
+                "Licensed lender. Total repayable shown in the app"
+              ]
+            }
+          },
+          "say": "Rewrite three, a loan hook. Before: Instant cash, guaranteed approval. No credit check, no questions. Borrow free money today. After: Apply in about five minutes, approval depends on checks. See the full cost before you accept. Licensed lender, total repayable shown in the app. Be clear about speed and process, and show the cost. Never suggest approval is certain or the loan is free. People who understand the cost before they apply are less likely to complain later."
+        },
+        {
+          "v": "compare",
+          "h": "Rewrite 4: lander headline",
+          "p": "The lander is reviewed too, and users judge it in seconds. Match the ad's promise word for word, name the operator, and keep key terms visible next to the main button, not at the bottom.",
+          "d": {
+            "a": {
+              "title": "Before",
+              "items": [
+                "Fake news article with a celebrity quote",
+                "Countdown timer that resets",
+                "Disclaimer in tiny grey text at the bottom"
+              ]
+            },
+            "b": {
+              "title": "After",
+              "items": [
+                "Headline repeats the ad's promise exactly",
+                "No fake urgency; real deadlines only",
+                "Key terms in readable text near the button"
+              ]
+            }
+          },
+          "say": "Rewrite four, the lander headline. The lander is reviewed too, and users judge it in seconds. Before: a fake news article with a celebrity quote, a countdown timer that resets, and a disclaimer in tiny grey text at the bottom. After: a headline that repeats the ad's promise exactly, no fake urgency, real deadlines only, and key terms in readable text near the button. Match the ad word for word, name the operator, and keep key terms next to the main button."
+        },
+        {
+          "v": "cards",
+          "h": "Where disclaimers must sit",
+          "p": "A disclaimer only counts if people see it. Regulators often judge prominence, not just presence, so a warning hidden in grey text can fail even when it exists. Use these placement rules as a starting standard.",
+          "d": [
+            "Near the claim|Same screen as the offer or bonus",
+            "Readable|Normal text size on a phone, good contrast",
+            "Not hidden|Not only behind \"see more\" or a link",
+            "In video|On screen long enough to read, ideally the whole clip",
+            "On the lander|Above or next to the main button"
+          ],
+          "say": "A disclaimer only counts if people see it. Regulators often judge prominence, not just presence. Here's a starting standard. Near the claim, on the same screen as the offer or bonus. Readable, normal text size on a phone, with good contrast. Not hidden only behind see more or a link. In video, on screen long enough to read, ideally the whole clip. And on the lander, above or next to the main button."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example: the text people never see",
+          "p": "Example. On mobile, Meta often cuts primary text after roughly the first 125 characters at the time of writing; we are not certain of the current limit, so check the ad preview. Your text is 210 characters and the risk warning starts at character 180. Most users never see it.",
+          "more": "Example maths: if the visible cut is around 125 characters and your warning starts at 180, the warning sits 55 characters below the fold. Users must tap \"see more\" to read it, and many will not. Moving a short warning such as \"18+. Gamble responsibly.\" (24 characters) to the start of the text, or burning it into the creative, keeps it visible. Always check the preview for each placement, because Feed, Stories and Reels show different amounts.",
+          "d": {
+            "kind": "example",
+            "text": "Fix: put the warning inside the first 125 characters or on the image or video itself, then check every placement preview."
+          },
+          "say": "Here's the text people never see. This is an example. On mobile, Meta often cuts primary text after roughly the first one hundred twenty five characters at the time of writing, but we're not certain of the current limit, so check the ad preview. Say your text is two hundred ten characters and the risk warning starts at character one hundred eighty. It sits below the cut, and most users never tap see more. The fix: put the warning inside the first one hundred twenty five characters, or on the image or video itself, then check every placement preview."
+        },
+        {
+          "v": "screen",
+          "h": "Check the mobile preview before publishing",
+          "p": "Open the ad preview for each placement and read it as a user would. If a warning or age marker is cut off in any placement, move it or exclude that placement. Preview names and layouts change; check the current Ads Manager.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/ad/preview",
+            "title": "Ad preview: Feed, mobile",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Primary text (visible)",
+                "value": "Learn how gold moves after big news. Free demo account. Trading involves risk. 74% of retail CFD accounts lose money..."
+              },
+              {
+                "type": "select",
+                "label": "Placement",
+                "value": "Feed (mobile)"
+              },
+              {
+                "type": "text",
+                "value": "Example figure. Use the broker's current percentage. Warning visible before \"see more\": yes"
+              },
+              {
+                "type": "button",
+                "label": "Next placement"
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Before publishing, open the ad preview for each placement and read it as a user would. Look at the visible text on screen. The warning appears before the see more cut, so it passes. That figure is an example, so use the broker's current percentage. If a warning or age marker is cut off in any placement, move it, or exclude that placement. Feed, Stories and Reels show different amounts. Preview names and layouts change, so check the current Ads Manager."
+        },
+        {
+          "v": "check",
+          "h": "Creative pre-submit checklist",
+          "p": "Run every ad through this list before you click publish, including small edits and duplicates. If one line fails, fix it first. It takes a few minutes and catches most problems before a reviewer does.",
+          "d": [
+            "No income, return or win guarantees",
+            "Required warning or age marker visible without tapping",
+            "Every claim true and typical; proof on file",
+            "No fake endorsements, news logos or AI fakes of real people",
+            "Nothing that appeals to minors",
+            "Ad, lander and offer say the same thing"
+          ],
+          "say": "Run every ad through this checklist before you click publish, including small edits and duplicates. No income, return or win guarantees. The required warning or age marker visible without tapping. Every claim true and typical, with proof on file. No fake endorsements, news logos or A I fakes of real people. Nothing that appeals to minors. And the ad, lander and offer all say the same thing. If one line fails, fix it first."
+        },
+        {
+          "v": "phone",
+          "h": "An age gate on a gambling lander",
+          "p": "Where a lander promotes gambling or other adult-only products, a simple age confirmation is a sensible extra step. It does not replace the operator's age checks at sign-up, which are the real verification.",
+          "d": {
+            "app": "browser",
+            "url": "yourlander.example/ke",
+            "page": {
+              "h": "Are you 18 or older?",
+              "p": "This page is about licensed sports betting and is for adults only. Gamble responsibly.",
+              "cta": "Yes, I am 18 or older"
+            }
+          },
+          "say": "Here's an age gate on a gambling lander. On the phone screen, the question reads, are you eighteen or older? Below it, this page is about licensed sports betting and is for adults only, gamble responsibly. And a button to confirm. Where a lander promotes gambling or other adult-only products, this is a sensible extra step. But it doesn't replace the operator's age checks at sign-up. Those are the real verification."
+        },
+        {
+          "v": "cards",
+          "h": "What an age gate can and cannot do",
+          "p": "Be honest with yourself about limits. A self-declared gate stops casual visits, not determined minors. Your real protection is targeting, creative choices and the operator's checks.",
+          "d": [
+            "Can|Signal adults-only and set expectations",
+            "Can|Redirect users who say no",
+            "Cannot|Prove someone's real age",
+            "Avoid|Collecting date of birth you do not need"
+          ],
+          "say": "Be honest about what an age gate can do. It can signal adults only and set expectations. It can redirect users who say no. But it can't prove someone's real age. And avoid collecting a date of birth you don't need. A self-declared gate stops casual visits, not determined minors. Your real protection is targeting, creative choices and the operator's checks."
+        },
+        {
+          "v": "check",
+          "h": "Data protection on your landers",
+          "p": "If your lander collects any personal data, even just a phone number, these are the basics in most places. They are not a full legal review, but a lander without them is a risk to you and to your users.",
+          "d": [
+            "HTTPS on every page",
+            "Privacy policy linked, naming you and partners",
+            "Only the fields you need",
+            "Separate, unticked consent boxes",
+            "Cookie notice where the law requires it",
+            "Consent text and version saved with each lead"
+          ],
+          "say": "If your lander collects any personal data, even just a phone number, these are the basics in most places. H T T P S on every page. A privacy policy linked, naming you and your partners. Only the fields you need. Separate, unticked consent boxes. A cookie notice where the law requires it. And the consent text and its version saved with each lead. This isn't a full legal review, but a lander without these is a risk to you and your users."
+        },
+        {
+          "v": "product",
+          "h": "Building landers you control",
+          "p": "If you build your own landers, use a tool where you control the text, the disclaimer placement and the forms, so every rule in this lesson can be applied. Any honest page builder works.",
+          "d": {
+            "slug": "landvoo",
+            "why": "Build landers where you control disclaimer placement, age confirmation and consent wording."
+          },
+          "say": "If you build your own landers, use a tool where you control the text, the disclaimer placement and the forms, so every rule in this lesson can be applied. Landvoo is one option, built so you control disclaimer placement, age confirmation and consent wording. But any honest page builder works."
+        },
+        {
+          "v": "tip",
+          "h": "The reviewed page must be the real page",
+          "p": "Never show reviewers one page and users another. Cloaking is banned on every major platform and can be fraud. If a page would fail review, fix the page.",
+          "d": {
+            "kind": "warn",
+            "text": "Regulated ads usually need platform authorization and must follow local law. Check both before you run."
+          },
+          "say": "Never show reviewers one page and users another. That's called cloaking, it's banned on every major platform, and it can be fraud. If a page would fail review, fix the page. As the warning says, regulated ads usually need platform authorization and must follow local law. Check both before you run."
+        },
+        {
+          "v": "flow",
+          "h": "Your pre-launch creative review",
+          "p": "A short routine you repeat for every new ad. It takes about 15 minutes. A second person matters because the writer of an ad rarely spots their own exaggerations, especially when the ad is performing.",
+          "d": [
+            "Write the ad",
+            "Run the checklist",
+            "Check mobile previews",
+            "Second person reviews",
+            "Save approved copy to file"
+          ],
+          "say": "Here's your pre-launch creative review, a short routine you repeat for every new ad. Follow the flow. Write the ad. Run the checklist. Check the mobile previews. Have a second person review it. And save the approved copy to file. It takes about fifteen minutes. The second person matters because the writer of an ad rarely spots their own exaggerations, especially when the ad is performing."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for creatives",
+          "p": "Starting rules to adapt. They remove guesswork when you are tempted to push a borderline ad because it converts. Each rule tells you exactly what to do next, so the decision is not made on emotion.",
+          "d": [
+            "Any \"Before\" pattern present = do not submit",
+            "Rejected once = read reason, fix cause, resubmit once",
+            "Rejected twice for same reason = retire the concept",
+            "Warning not visible in a placement = exclude that placement",
+            "Network edits your copy = recheck the whole checklist"
+          ],
+          "say": "Here are starting decision rules for creatives. Any Before pattern present means don't submit. Rejected once, read the reason, fix the cause, and resubmit once. Rejected twice for the same reason, retire the concept. A warning not visible in a placement, exclude that placement. And if the network edits your copy, recheck the whole checklist. These remove guesswork when you're tempted to push a borderline ad because it converts."
+        }
+      ],
+      "takeaways": [
+        "Rewrite promises into descriptions of what the product really does.",
+        "A disclaimer must be visible where the claim is, on a phone, without tapping.",
+        "Age gates help but do not verify age; targeting, creative and the operator's checks do the real work.",
+        "Landers need HTTPS, a privacy policy, minimal fields and recorded consent.",
+        "Run the same pre-submit routine for every ad and file the approved copy."
+      ],
+      "action": "Take your three best-performing regulated ads. Rewrite any line that matches a \"Before\" pattern, check the mobile preview for warning visibility in each placement, and save the approved versions in your compliance folder.",
+      "glossary": [
+        {
+          "term": "Disclaimer",
+          "def": "A short statement that qualifies a claim, such as a risk warning or terms line."
+        },
+        {
+          "term": "Prominence",
+          "def": "How easy a message is to see and read; regulators often judge this, not only presence."
+        },
+        {
+          "term": "Age gate",
+          "def": "A page step asking users to confirm they are old enough before continuing."
+        },
+        {
+          "term": "Cloaking",
+          "def": "Showing reviewers different content from real users; banned and treated as deception."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Your risk warning is at character 180 of 210, and mobile shows about the first 125. What is the best fix?",
+          "options": [
+            "Leave it; it is in the text",
+            "Move it into the visible part or onto the creative",
+            "Make the text longer",
+            "Put it in the comments"
+          ],
+          "answer": 1,
+          "why": "A warning people cannot see without tapping does little. Put it where it shows in every placement."
+        },
+        {
+          "q": "Which is the best rewrite of \"Copy my trades and get rich\"?",
+          "options": [
+            "Copy my trades, results may vary",
+            "Get rich slowly with my trades",
+            "Practise on a free demo before using real money",
+            "Copy my trades, 95% win rate"
+          ],
+          "answer": 2,
+          "why": "It describes a real feature, makes no income claim and does not offer trade calls."
+        },
+        {
+          "q": "What does a self-declared age gate on a lander do?",
+          "options": [
+            "Signals adults-only and stops casual visits, but does not prove age",
+            "Verifies age legally",
+            "Replaces age targeting",
+            "Lets you target under-18s"
+          ],
+          "answer": 0,
+          "why": "Real age checks happen at the operator's sign-up. The gate is a helpful extra, not verification."
+        },
+        {
+          "q": "An ad was rejected twice for the same reason after small edits. What do you do?",
+          "options": [
+            "Submit again from another account",
+            "Appeal both and run a copy meanwhile",
+            "Use a different lander for reviewers",
+            "Retire the concept and write a new compliant one"
+          ],
+          "answer": 3,
+          "why": "Repeated rejections for the same reason mean the idea itself breaks policy. Workarounds risk the account."
+        },
+        {
+          "q": "Which lander practice is a data protection problem?",
+          "options": [
+            "HTTPS on every page",
+            "A pre-ticked box for partner marketing",
+            "A privacy policy naming partners",
+            "Asking only for name and phone"
+          ],
+          "answer": 1,
+          "why": "Pre-ticked boxes are not clear consent in many laws. Use separate, unticked boxes."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn to write creatives and landers that pass review and still earn clicks. You'll rewrite risky hooks, place disclaimers where people really see them, add an age gate and basic data protection, and run a pre-submit checklist.",
+      "say_outro": "So, keep the curiosity and drop the promise, make warnings visible on a phone, protect data on your landers, and check every ad before you submit. Your task: take your three best-performing regulated ads, rewrite any line that matches a Before pattern, check the mobile preview for warning visibility in each placement, and save the approved versions in your compliance folder. Now take the quiz."
+    },
+    {
+      "slug": "your-compliance-file",
+      "title": "Your compliance file and the go/no-go gate",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can set up a compliance folder that proves what you checked and when.",
+        "You can run an exact pre-launch go/no-go gate for any regulated campaign.",
+        "You can respond in writing when a network asks for something non-compliant.",
+        "You can keep your records current with a short monthly routine."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why a file beats a memory",
+          "p": "When a platform reviews your account, a network audits your traffic or a regulator asks a question, the only thing that helps is proof. A short, organised file shows what you checked, when and on whose advice. Without it, you are asking people to trust your memory.",
+          "d": {
+            "b": "If it is not written down, it did not happen",
+            "s": "Proof turns a dispute into a conversation."
+          },
+          "say": "When a platform reviews your account, a network audits your traffic, or a regulator asks a question, the only thing that helps is proof. A short, organised file shows what you checked, when, and on whose advice. Without it, you're asking people to trust your memory. If it's not written down, it didn't happen. Proof turns a dispute into a conversation."
+        },
+        {
+          "v": "cards",
+          "h": "What to keep for every regulated offer",
+          "p": "Collect these before launch and update them whenever anything changes. Most are screenshots, emails or PDFs that take a few minutes each to save, and together they show exactly what you checked and when.",
+          "d": [
+            "Licence proofs|Dated register screenshots per geo",
+            "Platform authorizations|Approval emails, permission screens",
+            "Network terms|Offer terms and every written answer",
+            "Approved copy|Final ads, landers and warnings used",
+            "Consent logs|What each lead agreed to, when, with what text",
+            "Advice|Notes from lawyers or advisers, dated"
+          ],
+          "say": "Look at these six cards. For every regulated offer, keep licence proofs, meaning dated register screenshots per geo. Platform authorizations, like approval emails and permission screens. Network terms, with the offer terms and every written answer. Approved copy, the final ads, landers and warnings used. Consent logs, what each lead agreed to, when, and with what text. And advice, dated notes from lawyers or advisers. Collect these before launch, and update them whenever anything changes."
+        },
+        {
+          "v": "code",
+          "h": "A simple folder structure",
+          "p": "One folder per offer and geo keeps everything findable, even months later or when a teammate needs it. Use dates in file names so the newest proof is obvious and older versions stay as history.",
+          "d": {
+            "lang": "text",
+            "text": "compliance/\n  KE_BrandX_sportsbook/\n    01_law/2026-10-04_notes.pdf\n    02_licence/2026-10-04_register.png\n    03_platform/2026-10-02_permission.pdf\n    04_network/2026-10-03_terms_and_emails.pdf\n    05_copy/approved_ads_v3.pdf\n    06_consent/consent_text_v2.txt\n    07_incidents/",
+            "note": "Example structure. Adapt names to your team."
+          },
+          "say": "On screen is an example folder structure. Don't worry about the exact names. The idea is one folder per offer and geo, with numbered sub-folders for law, licence, platform, network, copy, consent and incidents. Each file name starts with a date, so the newest proof is obvious and older versions stay as history. That keeps everything findable, even months later, or when a teammate needs it. Adapt the names to your team."
+        },
+        {
+          "v": "code",
+          "h": "What one consent record looks like",
+          "p": "For every lead, store enough to prove what the person agreed to, when and through which form. Link the record to the exact version of the consent text shown, because wording changes over time.",
+          "more": "Keep consent records secure, limit who can see them and set a deletion date. How long you must keep records depends on the law and your contracts, so ask your adviser; do not keep personal data longer than you need. If a person asks what you hold or asks you to delete it, the record tells you exactly where their data went, which many data protection laws require you to answer.",
+          "d": {
+            "lang": "json",
+            "text": "{\n  \"lead_id\": \"L-20261004-0193\",\n  \"time_utc\": \"2026-10-04T09:14:22Z\",\n  \"source\": \"meta_leadform_KE_loans_v2\",\n  \"consent_text_version\": \"v2\",\n  \"consents\": {\"contact_about_request\": true, \"partner_marketing\": false},\n  \"shared_with\": [\"Example Lender Ltd\"]\n}",
+            "note": "Example record. Store securely and only as long as you need it."
+          },
+          "say": "Here's an example of one consent record, shown as code on screen. For every lead, store enough to prove what the person agreed to, when, and through which form. That means a lead reference, the time, the source form, the version of the consent text shown, which consents they gave, and who the data was shared with. Linking to the exact text version matters because wording changes over time. Keep these records secure, limit who sees them, and don't keep personal data longer than you need. Ask your adviser how long to keep them."
+        },
+        {
+          "v": "check",
+          "h": "The pre-launch go/no-go gate",
+          "p": "Use this exact gate for every new regulated campaign, geo or major creative change. Every line must be a yes with a file in the folder. One no or one unknown means no launch. This is a starting gate; adapt it with your adviser.",
+          "d": [
+            "1. Law: product may be offered and advertised in this geo, source filed",
+            "2. Licence: entity verified on official register for this geo, dated screenshot",
+            "3. Platform: authorization or special category in place where required",
+            "4. Network: source, geo, copy and age written and filed",
+            "5. Copy: passes creative checklist; warnings visible on mobile",
+            "6. Data: privacy policy live, consent text versioned, records stored"
+          ],
+          "say": "Here's the pre-launch go or no-go gate. Use it for every new regulated campaign, geo or major creative change. One: law, the product may be offered and advertised in this geo, with a source filed. Two: licence, the entity verified on the official register, with a dated screenshot. Three: platform, authorization or special category in place where required. Four: network, source, geo, copy and age in writing. Five: copy passes the checklist, with warnings visible on mobile. Six: data, privacy policy live, consent text versioned, records stored. One no or one unknown means no launch."
+        },
+        {
+          "v": "screen",
+          "h": "A compliance tracker for your campaigns",
+          "p": "Keep one sheet that shows the gate status of every live campaign. Anyone on the team can see at a glance what may run. Screen is an illustrative mock-up.",
+          "d": {
+            "kind": "browser",
+            "url": "sheets.example/compliance-tracker",
+            "title": "Compliance tracker",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Campaign",
+                  "Gate",
+                  "Next review"
+                ],
+                "rows": [
+                  [
+                    "KE_Sportsbook_01",
+                    "6/6 GO",
+                    "2026-11-04"
+                  ],
+                  [
+                    "NG_Broker_02",
+                    "5/6 NO-GO",
+                    "Licence check"
+                  ],
+                  [
+                    "ZA_Loans_01",
+                    "6/6 GO",
+                    "2026-10-30"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "NO-GO rows stay paused until every line is a yes."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Keep one sheet showing the gate status of every live campaign. Look at this tracker, an illustrative mock-up. The Kenya sportsbook campaign is six out of six, GO, with a next review date. The Nigeria broker campaign is five out of six, NO-GO, waiting on a licence check. The South Africa loans campaign is six out of six, GO. Anyone on the team can see at a glance what may run. And NO-GO rows stay paused until every line is a yes."
+        },
+        {
+          "v": "phone",
+          "h": "When a network asks for non-compliant copy",
+          "p": "Networks and managers sometimes push copy that converts but breaks rules. Your reply should be polite, written and firm, and it should offer a compliant alternative.",
+          "d": {
+            "app": "chat",
+            "title": "Network manager",
+            "subtitle": "online",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Top affiliates run \"guaranteed 300% returns\". Use it and we raise your payout."
+              },
+              {
+                "from": "me",
+                "text": "I cannot run guaranteed return claims. They break platform policy and local rules."
+              },
+              {
+                "from": "me",
+                "text": "I can run demo-account and education angles with the risk warning. Can you confirm that copy in writing?"
+              },
+              {
+                "from": "them",
+                "text": "OK, send it over for approval."
+              }
+            ]
+          },
+          "say": "Networks and managers sometimes push copy that converts but breaks rules. In this chat, notice how it's handled. The manager says top affiliates run guaranteed three hundred percent returns, and offers a higher payout. You reply that you can't run guaranteed return claims, because they break platform policy and local rules. Then you offer demo account and education angles with the risk warning, and ask for written confirmation. Your reply should be polite, written and firm, and offer a compliant alternative."
+        },
+        {
+          "v": "flow",
+          "h": "What to do when asked to break the rules",
+          "p": "Follow the same steps every time, so the decision is never made under pressure or for a higher payout. Writing it down also protects you if the network later claims you ran the copy on your own.",
+          "d": [
+            "Do not run it",
+            "Reply in writing with the reason",
+            "Offer a compliant alternative",
+            "Escalate if they insist",
+            "Walk away if they still insist",
+            "File the whole exchange"
+          ],
+          "say": "Follow the same steps every time you're asked to break the rules. Don't run it. Reply in writing with the reason. Offer a compliant alternative. Escalate if they insist. Walk away if they still insist. And file the whole exchange. Doing it the same way every time means the decision is never made under pressure, or for a higher payout. Writing it down also protects you if the network later claims you ran the copy on your own."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes with compliance records",
+          "p": "Most buyers do some checking. The problem is usually that the proof is scattered, undated or missing on the day it is needed, so the checking cannot be shown to anyone.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Approvals agreed on voice calls",
+                "Screenshots without dates or URLs",
+                "One folder for all offers",
+                "Never rechecking after launch"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Confirm every answer by email or chat",
+                "Dated file names, visible URL",
+                "One folder per offer and geo",
+                "Monthly review and before scaling"
+              ]
+            }
+          },
+          "say": "Most buyers do some checking. The problem is usually that the proof is scattered, undated or missing on the day it's needed. Look at the mistakes. Approvals agreed on voice calls. Screenshots without dates or U R Ls. One folder for all offers. Never rechecking after launch. And the fixes: confirm every answer by email or chat, use dated file names with the U R L visible, keep one folder per offer and geo, and review monthly and before scaling."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example: the cost of keeping a file",
+          "p": "Example. A file takes about 20 minutes per campaign to set up. With 10 new campaigns a month that is 200 minutes, about 3.3 hours. Compare that with one disputed month of payouts.",
+          "more": "Example maths: 20 minutes x 10 campaigns = 200 minutes, and 200 divided by 60 is about 3.3 hours. If a network disputes $2,000 of payouts and claims your geo or copy broke the terms, the file is what lets you show the written approval and the copy you actually ran. Without it, the network's word usually wins. The figures are illustrative; your own time and payouts will differ.",
+          "d": {
+            "kind": "example",
+            "text": "Example: 3.3 hours of filing a month versus a $2,000 payout dispute you cannot answer without proof."
+          },
+          "say": "What does keeping a file cost? This is an example. Setting up a file takes about twenty minutes per campaign. With ten new campaigns a month, that's two hundred minutes, about three point three hours. Now compare that with a network disputing two thousand dollars of payouts, claiming your geo or copy broke the terms. The file lets you show the written approval and the copy you actually ran. Without it, the network's word usually wins. The figures are illustrative, and yours will differ."
+        },
+        {
+          "v": "quote",
+          "h": "From the founder",
+          "p": "Dchessking on why records matter more as you grow. As a team adds buyers, offers and geos, nobody can remember every approval, so the file becomes the memory of the business.",
+          "d": "The day you need your compliance file is never the day you can build it. Save the proof while it is easy, and you will spend that bad day explaining instead of guessing.",
+          "by": "dchessking",
+          "say": "As a team adds buyers, offers and geos, nobody can remember every approval, so the file becomes the memory of the business. Here's how Dchessking puts it: The day you need your compliance file is never the day you can build it. Save the proof while it is easy, and you will spend that bad day explaining instead of guessing."
+        },
+        {
+          "v": "cards",
+          "h": "When something goes wrong",
+          "p": "Rejections, restrictions and complaints happen even to careful buyers. Respond calmly, with facts from your file and through the official process. Never open new accounts to get around a restriction.",
+          "d": [
+            "Ad rejected|Read reason, fix cause, note it in the file",
+            "Account restricted|Appeal through the official process with your proof",
+            "Network clawback|Send your written approvals and copy history",
+            "User complaint|Pause, review, respond honestly, record the outcome",
+            "Regulator contact|Stop and speak to a qualified lawyer first"
+          ],
+          "say": "Rejections, restrictions and complaints happen even to careful buyers. Here's how to respond. Ad rejected: read the reason, fix the cause, note it in the file. Account restricted: appeal through the official process with your proof. Network clawback: send your written approvals and copy history. User complaint: pause, review, respond honestly, record the outcome. Regulator contact: stop, and speak to a qualified lawyer first. Respond calmly, with facts, and never open new accounts to get around a restriction."
+        },
+        {
+          "v": "check",
+          "h": "Monthly compliance routine",
+          "p": "Starting rules to adapt. Put a recurring date in your calendar. Licences get suspended, warnings change and policies are updated, so a check that was true at launch may not be true a month later.",
+          "d": [
+            "Recheck every licence on its register every 30 days",
+            "Recheck before any budget increase above 2x",
+            "Update risk warnings when the broker's figure changes",
+            "Reread platform policy pages for your verticals",
+            "Delete personal data past its retention date"
+          ],
+          "say": "Put a recurring date in your calendar for this monthly routine. These are starting rules to adapt. Recheck every licence on its register every thirty days. Recheck before any budget increase above two times. Update risk warnings when the broker's figure changes. Reread platform policy pages for your verticals. And delete personal data past its retention date. Licences get suspended, warnings change and policies are updated, so a check that was true at launch may not be true a month later."
+        },
+        {
+          "v": "tip",
+          "h": "Not legal advice",
+          "p": "This module is education, not legal advice. Laws, licences and platform policies differ by country and change often. Before you run or scale a regulated offer, check the current rules yourself and, where money or your accounts are at stake, speak to a qualified local lawyer.",
+          "d": {
+            "kind": "warn",
+            "text": "Education only. Regulated ads usually need platform authorization and must follow local law. Check both, and get local legal advice before scaling."
+          },
+          "say": "To close the module, a reminder. This is education, not legal advice. Laws, licences and platform policies differ by country and change often. Before you run or scale a regulated offer, check the current rules yourself, and where money or your accounts are at stake, speak to a qualified local lawyer. As the warning says, regulated ads usually need platform authorization and must follow local law. Check both, and get local legal advice before scaling."
+        }
+      ],
+      "takeaways": [
+        "Keep a dated file per offer and geo: licences, authorizations, network terms, approved copy, consent logs and advice.",
+        "Use the six-line go/no-go gate; any no or unknown means no launch.",
+        "Answer non-compliant requests in writing, offer a compliant alternative and walk away if pushed.",
+        "Recheck licences monthly and before scaling.",
+        "Your file is what turns a dispute or review into a conversation backed by proof."
+      ],
+      "action": "Create the compliance folder structure for one live or planned regulated campaign, fill in as many of the six gate lines as you can today, and mark the campaign GO or NO-GO in a tracker sheet.",
+      "glossary": [
+        {
+          "term": "Compliance file",
+          "def": "An organised set of records proving what you checked, approved and ran."
+        },
+        {
+          "term": "Go/no-go gate",
+          "def": "A fixed checklist that must be fully passed before a campaign may launch."
+        },
+        {
+          "term": "Clawback",
+          "def": "A network taking back or withholding payouts already counted, often for terms breaches."
+        },
+        {
+          "term": "Retention period",
+          "def": "How long you keep a record before deleting it, set by law, contract or policy."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Your gate shows 5 of 6 lines as yes; the platform authorization is still pending. What is the status?",
+          "options": [
+            "GO at half budget",
+            "GO, five is enough",
+            "NO-GO until authorization is granted",
+            "GO on a different platform without checking"
+          ],
+          "answer": 2,
+          "why": "Any no or unknown line means no launch. The gate only works if it is applied exactly."
+        },
+        {
+          "q": "A manager approved your geo on a voice call. What do you do?",
+          "options": [
+            "Ask them to confirm it in writing and file the reply",
+            "Nothing, a call is enough",
+            "Record the call without telling them",
+            "Launch and ask later"
+          ],
+          "answer": 0,
+          "why": "A written confirmation is proof you can file. Memories of calls do not help in a dispute."
+        },
+        {
+          "q": "A network offers a higher payout if you use \"guaranteed returns\" copy. What is the right first reply?",
+          "options": [
+            "Accept but soften it to \"almost guaranteed\"",
+            "Run it on one ad set only",
+            "Ignore the message",
+            "Decline in writing and offer compliant copy"
+          ],
+          "answer": 3,
+          "why": "Do not run it, explain why in writing and propose an alternative. File the exchange."
+        },
+        {
+          "q": "20 minutes per campaign, 12 campaigns a month. How long is the filing?",
+          "options": [
+            "2 hours",
+            "4 hours",
+            "3 hours",
+            "6 hours"
+          ],
+          "answer": 1,
+          "why": "20 x 12 = 240 minutes, which is 4 hours. Small compared with one payout dispute you cannot prove."
+        },
+        {
+          "q": "When should you recheck a licence on the register?",
+          "options": [
+            "Only at first launch",
+            "Only when the network asks",
+            "Monthly and before scaling",
+            "Once a year"
+          ],
+          "answer": 2,
+          "why": "Licences can be suspended or changed. A monthly check and a check before scaling keep your proof current."
+        }
+      ],
+      "say_intro": "In this lesson you'll build a compliance file that proves what you checked and when. You'll run an exact go or no-go gate before launch, learn how to answer a network that asks for non-compliant copy, and set up a short monthly routine.",
+      "say_outro": "So, save proof as you go, run the six line gate before every launch, answer pressure in writing, and recheck monthly. Your task: create the compliance folder structure for one live or planned regulated campaign, fill in as many of the six gate lines as you can today, and mark the campaign GO or NO-GO in a tracker sheet. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "Meta approved your betting ad for Nigeria. The brand says it is licensed \"in Nigeria\". You target Lagos and Abuja. What is the right next step?",
+      "options": [
+        "Launch; approval and a licence are enough",
+        "Check which state or federal licence applies to each area you target and get it in writing",
+        "Target only Abuja to be safe",
+        "Ask the network to run the ads for you"
+      ],
+      "answer": 1,
+      "why": "Gambling regulation in Nigeria sits largely with states after a 2024 ruling, so a licence must cover the specific places you target. Ad approval is a separate layer."
+    },
+    {
+      "q": "A broker's register entry is authorised, but the domain listed is different from your offer's domain. Your manager says \"it is fine, same group\". What do you do?",
+      "options": [
+        "Run it; same group is fine",
+        "Run at half budget while checking",
+        "Pause and get written proof that the offer domain belongs to the licensed entity for your geo",
+        "Change your lander to the registered domain"
+      ],
+      "answer": 2,
+      "why": "A mismatched domain is a clone warning. Only written, verifiable proof clears it, and until then the gate is a no."
+    },
+    {
+      "q": "You plan a crypto exchange campaign in Ghana. The exchange is registered abroad, and you have no platform permission yet. Which gate lines fail?",
+      "options": [
+        "Only the network line",
+        "None; crypto is not regulated",
+        "Only the copy line",
+        "At least the platform line, and the licence line until Ghana coverage is verified"
+      ],
+      "answer": 3,
+      "why": "At the time of writing many crypto ads need platform permission, and a foreign registration does not prove the exchange may market in Ghana."
+    },
+    {
+      "q": "An iGaming offer allows 18+ in Kenya, but the brand's terms say 21+ for all affiliate traffic. Your CPM is lower at 18 to 24. What age do you set?",
+      "options": [
+        "21+, because the strictest rule wins",
+        "18+, because the law allows it",
+        "18+ but exclude interests",
+        "25+ to be extra safe and cheaper"
+      ],
+      "answer": 0,
+      "why": "Leads from 18 to 20 would breach the brand's terms and be rejected. The strictest applicable layer decides."
+    },
+    {
+      "q": "Example: you spent $600 on a forex offer, 12 FTDs at $70 were reported, then the broker found \"guaranteed profit\" in your ads and withheld everything. What is your result and what would compliant ads at the same cost have earned?",
+      "options": [
+        "-$600 and +$240",
+        "$0 and +$840",
+        "-$600 and +$840",
+        "-$240 and +$600"
+      ],
+      "answer": 0,
+      "why": "Withheld payouts leave you at -$600. At the same cost, 12 x $70 = $840 revenue minus $600 = +$240 profit."
+    },
+    {
+      "q": "A loan costs NGN 6,000 on NGN 40,000 for 30 days. What is the 30-day cost, and what should your ad show as the annual rate?",
+      "options": [
+        "15%; your own annualised figure",
+        "6%; nothing",
+        "15%; the lender's official rate as their regulator requires",
+        "40%; the total repayable only"
+      ],
+      "answer": 2,
+      "why": "6,000 / 40,000 = 15% for 30 days. Official annual rate formulas differ by country, so show the lender's official figure and required example."
+    },
+    {
+      "q": "Your loan lead form collected 200 submissions; 120 ticked the separate partner-sharing box. A buyer offers $4 per lead for all 200. What do you sell?",
+      "options": [
+        "All 200; they filled the form",
+        "Only the 120 who consented to sharing",
+        "200, but tell the buyer about the 80",
+        "None; lead forms cannot be sold"
+      ],
+      "answer": 1,
+      "why": "Only consented leads can be shared. Selling the other 80 breaches data protection law in many countries and most terms."
+    },
+    {
+      "q": "Your CFD ad's risk warning is in the last line of a long primary text and is cut off on mobile. The ad is approved. What do you do?",
+      "options": [
+        "Nothing; approval means it is fine",
+        "Add the warning to the comments",
+        "Make the font smaller",
+        "Move the warning into the visible text or onto the creative and check each placement"
+      ],
+      "answer": 3,
+      "why": "Prominence matters. A warning users cannot see without tapping does little, and approval does not prove compliance."
+    },
+    {
+      "q": "Your gambling permission request is pending. The network suggests running the same ads labelled as a \"sports news\" page meanwhile. What do you do?",
+      "options": [
+        "Decline in writing; it is circumvention, and wait for permission",
+        "Run it for 3 days only",
+        "Run it on a backup account",
+        "Run it with a news lander for reviewers"
+      ],
+      "answer": 0,
+      "why": "Disguising a restricted category or showing reviewers a different page is circumvention and can get every account involved restricted."
+    },
+    {
+      "q": "Gate check for a new South Africa loans campaign: lender on NCR list (filed), special category declared, network terms filed, copy checked, but consent text has no named recipient. Status?",
+      "options": [
+        "GO; five of six is fine",
+        "GO with a smaller budget",
+        "NO-GO until the consent text names who gets the data",
+        "GO if the lender agrees verbally"
+      ],
+      "answer": 2,
+      "why": "Any no or unknown line means no launch. Consent must name the recipient before you collect a single lead."
+    }
+  ]
+}

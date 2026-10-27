@@ -1,0 +1,28 @@
+/* VooSquare Academy's own site, the learner app (/learn on voosquareacademy.com, public/learn.html). The member app in
+ * academy mode (app.js LEARN): the Academy lock-up, Academy pages only, and VooSquare one tap away. */
+.ln-brand { align-items: center; }
+.ln-lock { display: grid; line-height: 1.1; min-width: 0; }
+.ln-lock > span { font-size: 18px; white-space: nowrap; }
+.ln-lock small { font-size: 11.5px; font-weight: 600; color: var(--muted2); letter-spacing: 0; white-space: nowrap; }
+.nl-sw .nl-ext { margin-left: auto; opacity: .45; display: inline-flex; }
+.nl-sw .nl-ext .ico { width: 15px; height: 15px; }
+.nl-sw:hover .nl-ext { opacity: 1; color: var(--lime); }
+.ln-comm { margin: 14px 4px 0; padding: 16px; border-radius: 18px; background: radial-gradient(120% 120% at 0% 0%, rgba(18,199,132,.22), transparent 60%), #10261A; border: 1px solid var(--nline); }
+.ln-comm-k { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 800; color: var(--lime); }
+.ln-comm-k .pi { width: 20px; height: 20px; }
+.ln-comm b { display: block; color: #fff; font-size: 16px; letter-spacing: -.03em; margin-top: 8px; }
+.ln-comm p { font-size: 12.5px; color: var(--ntext); margin-top: 4px; line-height: 1.45; }
+.ln-comm .btn { margin-top: 12px; }
+.ln-top-comm { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 14px 0 6px; border-radius: 999px; background: var(--night); color: #fff; font-weight: 700; font-size: 14px; transition: transform .2s var(--ease), box-shadow .2s; }
+.ln-top-comm:hover { transform: translateY(-1px); box-shadow: 0 10px 22px -12px rgba(0,0,0,.6); }
+.ln-top-comm .pi { width: 28px; height: 28px; }
+.ln-top-comm.loading span { opacity: .6; }
+.ln-shell .bnav .mid { border: 0; background: none; }
+.ln-switch { max-width: 560px; margin: 8vh auto 0; text-align: center; display: grid; justify-items: center; gap: 12px; padding: clamp(24px, 5vw, 40px); }
+.ln-switch h2 { font-size: clamp(24px, 4vw, 32px); letter-spacing: -.045em; }
+.ln-switch p { color: var(--muted); max-width: 42ch; }
+.ln-sw-ic .pi { width: 64px; height: 64px; }
+.ln-sw-a { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 8px; }
+@media (max-width: 1060px) { .ln-top-comm { display: none; } }
+.ln-shell .main { min-width: 0; }
+.ln-shell .top h1 { min-width: 0; flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

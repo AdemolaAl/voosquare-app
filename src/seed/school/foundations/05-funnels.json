@@ -1,0 +1,2641 @@
+{
+  "school": "foundations",
+  "order": 5,
+  "slug": "funnels",
+  "title": "Funnels",
+  "summary": "How people move from your ad to the offer, and how to build each step so the right people keep going. You compare four funnel types, learn message match and landing page basics, find where and why people drop, and set up a simple Telegram funnel, the honest way.",
+  "lessons": [
+    {
+      "slug": "the-path-from-ad-to-action",
+      "title": "The path from ad to action",
+      "minutes": 13,
+      "objectives": [
+        "By the end you can describe a funnel as a series of steps, each with its own rate.",
+        "Multiply step rates to predict how many people finish.",
+        "Tell intent from interruption, and name the friction you can remove."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "What a funnel is",
+          "p": "A funnel is the path a person takes from seeing your ad to doing the thing your offer pays for. It is called a funnel because it gets narrower: many people start and fewer finish. Your job is to build a path that the right people can finish easily.",
+          "d": {
+            "b": "Many start. Few finish.",
+            "s": "Build the path so the right people finish"
+          },
+          "say": "Let's start with the big idea on screen: many start, few finish. A funnel is simply the path a person takes from seeing your ad to doing the thing your offer pays for. We call it a funnel because it gets narrower as it goes. Lots of people see the ad, fewer click, and fewer still finish. That's normal. Your job isn't to stop the narrowing, it's to build a path that the right people can finish easily."
+        },
+        {
+          "v": "flow",
+          "h": "A typical path",
+          "p": "Most affiliate funnels have the same basic shape, with small differences. The person sees an ad, clicks, reads a page, signs up and, in many verticals, makes a first payment. Each arrow is a moment where they can stop.",
+          "d": [
+            "Sees ad",
+            "Clicks",
+            "Reads page",
+            "Signs up",
+            "Deposits"
+          ],
+          "say": "Here's the shape most affiliate funnels share. Follow the arrows from left to right. Someone sees your ad, they click, they read a page, they sign up, and in many verticals they make a first deposit. The details change from offer to offer, but the shape stays about the same. Now notice the arrows themselves. Each one is a moment where the person can simply stop. Keep that in mind, because every arrow is a place you can lose people."
+        },
+        {
+          "v": "map",
+          "h": "The path as a map: who controls what",
+          "p": "The same path as a system. You control the ad, your page and your tracking link. The advertiser controls sign-up, ID checks and deposit. The postback carries the result back so it reaches your dashboard. Watch where people and data move.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Your ad",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Your page",
+                "kind": "page"
+              },
+              {
+                "id": "reg",
+                "label": "Brand sign-up + KYC",
+                "kind": "offer"
+              },
+              {
+                "id": "dep",
+                "label": "First deposit",
+                "kind": "money"
+              },
+              {
+                "id": "pb",
+                "label": "Postback",
+                "kind": "data"
+              },
+              {
+                "id": "net",
+                "label": "Your dashboard",
+                "kind": "tool"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "lp",
+                "click"
+              ],
+              [
+                "lp",
+                "reg",
+                "tap"
+              ],
+              [
+                "reg",
+                "dep",
+                "deposit"
+              ],
+              [
+                "dep",
+                "pb",
+                "FTD"
+              ],
+              [
+                "pb",
+                "net",
+                "counted"
+              ]
+            ]
+          },
+          "say": "Now look at the same path drawn as a system. The question here is who controls what. You control the ad, your own page, and your tracking link. The advertiser controls the sign-up, the K Y C, or know your customer, identity checks, and the deposit. Then the postback carries the result, the F T D, or first time deposit, back so it shows up as counted in your dashboard. Watch how people move along the top, and data flows back at the end."
+        },
+        {
+          "v": "cards",
+          "h": "Every step asks for a yes",
+          "p": "Each step asks the person for something: attention, a tap, their trust, their details, then their money. Each ask is bigger than the one before. People only give the bigger yes if the step before made them want to continue.",
+          "d": [
+            "Ad|asks for attention",
+            "Click|asks for a tap",
+            "Page|asks for trust",
+            "Form|asks for details",
+            "Deposit|asks for money"
+          ],
+          "say": "Every step asks the person for a yes, and each ask is bigger than the last. Look at the cards. The ad asks for attention. The click asks for a tap. Your page asks for trust. The form asks for their details. And the deposit asks for their money. People only give that bigger yes if the step before made them want to keep going. So each step's real job is to earn the next one."
+        },
+        {
+          "v": "funnel",
+          "h": "Worked example: a funnel in numbers",
+          "p": "Example: 1,000 clicks. 800 pages load, 240 people tap the main button, 60 register on the offer and 6 make a first deposit. Out of 1,000 paid clicks, 6 people finished the whole path: 0.6%.",
+          "d": [
+            [
+              "Clicks",
+              1000
+            ],
+            [
+              "Page loads",
+              800
+            ],
+            [
+              "Button taps",
+              240
+            ],
+            [
+              "Registrations",
+              60
+            ],
+            [
+              "FTDs",
+              6
+            ]
+          ],
+          "say": "Let's put numbers on it. This is an example. Start with one thousand clicks. Eight hundred pages load. Two hundred and forty people tap the main button. Sixty register on the offer, and six make a first deposit. Look how the bars shrink at every stage. Out of one thousand paid clicks, just six people finished the whole path. That's zero point six percent. Small numbers at the end are normal, which is why each step matters so much."
+        },
+        {
+          "v": "eq",
+          "h": "The funnel is a multiplication",
+          "p": "The share who finish equals every step's rate multiplied together. Example: 80% load × 30% tap × 25% register × 10% deposit = 0.6%. That is why a leak early in the funnel hurts so much: it shrinks every step that follows.",
+          "more": "Each rate is measured against the step just before it. Tap rate: 240 ÷ 800 = 30%. Registration rate: 60 ÷ 240 = 25%. Deposit rate: 6 ÷ 60 = 10%. Check the total: 0.8 × 0.3 × 0.25 × 0.1 = 0.006, which is 0.6%, and 0.6% of 1,000 clicks is 6 FTDs.",
+          "d": [
+            "80%",
+            "×",
+            "30%",
+            "×",
+            "25%",
+            "×",
+            "10%",
+            "=",
+            "0.6%"
+          ],
+          "say": "Here's the key maths. The share of people who finish equals every step's rate multiplied together. In our example, eighty percent load, times thirty percent tap, times twenty five percent register, times ten percent deposit, gives zero point six percent. Each rate is measured against the step just before it, not against the original clicks. And because it's a multiplication, a leak early in the funnel hurts a lot. It shrinks every single step that follows."
+        },
+        {
+          "v": "bars",
+          "h": "Fix one step, lift the end",
+          "p": "Example: lift the button tap rate from 30% to 40% and change nothing else. Taps go from 240 to 320, registrations from 60 to 80, and FTDs from 6 to 8. One step improved by a third, so the end result improved by a third.",
+          "more": "The same spend now buys 8 FTDs instead of 6. If those 1,000 clicks cost $200, cost per FTD falls from $200 ÷ 6 = $33.33 to $200 ÷ 8 = $25.00. Funnel work and creative work both lower your costs. Funnel changes are often cheaper to test, because you are not paying for new ads to learn.",
+          "d": [
+            [
+              "Before: 30% tap rate",
+              75,
+              "6 FTDs"
+            ],
+            [
+              "After: 40% tap rate",
+              100,
+              "8 FTDs"
+            ]
+          ],
+          "say": "Now see what happens when you fix one step. In this example, the button tap rate goes from thirty percent to forty percent, and nothing else changes. Taps go from two hundred and forty to three hundred and twenty, registrations from sixty to eighty, and F T Ds from six to eight. One step improved by a third, so the end result improved by a third. If those clicks cost two hundred dollars, cost per F T D falls from about thirty three dollars to twenty five. Funnel changes are often cheaper to test than new ads."
+        },
+        {
+          "v": "lab",
+          "h": "Try it: find the leaking step",
+          "p": "Here is an example funnel for one week. Each step's pass-through rate is the count divided by the step before it. Work out the rates, pick the step with the lowest pass-through, then check your answer.",
+          "more": "Page loads 550 ÷ 1,000 = 55%. Button taps 60 ÷ 550 = about 11%. Registrations 30 ÷ 60 = 50%. FTDs 4 ÷ 30 = about 13%. The tap step is the weakest, and it sits on your own page, so it is the cheapest to fix: headline and message match first. The slow load is the second fix.",
+          "d": {
+            "kind": "funnel",
+            "task": "Which step has the lowest pass-through rate?",
+            "preset": {
+              "steps": [
+                [
+                  "Clicks",
+                  1000
+                ],
+                [
+                  "Page loads",
+                  550
+                ],
+                [
+                  "Button taps",
+                  60
+                ],
+                [
+                  "Registrations",
+                  30
+                ],
+                [
+                  "FTDs",
+                  4
+                ]
+              ],
+              "payout": 40
+            },
+            "answer": {
+              "field": "worst_step",
+              "value": 2
+            }
+          },
+          "say": "Time to practise. On screen is an example funnel for one week, with a count at each step. Your task is to work out each step's pass-through rate. That's the count at a step divided by the count at the step just before it. Then find the step with the lowest pass-through rate. Take your time and do the division for each step. Pause and try it, then check your answer."
+        },
+        {
+          "v": "compare",
+          "h": "Intent vs interruption",
+          "p": "Search traffic comes from people already looking for something, which is high intent. Social feed traffic interrupts people who were doing something else. Interrupted people need more explaining and more trust before they say yes, so feed traffic usually needs a stronger funnel.",
+          "d": {
+            "a": {
+              "title": "High intent (search)",
+              "items": [
+                "Already looking",
+                "Fewer steps needed",
+                "Direct to offer can work",
+                "Clicks often cost more"
+              ]
+            },
+            "b": {
+              "title": "Interruption (feeds)",
+              "items": [
+                "Not looking yet",
+                "Needs warming up",
+                "A page that explains often helps",
+                "Clicks often cost less"
+              ]
+            }
+          },
+          "say": "Not all traffic arrives in the same mood. On the left is high intent traffic, like search. These people are already looking, so fewer steps are needed, and a direct link to the offer can work, though clicks often cost more. On the right is interruption traffic, like social feeds. These people weren't looking yet. They need warming up, and a page that explains often helps. Clicks often cost less, but feed traffic usually needs a stronger funnel."
+        },
+        {
+          "v": "cards",
+          "h": "Friction: what slows people down",
+          "p": "Friction is anything that makes the next step harder: a slow page, a long form, a confusing button or an unexpected request for ID. Some friction is required, for example identity checks in regulated verticals. Remove the friction you control.",
+          "more": "KYC (know your customer) identity checks are required by law for many trading and gambling brands. You cannot remove them, and you should never coach users on how to get around them. What you can do is tell people honestly, before they click, that the brand will ask for ID. Fewer surprises means fewer people dropping out later.",
+          "d": [
+            "Speed|slow pages lose people",
+            "Length|every extra field costs sign-ups",
+            "Clarity|unclear next steps stop people",
+            "Surprises|unexpected costs or requests"
+          ],
+          "say": "Friction is anything that makes the next step harder. The cards show the big four: speed, because slow pages lose people; length, because every extra field costs sign-ups; clarity, because unclear next steps stop people; and surprises, like unexpected costs or requests. Some friction is required. K Y C checks are required by law for many trading and gambling brands, and you should never coach anyone around them. What you can do is tell people honestly, before they click, that the brand will ask for ID. Remove the friction you control."
+        },
+        {
+          "v": "tip",
+          "h": "Losing the wrong people is fine",
+          "p": "A funnel should filter. If someone under 18, or in a country the offer does not accept, leaves early, that saves you money and keeps you compliant. Aim to lose the wrong people early and cheaply, and keep the right people moving forward.",
+          "d": {
+            "kind": "tip",
+            "text": "A clear page that turns away the wrong people is doing its job."
+          },
+          "say": "Here's a mindset shift. Losing the wrong people is fine. A good funnel filters. If someone under eighteen, or someone in a country the offer doesn't accept, leaves early, that saves you money and keeps you compliant. As the tip says, a clear page that turns away the wrong people is doing its job. Aim to lose the wrong people early and cheaply, and keep the right people moving forward."
+        },
+        {
+          "v": "flow",
+          "h": "What you control and what you do not",
+          "p": "You control the ad, your own page and any Telegram channel or bot you run. The brand controls its registration form, KYC and deposit page. Put your effort where you have control, and choose offers whose own pages already convert well.",
+          "d": [
+            "Ad (you)",
+            "Your page (you)",
+            "Telegram (you)",
+            "Sign-up (brand)",
+            "Deposit (brand)"
+          ],
+          "say": "Look at the labels in brackets on this flow. The first three say you: the ad, your own page, and any Telegram channel or bot you run. The last two say brand: the sign-up form, K Y C, and the deposit page. That split tells you where to put your effort. Work hard on the parts you control. For the parts you don't, your best move is choosing offers whose own pages already convert well."
+        },
+        {
+          "v": "tip",
+          "h": "Never coach people around the brand's checks",
+          "p": "ID checks, age limits and country rules on the brand's side exist because the law requires them. Telling people how to get around them, or using someone else's details, is dishonest and can be illegal. Tell people what to expect, and let the checks work.",
+          "d": {
+            "kind": "warn",
+            "text": "Explain the steps honestly. Never help anyone dodge KYC, age or country checks."
+          },
+          "say": "This one is a firm rule. I D checks, age limits and country rules on the brand's side exist because the law requires them. Telling people how to get around them, or using someone else's details, is dishonest and can be illegal. As the warning says, explain the steps honestly, and never help anyone dodge K Y C, age or country checks. Tell people what to expect, and let the checks work."
+        },
+        {
+          "v": "table",
+          "h": "Funnel words to know",
+          "p": "These words come up in almost every funnel conversation with networks, affiliate managers and other buyers. Learn them now and the rest of this module will read more easily and more quickly.",
+          "d": {
+            "cols": [
+              "Term",
+              "Meaning"
+            ],
+            "rows": [
+              [
+                "Step rate",
+                "Share who pass one step"
+              ],
+              [
+                "Overall rate",
+                "Share who finish every step"
+              ],
+              [
+                "Drop-off",
+                "People lost at a step"
+              ],
+              [
+                "Friction",
+                "Anything that slows the next step"
+              ],
+              [
+                "Intent",
+                "How ready people are to act"
+              ]
+            ]
+          },
+          "say": "Here are five funnel words you'll hear in almost every conversation with networks, affiliate managers and other buyers. Step rate is the share who pass one step. Overall rate is the share who finish every step. Drop-off is the people lost at a step. Friction is anything that slows the next step. And intent is how ready people are to act. Learn these now, and the rest of this module will read more easily."
+        },
+        {
+          "v": "check",
+          "h": "Map your first funnel",
+          "p": "Before you choose a funnel type in the next lesson, write down the path for any offer you are looking at. Seeing the steps on paper shows you where people could stop.",
+          "d": [
+            "List every step from ad to payment",
+            "Mark which steps you control",
+            "Note any ID or payment checks",
+            "Guess where most people will stop"
+          ],
+          "say": "Before the next lesson, where you'll choose a funnel type, map your first funnel on paper. Work through this checklist. List every step from ad to payment. Mark which steps you control. Note any I D or payment checks. Then guess where most people will stop. It sounds simple, but seeing the steps written down shows you exactly where people could fall away."
+        },
+        {
+          "v": "cards",
+          "h": "Common funnel mistakes, and the fix",
+          "p": "These are the funnel mistakes beginners make before they have even launched. Each one hides where people are really stopping, so you fix the wrong thing.",
+          "d": [
+            "Adding or averaging step rates|multiply them",
+            "Fixing the brand's steps first|fix the steps you control",
+            "Looking only at final FTDs|read every step rate",
+            "Hiding friction like ID checks|say it honestly up front",
+            "Changing several steps at once|one change at a time"
+          ],
+          "say": "Finally, the common mistakes beginners make, each with its fix. Adding or averaging step rates? Multiply them. Fixing the brand's steps first? Fix the steps you control. Looking only at final F T Ds? Read every step rate. Hiding friction like I D checks? Say it honestly up front. Changing several steps at once? Make one change at a time. Each of these mistakes hides where people are really stopping, so you end up fixing the wrong thing."
+        }
+      ],
+      "takeaways": [
+        "A funnel is a chain of steps. The share who finish is every step rate multiplied together.",
+        "Improving one step by a share lifts the final result by the same share.",
+        "Feed traffic usually needs more warming up than search traffic. Remove the friction you control."
+      ],
+      "action": "Pick one offer and write its funnel as a list of steps. For each step, write who controls it (you or the brand) and one reason a person might stop there.",
+      "glossary": [
+        {
+          "term": "Funnel",
+          "def": "The path from seeing an ad to completing the paid action, with fewer people at each step."
+        },
+        {
+          "term": "Step rate",
+          "def": "The share of people at one step who move on to the next."
+        },
+        {
+          "term": "Drop-off",
+          "def": "The people lost between one step and the next."
+        },
+        {
+          "term": "Friction",
+          "def": "Anything that makes the next step harder, such as slow loading or long forms."
+        },
+        {
+          "term": "Intent",
+          "def": "How ready a person already is to take the action."
+        },
+        {
+          "term": "KYC",
+          "def": "Know your customer: identity checks that regulated brands must run on users."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "The step rates are 90%, 20%, 50% and 10%. What share of clicks finish the funnel?",
+          "options": [
+            "170%",
+            "0.9%",
+            "9%",
+            "42.5%"
+          ],
+          "answer": 1,
+          "why": "Multiply the rates: 0.9 × 0.2 × 0.5 × 0.1 = 0.009, which is 0.9%. Adding or averaging rates gives nonsense."
+        },
+        {
+          "q": "Which step is usually the biggest ask?",
+          "options": [
+            "Seeing the ad",
+            "Tapping the ad",
+            "Making a deposit",
+            "Reading the headline"
+          ],
+          "answer": 2,
+          "why": "Each step asks for more. Handing over money is the largest ask, which is why the deposit step often loses the most people."
+        },
+        {
+          "q": "You lift one step rate from 20% to 25% and nothing else changes. What happens to final conversions?",
+          "options": [
+            "They rise by 5 conversions",
+            "They rise by 25%",
+            "They stay the same",
+            "They rise by 5%"
+          ],
+          "answer": 1,
+          "why": "25 ÷ 20 = 1.25, so that step passes 25% more people, and every later step multiplies that bigger number."
+        },
+        {
+          "q": "Why does feed traffic often need more warming up than search traffic?",
+          "options": [
+            "Feed clicks always cost more",
+            "Search users never convert",
+            "Feeds do not allow links",
+            "Feed users were interrupted and were not already looking"
+          ],
+          "answer": 3,
+          "why": "Search users arrive looking for something. Feed users were doing something else, so they need more explanation and trust."
+        },
+        {
+          "q": "A trading offer requires ID checks after registration. What should you do?",
+          "options": [
+            "Tell people honestly before they click that ID will be needed",
+            "Hide it so more people register",
+            "Tell users how to skip the checks",
+            "Stop working with regulated offers"
+          ],
+          "answer": 0,
+          "why": "Honest expectations reduce later drop-off and keep you compliant. Hiding or helping people dodge KYC is dishonest and can break the law."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn what a funnel really is: a series of steps, each with its own rate. You'll see how those rates multiply, and why that tells you where to spend your effort first.",
+      "say_outro": "To recap: a funnel is a chain of steps, the step rates multiply, an early leak shrinks everything after it, and you fix the friction you control while letting the brand's checks do their job. Your task: pick one offer and write its funnel as a list of steps. For each step, write who controls it, you or the brand, and one reason a person might stop there. Now take the quiz."
+    },
+    {
+      "slug": "four-funnel-types",
+      "title": "Four funnel types compared",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can describe the direct link, prelander, lead form and Telegram funnel.",
+        "Compare funnels on cost per FTD over the same budget and period.",
+        "Choose a first funnel that fits the offer and that you can run honestly."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Four ways from ad to offer",
+          "p": "There are many funnel designs, and beginners meet four of them again and again: the direct link, the prelander, the lead form and the Telegram funnel. Each suits different offers, budgets and skills. This lesson compares them using the same Example budget.",
+          "d": {
+            "b": "Four paths, one goal",
+            "s": "Pick the one that fits the offer"
+          },
+          "say": "There are many funnel designs, but beginners meet four of them again and again: the direct link, the prelander, the lead form, and the Telegram funnel. Four paths, one goal. Each one suits different offers, budgets and skills, so there's no single best choice. In this lesson we'll compare them side by side, using the same example budget, so you can see how to pick the one that fits the offer."
+        },
+        {
+          "v": "flow",
+          "h": "1. Direct link",
+          "p": "The ad sends people straight to the brand's offer page using your affiliate link. It is the fastest funnel to set up and has the fewest steps. The cost is that you have no page of your own to explain the offer, and nothing to test between the ad and the brand.",
+          "more": "Best for high-intent traffic, simple offers people already understand, and checking whether an offer converts at all. Watch out: the brand's page may not match your ad's message, and ad platforms often review the final page too, so the brand's page must also meet the platform's policies.",
+          "d": [
+            "Ad",
+            "Offer page",
+            "Sign-up",
+            "Deposit"
+          ],
+          "say": "Funnel one is the direct link. Follow the flow: ad, offer page, sign-up, deposit. Your ad sends people straight to the brand's page using your affiliate link. It's the fastest to set up and has the fewest steps. The cost is that you have no page of your own to explain the offer, and nothing to test in between. It works best for high intent traffic and simple offers. And remember, ad platforms often review the final page too, so the brand's page must meet their policies."
+        },
+        {
+          "v": "flow",
+          "h": "2. Prelander",
+          "p": "A prelander is a page you own that sits between the ad and the offer. It explains, answers doubts and sets honest expectations, then sends the reader on to the offer. It adds a step, so fewer people reach the offer, but those who do are often better informed.",
+          "more": "Good prelanders are short and honest: what the product is, who it is for, what it costs or risks, and one button. Never build fake news articles, fake celebrity endorsements, invented testimonials or pages that pretend to be someone else. These break ad policies and consumer law, they harm real people, and they get accounts banned.",
+          "d": [
+            "Ad",
+            "Your page",
+            "Offer page",
+            "Sign-up",
+            "Deposit"
+          ],
+          "say": "Funnel two is the prelander. Notice the extra box in the flow: your page, sitting between the ad and the offer. It explains, answers doubts, and sets honest expectations, then sends the reader on. Because it adds a step, fewer people reach the offer, but those who do are often better informed. Keep it short and honest. Never build fake news articles, fake celebrity endorsements or invented testimonials. They break ad policies and consumer law, harm real people, and get accounts banned."
+        },
+        {
+          "v": "phone",
+          "h": "What an honest prelander looks like",
+          "p": "Example prelander on a phone for a fictional trading-education offer. It says what the reader will get, states the risk, names who runs the page and has one button. It warms people up without promising anything the offer cannot deliver.",
+          "d": {
+            "app": "browser",
+            "url": "learn.example/forex-basics",
+            "page": {
+              "h": "Forex basics in 5 short lessons",
+              "p": "Example only. Free lessons on how currency trading works, by Example Media. Trading carries a high risk of losing money. 18+. The next page is a licensed broker's sign-up.",
+              "cta": "Read lesson 1"
+            }
+          },
+          "say": "Here's an example of an honest prelander on a phone, for a fictional trading education offer. Read the screen. The headline says what you get: forex basics in five short lessons. It names who runs the page. It states plainly that trading carries a high risk of losing money, and that it's eighteen plus. It even says the next page is a licensed broker's sign-up. Then there's one button. It warms people up without promising anything the offer can't deliver."
+        },
+        {
+          "v": "flow",
+          "h": "3. Lead form",
+          "p": "Some platforms let people submit their details inside the app without loading a page. At the time of writing, Meta calls these instant forms; names change, so check the current Ads Manager. They are quick and often cheap per lead. Many of those leads are low intent, so you need fast follow-up by call, SMS or chat.",
+          "more": "Lead forms collect personal data, so you need a privacy policy, clear consent for how you will contact people, and a lawful basis before sharing data with anyone. Many networks do not accept form leads at all. Check the offer terms and local data-protection law, for example Nigeria's NDPA, Kenya's Data Protection Act or South Africa's POPIA, before running one.",
+          "d": [
+            "Ad",
+            "Form in the app",
+            "Lead list",
+            "Follow-up",
+            "Offer"
+          ],
+          "say": "Funnel three is the lead form. Some platforms let people submit their details inside the app, without loading a page. At the time of writing, Meta calls these instant forms, but names change, so check the current Ads Manager. They're quick and often cheap per lead, but many of those leads are low intent, so you need fast follow-up by call, S M S or chat. Lead forms collect personal data, so you need a privacy policy and clear consent. Many networks don't accept form leads at all, so check the offer terms and local data protection law first."
+        },
+        {
+          "v": "screen",
+          "h": "The settings that matter on a lead form",
+          "p": "Example lead form setup in an Ads Manager-style screen. Before the questions, set the privacy policy link and a clear consent line. The highlighted field is the one that cannot be skipped. Names and options change; check the current Ads Manager.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/forms/new",
+            "title": "New lead form (example)",
+            "blocks": [
+              {
+                "type": "select",
+                "label": "Form type",
+                "value": "Higher intent (review step)"
+              },
+              {
+                "type": "field",
+                "label": "Questions",
+                "value": "Full name, phone number"
+              },
+              {
+                "type": "field",
+                "label": "Privacy policy link",
+                "value": "https://yoursite.example/privacy"
+              },
+              {
+                "type": "text",
+                "value": "Consent: \"A loan adviser from Example Ltd may call you about this enquiry.\""
+              },
+              {
+                "type": "button",
+                "label": "Publish form"
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "This is an example lead form setup in an Ads Manager style screen. Names and options change, so check the current tool. Look at the fields: the form type, the questions, then the highlighted one, the privacy policy link. That's the field that can't be skipped. Below it is a clear consent line telling people who may contact them and why. Set the privacy link and consent before you even think about the questions."
+        },
+        {
+          "v": "flow",
+          "h": "4. Telegram funnel",
+          "p": "The ad sends people to a Telegram channel or group, sometimes through a short landing page first. Inside, you welcome them, share useful content and later share the offer link. It takes longer, but you keep the audience and can message them again.",
+          "more": "A Telegram funnel turns paid clicks into an audience you can reach again, within Telegram's rules. The trade-offs: you must post content daily, answer questions, and track joins properly, because ad platforms cannot see what happens inside Telegram without extra tracking (Tracking basics module; full setup: Tracking setup lab module). The last lesson of this module walks through a Telegram funnel step by step. Never promise guaranteed profits or post fake results in the channel.",
+          "d": [
+            "Ad",
+            "Join channel",
+            "Welcome and content",
+            "Offer link",
+            "Deposit"
+          ],
+          "say": "Funnel four is the Telegram funnel. Follow the flow: ad, join channel, welcome and content, offer link, deposit. Sometimes there's a short landing page before the channel. Inside, you welcome people, share useful content, and later share the offer link. It's slower, but you keep the audience and can message them again. The trade-offs: you must post daily, answer questions, and track joins properly. And never promise guaranteed profits or post fake results in the channel."
+        },
+        {
+          "v": "bars",
+          "h": "Example: same budget, different funnels",
+          "p": "Example: $100 on each funnel at a $0.20 CPC buys 500 clicks each. Direct link: 30 registrations, 3 FTDs. Prelander: 200 reach the offer, 24 register, 4 deposit. Telegram: 200 joins, 5 FTDs over two weeks. Cost per FTD below.",
+          "more": "Check: $100 ÷ 3 = $33.33, $100 ÷ 4 = $25.00, $100 ÷ 5 = $20.00. These numbers are invented to show the method. In your own tests the order can be completely different: a direct link can beat a prelander, and a Telegram channel can produce nothing if the content is weak. Compare funnels on cost per FTD over the same period, never on clicks or joins alone.",
+          "d": [
+            [
+              "Direct link",
+              100,
+              "$33.33"
+            ],
+            [
+              "Prelander",
+              75,
+              "$25.00"
+            ],
+            [
+              "Telegram",
+              60,
+              "$20.00"
+            ]
+          ],
+          "say": "Now an example comparison. One hundred dollars on each funnel, at twenty cents per click, buys five hundred clicks each. The direct link gets thirty registrations and three F T Ds, first time deposits. The prelander gets two hundred people to the offer, twenty four register and four deposit. Telegram gets two hundred joins and five F T Ds over two weeks. Look at the bars for cost per F T D: about thirty three dollars, twenty five dollars, and twenty dollars. These numbers are invented to show the method. In your own tests, the order can be completely different."
+        },
+        {
+          "v": "table",
+          "h": "The four at a glance",
+          "p": "Use this as a starting map. Speed means how quickly you can go live. Control means how much of the path you can test and improve yourself. Every funnel has one main risk you must manage from the first day.",
+          "d": {
+            "cols": [
+              "Funnel",
+              "Speed to launch",
+              "Control",
+              "Main risk"
+            ],
+            "rows": [
+              [
+                "Direct link",
+                "Fastest",
+                "Low",
+                "Message mismatch"
+              ],
+              [
+                "Prelander",
+                "Medium",
+                "Medium",
+                "Extra step loses people"
+              ],
+              [
+                "Lead form",
+                "Fast",
+                "Medium",
+                "Low-intent leads"
+              ],
+              [
+                "Telegram",
+                "Slowest",
+                "High",
+                "Needs daily work"
+              ]
+            ]
+          },
+          "say": "Here are all four at a glance. Read across each row. The direct link is fastest to launch, with low control, and its main risk is message mismatch. The prelander is medium speed and medium control, and the extra step can lose people. The lead form is fast with medium control, but leads can be low intent. Telegram is the slowest, with the most control, and it needs daily work. Every funnel has one main risk you manage from day one."
+        },
+        {
+          "v": "compare",
+          "h": "Fast money vs slow money",
+          "p": "Direct links and prelanders show results within days. Telegram funnels often convert over weeks, as trust builds. Judge a slow funnel too early and you may stop something that was about to work. Decide the review window before you launch.",
+          "d": {
+            "a": {
+              "title": "Fast funnels",
+              "items": [
+                "Direct link, prelander",
+                "Results in days",
+                "Short review windows",
+                "Each click used once"
+              ]
+            },
+            "b": {
+              "title": "Slow funnels",
+              "items": [
+                "Telegram, lead follow-up",
+                "Results over weeks",
+                "Longer review windows",
+                "Audience you can reach again"
+              ]
+            }
+          },
+          "say": "Some funnels pay fast and some pay slow. On the left, direct links and prelanders show results within days, so you use short review windows, but each click is used once. On the right, Telegram and lead follow-up convert over weeks as trust builds. They need longer review windows, but they give you an audience you can reach again. If you judge a slow funnel too early, you might stop something that was about to work. So decide the review window before you launch."
+        },
+        {
+          "v": "tip",
+          "h": "Same rules, different review windows",
+          "p": "Example: target $25. On a fast funnel, apply the starting rules daily: kill at $50 with 0 FTDs, judge CPA from $75. On a Telegram funnel, apply the same lines to FTDs counted over your review window, and use cost per join as an early warning only.",
+          "more": "Slow funnels need the rules for late data: judge only spend that has had time to convert. An early warning, such as cost per join far above what you can afford, may justify stopping early. It can never justify scaling; only network-confirmed FTDs can. Full detail: Budget and kill rules module.",
+          "d": {
+            "kind": "example",
+            "text": "Fast funnel: rules daily. Slow funnel: same lines, over the review window you set before launch."
+          },
+          "say": "Same rules, different review windows. Here's an example with a target C P A, cost per acquisition, of twenty five dollars. On a fast funnel, apply the starting rules daily: kill at fifty dollars with zero F T Ds, and judge C P A from seventy five dollars. On a Telegram funnel, apply the same lines to F T Ds counted over your review window, and use cost per join only as an early warning. An early warning can justify stopping. It can never justify scaling. Only network confirmed F T Ds can."
+        },
+        {
+          "v": "cards",
+          "h": "Choosing your first funnel",
+          "p": "For a first campaign, pick the simplest funnel the offer allows and that you can run honestly every day. Add complexity only when your numbers show you exactly where the problem is.",
+          "d": [
+            "Simple offer, small budget|start with a direct link",
+            "Offer needs explaining|test a prelander",
+            "Sales team to call leads|a lead form can work",
+            "Can post every day|Telegram builds an audience"
+          ],
+          "say": "So how do you choose your first funnel? Pick the simplest one the offer allows, and that you can run honestly every day. The cards give you a starting guide. A simple offer and small budget: start with a direct link. An offer that needs explaining: test a prelander. A sales team ready to call leads: a lead form can work. Able to post every day: Telegram builds an audience. Add complexity only when your numbers show exactly where the problem is."
+        },
+        {
+          "v": "tip",
+          "h": "Regulated verticals",
+          "p": "Trading, gambling and many finance offers are regulated. Ads usually need platform authorization, and both the ads and the pages must follow local law in each country you target. This applies to every funnel type, including Telegram content. Check both before you run.",
+          "d": {
+            "kind": "warn",
+            "text": "Authorization and local law first. Funnel choice second."
+          },
+          "say": "A note on regulated verticals. Trading, gambling and many finance offers are regulated. Ads usually need platform authorization, and both the ads and the pages must follow local law in each country you target. This applies to every funnel type, including your Telegram content. As the warning puts it: authorization and local law first, funnel choice second. Check both before you run."
+        },
+        {
+          "v": "phone",
+          "h": "What a good welcome looks like",
+          "p": "Example of an honest welcome from a bot in a trading-education channel. It says what the channel offers and what it does not promise, and it invites a question so new members start talking instead of scrolling past.",
+          "d": {
+            "app": "bot",
+            "title": "Forex Basics Helper",
+            "subtitle": "bot",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Welcome. This channel shares daily lessons on how trading works, in plain English."
+              },
+              {
+                "from": "them",
+                "text": "We do not promise profits. Trading carries real risk, and you can lose money.",
+                "buttons": [
+                  "Start lesson 1",
+                  "Ask a question"
+                ]
+              },
+              {
+                "from": "me",
+                "text": "I am new. Where do I start?"
+              },
+              {
+                "from": "them",
+                "text": "Start with the pinned lesson. Reply with any question and we will answer it."
+              }
+            ]
+          },
+          "say": "Here's an example of an honest welcome from a bot in a trading education channel. Read the chat. It says what the channel offers: daily lessons in plain English. Then it clearly says it does not promise profits, that trading carries real risk, and you can lose money. It offers buttons to start a lesson or ask a question. And when a new member says they're new, it points them to the pinned lesson. That invitation gets people talking instead of scrolling past."
+        },
+        {
+          "v": "check",
+          "h": "Before you pick",
+          "p": "Run through this list for each offer. It takes five minutes and stops you choosing a funnel that the offer, the network or the ad platform will not accept.",
+          "d": [
+            "Does the offer allow this traffic type?",
+            "Does the network accept form or Telegram leads?",
+            "Do I have the right ad authorization?",
+            "Can I run it honestly every day?",
+            "How long will results take?"
+          ],
+          "say": "Before you pick, run each offer through this checklist. Does the offer allow this traffic type? Does the network accept form or Telegram leads? Do I have the right ad authorization? Can I run it honestly every day? And how long will results take? It takes about five minutes, and it stops you choosing a funnel that the offer, the network or the ad platform won't accept."
+        },
+        {
+          "v": "cards",
+          "h": "Common funnel-choice mistakes, and the fix",
+          "p": "Most bad funnel choices come from picking the one a successful buyer uses rather than the one that fits your offer, skills and time. These are the patterns to avoid.",
+          "d": [
+            "Copying someone else's funnel|choose for your offer and skills",
+            "Judging Telegram on day 3|set the review window first",
+            "Form leads the network rejects|confirm form leads are accepted",
+            "Fake news style prelanders|honest, labelled pages only",
+            "Building everything at once|start simple, add steps with data"
+          ],
+          "say": "Finally, common funnel choice mistakes and their fixes. Copying someone else's funnel? Choose for your own offer and skills. Judging Telegram on day three? Set the review window first. Sending form leads the network rejects? Confirm form leads are accepted. Building fake news style prelanders? Use honest, labelled pages only. Building everything at once? Start simple, and add steps when the data tells you to."
+        }
+      ],
+      "takeaways": [
+        "Direct link is fastest, a prelander adds an honest explaining step, lead forms are quick but low intent, and Telegram is slow but builds an audience.",
+        "Compare funnels on cost per FTD over the same budget and period.",
+        "Check the offer terms, ad authorization and local law before choosing any funnel."
+      ],
+      "action": "For one offer, write which of the four funnels it allows, which one you would test first and why, and how many days you would wait before judging it.",
+      "glossary": [
+        {
+          "term": "Direct link",
+          "def": "A funnel where the ad sends people straight to the brand's offer page."
+        },
+        {
+          "term": "Prelander",
+          "def": "Your own page between the ad and the offer that explains and sets honest expectations."
+        },
+        {
+          "term": "Lead form",
+          "def": "A form inside the ad platform where people submit details without loading a page."
+        },
+        {
+          "term": "Telegram funnel",
+          "def": "A funnel that sends people to a Telegram channel or group, then to the offer later."
+        },
+        {
+          "term": "Affiliate link",
+          "def": "The tracked link from your network that credits you for the people you send."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which funnel sends people from the ad straight to the brand's offer page?",
+          "options": [
+            "Prelander",
+            "Direct link",
+            "Lead form",
+            "Telegram funnel"
+          ],
+          "answer": 1,
+          "why": "A direct link skips any page of your own. A prelander, form or channel all add a step before the offer."
+        },
+        {
+          "q": "You spend $150 on each funnel. The direct link gives 5 FTDs and the prelander gives 6. What is the cost per FTD for each?",
+          "options": [
+            "$30 and $25",
+            "$25 and $30",
+            "$750 and $900",
+            "$5 and $6"
+          ],
+          "answer": 0,
+          "why": "$150 ÷ 5 = $30 for the direct link and $150 ÷ 6 = $25 for the prelander."
+        },
+        {
+          "q": "Which of these is acceptable on a prelander?",
+          "options": [
+            "A fake news article about a celebrity",
+            "Invented customer testimonials",
+            "A short honest explanation with clear risks and one button",
+            "A countdown timer that resets on every visit"
+          ],
+          "answer": 2,
+          "why": "Honest explanation is the job of a prelander. The other three mislead people and break ad policies and consumer law."
+        },
+        {
+          "q": "Your Telegram funnel has run 3 days with 150 joins and 1 FTD. You planned a 14-day review window. What is the best view?",
+          "options": [
+            "Stop it now, because the CPA is too high",
+            "Switch to lead forms immediately",
+            "Delete the channel and start again",
+            "Keep to the 14-day window unless tracking or content is clearly broken"
+          ],
+          "answer": 3,
+          "why": "Telegram funnels convert over weeks. Judging on day 3 breaks the window you set for a slow funnel."
+        },
+        {
+          "q": "Before running instant forms for a finance offer, what must you check?",
+          "options": [
+            "Only the payout",
+            "That the network accepts form leads, and that you have consent text and a privacy policy",
+            "The colour of the form",
+            "Nothing, because forms are always allowed"
+          ],
+          "answer": 1,
+          "why": "Many networks reject form leads, and collecting personal data needs consent and a privacy policy under data-protection law."
+        }
+      ],
+      "say_intro": "This lesson compares four funnel types you'll meet again and again: the direct link, the prelander, the lead form and the Telegram funnel. You'll learn how to compare them fairly and how to pick a first funnel you can run honestly.",
+      "say_outro": "To recap: each funnel trades speed for control, you compare them on cost per F T D over the same budget and period, and you set the review window before launch. Your task: for one offer, write which of the four funnels it allows, which one you'd test first and why, and how many days you'd wait before judging it. Now take the quiz."
+    },
+    {
+      "slug": "message-match",
+      "title": "Message match",
+      "minutes": 13,
+      "objectives": [
+        "By the end you can explain message match and why it lowers your cost per lead.",
+        "Match the words, look, language and offer from ad to page.",
+        "Fix a mismatch honestly, without exaggerating the ad or the page."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Keep the promise you made",
+          "p": "Message match means the page a person lands on continues exactly what the ad said. If the ad promised a free beginner guide, the page should open with that guide. When the page talks about something else, people feel tricked and leave.",
+          "d": {
+            "b": "The page keeps the ad's promise",
+            "s": "Same words, same offer, same look"
+          },
+          "say": "The big idea on screen is simple: the page keeps the ad's promise. Same words, same offer, same look. Message match means the page a person lands on continues exactly what the ad said. If the ad promised a free beginner guide, the page should open with that guide. When the page talks about something else, people feel tricked, and they leave. That's money you paid for, walking away."
+        },
+        {
+          "v": "flow",
+          "h": "The promise chain",
+          "p": "Think of the funnel as one promise passed along a chain. The ad makes the promise, the headline repeats it, the button points to it and the offer delivers it. Break any link and the reader starts to doubt the whole thing.",
+          "d": [
+            "Ad hook",
+            "Page headline",
+            "Button text",
+            "Offer page"
+          ],
+          "say": "Think of the funnel as one promise passed along a chain. Follow the flow on screen. The ad hook makes the promise. The page headline repeats it. The button text points to it. And the offer page delivers it. If any link breaks, the reader starts to doubt the whole thing, even the parts that were true. So every link needs to carry the same promise forward."
+        },
+        {
+          "v": "compare",
+          "h": "Mismatch vs match",
+          "p": "Example: an ad says Learn how trading works, free beginner lessons. Here is what two different pages do with the same ad, the same audience and the same clicks. Only one of them continues the promise.",
+          "d": {
+            "a": {
+              "title": "Mismatched page",
+              "items": [
+                "Headline: Open an account now",
+                "No mention of lessons",
+                "Reader feels misled",
+                "Leaves in seconds"
+              ]
+            },
+            "b": {
+              "title": "Matched page",
+              "items": [
+                "Headline: Free beginner trading lessons",
+                "Shows what the lessons cover",
+                "States the risks plainly",
+                "Button: Get the first lesson"
+              ]
+            }
+          },
+          "say": "Here's an example. The ad says: learn how trading works, free beginner lessons. Now compare the two pages. On the left, the mismatched page opens with open an account now, never mentions lessons, the reader feels misled and leaves in seconds. On the right, the matched page says free beginner trading lessons, shows what the lessons cover, states the risks plainly, and the button says get the first lesson. Same ad, same audience, same clicks. Only one continues the promise."
+        },
+        {
+          "v": "phone",
+          "h": "The matched page on a phone",
+          "p": "Here is the matched page from the last slide as a reader sees it after tapping the ad. The headline repeats the promise, the risk is stated and the button names the next step. Nothing on it surprises someone who read the ad.",
+          "d": {
+            "app": "browser",
+            "url": "learn.example/free-lessons",
+            "page": {
+              "h": "Free beginner trading lessons",
+              "p": "Example only. Five short lessons: what trading is, how brokers work, fees, risk and demo accounts. Trading carries a high risk of losing money. 18+.",
+              "cta": "Get the first lesson"
+            }
+          },
+          "say": "This is the matched page from the last slide, as a reader sees it on their phone after tapping the ad. Look at the screen. The headline repeats the promise: free beginner trading lessons. The text lists the five short lessons, states that trading carries a high risk of losing money, and says eighteen plus. The button names the next step. Nothing on it surprises someone who just read the ad."
+        },
+        {
+          "v": "bars",
+          "h": "Worked example: what match is worth",
+          "p": "Example: $30 spent on each page buys 200 clicks each. The mismatched page gets 8 leads, a CPL of $30 ÷ 8 = $3.75. The matched page gets 24 leads, a CPL of $30 ÷ 24 = $1.25. Same spend, three times the leads.",
+          "more": "These numbers are an illustration. The size of the gain varies widely, and sometimes a mismatched page still converts because the offer is strong. The direction is reliable: when people find what they clicked for, more of them continue.",
+          "d": [
+            [
+              "Mismatched page",
+              100,
+              "$3.75 CPL"
+            ],
+            [
+              "Matched page",
+              33,
+              "$1.25 CPL"
+            ]
+          ],
+          "say": "So what's match worth? Here's an example. Thirty dollars on each page buys two hundred clicks each. The mismatched page gets eight leads, so a C P L, cost per lead, of three dollars seventy five. The matched page gets twenty four leads, a C P L of one dollar twenty five. Same spend, three times the leads. These numbers are an illustration, and the size of the gain varies widely. But the direction is reliable: when people find what they clicked for, more of them continue."
+        },
+        {
+          "v": "cards",
+          "h": "Three things to match",
+          "p": "Match works on three levels. The words should repeat the ad's main promise. The look should feel like the same brand. The offer should be exactly what the ad described, with the same price, terms and conditions.",
+          "d": [
+            "Words|repeat the ad's key phrase",
+            "Look|same colours, images, tone",
+            "Offer|same price, terms, conditions"
+          ],
+          "say": "Match works on three levels, shown on these cards. Words: repeat the ad's key phrase. Look: use the same colours, images and tone, so it feels like the same brand. And offer: the same price, terms and conditions the ad described. If any one of the three is off, the reader notices, even if they can't say exactly why."
+        },
+        {
+          "v": "tip",
+          "h": "Match the language too",
+          "p": "If your ad speaks Pidgin, Swahili or French, a page in formal English breaks the match. Example: an ad in Swahili for Kenya that leads to an English-only page loses many of the people the ad was written for. Translate the page, or at least its headline and button.",
+          "d": {
+            "kind": "example",
+            "text": "Example: Swahili ad, Swahili headline, Swahili button."
+          },
+          "say": "Match the language too. If your ad speaks Pidgin, Swahili or French, a page in formal English breaks the match. Here's the example: an ad in Swahili for Kenya that leads to an English only page loses many of the people the ad was written for. The fix on screen: Swahili ad, Swahili headline, Swahili button. Translate the page, or at least its headline and button."
+        },
+        {
+          "v": "check",
+          "h": "Writing a headline that matches",
+          "p": "A quick way to write a matching headline: take the strongest phrase from your ad and use it almost word for word. Then add one line saying who the page is for and what happens when they tap the button.",
+          "d": [
+            "Reuse the ad's key phrase",
+            "Say who it is for",
+            "Say what happens next",
+            "Keep it short enough to read at a glance"
+          ],
+          "say": "Here's a quick way to write a headline that matches. Take the strongest phrase from your ad and use it almost word for word. Then add one line saying who the page is for, and what happens when they tap the button. Use the checklist: reuse the ad's key phrase, say who it's for, say what happens next, and keep it short enough to read at a glance."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: check one ad and page pair",
+          "p": "Do this check before every launch and after every edit. Tap through the steps. The screens are generic examples; what matters is reading the ad and the page side by side, as a stranger would.",
+          "d": {
+            "steps": [
+              {
+                "title": "Read the ad",
+                "text": "Write down its main promise, its language and any number or price it mentions.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/ads/preview",
+                  "title": "Ad preview (example)",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Primary text",
+                      "value": "Fast charger and cable set. Pay on delivery in Lagos."
+                    },
+                    {
+                      "type": "field",
+                      "label": "Headline",
+                      "value": "Charge in 30 minutes. ₦8,500"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Open the page on your phone",
+                "text": "Tap the ad's link on mobile data. Does the top of the page repeat the same promise and price?",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "shop.example/charger",
+                  "page": {
+                    "h": "Fast charger and cable set, ₦8,500",
+                    "p": "Example only. Pay on delivery in Lagos, 1 to 3 days. Charges most phones to 50% in about 30 minutes.",
+                    "cta": "Order, pay on delivery"
+                  }
+                }
+              },
+              {
+                "title": "Compare and fix",
+                "text": "List anything that differs: words, price, language, terms. Fix the page or the ad so both tell the same true story.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "voosquare.example/school/match-check",
+                  "title": "Match check (example)",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Promise repeated",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Same price",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Same language",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Every claim true",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 3
+                }
+              }
+            ]
+          },
+          "say": "Let's walk through checking one ad and page pair. Tap Next to follow each step. First, read the ad. In this example ad preview, write down its main promise, its language, and any number or price, here a fast charger set for eight thousand five hundred naira, pay on delivery in Lagos. Second, open the page on your phone using mobile data. Does the top repeat the same promise and price? Third, compare and fix. List anything that differs, words, price, language, terms, and fix the page or the ad so both tell the same true story."
+        },
+        {
+          "v": "compare",
+          "h": "Match honestly, never by exaggerating",
+          "p": "Some buyers fix a mismatch by exaggerating both the ad and the page. That is the wrong fix. Example: if the real offer is a trading account with a small minimum deposit and real risk, the ad and the page should both say so. Matching a false promise is still false.",
+          "d": {
+            "a": {
+              "title": "Matched but false",
+              "items": [
+                "Ad: Double your money",
+                "Page: Double your money",
+                "Breaks ad policy",
+                "Misleads real people"
+              ]
+            },
+            "b": {
+              "title": "Matched and true",
+              "items": [
+                "Ad: Learn to trade, start small",
+                "Page: Learn to trade, start small",
+                "States the risk",
+                "Fits ad policies"
+              ]
+            }
+          },
+          "say": "Some buyers fix a mismatch by exaggerating both the ad and the page. That's the wrong fix. On the left, matched but false: double your money in the ad and on the page. It breaks ad policy and misleads real people. On the right, matched and true: learn to trade, start small, in both places, with the risk stated. If the real offer is a trading account with a small minimum deposit and real risk, both should say so. Matching a false promise is still false."
+        },
+        {
+          "v": "table",
+          "h": "Ad review looks at the page too",
+          "p": "Ad platforms often review the landing page as well as the ad. A page that says something different from the ad, or promises what the offer does not give, can get the ad rejected. Policies change, so read the current ones for your platform.",
+          "d": {
+            "cols": [
+              "Check",
+              "Why it matters"
+            ],
+            "rows": [
+              [
+                "Ad and page say the same",
+                "Mismatch can look misleading"
+              ],
+              [
+                "Every claim is true",
+                "False claims break policy"
+              ],
+              [
+                "Page works on mobile",
+                "Broken pages get rejected"
+              ],
+              [
+                "Required notices shown",
+                "Regulated offers need them"
+              ]
+            ]
+          },
+          "say": "Ad platforms often review the landing page as well as the ad. This table shows what they look at and why. If the ad and page say different things, the mismatch can look misleading. If a claim isn't true, it breaks policy. If the page doesn't work on mobile, it can get rejected. And regulated offers need their required notices shown. Policies change, so read the current ones for your platform."
+        },
+        {
+          "v": "flow",
+          "h": "How to test message match",
+          "p": "Build one page per ad angle instead of one page for everything. An angle is the reason you give people to care. Then compare leads and deposits per angle. A page built for one angle often beats a general page, because every reader sees their own reason for clicking.",
+          "d": [
+            "Write one ad angle",
+            "Build a page for it",
+            "Run 2 angles, 2 pages",
+            "Compare CPL, then CPA"
+          ],
+          "say": "Here's how to test message match. Build one page per ad angle, instead of one page for everything. An angle is the reason you give people to care. Follow the flow: write one ad angle, build a page for it, run two angles with two pages, then compare C P L, and then C P A, cost per acquisition. A page built for one angle often wins, because every reader sees their own reason for clicking."
+        },
+        {
+          "v": "tip",
+          "h": "When the offer page is not yours",
+          "p": "On a direct link, the brand's page is the landing page and you cannot edit it. Read it before writing your ad, and write the ad to match it. If the brand's page says Create your account, do not run an ad that says Free download.",
+          "d": {
+            "kind": "warn",
+            "text": "Read the offer page first, then write the ad."
+          },
+          "say": "What if the offer page isn't yours? On a direct link, the brand's page is the landing page, and you can't edit it. So reverse the order. Read the offer page first, then write the ad to match it. For example, if the brand's page says create your account, don't run an ad that says free download. The warning on screen sums it up: read the offer page first, then write the ad."
+        },
+        {
+          "v": "check",
+          "h": "Message match checklist",
+          "p": "Run this check on every ad and page pair before launch, and again whenever you change one of them. Most mismatches happen when someone edits the ad and forgets to update the page.",
+          "d": [
+            "Headline repeats the ad's promise",
+            "Same language as the ad",
+            "Same look and feel",
+            "Offer terms match exactly",
+            "No claim the offer cannot back up"
+          ],
+          "say": "Here's your message match checklist. Run it on every ad and page pair before launch, and again whenever you change either one. Does the headline repeat the ad's promise? Is it in the same language? Does it have the same look and feel? Do the offer terms match exactly? And is there no claim the offer can't back up? Most mismatches happen when someone edits the ad and forgets to update the page."
+        },
+        {
+          "v": "cards",
+          "h": "Common message match mistakes, and the fix",
+          "p": "Mismatches rarely happen on purpose. They creep in when one part of the funnel changes and the rest does not. These are the usual ways it happens.",
+          "d": [
+            "Editing the ad, not the page|recheck the pair after every edit",
+            "One page for every angle|one page per angle",
+            "Ad in Pidgin, page in formal English|match the language",
+            "Price in the ad, none on the page|show the same price",
+            "Matching an exaggeration|tell the truth in both places"
+          ],
+          "say": "Last, the common message match mistakes and their fixes. Editing the ad but not the page? Recheck the pair after every edit. One page for every angle? Build one page per angle. Ad in Pidgin, page in formal English? Match the language. A price in the ad, but none on the page? Show the same price. Matching an exaggeration? Tell the truth in both places. Mismatches rarely happen on purpose. They creep in when one part changes and the rest doesn't."
+        }
+      ],
+      "takeaways": [
+        "Message match means the page continues exactly what the ad promised.",
+        "Match the words, the look, the language and the offer terms.",
+        "Fix mismatches by telling the truth in both places, never by exaggerating both."
+      ],
+      "action": "Take one ad and its landing page. Write the ad's main promise and the page headline side by side. If they differ, rewrite the headline to repeat the promise, in the ad's language.",
+      "glossary": [
+        {
+          "term": "Message match",
+          "def": "When the landing page continues the exact promise, language and offer of the ad."
+        },
+        {
+          "term": "Hook",
+          "def": "The opening line or moment of an ad that makes people stop and pay attention."
+        },
+        {
+          "term": "Angle",
+          "def": "The main reason an ad gives people to care about the offer."
+        },
+        {
+          "term": "Headline",
+          "def": "The first and largest line on a page, which should repeat the ad's promise."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "The ad says Free budgeting app for students. Which page headline matches best?",
+          "options": [
+            "The best finance app in Africa",
+            "Open a bank account today",
+            "Free budgeting app for students",
+            "Invest and grow your money"
+          ],
+          "answer": 2,
+          "why": "The matching headline repeats the ad's promise almost word for word. The others change the offer or the audience."
+        },
+        {
+          "q": "You spend $40 and get 160 clicks to each page. Page A gets 10 leads and page B gets 20. What are the CPLs?",
+          "options": [
+            "$4.00 and $2.00",
+            "$0.25 and $0.50",
+            "$16 and $8",
+            "$2.00 and $4.00"
+          ],
+          "answer": 0,
+          "why": "CPL = spend ÷ leads: $40 ÷ 10 = $4.00 and $40 ÷ 20 = $2.00."
+        },
+        {
+          "q": "Your ad is in Pidgin and your page is in formal English only. What is the issue?",
+          "options": [
+            "None, because English works everywhere",
+            "The language mismatch can lose the people the ad spoke to",
+            "Pidgin ads are not allowed",
+            "The CPM will rise"
+          ],
+          "answer": 1,
+          "why": "Language is part of message match. People who responded to Pidgin may not stay on a formal English page."
+        },
+        {
+          "q": "Which is the wrong way to fix a mismatch?",
+          "options": [
+            "Rewrite the headline to repeat the ad's promise",
+            "Build one page per angle",
+            "Change the ad to match the offer page",
+            "Make both the ad and the page promise guaranteed returns"
+          ],
+          "answer": 3,
+          "why": "Matching a false promise is still false. It misleads people and breaks ad policies."
+        },
+        {
+          "q": "On a direct link funnel, what should you do first?",
+          "options": [
+            "Read the brand's offer page and write the ad to match it",
+            "Write the ad, then ask the brand to change its page",
+            "Use the same ad for every offer",
+            "Skip reading the offer page"
+          ],
+          "answer": 0,
+          "why": "You cannot edit the brand's page, so the ad must match it."
+        }
+      ],
+      "say_intro": "This lesson is about message match: making sure the page continues exactly what the ad promised. You'll learn why it lowers your cost per lead, and how to fix a mismatch honestly.",
+      "say_outro": "To recap: the page should keep the ad's promise in words, look, language and offer, you check every pair after each edit, and you never fix a mismatch by exaggerating. Your task: take one ad and its landing page, and write the ad's main promise and the page headline side by side. If they differ, rewrite the headline to repeat the promise, in the ad's language. Now take the quiz."
+    },
+    {
+      "slug": "landing-page-basics",
+      "title": "Landing page basics: speed, mobile, one action",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can measure page load rate and show what speed costs.",
+        "Build a phone-first page with one clear action.",
+        "Run a pre-launch check that covers speed, message, form, legal pages and tracking."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Three rules for a page that works",
+          "p": "A landing page is the page people reach after clicking your ad. Most beginner pages fail for the same three reasons: they load slowly, they are hard to use on a phone, or they ask people to do too many things. Fix those three first.",
+          "d": {
+            "b": "Fast. Mobile. One action.",
+            "s": "Everything else comes after"
+          },
+          "say": "A landing page is the page people reach after clicking your ad. Most beginner pages fail for the same three reasons. They load slowly, they're hard to use on a phone, or they ask people to do too many things. That's the headline on screen: fast, mobile, one action. Fix those three first. Everything else, the design polish, the extra sections, comes after."
+        },
+        {
+          "v": "stat",
+          "h": "You pay for clicks that never load",
+          "p": "Every click is paid for when it happens, whether the page loads or not. If the page is slow, people leave before they see anything. The gap between link clicks and landing page views shows how much you are losing.",
+          "d": {
+            "n": 30,
+            "pre": "",
+            "suf": "%",
+            "dec": 0,
+            "label": "of paid clicks never saw the page",
+            "note": "Example: 200 clicks, 140 page views."
+          },
+          "say": "Here's something many beginners miss. You pay for every click when it happens, whether the page loads or not. Look at the big number: thirty percent of paid clicks never saw the page. That's from the example in the note, two hundred clicks but only one hundred and forty page views. The gap between link clicks and landing page views shows exactly how much you're losing to a slow page."
+        },
+        {
+          "v": "bars",
+          "h": "Worked example: fixing speed",
+          "p": "Example: $30 buys 200 clicks. A slow page loads for 140 people; at a 15% sign-up rate that is 21 leads, a $1.43 CPL. After compressing images, 180 people see it; at the same 15% that is 27 leads, a $1.11 CPL.",
+          "more": "Check: 140 × 0.15 = 21 leads and $30 ÷ 21 = $1.43. Then 180 × 0.15 = 27 leads and $30 ÷ 27 = $1.11. Nothing changed except speed: same ad, same spend, same page wording. Six extra leads came from people who were already paid for.",
+          "d": [
+            [
+              "Slow page",
+              100,
+              "$1.43 CPL"
+            ],
+            [
+              "Faster page",
+              78,
+              "$1.11 CPL"
+            ]
+          ],
+          "say": "Let's work through an example of fixing speed. Thirty dollars buys two hundred clicks. A slow page loads for one hundred and forty people. At a fifteen percent sign-up rate, that's twenty one leads, a C P L, cost per lead, of about one dollar forty three. After compressing images, one hundred and eighty people see it. At the same fifteen percent, that's twenty seven leads, about one dollar eleven each. Same ad, same spend, same wording. Only the speed changed."
+        },
+        {
+          "v": "check",
+          "h": "How to make a page faster",
+          "p": "Most slow pages are slow for a few common reasons, and you can fix most of them without being a developer. Test on a mid-range phone using mobile data, the way your audience actually browses.",
+          "more": "Free tools such as Google's PageSpeed Insights measure load speed and list what to fix. Rough guide, varies by geo and device: aim for the main content to appear within about 2 to 3 seconds on a mid-range phone. In many African markets people browse on prepaid data and older phones, so a light page matters even more.",
+          "d": [
+            "Compress and resize images",
+            "Avoid autoplay video on load",
+            "Remove scripts you do not use",
+            "Use a fast, reliable host",
+            "Test on mobile data, not office Wi-Fi"
+          ],
+          "say": "Most slow pages are slow for a few common reasons, and you can fix most of them without being a developer. Go through the list: compress and resize images, avoid autoplay video on load, remove scripts you don't use, use a fast, reliable host, and test on mobile data, not office Wi-Fi. As a rough guide, which varies by geo and device, aim for the main content to appear within about two to three seconds on a mid-range phone."
+        },
+        {
+          "v": "screen",
+          "h": "Reading a speed test",
+          "p": "Example result from a free page speed test on a mobile setting. Ignore the score at first and read the list of fixes. The highlighted line is the most common fix on beginner pages: oversized images.",
+          "more": "Tools such as Google's PageSpeed Insights show results like this. Scores, metric names and thresholds change over time, so read the tool's own help for what each line means today. What does not change: test the mobile result, fix the biggest item first, and retest after each change.",
+          "d": {
+            "kind": "browser",
+            "url": "pagespeed.example/report?url=yourpage.example",
+            "title": "Mobile result (example)",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Main content visible after",
+                "value": "5.8 s on a mid-range phone"
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "Fix",
+                  "Possible saving"
+                ],
+                "rows": [
+                  [
+                    "Resize and compress images",
+                    "2.9 s"
+                  ],
+                  [
+                    "Remove unused scripts",
+                    "0.8 s"
+                  ],
+                  [
+                    "Defer the video",
+                    "0.6 s"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Example figures. Retest after each change."
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "This is an example result from a free page speed test, on a mobile setting. Ignore the score at first and read the list of fixes. Here, the main content appears after five point eight seconds. The highlighted table lists the fixes, and the top line is the most common one on beginner pages: resizing and compressing oversized images. Scores and metric names change over time, but the method doesn't. Test the mobile result, fix the biggest item first, and retest after each change."
+        },
+        {
+          "v": "compare",
+          "h": "Built for a phone",
+          "p": "Most social traffic arrives on phones. Design for the phone first, then check the desktop view. Picture the reader holding the phone in one hand on a bus, with a weak signal and a few seconds of attention to give you.",
+          "d": {
+            "a": {
+              "title": "Desktop-first page",
+              "items": [
+                "Small text that needs zooming",
+                "Tiny buttons close together",
+                "Wide images that crop badly",
+                "Pop-ups covering the screen"
+              ]
+            },
+            "b": {
+              "title": "Phone-first page",
+              "items": [
+                "Text readable without zooming",
+                "Big buttons, easy to tap",
+                "Images sized for portrait",
+                "No blocking pop-ups"
+              ]
+            }
+          },
+          "say": "Most social traffic arrives on phones, so design for the phone first. Compare the two columns. A desktop first page has small text that needs zooming, tiny buttons close together, wide images that crop badly, and pop-ups covering the screen. A phone first page has text you can read without zooming, big buttons that are easy to tap, images sized for portrait, and no blocking pop-ups. Picture your reader on a bus, phone in one hand, with a weak signal."
+        },
+        {
+          "v": "big",
+          "h": "One page, one action",
+          "p": "A landing page should ask for one thing: tap this button, fill this form or join this channel. Menus, extra links and second offers give people more ways to leave. If you have two offers, build two pages.",
+          "d": {
+            "b": "One page. One button.",
+            "s": "Every extra link is an exit"
+          },
+          "say": "One page, one action. A landing page should ask for one thing: tap this button, fill this form, or join this channel. Menus, extra links and second offers just give people more ways to leave. As the screen says, every extra link is an exit. If you have two offers, build two pages."
+        },
+        {
+          "v": "cards",
+          "h": "What goes at the top",
+          "p": "The top of the page, the part people see before they scroll, decides whether they stay. On a phone that space is small. Put these four things there so a reader understands the page without scrolling at all.",
+          "d": [
+            "Headline|repeats the ad's promise",
+            "One line|who it is for, what happens",
+            "Visual|shows the real product",
+            "Button|the one action, clearly named"
+          ],
+          "say": "The top of the page, the part people see before they scroll, decides whether they stay. On a phone that space is small, so put these four things there. A headline that repeats the ad's promise. One line saying who it's for and what happens. A visual that shows the real product. And a button with the one action, clearly named. A reader should understand the page without scrolling at all."
+        },
+        {
+          "v": "phone",
+          "h": "A phone-first page, top of screen",
+          "p": "Example top of a phone-first page for a fictional budgeting app. Headline, one line, a real screenshot and one clear button all fit before any scrolling. Everything else, including the footer, sits below.",
+          "d": {
+            "app": "browser",
+            "url": "budgetapp.example/start",
+            "page": {
+              "h": "Free budgeting app for students",
+              "p": "Example only. Track pocket money and data spend in two taps. Works offline. Made by Example Apps Ltd.",
+              "cta": "Get the free app"
+            }
+          },
+          "say": "Here's an example of the top of a phone first page, for a fictional budgeting app. Look at what fits before any scrolling. The headline: free budgeting app for students. One line on what it does and who made it. A real screenshot. And one clear button: get the free app. Everything else, including the footer, sits further down."
+        },
+        {
+          "v": "tip",
+          "h": "Ask only for what you need",
+          "p": "Each extra form field costs some sign-ups. Ask only for what you or the offer truly need. If the network only needs a phone number, do not also ask for email, city and age. Fewer fields usually means more completed forms.",
+          "more": "Asking for less is also a privacy principle in most data-protection laws: collect only the data you need, say why you collect it, and get consent before you share it with anyone, including the network.",
+          "d": {
+            "kind": "tip",
+            "text": "Remove any field you cannot explain a use for."
+          },
+          "say": "Ask only for what you need. Each extra form field costs some sign-ups. If the network only needs a phone number, don't also ask for email, city and age. Fewer fields usually means more completed forms. It's also a privacy principle in most data protection laws: collect only what you need, say why, and get consent before you share it with anyone, including the network. The tip on screen: remove any field you can't explain a use for."
+        },
+        {
+          "v": "compare",
+          "h": "Buttons that say what happens",
+          "p": "Button text should tell people exactly what happens when they tap it. Vague words make people hesitate. Clear words set the right expectation, so the people who tap are the ones who want that next step.",
+          "d": {
+            "a": {
+              "title": "Vague",
+              "items": [
+                "Submit",
+                "Click here",
+                "Continue"
+              ]
+            },
+            "b": {
+              "title": "Clear",
+              "items": [
+                "Get the free lesson",
+                "Join the Telegram channel",
+                "See the account options"
+              ]
+            }
+          },
+          "say": "Your button text should tell people exactly what happens when they tap. Compare the columns. Vague buttons say submit, click here, or continue, and that makes people hesitate. Clear buttons say get the free lesson, join the Telegram channel, or see the account options. Clear words set the right expectation, so the people who tap are the ones who actually want that next step."
+        },
+        {
+          "v": "check",
+          "h": "What every page needs",
+          "p": "Ad platforms and local laws expect certain things on a landing page. Missing them can get ads rejected and costs you trust with readers. Keep these in a simple footer on every page you run.",
+          "more": "For trading and gambling offers, show the risk warning and the age limit clearly. The age limit is often 18 and sometimes higher, depending on the country, and local law can set the exact wording. Ads in these verticals usually need platform authorization too. Check both before running.",
+          "d": [
+            "Who runs the page (business name)",
+            "Privacy policy",
+            "Terms of use",
+            "Working contact details",
+            "Risk or age notice where required"
+          ],
+          "say": "Ad platforms and local laws expect certain things on every landing page. Keep them in a simple footer: who runs the page, a privacy policy, terms of use, working contact details, and a risk or age notice where required. For trading and gambling offers, show the risk warning and age limit clearly. It's often eighteen, sometimes higher depending on the country. Missing these can get ads rejected, and it costs you trust with readers."
+        },
+        {
+          "v": "flow",
+          "h": "Building your first page",
+          "p": "You do not need a designer to build a first page. A simple page builder and these five steps produce a clean, fast page. Keep it plain at first; you can improve the design once the numbers show the page converts.",
+          "d": [
+            "Copy the ad's promise",
+            "Write headline and one line",
+            "Add one real image",
+            "Add one clear button",
+            "Add footer, test on a phone"
+          ],
+          "say": "You don't need a designer for your first page. A simple page builder and these five steps will do. Follow the flow: copy the ad's promise, write the headline and one line, add one real image, add one clear button, then add the footer and test on a phone. Keep it plain at first. You can improve the design once the numbers show the page converts."
+        },
+        {
+          "v": "product",
+          "h": "A quicker way to a first page",
+          "p": "Any simple page builder can produce the page this lesson describes. If you would rather start from a phone-first template, a lander builder can save setup time. Whatever you use, the five rules still apply: fast, mobile, one action, honest, legal pages in the footer.",
+          "d": {
+            "slug": "landvoo",
+            "why": "Builds simple mobile landers quickly, so you can test a phone-first page with one action and add your tracking."
+          },
+          "say": "Any simple page builder can make the page this lesson describes. If you'd rather start from a phone first template, a lander builder like the one on screen can save setup time. It builds simple mobile landers quickly, so you can test a phone first page with one action and add your tracking. Whatever tool you use, the five rules still apply: fast, mobile, one action, honest, and legal pages in the footer."
+        },
+        {
+          "v": "table",
+          "h": "Page numbers to watch",
+          "p": "Track these four numbers for every page you run. Load rate tells you about speed. Button rate tells you about the message. Page CR and CPL tell you whether the page earns its place in the funnel.",
+          "d": {
+            "cols": [
+              "Number",
+              "Formula",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Load rate",
+                "Page views ÷ Clicks",
+                "90%"
+              ],
+              [
+                "Button rate",
+                "Button taps ÷ Page views",
+                "35%"
+              ],
+              [
+                "Page CR",
+                "Leads ÷ Page views",
+                "15%"
+              ],
+              [
+                "CPL",
+                "Spend ÷ Leads",
+                "$1.11"
+              ]
+            ]
+          },
+          "say": "Track these four numbers for every page. Load rate is page views divided by clicks, ninety percent in this example, and it tells you about speed. Button rate is button taps divided by page views, here thirty five percent, and it tells you about the message. Page C R, conversion rate, is leads divided by page views, here fifteen percent. And C P L is spend divided by leads, here one dollar eleven. Together they tell you whether the page earns its place."
+        },
+        {
+          "v": "check",
+          "h": "Pre-launch page check",
+          "p": "Do this check on your own phone every time you launch or edit a page, as well as on a computer. A broken page wastes budget faster than any weak ad, because every click on it is paid for and lost.",
+          "d": [
+            "Opens quickly on mobile data",
+            "Headline matches the ad",
+            "One button, clearly named",
+            "Form has only needed fields",
+            "Footer has the legal pages",
+            "Tracking fires on load and sign-up"
+          ],
+          "say": "Do this pre-launch check on your own phone every time you launch or edit a page, and on a computer too. Does it open quickly on mobile data? Does the headline match the ad? Is there one button, clearly named? Does the form have only the fields you need? Does the footer have the legal pages? And does tracking fire on load and on sign-up? A broken page wastes budget faster than any weak ad, because every click on it is paid for and lost."
+        },
+        {
+          "v": "cards",
+          "h": "Common landing page mistakes, and the fix",
+          "p": "These are the mistakes found most often when beginners share their first pages. Every one of them costs paid clicks, and every fix is free.",
+          "d": [
+            "Testing only on office Wi-Fi|test on a phone with mobile data",
+            "Menus and extra links|one page, one action",
+            "Asking for data you do not use|remove the field",
+            "No privacy policy or business name|add the footer",
+            "Tracking not tested|fire a test sign-up before launch"
+          ],
+          "say": "Here are the most common landing page mistakes, with the fix for each. Testing only on office Wi-Fi? Test on a phone with mobile data. Menus and extra links? One page, one action. Asking for data you don't use? Remove the field. No privacy policy or business name? Add the footer. Tracking not tested? Fire a test sign-up before launch. Every one of these costs paid clicks, and every fix is free."
+        },
+        {
+          "v": "tip",
+          "h": "Data and notices are legal duties",
+          "p": "A page that collects names or phone numbers handles personal data, which data protection laws such as Nigeria's NDPA, Kenya's Data Protection Act and South Africa's POPIA regulate. Regulated offers also need risk and age notices. Check the rules for each country you target.",
+          "d": {
+            "kind": "warn",
+            "text": "Collect only what you need, say why, get consent before sharing, and show required notices."
+          },
+          "say": "One final warning. A page that collects names or phone numbers handles personal data. Data protection laws regulate that, such as Nigeria's N D P A, Kenya's Data Protection Act, and South Africa's POPIA. Regulated offers also need risk and age notices. The rule on screen: collect only what you need, say why, get consent before sharing, and show required notices. Check the rules for each country you target."
+        }
+      ],
+      "takeaways": [
+        "Slow pages waste paid clicks. Load rate = landing page views ÷ link clicks.",
+        "Design for the phone first, with one action and a clear button at the top.",
+        "Ask only for the data you need, and keep legal pages and required notices in the footer."
+      ],
+      "action": "Open your landing page (or any affiliate's page) on your phone using mobile data. Time how long the main content takes to appear, count the links and form fields, and list three things you would remove.",
+      "glossary": [
+        {
+          "term": "Landing page",
+          "def": "The page people reach after clicking an ad."
+        },
+        {
+          "term": "Load rate",
+          "def": "Landing page views divided by link clicks: the share of clicks that saw the page."
+        },
+        {
+          "term": "Above the fold",
+          "def": "The part of a page visible before scrolling."
+        },
+        {
+          "term": "CTA",
+          "def": "Call to action: the button or link that asks for the one action you want."
+        },
+        {
+          "term": "Page weight",
+          "def": "The total size of everything a page downloads. Heavier pages load slower on mobile data."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "You got 200 link clicks and 150 landing page views. What is the load rate?",
+          "options": [
+            "25%",
+            "75%",
+            "133%",
+            "50%"
+          ],
+          "answer": 1,
+          "why": "Load rate = 150 ÷ 200 = 75%. 25% is the share that did not load."
+        },
+        {
+          "q": "Which change is most likely to speed up a slow page?",
+          "options": [
+            "Compressing and resizing images",
+            "Adding a background video",
+            "Adding more fonts",
+            "Adding a welcome pop-up"
+          ],
+          "answer": 0,
+          "why": "Large images are one of the most common causes of slow pages. The other three add weight."
+        },
+        {
+          "q": "$40 buys 250 clicks. 200 pages load and 10% of page views sign up. What is the CPL?",
+          "options": [
+            "$0.16",
+            "$4.00",
+            "$2.00",
+            "$1.60"
+          ],
+          "answer": 2,
+          "why": "200 × 0.10 = 20 leads, and $40 ÷ 20 = $2.00. $1.60 wrongly assumes all 250 clicks loaded."
+        },
+        {
+          "q": "Which button text is best?",
+          "options": [
+            "Submit",
+            "Click here",
+            "Continue",
+            "Join the free Telegram channel"
+          ],
+          "answer": 3,
+          "why": "Clear button text says exactly what happens next, so the people who tap want that step."
+        },
+        {
+          "q": "Your page has a menu with 6 links as well as your offer button. What is the issue?",
+          "options": [
+            "There are too few links",
+            "Every extra link is another way to leave before taking the one action",
+            "Menus raise the CPM",
+            "Nothing, because menus build trust"
+          ],
+          "answer": 1,
+          "why": "A landing page should ask for one action. Extra links pull paid visitors away from it."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn the three rules for a landing page that works: fast, mobile, and one action. You'll see what slow pages cost you, and finish with a pre-launch check you can run every time.",
+      "say_outro": "To recap: speed saves clicks you've already paid for, design for the phone first, ask for one action and only the data you need, and keep the legal pages and notices in the footer. Your task: open your landing page, or any affiliate's page, on your phone using mobile data. Time how long the main content takes to appear, count the links and form fields, and list three things you'd remove. Now take the quiz."
+    },
+    {
+      "slug": "trust-honesty-and-drop-off",
+      "title": "Trust, honesty and where people drop",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can build trust with honest, checkable signals.",
+        "Read a funnel step by step and find the weakest step against your own past numbers.",
+        "Match each weak step to its likely causes and test one fix at a time."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Trust earns every next step",
+          "p": "Every step of a funnel asks for a little more trust. People hand over a phone number, then an ID, then money, only if they believe what they were told. Honest funnels build that belief. Dishonest ones lose it, and they also lose ad accounts.",
+          "d": {
+            "b": "Trust earns the next yes",
+            "s": "Honesty keeps the account alive"
+          },
+          "say": "Every step of a funnel asks for a little more trust. People hand over a phone number, then an ID, then money, but only if they believe what they were told. That's the idea on screen: trust earns the next yes, and honesty keeps the account alive. Honest funnels build that belief. Dishonest ones lose it, and they lose ad accounts too."
+        },
+        {
+          "v": "compare",
+          "h": "Honest vs dishonest funnels",
+          "p": "Some tricks raise conversions for a few days, then bring refunds, complaints, rejected ads and banned accounts. They also hurt real people. The honest column is the only one that lasts, and it is the only one this academy teaches.",
+          "d": {
+            "a": {
+              "title": "Gets accounts banned",
+              "items": [
+                "Guaranteed profit claims",
+                "Fake testimonials",
+                "Fake countdown timers",
+                "Celebrity names without consent"
+              ]
+            },
+            "b": {
+              "title": "Builds trust",
+              "items": [
+                "Clear risks and terms",
+                "Real reviews, with consent",
+                "Real deadlines only",
+                "Your own real identity"
+              ]
+            }
+          },
+          "say": "Compare the two columns. On the left, the tricks that get accounts banned: guaranteed profit claims, fake testimonials, fake countdown timers, and celebrity names used without consent. They might raise conversions for a few days, then bring refunds, complaints, rejected ads and banned accounts, and they hurt real people. On the right, what builds trust: clear risks and terms, real reviews with consent, real deadlines only, and your own real identity. The honest column is the only one that lasts, and the only one this academy teaches."
+        },
+        {
+          "v": "cards",
+          "h": "Honest trust signals",
+          "p": "You can build trust without tricks. These signals work because they are true and anyone can check them. Use only the ones you can back up, and remove any that stop being true.",
+          "d": [
+            "Who you are|real name or business",
+            "What it costs|prices, fees, minimums",
+            "What the risks are|stated plainly",
+            "How to reach you|contact that works",
+            "Real proof|shared with permission"
+          ],
+          "say": "You can build trust without tricks. These signals work because they're true and anyone can check them. Who you are: a real name or business. What it costs: prices, fees and minimums. What the risks are, stated plainly. How to reach you, with contact details that work. And real proof, shared with permission. Use only the ones you can back up, and remove any that stop being true."
+        },
+        {
+          "v": "tip",
+          "h": "Regulated offers: say the hard parts",
+          "p": "In trading, gambling and finance, the honest message includes risk. Say that people can lose money, state the age limit, and never promise returns. Ads usually need platform authorization and must follow local law in every country you target. Check both before you run. Full detail: Compliance for finance, trading and gambling offers module.",
+          "d": {
+            "kind": "warn",
+            "text": "No guaranteed returns. Risk and age limits shown. Authorization checked."
+          },
+          "say": "In trading, gambling and finance, the honest message includes the hard parts. Say that people can lose money, state the age limit, and never promise returns. Ads usually need platform authorization and must follow local law in every country you target, so check both before you run. The warning on screen sums it up: no guaranteed returns, risk and age limits shown, authorization checked. There's full detail in the compliance module for finance, trading and gambling offers."
+        },
+        {
+          "v": "phone",
+          "h": "Answering the hard question",
+          "p": "Example from a Telegram chat. A new member asks the question every trading funnel hears. The honest answer may lose this person today, but it keeps the channel's trust and keeps the ad account safe.",
+          "d": {
+            "app": "chat",
+            "title": "Forex Basics (channel admin)",
+            "subtitle": "online",
+            "messages": [
+              {
+                "from": "them",
+                "text": "If I deposit $50, how much will I make in a week?"
+              },
+              {
+                "from": "me",
+                "text": "Nobody can promise that. Trading can lose money as well as make it."
+              },
+              {
+                "from": "me",
+                "text": "Start with the free lessons and a demo account before you risk anything."
+              },
+              {
+                "from": "them",
+                "text": "Okay. Thanks for being straight with me."
+              }
+            ]
+          },
+          "say": "Here's an example from a Telegram chat. A new member asks the question every trading funnel hears: if I deposit fifty dollars, how much will I make in a week? Read the admin's reply. Nobody can promise that, trading can lose money as well as make it. Then a helpful next step: start with the free lessons and a demo account before risking anything. And notice the member's response: thanks for being straight with me. The honest answer may lose this person today, but it keeps the channel's trust and the ad account safe."
+        },
+        {
+          "v": "funnel",
+          "h": "Reading drop-off step by step",
+          "p": "Example funnel for one week. Read it as a chain of step rates: 70% of clicks loaded the page, 20% of page views tapped the button, 50% of taps registered and 10% of registrations deposited. Which step is weakest compared with your own past?",
+          "d": [
+            [
+              "Clicks",
+              2000
+            ],
+            [
+              "Page views",
+              1400
+            ],
+            [
+              "Button taps",
+              280
+            ],
+            [
+              "Registrations",
+              140
+            ],
+            [
+              "FTDs",
+              14
+            ]
+          ],
+          "say": "Now let's read drop-off. This is an example funnel for one week. Read it as a chain of step rates. Seventy percent of clicks loaded the page. Twenty percent of page views tapped the button. Fifty percent of taps registered. And ten percent of registrations deposited. The question to ask is: which step is weakest compared with your own past numbers? Hold that thought for the next slide."
+        },
+        {
+          "v": "bars",
+          "h": "Worked example: find the weak step",
+          "p": "Example: compare this week with last week. Load rate held at 70%. Button rate fell from 30% to 20%. Registration and deposit rates held. The page-to-button step is the leak, so check the headline and message match first.",
+          "more": "Bar length is this week's rate as a share of last week's. At last week's 30%, the same 1,400 page views would have given 420 taps, 210 registrations and 21 FTDs. This week gave 14. One weaker step cost 7 FTDs. First question: did the ad change recently? A new ad with a different promise is a common cause of a sudden drop at this step.",
+          "d": [
+            [
+              "Load rate",
+              100,
+              "70% vs 70%"
+            ],
+            [
+              "Button rate",
+              67,
+              "20% vs 30%"
+            ],
+            [
+              "Sign-up rate",
+              100,
+              "50% vs 50%"
+            ],
+            [
+              "Deposit rate",
+              100,
+              "10% vs 10%"
+            ]
+          ],
+          "say": "Here's the answer for this example, comparing this week with last week. Each bar is this week's rate as a share of last week's. Load rate held at seventy percent. Sign-up and deposit rates held too. But the button rate fell from thirty percent to twenty percent. That page to button step is the leak, so check the headline and message match first. At last week's rate, the same page views would have given twenty one F T Ds, first time deposits, instead of fourteen. A good first question: did the ad change recently?"
+        },
+        {
+          "v": "table",
+          "h": "Symptoms and likely causes",
+          "p": "Each weak step has a few common causes. Start with the most likely one and change one thing at a time, so you know which change worked. Compare each rate with your own earlier numbers before any outside benchmark.",
+          "d": {
+            "cols": [
+              "Weak step",
+              "Likely causes",
+              "First fix"
+            ],
+            "rows": [
+              [
+                "Ad to click",
+                "Weak hook, wrong audience",
+                "New creative"
+              ],
+              [
+                "Click to page view",
+                "Slow page, broken link",
+                "Speed and link check"
+              ],
+              [
+                "Page to button",
+                "Mismatch, unclear offer",
+                "Rewrite the headline"
+              ],
+              [
+                "Button to sign-up",
+                "Long form, offer page trust",
+                "Fewer fields, try another offer"
+              ],
+              [
+                "Sign-up to deposit",
+                "Low intent, payment issues",
+                "Honest pre-sell, check methods"
+              ]
+            ]
+          },
+          "say": "Each weak step has a few common causes. Read across the table. Ad to click: a weak hook or the wrong audience, so try new creative. Click to page view: a slow page or broken link, so check speed and the link. Page to button: a mismatch or unclear offer, so rewrite the headline. Button to sign-up: a long form or trust in the offer page, so cut fields or try another offer. Sign-up to deposit: low intent or payment issues, so pre-sell honestly and check payment methods. Change one thing at a time."
+        },
+        {
+          "v": "lab",
+          "h": "Try it: find this week's leak",
+          "p": "Another example week. Work out each step's pass-through rate, then pick the step with the lowest one. Then use the table on the last slide to name its most likely cause and first fix.",
+          "more": "Page views 1,500 ÷ 2,000 = 75%. Button taps 150 ÷ 1,500 = 10%. Registrations 90 ÷ 150 = 60%. FTDs 18 ÷ 90 = 20%. The page-to-button step is the leak. Likely causes: a mismatch with the ad or an unclear offer. First fix: rewrite the headline to repeat the ad's promise, and change nothing else.",
+          "d": {
+            "kind": "funnel",
+            "task": "Which step has the lowest pass-through rate?",
+            "preset": {
+              "steps": [
+                [
+                  "Clicks",
+                  2000
+                ],
+                [
+                  "Page views",
+                  1500
+                ],
+                [
+                  "Button taps",
+                  150
+                ],
+                [
+                  "Registrations",
+                  90
+                ],
+                [
+                  "FTDs",
+                  18
+                ]
+              ],
+              "payout": 30
+            },
+            "answer": {
+              "field": "worst_step",
+              "value": 2
+            }
+          },
+          "say": "Practice time. Here's another example week, with counts at each step. First, work out each step's pass-through rate, dividing each count by the step before it. Then pick the step with the lowest rate. Finally, use the table from the last slide to name that step's most likely cause and its first fix. Pause and try it, then check your answer."
+        },
+        {
+          "v": "cards",
+          "h": "Why sign-ups do not deposit",
+          "p": "The last step often has the biggest drop, and much of it happens on the brand's side. Common reasons are below. You can influence some of them by choosing offers carefully and setting honest expectations before people register.",
+          "more": "In many African markets people pay by mobile money, bank transfer or local cards. If an offer does not support the methods people in your geo use, page changes will not fix the deposit step. Ask the network or your affiliate manager which payment methods work in each geo before you launch, and again if the deposit rate suddenly drops.",
+          "d": [
+            "Payment methods|local options missing",
+            "Minimums|deposit higher than expected",
+            "KYC|ID checks not expected",
+            "Intent|curious, not ready",
+            "Follow-up|nobody answered questions"
+          ],
+          "say": "The last step, sign-up to deposit, often has the biggest drop, and much of it happens on the brand's side. Look at the reasons. Payment methods, when local options are missing. Minimums, when the deposit is higher than expected. K Y C, know your customer, when ID checks weren't expected. Intent, when people are curious but not ready. And follow-up, when nobody answered their questions. In many African markets people pay by mobile money, bank transfer or local cards. If the offer doesn't support those, page changes won't fix this step. Ask the network which payment methods work in each geo."
+        },
+        {
+          "v": "quote",
+          "h": "From the founder",
+          "p": "Dchessking on why honest funnels are the ones that last, drawn from years of running paid traffic for trading and iGaming offers across several African markets.",
+          "d": "The cheapest depositor is the one who already trusts you before they reach the offer. Honest pages and real answers in the chat build that trust. Tricks only buy a bigger problem next week.",
+          "by": "dchessking",
+          "say": "Here's how Dchessking puts it, drawn from years of running paid traffic for trading and iGaming offers across several African markets: The cheapest depositor is the one who already trusts you before they reach the offer. Honest pages and real answers in the chat build that trust. Tricks only buy a bigger problem next week."
+        },
+        {
+          "v": "tip",
+          "h": "Urgency only when it is real",
+          "p": "Real deadlines exist: a bonus that ends on a stated date, or a class that starts on Monday. Fake ones do not: timers that reset, stock counters that never move, invented spots left. Fake urgency breaks ad platform policies and consumer law in many countries.",
+          "d": {
+            "kind": "warn",
+            "text": "If the deadline is not real, do not show one."
+          },
+          "say": "Use urgency only when it's real. Real deadlines exist, like a bonus that ends on a stated date, or a class that starts on Monday. Fake ones don't: timers that reset, stock counters that never move, invented spots left. Fake urgency breaks ad platform policies and consumer law in many countries. The rule on screen is simple: if the deadline isn't real, don't show one."
+        },
+        {
+          "v": "flow",
+          "h": "The drop-off fix loop",
+          "p": "Fixing a funnel is a loop. Change one thing at a time, wait for enough data, then compare the step rate with before. Changing three things at once leaves you guessing which one helped and which one hurt.",
+          "d": [
+            "Find the weakest step",
+            "Pick one likely cause",
+            "Change one thing",
+            "Wait for enough data",
+            "Keep it or undo it"
+          ],
+          "more": "Enough data means the step you changed has had enough people pass through it for the rate to settle; a few hundred page views is a rough guide for a page change, and it varies by geo and vertical. While you wait, your starting rules still apply to every ad set: a funnel test is never a reason to ignore a kill line. Full detail: Budget and kill rules module.",
+          "say": "Fixing a funnel is a loop. Follow it around. Find the weakest step. Pick one likely cause. Change one thing. Wait for enough data. Then keep it, or undo it. Enough data means enough people have passed through that step for the rate to settle. A few hundred page views is a rough guide for a page change, and it varies by geo and vertical. While you wait, your kill rules still apply. A funnel test is never a reason to ignore a kill line."
+        },
+        {
+          "v": "check",
+          "h": "Honesty check before launch",
+          "p": "Read your ad, your page and your first messages as a stranger would. If any line could make someone believe something untrue, rewrite it. This check protects your readers, your ad account and your relationship with the network.",
+          "d": [
+            "Every claim is true and provable",
+            "Risks and costs are stated",
+            "Testimonials are real, with consent",
+            "No fake timers or counters",
+            "Age and geo limits are clear",
+            "Authorization and local law checked"
+          ],
+          "say": "Before launch, read your ad, your page and your first messages as a stranger would. Run this honesty check. Is every claim true and provable? Are risks and costs stated? Are testimonials real, with consent? Are there no fake timers or counters? Are age and geo limits clear? Have you checked authorization and local law? If any line could make someone believe something untrue, rewrite it. This protects your readers, your ad account, and your relationship with the network."
+        },
+        {
+          "v": "cards",
+          "h": "Common drop-off mistakes, and the fix",
+          "p": "When a funnel leaks, the temptation is to change everything at once or to add pressure on the reader. Both make things worse and cost you trust. These are the patterns to avoid.",
+          "d": [
+            "Comparing with someone else's rates|compare with your own past",
+            "Fixing the ad when the page leaks|fix the weakest step",
+            "Adding fake urgency|real deadlines only",
+            "Blaming the page for deposit drops|check payment methods first",
+            "Several changes at once|one change, then wait"
+          ],
+          "say": "Finally, the common drop-off mistakes and their fixes. Comparing with someone else's rates? Compare with your own past. Fixing the ad when the page leaks? Fix the weakest step. Adding fake urgency? Real deadlines only. Blaming the page for deposit drops? Check payment methods first. Making several changes at once? One change, then wait. When a funnel leaks, it's tempting to change everything or add pressure. Both make things worse."
+        }
+      ],
+      "takeaways": [
+        "Trust earns each next step. Use only true, checkable trust signals.",
+        "Find the weakest step by comparing step rates with your own past numbers, then fix its most likely cause.",
+        "Change one thing at a time. Fake urgency, fake proof and guaranteed returns are never allowed."
+      ],
+      "action": "Write last week's (or a sample) funnel as counts at each step, work out every step rate, and circle the weakest one. Write its most likely cause and the single change you would test first.",
+      "glossary": [
+        {
+          "term": "Trust signal",
+          "def": "A true, checkable detail that helps people believe the page, such as real contact details."
+        },
+        {
+          "term": "Drop-off rate",
+          "def": "The share of people who leave at a step instead of moving on."
+        },
+        {
+          "term": "Baseline",
+          "def": "Your own earlier numbers, used to judge whether a step got better or worse."
+        },
+        {
+          "term": "Fake urgency",
+          "def": "Made-up deadlines or scarcity, such as resetting timers. Not allowed."
+        },
+        {
+          "term": "Mobile money",
+          "def": "Payments made from a phone wallet, common in many African markets."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "This week the page-to-button rate is 15%. Last week it was 30%. Other steps are unchanged. What do you check first?",
+          "options": [
+            "CPM",
+            "The page headline and whether it still matches the ad",
+            "The deposit methods",
+            "The payout"
+          ],
+          "answer": 1,
+          "why": "A drop at the page-to-button step points to the message on the page. CPM, payout and deposits sit at other steps."
+        },
+        {
+          "q": "Which trust signal is allowed?",
+          "options": [
+            "A testimonial you wrote yourself",
+            "A celebrity photo found online",
+            "A real customer review shared with permission",
+            "A timer that resets on every visit"
+          ],
+          "answer": 2,
+          "why": "Only real, permitted proof is honest. The others are invented or used without consent."
+        },
+        {
+          "q": "1,000 registrations brought 30 FTDs. The network tells you the local mobile money option is not supported. What is the main issue?",
+          "options": [
+            "The ad creative",
+            "Page speed",
+            "Ad frequency",
+            "The payment methods people in the geo use are missing"
+          ],
+          "answer": 3,
+          "why": "If people cannot pay the way they normally pay, the deposit step fails no matter how good the ad or page is."
+        },
+        {
+          "q": "A lead asks how much they will make from a $50 deposit. What is the best reply?",
+          "options": [
+            "Explain that nobody can promise returns, that trading carries risk, and point to free lessons",
+            "Say most people double it in a week",
+            "Ignore the question",
+            "Share a screenshot of someone else's profit as proof"
+          ],
+          "answer": 0,
+          "why": "An honest answer keeps trust and follows ad rules and local law. Promising returns or using others' results misleads people."
+        },
+        {
+          "q": "You change the headline, the button colour and the form fields at the same time, and CR rises. What is the problem?",
+          "options": [
+            "CR cannot rise this way",
+            "You do not know which change caused the rise",
+            "The CPM will rise",
+            "Nothing, because this is best practice"
+          ],
+          "answer": 1,
+          "why": "Changing one thing at a time is the only way to know what worked, so you can repeat it."
+        }
+      ],
+      "say_intro": "This lesson is about trust and drop-off. You'll learn how to build trust with honest signals anyone can check, how to read a funnel step by step to find the weakest step, and how to fix it one change at a time.",
+      "say_outro": "To recap: trust earns every next step, honest signals beat tricks, you find the weakest step against your own past numbers, and you change one thing at a time. Your task: write last week's funnel, or a sample one, as counts at each step, work out every step rate, and circle the weakest. Write its most likely cause and the single change you'd test first. Now take the quiz."
+    },
+    {
+      "slug": "telegram-funnel-basics",
+      "title": "The Telegram funnel, step by step",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can draw a Telegram funnel from ad to deposit and say what each part does.",
+        "Set up a bot, a join-request invite link and a welcome message in the right order, keeping the token secret.",
+        "Work out a maximum cost per join and judge a slow funnel with starting rules and an early warning."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why a Telegram funnel is worth the work",
+          "p": "A direct link uses each paid click once. A Telegram funnel turns some of those clicks into people you can reach again without paying for every view. That can lower your cost per deposit over weeks. It also costs daily effort and brings Telegram's own rules.",
+          "more": "This lesson is the beginner's version. You will see the parts, the order to set them up, the numbers to judge them by and the rules to follow. The Operator school goes much deeper in the Telegram build lab and the Telegram funnel flow, end to end modules.",
+          "d": {
+            "b": "Pay once, reach again",
+            "s": "Slower, more work, more control"
+          },
+          "say": "Why is a Telegram funnel worth the work? A direct link uses each paid click once. A Telegram funnel turns some of those clicks into people you can reach again, without paying for every view. That's the idea on screen: pay once, reach again. Over weeks, that can lower your cost per deposit. But it's slower, it takes daily effort, and it comes with Telegram's own rules. More work, more control."
+        },
+        {
+          "v": "map",
+          "h": "The Telegram funnel as a map",
+          "p": "Here is a common shape. The ad sends people to an invite link that asks to join. A bot sees the join request, welcomes the person and approves them. Lessons in the channel build trust. Later, some people tap your offer link, and the network reports the deposit back.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Meta ad",
+                "kind": "ad"
+              },
+              {
+                "id": "link",
+                "label": "Invite link (approval)",
+                "kind": "telegram"
+              },
+              {
+                "id": "bot",
+                "label": "Welcome bot",
+                "kind": "bot"
+              },
+              {
+                "id": "ch",
+                "label": "Channel lessons",
+                "kind": "telegram"
+              },
+              {
+                "id": "offer",
+                "label": "Broker sign-up",
+                "kind": "offer"
+              },
+              {
+                "id": "pb",
+                "label": "Postback",
+                "kind": "data"
+              },
+              {
+                "id": "pay",
+                "label": "Payout",
+                "kind": "money"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "link",
+                "tap"
+              ],
+              [
+                "link",
+                "bot",
+                "join request"
+              ],
+              [
+                "bot",
+                "ch",
+                "approved"
+              ],
+              [
+                "ch",
+                "offer",
+                "offer link"
+              ],
+              [
+                "offer",
+                "pb",
+                "FTD"
+              ],
+              [
+                "pb",
+                "pay",
+                "approved"
+              ]
+            ]
+          },
+          "say": "Here's a common shape, drawn as a map. Follow the arrows. A Meta ad sends people to an invite link that needs approval. They send a join request. A welcome bot sees it, welcomes them and approves them. Lessons in the channel build trust over time. Later, some people tap your offer link and sign up with the broker. The network reports the F T D, first time deposit, back through a postback, and once approved, that becomes your payout."
+        },
+        {
+          "v": "flow",
+          "h": "Set it up in this order",
+          "p": "Order matters. If the ad goes live before the bot can approve and welcome people, the first clicks you pay for are wasted. Build from the back of the funnel to the front, and test it yourself before any spend.",
+          "d": [
+            "Create the bot",
+            "Make it channel admin",
+            "Create an approval link",
+            "Write the welcome",
+            "Test with your phone",
+            "Then launch the ad"
+          ],
+          "say": "Order matters here. If your ad goes live before the bot can approve and welcome people, the first clicks you pay for are wasted. So build from the back of the funnel to the front. Follow the steps: create the bot, make it a channel admin, create an approval link, write the welcome, test it with your phone, and only then launch the ad."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: bot, admin rights, invite link",
+          "p": "Tap through the setup. Telegram's menus change, so treat the names here as a guide and check the current app and the official Bot API documentation. The steps themselves have been stable for some time, at the time of writing.",
+          "d": {
+            "steps": [
+              {
+                "title": "Create the bot with BotFather",
+                "text": "Open the official @BotFather chat, send /newbot, choose a name, then a username ending in \"bot\". BotFather replies with your token.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "BotFather",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "/newbot"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Alright, a new bot. How are we going to call it?"
+                    },
+                    {
+                      "from": "me",
+                      "text": "Forex Basics Helper"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Good. Now choose a username for your bot. It must end in \"bot\"."
+                    },
+                    {
+                      "from": "me",
+                      "text": "forexbasics_helper_bot"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Done. Use this token to access the HTTP API: <TOKEN>. Keep your token secure."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Make the bot a channel admin",
+                "text": "In your channel's admin settings, add the bot as an administrator with permission to invite users via link. Without it, the bot cannot approve join requests.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "channel settings (example)",
+                  "title": "Admin rights: Forex Basics Helper",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Post messages",
+                      "on": false
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Invite users via link",
+                      "on": true
+                    },
+                    {
+                      "type": "text",
+                      "value": "Example screen. Names change; check the current Telegram app."
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Create an invite link with approval",
+                "text": "Create a new invite link, name it after the ad set, and switch on \"request admin approval\". One link per ad set lets you count joins per ad set.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "channel invite links (example)",
+                  "title": "New invite link",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Link name",
+                      "value": "fb_ng_adset_A"
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Request admin approval",
+                      "on": true
+                    },
+                    {
+                      "type": "button",
+                      "label": "Create link"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "A join request arrives",
+                "text": "Your bot receives a chat_join_request update. While the request is pending it may message the person privately; then it approves with approveChatJoinRequest.",
+                "screen": {
+                  "v": "phone",
+                  "app": "bot",
+                  "title": "Forex Basics Helper",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "Hi, thanks for asking to join Forex Basics. It is free lessons only. Trading carries real risk.",
+                      "buttons": [
+                        "Join the channel"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Count joins per link",
+                "text": "Check how many people joined through each named link and copy the counts into your sheet next to each ad set's spend.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/telegram",
+                  "title": "Joins by link (example)",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Link",
+                        "Spend",
+                        "Joins",
+                        "Cost per join"
+                      ],
+                      "rows": [
+                        [
+                          "fb_ng_adset_A",
+                          "$30",
+                          "100",
+                          "$0.30"
+                        ],
+                        [
+                          "fb_ng_adset_B",
+                          "$30",
+                          "40",
+                          "$0.75"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Let's walk through the setup. Telegram's menus change, so treat the names as a guide and check the current app. Tap Next to follow each step. One: in the official BotFather chat, create a new bot, choose a name and a username ending in bot. BotFather replies with your token. Keep it secret. Two: add the bot as a channel admin with permission to invite users via link. Three: create an invite link named after the ad set, with request admin approval switched on. Four: when a join request arrives, the bot can message the person privately, then approve. Five: count joins per link in your sheet, next to each ad set's spend."
+        },
+        {
+          "v": "code",
+          "h": "The two Bot API calls behind approval",
+          "p": "Under the hood, the bot learns about join requests and approves them with calls like these to the official Bot API. You do not need to write them yourself to follow this lesson, but you should know what happens and where your token goes.",
+          "more": "Bots receive updates by long polling with getUpdates or by a webhook set with setWebhook. A bot cannot start a private chat with someone who never started it, except during that short join-request window, at the time of writing up to 5 minutes; check the current Bot API documentation. Respect Telegram's rate limits. Full setup: Tracking setup lab module.",
+          "d": {
+            "lang": "url",
+            "text": "https://api.telegram.org/bot<TOKEN>/getUpdates\nhttps://api.telegram.org/bot<TOKEN>/approveChatJoinRequest?chat_id=<CHANNEL_ID>&user_id=<USER_ID>",
+            "note": "Keep the token secret. Anyone with it controls your bot."
+          },
+          "say": "Under the hood, your bot learns about join requests and approves them with calls like the ones on screen, to the official Bot A P I, or application programming interface. You don't need to write them yourself for this lesson. But you should know what happens, and where your token goes. Notice the note: keep the token secret, because anyone with it controls your bot. One more detail: a bot can't start a private chat with someone who never started it, except during that short join request window, which at the time of writing is up to five minutes."
+        },
+        {
+          "v": "eq",
+          "h": "From cost per join to cost per FTD",
+          "p": "Example: $60 of ads brings 200 joins, so $0.30 per join. Over the 14-day review window, 3% of those joins make a first deposit: 6 FTDs. Cost per FTD is $60 ÷ 6 = $10, the same as $0.30 ÷ 3%.",
+          "more": "This is why you track two numbers: cost per join, which you see on day one, and the join-to-FTD rate, which takes weeks. Small changes in either move the final cost a lot. At 2% the same joins give 4 FTDs and $15 each. Figures are an example, not a forecast.",
+          "d": [
+            "$0.30 per join",
+            "÷",
+            "3% join→FTD",
+            "=",
+            "$10 per FTD"
+          ],
+          "say": "Now the numbers. Here's an example. Sixty dollars of ads brings two hundred joins, so thirty cents per join. Over the fourteen day review window, three percent of those joins make a first deposit. That's six F T Ds. So cost per F T D is sixty dollars divided by six, which is ten dollars. It's the same as thirty cents divided by three percent. At two percent, the same joins give four F T Ds at fifteen dollars each. These figures are an example, not a forecast."
+        },
+        {
+          "v": "table",
+          "h": "Your maximum cost per join",
+          "p": "Example: payout $40, target $30 per FTD. Multiply each by your join-to-FTD rate to get the most you can pay per join. Use a cautious rate until your own data replaces it, because early estimates are often too hopeful.",
+          "more": "Break-even per join is payout × rate. Target per join is target CPA × rate. At 3%: $40 × 3% = $1.20 break-even, $30 × 3% = $0.90 target. If you only know the network's average rate, start with a lower one; the table shows 2% for that reason.",
+          "d": {
+            "cols": [
+              "Join→FTD rate",
+              "Break-even per join",
+              "Target per join"
+            ],
+            "rows": [
+              [
+                "2%",
+                "$0.80",
+                "$0.60"
+              ],
+              [
+                "3%",
+                "$1.20",
+                "$0.90"
+              ],
+              [
+                "5%",
+                "$2.00",
+                "$1.50"
+              ]
+            ]
+          },
+          "say": "So what's the most you can pay per join? Example: a payout of forty dollars and a target of thirty dollars per F T D. Multiply each by your join to F T D rate. Read across the rows. At two percent, break-even per join is eighty cents and target is sixty cents. At three percent, it's one dollar twenty and ninety cents. At five percent, two dollars and one dollar fifty. Use a cautious rate until your own data replaces it, because early estimates are often too hopeful."
+        },
+        {
+          "v": "tip",
+          "h": "Judging a slow funnel: rules and a warning",
+          "p": "Example: target $30, rate 3%, so target cost per join is $0.90. Early warning: cost per join above $1.80 once an ad set has spent $30. Kill and scale still use network-confirmed FTDs: kill at $60 with 0 FTDs, counted over your review window.",
+          "more": "This is the proxy rule from the Budget and kill rules module, applied to joins. A proxy such as cost per join may trigger an early kill, because it shows the ad set is unlikely to reach target. It can never trigger a scale: scaling needs at least 3 confirmed FTDs at or below 0.8 × target, so $24 here, and then +20% at most every 48 hours. Count FTDs from people who joined during the test, and only once their deposits have had time to arrive.",
+          "d": {
+            "kind": "example",
+            "text": "Warning: over $1.80 per join after $30. Kill: $60, 0 FTDs. Scale: 3+ FTDs at ≤ $24. Proxy never scales."
+          },
+          "say": "Here's how to judge a slow funnel. Example: target thirty dollars, rate three percent, so target cost per join is ninety cents. The early warning is cost per join above one dollar eighty once an ad set has spent thirty dollars. But kill and scale still use network confirmed F T Ds. Kill at sixty dollars with zero F T Ds, counted over your review window. Scaling needs at least three F T Ds at or below twenty four dollars. And remember the last line on screen: the proxy never scales."
+        },
+        {
+          "v": "product",
+          "h": "Counting joins per ad set without coding",
+          "p": "You can count joins with named invite links and a sheet, or build your own bot to record them. If you would rather not run a bot server, a join tracker can handle the links, approvals and counts per source for you.",
+          "d": {
+            "slug": "joinvoo",
+            "why": "Tracks Telegram joins by link and ad set, so you can see cost per join without building the bot yourself."
+          },
+          "say": "You can count joins with named invite links and a spreadsheet, or by building your own bot to record them. If you'd rather not run a bot server, a join tracker like the one on screen can handle the links, the approvals and the counts per source for you. It tracks Telegram joins by link and ad set, so you can see cost per join without building the bot yourself."
+        },
+        {
+          "v": "tip",
+          "h": "Telegram's rules and the law still apply",
+          "p": "Only people who chose to join should be in your channel. Never add people without asking, buy members, spam private messages or post fake results. Trading and gambling content must state risk, never promise profit, and follow local law. Paid ads into it usually need platform authorization.",
+          "more": "Full detail: Compliance for finance, trading and gambling offers module. Telegram's own terms and bot rules apply too, and they change; check the current versions.",
+          "d": {
+            "kind": "warn",
+            "text": "Consent to join, honest posts, no profit promises, no fake proof. Check Telegram's current terms."
+          },
+          "say": "Telegram's rules and the law still apply. Only people who chose to join should be in your channel. Never add people without asking, buy members, spam private messages, or post fake results. Trading and gambling content must state risk, never promise profit, and follow local law. Paid ads into it usually need platform authorization. The warning sums it up: consent to join, honest posts, no profit promises, no fake proof. And check Telegram's current terms, because they change."
+        },
+        {
+          "v": "cards",
+          "h": "Common Telegram funnel mistakes, and the fix",
+          "p": "These are the mistakes that make Telegram funnels look like they do not work. Most of them are about setup order and measurement rather than the content you post.",
+          "d": [
+            "Launching before the bot works|test the whole path on your phone",
+            "One invite link for every ad set|one named link per ad set",
+            "Sharing the bot token|keep it secret; regenerate if leaked",
+            "Judging on day 3|use the review window and the warning line",
+            "Posting profit screenshots|teach, state risk, never promise"
+          ],
+          "say": "These are the mistakes that make Telegram funnels look like they don't work. Launching before the bot works? Test the whole path on your phone. One invite link for every ad set? Use one named link per ad set. Sharing the bot token? Keep it secret, and regenerate it if it leaks. Judging on day three? Use the review window and the warning line. Posting profit screenshots? Teach, state risk, and never promise. Most of these are about setup and measurement, not content."
+        },
+        {
+          "v": "check",
+          "h": "Your daily channel routine",
+          "p": "A Telegram funnel needs a small amount of work every day. These habits keep people reading and keep your numbers honest. Fifteen minutes a day is enough for a beginner channel.",
+          "d": [
+            "Post one useful lesson",
+            "Answer every question",
+            "Copy joins per link into your sheet",
+            "Check the bot is still approving",
+            "Note any FTDs the network confirmed"
+          ],
+          "say": "A Telegram funnel needs a little work every day. Here's your routine. Post one useful lesson. Answer every question. Copy joins per link into your sheet. Check the bot is still approving people. And note any F T Ds the network confirmed. About fifteen minutes a day is enough for a beginner channel, and these habits keep people reading and your numbers honest."
+        },
+        {
+          "v": "big",
+          "h": "Where to go next",
+          "p": "You now know the parts, the order and the numbers. The Operator school builds this properly: Telegram build lab for the bot and links, and Telegram funnel flow, end to end for welcome flows, broadcasts and retention. Full tracking setup: Tracking setup lab module.",
+          "d": {
+            "b": "Parts, order, numbers, rules",
+            "s": "Then build it properly in the Operator school"
+          },
+          "say": "You now know the parts, the order, the numbers and the rules. That's the beginner's foundation. The Operator school builds this properly. The Telegram build lab covers the bot and the links, and the Telegram funnel flow, end to end, covers welcome flows, broadcasts and retention. For the full tracking setup, see the Tracking setup lab module."
+        }
+      ],
+      "takeaways": [
+        "A Telegram funnel turns paid clicks into an audience you can reach again, at the cost of daily work and slower results.",
+        "Set up from the back: bot, admin rights, approval invite link, welcome, a test on your phone, then the ad. Keep the token secret.",
+        "Judge it with cost per join as an early warning and network-confirmed FTDs over the review window for kill and scale."
+      ],
+      "action": "Create a test channel and a bot with BotFather, add the bot as an admin that can invite users, create one invite link with admin approval named after an ad set, and request to join from a second phone or account to see the flow.",
+      "glossary": [
+        {
+          "term": "Join request",
+          "def": "A request to join a channel through an invite link that needs admin approval, which a bot can see and approve."
+        },
+        {
+          "term": "Invite link",
+          "def": "A link that lets people join a channel. Admins can create several, name them and count joins per link."
+        },
+        {
+          "term": "BotFather",
+          "def": "The official Telegram bot used to create bots and manage their settings."
+        },
+        {
+          "term": "Bot token",
+          "def": "The secret key BotFather gives you to control your bot through the Bot API. Anyone with it controls the bot."
+        },
+        {
+          "term": "Cost per join",
+          "def": "Ad spend divided by the number of people who joined through that ad set's invite link."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What must a bot have before it can approve join requests for your channel?",
+          "options": [
+            "A paid Telegram account",
+            "Admin rights in the channel with permission to invite users",
+            "At least 1,000 subscribers",
+            "A website"
+          ],
+          "answer": 1,
+          "why": "A bot approves join requests as a channel admin that can invite users. Without that permission the requests sit unapproved."
+        },
+        {
+          "q": "Example: $45 of ads brings 150 joins, and 4% of joins make a first deposit within the review window. What is the cost per FTD?",
+          "options": [
+            "$0.30",
+            "$11.25",
+            "$7.50",
+            "$4.50"
+          ],
+          "answer": 2,
+          "why": "$45 ÷ 150 = $0.30 per join. 150 × 4% = 6 FTDs, and $45 ÷ 6 = $7.50. Or $0.30 ÷ 4% = $7.50."
+        },
+        {
+          "q": "Payout $40, target $30, and you expect 2% of joins to deposit. What is your target cost per join?",
+          "options": [
+            "$0.60",
+            "$0.80",
+            "$1.50",
+            "$15"
+          ],
+          "answer": 0,
+          "why": "Target per join = target CPA × rate = $30 × 2% = $0.60. $0.80 is the break-even per join, $40 × 2%."
+        },
+        {
+          "q": "Your bot token appears in a screenshot you posted in a group. What should you do?",
+          "options": [
+            "Nothing, nobody will notice",
+            "Delete the screenshot and carry on",
+            "Revoke it and get a new token from BotFather, then update your bot",
+            "Change the channel name"
+          ],
+          "answer": 2,
+          "why": "Anyone with the token controls the bot. Revoking it and issuing a new one in BotFather is the fix; deleting the image is not enough."
+        },
+        {
+          "q": "Cost per join is low and joins look great after 3 days, but there are no confirmed FTDs yet. Can you scale?",
+          "options": [
+            "Yes, joins prove it works",
+            "No: scaling needs at least 3 network-confirmed FTDs at or below 0.8 × target",
+            "Yes, by 50%",
+            "Only if the channel has 1,000 members"
+          ],
+          "answer": 1,
+          "why": "A proxy like cost per join can warn you early, but only confirmed FTDs can justify a scale, and then by +20% at most every 48 hours."
+        }
+      ],
+      "say_intro": "This lesson walks you through a Telegram funnel step by step: the parts, the order to set them up, the numbers to judge it by, and the rules to follow. It's the beginner's version, so you understand it before you build it properly.",
+      "say_outro": "To recap: build from the back of the funnel to the front, keep your bot token secret, work out your maximum cost per join, and judge a slow funnel with an early warning plus confirmed F T Ds. Your task: create a test channel and a bot with BotFather, add the bot as an admin that can invite users, create one invite link with admin approval named after an ad set, then request to join from a second phone or account to see the flow. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "You spent $60 with 0 FTDs. Target CPA is $25. You have 300 clicks, 290 page views and 3 button taps. Where is the problem?",
+      "options": [
+        "Page speed",
+        "Page to button: almost nobody acts, so check message match and the offer",
+        "Deposit methods",
+        "Nothing yet"
+      ],
+      "answer": 1,
+      "why": "290 of 300 pages loaded, so speed is fine. Only 3 of 290 page views tapped (about 1%), so the page is not moving people forward."
+    },
+    {
+      "q": "A Telegram funnel test: $90 of ads brought 250 joins. After the 14-day review window the network confirms 5 FTDs. Payout $40, target $30. What is the cost per FTD, and what do the starting rules say?",
+      "options": [
+        "$18; scale +20%, since $18 ≤ $24 with 5 FTDs",
+        "$0.36; scale, because cost per join is low",
+        "$18; kill, because it took 14 days",
+        "$90; hold"
+      ],
+      "answer": 0,
+      "why": "$90 ÷ 5 = $18. The scale line is 0.8 × $30 = $24 with at least 3 confirmed FTDs, so a +20% step is allowed, then wait at least 48 hours."
+    },
+    {
+      "q": "Step rates: load 80%, button 25%, register 40%, deposit 10%. You buy 2,000 clicks. How many FTDs do you expect?",
+      "options": [
+        "16",
+        "40",
+        "160",
+        "8"
+      ],
+      "answer": 0,
+      "why": "2,000 × 0.8 = 1,600 views, × 0.25 = 400 taps, × 0.4 = 160 registrations, × 0.1 = 16 FTDs."
+    },
+    {
+      "q": "Same funnel as the last question, but you raise the button rate to 30%. How many FTDs now?",
+      "options": [
+        "16",
+        "24",
+        "About 19",
+        "20"
+      ],
+      "answer": 2,
+      "why": "1,600 × 0.3 = 480 taps, × 0.4 = 192 registrations, × 0.1 = 19.2 FTDs. The button rate rose by a fifth, so FTDs rose by a fifth."
+    },
+    {
+      "q": "Your Swahili ad leads to an English offer page you cannot edit. What is the best move?",
+      "options": [
+        "Keep it, because language does not matter",
+        "Add a short, honest Swahili prelander that explains the offer, or choose an offer with a Swahili page",
+        "Copy and translate the brand's page without permission",
+        "Promise extra bonuses in the ad to make up for it"
+      ],
+      "answer": 1,
+      "why": "A prelander in the ad's language restores the match honestly. Copying a brand's page without permission or inventing bonuses is not allowed."
+    },
+    {
+      "q": "A lead form campaign has a $0.40 CPL, but only 2% of leads answer the follow-up call and the network rejects most of them. What is the likely issue and fix?",
+      "options": [
+        "Leads are too cheap, so raise the bid",
+        "The payout is too high",
+        "The CPM is too low",
+        "Low intent and accidental sign-ups; add a qualifying question or test a page funnel"
+      ],
+      "answer": 3,
+      "why": "Cheap form leads are often low intent. A qualifying question or a page funnel trades some volume for leads that answer and convert."
+    },
+    {
+      "q": "1,000 clicks gave 550 landing page views and an 18% page CR. A faster page reaches 850 views at the same CR. Spend is $150. What is the CPL before and after?",
+      "options": [
+        "$1.52 before, $0.98 after",
+        "$0.15 before, $0.18 after",
+        "$2.73 before, $1.76 after",
+        "$1.52 before, $1.18 after"
+      ],
+      "answer": 0,
+      "why": "Before: 550 × 0.18 = 99 leads, $150 ÷ 99 = $1.52. After: 850 × 0.18 = 153 leads, $150 ÷ 153 = $0.98."
+    },
+    {
+      "q": "A colleague suggests a countdown timer that resets on every visit to raise sign-ups. What do you do?",
+      "options": [
+        "Decline: fake urgency misleads people and breaks ad policies and consumer law in many places",
+        "Use it, because many pages do",
+        "Use it only at weekends",
+        "Use it, but hide it from the ad reviewer"
+      ],
+      "answer": 0,
+      "why": "A resetting timer is fake urgency. Hiding it from reviewers would also be policy circumvention, which is never acceptable."
+    },
+    {
+      "q": "On a Nigeria offer, the sign-up to FTD rate fell from 9% last month to 3% this month, and nothing changed on your side. What do you do first?",
+      "options": [
+        "Rewrite the ad",
+        "Ask the affiliate manager whether payment methods, minimum deposit or KYC changed",
+        "Cut the page in half",
+        "Increase the budget"
+      ],
+      "answer": 1,
+      "why": "The deposit step mostly happens on the brand's side. If your funnel did not change, check the brand's payment, minimum and KYC first."
+    },
+    {
+      "q": "You have a small budget, an offer people already understand, and you want a first read within days. Which funnel fits best?",
+      "options": [
+        "A Telegram funnel",
+        "A lead form with a call team",
+        "A direct link, then a prelander test once you have data",
+        "Building a full website first"
+      ],
+      "answer": 2,
+      "why": "A direct link is the fastest and simplest way to learn whether the offer converts. Add a prelander test once your numbers show where people drop."
+    }
+  ]
+}

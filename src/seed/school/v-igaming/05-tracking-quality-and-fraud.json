@@ -1,0 +1,2795 @@
+{
+  "school": "v-igaming",
+  "order": 5,
+  "slug": "tracking-quality-and-fraud",
+  "title": "Tracking, quality and fraud",
+  "summary": "How operators judge your traffic and how to measure it the same way: qualified FTDs, postbacks, cohorts and player value. You will learn to detect bonus abuse, multi-accounting and invalid traffic in your own data and keep them out of your funnel, then run a weekly quality review.",
+  "lessons": [
+    {
+      "slug": "ftd-quality-kpis",
+      "title": "FTD quality: what the operator measures",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can name the quality KPIs an operator uses to judge your traffic.",
+        "By the end you can calculate your true cost per qualified FTD from platform and operator numbers.",
+        "By the end you can see your traffic through the operator's eyes and predict when a deal is at risk."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why FTD count is not enough",
+          "p": "Operators do not pay for FTDs because they like the number. They pay because they expect each player to be worth more than the payout. If your players deposit once and vanish, the operator loses money on you, and sooner or later they lower your payout, cut your cap or end the deal.",
+          "d": {
+            "b": "Operators buy player value, not FTD count",
+            "s": "Your deal lasts as long as your players are worth it."
+          },
+          "say": "Here's something many new buyers miss. Operators don't pay for F T Ds, first-time deposits, because they like the number. They pay because they expect each player to be worth more than the payout. If your players deposit once and vanish, the operator loses money on you. Sooner or later, they lower your payout, cut your cap, or end the deal. Operators buy player value, not F T D count. Your deal lasts as long as your players are worth it."
+        },
+        {
+          "v": "cards",
+          "h": "The quality KPIs operators watch",
+          "p": "Most operators judge affiliate traffic on a similar set of numbers. Ask your affiliate manager which ones they use for you, and ask for them by sub-ID. Not every operator shares all of them.",
+          "d": [
+            "Qualified rate|share of FTDs that meet the deal terms",
+            "Average first deposit|size of the first deposit",
+            "Redeposit rate|share who deposit again within 30 days",
+            "Active days|how many days players actually play",
+            "NGR per player|net gaming revenue each player generates",
+            "Bonus cost share|how much of revenue goes back as bonuses"
+          ],
+          "say": "Look at these cards. These are the quality K P Is, key performance indicators, most operators watch. Qualified rate, the share of F T Ds that meet the deal terms. Average first deposit. Redeposit rate, the share who deposit again within thirty days. Active days, how many days players actually play. N G R per player, the net gaming revenue each one generates. And bonus cost share, how much revenue goes back as bonuses. Ask your affiliate manager which ones they use for you, and ask for them by sub I D. Not every operator shares all of them."
+        },
+        {
+          "v": "table",
+          "h": "Example: one month's quality report",
+          "p": "Example: an operator report for one sub-ID over a month. Each number tells you something different. Together they say whether this traffic is healthy or a deal at risk.",
+          "more": "These figures are illustrations, not benchmarks. What counts as healthy depends on the geo, the product (sports or casino) and the operator. The useful habit is comparing each sub-ID with your own account average and with what your manager says the operator expects.",
+          "d": {
+            "cols": [
+              "KPI",
+              "Value",
+              "What it suggests"
+            ],
+            "rows": [
+              [
+                "FTDs",
+                "40",
+                "volume"
+              ],
+              [
+                "Qualified FTDs",
+                "28 (70%)",
+                "acceptable share"
+              ],
+              [
+                "Average first deposit",
+                "$14",
+                "small but normal for geo"
+              ],
+              [
+                "30-day redeposit",
+                "45%",
+                "players return"
+              ],
+              [
+                "NGR per player (30 days)",
+                "$22",
+                "value so far"
+              ],
+              [
+                "Bonus cost share",
+                "18%",
+                "not bonus-driven"
+              ]
+            ]
+          },
+          "say": "Here's an example operator report for one sub I D over a month. Forty F T Ds, of which twenty eight qualified, seventy percent, an acceptable share. Average first deposit fourteen dollars, small but normal for the geo. Thirty day redeposit forty five percent, so players return. N G R per player twenty two dollars so far. And bonus cost share eighteen percent, so it's not bonus-driven. These figures are illustrations, not benchmarks. What's healthy depends on geo, product and operator. The useful habit is comparing each sub I D with your own account average."
+        },
+        {
+          "v": "eq",
+          "h": "Your true cost per FTD",
+          "p": "Meta reports cost per FTD using every FTD the pixel or postback counts. You are paid on qualified FTDs. Divide spend by qualified FTDs to get the number your kill and scale rules should use.",
+          "more": "Example: spend $1,200. The platform shows 40 FTDs, so it reports $30 per FTD. The operator qualifies 28. $1,200 ÷ 28 = $42.86 per qualified FTD. If the payout is $40, the campaign that looked like a $10 profit per FTD is actually losing $2.86 on each one that pays.",
+          "d": [
+            "Spend",
+            "÷",
+            "Qualified FTDs",
+            "=",
+            "True cost per FTD"
+          ],
+          "say": "Here's your true cost per F T D. Meta reports cost per F T D using every F T D the pixel or postback counts. But you're paid on qualified F T Ds. So follow the equation: spend divided by qualified F T Ds. Example: you spend one thousand two hundred dollars. The platform shows forty F T Ds, so thirty dollars each. But the operator qualifies only twenty eight. Divide, and it's about forty two eighty six per qualified F T D. With a forty dollar payout, what looked like ten dollars profit each is actually a loss of about two eighty six on each one that pays."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: the most you can pay per FTD",
+          "p": "Use the break-even lab with the qualified rate as the conversion rate. It tells you the most you can pay per FTD as Meta reports it, after qualification and your margin.",
+          "more": "$40 × 70% = $28 of revenue per reported FTD. Keeping 25% margin leaves $28 × 75% = $21. So your target cost per reported FTD is $21, not the $30 you might set from the payout alone.",
+          "d": {
+            "kind": "breakeven",
+            "task": "Payout $40 per qualified FTD, 70% of FTDs qualify, margin 25%. Most you can pay per reported FTD?",
+            "preset": {
+              "payout": 40,
+              "cr_pct": 70,
+              "margin_pct": 25
+            },
+            "answer": {
+              "field": "max_cpl",
+              "value": 21,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Time for the lab. The payout is forty dollars per qualified F T D, seventy percent of F T Ds qualify, and you want a twenty five percent margin. What's the most you can pay per F T D as Meta reports it? Use the break-even lab, and put the qualified rate in as the conversion rate. It'll tell you the most you can pay after qualification and your margin. Pause and try it, then check your answer."
+        },
+        {
+          "v": "table",
+          "h": "The operator's view of your traffic",
+          "p": "Example: what the operator sees for a cohort of your players after six months. If the revenue they earn is below what they paid you, your traffic is a loss for them, even if it was profitable for you.",
+          "more": "The operator also pays staff, payment fees, taxes and licences, so a $17 per player margin may still be thin for them. If NGR over six months were $3,500, they would be $500 down on your traffic and would likely cut your CPA. Asking for this view, politely, is one of the best ways to know where your deal stands.",
+          "d": {
+            "cols": [
+              "Item",
+              "Rule",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Qualified FTDs",
+                "from report",
+                "100"
+              ],
+              [
+                "Paid to you",
+                "100 × $40 CPA",
+                "$4,000"
+              ],
+              [
+                "NGR, 6 months",
+                "sum of monthly NGR",
+                "$5,700"
+              ],
+              [
+                "Operator margin",
+                "$5,700 − $4,000",
+                "$1,700"
+              ],
+              [
+                "Per player",
+                "$1,700 ÷ 100",
+                "$17 before their costs"
+              ]
+            ]
+          },
+          "say": "Now see your traffic through the operator's eyes. This is an example for a cohort of one hundred qualified players after six months. They paid you forty dollars each, so four thousand dollars. The players generated five thousand seven hundred in N G R. That leaves the operator one thousand seven hundred, or seventeen dollars per player, before their own costs like staff, payment fees, taxes and licences. If N G R had been three thousand five hundred, they'd be five hundred down and would likely cut your C P A, your cost per acquisition. Asking for this view, politely, tells you where your deal stands."
+        },
+        {
+          "v": "walk",
+          "h": "Read an operator report",
+          "p": "Every operator's dashboard looks different, but the steps are the same. Field names vary; ask your manager if you cannot find a column. Do it the same way every week so the numbers stay comparable.",
+          "d": {
+            "steps": [
+              {
+                "title": "Choose the date basis",
+                "text": "Pick FTD date or registration date and use the same basis every week.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "partner.example/reports",
+                  "title": "Reports",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Report",
+                      "value": "Player activity"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Date basis",
+                      "value": "FTD date"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Period",
+                      "value": "Last 30 days"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Break down by sub-ID",
+                "text": "Group by sub1 so each ad or ad set has its own row.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "partner.example/reports",
+                  "title": "Group by",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Group by",
+                      "value": "Sub-ID 1"
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Show qualified FTDs",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Show NGR",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Read the table",
+                "text": "Compare each row's qualified rate and NGR with the account average.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "partner.example/reports",
+                  "title": "Results",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Sub-ID",
+                        "FTD",
+                        "Qual",
+                        "NGR"
+                      ],
+                      "rows": [
+                        [
+                          "NG_Derby_v1",
+                          "40",
+                          "28",
+                          "$880"
+                        ],
+                        [
+                          "NG_Offer_v2",
+                          "36",
+                          "15",
+                          "$310"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Export and match spend",
+                "text": "Export, then add Meta spend per sub-ID in your sheet.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "partner.example/reports",
+                  "title": "Export",
+                  "blocks": [
+                    {
+                      "type": "button",
+                      "label": "Export CSV"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Match each sub-ID to its Meta spend for the same dates."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Every operator's dashboard looks different, but the steps are the same. Tap Next to follow each step. First, choose the date basis, F T D date or registration date, and use the same basis every week. Second, break down by sub I D, grouping by sub one so each ad or ad set has its own row. Third, read the table, comparing each row's qualified rate and N G R with the account average. Fourth, export it, and add Meta spend per sub I D in your sheet. Field names vary, so ask your manager if you can't find a column."
+        },
+        {
+          "v": "tip",
+          "h": "Definitions differ by deal",
+          "p": "A qualified FTD might mean a minimum deposit, a minimum amount wagered, a number of bets, or a number of active days. Each operator and each deal sets its own rule. Read yours before you build any target.",
+          "d": {
+            "kind": "example",
+            "text": "Example only: 'qualified = first deposit of at least $10 and at least $20 wagered within 30 days'. Your deal will differ; copy the exact wording into your numbers sheet."
+          },
+          "say": "Definitions differ by deal. A qualified F T D might mean a minimum deposit, a minimum amount wagered, a number of bets, or a number of active days. Each operator and each deal sets its own rule. Look at the example on screen: qualified means a first deposit of at least ten dollars and at least twenty dollars wagered within thirty days. That's an example only. Your deal will differ, so copy the exact wording into your numbers sheet before you build any target."
+        },
+        {
+          "v": "compare",
+          "h": "Common quality mistakes",
+          "p": "Most beginner buyers measure the wrong thing for weeks before an operator report corrects them. Each fix below takes minutes and changes which ad sets you keep.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Celebrating FTD count",
+                "Using the platform's CPA for kill rules",
+                "Never asking for quality data",
+                "Mixing registration-date and FTD-date reports",
+                "Judging a sub-ID on 5 FTDs"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Report qualified FTDs and NGR",
+                "Use spend ÷ qualified FTDs",
+                "Ask weekly, by sub-ID",
+                "One date basis, always",
+                "Wait for at least 20 FTDs"
+              ]
+            }
+          },
+          "say": "Most beginners measure the wrong thing for weeks before an operator report corrects them. Celebrating F T D count. Using the platform's C P A for kill rules. Never asking for quality data. Mixing registration-date and F T D-date reports. Judging a sub I D on five F T Ds. And the fixes: report qualified F T Ds and N G R. Use spend divided by qualified F T Ds. Ask weekly, by sub I D. One date basis, always. And wait for at least twenty F T Ds. Each fix takes minutes and changes which ad sets you keep."
+        },
+        {
+          "v": "check",
+          "h": "Quality decision rules",
+          "p": "Starting rules to adapt. They sit on top of the money rules from the foundations school and use qualified numbers wherever you have them. Write them on your numbers sheet next to the target CPA.",
+          "d": [
+            "Apply kill and scale rules to spend ÷ qualified FTDs",
+            "Qualified rate < 60% over ≥ 20 FTDs on a sub-ID: pause and investigate",
+            "Scale only sub-IDs whose qualified rate is at or above your account average",
+            "Ask for a sub-ID quality report every week",
+            "Recalculate target CPA per reported FTD whenever the qualified rate moves by 10 points"
+          ],
+          "say": "Here are quality decision rules, to adapt. They sit on top of the money rules from the foundations school. Apply kill and scale rules to spend divided by qualified F T Ds. If the qualified rate is under sixty percent over twenty or more F T Ds on a sub I D, pause and investigate. Scale only sub I Ds whose qualified rate is at or above your account average. Ask for a sub I D quality report every week. And recalculate target C P A per reported F T D whenever the qualified rate moves by ten points."
+        },
+        {
+          "v": "tip",
+          "h": "Value without exploitation",
+          "p": "Optimising for high-value players can drift into targeting people who gamble more than they can afford. Never seek out people because they lose heavily, never use lists of self-excluded or vulnerable people, and treat player data as the operator's, under data protection law.",
+          "d": {
+            "kind": "warn",
+            "text": "Gambling ads usually need platform authorization and must follow local law, including data protection and responsible gambling rules. We are not certain this is current; check the platform Help Center and your operator's terms before relying on it."
+          },
+          "say": "A careful word on value. Optimising for high-value players can drift into targeting people who gamble more than they can afford. Never seek people out because they lose heavily. Never use lists of self-excluded or vulnerable people. And treat player data as the operator's, under data protection law. As the warning says, gambling ads usually need platform authorization and must follow local law, including data protection and responsible gambling rules. We're not certain this is current, so check the platform Help Center and your operator's terms."
+        },
+        {
+          "v": "big",
+          "h": "A good player plays within their means",
+          "p": "The best traffic for everyone is adults who bet for entertainment, with amounts they can afford, and keep playing at that level. Spiky value from a few heavy losers is fragile, harmful and often clawed back. Build your funnel for steady, moderate players.",
+          "d": {
+            "b": "Steady, moderate, adult players",
+            "s": "That is quality the operator, the regulator and you can live with."
+          },
+          "say": "So what does a good player look like? The best traffic for everyone is adults who bet for entertainment, with amounts they can afford, and keep playing at that level. Spiky value from a few heavy losers is fragile, harmful, and often clawed back. So build your funnel for steady, moderate, adult players. That's quality the operator, the regulator and you can all live with."
+        }
+      ],
+      "takeaways": [
+        "You are paid on qualified FTDs, so use spend ÷ qualified FTDs in every rule.",
+        "Ask for qualified rate, redeposits and NGR by sub-ID every week.",
+        "If your players are worth less than your payout to the operator, your deal is at risk.",
+        "Quality means steady adult players, not heavy losers."
+      ],
+      "action": "Ask your affiliate manager in writing for last month's report by sub-ID with FTDs, qualified FTDs and NGR, then calculate your true cost per qualified FTD for each sub-ID.",
+      "glossary": [
+        {
+          "term": "Qualified FTD",
+          "def": "An FTD that meets the deal's qualification terms, such as a minimum deposit or wagering, and so earns the payout."
+        },
+        {
+          "term": "Qualified rate",
+          "def": "Qualified FTDs ÷ all FTDs, as a percentage."
+        },
+        {
+          "term": "NGR",
+          "def": "Net gaming revenue: what the operator keeps from player activity after winnings, bonuses and other deductions set in the contract."
+        },
+        {
+          "term": "Redeposit rate",
+          "def": "The share of players who deposit again within a set period, often 30 days."
+        },
+        {
+          "term": "Date basis",
+          "def": "Whether a report counts players by registration date or by FTD date."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Spend $900. Meta shows 36 FTDs; the operator qualifies 24. What is the true cost per qualified FTD?",
+          "options": [
+            "$25.00",
+            "$30.00",
+            "$37.50",
+            "$40.00"
+          ],
+          "answer": 2,
+          "why": "$900 ÷ 24 = $37.50."
+        },
+        {
+          "q": "Payout $50 per qualified FTD, 60% qualify, margin 20%. Most you can pay per reported FTD?",
+          "options": [
+            "$24",
+            "$30",
+            "$40",
+            "$50"
+          ],
+          "answer": 0,
+          "why": "$50 × 0.60 = $30; $30 × 0.80 = $24."
+        },
+        {
+          "q": "A sub-ID has 25 FTDs and 13 qualified. What does the starting rule say?",
+          "options": [
+            "Scale, it has over 20 FTDs",
+            "Raise the bid",
+            "Hold for 100 FTDs",
+            "Pause and investigate, the qualified rate is 52%"
+          ],
+          "answer": 3,
+          "why": "13 ÷ 25 = 52%, below 60% over at least 20 FTDs."
+        },
+        {
+          "q": "The operator paid $4,000 for 100 qualified FTDs and earned $3,500 NGR from them in six months. What is likely?",
+          "options": [
+            "Your CPA will rise",
+            "Your deal is at risk of a lower CPA or cap",
+            "Nothing changes",
+            "They will switch you to a higher RevShare"
+          ],
+          "answer": 1,
+          "why": "They are $500 down on your traffic before their own costs."
+        },
+        {
+          "q": "Why use one date basis in every report?",
+          "options": [
+            "Mixing registration-date and FTD-date reports makes weeks incomparable",
+            "Operators require it by law",
+            "It lowers CPM",
+            "It increases qualified rate"
+          ],
+          "answer": 0,
+          "why": "Different bases count different players in each period, so comparisons break."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn how an operator judges the quality of your players, not just how many you send. You'll work out your true cost per qualified F T D, first-time deposit, and see your traffic through the operator's eyes.",
+      "say_outro": "So, operators buy player value, you get paid on qualified F T Ds, and your rules should use spend divided by qualified F T Ds. Your task: ask your affiliate manager in writing for last month's report by sub I D with F T Ds, qualified F T Ds and N G R, then calculate your true cost per qualified F T D for each sub I D. Now take the quiz."
+    },
+    {
+      "slug": "igaming-postbacks-and-events",
+      "title": "Postbacks and events for iGaming",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can map operator events to tracker and ad platform events.",
+        "By the end you can build and test a postback URL with the network's macros.",
+        "By the end you can choose which event to optimise for, based on weekly volume."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the signal matters",
+          "p": "The ad platform learns from the events you send it. Send registrations and it finds people who register. Send FTDs and it looks for people who deposit. Send the wrong event, or send it twice, and you train the algorithm to find the wrong people with your money.",
+          "d": {
+            "b": "The event you send is the customer you get",
+            "s": "Clean signal in, better players out."
+          },
+          "say": "The ad platform learns from the events you send it. Send registrations, and it finds people who register. Send F T Ds, first-time deposits, and it looks for people who deposit. Send the wrong event, or send it twice, and you're paying to train the algorithm to find the wrong people. The event you send is the customer you get. Clean signal in, better players out."
+        },
+        {
+          "v": "map",
+          "h": "The data path from ad to platform",
+          "p": "This is the usual path. The click ID travels with the player to the operator. When the player deposits, the network fires a postback to your tracker, which can pass the event on to the ad platform server to server.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Meta ad",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Prelander",
+                "kind": "page"
+              },
+              {
+                "id": "op",
+                "label": "Operator sign-up",
+                "kind": "offer"
+              },
+              {
+                "id": "ftd",
+                "label": "First deposit",
+                "kind": "money"
+              },
+              {
+                "id": "net",
+                "label": "Network",
+                "kind": "data"
+              },
+              {
+                "id": "trk",
+                "label": "Your tracker",
+                "kind": "tool"
+              },
+              {
+                "id": "capi",
+                "label": "Conversions API",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "lp",
+                "click ID"
+              ],
+              [
+                "lp",
+                "op",
+                "click ID in sub1"
+              ],
+              [
+                "op",
+                "ftd",
+                "deposit"
+              ],
+              [
+                "ftd",
+                "net",
+                "event"
+              ],
+              [
+                "net",
+                "trk",
+                "postback"
+              ],
+              [
+                "trk",
+                "capi",
+                "server event"
+              ]
+            ]
+          },
+          "say": "Follow the map from left to right. A player clicks your Meta ad and lands on your prelander. The click I D travels with them, passed into sub one, to the operator's sign-up. When the player makes their first deposit, the network records the event and fires a postback to your tracker. Your tracker can then pass that event on to the ad platform server to server, through the conversions A P I. That's the usual path, and every link in it has to work."
+        },
+        {
+          "v": "table",
+          "h": "Map events end to end",
+          "p": "Decide this map before launch and write it down. Event names on the ad platform are examples; check which standard and custom events your platform currently supports for optimisation. Names change; check the current Ads Manager.",
+          "d": {
+            "cols": [
+              "Operator event",
+              "Postback event",
+              "Ad platform event (example)"
+            ],
+            "rows": [
+              [
+                "Registration",
+                "reg",
+                "CompleteRegistration"
+              ],
+              [
+                "First deposit",
+                "ftd + amount",
+                "Purchase with value"
+              ],
+              [
+                "Qualified FTD",
+                "qftd",
+                "Custom event, if supported"
+              ],
+              [
+                "Redeposit",
+                "dep",
+                "Usually not sent"
+              ]
+            ]
+          },
+          "say": "Decide this map before launch and write it down. Registration at the operator becomes a reg postback, and on the platform, for example, Complete Registration. First deposit becomes F T D plus amount, and a Purchase with value. A qualified F T D can become a custom event, if supported. And redeposits are usually not sent. The platform event names are examples. Check which standard and custom events your platform currently supports for optimisation, because names change."
+        },
+        {
+          "v": "code",
+          "h": "A postback URL",
+          "p": "Your network fires this URL when the event happens. Words in braces are macros the network replaces with real values. Macro names differ between networks, so copy them from your network's postback page, never from a tutorial.",
+          "d": {
+            "lang": "url",
+            "text": "https://track.example/postback?cid={clickid}&event=ftd&payout={commission}&amount={deposit_amount}",
+            "note": "Example only. Your network's macro names will differ."
+          },
+          "say": "On screen is an example postback U R L. I won't read it out. Your network fires this link when the event happens. The words in curly braces are macros, placeholders the network swaps for real values, like the click I D, the payout and the deposit amount. Macro names differ between networks. So always copy them from your own network's postback page, never from a tutorial."
+        },
+        {
+          "v": "walk",
+          "h": "Set up and test a postback",
+          "p": "Follow these steps once per offer. Never launch paid traffic on an offer whose postback you have not tested end to end. A broken postback means the platform learns nothing and your dashboard shows nothing.",
+          "d": {
+            "steps": [
+              {
+                "title": "Find the macro list",
+                "text": "Open the network's postback settings and note the macro for click ID, payout and event.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/postbacks",
+                  "title": "Postback settings",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "value": "Available macros: {clickid}, {commission}, {deposit_amount}, {event}"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Event",
+                      "value": "First deposit"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Pass the click ID out",
+                "text": "Your tracking link puts the tracker's click ID into the network's sub parameter.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "tracker.example/offer",
+                  "title": "Offer URL",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Offer URL",
+                      "value": "https://network.example/go?o=123&sub1={clickid}"
+                    },
+                    {
+                      "type": "text",
+                      "value": "The tracker fills {clickid} on every click."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Paste the postback",
+                "text": "Add your tracker's postback URL to the network for the FTD event.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/postbacks",
+                  "title": "Add postback",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "URL",
+                      "value": "https://track.example/postback?cid={clickid}&event=ftd&payout={commission}"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Fires on",
+                      "value": "FTD"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Save"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Make a test conversion",
+                "text": "Use the network's test tool if it has one; otherwise ask your manager. Do not make real deposits to test.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/postbacks",
+                  "title": "Test",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Test click ID",
+                      "value": "test_abc123"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Send test postback"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Confirm and clean up",
+                "text": "Check the event appears in the tracker, then delete or mark the test so it never counts.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "tracker.example/conversions",
+                  "title": "Conversions",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Click ID",
+                        "Event",
+                        "Payout"
+                      ],
+                      "rows": [
+                        [
+                          "test_abc123",
+                          "ftd",
+                          "$0.00"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "button",
+                      "label": "Mark as test"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Do this once per offer, and never launch paid traffic until it's tested end to end. Tap Next to follow each step. First, open the network's postback settings and note the macros for click I D, payout and event. Second, make sure your tracking link puts the tracker's click I D into the network's sub parameter. Third, paste your tracker's postback into the network for the F T D event. Fourth, make a test conversion with the network's test tool, or ask your manager. Don't make real deposits to test. Fifth, confirm it appears in your tracker, then delete or mark the test."
+        },
+        {
+          "v": "eq",
+          "h": "Which value to send",
+          "p": "For return on ad spend, send the money you earn, not the player's deposit. The deposit is the player's money and can be far above or below your commission. It also teaches the platform to chase bigger depositors, which is the wrong goal.",
+          "more": "Example: 30 FTDs with an average deposit of $60, spend $900. Sending deposits as value reports $1,800 of 'revenue' and a ROAS of 2.0. Your real commission is 21 qualified × $35 = $735, a ROAS of $735 ÷ $900 = 0.82, a loss. The deposit-based number hides the loss and pushes delivery toward heavy spenders, which is also a responsible gambling risk.",
+          "d": [
+            "Commission earned",
+            "÷",
+            "Spend",
+            "=",
+            "Your real ROAS"
+          ],
+          "say": "Which value should you send? For R O A S, return on ad spend, send the money you earn, not the player's deposit. Follow the equation: commission earned divided by spend is your real R O A S. Example: thirty F T Ds with a sixty dollar average deposit and nine hundred dollars spend. Sending deposits reports one thousand eight hundred, a R O A S of two. But real commission is twenty one qualified times thirty five, seven hundred thirty five dollars, a R O A S of about zero point eight two, a loss. Deposit values also push delivery toward heavy spenders, a responsible gambling risk."
+        },
+        {
+          "v": "stat",
+          "h": "Reconcile every week",
+          "p": "Your tracker and the operator will rarely match exactly. Some FTDs fail KYC, some are duplicates, some arrive late. A small gap is normal. A large one means something is broken, either in your setup or theirs.",
+          "d": {
+            "n": 10,
+            "pre": "",
+            "suf": "%",
+            "dec": 0,
+            "label": "gap that triggers an investigation",
+            "note": "Starting rule. Example: tracker 52 FTDs, operator 46 = 11.5% gap."
+          },
+          "say": "Reconcile every week. Your tracker and the operator will rarely match exactly. Some F T Ds fail K Y C, know your customer checks. Some are duplicates, some arrive late. A small gap is normal. A large one means something's broken, in your setup or theirs. The starting rule on screen: a gap of ten percent triggers an investigation. For example, tracker fifty two F T Ds, operator forty six, is an eleven and a half percent gap."
+        },
+        {
+          "v": "tip",
+          "h": "Deduplication",
+          "p": "If you send the same event from the browser pixel and from the server, both must carry the same event ID or the platform may count it twice. Postback-only server events usually have no browser twin, which avoids the problem.",
+          "d": {
+            "kind": "example",
+            "text": "We are not certain how each platform currently deduplicates every event type; check Meta's Events Manager documentation before you send the same event from two sources."
+          },
+          "say": "A note on deduplication. If you send the same event from the browser pixel and from the server, both must carry the same event I D, or the platform may count it twice. Postback-only server events usually have no browser twin, which avoids the problem. We're not certain how each platform currently deduplicates every event type, so check Meta's Events Manager documentation before you send the same event from two sources."
+        },
+        {
+          "v": "compare",
+          "h": "Common postback mistakes",
+          "p": "Each of these breaks optimisation quietly. You often find out weeks later, when the operator report disagrees with your dashboard. Check your setup against this list before every new offer.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Postback fires on baseline FTD but you are paid on qualified",
+                "Test conversions left in the data",
+                "Deposit amount sent as revenue",
+                "Click ID not passed, so nothing matches",
+                "Pixel and server both firing without an event ID"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Send qftd too if the network supports it",
+                "Mark or delete tests at once",
+                "Send commission as value",
+                "Test the full path before launch",
+                "One source per event, or shared event ID"
+              ]
+            }
+          },
+          "say": "Each of these mistakes breaks optimisation quietly, and you often find out weeks later. The postback fires on baseline F T D, but you're paid on qualified. Test conversions left in the data. Deposit amount sent as revenue. Click I D not passed, so nothing matches. Pixel and server both firing without an event I D. And the fixes: send a qualified F T D event too, if supported. Mark or delete tests at once. Send commission as value. Test the full path before launch. And use one source per event, or a shared event I D."
+        },
+        {
+          "v": "check",
+          "h": "Event decision rules",
+          "p": "Starting rules to adapt. Delivery systems need enough events to learn; how many is not published precisely, so treat these as rough guides. Write the chosen event for each ad set in your plan, with the reason.",
+          "more": "Example: target CPA $20 and a $50 daily budget. At target, that is about 2.5 FTDs a day or 17 a week, enough to try FTD optimisation. At $15 a day it is about 5 a week, so start on registration and move up once volume grows. We are not certain of each platform's current learning threshold; check the Help Center.",
+          "d": [
+            "Ad set can reach about 10 FTDs a week or more: optimise for FTD",
+            "Fewer than that: optimise for registration, judge on qualified FTDs",
+            "Tracker vs operator gap > 10%: investigate before spending more",
+            "Never optimise on an event you have not tested end to end",
+            "Change the optimisation event in a new ad set, not by editing a live one"
+          ],
+          "say": "Here are event decision rules, rough guides to adapt. If an ad set can reach about ten F T Ds a week or more, optimise for F T D. Fewer than that, optimise for registration, but judge on qualified F T Ds. Tracker versus operator gap over ten percent, investigate before spending more. Never optimise on an untested event. And change the optimisation event in a new ad set, not by editing a live one. Example: a twenty dollar target C P A, cost per acquisition, at fifty dollars a day is about seventeen a week, enough to try F T D. We're not certain of each platform's learning threshold, so check the Help Center."
+        },
+        {
+          "v": "tip",
+          "h": "Personal data in postbacks",
+          "p": "Postbacks should carry IDs and amounts, not names, phone numbers or emails. Player data belongs to the operator and is covered by data protection laws such as Nigeria's NDPA, Kenya's Data Protection Act, South Africa's POPIA and Ghana's Data Protection Act.",
+          "d": {
+            "kind": "warn",
+            "text": "Send no personal data in postbacks unless the operator, the platform and the law allow it, and then only as the platform specifies. We are not certain this is current; check the platform Help Center and your operator's terms before relying on it."
+          },
+          "say": "Postbacks should carry I Ds and amounts, not names, phone numbers or emails. Player data belongs to the operator, and it's covered by data protection laws such as Nigeria's N D P A, Kenya's Data Protection Act, South Africa's POPIA and Ghana's Data Protection Act. As the warning says, send no personal data in postbacks unless the operator, the platform and the law allow it, and then only as the platform specifies. We're not certain this is current, so check the Help Center and your operator's terms."
+        },
+        {
+          "v": "big",
+          "h": "Clean data protects players too",
+          "p": "When your signal is clean, you can optimise for qualified, steady players instead of raw deposit size. That keeps the platform from hunting the heaviest spenders, which is better for your deal and better for the people on the other side of the ad.",
+          "d": {
+            "b": "Optimise for qualified, not biggest",
+            "s": "Send commission, not deposit size."
+          },
+          "say": "Clean data protects players too. When your signal is clean, you can optimise for qualified, steady players, instead of raw deposit size. That stops the platform hunting the heaviest spenders, which is better for your deal, and better for the people on the other side of the ad. Optimise for qualified, not biggest. Send commission, not deposit size."
+        }
+      ],
+      "takeaways": [
+        "Map operator events to postbacks and platform events before launch.",
+        "Copy macro names from your network and test the full path with a test conversion.",
+        "Send commission as value, never the player's deposit.",
+        "Reconcile weekly; a gap over 10% means stop and investigate."
+      ],
+      "action": "Write your event map for one offer (operator event, postback event, platform event), then send one test postback through to your tracker and mark it as a test.",
+      "glossary": [
+        {
+          "term": "Postback",
+          "def": "A server-to-server message the network sends to your tracker when a player completes an event."
+        },
+        {
+          "term": "Macro",
+          "def": "A placeholder in a URL, such as {clickid}, that the system replaces with a real value."
+        },
+        {
+          "term": "Conversions API",
+          "def": "A way to send events from your server to the ad platform instead of from the browser."
+        },
+        {
+          "term": "Event ID",
+          "def": "A unique identifier attached to an event so the platform can remove duplicates."
+        },
+        {
+          "term": "Reconciliation",
+          "def": "Comparing your numbers with the operator's to find and explain gaps."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Tracker shows 60 FTDs; the operator shows 51. What is the gap and what do you do?",
+          "options": [
+            "5%, ignore",
+            "15%, double the budget",
+            "9%, ignore",
+            "15%, investigate before spending more"
+          ],
+          "answer": 3,
+          "why": "(60 − 51) ÷ 60 = 15%, above the 10% line."
+        },
+        {
+          "q": "Which value should you send to the ad platform for ROAS?",
+          "options": [
+            "The player's deposit",
+            "Your commission",
+            "The bonus amount",
+            "The player's balance"
+          ],
+          "answer": 1,
+          "why": "Your ROAS is about your revenue, the commission. Deposits distort it and push the platform toward heavy spenders."
+        },
+        {
+          "q": "Target CPA $25, daily budget $20. Roughly how many FTDs a week at target, and which event should you optimise for?",
+          "options": [
+            "About 6; registration",
+            "About 20; FTD",
+            "About 12; FTD",
+            "About 3; purchase"
+          ],
+          "answer": 0,
+          "why": "$20 ÷ $25 = 0.8 a day, about 5.6 a week, below the rough 10 a week line, so start on registration."
+        },
+        {
+          "q": "Where should macro names in your postback come from?",
+          "options": [
+            "A tutorial video",
+            "Any tracker's default list",
+            "Your network's postback page",
+            "The ad platform"
+          ],
+          "answer": 2,
+          "why": "Macro names differ by network."
+        },
+        {
+          "q": "Which postback content is a problem?",
+          "options": [
+            "Click ID",
+            "Player's phone number",
+            "Commission amount",
+            "Event name"
+          ],
+          "answer": 1,
+          "why": "Personal data should not be sent in postbacks unless the law and all parties allow it."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn how postbacks and events carry the right signal from the operator back to your tracker and the ad platform. You'll map events, build and test a postback, and choose which event to optimise for.",
+      "say_outro": "So, the event you send is the customer you get: map events before launch, test every postback end to end, send commission as value, and reconcile weekly. Your task: write your event map for one offer, with operator event, postback event and platform event, then send one test postback through to your tracker and mark it as a test. Now take the quiz."
+    },
+    {
+      "slug": "cohorts-and-player-value",
+      "title": "Cohorts and player value",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can build a cohort table by FTD month and sub-ID.",
+        "By the end you can calculate player value on CPA and RevShare from cohort NGR.",
+        "By the end you can tell when a cohort is too small or too early to judge."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why cohorts",
+          "p": "A month's total revenue mixes old and new players, so it hides whether your new traffic is getting better or worse. A cohort groups players by when they made their first deposit and follows them over time. It is the only fair way to compare ad sets, geos and months.",
+          "d": {
+            "b": "Follow each group of players over time",
+            "s": "Totals hide trends; cohorts show them."
+          },
+          "say": "A month's total revenue mixes old and new players, so it hides whether your new traffic is getting better or worse. A cohort groups players by when they made their first deposit, and follows that group over time. It's the only fair way to compare ad sets, geos and months. Totals hide trends. Cohorts show them."
+        },
+        {
+          "v": "table",
+          "h": "Example: two ad sets, one month",
+          "p": "Example: two ad sets from the same month. Ad set A is cheaper per FTD. Ad set B's players are worth far more. On a CPA deal the operator notices; on RevShare you notice directly.",
+          "more": "At 30% RevShare, A earns you $18 × 30% = $5.40 per player in month one; B earns $45 × 30% = $13.50. A's whole cohort: 30 × $5.40 = $162 against $450 of spend. B's: 20 × $13.50 = $270 against $440. Neither has paid back in month one, which is normal on RevShare, but B is on a much better path.",
+          "d": {
+            "cols": [
+              "Ad set",
+              "FTDs",
+              "Cost per FTD",
+              "30-day NGR per player"
+            ],
+            "rows": [
+              [
+                "A: offer angle",
+                "30",
+                "$15",
+                "$18"
+              ],
+              [
+                "B: fixture angle",
+                "20",
+                "$22",
+                "$45"
+              ]
+            ]
+          },
+          "say": "Here's an example: two ad sets from the same month. Ad set A, the offer angle, has thirty F T Ds, first-time deposits, at fifteen dollars each, and thirty day N G R, net gaming revenue, of eighteen dollars per player. Ad set B, the fixture angle, has twenty F T Ds at twenty two dollars, but forty five dollars N G R per player. A is cheaper, but B's players are worth far more. At thirty percent RevShare, A earns five forty per player in month one, and B earns thirteen fifty. Neither has paid back yet, which is normal on RevShare, but B is on a much better path."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: six-month player value",
+          "p": "Example: a cohort of 100 qualified players from one month, followed for six months. NGR falls each month as players drop off. That shape is normal.",
+          "more": "Player value over six months = $6,000 ÷ 100 = $60 NGR per player. At 30% RevShare your share is $60 × 30% = $18 per player. If the alternative was a $40 CPA, the CPA paid more by month six. RevShare only wins if players keep playing for much longer, or the RevShare rate is higher. Module 6 builds on this.",
+          "d": {
+            "cols": [
+              "Month",
+              "Cohort NGR",
+              "Cumulative"
+            ],
+            "rows": [
+              [
+                "1",
+                "$2,500",
+                "$2,500"
+              ],
+              [
+                "2",
+                "$1,200",
+                "$3,700"
+              ],
+              [
+                "3",
+                "$800",
+                "$4,500"
+              ],
+              [
+                "4",
+                "$600",
+                "$5,100"
+              ],
+              [
+                "5",
+                "$500",
+                "$5,600"
+              ],
+              [
+                "6",
+                "$400",
+                "$6,000"
+              ]
+            ]
+          },
+          "say": "Here's a worked example: one hundred qualified players from one month, followed for six months. N G R starts at two thousand five hundred in month one, then falls each month as players drop off, down to four hundred in month six. That shape is normal. The cumulative total reaches six thousand dollars, so sixty dollars N G R per player. At thirty percent RevShare, your share is eighteen dollars per player. If the alternative was a forty dollar C P A, cost per acquisition, the C P A paid more by month six. RevShare only wins if players keep playing much longer, or the rate is higher."
+        },
+        {
+          "v": "curve",
+          "h": "Example: two cohorts over six months",
+          "p": "Example: cumulative NGR per player for two cohorts. Both flatten as players leave, but the fixture-angle cohort keeps climbing for longer. That gap is where long-term affiliate value comes from.",
+          "d": {
+            "a": [
+              18,
+              29,
+              36,
+              41,
+              45,
+              48,
+              50
+            ],
+            "la": "Offer angle ($ per player)",
+            "b": [
+              45,
+              70,
+              88,
+              100,
+              110,
+              118,
+              124
+            ],
+            "lb": "Fixture angle ($ per player)",
+            "x": [
+              "M1",
+              "M2",
+              "M3",
+              "M4",
+              "M5",
+              "M6",
+              "M7"
+            ]
+          },
+          "say": "Watch these two lines. It's an example of cumulative N G R per player for two cohorts. The offer angle starts at eighteen dollars and flattens around fifty. The fixture angle starts at forty five and keeps climbing for longer, to one hundred twenty four by month seven. Both flatten as players leave, but that growing gap between the lines is where long-term affiliate value comes from."
+        },
+        {
+          "v": "walk",
+          "h": "Build a cohort table",
+          "p": "You can do this in any spreadsheet from operator exports. Column names vary by operator. Once the template exists, refreshing it each month takes minutes.",
+          "d": {
+            "steps": [
+              {
+                "title": "Export by FTD month",
+                "text": "Ask for or export player-level or sub-ID-level data with FTD date and monthly NGR.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "partner.example/reports",
+                  "title": "Export",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Report",
+                      "value": "Cohort / player activity"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Date basis",
+                      "value": "FTD date"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Export CSV"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Group by FTD month and sub-ID",
+                "text": "Each row is one cohort: one month, one sub-ID.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/cohorts",
+                  "title": "Pivot",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Rows",
+                      "value": "FTD month, Sub-ID"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Columns",
+                      "value": "Activity month"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Values",
+                      "value": "Sum of NGR"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Divide by players",
+                "text": "NGR ÷ qualified FTDs in the cohort gives value per player per month.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/cohorts",
+                  "title": "Per player",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Cohort",
+                        "M1",
+                        "M2",
+                        "M3"
+                      ],
+                      "rows": [
+                        [
+                          "Jan_A",
+                          "$18",
+                          "$11",
+                          "$7"
+                        ],
+                        [
+                          "Jan_B",
+                          "$45",
+                          "$25",
+                          "$18"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Add your spend",
+                "text": "Put cost per qualified FTD next to the cumulative value to see payback.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/cohorts",
+                  "title": "Payback",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Cohort",
+                        "Cost/qual",
+                        "Value to you, M3"
+                      ],
+                      "rows": [
+                        [
+                          "Jan_A",
+                          "$21",
+                          "$10.80"
+                        ],
+                        [
+                          "Jan_B",
+                          "$26",
+                          "$26.40"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "You can build this in any spreadsheet. Tap Next to follow each step. First, export player-level or sub I D level data with F T D date and monthly N G R. Second, group by F T D month and sub I D, so each row is one cohort, one month, one sub I D. Third, divide N G R by qualified F T Ds in the cohort to get value per player per month. Fourth, put cost per qualified F T D next to the cumulative value to see payback. Column names vary by operator, and once the template exists, refreshing it takes minutes."
+        },
+        {
+          "v": "stat",
+          "h": "One player can be the whole story",
+          "p": "Example: a cohort produced $6,000 of NGR and one player accounted for $2,400 of it. Remove that player and the cohort looks very different. Large single players make small cohorts unreliable in both directions.",
+          "d": {
+            "n": 40,
+            "pre": "",
+            "suf": "%",
+            "dec": 0,
+            "label": "of cohort NGR from one player",
+            "note": "Example. Check concentration before you judge a cohort."
+          },
+          "say": "Look at that number: forty percent. In this example, a cohort produced six thousand dollars of N G R, and one single player accounted for two thousand four hundred of it. Remove that player, and the cohort looks very different. Large single players make small cohorts unreliable, in both directions. So check concentration before you judge a cohort."
+        },
+        {
+          "v": "check",
+          "h": "Cohort decision rules",
+          "p": "Starting rules to adapt. They stop you from reacting to noise or to one lucky or unlucky player. Apply them before you move budget between ad sets on cohort data.",
+          "d": [
+            "Under 20 qualified players: treat the cohort as noise",
+            "Judge CPA quality at day 7 and day 30, not day 1",
+            "Judge RevShare cohorts at 90 days at the earliest",
+            "If one player is over 25% of cohort NGR, report the cohort with and without them",
+            "Shift budget toward the ad set whose 90-day value per player is higher, if cost per qualified FTD is within 20%"
+          ],
+          "say": "Here are cohort decision rules, to adapt. Under twenty qualified players, treat the cohort as noise. Judge C P A quality at day seven and day thirty, not day one. Judge RevShare cohorts at ninety days at the earliest. If one player is over twenty five percent of cohort N G R, report the cohort with and without them. And shift budget toward the ad set with higher ninety day value per player, if cost per qualified F T D is within twenty percent. Apply these before moving budget on cohort data."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: return on a cohort",
+          "p": "Use the ROAS lab on a cohort. Spend is what you paid to acquire it. Revenue is the commission you earned from it so far. Work out ROAS and profit.",
+          "more": "$1,950 ÷ $1,500 = 1.3. Profit is $1,950 − $1,500 = $450 before tools and fees. On RevShare this number keeps changing month by month, which is why you track it per cohort.",
+          "d": {
+            "kind": "roas",
+            "task": "A cohort cost $1,500 to acquire and has earned you $1,950 in commission. What is the ROAS?",
+            "preset": {
+              "spend": 1500,
+              "revenue": 1950
+            },
+            "answer": {
+              "field": "roas",
+              "value": 1.3,
+              "tolerance": 0.02
+            }
+          },
+          "say": "Now a lab using the R O A S tool, return on ad spend. A cohort cost one thousand five hundred dollars to acquire, and so far it has earned you one thousand nine hundred fifty dollars in commission. Spend is what you paid to acquire it, and revenue is the commission you've earned from it so far. What's the R O A S, and what's the profit? Pause and try it, then check your answer."
+        },
+        {
+          "v": "compare",
+          "h": "Common cohort mistakes",
+          "p": "Cohort analysis is simple maths, but the mistakes are about patience and sample size. Each one makes a cohort look better or worse than it really is.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Judging RevShare after two weeks",
+                "Mixing all months together",
+                "Trusting a 6-player cohort",
+                "Ignoring one huge player",
+                "Comparing cohorts with different date bases"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Wait at least 90 days",
+                "One row per FTD month",
+                "Need 20 or more qualified",
+                "Report with and without them",
+                "FTD date for every cohort"
+              ]
+            }
+          },
+          "say": "Cohort analysis is simple maths, but the mistakes are about patience and sample size. Judging RevShare after two weeks. Mixing all months together. Trusting a six player cohort. Ignoring one huge player. Comparing cohorts with different date bases. And the fixes: wait at least ninety days. One row per F T D month. Need twenty or more qualified. Report with and without the big player. And use F T D date for every cohort."
+        },
+        {
+          "v": "tip",
+          "h": "Negative months happen",
+          "p": "When a player wins big, NGR for that month can go below zero. On RevShare that can wipe out a month's earnings, and on some deals it carries into the next month. Module 6 covers negative carryover in detail.",
+          "d": {
+            "kind": "example",
+            "text": "Example: a cohort earns $1,200 NGR in month 3, then a player wins $2,000 in month 4. Month 4 NGR is −$800 if the rest of the cohort nets $1,200."
+          },
+          "say": "Negative months happen. When a player wins big, N G R for that month can go below zero. On RevShare, that can wipe out a month's earnings, and on some deals, it carries into the next month. Here's the example on screen: a cohort earns one thousand two hundred N G R in month three. Then a player wins two thousand in month four. If the rest of the cohort nets one thousand two hundred, month four N G R is minus eight hundred. Module six covers negative carryover in detail."
+        },
+        {
+          "v": "tip",
+          "h": "Do not chase heavy losers",
+          "p": "A cohort whose value comes from a few very heavy players may include people who are gambling beyond their means. Do not try to find more people like them. Operators have duties to intervene, and your marketing must not work against those duties.",
+          "d": {
+            "kind": "warn",
+            "text": "Never build audiences to find heavy losers, and never use player lists you have no lawful right to. Follow local responsible gambling and data protection rules."
+          },
+          "say": "A cohort whose value comes from a few very heavy players may include people gambling beyond their means. Don't try to find more people like them. Operators have duties to intervene, and your marketing must not work against those duties. As the warning says, never build audiences to find heavy losers, never use player lists you have no lawful right to, and follow local responsible gambling and data protection rules."
+        },
+        {
+          "v": "big",
+          "h": "Value should be broad, not spiky",
+          "p": "Healthy cohorts earn from many players each playing a little, month after month. That value is stable, defensible and much less likely to be clawed back. Build your funnels and creatives for that kind of player.",
+          "d": {
+            "b": "Many moderate players beat a few heavy ones",
+            "s": "Broad value lasts."
+          },
+          "say": "Healthy cohorts earn from many players, each playing a little, month after month. That kind of value is stable, defensible, and much less likely to be clawed back. So build your funnels and creatives for that kind of player. Many moderate players beat a few heavy ones. Broad value lasts."
+        }
+      ],
+      "takeaways": [
+        "Group players by FTD month and follow them; totals hide trends.",
+        "Player value = cohort NGR ÷ qualified players; your share depends on the deal.",
+        "Under 20 players or one dominant player: the cohort is not yet reliable.",
+        "Judge CPA quality at day 7 and 30; RevShare at 90 days or later."
+      ],
+      "action": "Build a cohort table for your last two months of traffic by sub-ID and calculate value per player at day 30 for each row.",
+      "glossary": [
+        {
+          "term": "Cohort",
+          "def": "A group of players who made their first deposit in the same period, tracked together over time."
+        },
+        {
+          "term": "Player value",
+          "def": "The NGR a player generates over a period; your share depends on your deal."
+        },
+        {
+          "term": "Payback",
+          "def": "The point where cumulative commission from a cohort equals what it cost to acquire."
+        },
+        {
+          "term": "Concentration",
+          "def": "How much of a cohort's NGR comes from a few players."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A cohort of 50 qualified players earned $3,000 NGR in six months. At 25% RevShare, what is your share per player?",
+          "options": [
+            "$12",
+            "$15",
+            "$60",
+            "$75"
+          ],
+          "answer": 1,
+          "why": "$3,000 ÷ 50 = $60 per player; $60 × 25% = $15."
+        },
+        {
+          "q": "A cohort has 12 qualified players. What does the rule say?",
+          "options": [
+            "Judge it now",
+            "Scale it",
+            "Treat it as noise",
+            "Kill it"
+          ],
+          "answer": 2,
+          "why": "Under 20 qualified players is too small to judge."
+        },
+        {
+          "q": "One player is 35% of a cohort's NGR. What do you report?",
+          "options": [
+            "Only the total",
+            "Nothing",
+            "Only the player",
+            "The cohort with and without that player"
+          ],
+          "answer": 3,
+          "why": "Above 25% concentration, show both views."
+        },
+        {
+          "q": "A cohort cost $2,000 and has earned $2,600. What is the ROAS?",
+          "options": [
+            "1.3",
+            "0.77",
+            "1.6",
+            "2.6"
+          ],
+          "answer": 0,
+          "why": "$2,600 ÷ $2,000 = 1.3."
+        },
+        {
+          "q": "When is the earliest you should judge a RevShare cohort?",
+          "options": [
+            "Day 1",
+            "Day 7",
+            "Day 90",
+            "Day 30"
+          ],
+          "answer": 2,
+          "why": "RevShare value builds over months; 90 days is the earliest starting point."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn to follow groups of players over time using cohorts. You'll build a cohort table, work out player value on C P A and RevShare deals, and learn when a cohort is too small or too early to judge.",
+      "say_outro": "So, group players by F T D month and sub I D, follow them over time, check size and concentration, and wait long enough before judging. Your task: build a cohort table for your last two months of traffic by sub I D, and calculate value per player at day thirty for each row. Now take the quiz."
+    },
+    {
+      "slug": "bonus-abuse-and-multi-accounting",
+      "title": "Bonus abuse and multi-accounting: keep it out",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can explain how operators define bonus abuse and multi-accounting and why they claw back commission for it.",
+        "By the end you can spot the patterns in your own reports that suggest a source is sending it.",
+        "By the end you can apply rules that keep incentivised and abusive traffic out of your funnel."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why this is your problem",
+          "p": "Operators protect their bonuses. When players open several accounts or play only to extract bonuses, operators reject those FTDs and, under most affiliate terms, withhold or claw back the commission. If your sources attract this behaviour, you pay for the traffic and lose the revenue.",
+          "d": {
+            "b": "Abusive FTDs are spend with no revenue",
+            "s": "Keep it out of your funnel from the start."
+          },
+          "say": "Operators protect their bonuses. When players open several accounts or play only to extract bonuses, operators reject those F T Ds, first-time deposits, and under most affiliate terms, they withhold or claw back the commission. If your sources attract this behaviour, you pay for the traffic and lose the revenue. Abusive F T Ds are spend with no revenue. So keep it out of your funnel from the start."
+        },
+        {
+          "v": "cards",
+          "h": "What operators flag",
+          "p": "These are the behaviours operators commonly treat as abuse in their terms. You will not see the details, but you will see the result in your reports. This is for spotting it, not doing it.",
+          "d": [
+            "Multi-accounting|one person or household opening several accounts",
+            "Bonus-only play|deposit, take bonus, withdraw at the first chance",
+            "Coordinated groups|many accounts acting together",
+            "Incentivised sign-ups|players paid by a third party to join",
+            "Identity misuse|accounts in someone else's name"
+          ],
+          "say": "These cards show the behaviours operators commonly treat as abuse. Multi-accounting, one person or household opening several accounts. Bonus-only play, deposit, take the bonus, withdraw at the first chance. Coordinated groups, many accounts acting together. Incentivised sign-ups, players paid by a third party to join. And identity misuse, accounts in someone else's name. You won't see the details, but you'll see the result in your reports. This is for spotting it, not doing it."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: the cost of a flagged batch",
+          "p": "Example: a month where a new source looked excellent until the operator's checks ran. The rejected FTDs were real spend and zero revenue. Read the last row first, then trace how it happened.",
+          "more": "Without the flagged FTDs the plan was $2,000 − $1,500 = $500 profit. The real result was a $100 loss. Your true cost per accepted FTD was $1,500 ÷ 35 = $42.86, above the $40 payout. If the operator also reviews earlier months, the loss can grow, which is why prevention matters more than arguing afterwards.",
+          "d": {
+            "cols": [
+              "Item",
+              "Rule",
+              "Example"
+            ],
+            "rows": [
+              [
+                "FTDs invoiced",
+                "50 × $40 CPA",
+                "$2,000"
+              ],
+              [
+                "Flagged as abuse",
+                "15 FTDs × $40",
+                "−$600"
+              ],
+              [
+                "Commission paid",
+                "$2,000 − $600",
+                "$1,400"
+              ],
+              [
+                "Spend",
+                "Meta invoice",
+                "$1,500"
+              ],
+              [
+                "Result",
+                "$1,400 − $1,500",
+                "−$100"
+              ]
+            ]
+          },
+          "say": "Here's an example month where a new source looked excellent until the operator's checks ran. Read the last row first: a result of minus one hundred dollars. Now trace it. Fifty F T Ds invoiced at a forty dollar C P A, cost per acquisition, is two thousand dollars. Fifteen were flagged as abuse, minus six hundred. So commission paid was one thousand four hundred, against one thousand five hundred of spend. The plan was five hundred profit. Your true cost per accepted F T D was about forty two eighty six, above the payout. And if the operator reviews earlier months, the loss can grow."
+        },
+        {
+          "v": "eq",
+          "h": "True cost after rejections",
+          "p": "Always calculate cost per accepted FTD. It is the only number that matches what you are paid. Use it in every kill and scale rule instead of the platform's cost per FTD.",
+          "d": [
+            "Spend",
+            "÷",
+            "Accepted qualified FTDs",
+            "=",
+            "True cost per FTD"
+          ],
+          "say": "So always calculate cost per accepted F T D. Follow the equation: spend divided by accepted, qualified F T Ds gives your true cost per F T D. It's the only number that matches what you're actually paid. Use it in every kill and scale rule, instead of the platform's cost per F T D."
+        },
+        {
+          "v": "cards",
+          "h": "How affiliate traffic attracts abuse",
+          "p": "Most abuse does not start with the player. It starts with a message or a source that rewards the wrong behaviour. Check your own funnel against this list.",
+          "d": [
+            "'Free money' angles|attract people who only want the bonus",
+            "Your own cash rewards|paying players to sign up is incentivised traffic",
+            "Code-sharing groups|posts that encourage new accounts for bonuses",
+            "Unvetted sub-affiliates|sources you cannot see or control",
+            "Per-account referral prizes|reward account opening, not genuine play"
+          ],
+          "say": "Most abuse doesn't start with the player. It starts with a message or a source that rewards the wrong behaviour. Check your funnel against these cards. Free money angles attract people who only want the bonus. Your own cash rewards, paying players to sign up, is incentivised traffic. Code-sharing groups encourage new accounts for bonuses. Unvetted sub-affiliates are sources you can't see or control. And per-account referral prizes reward account opening, not genuine play."
+        },
+        {
+          "v": "bars",
+          "h": "Example: qualified rate by source",
+          "p": "Example from one account. Most sources sit near the account average. The coupon sub-affiliate is far below it, which is the typical shape of incentivised or abusive traffic.",
+          "d": [
+            [
+              "Fixture ads",
+              78,
+              "78%"
+            ],
+            [
+              "Telegram tips channel",
+              70,
+              "70%"
+            ],
+            [
+              "Offer ads",
+              52,
+              "52%"
+            ],
+            [
+              "Coupon sub-affiliate",
+              21,
+              "21%"
+            ]
+          ],
+          "say": "Look at these bars. It's an example from one account, showing qualified rate by source. Fixture ads at seventy eight percent. The Telegram tips channel at seventy. Offer ads at fifty two. And the coupon sub-affiliate, way down at twenty one percent. Most sources sit near the account average. That one far below it is the typical shape of incentivised or abusive traffic."
+        },
+        {
+          "v": "check",
+          "h": "Signals in your own data",
+          "p": "You cannot see device or identity data, but you can see patterns. Any of these is a reason to look closer at a sub-ID. None of them proves abuse on its own. Two or more together usually do deserve a pause.",
+          "d": [
+            "FTD spike from one sub-ID within hours",
+            "Most FTDs exactly at the minimum deposit",
+            "Qualified rate far below the account average",
+            "Registrations from outside your target geos",
+            "Operator mentions duplicates or linked accounts",
+            "Redeposit rate near zero"
+          ],
+          "say": "You can't see device or identity data, but you can see patterns. Here are signals worth a closer look at a sub I D. An F T D spike from one sub I D within hours. Most F T Ds exactly at the minimum deposit. A qualified rate far below the account average. Registrations from outside your target geos. The operator mentioning duplicates or linked accounts. And a redeposit rate near zero. None proves abuse on its own. But two or more together usually deserve a pause."
+        },
+        {
+          "v": "product",
+          "h": "Trace each join back to its source",
+          "p": "If you run Telegram channels, give every post, partner and ad its own invite link. Then a sudden spike of joins, and the FTDs that follow, can be traced to one source instead of the whole channel.",
+          "d": {
+            "slug": "joinvoo",
+            "why": "Track which invite link and source each Telegram join came from, so a suspicious spike can be traced and closed."
+          },
+          "say": "If you run Telegram channels, give every post, partner and ad its own invite link. Then a sudden spike of joins, and the F T Ds that follow, can be traced to one source instead of the whole channel. Joinvoo tracks which invite link and source each Telegram join came from, so a suspicious spike can be traced and closed."
+        },
+        {
+          "v": "walk",
+          "h": "Investigate a flagged sub-ID",
+          "p": "When the operator flags a source, act quickly and with evidence. These steps protect both the relationship and your future commission. The same steps work whether the source is an ad, a channel post or a partner.",
+          "d": {
+            "steps": [
+              {
+                "title": "Read the flag",
+                "text": "Note which sub-ID, which dates and what pattern the operator saw.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Affiliate manager",
+                  "subtitle": "chat",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "Sub-ID TG_promo_07 has 18 FTDs this week; 11 linked to existing accounts. We will reject them."
+                    },
+                    {
+                      "from": "me",
+                      "text": "Understood. Pausing that source now and checking where the traffic came from."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Pause the source",
+                "text": "Stop spend or posting on that sub-ID before you investigate.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/ads",
+                  "title": "Ads",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Ad",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "TG_promo_07",
+                          "Paused"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "Pause first, investigate second."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Compare with your baseline",
+                "text": "Qualified rate, deposit sizes, geo and timing against your account average.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/quality",
+                  "title": "Sub-ID check",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Metric",
+                        "TG_promo_07",
+                        "Average"
+                      ],
+                      "rows": [
+                        [
+                          "Qualified rate",
+                          "22%",
+                          "71%"
+                        ],
+                        [
+                          "Min-deposit share",
+                          "89%",
+                          "35%"
+                        ],
+                        [
+                          "Out of geo",
+                          "14%",
+                          "2%"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Find the cause and fix it",
+                "text": "A post shared to a bonus group, a sub-affiliate, a misleading message. Remove it at the source.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/quality",
+                  "title": "Cause",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Cause",
+                      "value": "Post forwarded to a bonus-code group"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Fix",
+                      "value": "Removed post, banned forwarding of offer links"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Log fix"
+                    }
+                  ],
+                  "highlight": 2
+                }
+              },
+              {
+                "title": "Report back in writing",
+                "text": "Tell the manager what you found and what changed. Accept valid rejections.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Affiliate manager",
+                  "subtitle": "chat",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "Found it: our post was shared into a bonus group. Removed, source closed. We accept the rejections."
+                    },
+                    {
+                      "from": "them",
+                      "text": "Thanks for the quick fix. Noted on your account."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "say": "When the operator flags a source, act quickly and with evidence. Tap Next to follow each step. First, read the flag, noting which sub I D, which dates and what pattern they saw. Second, pause the source before you investigate. Third, compare it with your baseline: qualified rate, deposit sizes, geo and timing against your account average. Fourth, find the cause, like a post shared to a bonus group, a sub-affiliate, or a misleading message, and remove it at the source. Fifth, report back in writing, and accept valid rejections."
+        },
+        {
+          "v": "compare",
+          "h": "Wrong source habits and the fix",
+          "p": "These habits look like growth for a week and end in rejections. Each fix keeps the source honest. Check every live source against the left column today.",
+          "d": {
+            "a": {
+              "title": "Wrong",
+              "items": [
+                "Paying players a reward for signing up",
+                "Posting 'new account, new bonus' content",
+                "Buying traffic from sub-affiliates you cannot audit",
+                "Leaving offer links open to forwarding into groups"
+              ]
+            },
+            "b": {
+              "title": "Right",
+              "items": [
+                "No incentives unless the operator approves in writing",
+                "Moderate and remove such posts at once",
+                "Only vetted sources, each on its own sub-ID",
+                "Use sub-IDs per post and watch for spikes"
+              ]
+            }
+          },
+          "say": "These habits look like growth for a week and end in rejections. Paying players a reward for signing up. Posting new account, new bonus content. Buying traffic from sub-affiliates you can't audit. Leaving offer links open to forwarding into groups. And the right way: no incentives unless the operator approves in writing. Moderate and remove such posts at once. Only vetted sources, each on its own sub I D. And use sub I Ds per post, and watch for spikes. Check every live source against the left column today."
+        },
+        {
+          "v": "tip",
+          "h": "Never encourage it",
+          "p": "Encouraging people to open multiple accounts, share accounts, or misuse bonuses breaches operator terms and can amount to fraud. It also pulls in people chasing 'free money', who are often the most at risk of harm.",
+          "d": {
+            "kind": "warn",
+            "text": "Do not run, promote or tolerate bonus abuse or multi-accounting in your sources. Moderate your channels and remove any content that suggests it. Check local law and your affiliate terms."
+          },
+          "say": "Never encourage it. Encouraging people to open multiple accounts, share accounts, or misuse bonuses breaches operator terms and can amount to fraud. It also pulls in people chasing free money, who are often the most at risk of harm. As the warning says, don't run, promote or tolerate bonus abuse or multi-accounting in your sources. Moderate your channels, remove any content that suggests it, and check local law and your affiliate terms."
+        },
+        {
+          "v": "check",
+          "h": "Abuse decision rules",
+          "p": "Starting rules to adapt. They turn a vague worry into a clear action. Add them to the same sheet as your money rules so both are checked together.",
+          "more": "Example: account qualified rate is 70%. 60% of that is 42%. A sub-ID with 25 FTDs and 9 qualified has a rate of 36%, below 42%, so you pause it and investigate.",
+          "d": [
+            "Qualified rate on a sub-ID < 60% of account average over ≥ 20 FTDs: pause it",
+            "Operator flags > 10% of a source's FTDs in a month: close the source",
+            "Any incentivised traffic: only with written operator approval",
+            "New sub-affiliate: own sub-ID, cap of 20 FTDs until the first quality report",
+            "Use cost per accepted qualified FTD in every kill and scale rule"
+          ],
+          "say": "Here are abuse decision rules, to adapt. Qualified rate on a sub I D under sixty percent of the account average over twenty or more F T Ds, pause it. Operator flags over ten percent of a source's F T Ds in a month, close the source. Incentivised traffic only with written operator approval. A new sub-affiliate gets its own sub I D and a cap of twenty F T Ds until the first quality report. Example: account qualified rate seventy percent, sixty percent of that is forty two. A sub I D at thirty six percent is below, so pause and investigate."
+        },
+        {
+          "v": "quote",
+          "h": "From Dchessking",
+          "p": "A short note from the founder on why quality comes before volume when you work with operators. Keep it in mind every time a new source looks too good to be true.",
+          "d": "An FTD the operator rejects is not revenue. It is spend you have not admitted to losing yet.",
+          "by": "dchessking",
+          "say": "Here's a short note from the founder on why quality comes before volume. Keep it in mind every time a new source looks too good to be true. Here's how Dchessking puts it: An F T D the operator rejects is not revenue. It is spend you have not admitted to losing yet."
+        },
+        {
+          "v": "big",
+          "h": "Honest funnels attract honest players",
+          "p": "When your ads and channels talk about the game and the terms instead of free money, the people who arrive are there to play for fun. They qualify, they stay, and nobody has to claw anything back.",
+          "d": {
+            "b": "Your message decides who arrives",
+            "s": "Free-money messaging attracts free-money behaviour."
+          },
+          "say": "Honest funnels attract honest players. When your ads and channels talk about the game and the terms, instead of free money, the people who arrive are there to play for fun. They qualify, they stay, and nobody has to claw anything back. Your message decides who arrives. Free money messaging attracts free money behaviour."
+        }
+      ],
+      "takeaways": [
+        "Abusive FTDs are rejected and commission is withheld; you keep the spend.",
+        "Messages, incentives and unvetted sources are what attract abuse.",
+        "Watch sub-IDs for spikes, minimum deposits, out-of-geo sign-ups and low qualified rates.",
+        "Pause first, investigate, fix at the source, report in writing."
+      ],
+      "action": "List every source and sub-ID you run, mark any that use incentives, code-sharing or sources you cannot audit, and remove or close them today.",
+      "glossary": [
+        {
+          "term": "Bonus abuse",
+          "def": "Using bonuses in ways the operator's terms forbid, such as depositing only to extract a bonus."
+        },
+        {
+          "term": "Multi-accounting",
+          "def": "One person or group opening more than one account with an operator."
+        },
+        {
+          "term": "Incentivised traffic",
+          "def": "Players paid or rewarded by a third party to sign up or deposit."
+        },
+        {
+          "term": "Clawback",
+          "def": "Commission reversed or withheld after it was reported, usually for rejected players."
+        },
+        {
+          "term": "Sub-affiliate",
+          "def": "Another affiliate sending traffic through your link or account."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Example: 40 FTDs at $35 invoiced, 10 flagged, spend $1,100. What is the result?",
+          "options": [
+            "−$50",
+            "+$300",
+            "+$1,050",
+            "−$1,100"
+          ],
+          "answer": 0,
+          "why": "30 accepted × $35 = $1,050; $1,050 − $1,100 = −$50."
+        },
+        {
+          "q": "Account qualified rate 75%. A sub-ID has 30 FTDs and 12 qualified. What does the rule say?",
+          "options": [
+            "Keep it, 40% is fine",
+            "Scale it",
+            "Pause it, 40% is below 45%",
+            "Wait for 100 FTDs"
+          ],
+          "answer": 2,
+          "why": "60% of 75% is 45%. 12 ÷ 30 = 40%, below the line."
+        },
+        {
+          "q": "Which practice is acceptable?",
+          "options": [
+            "Paying players $3 each for signing up, unannounced",
+            "Using a separate sub-ID for each new source and capping it until the first quality report",
+            "Posting 'open a new account for another bonus'",
+            "Buying traffic from an unknown sub-affiliate"
+          ],
+          "answer": 1,
+          "why": "Separate sub-IDs and caps let you measure and control quality."
+        },
+        {
+          "q": "The operator flags 11 of a source's 18 FTDs as linked accounts. First step?",
+          "options": [
+            "Argue the rejection",
+            "Move the link to a new sub-ID",
+            "Increase budget to make up the loss",
+            "Pause the source"
+          ],
+          "answer": 3,
+          "why": "Pause first, then investigate and report."
+        },
+        {
+          "q": "Which message is most likely to attract bonus abusers?",
+          "options": [
+            "Free money, just sign up",
+            "Live odds for tonight's derby",
+            "Deposit with M-Pesa",
+            "Cash out on mobile"
+          ],
+          "answer": 0,
+          "why": "'Free money' attracts people who only want the bonus."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn how operators define bonus abuse and multi-accounting, and why they claw back commission for it. You'll learn to spot the warning signs in your own reports and set rules that keep abusive traffic out of your funnel.",
+      "say_outro": "So, abusive F T Ds are spend with no revenue, your message and sources decide who arrives, and clear rules turn worry into action. Your task: list every source and sub I D you run, mark any that use incentives, code-sharing or sources you can't audit, and remove or close them today. Now take the quiz."
+    },
+    {
+      "slug": "traffic-fraud-and-invalid-sources",
+      "title": "Traffic fraud, bots and invalid sources",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can recognise the main kinds of invalid traffic in an iGaming funnel.",
+        "By the end you can set up basic tracker filters and anomaly rules.",
+        "By the end you can raise a data discrepancy with an operator honestly and with evidence."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why invalid traffic hurts twice",
+          "p": "Bots and fake sign-ups cost you twice. You pay for the clicks, then the operator rejects the players and may question your whole account. On paid social the risk is smaller than on cheap open networks, but placements, sub-affiliates and fake sign-ups still leak in.",
+          "d": {
+            "b": "You pay for it, then you lose credit for it",
+            "s": "Filter early, measure often."
+          },
+          "say": "Bots and fake sign-ups cost you twice. You pay for the clicks, then the operator rejects the players and may question your whole account. On paid social, the risk is smaller than on cheap open networks, but placements, sub-affiliates and fake sign-ups still leak in. You pay for it, then you lose credit for it. So filter early, and measure often."
+        },
+        {
+          "v": "cards",
+          "h": "Kinds of invalid traffic",
+          "p": "Know the main kinds so you can match a symptom to a cause. Each one shows up differently in your funnel numbers. Most real cases are a mix, so check several numbers before you decide.",
+          "d": [
+            "Bots|automated clicks with no human behind them",
+            "Click spam|inflated clicks from low-quality placements",
+            "Fake sign-ups|registrations with made-up details",
+            "Out-of-geo traffic|visits from countries you do not target, often via VPN",
+            "Stolen payment use|deposits later reversed as chargebacks",
+            "Underage attempts|blocked at KYC, but your targeting must prevent them"
+          ],
+          "say": "Know the main kinds of invalid traffic, so you can match a symptom to a cause. Bots, automated clicks with no human behind them. Click spam, inflated clicks from low-quality placements. Fake sign-ups with made-up details. Out-of-geo traffic from countries you don't target, often through a V P N. Stolen payment use, deposits later reversed as chargebacks. And underage attempts, blocked at K Y C, know your customer checks, but your targeting must prevent them. Most real cases are a mix, so check several numbers before you decide."
+        },
+        {
+          "v": "funnel",
+          "h": "Example: a healthy funnel",
+          "p": "Example of a healthy-looking paid social funnel. Most clicks reach the lander, a reasonable share register, and about one in ten registrations deposits. Compare it with the next slide.",
+          "d": [
+            [
+              "Clicks",
+              10000
+            ],
+            [
+              "Lander views",
+              9200
+            ],
+            [
+              "Registrations",
+              600
+            ],
+            [
+              "FTDs",
+              60
+            ]
+          ],
+          "say": "Here's an example of a healthy-looking paid social funnel. Ten thousand clicks. Nine thousand two hundred lander views, so most clicks reach the page. Six hundred registrations. And sixty F T Ds, first-time deposits, so about one in ten registrations deposits. Keep this shape in mind, and compare it with the next slide."
+        },
+        {
+          "v": "funnel",
+          "h": "Example: a suspicious funnel",
+          "p": "Same clicks, very different shape. Two thirds of clicks never load the lander, yet registrations are high and deposits are tiny. That pattern points to bots, accidental clicks or fake sign-ups.",
+          "more": "Click to view: 3,100 ÷ 10,000 = 31% against 92% in the healthy funnel. Registration to FTD: 9 ÷ 900 = 1% against 10%. A rough guide, varies by geo and source: if click-to-view falls far below your normal, or registration-to-FTD collapses while registrations rise, investigate the placement or source before spending more.",
+          "d": [
+            [
+              "Clicks",
+              10000
+            ],
+            [
+              "Lander views",
+              3100
+            ],
+            [
+              "Registrations",
+              900
+            ],
+            [
+              "FTDs",
+              9
+            ]
+          ],
+          "say": "Same clicks, very different shape. Ten thousand clicks, but only three thousand one hundred lander views, about thirty one percent against ninety two in the healthy funnel. Yet nine hundred registrations, and just nine F T Ds, one percent against ten. Two thirds of clicks never load the lander, registrations are high, and deposits are tiny. That pattern points to bots, accidental clicks or fake sign-ups. As a rough guide that varies by geo and source, if these ratios collapse, investigate the placement or source before spending more."
+        },
+        {
+          "v": "walk",
+          "h": "Set up basic tracker filters",
+          "p": "Most trackers have settings like these. Names and options vary; check your tracker's documentation. These filters do not catch everything, but they remove the obvious junk and make anomalies easier to see.",
+          "d": {
+            "steps": [
+              {
+                "title": "Turn on bot filtering",
+                "text": "Filter known bots and data-centre IP ranges where your tracker supports it.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "tracker.example/settings",
+                  "title": "Traffic filters",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Filter known bots",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Flag data-centre IPs",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Flag duplicate click IDs",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Restrict geos",
+                "text": "Send visitors outside your target and licensed geos to a neutral page, never to the offer.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "tracker.example/settings",
+                  "title": "Geo rules",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Allowed geos",
+                      "value": "NG, KE, GH"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Other geos",
+                      "value": "Neutral info page"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Only send traffic where the operator is licensed."
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Record the details",
+                "text": "Keep placement, device and source in every click so you can find bad pockets.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "tracker.example/settings",
+                  "title": "Parameters",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "sub2",
+                      "value": "{placement}"
+                    },
+                    {
+                      "type": "field",
+                      "label": "sub3",
+                      "value": "{device}"
+                    },
+                    {
+                      "type": "field",
+                      "label": "sub4",
+                      "value": "{source}"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Set an alert",
+                "text": "Get notified when a ratio moves far from normal.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "tracker.example/alerts",
+                  "title": "New alert",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Metric",
+                      "value": "Click to lander view"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Condition",
+                      "value": "below 70% for 2 hours"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Save alert"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              }
+            ]
+          },
+          "say": "Most trackers have settings like these, though names vary, so check your tracker's documentation. Tap Next to follow each step. First, turn on bot filtering, filtering known bots and data-centre I P ranges where supported. Second, restrict geos, sending visitors outside your target and licensed geos to a neutral page, never to the offer. Third, record placement, device and source on every click, so you can find bad pockets. Fourth, set an alert for when a ratio moves far from normal. These won't catch everything, but they remove the obvious junk."
+        },
+        {
+          "v": "eq",
+          "h": "What chargebacks cost you",
+          "p": "When a deposit is reversed as a chargeback, the operator usually reverses the commission on it. Some deals also include extra penalties for fraud. Read your terms before you need them.",
+          "more": "Example: 4 FTDs in a month turn out to use stolen cards and are charged back. 4 × $40 = $160 reversed. If those came from one sub-ID, that sub-ID's true cost per accepted FTD rises sharply, and the operator will watch your account more closely. We are not certain how each operator handles chargebacks; it depends on your contract.",
+          "d": [
+            "Chargeback FTDs",
+            "×",
+            "Payout",
+            "=",
+            "Commission reversed"
+          ],
+          "say": "When a deposit is reversed as a chargeback, the operator usually reverses the commission on it. Follow the equation: chargeback F T Ds times payout equals commission reversed. Example: four F T Ds in a month turn out to use stolen cards. Four times forty dollars is one hundred sixty dollars reversed. If they came from one sub I D, its true cost per accepted F T D rises sharply. Some deals add extra penalties for fraud, and we're not certain how each operator handles chargebacks. It depends on your contract, so read your terms before you need them."
+        },
+        {
+          "v": "check",
+          "h": "Fraud decision rules",
+          "p": "Starting rules to adapt. Rough guides; set your own normal from two weeks of clean data. Write your own normal ratios at the top of the sheet so the alerts have something to compare against.",
+          "d": [
+            "Click to lander view < 70% on a placement: exclude it",
+            "Visits from outside target geos > 5%: check targeting and VPN patterns",
+            "Registration to FTD below half your 30-day average for 2 days: pause the source",
+            "Any chargeback cluster on one sub-ID: pause it and tell the operator",
+            "Unknown source sending traffic on your link: close the link and issue a new one"
+          ],
+          "say": "Here are fraud decision rules, rough guides to adapt. Set your own normal from two weeks of clean data. Click to lander view under seventy percent on a placement, exclude it. Visits from outside target geos over five percent, check targeting and V P N patterns. Registration to F T D below half your thirty day average for two days, pause the source. Any chargeback cluster on one sub I D, pause it and tell the operator. And an unknown source using your link, close it and issue a new one."
+        },
+        {
+          "v": "compare",
+          "h": "Common fraud mistakes",
+          "p": "Most affiliates do not commit fraud; they just fail to notice it until the operator does. Each fix below makes problems visible earlier, while they are still cheap.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Celebrating a registration spike",
+                "Leaving all placements on with no check",
+                "Sharing one tracking link everywhere",
+                "Ignoring out-of-geo visits",
+                "Hiding a problem from the manager"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Check the FTD rate behind it",
+                "Review placement reports weekly",
+                "One link per source and sub-ID",
+                "Neutral page for other geos",
+                "Report it first, with evidence"
+              ]
+            }
+          },
+          "say": "Most affiliates don't commit fraud. They just fail to notice it until the operator does. Celebrating a registration spike. Leaving all placements on with no check. Sharing one tracking link everywhere. Ignoring out-of-geo visits. Hiding a problem from the manager. And the fixes: check the F T D rate behind any spike. Review placement reports weekly. Use one link per source and sub I D. Send other geos to a neutral page. And report problems first, with evidence."
+        },
+        {
+          "v": "tip",
+          "h": "Geo and age compliance",
+          "p": "Sending traffic into a country where the operator is not licensed can break the law there and your contract. Under-age sign-ups are illegal and harmful, even if KYC blocks them later. Your targeting, creatives and geo rules must prevent both.",
+          "d": {
+            "kind": "warn",
+            "text": "Target only adults in geos where the operator is licensed and the platform allows gambling ads. Check local law and platform policy before running. We are not certain every platform's allowed-country list is current; check before relying on it."
+          },
+          "say": "Sending traffic into a country where the operator isn't licensed can break the law there and your contract. Under-age sign-ups are illegal and harmful, even if K Y C blocks them later. Your targeting, creatives and geo rules must prevent both. As the warning says, target only adults in geos where the operator is licensed and the platform allows gambling ads. Check local law and platform policy, and we're not certain every platform's allowed-country list is current, so check before relying on it."
+        },
+        {
+          "v": "phone",
+          "h": "Raising a discrepancy honestly",
+          "p": "Sometimes the problem is on the operator side: postbacks failing or players not credited. Raise it with data, not accusations. Here is a good example.",
+          "d": {
+            "app": "chat",
+            "title": "Affiliate manager",
+            "subtitle": "online",
+            "messages": [
+              {
+                "from": "me",
+                "text": "Last week our tracker shows 52 FTDs on sub-ID NG_Derby, your report shows 41. That is a 21% gap. Here is our click ID export."
+              },
+              {
+                "from": "them",
+                "text": "Thanks. 6 failed KYC and 2 were duplicates. Checking the other 3 with tech."
+              },
+              {
+                "from": "me",
+                "text": "That explains 8. Could you confirm the last 3 and whether the postback was down?"
+              },
+              {
+                "from": "them",
+                "text": "Postback failed for 3 hours on Saturday. Adding those 3 to your report."
+              }
+            ]
+          },
+          "say": "Sometimes the problem is on the operator's side. In this chat, notice how it's raised with data, not accusations. You point out the tracker shows fifty two F T Ds on a sub I D, the report shows forty one, a twenty one percent gap, and you share your click I D export. The manager explains six failed K Y C and two were duplicates. You ask about the last three and whether the postback was down. They find it failed for three hours on Saturday, and add those three to your report."
+        },
+        {
+          "v": "table",
+          "h": "Reading a reconciliation",
+          "p": "Example: break the gap into parts. Some gaps are legitimate rejections; some are tracking failures you should be credited for. Write each down so you learn what normal looks like.",
+          "d": {
+            "cols": [
+              "Reason",
+              "FTDs",
+              "Credited?"
+            ],
+            "rows": [
+              [
+                "Tracker count",
+                "52",
+                "start"
+              ],
+              [
+                "Failed KYC",
+                "−6",
+                "no, normal"
+              ],
+              [
+                "Duplicates",
+                "−2",
+                "no, normal"
+              ],
+              [
+                "Postback outage",
+                "3",
+                "yes, added back"
+              ],
+              [
+                "Final credited",
+                "44",
+                "41 + 3"
+              ]
+            ]
+          },
+          "say": "Here's how to read that reconciliation. It's an example. Start with the tracker count, fifty two. Minus six that failed K Y C, which is normal and not credited. Minus two duplicates, also normal. Then three lost to the postback outage, which are added back. The final credited figure is forty four, the report's forty one plus three. Some gaps are legitimate rejections, and some are tracking failures you should be credited for. Write each down so you learn what normal looks like."
+        },
+        {
+          "v": "big",
+          "h": "Clean traffic is a reputation",
+          "p": "Operators talk to their affiliates and to each other through their managers and networks. A buyer known for clean, adult, in-geo traffic gets better deals and faster answers. That reputation takes months to build and one bad source to damage.",
+          "d": {
+            "b": "Clean traffic earns better deals",
+            "s": "Protect your reputation like your bankroll."
+          },
+          "say": "Clean traffic is a reputation. Operators talk to their affiliates, and to each other, through their managers and networks. A buyer known for clean, adult, in-geo traffic gets better deals and faster answers. That reputation takes months to build, and just one bad source to damage. Protect your reputation like your bankroll."
+        }
+      ],
+      "takeaways": [
+        "Invalid traffic costs you the spend and the operator's trust.",
+        "Compare funnel shapes: click-to-view and registration-to-FTD reveal most junk.",
+        "Filter bots, restrict geos, record placements and set alerts.",
+        "Raise discrepancies with evidence and accept legitimate rejections."
+      ],
+      "action": "Turn on your tracker's bot and geo filters, add placement and device to your sub-IDs, and set one alert for click-to-lander view below 70%.",
+      "glossary": [
+        {
+          "term": "Invalid traffic",
+          "def": "Clicks or visits not made by genuine interested people, such as bots or accidental clicks."
+        },
+        {
+          "term": "Chargeback",
+          "def": "A card payment reversed by the bank, often after a fraud claim."
+        },
+        {
+          "term": "Click-to-view rate",
+          "def": "Lander views ÷ clicks; a low rate can signal bots or accidental clicks."
+        },
+        {
+          "term": "Neutral page",
+          "def": "A non-offer page shown to visitors you must not send to the offer, such as those outside licensed geos."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "10,000 clicks, 4,000 lander views. What is the click-to-view rate and the rule?",
+          "options": [
+            "4%, scale it",
+            "40%, keep it",
+            "60%, keep it",
+            "40%, exclude the placement"
+          ],
+          "answer": 3,
+          "why": "4,000 ÷ 10,000 = 40%, below the 70% line."
+        },
+        {
+          "q": "Your 30-day registration-to-FTD rate is 10%. For two days it has been 4%. What do you do?",
+          "options": [
+            "Pause the source",
+            "Scale",
+            "Nothing",
+            "Add a new geo"
+          ],
+          "answer": 0,
+          "why": "4% is below half of 10% for two days, so pause the source."
+        },
+        {
+          "q": "6 FTDs are charged back at a $35 payout. How much commission is reversed?",
+          "options": [
+            "$35",
+            "$175",
+            "$210",
+            "$350"
+          ],
+          "answer": 2,
+          "why": "6 × $35 = $210."
+        },
+        {
+          "q": "Tracker 60 FTDs, operator 48. 7 failed KYC, 1 duplicate. How many are unexplained?",
+          "options": [
+            "8",
+            "4",
+            "12",
+            "0"
+          ],
+          "answer": 1,
+          "why": "60 − 48 = 12; 7 + 1 = 8 explained; 4 remain to check."
+        },
+        {
+          "q": "Visitors from a country where your operator is not licensed reach your tracker. What should happen?",
+          "options": [
+            "Send them to the offer anyway",
+            "Ignore it",
+            "Send them to a different operator",
+            "Send them to a neutral page and fix targeting"
+          ],
+          "answer": 3,
+          "why": "Never send traffic into an unlicensed geo; route to a neutral page and tighten targeting."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn to recognise bots, fake sign-ups and other invalid traffic in an iGaming funnel. You'll set up basic tracker filters and alerts, and learn how to raise a data gap with an operator honestly and with evidence.",
+      "say_outro": "So, know the kinds of invalid traffic, compare your funnel shape to normal, filter early, and raise discrepancies with data. Your task: turn on your tracker's bot and geo filters, add placement and device to your sub I Ds, and set one alert for click to lander view below seventy percent. Now take the quiz."
+    },
+    {
+      "slug": "weekly-quality-review",
+      "title": "The weekly quality review",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can build a sub-ID quality scorecard combining cost and quality.",
+        "By the end you can apply kill, hold and scale rules on qualified numbers.",
+        "By the end you can write a short weekly quality note to your affiliate manager."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why a weekly review",
+          "p": "Quality problems grow quietly. One week of bad traffic is a small loss; four weeks is a clawback, a cut payout or a lost deal. A fixed weekly review catches problems while they are cheap, and gives your manager the evidence to defend your account inside the operator.",
+          "d": {
+            "b": "Once a week, every week",
+            "s": "Small problems stay small."
+          },
+          "say": "Quality problems grow quietly. One week of bad traffic is a small loss. Four weeks is a clawback, a cut payout, or a lost deal. A fixed weekly review catches problems while they're still cheap, and gives your manager the evidence to defend your account inside the operator. Once a week, every week. Small problems stay small."
+        },
+        {
+          "v": "flow",
+          "h": "The Monday routine",
+          "p": "Run this every Monday morning for the previous week, before you make budget changes. It takes about an hour once the sheet is built. Same day, same order, every week.",
+          "d": [
+            "Pull operator report",
+            "Reconcile with tracker",
+            "Fill the scorecard",
+            "Apply the rules",
+            "Make changes",
+            "Send the quality note"
+          ],
+          "say": "Here's the Monday routine. Run it every Monday morning for the previous week, before you make any budget changes. Follow the flow. Pull the operator report. Reconcile it with your tracker. Fill the scorecard. Apply the rules. Make the changes. And send the quality note. Once the sheet is built, it takes about an hour. Same day, same order, every week."
+        },
+        {
+          "v": "table",
+          "h": "Example: a sub-ID scorecard",
+          "p": "Example: three sub-IDs for one week. Target cost per qualified FTD is $30, payout $40, account qualified rate 70%. Each row gets a decision from the rules on the next slide.",
+          "more": "Derby: $330 ÷ 15 = $22. The scale line is 0.8 × $30 = $24, so it qualifies to scale. Feature: $270 ÷ 9 = $30, at target, so hold. Offer: $150 is 5 × target, CPA $75 is above the kill line (lower of 1.5 × $30 = $45 and $40 break-even, so $40), and the qualified rate of 33% is below 60% of 70% = 42%. Kill.",
+          "d": {
+            "cols": [
+              "Sub-ID",
+              "Spend / Qual",
+              "Cost per qual",
+              "Qual rate"
+            ],
+            "rows": [
+              [
+                "NG_Derby_v1",
+                "$330 / 15",
+                "$22.00",
+                "75%"
+              ],
+              [
+                "NG_Feature_v2",
+                "$270 / 9",
+                "$30.00",
+                "69%"
+              ],
+              [
+                "NG_Offer_v3",
+                "$150 / 2",
+                "$75.00",
+                "33%"
+              ]
+            ]
+          },
+          "say": "Here's an example scorecard for three sub I Ds. Target cost per qualified F T D, first-time deposit, is thirty dollars, payout forty, and the account qualified rate is seventy percent. Derby spent three hundred thirty for fifteen qualified, twenty two dollars each, under the twenty four dollar scale line, so it qualifies to scale. Feature spent two hundred seventy for nine, thirty dollars, right at target, so hold. And the Offer sub I D, at seventy five dollars per qualified and a thirty three percent qualified rate, you'll judge yourself in the lab in a moment."
+        },
+        {
+          "v": "check",
+          "h": "The combined rule card",
+          "p": "Starting rules to adapt. The money rules come from the foundations school; the quality gates are new in this module. A sub-ID must pass the quality gate before any scale step.",
+          "d": [
+            "Kill: spend ≥ 2 × target with 0 qualified FTDs",
+            "Kill: cost per qualified > lower of 1.5 × target and break-even, after 3 × target spend",
+            "Quality gate: qualified rate ≥ 60% of account average over ≥ 20 FTDs",
+            "Scale +20% every ≥ 48 hours at cost per qualified ≤ 0.8 × target with ≥ 3 qualified",
+            "Operator flag on a sub-ID: pause within 24 hours"
+          ],
+          "say": "This is the combined rule card, starting rules to adapt. Kill when spend is two times target with zero qualified F T Ds. Kill when cost per qualified is above the lower of one point five times target and break-even, after three times target spend. The quality gate: qualified rate at least sixty percent of the account average, over twenty or more F T Ds. Scale plus twenty percent, at least forty eight hours apart, at cost per qualified of zero point eight times target or less, with three or more qualified. And an operator flag means pause within twenty four hours. A sub I D must pass the quality gate before any scale step."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: judge on qualified FTDs",
+          "p": "Use the kill-scale lab with qualified FTDs as the conversions. Payout is $40, so break-even is $40. Decide kill, hold or scale. Then read the explanation to check your reasoning.",
+          "more": "3 × $30 = $90 of spend has been passed. $150 ÷ 2 = $75 per qualified FTD. The kill line is the lower of 1.5 × $30 = $45 and break-even $40, so $40. $75 is far above it. Kill.",
+          "d": {
+            "kind": "killscale",
+            "task": "Spend $150, 2 qualified FTDs, target CPA $30, 4 days. Kill, hold or scale?",
+            "preset": {
+              "spend": 150,
+              "conversions": 2,
+              "target_cpa": 30,
+              "days": 4
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "kill"
+            }
+          },
+          "say": "Now use the kill-scale lab, with qualified F T Ds as the conversions. The spend is one hundred fifty dollars, with two qualified F T Ds, a thirty dollar target C P A, cost per acquisition, over four days. The payout is forty dollars, so break-even is forty. Decide kill, hold or scale. Pause and try it, then check your answer, and read the explanation to check your reasoning."
+        },
+        {
+          "v": "walk",
+          "h": "Fill the scorecard",
+          "p": "Build the scorecard once and copy it each week. These steps assume your operator export and your platform export use the same sub-IDs. Formulas make the decision consistent, whoever on the team runs the review.",
+          "d": {
+            "steps": [
+              {
+                "title": "Paste the operator export",
+                "text": "FTDs, qualified FTDs and NGR per sub-ID for last week.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/scorecard",
+                  "title": "Operator data",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Sub-ID",
+                        "FTD",
+                        "Qual"
+                      ],
+                      "rows": [
+                        [
+                          "NG_Derby_v1",
+                          "20",
+                          "15"
+                        ],
+                        [
+                          "NG_Offer_v3",
+                          "6",
+                          "2"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Paste the spend",
+                "text": "Spend per sub-ID from the ad platform for the same dates and time zone.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/scorecard",
+                  "title": "Spend",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Sub-ID",
+                        "Spend"
+                      ],
+                      "rows": [
+                        [
+                          "NG_Derby_v1",
+                          "$330"
+                        ],
+                        [
+                          "NG_Offer_v3",
+                          "$150"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "Check the account time zone matches the report."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Let the formulas decide",
+                "text": "Cost per qualified, qualified rate and a rule column that prints kill, hold or scale.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/scorecard",
+                  "title": "Decisions",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Sub-ID",
+                        "Cost/qual",
+                        "Rule"
+                      ],
+                      "rows": [
+                        [
+                          "NG_Derby_v1",
+                          "$22.00",
+                          "Scale +20%"
+                        ],
+                        [
+                          "NG_Offer_v3",
+                          "$75.00",
+                          "Kill"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Act and log",
+                "text": "Make the changes in the ad platform and note them with the date.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/scorecard",
+                  "title": "Change log",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Change",
+                      "value": "Derby budget $50 to $60; Offer_v3 off"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Date",
+                      "value": "Monday"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Save"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Build the scorecard once and copy it each week. Tap Next to follow each step. First, paste the operator export: F T Ds, qualified F T Ds and N G R, net gaming revenue, per sub I D for last week. Second, paste spend per sub I D from the ad platform for the same dates and time zone. Third, let the formulas work out cost per qualified, qualified rate, and a rule column that prints kill, hold or scale. Fourth, make the changes in the ad platform and log them with the date. Formulas keep decisions consistent, whoever runs the review."
+        },
+        {
+          "v": "phone",
+          "h": "The weekly quality note",
+          "p": "A short note to your affiliate manager every week builds trust. It shows you watch quality, gives them evidence to defend your account, and invites them to raise problems early.",
+          "d": {
+            "app": "chat",
+            "title": "Affiliate manager",
+            "subtitle": "online",
+            "messages": [
+              {
+                "from": "me",
+                "text": "Weekly note: 44 FTDs, 32 qualified (73%). Closed NG_Offer_v3 for low quality. Scaling NG_Derby_v1 by 20%."
+              },
+              {
+                "from": "me",
+                "text": "Anything on your side we should know about? Any flagged players or compliance notes?"
+              },
+              {
+                "from": "them",
+                "text": "All clean this week. Derby traffic is redepositing well. Keep it up."
+              }
+            ]
+          },
+          "say": "A short weekly note to your affiliate manager builds trust. In this chat, notice what it covers. Forty four F T Ds, thirty two qualified, seventy three percent. One sub I D closed for low quality, and Derby scaled by twenty percent. Then you ask if there's anything on their side, like flagged players or compliance notes. The manager replies all clean, and Derby traffic is redepositing well. It shows you watch quality, gives them evidence, and invites them to raise problems early."
+        },
+        {
+          "v": "compare",
+          "h": "Common review mistakes",
+          "p": "The review only works if it is regular and honest. These are the ways it quietly stops working. Check your own routine against the left column once a month.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Skipping the review in a good week",
+                "Making budget changes before reconciling",
+                "Judging on platform FTDs",
+                "Hiding a bad source from the manager",
+                "No change log"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Same day, every week",
+                "Reconcile first, act second",
+                "Use qualified FTDs",
+                "Report it with the fix",
+                "Log every change with a date"
+              ]
+            }
+          },
+          "say": "The review only works if it's regular and honest. Here's how it quietly stops working. Skipping it in a good week. Making budget changes before reconciling. Judging on platform F T Ds. Hiding a bad source from the manager. No change log. And the fixes: same day, every week. Reconcile first, act second. Use qualified F T Ds. Report problems with the fix. And log every change with a date. Check your routine against the left column once a month."
+        },
+        {
+          "v": "tip",
+          "h": "Records and data protection",
+          "p": "Keep scorecards, change logs, approvals and reports for at least the length of your contract. Store only aggregate or ID-level data you are allowed to hold, and never pass player-level data outside your team.",
+          "d": {
+            "kind": "warn",
+            "text": "Follow local data protection law and your affiliate terms on what player data you may store and share. We are not certain of every operator's data terms; read yours."
+          },
+          "say": "Keep scorecards, change logs, approvals and reports for at least the length of your contract. Store only aggregate or I D-level data you're allowed to hold, and never pass player-level data outside your team. As the warning says, follow local data protection law and your affiliate terms on what player data you may store and share. We're not certain of every operator's data terms, so read yours."
+        },
+        {
+          "v": "partner",
+          "h": "Pick partners who share quality data",
+          "p": "You cannot run this review without sub-ID level data. Operators and networks that share qualified FTDs and NGR by sub-ID, quickly and reliably, are worth more than ones that pay slightly more but tell you nothing.",
+          "d": {
+            "vertical": "igaming",
+            "note": "Ask before signing: do you report qualified FTDs and NGR by sub-ID, how often, and with what delay?"
+          },
+          "say": "You can't run this review without sub I D level data. So operators and networks that share qualified F T Ds and N G R by sub I D, quickly and reliably, are worth more than ones that pay slightly more but tell you nothing. Before signing, ask: do you report qualified F T Ds and N G R by sub I D, how often, and with what delay?"
+        },
+        {
+          "v": "cards",
+          "h": "What the review protects",
+          "p": "The weekly review is not paperwork. Each part protects something you would otherwise lose. Read them as the reasons to keep the habit in a good week.",
+          "d": [
+            "Your margin|bad sub-IDs cut before they cost a month",
+            "Your payout|operator sees quality before it renegotiates",
+            "Your account|flags handled within a day",
+            "Your players|complaints and RG issues spotted early"
+          ],
+          "say": "The weekly review isn't paperwork. Each part protects something you'd otherwise lose. Your margin, because bad sub I Ds are cut before they cost a month. Your payout, because the operator sees quality before it renegotiates. Your account, because flags are handled within a day. And your players, because complaints and responsible gambling issues are spotted early. Read these as the reasons to keep the habit, even in a good week."
+        },
+        {
+          "v": "big",
+          "h": "Add RG to the review",
+          "p": "Add one line to every weekly review: any player complaints, operator responsible gambling notes, or creatives that drew worried comments. Stop any creative that draws them. Quality includes the wellbeing of the people you send.",
+          "d": {
+            "b": "One RG line in every review",
+            "s": "Complaints and worried comments stop the creative."
+          },
+          "say": "Finally, add one responsible gambling line to every weekly review. Note any player complaints, any responsible gambling notes from the operator, and any creatives that drew worried comments. Stop any creative that draws them. Quality includes the wellbeing of the people you send."
+        }
+      ],
+      "takeaways": [
+        "Review every week, reconcile first, then act.",
+        "Judge on cost per qualified FTD, with a quality gate before any scale step.",
+        "Send your manager a short weekly quality note.",
+        "Include responsible gambling signals in the review."
+      ],
+      "action": "Build your weekly scorecard with spend, FTDs, qualified FTDs, cost per qualified and a rule column, fill it for last week, and send your affiliate manager a three-line quality note.",
+      "glossary": [
+        {
+          "term": "Scorecard",
+          "def": "A weekly table of sub-IDs with cost and quality numbers and the decision for each."
+        },
+        {
+          "term": "Quality gate",
+          "def": "A minimum quality level a sub-ID must reach before it can be scaled."
+        },
+        {
+          "term": "Change log",
+          "def": "A dated record of every budget, creative or targeting change."
+        },
+        {
+          "term": "Quality note",
+          "def": "A short weekly message to the affiliate manager summarising volume, quality and actions."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Target $30, payout $40. A sub-ID spent $96 for 4 qualified FTDs with a 72% qualified rate (account 70%). Verdict?",
+          "options": [
+            "Kill",
+            "Hold",
+            "Scale +20%",
+            "Pause for quality"
+          ],
+          "answer": 2,
+          "why": "$96 ÷ 4 = $24, at the 0.8 × $30 = $24 scale line, with ≥ 3 qualified and a healthy rate."
+        },
+        {
+          "q": "Target $30. A sub-ID spent $60 with 0 qualified FTDs. Verdict?",
+          "options": [
+            "Hold",
+            "Wait 3 days",
+            "Scale",
+            "Kill"
+          ],
+          "answer": 3,
+          "why": "$60 is 2 × target with 0 qualified, the zero-conversion kill line."
+        },
+        {
+          "q": "A sub-ID has a cost per qualified of $20 (target $30) but a 35% qualified rate over 30 FTDs; account average 70%. What do you do?",
+          "options": [
+            "Do not scale; it fails the quality gate, investigate",
+            "Scale, the cost is low",
+            "Kill immediately",
+            "Raise the bid"
+          ],
+          "answer": 0,
+          "why": "60% of 70% is 42%; 35% fails the gate, so no scale step until it is understood."
+        },
+        {
+          "q": "What comes first in the Monday routine?",
+          "options": [
+            "Raise budgets",
+            "Pull the operator report and reconcile",
+            "Send the quality note",
+            "Launch new creatives"
+          ],
+          "answer": 1,
+          "why": "Reconcile before you act."
+        },
+        {
+          "q": "What should a partner tell you before you sign, for this review to work?",
+          "options": [
+            "Their logo files",
+            "Their office address",
+            "Whether they report qualified FTDs and NGR by sub-ID, and how often",
+            "Their social media followers"
+          ],
+          "answer": 2,
+          "why": "Without sub-ID quality data you cannot run the review."
+        }
+      ],
+      "say_intro": "In this lesson you'll pull everything together into a weekly quality review. You'll build a sub I D scorecard that combines cost and quality, apply kill, hold and scale rules on qualified numbers, and send a short note to your affiliate manager.",
+      "say_outro": "So, review every week in the same order, reconcile before you act, use qualified numbers, pass the quality gate before scaling, and add a responsible gambling line. Your task: build your weekly scorecard with spend, F T Ds, qualified F T Ds, cost per qualified and a rule column, fill it for last week, and send your affiliate manager a three line quality note. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "Spend $1,400. Meta reports 50 FTDs; the operator qualifies 35. Payout $40. What is the true cost per qualified FTD and the result?",
+      "options": [
+        "$28, +$12 each",
+        "$40, +$12 each",
+        "$28, −$12 each",
+        "$40, break-even"
+      ],
+      "answer": 3,
+      "why": "$1,400 ÷ 35 = $40, exactly the payout, so break-even before costs."
+    },
+    {
+      "q": "Payout $45, 60% qualify, margin 20%. Most you can pay per reported FTD?",
+      "options": [
+        "$21.60",
+        "$27.00",
+        "$36.00",
+        "$45.00"
+      ],
+      "answer": 0,
+      "why": "$45 × 0.60 = $27; $27 × 0.80 = $21.60."
+    },
+    {
+      "q": "Tracker 80 FTDs, operator 68. 6 failed KYC. What is the gap and what is left to explain?",
+      "options": [
+        "15%; 12 unexplained",
+        "12%; 12 unexplained",
+        "15%; 6 unexplained",
+        "8%; 6 unexplained"
+      ],
+      "answer": 2,
+      "why": "(80 − 68) ÷ 80 = 15%; 12 missing minus 6 explained by KYC leaves 6."
+    },
+    {
+      "q": "A cohort of 40 qualified players earned $2,000 NGR in six months. One player produced $900 of it. What do you do?",
+      "options": [
+        "Judge it on the total only",
+        "Build a lookalike of that player",
+        "Kill the ad set",
+        "Report it with and without that player"
+      ],
+      "answer": 3,
+      "why": "$900 ÷ $2,000 = 45%, above 25% concentration, so show both views. Never target heavy players."
+    },
+    {
+      "q": "Example: 60 FTDs at $40 invoiced, 18 flagged, spend $1,800. What is the result?",
+      "options": [
+        "−$120",
+        "+$600",
+        "+$480",
+        "−$600"
+      ],
+      "answer": 0,
+      "why": "42 × $40 = $1,680; $1,680 − $1,800 = −$120."
+    },
+    {
+      "q": "Which is the strongest sign a source is sending incentivised or abusive traffic?",
+      "options": [
+        "CTR above average",
+        "CPM higher on weekends",
+        "Qualified rate 22% against an account average of 70%, most FTDs at minimum deposit",
+        "More mobile than desktop traffic"
+      ],
+      "answer": 2,
+      "why": "Very low qualified rate plus minimum deposits is the typical pattern."
+    },
+    {
+      "q": "Daily budget $15, target CPA $20. Roughly how many FTDs a week at target, and which event do you start with?",
+      "options": [
+        "About 20; FTD",
+        "About 5; registration, judged on qualified FTDs",
+        "About 10; FTD",
+        "About 1; purchase value"
+      ],
+      "answer": 1,
+      "why": "$15 ÷ $20 = 0.75 a day, about 5 a week, below the rough 10 a week line, so optimise for registration and judge on qualified FTDs."
+    },
+    {
+      "q": "Click-to-view rate on a placement is 45%, account normal 90%. What do you do?",
+      "options": [
+        "Exclude the placement",
+        "Raise its bid",
+        "Nothing",
+        "Move it to a new account"
+      ],
+      "answer": 0,
+      "why": "Below 70% click-to-view, exclude the placement."
+    },
+    {
+      "q": "Target $25, payout $35. A sub-ID spent $100 with 3 qualified FTDs and a 68% qualified rate (account 70%). What is the verdict?",
+      "options": [
+        "Kill",
+        "Pause for quality",
+        "Scale +20%",
+        "Hold"
+      ],
+      "answer": 3,
+      "why": "$100 ÷ 3 = $33.33. The kill line is the lower of 1.5 × $25 = $37.50 and break-even $35, so $35; $33.33 is under it. The scale line is $20; it is above it. Quality passes. Hold."
+    },
+    {
+      "q": "Which value should go into the ad platform as conversion value?",
+      "options": [
+        "Player's deposit",
+        "Commission you earn",
+        "Bonus value",
+        "NGR of all players"
+      ],
+      "answer": 1,
+      "why": "Send your commission; deposits distort ROAS and push delivery toward heavy spenders."
+    }
+  ]
+}

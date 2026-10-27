@@ -1,0 +1,2750 @@
+{
+  "school": "foundations",
+  "order": 9,
+  "slug": "first-campaign",
+  "title": "Your first campaign",
+  "summary": "Take a first campaign from empty account to first decisions: safe setup, a test budget you can afford, a simple structure built click by click in Ads Manager, a launch checklist and the kill, hold, keep and scale starting rules. This is where everything from the earlier modules gets used with real money, so it is built to keep mistakes small.",
+  "lessons": [
+    {
+      "slug": "set-up-your-accounts",
+      "title": "Set up your accounts the right way",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can list every account and asset a first campaign needs.",
+        "By the end you can set up a profile, business account, ad account and payment method that stay healthy.",
+        "By the end you can confirm your offer approval, tracking link and any required ad authorization before you spend."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Foundations before the first ad",
+          "p": "A first campaign fails more often from a broken setup than from a bad ad. A declined card, a missing pixel or an offer you were never approved for can waste days. This lesson walks through every account and asset you need, in order, so launch day is calm.",
+          "d": {
+            "b": "Set up once, properly",
+            "s": "Every shortcut here costs you later"
+          },
+          "say": "Here's something that surprises most beginners. A first campaign fails more often from a broken setup than from a bad ad. A declined card, a missing pixel, or an offer you were never approved for can waste days. So in this lesson we walk through every account and asset you need, in order. Set it up once, properly, because every shortcut here costs you later."
+        },
+        {
+          "v": "cards",
+          "h": "The five pieces you need",
+          "p": "Think of your setup as five pieces, each with one job. If any piece is missing or broken, the whole campaign stalls. Check all five before you plan a single ad or spend a single dollar.",
+          "more": "On Meta the business account is, at the time of writing, called a business portfolio and is managed through Meta Business Suite or Business Manager. Names change; check the current Ads Manager and the Meta help centre. TikTok, Snapchat and Google have the same pieces under different names: a business centre or manager account, one or more ad accounts, a profile or page, billing and a pixel or tag.",
+          "d": [
+            "Business account|holds your assets in one place",
+            "Ad account|where campaigns and spend live",
+            "Page|the public face your ads run from",
+            "Payment method|how the platform charges you",
+            "Tracking|pixel or dataset plus your offer link"
+          ],
+          "say": "Think of your setup as five pieces, each with one job. Look at the cards. The business account holds your assets in one place. The ad account is where campaigns and spend live. The page is the public face your ads run from. The payment method is how the platform charges you. And tracking means your pixel or dataset plus your offer link. If any one piece is missing or broken, the whole campaign stalls, so check all five before you spend a single dollar."
+        },
+        {
+          "v": "flow",
+          "h": "Set up in this order",
+          "p": "Do things in this order. Each step depends on the one before it. Doing them out of order is the most common reason beginners get stuck in review, see payment errors or lose access to their own assets.",
+          "d": [
+            "Secure your profile",
+            "Create business account",
+            "Add page and ad account",
+            "Add payment method",
+            "Install tracking",
+            "Get your offer link"
+          ],
+          "say": "Now the order. Follow the arrows on screen. First, secure your profile. Then create the business account. Then add your page and ad account, add a payment method, install tracking, and finally get your offer link. Each step depends on the one before it. Doing them out of order is the most common reason beginners get stuck in review, hit payment errors, or lose access to their own assets."
+        },
+        {
+          "v": "check",
+          "h": "Secure your personal profile first",
+          "p": "Your business assets are attached to your real personal profile. If that profile is hacked or restricted, everything attached to it can go too. Use your real name and details, and lock the profile down before you build anything on top of it.",
+          "more": "Platforms require real identities. Two-factor authentication (2FA) means a second code, usually from an authenticator app, is needed every time someone logs in from a new device. It stops most account takeovers, which often start with a fake 'copyright warning' message or a fake login page. If a teammate needs access, add them with their own profile and the smallest role that does the job. If you are ever restricted, follow the Ad account bans module.",
+          "d": [
+            "Real name and real details",
+            "Two-factor authentication on",
+            "Strong, unique password",
+            "Recovery email and phone up to date",
+            "Nobody else logs in as you"
+          ],
+          "say": "Start with your personal profile, because your business assets are attached to it. If it's hacked or restricted, everything attached can go too. So use your real name and details. Turn on two factor authentication, which asks for a second code when someone logs in from a new device. Use a strong, unique password, keep your recovery email and phone up to date, and never let anyone else log in as you. If a teammate needs access, add them with their own profile."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: create your business portfolio",
+          "p": "Build your business account from your secured real profile. We are not certain the button names below are current, because Meta changes them often. Look for the same steps: create a business, add your details, then add assets.",
+          "d": {
+            "steps": [
+              {
+                "title": "Start a business portfolio",
+                "text": "From Meta Business Suite or business settings, choose to create a business portfolio.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/create",
+                  "title": "Create a business portfolio",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Business portfolio name",
+                      "value": "Your Brand Media"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Your name",
+                      "value": "Your real name"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Business email",
+                      "value": "you@yourbrand.example"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Create"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Add your page",
+                "text": "In business settings, add the page your ads will run from, or create one with your real brand name.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/settings/pages",
+                  "title": "Pages",
+                  "blocks": [
+                    {
+                      "type": "button",
+                      "label": "Add a page"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Use a page you own. Do not request someone else's."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Create the ad account",
+                "text": "Add a new ad account inside the business portfolio. The next slide covers its settings.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/settings/ad_accounts",
+                  "title": "Ad accounts",
+                  "blocks": [
+                    {
+                      "type": "button",
+                      "label": "Create a new ad account"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Let's walk through creating your business portfolio, from your secured real profile. One honest note: Meta changes button names often, so these may not match exactly. Look for the same steps. First, start a business portfolio from Meta Business Suite or business settings, and fill in the name, your real name and a business email. Second, add the page your ads will run from, a page you own, never someone else's. Third, create a new ad account inside the portfolio. The next slide covers its settings."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: ad account time zone and currency",
+          "p": "Choose the ad account's time zone and currency on purpose. At the time of writing they are hard or impossible to change later. Use the time zone of your main geo, so the platform's day matches your daily sheet.",
+          "d": {
+            "kind": "browser",
+            "url": "business.example/settings/ad_accounts/new",
+            "title": "Create ad account",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Ad account name",
+                "value": "NG_Main_01"
+              },
+              {
+                "type": "select",
+                "label": "Time zone",
+                "value": "(GMT+01:00) Africa/Lagos"
+              },
+              {
+                "type": "select",
+                "label": "Currency",
+                "value": "US Dollar (USD)"
+              },
+              {
+                "type": "text",
+                "value": "Example. Check the currency your card can pay without extra fees."
+              },
+              {
+                "type": "button",
+                "label": "Next"
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "When you create the ad account, choose its time zone and currency on purpose. At the time of writing, they're hard or impossible to change later. Look at the highlighted time zone field. Use the time zone of your main geo, so the platform's day matches your daily sheet. The example shows Lagos time and US dollars. That's just an example, so check which currency your card can pay without extra fees."
+        },
+        {
+          "v": "tip",
+          "h": "Never buy or rent accounts",
+          "p": "You will see people selling old ad accounts, rented profiles and 'agency accounts' that promise no limits. These break platform rules, get shut down without warning and can take your money with them. Build your own accounts slowly and honestly.",
+          "d": {
+            "kind": "warn",
+            "text": "Bought, rented or farmed accounts break platform rules. When they are banned, the spend, the data and your page go with them."
+          },
+          "say": "You'll see people selling old ad accounts, rented profiles, and so called agency accounts that promise no limits. Please stay away. These break platform rules and get shut down without warning. When they're banned, the spend, the data and your page go with them. Build your own accounts slowly and honestly. It's slower at the start, but it's the only foundation that lasts."
+        },
+        {
+          "v": "table",
+          "h": "Payment method basics",
+          "p": "The platform charges you as you spend. A card that declines halfway through a test pauses your ads and wastes the data you were building. Pick a payment method that works reliably for foreign currency charges and is in your own name.",
+          "more": "In many African markets, local bank cards have monthly limits on foreign currency spending, and those limits change. Ask your bank for your current limit before you launch. The ad account's currency and time zone are usually hard or impossible to change after you create the account, so choose them on purpose. An account spending limit is a total cap you set yourself; when it is reached, ads stop. Names change; check the current Ads Manager billing settings.",
+          "d": {
+            "cols": [
+              "Check",
+              "Why it matters"
+            ],
+            "rows": [
+              [
+                "Card allows foreign charges",
+                "Many ad accounts bill in USD"
+              ],
+              [
+                "Monthly limit known",
+                "Avoid declines mid-test"
+              ],
+              [
+                "Card in your own name",
+                "Matches your identity"
+              ],
+              [
+                "Account currency chosen",
+                "Usually hard to change later"
+              ],
+              [
+                "Account spending limit set",
+                "A cap on costly mistakes"
+              ]
+            ]
+          },
+          "say": "Next, payment. The platform charges you as you spend, and a card that declines halfway through a test pauses your ads and wastes the data you were building. Go down the table. Make sure your card allows foreign charges, since many ad accounts bill in U S dollars. Know your monthly limit, because in many African markets local cards have foreign spending limits that change. Use a card in your own name, choose the account currency carefully, and set an account spending limit as a cap on costly mistakes."
+        },
+        {
+          "v": "stat",
+          "h": "Example: check the card limit",
+          "p": "Example: your bank allows $200 a month in foreign card spending and your plan is 3 ad sets at $18, so $54 a day. The card will decline on day four, in the middle of your test. Find this out before launch, not after.",
+          "d": {
+            "n": 3.7,
+            "pre": "",
+            "suf": " days",
+            "dec": 1,
+            "label": "until a $200 limit runs out at $54 a day",
+            "note": "Example. $200 ÷ $54 = 3.7, so the decline lands on day 4."
+          },
+          "say": "Here's an example of why the card limit matters. Say your bank allows two hundred dollars a month in foreign card spending, and your plan is three ad sets at eighteen dollars, so fifty four dollars a day. Two hundred divided by fifty four is about three point seven days. That means the card declines on day four, right in the middle of your test. Find this out before launch, not after."
+        },
+        {
+          "v": "cards",
+          "h": "Tracking you need on day one",
+          "p": "You cannot judge a campaign you cannot measure. At minimum you need the platform's pixel or dataset on your landing page and your tracked offer link from the network, with sub IDs that tell you which ad sent each conversion.",
+          "more": "The Tracking basics module explained these; full setup, click by click: Tracking setup lab module. For a first campaign keep it simple: one pixel or dataset, one standard event that matches your goal, and a tracking link with sub IDs filled with your campaign, ad set and ad names. At the time of writing, Meta lists the pixel under datasets in Events Manager. Names change; check the current Events Manager.",
+          "d": [
+            "Pixel or dataset|tells the platform who converted",
+            "Network tracking link|credits you for each action",
+            "Sub IDs or UTMs|show which ad brought the action",
+            "Test conversion|proves the whole chain works"
+          ],
+          "say": "You can't judge a campaign you can't measure. On day one you need four things, shown on these cards. The pixel or dataset tells the platform who converted. The network tracking link credits you for each action. Sub I Ds or U T M parameters show which ad brought the action. And a test conversion proves the whole chain works. For a first campaign, keep it simple: one pixel, one standard event that matches your goal, and sub I Ds filled with your campaign, ad set and ad names."
+        },
+        {
+          "v": "check",
+          "h": "Make sure the offer is ready",
+          "p": "Before you spend, confirm with your affiliate manager that you are approved and that your plan is allowed. Many offers restrict traffic sources, countries or wording. Conversions from traffic the offer does not allow are often not paid at all.",
+          "d": [
+            "Approved on the offer in writing",
+            "Your traffic source is allowed",
+            "Your geos and any caps confirmed",
+            "Payout and hold period noted",
+            "Creative and wording rules saved"
+          ],
+          "say": "Before you spend, confirm with your affiliate manager that you're approved and that your plan is allowed. Many offers restrict traffic sources, countries or wording, and conversions from traffic the offer doesn't allow are often not paid at all. So work through this checklist: approval in writing, your traffic source allowed, your geos and caps confirmed, the payout and hold period noted, and the creative and wording rules saved."
+        },
+        {
+          "v": "tip",
+          "h": "Regulated verticals need authorization",
+          "p": "Trading, gambling, crypto, loans and some health offers are regulated. Ads for them usually need written platform authorization and must follow the law of every country you target. Check both, and wait for approval, before you run a single ad in these verticals.",
+          "d": {
+            "kind": "warn",
+            "text": "If the platform requires authorization for your vertical and country, apply and wait. Running without it risks your account and may break local law."
+          },
+          "say": "This one matters a lot. Trading, gambling, crypto, loans and some health offers are regulated. Ads for them usually need written platform authorization, and they must follow the law of every country you target. So check both, and wait for approval before you run a single ad in these verticals. If the platform requires authorization for your vertical and country, apply and wait. Running without it risks your account and may break local law."
+        },
+        {
+          "v": "compare",
+          "h": "Common setup mistakes",
+          "p": "Most beginners rush setup to get ads live today. The buyer who spends one extra day on setup usually avoids paying to learn that the card declined, the pixel never fired or the offer did not allow their traffic.",
+          "d": {
+            "a": {
+              "title": "Rushed setup",
+              "items": [
+                "Profile without 2FA",
+                "Card limit unknown",
+                "No test conversion",
+                "Offer rules never read"
+              ]
+            },
+            "b": {
+              "title": "Careful setup",
+              "items": [
+                "Your real profile, secured",
+                "Card limit checked with the bank",
+                "Test conversion recorded",
+                "Offer rules saved in writing"
+              ]
+            }
+          },
+          "say": "Compare these two columns. On the left, a rushed setup: a profile without two factor authentication, an unknown card limit, no test conversion, and offer rules never read. On the right, a careful setup: your real profile secured, the card limit checked with the bank, a test conversion recorded, and offer rules saved in writing. The buyer who spends one extra day on setup usually avoids paying to learn those lessons the hard way."
+        },
+        {
+          "v": "check",
+          "h": "Setup sign-off",
+          "p": "Tick every line before you move on to budget planning. If any line is not ticked, fix it first. A campaign built on a broken foundation teaches you nothing, because you cannot trust any of its numbers.",
+          "d": [
+            "Profile secured with 2FA",
+            "Business account, page and ad account linked",
+            "Payment method and limit checked",
+            "Pixel or dataset receiving events",
+            "Offer approved and link tested",
+            "Authorization checked for your vertical"
+          ],
+          "say": "Here's your setup sign-off. Tick every line before you move on to budget planning: profile secured with two factor authentication, business account, page and ad account linked, payment method and limit checked, pixel or dataset receiving events, offer approved and link tested, and authorization checked for your vertical. If any line isn't ticked, fix it first. A campaign on a broken foundation teaches you nothing, because you can't trust its numbers."
+        }
+      ],
+      "takeaways": [
+        "Set up in order: profile, business account, page and ad account, payment, tracking, offer.",
+        "Use only real, secured accounts in your own name. Never buy, rent or borrow accounts.",
+        "Confirm offer rules and any required ad authorization in writing before you spend."
+      ],
+      "action": "Copy the setup sign-off list into your notes and tick each line honestly. Fix every unticked line before you plan your budget.",
+      "glossary": [
+        {
+          "term": "Business portfolio",
+          "def": "Meta's current name for the business account that holds your pages, ad accounts and datasets. Other platforms call it a business centre or manager. Names change."
+        },
+        {
+          "term": "Two-factor authentication (2FA)",
+          "def": "A second code, usually from an app, needed to log in. It protects your profile and everything attached to it."
+        },
+        {
+          "term": "Account spending limit",
+          "def": "A total spending cap you set on an ad account. When it is reached, ads stop until you raise or reset it."
+        },
+        {
+          "term": "Ad authorization",
+          "def": "Written permission from an ad platform to run ads in a restricted category, such as gambling or financial products, in specific countries."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why should you secure your personal profile before building ad accounts?",
+          "options": [
+            "Secured profiles get cheaper clicks",
+            "Your business assets are attached to it, so losing it can lose everything",
+            "It makes every ad approve faster",
+            "It is only needed for regulated verticals"
+          ],
+          "answer": 1,
+          "why": "Ad accounts and pages hang off your real profile. If it is hacked or restricted, the assets attached to it are at risk."
+        },
+        {
+          "q": "Your bank allows $150 a month in foreign card spending and you plan $20 a day. When will the card likely decline?",
+          "options": [
+            "Day 5",
+            "Day 6",
+            "Day 8",
+            "Day 15"
+          ],
+          "answer": 2,
+          "why": "$150 ÷ $20 = 7.5, so the limit runs out partway through day 8. Check limits before launch."
+        },
+        {
+          "q": "Someone offers to rent you an 'agency account with no limits'. What is the right move?",
+          "options": [
+            "Decline. Rented accounts break platform rules and can be shut with your money in them",
+            "Rent it for the first test only",
+            "Rent it but pay with your own card",
+            "Rent two in case one is banned"
+          ],
+          "answer": 0,
+          "why": "Rented and bought accounts break platform rules. When they are banned, your spend and data go with them."
+        },
+        {
+          "q": "What is the minimum tracking for a first campaign?",
+          "options": [
+            "Only the platform's click count",
+            "Screenshots of the network dashboard",
+            "A pixel or dataset on the page plus a network link with sub IDs, tested once",
+            "A paid tracker with ten integrations"
+          ],
+          "answer": 2,
+          "why": "You need the platform to see conversions and the network link to credit you, with sub IDs to match them. A test conversion proves it works."
+        },
+        {
+          "q": "You plan to promote a trading offer in Kenya. What must you check before launch?",
+          "options": [
+            "Only that the offer pays well",
+            "Whether competitors run similar ads",
+            "Nothing, because affiliate ads are exempt",
+            "Whether the platform requires authorization for financial ads there, and what local law allows"
+          ],
+          "answer": 3,
+          "why": "Trading is regulated. Ads usually need platform authorization and must follow the law in each country you target."
+        }
+      ],
+      "say_intro": "Welcome. In this lesson you'll set up every account and asset your first campaign needs, in the right order. Getting this right now is what makes launch day calm instead of chaotic.",
+      "say_outro": "So, five pieces, set up in order, from a secured real profile to a tested offer link, with authorization checked for regulated verticals. Your task: copy the setup sign-off list into your notes, tick each line honestly, and fix every unticked line before you plan your budget. Now take the quiz."
+    },
+    {
+      "slug": "plan-your-test-budget",
+      "title": "Plan a test budget you can afford",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can work out break-even CPA and a target CPA from a payout.",
+        "By the end you can set a zero-conversion kill line and calculate a total test budget.",
+        "By the end you can turn a test budget into daily budgets and check that it is realistic."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "A test budget is a planned loss limit",
+          "p": "Your first campaign is an experiment. A test budget is the most you will spend to get an answer, decided before launch. It is money you accept may not come back. Planning it in advance stops you from making emotional decisions at midnight.",
+          "d": {
+            "b": "Decide the limit before launch",
+            "s": "Not while you watch the numbers move"
+          },
+          "say": "Your first campaign is an experiment. A test budget is the most you'll spend to get an answer, decided before launch. It's money you accept may not come back. Why plan it in advance? Because deciding the limit before launch stops you making emotional decisions at midnight, while you watch the numbers move. Decide calmly now, and follow the plan later."
+        },
+        {
+          "v": "tip",
+          "h": "Only money you can lose",
+          "p": "Your test budget must be money that would not hurt you if it disappeared. No rent, school fees, loans or savings meant for something else. If the full budget would hurt, test smaller or wait. Paid traffic has no guaranteed return.",
+          "d": {
+            "kind": "warn",
+            "text": "Never test with borrowed money or money you need for living costs. A test can lose all of its budget."
+          },
+          "say": "Your test budget must be money that wouldn't hurt you if it disappeared. That means no rent, no school fees, no loans, and no savings meant for something else. If the full budget would hurt, test smaller or wait. Paid traffic has no guaranteed return. Read the warning on screen: never test with borrowed money or money you need for living costs, because a test can lose all of its budget."
+        },
+        {
+          "v": "eq",
+          "h": "Start from the payout",
+          "p": "On a CPA offer, the payout is your break-even cost per action. If one conversion costs you more than the payout, you lose money on it. Every number in your budget plan starts from this one.",
+          "more": "Example: the network pays $30 per FTD (first-time deposit). If one FTD costs you $30 in ads, you broke even. At $25 you made $5. At $40 you lost $10. RevShare offers are harder to plan because their value arrives over months. For a first test, a fixed CPA offer is simpler to measure and judge.",
+          "d": [
+            "Payout per action",
+            "=",
+            "Break-even CPA"
+          ],
+          "say": "Every budget plan starts from one number, the payout. On a C P A offer, that's cost per acquisition, the payout is your break-even cost per action. Look at the equation: payout per action equals break-even C P A. For example, if the network pays thirty dollars per F T D, first-time deposit, and one F T D costs you thirty dollars in ads, you broke even. At twenty five you made five. At forty you lost ten. For a first test, a fixed C P A offer is simpler to measure than RevShare."
+        },
+        {
+          "v": "eq",
+          "h": "Set a target CPA",
+          "p": "Break-even is the ceiling. Your goal sits below it. A target CPA sits below the payout and leaves room for profit and for conversions the network may later reject. Pick your target before launch, then judge every result against it.",
+          "more": "Example: payout $30 and you want a 20% margin. $30 × 0.8 = $24 target CPA. The margin is your choice; the Budget and kill rules module uses 25% in its examples and many beginners start between 20% and 30%. Remember rejections too: if the network later rejects some FTDs as low quality, your real cost per paid FTD is higher than the dashboard showed on the day.",
+          "d": [
+            "Payout",
+            "×",
+            "(1 − margin)",
+            "=",
+            "Target CPA"
+          ],
+          "say": "Break-even is the ceiling. Your goal sits below it. That's your target C P A, which leaves room for profit and for conversions the network may later reject. The equation is payout times one minus your margin. Example: payout thirty dollars, and you want a twenty percent margin. Thirty times zero point eight is twenty four dollars. The margin is your choice; many beginners start between twenty and thirty percent. Pick your target before launch, then judge every result against it."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: find your target CPA",
+          "p": "Try it. Enter the payout and the margin you want to keep, then check your answer. The lead-to-deposit rate does not change the target CPA. Change the margin afterwards and watch how fast the target moves.",
+          "d": {
+            "kind": "breakeven",
+            "task": "Payout $30 per FTD, margin 20%. What is your target CPA (max cost per FTD)?",
+            "preset": {
+              "payout": 30,
+              "cr_pct": 10,
+              "margin_pct": 20
+            },
+            "answer": {
+              "field": "max_cpa",
+              "value": 24,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Now try it yourself. In this lab, you have a payout of thirty dollars per F T D and a margin of twenty percent. Your task is to work out the target C P A, the maximum you can pay per F T D. Note that the lead to deposit rate doesn't change the target. Pause and try it, then check your answer. Afterwards, change the margin and watch how fast the target moves."
+        },
+        {
+          "v": "tip",
+          "h": "The zero-conversion kill line",
+          "p": "The zero-conversion kill line is how much one ad set may spend with 0 network-confirmed conversions before you switch it off. The starting rule is 2 × target CPA. Write it down before launch. Full rule card: Budget and kill rules module.",
+          "d": {
+            "kind": "example",
+            "text": "Example: target $24. Kill line 2 × $24 = $48. If an ad set spends $48 with 0 FTDs, switch it off. Starting rules; adapt to your vertical and data."
+          },
+          "say": "Next, the zero-conversion kill line. That's how much one ad set may spend with zero network-confirmed conversions before you switch it off. The starting rule is two times your target C P A. Example: target twenty four dollars, so the kill line is forty eight. If an ad set spends forty eight dollars with zero F T Ds, switch it off. These are starting rules, so adapt them to your vertical and data, and write yours down before launch."
+        },
+        {
+          "v": "eq",
+          "h": "The total test budget",
+          "p": "Plan 2 to 3 × target CPA of spend for each ad set. 2 × lets the zero-conversion kill line work. 3 × lets you judge CPA on an ad set that does convert. Multiply by the number of ad sets and add a small buffer for overspend.",
+          "d": [
+            "Ad sets",
+            "×",
+            "3 × target CPA",
+            "=",
+            "Test budget"
+          ],
+          "say": "How much should the whole test cost? Plan two to three times your target C P A of spend for each ad set. Two times lets the zero-conversion kill line work. Three times lets you judge C P A on an ad set that does convert. Look at the equation: number of ad sets, times three times target C P A, gives your test budget. Then add a small buffer for overspend."
+        },
+        {
+          "v": "stat",
+          "h": "Example: the full plan",
+          "p": "Example: target $24, so 3 × target is $72 per ad set. Three ad sets can cost up to 3 × $72 = $216 before every ad set has had a fair chance. Add about 10% for overspend and plan for roughly $240 in total.",
+          "d": {
+            "n": 216,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "max test budget (3 × $72)",
+            "note": "Example. $216 + 10% buffer ≈ $240."
+          },
+          "say": "Let's put it together. This is an example. With a twenty four dollar target, three times target is seventy two dollars per ad set. Three ad sets can cost up to two hundred and sixteen dollars before every ad set has had a fair chance. That's the big number on screen. Add about ten percent for overspend, and you plan for roughly two hundred and forty dollars in total."
+        },
+        {
+          "v": "table",
+          "h": "Turn it into daily budgets",
+          "p": "Spread each ad set's $72 over a few days so the platform has time to deliver and you do not judge on one bad morning. Smaller daily budgets give slower answers. Bigger daily budgets give faster but noisier answers.",
+          "more": "Example figures for a $72 test budget per ad set. Spending it all in one day gives the platform little time to find the right people and leaves you judging on a small, noisy sample. Many beginners choose 3 to 5 days per ad set. The $18 row is the plan used in the rest of this module.",
+          "d": {
+            "cols": [
+              "Daily per ad set",
+              "Days to reach $72",
+              "Daily total, 3 ad sets"
+            ],
+            "rows": [
+              [
+                "$12",
+                "6",
+                "$36"
+              ],
+              [
+                "$18",
+                "4",
+                "$54"
+              ],
+              [
+                "$24",
+                "3",
+                "$72"
+              ],
+              [
+                "$36",
+                "2",
+                "$108"
+              ]
+            ]
+          },
+          "say": "Now spread each ad set's seventy two dollars over a few days, so the platform has time to deliver and you don't judge on one bad morning. Read the table. At twelve dollars a day it takes six days. At eighteen dollars, four days, and fifty four dollars a day across three ad sets. At thirty six dollars, just two days. Smaller daily budgets give slower answers; bigger ones give faster but noisier answers. The eighteen dollar row is the plan used through the rest of this module."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: daily budget per ad set",
+          "p": "Turn the plan into a daily number. You want room for 3 target CPAs of $24 in each ad set, spread over 4 days. Work it out, then check. Change the days afterwards to see the trade-off between speed and noise.",
+          "d": {
+            "kind": "budget",
+            "task": "Room for 3 FTDs at a $24 target CPA over 4 days. What daily budget per ad set?",
+            "preset": {
+              "goal": 3,
+              "target_cpa": 24,
+              "days": 4
+            },
+            "answer": {
+              "field": "daily_budget",
+              "value": 18,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Time for another lab. You want room for three target C P As of twenty four dollars in each ad set, spread over four days. Your task is to work out the daily budget per ad set. Pause and try it, then check your answer. Afterwards, change the number of days and notice the trade-off between speed and noise."
+        },
+        {
+          "v": "big",
+          "h": "Small tests are noisy",
+          "p": "Ad platforms learn who converts by watching conversions. At the time of writing, Meta says an ad set usually needs around 50 optimisation events in a week to leave the learning phase. A small test will not reach that with deposits, and that is fine for a first test.",
+          "more": "We are not certain the 50-events figure is still current; check the current help centre. What it means for you: early results bounce around, so you judge on the money rules you wrote, never on a single day. School 2 covers choosing an optimisation event that suits a small budget.",
+          "d": {
+            "b": "Judge on rules, not one day",
+            "s": "Early numbers swing a lot"
+          },
+          "say": "Here's an important reality. Ad platforms learn who converts by watching conversions. At the time of writing, Meta says an ad set usually needs around fifty optimisation events in a week to leave the learning phase. We're not certain that figure is still current, so check the help centre. A small test won't reach that with deposits, and that's fine. It just means early results bounce around, so you judge on the money rules you wrote, never on a single day."
+        },
+        {
+          "v": "funnel",
+          "h": "Is the budget realistic?",
+          "p": "Work backwards to see whether one ad set's test budget can even buy a result. Example: $72 at $0.12 per click buys 600 clicks. If the funnel gives about 3 FTDs from that, the test is fair. If it gives 0.3, it is not.",
+          "more": "Example: CPC $0.12, so $72 ÷ $0.12 = 600 clicks. If 10% sign up, that is 60 sign-ups. If 5% of sign-ups deposit, that is 3 FTDs, a cost of $24 each, exactly on target. These rates are illustrations; real rates vary widely by geo, offer and funnel. If your honest estimate gives less than 1 FTD per ad set's test budget, pick a cheaper source or an offer with an easier conversion.",
+          "d": [
+            [
+              "Clicks",
+              600
+            ],
+            [
+              "Sign-ups",
+              60
+            ],
+            [
+              "FTDs",
+              3
+            ]
+          ],
+          "say": "Is your budget even realistic? Work backwards down this funnel. Example: seventy two dollars at twelve cents a click buys six hundred clicks. If ten percent sign up, that's sixty sign-ups. If five percent of those deposit, that's three F T Ds at twenty four dollars each, right on target. These rates are illustrations and real rates vary widely. If your honest estimate gives less than one F T D per ad set's budget, pick a cheaper source or an offer with an easier conversion."
+        },
+        {
+          "v": "compare",
+          "h": "Budget mistakes to avoid",
+          "p": "Most budget mistakes come from spreading money too thin or changing the plan mid-test. Example: $5 a day across 10 ad sets is $50 a day, yet each ad set needs more than 14 days to reach a $72 test budget.",
+          "d": {
+            "a": {
+              "title": "Common mistakes",
+              "items": [
+                "Testing with rent money",
+                "No written kill lines",
+                "$5 a day across 10 ad sets",
+                "Raising budget to win back losses"
+              ]
+            },
+            "b": {
+              "title": "Better habits",
+              "items": [
+                "Only money you can lose",
+                "Kill lines written before launch",
+                "Fewer ad sets, enough budget each",
+                "Stop at the limit and review"
+              ]
+            }
+          },
+          "say": "Most budget mistakes come from spreading money too thin or changing the plan mid-test. Compare the columns. On the left: testing with rent money, no written kill lines, five dollars a day across ten ad sets, and raising budget to win back losses. That five dollar setup is fifty dollars a day, yet each ad set needs more than fourteen days to reach seventy two dollars. On the right, the better habits: only money you can lose, kill lines written first, fewer ad sets with enough budget, and stopping at the limit to review."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: your budget plan tab",
+          "p": "Put the plan in a spreadsheet tab before you open Ads Manager. Type the payout and margin, then let formulas fill every other line, so a payout change updates the whole plan. Screenshot it with the date.",
+          "d": {
+            "kind": "browser",
+            "url": "sheets.example/first-test-plan",
+            "title": "Plan: NG_OfferA_FTD_1004",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Payout (B1)",
+                "value": "$30"
+              },
+              {
+                "type": "field",
+                "label": "Margin (B2)",
+                "value": "20%"
+              },
+              {
+                "type": "field",
+                "label": "Target CPA (B3) = B1*(1-B2)",
+                "value": "$24"
+              },
+              {
+                "type": "field",
+                "label": "Zero-FTD kill (B4) = 2*B3",
+                "value": "$48"
+              },
+              {
+                "type": "field",
+                "label": "CPA kill line (B5) = MIN(1.5*B3, B1)",
+                "value": "$30"
+              },
+              {
+                "type": "field",
+                "label": "Test budget per ad set (B6) = 3*B3",
+                "value": "$72"
+              },
+              {
+                "type": "field",
+                "label": "Daily per ad set (B7) = B6/4",
+                "value": "$18"
+              }
+            ],
+            "highlight": 3
+          },
+          "say": "Before you open Ads Manager, put the plan in a spreadsheet tab like this one. You type only two things, the payout and the margin. Formulas fill every other line: target C P A, the zero F T D kill line, the C P A kill line, the test budget per ad set, and the daily budget. The highlighted line is the zero F T D kill. Because it's all formulas, a payout change updates the whole plan. Screenshot it with the date."
+        },
+        {
+          "v": "check",
+          "h": "Your budget plan on one page",
+          "p": "Write these six numbers on one page before launch. If you cannot fill a line, you are not ready to spend. Keep the page next to you during the first 72 hours and decide with it.",
+          "d": [
+            "Payout and break-even CPA",
+            "Target CPA",
+            "Zero-conversion kill line (2 × target)",
+            "Number of ad sets",
+            "Daily budget and number of days",
+            "Total test budget with buffer"
+          ],
+          "say": "Finally, put these six numbers on one page before launch: payout and break-even C P A, target C P A, the zero-conversion kill line at two times target, the number of ad sets, the daily budget and number of days, and the total test budget with buffer. If you can't fill a line, you're not ready to spend. Keep this page next to you during the first seventy two hours, and decide with it."
+        }
+      ],
+      "takeaways": [
+        "On a CPA offer, payout equals break-even CPA. Your target CPA sits below it.",
+        "Zero-conversion kill line: 2 × target CPA. Plan 2 to 3 × target of spend per ad set.",
+        "Use only money you can lose, and check the funnel can produce at least one result per ad set."
+      ],
+      "action": "Pick an offer you could run and fill in the one-page budget plan: payout, target CPA, zero-conversion kill line, ad sets, daily budget and total test budget.",
+      "glossary": [
+        {
+          "term": "Test budget",
+          "def": "The most you will spend on an experiment, decided before launch, from money you can afford to lose."
+        },
+        {
+          "term": "Break-even CPA",
+          "def": "The cost per action at which you neither win nor lose. On a CPA offer it equals the payout."
+        },
+        {
+          "term": "Target CPA",
+          "def": "The cost per action you aim for, set below break-even to leave room for profit and rejections."
+        },
+        {
+          "term": "Zero-conversion kill line",
+          "def": "The spend at which an ad set with 0 network-confirmed conversions is switched off. Starting rule: 2 × target CPA."
+        },
+        {
+          "term": "Learning phase",
+          "def": "The period when a platform is still learning who to show your ads to. Results are less stable during it."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A CPA offer pays $40 per FTD. What is your break-even CPA?",
+          "options": [
+            "$20",
+            "$32",
+            "$40",
+            "$80"
+          ],
+          "answer": 2,
+          "why": "On a CPA offer, break-even CPA equals the payout. Paying more than $40 per FTD loses money."
+        },
+        {
+          "q": "Payout is $50 and you want a 20% margin. What is your target CPA?",
+          "options": [
+            "$40",
+            "$10",
+            "$45",
+            "$60"
+          ],
+          "answer": 0,
+          "why": "$50 × (1 − 0.2) = $50 × 0.8 = $40."
+        },
+        {
+          "q": "Target CPA $25. You test 4 ad sets and plan 3 × target for each. What is the maximum test budget before buffer?",
+          "options": [
+            "$75",
+            "$100",
+            "$300",
+            "$400"
+          ],
+          "answer": 2,
+          "why": "3 × $25 = $75 per ad set, and 4 × $75 = $300."
+        },
+        {
+          "q": "Target CPA $30, so the zero-conversion kill line is 2 × $30. At $20 a day, how many days until an ad set with no FTDs reaches it?",
+          "options": [
+            "2",
+            "3",
+            "6",
+            "12"
+          ],
+          "answer": 1,
+          "why": "2 × $30 = $60, and $60 ÷ $20 = 3 days."
+        },
+        {
+          "q": "Which money should a test budget come from?",
+          "options": [
+            "Next month's rent, since a winner will replace it",
+            "A short loan, to test faster",
+            "Money you can lose without hurting your essentials",
+            "Savings set aside for school fees"
+          ],
+          "answer": 2,
+          "why": "A test can lose its whole budget. Only use money whose loss would not hurt your essentials."
+        }
+      ],
+      "say_intro": "In this lesson you'll plan a test budget you can actually afford. You'll work out your target cost per acquisition, your kill line and your daily budgets, all before you launch, so the numbers make the decisions instead of your nerves.",
+      "say_outro": "You now know how to go from a payout to a target C P A, a zero-conversion kill line, a total test budget and daily budgets, and how to check the plan is realistic. Your task: pick an offer you could run and fill in the one page budget plan, with payout, target C P A, kill line, ad sets, daily budget and total test budget. Now take the quiz."
+    },
+    {
+      "slug": "structure-and-creatives",
+      "title": "Simple structure, honest creatives",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can build a simple campaign structure that tests one variable.",
+        "By the end you can name campaigns, ad sets and ads so results are easy to read.",
+        "By the end you can write a basic, honest ad with a hook, body and call to action."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Simple beats clever",
+          "p": "Your first campaign should be easy to read. If you change ten things at once and it works, you will not know why. If it fails, you will not know what to fix. A simple structure turns every result into a lesson.",
+          "d": {
+            "b": "One campaign, a few ad sets, a few ads",
+            "s": "Change one thing at a time"
+          },
+          "say": "Simple beats clever. Your first campaign should be easy to read. If you change ten things at once and it works, you won't know why. If it fails, you won't know what to fix. So the plan is one campaign, a few ad sets, and a few ads, changing only one thing at a time. That's how every result becomes a lesson."
+        },
+        {
+          "v": "flow",
+          "h": "The three levels",
+          "p": "Most ad platforms use three levels. The campaign holds the goal. The ad set holds who sees the ads, where they appear and the budget. The ad is the creative and text that people actually see in their feed.",
+          "more": "Meta uses campaign, ad set and ad. TikTok uses campaign, ad group and ad. Names change; check the current Ads Manager. Budget can sit at campaign level or at ad set level. For a first test, ad set budgets make each ad set's spend easy to compare with your kill lines.",
+          "d": [
+            "Campaign: the goal",
+            "Ad set: audience, placements, budget",
+            "Ad: creative and copy"
+          ],
+          "say": "Most ad platforms use three levels, shown here from top to bottom. The campaign holds the goal. The ad set holds who sees the ads, where they appear, and the budget. And the ad is the creative and text people actually see in their feed. Meta calls these campaign, ad set and ad; TikTok says ad group instead of ad set. For a first test, keep budgets at ad set level so each one's spend is easy to compare with your kill lines."
+        },
+        {
+          "v": "cards",
+          "h": "A starter structure",
+          "p": "Example: one campaign optimising for your conversion event, three ad sets that differ in one thing only, and two or three ads in each. That gives you six to nine ads, enough to learn without spreading the budget too thin.",
+          "more": "Testing angles across ad sets is a common first test. Keep geo, audience, placements and budget identical so the angle is the only difference. Another valid first test is the same creatives shown to different audiences. Pick one variable per test and write it down.",
+          "d": [
+            "Campaign|1 goal, 1 conversion event",
+            "Ad set A|broad audience, angle 1",
+            "Ad set B|broad audience, angle 2",
+            "Ad set C|broad audience, angle 3"
+          ],
+          "say": "Here's an example starter structure. One campaign with one goal and one conversion event. Then three ad sets, A, B and C, each with a broad audience but a different angle. Put two or three ads in each, and you have six to nine ads, enough to learn without spreading the budget too thin. Keep geo, audience, placements and budget identical, so the angle is the only difference. Pick one variable per test, and write it down."
+        },
+        {
+          "v": "compare",
+          "h": "One variable at a time",
+          "p": "In the messy test, if ad set B wins you cannot tell whether it was Kenya, the image or the broad audience. In the clean test, only the angle changed, so the winner tells you which angle works.",
+          "d": {
+            "a": {
+              "title": "Messy test",
+              "items": [
+                "A: Nigeria, video, men 25 to 34",
+                "B: Kenya, image, broad",
+                "C: Ghana, carousel, interests"
+              ]
+            },
+            "b": {
+              "title": "Clean test",
+              "items": [
+                "Same geo and audience",
+                "Same placements and budget",
+                "Only the angle changes"
+              ]
+            }
+          },
+          "say": "Compare these two tests. In the messy test on the left, each ad set changes the country, the format and the audience. If ad set B wins, you can't tell whether it was Kenya, the image, or the broad audience. In the clean test on the right, the geo, audience, placements and budget are the same, and only the angle changes. So the winner tells you exactly which angle works."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: the structure in Ads Manager",
+          "p": "This is what the clean test looks like once it is built. One campaign, three ad sets that differ only in angle, the same daily budget each and names that match your sub IDs. Column names change; check the current Ads Manager.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/campaigns/NG_OfferA_FTD_1004",
+            "title": "NG_OfferA_FTD_1004",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Ad set",
+                  "Audience",
+                  "Budget",
+                  "Ads"
+                ],
+                "rows": [
+                  [
+                    "Broad_HowItWorks",
+                    "Broad, NG, 18+",
+                    "$18/day",
+                    "3"
+                  ],
+                  [
+                    "Broad_Demo",
+                    "Broad, NG, 18+",
+                    "$18/day",
+                    "3"
+                  ],
+                  [
+                    "Broad_Learn",
+                    "Broad, NG, 18+",
+                    "$18/day",
+                    "3"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Example. Only the angle changes between ad sets."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "This is the clean test once it's built in Ads Manager. Look at the table. One campaign, three ad sets named after their angles, the same broad Nigerian audience aged eighteen and over, eighteen dollars a day each, and three ads per ad set. The names match your sub I Ds. Only the angle changes between ad sets. It's an example, and column names change, so check the current Ads Manager."
+        },
+        {
+          "v": "table",
+          "h": "Name everything clearly",
+          "p": "Use one naming pattern so you can read results at a glance and match them to your network's sub IDs. Pick a pattern today and never break it. Future you, and any teammate, will thank you.",
+          "more": "Example names. Keep them short, use no spaces, and put the same names into your tracking link's sub IDs. Then when the network reports an FTD on sub ID Video_Q1_v1, you know exactly which ad earned it.",
+          "d": {
+            "cols": [
+              "Level",
+              "Pattern",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Campaign",
+                "Geo_Offer_Goal_Date",
+                "NG_OfferA_FTD_1004"
+              ],
+              [
+                "Ad set",
+                "Audience_Angle",
+                "Broad_HowItWorks"
+              ],
+              [
+                "Ad",
+                "Format_Hook_Version",
+                "Video_Q1_v1"
+              ]
+            ]
+          },
+          "say": "Use one naming pattern so you can read results at a glance and match them to your network's sub I Ds. Look at the table. Campaigns follow geo, offer, goal and date. Ad sets follow audience and angle. Ads follow format, hook and version. Keep names short with no spaces, and put the same names into your tracking link. Then when the network reports an F T D, a first-time deposit, on a given sub I D, you know exactly which ad earned it."
+        },
+        {
+          "v": "cards",
+          "h": "What a creative must do",
+          "p": "Every ad has three jobs: stop the scroll, explain the offer honestly, and tell people what to do next. On a phone feed you have about a second to do the first job before the thumb moves on.",
+          "d": [
+            "Hook|the first line or first second",
+            "Body|what it is and who it is for",
+            "Call to action|one clear next step",
+            "Format|vertical video or square image"
+          ],
+          "say": "Every ad has three jobs: stop the scroll, explain the offer honestly, and tell people what to do next. Look at the cards. The hook is the first line or first second. The body says what it is and who it's for. The call to action gives one clear next step. And the format is vertical video or square image, made for phones. On a phone feed you have about a second to do the first job before the thumb moves on."
+        },
+        {
+          "v": "flow",
+          "h": "Writing a simple ad",
+          "p": "Follow these steps for every ad. Start with the person, not the product. Then find an honest benefit, put it into a hook, give one clear next step and check the whole ad against policy before you upload it.",
+          "d": [
+            "Who is it for?",
+            "What is the honest benefit?",
+            "Hook in under 3 seconds",
+            "One clear call to action",
+            "Check against policy"
+          ],
+          "say": "Follow these steps for every ad you write. Start with the person, not the product: who is it for? Then find the honest benefit. Put that into a hook that lands in under three seconds. Give one clear call to action. And finally, check the whole ad against policy before you upload it. Doing it in this order keeps your ads both useful and safe."
+        },
+        {
+          "v": "tip",
+          "h": "Example: three angles for one offer",
+          "p": "An angle is the reason someone should care. Example: for a budgeting app, three honest angles could be seeing where money goes, planning school fees and budgeting with an irregular income. Each angle becomes one ad set in your test.",
+          "d": {
+            "kind": "example",
+            "text": "Example angles: 1 'See where your money goes'. 2 'Plan school fees month by month'. 3 'A simple budget for irregular income'."
+          },
+          "say": "An angle is the reason someone should care. Here's an example for a budgeting app, with three honest angles. One: see where your money goes. Two: plan school fees month by month. Three: a simple budget for irregular income. Each angle speaks to a different person with a different worry, and each one becomes one ad set in your test."
+        },
+        {
+          "v": "phone",
+          "h": "Message match on the phone",
+          "p": "The lander the ad sends people to should repeat the ad's angle in its headline. Here is the page for angle 1. If the ad says see where your money goes, the page says it too, with one clear button.",
+          "d": {
+            "app": "browser",
+            "url": "yourlander.example/budget?utm_content=video_q1_v1",
+            "page": {
+              "h": "See where your money goes",
+              "p": "Track your spending in two minutes a day. Free to start.",
+              "cta": "Try it free"
+            }
+          },
+          "say": "Look at the phone. This is the landing page for angle one. The ad said see where your money goes, so the page headline says exactly the same thing, with a short line underneath and one clear button. That's message match. When the page repeats the ad's angle, the visitor knows they're in the right place and is far more likely to continue."
+        },
+        {
+          "v": "compare",
+          "h": "Honest copy vs risky copy",
+          "p": "Ads that promise income, invent urgency or borrow famous faces get rejected, get accounts banned and mislead real people. In regulated verticals they can also break the law. Honest copy lasts longer and keeps your account alive.",
+          "more": "Trading and gambling ads usually also need risk warnings and age limits set by law or by the platform. If you are not sure whether a claim is allowed, leave it out. A rejected ad costs a day; a banned account can cost months.",
+          "d": {
+            "a": {
+              "title": "Risky and often banned",
+              "items": [
+                "'Make $500 a day, guaranteed'",
+                "Fake news headlines",
+                "Celebrities who never agreed",
+                "'Only 3 spots left' when untrue"
+              ]
+            },
+            "b": {
+              "title": "Honest and allowed",
+              "items": [
+                "'See how this app works'",
+                "Clear brand or offer name",
+                "Real people, with consent",
+                "Real deadlines only"
+              ]
+            }
+          },
+          "say": "Compare the columns. On the left, risky copy that often gets banned: promises like make five hundred dollars a day guaranteed, fake news headlines, celebrities who never agreed, and false scarcity. On the right, honest copy: see how this app works, a clear brand name, real people with consent, and real deadlines only. Risky copy gets rejected, gets accounts banned, misleads people, and in regulated verticals can break the law. If you're not sure a claim is allowed, leave it out."
+        },
+        {
+          "v": "check",
+          "h": "Creative basics checklist",
+          "p": "Run every creative through this list before you upload it. Most rejected or weak ads fail one of these lines. It takes a minute per ad and saves money and account health.",
+          "d": [
+            "Made for phones: vertical or square",
+            "Works with sound off (captions)",
+            "Hook in the first 1 to 3 seconds",
+            "Language and examples fit the geo",
+            "Your own or licensed footage and music",
+            "No claim you cannot prove"
+          ],
+          "say": "Run every creative through this checklist before you upload it. Made for phones, vertical or square. Works with sound off, so add captions. A hook in the first one to three seconds. Language and examples that fit the geo. Your own or licensed footage and music. And no claim you can't prove. It takes about a minute per ad, and most rejected or weak ads fail one of these lines."
+        },
+        {
+          "v": "product",
+          "h": "Make honest variations faster",
+          "p": "Three angles with three ads each is nine creatives, which takes time to make well. An AI creative tool can speed up honest drafts, as long as every claim stays true and you label AI content where required.",
+          "d": {
+            "slug": "vooads",
+            "why": "Turns your written angles and hooks into ad drafts quickly, so you can test three honest angles without a production budget."
+          },
+          "say": "Three angles with three ads each is nine creatives, and making them well takes time. An A I creative tool like the one on screen can turn your written angles and hooks into ad drafts quickly, so you can test three honest angles without a production budget. The condition is important: every claim must stay true, and you label A I content where required."
+        },
+        {
+          "v": "tip",
+          "h": "Do not copy other people's ads",
+          "p": "Ad spy tools are for learning which angles and formats work. Copying someone's video, images or exact words is stealing, can get your ads removed and damages your account. Take the idea, then make your own version.",
+          "d": {
+            "kind": "warn",
+            "text": "Inspiration is fine. Downloading and re-uploading someone else's creative is not."
+          },
+          "say": "Ad spy tools are great for learning which angles and formats work. But copying someone's video, images or exact words is stealing. It can get your ads removed and damage your account. So take the idea, then make your own version. Inspiration is fine. Downloading and re-uploading someone else's creative is not."
+        },
+        {
+          "v": "stat",
+          "h": "How many ads to start with",
+          "p": "Example: 3 ad sets with 3 ads each is 9 ads. At $18 a day per ad set, each ad averages about $6 a day. Fewer ads per ad set gives each one a fairer chance to get spend.",
+          "more": "Platforms do not split spend evenly between ads. They push budget towards the ad they predict will do best, so one ad may take most of the $18. That is normal. Judge ads and ad sets with your spend rules rather than expecting equal shares. Deeper testing method: Creative testing lab module.",
+          "d": {
+            "n": 9,
+            "pre": "",
+            "suf": "",
+            "dec": 0,
+            "label": "ads in a 3 × 3 starter test",
+            "note": "Example. $18 ÷ 3 ads = $6 per ad per day on average."
+          },
+          "say": "How many ads should you start with? Here's an example. Three ad sets with three ads each is nine ads. At eighteen dollars a day per ad set, each ad averages about six dollars a day. But platforms don't split spend evenly. They push budget toward the ad they predict will do best, so one ad may take most of it. That's normal. Fewer ads per ad set gives each one a fairer chance, and you judge with your spend rules."
+        },
+        {
+          "v": "cards",
+          "h": "Common structure mistakes",
+          "p": "These mistakes make a first test impossible to read. Each one is fixed before you build, which costs nothing, while finding it after launch costs a whole test budget.",
+          "d": [
+            "Many variables at once|change only the angle",
+            "Ten ad sets on a small budget|three ad sets, enough each",
+            "Names that do not match sub IDs|one pattern everywhere",
+            "Campaign budget on a first test|ad set budgets you can compare"
+          ],
+          "say": "Finally, four structure mistakes that make a first test impossible to read, each with its fix. Many variables at once, so change only the angle. Ten ad sets on a small budget, so use three with enough each. Names that don't match sub I Ds, so use one pattern everywhere. And a campaign budget on a first test, so use ad set budgets you can compare. Fixing these before you build costs nothing."
+        }
+      ],
+      "takeaways": [
+        "Start with one campaign, a few ad sets and a few ads, testing one variable.",
+        "Name everything with one pattern and use the same names in your sub IDs.",
+        "Every ad needs a hook, an honest body and one call to action. Never copy other people's creatives."
+      ],
+      "action": "Write three honest angles for your chosen offer and one hook for each. Then write the names you would give the campaign, the three ad sets and the first ad.",
+      "glossary": [
+        {
+          "term": "Ad set",
+          "def": "The middle level of a campaign. It holds the audience, placements and, often, the budget. TikTok calls it an ad group."
+        },
+        {
+          "term": "Angle",
+          "def": "The reason someone should care about the offer, such as saving time or learning something new."
+        },
+        {
+          "term": "Hook",
+          "def": "The first line or first seconds of an ad, whose job is to stop the scroll."
+        },
+        {
+          "term": "Call to action (CTA)",
+          "def": "The one clear next step the ad asks people to take, such as 'Sign up' or 'Learn more'."
+        },
+        {
+          "term": "Naming convention",
+          "def": "A fixed pattern for naming campaigns, ad sets and ads so results are easy to read and match to tracking."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "When you use ad set budgets on Meta, which level holds the audience and the budget?",
+          "options": [
+            "Campaign",
+            "Ad set",
+            "Ad",
+            "Page"
+          ],
+          "answer": 1,
+          "why": "The ad set holds audience, placements and, with ad set budgets, the budget. The campaign holds the goal."
+        },
+        {
+          "q": "Ad set A is Nigeria with video. Ad set B is Ghana with an image. B wins. What did you learn?",
+          "options": [
+            "Ghana is better than Nigeria",
+            "Images beat video",
+            "Video should be dropped everywhere",
+            "Nothing certain, because two things changed"
+          ],
+          "answer": 3,
+          "why": "Geo and format both changed, so you cannot tell which one caused the result. Test one variable at a time."
+        },
+        {
+          "q": "Which ad copy is honest and most likely to be approved?",
+          "options": [
+            "'See how this budgeting app tracks your spending'",
+            "'Earn ₦200,000 a week, guaranteed'",
+            "'Only 2 spots left today' shown every day",
+            "'As seen on a famous presenter's show' with no permission"
+          ],
+          "answer": 0,
+          "why": "It describes what the product does without income promises, fake urgency or borrowed fame."
+        },
+        {
+          "q": "What is the main job of the hook?",
+          "options": [
+            "Explain all the terms and conditions",
+            "Show the payout",
+            "Stop the scroll in the first moments",
+            "List every feature"
+          ],
+          "answer": 2,
+          "why": "The hook is the first line or second. If it fails, nobody sees the rest of the ad."
+        },
+        {
+          "q": "You find a strong competitor video in an ad spy tool. What do you do?",
+          "options": [
+            "Download and run it",
+            "Run it with your logo added",
+            "Translate it and run it in another geo",
+            "Study the angle and make your own version"
+          ],
+          "answer": 3,
+          "why": "Spy tools are for learning angles and formats. Re-using someone else's creative is stealing and risks your account."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn to build a simple campaign structure that tests one thing at a time, name everything clearly, and write honest ads. Simple structures are what turn every result into something you can learn from.",
+      "say_outro": "So: one campaign, a few ad sets that differ in one variable, clear names that match your sub I Ds, and honest ads with a hook, body and call to action. Your task: write three honest angles for your chosen offer with one hook each, then write the names you'd give the campaign, the three ad sets and the first ad. Now take the quiz."
+    },
+    {
+      "slug": "build-it-in-ads-manager",
+      "title": "Build the campaign in Ads Manager",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can create a campaign, ad set and ad click by click from your written plan.",
+        "By the end you can set the conversion event, budget, location, age and tracking without guessing.",
+        "By the end you can review every setting before you publish."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Build from the plan, not from memory",
+          "p": "A wrong country, an extra zero in the budget or the wrong conversion event can spend your whole test on the wrong thing. Building slowly from your written plan, and checking every screen, is how you keep that from happening.",
+          "d": {
+            "b": "Plan on paper, then click",
+            "s": "Every setting should come from your plan tab"
+          },
+          "say": "A wrong country, an extra zero in the budget, or the wrong conversion event can spend your whole test on the wrong thing. That's why we build from the plan, not from memory. Plan on paper, then click. Every setting you enter should come straight from your plan tab, and you check each screen as you go."
+        },
+        {
+          "v": "flow",
+          "h": "The build order",
+          "p": "Build from the top level down, then review everything before you publish. Ads Manager guides you through the same three levels you learned in the last lesson. Names change; check the current Ads Manager.",
+          "d": [
+            "Campaign: objective",
+            "Ad set: event, budget, people",
+            "Ad: creative, link, tracking",
+            "Review every level",
+            "Publish when you can watch"
+          ],
+          "say": "Here's the build order, from the top level down. Campaign first, where you set the objective. Then the ad set, with the event, budget and people. Then the ad, with the creative, link and tracking. Then review every level. And finally, publish only when you can watch. It's the same three levels from the last lesson. Names change, so check the current Ads Manager."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: create the campaign",
+          "p": "Here is the campaign level on Meta. We are not certain the current objective and button names match these exactly; Meta renames them often. Look for the same choices.",
+          "d": {
+            "steps": [
+              {
+                "title": "Choose the objective",
+                "text": "Click Create and choose the objective that matches a conversion on a website, usually Sales or Leads.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/create",
+                  "title": "Choose a campaign objective",
+                  "blocks": [
+                    {
+                      "type": "radio",
+                      "label": "Objective",
+                      "options": [
+                        "Awareness",
+                        "Traffic",
+                        "Leads",
+                        "Sales"
+                      ],
+                      "value": 3
+                    },
+                    {
+                      "type": "button",
+                      "label": "Continue"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Name it and pick manual setup",
+                "text": "Use your naming pattern. If offered a choice, pick the manual setup so you control each setting.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/create/campaign",
+                  "title": "Campaign",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Campaign name",
+                      "value": "NG_OfferA_FTD_1004"
+                    },
+                    {
+                      "type": "radio",
+                      "label": "Setup",
+                      "options": [
+                        "Manual",
+                        "Automated"
+                      ],
+                      "value": 0
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Keep budgets at ad set level",
+                "text": "Turn the campaign budget option off, so each ad set gets its own $18 and you can compare them with your kill lines.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/create/campaign",
+                  "title": "Campaign",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Advantage campaign budget",
+                      "on": false
+                    },
+                    {
+                      "type": "select",
+                      "label": "Special ad categories",
+                      "value": "None declared"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Next"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Let's walk through the campaign level on Meta. We're not certain the objective and button names match exactly, since Meta renames them often, so look for the same choices. Step one: click Create and choose the objective that matches a conversion on a website, usually Sales or Leads. Step two: name it with your naming pattern and pick manual setup if offered, so you control each setting. Step three: turn the campaign budget option off, so each ad set gets its own eighteen dollars and you can compare them with your kill lines."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: set up the ad set",
+          "p": "The ad set holds the event, budget, schedule and people. Each field below comes from your plan tab. Setting names change; check the current Ads Manager.",
+          "d": {
+            "steps": [
+              {
+                "title": "Conversion location and event",
+                "text": "Choose Website, your pixel or dataset, and the event that matches your goal.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/create/adset",
+                  "title": "Ad set: Broad_HowItWorks",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Conversion location",
+                      "value": "Website"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Dataset",
+                      "value": "MyBrand_Main_Web"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Conversion event",
+                      "value": "CompleteRegistration"
+                    }
+                  ],
+                  "highlight": 2
+                }
+              },
+              {
+                "title": "Budget and schedule",
+                "text": "Daily budget $18 from your plan. Start tomorrow morning in the geo's time zone.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/create/adset",
+                  "title": "Budget and schedule",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Daily budget",
+                      "value": "$18.00"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Start date",
+                      "value": "Tomorrow, 08:00 Africa/Lagos"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Location and age",
+                "text": "One country only. Age at or above the legal minimum for the offer, 18 at the very least.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/create/adset",
+                  "title": "Audience",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Locations",
+                      "value": "Nigeria"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Age",
+                      "value": "18 - 65+"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Broad: no interests for this test."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Placements",
+                "text": "Leave automatic placements on for a first test unless your offer terms forbid some placements.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/create/adset",
+                  "title": "Placements",
+                  "blocks": [
+                    {
+                      "type": "radio",
+                      "label": "Placements",
+                      "options": [
+                        "Advantage placements",
+                        "Manual placements"
+                      ],
+                      "value": 0
+                    },
+                    {
+                      "type": "button",
+                      "label": "Next"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Now the ad set, which holds the event, budget, schedule and people. Every field comes from your plan tab. First, set the conversion location to Website, pick your pixel or dataset, and choose the event that matches your goal. Second, set the daily budget to eighteen dollars and start tomorrow morning in the geo's time zone. Third, choose one country only, and an age at or above the legal minimum for the offer, eighteen at the very least. Fourth, leave automatic placements on, unless your offer terms forbid some."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: build the ad",
+          "p": "The ad level holds what people see and where the click goes. Paste the link and parameters from your naming key, never from an old campaign. Field names change; check the current Ads Manager.",
+          "d": {
+            "steps": [
+              {
+                "title": "Identity and format",
+                "text": "Choose your own page as the identity, and single video or image as the format.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/create/ad",
+                  "title": "Ad: Video_Q1_v1",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Page",
+                      "value": "Your Brand Media"
+                    },
+                    {
+                      "type": "radio",
+                      "label": "Format",
+                      "options": [
+                        "Single image or video",
+                        "Carousel"
+                      ],
+                      "value": 0
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Text and button",
+                "text": "Paste your honest primary text and headline, and pick a button that matches the page, such as Learn more.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/create/ad",
+                  "title": "Ad creative",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Primary text",
+                      "value": "See where your money goes. Track spending in two minutes a day."
+                    },
+                    {
+                      "type": "field",
+                      "label": "Headline",
+                      "value": "Try it free"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Call to action",
+                      "value": "Learn more"
+                    }
+                  ],
+                  "highlight": 2
+                }
+              },
+              {
+                "title": "Link and tracking",
+                "text": "Paste the lander URL and the URL parameters, and make sure your dataset is ticked under tracking.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/create/ad",
+                  "title": "Destination and tracking",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Website URL",
+                      "value": "https://yourlander.example/budget"
+                    },
+                    {
+                      "type": "field",
+                      "label": "URL parameters",
+                      "value": "utm_source=facebook&utm_campaign={{campaign.name}}&utm_content={{ad.name}}"
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Website events: MyBrand_Main_Web",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 1
+                }
+              }
+            ]
+          },
+          "say": "Now the ad level, which holds what people see and where the click goes. First, choose your own page as the identity, and single image or video as the format. Second, paste your honest primary text and headline, and pick a button that matches the page, like Learn more. Third, paste the lander address and the U R L parameters, and make sure your dataset is ticked under tracking. Always paste the link and parameters from your naming key, never from an old campaign."
+        },
+        {
+          "v": "code",
+          "h": "The link people will actually open",
+          "p": "This is the full address one click opens once the platform fills in the placeholders. Open the ad preview on your phone and compare the address bar with it. If any part is missing, fix the ad before you publish.",
+          "d": {
+            "lang": "url",
+            "text": "https://yourlander.example/budget?utm_source=facebook&utm_campaign=NG_OfferA_FTD_1004&utm_content=Video_Q1_v1",
+            "note": "Example. Your lander then passes its click ID into sub1 of the offer link."
+          },
+          "say": "On screen is the full address one click opens, once the platform fills in the placeholders. I won't read it out, but notice it carries the source, the campaign name and the ad name. Open the ad preview on your phone and compare the address bar with what's shown here. If any part is missing, fix the ad before you publish. Your lander then passes its click I D into the offer link."
+        },
+        {
+          "v": "table",
+          "h": "Settings sheet: what and why",
+          "p": "Example settings for the first test, taken straight from the plan tab. You optimise for registrations because they come often enough for Meta to learn, but you still judge results on FTDs from the network. Keep this table next to Ads Manager while you build and tick each row on the review screen.",
+          "d": {
+            "cols": [
+              "Setting",
+              "Example",
+              "Why"
+            ],
+            "rows": [
+              [
+                "Objective",
+                "Sales",
+                "A conversion goal"
+              ],
+              [
+                "Event",
+                "CompleteRegistration",
+                "Enough volume to learn"
+              ],
+              [
+                "Budget",
+                "$18 per ad set",
+                "3 × $24 over 4 days"
+              ],
+              [
+                "Location",
+                "Nigeria only",
+                "Offer geo"
+              ],
+              [
+                "Age",
+                "18+",
+                "Legal minimum or higher"
+              ],
+              [
+                "Start",
+                "08:00 local",
+                "You can watch it"
+              ]
+            ]
+          },
+          "say": "This is an example settings sheet for the first test, taken straight from the plan tab. Objective: Sales, a conversion goal. Event: complete registration, for enough volume to learn. Meta optimises for registrations, but you still judge results on F T Ds from the network. Budget: eighteen dollars per ad set, three times twenty four over four days. Location: Nigeria only, the offer geo. Age: eighteen plus, the legal minimum or higher. Start: eight in the morning local time, so you can watch. Keep this next to Ads Manager and tick each row on the review screen."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: budget from the plan",
+          "p": "Example: the daily budget is not a guess. It comes from the test budget per ad set divided by the days you chose. Three ad sets at $18 means $54 a day in total, which must fit your card and your daily cap.",
+          "d": [
+            "$72 per ad set",
+            "÷",
+            "4 days",
+            "=",
+            "$18 a day"
+          ],
+          "say": "Here's a worked example of where the budget comes from. The daily budget isn't a guess. Look at the equation: seventy two dollars per ad set, divided by four days, equals eighteen dollars a day. With three ad sets, that's fifty four dollars a day in total, and that total must fit your card and your daily cap."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: review before you publish",
+          "p": "Before publishing, open the review or summary view and read every level against your settings sheet. Look for errors and warnings. If anything differs from your plan, fix it now. Names change; check the current Ads Manager.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/review",
+            "title": "Review and publish",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Level",
+                  "Name",
+                  "Check"
+                ],
+                "rows": [
+                  [
+                    "Campaign",
+                    "NG_OfferA_FTD_1004",
+                    "Sales"
+                  ],
+                  [
+                    "Ad set",
+                    "Broad_HowItWorks",
+                    "$18, NG, 18+"
+                  ],
+                  [
+                    "Ad",
+                    "Video_Q1_v1",
+                    "URL params set"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "0 errors. Read every warning before you continue."
+              },
+              {
+                "type": "button",
+                "label": "Publish"
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Before publishing, open the review or summary view and read every level against your settings sheet. Look at the table: the campaign with its objective, the ad set with eighteen dollars, Nigeria and eighteen plus, and the ad with U R L parameters set. Check the errors and read every warning. If anything differs from your plan, fix it now, not after the money starts moving. Names change, so check the current Ads Manager."
+        },
+        {
+          "v": "compare",
+          "h": "Common build mistakes",
+          "p": "These are the build mistakes that cost beginners the most. Every one is visible on the review screen if you read it slowly against your settings sheet.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "$180 typed instead of $18",
+                "Several countries left in",
+                "Wrong event, such as link clicks",
+                "URL parameters copied from an old ad"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Read budgets aloud at review",
+                "One geo per test",
+                "Event from your plan tab",
+                "Rebuild links from your naming key"
+              ]
+            }
+          },
+          "say": "These are the build mistakes that cost beginners the most, each with its fix. One hundred and eighty dollars typed instead of eighteen, so read budgets aloud at review. Several countries left in, so use one geo per test. The wrong event, like link clicks, so take the event from your plan tab. U R L parameters copied from an old ad, so rebuild links from your naming key. Every one of these shows on the review screen if you read it slowly."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: categories and authorization",
+          "p": "Some ads must be declared in a special category, which limits targeting. At the time of writing this covers areas like credit, and in some regions wider financial products. We are not certain of the current list for your country; check Meta's help centre.",
+          "d": {
+            "kind": "warn",
+            "text": "Declare a special category if your offer needs one, and do not publish regulated ads without the authorization the platform requires."
+          },
+          "say": "A compliance point. Some ads must be declared in a special category, which limits targeting. At the time of writing this covers areas like credit, and in some regions wider financial products. We're not certain of the current list for your country, so check Meta's help centre. Declare a special category if your offer needs one, and don't publish regulated ads without the authorization the platform requires."
+        },
+        {
+          "v": "tip",
+          "h": "Publish when you can watch",
+          "p": "Publishing sends ads to review, and they can start delivering soon after approval. Schedule the start for a morning in the geo, or publish only when you can watch the first hours.",
+          "d": {
+            "kind": "tip",
+            "text": "Use a scheduled start time, such as 08:00 in the geo, so delivery begins when you are awake and ready to check."
+          },
+          "say": "Publishing sends your ads to review, and they can start delivering soon after approval. So schedule the start for a morning in the geo, or publish only when you can watch the first hours. A scheduled start, like eight in the morning in the geo, means delivery begins when you're awake and ready to check."
+        },
+        {
+          "v": "check",
+          "h": "Build sign-off",
+          "p": "Tick every line on the review screen before you press publish. If one line is wrong, fix it and read the whole review again. The next lesson adds the full launch checklist on top.",
+          "d": [
+            "Objective and event match the plan",
+            "Budget per ad set matches the plan",
+            "One country, legal age or higher",
+            "Ads use your page and honest copy",
+            "URL and parameters checked on a phone",
+            "Special category and authorization checked"
+          ],
+          "say": "Here's your build sign-off. Tick every line on the review screen before you press publish. Objective and event match the plan. Budget per ad set matches the plan. One country, legal age or higher. Ads use your page and honest copy. U R L and parameters checked on a phone. Special category and authorization checked. If one line is wrong, fix it and read the whole review again. The next lesson adds the full launch checklist on top."
+        }
+      ],
+      "takeaways": [
+        "Build from your plan tab, top level down: campaign, ad set, ad.",
+        "Every setting should match your settings sheet: event, budget, location, age and link.",
+        "Read the review screen slowly before publishing, and start when you can watch."
+      ],
+      "action": "Build your first test in Ads Manager from your plan tab, but leave it unpublished. Screenshot the review screen and tick each row of your settings sheet against it.",
+      "glossary": [
+        {
+          "term": "Objective",
+          "def": "The goal you choose at campaign level, such as Sales or Leads, which tells the platform what to optimise for. Names change."
+        },
+        {
+          "term": "Conversion event",
+          "def": "The event, such as CompleteRegistration, that the ad set asks the platform to find more of."
+        },
+        {
+          "term": "Special ad category",
+          "def": "A declaration some ads must make, such as for credit, which limits targeting options. Lists differ by region and change."
+        },
+        {
+          "term": "Placements",
+          "def": "Where ads can appear, such as feeds, stories and reels."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Your plan says $72 per ad set over 4 days. What daily budget do you type?",
+          "options": [
+            "$72",
+            "$18",
+            "$24",
+            "$288"
+          ],
+          "answer": 1,
+          "why": "$72 ÷ 4 days = $18 a day."
+        },
+        {
+          "q": "Where do you set the conversion event, budget and location?",
+          "options": [
+            "At ad set level",
+            "At campaign level",
+            "At ad level",
+            "In the network panel"
+          ],
+          "answer": 0,
+          "why": "The ad set holds the event, budget, schedule and people. The campaign holds the objective; the ad holds the creative and link."
+        },
+        {
+          "q": "On the review screen you see Nigeria, Ghana and Kenya listed for a Nigeria-only offer. What do you do?",
+          "options": [
+            "Publish and filter later",
+            "Leave it, more reach is better",
+            "Remove Ghana and Kenya before publishing",
+            "Lower the budget instead"
+          ],
+          "answer": 2,
+          "why": "Traffic from geos the offer does not allow is often not paid. One geo per test, matching the offer terms."
+        },
+        {
+          "q": "Why use a scheduled morning start time?",
+          "options": [
+            "Morning clicks are always cheaper",
+            "Platforms require it",
+            "It skips ad review",
+            "Delivery starts when you are awake to check it"
+          ],
+          "answer": 3,
+          "why": "The first hours are when broken links and settings show up. A scheduled start makes sure you are there."
+        },
+        {
+          "q": "Where should the URL parameters for a new ad come from?",
+          "options": [
+            "Your naming key, rebuilt for this campaign",
+            "Copied from last month's ad",
+            "Left empty, the platform adds them",
+            "The network's homepage"
+          ],
+          "answer": 0,
+          "why": "Copied links carry old names and sub IDs. Build them fresh from your naming key and check them on a phone."
+        }
+      ],
+      "say_intro": "In this lesson you'll build your first campaign in Ads Manager, click by click, straight from your written plan. Building slowly and checking every screen is how you avoid spending your test on the wrong thing.",
+      "say_outro": "You've built the campaign, ad set and ad from your plan, checked the link on a phone, and reviewed every level before publishing. Your task: build your first test in Ads Manager from your plan tab but leave it unpublished, then screenshot the review screen and tick each row of your settings sheet against it. Now take the quiz."
+    },
+    {
+      "slug": "launch-checklist",
+      "title": "Launch day checklist",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can run a pre-launch check on links, tracking, targeting, budget and creatives.",
+        "By the end you can run a test conversion and confirm it in every system.",
+        "By the end you can respond correctly to ad review outcomes, including rejections."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Launch is a checklist, not a feeling",
+          "p": "Pilots run a checklist before every flight, even after thousands of hours. Your launch deserves the same care. Most first-campaign disasters, from dead links to the wrong country, are caught by a list that takes about ten minutes.",
+          "d": {
+            "b": "Ten minutes of checks",
+            "s": "Saves days of wasted spend"
+          },
+          "say": "Pilots run a checklist before every flight, even after thousands of hours. Your launch deserves the same care. Most first campaign disasters, from dead links to the wrong country, are caught by a list that takes about ten minutes. Ten minutes of checks saves days of wasted spend. Let's build that list together."
+        },
+        {
+          "v": "check",
+          "h": "Links and tracking",
+          "p": "Start with the path a real person takes. Open everything on a phone, on mobile data, the way your audience will. A link that works on your laptop over office Wi-Fi can still fail for them.",
+          "d": [
+            "Ad link opens on a phone",
+            "Page loads fast on mobile data",
+            "Offer link carries your sub IDs",
+            "Test conversion shows in the network",
+            "Pixel or dataset event received",
+            "Names match your tracking sheet"
+          ],
+          "say": "Start with the path a real person takes. Open everything on a phone, on mobile data, the way your audience will. A link that works on your laptop over office Wi-Fi can still fail for them. Then check the list: the ad link opens on a phone, the page loads fast on mobile data, the offer link carries your sub I Ds, the test conversion shows in the network, the pixel event is received, and names match your tracking sheet."
+        },
+        {
+          "v": "check",
+          "h": "Targeting and budget",
+          "p": "Next check who will see the ads and how much you will spend. One wrong country or a misplaced zero in the budget can burn your whole test before lunch. Read every setting slowly, out loud if it helps.",
+          "more": "Gambling and trading offers often have an 18+ or higher minimum age, depending on the country, and platforms may require it too. Set the age to whatever the law and platform require, or higher. Names change; check the current Ads Manager for where age and location settings sit.",
+          "d": [
+            "Correct country or countries only",
+            "Age at or above the legal minimum",
+            "Language matches the ads",
+            "Daily budget matches your plan",
+            "Time zone and schedule correct",
+            "Account spending limit set"
+          ],
+          "say": "Next, check who will see the ads and how much you'll spend. One wrong country or a misplaced zero can burn your whole test before lunch. Go down the list: correct countries only, age at or above the legal minimum, language matching the ads, daily budget matching your plan, time zone and schedule correct, and an account spending limit set. Gambling and trading offers often need eighteen plus or higher depending on the country, so set whatever the law and platform require, or higher."
+        },
+        {
+          "v": "check",
+          "h": "Creative and copy",
+          "p": "Read each ad as a stranger would. Does it promise anything you cannot prove? Does the landing page say the same thing the ad says? Is the correct page or identity shown as the advertiser?",
+          "d": [
+            "Spelling and numbers checked",
+            "No income promises or fake urgency",
+            "Required risk warnings included",
+            "Landing page matches the ad",
+            "Correct page shown as advertiser"
+          ],
+          "say": "Now read each ad as a stranger would. Does it promise anything you can't prove? Does the landing page say the same thing the ad says? Is the correct page shown as the advertiser? Work through the checklist: spelling and numbers checked, no income promises or fake urgency, required risk warnings included, landing page matching the ad, and the correct page shown as advertiser."
+        },
+        {
+          "v": "flow",
+          "h": "Run a test conversion",
+          "p": "Before real money flows, act like a user. Click through from a phone, complete the action if the offer allows test conversions, then confirm the conversion shows everywhere it should, with the right sub ID attached.",
+          "more": "Ask your affiliate manager how they want test conversions done. Some offers let you register a clearly marked test account; others send a test postback for you. Never fake leads, make deposits for other people or submit conversions that are not real. Meta's Events Manager has a test events tool; names change, so check the current version.",
+          "d": [
+            "Click through on a phone",
+            "Complete the test action",
+            "See it in network stats",
+            "See the event in Events Manager",
+            "Match the sub ID"
+          ],
+          "say": "Before real money flows, act like a user. Follow the steps: click through on a phone, complete the test action, see it in your network stats, see the event in Events Manager, and match the sub I D. Ask your affiliate manager how they want test conversions done. Some offers let you register a clearly marked test account; others send a test postback. Never fake leads, make deposits for other people, or submit conversions that aren't real."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: the test conversion",
+          "p": "Do the test conversion on your phone, on mobile data, the way a real user would. Agree the method with your affiliate manager first. Screen names change; look for the same steps.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open the ad preview",
+                "text": "Send the ad preview to your phone and tap through from it, not from a saved link.",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "yourlander.example/budget?utm_content=Video_Q1_v1",
+                  "page": {
+                    "h": "See where your money goes",
+                    "p": "Example lander. Check the address bar carries your parameters.",
+                    "cta": "Try it free"
+                  }
+                }
+              },
+              {
+                "title": "Complete the agreed test",
+                "text": "Register a clearly marked test account, or ask the manager to fire a test conversion with your click ID.",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "offer.example/signup?sub1=test_1004",
+                  "page": {
+                    "h": "Create your account",
+                    "p": "Use the test details your manager agreed. Never fake a real lead.",
+                    "cta": "Sign up"
+                  }
+                }
+              },
+              {
+                "title": "Find it in the network",
+                "text": "Open the network stats, grouped by sub ID, and find your test click ID.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/stats",
+                  "title": "Statistics",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "sub1",
+                        "Clicks",
+                        "Regs"
+                      ],
+                      "rows": [
+                        [
+                          "test_1004",
+                          "1",
+                          "1"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Find it in Events Manager",
+                "text": "Check test events shows the registration once, with no duplicate.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/events_manager/test_events",
+                  "title": "Test events",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Event",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "PageView",
+                          "Received"
+                        ],
+                        [
+                          "CompleteRegistration",
+                          "Received"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Let's walk through the test conversion on your phone, on mobile data. Agree the method with your affiliate manager first. Step one: send the ad preview to your phone and tap through from it, and check the address bar carries your parameters. Step two: complete the agreed test, a clearly marked test account or a manager-fired test conversion, never a fake real lead. Step three: open the network stats grouped by sub I D and find your test click. Step four: check Events Manager shows the registration once, with no duplicate."
+        },
+        {
+          "v": "table",
+          "h": "Ad review outcomes",
+          "p": "After you publish, the platform reviews each ad before it can run. Many reviews finish within a day, but timing varies. Know what each outcome means and the correct move for each one.",
+          "more": "Status names change; check the current Ads Manager. Duplicating an ad that is still in review usually just creates more reviews and can look like spam. If an account is restricted, read the notice carefully and follow the platform's official appeal process only.",
+          "d": {
+            "cols": [
+              "Status",
+              "Meaning",
+              "Your move"
+            ],
+            "rows": [
+              [
+                "In review",
+                "Being checked",
+                "Wait, do not duplicate"
+              ],
+              [
+                "Active",
+                "Approved, can deliver",
+                "Watch delivery"
+              ],
+              [
+                "Rejected",
+                "Breaks a policy",
+                "Read the reason, fix it"
+              ],
+              [
+                "Account restricted",
+                "A bigger issue",
+                "Stop, read, appeal honestly"
+              ]
+            ]
+          },
+          "say": "After you publish, the platform reviews each ad. Many reviews finish within a day, but timing varies. Read the table. In review means it's being checked, so wait, and don't duplicate. Active means approved, so watch delivery. Rejected means it breaks a policy, so read the reason and fix it. Account restricted is a bigger issue, so stop, read the notice, and appeal honestly through the official process only."
+        },
+        {
+          "v": "compare",
+          "h": "When an ad is rejected",
+          "p": "A rejection is feedback about a policy. Trying to sneak past review is called circumvention. It breaks the rules, gets accounts banned and puts misleading ads in front of real people. It is never worth it.",
+          "d": {
+            "a": {
+              "title": "Wrong response",
+              "items": [
+                "Re-upload the same ad again and again",
+                "Hide words with symbols or spacing",
+                "Show reviewers a different page",
+                "Open a new account to get around it"
+              ]
+            },
+            "b": {
+              "title": "Right response",
+              "items": [
+                "Read the policy named",
+                "Fix the ad or the page",
+                "Request review if it was a mistake",
+                "Note the rule for next time"
+              ]
+            }
+          },
+          "say": "A rejection is feedback about a policy. Trying to sneak past review is called circumvention, and it's never worth it. Look at the wrong responses on the left: re-uploading the same ad again and again, hiding words with symbols, showing reviewers a different page, or opening a new account to get around it. These get accounts banned and put misleading ads in front of real people. The right response: read the policy named, fix the ad or page, request review if it was a mistake, and note the rule for next time."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: check delivery after publish",
+          "p": "About two hours after the start time, open Ads Manager and read the delivery column for every ad. Each status needs a different move, from the table above. Status names change; check the current Ads Manager.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/ads",
+            "title": "Ads",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Ad",
+                  "Delivery",
+                  "Spend"
+                ],
+                "rows": [
+                  [
+                    "Video_Q1_v1",
+                    "Active",
+                    "$1.40"
+                  ],
+                  [
+                    "Video_Q2_v1",
+                    "In review",
+                    "$0.00"
+                  ],
+                  [
+                    "Video_Q3_v1",
+                    "Rejected",
+                    "$0.00"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Example. Rejected: read the reason. In review: wait, do not duplicate."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "About two hours after the start time, open Ads Manager and read the delivery column for every ad. In this example, the first ad is active and has spent one dollar forty. The second is still in review, so you wait and don't duplicate. The third was rejected, so you read the reason. Each status needs a different move, from the table you just saw. Status names change, so check the current Ads Manager."
+        },
+        {
+          "v": "stat",
+          "h": "Example: what a dead link costs",
+          "p": "Example: you launch three ad sets at $18 each, $54 a day, with a typo in the offer link, so nobody can convert. If you only notice after two days, you have paid $108 for a lesson the checklist would have taught you for free.",
+          "d": {
+            "n": 108,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "lost to a broken link over 2 days",
+            "note": "Example. $54 × 2 days."
+          },
+          "say": "Here's an example of what skipping the checklist costs. You launch three ad sets at eighteen dollars each, fifty four dollars a day, with a typo in the offer link, so nobody can convert. If you only notice after two days, you've paid one hundred and eight dollars, the number on screen, for a lesson the checklist would have taught you for free."
+        },
+        {
+          "v": "cards",
+          "h": "When to launch",
+          "p": "Launch when you can watch the first hours. A morning launch in the geo's time zone gives you the whole day to catch problems. Avoid launching right before you sleep, travel or know you will be offline.",
+          "d": [
+            "Morning in the geo|catch problems early",
+            "A working day|your manager can answer",
+            "Not before a trip|you need to watch",
+            "Time zone checked|the account's day matches yours"
+          ],
+          "say": "When should you launch? When you can watch the first hours. Look at the cards. A morning in the geo, so you catch problems early. A working day, so your manager can answer. Not right before a trip, sleep, or time offline, because you need to watch. And check the time zone, so the account's day matches yours."
+        },
+        {
+          "v": "tip",
+          "h": "Screenshot your setup",
+          "p": "Before you publish, screenshot or export each ad set's settings. If something changes, or a teammate edits it, you can compare. These records also become part of your test log and your portfolio later in this school.",
+          "d": {
+            "kind": "tip",
+            "text": "Save a dated screenshot of every ad set's settings in a folder named after the campaign."
+          },
+          "say": "Before you publish, screenshot or export each ad set's settings. If something changes, or a teammate edits it, you can compare. These records also become part of your test log and your portfolio later in this school. The tip on screen: save a dated screenshot of every ad set's settings in a folder named after the campaign."
+        },
+        {
+          "v": "cards",
+          "h": "Common launch mistakes",
+          "p": "These launch mistakes show up again and again in first campaigns. Each one is caught by the checklists in this lesson, so the fix is simply to run them every time, even when you are in a hurry.",
+          "d": [
+            "Testing on Wi-Fi only|test on mobile data",
+            "Wrong country or age|read settings aloud",
+            "Budget typo|$180 is not $18",
+            "Launching before sleep|launch when you can watch"
+          ],
+          "say": "These launch mistakes show up again and again, each with its fix. Testing on Wi-Fi only, so test on mobile data. Wrong country or age, so read settings aloud. A budget typo, because one hundred and eighty dollars is not eighteen. And launching before sleep, so launch when you can watch. Every one is caught by this lesson's checklists, so run them every time, even when you're in a hurry."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: the last check before publish",
+          "p": "Publishing is the moment your ads meet real people and review. If your vertical needs platform authorization or a licence for the geo, and you do not have it in writing, the right move is not to publish yet.",
+          "d": {
+            "kind": "warn",
+            "text": "No written authorization where it is required, no publish. A day's delay costs nothing compared with a restricted account."
+          },
+          "say": "Publishing is the moment your ads meet real people and review. If your vertical needs platform authorization or a licence for the geo, and you don't have it in writing, the right move is not to publish yet. Read the warning: no written authorization where it's required, no publish. A day's delay costs nothing compared with a restricted account."
+        },
+        {
+          "v": "check",
+          "h": "Final sign-off",
+          "p": "Only press publish when every line is true. If you hesitate on any line, fix it first. A late launch costs you a few hours. A broken launch costs you money, data and confidence.",
+          "d": [
+            "Setup sign-off from lesson 1 still true",
+            "Budget plan written",
+            "Kill lines written",
+            "All checklists above ticked",
+            "You can watch the next 6 hours"
+          ],
+          "say": "Here's your final sign-off. Only press publish when every line is true. The setup sign-off from lesson one is still true. Your budget plan is written. Your kill lines are written. All the checklists above are ticked. And you can watch the next six hours. If you hesitate on any line, fix it first. A late launch costs a few hours. A broken launch costs money, data and confidence."
+        }
+      ],
+      "takeaways": [
+        "Check links, tracking, targeting, budget and creatives before every launch.",
+        "Run a real test conversion and confirm it in the network and the platform.",
+        "Fix rejected ads honestly. Never try to get around review."
+      ],
+      "action": "Turn this lesson's four checklists into one launch checklist in your notes. Use it for every campaign from now on.",
+      "glossary": [
+        {
+          "term": "Test conversion",
+          "def": "A planned check where you go through the funnel yourself, with your network's agreement, to confirm tracking works."
+        },
+        {
+          "term": "Ad review",
+          "def": "The platform's check of each ad against its policies before the ad can run."
+        },
+        {
+          "term": "Circumvention",
+          "def": "Trying to get around ad review or policy, for example by hiding words or showing reviewers a different page. It breaks platform rules."
+        },
+        {
+          "term": "Delivery",
+          "def": "Whether, and how much, the platform is actually showing your ads."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "An ad is rejected for misleading claims. What is the right response?",
+          "options": [
+            "Re-upload it with symbols in place of banned words",
+            "Read the policy, fix the claim, and request review if you think it was a mistake",
+            "Open a new ad account",
+            "Show reviewers one page and users another"
+          ],
+          "answer": 1,
+          "why": "Fix the issue and use the official review process. The other options are circumvention and break platform rules."
+        },
+        {
+          "q": "Your daily budget is $30 and the offer link is broken for 3 days. How much spend is wasted?",
+          "options": [
+            "$30",
+            "$60",
+            "$90",
+            "$120"
+          ],
+          "answer": 2,
+          "why": "$30 × 3 days = $90, all spent on clicks that could never convert."
+        },
+        {
+          "q": "Why run a test conversion before launch?",
+          "options": [
+            "To prove the click, action and tracking chain all work",
+            "It raises the payout",
+            "Platforms require one deposit per account",
+            "To feed the algorithm extra conversions"
+          ],
+          "answer": 0,
+          "why": "A test conversion shows the whole chain works and the sub IDs match, before real money is spent."
+        },
+        {
+          "q": "You are running a gambling offer in Ghana. How should you set the age?",
+          "options": [
+            "Leave the platform default",
+            "18 to 24 only, because they convert best",
+            "Age does not matter for affiliates",
+            "At or above the minimum required by law and the platform"
+          ],
+          "answer": 3,
+          "why": "Regulated offers have legal age limits. Set the age at or above what the law and the platform require."
+        },
+        {
+          "q": "When is the best time to launch your first campaign?",
+          "options": [
+            "Late at night, just before you sleep",
+            "Right before a trip",
+            "When you can watch the first several hours",
+            "On a public holiday when the network is closed"
+          ],
+          "answer": 2,
+          "why": "The first hours are when broken links and settings show up. You need to be there to catch them."
+        }
+      ],
+      "say_intro": "In this lesson you'll run a proper launch day checklist, do a test conversion, and learn how to respond to ad review outcomes, including rejections. Ten minutes of checks here can save days of wasted spend.",
+      "say_outro": "You now have checklists for links and tracking, targeting and budget, and creative, plus a test conversion and a clear plan for review outcomes. Your task: turn this lesson's four checklists into one launch checklist in your notes, and use it for every campaign from now on. Now take the quiz."
+    },
+    {
+      "slug": "first-72-hours",
+      "title": "The first 72 hours: kill, hold or scale",
+      "minutes": 20,
+      "objectives": [
+        "By the end you can say what to check, and what not to touch, in each part of the first 72 hours.",
+        "By the end you can apply written kill, hold and scale rules to real numbers.",
+        "By the end you can scale a winning ad set in small, safe steps."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Rules first, feelings never",
+          "p": "The first three days feel exciting and scary. You will want to refresh stats every five minutes, change things after one bad hour and double the budget after one good one. Rules you wrote before launch protect you from all three.",
+          "d": {
+            "b": "Decide with rules written before launch",
+            "s": "Not with how you feel today"
+          },
+          "say": "The first three days feel exciting and scary. You'll want to refresh stats every five minutes, change things after one bad hour, and double the budget after one good one. The rules you wrote before launch protect you from all three. Decide with rules written before launch, not with how you feel today."
+        },
+        {
+          "v": "curve",
+          "h": "Early numbers swing",
+          "p": "Example: daily cost per lead over one week, with the average of the daily figures. Early days jump around because there is little data, then settle. Judging on day one is like judging a football match after two minutes.",
+          "d": {
+            "a": [
+              9,
+              3.2,
+              6.5,
+              4.1,
+              4.8,
+              4.4,
+              4.5
+            ],
+            "la": "Daily CPL $ (Example)",
+            "b": [
+              9,
+              6.1,
+              6.2,
+              5.7,
+              5.5,
+              5.3,
+              5.2
+            ],
+            "lb": "Average so far $ (Example)",
+            "x": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7"
+            ]
+          },
+          "say": "Look at this chart. It's an example of daily cost per lead, C P L, over one week, with a second line showing the average so far. The daily line jumps from nine dollars down to about three, then up again, because there's so little data. The average line settles around five dollars. Judging on day one is like judging a football match after two minutes."
+        },
+        {
+          "v": "table",
+          "h": "What to check, and when",
+          "p": "Each window has a different job. Early on you check that things work. Later you judge whether they work well. These timings match the Budget and kill rules module, for an FTD offer whose postbacks usually arrive the same day.",
+          "d": {
+            "cols": [
+              "When",
+              "Look at",
+              "Allowed"
+            ],
+            "rows": [
+              [
+                "0 to 6 h",
+                "Approved, spending, link works",
+                "Fix only"
+              ],
+              [
+                "24 h",
+                "CTR, CPC, page views, sign-ups",
+                "Fix; zero-FTD kill only"
+              ],
+              [
+                "48 h",
+                "Network FTDs and CPA",
+                "Kill rules"
+              ],
+              [
+                "72 h",
+                "Network FTDs and CPA",
+                "Kill, keep, scale"
+              ],
+              [
+                "Every 24 h after",
+                "Same, same time each day",
+                "All four; scale steps ≥ 48 h apart"
+              ]
+            ]
+          },
+          "say": "Each time window has a different job. Read the table. From zero to six hours, check it's approved, spending, and the link works, and only fix things. At twenty four hours, look at C T R, C P C, page views and sign-ups, and only use the zero F T D kill. At forty eight hours, look at network F T Ds and C P A, cost per acquisition, and apply kill rules. At seventy two hours, kill, keep or scale. After that, check at the same time each day, with scale steps at least forty eight hours apart."
+        },
+        {
+          "v": "cards",
+          "h": "Early signals to read",
+          "p": "Before conversions arrive, a few early signals tell you whether the ad and page work at all. They are hints, not verdicts. Compare them with your other ads, because outside benchmarks vary by geo and vertical.",
+          "more": "If clicks are high but landing page views are much lower, people are leaving before the page loads, which is often a speed or link problem. Fix that at once. If one ad's CTR is far below your other ads, its hook may not be working. These are signals to investigate, not reasons to kill on day one.",
+          "d": [
+            "Spend|is the ad delivering at all?",
+            "CTR|are people stopping to click?",
+            "CPC|what each click costs",
+            "Clicks vs page views|is the page loading?"
+          ],
+          "say": "Before conversions arrive, a few early signals tell you whether the ad and page work at all. Spend: is the ad delivering? C T R, click-through rate: are people stopping to click? C P C, cost per click: what does each click cost? And clicks versus page views: is the page loading? If clicks are high but page views much lower, people leave before the page loads, so fix that at once. These are hints to investigate, not reasons to kill on day one."
+        },
+        {
+          "v": "compare",
+          "h": "Edit or wait?",
+          "p": "Most platforms put an ad set back into learning after significant edits, which resets the data it has gathered. In the first 72 hours, make only the changes your rules require, and fix anything broken at once.",
+          "more": "What counts as a significant edit differs by platform and changes over time. Check the current help centre. When in doubt, wait for your next checkpoint.",
+          "d": {
+            "a": {
+              "title": "Edits that reset learning",
+              "items": [
+                "Changing the creative",
+                "Big budget jumps",
+                "Changing audience or conversion event"
+              ]
+            },
+            "b": {
+              "title": "Fine in the first 72 hours",
+              "items": [
+                "Fixing a broken link (always)",
+                "Pausing an ad set at its kill line",
+                "Logging numbers in your sheet"
+              ]
+            }
+          },
+          "say": "Most platforms put an ad set back into learning after significant edits, which resets the data it has gathered. Compare the columns. Changing the creative, big budget jumps, or changing the audience or conversion event can reset learning. But fixing a broken link, always, pausing an ad set at its kill line, and logging numbers in your sheet are fine. What counts as significant varies and changes, so check the help centre, and when in doubt, wait for your next checkpoint."
+        },
+        {
+          "v": "flow",
+          "h": "The decision questions",
+          "p": "At each checkpoint, run every ad set through the same questions in the same order. The first yes decides. Write the answer in your sheet. This turns a stressful moment into a two-minute routine you can repeat for years.",
+          "d": [
+            "0 FTDs at 2 × target? Kill",
+            "Spend ≥ 3 × target, CPA over kill line? Kill",
+            "3+ FTDs, CPA ≤ 0.8 × target? Scale",
+            "3+ FTDs, CPA ≤ target? Keep",
+            "Anything else? Hold"
+          ],
+          "say": "At each checkpoint, run every ad set through the same questions, in the same order. The first yes decides. Zero F T Ds at two times target? Kill. Spend at three times target with C P A over the kill line? Kill. Three or more F T Ds with C P A at or below zero point eight times target? Scale. Three or more F T Ds at or below target? Keep. Anything else? Hold. Write the answer in your sheet. It becomes a two minute routine."
+        },
+        {
+          "v": "table",
+          "h": "The rule card for this test",
+          "p": "Example for a $30 payout and $24 target. These are the starting rules from the Budget and kill rules module; adapt them to your vertical and data. Check rows from the top, stop at the first true one and count only network-confirmed FTDs.",
+          "more": "The CPA kill line is the lower of 1.5 × target and break-even: 1.5 × $24 = $36, but break-even is $30, so the line is $30. It only applies once spend reaches 3 × target, $72, because before that one FTD more or less swings the CPA too much. Three conversions is a bare minimum before you trust a CPA. Scale means +20%, with at least 48 hours between steps. Keep means it works at target: leave the budget alone.",
+          "d": {
+            "cols": [
+              "Decision",
+              "Rule",
+              "Example, $24 target"
+            ],
+            "rows": [
+              [
+                "Kill",
+                "0 FTDs at spend ≥ 2 × target",
+                "$48 spent, 0 FTDs"
+              ],
+              [
+                "Kill",
+                "Spend ≥ 3 × target, CPA over kill line",
+                "$72+ spent, CPA over $30"
+              ],
+              [
+                "Scale",
+                "3+ FTDs, CPA ≤ 0.8 × target",
+                "3+ FTDs, CPA ≤ $19.20"
+              ],
+              [
+                "Keep",
+                "3+ FTDs, CPA ≤ target",
+                "3+ FTDs, CPA $19.21 to $24"
+              ],
+              [
+                "Hold",
+                "Anything else",
+                "e.g. $54 spent, 1 FTD"
+              ]
+            ]
+          },
+          "say": "Here's the rule card for this test, an example with a thirty dollar payout and twenty four dollar target. Check rows from the top, stop at the first true one, and count only network-confirmed F T Ds. The C P A kill line is the lower of one point five times target and break-even, so thirty dollars, and it only applies once spend reaches seventy two. Scale means three plus F T Ds at nineteen dollars twenty or less. Keep means three plus at up to twenty four. Hold is everything else. Adapt these starting rules to your vertical."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example: ad set A",
+          "p": "Example: ad set A has spent $48 by day 3 with 0 network-confirmed FTDs. The zero-conversion kill line is 2 × $24 = $48. Decision: kill. It does not matter that its CTR looked good. Rules are about the result you get paid for.",
+          "d": {
+            "kind": "example",
+            "text": "Ad set A: $48 spent, 0 FTDs, kill line $48. Decision: kill."
+          },
+          "say": "Let's work through some examples. Ad set A has spent forty eight dollars by day three, with zero network-confirmed F T Ds. The zero-conversion kill line is two times twenty four, which is forty eight. So the decision is kill. It doesn't matter that its C T R looked good. Rules are about the result you actually get paid for."
+        },
+        {
+          "v": "stat",
+          "h": "Worked example: ad set B",
+          "p": "Example: at 72 hours ad set B has spent $54 and brought 3 network-confirmed FTDs. That is a CPA of $18, at or under the $19.20 scale line (0.8 × $24). Decision: scale, with a budget increase of 20%.",
+          "d": {
+            "n": 18,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "CPA for ad set B ($54 ÷ 3 FTDs)",
+            "note": "Example."
+          },
+          "say": "Ad set B, also an example. At seventy two hours it has spent fifty four dollars and brought three network-confirmed F T Ds. Fifty four divided by three is a C P A of eighteen dollars, the number on screen. That's at or under the nineteen dollar twenty scale line, which is zero point eight times twenty four. So the decision is scale, with a budget increase of twenty percent."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example: ad set C",
+          "p": "Example: ad set C has spent $54 and brought 1 FTD, a CPA of $54. That looks terrible, but spend is still under 3 × target ($72) and there is only 1 conversion, so neither kill row is true yet. Decision: hold.",
+          "d": {
+            "kind": "example",
+            "text": "Ad set C: $54 ÷ 1 FTD = $54 CPA, but spend is under $72 and FTDs under 3. Decision: hold until the next checkpoint."
+          },
+          "more": "Why not kill now? One FTD more by $72 would make the CPA $36, and two more $24. Below 3 × target, single conversions swing the CPA too much to judge. If C reaches $72 with still only 1 FTD, its CPA is $72, above the $30 kill line, and it is killed then.",
+          "say": "Ad set C has spent fifty four dollars and brought one F T D, a C P A of fifty four. That looks terrible. But spend is still under three times target, seventy two dollars, and there's only one conversion, so neither kill row is true yet. Decision: hold. Why not kill now? One more F T D by seventy two dollars would make the C P A thirty six, two more would make it twenty four. If C reaches seventy two with still only one, it's killed then."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example: ad set D",
+          "p": "Example: ad set D has spent $66 and brought 3 FTDs, a CPA of $22. That is at or under the $24 target but above the $19.20 scale line. Decision: keep. Leave the budget alone and check again tomorrow.",
+          "d": {
+            "kind": "example",
+            "text": "Ad set D: $66 ÷ 3 FTDs = $22 CPA. Under target, over the scale line. Decision: keep."
+          },
+          "say": "Ad set D has spent sixty six dollars and brought three F T Ds. Sixty six divided by three is a C P A of twenty two dollars. That's at or under the twenty four dollar target, but above the nineteen dollar twenty scale line. So the decision is keep. Leave the budget alone, and check again tomorrow."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: ad set E",
+          "p": "Apply the card yourself. Check the rows from the top and stop at the first one that is true, then press check to see the working. Afterwards, change the spend to $60 and see why the answer changes.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $24, break-even $30. Spent $80 in 4 days, 2 network-confirmed FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 80,
+              "conversions": 2,
+              "target_cpa": 24,
+              "days": 4
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "kill"
+            }
+          },
+          "say": "Now apply the card yourself. In this lab, the target is twenty four dollars and break-even is thirty. Ad set E has spent eighty dollars over four days, with two network-confirmed F T Ds. Your task is to decide: kill, hold or scale. Check the rows from the top and stop at the first one that's true. Pause and try it, then check your answer. Afterwards, change the spend to sixty dollars and see why the answer changes."
+        },
+        {
+          "v": "stat",
+          "h": "Example: the test as a whole",
+          "p": "Example: ad sets A to D spent $48 + $54 + $54 + $66 = $222 and brought 0 + 3 + 1 + 3 = 7 FTDs. At $30 each that is $210 revenue, a $12 loss. That is tuition: one angle to scale, one to keep, one to watch and one to drop.",
+          "d": {
+            "n": 5.4,
+            "pre": "",
+            "suf": "%",
+            "dec": 1,
+            "label": "loss on the test ($12 of $222)",
+            "note": "Example. $12 ÷ $222 = 5.4%."
+          },
+          "say": "Now the test as a whole, still an example. Ad sets A to D spent forty eight, fifty four, fifty four and sixty six, which is two hundred and twenty two dollars, and brought seven F T Ds. At thirty dollars each, that's two hundred and ten dollars in revenue, a twelve dollar loss, about five point four percent. Think of that as tuition. You now have one angle to scale, one to keep, one to watch and one to drop."
+        },
+        {
+          "v": "check",
+          "h": "Scale without breaking it",
+          "p": "Scaling means spending more on what works. On a first test, scale slowly and keep watching CPA. A winner at $18 a day is not guaranteed to win at $180 a day, because new spend reaches new, often colder, people.",
+          "more": "Example: ad set B at $18 a day becomes $21.60 (+20%). After at least 48 hours, if CPA since the step and lifetime CPA are both still at or under $19.20, with at least 2 new FTDs, it becomes $25.92. Any miss: no step, keep or hold. Full step plan: Budget and kill rules module. School 3 covers scaling in depth.",
+          "d": [
+            "Scale only with 3+ network FTDs and CPA ≤ 0.8 × target",
+            "Raise budget +20% per step",
+            "At least 48 hours between steps",
+            "Judge CPA since the last step too",
+            "Keep the kill rules active"
+          ],
+          "say": "Scaling means spending more on what works. On a first test, scale slowly and keep watching C P A, because a winner at eighteen dollars a day isn't guaranteed to win at one hundred and eighty. New spend reaches new, often colder, people. The checklist: scale only with three plus network F T Ds and C P A at or below zero point eight times target, raise budget twenty percent per step, wait at least forty eight hours between steps, judge C P A since the last step too, and keep the kill rules active."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: the decision sheet at 72 hours",
+          "p": "At each checkpoint, copy spend from Ads Manager and FTDs from the network into one row per ad set. Let formulas do the CPA, then apply the card and write the decision and the reason. This is the record you will learn from.",
+          "d": {
+            "kind": "browser",
+            "url": "sheets.example/first-test-decisions",
+            "title": "Decisions: 72 h checkpoint",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Ad set",
+                  "Spend",
+                  "Net FTDs",
+                  "Decision"
+                ],
+                "rows": [
+                  [
+                    "A",
+                    "$48",
+                    "0",
+                    "Kill: 2 × target"
+                  ],
+                  [
+                    "B",
+                    "$54",
+                    "3",
+                    "Scale: $18 CPA"
+                  ],
+                  [
+                    "C",
+                    "$54",
+                    "1",
+                    "Hold: under $72"
+                  ],
+                  [
+                    "D",
+                    "$66",
+                    "3",
+                    "Keep: $22 CPA"
+                  ]
+                ]
+              },
+              {
+                "type": "field",
+                "label": "CPA formula",
+                "value": "=IF(C2=0,\"none\",B2/C2)"
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Here's the decision sheet at seventy two hours. At each checkpoint, copy spend from Ads Manager and F T Ds from the network into one row per ad set. Let a formula, shown on screen, work out the C P A. Then apply the card and write the decision with its reason. You can see all four examples: A killed, B scaled, C on hold, D kept. This record is what you'll learn from."
+        },
+        {
+          "v": "cards",
+          "h": "Common 72-hour mistakes",
+          "p": "These are the mistakes that turn a fair test into a lost one. Your written rule card exists to stop every one of them, so when you feel the urge, read the card instead of the dashboard.",
+          "d": [
+            "Killing on one bad hour|wait for the checkpoint",
+            "Scaling on platform conversions|use network-confirmed FTDs",
+            "Doubling a winner|+20% steps, 48 h apart",
+            "Editing creatives in learning|only rule-based changes"
+          ],
+          "say": "These mistakes turn a fair test into a lost one. Killing on one bad hour, so wait for the checkpoint. Scaling on platform conversions, so use network-confirmed F T Ds. Doubling a winner, so use twenty percent steps, forty eight hours apart. Editing creatives in learning, so make only rule-based changes. When you feel the urge, read the card instead of the dashboard."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance at every checkpoint",
+          "p": "A winning ad set still has to follow the offer terms and platform policy as it grows. Check the offer cap and allowed geos before each scale step, and keep every new ad honest and approved.",
+          "d": {
+            "kind": "warn",
+            "text": "Scaling past an offer cap or into a geo the brand is not licensed for means unpaid conversions and account risk. Check before every step."
+          },
+          "say": "A winning ad set still has to follow the offer terms and platform policy as it grows. Before each scale step, check the offer cap and allowed geos, and keep every new ad honest and approved. Read the warning: scaling past an offer cap or into a geo the brand isn't licensed for means unpaid conversions and account risk. Check before every step."
+        },
+        {
+          "v": "quote",
+          "h": "What the notes are for",
+          "p": "Dchessking on what made his early losing tests worth the money. A loss with notes becomes a rule you use on every campaign after it. A loss without notes is just money gone.",
+          "d": "My first tests mostly lost money. The ones that paid me back later were the ones where I wrote down why I killed or kept every ad set.",
+          "by": "dchessking",
+          "say": "Here's how Dchessking puts it, on what made his early losing tests worth the money: My first tests mostly lost money. The ones that paid me back later were the ones where I wrote down why I killed or kept every ad set. A loss with notes becomes a rule you use on every campaign after it. A loss without notes is just money gone."
+        }
+      ],
+      "takeaways": [
+        "In the first hours, check that things work. Judge results only at planned checkpoints.",
+        "Apply the rule card: kill at 2 × target with 0 FTDs, kill above the CPA kill line from 3 × target, scale at 0.8 × target with 3+ FTDs, keep at target, hold otherwise.",
+        "Scale winners +20% at least 48 hours apart and keep the kill rules running."
+      ],
+      "action": "Write your own rule card for the offer you planned in lesson 2, with dollar values for each row, and set up a decision sheet with one row per ad set per checkpoint.",
+      "glossary": [
+        {
+          "term": "Checkpoint",
+          "def": "A planned moment when you review results and apply your rules, such as the end of each day."
+        },
+        {
+          "term": "Kill, hold, keep, scale",
+          "def": "The four decisions for an ad set: switch it off, wait without changes, leave it running at target, or add budget in a +20% step."
+        },
+        {
+          "term": "Scaling",
+          "def": "Increasing spend on something that works, usually in small steps so results stay stable."
+        },
+        {
+          "term": "Significant edit",
+          "def": "A change, such as a new creative, audience or big budget jump, that can send an ad set back into learning."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Payout $30, target CPA $24. After 72 hours an ad set spent $69 and brought 3 network-confirmed FTDs. What do you do?",
+          "options": [
+            "Kill it",
+            "Scale +20%",
+            "Keep it: no budget change",
+            "Change the creative"
+          ],
+          "answer": 2,
+          "why": "$69 ÷ 3 = $23 CPA. That is at or under the $24 target but above the $19.20 scale line (0.8 × $24), so the card says keep."
+        },
+        {
+          "q": "Target CPA $25, so the zero-conversion kill line is $50. An ad set spent $50 with 0 FTDs but has the best CTR in the account. What do you do?",
+          "options": [
+            "Keep it because the CTR is high",
+            "Kill it, because the rule is about paid results",
+            "Double the budget",
+            "Change the audience and keep going"
+          ],
+          "answer": 1,
+          "why": "2 × $25 = $50 with 0 network-confirmed FTDs. CTR is a hint; the kill rule is about the result you are paid for."
+        },
+        {
+          "q": "Why not double the budget on a winner on day 2?",
+          "options": [
+            "Big jumps can disrupt delivery and early data is noisy",
+            "Platforms do not allow it",
+            "It lowers the network payout",
+            "It always stops the ad"
+          ],
+          "answer": 0,
+          "why": "Two days of data is a small sample, and large budget jumps can reset learning. Scale in small steps."
+        },
+        {
+          "q": "Payout $45, target $36. An ad set spent $80 and brought 2 FTDs. Using this lesson's rules, what do you do?",
+          "options": [
+            "Kill it",
+            "Hold it",
+            "Scale it",
+            "Delete the campaign"
+          ],
+          "answer": 1,
+          "why": "CPA is $40, but spend is under 3 × target ($108) and there are fewer than 3 FTDs, so neither kill row is true yet. Hold."
+        },
+        {
+          "q": "An ad has 200 clicks but only 70 landing page views. What is the most likely issue?",
+          "options": [
+            "The hook is weak",
+            "The payout is too low",
+            "The audience is too broad",
+            "The page loads slowly or the link is broken"
+          ],
+          "answer": 3,
+          "why": "People clicked but did not reach the page. That points to page speed or a link problem, which you fix at once."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn what to check, and what to leave alone, in the first seventy two hours. You'll apply written kill, hold, keep and scale rules to real numbers, so your decisions come from rules rather than feelings.",
+      "say_outro": "You've seen how early numbers swing, what to check at each window, and how to run every ad set through the rule card in order, then scale in small, safe steps. Your task: write your own rule card for the offer you planned in lesson two, with dollar values for each row, and set up a decision sheet with one row per ad set per checkpoint. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "Payout $30, target CPA $25. An ad set has spent $50 with 0 network-confirmed FTDs. What do you do?",
+      "options": [
+        "Keep it running for one more day",
+        "Kill it: it reached the zero-conversion kill line of 2 × target",
+        "Raise the budget so it finds buyers faster",
+        "Change the creative and keep the same ad set"
+      ],
+      "answer": 1,
+      "why": "2 × $25 = $50. The line is reached with 0 FTDs, so the starting rule says kill."
+    },
+    {
+      "q": "Target CPA $20. You plan 4 ad sets with 3 × target each. What is the maximum test budget before buffer?",
+      "options": [
+        "$160",
+        "$60",
+        "$240",
+        "$320"
+      ],
+      "answer": 2,
+      "why": "3 × $20 = $60 per ad set, and 4 × $60 = $240."
+    },
+    {
+      "q": "Your bank allows $200 a month in foreign card spending. You plan 3 ad sets at $25 a day each. What happens?",
+      "options": [
+        "The card declines during day 3, mid-test",
+        "Nothing, $200 covers a week",
+        "The card declines on day 8",
+        "The platform lowers your budget automatically"
+      ],
+      "answer": 0,
+      "why": "3 × $25 = $75 a day. $200 ÷ $75 = 2.7, so the limit runs out during day 3. Check limits before launch."
+    },
+    {
+      "q": "You want to learn which of three angles works best in Nigeria. Which structure is best?",
+      "options": [
+        "Three ad sets in three different countries",
+        "One ad set with 15 ads of mixed angles and formats",
+        "Three ad sets, same audience and budget, one angle each",
+        "Three campaigns with different conversion events"
+      ],
+      "answer": 2,
+      "why": "Keeping everything else the same makes the angle the only variable, so the result answers your question."
+    },
+    {
+      "q": "Your forex offer ad is rejected because financial ads need authorization in your target country. What do you do?",
+      "options": [
+        "Reword the ad to hide that it is about trading",
+        "Run it from a new ad account",
+        "Send reviewers to a harmless page",
+        "Pause, apply for the required authorization and check local law before running"
+      ],
+      "answer": 3,
+      "why": "Regulated ads need authorization where required and must follow local law. Hiding or redirecting is circumvention."
+    },
+    {
+      "q": "Payout $30, target $24. At 72 hours an ad set spent $45 and brought 3 FTDs. What is the CPA and the decision?",
+      "options": [
+        "$15 CPA, scale with a 20% budget increase",
+        "$15 CPA, double the budget today",
+        "$45 CPA, kill",
+        "$15 CPA, keep, it is only under target"
+      ],
+      "answer": 0,
+      "why": "$45 ÷ 3 = $15, under the $19.20 scale line (0.8 × $24) with 3 FTDs. Scale in a +20% step, not a big jump."
+    },
+    {
+      "q": "Three hours after launch, one ad set's cost per lead is double the others. What do you do?",
+      "options": [
+        "Kill it now",
+        "Edit its creative straight away",
+        "Check it is delivering and the link works, then wait for your checkpoint",
+        "Move its budget to the others"
+      ],
+      "answer": 2,
+      "why": "Early numbers are noisy. In the first hours you only check that things work, then judge at planned checkpoints."
+    },
+    {
+      "q": "Ads Manager shows 12 conversions but your network shows 0 sign-ups from 500 clicks. What is the first thing to check?",
+      "options": [
+        "The ad's CTR",
+        "The offer link, sub IDs and a fresh test conversion",
+        "The audience size",
+        "The ad copy for spelling"
+      ],
+      "answer": 1,
+      "why": "When two systems disagree this much, the tracking chain is the likely cause. Re-test the link and conversion first."
+    },
+    {
+      "q": "Payout $30, target $24. An ad set spent $80 and brought 2 network-confirmed FTDs. What does the rule card say?",
+      "options": [
+        "Hold, fewer than 3 FTDs",
+        "Scale, it has conversions",
+        "Kill: spend is past 3 × target ($72) and the $40 CPA is over the $30 kill line",
+        "Keep, CPA is close to target"
+      ],
+      "answer": 2,
+      "why": "The kill line is the lower of 1.5 × $24 = $36 and break-even $30, so $30. Spend $80 ≥ $72 and CPA $40 > $30, so kill."
+    },
+    {
+      "q": "An ad set has a CPA of $18 against a $24 target at $20 a day, with 4 network FTDs over 3 days. What is a sensible next step?",
+      "options": [
+        "Raise it to $200 a day",
+        "Raise it to $24 a day and wait at least 48 hours before another step",
+        "Pause it to protect the profit",
+        "Change the audience to find more people"
+      ],
+      "answer": 1,
+      "why": "$18 is under the $19.20 scale line with 3+ FTDs. A 20% step ($20 to $24), then at least 48 hours, keeps delivery stable."
+    }
+  ]
+}

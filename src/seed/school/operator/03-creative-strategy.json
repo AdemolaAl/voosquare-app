@@ -1,0 +1,2763 @@
+{
+  "school": "operator",
+  "order": 3,
+  "slug": "creative-strategy",
+  "title": "Creative strategy",
+  "summary": "Creative is the biggest lever a buyer controls: it decides who stops, who clicks and, on broad audiences, who Meta finds next. This module covers hooks, angles, formats, testing, fatigue, localisation, honest copy and using AI tools responsibly, with numbers you can apply to your own ads. It ends with producing ads cheaply on a phone, so you can test enough concepts to find winners.",
+  "lessons": [
+    {
+      "slug": "hooks-and-the-first-3-seconds",
+      "title": "Hooks and the first 3 seconds",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can name six honest hook types and write one of each.",
+        "You can measure hook rate and hold rate from Ads Manager columns.",
+        "You can show with numbers how a better hook lowers cost per click.",
+        "You can set up hook rate and hold rate columns and use them to pick the next iteration."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Nothing else matters if they scroll past",
+          "p": "People scroll fast. In the first one to three seconds they decide whether your ad is worth their attention. A strong body with a weak opening is never seen. The hook is the opening that earns the rest of the ad.",
+          "d": {
+            "b": "Earn the next second",
+            "s": "Then the next, then the click"
+          },
+          "say": "Let's start with a hard truth. People scroll fast, and in the first one to three seconds they decide whether your ad deserves their attention. You could have a brilliant body, but if the opening is weak, nobody ever sees it. That opening is the hook. As the screen says, its job is to earn the next second, then the next, and then the click."
+        },
+        {
+          "v": "cards",
+          "h": "Six honest hook types",
+          "p": "Every hook below can be written honestly. Pick the type that fits your angle and audience, then test several types against the same body so you learn which opening works.",
+          "d": [
+            "Question|Do you know what a spread is?",
+            "Callout|Nairobi, new to trading? Watch this.",
+            "Demonstration|show the app working in second one",
+            "Bold true statement|Most beginners skip the demo account.",
+            "Pattern interrupt|an unexpected but relevant visual",
+            "Story opener|Last year I lost my first deposit in a week."
+          ],
+          "say": "Here are six hook types, and every one can be written honestly. A question, like do you know what a spread is. A callout, naming the viewer, like Nairobi, new to trading. A demonstration, showing the app working in second one. A bold true statement. A pattern interrupt, an unexpected but relevant visual. And a story opener. Pick the type that fits your angle and audience, then test several types against the same body, so you learn which opening actually works."
+        },
+        {
+          "v": "flow",
+          "h": "What happens in the first 3 seconds",
+          "p": "A good opening stacks several signals at once, because many people watch with sound off and some only glance. Each layer tells the viewer the same thing: this is for you.",
+          "d": [
+            "0s: striking first frame",
+            "On-screen text hook",
+            "Spoken line",
+            "Reason to keep watching"
+          ],
+          "say": "Look at this flow. A good opening stacks several signals at once. It starts with a striking first frame at zero seconds, then on-screen text, then a spoken line, then a reason to keep watching. Why stack them? Because many people watch with the sound off, and some only glance. Every layer tells the viewer the same thing: this is for you."
+        },
+        {
+          "v": "table",
+          "h": "Measuring the hook",
+          "p": "You cannot judge a hook by feel. Build custom columns in Ads Manager from the video metrics. Exact column names change, so check the current Ads Manager for 3-second plays and ThruPlays.",
+          "d": {
+            "cols": [
+              "Metric",
+              "Formula",
+              "Tells you"
+            ],
+            "rows": [
+              [
+                "Hook rate",
+                "3-second plays ÷ impressions",
+                "Did the opening stop them"
+              ],
+              [
+                "Hold rate",
+                "ThruPlays ÷ 3-second plays",
+                "Did the body keep them"
+              ],
+              [
+                "Link CTR",
+                "Link clicks ÷ impressions",
+                "Did they act"
+              ],
+              [
+                "Cost per result",
+                "Spend ÷ results",
+                "Did it make money"
+              ]
+            ]
+          },
+          "say": "You can't judge a hook by feel, so you measure it. Look at the table. Hook rate is three-second plays divided by impressions, and it tells you whether the opening stopped people. Hold rate is ThruPlays divided by three-second plays, did the body keep them. Link C T R, click-through rate, is link clicks divided by impressions, did they act. And cost per result tells you whether it made money. Column names change, so check the current Ads Manager for three-second plays and ThruPlays."
+        },
+        {
+          "v": "walk",
+          "h": "Add a hook rate column, step by step",
+          "p": "A generic walkthrough of a custom metric in an Ads Manager-style tool. The menu and metric names are as we understand them at the time of writing; we are not certain they are current. Names change; check the current Ads Manager.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open column settings",
+                "text": "From the columns menu, choose to customise columns, then create a custom metric.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/columns",
+                  "title": "Customise columns",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Columns",
+                      "value": "Performance"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Create custom metric"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Write the formula",
+                "text": "Name it Hook rate and divide 3-second video plays by impressions. Format it as a percentage.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/columns/custom",
+                  "title": "Custom metric",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Name",
+                      "value": "Hook rate"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Formula",
+                      "value": "3-second video plays ÷ Impressions"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Format",
+                      "value": "Percentage"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Add hold rate the same way",
+                "text": "Create Hold rate as ThruPlays divided by 3-second plays, then save both in a preset.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/columns/custom",
+                  "title": "Custom metric",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Name",
+                      "value": "Hold rate"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Formula",
+                      "value": "ThruPlays ÷ 3-second video plays"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Save preset: Creative"
+                    }
+                  ],
+                  "highlight": 2
+                }
+              }
+            ]
+          },
+          "say": "Let's build a hook rate column. Tap Next to follow each step. First, open the columns menu, choose to customise columns, and create a custom metric. Second, name it Hook rate, and set the formula to three-second video plays divided by impressions, formatted as a percentage. Third, create Hold rate the same way, ThruPlays divided by three-second plays, and save both in a preset. This is a generic walkthrough, and menu names may have changed, so check the current Ads Manager."
+        },
+        {
+          "v": "eq",
+          "h": "Hook rate in one line",
+          "p": "Example: an ad got 10,000 impressions and 3,000 people watched at least three seconds. The hook rate is 30%. Track it for every video so you can compare openings fairly.",
+          "d": [
+            "3,000 3-sec plays",
+            "÷",
+            "10,000 impressions",
+            "=",
+            "30% hook rate"
+          ],
+          "say": "Here's hook rate in one line. In this example, an ad got ten thousand impressions, and three thousand people watched at least three seconds. Three thousand divided by ten thousand gives a thirty percent hook rate. Track this number for every video. That way you compare openings fairly, using the same measure each time, instead of guessing which one felt stronger."
+        },
+        {
+          "v": "bars",
+          "h": "Four hooks, same body",
+          "p": "Example: the same 30-second video with four different openings, each with similar spend. The demonstration hook stopped the most people. The numbers are illustrations; your winner will depend on your audience.",
+          "d": [
+            [
+              "Question",
+              82,
+              "31%"
+            ],
+            [
+              "Bold statement",
+              63,
+              "24%"
+            ],
+            [
+              "Demonstration",
+              100,
+              "38%"
+            ],
+            [
+              "Callout",
+              76,
+              "29%"
+            ]
+          ],
+          "say": "Now look at the bars. This is an example of the same thirty-second video with four different openings, each with similar spend. The question hook got thirty one percent, the bold statement twenty four, the callout twenty nine, and the demonstration hook led with thirty eight percent. These numbers are illustrations. Your winner will depend on your audience, which is exactly why you test."
+        },
+        {
+          "v": "table",
+          "h": "Why the hook changes cost",
+          "p": "Example: two videos with the same $3 CPM and 10,000 impressions, so $30 spend each. Video B's stronger hook kept more people watching, more of them clicked, and each click cost much less.",
+          "more": "Worked example. Video A: 2,000 three-second plays (20% hook rate), 80 link clicks, CTR 0.8%, cost per click $30 ÷ 80 = $0.375. Video B: 3,500 plays (35% hook rate), 140 clicks, CTR 1.4%, cost per click $30 ÷ 140 = $0.214. Same spend, same audience, 43% cheaper clicks. Then check the paid event: a hook that attracts the wrong people can raise CTR and still lose.",
+          "d": {
+            "cols": [
+              "Metric",
+              "Video A",
+              "Video B"
+            ],
+            "rows": [
+              [
+                "Hook rate",
+                "20%",
+                "35%"
+              ],
+              [
+                "Link clicks",
+                "80",
+                "140"
+              ],
+              [
+                "CTR",
+                "0.8%",
+                "1.4%"
+              ],
+              [
+                "Cost per click",
+                "$0.375",
+                "$0.214"
+              ]
+            ]
+          },
+          "say": "Why does the hook change your costs? In this example, two videos have the same three dollar C P M, cost per thousand impressions, and ten thousand impressions, so thirty dollars spend each. Video A had a twenty percent hook rate and eighty clicks, so each click cost about thirty seven cents. Video B had a thirty five percent hook rate and a hundred and forty clicks, about twenty one cents each. Same spend, forty three percent cheaper clicks. But still check the paid event, because a hook that attracts the wrong people can raise C T R and still lose."
+        },
+        {
+          "v": "curve",
+          "h": "Where viewers leave",
+          "p": "Example: share of viewers still watching at each second for two versions of one ad. Most people leave early. The better hook keeps more viewers at every point after the opening.",
+          "d": {
+            "a": [
+              100,
+              62,
+              45,
+              35,
+              28,
+              18,
+              12
+            ],
+            "la": "Demo-first hook (% watching)",
+            "b": [
+              100,
+              48,
+              30,
+              20,
+              15,
+              9,
+              6
+            ],
+            "lb": "Logo intro (% watching)",
+            "x": [
+              "0s",
+              "1s",
+              "2s",
+              "3s",
+              "5s",
+              "10s",
+              "15s"
+            ]
+          },
+          "say": "This curve shows where viewers leave. It's an example of the share still watching at each second, for two versions of one ad. Notice how both lines drop fast at the start, because most people leave early. But the demo-first hook keeps more viewers at every point after the opening than the logo intro. At fifteen seconds, it's twelve percent versus six percent."
+        },
+        {
+          "v": "screen",
+          "h": "Four hooks, one report",
+          "p": "A generic mock-up of the Creative preset after a hook test. Same body, four openings, similar spend. Read left to right: did it stop people, did they stay, did they click, and what did the paid event cost.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/ads?columns=creative",
+            "title": "Ads: C05 hook test",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Ad",
+                  "Hook rate",
+                  "CTR",
+                  "Cost per reg"
+                ],
+                "rows": [
+                  [
+                    "C05_hookQuestion",
+                    "31%",
+                    "1.3%",
+                    "$9.80"
+                  ],
+                  [
+                    "C05_hookBold",
+                    "24%",
+                    "1.0%",
+                    "$12.90"
+                  ],
+                  [
+                    "C05_hookDemo",
+                    "38%",
+                    "1.5%",
+                    "$8.10"
+                  ],
+                  [
+                    "C05_hookCallout",
+                    "29%",
+                    "1.4%",
+                    "$9.20"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Demo hook leads on every column. Iterate on it next."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Here's a mock-up of the Creative preset after a hook test. Same body, four openings, similar spend. Read each row left to right. Did it stop people, that's hook rate. Did they click, that's C T R. And what did the paid event cost, here cost per registration. Notice the demo hook leads on every column, at eight dollars ten per registration. So that's the one to iterate on next."
+        },
+        {
+          "v": "tip",
+          "h": "Starting rule: hooks pick iterations, not winners",
+          "p": "Compare hooks only at similar spend. Use hook rate and CTR to choose which hook to iterate next. Kill, keep and scale decisions still come from the starting rule card on the paid event. Adapt to your data.",
+          "more": "Full creative test rules, budgets and timing: Creative testing lab module. Full rule card: Budget and kill rules module.",
+          "d": {
+            "kind": "example",
+            "text": "Example: target $10 per registration. A hook spent $30 (3 × target) for 1 registration, a $30 CPA, far above 1.5 × target: kill it, whatever its CTR."
+          },
+          "say": "Here's a starting rule. Compare hooks only at similar spend, and use hook rate and C T R to choose which hook to iterate next. But kill, keep and scale decisions still come from the rule card, on the paid event. Look at the example. Target is ten dollars per registration. A hook spent thirty dollars, three times target, for one registration. That's a thirty dollar C P A, cost per acquisition, far above one point five times target. Kill it, whatever its C T R. Adapt this to your data."
+        },
+        {
+          "v": "compare",
+          "h": "Weak and strong openings",
+          "p": "Most weak openings waste the first seconds on things the viewer does not care about yet. Strong openings show the point straight away, in a way the right person recognises.",
+          "d": {
+            "a": {
+              "title": "Weak",
+              "items": [
+                "Logo animation",
+                "Slow intro: Hi guys, welcome",
+                "Text too small to read",
+                "Generic stock footage"
+              ]
+            },
+            "b": {
+              "title": "Strong",
+              "items": [
+                "The product on screen at 0s",
+                "A clear question in big text",
+                "A face talking straight to camera",
+                "A local setting the viewer knows"
+              ]
+            }
+          },
+          "say": "Compare these two columns. Weak openings waste the first seconds on things the viewer doesn't care about yet: a logo animation, a slow hi guys welcome, tiny text, generic stock footage. Strong openings show the point straight away, in a way the right person recognises: the product on screen at zero seconds, a clear question in big text, a face talking to camera, or a local setting the viewer knows."
+        },
+        {
+          "v": "compare",
+          "h": "Common hook mistakes",
+          "p": "Most weak hooks fail for the same few reasons. Each one below wastes the most expensive seconds of the ad, the ones you paid an impression for.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Logo or intro in the first second",
+                "Judging hooks at very different spend",
+                "Text too small for a phone",
+                "Choosing the hook by CTR alone",
+                "Fake alerts to stop the scroll"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Show the point at 0s",
+                "Compare at similar spend",
+                "Big, short on-screen text",
+                "Confirm on the paid event",
+                "Honest pattern interrupts only"
+              ]
+            }
+          },
+          "say": "Most weak hooks fail for the same few reasons. On the left are the mistakes: a logo in the first second, judging hooks at very different spend, text too small for a phone, choosing by C T R alone, and fake alerts to stop the scroll. On the right are the fixes. Show the point at zero seconds, compare at similar spend, use big short text, confirm on the paid event, and use only honest pattern interrupts. Remember, these are the most expensive seconds of your ad."
+        },
+        {
+          "v": "tip",
+          "h": "Hooks must not trick people",
+          "p": "Some hooks get attention by lying: fake breaking news, fake notifications, fake celebrity clips, fake play buttons. They break ad policies, attract the wrong clicks and can get your account restricted. Earn attention honestly.",
+          "d": {
+            "kind": "warn",
+            "text": "No fake news screens, fake system alerts, fake celebrity endorsements or fake profit screenshots."
+          },
+          "say": "This one matters a lot. Some hooks grab attention by lying: fake breaking news, fake notifications, fake celebrity clips, fake play buttons. They break ad policies, they attract the wrong clicks, and they can get your account restricted. As the warning says, no fake news screens, fake system alerts, fake celebrity endorsements or fake profit screenshots. Earn attention honestly."
+        },
+        {
+          "v": "product",
+          "h": "Making hook variations faster",
+          "p": "Once you know which hook types work, you need many openings for the same body. A creative tool can draft variations quickly; a human still checks every claim before upload.",
+          "d": {
+            "slug": "vooads",
+            "why": "Draft several hook versions of one ad quickly, then check each one against the hook checklist before testing."
+          },
+          "say": "Once you know which hook types work, you'll need many openings for the same body. A creative tool like Vooads can draft several hook versions of one ad quickly. But a human still checks every claim before upload, against the hook checklist, before anything goes into a test."
+        },
+        {
+          "v": "check",
+          "h": "Hook checklist",
+          "p": "Check every new video against this list before you upload. It takes one minute and catches most of the reasons hooks fail or get rejected.",
+          "d": [
+            "Point is clear by second one",
+            "Works with sound off, captions on",
+            "Text readable on a small phone",
+            "Speaks to one clear audience",
+            "Nothing false or misleading"
+          ],
+          "say": "Finally, here's your hook checklist. Run every new video through it before upload. Is the point clear by second one? Does it work with sound off and captions on? Is the text readable on a small phone? Does it speak to one clear audience? And is there nothing false or misleading? It takes about a minute, and it catches most of the reasons hooks fail or get rejected."
+        }
+      ],
+      "takeaways": [
+        "The first seconds decide whether the rest of the ad is seen.",
+        "Measure hook rate (3-second plays ÷ impressions) and hold rate, then confirm on the paid event.",
+        "Earn attention honestly; trick hooks break policy and bring the wrong people.",
+        "Hook rate chooses what to iterate; the starting rule card on the paid event decides kill, keep and scale."
+      ],
+      "action": "Take your best current video and write four new openings for it, one each of question, callout, demonstration and bold true statement. Note its current hook rate so you can compare.",
+      "glossary": [
+        {
+          "term": "Hook",
+          "def": "The first one to three seconds of an ad, designed to stop the scroll."
+        },
+        {
+          "term": "Hook rate",
+          "def": "3-second video plays divided by impressions. Shows how well the opening stops people."
+        },
+        {
+          "term": "Hold rate",
+          "def": "ThruPlays divided by 3-second plays. Shows how well the body keeps viewers."
+        },
+        {
+          "term": "ThruPlay",
+          "def": "Meta's count of video plays to completion or to at least 15 seconds, whichever comes first. Definitions can change; check current docs."
+        },
+        {
+          "term": "Pattern interrupt",
+          "def": "An unexpected visual or sound that breaks the viewer's scroll rhythm, used honestly and relevantly."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "An ad has 8,000 impressions and 2,000 3-second plays. What is the hook rate?",
+          "options": [
+            "4%",
+            "40%",
+            "25%",
+            "16%"
+          ],
+          "answer": 2,
+          "why": "2,000 ÷ 8,000 = 25%."
+        },
+        {
+          "q": "A hook has the best CTR but spent $30 (3 × the $10 target) for 1 registration. What does the starting rule card say?",
+          "options": [
+            "Scale it, CTR is best",
+            "Kill it: CPA $30 is above the kill line after 3 × target",
+            "Hold, CTR proves it works",
+            "Duplicate it into 3 ad sets"
+          ],
+          "answer": 1,
+          "why": "CTR helps diagnose, but decisions use the paid event. $30 CPA is above the lower of 1.5 × $10 and break-even."
+        },
+        {
+          "q": "Two videos each spend $40. A gets 100 clicks, B gets 160. What is B's cost per click?",
+          "options": [
+            "$0.40",
+            "$4.00",
+            "$0.16",
+            "$0.25"
+          ],
+          "answer": 3,
+          "why": "$40 ÷ 160 = $0.25. A's is $0.40."
+        },
+        {
+          "q": "Which opening is honest and strong for a trading app ad?",
+          "options": [
+            "A fake breaking news banner",
+            "A screen recording of the app placing a demo trade at 0s",
+            "A celebrity clip without permission",
+            "A fake phone notification of profit"
+          ],
+          "answer": 1,
+          "why": "It shows the real product straight away. The others are deceptive and against policy."
+        },
+        {
+          "q": "Why should hooks work with sound off?",
+          "options": [
+            "Many people watch muted, so text and visuals must carry the message",
+            "Meta removes all audio",
+            "Sound costs extra",
+            "Sound lowers CPM"
+          ],
+          "answer": 0,
+          "why": "Many viewers scroll with sound off. Captions and on-screen text make the hook land either way."
+        }
+      ],
+      "say_intro": "This lesson is about hooks, the first one to three seconds of your ad. You'll learn six honest hook types, how to measure hook rate and hold rate, and why a better opening can make every click cheaper.",
+      "say_outro": "To recap: the hook earns attention in the first seconds, you measure it with hook rate and hold rate, and you judge winners on the paid event, always honestly. Your task: take your best current video, write four new openings for it, a question, a callout, a demonstration and a bold true statement, and note its current hook rate. Now take the quiz."
+    },
+    {
+      "slug": "angles-and-formats",
+      "title": "Angles and formats",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can tell an angle from a hook and write several angles for one offer.",
+        "You can choose formats such as UGC, talking head, demo and static for each angle.",
+        "You can build an angle and format matrix for a test round.",
+        "You can read a matrix result and decide which angle earns video budget."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Angle is why, hook is how",
+          "p": "The angle is the reason someone should care: learning, convenience, safety, a problem solved. The hook is how you open the ad. One angle can carry many hooks. Test angles first, because a new angle can find a whole new group of people.",
+          "d": {
+            "b": "Angle = the reason",
+            "s": "Hook = the opening line"
+          },
+          "say": "Here's the key idea. The angle is why someone should care: learning, convenience, safety, a problem solved. The hook is how you open the ad. One angle can carry many hooks. So test angles first. Why? Because a new angle can find a whole new group of people, while a new hook usually just helps you reach the same people a bit better."
+        },
+        {
+          "v": "cards",
+          "h": "Angles that work honestly",
+          "p": "These angles fit trading, iGaming and finance offers without promising income. Each one speaks to a different motivation, so each tends to find different people.",
+          "d": [
+            "Education|learn how it works first",
+            "Product demo|see the app, step by step",
+            "Convenience|deposit with M-Pesa or bank app",
+            "Safety and control|limits, demo accounts, regulation",
+            "Entertainment|the match, the game, for fun",
+            "Local relevance|built for your market and language"
+          ],
+          "say": "Look at these six angles. They fit trading, iGaming and finance offers without promising income. Education, learn how it works first. Product demo, see the app step by step. Convenience, like depositing with M-Pesa or a bank app. Safety and control, limits, demo accounts, regulation. Entertainment, the match or the game, for fun. And local relevance, built for your market and language. Each speaks to a different motivation, so each tends to find different people."
+        },
+        {
+          "v": "product",
+          "h": "Research angles before you write",
+          "p": "Before writing angles, look at which angles and formats other advertisers in your geo keep running for weeks. Long-running ads are often working. Learn from the angle; never copy the creative.",
+          "d": {
+            "slug": "spyvoo",
+            "why": "See which angles and formats keep running in your geo, so your angle list starts from evidence."
+          },
+          "say": "Before writing angles, do some research. Look at which angles and formats other advertisers in your geo keep running for weeks. Long-running ads are often working, because few advertisers keep paying for losers. A tool like Spyvoo helps you see this, so your angle list starts from evidence. But remember, learn from the angle, and never copy the creative."
+        },
+        {
+          "v": "table",
+          "h": "One offer, five angles",
+          "p": "Example: angles for a licensed trading app in Ghana. Each line could become several ads with different hooks and formats. None of them promises a result or an income.",
+          "d": {
+            "cols": [
+              "Angle",
+              "Example headline"
+            ],
+            "rows": [
+              [
+                "Education",
+                "What a pip is, in 30 seconds"
+              ],
+              [
+                "Demo",
+                "Watch a trade placed on a demo account"
+              ],
+              [
+                "Convenience",
+                "Fund your account with mobile money"
+              ],
+              [
+                "Control",
+                "Set a stop loss before you trade"
+              ],
+              [
+                "Local",
+                "Support in English and Twi"
+              ]
+            ]
+          },
+          "say": "Here's an example of one offer with five angles, for a licensed trading app in Ghana. Education: what a pip is, in thirty seconds. Demo: watch a trade placed on a demo account. Convenience: fund your account with mobile money. Control: set a stop loss before you trade. Local: support in English and Twi. Each line could become several ads. And notice, none of them promises a result or an income."
+        },
+        {
+          "v": "cards",
+          "h": "The main formats",
+          "p": "Format is the shape of the ad. Different formats suit different angles and placements. Build each concept in the format that shows the angle most clearly.",
+          "d": [
+            "UGC|a real person filmed on a phone",
+            "Talking head|one presenter speaking to camera",
+            "Screen demo|recording of the app or site",
+            "Static|one image with a clear message",
+            "Carousel|several cards, one idea each",
+            "Motion graphic|animated text and visuals"
+          ],
+          "say": "Format is the shape of the ad. Look at the cards. U G C, user-generated content, is a real person filmed on a phone. Talking head is one presenter speaking to camera. Screen demo records the app or site. Static is one image with a clear message. Carousel is several cards, one idea each. And motion graphic uses animated text and visuals. Build each concept in the format that shows the angle most clearly."
+        },
+        {
+          "v": "compare",
+          "h": "UGC done right",
+          "p": "User-generated content works because it feels like a real person talking. That only stays honest if it is a real person, telling their real experience, with any payment disclosed where required.",
+          "d": {
+            "a": {
+              "title": "Fake UGC",
+              "items": [
+                "Actor pretends to be a customer",
+                "Scripted profit claims",
+                "Undisclosed paid endorsement",
+                "Stolen videos from other ads"
+              ]
+            },
+            "b": {
+              "title": "Honest UGC",
+              "items": [
+                "Real user or clearly a presenter",
+                "Shows the product, not results",
+                "Paid partnership disclosed",
+                "Original footage with rights"
+              ]
+            }
+          },
+          "say": "U G C works because it feels like a real person talking. But that only stays honest if it is a real person, telling their real experience, with any payment disclosed where required. Compare the columns. Fake U G C uses actors pretending to be customers, scripted profit claims, undisclosed paid endorsements, or stolen videos. Honest U G C uses a real user or a clear presenter, shows the product not results, discloses paid partnerships, and uses original footage with rights."
+        },
+        {
+          "v": "tip",
+          "h": "Every angle must be honest on its own",
+          "p": "An angle is a reason to care, so it can drift into a promise. 'Convenience' must not become 'easy money'; 'safety' must not become 'no risk'. On regulated offers, each angle still needs the required warnings.",
+          "more": "Full detail: Compliance for finance, trading and gambling offers module.",
+          "d": {
+            "kind": "warn",
+            "text": "Disclose paid partnerships where rules require, and never present an actor as a real customer."
+          },
+          "say": "An angle is a reason to care, so it can slowly drift into a promise. Convenience must not become easy money. Safety must not become no risk. On regulated offers, every angle still needs the required warnings. And as the warning on screen says, disclose paid partnerships where rules require, and never present an actor as a real customer."
+        },
+        {
+          "v": "flow",
+          "h": "A simple UGC script",
+          "p": "Most good UGC and talking head scripts follow the same shape. Keep it under about 30 seconds for a first test, and make each part do one job.",
+          "d": [
+            "Hook",
+            "Problem or question",
+            "Show the product",
+            "What to expect honestly",
+            "Call to action"
+          ],
+          "say": "Here's a simple script shape for U G C and talking head ads. Follow the flow: a hook, then the problem or question, then show the product, then what to expect honestly, then the call to action. Keep it under about thirty seconds for a first test, and make each part do just one job. When a part tries to do two things, it usually does neither well."
+        },
+        {
+          "v": "phone",
+          "h": "Briefing a creator in chat",
+          "p": "Example of a short, clear brief sent in a Telegram-style chat. One angle, three hooks to film, what not to say, the format and the disclosure. The creator confirms before filming.",
+          "d": {
+            "app": "chat",
+            "title": "Creator: Esi",
+            "subtitle": "UGC creator, Accra",
+            "messages": [
+              {
+                "from": "me",
+                "text": "Angle: control. Message: you can set a stop loss before you trade. Film 3 hooks: question, demo at 0s, bold true statement."
+              },
+              {
+                "from": "me",
+                "text": "Not allowed: any income or profit claim, 'no risk', results screenshots. Say 'capital at risk' on camera."
+              },
+              {
+                "from": "me",
+                "text": "9:16, 20 to 30 s, captions on. Paid partnership disclosed. We keep usage rights for 6 months."
+              },
+              {
+                "from": "them",
+                "text": "Clear. I will send drafts Thursday."
+              }
+            ]
+          },
+          "say": "Look at this chat. It's an example of a clear creator brief in a Telegram-style chat. Notice what it covers. One angle, control, with one message. Three hooks to film. A list of what's not allowed: no income or profit claims, no saying no risk, no results screenshots, and say capital at risk on camera. Then the format, nine by sixteen, twenty to thirty seconds, captions on, the disclosure and usage rights. And the creator confirms before filming."
+        },
+        {
+          "v": "tip",
+          "h": "Static ads are cheap angle tests",
+          "p": "A static image with one clear line costs little to make. Use statics to test which angles get clicks and paid events, then spend video budget on the angles that win.",
+          "d": {
+            "kind": "tip",
+            "text": "Test 5 angles as statics, then turn the best 2 into video."
+          },
+          "say": "Static ads are cheap angle tests. A single image with one clear line costs very little to make. So use statics to find out which angles get clicks and paid events, and then spend your video budget only on the angles that win. As the tip says, test five angles as statics, then turn the best two into video."
+        },
+        {
+          "v": "table",
+          "h": "Build an angle and format matrix",
+          "p": "Example: three angles crossed with three formats gives nine concepts. Launch them in one test round so you learn which angle wins and which format carries it best.",
+          "more": "Worked example. 3 angles × 3 formats = 9 concepts. At a $10 target cost per registration and about $30 to read each concept, the round costs about $270. You might find that the demo angle wins in every format, which tells you the angle is strong, or that UGC wins for every angle, which tells you the format is strong. Both are useful.",
+          "d": {
+            "cols": [
+              "Angle",
+              "UGC",
+              "Screen demo",
+              "Static"
+            ],
+            "rows": [
+              [
+                "Education",
+                "C01",
+                "C02",
+                "C03"
+              ],
+              [
+                "Convenience",
+                "C04",
+                "C05",
+                "C06"
+              ],
+              [
+                "Control",
+                "C07",
+                "C08",
+                "C09"
+              ]
+            ]
+          },
+          "say": "Now let's build a matrix. In this example, three angles, education, convenience and control, cross three formats, U G C, screen demo and static. That gives nine concepts, C zero one to C zero nine. At a ten dollar target and about thirty dollars to read each concept, the round costs about two hundred and seventy dollars. You might learn the angle is strong, if it wins in every format, or the format is strong, if it wins for every angle. Both are useful."
+        },
+        {
+          "v": "bars",
+          "h": "Cost per registration by format",
+          "p": "Example: average cost per registration by format across one test round. Shorter bars are better here. UGC and screen demo led, statics trailed. Your results will depend on geo, offer and audience.",
+          "d": [
+            [
+              "UGC",
+              70,
+              "$7.80"
+            ],
+            [
+              "Screen demo",
+              75,
+              "$8.40"
+            ],
+            [
+              "Talking head",
+              81,
+              "$9.10"
+            ],
+            [
+              "Static",
+              100,
+              "$11.20"
+            ]
+          ],
+          "say": "These bars show an example of average cost per registration by format across one test round. Here, shorter bars are better. U G C came in at seven dollars eighty, screen demo eight forty, talking head nine ten, and static trailed at eleven twenty. Your results will depend on your geo, offer and audience, so treat this as an illustration, not a rule."
+        },
+        {
+          "v": "screen",
+          "h": "Reading the angle matrix",
+          "p": "A generic mock-up of results from a 3 × 3 matrix after each concept spent about 3 × target. Read across a row to judge the angle and down a column to judge the format.",
+          "d": {
+            "kind": "browser",
+            "url": "sheet.example/creative-log/w41",
+            "title": "Matrix results, cost per registration",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Angle",
+                  "UGC",
+                  "Demo",
+                  "Static"
+                ],
+                "rows": [
+                  [
+                    "Education",
+                    "$9.40",
+                    "$10.20",
+                    "$13.80"
+                  ],
+                  [
+                    "Convenience",
+                    "$11.90",
+                    "$12.60",
+                    "$15.10"
+                  ],
+                  [
+                    "Control",
+                    "$7.60",
+                    "$8.10",
+                    "$10.90"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Target $10. Control wins in every format; static trails in every row."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Here's how to read matrix results. This mock-up shows cost per registration after each concept spent about three times target. Read across a row to judge the angle, and down a column to judge the format. With a ten dollar target, control wins in every format, from seven sixty with U G C. And static trails in every row. So control is your strongest angle here."
+        },
+        {
+          "v": "tip",
+          "h": "Starting rule: which angles get video budget",
+          "p": "Promote an angle to video only when it has passed the rule card as a static or cheap format: at least 3 conversions and CPA at or under target. Angles that hit a kill rule go to the log, not to production. Adapt to your data.",
+          "more": "Full creative test rules: Creative testing lab module.",
+          "d": {
+            "kind": "example",
+            "text": "Example: target $10. Control static: 4 registrations at $9.20 after $36.80. It qualifies for video. Convenience static: $30 spent, 1 registration: killed."
+          },
+          "say": "Here's a starting rule for video budget. Promote an angle to video only after it passes the rule card as a static or cheap format: at least three conversions, and C P A, cost per acquisition, at or under target. In this example, target is ten dollars. The control static got four registrations at nine twenty, so it qualifies for video. The convenience static spent thirty dollars for one registration, so it's killed and goes to the log. Adapt this to your data."
+        },
+        {
+          "v": "compare",
+          "h": "Common angle and format mistakes",
+          "p": "These mistakes make test rounds expensive and hard to read. Most come from testing small changes before you know which reason to care actually works.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Testing ten hooks on one angle first",
+                "Paying for video before angles are proven",
+                "Actors posing as customers",
+                "Briefs with no banned claims",
+                "Copying a competitor's ad"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Test angles first, hooks second",
+                "Statics first, video for winners",
+                "Real users or clear presenters",
+                "Write the not-allowed list",
+                "Learn the angle, make your own"
+              ]
+            }
+          },
+          "say": "These mistakes make test rounds expensive and hard to read. Testing ten hooks on one angle first. Paying for video before angles are proven. Actors posing as customers. Briefs with no banned claims. And copying a competitor's ad. The fixes are on the right: test angles first and hooks second, statics first and video for winners, real users or clear presenters, write the not-allowed list, and learn the angle but make your own."
+        },
+        {
+          "v": "check",
+          "h": "Before you brief a creator",
+          "p": "A clear brief saves money and stops creators from improvising claims you cannot use. Give every creator these points in writing before filming starts, and keep a copy with the creative log.",
+          "d": [
+            "The angle and the one message",
+            "Three hook options to film",
+            "What the product does and does not do",
+            "Words and claims that are not allowed",
+            "Format, length and aspect ratios",
+            "Disclosure and usage rights"
+          ],
+          "say": "Before you brief a creator, give them these points in writing. The angle and the one message. Three hook options to film. What the product does and does not do. The words and claims that aren't allowed. The format, length and aspect ratios. And the disclosure and usage rights. A clear brief saves money and stops creators improvising claims you can't use. Keep a copy with your creative log."
+        }
+      ],
+      "takeaways": [
+        "Test angles first: the angle is the reason to care, the hook is the opening.",
+        "Pick the format that shows the angle most clearly, and keep UGC real and disclosed.",
+        "Use an angle and format matrix to learn what wins and why.",
+        "Promote an angle to video only after it passes the rule card in a cheap format."
+      ],
+      "action": "Write five honest angles for one offer you run. Turn the two you like best into a 2 × 3 matrix with UGC, screen demo and static formats.",
+      "glossary": [
+        {
+          "term": "Angle",
+          "def": "The reason a person should care about the offer, such as learning, convenience or control."
+        },
+        {
+          "term": "UGC",
+          "def": "User-generated content. Ads filmed by real people on their phones, in a natural style."
+        },
+        {
+          "term": "Concept",
+          "def": "One combination of angle and format, which can carry several hooks."
+        },
+        {
+          "term": "Creative matrix",
+          "def": "A grid that crosses angles with formats so a test round covers both."
+        },
+        {
+          "term": "Paid partnership",
+          "def": "A post or ad where a creator is paid, which must be disclosed where rules require."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the difference between an angle and a hook?",
+          "options": [
+            "They are the same",
+            "The hook is the reason; the angle is the opening",
+            "The angle is the reason to care; the hook is how the ad opens",
+            "Angles are for statics, hooks for video"
+          ],
+          "answer": 2,
+          "why": "One angle can carry many hooks. Testing angles finds new groups of people."
+        },
+        {
+          "q": "4 angles × 3 formats. How many concepts is that?",
+          "options": [
+            "7",
+            "12",
+            "4",
+            "43"
+          ],
+          "answer": 1,
+          "why": "4 × 3 = 12 concepts."
+        },
+        {
+          "q": "Which is honest UGC?",
+          "options": [
+            "An actor saying they made $2,000 last week",
+            "Footage downloaded from a competitor's ad",
+            "A paid creator showing the app, with the partnership disclosed",
+            "A fake review read by an AI voice"
+          ],
+          "answer": 2,
+          "why": "Real person, real product, disclosed payment. The others are fake or stolen."
+        },
+        {
+          "q": "Target $10. A static on the control angle has 4 registrations at $9.20 after $36.80. What does the starting rule suggest?",
+          "options": [
+            "It qualifies for video: 3+ conversions at or under target",
+            "Kill it",
+            "Keep testing statics only",
+            "Change the angle"
+          ],
+          "answer": 0,
+          "why": "It has at least 3 conversions and CPA at or under target, so it earns video production budget."
+        },
+        {
+          "q": "Which belongs in a creator brief?",
+          "options": [
+            "Freedom to promise any results",
+            "No mention of rules",
+            "Only the payment amount",
+            "Claims that are not allowed and disclosure requirements"
+          ],
+          "answer": 3,
+          "why": "Creators need to know what they must not say and how to disclose, or the ad may be unusable."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn the difference between an angle and a hook, and how to choose formats like U G C, talking head, demo and static. You'll build an angle and format matrix, so your test budget goes to the right ideas.",
+      "say_outro": "To recap: the angle is why someone cares, the hook is how you open, and you test angles first, cheaply, as statics, before spending on video. Your task: write five honest angles for one offer you run, then turn your best two into a two by three matrix with U G C, screen demo and static formats. Now take the quiz."
+    },
+    {
+      "slug": "creative-testing-frameworks",
+      "title": "Creative testing frameworks",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can set up a creative test with a clear hypothesis and budget.",
+        "You can tell a concept test from an iteration test.",
+        "You can pick winners on the paid event, not on CTR alone.",
+        "You can apply the starting kill and hold rules to each concept in a round."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Test concepts first, polish later",
+          "p": "Small changes to a weak idea rarely make it a winner. Big differences between ideas often do. Start by testing different concepts, then iterate on the ones that win. This lesson gives the framework; the Creative testing lab module gives the full step-by-step build.",
+          "d": {
+            "b": "Find the idea, then refine it",
+            "s": "Concept tests first, iterations second"
+          },
+          "say": "Here's the big idea. Small changes to a weak idea rarely make it a winner. Big differences between ideas often do. So start by testing different concepts, find the idea that works, and only then refine it with iterations. This lesson gives you the framework. The Creative testing lab module gives you the full step-by-step build."
+        },
+        {
+          "v": "compare",
+          "h": "Concept test vs iteration test",
+          "p": "These are two different questions. A concept test asks which idea works. An iteration test asks how to make a working idea work better. Mixing them makes results impossible to read.",
+          "d": {
+            "a": {
+              "title": "Concept test",
+              "items": [
+                "Different angles or formats",
+                "Big differences",
+                "Finds new winners",
+                "Higher failure rate"
+              ]
+            },
+            "b": {
+              "title": "Iteration test",
+              "items": [
+                "Same concept, one change",
+                "Hook, length, creator, CTA",
+                "Improves a winner",
+                "Smaller but steadier gains"
+              ]
+            }
+          },
+          "say": "These are two different questions. A concept test asks which idea works. It uses different angles or formats, big differences, it finds new winners, and it fails more often. An iteration test asks how to make a working idea better. Same concept, one change, like the hook, length, creator or C T A, call to action. Smaller but steadier gains. Mix them in one round and the results become impossible to read."
+        },
+        {
+          "v": "flow",
+          "h": "The testing loop",
+          "p": "Every test should follow the same loop. Writing down the hypothesis before launch stops you from inventing a story after you see the numbers, which is the most common way buyers fool themselves.",
+          "d": [
+            "Hypothesis",
+            "Build",
+            "Launch",
+            "Read on paid event",
+            "Decide",
+            "Log the lesson"
+          ],
+          "say": "Every test follows the same loop. Look at the flow: hypothesis, build, launch, read on the paid event, decide, and log the lesson. Writing the hypothesis down before launch is the important part. It stops you inventing a story after you see the numbers, and that's the most common way buyers fool themselves."
+        },
+        {
+          "v": "table",
+          "h": "Two common test setups",
+          "p": "There is no single correct setup. These are two that operators use. Meta also has a built-in experiments tool for split tests; check the current Ads Manager for its name and options.",
+          "more": "When many ads share one ad set, Meta often gives most of the spend to one or two ads early. That is efficient for results but unfair as a test. Separate ad sets give each concept a fairer share, at the cost of splitting signal. Many buyers test in a separate campaign, then move winners into their main campaign.",
+          "d": {
+            "cols": [
+              "Setup",
+              "How",
+              "Trade-off"
+            ],
+            "rows": [
+              [
+                "One ad set per concept",
+                "Ad set budgets, same audience",
+                "Fair spend, more ad sets"
+              ],
+              [
+                "Many ads in one ad set",
+                "Meta picks the spend",
+                "Fast, but uneven spend"
+              ],
+              [
+                "Built-in split test",
+                "Meta splits the audience",
+                "Cleanest, needs more budget"
+              ]
+            ]
+          },
+          "say": "There's no single correct setup, but here are three that operators use. One ad set per concept gives fair spend, but more ad sets. Many ads in one ad set is fast, but Meta often gives most spend to one or two ads early, so spend is uneven. And Meta's built-in split test divides the audience, which is cleanest but needs more budget. Check the current Ads Manager for that tool's name and options. Many buyers test in a separate campaign, then move winners into their main one."
+        },
+        {
+          "v": "eq",
+          "h": "Budget a test before you launch",
+          "p": "Decide how much each concept may spend before you judge it. Example: target cost per registration $10, and you want about three registrations to read a concept. That is $30 each, or $180 for six concepts.",
+          "d": [
+            "$10 target",
+            "×",
+            "3 results",
+            "×",
+            "6 concepts",
+            "=",
+            "$180"
+          ],
+          "say": "Always budget a test before you launch. Decide how much each concept may spend before you judge it. In this example, the target cost per registration is ten dollars, and you want about three registrations to read a concept. That's thirty dollars per concept. Multiply by six concepts, and the round costs one hundred and eighty dollars. Now you know the cost before you spend a cent."
+        },
+        {
+          "v": "tip",
+          "h": "The starting kill rules for a test",
+          "p": "Use the same starting rule card for creatives as for ad sets. Kill at spend ≥ 2 × target with zero results. Once spend reaches 3 × target, kill if CPA is above the lower of 1.5 × target and break-even. Otherwise hold. Adapt for slow events like FTD.",
+          "more": "Worked example. Target $10 per registration, break-even $14, so the kill line is $14. Concept C04 spends $20 with zero registrations: 2 × target, killed. C05 spends $20 with two registrations, $10 each: hold to the full $30. C06 spends $30 with one registration, a $30 CPA, above $14 after 3 × target: killed and logged. For FTDs, which arrive days later, apply the same rules only to spend whose postbacks have had time to arrive. Full rule card: Budget and kill rules module.",
+          "d": {
+            "kind": "example",
+            "text": "Example: target $10. $20 spent, 0 results: kill. $30 spent, 1 result ($30 CPA): kill. $20 spent, 2 results: hold."
+          },
+          "say": "Here are the starting kill rules, the same rule card you use for ad sets. Kill at spend of two times target with zero results. Once spend reaches three times target, kill if the C P A, cost per acquisition, is above the lower of one point five times target and break-even. Otherwise, hold. In the example, target is ten dollars. Twenty spent, zero results: kill. Thirty spent, one result, a thirty dollar C P A: kill. Twenty spent, two results: hold. For slow events like F T D, first-time deposit, give postbacks time to arrive."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: call this concept",
+          "p": "Apply the starting rule card to one concept from a round. Work out the CPA, check how much it has spent against 3 × target and compare with the kill line. Then press check.",
+          "more": "Working. CPA $40. Spend is 3.3 × target, so the CPA rule applies. 1.5 × $12 = $18, and $40 is far above it. Kill and log the lesson.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $12 per registration. A concept spent $40 over 3 days for 1 registration. Kill, hold or scale?",
+            "preset": {
+              "spend": 40,
+              "conversions": 1,
+              "target_cpa": 12,
+              "days": 3
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "kill"
+            }
+          },
+          "say": "Time for a lab. The target is twelve dollars per registration, and a concept spent forty dollars over three days for one registration. Your job is to call it: kill, hold or scale. Work out the C P A, check how much it has spent against three times target, and compare with the kill line from the rule card. Pause and try it, then check your answer."
+        },
+        {
+          "v": "funnel",
+          "h": "Most concepts fail",
+          "p": "Example: one month of creative work. Twenty ideas became ten produced ads, eight launched, three passed the first read and one became a winner worth scaling. That is normal, so plan volume.",
+          "d": [
+            [
+              "Ideas",
+              20
+            ],
+            [
+              "Produced",
+              10
+            ],
+            [
+              "Launched",
+              8
+            ],
+            [
+              "Passed first read",
+              3
+            ],
+            [
+              "Winner",
+              1
+            ]
+          ],
+          "say": "Look at this funnel. It's an example of one month of creative work. Twenty ideas became ten produced ads, eight were launched, three passed the first read, and one became a winner worth scaling. That's normal. Most concepts fail, so the only way to find winners is to plan for volume."
+        },
+        {
+          "v": "table",
+          "h": "The CTR winner is not always the winner",
+          "p": "Example: three concepts in one test. Creative A had the best CTR and the cheapest registrations, but the worst cost per FTD. B made the most money. Judge on the event you are paid for.",
+          "more": "Why it happens: a curiosity-heavy hook can attract clickers who are not ready to deposit. A plain demo attracts fewer, more serious people. CTR and hook rate are leading indicators that help you diagnose. Cost per paid event is the result. With small numbers, give FTD data enough time and volume before you decide.",
+          "d": {
+            "cols": [
+              "Creative",
+              "CTR",
+              "Cost per reg",
+              "Cost per FTD"
+            ],
+            "rows": [
+              [
+                "A curiosity",
+                "2.4%",
+                "$6.10",
+                "$38"
+              ],
+              [
+                "B demo",
+                "1.6%",
+                "$8.20",
+                "$26"
+              ],
+              [
+                "C education",
+                "1.1%",
+                "$9.50",
+                "$29"
+              ]
+            ]
+          },
+          "say": "Here's a trap. In this example, creative A, the curiosity hook, had the best C T R and the cheapest registrations, but the worst cost per F T D, thirty eight dollars. Creative B, the plain demo, made the most money at twenty six dollars per F T D. Why? A curiosity hook can attract clickers who aren't ready to deposit. C T R helps you diagnose. Cost per paid event is the result. And with small numbers, give F T D data enough time and volume before you decide."
+        },
+        {
+          "v": "screen",
+          "h": "A test round, with the calls written",
+          "p": "A generic mock-up of a test sheet at the end of a round. Every concept spent up to 3 × target or hit a kill rule first. The call column is written from the rule card, not from feel.",
+          "d": {
+            "kind": "browser",
+            "url": "sheet.example/tests/w41",
+            "title": "Test round W41, target $10, break-even $14",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Concept",
+                  "Spend",
+                  "Regs",
+                  "Call"
+                ],
+                "rows": [
+                  [
+                    "C01 education UGC",
+                    "$30",
+                    "3",
+                    "Keep, iterate"
+                  ],
+                  [
+                    "C02 demo",
+                    "$20",
+                    "0",
+                    "Kill at 2 ×"
+                  ],
+                  [
+                    "C03 control static",
+                    "$30",
+                    "5",
+                    "Scale step"
+                  ],
+                  [
+                    "C04 convenience",
+                    "$30",
+                    "1",
+                    "Kill, CPA $30"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "C03: CPA $6.00, under 0.8 × $10 with 5 results."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "This mock-up shows a test round with the calls written. Target ten dollars, break-even fourteen. Each concept spent up to three times target, or hit a kill rule first. C zero one, three registrations: keep and iterate. C zero two, twenty dollars and zero: killed at two times. C zero three, five registrations at six dollars, under point eight times target: a scale step. C zero four, a thirty dollar C P A: killed. Notice the calls come from the rule card, not from feel."
+        },
+        {
+          "v": "tip",
+          "h": "Change one thing per iteration",
+          "p": "When you iterate on a winner, change one element at a time: the hook, the creator, the length or the CTA. If you change three things and results move, you will not know which change caused it.",
+          "d": {
+            "kind": "tip",
+            "text": "One variable per iteration. Name the ad after the change, for example C05_hookB."
+          },
+          "say": "When you iterate on a winner, change one element at a time: the hook, the creator, the length or the C T A. If you change three things and results move, you won't know which change caused it. And as the tip says, name the ad after the change, for example C zero five underscore hook B, so your reports explain themselves."
+        },
+        {
+          "v": "tip",
+          "h": "Never test whether a false claim passes",
+          "p": "Some buyers test 'aggressive' versions with income promises or fake urgency to see if they get through review. That breaks ad policy even if the ad runs, and repeated rejections can restrict the account.",
+          "more": "What repeated rejections can lead to: Ad account bans module.",
+          "d": {
+            "kind": "warn",
+            "text": "Every concept in a test must be one you would happily run at scale."
+          },
+          "say": "Some buyers test aggressive versions with income promises or fake urgency, just to see if they get through review. Don't do this. It breaks ad policy even if the ad runs, and repeated rejections can restrict the account. The rule on screen is simple: every concept in a test must be one you'd happily run at scale."
+        },
+        {
+          "v": "compare",
+          "h": "Common testing mistakes",
+          "p": "These mistakes make tests unreadable or expensive. They are easy to avoid if you write the hypothesis, the budget per concept and the rules before launch, and keep to them when a result tempts you.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Mixing concepts and iterations in one round",
+                "No budget set per concept",
+                "Deciding on CTR",
+                "Changing three things at once",
+                "No creative log"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "One question per round",
+                "3 × target per concept, set first",
+                "Decide on the paid event",
+                "One variable per iteration",
+                "Log every result and reason"
+              ]
+            }
+          },
+          "say": "These mistakes make tests unreadable or expensive. Mixing concepts and iterations in one round. No budget per concept. Deciding on C T R. Changing three things at once. And no creative log. The fixes: one question per round, three times target per concept set first, decide on the paid event, one variable per iteration, and log every result and reason. Write the rules before launch, and keep to them when a result tempts you."
+        },
+        {
+          "v": "check",
+          "h": "What to log for every test",
+          "p": "A creative log turns spend into knowledge your whole team can reuse. Over months it becomes the most valuable document in your operation, because it records what worked, what failed and why.",
+          "d": [
+            "Creative ID, angle, format and hook",
+            "Hypothesis before launch",
+            "Spend, hook rate, CTR",
+            "Cost per paid event",
+            "Decision and reason",
+            "Lesson for the next round"
+          ],
+          "say": "Finally, here's what to log for every test. The creative I D, angle, format and hook. The hypothesis before launch. Spend, hook rate and C T R. Cost per paid event. The decision and the reason. And the lesson for the next round. Over months, this log becomes one of the most valuable documents in your operation, because it records what worked, what failed, and why."
+        }
+      ],
+      "takeaways": [
+        "Test different concepts first, then iterate one variable at a time on winners.",
+        "Set the test budget (about 3 × target per concept) and the starting rule card before launch.",
+        "Pick winners on the paid event; CTR and hook rate only help you diagnose."
+      ],
+      "action": "Plan your next test round: write a hypothesis, list the concepts, set a budget per concept with the formula in this lesson, and write your kill rule.",
+      "glossary": [
+        {
+          "term": "Concept test",
+          "def": "A test that compares clearly different creative ideas to find a new winner."
+        },
+        {
+          "term": "Iteration",
+          "def": "A new version of a winning ad with one element changed."
+        },
+        {
+          "term": "Hypothesis",
+          "def": "A short written guess about what will happen and why, made before the test."
+        },
+        {
+          "term": "Kill rule",
+          "def": "A rule set before launch that says when to stop spending on a test."
+        },
+        {
+          "term": "Leading indicator",
+          "def": "An early metric, such as hook rate or CTR, that hints at results but is not the result itself."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Target cost per registration is $12. You want 3 registrations to read each of 5 concepts. What is the test budget?",
+          "options": [
+            "$60",
+            "$36",
+            "$180",
+            "$15"
+          ],
+          "answer": 2,
+          "why": "$12 × 3 × 5 = $180."
+        },
+        {
+          "q": "You change the hook, the creator and the music on a winner, and results improve. What is the problem?",
+          "options": [
+            "You do not know which change caused the improvement",
+            "Nothing",
+            "Meta will reject it",
+            "Results cannot improve that way"
+          ],
+          "answer": 0,
+          "why": "Changing several variables at once hides which one mattered."
+        },
+        {
+          "q": "Creative X has the highest CTR. Creative Y has a lower CTR but cheaper FTDs. Which wins on an FTD offer?",
+          "options": [
+            "X",
+            "Neither",
+            "Whichever is newer",
+            "Y"
+          ],
+          "answer": 3,
+          "why": "You are paid on FTDs, so the cheapest cost per FTD with enough data wins."
+        },
+        {
+          "q": "Target $15, break-even $20. A concept spent $46 for 1 registration. What does the starting rule card say?",
+          "options": [
+            "Keep it running",
+            "Kill it: CPA $46 is above the kill line after 3 × target",
+            "Double its budget",
+            "Change its audience"
+          ],
+          "answer": 1,
+          "why": "$46 is over 3 × $15 = $45, and the CPA of $46 is above the lower of $22.50 and $20."
+        },
+        {
+          "q": "Which is a concept test?",
+          "options": [
+            "Same video, two CTA buttons",
+            "Same video, 15s vs 30s",
+            "Education angle vs convenience angle",
+            "Same video, two thumbnails"
+          ],
+          "answer": 2,
+          "why": "Different angles are different concepts. The others are iterations of one concept."
+        }
+      ],
+      "say_intro": "This lesson gives you a framework for creative testing. You'll learn the difference between concept and iteration tests, how to budget a round, and why winners are picked on the paid event, not on C T R alone.",
+      "say_outro": "To recap: test concepts first and iterate second, budget each concept before launch, apply the kill rules, and judge on the paid event. Your task: plan your next test round with a written hypothesis, a list of concepts, a budget per concept using this lesson's formula, and your kill rule. Now take the quiz."
+    },
+    {
+      "slug": "fatigue-and-iteration",
+      "title": "Fatigue and iteration",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can spot creative fatigue from frequency, CTR and cost trends.",
+        "You can calculate how a falling CTR raises your cost per FTD.",
+        "You can plan an iteration ladder and a weekly creative calendar.",
+        "You can apply starting fatigue rules next to your rule card."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Every winner wears out",
+          "p": "The same people see your ad again and again. At first that helps. Then they stop noticing it, CTR falls and costs rise. This is creative fatigue, and planning for it is part of the job.",
+          "d": {
+            "b": "Winners have a shelf life",
+            "s": "Plan the next one before you need it"
+          },
+          "say": "Here's something every buyer learns. The same people see your ad again and again. At first that helps. Then they stop noticing it, C T R, click-through rate, falls, and costs rise. That's creative fatigue. As the screen says, winners have a shelf life. So plan the next one before you need it. That planning is part of the job."
+        },
+        {
+          "v": "eq",
+          "h": "Frequency",
+          "p": "Frequency is the average number of times each person saw your ad. Example: 42,000 impressions reached 12,000 people, so the frequency is 3.5. Watch it by ad set over a set period, such as seven days.",
+          "d": [
+            "42,000 impressions",
+            "÷",
+            "12,000 reach",
+            "=",
+            "3.5 frequency"
+          ],
+          "say": "Frequency is the average number of times each person saw your ad. In this example, forty two thousand impressions reached twelve thousand people. Forty two thousand divided by twelve thousand gives a frequency of three point five. Watch frequency by ad set over a set period, such as seven days, so you're comparing like with like."
+        },
+        {
+          "v": "table",
+          "h": "Signs of fatigue",
+          "p": "No single number proves fatigue. Look for several of these moving together over a week, on an ad that used to perform. If only one moves, look for another cause first.",
+          "d": {
+            "cols": [
+              "Signal",
+              "Direction"
+            ],
+            "rows": [
+              [
+                "Frequency",
+                "Rising"
+              ],
+              [
+                "CTR and hook rate",
+                "Falling"
+              ],
+              [
+                "CPM",
+                "Often rising"
+              ],
+              [
+                "Cost per paid event",
+                "Rising"
+              ],
+              [
+                "Comments",
+                "More negative or repetitive"
+              ]
+            ]
+          },
+          "say": "No single number proves fatigue. Look at the table. Frequency rising. C T R and hook rate falling. C P M, cost per thousand impressions, often rising. Cost per paid event rising. And comments getting more negative or repetitive. Look for several of these moving together over a week, on an ad that used to perform. If only one moves, look for another cause first."
+        },
+        {
+          "v": "screen",
+          "h": "Spotting fatigue in a weekly breakdown",
+          "p": "A generic mock-up of one winning ad broken down by week. Several signals move together: frequency up, CTR down, cost per FTD up. That pattern, not one bad day, is fatigue.",
+          "more": "Worked example. Best CTR 1.6%, now 1.0%: a fall of 0.6 points, which is 37.5% of 1.6. Cost per FTD rose from $20 to $31. With a $30 target and $40 break-even, the ad is still above target but under the kill line, so the rule card says Hold, and the fatigue rule says brief new iterations.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/ads/C05?breakdown=week",
+            "title": "Ad C05_hookDemo, by week",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Week",
+                  "Frequency",
+                  "CTR",
+                  "Cost per FTD"
+                ],
+                "rows": [
+                  [
+                    "W1",
+                    "1.6",
+                    "1.6%",
+                    "$20"
+                  ],
+                  [
+                    "W2",
+                    "2.2",
+                    "1.5%",
+                    "$21"
+                  ],
+                  [
+                    "W3",
+                    "3.0",
+                    "1.2%",
+                    "$25"
+                  ],
+                  [
+                    "W4",
+                    "3.8",
+                    "1.0%",
+                    "$31"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "CTR down about 38% from its best, frequency rising. Brief iterations now."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Here's a mock-up of one winning ad broken down by week. Notice how the signals move together. Frequency goes from one point six to three point eight. C T R falls from one point six percent to one percent, about thirty eight percent off its best. Cost per F T D, first-time deposit, rises from twenty to thirty one dollars. With a thirty dollar target and forty dollar break-even, the rule card says hold, and the fatigue rule says brief new iterations now."
+        },
+        {
+          "v": "stat",
+          "h": "How a falling CTR raises cost",
+          "p": "Example: CPM stays at $4 and 1.25% of clicks become FTDs. When CTR drops from 1.6% to 1.0%, cost per FTD rises from $20 to $32. Nothing else changed.",
+          "more": "Worked example. Cost per FTD = CPM ÷ (1,000 × CTR × click-to-FTD rate). At 1.6% CTR: $4 ÷ (1,000 × 0.016 × 0.0125) = $4 ÷ 0.2 = $20. At 1.0% CTR: $4 ÷ (1,000 × 0.010 × 0.0125) = $4 ÷ 0.125 = $32. A CTR drop that looks small on screen is a 60% rise in cost per FTD.",
+          "d": {
+            "n": 32,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "cost per FTD after CTR fell to 1.0%",
+            "note": "Example. Was $20 at 1.6% CTR."
+          },
+          "say": "Let's see how a falling C T R raises cost. In this example, C P M stays at four dollars, and one point two five percent of clicks become F T Ds. When C T R drops from one point six percent to one percent, cost per F T D rises from twenty dollars to thirty two, the number on screen. Nothing else changed. A C T R drop that looks small is a sixty percent rise in cost per F T D."
+        },
+        {
+          "v": "curve",
+          "h": "Refreshing vs riding one ad",
+          "p": "Example: weekly cost per FTD for two ad sets that started with the same winning ad. One kept running it alone. The other added a new iteration every week. The refreshed ad set stayed near target.",
+          "d": {
+            "a": [
+              20,
+              20,
+              22,
+              25,
+              28,
+              32,
+              34
+            ],
+            "la": "One ad, no refresh ($)",
+            "b": [
+              20,
+              20,
+              21,
+              20,
+              21,
+              20,
+              21
+            ],
+            "lb": "Weekly iterations added ($)",
+            "x": [
+              "W1",
+              "W2",
+              "W3",
+              "W4",
+              "W5",
+              "W6",
+              "W7"
+            ]
+          },
+          "say": "Look at these two lines. It's an example of weekly cost per F T D for two ad sets that started with the same winning ad. One kept running that ad alone, and its cost climbed from twenty dollars to thirty four by week seven. The other added a new iteration every week, and it stayed near twenty to twenty one dollars, close to target. Refreshing keeps a winner alive."
+        },
+        {
+          "v": "table",
+          "h": "Starting fatigue rules",
+          "p": "These rules sit next to your rule card. They do not replace it: kills still come from the card. They decide when to stop adding budget and when to brief new creative. Starting rules; adapt to your data.",
+          "more": "These match the stop-scaling rules in the Budget and kill rules module. The 30% line is a starting habit, not a platform number; tune it to how fast your ads tire.",
+          "d": {
+            "cols": [
+              "Trigger",
+              "Action"
+            ],
+            "rows": [
+              [
+                "CTR down 30%+ from its best, frequency rising",
+                "No more budget steps; brief 2 to 3 iterations"
+              ],
+              [
+                "CPA since last step above 0.8 × target for 48 h",
+                "No more steps; keep"
+              ],
+              [
+                "CPA above the kill line after 3 × target",
+                "Kill the ad set (rule card)"
+              ],
+              [
+                "New iteration passes the rule card",
+                "Let it carry volume, then pause the old ad"
+              ]
+            ]
+          },
+          "say": "These fatigue rules sit next to your rule card; kills still come from the card. If C T R is down thirty percent or more from its best and frequency is rising, take no more budget steps and brief two to three iterations. If C P A, cost per acquisition, since the last step is above point eight times target for forty eight hours, no more steps, just keep. If C P A is above the kill line after three times target, kill it. And when a new iteration passes, let it carry volume, then pause the old ad. The thirty percent line is a starting habit. Adapt to your data."
+        },
+        {
+          "v": "flow",
+          "h": "The iteration ladder",
+          "p": "Start with the cheapest change that could restore attention and keep the core that made the ad win. Move down the ladder only when the cheaper steps stop working.",
+          "d": [
+            "New hook",
+            "New first frame",
+            "New creator or voice",
+            "New length or pace",
+            "New format, same angle"
+          ],
+          "say": "Here's the iteration ladder. Start with the cheapest change that could restore attention, and keep the core that made the ad win. A new hook first. Then a new first frame. Then a new creator or voice. Then a new length or pace. And finally a new format, same angle. Move down the ladder only when the cheaper steps stop working."
+        },
+        {
+          "v": "cards",
+          "h": "What to keep, what to change",
+          "p": "A winner wins for a reason, usually its angle and its core message. Keep those. Change the surface so the same people see something that feels new.",
+          "d": [
+            "Keep|the angle and core message",
+            "Keep|the offer and honest claims",
+            "Change|the opening seconds",
+            "Change|the face, voice or setting"
+          ],
+          "say": "A winner wins for a reason, usually its angle and core message. So look at the cards. Keep the angle and core message. Keep the offer and the honest claims. Change the opening seconds. Change the face, voice or setting. You're changing the surface, so the same people see something that feels new, while the reason it works stays the same."
+        },
+        {
+          "v": "tip",
+          "h": "Add, do not swap",
+          "p": "When a winner starts to tire, add new iterations next to it rather than pausing it at once. Let delivery move to the new ads as they prove themselves. Pausing a winner too early can leave you with nothing working.",
+          "d": {
+            "kind": "tip",
+            "text": "Add 2 to 3 new iterations to the ad set. Pause the old winner only once a new one carries the volume."
+          },
+          "say": "When a winner starts to tire, don't pause it straight away. Add new iterations next to it, and let delivery move to the new ads as they prove themselves. Pausing too early can leave you with nothing working. As the tip says, add two to three new iterations to the ad set, and pause the old winner only once a new one carries the volume."
+        },
+        {
+          "v": "walk",
+          "h": "Launch an iteration, step by step",
+          "p": "A generic walkthrough of adding a new-hook version next to a tired winner. Menu names are as we understand them at the time of writing and may differ on your screen. Names change; check the current Ads Manager.",
+          "d": {
+            "steps": [
+              {
+                "title": "Duplicate the winning ad",
+                "text": "Duplicate the ad into the same ad set, so the winner keeps running.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/ads/C05",
+                  "title": "Ad: C05_hookDemo",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Duplicate into",
+                      "value": "Same ad set"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Duplicate"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Swap only the hook",
+                "text": "Upload the new video with the new opening. Keep copy, link and tracking the same.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/ads/C05-copy",
+                  "title": "Ad: copy",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Video",
+                      "value": "C05_hookFact_9x16.mp4"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Primary text",
+                      "value": "Unchanged"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Website URL",
+                      "value": "Unchanged, same sub IDs"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Name it after the change",
+                "text": "Rename it so the report shows what changed, then publish.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/ads/C05-copy",
+                  "title": "Ad: copy",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Ad name",
+                      "value": "C05_hookFact_V2"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Publish"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Let's launch an iteration. Tap Next to follow each step. First, duplicate the winning ad into the same ad set, so the winner keeps running. Second, swap only the hook: upload the new video with the new opening, and keep the copy, link and tracking the same. Third, rename the ad after the change, so the report shows what changed, then publish. This is a generic walkthrough, and menu names may differ, so check the current Ads Manager."
+        },
+        {
+          "v": "tip",
+          "h": "Every iteration goes through review again",
+          "p": "A new hook is a new ad. It must keep the honest claims and any required risk or age warning, even when the edit is quick. Never re-upload a rejected ad with small changes to slip past review.",
+          "more": "What repeated rejections can lead to: Ad account bans module.",
+          "d": {
+            "kind": "warn",
+            "text": "Iterate the surface, never the honesty: claims, warnings and disclosures stay."
+          },
+          "say": "Remember, a new hook is a new ad, and it goes through review again. It must keep the honest claims and any required risk or age warning, even when the edit is quick. And never re-upload a rejected ad with small changes to slip past review. As the warning says, iterate the surface, never the honesty. Claims, warnings and disclosures stay."
+        },
+        {
+          "v": "compare",
+          "h": "Common fatigue mistakes",
+          "p": "Fatigue costs most when buyers react late or react to the wrong signal. These are the usual errors, and the fix for each one, so you react early and to the right signal.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Pausing the winner before a new ad works",
+                "Calling fatigue on one bad day",
+                "Changing the angle when only the hook tired",
+                "Raising budget to fight falling CTR",
+                "No iterations briefed in advance"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Add iterations, then pause",
+                "Look for several signals over a week",
+                "Climb the iteration ladder in order",
+                "Stop budget steps when CTR falls 30%+",
+                "Brief every week, even when winning"
+              ]
+            }
+          },
+          "say": "Fatigue costs most when buyers react late, or react to the wrong signal. The mistakes: pausing the winner before a new ad works, calling fatigue on one bad day, changing the angle when only the hook tired, raising budget to fight falling C T R, and having no iterations briefed in advance. The fixes: add iterations then pause, look for several signals over a week, climb the ladder in order, stop budget steps when C T R falls thirty percent or more, and brief every week."
+        },
+        {
+          "v": "quote",
+          "h": "From the founder",
+          "p": "Dchessking on why his media buying team at Zedapex plans and briefs new creative every week, even when the current ads are still performing well across their geos.",
+          "d": "The best time to make your next winner is while the current one is still working. Once it dies, you are already late.",
+          "by": "dchessking",
+          "say": "Dchessking's media buying team at Zedapex plans and briefs new creative every week, even when the current ads are still performing well. Here's how Dchessking puts it: The best time to make your next winner is while the current one is still working. Once it dies, you are already late."
+        },
+        {
+          "v": "check",
+          "h": "A weekly creative calendar",
+          "p": "A steady rhythm beats panic production. This is an example cadence for a small team; adjust it to your budget and how fast your ads tire.",
+          "d": [
+            "Monday: review last week's creative log",
+            "Tuesday: brief 2 to 3 iterations of winners",
+            "Wednesday: brief 1 to 2 new concepts",
+            "Thursday: produce and check compliance",
+            "Friday: launch in planned test slots"
+          ],
+          "say": "Here's an example weekly creative calendar for a small team. Monday, review last week's creative log. Tuesday, brief two to three iterations of winners. Wednesday, brief one to two new concepts. Thursday, produce and check compliance. Friday, launch in planned test slots. A steady rhythm beats panic production. Adjust it to your budget and how fast your ads tire."
+        }
+      ],
+      "takeaways": [
+        "Fatigue shows as rising frequency and cost with falling CTR and hook rate, together over time.",
+        "Small CTR drops cause large cost rises: cost per FTD = CPM ÷ (1,000 × CTR × CR).",
+        "Iterate the surface, keep the angle, add new ads before pausing winners, and keep a weekly rhythm.",
+        "When CTR falls 30%+ from its best with frequency rising, stop budget steps and brief iterations; kills still come from the rule card."
+      ],
+      "action": "For your top three ads, chart weekly frequency, CTR and cost per paid event for the last four weeks. Mark any that show fatigue and brief one iteration for each.",
+      "glossary": [
+        {
+          "term": "Creative fatigue",
+          "def": "When an ad performs worse over time because the same people have seen it too often."
+        },
+        {
+          "term": "Frequency",
+          "def": "Impressions divided by reach. The average number of times each person saw the ad."
+        },
+        {
+          "term": "Reach",
+          "def": "The number of different people who saw your ad at least once."
+        },
+        {
+          "term": "Iteration ladder",
+          "def": "An ordered list of changes, from cheapest to biggest, used to refresh a winning ad."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "An ad has 30,000 impressions and a reach of 10,000. What is the frequency?",
+          "options": [
+            "0.33",
+            "3",
+            "300",
+            "30"
+          ],
+          "answer": 1,
+          "why": "30,000 ÷ 10,000 = 3."
+        },
+        {
+          "q": "CPM is $5 and click-to-FTD is 1%. CTR falls from 2% to 1%. What happens to cost per FTD?",
+          "options": [
+            "It halves, from $50 to $25",
+            "No change",
+            "It doubles, from $25 to $50",
+            "It rises by 1%"
+          ],
+          "answer": 2,
+          "why": "At 2%: $5 ÷ (1,000 × 0.02 × 0.01) = $25. At 1%: $5 ÷ 0.1 = $50."
+        },
+        {
+          "q": "What is the cheapest first step on the iteration ladder?",
+          "options": [
+            "A new hook on the same body",
+            "A whole new angle",
+            "A new offer",
+            "A new ad account"
+          ],
+          "answer": 0,
+          "why": "A new opening is cheap to make and often restores attention while keeping what made the ad win."
+        },
+        {
+          "q": "Your winner's cost per FTD has risen for two weeks. What do you do first?",
+          "options": [
+            "Pause it immediately with nothing to replace it",
+            "Double its budget",
+            "Change the offer",
+            "Add 2 to 3 iterations next to it and let delivery shift as they prove themselves"
+          ],
+          "answer": 3,
+          "why": "Adding before removing keeps volume running while new ads take over."
+        },
+        {
+          "q": "A winner's CTR fell from 2.0% to 1.3% while frequency rose. CPA is above target but under the kill line. What do the starting rules say?",
+          "options": [
+            "Kill it now",
+            "Raise budget 20%",
+            "Change the offer",
+            "No more budget steps; brief 2 to 3 iterations and keep it running"
+          ],
+          "answer": 3,
+          "why": "CTR is down 35% from its best with frequency rising, which triggers the fatigue rule. The rule card says Hold, not kill."
+        }
+      ],
+      "say_intro": "Every winning ad wears out eventually. In this lesson you'll learn to spot creative fatigue, see how a falling C T R raises your costs, and plan iterations so you always have the next winner ready.",
+      "say_outro": "To recap: watch frequency, C T R and cost together, climb the iteration ladder, and add new ads before pausing the winner. Your task: for your top three ads, chart weekly frequency, C T R and cost per paid event for the last four weeks, mark any that show fatigue, and brief one iteration for each. Now take the quiz."
+    },
+    {
+      "slug": "localisation-honest-copy-and-ai",
+      "title": "Localisation, honest copy and AI tools",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can localise an ad for language, money, payment methods and setting.",
+        "You can write copy that is persuasive and honest, and reply to sceptical comments.",
+        "You can use AI tools to speed up creative work without faking people, results or claims.",
+        "You can run an AI-drafted script through a pre-check and native speaker review before launch."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Localise, do not just translate",
+          "p": "A translated ad says the same words in another language. A localised ad feels like it was made in that place: the right language, money, payment methods, faces, places and timing. People respond to ads that feel like theirs.",
+          "d": {
+            "b": "Feels local, not translated",
+            "s": "Language, money, places, timing"
+          },
+          "say": "A translated ad says the same words in another language. A localised ad feels like it was made in that place. It has the right language, money, payment methods, faces, places and timing. As the screen says, it feels local, not translated. People respond to ads that feel like theirs, so this is worth the extra effort."
+        },
+        {
+          "v": "cards",
+          "h": "Languages across our core geos",
+          "p": "Most of these markets use more than one language. Testing a local language version next to English often finds new audiences. Have a native speaker check every script.",
+          "d": [
+            "Nigeria|English, Pidgin, Yoruba, Hausa, Igbo",
+            "Kenya|English, Swahili, Sheng",
+            "Ghana|English, Twi and others",
+            "Cameroon|French and English, plus Pidgin",
+            "South Africa|English, Zulu, Afrikaans and more"
+          ],
+          "say": "Look at the cards. Most of our core markets use more than one language. Nigeria has English, Pidgin, Yoruba, Hausa and Igbo. Kenya has English, Swahili and Sheng. Ghana has English, Twi and others. Cameroon has French and English, plus Pidgin. South Africa has English, Zulu, Afrikaans and more. Testing a local language version next to English often finds new audiences. And always have a native speaker check every script."
+        },
+        {
+          "v": "check",
+          "h": "What to localise",
+          "p": "Language is only one part. Check each of these for every geo you run, and change them in the creative, the copy and the landing page so the whole journey matches.",
+          "d": [
+            "Currency and realistic amounts",
+            "Payment methods, such as M-Pesa or mobile money",
+            "Faces, settings and places people know",
+            "Time zone and posting hours",
+            "Local events, holidays and fixtures",
+            "Local rules and required warnings"
+          ],
+          "say": "Language is only one part. Check each of these for every geo. Currency and realistic amounts. Payment methods, such as M-Pesa or mobile money. Faces, settings and places people know. Time zone and posting hours. Local events, holidays and fixtures. And local rules and required warnings. Change them in the creative, the copy and the landing page, so the whole journey matches."
+        },
+        {
+          "v": "phone",
+          "h": "A localised page on a phone",
+          "p": "This is what a Kenya version looks like when the whole journey is localised: shillings, M-Pesa, a local phrase, and the same honest risk line as the English page.",
+          "d": {
+            "app": "browser",
+            "url": "lander.example/ke/sw",
+            "page": {
+              "h": "Jifunze biashara kwanza, kwa akaunti ya mazoezi",
+              "p": "Learn on a free demo account first. Fund with M-Pesa from KSh 1,300 when you are ready. Capital at risk; only use money you can afford to lose.",
+              "cta": "Anza na demo"
+            }
+          },
+          "say": "Here's what a Kenya version looks like on a phone. The headline is in Swahili, inviting people to learn on a practice account first. It mentions funding with M-Pesa in shillings, and the button says start with demo. And notice the risk line: capital at risk, only use money you can afford to lose. It's the same honest risk line as the English page. Localising never removes the warning."
+        },
+        {
+          "v": "bars",
+          "h": "Localisation in numbers",
+          "p": "Example: one concept in Lagos in three versions with similar spend. Shorter bars mean cheaper registrations. The localised Pidgin version cost least. Illustration only; test it in your own geo.",
+          "more": "Worked example. On $300 each: English generic got about 24 registrations at $12.40. English localised, with naira amounts and Lagos settings, got about 30 at $10.10. Pidgin localised got about 35 at $8.60. If FTD rates are similar across versions, the Pidgin version gives about 44% more registrations for the same spend than the generic one.",
+          "d": [
+            [
+              "English, generic",
+              100,
+              "$12.40"
+            ],
+            [
+              "English, localised",
+              81,
+              "$10.10"
+            ],
+            [
+              "Pidgin, localised",
+              69,
+              "$8.60"
+            ]
+          ],
+          "say": "These bars show an example of one concept in Lagos, in three versions with similar spend. Shorter bars mean cheaper registrations. English generic cost twelve dollars forty. English localised, with naira amounts and Lagos settings, cost ten dollars ten. And the Pidgin localised version cost least, eight sixty. If F T D, first-time deposit, rates are similar, that's about forty four percent more registrations for the same spend. This is an illustration only, so test it in your own geo."
+        },
+        {
+          "v": "compare",
+          "h": "Persuasive and honest copy",
+          "p": "Honest copy can still be strong. It is specific about what the product does, clear about risk, and gives one simple next step. It avoids promises nobody can keep.",
+          "d": {
+            "a": {
+              "title": "Misleading",
+              "items": [
+                "Earn 50k daily guaranteed",
+                "Zero risk",
+                "Only 3 spots left (when untrue)",
+                "Bank-approved (when it is not)"
+              ]
+            },
+            "b": {
+              "title": "Honest and strong",
+              "items": [
+                "Practise free on a demo account first",
+                "Capital at risk. Start small.",
+                "Sign-up takes about 3 minutes",
+                "Licensed by the regulator named on site"
+              ]
+            }
+          },
+          "say": "Honest copy can still be strong. Compare the columns. Misleading copy says earn fifty k daily guaranteed, zero risk, only three spots left when that's untrue, or bank-approved when it isn't. Honest and strong copy says practise free on a demo account first, capital at risk, start small, sign-up takes about three minutes, licensed by the regulator named on site. It's specific about what the product does, clear about risk, and gives one simple next step."
+        },
+        {
+          "v": "chat",
+          "h": "Replying to sceptical comments",
+          "p": "Comments are part of your creative. Honest, calm replies build trust with everyone reading them. Never promise income in a reply, even when someone asks for it directly.",
+          "d": [
+            {
+              "from": "lead",
+              "text": "Is this real? Can I make 50k a day with this app?"
+            },
+            {
+              "from": "buyer",
+              "text": "Nobody can promise daily income. It is a trading app and your money is at risk. Try the free demo account first and see if it is for you."
+            },
+            {
+              "from": "lead",
+              "text": "Ok. Can I fund it with Opay?"
+            },
+            {
+              "from": "buyer",
+              "text": "The payment options for Nigeria are listed on the deposit page. Check them there before you sign up."
+            }
+          ],
+          "say": "Comments are part of your creative. In this chat, a lead asks if they can make fifty k a day. Notice the reply: nobody can promise daily income, it's a trading app and your money is at risk, try the free demo first. Then they ask about funding with Opay, and the buyer points them to the deposit page to check the options. Calm, honest replies build trust with everyone reading. Never promise income in a reply, even when someone asks directly."
+        },
+        {
+          "v": "cards",
+          "h": "Good uses of AI tools",
+          "p": "AI tools can make a small team much faster. Use them to speed up the work around a real, honest message, with a human checking everything before it goes live.",
+          "d": [
+            "Script drafts|many hooks from one brief",
+            "Translation drafts|checked by a native speaker",
+            "Voiceovers|licensed voices, honest scripts",
+            "Resizing and edits|9:16, 4:5 and 1:1 versions",
+            "Compliance pre-checks|flag risky claims before review"
+          ],
+          "say": "A I tools can make a small team much faster. Look at the good uses. Script drafts, many hooks from one brief. Translation drafts, checked by a native speaker. Voiceovers, with licensed voices and honest scripts. Resizing and edits, into nine by sixteen, four by five and one by one. And compliance pre-checks, flagging risky claims before review. The rule is simple: A I speeds up the work around a real, honest message, and a human checks everything before it goes live."
+        },
+        {
+          "v": "compare",
+          "h": "Where AI crosses the line",
+          "p": "The same tools can produce fakes that mislead people and break platform rules. If a viewer would believe something false about who is speaking or what happened, do not publish it.",
+          "d": {
+            "a": {
+              "title": "Never",
+              "items": [
+                "AI people presented as real customers",
+                "Fake testimonials or reviews",
+                "Deepfakes of celebrities or real people",
+                "Fake profit screenshots or news"
+              ]
+            },
+            "b": {
+              "title": "Fine with care",
+              "items": [
+                "Clearly a presenter or animation",
+                "Real product screens",
+                "Voiceover of an honest script",
+                "Disclosed where rules require"
+              ]
+            }
+          },
+          "say": "The same tools can produce fakes. On the never side: A I people presented as real customers, fake testimonials or reviews, deepfakes of celebrities or real people, and fake profit screenshots or news. On the fine with care side: clearly a presenter or animation, real product screens, a voiceover of an honest script, and disclosure where rules require. Here's the test: if a viewer would believe something false about who's speaking or what happened, don't publish it."
+        },
+        {
+          "v": "tip",
+          "h": "Disclosure rules for AI content",
+          "p": "At the time of writing, Meta requires disclosure when certain ads, such as social issue, electoral or political ads, contain digitally created or altered realistic content, and may label AI content elsewhere. Rules are changing fast; we are not certain of the current scope, so check the policy for your ad type and geo.",
+          "d": {
+            "kind": "warn",
+            "text": "If an AI-made person or scene could be mistaken for real, disclose it or do not use it."
+          },
+          "more": "Full detail on claims and warnings for regulated offers: Compliance for finance, trading and gambling offers module.",
+          "say": "Now, disclosure. At the time of writing, Meta requires disclosure when certain ads, such as social issue, electoral or political ads, contain digitally created or altered realistic content, and may label A I content elsewhere. These rules are changing fast, and we're not certain of the current scope, so check the policy for your ad type and geo. The warning on screen sums it up: if an A I-made person or scene could be mistaken for real, disclose it or don't use it."
+        },
+        {
+          "v": "screen",
+          "h": "Pre-check a script before launch",
+          "p": "A generic mock-up of a compliance pre-check on an AI-drafted script. A tool or checklist flags risky lines; a human decides and rewrites. Nothing ships until every flag is cleared.",
+          "d": {
+            "kind": "browser",
+            "url": "review.example/scripts/C11",
+            "title": "Script C11, Pidgin draft",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Line",
+                  "Flag",
+                  "Fix"
+                ],
+                "rows": [
+                  [
+                    "'Make money sharp sharp'",
+                    "Income claim",
+                    "'Learn how the app works'"
+                  ],
+                  [
+                    "'No wahala, no risk'",
+                    "Risk denied",
+                    "'Your money fit loss'"
+                  ],
+                  [
+                    "'Open with Opay'",
+                    "Check payment list",
+                    "Confirm on deposit page"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Native speaker review: pending."
+              },
+              {
+                "type": "button",
+                "label": "Send to reviewer"
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Here's a mock-up of a compliance pre-check on an A I-drafted Pidgin script. Look at the flags. Make money sharp sharp is flagged as an income claim, and rewritten as learn how the app works. No wahala, no risk is flagged as risk denied, and becomes your money fit loss. Open with Opay is flagged to confirm on the deposit page. The native speaker review is still pending. A tool flags, a human decides, and nothing ships until every flag is cleared."
+        },
+        {
+          "v": "flow",
+          "h": "An honest AI creative workflow",
+          "p": "Keep humans in charge of the message and the final check. AI speeds up the middle steps. Every ad still passes a native speaker and a compliance check before launch.",
+          "d": [
+            "Human brief",
+            "AI drafts",
+            "Native speaker review",
+            "Compliance check",
+            "Launch and log"
+          ],
+          "say": "Here's an honest A I creative workflow. Follow the flow. A human writes the brief. A I drafts. A native speaker reviews. A compliance check follows. Then you launch and log. Humans stay in charge of the message and the final check, and A I speeds up the middle. Every ad still passes a native speaker and a compliance check before launch."
+        },
+        {
+          "v": "compare",
+          "h": "Common localisation mistakes",
+          "p": "These mistakes make an ad feel foreign or, worse, misleading. Most come from translating words without checking money, payment methods and meaning with someone who lives in that market.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Machine translation with no review",
+                "Wrong currency or unrealistic amounts",
+                "Payment methods that do not exist there",
+                "Slang that changes the claim",
+                "AI faces posing as locals"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Native speaker checks every script",
+                "Local currency, realistic sums",
+                "Confirm payment options per geo",
+                "Re-check claims after translation",
+                "Real people or clear presenters"
+              ]
+            }
+          },
+          "say": "These mistakes make an ad feel foreign or, worse, misleading. Machine translation with no review. Wrong currency or unrealistic amounts. Payment methods that don't exist there. Slang that changes the claim. And A I faces posing as locals. The fixes: a native speaker checks every script, local currency and realistic sums, confirm payment options per geo, re-check claims after translation, and use real people or clear presenters."
+        },
+        {
+          "v": "product",
+          "h": "Drafting localised versions",
+          "p": "Once a concept wins in one language, you need versions for others quickly. A creative tool can draft resized and translated versions; a native speaker and a compliance check still come before launch.",
+          "d": {
+            "slug": "vooads",
+            "why": "Draft resized and localised versions of a winning ad, then send each through native speaker and compliance review."
+          },
+          "say": "Once a concept wins in one language, you'll want versions for other languages quickly. A creative tool like Vooads can draft resized and localised versions of a winning ad. But each version still goes through a native speaker and a compliance check before launch. The tool saves time; the checks protect you."
+        },
+        {
+          "v": "check",
+          "h": "Final pre-launch creative check",
+          "p": "Run every ad through this list before it goes live, whoever or whatever made it. It protects viewers, your ad accounts and your relationship with the network.",
+          "d": [
+            "No income or result promises",
+            "Risk or age warning where required",
+            "No fake people, reviews or screenshots",
+            "Language checked by a native speaker",
+            "Local amounts and payment methods correct",
+            "Matches the landing page"
+          ],
+          "say": "Here's your final pre-launch creative check. Run every ad through it, whoever or whatever made it. No income or result promises. A risk or age warning where required. No fake people, reviews or screenshots. Language checked by a native speaker. Local amounts and payment methods correct. And the ad matches the landing page. This protects viewers, your ad accounts, and your relationship with the network."
+        }
+      ],
+      "takeaways": [
+        "Localise language, money, payment methods, faces and timing; test local languages next to English.",
+        "Honest copy can be strong: specific, clear on risk, one next step, no promises.",
+        "Use AI to speed up honest work, never to fake people, reviews, results or endorsements."
+      ],
+      "action": "Take one ad that works in English and brief a localised version for one geo: language, currency, payment method, setting. Have a native speaker check the script before you launch.",
+      "glossary": [
+        {
+          "term": "Localisation",
+          "def": "Adapting an ad's language, money, payment methods, people and timing so it feels made for that market."
+        },
+        {
+          "term": "Deepfake",
+          "def": "AI-generated video or audio that makes a real person appear to say or do something they did not."
+        },
+        {
+          "term": "AI disclosure",
+          "def": "A label or statement telling viewers that content was created or altered with AI, required in some ad types."
+        },
+        {
+          "term": "Native speaker review",
+          "def": "A check of a script or translation by someone who speaks that language as a first language."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which is localisation rather than translation?",
+          "options": [
+            "Running the English script through a translator",
+            "Swapping only the logo",
+            "Changing the font",
+            "Using Swahili, shilling amounts, M-Pesa and a Nairobi setting for Kenya"
+          ],
+          "answer": 3,
+          "why": "Localisation adapts the whole experience to the market, not just the words."
+        },
+        {
+          "q": "A commenter asks 'How much will I make a day?' on a trading ad. Best reply?",
+          "options": [
+            "Most people make about 20k a day",
+            "Nobody can promise income. Your money is at risk. Try the demo first.",
+            "Delete the comment",
+            "DM for guaranteed signals"
+          ],
+          "answer": 1,
+          "why": "It is honest about risk and points to a safe next step. Income claims are misleading and against policy."
+        },
+        {
+          "q": "Which use of AI is acceptable?",
+          "options": [
+            "An AI person presented as a real customer sharing profits",
+            "A deepfake of a famous footballer endorsing a betting app",
+            "AI drafting ten hook options that a human edits and checks",
+            "AI-generated fake reviews on the lander"
+          ],
+          "answer": 2,
+          "why": "Drafting with human review is a legitimate speed-up. The others deceive viewers."
+        },
+        {
+          "q": "On $300 a version, English costs $12 per registration and Pidgin $8. About how many more registrations does Pidgin get?",
+          "options": [
+            "12.5",
+            "4",
+            "37.5",
+            "25"
+          ],
+          "answer": 0,
+          "why": "English: $300 ÷ $12 = 25. Pidgin: $300 ÷ $8 = 37.5. Difference 12.5 registrations."
+        },
+        {
+          "q": "An AI draft in Pidgin says 'No wahala, no risk'. What do you do?",
+          "options": [
+            "Run it, Pidgin ads are informal",
+            "Rewrite it to state the risk honestly, then get native speaker review",
+            "Add a small disclaimer and run it",
+            "Translate it back to English"
+          ],
+          "answer": 1,
+          "why": "Denying risk is misleading in any language. Fix the claim, then have a native speaker check the new line."
+        }
+      ],
+      "say_intro": "This lesson is about making ads feel local, writing copy that's persuasive and honest, and using A I tools without faking anything. These skills help you reach more people while protecting your accounts and your viewers.",
+      "say_outro": "To recap: localise the whole journey, write copy that's strong and honest, and use A I only to speed up honest work, with human checks. Your task: take one ad that works in English and brief a localised version for one geo, covering language, currency, payment method and setting, and have a native speaker check the script before launch. Now take the quiz."
+    },
+    {
+      "slug": "producing-creatives-on-a-budget",
+      "title": "Producing ads on a phone budget",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can film, edit and export a UGC-style ad on a phone.",
+        "You can work out the cost per winning creative and plan production volume.",
+        "You can protect rights, consent and claims in every ad you produce."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Production cost decides test volume",
+          "p": "Most concepts lose, so you need many of them. If each ad costs $120 to make, a small budget tests three ideas a month. At $10 each it tests thirty. Cheap, honest production is how small teams find winners.",
+          "d": {
+            "b": "Make many, cheaply, honestly",
+            "s": "Spend more only on proven angles"
+          },
+          "say": "Most concepts lose, so you need many of them. And production cost decides how many you can test. If each ad costs one hundred and twenty dollars to make, a small budget tests three ideas a month. At ten dollars each, it tests thirty. That's why cheap, honest production is how small teams find winners. Spend more only on proven angles."
+        },
+        {
+          "v": "stat",
+          "h": "What one winner really costs",
+          "p": "Example: one in eight concepts becomes a winner. Each costs $15 to produce and $90 to test, at 3 × a $30 target. Eight concepts cost $840 in total, which is the real price of one winner.",
+          "more": "Worked example. 8 × $15 = $120 production. 8 × $90 = $720 testing. Total $840. If production cost $120 per ad instead, the same eight concepts would cost $1,680, twice as much for the same one winner. Cut production cost before you cut test budget, because the test budget is what tells you the truth.",
+          "d": {
+            "n": 840,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "cost per winning creative",
+            "note": "Example. 8 × ($15 + $90)."
+          },
+          "say": "Here's what one winner really costs. In this example, one in eight concepts becomes a winner. Each costs fifteen dollars to produce and ninety dollars to test, at three times a thirty dollar target. Eight concepts cost eight hundred and forty dollars in total, the number on screen. If production were one hundred and twenty per ad, the same eight would cost one thousand six hundred and eighty. So cut production cost before you cut test budget, because testing tells you the truth."
+        },
+        {
+          "v": "bars",
+          "h": "Cost per finished ad by method",
+          "p": "Example costs for one 20 to 30 second ad in a West African city. These are illustrations, not quotes; prices vary widely by city and creator. The point is the gap between methods.",
+          "d": [
+            [
+              "Own phone, own edit",
+              3,
+              "Example: $3"
+            ],
+            [
+              "Local UGC creator",
+              13,
+              "Example: $15"
+            ],
+            [
+              "Small studio",
+              100,
+              "Example: $120"
+            ]
+          ],
+          "say": "Look at the bars. These are example costs for one twenty to thirty second ad in a West African city. Your own phone and your own edit, about three dollars. A local U G C, user-generated content, creator, about fifteen dollars. A small studio, about one hundred and twenty. These are illustrations, not quotes, and prices vary widely by city and creator. The point is the gap between methods."
+        },
+        {
+          "v": "check",
+          "h": "A phone filming kit",
+          "p": "You do not need a camera. Most good UGC is filmed on a mid-range phone. These few things make the biggest difference to how professional and trustworthy it looks.",
+          "d": [
+            "Daylight from a window, facing the light",
+            "A clip-on microphone",
+            "A small tripod or phone stand",
+            "A quiet room with a simple background",
+            "Phone on airplane mode while filming",
+            "Lens wiped clean"
+          ],
+          "say": "You don't need a camera. Most good U G C is filmed on a mid-range phone. Here's a simple kit. Daylight from a window, facing the light. A clip-on microphone. A small tripod or phone stand. A quiet room with a simple background. Your phone on airplane mode while filming, so nothing interrupts. And a clean lens. These few things make the biggest difference to how professional and trustworthy it looks."
+        },
+        {
+          "v": "table",
+          "h": "Formats to export",
+          "p": "Export each concept in the shapes your placements use. These sizes are common at the time of writing; recommended specs change, so check Meta's current ad specs guide before a big shoot.",
+          "d": {
+            "cols": [
+              "Placement",
+              "Shape",
+              "Pixels"
+            ],
+            "rows": [
+              [
+                "Reels and Stories",
+                "9:16",
+                "1080 × 1920"
+              ],
+              [
+                "Feeds",
+                "4:5",
+                "1080 × 1350"
+              ],
+              [
+                "Feeds, square",
+                "1:1",
+                "1080 × 1080"
+              ]
+            ]
+          },
+          "say": "Export each concept in the shapes your placements use. Look at the table. Reels and Stories use nine by sixteen, ten eighty by nineteen twenty pixels. Feeds use four by five, ten eighty by thirteen fifty. And square feeds use one by one, ten eighty by ten eighty. These sizes are common at the time of writing, but recommended specs change, so check Meta's current ad specs guide before a big shoot."
+        },
+        {
+          "v": "tip",
+          "h": "Keep key text in the safe area",
+          "p": "In Reels and Stories, the app's buttons and captions cover parts of the top and bottom of the screen. Keep your hook text, logo and risk line in the middle area. We are not certain of the exact current margins; check Meta's safe-zone guidance.",
+          "d": {
+            "kind": "tip",
+            "text": "Preview every 9:16 export on a phone with the app's interface showing before you upload."
+          },
+          "say": "In Reels and Stories, the app's buttons and captions cover parts of the top and bottom of the screen. So keep your hook text, logo and risk line in the middle area. We're not certain of the exact current margins, so check Meta's safe-zone guidance. As the tip says, preview every nine by sixteen export on a phone, with the app's interface showing, before you upload."
+        },
+        {
+          "v": "walk",
+          "h": "Edit and export, step by step",
+          "p": "A generic walkthrough in a phone or desktop editing app. Every editor names things differently; look for the same steps on yours. The order matters more than the tool: trim, caption, export, then log.",
+          "d": {
+            "steps": [
+              {
+                "title": "Import and trim",
+                "text": "Import the best take of each hook and the body. Cut every pause before the first word.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "editor.example/project/C12",
+                  "title": "Project C12",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Clips",
+                      "value": "hookQ.mp4, hookDemo.mp4, body.mp4"
+                    },
+                    {
+                      "type": "text",
+                      "value": "First word at 0.2 s"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Add captions",
+                "text": "Auto-caption, then correct every word by hand. Add the risk line on screen.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "editor.example/project/C12/captions",
+                  "title": "Captions",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Auto captions",
+                      "on": true
+                    },
+                    {
+                      "type": "field",
+                      "label": "Risk line",
+                      "value": "Capital at risk"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Check spelling and local words by hand"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Export each shape",
+                "text": "Export 9:16 first, then 4:5 and 1:1 versions.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "editor.example/project/C12/export",
+                  "title": "Export",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Ratio",
+                      "value": "9:16"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Resolution",
+                      "value": "1080 × 1920"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Export"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Name and log",
+                "text": "Name the file with concept, hook, format and version, and add it to the creative log.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/creative-log",
+                  "title": "Creative log",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "File",
+                      "value": "C12_hookQ_9x16_V1.mp4"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Angle",
+                      "value": "Education"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Rights",
+                      "value": "Creator consent on file"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Let's edit and export. Tap Next to follow each step. First, import the best take of each hook and the body, and trim every pause before the first word. Second, add captions: auto-caption, then correct every word by hand, and add the risk line on screen. Third, export each shape, nine by sixteen first, then four by five and one by one. Fourth, name the file with concept, hook, format and version, and add it to the creative log. Every editor names things differently, but the order matters more than the tool."
+        },
+        {
+          "v": "phone",
+          "h": "Confirming rights with a creator",
+          "p": "Example of the message that closes every creator job. Written consent, usage period, payment and disclosure, confirmed in the chat and saved with the file.",
+          "d": {
+            "app": "chat",
+            "title": "Creator: Tunde",
+            "subtitle": "UGC creator, Lagos",
+            "messages": [
+              {
+                "from": "me",
+                "text": "Thanks for the 3 videos. To confirm: we may use them in paid ads for 6 months, in Nigeria and Ghana, for $45 total."
+              },
+              {
+                "from": "me",
+                "text": "The ads will be marked as a paid partnership where required. You filmed the app yourself and said no income claims."
+              },
+              {
+                "from": "them",
+                "text": "Confirmed. You can use them as agreed."
+              }
+            ]
+          },
+          "say": "This chat is an example of the message that closes every creator job. Look at what it confirms. Usage in paid ads for six months, in Nigeria and Ghana, for forty five dollars total. The ads marked as a paid partnership where required. And that the creator filmed the app themselves and made no income claims. The creator confirms in writing, and you save that with the file."
+        },
+        {
+          "v": "flow",
+          "h": "A weekly production pipeline",
+          "p": "A simple pipeline for a one or two person team. Each step has an owner and a day. The compliance check sits before upload, not after a rejection.",
+          "d": [
+            "Brief",
+            "Script",
+            "Film",
+            "Edit",
+            "Compliance check",
+            "Upload and log"
+          ],
+          "say": "Here's a weekly production pipeline for a one or two person team. Follow the flow: brief, script, film, edit, compliance check, then upload and log. Each step has an owner and a day. And notice where the compliance check sits: before upload, not after a rejection. Catching problems early is much cheaper than fixing them later."
+        },
+        {
+          "v": "tip",
+          "h": "Starting rule: when to spend more on production",
+          "p": "Upgrade production only for proven angles. Starting rule: a concept earns a better-produced version once it has 3 or more conversions at CPA at or under target. Everything else stays cheap. Adapt to your data.",
+          "more": "Full test rules: Creative testing lab module.",
+          "d": {
+            "kind": "example",
+            "text": "Example: target $30. C12 made on a phone: 4 FTDs at $26. It earns a $120 studio version. C13 spent $60 with 0: killed, no upgrade."
+          },
+          "say": "Here's a starting rule. Upgrade production only for proven angles. A concept earns a better-produced version once it has three or more conversions at a C P A, cost per acquisition, at or under target. Everything else stays cheap. In the example, target is thirty dollars. C twelve, made on a phone, got four F T Ds, first-time deposits, at twenty six dollars, so it earns a studio version. C thirteen spent sixty with zero, so it's killed with no upgrade. Adapt this to your data."
+        },
+        {
+          "v": "compare",
+          "h": "Common production mistakes",
+          "p": "These mistakes either waste production money or create an ad you cannot legally use. All of them are cheaper to prevent than to fix, so check each new ad against this list.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Studio budget before any test",
+                "No written consent from people filmed",
+                "Unlicensed music",
+                "Text hidden under app buttons",
+                "Captions never proofread"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Phone first, upgrade proven angles",
+                "Written consent and usage period",
+                "Licensed or platform library music",
+                "Preview in the safe area",
+                "Correct every caption by hand"
+              ]
+            }
+          },
+          "say": "These mistakes either waste money or create an ad you can't legally use. Studio budget before any test. No written consent from people filmed. Unlicensed music. Text hidden under app buttons. Captions never proofread. The fixes: phone first and upgrade proven angles, written consent and a usage period, licensed or platform library music, preview in the safe area, and correct every caption by hand. All of these are cheaper to prevent than to fix."
+        },
+        {
+          "v": "tip",
+          "h": "Rights, consent and honest claims",
+          "p": "Use only footage you made or have rights to, with written consent from everyone filmed. Never use stolen ads, celebrity clips or AI people presented as real customers. Income claims stay out, however they are filmed.",
+          "more": "Full detail on claims for regulated offers: Compliance for finance, trading and gambling offers module.",
+          "d": {
+            "kind": "warn",
+            "text": "No consent, no rights, no claim proof: do not upload."
+          },
+          "say": "This one protects you. Use only footage you made or have rights to, with written consent from everyone filmed. Never use stolen ads, celebrity clips, or A I people presented as real customers. And income claims stay out, however they're filmed. The rule on screen says it clearly: no consent, no rights, no claim proof, do not upload."
+        },
+        {
+          "v": "product",
+          "h": "Speeding up production",
+          "p": "When you need many versions of a proven concept, a creative tool can help with drafts, resizes and variations. Your own phone footage and human checks remain the core of honest production.",
+          "d": {
+            "slug": "vooads",
+            "why": "Generate resizes and variations of a proven ad quickly, so production cost per test stays low."
+          },
+          "say": "When you need many versions of a proven concept, a creative tool like Vooads can help with drafts, resizes and variations, so your production cost per test stays low. But your own phone footage and human checks remain the core of honest production."
+        },
+        {
+          "v": "check",
+          "h": "Before you upload",
+          "p": "Run every finished ad through this list. It takes two minutes and catches most rejections and most of the mistakes that make good concepts fail.",
+          "d": [
+            "Hook lands in the first second",
+            "Captions correct, risk line visible",
+            "Text inside the safe area",
+            "Right shape for each placement",
+            "Consent and rights on file",
+            "Named and logged"
+          ],
+          "say": "Before you upload, run every finished ad through this list. Does the hook land in the first second? Are captions correct, with the risk line visible? Is the text inside the safe area? Is it the right shape for each placement? Are consent and rights on file? And is it named and logged? It takes about two minutes, and it catches most rejections and most of the mistakes that make good concepts fail."
+        }
+      ],
+      "takeaways": [
+        "Cheap, honest production lets you test more concepts; count the cost per winner, not per ad.",
+        "Film on a phone with good light and sound, export each shape, and keep text in the safe area.",
+        "Upgrade production only for angles that passed the rule card, and keep consent and rights on file."
+      ],
+      "action": "Film one 20 to 30 second UGC-style ad on your phone for an angle you already tested, export it in 9:16 and 4:5, and log it with a name, angle and rights note.",
+      "glossary": [
+        {
+          "term": "Safe area",
+          "def": "The part of a full-screen ad not covered by the app's buttons and captions."
+        },
+        {
+          "term": "Usage rights",
+          "def": "Written permission to use a creator's footage in ads, for a set period and set countries."
+        },
+        {
+          "term": "Cost per winner",
+          "def": "Total production and test cost of all concepts divided by the number that became winners."
+        },
+        {
+          "term": "Aspect ratio",
+          "def": "The shape of a video or image, such as 9:16 for full-screen or 4:5 for feeds."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "One in ten concepts wins. Each costs $10 to make and $75 to test. What is the cost per winner?",
+          "options": [
+            "$85",
+            "$750",
+            "$850",
+            "$100"
+          ],
+          "answer": 2,
+          "why": "10 × ($10 + $75) = $850 for one winner."
+        },
+        {
+          "q": "Which concept should get a higher-budget production version first?",
+          "options": [
+            "The one with the prettiest thumbnail",
+            "One with 3+ conversions at or under target CPA",
+            "The newest concept",
+            "One that hit the zero-conversion kill rule"
+          ],
+          "answer": 1,
+          "why": "Production upgrades go to angles that have already passed the rule card."
+        },
+        {
+          "q": "What must you have before using a creator's video in paid ads?",
+          "options": [
+            "Written consent with usage period and countries",
+            "A verbal OK",
+            "Nothing if you paid them",
+            "Only their username"
+          ],
+          "answer": 0,
+          "why": "Written consent with clear usage terms protects you and the creator."
+        },
+        {
+          "q": "Where should the hook text and risk line sit in a 9:16 ad?",
+          "options": [
+            "At the very top edge",
+            "At the very bottom edge",
+            "Under the like button",
+            "In the middle safe area, checked on a phone"
+          ],
+          "answer": 3,
+          "why": "App interface covers parts of the top and bottom. Keep key text in the middle and preview it."
+        },
+        {
+          "q": "Which is the cheapest honest way to test many angles?",
+          "options": [
+            "Studio shoots for every idea",
+            "Stolen competitor ads",
+            "Phone-filmed UGC and statics",
+            "AI people posing as customers"
+          ],
+          "answer": 2,
+          "why": "Phone-filmed UGC and statics are cheap and honest. The others are expensive or deceptive."
+        }
+      ],
+      "say_intro": "This lesson shows you how to produce ads cheaply on a phone. You'll learn what one winner really costs, how to film, edit and export, and how to protect rights and consent, so you can test more ideas on a small budget.",
+      "say_outro": "To recap: cheap, honest production lets you test more ideas, and you upgrade only proven angles, with rights and consent always on file. Your task: film one twenty to thirty second U G C-style ad on your phone for an angle you've already tested, export it in nine by sixteen and four by five, and log it with a name, angle and rights note. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "Target $10 per registration, break-even $14. Concept C06 spent $31 and has 1 registration. What do the starting rules say?",
+      "options": [
+        "Keep it to $50",
+        "Scale, it converted",
+        "Hold, it needs more data",
+        "Kill: CPA $31 is above the $14 kill line after 3 × target"
+      ],
+      "answer": 3,
+      "why": "Spend is over 3 × $10, so the CPA rule applies. The kill line is the lower of $15 and $14. $31 is far above it."
+    },
+    {
+      "q": "Creative X: CTR 2.6%, cost per FTD $41. Creative Y: CTR 1.3%, cost per FTD $27. Target $30. Both have enough data. What do you do?",
+      "options": [
+        "Scale X, its CTR is double",
+        "Scale Y and iterate on it; study why X attracts non-depositors",
+        "Pause both",
+        "Scale both equally"
+      ],
+      "answer": 1,
+      "why": "You are paid on FTDs. Y is under target; X is far over it despite the CTR."
+    },
+    {
+      "q": "Target cost per registration $8. Concept spends $17 with zero registrations. Your kill rule is 2× target with zero results. What now?",
+      "options": [
+        "Pause it and log the result",
+        "Keep it, it needs more time",
+        "Raise its budget",
+        "Change the offer"
+      ],
+      "answer": 0,
+      "why": "2 × $8 = $16. It spent $17 with nothing, so the rule says pause."
+    },
+    {
+      "q": "CPM $6, click-to-FTD 1.5%, CTR falls from 2% to 1.25%. What is the new cost per FTD?",
+      "options": [
+        "$20",
+        "$24",
+        "$32",
+        "$45"
+      ],
+      "answer": 2,
+      "why": "Before: $6 ÷ (1,000 × 0.02 × 0.015) = $6 ÷ 0.3 = $20. After: $6 ÷ (1,000 × 0.0125 × 0.015) = $6 ÷ 0.1875 = $32."
+    },
+    {
+      "q": "A creator sends a UGC video saying 'I made 200k last month with this app'. You cannot verify it. What do you do?",
+      "options": [
+        "Run it, the creator said it",
+        "Run it with tiny text saying results vary",
+        "Run it only in Tier 3 geos",
+        "Do not run it; ask for a version that shows the product without income claims"
+      ],
+      "answer": 3,
+      "why": "Income claims are misleading and usually against policy, even with a disclaimer. Reshoot without them."
+    },
+    {
+      "q": "An ad set in a scale path has 6 FTDs since its last step at $22 CPA (target $30), so it would earn a +20% step. But its main ad's CTR is down 32% from its best and frequency is rising. What fits the starting rules?",
+      "options": [
+        "Take the +20% step, the CPA qualifies",
+        "No budget step; keep the budget and brief 2 to 3 iterations first",
+        "Kill the ad set",
+        "Double the budget before fatigue gets worse"
+      ],
+      "answer": 1,
+      "why": "The fatigue rule comes first: CTR down 30%+ from its best with rising frequency means no more steps until new creatives carry volume, even when CPA qualifies."
+    },
+    {
+      "q": "One concept in eight becomes a winner. Each costs $20 to produce and $60 to test. Which change cuts the cost per winner most without losing information?",
+      "options": [
+        "Halve the test budget to $30",
+        "Cut production to $8 by filming on a phone",
+        "Test only two concepts",
+        "Skip the test and scale all eight"
+      ],
+      "answer": 1,
+      "why": "Cost per winner is 8 × ($20 + $60) = $640. Cheaper production keeps the full test budget, which is what tells you the truth; phone production gives 8 × ($8 + $60) = $544."
+    },
+    {
+      "q": "An AI tool can make a realistic video of a well-known Nigerian actor praising your betting offer. What is right?",
+      "options": [
+        "Use it with a small AI label",
+        "Use it in one geo only",
+        "Do not use it; it impersonates a real person without consent",
+        "Use it only in Stories"
+      ],
+      "answer": 2,
+      "why": "Deepfakes of real people are deceptive, breach platform rules and may break the law. A label does not fix it."
+    },
+    {
+      "q": "A Kenya campaign uses an English ad with naira amounts translated into Swahili. What is the main problem?",
+      "options": [
+        "Swahili ads cannot run on Meta",
+        "Translated but not localised: wrong currency and likely wrong payment methods",
+        "It needs more hashtags",
+        "Nothing is wrong"
+      ],
+      "answer": 1,
+      "why": "Kenyan viewers need shillings, local payment methods such as M-Pesa and familiar settings."
+    },
+    {
+      "q": "Test plan: $15 target cost per registration, about 3 registrations to read each concept, 8 concepts. Daily budget for the test is $60. How many days will it take to spend the full test budget?",
+      "options": [
+        "2 days",
+        "4 days",
+        "8 days",
+        "6 days"
+      ],
+      "answer": 3,
+      "why": "Budget: $15 × 3 × 8 = $360. $360 ÷ $60 a day = 6 days."
+    }
+  ]
+}

@@ -1,0 +1,2767 @@
+{
+  "school": "v-finance",
+  "order": 6,
+  "slug": "scaling-finance",
+  "title": "Scaling finance",
+  "summary": "How to grow a proven finance campaign without breaking quality, cash or compliance: the scale gate, new geos and their regulators, partners and deal terms, seasonal planning, cash flow with clawbacks, and a portfolio that survives a bad month. Results vary and nothing here guarantees income.",
+  "lessons": [
+    {
+      "slug": "ready-to-scale",
+      "title": "When a finance campaign is ready to scale",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can decide whether a finance campaign has earned more budget, using lag-adjusted data.",
+        "By the end you can check caps, quality limits and cash before scaling.",
+        "By the end you can scale in steps and spot quality decay early."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why finance punishes early scaling",
+          "p": "In finance, the money you see on day three is not the money you will be paid. Approvals, funding and returns arrive later. Scale too early and you can multiply a loss you have not seen yet, then lose the deal when the advertiser's quality report arrives. Scaling starts with proof, not hope.",
+          "d": {
+            "b": "Scale what is proven, after the lag",
+            "s": "Not what looks good this morning."
+          },
+          "say": "Here's why finance punishes early scaling. The money you see on day three isn't the money you'll be paid. Approvals, funding and returns arrive later. Scale too early, and you can multiply a loss you haven't seen yet, then lose the deal when the advertiser's quality report arrives. So scale what's proven, after the lag, not what looks good this morning. Scaling starts with proof, not hope."
+        },
+        {
+          "v": "check",
+          "h": "The scale gate",
+          "p": "A campaign passes the gate only when every box is ticked. If one is missing, the answer is 'not yet', and you keep testing at the current budget.",
+          "d": [
+            "Lag-adjusted cost per paid event ≤ 0.8 × target",
+            "At least 3 paid events, ideally many more",
+            "Approval and valid rates stable for 7 days",
+            "Advertiser has room in the cap",
+            "Cash covers spend until payment arrives"
+          ],
+          "say": "A campaign passes the scale gate only when every box is ticked. Go down the list. Lag-adjusted cost per paid event at point eight times target or less. At least three paid events, ideally many more. Approval and valid rates stable for seven days. The advertiser has room in the cap. And your cash covers spend until payment arrives. If one box is missing, the answer is not yet, and you keep testing at the current budget."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: is it ready?",
+          "p": "Example: card offer, payout $40 per approved application, 25% margin, target $30. Two campaigns after 10 days, using only leads older than the 5-day approval lag.",
+          "more": "Check: A $600 ÷ 25 = $24.00, exactly 0.8 × $30, with 25 approvals: passes the gate. B $600 ÷ 16 = $37.50, above target and close to the $40 break-even, with a falling approval rate. B needs work, not money. Illustrative figures.",
+          "d": {
+            "cols": [
+              "",
+              "Campaign A",
+              "Campaign B"
+            ],
+            "rows": [
+              [
+                "Lagged spend",
+                "$600",
+                "$600"
+              ],
+              [
+                "Approvals",
+                "25",
+                "16"
+              ],
+              [
+                "Cost per approval",
+                "$24.00",
+                "$37.50"
+              ],
+              [
+                "Approval rate trend",
+                "Stable",
+                "Falling"
+              ],
+              [
+                "Verdict",
+                "Scale +20%",
+                "Do not scale"
+              ]
+            ]
+          },
+          "say": "Here's a worked example with illustrative figures. A card offer pays forty dollars per approved application, with a twenty five percent margin, so the target is thirty dollars. Two campaigns after ten days, counting only leads older than the five day approval lag. Campaign A: six hundred dollars for twenty five approvals, twenty four dollars each, exactly point eight times target, with a stable approval rate. It passes, so scale twenty percent. Campaign B: six hundred for sixteen, thirty seven fifty each, close to the forty dollar break-even, with a falling approval rate. B needs work, not money."
+        },
+        {
+          "v": "eq",
+          "h": "The scale line",
+          "p": "The scale line is a fixed share of your target. Below it, a campaign has enough margin for the extra cost that usually comes with more budget. As a starting rule use 0.8.",
+          "more": "Example: target $30, scale line $24. A campaign at $27 is profitable but has little room; when you add budget, costs often rise a little and it can slip above target. A campaign at $24 or less has room to absorb that rise.",
+          "d": [
+            "0.8",
+            "×",
+            "Target cost per paid event",
+            "=",
+            "Scale line"
+          ],
+          "say": "The scale line is a fixed share of your target. Look at the equation. Point eight, times target cost per paid event, equals the scale line. With a thirty dollar target, that's twenty four dollars. Why leave room? When you add budget, costs often rise a little. A campaign at twenty seven dollars is profitable, but it can slip above target. A campaign at twenty four or less has room to absorb that rise. Use point eight as a starting rule."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: does Campaign A scale?",
+          "p": "Check A with the rule card. Target $30, lagged spend $600 over 10 days, 25 approvals. Enter the numbers and choose kill, hold or scale.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $30. Spent $600 in 10 days, 25 approvals. Kill, hold or scale?",
+            "preset": {
+              "spend": 600,
+              "conversions": 25,
+              "target_cpa": 30,
+              "days": 10
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "scale"
+            }
+          },
+          "say": "Lab time. Check Campaign A with the rule card. The target is thirty dollars. Lagged spend is six hundred dollars over ten days, with twenty five approvals. Enter the numbers, and choose kill, hold or scale. Pause and try it, then check your answer."
+        },
+        {
+          "v": "table",
+          "h": "Scaling steps for finance",
+          "p": "Starting rules to adapt. Finance steps are slower than in fast-paying verticals because each step's quality can only be judged after the lag. A step that hurts quality is reversed, not pushed through.",
+          "d": {
+            "cols": [
+              "Step",
+              "Rule"
+            ],
+            "rows": [
+              [
+                "Budget increase",
+                "+20% at a time"
+              ],
+              [
+                "Wait between steps",
+                "At least the approval lag, often 5 to 7 days"
+              ],
+              [
+                "Reverse a step",
+                "Lagged cost > target for 2 checkpoints"
+              ],
+              [
+                "Stop scaling",
+                "Approval rate falls 20%+ from baseline"
+              ],
+              [
+                "Ask before 2× volume",
+                "Confirm cap and quality with advertiser"
+              ]
+            ]
+          },
+          "say": "Here are the scaling steps for finance. They're starting rules to adapt. Raise budget twenty percent at a time. Wait at least the approval lag between steps, often five to seven days. Reverse a step if lagged cost is above target for two checkpoints. Stop scaling if the approval rate falls twenty percent or more from baseline. And before you double volume, confirm the cap and quality with the advertiser. Finance steps are slower than in fast-paying verticals, because each step's quality can only be judged after the lag."
+        },
+        {
+          "v": "curve",
+          "h": "Quality can decay as you scale",
+          "p": "Example: daily budget and approval rate over seven weeks. As budget rises the platform reaches less-qualified people, and approval rate slips. Watch the second line, not the first.",
+          "d": {
+            "a": [
+              100,
+              120,
+              144,
+              173,
+              207,
+              249,
+              299
+            ],
+            "la": "Daily budget ($)",
+            "b": [
+              100,
+              99,
+              97,
+              94,
+              88,
+              80,
+              72
+            ],
+            "lb": "Approval rate (index, week 1 = 100)",
+            "x": [
+              "W1",
+              "W2",
+              "W3",
+              "W4",
+              "W5",
+              "W6",
+              "W7"
+            ]
+          },
+          "say": "Quality can decay as you scale. Look at the two lines in this example, over seven weeks. The daily budget climbs from one hundred to about three hundred dollars. Meanwhile, the approval rate index slips from one hundred down to seventy two. As budget rises, the platform reaches less-qualified people. So watch the second line, not the first."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: a scale step with a check",
+          "p": "One scale step, done properly, from the cap check to the log entry. Each step is small on purpose so you can tell exactly what changed. Names change; check the current Ads Manager.",
+          "d": {
+            "steps": [
+              {
+                "title": "Confirm the cap",
+                "text": "Message your manager with the planned volume. Caps in finance often depend on the lender's daily capacity.",
+                "screen": {
+                  "app": "chat",
+                  "title": "Affiliate manager",
+                  "subtitle": "chat",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "Planning to raise KE card traffic about 20% this week, roughly 30 more applications a day. Any cap issue?"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Fine up to 200 a day. Keep approval above 15%."
+                    }
+                  ],
+                  "v": "phone"
+                }
+              },
+              {
+                "title": "Raise budget by 20%",
+                "text": "Change one thing only: the budget of the winning campaign or ad set.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "adsmanager.example/campaigns",
+                  "title": "Budget",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Campaign",
+                      "value": "KE_Card_Compare_v3"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Daily budget",
+                      "value": "$100 → $120"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Names change; check the current Ads Manager."
+                    }
+                  ],
+                  "highlight": 1,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "Log and wait",
+                "text": "Log the date and new budget. Do not judge the step until leads from it are older than the lag.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/scale-log",
+                  "title": "Scale log",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Date",
+                        "Budget",
+                        "Judge after"
+                      ],
+                      "rows": [
+                        [
+                          "4 Oct",
+                          "$120",
+                          "11 Oct"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0,
+                  "v": "screen"
+                }
+              }
+            ]
+          },
+          "say": "Here's one scale step done properly. Tap Next to follow each step. First, confirm the cap. Message your manager with the planned volume. In the example, the buyer plans about twenty percent more, roughly thirty more applications a day. The manager says fine up to two hundred a day, and keep approval above fifteen percent. Caps in finance often depend on the lender's daily capacity. Second, raise the budget by twenty percent, here from one hundred to one hundred and twenty dollars a day. Change one thing only. Third, log the date and new budget, and wait. Don't judge the step until its leads are older than the lag. Names change, so check the current Ads Manager."
+        },
+        {
+          "v": "tip",
+          "h": "Volume never excuses lower standards",
+          "p": "When you scale, the pressure to loosen claims, targeting or validation grows, because each small cut seems to add volume. Resist it; the cost arrives later as returns and reversals.",
+          "d": {
+            "kind": "warn",
+            "text": "Scaling does not change the rules. Keep the same approved claims, consent capture, validation and platform authorization at every budget. If a new geo or product needs new authorization or licences, get them before spending. We are not certain how each platform's financial services rules apply in every region; check before you run."
+          },
+          "say": "Volume never excuses lower standards. When you scale, the pressure to loosen claims, targeting or validation grows, because each small cut seems to add volume. Resist it. The cost arrives later as returns and reversals. Read the warning. Scaling doesn't change the rules. Keep the same approved claims, consent capture, validation and platform authorization at every budget. If a new geo or product needs new authorization or licences, get them before spending. We're not certain how each platform's financial services rules apply in every region, so check before you run."
+        },
+        {
+          "v": "compare",
+          "h": "Scaling mistakes",
+          "p": "Each of these mistakes turns a profitable finance campaign into a quality problem within weeks. They are easy to avoid once your rules are written down before you scale.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Doubling budget on day-3 numbers",
+                "Scaling past the advertiser's cap",
+                "Several changes at once",
+                "Ignoring a falling approval rate"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Scale only on lagged data",
+                "Confirm caps before each big step",
+                "One change per step, logged",
+                "Stop when approval falls 20%+"
+              ]
+            }
+          },
+          "say": "Each of these mistakes turns a profitable finance campaign into a quality problem within weeks. Doubling budget on day three numbers: scale only on lagged data. Scaling past the advertiser's cap: confirm caps before each big step. Several changes at once: one change per step, logged. Ignoring a falling approval rate: stop when approval falls twenty percent or more. They're easy to avoid once your rules are written down before you scale."
+        },
+        {
+          "v": "stat",
+          "h": "Example: what a bad scale step costs",
+          "p": "Example: you double a $200-a-day campaign before the lag. Approval rate drops from 15% to 9% at the new budget. On $400 a day at $2 CPL that is 200 leads and 18 approvals instead of 30. At $40 per approval, revenue falls $480 per day.",
+          "d": {
+            "n": 480,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "less revenue per day from 12 fewer approvals",
+            "note": "Example: (30 − 18) × $40."
+          },
+          "say": "Here's what a bad scale step can cost, as an example. You double a two hundred dollar a day campaign before the lag. At the new budget, the approval rate drops from fifteen percent to nine. At four hundred a day and a two dollar C P L, cost per lead, that's two hundred leads and eighteen approvals instead of thirty. At forty dollars per approval, that's twelve fewer approvals, and the four hundred and eighty dollars on screen, less revenue per day."
+        },
+        {
+          "v": "table",
+          "h": "Starting rules summary",
+          "p": "Starting rules to adapt, collected in one place. Print them and keep them beside your scaling log so every step, by you or your team, follows the same logic.",
+          "d": {
+            "cols": [
+              "Signal",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Passes the scale gate",
+                "+20%"
+              ],
+              [
+                "Lagged cost ≤ 0.6 × target, ≥ 10 events",
+                "+30% to +50%, one step"
+              ],
+              [
+                "Lagged cost > target after a step",
+                "Hold; reverse if it repeats"
+              ],
+              [
+                "Approval rate −20% from baseline",
+                "Stop scaling; fix quality"
+              ]
+            ]
+          },
+          "say": "Here are the starting rules in one place. If a campaign passes the scale gate, add twenty percent. If lagged cost is point six times target or less, with at least ten events, you can add thirty to fifty percent, in one step. If lagged cost goes above target after a step, hold, and reverse if it repeats. If the approval rate falls twenty percent from baseline, stop scaling and fix quality. Print these, and keep them beside your scaling log, so every step follows the same logic."
+        }
+      ],
+      "takeaways": [
+        "Scale only campaigns that pass the gate on lag-adjusted data, with cap and cash confirmed.",
+        "Scale in +20% steps, one change at a time, judging each step after the lag.",
+        "Watch approval rate as you scale; stop when it falls 20% or more from baseline."
+      ],
+      "action": "Write your scale gate and step rules on one page for your best finance campaign, then check it against the gate using only leads older than the approval lag.",
+      "glossary": [
+        {
+          "term": "Scale gate",
+          "def": "The checklist a campaign must pass before it gets more budget."
+        },
+        {
+          "term": "Cap",
+          "def": "The maximum leads or conversions an advertiser will accept in a period."
+        },
+        {
+          "term": "Quality decay",
+          "def": "Falling approval or valid rates as budget rises and the platform reaches broader audiences."
+        },
+        {
+          "term": "Baseline",
+          "def": "The stable rate measured before you began scaling, used to judge changes."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Target $25. Lagged spend $500, 26 approvals. Scale gate on cost?",
+          "options": [
+            "Passes: about $19.23, under 0.8 × target ($20)",
+            "Fails: above target",
+            "Fails: below break-even",
+            "Cannot tell"
+          ],
+          "answer": 0,
+          "why": "$500 ÷ 26 ≈ $19.23, which is ≤ $20."
+        },
+        {
+          "q": "Approval lag is 6 days. How long between scale steps as a starting rule?",
+          "options": [
+            "1 day",
+            "Never wait",
+            "At least the lag, about 6 days or more",
+            "30 days always"
+          ],
+          "answer": 2,
+          "why": "A step can only be judged once its leads are older than the lag."
+        },
+        {
+          "q": "Baseline approval 15%; after two steps it is 11.5%. Starting rule?",
+          "options": [
+            "Keep scaling",
+            "Stop scaling and fix quality",
+            "Double budget",
+            "Change claims"
+          ],
+          "answer": 1,
+          "why": "That is a 23% fall from baseline, beyond the 20% stop line."
+        },
+        {
+          "q": "What must you confirm with the advertiser before a large step?",
+          "options": [
+            "Their favourite angle",
+            "The weather",
+            "Your CTR",
+            "The cap and quality expectations"
+          ],
+          "answer": 3,
+          "why": "Finance caps often depend on lender capacity; exceeding them wastes leads."
+        },
+        {
+          "q": "Which is a scaling mistake?",
+          "options": [
+            "One change per step",
+            "Logging each step",
+            "Raising budget and changing audience on the same day",
+            "Waiting for the lag"
+          ],
+          "answer": 2,
+          "why": "Several changes at once means you cannot tell which one caused the result."
+        }
+      ],
+      "say_intro": "In finance, the money you see early isn't the money you'll be paid. This lesson shows you how to decide whether a finance campaign has earned more budget, using lag-adjusted data, caps and cash, and how to scale in small steps.",
+      "say_outro": "You've learned the scale gate, the point eight times target scale line, and why finance steps wait for the approval lag and stop when quality slips. Your task: write your scale gate and step rules on one page for your best finance campaign, then check it against the gate using only leads older than the approval lag. Now take the quiz."
+    },
+    {
+      "slug": "geos-and-regulators",
+      "title": "Geo expansion and regulators",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can compare finance geos on payout, cost, regulation and payment flow.",
+        "By the end you can run a geo readiness check before your first test in a new country.",
+        "By the end you can work out whether a higher-payout geo really earns more per dollar."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why each new geo is a new business",
+          "p": "A finance offer in Kenya and the 'same' offer in South Africa differ in regulator, licence, language, payment habits, approval rates and ad rules. Expanding geo by geo is the safest way to grow in finance, but only if you treat each one as a fresh test with its own compliance check.",
+          "d": {
+            "b": "New geo, new rules, new test",
+            "s": "Nothing carries over automatically."
+          },
+          "say": "A finance offer in Kenya and the same offer in South Africa differ in regulator, licence, language, payment habits, approval rates and ad rules. So nothing carries over automatically. New geo, new rules, new test. Expanding geo by geo is the safest way to grow in finance, but only if you treat each one as a fresh test, with its own compliance check."
+        },
+        {
+          "v": "table",
+          "h": "African finance geos at a glance",
+          "p": "Example overview from our understanding at the time of writing. Regulators and rules change; check each regulator's site and the advertiser's licence before running. Payment flows are typical, not universal.",
+          "more": "Insurance is usually overseen by a separate regulator, for example NAICOM in Nigeria, the IRA in Kenya, the National Insurance Commission in Ghana, and in South Africa the Prudential Authority and FSCA. We are reasonably confident of these names but not certain every detail of who oversees what, especially for newer digital products, is current. Always verify the specific advertiser's licence on the regulator's public register.",
+          "d": {
+            "cols": [
+              "Geo",
+              "Lending regulator (as we understand)",
+              "Typical money flow"
+            ],
+            "rows": [
+              [
+                "Nigeria",
+                "CBN (banks), FCCPC (digital lenders)",
+                "Bank transfer, cards, USSD"
+              ],
+              [
+                "Kenya",
+                "CBK (incl. digital credit providers)",
+                "M-Pesa"
+              ],
+              [
+                "Ghana",
+                "Bank of Ghana",
+                "Mobile money, bank"
+              ],
+              [
+                "South Africa",
+                "National Credit Regulator",
+                "Bank EFT, cards"
+              ],
+              [
+                "Cameroon",
+                "COBAC / BEAC region",
+                "Mobile money"
+              ]
+            ]
+          },
+          "say": "Here's an overview of African finance geos, from our understanding at the time of writing. In Nigeria, lending sits with the C B N for banks and the F C C P C for digital lenders, and money moves by bank transfer, cards and U S S D. In Kenya, the C B K, including digital credit providers, with M-Pesa. Ghana, the Bank of Ghana, with mobile money and bank. South Africa, the National Credit Regulator, with bank E F T and cards. Cameroon, the COBAC and BEAC region, with mobile money. Insurance usually has separate regulators. Rules change, so check each regulator's site and the advertiser's licence on its public register."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: does the bigger payout win?",
+          "p": "Example: the same budget on a card offer in two geos. The higher-payout geo also has higher CPLs and a different approval rate. Compare return per dollar, not payout.",
+          "more": "Check: X $0.80 ÷ 10% = $8 per approval; $1,000 buys 125 approvals × $15 = $1,875 revenue, profit $875. Y $6 ÷ 15% = $40 per approval; $1,000 buys 25 approvals × $60 = $1,500, profit $500. The smaller payout earns more per dollar here, though Geo Y might scale further before quality decays. Illustrative figures, not benchmarks for either kind of geo.",
+          "d": {
+            "cols": [
+              "",
+              "Geo X",
+              "Geo Y"
+            ],
+            "rows": [
+              [
+                "Payout per approval",
+                "$15",
+                "$60"
+              ],
+              [
+                "CPL",
+                "$0.80",
+                "$6.00"
+              ],
+              [
+                "Approval rate",
+                "10%",
+                "15%"
+              ],
+              [
+                "Cost per approval",
+                "$8.00",
+                "$40.00"
+              ],
+              [
+                "Profit per $1,000",
+                "$875",
+                "$500"
+              ]
+            ]
+          },
+          "say": "Does the bigger payout win? Here's an example, with illustrative figures. Geo X pays fifteen dollars per approval, with an eighty cent C P L, cost per lead, and a ten percent approval rate. That's eight dollars per approval, and one thousand dollars buys eight hundred and seventy five dollars profit. Geo Y pays sixty dollars, but with a six dollar C P L and fifteen percent approval, that's forty dollars per approval, and five hundred dollars profit per thousand. The smaller payout earns more per dollar here, though Geo Y might scale further before quality decays."
+        },
+        {
+          "v": "bars",
+          "h": "Profit per $1,000 spent",
+          "p": "Example from the table. A big payout headline can hide a weaker return on each dollar. Always convert to the same base before choosing where to expand.",
+          "d": [
+            [
+              "Geo X revenue",
+              100,
+              "$1,875"
+            ],
+            [
+              "Geo X profit",
+              47,
+              "$875"
+            ],
+            [
+              "Geo Y revenue",
+              80,
+              "$1,500"
+            ],
+            [
+              "Geo Y profit",
+              27,
+              "$500"
+            ]
+          ],
+          "say": "Here's that comparison as bars, profit per one thousand dollars spent. Geo X revenue, one thousand eight hundred and seventy five dollars, and profit, eight hundred and seventy five. Geo Y revenue, one thousand five hundred, and profit, five hundred. A big payout headline can hide a weaker return on each dollar. So always convert to the same base before choosing where to expand."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: max CPL in Geo Y",
+          "p": "Before testing Geo Y, work out the most you can pay per lead. Payout $60 per approval, expected approval rate 15%, margin 25%. Enter the numbers and check.",
+          "more": "$60 × 15% = $9.00 per lead at break-even; × 0.75 = $6.75. The example CPL of $6.00 is under it, so Geo Y is profitable, just less so per dollar than Geo X.",
+          "d": {
+            "kind": "breakeven",
+            "task": "Payout $60 per approval, 15% approved, margin 25%. Max CPL?",
+            "preset": {
+              "payout": 60,
+              "cr_pct": 15,
+              "margin_pct": 25
+            },
+            "answer": {
+              "field": "max_cpl",
+              "value": 6.75,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Lab time. Before testing Geo Y, work out the most you can pay per lead. The payout is sixty dollars per approval, the expected approval rate is fifteen percent, and your margin is twenty five percent. Enter the numbers and find the maximum C P L. Pause and try it, then check your answer."
+        },
+        {
+          "v": "flow",
+          "h": "Expanding one geo at a time",
+          "p": "A simple order that keeps each expansion small and readable. Move to the next geo only when the current one is stable on lagged data for two weeks.",
+          "d": [
+            "Readiness check",
+            "Small test, own targets",
+            "Two stable lagged weeks",
+            "Scale with the gate",
+            "Next geo"
+          ],
+          "say": "Here's a simple order that keeps each expansion small and readable. Follow the flow. Readiness check. A small test, with its own targets. Two stable lagged weeks. Scale with the gate. Then the next geo. Move on only when the current geo has been stable on lagged data for two weeks."
+        },
+        {
+          "v": "cards",
+          "h": "Beyond Africa: what changes",
+          "p": "Tier 1 finance markets often pay more and cost much more, with stricter rules and heavier competition. Example differences to plan for; check current rules in each market.",
+          "d": [
+            "United States|special ad category rules on Meta, state licensing, call/text consent law",
+            "United Kingdom|FCA-regulated promotions; financial services advertiser verification on some platforms",
+            "EU|GDPR, national credit rules, many languages",
+            "Asia and LatAm|country-specific lender registration; check each platform's local loan policy"
+          ],
+          "say": "Beyond Africa, tier one finance markets often pay more and cost much more, with stricter rules and heavier competition. Look at the cards. In the United States, special ad category rules on Meta, state licensing, and call and text consent law. In the United Kingdom, F C A regulated promotions, and financial services advertiser verification on some platforms. In the E U, G D P R, national credit rules and many languages. In Asia and Latin America, country-specific lender registration, so check each platform's local loan policy. These are example differences, so check current rules in each market."
+        },
+        {
+          "v": "tip",
+          "h": "Special ad categories and verification",
+          "p": "Platforms treat credit and other financial ads differently by region. These rules change often and we cannot list them reliably here, so treat this slide as a reminder to check.",
+          "d": {
+            "kind": "warn",
+            "text": "Meta applies a financial products and services special ad category in some regions, which limits targeting options, and requires financial advertiser verification in some countries. We are not certain which regions and rules apply today; check Meta's Help Center and Ads Manager for each geo before running, and confirm the advertiser's licence there."
+          },
+          "say": "Platforms treat credit and other financial ads differently by region, and these rules change often. So treat this slide as a reminder to check. Read the warning. Meta applies a financial products and services special ad category in some regions, which limits targeting options. It also requires financial advertiser verification in some countries. We're not certain which regions and rules apply today, so check Meta's Help Center and Ads Manager for each geo before running, and confirm the advertiser's licence there."
+        },
+        {
+          "v": "check",
+          "h": "Geo readiness check",
+          "p": "Run this before spending your first dollar in a new geo. If any box is empty, do the work first; a cheap test in an unready geo is not cheap.",
+          "d": [
+            "Advertiser licence verified on the regulator's register",
+            "Platform rules and verification for this geo checked",
+            "Data protection law noted",
+            "Native speaker for language and trust signals",
+            "Payment and stage postbacks confirmed for this geo",
+            "Target cost per paid event worked out from this geo's payout"
+          ],
+          "say": "Run this check before spending your first dollar in a new geo. Advertiser licence verified on the regulator's register. Platform rules and verification for this geo checked. Data protection law noted. A native speaker for language and trust signals. Payment and stage postbacks confirmed for this geo. And a target cost per paid event worked out from this geo's payout. If any box is empty, do the work first. A cheap test in an unready geo isn't cheap."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: verify a lender's licence",
+          "p": "Do this for every new advertiser in every geo. It takes a few minutes and is the single best protection against promoting an unlicensed lender. Register names and layouts change.",
+          "d": {
+            "steps": [
+              {
+                "title": "Get the details",
+                "text": "Ask the network for the lender's legal name and licence or registration number.",
+                "screen": {
+                  "app": "chat",
+                  "title": "Affiliate manager",
+                  "subtitle": "chat",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "Before I test the GH loan offer, what is the lender's legal name and licence number?"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Example Credit Ltd, licence details attached."
+                    }
+                  ],
+                  "v": "phone"
+                }
+              },
+              {
+                "title": "Open the official register",
+                "text": "Go to the regulator's own website, not a link from the offer page, and find its list of licensed institutions.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "regulator.example/licensed-institutions",
+                  "title": "Licensed institutions",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Search",
+                      "value": "Example Credit Ltd"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Search"
+                    }
+                  ],
+                  "highlight": 0,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "Match and save",
+                "text": "Check name, licence type and status match. Screenshot with the date and save it to the offer folder.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "regulator.example/licensed-institutions",
+                  "title": "Result",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Name",
+                        "Type",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "Example Credit Ltd",
+                          "Credit provider",
+                          "Active"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "Screenshot saved 4 Oct 2026"
+                    }
+                  ],
+                  "highlight": 0,
+                  "v": "screen"
+                }
+              }
+            ]
+          },
+          "say": "Here's how to verify a lender's licence. Do it for every new advertiser in every geo. Tap Next to follow each step. First, get the details. Ask the network for the lender's legal name and licence or registration number. In the example chat, it's Example Credit Limited, with details attached. Second, open the official register. Go to the regulator's own website, not a link from the offer page, and search its list of licensed institutions. Third, match and save. Check the name, licence type and status match, here a credit provider marked active. Screenshot it with the date, and save it to the offer folder. Register names and layouts change."
+        },
+        {
+          "v": "cards",
+          "h": "Common geo expansion mistakes",
+          "p": "These mistakes come from assuming a new country works like the last one. Each fix is already part of the readiness check, which is why the check is never skipped.",
+          "d": [
+            "Copying creatives across geos|re-audit claims per country",
+            "Assuming the same licence covers all|verify each geo's register",
+            "Choosing geos by payout alone|compare profit per $1,000",
+            "Machine-translated ads|native review before launch",
+            "Launching several geos at once|one geo per test cycle"
+          ],
+          "say": "These mistakes come from assuming a new country works like the last one. Copying creatives across geos: re-audit claims per country. Assuming the same licence covers everything: verify each geo's register. Choosing geos by payout alone: compare profit per one thousand dollars. Machine-translated ads: native review before launch. Launching several geos at once: one geo per test cycle. Each fix is already part of the readiness check, which is why the check is never skipped."
+        },
+        {
+          "v": "table",
+          "h": "Starting rules for new geos",
+          "p": "Starting rules to adapt. Treat each geo's first two weeks as a test with its own targets and kill lines, even if the offer is a winner elsewhere.",
+          "d": {
+            "cols": [
+              "Situation",
+              "Rule"
+            ],
+            "rows": [
+              [
+                "Readiness check incomplete",
+                "Do not launch"
+              ],
+              [
+                "New geo test budget",
+                "3 × target cost per paid event per ad set"
+              ],
+              [
+                "Spend ≥ 2 × target, 0 paid events (lagged)",
+                "Kill that ad set"
+              ],
+              [
+                "Geo profitable 2 lagged weeks",
+                "Add next geo; keep this one stable"
+              ]
+            ]
+          },
+          "say": "Here are starting rules for new geos, to adapt. If the readiness check is incomplete, don't launch. For a new geo test, budget three times target cost per paid event per ad set. If spend reaches two times target with zero lagged paid events, kill that ad set. And once a geo is profitable for two lagged weeks, add the next geo, and keep this one stable. Treat each geo's first two weeks as a test, even if the offer is a winner elsewhere."
+        }
+      ],
+      "takeaways": [
+        "Each geo has its own regulator, licence, language, payments and ad rules; treat it as a new test.",
+        "Compare geos on profit per $1,000 spent, not on headline payout.",
+        "Verify the lender's licence on the official register and check platform rules before spending."
+      ],
+      "action": "Pick one new geo for a finance offer, run the geo readiness check, and verify the lender's licence on the regulator's official register, saving a dated screenshot.",
+      "glossary": [
+        {
+          "term": "Regulator's register",
+          "def": "The official public list of licensed or registered financial firms in a country."
+        },
+        {
+          "term": "Special ad category",
+          "def": "A platform setting for sensitive ad types, such as financial products, that limits targeting in some regions."
+        },
+        {
+          "term": "Advertiser verification",
+          "def": "A platform check that a financial advertiser is authorised, required in some countries."
+        },
+        {
+          "term": "Profit per $1,000",
+          "def": "A common base for comparing geos or offers: profit earned for every $1,000 of spend."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Geo A: $20 payout, $1.00 CPL, 10% approval. Profit per $1,000?",
+          "options": [
+            "$2,000",
+            "$1,000",
+            "$500",
+            "$0"
+          ],
+          "answer": 1,
+          "why": "Cost per approval $10; $1,000 buys 100 approvals × $20 = $2,000 revenue; profit $1,000."
+        },
+        {
+          "q": "Where should you verify a lender's licence?",
+          "options": [
+            "On the lender's own offer page",
+            "On a review site",
+            "In a Telegram group",
+            "On the regulator's official register"
+          ],
+          "answer": 3,
+          "why": "Only the regulator's own register is authoritative."
+        },
+        {
+          "q": "Your winning Kenya creative is ready to copy to Ghana. First step?",
+          "options": [
+            "Launch as is",
+            "Double the budget",
+            "Re-audit claims, language and licence for Ghana",
+            "Machine-translate it"
+          ],
+          "answer": 2,
+          "why": "Rules, trust signals and licences differ by country."
+        },
+        {
+          "q": "Which is true about Meta's financial special ad category?",
+          "options": [
+            "It limits targeting in some regions; check current rules per geo",
+            "It applies everywhere identically",
+            "It does not exist",
+            "It raises payouts"
+          ],
+          "answer": 0,
+          "why": "Region coverage and rules change; check the Help Center for each geo."
+        },
+        {
+          "q": "Readiness check is missing the stage postback for the new geo. Starting rule?",
+          "options": [
+            "Launch and add it later",
+            "Use the old geo's postback",
+            "Launch with double budget",
+            "Do not launch yet"
+          ],
+          "answer": 3,
+          "why": "Without stage data you cannot judge the test."
+        }
+      ],
+      "say_intro": "Each new country is a new business in finance. In this lesson you'll compare geos on payout, cost, regulation and payment flow, run a readiness check, and work out whether a bigger payout really earns more per dollar.",
+      "say_outro": "You've learned that each geo needs its own regulator check, licence check and targets, and that profit per dollar beats payout size. Your task: pick one new geo for a finance offer, run the geo readiness check, and verify the lender's licence on the regulator's official register, saving a dated screenshot. Now take the quiz."
+    },
+    {
+      "slug": "partners-and-deal-structures",
+      "title": "Partners and deal structures",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can compare networks, direct lenders, lead buyers and marketplaces as partners.",
+        "By the end you can negotiate a better finance deal with data, not pressure.",
+        "By the end you can reduce partner concentration risk."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the partner matters as much as the payout",
+          "p": "The same lead can earn very different money depending on who buys it, how fast they pay, how they scrub, and whether they keep the deal open. In finance, partners also carry legal risk. A great payout from a partner that pays late, scrubs hard or promotes unlicensed lenders is a bad deal.",
+          "d": {
+            "b": "Choose partners, not just payouts",
+            "s": "Terms, trust and licences matter."
+          },
+          "say": "Why does the partner matter as much as the payout? Because the same lead can earn very different money depending on who buys it, how fast they pay, how they scrub, and whether they keep the deal open. In finance, partners also carry legal risk. A great payout from a partner that pays late, scrubs hard or promotes unlicensed lenders is a bad deal. Choose partners, not just payouts."
+        },
+        {
+          "v": "table",
+          "h": "Partner types compared",
+          "p": "Example overview. Real terms vary widely between partners and countries. Most affiliates start with networks, then add direct deals once they have steady volume and a clean quality history.",
+          "d": {
+            "cols": [
+              "Partner",
+              "Upside",
+              "Watch for"
+            ],
+            "rows": [
+              [
+                "Affiliate network",
+                "Many offers, one payment",
+                "Network margin, holds"
+              ],
+              [
+                "Direct lender / insurer",
+                "Higher payout, direct data",
+                "Volume minimums, contracts"
+              ],
+              [
+                "Lead buyer",
+                "Pays for leads, not outcomes",
+                "Scrubs, consent requirements"
+              ],
+              [
+                "Lead marketplace / ping tree",
+                "Several buyers bid per lead",
+                "Consent must cover buyers; complexity"
+              ]
+            ]
+          },
+          "say": "Here are the partner types, as an example overview. An affiliate network gives you many offers and one payment, but watch for the network margin and holds. A direct lender or insurer pays more, with direct data, but watch for volume minimums and contracts. A lead buyer pays for leads, not outcomes, but watch for scrubs and consent requirements. A lead marketplace or ping tree lets several buyers bid per lead, but consent must cover those buyers, and it's complex. Most affiliates start with networks, then add direct deals once they have steady volume and a clean quality history."
+        },
+        {
+          "v": "partner",
+          "h": "Finance partners to consider",
+          "p": "These are partners the VooSquare Academy team lists for the finance vertical. Treat every listing as a starting point: verify licences, terms and payment history yourself before sending traffic.",
+          "d": {
+            "vertical": "finance",
+            "note": "Look for verifiable lender licences, written return terms, stage postbacks and an on-time payment record."
+          },
+          "say": "These are partners the VooSquare Academy team lists for the finance vertical. Treat every listing as a starting point, not an endorsement of terms. Verify licences, terms and payment history yourself before sending traffic. Look for verifiable lender licences, written return terms, stage postbacks and an on-time payment record."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: network vs direct deal",
+          "p": "Example: 1,000 approved applications a month on a card offer. The direct deal pays more per approval but pays later and needs a minimum. Compare what you keep and when.",
+          "more": "The direct deal earns $8,000 more per month (1,000 × $8). But with net 45 you wait about a month longer for each payment, so you must fund roughly an extra month of ad spend from your own cash. If you dip below 800 approvals, the deal may revert to a lower rate. The extra $8,000 is real only if your cash and volume can carry it. Illustrative figures.",
+          "d": {
+            "cols": [
+              "",
+              "Network",
+              "Direct"
+            ],
+            "rows": [
+              [
+                "Payout per approval",
+                "$40",
+                "$48"
+              ],
+              [
+                "Monthly revenue",
+                "$40,000",
+                "$48,000"
+              ],
+              [
+                "Payment terms",
+                "Net 15",
+                "Net 45"
+              ],
+              [
+                "Volume minimum",
+                "None",
+                "800 a month"
+              ],
+              [
+                "Extra per month",
+                "",
+                "+$8,000"
+              ]
+            ]
+          },
+          "say": "Network or direct deal? Here's an example with illustrative figures: one thousand approved applications a month on a card offer. The network pays forty dollars per approval, forty thousand a month, on net fifteen, with no minimum. The direct deal pays forty eight dollars, forty eight thousand a month, so eight thousand more. But it's net forty five, with an eight hundred a month minimum. You'd wait about a month longer for each payment, so you must fund an extra month of ad spend from your own cash. And below eight hundred, the rate may drop. The extra eight thousand is real only if your cash and volume can carry it."
+        },
+        {
+          "v": "chat",
+          "h": "Negotiating with data",
+          "p": "Example of a calm payout conversation. You bring quality data, a volume plan and a specific ask. Managers can often only argue for a raise internally if you give them numbers.",
+          "d": [
+            {
+              "from": "buyer",
+              "text": "Last 8 weeks: 1,150 approvals, approval rate 18% vs your 14% average, returns 4%. I can do 1,500 next month."
+            },
+            {
+              "from": "lead",
+              "text": "Those are strong numbers. What are you asking for?"
+            },
+            {
+              "from": "buyer",
+              "text": "$44 per approval from $40, and net 15 instead of net 30."
+            },
+            {
+              "from": "lead",
+              "text": "I can approve $43 and net 15 now, $45 if you hold 18% at 1,500."
+            }
+          ],
+          "say": "Here's a calm payout conversation, as an example. The buyer opens with data: over the last eight weeks, one thousand one hundred and fifty approvals, an eighteen percent approval rate against a fourteen percent average, four percent returns, and a plan for one thousand five hundred next month. The manager asks what they want. The buyer asks for forty four dollars per approval, up from forty, and net fifteen instead of net thirty. The manager approves forty three and net fifteen now, and forty five if they hold eighteen percent at one thousand five hundred. Managers can often only argue for a raise internally if you give them numbers."
+        },
+        {
+          "v": "product",
+          "h": "Find and compare finance offers",
+          "p": "Before you negotiate, know what comparable offers pay elsewhere. A list of options is your strongest argument and your safety net if a partner changes terms.",
+          "d": {
+            "slug": "affleego",
+            "why": "Compare finance offers and payouts across partners so you negotiate from real alternatives."
+          },
+          "say": "Before you negotiate, know what comparable offers pay elsewhere. A list of options is your strongest argument, and your safety net if a partner changes terms. That's where Affleego, shown here, comes in. It lets you compare finance offers and payouts across partners, so you negotiate from real alternatives."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: due diligence on a new partner",
+          "p": "Do this before the first lead, and keep the answers in your partner folder. It protects your payouts, your name and the people whose details you send.",
+          "d": {
+            "steps": [
+              {
+                "title": "Ask for terms in writing",
+                "text": "Payout event, payment terms, holds, return rules, caps and stage postbacks.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "mail.example/compose",
+                  "title": "To: new partner",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Subject",
+                      "value": "Terms before launch"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Please confirm: paid event, payment terms, return window and reasons, caps, postback stages."
+                    },
+                    {
+                      "type": "button",
+                      "label": "Send"
+                    }
+                  ],
+                  "highlight": 1,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "Verify licences",
+                "text": "For each lender or insurer behind the offers, check the regulator's register as in the last lesson.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "regulator.example/licensed-institutions",
+                  "title": "Licence check",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Advertiser",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "Example Credit Ltd",
+                          "Active"
+                        ],
+                        [
+                          "QuickCash App",
+                          "Not found"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "Not found: do not promote."
+                    }
+                  ],
+                  "highlight": 0,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "Ask around and start small",
+                "text": "Ask other affiliates about payment history, then start with a small test and a first payout before scaling.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/partners",
+                  "title": "Partner tracker",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Partner",
+                      "value": "New Network Z"
+                    },
+                    {
+                      "type": "field",
+                      "label": "First payment due",
+                      "value": "15 Nov"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Max exposure before first payment",
+                      "value": "$1,000"
+                    }
+                  ],
+                  "highlight": 2,
+                  "v": "screen"
+                }
+              }
+            ]
+          },
+          "say": "Here's due diligence on a new partner. Do it before the first lead. Tap Next to follow each step. First, ask for terms in writing: the paid event, payment terms, holds, return rules, caps and stage postbacks. Second, verify licences. For each lender or insurer behind the offers, check the regulator's register, as in the last lesson. In the example, one lender is active, and another, QuickCash App, isn't found. Not found means don't promote. Third, ask other affiliates about payment history, then start small. Here the tracker caps exposure at one thousand dollars before the first payment. Keep the answers in your partner folder."
+        },
+        {
+          "v": "tip",
+          "h": "Shared leads need shared consent",
+          "p": "Ping trees and marketplaces sell one lead to one of several buyers. That is only lawful and fair if the person agreed to it, in words they could understand.",
+          "d": {
+            "kind": "warn",
+            "text": "Only sell or pass a lead to buyers the person agreed to, in the consent wording they saw. Never resell returned or old leads to new buyers without fresh consent. Check data protection law in each geo and the platform's lead ad terms; this is not legal advice."
+          },
+          "say": "Ping trees and marketplaces sell one lead to one of several buyers. That's only lawful and fair if the person agreed to it, in words they could understand. Read the warning. Only sell or pass a lead to buyers the person agreed to, in the consent wording they saw. Never resell returned or old leads to new buyers without fresh consent. Check data protection law in each geo and the platform's lead ad terms. This isn't legal advice."
+        },
+        {
+          "v": "check",
+          "h": "Signs of a partner to avoid",
+          "p": "Any one of these is a reason to slow down; two or more are a reason to walk away, however attractive the payout. Ask other affiliates about their experience too.",
+          "d": [
+            "Won't put terms in writing",
+            "Offers from lenders you can't verify",
+            "Asks you to use claims you can't prove",
+            "No stage postbacks or reports",
+            "Payment dates keep moving"
+          ],
+          "say": "Here are signs of a partner to avoid. They won't put terms in writing. They offer lenders you can't verify. They ask you to use claims you can't prove. There are no stage postbacks or reports. Or payment dates keep moving. Any one of these is a reason to slow down. Two or more is a reason to walk away, however attractive the payout. And ask other affiliates about their experience too."
+        },
+        {
+          "v": "screen",
+          "h": "Example: a partner tracker",
+          "p": "Keep one row per partner with terms, what they owe you and their payment record. Review it weekly with your cash forecast so exposure never grows unnoticed.",
+          "d": {
+            "kind": "browser",
+            "url": "sheets.example/partners",
+            "title": "Partner tracker",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Partner",
+                  "Terms",
+                  "Owed",
+                  "On time"
+                ],
+                "rows": [
+                  [
+                    "Network A",
+                    "Net 15",
+                    "$5,500",
+                    "6 of 6"
+                  ],
+                  [
+                    "Direct B",
+                    "Net 45",
+                    "$10,000",
+                    "3 of 4"
+                  ],
+                  [
+                    "Network C",
+                    "Net 30",
+                    "$2,000",
+                    "New"
+                  ]
+                ]
+              },
+              {
+                "type": "field",
+                "label": "Exposure cap per partner",
+                "value": "$8,000 (example)"
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Here's an example partner tracker, one row per partner. Network A, net fifteen, owes five thousand five hundred dollars, and has paid on time six out of six. Direct B, net forty five, owes ten thousand, on time three out of four. Network C, net thirty, owes two thousand, and is new. Below, an example exposure cap of eight thousand dollars per partner. Notice Direct B is already over it. Review this weekly with your cash forecast, so exposure never grows unnoticed."
+        },
+        {
+          "v": "bars",
+          "h": "Concentration risk",
+          "p": "Example: share of monthly revenue by partner. When one partner is most of your income, one policy change, scrub or late payment can stop your business. Spread risk deliberately.",
+          "d": [
+            [
+              "Partner A",
+              70,
+              "70%"
+            ],
+            [
+              "Partner B",
+              20,
+              "20%"
+            ],
+            [
+              "Partner C",
+              10,
+              "10%"
+            ]
+          ],
+          "say": "Here's concentration risk, as an example. Look at the bars, the share of monthly revenue by partner. Partner A is seventy percent, Partner B twenty, and Partner C ten. When one partner is most of your income, one policy change, scrub or late payment can stop your business. So spread risk deliberately."
+        },
+        {
+          "v": "cards",
+          "h": "Partner mistakes",
+          "p": "Each of these comes from trusting a payout figure more than the terms around it. The fixes are boring, and they keep you in business.",
+          "d": [
+            "No written return rules|get them before traffic",
+            "Unverified lenders|check every licence",
+            "One partner is 70%+ of revenue|add a second, test it",
+            "Big exposure before first payment|cap spend until paid",
+            "Pushing for a raise with no data|bring quality numbers"
+          ],
+          "say": "Each of these mistakes comes from trusting a payout figure more than the terms around it. No written return rules: get them before traffic. Unverified lenders: check every licence. One partner at seventy percent or more of revenue: add a second, and test it. Big exposure before the first payment: cap spend until paid. Pushing for a raise with no data: bring quality numbers. The fixes are boring, and they keep you in business."
+        },
+        {
+          "v": "table",
+          "h": "Starting rules for partners",
+          "p": "Starting rules to adapt. They balance the pull of higher payouts against the risk of non-payment, heavy scrubs and legal exposure from unlicensed advertisers. Adjust the numbers once you know each partner well.",
+          "d": {
+            "cols": [
+              "Situation",
+              "Rule"
+            ],
+            "rows": [
+              [
+                "New partner",
+                "Cap exposure until the first payment arrives"
+              ],
+              [
+                "Partner > 60% of revenue",
+                "Test a second partner on the same offer type"
+              ],
+              [
+                "Payment late twice",
+                "Pause new traffic; ask for a date in writing"
+              ],
+              [
+                "Any unlicensed advertiser found",
+                "Stop that offer immediately"
+              ]
+            ]
+          },
+          "say": "Here are starting rules for partners, to adapt. For a new partner, cap exposure until the first payment arrives. If a partner is over sixty percent of revenue, test a second partner on the same offer type. If payment is late twice, pause new traffic and ask for a date in writing. And if you find any unlicensed advertiser, stop that offer immediately. Adjust the numbers once you know each partner well."
+        }
+      ],
+      "takeaways": [
+        "Compare partners on terms, payment speed, scrubs and licences, not payout alone.",
+        "Negotiate with quality and volume data and a specific ask.",
+        "Cap exposure to new partners and avoid depending on one partner for most of your revenue."
+      ],
+      "action": "List every finance partner you work with, their payment terms, return rules and share of your revenue, and mark any partner over 60% or any advertiser without a verified licence.",
+      "glossary": [
+        {
+          "term": "Direct deal",
+          "def": "A contract with a lender or insurer without a network in between."
+        },
+        {
+          "term": "Ping tree",
+          "def": "A system that offers a lead to several buyers in order or by bid; the highest eligible bid buys it."
+        },
+        {
+          "term": "Net terms",
+          "def": "How many days after the period ends you are paid, such as net 30."
+        },
+        {
+          "term": "Concentration risk",
+          "def": "The danger of depending on one partner, offer or platform for most of your income."
+        },
+        {
+          "term": "Exposure",
+          "def": "Money you have spent or are owed that is not yet paid."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Network pays $30 net 15; direct pays $34 net 60. 500 approvals a month. Extra revenue from direct?",
+          "options": [
+            "$1,000",
+            "$4,000",
+            "$2,000",
+            "$500"
+          ],
+          "answer": 2,
+          "why": "500 × $4 = $2,000 a month, but you wait 45 more days to be paid."
+        },
+        {
+          "q": "Strongest basis for a payout increase?",
+          "options": [
+            "Quality and volume data plus a specific ask",
+            "Threatening to leave",
+            "Saying a friend gets more",
+            "Sending more leads without warning"
+          ],
+          "answer": 0,
+          "why": "Managers need numbers to argue for you internally."
+        },
+        {
+          "q": "One partner is 75% of revenue. Starting rule?",
+          "options": [
+            "Ignore it",
+            "Stop working with them",
+            "Move 100% to them",
+            "Test a second partner on the same offer type"
+          ],
+          "answer": 3,
+          "why": "Over 60% means concentration risk; add an alternative."
+        },
+        {
+          "q": "A ping tree wants to sell your leads to 12 buyers; your consent names one. What do you do?",
+          "options": [
+            "Allow it",
+            "Only pass leads to buyers the person agreed to",
+            "Allow it if the price is high",
+            "Change consent after the fact"
+          ],
+          "answer": 1,
+          "why": "Leads can only go to buyers covered by the consent the person gave."
+        },
+        {
+          "q": "A new partner has not paid yet. Starting rule on spend?",
+          "options": [
+            "Cap exposure until the first payment arrives",
+            "Unlimited",
+            "Double it to show commitment",
+            "Pay them first"
+          ],
+          "answer": 0,
+          "why": "Limit how much you can lose to an unproven payer."
+        }
+      ],
+      "say_intro": "The same lead can earn very different money depending on who buys it. In this lesson you'll compare partner types, negotiate with data instead of pressure, and keep any one partner from carrying too much of your business.",
+      "say_outro": "You've compared partner types, seen how to negotiate with quality data, and learned to cap exposure and spread revenue across partners. Your task: list every finance partner you work with, their payment terms, return rules and share of your revenue, and mark any partner over sixty percent or any advertiser without a verified licence. Now take the quiz."
+    },
+    {
+      "slug": "seasonality-and-calendar",
+      "title": "Seasonality and the finance calendar",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can build a finance calendar for your geos with salary, school and holiday cycles.",
+        "By the end you can plan budget around seasonal demand and seasonal costs.",
+        "By the end you can avoid exploitative timing while still meeting real demand."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why timing moves finance results",
+          "p": "People look for loans before school fees, compare insurance at renewal time and open accounts when a new salary starts. Ad costs also rise in busy shopping seasons. Planning around these cycles lets you spend when demand is real and avoid paying peak prices for weak intent.",
+          "d": {
+            "b": "Demand for money follows a calendar",
+            "s": "Plan budget around it."
+          },
+          "say": "Why does timing move finance results? People look for loans before school fees, compare insurance at renewal time, and open accounts when a new salary starts. Ad costs also rise in busy shopping seasons. So demand for money follows a calendar. Plan around these cycles, and you spend when demand is real, instead of paying peak prices for weak intent."
+        },
+        {
+          "v": "cards",
+          "h": "Cycles to put on your calendar",
+          "p": "Example cycles. Exact dates differ by country, school system and employer; ask local buyers and check your own data for the pattern in your geo.",
+          "d": [
+            "Salary cycle|demand often shifts near month end and payday",
+            "School fees|term starts drive education and short-term loans",
+            "Festive season|December spending, January repayments",
+            "Insurance renewals|car and health renewals, enrolment windows",
+            "Big shopping days|card offers compete with retail ad costs"
+          ],
+          "say": "Here are example cycles to put on your calendar. The salary cycle: demand often shifts near month end and payday. School fees: term starts drive education and short-term loans. The festive season: December spending, then January repayments. Insurance renewals: car and health renewals, and enrolment windows. And big shopping days, when card offers compete with retail ad costs. Exact dates differ by country, school system and employer, so ask local buyers and check your own data."
+        },
+        {
+          "v": "table",
+          "h": "Example calendar for one year",
+          "p": "Example only. Use it as a template and fill in the real dates for your geos. Mark both demand and expected ad cost so you can see when they line up and when they fight.",
+          "more": "For US insurance, Medicare's annual enrolment period has run from 15 October to 7 December and the ACA marketplace open enrolment from 1 November into January in recent years. We are not certain of exact current dates; check official sources each year. Medicare and health insurance marketing in the US is heavily regulated, with specific rules for agents and marketers, so only enter it with a compliant partner.",
+          "d": {
+            "cols": [
+              "Period",
+              "Finance demand (example)",
+              "Ad cost (example)"
+            ],
+            "rows": [
+              [
+                "January",
+                "Repayment pressure, school fees in some geos",
+                "Lower after holidays"
+              ],
+              [
+                "Mid-year",
+                "School terms, mid-year bonuses",
+                "Normal"
+              ],
+              [
+                "Oct to Dec (US)",
+                "Medicare enrolment window",
+                "Rising"
+              ],
+              [
+                "Nov to Dec",
+                "Festive spending, card offers",
+                "Highest"
+              ],
+              [
+                "Month end",
+                "Salary-linked demand",
+                "Normal"
+              ]
+            ]
+          },
+          "say": "Here's an example calendar for one year. Use it as a template. January: repayment pressure and school fees in some geos, with lower ad costs after the holidays. Mid-year: school terms and bonuses, normal costs. October to December in the U S, the Medicare enrolment window, with rising costs. November to December: festive spending and card offers, with the highest costs. And month end: salary-linked demand. U S Medicare and health insurance marketing is heavily regulated, so only enter it with a compliant partner, and check the official dates each year."
+        },
+        {
+          "v": "curve",
+          "h": "Example: demand and cost through the month",
+          "p": "Example index of loan applications and CPM in one geo across a month. Applications rise before month end; CPM barely moves. That gap is where your budget works hardest.",
+          "d": {
+            "a": [
+              80,
+              85,
+              90,
+              100,
+              110,
+              125,
+              140
+            ],
+            "la": "Applications (index)",
+            "b": [
+              100,
+              100,
+              102,
+              101,
+              103,
+              104,
+              105
+            ],
+            "lb": "CPM (index)",
+            "x": [
+              "D1",
+              "D5",
+              "D10",
+              "D15",
+              "D20",
+              "D25",
+              "D30"
+            ]
+          },
+          "say": "Here's demand and cost through one month, as an example index in one geo. Look at the two lines. Loan applications rise from eighty to one hundred and forty before month end. But C P M, the cost per thousand impressions, barely moves, from one hundred to one hundred and five. That gap, rising demand with flat cost, is where your budget works hardest."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: shifting budget in a month",
+          "p": "Example: $3,000 a month on a loan offer. Flat spend versus weighting the last ten days. Cost per approval differs by period because intent differs.",
+          "more": "Flat: $2,000 ÷ $25 = 80, $1,000 ÷ $18 ≈ 55.6, total ≈ 136 approvals. Weighted: $1,500 ÷ $25 = 60, $1,500 ÷ $18 ≈ 83.3, total ≈ 143. About 8 more approvals for the same spend. This only works if cost per approval really stays at $18 when you add budget; check it with a small test before moving a large share. Illustrative figures.",
+          "d": {
+            "cols": [
+              "Plan",
+              "Days 1 to 20",
+              "Days 21 to 30",
+              "Approvals"
+            ],
+            "rows": [
+              [
+                "Flat",
+                "$2,000 at $25",
+                "$1,000 at $18",
+                "80 + 55.6 = 135.6"
+              ],
+              [
+                "Weighted",
+                "$1,500 at $25",
+                "$1,500 at $18",
+                "60 + 83.3 = 143.3"
+              ]
+            ]
+          },
+          "say": "Here's a worked example, with illustrative figures: three thousand dollars a month on a loan offer. Cost per approval is twenty five dollars in days one to twenty, and eighteen dollars in the last ten days, because intent differs. Flat spend puts two thousand in the first period and one thousand in the second, for about one hundred and thirty six approvals. Weighted spend puts one thousand five hundred in each, for about one hundred and forty three. About eight more approvals for the same spend. But this only works if cost per approval really stays at eighteen when you add budget, so test it small first."
+        },
+        {
+          "v": "bars",
+          "h": "Example: cost per approval by month",
+          "p": "Example from one year of a loan offer in one geo. The cheapest months are not always the busiest. Use your own data to find them and weight budget towards them.",
+          "d": [
+            [
+              "Jan",
+              70,
+              "$21"
+            ],
+            [
+              "Apr",
+              63,
+              "$19"
+            ],
+            [
+              "Sep",
+              57,
+              "$17"
+            ],
+            [
+              "Nov",
+              83,
+              "$25"
+            ],
+            [
+              "Dec",
+              97,
+              "$29"
+            ]
+          ],
+          "say": "Here's cost per approval by month, from one year of a loan offer in one geo. It's an example. January, twenty one dollars. April, nineteen. September, seventeen. November, twenty five. December, twenty nine. Notice the cheapest months aren't always the busiest. Use your own data to find them, and weight budget towards them."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: daily budget for the season",
+          "p": "You want 60 approvals in a 30-day season at a $25 target cost per approval. What daily budget does that need? Check it, then compare it with your cash forecast.",
+          "more": "60 × $25 = $1,500 over 30 days = $50 a day. If the season pushes cost per approval to $29, the same budget buys only about 52 approvals, so plan a range, not one number.",
+          "d": {
+            "kind": "budget",
+            "task": "60 approvals, $25 target, 30 days. Daily budget?",
+            "preset": {
+              "goal": 60,
+              "target_cpa": 25,
+              "days": 30
+            },
+            "answer": {
+              "field": "daily_budget",
+              "value": 50,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Lab time. You want sixty approvals in a thirty day season, at a twenty five dollar target cost per approval. What daily budget does that need? Work it out, then compare it with your cash forecast. Pause and try it, then check your answer."
+        },
+        {
+          "v": "tip",
+          "h": "Meet demand, don't exploit distress",
+          "p": "Busy periods are when people under pressure borrow. That makes honest messaging and clear cost disclosure more important in peak season, not less. Regulators and platforms notice.",
+          "d": {
+            "kind": "warn",
+            "text": "Do not create fake urgency ('apply before Friday or miss out') or target people at moments of distress with high-cost credit. Keep the same claims, cost disclosure and policy checks in peak season. Check platform and local rules; some regulators watch seasonal lending ads closely."
+          },
+          "say": "Meet demand, don't exploit distress. Busy periods are when people under pressure borrow. That makes honest messaging and clear cost disclosure more important in peak season, not less, and regulators and platforms notice. Read the warning. Don't create fake urgency, like apply before Friday or miss out, and don't target people at moments of distress with high-cost credit. Keep the same claims, cost disclosure and policy checks in peak season. Check platform and local rules, because some regulators watch seasonal lending ads closely."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: build your finance calendar",
+          "p": "An hour of work once a year, updated every month. Do it in a shared sheet so your whole team plans budgets and creatives from the same dates.",
+          "d": {
+            "steps": [
+              {
+                "title": "List your geos and products",
+                "text": "One tab per geo. Rows are months; columns are product lines.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/finance-calendar",
+                  "title": "Calendar: Nigeria",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Month",
+                        "Loans",
+                        "Insurance"
+                      ],
+                      "rows": [
+                        [
+                          "Jan",
+                          "School fees",
+                          "Car renewals"
+                        ],
+                        [
+                          "Sep",
+                          "School fees",
+                          "Normal"
+                        ],
+                        [
+                          "Dec",
+                          "Festive",
+                          "Travel cover"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "Add your own data",
+                "text": "Paste last year's applications and cost per paid event by month, if you have them.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/finance-calendar",
+                  "title": "History",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Best month (cost per approval)",
+                      "value": "Sep: $17"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Worst month",
+                      "value": "Dec: $29"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Your data beats any template."
+                    }
+                  ],
+                  "highlight": 0,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "Set budget weights",
+                "text": "Give each month a weight, for example 0.8 to 1.3, and adjust after each month's results.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/finance-calendar",
+                  "title": "Budget weights",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Sep",
+                      "value": "1.3"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Dec",
+                      "value": "0.8"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Apply to plan"
+                    }
+                  ],
+                  "highlight": 0,
+                  "v": "screen"
+                }
+              }
+            ]
+          },
+          "say": "Here's how to build your finance calendar, in a shared sheet so your team plans from the same dates. Tap Next to follow each step. First, list your geos and products, one tab per geo, with months as rows and product lines as columns. In the Nigeria example, school fees in January and September, festive loans and travel cover in December. Second, add your own data: last year's applications and cost per paid event by month. Here the best month is September, at seventeen dollars, and the worst is December, at twenty nine. Your data beats any template. Third, set budget weights, for example point eight to one point three, here one point three for September and point eight for December. Adjust after each month's results."
+        },
+        {
+          "v": "check",
+          "h": "Seasonal prep checklist",
+          "p": "Run this two to four weeks before each important period, so creatives are approved and budgets are set before costs rise and attention is scarce.",
+          "d": [
+            "Seasonal creatives audited and approved",
+            "Caps confirmed with partners",
+            "Budget weights set from last year",
+            "Cash forecast covers the higher spend",
+            "Kill lines written for the period"
+          ],
+          "say": "Run this checklist two to four weeks before each important period. Seasonal creatives audited and approved. Caps confirmed with partners. Budget weights set from last year. A cash forecast that covers the higher spend. And kill lines written for the period. That way, creatives are approved and budgets set before costs rise and attention is scarce."
+        },
+        {
+          "v": "compare",
+          "h": "Seasonal mistakes",
+          "p": "Each mistake either buys expensive traffic with weak intent or misses real demand. Your own month-by-month data is the fix in every case, not a template from another market.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Spending most in December because 'people need money'",
+                "Copying another country's calendar",
+                "Launching new tests in peak cost weeks",
+                "Seasonal claims nobody approved"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Judge by cost per paid event per month",
+                "Build each geo's calendar from local data",
+                "Test in calm weeks, scale in good weeks",
+                "Approve seasonal creatives early"
+              ]
+            }
+          },
+          "say": "Each of these mistakes either buys expensive traffic with weak intent, or misses real demand. Spending most in December because people need money: judge by cost per paid event per month. Copying another country's calendar: build each geo's calendar from local data. Launching new tests in peak cost weeks: test in calm weeks, scale in good weeks. Seasonal claims nobody approved: approve seasonal creatives early. In every case, your own month-by-month data is the fix."
+        },
+        {
+          "v": "table",
+          "h": "Starting rules for seasons",
+          "p": "Starting rules to adapt. Use your own monthly cost per paid event to set the weights; these rules only get you started until you have a year of data.",
+          "d": {
+            "cols": [
+              "Signal",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Month's lagged cost ≤ 0.8 × target",
+                "Weight up next year's same month"
+              ],
+              [
+                "CPM up 30%+ with no rise in approvals",
+                "Cut to maintenance budget"
+              ],
+              [
+                "New offer",
+                "Launch in a calm month, not peak"
+              ],
+              [
+                "Seasonal creative",
+                "Approved 2 weeks before the season"
+              ]
+            ]
+          },
+          "say": "Here are starting rules for seasons, to adapt. If a month's lagged cost is point eight times target or less, weight up the same month next year. If C P M rises thirty percent or more with no rise in approvals, cut to a maintenance budget. Launch a new offer in a calm month, not at peak. And have seasonal creatives approved two weeks before the season. These rules get you started until you have a year of your own data."
+        }
+      ],
+      "takeaways": [
+        "Finance demand follows salary, school, festive and renewal cycles that differ by geo.",
+        "Shift budget toward periods where cost per paid event is lowest, tested in small steps.",
+        "Peak seasons need the same honest claims and no fake urgency."
+      ],
+      "action": "Start a finance calendar sheet for your main geo with salary, school, festive and renewal dates, and add last months' cost per paid event if you have it.",
+      "glossary": [
+        {
+          "term": "Seasonality",
+          "def": "Regular changes in demand or cost at certain times of month or year."
+        },
+        {
+          "term": "Budget weight",
+          "def": "A multiplier showing how much more or less to spend in a period than average."
+        },
+        {
+          "term": "Enrolment window",
+          "def": "A fixed period when people can sign up for or change certain insurance plans."
+        },
+        {
+          "term": "Maintenance budget",
+          "def": "A low budget that keeps campaigns running without heavy spend during poor periods."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "$2,000: $1,000 at $20 per approval and $1,000 at $16. Total approvals?",
+          "options": [
+            "100",
+            "90",
+            "125",
+            "112.5"
+          ],
+          "answer": 3,
+          "why": "$1,000 ÷ $20 = 50; $1,000 ÷ $16 = 62.5; total 112.5."
+        },
+        {
+          "q": "CPM rises 35% in December and approvals don't rise. Starting rule?",
+          "options": [
+            "Double budget",
+            "Cut to maintenance budget",
+            "Launch new tests",
+            "Add urgency claims"
+          ],
+          "answer": 1,
+          "why": "Higher cost without better results means weaker return per dollar."
+        },
+        {
+          "q": "When should you launch a new finance offer test?",
+          "options": [
+            "A calm month",
+            "Peak festive week",
+            "Only in December",
+            "Any time, same result"
+          ],
+          "answer": 0,
+          "why": "Calm periods give cleaner, cheaper test data."
+        },
+        {
+          "q": "Which seasonal message is acceptable?",
+          "options": [
+            "Apply before Friday or miss out",
+            "Everyone gets approved this week",
+            "School fees season: compare loan costs",
+            "Last chance for cash"
+          ],
+          "answer": 2,
+          "why": "It names a real event and the product without fake urgency or promises."
+        },
+        {
+          "q": "Why build each geo's calendar from local data?",
+          "options": [
+            "Templates are illegal",
+            "Salary, school and holiday cycles differ by country",
+            "It's faster",
+            "Platforms require it"
+          ],
+          "answer": 1,
+          "why": "Cycles vary by country, school system and employer."
+        }
+      ],
+      "say_intro": "Demand for money follows a calendar. In this lesson you'll build a finance calendar for your geos, plan budget around seasonal demand and costs, and learn to meet real demand without exploiting people under pressure.",
+      "say_outro": "You've learned the salary, school, festive and renewal cycles, how to weight budget towards months and days where cost per approval is lowest, and why peak season calls for more honesty, not less. Your task: start a finance calendar sheet for your main geo with salary, school, festive and renewal dates, and add last months' cost per paid event if you have it. Now take the quiz."
+    },
+    {
+      "slug": "cash-flow-and-risk",
+      "title": "Cash flow, clawbacks and risk at scale",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can forecast cash needs when payments lag spend by weeks.",
+        "By the end you can account for clawbacks, holds and returns in your plan.",
+        "By the end you can set exposure limits that keep one bad month from ending the business."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why profitable affiliates still run out of cash",
+          "p": "In finance you often pay the ad platform daily but are paid by the network weeks later, after approvals, funding and return windows. The bigger you scale, the bigger the gap. A campaign can be profitable on paper and still empty your account. Cash planning is a scaling skill.",
+          "d": {
+            "b": "Profit on paper is not cash in the bank",
+            "s": "The gap grows as you scale."
+          },
+          "say": "Here's why profitable affiliates still run out of cash. In finance, you often pay the ad platform daily, but the network pays you weeks later, after approvals, funding and return windows. The bigger you scale, the bigger that gap. A campaign can be profitable on paper and still empty your account. Profit on paper isn't cash in the bank. That's why cash planning is a scaling skill."
+        },
+        {
+          "v": "flow",
+          "h": "Where the cash gap comes from",
+          "p": "Each step adds days between spending a dollar and getting it back. Add them up for every offer you run; the total is your cycle in days.",
+          "d": [
+            "Spend today",
+            "Lead to paid stage: days to weeks",
+            "Month closes",
+            "Net terms: 15 to 60 days",
+            "Payment arrives"
+          ],
+          "say": "Where does the cash gap come from? Follow the flow. You spend today. Then the lead takes days to weeks to reach the paid stage. Then the month closes. Then net terms add fifteen to sixty days. And finally, payment arrives. Each step adds days between spending a dollar and getting it back. Add them up for every offer you run. The total is your cycle in days."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: the cash gap",
+          "p": "Example: $200 a day on a loan offer paying on funding, profitable at 40% ROI. Funding lag about 10 days, monthly billing, net 30. How much cash must you hold?",
+          "more": "On average a dollar spent mid-month waits about 15 days for the month to close, plus the funding lag and the net terms. At $200 a day, about $11,000 is in the gap at any time, before any profit comes back. If you double spend to $400 a day, the gap doubles to about $22,000. Profit does not help until it arrives. Illustrative figures; your own lags and terms decide the real number.",
+          "d": {
+            "cols": [
+              "Item",
+              "Calculation",
+              "Amount"
+            ],
+            "rows": [
+              [
+                "Daily spend",
+                "",
+                "$200"
+              ],
+              [
+                "Days until paid (roughly)",
+                "10 lag + 15 avg to month end + 30 net",
+                "55 days"
+              ],
+              [
+                "Cash tied up",
+                "$200 × 55",
+                "$11,000"
+              ],
+              [
+                "Buffer (20%)",
+                "$11,000 × 0.2",
+                "$2,200"
+              ],
+              [
+                "Cash to hold",
+                "",
+                "$13,200"
+              ]
+            ]
+          },
+          "say": "Here's a worked example, with illustrative figures. Two hundred dollars a day on a loan offer that pays on funding, profitable at forty percent R O I, return on investment. The funding lag is about ten days. A dollar spent mid-month waits about fifteen days for the month to close, then net thirty. That's about fifty five days. Two hundred times fifty five is eleven thousand dollars tied up. Add a twenty percent buffer, two thousand two hundred, and you should hold thirteen thousand two hundred. Double spend, and the gap doubles. Profit doesn't help until it arrives."
+        },
+        {
+          "v": "eq",
+          "h": "The cash gap formula",
+          "p": "Multiply your daily spend by your cycle in days. The answer is roughly how much of your money is out in the system at any moment, waiting to come back as payment.",
+          "d": [
+            "Daily spend",
+            "×",
+            "Cycle in days",
+            "=",
+            "Cash tied up"
+          ],
+          "say": "Here's the cash gap formula. Look at the equation. Daily spend, times cycle in days, equals cash tied up. The answer is roughly how much of your money is out in the system at any moment, waiting to come back as payment. Know both numbers for every offer you run."
+        },
+        {
+          "v": "stat",
+          "h": "Cash tied up per $100 a day",
+          "p": "Example rule of thumb from the table: every extra $100 of daily spend on a 55-day cycle ties up about $5,500 more cash. Know your own cycle in days.",
+          "d": {
+            "n": 5500,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "cash tied up per extra $100 a day (55-day cycle)",
+            "note": "Example."
+          },
+          "say": "Here's a rule of thumb from the table, as an example. Every extra one hundred dollars of daily spend, on a fifty five day cycle, ties up about five thousand five hundred dollars more cash. That's the number on screen. Your cycle will be different, so know your own cycle in days."
+        },
+        {
+          "v": "cards",
+          "h": "Clawbacks, holds and reversals",
+          "p": "Even money you have already been paid can come back. Read your terms for each of these, and keep a reserve for them in your cash plan.",
+          "d": [
+            "Clawback|payout taken back later, e.g. policy cancelled early",
+            "Hold|payment delayed during a quality review",
+            "Return|lead rejected inside the return window",
+            "Reversal|conversions removed after fraud findings",
+            "Chargeback-style adjustments|disputed items deducted next invoice"
+          ],
+          "say": "Even money you've already been paid can come back. Look at the cards. A clawback is a payout taken back later, for example when a policy is cancelled early. A hold is payment delayed during a quality review. A return is a lead rejected inside the return window. A reversal is conversions removed after fraud findings. And chargeback-style adjustments are disputed items deducted from the next invoice. Read your terms for each one, and keep a reserve for them in your cash plan."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: insurance clawbacks",
+          "p": "Example: an insurance offer pays $80 per policy issued, with a clawback if the policy is cancelled within 90 days. You must plan for net revenue after expected cancellations.",
+          "more": "Plan with $70.40 per issued policy, not $80. If your cost per issued policy is $65, your real margin is $5.40, about 7.7%, not the 18.75% the gross figure suggests. Clawback windows and rates vary by product and insurer; ask for them in writing. Illustrative figures.",
+          "d": {
+            "cols": [
+              "Item",
+              "Calculation",
+              "Amount"
+            ],
+            "rows": [
+              [
+                "Policies issued",
+                "",
+                "100"
+              ],
+              [
+                "Gross payout",
+                "100 × $80",
+                "$8,000"
+              ],
+              [
+                "Early cancellations",
+                "12% of 100",
+                "12"
+              ],
+              [
+                "Clawed back",
+                "12 × $80",
+                "−$960"
+              ],
+              [
+                "Net revenue",
+                "$8,000 − $960",
+                "$7,040"
+              ]
+            ]
+          },
+          "say": "Here's an insurance example, with illustrative figures. The offer pays eighty dollars per policy issued, with a clawback if the policy is cancelled within ninety days. One hundred policies is eight thousand dollars gross. Twelve percent cancel early, so nine hundred and sixty dollars is clawed back, leaving seven thousand and forty net. So plan with seventy dollars forty per policy, not eighty. If your cost per policy is sixty five dollars, your real margin is about seven point seven percent, not the eighteen point seven five the gross figure suggests. Ask for clawback windows and rates in writing."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: a 13-week cash forecast",
+          "p": "A simple weekly forecast is enough to see trouble coming weeks ahead. Update it every Monday with real payments received and real spend, and compare it with last week's version.",
+          "d": {
+            "steps": [
+              {
+                "title": "List cash out",
+                "text": "Weekly ad spend per platform, tools, salaries and fees.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/cash-forecast",
+                  "title": "Cash out",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Week",
+                        "Ad spend",
+                        "Other"
+                      ],
+                      "rows": [
+                        [
+                          "W1",
+                          "$1,400",
+                          "$300"
+                        ],
+                        [
+                          "W2",
+                          "$1,400",
+                          "$300"
+                        ],
+                        [
+                          "W3",
+                          "$1,680",
+                          "$300"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "List cash in, by expected date",
+                "text": "Each partner's expected payment on its real date, after net terms, minus expected returns and clawbacks.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/cash-forecast",
+                  "title": "Cash in",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Week",
+                        "Partner",
+                        "Expected"
+                      ],
+                      "rows": [
+                        [
+                          "W2",
+                          "Network A",
+                          "$4,200"
+                        ],
+                        [
+                          "W6",
+                          "Direct B",
+                          "$5,100"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "Check the lowest point",
+                "text": "The forecast's lowest balance must stay above your safety floor. If not, slow scaling.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/cash-forecast",
+                  "title": "Balance",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Lowest balance",
+                      "value": "$2,300 in W5"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Safety floor",
+                      "value": "$3,000"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Below floor: hold scaling until W6 payment."
+                    }
+                  ],
+                  "highlight": 0,
+                  "v": "screen"
+                }
+              }
+            ]
+          },
+          "say": "Here's a thirteen week cash forecast. Update it every Monday with real payments and real spend. Tap Next to follow each step. First, list cash out: weekly ad spend per platform, tools, salaries and fees. In the example, one thousand four hundred dollars of ad spend in weeks one and two, rising to one thousand six hundred and eighty in week three. Second, list cash in, by expected date: each partner's payment on its real date, after net terms, minus expected returns and clawbacks. Third, check the lowest point. Here it's two thousand three hundred dollars in week five, below a three thousand dollar safety floor. So hold scaling until the week six payment."
+        },
+        {
+          "v": "tip",
+          "h": "Taxes, currency and professional advice",
+          "p": "Scaling brings tax, currency and contract questions that differ by country. Get professional advice early, before the amounts get large and mistakes become expensive to unwind.",
+          "d": {
+            "kind": "warn",
+            "text": "Payments in foreign currency, withholding taxes, VAT and business registration rules vary by country. Speak to a qualified accountant and, for contracts, a lawyer. Do not move money through personal accounts in ways that break your bank's or network's terms. This is not tax or legal advice."
+          },
+          "say": "Scaling brings tax, currency and contract questions that differ by country. Get professional advice early, before the amounts get large. Read the warning. Payments in foreign currency, withholding taxes, V A T and business registration rules vary by country. Speak to a qualified accountant and, for contracts, a lawyer. Don't move money through personal accounts in ways that break your bank's or network's terms. This isn't tax or legal advice."
+        },
+        {
+          "v": "screen",
+          "h": "Example: an invoice with deductions",
+          "p": "Read every invoice line by line. Clawbacks and returns from earlier months are often deducted from the current payment, so the amount received can be well below this month's earnings.",
+          "d": {
+            "kind": "browser",
+            "url": "network.example/invoices/2026-09",
+            "title": "Invoice: September",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Line",
+                  "Amount"
+                ],
+                "rows": [
+                  [
+                    "Approved policies (100 × $80)",
+                    "$8,000"
+                  ],
+                  [
+                    "Clawbacks from July",
+                    "−$960"
+                  ],
+                  [
+                    "Returned leads",
+                    "−$240"
+                  ],
+                  [
+                    "Payable",
+                    "$6,800"
+                  ]
+                ]
+              },
+              {
+                "type": "field",
+                "label": "Due",
+                "value": "Net 30: 30 Oct"
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Read every invoice line by line. Here's an example September invoice. Approved policies, one hundred times eighty dollars, eight thousand. Clawbacks from July, minus nine hundred and sixty. Returned leads, minus two hundred and forty. Payable, six thousand eight hundred, due on net thirty terms. Clawbacks and returns from earlier months are often deducted from the current payment, so what you receive can be well below this month's earnings."
+        },
+        {
+          "v": "bars",
+          "h": "Exposure by partner",
+          "p": "Example: money owed to you right now, by partner. Exposure is what you lose if that partner pays late or not at all. Set a maximum per partner and keep to it.",
+          "d": [
+            [
+              "Network A (owed)",
+              55,
+              "$5,500"
+            ],
+            [
+              "Direct B (owed)",
+              100,
+              "$10,000"
+            ],
+            [
+              "Network C (owed)",
+              20,
+              "$2,000"
+            ]
+          ],
+          "say": "Exposure is what you lose if a partner pays late or not at all. Look at the bars, money owed to you right now in this example. Network A owes five thousand five hundred dollars. Direct B owes ten thousand. Network C owes two thousand. Set a maximum per partner, and keep to it."
+        },
+        {
+          "v": "compare",
+          "h": "Cash mistakes at scale",
+          "p": "These mistakes end affiliate businesses that were profitable on paper. All of them are visible in a 13-week cash forecast well before they happen, if you look at it.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Scaling on paper profit",
+                "Planning with gross insurance payouts",
+                "No limit on what one partner owes you",
+                "Spending the buffer on new tests"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Forecast cash weekly",
+                "Plan with net of clawbacks",
+                "Cap exposure per partner",
+                "Protect a safety floor"
+              ]
+            }
+          },
+          "say": "These mistakes end affiliate businesses that were profitable on paper. Scaling on paper profit: forecast cash weekly. Planning with gross insurance payouts: plan net of clawbacks. No limit on what one partner owes you: cap exposure per partner. Spending the buffer on new tests: protect a safety floor. All of them show up in a thirteen week cash forecast well before they happen, if you look at it."
+        },
+        {
+          "v": "table",
+          "h": "Starting rules for cash",
+          "p": "Starting rules to adapt with your accountant. They keep growth inside what your cash can actually carry, even when a partner pays late or a clawback arrives.",
+          "d": {
+            "cols": [
+              "Signal",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Forecast low point < safety floor",
+                "Hold scaling until it clears"
+              ],
+              [
+                "One partner owes > 2 months of profit",
+                "Pause new traffic to them"
+              ],
+              [
+                "Clawback rate rises 5+ points",
+                "Recalculate net payout; review quality"
+              ],
+              [
+                "Scaling step planned",
+                "Add the extra cash gap first"
+              ]
+            ]
+          },
+          "say": "Here are starting rules for cash, to adapt with your accountant. If the forecast low point is below your safety floor, hold scaling until it clears. If one partner owes more than two months of profit, pause new traffic to them. If the clawback rate rises five points or more, recalculate net payout and review quality. And before any planned scaling step, add the extra cash gap first. These rules keep growth inside what your cash can actually carry."
+        }
+      ],
+      "takeaways": [
+        "Finance payments lag spend by weeks; the cash gap grows with every scaling step.",
+        "Plan with net revenue after returns and clawbacks, not gross payouts.",
+        "Forecast cash weekly, keep a safety floor and cap what any partner can owe you."
+      ],
+      "action": "Work out your cycle in days for one finance offer (paid-stage lag + time to month end + net terms), multiply by your daily spend, and compare the result with the cash you have.",
+      "glossary": [
+        {
+          "term": "Cash gap",
+          "def": "Money spent on ads that has not yet come back as payment."
+        },
+        {
+          "term": "Clawback",
+          "def": "A payout taken back after it was earned, for example when an insurance policy is cancelled early."
+        },
+        {
+          "term": "Safety floor",
+          "def": "The lowest cash balance you allow before you stop scaling."
+        },
+        {
+          "term": "Cash forecast",
+          "def": "A week-by-week plan of money in and out to see future low points."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "$300 a day, 50-day cycle. Cash tied up?",
+          "options": [
+            "$15,000",
+            "$6,000",
+            "$1,500",
+            "$30,000"
+          ],
+          "answer": 0,
+          "why": "$300 × 50 = $15,000."
+        },
+        {
+          "q": "Policy payout $100, expected 10% clawed back. Net per issued policy?",
+          "options": [
+            "$110",
+            "$100",
+            "$90",
+            "$80"
+          ],
+          "answer": 2,
+          "why": "$100 − 10% = $90."
+        },
+        {
+          "q": "Forecast low point $1,800, safety floor $3,000. Starting rule?",
+          "options": [
+            "Scale anyway",
+            "Hold scaling until it clears",
+            "Spend the buffer",
+            "Ignore the forecast"
+          ],
+          "answer": 1,
+          "why": "Below the floor you hold growth until payments arrive."
+        },
+        {
+          "q": "Which is a cash mistake?",
+          "options": [
+            "Weekly forecast",
+            "A safety floor",
+            "Exposure caps",
+            "Planning with gross insurance payouts"
+          ],
+          "answer": 3,
+          "why": "Gross payouts ignore clawbacks and overstate margin."
+        },
+        {
+          "q": "Doubling spend from $200 to $400 a day on a 55-day cycle adds how much cash need?",
+          "options": [
+            "$5,500",
+            "$22,000",
+            "$11,000",
+            "$400"
+          ],
+          "answer": 2,
+          "why": "Extra $200 × 55 = $11,000."
+        }
+      ],
+      "say_intro": "A profitable finance campaign can still empty your account. In this lesson you'll forecast cash when payments lag spend by weeks, plan for clawbacks and holds, and set exposure limits so one bad month doesn't end the business.",
+      "say_outro": "You've learned that the cash gap is daily spend times your cycle in days, that clawbacks and returns cut what you're really paid, and that a weekly forecast and exposure caps protect the business. Your task: work out your cycle in days for one finance offer, the paid-stage lag plus time to month end plus net terms, multiply by your daily spend, and compare the result with the cash you have. Now take the quiz."
+    },
+    {
+      "slug": "building-a-finance-portfolio",
+      "title": "Building a lasting finance portfolio",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can design a mix of products, geos, partners and channels that spreads risk.",
+        "By the end you can build owned audiences with consent and use them responsibly.",
+        "By the end you can run a weekly portfolio review with clear rules."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why a portfolio beats a single winner",
+          "p": "Finance winners change. A lender tightens criteria, a platform changes a policy, a regulator updates rules, and a campaign that paid the bills stops. Affiliates who last in finance run a portfolio: several products, geos, partners and channels, so one change hurts but does not end the business.",
+          "d": {
+            "b": "One winner is a job; a portfolio is a business",
+            "s": "Spread risk on purpose."
+          },
+          "say": "Here's why a portfolio beats a single winner. Finance winners change. A lender tightens criteria, a platform changes a policy, a regulator updates rules, and a campaign that paid the bills stops. Affiliates who last in finance run several products, geos, partners and channels, so one change hurts but doesn't end the business. One winner is a job. A portfolio is a business. Spread risk on purpose."
+        },
+        {
+          "v": "cards",
+          "h": "The four dimensions of your portfolio",
+          "p": "Spread risk across each dimension. You do not need many of each; even two in every dimension is far safer than relying on one of anything.",
+          "d": [
+            "Products|loans, cards, insurance, banking",
+            "Geos|at least two countries",
+            "Partners|no single partner over about 60%",
+            "Channels|paid ads plus owned audiences"
+          ],
+          "say": "There are four dimensions to your portfolio. Look at the cards. Products: loans, cards, insurance and banking. Geos: at least two countries. Partners: no single partner over about sixty percent. Channels: paid ads plus owned audiences. You don't need many of each. Even two in every dimension is far safer than relying on one of anything."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: two portfolios after a shock",
+          "p": "Example: both earn $10,000 profit a month. Then the main loan offer pauses for a month after the lender changes criteria. Compare what is left.",
+          "more": "Concentrated: 10% of $10,000 = $1,000 survives. Spread: 65% of $10,000 = $6,500 survives. The spread portfolio may earn a little less in good months because not every dollar sits in the best offer. That is the price of staying in business through bad ones. Illustrative figures.",
+          "d": {
+            "cols": [
+              "",
+              "Concentrated",
+              "Spread"
+            ],
+            "rows": [
+              [
+                "Loan offer share of profit",
+                "90%",
+                "35%"
+              ],
+              [
+                "Other products / geos",
+                "10%",
+                "65%"
+              ],
+              [
+                "Profit in shock month",
+                "$1,000",
+                "$6,500"
+              ],
+              [
+                "Months of costs covered",
+                "Low",
+                "Higher"
+              ]
+            ]
+          },
+          "say": "Here's a worked example, with illustrative figures. Two portfolios each earn ten thousand dollars profit a month. Then the main loan offer pauses for a month after the lender changes criteria. The concentrated portfolio had ninety percent of profit in that offer, so only one thousand dollars survives. The spread portfolio had thirty five percent there, so six thousand five hundred survives. The spread portfolio may earn a little less in good months. That's the price of staying in business through bad ones."
+        },
+        {
+          "v": "compare",
+          "h": "Owned audiences, done with consent",
+          "p": "Email lists, Telegram channels and similar owned audiences let you reach people again without paying for every impression. In finance they must be built with clear consent and used for education and relevant offers, not pressure.",
+          "d": {
+            "a": {
+              "title": "Wrong way",
+              "items": [
+                "Adding every lead to your list by default",
+                "Daily loan offers to the same people",
+                "Buying lists",
+                "No unsubscribe"
+              ]
+            },
+            "b": {
+              "title": "Right way",
+              "items": [
+                "Separate opt-in for your updates",
+                "Mostly education, some offers",
+                "Only your own consented sign-ups",
+                "One-tap unsubscribe, honoured fast"
+              ]
+            }
+          },
+          "say": "Owned audiences, like email lists and Telegram channels, let you reach people again without paying for every impression. In finance, they must be built with clear consent. On the left, the wrong way: adding every lead to your list by default, daily loan offers to the same people, buying lists, and no unsubscribe. On the right, the right way: a separate opt-in for your updates, mostly education with some offers, only your own consented sign-ups, and a one-tap unsubscribe, honoured fast."
+        },
+        {
+          "v": "product",
+          "h": "Broadcast to people who opted in",
+          "p": "Once you have an opted-in channel, a regular, useful broadcast keeps it alive: how APR works, how to compare insurance, plus an occasional relevant offer with full cost shown.",
+          "d": {
+            "slug": "castvoo",
+            "why": "Schedule education-first broadcasts to people who opted in to your Telegram channel, with offers kept occasional and fully disclosed."
+          },
+          "say": "Once you have an opted-in channel, a regular, useful broadcast keeps it alive. For example, how A P R, the annual percentage rate, works, or how to compare insurance, plus an occasional relevant offer with the full cost shown. Castvoo, shown here, lets you schedule education-first broadcasts to people who opted in to your Telegram channel, with offers kept occasional and fully disclosed."
+        },
+        {
+          "v": "phone",
+          "h": "Example: an education-first broadcast",
+          "p": "Example message in an opted-in channel. It teaches something useful, shows how to compare, and gives a way to leave. Offers, when they appear, carry the same cost disclosure as your ads.",
+          "d": {
+            "app": "chat",
+            "title": "Money Basics NG",
+            "subtitle": "channel",
+            "messages": [
+              {
+                "from": "them",
+                "text": "This week: how to read a loan's total cost. Look for three numbers: amount, total repayable and term. If any is missing, ask before you accept."
+              },
+              {
+                "from": "them",
+                "text": "Worked example: N100,000 for 3 months, total repayable N117,000. Cost: N17,000.",
+                "buttons": [
+                  "Full guide",
+                  "Unsubscribe"
+                ]
+              }
+            ]
+          },
+          "say": "Here's an example message in an opted-in channel called Money Basics N G. It teaches something useful: how to read a loan's total cost. Look for three numbers: amount, total repayable and term. If any is missing, ask before you accept. Then a worked example: one hundred thousand naira for three months, with a total repayable of one hundred and seventeen thousand, so the cost is seventeen thousand naira. Notice the buttons: a full guide, and unsubscribe. Offers, when they appear, carry the same cost disclosure as your ads."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: the weekly portfolio review",
+          "p": "Thirty minutes every week, on the same day. Use lag-adjusted numbers only, so the review reflects money you will really be paid, and write each decision down.",
+          "d": {
+            "steps": [
+              {
+                "title": "Profit by line",
+                "text": "Lagged profit by product, geo, partner and channel for the last 4 weeks.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/portfolio",
+                  "title": "Profit by line",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Line",
+                        "4-week profit",
+                        "Share"
+                      ],
+                      "rows": [
+                        [
+                          "NG loans",
+                          "$4,800",
+                          "40%"
+                        ],
+                        [
+                          "KE cards",
+                          "$3,600",
+                          "30%"
+                        ],
+                        [
+                          "ZA insurance",
+                          "$2,400",
+                          "20%"
+                        ],
+                        [
+                          "Owned channel",
+                          "$1,200",
+                          "10%"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "Risk flags",
+                "text": "Mark any line over 60% share, any partner late paying, any falling approval rate or policy change.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/portfolio",
+                  "title": "Risk flags",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Any line > 60%",
+                      "on": false
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Late partner payment",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Approval rate down 20%+",
+                      "on": false
+                    },
+                    {
+                      "type": "text",
+                      "value": "Flag: Direct B paid 9 days late."
+                    }
+                  ],
+                  "highlight": 1,
+                  "v": "screen"
+                }
+              },
+              {
+                "title": "Decide next tests",
+                "text": "Pick one new test that reduces your biggest risk, with its budget and kill line.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/portfolio",
+                  "title": "Next test",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Test",
+                      "value": "GH loans with Network A"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Budget",
+                      "value": "3 × target per ad set"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Why",
+                      "value": "Reduce NG dependence"
+                    }
+                  ],
+                  "highlight": 0,
+                  "v": "screen"
+                }
+              }
+            ]
+          },
+          "say": "Here's the weekly portfolio review. Thirty minutes, same day every week, using lag-adjusted numbers only. Tap Next to follow each step. First, profit by line for the last four weeks. In the example, Nigeria loans are forty percent, Kenya cards thirty, South Africa insurance twenty, and the owned channel ten. Second, risk flags. Mark any line over sixty percent, any late partner payment, any approval rate down twenty percent or more, or any policy change. Here, one flag: Direct B paid nine days late. Third, decide the next test, one that reduces your biggest risk, with its budget and kill line. Here, Ghana loans with Network A, at three times target per ad set, to reduce Nigeria dependence. Write each decision down."
+        },
+        {
+          "v": "quote",
+          "h": "From Dchessking",
+          "p": "A short note from the founder on staying in finance for years rather than months. It is the reason this module ends on portfolios instead of on one big scaling trick.",
+          "d": "Every finance offer I have run has had a bad month. The businesses that survive are the ones that never let one offer, one partner or one account carry everything.",
+          "by": "dchessking",
+          "say": "Here's a short note from the founder, on staying in finance for years rather than months. It's the reason this module ends on portfolios instead of one big scaling trick. Here's how Dchessking puts it: Every finance offer I have run has had a bad month. The businesses that survive are the ones that never let one offer, one partner or one account carry everything."
+        },
+        {
+          "v": "flow",
+          "h": "Adding a new line safely",
+          "p": "Use the same sequence whenever you add a product, geo, partner or channel. It reuses everything earlier modules taught, so a new line starts as a controlled test, never a leap.",
+          "d": [
+            "Learn the product and rules",
+            "Verify licence and terms",
+            "Readiness check",
+            "Small test with kill lines",
+            "Scale with the gate"
+          ],
+          "say": "Use the same sequence whenever you add a product, geo, partner or channel. Follow the flow. Learn the product and its rules. Verify the licence and terms. Run the readiness check. Start a small test with kill lines. Then scale with the gate. It reuses everything earlier modules taught, so a new line starts as a controlled test, never a leap."
+        },
+        {
+          "v": "tip",
+          "h": "The long game is the honest game",
+          "p": "Lenders, regulators and platforms keep records. Your history follows you from deal to deal, and from one network manager to the next. Protect it like capital.",
+          "d": {
+            "kind": "warn",
+            "text": "Keep every product, geo and channel on the same standards: verified licences, approved claims, full cost disclosure, provable consent and clean traffic. Check platform authorization and local law for each new line before you run it. Results vary and nothing here guarantees income."
+          },
+          "say": "The long game is the honest game. Lenders, regulators and platforms keep records. Your history follows you from deal to deal, and from one network manager to the next, so protect it like capital. Read the warning. Keep every product, geo and channel on the same standards: verified licences, approved claims, full cost disclosure, provable consent and clean traffic. Check platform authorization and local law for each new line before you run it. Results vary, and nothing here guarantees income."
+        },
+        {
+          "v": "cards",
+          "h": "Portfolio mistakes",
+          "p": "These mistakes come from success, not failure. A winner makes it tempting to stop testing and stop spreading risk, until the winner stops and nothing is ready to replace it.",
+          "d": [
+            "All profit from one offer|keep one test running for diversity",
+            "Owned list used for daily offers|education first",
+            "Expanding into products you don't understand|learn the product's rules first",
+            "No weekly review|fixed day, fixed sheet"
+          ],
+          "say": "These mistakes come from success, not failure. All profit from one offer: keep one test running for diversity. An owned list used for daily offers: education first. Expanding into products you don't understand: learn the product's rules first. No weekly review: fixed day, fixed sheet. A winner makes it tempting to stop testing and stop spreading risk, until the winner stops and nothing is ready to replace it."
+        },
+        {
+          "v": "table",
+          "h": "Starting rules for the portfolio",
+          "p": "Starting rules to adapt. Review them every quarter as your business grows, and write down why you changed any line, so you learn from your own decisions.",
+          "d": {
+            "cols": [
+              "Signal",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Any line > 60% of profit",
+                "Start a test that reduces it"
+              ],
+              [
+                "Fewer than 2 geos or partners",
+                "Add one within the quarter"
+              ],
+              [
+                "Owned-channel unsubscribes rising",
+                "Fewer offers, more education"
+              ],
+              [
+                "Line unprofitable 4 lagged weeks",
+                "Fix or retire it"
+              ]
+            ]
+          },
+          "say": "Here are starting rules for the portfolio, to adapt. If any line is over sixty percent of profit, start a test that reduces it. If you have fewer than two geos or partners, add one within the quarter. If owned-channel unsubscribes are rising, send fewer offers and more education. And if a line is unprofitable for four lagged weeks, fix it or retire it. Review these every quarter, and write down why you changed any line."
+        }
+      ],
+      "takeaways": [
+        "Spread risk across products, geos, partners and channels so one change cannot end the business.",
+        "Build owned audiences only with clear opt-in and use them for education first.",
+        "Run a weekly lag-adjusted portfolio review and always have one risk-reducing test running."
+      ],
+      "action": "Fill in a portfolio sheet with your profit by product, geo, partner and channel for the last four lagged weeks, flag any line over 60%, and choose one test that reduces that risk.",
+      "glossary": [
+        {
+          "term": "Portfolio",
+          "def": "The mix of products, geos, partners and channels your income comes from."
+        },
+        {
+          "term": "Owned audience",
+          "def": "People who opted in to hear from you directly, such as an email list or Telegram channel."
+        },
+        {
+          "term": "Opt-in",
+          "def": "A clear, separate choice by a person to receive your messages."
+        },
+        {
+          "term": "Portfolio review",
+          "def": "A regular check of profit and risk by line, used to choose the next test."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Profit $8,000: one offer $6,400. Its share and starting rule?",
+          "options": [
+            "60%, fine",
+            "80%, start a test that reduces it",
+            "40%, fine",
+            "80%, scale it further"
+          ],
+          "answer": 1,
+          "why": "$6,400 ÷ $8,000 = 80%, over the 60% line."
+        },
+        {
+          "q": "Which owned-audience practice is right?",
+          "options": [
+            "Add every lead automatically",
+            "Hide unsubscribe",
+            "Buy a list",
+            "Separate opt-in, mostly education"
+          ],
+          "answer": 3,
+          "why": "Opt-in and useful content keep it lawful and trusted."
+        },
+        {
+          "q": "Concentrated portfolio, 85% from one offer, $12,000 a month. Offer pauses. Profit left?",
+          "options": [
+            "$10,200",
+            "$6,000",
+            "$1,800",
+            "$0"
+          ],
+          "answer": 2,
+          "why": "15% of $12,000 = $1,800."
+        },
+        {
+          "q": "A line has been unprofitable for 4 lagged weeks. Starting rule?",
+          "options": [
+            "Fix or retire it",
+            "Ignore",
+            "Double budget",
+            "Hide it from the review"
+          ],
+          "answer": 0,
+          "why": "Four lagged weeks of losses is enough evidence to act."
+        },
+        {
+          "q": "Unsubscribes on your channel are rising. What do you change first?",
+          "options": [
+            "More offers",
+            "Post more often",
+            "Remove unsubscribe button",
+            "Fewer offers, more education"
+          ],
+          "answer": 3,
+          "why": "Rising unsubscribes usually mean too much selling."
+        }
+      ],
+      "say_intro": "Finance winners change, so the affiliates who last run a portfolio. In this lesson you'll spread risk across products, geos, partners and channels, build owned audiences with consent, and run a weekly portfolio review.",
+      "say_outro": "You've learned to spread risk across products, geos, partners and channels, to build owned audiences with real consent, and to run a weekly portfolio review with clear rules. Your task: fill in a portfolio sheet with your profit by product, geo, partner and channel for the last four lagged weeks, flag any line over sixty percent, and choose one test that reduces that risk. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "Target $30. Lagged spend $900, 40 approvals, approval rate stable, cap confirmed, cash forecast clear. Action?",
+      "options": [
+        "Scale +20%",
+        "Hold",
+        "Kill",
+        "Scale +100%"
+      ],
+      "answer": 0,
+      "why": "$900 ÷ 40 = $22.50, under 0.8 × $30 = $24, with all gate boxes ticked. A +20% step is the starting rule; 0.6 × target ($18) is not met for a bigger jump."
+    },
+    {
+      "q": "Baseline approval 20%. After scaling it is 15%. What now?",
+      "options": [
+        "Keep scaling",
+        "Change the payout",
+        "Stop scaling and fix quality",
+        "Add urgency to ads"
+      ],
+      "answer": 2,
+      "why": "A 25% fall from baseline is past the 20% stop line."
+    },
+    {
+      "q": "Geo P: $25 payout, $2 CPL, 12% approval. Geo Q: $70 payout, $9 CPL, 14% approval. Better profit per $1,000?",
+      "options": [
+        "Q: higher payout",
+        "P: about $500 vs Q about $89",
+        "Equal",
+        "P: about $1,000"
+      ],
+      "answer": 1,
+      "why": "P: cost per approval $16.67; 60 approvals × $25 = $1,500; profit $500. Q: $64.29; about 15.6 × $70 ≈ $1,089; profit ≈ $89."
+    },
+    {
+      "q": "A new geo's readiness check shows the lender is 'not found' on the regulator's register. Action?",
+      "options": [
+        "Launch small",
+        "Use another geo's licence",
+        "Launch and ask later",
+        "Do not promote the offer"
+      ],
+      "answer": 3,
+      "why": "Unverified licences mean you do not run the offer."
+    },
+    {
+      "q": "Direct deal pays $6 more per approval on 600 approvals a month but moves from net 15 to net 45, with $30,000 monthly spend. What must you check first?",
+      "options": [
+        "Nothing; take it",
+        "That you can fund about one extra month of spend, roughly $30,000",
+        "The creative CTR",
+        "Your follower count"
+      ],
+      "answer": 1,
+      "why": "Extra revenue is $3,600 a month, but the cash gap grows by about a month of spend."
+    },
+    {
+      "q": "A ping tree offers more per lead, but your consent text names one lender. Action?",
+      "options": [
+        "Only pass leads to buyers covered by consent; update consent for future leads if appropriate",
+        "Join it",
+        "Resell old leads to it",
+        "Ignore consent"
+      ],
+      "answer": 0,
+      "why": "Leads can only go to buyers the person agreed to."
+    },
+    {
+      "q": "$4,000 a month: the last 10 days cost $20 per approval, the first 20 days $28. Moving $1,000 from early to late (costs hold) adds about how many approvals?",
+      "options": [
+        "None",
+        "About 5",
+        "About 50",
+        "About 14"
+      ],
+      "answer": 3,
+      "why": "Late: $1,000 ÷ $20 = 50. Early: $1,000 ÷ $28 ≈ 35.7. Moving it gains about 50 − 35.7 ≈ 14 approvals."
+    },
+    {
+      "q": "Spend $250 a day, cycle 60 days, buffer 20%. Cash to hold?",
+      "options": [
+        "$15,000",
+        "$12,500",
+        "$18,000",
+        "$3,000"
+      ],
+      "answer": 2,
+      "why": "$250 × 60 = $15,000; plus 20% = $18,000."
+    },
+    {
+      "q": "Insurance: $90 per issued policy, 15% cancel within the clawback window, cost per issued policy $75. Real margin per policy?",
+      "options": [
+        "$15",
+        "$1.50",
+        "$0",
+        "$13.50"
+      ],
+      "answer": 1,
+      "why": "Net payout $90 × 0.85 = $76.50; minus $75 = $1.50."
+    },
+    {
+      "q": "Portfolio: 70% of profit from one partner who has paid late twice. Starting rules say:",
+      "options": [
+        "Send them more",
+        "Stop all campaigns",
+        "Ignore it",
+        "Pause new traffic to them until a written date, and test a second partner"
+      ],
+      "answer": 3,
+      "why": "Late payments pause new traffic; over 60% share calls for a second partner."
+    }
+  ]
+}

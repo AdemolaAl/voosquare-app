@@ -1,0 +1,2754 @@
+{
+  "school": "operator",
+  "order": 7,
+  "slug": "telegram-funnel-flow",
+  "title": "Telegram funnel flow, end to end",
+  "summary": "The full Telegram funnel on one page: from a Meta ad through the prelander, join request, bot, channel and tracked offer link to the first deposit, the postback and the event that teaches the ad platform. You learn to track every hop, nurture honestly, read the numbers hop by hop and build and launch your own flow with the legal checks done first.",
+  "lessons": [
+    {
+      "slug": "the-whole-flow-on-one-page",
+      "title": "The whole flow on one page",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can draw every hop from a Meta ad to a deposit and back to the ad platform",
+        "By the end you can say what each hop does and what you measure there",
+        "By the end you can explain who controls each hop: you, Telegram, the network or the ad platform",
+        "By the end you can spot the two places most Telegram funnels lose their tracking"
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "One person, eleven hops",
+          "p": "A Telegram funnel looks simple from the outside: an ad, a channel, a deposit. Inside, one person passes through about eleven hops, and each hop can lose them or lose their tracking. This module walks the whole path, then shows you how to measure it, fill it with honest content, read its numbers and build your own.",
+          "d": {
+            "b": "Ad to deposit and back again",
+            "s": "Every hop can leak people or data"
+          },
+          "say": "From the outside, a Telegram funnel looks simple: an ad, a channel, a deposit. Inside, one person passes through about eleven hops, and each hop can lose them, or lose their tracking. That's the idea on screen: ad to deposit and back again, and every hop can leak people or data. In this module we'll walk the whole path, then learn how to measure it, fill it with honest content, read its numbers, and build your own."
+        },
+        {
+          "v": "map",
+          "h": "The full flow on one map",
+          "p": "Here is the whole journey. A Meta ad sends a click to your prelander. The prelander hands out an invite link that needs admin approval. Your bot sees the join request, welcomes the person and approves them. The channel nurtures them. A tracked offer link leads to registration and a first deposit. The network postback travels back, and you send the event to Meta.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Meta ad",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Prelander",
+                "kind": "page"
+              },
+              {
+                "id": "jr",
+                "label": "Join request",
+                "kind": "telegram"
+              },
+              {
+                "id": "bot",
+                "label": "Welcome bot",
+                "kind": "bot"
+              },
+              {
+                "id": "ch",
+                "label": "Channel posts",
+                "kind": "telegram"
+              },
+              {
+                "id": "offer",
+                "label": "Offer sign-up",
+                "kind": "offer"
+              },
+              {
+                "id": "ftd",
+                "label": "First deposit",
+                "kind": "money"
+              },
+              {
+                "id": "pb",
+                "label": "Postback",
+                "kind": "data"
+              },
+              {
+                "id": "ev",
+                "label": "Ad platform event",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "lp",
+                "click"
+              ],
+              [
+                "lp",
+                "jr",
+                "invite link"
+              ],
+              [
+                "jr",
+                "bot",
+                "update"
+              ],
+              [
+                "bot",
+                "ch",
+                "approve"
+              ],
+              [
+                "ch",
+                "offer",
+                "offer link"
+              ],
+              [
+                "offer",
+                "ftd",
+                "deposit"
+              ],
+              [
+                "ftd",
+                "pb",
+                "network"
+              ],
+              [
+                "pb",
+                "ev",
+                "server event"
+              ]
+            ]
+          },
+          "more": "Read the map left to right for the person and right to left for the data. The person moves forward through pages and chats. The data has to travel all the way back so that Meta learns which ads produced deposits. If the data path breaks anywhere, Meta optimises for the wrong people even when the funnel itself is fine.",
+          "say": "Here's the whole journey on one map. Follow the arrows. A Meta ad sends a click to your prelander. The prelander hands out an invite link that needs admin approval. Your bot sees the join request, welcomes the person and approves them. The channel nurtures them. A tracked offer link leads to sign-up and a first deposit. Then the network postback travels back, and you send the event to Meta. Read it left to right for the person, and right to left for the data. If the data path breaks anywhere, Meta optimises for the wrong people."
+        },
+        {
+          "v": "phone",
+          "h": "Hop 1 and 2: the ad lands on a prelander",
+          "p": "The prelander is the first page you control. It repeats the ad promise, explains what the channel offers, and has one button: join the channel. It is also where you capture the click ID from the ad, because after this point the person leaves the web and enters Telegram.",
+          "d": {
+            "app": "browser",
+            "url": "learn.example.com/ng-markets",
+            "page": {
+              "h": "Free daily market lessons in plain English",
+              "p": "Join our Telegram channel for one short lesson a day. Trading is risky and you can lose money. 18+ only.",
+              "cta": "Join the channel"
+            }
+          },
+          "say": "Hops one and two: the ad lands on a prelander. This is the first page you control. Look at the example on the phone. It repeats the ad's promise of free daily lessons, explains what the channel offers, states that trading is risky and you can lose money, says eighteen plus only, and has one button: join the channel. It's also where you capture the click I D from the ad, because after this point the person leaves the web and enters Telegram."
+        },
+        {
+          "v": "map",
+          "h": "The front half: from click to member",
+          "p": "Zoom in on the first half. The prelander stores the click, then gives the person an invite link that needs approval. Telegram sends your bot a join request update. The bot sends a short welcome while the request is pending, then approves. Only now is the person a member.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Ad click",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Prelander stores click",
+                "kind": "page"
+              },
+              {
+                "id": "link",
+                "label": "Invite link (approval on)",
+                "kind": "telegram"
+              },
+              {
+                "id": "jr",
+                "label": "Join request",
+                "kind": "telegram"
+              },
+              {
+                "id": "bot",
+                "label": "Bot: welcome then approve",
+                "kind": "bot"
+              },
+              {
+                "id": "mem",
+                "label": "Channel member",
+                "kind": "person"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "lp",
+                "fbclid"
+              ],
+              [
+                "lp",
+                "link",
+                "tap"
+              ],
+              [
+                "link",
+                "jr",
+                "request"
+              ],
+              [
+                "jr",
+                "bot",
+                "chat_join_request"
+              ],
+              [
+                "bot",
+                "mem",
+                "approved"
+              ]
+            ]
+          },
+          "say": "Now zoom in on the front half, from click to member. Follow the map. The ad click arrives, and the prelander stores the click. It gives the person an invite link with approval switched on. They tap it, and Telegram sends your bot a join request update. The bot sends a short welcome while the request is pending, then approves. Only at that point is the person actually a channel member."
+        },
+        {
+          "v": "phone",
+          "h": "Hop 4 and 5: the welcome",
+          "p": "While a join request is pending, the bot may send the person a private message. At the time of writing that window is about five minutes, until the request is handled. Use it for one clear, honest welcome and a button to start the bot, so you can keep talking later with their consent.",
+          "d": {
+            "app": "bot",
+            "title": "Market Lessons Bot",
+            "subtitle": "bot",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Hi, thanks for your request to join Market Lessons. One short lesson a day, no promises of profit. Trading is risky. 18+ only."
+              },
+              {
+                "from": "them",
+                "text": "Tap Start to get the free starter guide and choose how often we message you.",
+                "buttons": [
+                  "Start",
+                  "No thanks"
+                ]
+              },
+              {
+                "from": "me",
+                "text": "/start"
+              },
+              {
+                "from": "them",
+                "text": "Welcome. You are in. Type /stop at any time to stop bot messages."
+              }
+            ]
+          },
+          "more": "Order matters: send the welcome first, then approve. If you approve first, the pending window can close before your message goes out. Also note what the bot cannot do: it cannot message someone who never started it, apart from this join-request window. That is a Telegram rule, and it protects people from spam.",
+          "say": "Hops four and five: the welcome. While a join request is pending, the bot may send the person a private message. At the time of writing, that window is about five minutes, until the request is handled. Look at the chat. One clear, honest welcome, no promises of profit, the risk and age line, and a Start button so you can keep talking later with their consent. Order matters: send the welcome first, then approve. And remember, a bot can't message someone who never started it, apart from this window. That's a Telegram rule that protects people from spam."
+        },
+        {
+          "v": "map",
+          "h": "The back half: from member to money",
+          "p": "Now the second half. Channel posts point to the bot, not straight to the offer. The bot hands each person their own offer link with sub IDs. The network records registration and first deposit, then calls your server with a postback. Your server sends the matching event to Meta.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ch",
+                "label": "Channel post",
+                "kind": "telegram"
+              },
+              {
+                "id": "bot",
+                "label": "Bot gives personal link",
+                "kind": "bot"
+              },
+              {
+                "id": "net",
+                "label": "Network tracking link",
+                "kind": "tool"
+              },
+              {
+                "id": "reg",
+                "label": "Registration",
+                "kind": "offer"
+              },
+              {
+                "id": "ftd",
+                "label": "First deposit",
+                "kind": "money"
+              },
+              {
+                "id": "srv",
+                "label": "Your server",
+                "kind": "data"
+              },
+              {
+                "id": "meta",
+                "label": "Meta event",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "ch",
+                "bot",
+                "deep link"
+              ],
+              [
+                "bot",
+                "net",
+                "sub1=click_id"
+              ],
+              [
+                "net",
+                "reg",
+                "redirect"
+              ],
+              [
+                "reg",
+                "ftd",
+                "KYC + deposit"
+              ],
+              [
+                "ftd",
+                "srv",
+                "postback"
+              ],
+              [
+                "srv",
+                "meta",
+                "server event"
+              ]
+            ]
+          },
+          "more": "Why route through the bot? A channel post shows the same link to everyone, so it cannot carry a personal ID. The bot knows which Telegram user came from which click, so it can build a personal offer link for each person. That is what lets a deposit three weeks later find its way back to the right ad.",
+          "say": "Now the back half, from member to money. Follow the map. Channel posts point to the bot, not straight to the offer. The bot hands each person their own offer link, with sub I Ds. The network records sign-up, then K Y C, know your customer checks, and a first deposit, and calls your server with a postback. Your server then sends the matching event to Meta. Why route through the bot? A channel post shows the same link to everyone. The bot knows which person came from which click, so a deposit weeks later can find its way back to the right ad."
+        },
+        {
+          "v": "table",
+          "h": "What each hop does",
+          "p": "Use this table as your reference. Every hop has one job and one number you watch. When results drop, you walk the table from top to bottom and find the hop whose number moved.",
+          "d": {
+            "cols": [
+              "Hop",
+              "Job",
+              "You measure"
+            ],
+            "rows": [
+              [
+                "Ad",
+                "Earn the click",
+                "CTR, CPC"
+              ],
+              [
+                "Prelander",
+                "Context, one button",
+                "Join-tap rate"
+              ],
+              [
+                "Join request",
+                "Ask to enter",
+                "Requests per tap"
+              ],
+              [
+                "Bot welcome",
+                "Greet, get Start",
+                "Start rate"
+              ],
+              [
+                "Channel",
+                "Teach, build trust",
+                "Retention, views"
+              ],
+              [
+                "Offer link",
+                "Personal tracked link",
+                "Offer clicks"
+              ],
+              [
+                "Offer",
+                "Register, deposit",
+                "Reg and FTD rate"
+              ]
+            ]
+          },
+          "say": "Use this table as your reference. Every hop has one job and one number you watch. The ad earns the click, so you watch C T R, click-through rate, and C P C, cost per click. The prelander gives context and one button, so you watch the join tap rate. Then requests per tap, the bot's start rate, channel retention and views, offer clicks, and finally the registration and F T D, first time deposit, rate. When results drop, walk the table top to bottom and find the hop whose number moved."
+        },
+        {
+          "v": "cards",
+          "h": "Who controls each hop",
+          "p": "You do not own the whole path. Knowing who controls each hop tells you what you can fix and what you can only work around. Rules set by Telegram, the network or Meta can change, so check their current documentation when something stops working.",
+          "d": [
+            "You|Ad, prelander, bot, posts, your server",
+            "Telegram|Invite links, join requests, bot limits",
+            "Network|Offer page, KYC, postback timing",
+            "Meta|Delivery, event matching, attribution",
+            "The person|Every decision to continue or leave"
+          ],
+          "say": "You don't own the whole path. Look at the cards. You control the ad, the prelander, the bot, the posts and your server. Telegram controls invite links, join requests and bot limits. The network controls the offer page, K Y C and postback timing. Meta controls delivery, event matching and attribution. And the person controls every decision to continue or leave. Knowing who owns each hop tells you what you can fix and what you can only work around. Their rules can change, so check their current documentation."
+        },
+        {
+          "v": "code",
+          "h": "Two links you will meet",
+          "p": "Two Telegram links do most of the work. An invite link lets someone join the channel, and can be set to need admin approval. A bot deep link opens your bot and passes a short code in the start parameter. Both can carry tracking, in different ways.",
+          "d": {
+            "lang": "url",
+            "text": "Invite link:   https://t.me/+AbCdEf123456\nBot deep link: https://t.me/MarketLessonsBot?start=ck_8f3k2",
+            "note": "Example links. At the time of writing the start code can be up to 64 characters: letters, numbers, _ and -. Check the current Bot API docs."
+          },
+          "say": "Two Telegram links do most of the work, and you can see example versions on screen. Don't worry about the exact characters. The first is an invite link, which lets someone join the channel and can be set to need admin approval. The second is a bot deep link, which opens your bot and passes a short code in the start parameter. Both can carry tracking, but in different ways. At the time of writing, that start code can be up to sixty four characters, so check the current Bot A P I docs."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes: the leaky flow",
+          "p": "Most broken Telegram funnels make the same two mistakes: they drop the click ID at the prelander, and they post one shared offer link in the channel. Both make it impossible to say which ad produced which deposit.",
+          "d": {
+            "a": {
+              "title": "Leaky flow",
+              "items": [
+                "One invite link for every ad",
+                "Offer link pasted in channel posts",
+                "No postback set up",
+                "Meta optimises for clicks only"
+              ]
+            },
+            "b": {
+              "title": "Tracked flow",
+              "items": [
+                "Click stored at the prelander",
+                "Join request linked to that click",
+                "Bot gives each person their own link",
+                "Postback returns, server event sent"
+              ]
+            }
+          },
+          "say": "Most broken Telegram funnels make the same two mistakes. They drop the click I D at the prelander, and they post one shared offer link in the channel. Compare the columns. The leaky flow uses one invite link for every ad, pastes the offer link in posts, has no postback, and Meta ends up optimising for clicks only. The tracked flow stores the click at the prelander, links the join request to that click, has the bot give each person their own link, and sends the postback back as a server event."
+        },
+        {
+          "v": "funnel",
+          "h": "Example: one flow in numbers",
+          "p": "Example numbers for one week, to show the shape. Each bar is a hop. Notice how big the early drops are in absolute terms and how small the final number is. That is normal for deposit offers. The Reading the funnel numbers lesson shows how to read these rates properly.",
+          "d": [
+            [
+              "Link clicks",
+              1000
+            ],
+            [
+              "Prelander views",
+              820
+            ],
+            [
+              "Join requests",
+              300
+            ],
+            [
+              "Welcomed",
+              290
+            ],
+            [
+              "Offer link clicks",
+              80
+            ],
+            [
+              "Registrations",
+              40
+            ],
+            [
+              "FTDs",
+              8
+            ]
+          ],
+          "say": "Here's an example week, to show the shape. Each bar is a hop. One thousand link clicks, eight hundred and twenty prelander views, three hundred join requests, two hundred and ninety welcomed, eighty offer link clicks, forty registrations, and eight F T Ds. Notice how big the early drops are in absolute terms, and how small the final number is. That's normal for deposit offers. The Reading the funnel numbers lesson shows you how to read these rates properly."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example",
+          "p": "Example: you spend $250 and get 8 first deposits. Cost per FTD is $250 ÷ 8 = $31.25. With an FTD payout of $40 you earn $320, a $70 profit. Cost per join request is $250 ÷ 300 = about $0.83.",
+          "d": {
+            "kind": "example",
+            "text": "Example: $250 spend ÷ 8 FTDs = $31.25 per FTD. Payout $40 × 8 = $320 revenue, $70 profit."
+          },
+          "more": "Why track cost per join request at all if you are paid per FTD? Because FTDs arrive slowly and in small numbers. Join requests arrive the same day in the hundreds. A rising cost per join request is an early warning that something changed at the ad or prelander, days before the FTD numbers can tell you.",
+          "say": "Let's work through the example. You spend two hundred and fifty dollars and get eight first deposits. Cost per F T D is two hundred and fifty divided by eight, which is thirty one dollars twenty five. With a forty dollar payout, you earn three hundred and twenty dollars, a seventy dollar profit. Cost per join request is about eighty three cents. Why track that if you're paid per F T D? Because F T Ds arrive slowly and in small numbers, while join requests arrive the same day. A rising cost per request is an early warning."
+        },
+        {
+          "v": "tip",
+          "h": "Joins warn you, FTDs decide",
+          "p": "Join requests warn you early; network-confirmed FTDs decide. The rule card from the Budget and kill rules module: kill at 2 × target CPA with 0 FTDs, kill above the CPA kill line once spend reaches 3 × target, scale +20% at 3+ FTDs and CPA ≤ 0.8 × target, otherwise hold. Starting rules; adapt them.",
+          "more": "Apply it to the worked example. Payout $40 with a 25% margin gives a target of $30. Break-even is $40, and 1.5 × $30 is $45, so the CPA kill line is the lower one, $40. Spend $250 is well past 3 × target ($90). Cost per FTD $31.25 is above target but under $40, so the ad set holds: no budget change, fix the weakest hop, check again at the next checkpoint.",
+          "d": {
+            "kind": "example",
+            "text": "Example: payout $40, target $30. Zero-FTD kill line $60. CPA kill line $40 (lower of $45 and break-even $40). Scale line $24. The $31.25 above is a Hold."
+          },
+          "say": "Joins warn you early, but network confirmed F T Ds decide. Here's the rule card from the Budget and kill rules module. Kill at two times target C P A, cost per acquisition, with zero F T Ds. Kill above the C P A kill line once spend reaches three times target. Scale by twenty percent at three or more F T Ds with C P A at or below zero point eight times target. Otherwise, hold. In the example, payout is forty dollars and target thirty, so the kill line is forty dollars. The thirty one twenty five result is a hold. These are starting rules, so adapt them."
+        },
+        {
+          "v": "tip",
+          "h": "Rules sit on top of the map",
+          "p": "Trading and gambling offers are regulated. Ads for them usually need platform authorization, and some financial products are not allowed on Meta at all. Local law decides who may promote what, and to whom. Check both before you draw a single arrow.",
+          "d": {
+            "kind": "warn",
+            "text": "Check the ad platform policy and local law for your geo and vertical before you build. Rules change."
+          },
+          "say": "The rules sit on top of the map. Trading and gambling offers are regulated. Ads for them usually need platform authorization, and some financial products aren't allowed on Meta at all. Local law decides who may promote what, and to whom. As the warning says, check the ad platform policy and local law for your geo and vertical before you build, because rules change. Check both before you draw a single arrow."
+        },
+        {
+          "v": "check",
+          "h": "Before you draw your own map",
+          "p": "Write these down before you build anything, even for a small test. If you cannot fill in a line, that hop is not ready yet, and money spent on it will teach you very little. The Build your own flow lesson turns this list into a full template.",
+          "d": [
+            "Offer, payout and which event you are paid on",
+            "Platform policy and local law checked for the geo",
+            "Where the click ID is stored",
+            "How a join is linked back to that click",
+            "How the offer link carries the ID",
+            "Where the postback lands and what you send to Meta"
+          ],
+          "say": "Before you draw your own map, write these down, even for a small test. The offer, the payout and which event you're paid on. Platform policy and local law checked for the geo. Where the click I D is stored. How a join is linked back to that click. How the offer link carries the I D. And where the postback lands and what you send to Meta. If you can't fill in a line, that hop isn't ready, and money spent on it will teach you very little."
+        },
+        {
+          "v": "big",
+          "h": "The map is your debugging tool",
+          "p": "When something breaks, and it will, do not guess. Open your map, walk it hop by hop, and find the first place where the count or the ID stops. Fix that one place. Buyers who keep a map fix problems in an hour that others chase for a week.",
+          "d": {
+            "b": "Walk the map, find the first break",
+            "s": "Fix one hop at a time"
+          },
+          "say": "Here's the habit that separates calm buyers from stressed ones. When something breaks, and it will, don't guess. Open your map, walk it hop by hop, and find the first place where the count or the I D stops. Fix that one place. As the screen says: walk the map, find the first break, fix one hop at a time. Buyers who keep a map fix in an hour what others chase for a week."
+        }
+      ],
+      "takeaways": [
+        "A Telegram funnel has about eleven hops from ad to ad platform event, and each can lose people or data.",
+        "The welcome is sent during the join-request window, then the request is approved; bots cannot message people who never started them outside that window.",
+        "Channel posts send people to the bot so each person gets a personal tracked offer link.",
+        "Cost per join request is your fast early signal; cost per FTD is the number that pays you."
+      ],
+      "action": "On paper or in a notes app, draw your current or planned funnel as boxes and arrows. Under each arrow, write what ID or data passes along it. Circle any arrow where you do not know the answer.",
+      "glossary": [
+        {
+          "term": "Hop",
+          "def": "One step a person passes through in a funnel, such as the prelander or the join request."
+        },
+        {
+          "term": "Bot deep link",
+          "def": "A t.me link to a bot with a start code, such as ?start=ck_8f3k2, that the bot receives when the person taps Start."
+        },
+        {
+          "term": "Pending window",
+          "def": "The short time while a join request waits for approval, when the bot may message the person privately. About five minutes at the time of writing."
+        },
+        {
+          "term": "Personal offer link",
+          "def": "An offer link built for one person, carrying their own sub ID so a later deposit can be traced to their ad click."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why do channel posts in a tracked flow send people to the bot instead of straight to the offer?",
+          "options": [
+            "Telegram does not allow links in channel posts",
+            "A channel post shows the same link to everyone, so it cannot carry a personal ID",
+            "The bot makes the offer page load faster",
+            "Networks reject traffic from channels"
+          ],
+          "answer": 1,
+          "why": "One post, one link, every reader. The bot knows which person came from which click, so it can give each person their own tracked link."
+        },
+        {
+          "q": "Your bot receives a join request. What is the better order of actions?",
+          "options": [
+            "Approve first, then message whenever you like",
+            "Ignore the request and wait for the person to message you",
+            "Send the short welcome first, then approve the request",
+            "Add the person to a group without asking"
+          ],
+          "answer": 2,
+          "why": "The bot may message the person only during the pending window, which can close once the request is handled. Welcome first, then approve."
+        },
+        {
+          "q": "Which hop is the last point where you can read the ad click ID directly from the URL?",
+          "options": [
+            "The prelander",
+            "The join request",
+            "The channel post",
+            "The broker registration page"
+          ],
+          "answer": 0,
+          "why": "After the prelander, the person leaves the web for Telegram. If you do not store the click there, it is gone."
+        },
+        {
+          "q": "You are paid per FTD. Why watch cost per join request?",
+          "options": [
+            "Because networks pay on join requests",
+            "Meta requires it",
+            "It replaces the need for a postback",
+            "It arrives fast and in volume, so it warns you early when something changes"
+          ],
+          "answer": 3,
+          "why": "FTDs are few and slow. Join requests come the same day and show changes at the ad or prelander quickly."
+        },
+        {
+          "q": "Who controls the rules for invite links, join requests and bot messaging limits?",
+          "options": [
+            "You",
+            "Telegram",
+            "The affiliate network",
+            "Meta"
+          ],
+          "answer": 1,
+          "why": "Telegram sets how invite links, join requests and bots work. You work within those rules and check their current documentation."
+        }
+      ],
+      "say_intro": "In this lesson you'll see the whole Telegram funnel on one page, every hop from a Meta ad to a deposit and back to the ad platform. You'll learn what each hop does, who controls it, and the two places most funnels lose their tracking.",
+      "say_outro": "To recap: one person passes through about eleven hops, the person moves forward while the data has to travel all the way back, and your map is your debugging tool. Your task: on paper or in a notes app, draw your current or planned funnel as boxes and arrows. Under each arrow, write what I D or data passes along it, and circle any arrow where you don't know the answer. Now take the quiz."
+    },
+    {
+      "slug": "tracking-every-hop",
+      "title": "Tracking every hop",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can pass an ad ID through the prelander, join request, bot and offer link",
+        "By the end you can explain how a Telegram join is attributed back to an ad",
+        "By the end you can read a generic postback URL and map network events to ad platform events",
+        "By the end you can test the whole chain before spending"
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "One ID has to survive every hop",
+          "p": "Tracking a Telegram funnel means carrying one identifier from the ad click to the deposit and back. The Tracking basics and Tracking setup lab modules taught click IDs, pixels and postbacks; the Tracking, advanced module goes deeper. This lesson applies them to the hops that are special to Telegram: the invite link, the join request and the bot.",
+          "d": {
+            "b": "Store it, link it, pass it, return it",
+            "s": "Four jobs for one click ID"
+          },
+          "say": "Tracking a Telegram funnel means carrying one identifier from the ad click to the deposit, and back again. You learned click I Ds, pixels and postbacks in earlier modules. This lesson applies them to the hops that are special to Telegram: the invite link, the join request, and the bot. The screen gives you four jobs for one click I D: store it, link it, pass it, and return it."
+        },
+        {
+          "v": "map",
+          "h": "Where the ID travels",
+          "p": "Follow the ID. Meta adds a click ID to the landing URL. Your prelander stores it under your own click ID. That click ID rides inside a unique invite link name or a bot start code. The bot links it to the Telegram user, then puts it in sub1 of the offer link. The network returns it in the postback.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Ad click (fbclid)",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Prelander: click_id",
+                "kind": "page"
+              },
+              {
+                "id": "inv",
+                "label": "Invite link name",
+                "kind": "telegram"
+              },
+              {
+                "id": "bot",
+                "label": "Bot: user ↔ click_id",
+                "kind": "bot"
+              },
+              {
+                "id": "offer",
+                "label": "Offer link sub1",
+                "kind": "offer"
+              },
+              {
+                "id": "pb",
+                "label": "Postback sub1",
+                "kind": "data"
+              },
+              {
+                "id": "srv",
+                "label": "Your server",
+                "kind": "tool"
+              },
+              {
+                "id": "meta",
+                "label": "Meta event",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "lp",
+                "URL"
+              ],
+              [
+                "lp",
+                "inv",
+                "per visitor"
+              ],
+              [
+                "inv",
+                "bot",
+                "join request"
+              ],
+              [
+                "bot",
+                "offer",
+                "personal link"
+              ],
+              [
+                "offer",
+                "pb",
+                "network"
+              ],
+              [
+                "pb",
+                "srv",
+                "HTTP call"
+              ],
+              [
+                "srv",
+                "meta",
+                "CAPI"
+              ]
+            ]
+          },
+          "say": "Follow the I D across this map. Meta adds its own click I D to the landing link. Your prelander stores it under your own click I D. That click I D rides inside a unique invite link name, or a bot start code. The bot links it to the Telegram user, then puts it in sub one of the offer link. The network returns it in the postback, your server receives it, and sends the event to Meta through the Conversions A P I."
+        },
+        {
+          "v": "code",
+          "h": "Tag the ad URL",
+          "p": "Start at the ad. Add URL parameters so every click tells your prelander which campaign, ad set and ad it came from. Meta can fill these in for you with dynamic values in double curly brackets. Meta also adds its own fbclid to the URL when someone clicks.",
+          "d": {
+            "lang": "url",
+            "text": "https://learn.example.com/ng-markets?src=meta&cmp={{campaign.id}}&as={{adset.id}}&ad={{ad.id}}&pl={{placement}}",
+            "note": "Dynamic parameter names can change; check the current Ads Manager help."
+          },
+          "more": "At the prelander your code reads these values plus fbclid, creates your own short click_id such as ck_8f3k2, and saves one row: click_id, campaign, ad set, ad, placement, fbclid, time, IP address and user agent. IP and user agent are used later for event matching, so state that in your privacy notice and follow local data protection law.",
+          "say": "Start at the ad. Add U R L parameters, so every click tells your prelander which campaign, ad set and ad it came from. The code on screen shows an example. Meta can fill these values in for you, using dynamic values in double curly brackets, and it also adds its own click I D when someone clicks. At the prelander, your code saves one row: your click I D, the campaign, ad set, ad, placement, Meta's click I D, the time, I P address and user agent. Those last two are used for event matching, so state that in your privacy notice and follow local data protection law."
+        },
+        {
+          "v": "screen",
+          "h": "Where the parameters go",
+          "p": "In an Ads Manager-style editor, the tracking parameters usually sit in a URL parameters field at the ad level, separate from the website URL. Keep the website URL clean and put the tags in that field so they apply the same way to every ad you duplicate.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/ad/edit",
+            "title": "Ad: NG_Markets_Hook03",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Website URL",
+                "value": "https://learn.example.com/ng-markets"
+              },
+              {
+                "type": "field",
+                "label": "URL parameters",
+                "value": "src=meta&cmp={{campaign.id}}&as={{adset.id}}&ad={{ad.id}}"
+              },
+              {
+                "type": "text",
+                "value": "Preview: learn.example.com/ng-markets?src=meta&cmp=120...&as=120...&ad=120..."
+              },
+              {
+                "type": "button",
+                "label": "Publish"
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "So where do those parameters go? In an Ads Manager style editor, they usually sit in a U R L parameters field at the ad level, separate from the website link. Look at the highlighted field. Keep the website link clean, and put the tags in that parameters field. That way they apply the same way to every ad you duplicate, and you never have to retype them by hand."
+        },
+        {
+          "v": "compare",
+          "h": "Link per ad set or link per visitor",
+          "p": "There are two levels of join tracking. A link per ad set tells you which ad set brought each join. A link per visitor, created by your bot or tool when the prelander loads, links each join to one exact click. The second is needed if you want to send server events Meta can match.",
+          "d": {
+            "a": {
+              "title": "Link per ad set",
+              "items": [
+                "One invite link per ad set, named after it",
+                "Easy, no code",
+                "Counts joins per ad set",
+                "Cannot match a join to one click"
+              ]
+            },
+            "b": {
+              "title": "Link per visitor",
+              "items": [
+                "Bot creates a fresh link per page load",
+                "Needs a bot and a small server",
+                "Links each join to one click_id",
+                "Enables matched server events"
+              ]
+            }
+          },
+          "more": "Start with links per ad set if you are new. Telegram lets admins create many invite links, each with a name, and shows join counts per link. When you are ready, move to per-visitor links created through the Bot API. Check current Telegram limits on how many links you create and how fast.",
+          "say": "There are two levels of join tracking. On the left, a link per ad set. One invite link per ad set, named after it. It's easy, needs no code, and counts joins per ad set, but it can't match a join to one click. On the right, a link per visitor. Your bot creates a fresh link per page load. It needs a bot and a small server, but it links each join to one click I D, and that enables matched server events. If you're new, start with links per ad set, then move up when you're ready."
+        },
+        {
+          "v": "code",
+          "h": "Creating a per-visitor invite link",
+          "p": "Your server asks the Bot API to create an invite link that needs approval, and uses the link name to hold the click ID. The bot must be an admin of the channel with permission to invite users. The token stays on your server, never in the page.",
+          "d": {
+            "lang": "json",
+            "text": "POST https://api.telegram.org/bot<TOKEN>/createChatInviteLink\n{\n  \"chat_id\": \"@market_lessons_ng\",\n  \"name\": \"ck_8f3k2\",\n  \"creates_join_request\": true\n}",
+            "note": "Link names are short (32 characters at the time of writing). At the time of writing a link that needs approval cannot also have a member limit; check the current Bot API docs."
+          },
+          "say": "Here's how a per visitor invite link gets made. Your server asks the Bot A P I to create an invite link that needs approval, and uses the link's name to hold the click I D. You can see the shape of that request on screen. The bot must be a channel admin with permission to invite users. And the token stays on your server, never in the page. At the time of writing, link names are short, thirty two characters, so check the current Bot A P I docs."
+        },
+        {
+          "v": "flow",
+          "h": "What happens when the request arrives",
+          "p": "When the person taps the link and asks to join, Telegram sends your bot a chat_join_request update, by long polling or webhook. It includes the user and the invite link they used. Your bot reads the link name, finds the click, saves the pair and acts.",
+          "d": [
+            "Update arrives",
+            "Read invite link name",
+            "Find click_id row",
+            "Save Telegram user ↔ click_id",
+            "Send welcome",
+            "approveChatJoinRequest"
+          ],
+          "say": "Now, what happens when the request arrives? Follow the flow. When the person taps the link and asks to join, Telegram sends your bot a join request update, by long polling or a webhook. It includes the user and the invite link they used. Your bot reads the invite link name, finds the matching click row, saves the Telegram user paired with that click I D, sends the welcome, and then approves the request."
+        },
+        {
+          "v": "code",
+          "h": "The join request update, trimmed",
+          "p": "This is a shortened example of what the bot receives. You need three things from it: the chat, the user and the invite link name. Everything else is optional for tracking. Store the user ID only in your own database, never in URLs.",
+          "d": {
+            "lang": "json",
+            "text": "{\n  \"chat_join_request\": {\n    \"chat\": { \"id\": -1001234567890, \"title\": \"Market Lessons\" },\n    \"from\": { \"id\": 555000111, \"first_name\": \"Ada\" },\n    \"user_chat_id\": 555000111,\n    \"date\": 1759561200,\n    \"invite_link\": { \"name\": \"ck_8f3k2\", \"creates_join_request\": true }\n  }\n}",
+            "note": "Example values. Field lists can grow; read the current Bot API docs."
+          },
+          "say": "This is a shortened example of what the bot receives. You don't need to read every line. You need three things from it: the chat, the user, and the invite link name. Everything else is optional for tracking. One important habit: store the user's I D only in your own database. Never put it in links. Field lists can grow over time, so read the current Bot A P I docs."
+        },
+        {
+          "v": "code",
+          "h": "The personal offer link",
+          "p": "When the person later taps an offer post, the bot sends them a link built just for them. Your click_id goes into a sub ID, plus a short label for the ad set and the source. Sub ID names differ by network: sub1, aff_sub, s1 and so on.",
+          "d": {
+            "lang": "url",
+            "text": "https://track.network.example/click?offer=1234&aff=5678&sub1=ck_8f3k2&sub2=as03&sub3=tg",
+            "note": "Example network. Use your network's own parameter names."
+          },
+          "say": "When the person later taps an offer post, the bot sends them a link built just for them. Look at the example link on screen. Your click I D goes into a sub I D, plus a short label for the ad set and another for the source, here Telegram. Sub I D names differ by network. Some call it sub one, others aff sub, or s one, and so on. Use your own network's parameter names."
+        },
+        {
+          "v": "tip",
+          "h": "No personal data in sub IDs",
+          "p": "Sub IDs travel through other companies' systems and show up in their reports. Put only your own opaque IDs there. Never a phone number, name, email or Telegram username.",
+          "d": {
+            "kind": "warn",
+            "text": "Sub IDs carry your own random IDs only. Never names, phone numbers, emails or usernames."
+          },
+          "say": "Here's a firm rule. Sub I Ds travel through other companies' systems and show up in their reports. So put only your own opaque I Ds there, random codes that mean nothing to anyone else. As the warning says, never names, phone numbers, emails or usernames. That protects the people in your funnel, and it keeps you on the right side of data protection law."
+        },
+        {
+          "v": "code",
+          "h": "The postback that comes back",
+          "p": "When the person registers or deposits, the network calls a URL you gave it. The network fills in macros, such as the sub ID, the event and the payout. Your server reads the click_id, finds the original ad click and records the conversion.",
+          "d": {
+            "lang": "url",
+            "text": "https://pb.yourserver.example/pb?click_id={sub1}&event={event}&payout={payout}&tx={transaction_id}&key=<SECRET>",
+            "note": "Macro names vary by network. Copy them from your network's postback settings."
+          },
+          "more": "Add a secret key to the URL and reject calls without it, so nobody can send you fake conversions. Use the transaction ID to ignore repeats: networks sometimes send the same postback twice. Store every postback as raw data first, then process it. If processing has a bug, you can replay the raw rows after fixing it.",
+          "say": "When the person registers or deposits, the network calls a link you gave it, called the postback. You can see an example on screen. The network fills in macros, like the sub I D, the event and the payout. Your server reads the click I D, finds the original ad click, and records the conversion. Add a secret key and reject calls without it, so nobody can send fake conversions. Use the transaction I D to ignore repeats. And store every postback as raw data first, so you can replay it if processing has a bug."
+        },
+        {
+          "v": "table",
+          "h": "Mapping hops to ad events",
+          "p": "Decide in advance which hop becomes which event in Meta. Use standard events where they fit so reports are easy to read. A join is not a website action, so it reaches Meta only as a server event from your system.",
+          "d": {
+            "cols": [
+              "Your hop",
+              "Source",
+              "Example Meta event"
+            ],
+            "rows": [
+              [
+                "Prelander view",
+                "Pixel + server",
+                "ViewContent"
+              ],
+              [
+                "Join request",
+                "Bot server",
+                "Lead or custom"
+              ],
+              [
+                "Registration",
+                "Postback",
+                "CompleteRegistration"
+              ],
+              [
+                "First deposit",
+                "Postback",
+                "Purchase + value"
+              ]
+            ]
+          },
+          "more": "Event names and the right action source field are set by Meta and can change; check the current Conversions API docs. Pick one event to optimise for. Deeper events like FTD are worth more but arrive in smaller numbers, so many buyers start optimising on join requests or registrations and move deeper as volume allows. The Tracking, advanced module covers this trade-off and deduplication with event_id.",
+          "say": "Decide in advance which hop becomes which event in Meta. Read the table. A prelander view comes from the pixel and server, as view content. A join request comes from your bot server, as a lead or custom event. Registration and first deposit come from the postback, as complete registration and purchase with a value. A join isn't a website action, so it reaches Meta only as a server event. Pick one event to optimise for. Deeper events are worth more but arrive in smaller numbers."
+        },
+        {
+          "v": "code",
+          "h": "A server event, simplified",
+          "p": "This is the shape of a server event for an FTD. The fbc value is built from the fbclid you stored at the prelander. Client IP and user agent come from the same row. The event_id stops double counting if the same event is sent twice.",
+          "d": {
+            "lang": "json",
+            "text": "{\n  \"event_name\": \"Purchase\",\n  \"event_time\": 1759821600,\n  \"event_id\": \"ftd_TX99104\",\n  \"action_source\": \"website\",\n  \"event_source_url\": \"https://learn.example.com/ng-markets\",\n  \"user_data\": {\n    \"fbc\": \"fb.1.1759561180000.IwAR2xYz...\",\n    \"client_ip_address\": \"102.89.0.10\",\n    \"client_user_agent\": \"Mozilla/5.0 (Linux; Android 13) ...\"\n  },\n  \"custom_data\": { \"value\": 40, \"currency\": \"USD\" }\n}",
+            "note": "Simplified. At the time of writing Meta rejects events older than seven days; check current docs."
+          },
+          "more": "The seven-day limit matters for Telegram funnels because deposits can come weeks after the click. Send FTDs as soon as the postback arrives. Deposits that arrive later than the limit still count in your own reports and the network's, even if Meta never sees them. That is one reason Meta often shows fewer FTDs than the network.",
+          "say": "This is the shape of a server event for an F T D, first time deposit. It's simplified, so don't worry about every field. The F B C value is built from Meta's click I D that you stored at the prelander. The I P address and user agent come from the same row. And the event I D stops double counting if the same event is sent twice. At the time of writing, Meta rejects events older than seven days. Since deposits can come weeks after the click, send F T Ds as soon as the postback arrives."
+        },
+        {
+          "v": "funnel",
+          "h": "Example: where IDs get lost",
+          "p": "Example audit of 500 test-period clicks. Count how many still carry a usable click ID at each hop. Here the big loss is between the prelander and the join: the invite link was shared, not per visitor, so most joins could not be linked to a click.",
+          "d": [
+            [
+              "Clicks with fbclid",
+              500
+            ],
+            [
+              "Prelander rows saved",
+              470
+            ],
+            [
+              "Joins linked to click",
+              120
+            ],
+            [
+              "Offer clicks with sub1",
+              115
+            ],
+            [
+              "Postbacks with sub1",
+              115
+            ]
+          ],
+          "say": "Here's an example audit of five hundred test period clicks. Count how many still carry a usable click I D at each hop. Five hundred clicks with Meta's I D. Four hundred and seventy prelander rows saved. Then a big drop: only one hundred and twenty joins linked to a click. After that, one hundred and fifteen offer clicks and postbacks with sub one. The big loss is between the prelander and the join, because the invite link was shared, not per visitor."
+        },
+        {
+          "v": "cards",
+          "h": "Common tracking mistakes",
+          "p": "These five mistakes break most Telegram tracking chains. Each one looks harmless during setup and only shows up later, as deposits your network pays for that Meta never sees or that you cannot trace to an ad.",
+          "d": [
+            "Shared invite link|no join can be tied to a click",
+            "Click saved only in the browser|blocked scripts lose it",
+            "Personal data in sub IDs|use opaque IDs only",
+            "No postback secret|anyone can send fake conversions",
+            "FTDs sent days late|Meta may reject old events"
+          ],
+          "say": "These five mistakes break most Telegram tracking chains. A shared invite link means no join can be tied to a click. A click saved only in the browser gets lost when scripts are blocked. Personal data in sub I Ds, so use opaque I Ds only. No postback secret means anyone can send fake conversions. And F T Ds sent days late, because Meta may reject old events. Each one looks harmless during setup, and only shows up later as deposits you can't trace."
+        },
+        {
+          "v": "product",
+          "h": "Joins as server events, without code",
+          "p": "Building per-visitor links, a join log and server events yourself takes code and upkeep. A join tracker can create the links, read each join request, tie it to the stored click and send the join to the ad platform as a server event. Check what it stores and that your privacy notice covers it.",
+          "d": {
+            "slug": "joinvoo",
+            "why": "Ties each Telegram join to the ad click that caused it and sends it to the ad platform as a server event."
+          },
+          "say": "Building per visitor links, a join log and server events yourself takes code and upkeep. A join tracker, like the one on screen, can create the links, read each join request, tie it to the stored click, and send the join to the ad platform as a server event. If you use one, check what it stores, and make sure your privacy notice covers it."
+        },
+        {
+          "v": "check",
+          "h": "Test the chain before you spend",
+          "p": "Run this test with your own phone before any budget goes live. Use a test ad set at very low spend or Meta's preview link, and a test event code in the events tool so test data does not mix with live data.",
+          "d": [
+            "Click the ad URL and see a new prelander row",
+            "Tap join and see the request linked to that row",
+            "Receive the welcome and approval",
+            "Tap an offer post and check sub1 in the link",
+            "Ask your manager to fire a test postback",
+            "See the test event arrive in the ad platform"
+          ],
+          "say": "Test the whole chain with your own phone before any budget goes live. Use a test ad set at very low spend, or Meta's preview link, and a test event code so test data doesn't mix with live data. Then work down the list. Click the ad link and see a new prelander row. Tap join and see the request linked to that row. Get the welcome and approval. Tap an offer post and check sub one in the link. Ask your manager to fire a test postback. And see the test event arrive in the ad platform."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example",
+          "p": "Example: three test clicks. Click 1 passes every hop. Click 2 has no prelander row because the phone blocked a script. Click 3 joins but the bot was offline, so no link to the click. Two fixes before launch: save the click on the server, and restart the bot automatically.",
+          "d": {
+            "kind": "example",
+            "text": "Example: 3 test clicks, 1 clean. Starting rule: launch only when every test click passes every hop. Fix server-side click saving and bot uptime first."
+          },
+          "say": "Here's a worked example with three test clicks. Click one passes every hop. Click two has no prelander row, because the phone blocked a script. Click three joins, but the bot was offline, so there's no link to the click. So only one of three is clean. That means two fixes before launch: save the click on the server, and restart the bot automatically. The starting rule is simple: launch only when every test click passes every hop."
+        }
+      ],
+      "takeaways": [
+        "Store your own click_id at the prelander along with fbclid, IP address and user agent, and say so in your privacy notice.",
+        "Link each join to a click with a per-visitor invite link name or a bot start code.",
+        "The bot builds personal offer links with your click_id in a sub ID; sub IDs never hold personal data.",
+        "Postbacks return the click_id; your server sends matched, deduplicated events to Meta quickly."
+      ],
+      "action": "Write the exact URL for each of your hops: the ad URL with parameters, one invite link or deep link, one offer link with sub IDs and your postback URL with your network's macros. Mark which ID each one carries.",
+      "glossary": [
+        {
+          "term": "chat_join_request",
+          "def": "The Bot API update Telegram sends to an admin bot when someone asks to join through a link that needs approval."
+        },
+        {
+          "term": "createChatInviteLink",
+          "def": "A Bot API method that creates a new invite link for a chat, optionally with a name and approval required."
+        },
+        {
+          "term": "fbc",
+          "def": "A Meta click value built from the fbclid in the landing URL, sent with server events to help match them to ad clicks."
+        },
+        {
+          "term": "Postback secret",
+          "def": "A private key in your postback URL that your server checks so only your network can report conversions."
+        },
+        {
+          "term": "Dynamic URL parameter",
+          "def": "A placeholder such as {{ad.id}} that the ad platform replaces with the real value when someone clicks."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "You use one shared invite link for all ad sets. What can you not do?",
+          "options": [
+            "Get any joins at all",
+            "Approve join requests with a bot",
+            "Link a join to the ad set or click that produced it",
+            "Post in the channel"
+          ],
+          "answer": 2,
+          "why": "A shared link looks the same for every join. Named links per ad set, or per visitor, are what tie a join to its source."
+        },
+        {
+          "q": "Where should the Telegram user ID be stored?",
+          "options": [
+            "In sub2 of the offer link",
+            "Only in your own database, linked to the click_id",
+            "In the ad URL parameters",
+            "In the postback URL"
+          ],
+          "answer": 1,
+          "why": "Sub IDs and URLs pass through other systems. Keep personal identifiers in your own database and send only opaque IDs outward."
+        },
+        {
+          "q": "A deposit happens 12 days after the click. What is the likely result in Meta at the time of writing?",
+          "options": [
+            "Meta counts it twice",
+            "Meta always counts it",
+            "The network refuses to pay it",
+            "The server event may be rejected as too old, so Meta shows fewer FTDs than the network"
+          ],
+          "answer": 3,
+          "why": "Meta has a limit on how old a server event can be (seven days at the time of writing). Late deposits still pay; Meta just may not see them."
+        },
+        {
+          "q": "What stops a stranger from sending fake conversions to your postback URL?",
+          "options": [
+            "A secret key in the URL that your server checks",
+            "Using HTTP instead of HTTPS",
+            "Keeping the URL short",
+            "Adding more sub IDs"
+          ],
+          "answer": 0,
+          "why": "Your server rejects any postback that does not carry the secret. Use HTTPS as well so the key is not exposed in transit."
+        },
+        {
+          "q": "Which permission does the bot need to approve join requests in your channel?",
+          "options": [
+            "Permission to delete messages",
+            "Admin with permission to invite users",
+            "Permission to pin messages",
+            "No permission, any member can approve"
+          ],
+          "answer": 1,
+          "why": "A bot must be an admin with the invite users right to create links and approve join requests."
+        }
+      ],
+      "say_intro": "This lesson is about tracking every hop of a Telegram funnel. You'll learn how one click I D is stored, linked, passed and returned, through the prelander, the join request, the bot and the offer link, so a deposit can be traced back to the ad that caused it.",
+      "say_outro": "To recap: one I D has to survive every hop, per visitor links let you match a join to one click, sub I Ds carry only your own opaque I Ds, and you test the whole chain before spending. Your task: write the exact link for each of your hops, the ad link with parameters, one invite or deep link, one offer link with sub I Ds, and your postback link with your network's macros, and mark which I D each one carries. Now take the quiz."
+    },
+    {
+      "slug": "content-and-nurture",
+      "title": "Content and nurture in the channel",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can write a simple daily posting plan for a funnel channel",
+        "By the end you can balance education and offer posts and explain why the balance matters",
+        "By the end you can write honest proof posts and clear risk disclaimers",
+        "By the end you can apply age rules and responsible messaging for trading and gambling"
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "The channel is a promise",
+          "p": "Your prelander promised something: lessons, market notes, a guide. The channel has to keep that promise every day. People who feel tricked leave, mute or report you, and reports can hurt both your channel and your ad account. Nurture means being useful long enough to earn trust.",
+          "d": {
+            "b": "Keep the promise the ad made",
+            "s": "Trust is built daily and lost in one post"
+          },
+          "say": "Your prelander promised something, lessons, market notes, a guide. The channel has to keep that promise every day. People who feel tricked leave, mute or report you, and reports can hurt both your channel and your ad account. Nurture simply means being useful long enough to earn trust. As the screen says, trust is built daily and lost in one post."
+        },
+        {
+          "v": "phone",
+          "h": "What a good day looks like",
+          "p": "Here is an example day in a trading education channel. Most posts teach. One invites questions. The offer is mentioned plainly, with risk stated, and sends people to the bot for their own link. Nothing shouts, nothing promises profit.",
+          "d": {
+            "app": "chat",
+            "title": "Market Lessons",
+            "subtitle": "channel",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Morning lesson: what a stop-loss is, in one picture. Save this one."
+              },
+              {
+                "from": "them",
+                "text": "Midday: 3 mistakes new traders make with leverage, and how to avoid them."
+              },
+              {
+                "from": "them",
+                "text": "Evening Q&A: reply in the group with your question and we answer the best three tomorrow."
+              },
+              {
+                "from": "them",
+                "text": "Practising on a demo account first is the safest start. Our partner broker offers one. Trading is risky and most beginners lose money. 18+.",
+                "buttons": [
+                  "Get my link from the bot"
+                ]
+              }
+            ]
+          },
+          "say": "Here's an example of a good day in a trading education channel. Read the posts. A morning lesson on what a stop-loss is. A midday post on three mistakes new traders make with leverage. An evening Q and A inviting questions. Then one offer, stated plainly: a demo account is the safest start, trading is risky and most beginners lose money, eighteen plus. The button sends people to the bot for their own link. Nothing shouts, and nothing promises profit."
+        },
+        {
+          "v": "table",
+          "h": "A daily posting plan",
+          "p": "Example plan for a channel in one time zone. Post at the times your members are free: early morning, lunch and evening are common, but check your own view counts by hour. Consistency matters more than volume.",
+          "d": {
+            "cols": [
+              "Time",
+              "Post",
+              "Purpose"
+            ],
+            "rows": [
+              [
+                "07:30",
+                "Short lesson",
+                "Teach one idea"
+              ],
+              [
+                "12:30",
+                "Tip or mistake",
+                "Practical value"
+              ],
+              [
+                "17:00",
+                "Question or poll",
+                "Get replies"
+              ],
+              [
+                "19:30",
+                "Recap or explainer",
+                "Depth"
+              ],
+              [
+                "Every 2–3 days",
+                "Offer post + risk line",
+                "Tracked action"
+              ]
+            ]
+          },
+          "more": "Times are an example for West or East Africa evenings after work. Your own data beats any template: after two weeks, look at average views per post by hour and move posts to the hours that are read. Three to five posts a day is a common range; more often leads to mutes. Rough guide, varies by geo and niche.",
+          "say": "Here's an example daily posting plan. Read down the times. Seven thirty, a short lesson to teach one idea. Twelve thirty, a tip or mistake for practical value. Five o'clock, a question or poll to get replies. Seven thirty in the evening, a recap or explainer for depth. And every two to three days, an offer post with a risk line. Post when your members are free, and after two weeks, check your own view counts by hour. Consistency matters more than volume."
+        },
+        {
+          "v": "bars",
+          "h": "Example: education versus offers",
+          "p": "An example content mix by share of posts. Most posts give value with no ask. A small share asks for action. If offers creep above roughly one post in five, watch mutes and leaves closely. Rough guide, varies by geo and vertical.",
+          "d": [
+            [
+              "Education",
+              60,
+              "60%"
+            ],
+            [
+              "Questions and community",
+              20,
+              "20%"
+            ],
+            [
+              "Honest proof and updates",
+              10,
+              "10%"
+            ],
+            [
+              "Offer posts",
+              10,
+              "10%"
+            ]
+          ],
+          "say": "Here's an example content mix, by share of posts. Look at the bars. Sixty percent education. Twenty percent questions and community. Ten percent honest proof and updates. And just ten percent offer posts. Most posts give value with no ask at all. If offers creep above roughly one post in five, watch mutes and leaves closely. That's a rough guide, and it varies by geo and vertical."
+        },
+        {
+          "v": "cards",
+          "h": "Content pillars that work",
+          "p": "Plan posts in a few repeating pillars so you never stare at a blank screen. Each pillar has a job. Rotate them through the week and reuse what members save or share.",
+          "d": [
+            "Basics|Terms, how markets or games work",
+            "Mistakes|What goes wrong and how to avoid it",
+            "Tools|Demo accounts, calculators, checklists",
+            "Q&A|Answer real member questions",
+            "Safety|Scams to avoid, risk and limits"
+          ],
+          "say": "Plan your posts in a few repeating pillars, so you never stare at a blank screen. Look at the cards. Basics: terms, and how markets or games work. Mistakes: what goes wrong and how to avoid it. Tools: demo accounts, calculators and checklists. Q and A: answering real member questions. And safety: scams to avoid, risk and limits. Rotate them through the week, and reuse what members save or share."
+        },
+        {
+          "v": "compare",
+          "h": "Honest proof or fake proof",
+          "p": "Proof sells, which is why fake proof is everywhere. Faked screenshots, rented accounts and invented testimonials are misleading claims. They break platform rules and consumer protection law in many countries, and they hurt real people who believe them.",
+          "d": {
+            "a": {
+              "title": "Never post",
+              "items": [
+                "Edited or borrowed profit screenshots",
+                "Testimonials you wrote yourself",
+                "Only wins, never losses",
+                "\"Guaranteed\" or \"risk-free\" returns"
+              ]
+            },
+            "b": {
+              "title": "Honest proof",
+              "items": [
+                "Your own lessons and how-tos",
+                "Real member questions, with consent",
+                "Wins and losses shown together",
+                "Clear \"past results do not predict future results\""
+              ]
+            }
+          },
+          "say": "Proof sells, and that's exactly why fake proof is everywhere. Compare the columns. Never post edited or borrowed profit screenshots, testimonials you wrote yourself, only wins and never losses, or guaranteed or risk-free returns. These are misleading claims. They break platform rules and consumer protection law in many countries, and they hurt real people. Honest proof looks like your own lessons, real member questions with consent, wins and losses shown together, and a clear line that past results don't predict future results."
+        },
+        {
+          "v": "tip",
+          "h": "Proof of process, not profit",
+          "p": "For trading and gambling, the safest proof is proof that you teach well, not proof that people make money. A clear lesson, a member thanking you for a scam warning, a demo walkthrough. None of these promise income.",
+          "d": {
+            "kind": "tip",
+            "text": "Show that you teach well. Do not show that people \"win\". Income claims are where most trouble starts."
+          },
+          "say": "For trading and gambling, the safest proof is proof that you teach well, not proof that people make money. Think of a clear lesson, a member thanking you for a scam warning, or a demo walkthrough. None of these promise income. The tip on screen says it well: show that you teach well, don't show that people win. Income claims are where most trouble starts."
+        },
+        {
+          "v": "code",
+          "h": "A risk line you can adapt",
+          "p": "Every offer post and the pinned message should carry a short, plain risk statement. Use the broker's or operator's own required wording where they provide it, including any official percentage of losing accounts. Never invent that number.",
+          "d": {
+            "lang": "text",
+            "text": "Trading involves risk. You can lose some or all of the money you deposit. Only use money you can afford to lose. Past results do not predict future results. 18+ only. This is education, not financial advice.",
+            "note": "Template only. Add any wording the broker, network or local regulator requires."
+          },
+          "say": "Every offer post, and your pinned message, should carry a short, plain risk statement. Here's a template you can adapt: Trading involves risk. You can lose some or all of the money you deposit. Only use money you can afford to lose. Past results do not predict future results. Eighteen plus only. This is education, not financial advice. Use the broker's or operator's own required wording where they give it, including any official percentage of losing accounts. Never invent that number."
+        },
+        {
+          "v": "compare",
+          "h": "Responsible messaging",
+          "p": "How you say things matters as much as what you say. Pressure tactics push people to act against their own interest, and regulators and platforms treat them as misleading. Write so a careful adult can decide calmly.",
+          "d": {
+            "a": {
+              "title": "Pressure",
+              "items": [
+                "\"Last chance, only 3 spots left\" when false",
+                "\"Quit your job, this pays more\"",
+                "Targeting people in money trouble",
+                "Telling losers to deposit more to win back"
+              ]
+            },
+            "b": {
+              "title": "Responsible",
+              "items": [
+                "Real deadlines only",
+                "Start small, demo first",
+                "Never borrow to trade or bet",
+                "Links to limits and help tools"
+              ]
+            }
+          },
+          "say": "How you say things matters as much as what you say. Compare the columns. Pressure looks like last chance, only three spots left when it's false, quit your job this pays more, targeting people in money trouble, or telling people who lost to deposit more to win it back. Responsible messaging means real deadlines only, start small and demo first, never borrow to trade or bet, and links to limits and help tools. Write so a careful adult can decide calmly."
+        },
+        {
+          "v": "tip",
+          "h": "Age rules come first",
+          "p": "Trading and gambling are for adults only. Target ads to 18 and over, or older where local law sets a higher age. Never use school themes, cartoons or content aimed at teenagers. State 18+ on the prelander, in the welcome and in the pinned post.",
+          "d": {
+            "kind": "warn",
+            "text": "18+ everywhere, or the higher local legal age. If you learn a member is under age, remove them and do not send offers."
+          },
+          "more": "Telegram cannot verify age for you, and the broker or operator checks identity at registration through KYC. Your job is to not attract or target minors in the first place: age targeting on the ad, adult tone in creatives, and a clear adult-only statement before anyone joins. Platforms usually require 18+ targeting for these categories; check the current policy.",
+          "say": "Age rules come first. Trading and gambling are for adults only. Target ads to eighteen and over, or older where local law sets a higher age. Never use school themes, cartoons, or content aimed at teenagers. State eighteen plus on the prelander, in the welcome, and in the pinned post. As the warning says, if you learn a member is under age, remove them and don't send offers. Telegram can't verify age for you, so your job is to not attract minors in the first place."
+        },
+        {
+          "v": "phone",
+          "h": "A welcome that respects consent",
+          "p": "Consent in practice: the bot says what it will send and how often, lets the person choose, and makes stopping easy. People who chose their frequency mute less and complain less.",
+          "d": {
+            "app": "bot",
+            "title": "Market Lessons Bot",
+            "subtitle": "bot",
+            "messages": [
+              {
+                "from": "them",
+                "text": "How often would you like private messages from us? You can change this any time.",
+                "buttons": [
+                  "Daily lesson",
+                  "Weekly summary",
+                  "Channel only"
+                ]
+              },
+              {
+                "from": "me",
+                "text": "Weekly summary"
+              },
+              {
+                "from": "them",
+                "text": "Done. One message on Sundays. Send /stop to stop all bot messages."
+              }
+            ]
+          },
+          "say": "Here's consent in practice. Look at the bot chat. It asks how often the person would like private messages: daily lesson, weekly summary, or channel only, and says they can change it any time. The person picks weekly. The bot confirms one message on Sundays, and explains how to stop all bot messages. People who chose their own frequency mute less and complain less."
+        },
+        {
+          "v": "curve",
+          "h": "Example: leaves by offer frequency",
+          "p": "Illustration of two channels over seven days after a new batch of joins. Channel A posts an offer every few hours. Channel B posts one every two to three days. Cumulative leaves rise much faster in A. Example data.",
+          "d": {
+            "a": [
+              2,
+              5,
+              9,
+              13,
+              17,
+              21,
+              24
+            ],
+            "la": "A: frequent offers (% left)",
+            "b": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "lb": "B: sparse offers (% left)",
+            "x": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7"
+            ]
+          },
+          "say": "This chart is an illustration of two channels, over seven days after a new batch of joins. It's example data. Channel A posts an offer every few hours. Channel B posts one every two to three days. Follow the two lines. By day seven, about twenty four percent have left channel A, compared with about seven percent in channel B. Cumulative leaves rise much faster when offers are frequent."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example",
+          "p": "Example week: 5 posts a day is 35 posts. At about one offer post in ten, that is 3 to 4 offer posts. With 470 members and 30% tapping one offer post, you get about 140 offer link clicks over the week.",
+          "d": {
+            "kind": "example",
+            "text": "Example: 35 posts a week, about 4 offers. 470 members × 30% = about 140 offer link clicks."
+          },
+          "more": "Why not post an offer every day to get more clicks? Because each extra offer post brings fewer new clicks than the one before (the same people already saw it) and more mutes and leaves. Once members mute the channel, your education posts stop reaching them too, so the next offer gets even fewer clicks.",
+          "say": "Here's a worked example week. Five posts a day is thirty five posts. At about one offer post in ten, that's three to four offer posts. With four hundred and seventy members, and thirty percent tapping one offer post, you get about one hundred and forty offer link clicks over the week. Why not post an offer every day? Because each extra offer post brings fewer new clicks, and more mutes and leaves. Once people mute, your education posts stop reaching them too."
+        },
+        {
+          "v": "table",
+          "h": "Offer frequency: starting rules",
+          "p": "Turn the content mix into rules you check weekly. Telegram channel statistics, where available, show joins, leaves and views per post; what is shown, and for which channels, can change, so check your app. Starting rules; adapt them to your geo and niche.",
+          "more": "Example: a normal day loses about 4 members. The day after an offer post loses 11, which is more than 2 × normal, so next week you halve offer posts. If average views per post fall from 400 to 290, that is a 27.5% drop, past the 25% line, so you add education posts and cut offers until views recover.",
+          "d": {
+            "cols": [
+              "Signal",
+              "Starting rule",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Leaves in 24 h after an offer post",
+                "Over 2 × a normal day",
+                "Halve offer posts next week"
+              ],
+              [
+                "Average views per post",
+                "Down 25% on the 4-week average",
+                "More teaching, fewer offers"
+              ],
+              [
+                "Offer posts per week",
+                "Over 1 in 5 posts",
+                "Cut back to about 1 in 10"
+              ],
+              [
+                "Reports or complaints",
+                "Any about claims",
+                "Pull the post, fix the claim"
+              ]
+            ]
+          },
+          "say": "Turn the content mix into rules you check weekly. Read across the table. If leaves in twenty four hours after an offer post are over two times a normal day, halve offer posts next week. If average views per post are down twenty five percent on the four week average, teach more and offer less. If offer posts are over one in five, cut back to about one in ten. And any report about claims means pull the post and fix the claim. These are starting rules, so adapt them to your geo and niche."
+        },
+        {
+          "v": "flow",
+          "h": "A weekly content cycle",
+          "p": "A simple weekly rhythm keeps quality up without burning you out. Read last week's numbers, plan the pillars on one day, write in a batch, check every claim, then schedule. Spend a few minutes each day answering questions, because replies are what make a channel feel alive.",
+          "d": [
+            "Read last week's views",
+            "Plan pillars for 7 days",
+            "Batch-write posts",
+            "Check every claim",
+            "Schedule",
+            "Answer questions daily"
+          ],
+          "say": "A simple weekly rhythm keeps quality up without burning you out. Follow the flow. Read last week's views. Plan your pillars for the next seven days. Batch-write the posts. Check every claim. Schedule them. And then answer questions every day. Those few minutes of replies are what make a channel feel alive."
+        },
+        {
+          "v": "quote",
+          "h": "From the founder",
+          "p": "A short note from Dchessking, the founder, on running funnel channels for the long term. It sums up why the balance of useful posts and offer posts matters more than any single post or any single week of results.",
+          "d": "Treat the channel like a bank account of trust. Every useful post is a small deposit. Every hyped post is a withdrawal, and the balance runs out faster than you expect.",
+          "by": "dchessking",
+          "say": "Here's a short note from Dchessking, the founder, on running funnel channels for the long term: Treat the channel like a bank account of trust. Every useful post is a small deposit. Every hyped post is a withdrawal, and the balance runs out faster than you expect."
+        },
+        {
+          "v": "cards",
+          "h": "Common nurture mistakes",
+          "p": "These are the habits that quietly empty funnel channels. Each one feels productive in the moment because it creates activity, but it trades long-term trust and reach for a few extra clicks this week.",
+          "d": [
+            "Offer in every post|mutes and leaves climb",
+            "Profit screenshots|misleading, often illegal",
+            "Posting on your clock|check views by hour in their time zone",
+            "Raw offer links in posts|tracking lost; route via the bot",
+            "Silence for days|members forget why they joined"
+          ],
+          "say": "These habits quietly empty funnel channels. An offer in every post, and mutes and leaves climb. Profit screenshots, which are misleading and often illegal. Posting on your own clock, when you should check views by hour in their time zone. Raw offer links in posts, which lose tracking, so route through the bot. And silence for days, so members forget why they joined. Each one feels productive in the moment, but trades long-term trust for a few clicks this week."
+        },
+        {
+          "v": "check",
+          "h": "Before you hit post",
+          "p": "Run every post through this list. If any line fails, edit before posting. It takes ten seconds and protects the channel, your ad account and your members.",
+          "d": [
+            "Is it true, and could I prove it?",
+            "No income promise or \"guaranteed\" result",
+            "Risk line on any offer post",
+            "18+ stated where there is an offer",
+            "Real deadlines and real numbers only",
+            "Links go to the bot, not raw offer links"
+          ],
+          "say": "Run every post through this list before you hit post. Is it true, and could I prove it? Is there no income promise or guaranteed result? Is there a risk line on any offer post? Is eighteen plus stated where there's an offer? Are deadlines and numbers real? And do links go to the bot, not raw offer links? If any line fails, edit before posting. It takes ten seconds, and it protects the channel, your ad account and your members."
+        }
+      ],
+      "takeaways": [
+        "Most posts should teach or help with no ask; offer posts are a small share and always carry a risk line.",
+        "Show proof that you teach well, never proof of profit; fake screenshots and testimonials are misleading claims.",
+        "Trading and gambling are 18+ (or the higher local age) in ads, prelander, welcome and pinned post.",
+        "Let people choose how often the bot messages them, and make /stop work."
+      ],
+      "action": "Write seven days of posts for one channel using the pillars in this lesson: at least 25 posts, no more than 4 offer posts, each offer post with a risk line. Check each one against the before-you-post list.",
+      "glossary": [
+        {
+          "term": "Nurture",
+          "def": "Useful, honest content and messages that build trust with new members before and between offers."
+        },
+        {
+          "term": "Content pillar",
+          "def": "A repeating type of post, such as basics, mistakes or Q&A, used to plan a channel's content."
+        },
+        {
+          "term": "Risk disclaimer",
+          "def": "A short, plain statement that the product carries risk of loss, shown wherever the offer appears."
+        },
+        {
+          "term": "Pressure tactic",
+          "def": "Messaging that pushes people to act fast against their interest, such as false scarcity or \"win back your losses\"."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which is the safest kind of proof to post in a trading channel?",
+          "options": [
+            "Screenshots of big profits from members",
+            "A clear lesson or demo walkthrough that shows you teach well",
+            "Testimonials you write in members' style",
+            "Only your winning trades"
+          ],
+          "answer": 1,
+          "why": "Proof of process does not promise income. Profit screenshots and invented testimonials are misleading claims."
+        },
+        {
+          "q": "Your offer posts are now 3 a day and leaves are rising. What is the most likely fix?",
+          "options": [
+            "Post offers every hour to reach more people",
+            "Remove the risk line to make posts shorter",
+            "Cut offer posts back to a small share and post more useful content",
+            "Stop posting completely for a month"
+          ],
+          "answer": 2,
+          "why": "Frequent offers drive mutes and leaves, which also hide your useful posts. Restore the balance."
+        },
+        {
+          "q": "Where should the 18+ statement appear?",
+          "options": [
+            "Only in the broker's terms",
+            "Only in the ad",
+            "Nowhere, KYC handles it",
+            "In the ad targeting, prelander, welcome and pinned post"
+          ],
+          "answer": 3,
+          "why": "Age rules apply at every step you control. KYC at the broker is a final check, not a reason to skip yours."
+        },
+        {
+          "q": "The broker publishes an official figure for the share of retail accounts that lose money. What should you do?",
+          "options": [
+            "Use their official wording and figure in your risk line",
+            "Round it down so it looks better",
+            "Leave it out because it hurts conversions",
+            "Make up your own figure"
+          ],
+          "answer": 0,
+          "why": "Use the required wording as published. Changing or hiding it is misleading and can break your network and local rules."
+        },
+        {
+          "q": "A member who lost money asks if they should deposit more to win it back. What is the responsible reply?",
+          "options": [
+            "Yes, losses always come back",
+            "Encourage them to try a bigger position",
+            "Tell them not to chase losses, only to use money they can afford to lose, and point to limits and help tools",
+            "Ignore the message"
+          ],
+          "answer": 2,
+          "why": "Chasing losses is a known harm. Responsible messaging steers people away from it, even when it costs you a deposit."
+        }
+      ],
+      "say_intro": "This lesson is about what happens inside the channel. You'll learn how to plan daily posts, balance teaching with offers, write honest proof and clear risk lines, and apply age rules and responsible messaging for trading and gambling.",
+      "say_outro": "To recap: the channel keeps the ad's promise every day, most posts teach, offers stay rare and carry a risk line, proof shows process not profit, and eighteen plus applies everywhere. Your task: write seven days of posts for one channel using this lesson's pillars, at least twenty five posts, no more than four offer posts, each offer post with a risk line, and check each one against the before you post list. Now take the quiz."
+    },
+    {
+      "slug": "reading-the-funnel-numbers",
+      "title": "Reading the funnel numbers",
+      "minutes": 20,
+      "objectives": [
+        "By the end you can calculate the pass-through rate of every hop from click to FTD",
+        "By the end you can find the weakest hop and decide what to fix first",
+        "By the end you can work out the most you can pay per join request",
+        "By the end you can run a weekly funnel review per ad set"
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Every hop has a rate",
+          "p": "A funnel is a chain of small percentages. Multiply them and you get your cost per deposit. When results are bad, the total tells you that something is wrong. The hop rates tell you where. This lesson walks one full example from click to FTD.",
+          "d": {
+            "b": "Totals say what, rates say where",
+            "s": "Divide each hop by the one before it"
+          },
+          "say": "A funnel is a chain of small percentages. Multiply them, and you get your cost per deposit. When results are bad, the total tells you that something is wrong. The hop rates tell you where. That's the line on screen: totals say what, rates say where. To get a rate, divide each hop by the one before it. In this lesson we'll walk one full example from click to F T D."
+        },
+        {
+          "v": "funnel",
+          "h": "Example: one week, click to FTD",
+          "p": "Example week for one ad set with $420 spend. Each row is people who reached that hop. Read it slowly. The final 14 deposits are the result of nine small decisions people made.",
+          "d": [
+            [
+              "Link clicks",
+              2000
+            ],
+            [
+              "Prelander views",
+              1640
+            ],
+            [
+              "Join taps",
+              820
+            ],
+            [
+              "Join requests",
+              610
+            ],
+            [
+              "Started bot",
+              590
+            ],
+            [
+              "Still members D3",
+              470
+            ],
+            [
+              "Offer link clicks",
+              140
+            ],
+            [
+              "Registrations",
+              70
+            ],
+            [
+              "FTDs",
+              14
+            ]
+          ],
+          "say": "Here's an example week for one ad set, with four hundred and twenty dollars spent. Read it slowly from the top. Two thousand link clicks, one thousand six hundred and forty prelander views, eight hundred and twenty join taps, six hundred and ten join requests, five hundred and ninety started the bot, four hundred and seventy still members on day three, one hundred and forty offer link clicks, seventy registrations, and fourteen F T Ds. Those final fourteen deposits are the result of many small decisions."
+        },
+        {
+          "v": "table",
+          "h": "The hop rates",
+          "p": "Divide each count by the one above it. This is the pass-through rate. It is the single most useful table for a Telegram funnel. Example figures from the funnel above.",
+          "d": {
+            "cols": [
+              "Hop",
+              "Count",
+              "Rate from above"
+            ],
+            "rows": [
+              [
+                "Prelander views",
+                "1,640",
+                "82%"
+              ],
+              [
+                "Join taps",
+                "820",
+                "50%"
+              ],
+              [
+                "Join requests",
+                "610",
+                "74%"
+              ],
+              [
+                "Still members D3",
+                "470",
+                "80% of 590"
+              ],
+              [
+                "Offer link clicks",
+                "140",
+                "30%"
+              ],
+              [
+                "Registrations",
+                "70",
+                "50%"
+              ],
+              [
+                "FTDs",
+                "14",
+                "20%"
+              ]
+            ]
+          },
+          "more": "The bot start step (590 of 610, 97%) is left out to keep the table short. It is usually high because the welcome arrives in the moment. The rates that deserve attention here are join taps to join requests (74%) and members to offer clicks (30%). Compare each rate with your own past weeks, not with someone else's screenshot.",
+          "say": "Now divide each count by the one above it. That's the pass-through rate, and it's the single most useful table for a Telegram funnel. Read the third column. Eighty two percent of clicks became views. Fifty percent tapped join. Seventy four percent of taps became requests. Eighty percent stayed until day three. Thirty percent clicked an offer. Fifty percent registered, and twenty percent deposited. The rates worth attention here are taps to requests, and members to offer clicks. Compare each with your own past weeks, not someone else's screenshot."
+        },
+        {
+          "v": "eq",
+          "h": "Cost per FTD",
+          "p": "The headline number. Spend divided by first deposits. Example: $420 ÷ 14 = $30 per FTD. With a $40 payout, that is $560 revenue and $140 profit before costs like tools and creatives.",
+          "d": [
+            "Spend $420",
+            "÷",
+            "14 FTDs",
+            "=",
+            "$30 per FTD"
+          ],
+          "say": "Here's the headline number: cost per F T D, which is spend divided by first deposits. In this example, four hundred and twenty dollars divided by fourteen F T Ds gives thirty dollars per F T D. With a forty dollar payout, that's five hundred and sixty dollars of revenue, and one hundred and forty dollars profit, before costs like tools and creatives."
+        },
+        {
+          "v": "eq",
+          "h": "Value of one join request",
+          "p": "Turn the deposit payout into a value per join request. That tells you the most you can pay per join and still break even. Example: $40 payout × 14 FTDs ÷ 610 requests = about $0.92 per request.",
+          "d": [
+            "Payout × FTDs",
+            "÷",
+            "Join requests",
+            "=",
+            "Value per request"
+          ],
+          "more": "Example: $40 × 14 = $560. $560 ÷ 610 = $0.918, about $0.92. You paid $420 ÷ 610 = $0.69 per request, so each request earned about $0.23 more than it cost. This is your fast decision number: while cost per request stays well under $0.92 and later rates hold, the ad set is profitable. Recalculate weekly as more late FTDs arrive.",
+          "say": "Next, turn the deposit payout into a value per join request. That tells you the most you can pay per join and still break even. Follow the equation: payout times F T Ds, divided by join requests. In the example, forty dollars times fourteen is five hundred and sixty, divided by six hundred and ten requests, gives about ninety two cents per request. You actually paid about sixty nine cents per request. That's your fast decision number. Recalculate it weekly as late F T Ds arrive."
+        },
+        {
+          "v": "stat",
+          "h": "Most you can pay per join",
+          "p": "At break-even, cost per join request equals value per join request. Aim lower to keep a margin for tools, creatives and the weeks that go wrong. Example from this week's numbers. Recalculate it every week, because the value changes as late deposits arrive.",
+          "d": {
+            "n": 0.92,
+            "pre": "$",
+            "suf": "",
+            "dec": 2,
+            "label": "break-even cost per join request",
+            "note": "Example. Payout $40, 14 FTDs from 610 requests."
+          },
+          "say": "So what's the most you can pay per join? At break-even, cost per join request equals value per join request. In this example, that's ninety two cents, from a forty dollar payout and fourteen F T Ds out of six hundred and ten requests. But aim lower than that, to keep a margin for tools, creatives, and the weeks that go wrong. And recalculate it every week, because the value changes as late deposits arrive."
+        },
+        {
+          "v": "cards",
+          "h": "What a weak hop usually means",
+          "p": "Each low rate points to a different kind of problem. Use these as first guesses, not answers. Before acting, check the evidence: open the page on a cheap phone, tap the link yourself, read the last offer posts, and ask the network about KYC or payment issues.",
+          "d": [
+            "Clicks to views low|Slow page, broken link, bot clicks",
+            "Views to taps low|Page does not match the ad",
+            "Taps to requests low|Telegram not installed or link confusing",
+            "Members to offer clicks low|Weak content or offer posts",
+            "Clicks to FTD low|Offer, KYC or payment friction"
+          ],
+          "say": "Each low rate points to a different kind of problem. Use these cards as first guesses, not answers. Clicks to views low: a slow page, broken link, or bot clicks. Views to taps low: the page doesn't match the ad. Taps to requests low: Telegram not installed, or a confusing link. Members to offer clicks low: weak content or offer posts. Clicks to F T D low: offer, K Y C, that's know your customer, or payment friction. Before acting, check the evidence yourself."
+        },
+        {
+          "v": "flow",
+          "h": "What to fix first",
+          "p": "Fix in this order. Tracking first, because a broken count looks like a broken funnel. Then the hop that dropped most against your own normal. Then the cheapest test. One change at a time, so you know what worked.",
+          "d": [
+            "Check tracking at every hop",
+            "Find the rate that fell most",
+            "Pick the cheapest fix",
+            "Change one thing",
+            "Wait for enough data",
+            "Compare the same hop"
+          ],
+          "say": "Fix things in this order. Follow the flow. Check tracking at every hop first, because a broken count looks like a broken funnel. Then find the rate that fell most against your own normal. Pick the cheapest fix. Change one thing. Wait for enough data. Then compare the same hop again. One change at a time, so you know what worked."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistake: fixing the biggest loss",
+          "p": "The biggest absolute loss is almost always at the top: clicks to page views loses hundreds. That does not make it the best fix. Judge each hop by its rate against your own normal and by how much a fix would change FTDs.",
+          "d": {
+            "a": {
+              "title": "Misleading",
+              "items": [
+                "\"We lose 1,180 people at the prelander\"",
+                "Fix the hop with the most people lost",
+                "Compare with other people's funnels",
+                "Change three things at once"
+              ]
+            },
+            "b": {
+              "title": "Useful",
+              "items": [
+                "\"Offer clicks fell from 38% to 30%\"",
+                "Fix the rate that dropped most",
+                "Compare with your own past weeks",
+                "One change, then measure"
+              ]
+            }
+          },
+          "say": "Here's a common mistake: fixing the biggest loss. Compare the columns. The misleading view says we lose one thousand one hundred and eighty people at the prelander, fixes the hop with the most people lost, compares with other people's funnels, and changes three things at once. The useful view says offer clicks fell from thirty eight to thirty percent, fixes the rate that dropped most, compares with your own past weeks, and makes one change, then measures."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example",
+          "p": "Example: raise members to offer clicks from 30% to 40%. 470 × 40% = 188 clicks. At 50% registration and 20% FTD, that is about 19 FTDs instead of 14, for the same $420. Cost per FTD falls from $30 to about $22.",
+          "d": {
+            "kind": "example",
+            "text": "Example: offer click rate 30% → 40% gives about 19 FTDs, cost per FTD $30 → about $22, with no extra spend."
+          },
+          "more": "Check the maths: 188 × 0.5 = 94 registrations. 94 × 0.2 = 18.8 FTDs. $420 ÷ 18.8 = $22.34. Fixes late in the funnel are powerful because every person there has already been paid for. Fixes early in the funnel are also valuable, but they often change who arrives, which can move the later rates too. That is why you measure every hop after each change.",
+          "say": "Here's a worked example. Raise members to offer clicks from thirty percent to forty percent. Four hundred and seventy times forty percent is one hundred and eighty eight clicks. At fifty percent registration and twenty percent F T D, that's about nineteen F T Ds instead of fourteen, for the same four hundred and twenty dollars. Cost per F T D falls from thirty dollars to about twenty two, with no extra spend. Fixes late in the funnel are powerful, because everyone there has already been paid for."
+        },
+        {
+          "v": "screen",
+          "h": "Reading it per ad set",
+          "p": "Totals hide differences. Put the hop rates side by side per ad set. Here ad set B has a fine join rate but a weak offer click rate, which points at the people it brings, not the channel content, because both ad sets share the same channel.",
+          "d": {
+            "kind": "browser",
+            "url": "dashboard.example/funnel?week=40",
+            "title": "Funnel by ad set: example week",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Ad set",
+                  "Cost/request",
+                  "Offer click %",
+                  "FTDs"
+                ],
+                "rows": [
+                  [
+                    "A broad",
+                    "$0.69",
+                    "30%",
+                    "14"
+                  ],
+                  [
+                    "B interest",
+                    "$0.55",
+                    "12%",
+                    "3"
+                  ],
+                  [
+                    "C lookalike",
+                    "$0.82",
+                    "36%",
+                    "9"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "B has the cheapest join requests and the fewest deposits. Cheap joins are not always good joins."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Totals hide differences, so read hop rates per ad set. Look at the table. Ad set A, broad, costs sixty nine cents per request, with thirty percent offer clicks and fourteen F T Ds. Ad set B, interest, has the cheapest requests at fifty five cents, but only twelve percent offer clicks and three F T Ds. Ad set C, lookalike, costs eighty two cents, with thirty six percent and nine F T Ds. Both share the same channel, so B's weak rate points at the people it brings. Cheap joins aren't always good joins."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: find the weakest hop",
+          "p": "Your turn. Here is a week from another ad set with a $40 payout. Work out the pass-through rate of each row from the row above it, and find the step with the lowest rate. Enter its index, counting the first row as 0.",
+          "d": {
+            "kind": "funnel",
+            "task": "Which step has the lowest pass-through rate from the step above? Enter its index (first row = 0).",
+            "preset": {
+              "steps": [
+                [
+                  "Link clicks",
+                  1500
+                ],
+                [
+                  "Prelander views",
+                  1230
+                ],
+                [
+                  "Join taps",
+                  640
+                ],
+                [
+                  "Join requests",
+                  560
+                ],
+                [
+                  "Started bot",
+                  540
+                ],
+                [
+                  "Offer link clicks",
+                  90
+                ],
+                [
+                  "Registrations",
+                  45
+                ],
+                [
+                  "FTDs",
+                  12
+                ]
+              ],
+              "payout": 40
+            },
+            "answer": {
+              "field": "worst_step",
+              "value": 5,
+              "tolerance": 0
+            }
+          },
+          "more": "Answer: index 5, offer link clicks. Rates: views 82%, join taps 52%, requests 88%, started bot 96%, offer clicks 90 ÷ 540 = 17%, registrations 50%, FTDs 27%. The members-to-offer step is the weakest. First check that offer posts link to the bot correctly and that the bot sends the link. If tracking is fine, work on content and offer posts before touching the ads.",
+          "say": "Your turn. Here's a week from another ad set, with a forty dollar payout. Work out the pass-through rate of each row, dividing it by the row above. Then find the step with the lowest rate. Enter its index, counting the first row as zero. Take it one row at a time. Pause and try it, then check your answer."
+        },
+        {
+          "v": "tip",
+          "h": "Deposits arrive late",
+          "p": "FTDs keep arriving for days or weeks after the join. If you judge last week's ad set today, its FTD count is still growing. Compare cohorts of the same age: joins from week 38 after 14 days against joins from week 39 after 14 days.",
+          "d": {
+            "kind": "warn",
+            "text": "Compare joins of the same age. A one-week-old cohort always looks worse than a three-week-old one."
+          },
+          "say": "Deposits arrive late. F T Ds keep coming in for days or weeks after the join. So if you judge last week's ad set today, its F T D count is still growing. Compare cohorts of the same age. For example, joins from week thirty eight after fourteen days, against joins from week thirty nine after fourteen days. As the warning says, a one week old cohort always looks worse than a three week old one."
+        },
+        {
+          "v": "table",
+          "h": "From hop rates to budget calls",
+          "p": "Hop rates show where to fix. The rule card decides the budget. Example: payout $40, target $30, break-even $40. The CPA kill line is the lower of 1.5 × target ($45) and break-even, so $40. Full rules: Budget and kill rules module. Starting rules; adapt them to your vertical and data.",
+          "more": "This week's ad set: $420 for 14 network-confirmed FTDs is $30, exactly on target, with far more than 3 FTDs, so it is Keep: leave the budget. If the offer-click fix lands and cost per FTD falls to about $22.34, that is 0.74 × target, under the 0.8 line, so it would earn a +20% step, then at least 48 hours before the next one.",
+          "d": {
+            "cols": [
+              "Decision",
+              "Starting rule",
+              "Example, target $30"
+            ],
+            "rows": [
+              [
+                "Kill",
+                "0 FTDs at spend ≥ 2 × target",
+                "$60 spent, 0 FTDs"
+              ],
+              [
+                "Kill",
+                "Spend ≥ 3 × target, CPA over kill line",
+                "$90+ spent, CPA over $40"
+              ],
+              [
+                "Scale +20%",
+                "3+ FTDs, CPA ≤ 0.8 × target",
+                "CPA $24 or less"
+              ],
+              [
+                "Keep",
+                "3+ FTDs, CPA ≤ target",
+                "CPA $24 to $30"
+              ],
+              [
+                "Hold",
+                "Anything else",
+                "Wait for the next check"
+              ]
+            ]
+          },
+          "say": "Hop rates show you where to fix. The rule card decides the budget. Example: payout forty dollars, target C P A, cost per acquisition, thirty dollars, break-even forty. Read the rows. Kill at sixty dollars spent with zero F T Ds. Kill once spend reaches ninety dollars with C P A over forty. Scale by twenty percent with three or more F T Ds at twenty four dollars or less. Keep between twenty four and thirty. Otherwise, hold. This week's thirty dollar result is a keep. These are starting rules, so adapt them."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: cheap joins, no deposits",
+          "p": "Ad set D brings the cheapest join requests in the account. A test postback reached your server today, so tracking works. Apply the rule card to its numbers and make the call. Then press check to see the working.",
+          "more": "Answer: kill. $66 ÷ $30 = 2.2 × target with 0 network-confirmed FTDs, past the 2 × zero-FTD line. Its 85 join requests cost about $0.78 each, cheap, but cheap joins are not good joins when none of them deposit.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $30. Ad set D spent $66 over 4 days: 85 join requests, 0 network-confirmed FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 66,
+              "conversions": 0,
+              "target_cpa": 30,
+              "days": 4
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "kill",
+              "tolerance": 0
+            }
+          },
+          "say": "Another lab. Ad set D brings the cheapest join requests in the account, and a test postback reached your server today, so tracking works. Read the task on screen: the target, how much it spent over how many days, its join requests, and its network confirmed F T Ds. Apply the rule card to those numbers and decide: kill, hold or scale. Pause and try it, then check your answer."
+        },
+        {
+          "v": "tip",
+          "h": "Honest numbers only",
+          "p": "When numbers disappoint, some buyers deposit themselves, pay people to deposit or send invented events to the ad platform. That is fraud against the network and false data to the platform, and it gets accounts closed and payouts clawed back. Read the real numbers and fix the real hop.",
+          "d": {
+            "kind": "warn",
+            "text": "Never self-deposit, reward deposits against the offer terms or send events that did not happen."
+          },
+          "say": "Honest numbers only. When results disappoint, some buyers deposit themselves, pay people to deposit, or send invented events to the ad platform. That's fraud against the network and false data to the platform. It gets accounts closed and payouts clawed back. The warning is clear: never self-deposit, reward deposits against the offer terms, or send events that didn't happen. Read the real numbers, and fix the real hop."
+        },
+        {
+          "v": "check",
+          "h": "Weekly funnel review",
+          "p": "Once a week, per ad set, run this list. Write down one decision and one test for next week. The Testing and data module covers test design and kill rules in depth.",
+          "d": [
+            "Hop rates against the last four weeks",
+            "Cost per join request against its value",
+            "Cohort FTDs at the same age",
+            "Network FTDs against Meta FTDs",
+            "One hop to fix, one test planned",
+            "Decision logged with the reason"
+          ],
+          "say": "Once a week, per ad set, run this review. Hop rates against the last four weeks. Cost per join request against its value. Cohort F T Ds at the same age. Network F T Ds against Meta F T Ds. One hop to fix, and one test planned. And your decision logged, with the reason. Write down one decision and one test for next week. The Testing and data module covers this in more depth."
+        }
+      ],
+      "takeaways": [
+        "Divide each hop by the one before it; compare rates with your own past, not other people's.",
+        "Value per join request = payout × FTDs ÷ join requests; it is the most you can pay per request at break-even.",
+        "Fix tracking first, then the rate that fell most, with one change at a time.",
+        "Late hops are powerful to fix because those people are already paid for; judge cohorts of the same age."
+      ],
+      "action": "Take last week's numbers for one ad set and fill in every hop from clicks to FTDs. Calculate each pass-through rate, the cost per FTD and the value per join request. Circle the weakest rate, write one test to fix it, and write the rule-card call for the ad set.",
+      "glossary": [
+        {
+          "term": "Pass-through rate",
+          "def": "The share of people at one hop who reach the next hop. Count at this hop ÷ count at the hop before."
+        },
+        {
+          "term": "Value per join request",
+          "def": "Payout × FTDs ÷ join requests. The most you can pay per request and break even."
+        },
+        {
+          "term": "Cohort",
+          "def": "A group of people who joined in the same period, compared at the same age."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Example: $500 spend, 20 FTDs. What is the cost per FTD?",
+          "options": [
+            "$20",
+            "$25",
+            "$40",
+            "$10"
+          ],
+          "answer": 1,
+          "why": "$500 ÷ 20 = $25 per FTD."
+        },
+        {
+          "q": "Example: payout $50, 10 FTDs from 800 join requests. What is the value per join request?",
+          "options": [
+            "$0.50",
+            "$1.60",
+            "$0.63",
+            "$6.25"
+          ],
+          "answer": 2,
+          "why": "$50 × 10 = $500. $500 ÷ 800 = $0.625, about $0.63. That is the break-even cost per request."
+        },
+        {
+          "q": "Example: payout $40, target $30. An ad set spent $96 with 3 network-confirmed FTDs. What does the rule card say?",
+          "options": [
+            "Kill: CPA is above target",
+            "Keep: 3+ FTDs and CPA $32 is under the $40 kill line",
+            "Hold: CPA $32 is above target but under the $40 kill line",
+            "Scale: it has 3 FTDs"
+          ],
+          "answer": 2,
+          "why": "$96 ÷ 3 = $32, above the $30 target, so neither Keep nor Scale. Spend is past 3 × target ($90) but $32 is under the $40 kill line (lower of $45 and break-even), so it holds."
+        },
+        {
+          "q": "Ad set B has the cheapest join requests and the fewest FTDs. What does that most likely mean?",
+          "options": [
+            "B is the best ad set, scale it",
+            "The channel content is broken for everyone",
+            "The postback is down",
+            "B brings cheaper but less interested people"
+          ],
+          "answer": 3,
+          "why": "If other ad sets in the same channel convert, the content is fine. Cheap joins are not always good joins."
+        },
+        {
+          "q": "Why compare cohorts at the same age?",
+          "options": [
+            "Because Meta requires it",
+            "Because FTDs keep arriving for days or weeks, so younger cohorts look worse",
+            "Because older joins are worth less",
+            "Because Telegram deletes old members"
+          ],
+          "answer": 1,
+          "why": "A one-week-old cohort has had less time to deposit. Fair comparisons use the same age."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn to read a Telegram funnel's numbers, from click to F T D, first time deposit. You'll calculate every hop rate, find the weakest hop, work out the most you can pay per join request, and turn it all into a weekly review.",
+      "say_outro": "To recap: totals tell you what's wrong, hop rates tell you where, value per join request is your fast decision number, and the rule card makes the budget call on confirmed F T Ds. Your task: take last week's numbers for one ad set, fill in every hop from clicks to F T Ds, calculate each pass-through rate, the cost per F T D and the value per join request. Circle the weakest rate, write one test to fix it, and write the rule card call. Now take the quiz."
+    },
+    {
+      "slug": "build-your-own-flow",
+      "title": "Build your own flow",
+      "minutes": 20,
+      "objectives": [
+        "By the end you can fill in a flow template for your own offer",
+        "By the end you can run the legal and platform checks before building",
+        "By the end you can follow a full worked example for a Kenyan trading offer",
+        "By the end you can follow a 14-day launch plan with clear decision rules"
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Write it before you build it",
+          "p": "Every hop in this module becomes a line in a written plan. Writing it first is cheaper than building and fixing. It also makes you face the hard questions early: is this offer legal to promote here, can I track it, and can I afford to test it properly?",
+          "d": {
+            "b": "Plan on paper, then build",
+            "s": "One page, every hop, every ID"
+          },
+          "say": "Every hop in this module becomes a line in a written plan. Writing it first is cheaper than building and fixing. It also makes you face the hard questions early. Is this offer legal to promote here? Can I track it? Can I afford to test it properly? That's the idea on screen: plan on paper, then build. One page, every hop, every I D."
+        },
+        {
+          "v": "table",
+          "h": "The flow template",
+          "p": "Copy this table for every new flow. One row per hop, four columns: the hop, the tool or page that runs it, the ID it carries forward, and the number you watch there. If a cell is empty, that hop is not ready to receive paid traffic.",
+          "d": {
+            "cols": [
+              "Hop",
+              "Tool or page",
+              "ID carried",
+              "Number to watch"
+            ],
+            "rows": [
+              [
+                "Ad",
+                "Ads Manager",
+                "fbclid + ad IDs",
+                "CPC, CTR"
+              ],
+              [
+                "Prelander",
+                "Your page",
+                "click_id stored",
+                "Join-tap rate"
+              ],
+              [
+                "Join request",
+                "Invite link",
+                "Link name = click_id",
+                "Requests per tap"
+              ],
+              [
+                "Bot",
+                "Your bot",
+                "User ↔ click_id",
+                "Start rate"
+              ],
+              [
+                "Channel",
+                "Telegram",
+                "None (shared)",
+                "Retention"
+              ],
+              [
+                "Offer link",
+                "Bot message",
+                "sub1 = click_id",
+                "Offer click rate"
+              ],
+              [
+                "Postback",
+                "Your server",
+                "sub1 back",
+                "FTDs, value"
+              ]
+            ]
+          },
+          "say": "Here's the flow template. Copy it for every new flow. One row per hop, and four columns: the hop, the tool or page that runs it, the I D it carries forward, and the number you watch there. For example, the prelander is your page, it stores the click I D, and you watch the join tap rate. The postback runs on your server, carries sub one back, and you watch F T Ds, first time deposits, and value. If any cell is empty, that hop isn't ready for paid traffic."
+        },
+        {
+          "v": "check",
+          "h": "Checks before you build",
+          "p": "Do these checks before you spend time or money. Trading and gambling ads usually need platform authorization, and local law decides who may promote what. If any check fails, choose another offer or geo. Full guide: Compliance for finance, trading and gambling offers module.",
+          "d": [
+            "Offer allowed in the ad platform's current policy",
+            "Any required ad authorization obtained",
+            "Broker or operator licensed or allowed in the geo",
+            "Local promotion rules and age limits read",
+            "Network allows Telegram and paid social traffic",
+            "Privacy notice covers what you collect"
+          ],
+          "say": "Do these checks before you spend any time or money. Is the offer allowed in the ad platform's current policy? Do you have any required ad authorization? Is the broker or operator licensed or allowed in the geo? Have you read the local promotion rules and age limits? Does the network allow Telegram and paid social traffic? And does your privacy notice cover what you collect? If any check fails, choose another offer or geo."
+        },
+        {
+          "v": "cards",
+          "h": "Worked example: the setup",
+          "p": "Now a full worked example. All figures are illustrative. A buyer in Nairobi plans a flow for a forex and CFD broker offer in Kenya, paid per qualified first deposit.",
+          "d": [
+            "Offer|Forex/CFD broker, CPA on qualified FTD",
+            "Geo|Kenya, English with some Swahili",
+            "Payout|Example: $45 per qualified FTD",
+            "Test budget|Example: $30 a day for 14 days",
+            "Channel|Daily market lessons, 18+"
+          ],
+          "say": "Now a full worked example. All the figures are illustrative. A buyer in Nairobi plans a flow for a forex and C F D broker offer in Kenya. Look at the cards. The offer pays a C P A, cost per acquisition, on a qualified F T D. The geo is Kenya, English with some Swahili. The example payout is forty five dollars per qualified F T D. The test budget is thirty dollars a day for fourteen days. And the channel shares daily market lessons, eighteen plus."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example: the legal check",
+          "p": "In Kenya, the Capital Markets Authority licenses online forex brokers. The buyer checks the broker is licensed or otherwise allowed to serve Kenyan clients and promote there, reads Meta's current financial ads policy, and confirms the network allows Meta and Telegram traffic.",
+          "d": {
+            "kind": "warn",
+            "text": "Example check only. Regulators, licences and ad policies change. Confirm with the regulator's current list and the platform's current policy."
+          },
+          "more": "Some products are not allowed on Meta at all at the time of writing, for example binary options, and crypto products need written permission. If the offer is in a banned category, do not run Meta ads to it, through a prelander or otherwise. Kenya's Data Protection Act also applies to the data you collect at the prelander and in the bot, so the privacy notice and storage must follow it. The same steps apply in Nigeria with the SEC and the Nigeria Data Protection Act. This is not legal advice; ask a local professional if unsure.",
+          "say": "First, the legal check. In Kenya, the Capital Markets Authority licenses online forex brokers. So the buyer checks that the broker is licensed or otherwise allowed to serve Kenyan clients and promote there, reads Meta's current financial ads policy, and confirms the network allows Meta and Telegram traffic. As the warning says, this is an example check only. Regulators, licences and ad policies change, so confirm with the regulator's current list and the platform's current policy. This isn't legal advice."
+        },
+        {
+          "v": "map",
+          "h": "Worked example: the flow",
+          "p": "The finished map for the Kenyan example. It follows the module's pattern exactly. The only local additions are a Swahili line on the prelander, M-Pesa explained in a lesson post because many deposits use it, and the broker's own risk wording.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Meta ad, KE 18+",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Prelander EN/SW",
+                "kind": "page"
+              },
+              {
+                "id": "jr",
+                "label": "Join request",
+                "kind": "telegram"
+              },
+              {
+                "id": "bot",
+                "label": "Bot welcome + choice",
+                "kind": "bot"
+              },
+              {
+                "id": "ch",
+                "label": "Lessons channel",
+                "kind": "telegram"
+              },
+              {
+                "id": "off",
+                "label": "Broker sign-up + KYC",
+                "kind": "offer"
+              },
+              {
+                "id": "ftd",
+                "label": "Qualified FTD",
+                "kind": "money"
+              },
+              {
+                "id": "pb",
+                "label": "Postback to server",
+                "kind": "data"
+              },
+              {
+                "id": "ev",
+                "label": "Purchase event",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "lp",
+                "click"
+              ],
+              [
+                "lp",
+                "jr",
+                "link per visitor"
+              ],
+              [
+                "jr",
+                "bot",
+                "update"
+              ],
+              [
+                "bot",
+                "ch",
+                "approve"
+              ],
+              [
+                "ch",
+                "bot",
+                "deep link"
+              ],
+              [
+                "bot",
+                "off",
+                "sub1"
+              ],
+              [
+                "off",
+                "ftd",
+                "deposit"
+              ],
+              [
+                "ftd",
+                "pb",
+                "network"
+              ],
+              [
+                "pb",
+                "ev",
+                "CAPI"
+              ]
+            ]
+          },
+          "say": "Here's the finished map for the Kenyan example. Follow it along. It matches the module's pattern exactly: Meta ad for Kenya, eighteen plus, prelander in English and Swahili, join request, bot welcome, lessons channel, back to the bot for a personal link, broker sign-up and K Y C, qualified F T D, postback, purchase event. The only local additions are a Swahili line on the prelander, M-Pesa explained in a lesson post because many deposits use it, and the broker's own risk wording."
+        },
+        {
+          "v": "phone",
+          "h": "Worked example: the prelander",
+          "p": "The prelander repeats the ad, says plainly what the channel is, shows the risk line and 18+ before the button, and gives one action. No profit screenshots, no countdown timers.",
+          "d": {
+            "app": "browser",
+            "url": "learn.example.com/ke-markets",
+            "page": {
+              "h": "Learn the markets, one lesson a day",
+              "p": "Free daily lessons for Kenyan beginners. Masomo ya kila siku. Trading is risky and you can lose money. 18+ only.",
+              "cta": "Join on Telegram"
+            }
+          },
+          "say": "This is the example prelander on a phone. Look at what it does. It repeats the ad: learn the markets, one lesson a day. It says plainly what the channel is, free daily lessons for Kenyan beginners, with a line in Swahili. It shows the risk line and eighteen plus before the button. And it gives one action: join on Telegram. No profit screenshots, no countdown timers."
+        },
+        {
+          "v": "product",
+          "h": "Build the prelander fast and light",
+          "p": "The prelander has one job: repeat the ad, state the risk and 18+, store the click and hand out the join link. A lander builder can produce light, fast pages for each geo and language. Whatever you use, keep claims honest and show reviewers and users the same page.",
+          "d": {
+            "slug": "landvoo",
+            "why": "Builds light, mobile-first prelanders per geo and language, with room for the risk line, 18+ notice and one join button."
+          },
+          "say": "The prelander has one job: repeat the ad, state the risk and eighteen plus, store the click, and hand out the join link. A lander builder, like the one on screen, can produce light, fast, mobile first pages for each geo and language, with room for the risk line, the age notice and one join button. Whatever tool you use, keep claims honest, and show reviewers and users the same page."
+        },
+        {
+          "v": "phone",
+          "h": "Worked example: the welcome",
+          "p": "The welcome goes out in the pending window, then the bot approves. It states what members will get, repeats the risk and age line, and asks how often to message them.",
+          "d": {
+            "app": "bot",
+            "title": "KE Market Lessons Bot",
+            "subtitle": "bot",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Karibu. Thanks for asking to join KE Market Lessons. One short lesson a day. Trading is risky; never use money you need. 18+ only."
+              },
+              {
+                "from": "them",
+                "text": "Tap Start for the free beginner guide and to choose how often we message you.",
+                "buttons": [
+                  "Start"
+                ]
+              },
+              {
+                "from": "me",
+                "text": "/start"
+              },
+              {
+                "from": "them",
+                "text": "You are in. Pick: daily lesson, weekly summary, or channel only. /stop ends bot messages.",
+                "buttons": [
+                  "Daily",
+                  "Weekly",
+                  "Channel only"
+                ]
+              }
+            ]
+          },
+          "say": "Here's the example welcome. It goes out in the pending window, and then the bot approves. Read the chat. It opens with Karibu, a Swahili welcome. It states what members will get, one short lesson a day, and repeats the risk and age line. After the person taps Start, it asks how often to message them: daily, weekly, or channel only. And it explains how to stop bot messages."
+        },
+        {
+          "v": "code",
+          "h": "Worked example: the link set",
+          "p": "All the links for the example in one place. Write yours the same way before building. Replace the network parameters and macros with your network's own.",
+          "d": {
+            "lang": "text",
+            "text": "Ad URL params: src=meta&cmp={{campaign.id}}&as={{adset.id}}&ad={{ad.id}}\nInvite link:   created per visitor, name = click_id, approval on\nOffer post:    https://t.me/KEMarketLessonsBot?start=offer_demo\nOffer link:    https://track.network.example/click?offer=88&aff=5678&sub1={click_id}&sub2={adset_short}&sub3=tg\nPostback:      https://pb.yourserver.example/pb?click_id={sub1}&event={event}&payout={payout}&tx={transaction_id}&key=<SECRET>",
+            "note": "Example placeholders. Never publish your bot token or postback key."
+          },
+          "say": "Here are all the links for the example, in one place. You don't need to read the exact characters. Notice the pattern. The ad has its tracking parameters. The invite link is created per visitor and named with the click I D, with approval on. The offer post opens the bot. The offer link carries the click I D in sub one. And the postback brings it back. Write yours the same way before building, using your own network's names. And never publish your bot token or postback key."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: target cost per FTD",
+          "p": "Set the target before launch. Example: $45 payout, keeping a 25% margin for tools, creatives and risk, gives a target cost per FTD of $33.75. Break-even is $45.",
+          "d": [
+            "$45 payout",
+            "×",
+            "(1 − 25% margin)",
+            "=",
+            "$33.75 target"
+          ],
+          "say": "Set your target before launch. Follow the equation. A forty five dollar payout, times one minus a twenty five percent margin for tools, creatives and risk, gives a target cost per F T D of thirty three dollars seventy five. Break-even is forty five dollars. Having that number written down before you spend means your decisions later aren't driven by mood."
+        },
+        {
+          "v": "table",
+          "h": "The 14-day launch plan",
+          "p": "Example plan for a $30 a day test: three ad sets at $10 a day from day 4, so up to $330 of ad spend by day 14. Days 1 to 3 cost little because they are building and testing. Decisions are made on written rules, not on mood.",
+          "d": {
+            "cols": [
+              "Days",
+              "Do",
+              "Decide"
+            ],
+            "rows": [
+              [
+                "1–2",
+                "Build, policy check, test chain",
+                "Every hop logs the ID"
+              ],
+              [
+                "3",
+                "Seed channel with 10 lessons",
+                "Content ready"
+              ],
+              [
+                "4–6",
+                "Launch 3 ad sets, $10 each",
+                "Cost per join request"
+              ],
+              [
+                "7",
+                "First review of hop rates",
+                "Early warnings only"
+              ],
+              [
+                "8–11",
+                "Replace any killed ad set",
+                "Zero-FTD line $67.50"
+              ],
+              [
+                "12–13",
+                "Count registrations, FTDs",
+                "Rule card at each check"
+              ],
+              [
+                "14",
+                "Full review, log decisions",
+                "Kill, hold, keep or scale"
+              ]
+            ]
+          },
+          "more": "Why spend so little early? Because most launch problems are plumbing: a missing click ID, a bot that crashed, a postback with the wrong macro. Finding those with $10 is far cheaper than finding them with $300. Each ad set reaches 2 × target ($67.50) at the end of day 10 and 3 × target ($101.25) on day 14, so the first FTD verdicts come late. FTDs keep arriving after day 14, so re-check the same cohort a week later.",
+          "say": "Here's the example fourteen day launch plan, for a thirty dollar a day test. Read down the rows. Days one and two: build, check policy and test the chain. Day three: seed the channel with ten lessons. Days four to six: launch three ad sets at ten dollars each, watching cost per join request. Day seven: first review, early warnings only. Days eight to eleven: replace any killed ad set. Days twelve and thirteen: count registrations and F T Ds. Day fourteen: full review and log decisions. Most launch problems are plumbing, and finding them with ten dollars is far cheaper."
+        },
+        {
+          "v": "table",
+          "h": "Example decision rules",
+          "p": "Write these before launch and stick to them. They are the rule card from the Budget and kill rules module with this example's numbers: target $33.75 and break-even $45, so the CPA kill line is $45, lower than 1.5 × target ($50.63). Judge on network-confirmed FTDs. Starting rules; adapt them.",
+          "d": {
+            "cols": [
+              "Signal",
+              "Starting rule",
+              "Action"
+            ],
+            "rows": [
+              [
+                "0 FTDs",
+                "Matured spend ≥ $67.50 (2 ×)",
+                "Check plumbing, then kill"
+              ],
+              [
+                "CPA over kill line",
+                "Spend ≥ $101.25 (3 ×), CPA over $45",
+                "Kill"
+              ],
+              [
+                "Scale line",
+                "3+ FTDs, CPA ≤ $27 (0.8 ×)",
+                "+20%, steps ≥ 48 h apart"
+              ],
+              [
+                "Keep",
+                "3+ FTDs, CPA $27 to $33.75",
+                "No budget change"
+              ],
+              [
+                "Early warning",
+                "Cost per request over its value, 3 days",
+                "May kill early; never scale"
+              ],
+              [
+                "Hold",
+                "Anything else",
+                "Change nothing until next check"
+              ],
+              [
+                "Leaves after offer posts",
+                "Rising week on week",
+                "Fewer offer posts"
+              ]
+            ]
+          },
+          "more": "Use matured spend: spend old enough for its FTDs to have arrived. The early-warning row may end an ad set before the zero-FTD line, but a proxy like cost per join request can never trigger a scale; only confirmed FTDs do. Value per request is payout × FTDs ÷ requests from your own recent data.",
+          "say": "These are the example decision rules. Write them before launch and stick to them. Target is thirty three dollars seventy five and break-even forty five, so the C P A kill line is forty five. Zero F T Ds at sixty seven dollars fifty or more of matured spend: check plumbing, then kill. Spend of one hundred and one dollars twenty five or more, with C P A over forty five: kill. Three or more F T Ds at twenty seven dollars or less: scale twenty percent, with steps at least forty eight hours apart. An early warning may kill early, but never scales. Judge on network confirmed F T Ds."
+        },
+        {
+          "v": "screen",
+          "h": "Logging the launch",
+          "p": "Keep a simple daily log alongside the dashboard. One row per day per ad set, plus a note on any change you made. On day 14 the log tells the story; without it you will remember only the good days.",
+          "d": {
+            "kind": "browser",
+            "url": "sheet.example/ke-launch",
+            "title": "KE launch log: example",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Day",
+                  "Spend",
+                  "Requests",
+                  "Note"
+                ],
+                "rows": [
+                  [
+                    "4",
+                    "$30",
+                    "41",
+                    "Launched A, B, C"
+                  ],
+                  [
+                    "5",
+                    "$30",
+                    "46",
+                    "No change"
+                  ],
+                  [
+                    "6",
+                    "$30",
+                    "39",
+                    "B CTR falling"
+                  ],
+                  [
+                    "7",
+                    "$30",
+                    "44",
+                    "Paused B, early warning"
+                  ]
+                ]
+              },
+              {
+                "type": "field",
+                "label": "Decision today",
+                "value": "Pause B: cost per request over its value 3 days (early warning)"
+              },
+              {
+                "type": "button",
+                "label": "Save row"
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "Keep a simple daily log alongside the dashboard. Look at the example. One row per day per ad set: the spend, the requests, and a note on any change. Day four, launched A, B and C. Day six, B's C T R, click-through rate, is falling. Day seven, paused B on the early warning. The highlighted field records today's decision and why. On day fourteen, the log tells the story. Without it, you'll remember only the good days."
+        },
+        {
+          "v": "tip",
+          "h": "When not to launch",
+          "p": "Some days the right decision is to wait. If any of these is true, fix it first: the offer's legal status is unclear, the ad needs authorization you do not have, the chain test fails, or the test budget is money you cannot afford to lose.",
+          "d": {
+            "kind": "warn",
+            "text": "No launch while legality, authorization, tracking or your own bankroll is in doubt. Waiting costs nothing."
+          },
+          "say": "Some days, the right decision is to wait. If any of these is true, fix it first: the offer's legal status is unclear, the ad needs authorization you don't have, the chain test fails, or the test budget is money you can't afford to lose. As the warning says, no launch while legality, authorization, tracking or your own bankroll is in doubt. Waiting costs nothing."
+        },
+        {
+          "v": "compare",
+          "h": "Common launch-plan mistakes",
+          "p": "Most first flows fail for planning reasons, not because the offer was bad. These mistakes are all decided before launch, which means they are also all fixable before a single dollar is spent.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Building before the legal check",
+                "No target CPA written down",
+                "Judging FTDs on day 5",
+                "Rules changed mid-test",
+                "One shared invite link"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Policy and law first",
+                "Target from payout and margin",
+                "Rule card on matured, confirmed data",
+                "Rules fixed until day 14",
+                "Per-visitor or per-ad-set links"
+              ]
+            }
+          },
+          "say": "Most first flows fail for planning reasons, not because the offer was bad. Compare the columns. Building before the legal check? Put policy and law first. No target C P A written down? Set the target from payout and margin. Judging F T Ds on day five? Use the rule card on matured, confirmed data. Changing rules mid-test? Fix the rules until day fourteen. One shared invite link? Use per visitor or per ad set links. All of these are fixable before you spend a single dollar."
+        },
+        {
+          "v": "check",
+          "h": "Launch-day checklist",
+          "p": "The last check before you press Publish. Every line should be true, not nearly true. If one fails, fix it and run the chain test again. A one-day delay costs nothing compared with a week of spend you cannot measure or a rejected ad account.",
+          "d": [
+            "Policy, authorization and local law checked",
+            "Chain test passed with a test postback",
+            "Channel has at least 10 useful posts",
+            "Risk line and 18+ on every page and offer post",
+            "Decision rules written down",
+            "Daily log ready"
+          ],
+          "say": "Here's the last check before you press Publish. Policy, authorization and local law checked. Chain test passed, with a test postback. The channel has at least ten useful posts. A risk line and eighteen plus on every page and offer post. Decision rules written down. And the daily log ready. Every line should be true, not nearly true. If one fails, fix it and run the chain test again. A one day delay costs nothing compared with a week of spend you can't measure."
+        },
+        {
+          "v": "big",
+          "h": "Then iterate, one hop at a time",
+          "p": "The first version of any flow is a draft. Run it, read the hop rates weekly, fix the weakest hop, and keep the log. Over a few cycles a flow that broke even can become one that holds a steady margin, without any promise that it will.",
+          "d": {
+            "b": "Launch, read, fix one hop, repeat",
+            "s": "Steady cycles beat big gambles"
+          },
+          "say": "The first version of any flow is a draft. Run it, read the hop rates weekly, fix the weakest hop, and keep the log. That's the cycle on screen: launch, read, fix one hop, repeat. Over a few cycles, a flow that broke even can become one that holds a steady margin, without any promise that it will. Steady cycles beat big gambles."
+        }
+      ],
+      "takeaways": [
+        "Fill in the flow template, one row per hop, before building anything.",
+        "Check platform policy, ad authorization, the broker's licence and local law first; some products cannot be advertised on Meta at all.",
+        "Set a target cost per FTD from the payout and a margin, and write decision rules before launch.",
+        "Use the first days to test the plumbing cheaply; judge FTDs by cohort after day 14."
+      ],
+      "action": "Fill in the flow template and the 14-day plan for one real offer you are considering, including the legal and policy checks with links to the sources you used. Do not launch until every cell is filled.",
+      "glossary": [
+        {
+          "term": "Flow template",
+          "def": "A one-page table listing every hop of a funnel with its tool, the ID it carries and the number to watch."
+        },
+        {
+          "term": "Qualified FTD",
+          "def": "A first deposit that meets the network's conditions for payout, such as a minimum amount or completed KYC."
+        },
+        {
+          "term": "Chain test",
+          "def": "A test click run through every hop to confirm each one records and passes on the ID before spending."
+        },
+        {
+          "term": "Decision rule",
+          "def": "A written if-then rule, set before launch, for when to pause, hold or raise budget."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which check comes first when planning a flow for a trading offer?",
+          "options": [
+            "Writing the welcome message",
+            "Picking the bot username",
+            "Confirming the offer is allowed on the platform and legal to promote in the geo",
+            "Designing the prelander colours"
+          ],
+          "answer": 2,
+          "why": "If the offer cannot be legally promoted or advertised on the platform, nothing else matters. Check policy, authorization and local law first."
+        },
+        {
+          "q": "Example: payout $60, target margin 30%. What is the target cost per FTD, and what is the CPA kill line?",
+          "options": [
+            "$42 target, $60 kill line",
+            "$42 target, $63 kill line",
+            "$18 target, $27 kill line",
+            "$60 target, $90 kill line"
+          ],
+          "answer": 0,
+          "why": "$60 × (1 − 0.30) = $42. 1.5 × $42 = $63, but break-even is $60, so the kill line is the lower, $60."
+        },
+        {
+          "q": "Why spend only small amounts in days 1 to 6 of the launch plan?",
+          "options": [
+            "Meta forbids larger budgets for new ad sets",
+            "Most launch problems are tracking and setup, and are cheaper to find at low spend",
+            "FTDs only happen after day 7",
+            "Telegram limits new channels"
+          ],
+          "answer": 1,
+          "why": "Plumbing problems are common at launch. Finding them with $10 costs far less than with $300."
+        },
+        {
+          "q": "The offer is a product that the ad platform bans at the time of writing. What do you do?",
+          "options": [
+            "Run ads to a prelander that hides the offer",
+            "Use a different ad account",
+            "Run it anyway at low spend",
+            "Do not advertise it on that platform; choose another offer or a channel where it is allowed"
+          ],
+          "answer": 3,
+          "why": "Hiding a banned product behind a prelander is cloaking and breaks policy. Pick a compliant offer or source."
+        },
+        {
+          "q": "On day 14, the FTD count is still rising. How should you treat the day-14 decision?",
+          "options": [
+            "As final, never look at the cohort again",
+            "As a direction, and re-check the same cohort a week later",
+            "As meaningless, wait three months",
+            "As a reason to double the budget"
+          ],
+          "answer": 1,
+          "why": "Deposits keep arriving. Decide direction on day 14 and confirm with the same cohort later."
+        }
+      ],
+      "say_intro": "In this lesson you'll build your own flow on paper before you build it for real. You'll fill in a flow template, run the legal and platform checks, follow a full worked example for a Kenyan trading offer, and see a fourteen day launch plan with clear decision rules.",
+      "say_outro": "To recap: write the plan before you build, run the legal and policy checks first, set your target from payout and margin, test cheaply, and decide on written rules using matured, confirmed data. Your task: fill in the flow template and the fourteen day plan for one real offer you're considering, including the legal and policy checks with links to your sources. Don't launch until every cell is filled. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "You use one invite link for all ad sets and post the raw offer link in the channel. Network shows 9 FTDs, Meta shows 0. What is the most useful first change?",
+      "options": [
+        "Raise the budget so Meta gets more data",
+        "Store a click_id at the prelander, link joins to it, and have the bot give personal offer links with sub1",
+        "Switch the channel to a public group",
+        "Change the offer"
+      ],
+      "answer": 1,
+      "why": "Without a stored click and personal links, deposits cannot be traced to ads, so no events reach Meta. Fix the ID chain first."
+    },
+    {
+      "q": "Example: target $33.75, payout $45. By day 14 an ad set has spent $110 with 2 network-confirmed FTDs. What does the rule card say?",
+      "options": [
+        "Hold: it has some FTDs",
+        "Scale: FTDs are arriving",
+        "Keep: 2 FTDs is close to 3",
+        "Kill: spend is past 3 × target and the $55 CPA is over the $45 kill line"
+      ],
+      "answer": 3,
+      "why": "$110 ≥ $101.25 (3 × target). CPA $110 ÷ 2 = $55, above the kill line, the lower of 1.5 × target ($50.63) and break-even ($45)."
+    },
+    {
+      "q": "Example: $600 spend, 1,000 join requests, 15 FTDs, payout $45. Is cost per join request above or below its value?",
+      "options": [
+        "Below: cost $0.60, value $0.675",
+        "Above: cost $0.60, value $0.45",
+        "Equal at $0.60",
+        "Cannot be calculated without CTR"
+      ],
+      "answer": 0,
+      "why": "Cost: $600 ÷ 1,000 = $0.60. Value: $45 × 15 ÷ 1,000 = $0.675. Each request earns about $0.075 more than it costs."
+    },
+    {
+      "q": "Members to offer clicks fell from 36% to 18% this week, everything else is steady, and tracking checks pass. What is the best first move?",
+      "options": [
+        "Pause all ads",
+        "Change the ad creative",
+        "Review recent offer posts and the bot link step, and test one fix",
+        "Switch networks"
+      ],
+      "answer": 2,
+      "why": "The rate that fell is inside the channel. Look at what changed there and test one fix."
+    },
+    {
+      "q": "A colleague wants to post edited profit screenshots \"because everyone does\". What do you say?",
+      "options": [
+        "Fine if the numbers are realistic",
+        "Fine if it is only in the channel, not ads",
+        "Only post wins from real members",
+        "No: it is a misleading claim that breaks platform rules and often consumer law; post proof of teaching instead"
+      ],
+      "answer": 3,
+      "why": "Fake proof misleads people and puts the channel and ad account at risk. Proof of process is the honest alternative."
+    },
+    {
+      "q": "Which value belongs in sub1 of the offer link?",
+      "options": [
+        "Your opaque click_id, such as ck_8f3k2",
+        "The member's phone number",
+        "The member's Telegram username",
+        "Your bot token"
+      ],
+      "answer": 0,
+      "why": "Sub IDs travel to other companies. Use your own opaque IDs only; never personal data or secrets."
+    },
+    {
+      "q": "Your postbacks for FTDs arrive 10 to 20 days after the click. What should you expect in Meta at the time of writing?",
+      "options": [
+        "Meta counts all of them",
+        "Some server events may be rejected as too old, so Meta shows fewer FTDs than the network",
+        "The network will not pay late FTDs",
+        "Meta counts them twice"
+      ],
+      "answer": 1,
+      "why": "Meta limits how old a server event can be (seven days at the time of writing). Late FTDs still pay; send events fast and read network numbers for profit."
+    },
+    {
+      "q": "Ad set X: cost per request $0.40, 2 FTDs from 900 requests. Ad set Y: $0.75, 9 FTDs from 500 requests. Payout $40. Which is more profitable, and why?",
+      "options": [
+        "X, because its requests are cheaper",
+        "Both lose money equally",
+        "Y, because its value per request ($0.72) is close to cost while X's is far below cost",
+        "Neither can be judged without CTR"
+      ],
+      "answer": 2,
+      "why": "X: value $40 × 2 ÷ 900 = $0.09 against $0.40 cost. Y: $40 × 9 ÷ 500 = $0.72 against $0.75. Y is near break-even; X loses heavily. Cheap joins are not good joins."
+    },
+    {
+      "q": "You plan a Nigerian trading offer. Which set of checks is complete before building?",
+      "options": [
+        "Ad platform policy and authorization, broker licensed or allowed with the SEC rules for promotion, age limits, network traffic terms, data protection notice",
+        "Only the network's payout",
+        "Only the bot username and channel name",
+        "Only Meta's audience size estimate"
+      ],
+      "answer": 0,
+      "why": "Regulated offers need platform, legal, age, network and privacy checks. Rules change, so use current sources."
+    },
+    {
+      "q": "Day 12 of your plan: one ad set has spent $90 (target $33.75) with 120 join requests and 0 registrations. Your rule says check plumbing first. What do you check?",
+      "options": [
+        "Whether the creative is pretty",
+        "Whether the channel has enough members",
+        "Whether the ad is in the learning phase",
+        "Whether offer posts reach the bot, the bot sends links with sub1, and a test click registers on the network"
+      ],
+      "answer": 3,
+      "why": "$90 is past the $67.50 zero-FTD line, but many joins with zero registrations often means a broken link or ID. Run the chain test first; if it passes, the rule fires and you kill."
+    }
+  ]
+}

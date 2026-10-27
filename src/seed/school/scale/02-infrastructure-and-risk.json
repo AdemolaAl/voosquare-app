@@ -1,0 +1,2823 @@
+{
+  "school": "scale",
+  "order": 2,
+  "slug": "infrastructure-and-risk",
+  "title": "Infrastructure and risk",
+  "summary": "How to build the business underneath your campaigns: verified identity, healthy accounts, reliable payments, honest appeals and backups that stay inside platform rules. You will also learn why buying or renting accounts, farming, cloaking and ban evasion end operations, and how compliance, a real company, clear contracts and clean records protect everything you scale.",
+  "lessons": [
+    {
+      "slug": "verified-business-identity",
+      "title": "Build on a verified business identity",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can explain why a verified business is the foundation of every account you run.",
+        "By the end you can set up business ownership, admin roles and security the right way.",
+        "By the end you can estimate what a single point of failure would cost your operation."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Infrastructure is the business",
+          "p": "At small budgets, one person and one ad account can work. At scale, the accounts, pages, payment methods and people with access become the business itself. If they are fragile, everything you built on top of them is fragile too.",
+          "d": {
+            "b": "Your accounts are your factory",
+            "s": "Build them like an asset, not a tool"
+          },
+          "say": "When you're small, one person and one ad account can work. But at scale, the accounts, pages, payment methods and the people with access become the business itself. As the screen says, your accounts are your factory. If they're fragile, everything you built on top of them is fragile too. So build them like an asset, not a tool."
+        },
+        {
+          "v": "cards",
+          "h": "The layers of a clean setup",
+          "p": "Every serious operation has the same layers. Each one must belong to you or your company, be verified where the platform asks, and be documented so the business does not depend on one person's phone.",
+          "d": [
+            "Legal entity|the company that owns everything",
+            "Business portfolio|the platform's container for assets",
+            "Ad accounts|where spend happens",
+            "Pages and domains|what users see",
+            "People and roles|who can do what",
+            "Payment methods|in the business's own name"
+          ],
+          "say": "Look at these layers. Every serious operation has them. The legal entity, the company that owns everything. The business portfolio, the platform's container for your assets. Ad accounts, where spend happens. Pages and domains, what users see. People and roles, who can do what. And payment methods, in the business's own name. Each layer must belong to you or your company, be verified where asked, and be documented, so the business doesn't depend on one person's phone."
+        },
+        {
+          "v": "flow",
+          "h": "Setting up the right way",
+          "p": "Order matters. Verification is far easier when the legal entity, website and contact details already match. Tool names change: at the time of writing Meta calls what was Business Manager a business portfolio. Check the current help pages before you start.",
+          "d": [
+            "Register the company",
+            "Create the business portfolio",
+            "Verify the business",
+            "Verify your domain",
+            "Add ad accounts and pages",
+            "Assign roles"
+          ],
+          "say": "Order matters here. Follow the flow: register the company, create the business portfolio, verify the business, verify your domain, add ad accounts and pages, and then assign roles. Why this order? Verification is far easier when the legal entity, website and contact details already match. At the time of writing, Meta calls what was Business Manager a business portfolio, but tool names change, so check the current help pages before you start."
+        },
+        {
+          "v": "check",
+          "h": "What verification usually needs",
+          "p": "Platforms ask you to prove the business is real and that you represent it. Exact documents vary by country and change over time, so check the current requirements before you start. Matching details across documents is what most often decides success.",
+          "d": [
+            "Legal business name exactly as registered",
+            "Registration document from the company registry",
+            "Business address and phone that match",
+            "A live website on your own domain",
+            "A business email on that domain",
+            "An authorised person with valid ID"
+          ],
+          "say": "Platforms ask you to prove the business is real and that you represent it. Here's what's usually needed. The legal business name exactly as registered. A registration document from the company registry. A business address and phone that match. A live website on your own domain. A business email on that domain. And an authorised person with valid I D. Documents vary by country and change over time, so check current requirements. Matching details is what most often decides success."
+        },
+        {
+          "v": "tip",
+          "h": "Match everything exactly",
+          "p": "A common reason verification fails is small mismatches: a different spelling of the company name, an old address, or a website that does not show the business name. Fix the mismatch before resubmitting rather than trying again and hoping.",
+          "d": {
+            "kind": "tip",
+            "text": "Put your registered company name and contact details in the website footer before you apply."
+          },
+          "say": "A common reason verification fails is a small mismatch. A different spelling of the company name, an old address, or a website that doesn't show the business name. When that happens, fix the mismatch before you resubmit. Don't just try again and hope. And here's a simple tip: put your registered company name and contact details in your website footer before you apply."
+        },
+        {
+          "v": "table",
+          "h": "Roles and access",
+          "p": "Give each person the least access they need to do their job. Admin rights are powerful: an admin can remove other admins. Role names change; check the current platform.",
+          "d": {
+            "cols": [
+              "Role",
+              "Who",
+              "Can do"
+            ],
+            "rows": [
+              [
+                "Business admin",
+                "Founder plus one deputy",
+                "Everything, incl. people"
+              ],
+              [
+                "Ad account advertiser",
+                "Media buyers",
+                "Create and edit ads"
+              ],
+              [
+                "Analyst",
+                "Reporting staff",
+                "View results only"
+              ],
+              [
+                "Finance",
+                "Accountant",
+                "Billing and invoices"
+              ]
+            ]
+          },
+          "more": "Keep at least two trusted admins who are real people in the company, each with two-factor authentication. If the only admin loses their phone, leaves, or has their personal profile restricted, the whole business can be locked out. When someone leaves, remove their access the same day and record it.",
+          "say": "Give each person the least access they need. Look at the table. Business admin is for the founder plus one deputy, and can do everything, including managing people. Media buyers get advertiser access to create and edit ads. Reporting staff get analyst access, view only. And your accountant gets finance access for billing. Admin rights are powerful, because an admin can remove other admins. Keep at least two trusted admins, each with two-factor authentication, and remove leavers the same day. Role names change, so check the current platform."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: audit people and roles",
+          "p": "Generic mock-ups, not real screens. Menu names change and we are not certain these are current; look for the same idea in your business settings. Do this audit once a month and on the day anyone leaves. Full prevention checklist: Ad account bans module.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open the people list",
+                "text": "In your business portfolio settings, open People. List every person, their role and whether two-factor is on.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/settings/people",
+                  "title": "People",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Person",
+                        "Role",
+                        "2FA"
+                      ],
+                      "rows": [
+                        [
+                          "Kemi O.",
+                          "Admin",
+                          "On"
+                        ],
+                        [
+                          "Ada N.",
+                          "Admin",
+                          "On"
+                        ],
+                        [
+                          "Tunde B.",
+                          "Advertiser",
+                          "Off"
+                        ],
+                        [
+                          "Old freelancer",
+                          "Admin",
+                          "Off"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Remove anyone who left",
+                "text": "The old freelancer still has admin rights. Remove the access today and write it in your access log.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/settings/people/4",
+                  "title": "Old freelancer",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Role",
+                      "value": "Admin"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Remove from business"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Set least access",
+                "text": "Tunde is a media buyer. Give him advertiser access to the ad accounts he runs, not admin rights over the business.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/settings/people/3",
+                  "title": "Tunde B.",
+                  "blocks": [
+                    {
+                      "type": "radio",
+                      "label": "Business access",
+                      "options": [
+                        "Admin",
+                        "Employee access only"
+                      ],
+                      "value": 1
+                    },
+                    {
+                      "type": "select",
+                      "label": "Ad account role",
+                      "value": "Advertiser: NG_Trading_01"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Save"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Require two-factor",
+                "text": "Where the option exists, require two-factor for everyone. Tunde turns it on before his next login.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "business.example/settings/security",
+                  "title": "Security",
+                  "blocks": [
+                    {
+                      "type": "radio",
+                      "label": "Two-factor authentication",
+                      "options": [
+                        "Not required",
+                        "Required for everyone"
+                      ],
+                      "value": 1
+                    },
+                    {
+                      "type": "button",
+                      "label": "Save"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Let's audit people and roles. Tap Next to follow each step. First, open the people list and note every person, their role, and whether two-factor is on. Second, remove anyone who left. Here, an old freelancer still has admin rights, so remove them today and log it. Third, set least access. Tunde is a media buyer, so he gets advertiser access to his ad accounts, not admin rights. Fourth, require two-factor for everyone where the option exists. These are generic mock-ups, so look for the same idea in your settings. Do this monthly and whenever anyone leaves."
+        },
+        {
+          "v": "check",
+          "h": "Security basics",
+          "p": "Most account losses at scale are not policy bans. They are hacked profiles and lost access. These basics prevent most of them and cost almost nothing.",
+          "d": [
+            "Two-factor authentication for every person",
+            "Authenticator app, not only SMS",
+            "A password manager for the team",
+            "Business email, not personal Gmail",
+            "Remove leavers the same day",
+            "Never share logins; add people properly"
+          ],
+          "say": "Here's something many people don't expect. Most account losses at scale aren't policy bans. They're hacked profiles and lost access. These basics prevent most of them and cost almost nothing. Two-factor authentication for every person. An authenticator app, not only S M S. A password manager for the team. Business email, not personal Gmail. Remove leavers the same day. And never share logins, add people properly."
+        },
+        {
+          "v": "code",
+          "h": "An asset register template",
+          "p": "Keep one register for every asset the business uses, with its owner and admins. Copy this into a shared document the founder and one deputy can open. When an asset depends on one person, the register makes it obvious.",
+          "d": {
+            "lang": "text",
+            "text": "ASSET REGISTER (review monthly)\nAsset | Type | Owned by | Admins (2FA?) | Notes\nZed Media Ltd portfolio | Business | Company | Kemi (on), Ada (on) | Verified 2025\nNG_Trading_01 | Ad account | Company | via portfolio | Card ****1234\nzedtrade.example | Domain | Company | Kemi, Ada | Verified\nTrading tips page | Page | Company | Kemi, Ada |\nLast checked: 04 Oct, by Ada",
+            "note": "Never write passwords here. They live in the password manager."
+          },
+          "say": "This is an asset register template. It lists every asset the business uses, its type, who owns it, and its admins, with whether two-factor is on. Copy it into a shared document that the founder and one deputy can open, and review it monthly. When an asset depends on one person, the register makes it obvious. And notice the note on screen: never write passwords here. They live in the password manager."
+        },
+        {
+          "v": "table",
+          "h": "Access rules with numbers",
+          "p": "Write access rules with clear numbers so nobody has to judge them on a busy day. These are starting rules; adapt them to the size of your team, and check the platform's current role options because names and limits change.",
+          "d": {
+            "cols": [
+              "Rule",
+              "Starting line"
+            ],
+            "rows": [
+              [
+                "Business admins",
+                "At least 2 real people, few more"
+              ],
+              [
+                "Two-factor",
+                "Every person, checked monthly"
+              ],
+              [
+                "Leaver",
+                "All access removed the same day"
+              ],
+              [
+                "New person",
+                "Least role first, raise later"
+              ],
+              [
+                "People audit",
+                "Monthly and after any incident"
+              ]
+            ]
+          },
+          "say": "Write access rules with clear numbers, so nobody has to judge them on a busy day. Look at the starting lines. Business admins: at least two real people, and few more. Two-factor: every person, checked monthly. Leavers: all access removed the same day. New people: least role first, raise later. And a people audit monthly and after any incident. Adapt these to your team size, and check the platform's current role options, because names and limits change."
+        },
+        {
+          "v": "stat",
+          "h": "Worked example: one point of failure",
+          "p": "Example: your operation makes $600 a day in profit through one business portfolio with one admin. That admin's profile is hacked and the business is locked for 10 days while you recover it. The direct cost is $6,000 in lost profit.",
+          "d": {
+            "n": 6000,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "profit lost in 10 days of lockout",
+            "note": "Example: $600/day × 10 days."
+          },
+          "more": "The real cost is higher. Campaigns that relaunch often need time to stabilise again, the network may give your cap to other affiliates while you are out, and your team is paid while they wait. Compare that with the cost of a second admin, two-factor authentication and a password manager: close to zero.",
+          "say": "Here's a worked example. Your operation makes six hundred dollars a day in profit through one business portfolio with one admin. That admin's profile is hacked, and the business is locked for ten days while you recover it. The direct cost is six thousand dollars in lost profit, the number on screen. The real cost is higher, because campaigns need time to stabilise and your team is still paid. Compare that with a second admin, two-factor and a password manager, which cost close to zero."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes: built to burn vs to last",
+          "p": "Two ways to set up the same operation. The left column lists the mistakes we see most; it feels faster in week one. The right column is the fix for each, and the only setup still running in year two.",
+          "d": {
+            "a": {
+              "title": "Built to burn",
+              "items": [
+                "Accounts in other people's names",
+                "One shared login",
+                "Personal cards",
+                "No verification"
+              ]
+            },
+            "b": {
+              "title": "Built to last",
+              "items": [
+                "Everything owned by your company",
+                "Each person has their own access",
+                "Business payment methods",
+                "Business and domain verified"
+              ]
+            }
+          },
+          "say": "Here are two ways to set up the same operation. On the left, built to burn: accounts in other people's names, one shared login, personal cards, and no verification. It feels faster in week one. On the right, built to last: everything owned by your company, each person with their own access, business payment methods, and business and domain verified. That's the only setup still running in year two."
+        },
+        {
+          "v": "tip",
+          "h": "Never use someone else's identity",
+          "p": "Running ads through accounts in another person's name, whether bought, rented or borrowed, breaks platform terms and can break laws on fraud and identity misuse. It also means someone else can take your business away at any time.",
+          "d": {
+            "kind": "warn",
+            "text": "Every account you advertise from should belong to you or your company, in your real details."
+          },
+          "say": "This is a firm line. Running ads through accounts in another person's name, whether bought, rented or borrowed, breaks platform terms, and can break laws on fraud and identity misuse. It also means someone else can take your business away at any time. As the warning says, every account you advertise from should belong to you or your company, in your real details."
+        },
+        {
+          "v": "big",
+          "h": "Verification is a moat",
+          "p": "Verified businesses with long, clean histories tend to get more trust from platforms over time. That trust is hard to fake and slow to build, which is exactly why it protects you from competitors who cut corners.",
+          "d": {
+            "b": "Clean history compounds",
+            "s": "Every month of good behaviour adds to it"
+          },
+          "say": "Here's why this is worth it. Verified businesses with long, clean histories tend to get more trust from platforms over time. That trust is hard to fake and slow to build. And that's exactly why it protects you from competitors who cut corners. As the screen says, clean history compounds. Every month of good behaviour adds to it."
+        }
+      ],
+      "takeaways": [
+        "Your accounts, pages, payment methods and people are the business at scale.",
+        "Own every asset through your company, verify it, and give access by role.",
+        "Two admins, two-factor authentication and a password manager prevent most losses."
+      ],
+      "action": "Write down every asset your operation uses (business portfolio, ad accounts, pages, domains, payment methods) with its owner and admins. Fix any asset that depends on a single person.",
+      "glossary": [
+        {
+          "term": "Business portfolio",
+          "def": "The platform's container that owns your ad accounts, pages, pixels and people. On Meta it was long called Business Manager; names change."
+        },
+        {
+          "term": "Business verification",
+          "def": "The platform's check that your business is real and that you represent it, using official documents."
+        },
+        {
+          "term": "Domain verification",
+          "def": "Proving to the platform that you own a website domain, usually by adding a DNS record or file."
+        },
+        {
+          "term": "Two-factor authentication",
+          "def": "A second login step, such as a code from an app, that stops someone who only has your password."
+        },
+        {
+          "term": "Least access",
+          "def": "Giving each person only the permissions their job needs."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What is the most common cause of losing account access at scale in this lesson?",
+          "options": [
+            "Hacked profiles and lost access",
+            "Policy bans",
+            "High CPMs",
+            "Network caps"
+          ],
+          "answer": 0,
+          "why": "Most losses come from security failures. Two-factor authentication and backup admins prevent most of them."
+        },
+        {
+          "q": "Verification failed. Your website shows a trading name, the registry shows the legal name. What should you do?",
+          "options": [
+            "Resubmit unchanged several times",
+            "Make the details match, then resubmit",
+            "Use a friend's business instead",
+            "Skip verification"
+          ],
+          "answer": 1,
+          "why": "Mismatched details are a common reason for failure. Fix them so documents and website agree."
+        },
+        {
+          "q": "How many trusted business admins should a business portfolio have, at minimum?",
+          "options": [
+            "One",
+            "Every media buyer",
+            "Two",
+            "None, use a shared login"
+          ],
+          "answer": 2,
+          "why": "At least two real admins avoids a single point of failure. Buyers need advertiser access, not admin."
+        },
+        {
+          "q": "An operation earns $450 a day profit and is locked out for 8 days. What is the direct profit lost?",
+          "options": [
+            "$450",
+            "$1,800",
+            "$3,600",
+            "$8,000"
+          ],
+          "answer": 2,
+          "why": "$450 × 8 = $3,600, before counting relaunch costs and lost cap."
+        },
+        {
+          "q": "Why is running ads through someone else's account a serious problem?",
+          "options": [
+            "It is slower",
+            "It only affects reporting",
+            "It costs more per click",
+            "It breaks platform terms, can break the law, and the owner can take it away"
+          ],
+          "answer": 3,
+          "why": "It violates terms, may involve identity misuse, and puts your business in someone else's hands."
+        }
+      ],
+      "say_intro": "This lesson is about the foundation under everything you run: a verified business identity. You'll learn how to set up ownership, roles and security properly, and what a single point of failure could cost you.",
+      "say_outro": "To recap: build on a verified company, give least access, keep two admins with two-factor, and remove single points of failure. Your task: write down every asset your operation uses, your business portfolio, ad accounts, pages, domains and payment methods, with each one's owner and admins, and fix any asset that depends on a single person. Now take the quiz."
+    },
+    {
+      "slug": "account-health",
+      "title": "Account health and account quality",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can read the signals that show an ad account's health.",
+        "By the end you can track your disapproval rate and act before it becomes a restriction.",
+        "By the end you can build habits that keep accounts in good standing at scale."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Health is a track record",
+          "p": "Platforms judge an account by its history: the ads it submitted, how many were rejected, how users responded, whether payments succeeded and whether it followed the rules. Every day either adds to that record or takes from it.",
+          "d": {
+            "b": "Every ad is a vote on your account",
+            "s": "Good history builds trust; violations spend it"
+          },
+          "say": "Platforms judge an account by its history. The ads it submitted, how many were rejected, how users responded, whether payments succeeded, and whether it followed the rules. As the screen says, every ad is a vote on your account. Good history builds trust, and violations spend it. So every single day either adds to that record or takes from it."
+        },
+        {
+          "v": "cards",
+          "h": "What affects account health",
+          "p": "Platforms do not publish exact formulas, and they change. These are the broad areas that matter, according to their own help pages and common experience. Treat each one as something you can manage.",
+          "d": [
+            "Policy record|rejections and violations",
+            "User feedback|hides, reports, negative comments",
+            "Payments|failed charges and disputes",
+            "Landing pages|what happens after the click",
+            "Security|unusual logins and access"
+          ],
+          "say": "Look at these cards. Platforms don't publish exact formulas, and they change. But these are the broad areas that matter. Your policy record, meaning rejections and violations. User feedback, like hides, reports and negative comments. Payments, failed charges and disputes. Landing pages, what happens after the click. And security, unusual logins and access. Treat each one as something you can manage."
+        },
+        {
+          "v": "table",
+          "h": "Where to look",
+          "p": "Most platforms have a page that shows the status of your assets. At the time of writing Meta calls it Account Quality; it lists restrictions and lets you request a review. Names and locations change, and we are not certain they are current; check the current Ads Manager.",
+          "d": {
+            "cols": [
+              "Signal",
+              "Where to find it",
+              "Check"
+            ],
+            "rows": [
+              [
+                "Rejected ads",
+                "Ads Manager status",
+                "Daily"
+              ],
+              [
+                "Restrictions",
+                "Account status page",
+                "Daily"
+              ],
+              [
+                "User feedback",
+                "Ad and page comments",
+                "Daily"
+              ],
+              [
+                "Payment issues",
+                "Billing",
+                "Weekly"
+              ],
+              [
+                "Landing page errors",
+                "Your own monitoring",
+                "Daily"
+              ]
+            ]
+          },
+          "say": "So where do you look? At the time of writing, Meta calls its status page Account Quality. It lists restrictions and lets you request a review. Look at the table. Check rejected ads in Ads Manager daily. Restrictions on the account status page, daily. User feedback in ad and page comments, daily. Payment issues in billing, weekly. And landing page errors with your own monitoring, daily. Names and locations change, so check the current Ads Manager."
+        },
+        {
+          "v": "eq",
+          "h": "Disapproval rate",
+          "p": "This one number gives you an early warning. A rising disapproval rate usually comes before restrictions, not after. Track it weekly for each account and each buyer.",
+          "d": [
+            "Ads rejected",
+            "÷",
+            "Ads submitted",
+            "=",
+            "Disapproval rate"
+          ],
+          "say": "Here's one number that gives you an early warning: your disapproval rate. It's ads rejected, divided by ads submitted. Why does it matter? A rising disapproval rate usually comes before restrictions, not after. So track it weekly, for each account and for each buyer."
+        },
+        {
+          "v": "stat",
+          "h": "Worked example: disapproval rate",
+          "p": "Example: your team submitted 40 ads this week and 6 were rejected. That is 6 ÷ 40 = 15%. Last month it was 5%. Something changed in how ads are being written or what the landing pages say.",
+          "d": {
+            "n": 15,
+            "pre": "",
+            "suf": "%",
+            "dec": 0,
+            "label": "disapproval rate this week",
+            "note": "Example: 6 of 40 ads rejected."
+          },
+          "more": "There is no published safe number, and it varies by vertical. What matters is your trend and the reasons. Group rejections by the policy named in the notice. If most are for the same reason, such as claims about results, you have one problem to fix in your creative brief, not six separate accidents.",
+          "say": "Here's a worked example. Your team submitted forty ads this week, and six were rejected. Six divided by forty is fifteen percent, the number on screen. Last month it was five percent. That tells you something changed, in how ads are written or what the landing pages say. There's no published safe number, and it varies by vertical. What matters is your trend and the reasons behind it."
+        },
+        {
+          "v": "bars",
+          "h": "Rejections by reason",
+          "p": "Example: grouping a month of rejections shows where the problem really is. Here, one reason accounts for more than half, so one change to the brief fixes most of it.",
+          "d": [
+            [
+              "Unrealistic outcome claims",
+              100,
+              "11"
+            ],
+            [
+              "Landing page issues",
+              45,
+              "5"
+            ],
+            [
+              "Personal attributes wording",
+              27,
+              "3"
+            ],
+            [
+              "Other",
+              18,
+              "2"
+            ]
+          ],
+          "say": "Look at these bars. It's an example of grouping a month of rejections by reason. Unrealistic outcome claims caused eleven. Landing page issues, five. Personal attributes wording, three. And other reasons, two. One reason accounts for more than half. So one change to the creative brief fixes most of the problem. That's why you group by reason, not just count."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: the weekly health tracker",
+          "p": "One tab, one row per ad account, filled every Monday from the rejection notices. The rate column is a formula. The reason field is what you act on: one repeated reason means one fix to the brief. Example figures.",
+          "more": "Check the maths: 6 ÷ 40 = 15%. 1 ÷ 25 = 4%. 2 ÷ 20 = 10%. Across all three accounts: 9 ÷ 85 = about 10.6%.",
+          "d": {
+            "kind": "browser",
+            "url": "sheets.example/health-tracker",
+            "title": "Account health, week 40",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Account",
+                  "Submitted",
+                  "Rejected",
+                  "Rate"
+                ],
+                "rows": [
+                  [
+                    "NG_Trading_01",
+                    "40",
+                    "6",
+                    "15%"
+                  ],
+                  [
+                    "KE_Trading_02",
+                    "25",
+                    "1",
+                    "4%"
+                  ],
+                  [
+                    "GH_Trading_01",
+                    "20",
+                    "2",
+                    "10%"
+                  ]
+                ]
+              },
+              {
+                "type": "field",
+                "label": "Top reason this week",
+                "value": "Unrealistic outcome claims (4 of 9)"
+              },
+              {
+                "type": "field",
+                "label": "Owner of the fix",
+                "value": "Ada, brief update by Wed"
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Here's a weekly health tracker. One row per ad account, filled every Monday from the rejection notices. N G Trading zero one: forty submitted, six rejected, fifteen percent. K E Trading zero two: four percent. G H Trading zero one: ten percent. The top reason this week is unrealistic outcome claims, four of nine. And there's a named owner for the fix, with a deadline. The reason field is what you act on. These are example figures."
+        },
+        {
+          "v": "table",
+          "h": "Health rules with numbers",
+          "p": "No platform publishes a safe disapproval rate, so these lines use your own history. Example: if your usual rate is 5%, a week at 10% or more triggers the stricter review. Starting rules; adapt them to your vertical and data.",
+          "d": {
+            "cols": [
+              "Trigger",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Any new restriction",
+                "Incident SOP the same day"
+              ],
+              [
+                "Rate up 2 weeks running",
+                "Fix brief before new launches"
+              ],
+              [
+                "Rate ≥ 2 × your baseline",
+                "Second-person review on every ad"
+              ],
+              [
+                "Same reason 3+ times",
+                "Update the claims register"
+              ],
+              [
+                "Unknown login",
+                "Treat as a hack: secure first"
+              ]
+            ]
+          },
+          "say": "No platform publishes a safe disapproval rate, so these rules use your own history. Look at the table. Any new restriction: run your incident plan the same day. Rate up two weeks running: fix the brief before new launches. Rate at two times your baseline or more: second-person review on every ad. Same reason three or more times: update the claims register. Unknown login: treat it as a hack and secure first. These are starting rules, so adapt them to your vertical and data."
+        },
+        {
+          "v": "compare",
+          "h": "Wording that hurts and helps",
+          "p": "Many rejections in trading and iGaming come from copy. These are typical patterns. Policies differ by platform and change over time; check the current rules. Full detail: Compliance for finance, trading and gambling offers module.",
+          "d": {
+            "a": {
+              "title": "Risky",
+              "items": [
+                "Make $500 a day guaranteed",
+                "Are you broke?",
+                "Quit your job next month",
+                "Risk-free trading"
+              ]
+            },
+            "b": {
+              "title": "Safer and honest",
+              "items": [
+                "Learn how the platform works",
+                "New to trading? Start with the basics",
+                "Practise with a demo first",
+                "Trading involves risk of loss"
+              ]
+            }
+          },
+          "say": "Many rejections in trading and iGaming come from copy. Compare the columns. Risky lines: make five hundred dollars a day guaranteed, are you broke, quit your job next month, risk-free trading. Safer and honest lines: learn how the platform works, new to trading, start with the basics, practise with a demo first, trading involves risk of loss. Policies differ by platform and change over time, so check the current rules."
+        },
+        {
+          "v": "tip",
+          "h": "The landing page counts",
+          "p": "Reviews look at what happens after the click. A clean ad that sends users to a page with income promises, fake countdowns or broken links will still hurt the account.",
+          "d": {
+            "kind": "warn",
+            "text": "The ad and the page must say the same honest thing. Never show reviewers one page and users another."
+          },
+          "say": "Reviews look at what happens after the click, not just at the ad. A clean ad that sends users to a page with income promises, fake countdowns or broken links will still hurt the account. As the warning says, the ad and the page must say the same honest thing. Never show reviewers one page and users another."
+        },
+        {
+          "v": "check",
+          "h": "Daily health habits",
+          "p": "Five minutes a day is enough to catch most problems early, while they are cheap to fix. Assign this to one named person so it does not fall between buyers.",
+          "d": [
+            "Check status page for restrictions",
+            "Read every rejection notice",
+            "Hide spam, answer real questions",
+            "Test landing pages on a phone",
+            "Log unusual logins or changes"
+          ],
+          "say": "Five minutes a day catches most problems early, while they're cheap to fix. Here's the daily routine. Check the status page for restrictions. Read every rejection notice. Hide spam and answer real questions. Test landing pages on a phone. And log unusual logins or changes. Assign this to one named person, so it doesn't fall between buyers."
+        },
+        {
+          "v": "phone",
+          "h": "The daily health message",
+          "p": "Example: the named health owner posts one short message in the team chat each morning. It says what was checked, what was found and what was done, so buyers do not have to open every status page themselves.",
+          "d": {
+            "app": "chat",
+            "title": "Team ops",
+            "subtitle": "group",
+            "messages": [
+              {
+                "from": "me",
+                "text": "Health 09:30. No restrictions. NG_Trading_01: 2 ads rejected, both for outcome claims."
+              },
+              {
+                "from": "me",
+                "text": "Paused that angle. Brief updated: no daily earnings lines. Lander checked on a phone, loads fine."
+              },
+              {
+                "from": "them",
+                "text": "Thanks. I will rewrite both from the claims register and send them for review."
+              }
+            ]
+          },
+          "say": "In this chat, the named health owner posts one short message each morning. Notice what it covers. No restrictions. Two ads rejected on one account, both for outcome claims. That angle is paused, the brief is updated with no daily earnings lines, and the lander is checked on a phone. A teammate replies that they'll rewrite both from the claims register. Now nobody else has to open every status page."
+        },
+        {
+          "v": "compare",
+          "h": "Common account health mistakes",
+          "p": "These habits quietly spend an account's good history. None of them looks dangerous on the day. Each fix on the right costs a few minutes and protects months of clean record.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Appealing every rejection",
+                "Fixing the ad, not the page",
+                "Nobody owns the daily check",
+                "Ignoring user comments"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Fix what is wrong, appeal the rest",
+                "Ad and page say the same thing",
+                "One named owner, every day",
+                "Answer real questions, hide spam"
+              ]
+            }
+          },
+          "say": "These habits quietly spend an account's good history. Appealing every rejection. Fixing the ad but not the page. Nobody owning the daily check. Ignoring user comments. Now look at the fixes. Fix what's wrong and appeal the rest. Make the ad and page say the same thing. One named owner, every day. Answer real questions and hide spam. Each fix takes a few minutes and protects months of clean record."
+        },
+        {
+          "v": "curve",
+          "h": "Early warnings before a restriction",
+          "p": "Illustration: an account whose disapproval rate climbed for weeks before it was restricted. The warning was visible long before the restriction. Weekly tracking would have caught it.",
+          "d": {
+            "a": [
+              4,
+              5,
+              7,
+              10,
+              14,
+              18,
+              22
+            ],
+            "la": "Disapproval rate %",
+            "x": [
+              "W1",
+              "W2",
+              "W3",
+              "W4",
+              "W5",
+              "W6",
+              "W7"
+            ]
+          },
+          "say": "This curve is an illustration of an account whose disapproval rate climbed for weeks before it was restricted. Look at the line. It went from four percent in week one, to ten in week four, to twenty two by week seven. The warning was visible long before the restriction. Weekly tracking would have caught it early."
+        },
+        {
+          "v": "flow",
+          "h": "When the rate rises",
+          "p": "Treat a rising disapproval rate as a process problem. Find the cause, fix the brief and the review step, then confirm the rate comes back down. If an account is restricted, follow the same-day plan in the Ad account bans module.",
+          "d": [
+            "Group rejections by reason",
+            "Find the common cause",
+            "Fix brief and checklist",
+            "Pre-check before submitting",
+            "Track next week's rate"
+          ],
+          "say": "When the rate rises, treat it as a process problem. Follow the flow. Group rejections by reason. Find the common cause. Fix the brief and the checklist. Pre-check ads before submitting. And track next week's rate to confirm it comes back down. If an account is actually restricted, follow the same-day plan in the Ad account bans module."
+        },
+        {
+          "v": "big",
+          "h": "Slow down to stay fast",
+          "p": "Checking ads before they go live feels slow when you are scaling. It is much faster than rebuilding an account. Healthy accounts spend more over a year than restricted ones.",
+          "d": {
+            "b": "Review before, not after",
+            "s": "Prevention is cheaper than appeals"
+          },
+          "say": "Checking ads before they go live can feel slow when you're scaling. But it's much faster than rebuilding an account. Healthy accounts spend more over a year than restricted ones. As the screen says, review before, not after. Prevention is cheaper than appeals."
+        }
+      ],
+      "takeaways": [
+        "Account health is a track record built from policy, feedback, payments and pages.",
+        "Track your disapproval rate weekly and group rejections by reason.",
+        "The ad and the landing page must say the same honest thing."
+      ],
+      "action": "Count last week's submitted and rejected ads for each account. Calculate the disapproval rate and write down the most common rejection reason.",
+      "glossary": [
+        {
+          "term": "Account quality",
+          "def": "The platform's view of an account's standing, often shown on a status page with restrictions and review options. Names change."
+        },
+        {
+          "term": "Disapproval rate",
+          "def": "Rejected ads divided by submitted ads over a period."
+        },
+        {
+          "term": "Restriction",
+          "def": "A limit placed on an account, page or person, such as not being able to run ads."
+        },
+        {
+          "term": "User feedback",
+          "def": "Signals from people who see your ads, such as hiding, reporting or commenting negatively."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Your team submitted 50 ads and 8 were rejected. What is the disapproval rate?",
+          "options": [
+            "8%",
+            "12.5%",
+            "16%",
+            "20%"
+          ],
+          "answer": 2,
+          "why": "8 ÷ 50 = 0.16, or 16%."
+        },
+        {
+          "q": "Most rejections this month cite the same policy about claims. What is the best fix?",
+          "options": [
+            "Appeal every one",
+            "Change the creative brief and pre-check copy against that policy",
+            "Open a new account",
+            "Lower budgets"
+          ],
+          "answer": 1,
+          "why": "One common cause means one process fix. Appeals alone do not stop new rejections."
+        },
+        {
+          "q": "Which is a sign of good account health practice?",
+          "options": [
+            "Showing reviewers a safe page and users a different one",
+            "Ignoring rejection notices",
+            "Matching the ad and landing page honestly",
+            "Using one login for the team"
+          ],
+          "answer": 2,
+          "why": "The ad and page must agree. Showing reviewers a different page is cloaking and is prohibited."
+        },
+        {
+          "q": "Which piece of copy is least likely to cause a policy problem for a trading offer?",
+          "options": [
+            "Guaranteed $300 a day",
+            "Risk-free profits",
+            "Are you broke?",
+            "Learn the basics; trading involves risk"
+          ],
+          "answer": 3,
+          "why": "It is honest and avoids income promises and personal attributes."
+        },
+        {
+          "q": "Why track disapproval rate weekly rather than wait for a restriction?",
+          "options": [
+            "It usually rises before a restriction, giving early warning",
+            "Platforms require weekly reports",
+            "It lowers CPM",
+            "It replaces appeals"
+          ],
+          "answer": 0,
+          "why": "A rising rate is an early warning. Fixing the cause early is far cheaper than recovering an account."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn how platforms judge your ad account's health, how to track your disapproval rate, and the daily habits that keep accounts in good standing as you scale.",
+      "say_outro": "To recap: account health is a track record, your disapproval rate is the early warning, and grouping rejections by reason shows you what to fix. Your task: count last week's submitted and rejected ads for each account, calculate the disapproval rate, and write down the most common rejection reason. Now take the quiz."
+    },
+    {
+      "slug": "payments-and-limits",
+      "title": "Payments, billing and spending limits",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can explain billing thresholds, spending limits and why payments fail at scale.",
+        "By the end you can plan payment capacity before you raise budgets.",
+        "By the end you can account for currency costs in your true CPA."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Payments are part of account health",
+          "p": "A failed payment is not just an admin problem. Repeated failed charges can pause delivery, lower trust in the account and in some cases lead to restrictions. At scale, payment capacity is as important as creative.",
+          "d": {
+            "b": "A declined card can stop a winner",
+            "s": "Plan payment capacity like you plan budget"
+          },
+          "say": "A failed payment isn't just an admin problem. Repeated failed charges can pause delivery, lower trust in the account, and in some cases lead to restrictions. As the screen says, a declined card can stop a winner. So at scale, plan your payment capacity just like you plan your budget. It's as important as creative."
+        },
+        {
+          "v": "cards",
+          "h": "Three limits to understand",
+          "p": "Three different limits often get confused. Each one works differently and is set by a different party. Names and rules vary by platform and country; check the current billing help.",
+          "d": [
+            "Billing threshold|spend level that triggers a charge",
+            "Account spending limit|a cap you set on total spend",
+            "Card or bank limit|what your bank allows per day"
+          ],
+          "say": "Three different limits often get confused. Look at the cards. The billing threshold is the spend level that triggers a charge. The account spending limit is a cap you set on total spend. And the card or bank limit is what your bank allows per day. Each works differently and is set by a different party. Names and rules vary by platform and country, so check the current billing help."
+        },
+        {
+          "v": "tip",
+          "h": "How thresholds work",
+          "p": "On many platforms, at the time of writing, you are charged each time spend reaches a billing threshold, and also on a regular billing date. Thresholds often start low and may rise with good payment history. We are not certain how your account is set; check its billing page.",
+          "d": {
+            "kind": "tip",
+            "text": "More spend with the same threshold means more charges per day, and more chances for a bank to flag one."
+          },
+          "say": "Here's how thresholds work on many platforms, at the time of writing. You're charged each time spend reaches the billing threshold, and also on a regular billing date. Thresholds often start low and may rise with good payment history. We're not certain how your account is set, so check its billing page. And here's the key point on screen: more spend with the same threshold means more charges per day, and more chances for a bank to flag one."
+        },
+        {
+          "v": "stat",
+          "h": "Worked example: charges per day",
+          "p": "Example: your billing threshold is $250 and you spend $1,000 a day. You will be charged about four times a day. If your bank flags repeated foreign charges as suspicious, one of them may be declined.",
+          "d": {
+            "n": 4,
+            "pre": "",
+            "suf": "",
+            "dec": 0,
+            "label": "charges a day",
+            "note": "Example: $1,000 ÷ $250 threshold."
+          },
+          "say": "Let's do the maths. In this example, your billing threshold is two hundred and fifty dollars, and you spend one thousand dollars a day. One thousand divided by two hundred and fifty is about four charges a day, the number on screen. If your bank flags repeated foreign charges as suspicious, one of those four may be declined."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: will the card hold?",
+          "p": "Example: a business card with a $1,500 daily limit. At each budget level, compare daily spend with the card limit. The plan breaks before the campaign does.",
+          "d": {
+            "cols": [
+              "Budget/day",
+              "Card limit",
+              "Room left"
+            ],
+            "rows": [
+              [
+                "$600",
+                "$1,500",
+                "$900"
+              ],
+              [
+                "$1,000",
+                "$1,500",
+                "$500"
+              ],
+              [
+                "$1,400",
+                "$1,500",
+                "$100"
+              ],
+              [
+                "$1,800",
+                "$1,500",
+                "−$300, fails"
+              ]
+            ]
+          },
+          "more": "Many operators keep spend below about 70% of the daily card limit as a rough guide, to leave room for timing, taxes and other charges on the same card. Here that means about $1,050 a day. To go higher, talk to your bank about a higher limit or add a second payment method owned by the same business.",
+          "say": "Will the card hold? In this example, a business card has a fifteen hundred dollar daily limit. At six hundred a day, you have nine hundred room left. At one thousand, five hundred left. At fourteen hundred, only one hundred. And at eighteen hundred, you're three hundred over, so it fails. The plan breaks before the campaign does. As a rough guide, many operators keep spend below about seventy percent of the card limit, here about one thousand and fifty dollars a day."
+        },
+        {
+          "v": "check",
+          "h": "Payment setup at scale",
+          "p": "Use payment methods in your company's name, with a backup ready before you need it. Options vary by country and platform, so check what is available for your business.",
+          "d": [
+            "Business card or account in the company name",
+            "A backup method on the same business",
+            "Bank told to expect regular foreign charges",
+            "Limits checked before each budget step",
+            "Invoices downloaded and filed monthly"
+          ],
+          "say": "Here's how to set up payments at scale. A business card or account in the company name. A backup method on the same business. Tell your bank to expect regular foreign charges. Check limits before each budget step. And download and file invoices monthly. Options vary by country and platform, so check what's available for your business."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: check payment capacity",
+          "p": "Generic mock-ups, not real screens. Billing menus change and we are not certain these names are current; check your platform's billing help. Run this check before every budget step, not after a charge has been declined.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open billing",
+                "text": "Open the ad account's billing and payment settings. Confirm both methods belong to your company.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/billing",
+                  "title": "Payment settings",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Method",
+                        "Name on it",
+                        "Role"
+                      ],
+                      "rows": [
+                        [
+                          "Business card ****1234",
+                          "Zed Media Ltd",
+                          "Primary"
+                        ],
+                        [
+                          "Business card ****8890",
+                          "Zed Media Ltd",
+                          "Backup"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Read threshold and limit",
+                "text": "Note the billing threshold and the account spending limit you set.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/billing/limits",
+                  "title": "Limits",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Billing threshold",
+                      "value": "$250"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Account spending limit",
+                      "value": "$30,000, $22,400 used"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Compare with the card",
+                "text": "In your sheet, compare the new daily budget with 70% of the card's daily limit.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheets.example/payment-check",
+                  "title": "Payment check",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Card daily limit",
+                      "value": "$1,500"
+                    },
+                    {
+                      "type": "field",
+                      "label": "70% line",
+                      "value": "$1,050"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Planned daily budget",
+                      "value": "$1,000"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Fits. Step allowed."
+                    }
+                  ],
+                  "highlight": 2
+                }
+              }
+            ]
+          },
+          "say": "Let's check payment capacity. Tap Next to follow each step. First, open billing and confirm both payment methods belong to your company, a primary and a backup. Second, read the billing threshold and the account spending limit. Here, two hundred and fifty dollars, and thirty thousand with twenty two thousand four hundred used. Third, in your sheet, compare the new daily budget with seventy percent of the card limit. One thousand fits under one thousand and fifty, so the step is allowed. Menus change, so check your platform's billing help."
+        },
+        {
+          "v": "table",
+          "h": "Payment rules before a step",
+          "p": "Example: card daily limit $1,500, so the 70% line is $1,050. These rules stop a winning campaign from pausing overnight on a declined charge. Starting rules; adapt the percentages to your bank and platform.",
+          "d": {
+            "cols": [
+              "Check",
+              "Action"
+            ],
+            "rows": [
+              [
+                "New budget above $1,050",
+                "No step; raise limit or add backup"
+              ],
+              [
+                "2 declined charges in 7 days",
+                "Pause steps; call the bank"
+              ],
+              [
+                "No backup method on file",
+                "No step until one is added"
+              ],
+              [
+                "Spending limit close to used up",
+                "Raise it or plan the stop"
+              ]
+            ]
+          },
+          "say": "These rules stop a winning campaign pausing overnight on a declined charge. In this example, the card limit is fifteen hundred, so the seventy percent line is one thousand and fifty. New budget above that? No step; raise the limit or add a backup. Two declined charges in seven days? Pause steps and call the bank. No backup method? No step until one's added. Spending limit nearly used? Raise it or plan the stop. Adapt the percentages to your bank and platform."
+        },
+        {
+          "v": "eq",
+          "h": "True cost after currency",
+          "p": "If your card is in a local currency and ad spend is billed in dollars, the bank's rate and fees add to your real cost. Include them, or your CPA will look better than it is.",
+          "d": [
+            "Ad CPA",
+            "×",
+            "(1 + FX and fees %)",
+            "=",
+            "True CPA"
+          ],
+          "say": "If your card is in a local currency and ad spend is billed in dollars, the bank's rate and fees add to your real cost. Here's the formula. Your ad C P A, cost per acquisition, times one plus your currency and fees percentage, equals your true C P A. Include it, or your C P A will look better than it really is."
+        },
+        {
+          "v": "stat",
+          "h": "Worked example: currency costs",
+          "p": "Example: your ads show a $25 CPA. Your bank's rate and card fees add 4% on top of the official rate. True CPA is 25 × 1.04 = $26. On a $30 payout, headroom drops from about 17% to about 13%.",
+          "d": {
+            "n": 26,
+            "pre": "$",
+            "suf": "",
+            "dec": 2,
+            "label": "true CPA after 4% currency costs",
+            "note": "Example: $25 × 1.04."
+          },
+          "more": "Check the maths: (30 − 25) ÷ 30 = 16.7%. (30 − 26) ÷ 30 = 13.3%. Some countries also add VAT or other taxes to digital ad spend; check your invoices and ask an accountant how they apply to you. Small percentages matter at scale: 4% on $30,000 of monthly spend is $1,200.",
+          "say": "Here's a worked example. Your ads show a twenty five dollar C P A. Your bank's rate and card fees add four percent. So twenty five times one point zero four is twenty six dollars, your true C P A. On a thirty dollar payout, your headroom drops from about seventeen percent to about thirteen percent. Small percentages matter at scale. Four percent on thirty thousand dollars of monthly spend is twelve hundred dollars. Some countries also add V A T or other taxes, so ask an accountant."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes: payment methods",
+          "p": "Payment methods are tied to identity, so platforms and banks watch them closely. The left column lists the mistakes that get accounts and people restricted. The right column is the fix for each, and it protects both the ad account and you personally.",
+          "d": {
+            "a": {
+              "title": "Do not",
+              "items": [
+                "Cards in other people's names",
+                "Bought or shared cards",
+                "Disputing charges you owe",
+                "Rotating cards to dodge limits"
+              ]
+            },
+            "b": {
+              "title": "Do",
+              "items": [
+                "Methods in the business's name",
+                "One backup on the same business",
+                "Pay disputes only if truly wrong",
+                "Raise limits with your bank"
+              ]
+            }
+          },
+          "say": "Payment methods are tied to identity, so platforms and banks watch them closely. On the left, what not to do: cards in other people's names, bought or shared cards, disputing charges you owe, and rotating cards to dodge limits. On the right, what to do: methods in the business's name, one backup on the same business, dispute only if a charge is truly wrong, and raise limits with your bank."
+        },
+        {
+          "v": "tip",
+          "h": "Do not dispute charges you owe",
+          "p": "Filing a chargeback on legitimate ad spend to get money back is treated as a serious billing issue and can lead to restrictions. It can also be fraud.",
+          "d": {
+            "kind": "warn",
+            "text": "If a charge is truly wrong, contact platform billing support first and keep the records."
+          },
+          "say": "Filing a chargeback on legitimate ad spend to get money back is treated as a serious billing issue, and it can lead to restrictions. It can also be fraud. As the warning says, if a charge is truly wrong, contact platform billing support first, and keep the records."
+        },
+        {
+          "v": "phone",
+          "h": "Telling your bank what to expect",
+          "p": "Example: a short message to the business bank before spend grows. Banks often flag repeated foreign charges as suspicious. Telling them in advance, and asking about the limit, prevents most declined charges.",
+          "d": {
+            "app": "chat",
+            "title": "Business banking",
+            "subtitle": "relationship manager",
+            "messages": [
+              {
+                "from": "me",
+                "text": "Hello. Zed Media Ltd runs daily ad charges in USD of about $1,000, often four charges a day. Please note this on our account so they are not blocked."
+              },
+              {
+                "from": "them",
+                "text": "Noted on your profile. Your card's daily limit is $1,500. We can review an increase with your last three statements."
+              },
+              {
+                "from": "me",
+                "text": "Thank you. I will send the statements today."
+              }
+            ]
+          },
+          "say": "In this chat, the buyer messages the business bank before spend grows. They explain the company runs daily ad charges in U S dollars, about one thousand a day, often four charges a day, and ask the bank to note it. The bank confirms, says the daily limit is fifteen hundred, and offers to review an increase with three statements. Banks often flag repeated foreign charges, so telling them in advance prevents most declined charges."
+        },
+        {
+          "v": "flow",
+          "h": "Before every budget step",
+          "p": "Add a payment check to your scaling routine. It takes two minutes and stops a winning campaign from pausing overnight on a declined charge that nobody noticed.",
+          "d": [
+            "New daily budget",
+            "Compare with card limit",
+            "Check account spending limit",
+            "Confirm backup method",
+            "Then raise budget"
+          ],
+          "say": "Add a payment check to your scaling routine. Follow the flow. Set the new daily budget. Compare it with the card limit. Check the account spending limit. Confirm your backup method. Then raise the budget. It takes about two minutes, and it stops a winning campaign from pausing overnight on a declined charge that nobody noticed."
+        },
+        {
+          "v": "big",
+          "h": "Money in, money out, on record",
+          "p": "Every payment should be traceable to the business, with invoices filed. That is what an accountant, a bank, a platform reviewer or a future buyer of your business will ask for.",
+          "d": {
+            "b": "If it is not on record, it did not happen",
+            "s": "File invoices every month"
+          },
+          "say": "Every payment should be traceable to the business, with invoices filed. That's what an accountant, a bank, a platform reviewer, or a future buyer of your business will ask for. As the screen says, if it's not on record, it didn't happen. So file your invoices every month."
+        }
+      ],
+      "takeaways": [
+        "Billing thresholds, account spending limits and card limits are different things.",
+        "Check payment capacity before every budget step and keep a backup on the same business.",
+        "Include currency costs and taxes in your true CPA."
+      ],
+      "action": "Write down your billing threshold, account spending limit and card daily limit. Calculate the highest daily budget your payment setup can support with 30% room left.",
+      "glossary": [
+        {
+          "term": "Billing threshold",
+          "def": "The amount of spend that triggers a charge to your payment method. Often rises with good payment history."
+        },
+        {
+          "term": "Account spending limit",
+          "def": "A cap you set on the total an ad account can spend until you change or reset it."
+        },
+        {
+          "term": "Chargeback",
+          "def": "A dispute filed with your bank to reverse a card payment."
+        },
+        {
+          "term": "True CPA",
+          "def": "Cost per result after adding currency conversion costs, card fees and taxes."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Billing threshold is $500 and daily spend is $2,000. About how many charges per day?",
+          "options": [
+            "1",
+            "2",
+            "4",
+            "10"
+          ],
+          "answer": 2,
+          "why": "$2,000 ÷ $500 = 4 charges a day."
+        },
+        {
+          "q": "Your card's daily limit is $2,000. Keeping a 30% buffer, what is the highest daily budget?",
+          "options": [
+            "$600",
+            "$1,400",
+            "$2,000",
+            "$2,600"
+          ],
+          "answer": 1,
+          "why": "70% of $2,000 is $1,400, leaving 30% room for timing and other charges."
+        },
+        {
+          "q": "Ads show $40 CPA. Currency costs add 5%. What is the true CPA?",
+          "options": [
+            "$38",
+            "$40",
+            "$42",
+            "$45"
+          ],
+          "answer": 2,
+          "why": "$40 × 1.05 = $42."
+        },
+        {
+          "q": "Spend is about to exceed your card's limit. Which action follows platform rules?",
+          "options": [
+            "Rotate in cards from friends",
+            "Dispute yesterday's charges",
+            "Ask your bank for a higher limit or add a business backup method",
+            "Open a new account in a relative's name"
+          ],
+          "answer": 2,
+          "why": "Raise limits with your bank or add another method owned by the same business."
+        },
+        {
+          "q": "When is it reasonable to raise a charge dispute with your bank?",
+          "options": [
+            "Whenever a campaign loses money",
+            "At month end to manage cash",
+            "To recover spend on rejected ads",
+            "Only when a charge is truly wrong, after contacting platform support"
+          ],
+          "answer": 3,
+          "why": "Disputing legitimate charges can lead to restrictions and may be fraud."
+        }
+      ],
+      "say_intro": "Payments are part of account health. In this lesson you'll learn how billing thresholds and spending limits work, how to check payment capacity before you raise budgets, and how currency costs change your true C P A.",
+      "say_outro": "To recap: know your threshold, spending limit and card limit, check capacity before every budget step, and include currency costs in your true C P A. Your task: write down your billing threshold, account spending limit and card daily limit, then calculate the highest daily budget your payment setup can support with thirty percent room left. Now take the quiz."
+    },
+    {
+      "slug": "appeals-and-legitimate-backups",
+      "title": "Appeals, backups and the shortcuts to refuse",
+      "minutes": 19,
+      "objectives": [
+        "By the end you can write an appeal that gives a reviewer what they need.",
+        "By the end you can build backups that follow platform rules.",
+        "By the end you can explain why buying or renting accounts, farming, cloaking and evasion end operations."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Restrictions happen to honest operators",
+          "p": "Automated review makes mistakes, and so do people. A restriction is not always a sign you did something wrong. The way you respond, calmly and with evidence, decides how quickly you recover and whether your record stays clean.",
+          "d": {
+            "b": "Respond with evidence, not anger",
+            "s": "A good appeal is short, specific and honest"
+          },
+          "say": "Automated review makes mistakes, and so do people. So a restriction isn't always a sign you did something wrong. What matters is how you respond. Calmly, and with evidence. As the screen says, respond with evidence, not anger. A good appeal is short, specific and honest, and it decides how quickly you recover and whether your record stays clean."
+        },
+        {
+          "v": "flow",
+          "h": "The appeal process",
+          "p": "Most platforms offer a way to request a review from the status page of the restricted asset. Steps and names change; check the current help pages. Read the notice carefully before doing anything. Full step-by-step, with templates: Ad account bans module.",
+          "d": [
+            "Read the exact notice",
+            "Check the named policy",
+            "Fix what is genuinely wrong",
+            "Request a review",
+            "Record the outcome"
+          ],
+          "say": "Here's the appeal process. Follow the flow. Read the exact notice. Check the named policy. Fix what's genuinely wrong. Request a review. Then record the outcome. Most platforms let you request a review from the status page of the restricted asset, but steps and names change, so check the current help pages. The full step-by-step, with templates, is in the Ad account bans module."
+        },
+        {
+          "v": "chat",
+          "h": "A clear appeal message",
+          "p": "Example: a short, factual message to support after an ad was rejected. It names the asset, explains the change, and asks one clear question. It does not argue or threaten.",
+          "d": [
+            {
+              "from": "buyer",
+              "text": "Hello. Ad ID 1234 was rejected under the policy on unrealistic outcomes."
+            },
+            {
+              "from": "buyer",
+              "text": "We removed the line 'earn daily' and now say 'learn how trading works; trading involves risk'. The landing page says the same."
+            },
+            {
+              "from": "buyer",
+              "text": "Our business is verified and the offer is authorised for this country. Could you review the updated ad?"
+            }
+          ],
+          "say": "Look at this example appeal message. It names the rejected ad and the policy, unrealistic outcomes. Then it explains the change: the line earn daily was removed, and replaced with learn how trading works, trading involves risk, and the landing page says the same. It notes the business is verified and the offer is authorised for the country. Then it asks one clear question. Notice it doesn't argue or threaten."
+        },
+        {
+          "v": "check",
+          "h": "What a good appeal includes",
+          "p": "Reviewers handle many cases a day. Make yours easy to approve by giving them everything they need in one place, in plain words, without long stories or emotion.",
+          "d": [
+            "The exact asset ID and notice",
+            "What you changed, if anything",
+            "Why it now meets the policy",
+            "Proof of authorization if regulated",
+            "One clear request"
+          ],
+          "say": "Reviewers handle many cases a day, so make yours easy to approve. A good appeal includes the exact asset I D and notice. What you changed, if anything. Why it now meets the policy. Proof of authorization if the offer is regulated. And one clear request. Put it all in one place, in plain words, without long stories or emotion."
+        },
+        {
+          "v": "tip",
+          "h": "Do not fix and appeal at the same time on a guess",
+          "p": "If you do not understand why something was rejected, read the policy first. Appealing an ad that genuinely breaks the rules wastes the review and adds to your record.",
+          "d": {
+            "kind": "tip",
+            "text": "If it breaks the policy, edit it. If you believe it does not, appeal it with your reason."
+          },
+          "say": "If you don't understand why something was rejected, read the policy first. Appealing an ad that genuinely breaks the rules wastes the review and adds to your record. The tip on screen makes it simple. If it breaks the policy, edit it. If you believe it doesn't, appeal it with your reason."
+        },
+        {
+          "v": "table",
+          "h": "Fix, appeal or accept",
+          "p": "Every restriction ends in one of three decisions. Use these lines so the decision does not depend on your mood. Starting rules; the platform's current options decide what is available, so check the notice and the help pages.",
+          "d": {
+            "cols": [
+              "Situation",
+              "Decision"
+            ],
+            "rows": [
+              [
+                "Ad breaks the named policy",
+                "Fix it; do not appeal"
+              ],
+              [
+                "You believe it complies",
+                "Appeal once, with evidence"
+              ],
+              [
+                "Ad appeal denied",
+                "Rewrite or drop the angle"
+              ],
+              [
+                "Business appeal denied",
+                "Accept; no new accounts"
+              ],
+              [
+                "One platform over 80% of profit",
+                "Start a second-source test"
+              ]
+            ]
+          },
+          "say": "Every restriction ends in one of three decisions: fix, appeal or accept. Look at the table. If the ad breaks the named policy, fix it and don't appeal. If you believe it complies, appeal once, with evidence. If an ad appeal is denied, rewrite or drop the angle. If a business appeal is denied, accept it, and open no new accounts. And if one platform is over eighty percent of profit, start a second-source test. These are starting rules, and the platform's current options decide what's available."
+        },
+        {
+          "v": "cards",
+          "h": "Common appeal mistakes",
+          "p": "Appeals fail for the same few reasons. Each mistake below makes a reviewer's job harder or adds to your record. Fix them in your template once and every future appeal is better.",
+          "d": [
+            "Angry tone|reviewers need facts, not feelings",
+            "Appealing on a guess|read the policy first",
+            "Many appeals at once|one clear request per asset",
+            "Untrue claims|every line must be true",
+            "No record|log every outcome"
+          ],
+          "say": "Appeals fail for the same few reasons. An angry tone, when reviewers need facts, not feelings. Appealing on a guess, instead of reading the policy first. Many appeals at once, instead of one clear request per asset. Untrue claims, when every line must be true. And no record, when you should log every outcome. Fix these in your template once, and every future appeal gets better."
+        },
+        {
+          "v": "cards",
+          "h": "Backups that follow the rules",
+          "p": "Redundancy is smart. These backups are generally within platform rules when they are owned by your verified business and used for real business needs, not to evade enforcement. Check current limits.",
+          "d": [
+            "Second admin|a real person with 2FA",
+            "Extra ad accounts|inside your verified business",
+            "Backup payment|same business, own name",
+            "Owned audiences|email lists and channels you built with consent",
+            "Other sources|a second traffic platform"
+          ],
+          "say": "Redundancy is smart, when it's done within the rules. Look at the cards. A second admin, a real person with two-factor. Extra ad accounts, inside your verified business. A backup payment method, same business, your own name. Owned audiences, email lists and channels built with consent. And other sources, like a second traffic platform. These are generally within platform rules when owned by your verified business and used for real needs, not to evade enforcement. Check current limits."
+        },
+        {
+          "v": "stat",
+          "h": "Worked example: diversified income",
+          "p": "Example: 70% of your profit comes from Meta, 20% from TikTok and 10% from your own Telegram channel. If one platform restricts you for two weeks, you keep 30% of profit while you appeal, instead of zero.",
+          "d": {
+            "n": 30,
+            "pre": "",
+            "suf": "%",
+            "dec": 0,
+            "label": "profit kept during a two-week Meta restriction",
+            "note": "Example: 20% TikTok + 10% owned channel."
+          },
+          "more": "If daily profit is $1,000, that is $300 a day kept, or $4,200 over 14 days, compared with nothing for a single-platform operation. Diversifying costs time and test budget, so do it once your main source is stable, not on day one.",
+          "say": "Here's a worked example. Seventy percent of your profit comes from Meta, twenty percent from TikTok, and ten percent from your own Telegram channel. If one platform restricts you for two weeks, you keep thirty percent of profit while you appeal, instead of zero. At one thousand dollars a day, that's three hundred a day kept. Diversifying costs time and test budget, so do it once your main source is stable, not on day one."
+        },
+        {
+          "v": "map",
+          "h": "Where your profit depends",
+          "p": "Example: draw where each dollar of profit comes from. Here, 70% runs through one platform. Every arrow is a dependency, and the owned channel is the only one no platform can switch off. Diversify once the main source is stable.",
+          "d": {
+            "nodes": [
+              {
+                "id": "meta",
+                "label": "Meta ads (70%)",
+                "kind": "ad"
+              },
+              {
+                "id": "tt",
+                "label": "TikTok ads (20%)",
+                "kind": "ad"
+              },
+              {
+                "id": "tg",
+                "label": "Own Telegram (10%)",
+                "kind": "telegram"
+              },
+              {
+                "id": "lp",
+                "label": "Own-domain lander",
+                "kind": "page"
+              },
+              {
+                "id": "off",
+                "label": "Offers",
+                "kind": "offer"
+              },
+              {
+                "id": "p",
+                "label": "Profit",
+                "kind": "money"
+              }
+            ],
+            "edges": [
+              [
+                "meta",
+                "lp",
+                "70%"
+              ],
+              [
+                "tt",
+                "lp",
+                "20%"
+              ],
+              [
+                "lp",
+                "tg",
+                "join"
+              ],
+              [
+                "tg",
+                "off",
+                "10%"
+              ],
+              [
+                "lp",
+                "off",
+                "sign-up"
+              ],
+              [
+                "off",
+                "p",
+                "payouts"
+              ]
+            ]
+          },
+          "say": "This map shows where each dollar of profit comes from, in an example. Meta ads send seventy percent through your own-domain lander, and TikTok sends twenty. From the lander, people either sign up to offers or join your own Telegram, which brings ten percent. Offers then pay out to profit. Every arrow is a dependency. And notice, the owned channel is the only one no platform can switch off."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: your resilience plan",
+          "p": "Keep the resilience plan as one short sheet the founder and deputy can both open. Review it every quarter and after any incident. Every field must describe something real and owned by your business. Example values.",
+          "d": {
+            "kind": "browser",
+            "url": "docs.example/resilience-plan",
+            "title": "Resilience plan, Q4",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Admins with 2FA",
+                "value": "2 of 2"
+              },
+              {
+                "type": "field",
+                "label": "Appeal template",
+                "value": "Saved, v2, 01 Oct"
+              },
+              {
+                "type": "field",
+                "label": "Profit by source",
+                "value": "Meta 70%, TikTok 20%, Telegram 10%"
+              },
+              {
+                "type": "field",
+                "label": "Second-source test",
+                "value": "TikTok, $40 a day"
+              },
+              {
+                "type": "field",
+                "label": "Cash reserve",
+                "value": "One full payout cycle"
+              },
+              {
+                "type": "toggle",
+                "label": "Reviewed this quarter",
+                "on": true
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "Here's a resilience plan as one short sheet the founder and deputy can both open. Admins with two-factor: two of two. An appeal template, saved. Profit by source: Meta seventy, TikTok twenty, Telegram ten. A second-source test on TikTok at forty dollars a day. A cash reserve of one full payout cycle. And reviewed this quarter. Review it every quarter and after any incident. Every field must describe something real and owned by your business. These are example values."
+        },
+        {
+          "v": "compare",
+          "h": "Backup or evasion?",
+          "p": "The same action can be legitimate or evasion depending on why you do it. The test: are you adding resilience to a real business, or trying to keep running after the platform said no?",
+          "d": {
+            "a": {
+              "title": "Evasion",
+              "items": [
+                "New account after a ban",
+                "Rented or bought accounts",
+                "Accounts in other people's names",
+                "Different page for reviewers"
+              ]
+            },
+            "b": {
+              "title": "Legitimate backup",
+              "items": [
+                "Second admin in your company",
+                "Extra accounts in your verified business",
+                "Diversified traffic sources",
+                "Appealing with evidence"
+              ]
+            }
+          },
+          "say": "The same action can be legitimate or evasion, depending on why you do it. On the left, evasion: a new account after a ban, rented or bought accounts, accounts in other people's names, a different page for reviewers. On the right, legitimate backup: a second admin in your company, extra accounts in your verified business, diversified traffic, and appealing with evidence. The test is simple. Are you adding resilience to a real business, or trying to keep running after the platform said no?"
+        },
+        {
+          "v": "table",
+          "h": "The shortcuts we refuse, and why",
+          "p": "Some sellers market these as 'infrastructure'. They are not. Each one breaks platform terms and often the law, and each ends with the operation losing everything built on it.",
+          "d": {
+            "cols": [
+              "Shortcut",
+              "What it is",
+              "Why it ends badly"
+            ],
+            "rows": [
+              [
+                "Buying or renting accounts",
+                "Using accounts in others' names",
+                "Bans, identity misuse, no control"
+              ],
+              [
+                "Account farming",
+                "Mass-creating fake profiles",
+                "Fake identities, mass bans"
+              ],
+              [
+                "Cloaking",
+                "Showing reviewers a different page",
+                "Deception; bans and legal risk"
+              ],
+              [
+                "Ban evasion",
+                "New assets after a restriction",
+                "Links back to you; wider bans"
+              ]
+            ]
+          },
+          "more": "Platforms link accounts using many signals, so evasion often leads to bans spreading to every connected asset, including your legitimate ones. Using another person's identity can break fraud and identity laws in many countries. Cloaking deceives both the platform and users and can be treated as consumer fraud. Networks also terminate affiliates caught doing this and may hold or claw back payouts.",
+          "say": "Some sellers market these shortcuts as infrastructure. They aren't. Buying or renting accounts means using accounts in other people's names, leading to bans and identity misuse. Account farming mass-creates fake profiles. Cloaking shows reviewers a different page, which is deception with legal risk. And ban evasion creates new assets after a restriction, which links back to you and widens bans. Each breaks platform terms and often the law, and networks may terminate affiliates and hold payouts."
+        },
+        {
+          "v": "quote",
+          "h": "What lasts",
+          "p": "Dchessking on the shortcut sellers who approach every growing buyer. His point is practical: what you cannot show openly, you cannot build on for long.",
+          "d": "Every shortcut I saw on accounts ended the same way: a ban, lost balances and starting again with nothing. A clean business you can show to anyone is the only asset that keeps growing.",
+          "by": "dchessking",
+          "say": "Dchessking talks about the shortcut sellers who approach every growing buyer. His point is practical: what you can't show openly, you can't build on for long. Here's how Dchessking puts it: Every shortcut I saw on accounts ended the same way: a ban, lost balances and starting again with nothing. A clean business you can show to anyone is the only asset that keeps growing."
+        },
+        {
+          "v": "tip",
+          "h": "If you are restricted",
+          "p": "If a platform restricts your business and the appeal fails, you are not allowed to keep advertising there through other accounts. Accept it, learn from it and focus on platforms where you are in good standing.",
+          "d": {
+            "kind": "warn",
+            "text": "Never create new assets to continue after a ban. It almost always makes the ban wider and permanent."
+          },
+          "say": "If a platform restricts your business and the appeal fails, you're not allowed to keep advertising there through other accounts. Accept it, learn from it, and focus on platforms where you're in good standing. As the warning says, never create new assets to continue after a ban. It almost always makes the ban wider and permanent."
+        },
+        {
+          "v": "check",
+          "h": "Your resilience plan",
+          "p": "Write this plan before you need it. On the day something goes wrong, you will follow a plan far better than you will invent one.",
+          "d": [
+            "Two admins with 2FA on every business",
+            "Appeal template ready",
+            "Second traffic source being tested",
+            "Owned audience growing with consent",
+            "Cash reserve for a slow month"
+          ],
+          "say": "Write this plan before you need it. Two admins with two-factor on every business. An appeal template ready. A second traffic source being tested. An owned audience growing with consent. And a cash reserve for a slow month. On the day something goes wrong, you'll follow a plan far better than you'll invent one."
+        }
+      ],
+      "takeaways": [
+        "Respond to restrictions with short, specific, honest appeals.",
+        "Build backups inside your own verified business and across traffic sources.",
+        "Buying or renting accounts, farming, cloaking and ban evasion break terms and often law, and end operations."
+      ],
+      "action": "Write a one-page resilience plan: your admins, your appeal template, your second traffic source and how much of your profit depends on one platform.",
+      "glossary": [
+        {
+          "term": "Appeal",
+          "def": "A request for the platform to review a decision, such as a rejected ad or restricted account."
+        },
+        {
+          "term": "Cloaking",
+          "def": "Showing reviewers or platform systems different content from what real users see. Prohibited and deceptive."
+        },
+        {
+          "term": "Account farming",
+          "def": "Mass-creating or aging fake profiles to run ads. Prohibited and often illegal."
+        },
+        {
+          "term": "Ban evasion",
+          "def": "Creating or using new assets to keep advertising after a platform has restricted you. Prohibited."
+        },
+        {
+          "term": "Owned audience",
+          "def": "People who chose to hear from you directly, such as an email list or channel built with consent."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which is a legitimate backup?",
+          "options": [
+            "Renting an aged account",
+            "A page shown only to reviewers",
+            "A new account after a ban",
+            "A second admin in your company with 2FA"
+          ],
+          "answer": 3,
+          "why": "A second real admin adds resilience within the rules. The others are evasion or cloaking."
+        },
+        {
+          "q": "Your appeal was denied and the business is restricted. What is the right move?",
+          "options": [
+            "Stop advertising there and focus on platforms where you are in good standing",
+            "Open accounts under a relative's name",
+            "Buy a verified account",
+            "Use cloaking to pass review"
+          ],
+          "answer": 0,
+          "why": "Continuing after a restriction through other accounts is ban evasion and usually makes the ban wider."
+        },
+        {
+          "q": "Daily profit is $800: 60% Meta, 30% TikTok, 10% own channel. Meta pauses for 10 days. How much profit do you keep over those days?",
+          "options": [
+            "$800",
+            "$3,200",
+            "$4,800",
+            "$8,000"
+          ],
+          "answer": 1,
+          "why": "40% of $800 is $320 a day. Over 10 days that is $3,200."
+        },
+        {
+          "q": "What makes cloaking especially serious?",
+          "options": [
+            "It only slows approval",
+            "It deceives the platform and users and can be treated as fraud",
+            "It raises CPM slightly",
+            "It is allowed for regulated offers"
+          ],
+          "answer": 1,
+          "why": "Cloaking is deception of both reviewers and users. It brings bans and legal risk."
+        },
+        {
+          "q": "What should a good appeal include?",
+          "options": [
+            "Threats to stop spending",
+            "As much text as possible",
+            "The asset ID, what changed and why it now meets the policy",
+            "Screenshots of competitors' ads"
+          ],
+          "answer": 2,
+          "why": "Short, specific and honest appeals are easiest to approve."
+        }
+      ],
+      "say_intro": "Restrictions happen even to honest operators. In this lesson you'll learn to write a clear appeal, build backups that follow platform rules, and understand why shortcuts like bought accounts, cloaking and ban evasion end operations.",
+      "say_outro": "To recap: appeal calmly with evidence, fix what's genuinely wrong, build backups inside your own verified business, and refuse every shortcut. Your task: write a one-page resilience plan covering your admins, your appeal template, your second traffic source, and how much of your profit depends on one platform. Now take the quiz."
+    },
+    {
+      "slug": "compliance-at-scale",
+      "title": "Compliance at scale and legal basics",
+      "minutes": 19,
+      "objectives": [
+        "By the end you can run a review process that keeps a high volume of ads compliant.",
+        "By the end you can list the regulators and data protection laws that matter in your main African geos.",
+        "By the end you can explain why a proper legal entity and contracts protect the operation."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Compliance is a process, not a person",
+          "p": "With one buyer and ten ads a week, the founder can check everything. With five buyers and a hundred ads a week, compliance has to be a process: written rules, a checklist and a named reviewer, applied to every ad before it goes live.",
+          "d": {
+            "b": "If it is not written down, it is not a rule",
+            "s": "Scale needs a review step, not good intentions"
+          },
+          "say": "With one buyer and ten ads a week, the founder can check everything. But with five buyers and a hundred ads a week, compliance has to be a process. Written rules, a checklist, and a named reviewer, applied to every ad before it goes live. As the screen says, if it's not written down, it's not a rule. Scale needs a review step, not good intentions."
+        },
+        {
+          "v": "flow",
+          "h": "A review pipeline",
+          "p": "Every ad and landing page passes through the same steps. The reviewer is not the person who made the ad. Keep the record so you can show what was checked.",
+          "d": [
+            "Brief with approved claims",
+            "Creative made",
+            "Second person reviews",
+            "Fix or approve",
+            "Launch",
+            "Log the decision"
+          ],
+          "say": "Here's a review pipeline. Follow the flow. A brief with approved claims. The creative is made. A second person reviews it. Fix or approve. Launch. And log the decision. Notice the most important rule: the reviewer isn't the person who made the ad. And keep the record, so you can show what was checked."
+        },
+        {
+          "v": "table",
+          "h": "A claims register",
+          "p": "A claims register is a short list of what you may and may not say about each offer, agreed with the network and checked against platform policy and local law. Buyers write from it instead of guessing.",
+          "d": {
+            "cols": [
+              "Claim",
+              "Status",
+              "Note"
+            ],
+            "rows": [
+              [
+                "Regulated by X",
+                "Allowed if true",
+                "Link to licence"
+              ],
+              [
+                "Learn with a demo",
+                "Allowed",
+                "If the offer has one"
+              ],
+              [
+                "Guaranteed profit",
+                "Never",
+                "False and prohibited"
+              ],
+              [
+                "Risk warning",
+                "Required",
+                "Trading and gambling"
+              ],
+              [
+                "18+ only",
+                "Required",
+                "Gambling and trading"
+              ]
+            ]
+          },
+          "say": "A claims register is a short list of what you may and may not say about each offer. It's agreed with the network and checked against platform policy and local law. Look at the table. Regulated by a named body: allowed if true, with a link to the licence. Learn with a demo: allowed, if the offer has one. Guaranteed profit: never. A risk warning and eighteen plus only: required for trading and gambling. Buyers write from it instead of guessing."
+        },
+        {
+          "v": "code",
+          "h": "A claims register you can copy",
+          "p": "Example register for one trading offer, as plain text in your shared folder. Buyers copy claims from here into briefs. Anything not on the list needs the reviewer's approval first, and is added once approved.",
+          "d": {
+            "lang": "text",
+            "text": "CLAIMS REGISTER: OFR12 (trading), v3, 01 Oct\nALLOWED: \"Learn how the platform works\"\nALLOWED: \"Practise with a demo account\" (offer has one)\nALLOWED IF TRUE: \"Regulated by [body]\" + link to licence\nREQUIRED: risk warning on ad and lander\nREQUIRED: 18+ only\nNEVER: guaranteed profit, daily earnings, \"risk-free\"\nNEVER: fake testimonials or celebrity faces",
+            "note": "Agree it with the network and check it against platform policy and local law."
+          },
+          "say": "Here's an example register for one trading offer, kept as plain text in your shared folder. You don't need to memorise it, the template is on screen. It lists allowed claims, like learn how the platform works. Required lines, like the risk warning on the ad and lander, and eighteen plus only. And never claims, like guaranteed profit, daily earnings, risk-free, or fake testimonials. Anything not on the list needs the reviewer's approval first. Agree it with the network and check it against policy and local law."
+        },
+        {
+          "v": "stat",
+          "h": "Worked example: review time",
+          "p": "Example: your team produces 25 new creatives a week. Each takes about 8 minutes to review against the checklist. That is 200 minutes, a little over 3 hours a week for one reviewer.",
+          "d": {
+            "n": 3.3,
+            "pre": "",
+            "suf": " hrs",
+            "dec": 1,
+            "label": "review time a week",
+            "note": "Example: 25 × 8 minutes = 200 minutes."
+          },
+          "more": "Three hours a week is small compared with the cost of one restricted account or one network termination. Budget the time explicitly in someone's role so it does not get skipped on busy days, which are exactly the days mistakes happen.",
+          "say": "How much time does review take? In this example, your team produces twenty five new creatives a week, and each takes about eight minutes to review. That's two hundred minutes, about three point three hours a week for one reviewer, the number on screen. That's small compared with one restricted account or a network termination. So budget the time in someone's role, so it isn't skipped on busy days, which are exactly when mistakes happen."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: one ad through review",
+          "p": "Generic mock-ups of a task board. Any board or shared sheet works. The rule that matters: the maker never approves their own ad, and every decision is logged with the reviewer's name and date.",
+          "d": {
+            "steps": [
+              {
+                "title": "Card enters Review",
+                "text": "The buyer moves the finished creative and its lander link into the Review column and tags the reviewer.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "board.example/creatives",
+                  "title": "Creative board",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Brief",
+                        "Produced",
+                        "Review",
+                        "Live"
+                      ],
+                      "rows": [
+                        [
+                          "KE_HOWTO_04",
+                          "NG_PROOF_11",
+                          "NG_DEMO_07",
+                          "NG_PROOF_09"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "NG_DEMO_07 waiting for Ada"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Reviewer checks the list",
+                "text": "Ada checks each line against the claims register and opens the lander on a phone.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "board.example/creatives/ng-demo-07",
+                  "title": "NG_DEMO_07",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Claims from register only",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Risk warning on ad and lander",
+                      "on": false
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "18+ shown",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Lander says the same thing",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Decide and log",
+                "text": "One required line is missing, so the decision is Fix. The note says exactly what to change.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "board.example/creatives/ng-demo-07",
+                  "title": "NG_DEMO_07",
+                  "blocks": [
+                    {
+                      "type": "radio",
+                      "label": "Decision",
+                      "options": [
+                        "Approve",
+                        "Fix",
+                        "Reject"
+                      ],
+                      "value": 1
+                    },
+                    {
+                      "type": "field",
+                      "label": "Note",
+                      "value": "Add risk warning to end card and lander footer."
+                    },
+                    {
+                      "type": "button",
+                      "label": "Log decision"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Let's take one ad through review. Tap Next to follow each step. First, the buyer moves the finished creative and its lander link into the Review column and tags Ada, the reviewer. Second, Ada checks each line against the claims register and opens the lander on a phone. Notice the risk warning toggle is off. Third, she decides Fix, writes exactly what to change, add the risk warning to the end card and lander footer, and logs the decision. The maker never approves their own ad."
+        },
+        {
+          "v": "table",
+          "h": "Review rules with no exceptions",
+          "p": "These lines turn the review into a lookup, so busy days do not change the answer. They are starting rules; your network, the platform and local law may require more, so add their requirements to the list.",
+          "d": {
+            "cols": [
+              "If the reviewer finds",
+              "Decision"
+            ],
+            "rows": [
+              [
+                "Any NEVER claim",
+                "Reject; back to brief"
+              ],
+              [
+                "A required warning missing",
+                "Fix before launch"
+              ],
+              [
+                "Lander differs from the ad",
+                "Hold both until they match"
+              ],
+              [
+                "Regulated offer, new geo",
+                "No launch without authorization on file"
+              ],
+              [
+                "Reviewer made the ad",
+                "Not a review; get a second person"
+              ]
+            ]
+          },
+          "say": "These lines turn review into a lookup, so busy days don't change the answer. Any never claim: reject, back to the brief. A required warning missing: fix before launch. Lander differs from the ad: hold both until they match. Regulated offer in a new geo: no launch without authorization on file. Reviewer made the ad: that's not a review, get a second person. These are starting rules, and your network, the platform and local law may require more."
+        },
+        {
+          "v": "tip",
+          "h": "Regulated verticals",
+          "p": "Trading, gambling and many financial products usually need platform authorization before ads run, and must follow local law and age limits. Requirements differ by country and change. Full detail: Compliance for finance, trading and gambling offers module.",
+          "d": {
+            "kind": "warn",
+            "text": "For every offer and every geo, check the current platform policy and the local regulator before running. If either says no, do not run."
+          },
+          "say": "Trading, gambling and many financial products usually need platform authorization before ads run, and must follow local law and age limits. Requirements differ by country and change. The warning on screen is clear: for every offer and every geo, check the current platform policy and the local regulator before running. If either says no, don't run."
+        },
+        {
+          "v": "table",
+          "h": "Who regulates what, by geo",
+          "p": "A starting point for your research, not legal advice. We are not certain every entry is current: rules change, Kenya has been reforming gambling law, and gambling in Nigeria is largely licensed at state level. For Cameroon and other geos, check locally. Confirm with the regulator or a local lawyer.",
+          "d": {
+            "cols": [
+              "Geo",
+              "Gambling",
+              "Investments"
+            ],
+            "rows": [
+              [
+                "Nigeria",
+                "State bodies, e.g. Lagos LSLGA",
+                "SEC Nigeria"
+              ],
+              [
+                "Kenya",
+                "BCLB or its successor; check",
+                "Capital Markets Authority"
+              ],
+              [
+                "South Africa",
+                "Provincial boards",
+                "FSCA"
+              ],
+              [
+                "Ghana",
+                "Gaming Commission",
+                "SEC Ghana"
+              ]
+            ]
+          },
+          "say": "Here's a starting point for your research, not legal advice. In Nigeria, gambling is largely licensed by state bodies, for example the Lagos L S L G A, and investments by S E C Nigeria. In Kenya, the B C L B or its successor, and the Capital Markets Authority. In South Africa, provincial boards and the F S C A. In Ghana, the Gaming Commission and S E C Ghana. We're not certain every entry is current, and Kenya has been reforming gambling law. Check Cameroon locally, and confirm with a regulator or local lawyer."
+        },
+        {
+          "v": "table",
+          "h": "Data protection laws",
+          "p": "If you collect names, phone numbers or chat histories, data protection law applies. Collect only what you need, on a lawful basis such as consent, keep it secure and delete it when no longer needed. We are not certain each entry is current; check the law in each country.",
+          "d": {
+            "cols": [
+              "Geo",
+              "Law",
+              "Regulator"
+            ],
+            "rows": [
+              [
+                "Nigeria",
+                "Data Protection Act 2023",
+                "NDPC"
+              ],
+              [
+                "Kenya",
+                "Data Protection Act 2019",
+                "ODPC"
+              ],
+              [
+                "South Africa",
+                "POPIA",
+                "Information Regulator"
+              ],
+              [
+                "Ghana",
+                "Data Protection Act 2012",
+                "Data Protection Commission"
+              ]
+            ]
+          },
+          "say": "If you collect names, phone numbers or chat histories, data protection law applies. Look at the table. Nigeria, the Data Protection Act twenty twenty three, with the N D P C. Kenya, the Data Protection Act twenty nineteen, with the O D P C. South Africa, POPIA, with the Information Regulator. Ghana, the Data Protection Act twenty twelve, with the Data Protection Commission. Collect only what you need, on a lawful basis such as consent, keep it secure, and delete it when no longer needed. Check the current law in each country."
+        },
+        {
+          "v": "cards",
+          "h": "Why a legal entity matters",
+          "p": "Running a scaled operation as a person, not a company, makes almost everything harder. A registered company is what platforms verify, banks open accounts for and networks sign contracts with.",
+          "d": [
+            "Verification|platforms verify businesses",
+            "Banking|business accounts and cards",
+            "Contracts|with networks and staff",
+            "Separation|business risk apart from personal assets",
+            "Sale|a business with records can be sold"
+          ],
+          "say": "Running a scaled operation as a person, not a company, makes almost everything harder. Look at the cards. Verification, because platforms verify businesses. Banking, for business accounts and cards. Contracts, with networks and staff. Separation, keeping business risk apart from personal assets. And sale, because a business with records can be sold. A registered company is what platforms verify, banks open accounts for, and networks sign contracts with."
+        },
+        {
+          "v": "table",
+          "h": "Company registries",
+          "p": "Where to register a company in the main geos. Requirements and fees change; check the registry's current site or use a qualified agent or lawyer.",
+          "d": {
+            "cols": [
+              "Geo",
+              "Registry",
+              "Common form"
+            ],
+            "rows": [
+              [
+                "Nigeria",
+                "Corporate Affairs Commission",
+                "Private limited (Ltd)"
+              ],
+              [
+                "Kenya",
+                "Business Registration Service",
+                "Private limited"
+              ],
+              [
+                "South Africa",
+                "CIPC",
+                "Private company (Pty) Ltd"
+              ],
+              [
+                "Ghana",
+                "Office of the Registrar of Companies",
+                "Private limited"
+              ]
+            ]
+          },
+          "say": "Here's where to register a company in the main geos. In Nigeria, the Corporate Affairs Commission, usually a private limited company. In Kenya, the Business Registration Service, private limited. In South Africa, the C I P C, as a private company, P T Y limited. In Ghana, the Office of the Registrar of Companies, private limited. Requirements and fees change, so check the registry's current site or use a qualified agent or lawyer."
+        },
+        {
+          "v": "check",
+          "h": "Contracts to have in place",
+          "p": "Written agreements prevent most disputes. A lawyer can draft them once and you reuse them. This is not legal advice; consult a professional in your country.",
+          "d": [
+            "Network agreement you have read in full",
+            "Employment or contractor terms for staff",
+            "Confidentiality for anyone with account access",
+            "Who owns creatives and data",
+            "Rules on compliance and consequences"
+          ],
+          "say": "Written agreements prevent most disputes. Here's what to have in place. A network agreement you've read in full. Employment or contractor terms for staff. Confidentiality for anyone with account access. Clear terms on who owns creatives and data. And rules on compliance and consequences. A lawyer can draft them once and you reuse them. This isn't legal advice, so consult a professional in your country."
+        },
+        {
+          "v": "compare",
+          "h": "Compliance as cost versus asset",
+          "p": "Operators who see compliance as a cost cut it when busy. Operators who see it as an asset find it protects every dollar they spend.",
+          "d": {
+            "a": {
+              "title": "Seen as a cost",
+              "items": [
+                "Skipped on busy days",
+                "Founder checks when he remembers",
+                "No record",
+                "Surprised by restrictions"
+              ]
+            },
+            "b": {
+              "title": "Seen as an asset",
+              "items": [
+                "Built into every launch",
+                "Named reviewer with time budgeted",
+                "Logged decisions",
+                "Problems caught early"
+              ]
+            }
+          },
+          "say": "Compare these two mindsets. When compliance is seen as a cost, it's skipped on busy days, the founder checks when he remembers, there's no record, and restrictions come as a surprise. When it's seen as an asset, it's built into every launch, there's a named reviewer with time budgeted, decisions are logged, and problems are caught early. Operators who see it as an asset find it protects every dollar they spend."
+        },
+        {
+          "v": "big",
+          "h": "Clean at scale is rare and valuable",
+          "p": "Many operators can grow fast for a while. Few can show a regulator, a network or a bank exactly how they work. That ability is what lets an operation keep growing for years.",
+          "d": {
+            "b": "Be the operator you can audit",
+            "s": "Records, reviews and a real company"
+          },
+          "say": "Many operators can grow fast for a while. But few can show a regulator, a network or a bank exactly how they work. That ability is what lets an operation keep growing for years. As the screen says, be the operator you can audit, with records, reviews and a real company."
+        }
+      ],
+      "takeaways": [
+        "At scale, compliance must be a written process with a named reviewer.",
+        "Know the regulators and data protection laws in each geo, and check them before running.",
+        "A registered company, proper contracts and records protect and add value to the operation."
+      ],
+      "action": "Write a claims register for your main offer with at least five lines: claims allowed, required warnings and claims that are never used.",
+      "glossary": [
+        {
+          "term": "Claims register",
+          "def": "A written list of what you may and may not say about an offer, checked against policy and law."
+        },
+        {
+          "term": "Review pipeline",
+          "def": "The fixed steps every ad passes through before launch, including review by a second person."
+        },
+        {
+          "term": "Data protection law",
+          "def": "Law that controls how personal information is collected, used, stored and deleted."
+        },
+        {
+          "term": "Legal entity",
+          "def": "A registered company that can own assets, sign contracts and hold bank accounts separately from its owners."
+        },
+        {
+          "term": "Regulator",
+          "def": "The official body that licenses and supervises an industry, such as gambling or investments."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Who should review an ad before launch in a scaled team?",
+          "options": [
+            "A second person using the checklist",
+            "The buyer who made it",
+            "No one if the buyer is experienced",
+            "The network after launch"
+          ],
+          "answer": 0,
+          "why": "A second reviewer catches what the maker misses. Self-review is weak at scale."
+        },
+        {
+          "q": "Your team makes 30 creatives a week and review takes 6 minutes each. How much review time per week?",
+          "options": [
+            "1 hour",
+            "2 hours",
+            "3 hours",
+            "6 hours"
+          ],
+          "answer": 2,
+          "why": "30 × 6 = 180 minutes, which is 3 hours."
+        },
+        {
+          "q": "You collect phone numbers through a lead form in Kenya. Which law is most relevant?",
+          "options": [
+            "POPIA",
+            "Data Protection Act 2019",
+            "Companies Act of Ghana",
+            "None"
+          ],
+          "answer": 1,
+          "why": "Kenya's Data Protection Act 2019 governs personal data, supervised by the ODPC."
+        },
+        {
+          "q": "Which statement belongs in a claims register as 'never'?",
+          "options": [
+            "Trading involves risk",
+            "18+ only",
+            "Guaranteed profit",
+            "Learn with a demo"
+          ],
+          "answer": 2,
+          "why": "Guaranteed profit is false and prohibited. The others are allowed or required."
+        },
+        {
+          "q": "Why does a registered company matter for scaling?",
+          "options": [
+            "It removes the need for verification",
+            "It lowers CPM",
+            "It guarantees ad approval",
+            "Platforms verify it, banks and networks deal with it, and it separates business risk"
+          ],
+          "answer": 3,
+          "why": "A company is what platforms, banks and networks work with, and it can be audited and sold."
+        }
+      ],
+      "say_intro": "This lesson shows you how to keep compliance working when you're running many ads. You'll learn to build a review pipeline and claims register, meet the regulators and data laws in our main geos, and see why a real company and contracts matter.",
+      "say_outro": "To recap: compliance at scale is a process, with a claims register, a second-person review, and checks on regulators and data law in every geo. Your task: write a claims register for your main offer with at least five lines, covering claims allowed, required warnings, and claims that are never used. Now take the quiz."
+    },
+    {
+      "slug": "company-contracts-and-records",
+      "title": "Your company, contracts and records",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can describe the steps from operating as a person to operating as a company.",
+        "By the end you can keep business money separate and read one month of company accounts.",
+        "By the end you can name the network agreement clauses to read before you scale."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the company matters at scale",
+          "p": "At small scale your own name can carry the operation. At scale, platforms, banks, networks and staff expect a company. Without one, verification stalls, business money mixes with personal cash and one dispute can reach your personal assets.",
+          "d": {
+            "b": "The company carries the business",
+            "s": "Not legal or tax advice; consult a professional in your country."
+          },
+          "say": "At small scale, your own name can carry the operation. At scale, platforms, banks, networks and staff all expect a company. Without one, verification stalls, business money mixes with personal cash, and one dispute can reach your personal assets. As the screen says, the company carries the business. And note, this isn't legal or tax advice, so consult a professional in your country."
+        },
+        {
+          "v": "flow",
+          "h": "From person to company",
+          "p": "A typical order. Requirements, fees and timelines vary by country and change, so check the registry's current site or use a qualified agent. The registries for the main geos are listed in the Compliance at scale lesson of this module.",
+          "d": [
+            "Choose name and structure",
+            "Register with the registry",
+            "Register for tax",
+            "Open a business bank account",
+            "Update platforms and networks",
+            "Keep records from day one"
+          ],
+          "say": "Here's a typical order for moving from person to company. Follow the flow. Choose a name and structure. Register with the registry. Register for tax. Open a business bank account. Update your platforms and networks. And keep records from day one. Requirements, fees and timelines vary by country and change, so check the registry's current site or use a qualified agent. The registries for the main geos are in the Compliance at scale lesson."
+        },
+        {
+          "v": "compare",
+          "h": "Operating as a person or a company",
+          "p": "The same operation, run two ways. The work is the same; what changes is who owns the assets, who signs and who carries the risk if something goes wrong.",
+          "d": {
+            "a": {
+              "title": "As a person",
+              "items": [
+                "Accounts in your own name",
+                "Payouts into a personal account",
+                "Handshake deals with staff",
+                "Records in your head"
+              ]
+            },
+            "b": {
+              "title": "As a company",
+              "items": [
+                "Assets owned by the company",
+                "Payouts into the business account",
+                "Written terms for staff",
+                "Monthly records anyone can check"
+              ]
+            }
+          },
+          "say": "Here's the same operation, run two ways. As a person: accounts in your own name, payouts into a personal account, handshake deals with staff, and records in your head. As a company: assets owned by the company, payouts into the business account, written terms for staff, and monthly records anyone can check. The work is the same. What changes is who owns the assets, who signs, and who carries the risk."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: one month in the company account",
+          "p": "Example figures for one month. Every dollar in and out goes through the business bank account, so the profit line is a fact, not a guess. The tax set-aside is an example amount, not a tax rate; ask an accountant what applies to you.",
+          "more": "Check the maths: 18,000 − 11,000 − 600 − 2,400 = 4,000. The example sets aside 30% of $4,000, which is $1,200, on the day payouts arrive. The real rate and rules depend on your country, your company type and your accountant's advice. Owner pay is recorded as a fixed, planned amount, never as whatever is left in the account.",
+          "d": {
+            "cols": [
+              "Line",
+              "Amount"
+            ],
+            "rows": [
+              [
+                "Network payouts received",
+                "$18,000"
+              ],
+              [
+                "Ad spend",
+                "−$11,000"
+              ],
+              [
+                "Tools",
+                "−$600"
+              ],
+              [
+                "Salaries",
+                "−$2,400"
+              ],
+              [
+                "Profit before tax",
+                "$4,000"
+              ],
+              [
+                "Example tax set-aside",
+                "$1,200"
+              ]
+            ]
+          },
+          "say": "Here's one month in the company account, with example figures. Network payouts received, eighteen thousand dollars. Ad spend, eleven thousand. Tools, six hundred. Salaries, two thousand four hundred. That leaves four thousand profit before tax. The example sets aside thirty percent, twelve hundred dollars, on payout day. That's an example amount, not a tax rate, so ask an accountant. Because everything goes through the business account, the profit line is a fact, not a guess."
+        },
+        {
+          "v": "stat",
+          "h": "The number a clean account gives you",
+          "p": "Example from the last slide. Because nothing personal went through the account, the $4,000 is the real profit before tax. Mixed accounts hide this number, and operators who cannot see it tend to overspend in good months.",
+          "d": {
+            "n": 4000,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "profit before tax this month",
+            "note": "Example: $18,000 − $11,000 − $600 − $2,400."
+          },
+          "say": "From the last slide, that four thousand dollars is the real profit before tax, the number on screen. Why can you trust it? Because nothing personal went through the account. Mixed accounts hide this number. And operators who can't see their real profit tend to overspend in good months."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: a simple monthly ledger",
+          "p": "A ledger can be a shared sheet. One row per transaction, a category from a fixed list and the document that proves it. At month end, filter by category and the totals become last slide's table. Example rows.",
+          "d": {
+            "kind": "browser",
+            "url": "sheets.example/ledger-oct",
+            "title": "Ledger, October",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Date",
+                  "Item",
+                  "Category",
+                  "Amount"
+                ],
+                "rows": [
+                  [
+                    "02 Oct",
+                    "Network payout, Sept",
+                    "Payouts",
+                    "+$18,000"
+                  ],
+                  [
+                    "03 Oct",
+                    "Ad invoice, account 01",
+                    "Ad spend",
+                    "−$3,900"
+                  ],
+                  [
+                    "05 Oct",
+                    "Tracker subscription",
+                    "Tools",
+                    "−$120"
+                  ],
+                  [
+                    "28 Oct",
+                    "Salaries, 2 staff",
+                    "Salaries",
+                    "−$2,400"
+                  ]
+                ]
+              },
+              {
+                "type": "select",
+                "label": "Category for new row",
+                "value": "Ad spend"
+              },
+              {
+                "type": "field",
+                "label": "Proof attached",
+                "value": "invoice_0310.pdf"
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "A ledger can be a simple shared sheet. One row per transaction, a category from a fixed list, and the document that proves it. Look at the example rows: a network payout in, an ad invoice out, a tracker subscription, and salaries. Notice the category picker and the proof attached for each row. At month end, filter by category, and the totals become the table from two slides ago."
+        },
+        {
+          "v": "table",
+          "h": "Network agreement: clauses to read",
+          "p": "Read the whole agreement before you scale with a network, because scale is when its terms start to cost real money. These clauses matter most to an affiliate. Not legal advice; ask a lawyer about large or unusual contracts.",
+          "d": {
+            "cols": [
+              "Clause",
+              "What to check"
+            ],
+            "rows": [
+              [
+                "Payment terms",
+                "Net days, minimum payout, method"
+              ],
+              [
+                "Holds and reversals",
+                "When, why and how much"
+              ],
+              [
+                "Traffic rules",
+                "Allowed sources, geos, claims"
+              ],
+              [
+                "Termination",
+                "What happens to unpaid earnings"
+              ],
+              [
+                "Data",
+                "Who owns leads, how they are protected"
+              ],
+              [
+                "Governing law",
+                "Which country's courts decide"
+              ]
+            ]
+          },
+          "say": "Read the whole network agreement before you scale, because scale is when its terms start to cost real money. Look at the clauses that matter most. Payment terms: net days, minimum payout and method. Holds and reversals: when, why and how much. Traffic rules: allowed sources, geos and claims. Termination: what happens to unpaid earnings. Data: who owns leads and how they're protected. And governing law: which country's courts decide. This isn't legal advice, so ask a lawyer about large or unusual contracts."
+        },
+        {
+          "v": "phone",
+          "h": "Get the terms in writing",
+          "p": "Example: before scaling, the buyer asks the network manager for the current terms in writing and files them. Terms agreed only in chat are easy to forget and hard to prove when a payout is held.",
+          "d": {
+            "app": "chat",
+            "title": "Affiliate manager",
+            "subtitle": "network",
+            "messages": [
+              {
+                "from": "me",
+                "text": "Before we scale OFR12, could you send the current terms in writing: payout, hold period, reversal rules and allowed traffic sources?"
+              },
+              {
+                "from": "them",
+                "text": "Sure, sending the PDF now. New partners have a 30-day hold."
+              },
+              {
+                "from": "me",
+                "text": "Thanks, filed with today's date. I will check with you before spending on any change."
+              }
+            ]
+          },
+          "say": "In this chat, before scaling, the buyer asks the affiliate manager for the current terms in writing: payout, hold period, reversal rules and allowed traffic sources. The manager sends a P D F, and mentions new partners have a thirty-day hold. The buyer files it with the date, and promises to check before spending on any change. Terms agreed only in chat are easy to forget and hard to prove when a payout is held."
+        },
+        {
+          "v": "table",
+          "h": "Money rules for the company",
+          "p": "Write these lines once and follow them every month. They keep the profit number honest and the company easy to verify, bank and, one day, sell. Starting rules; your accountant may add more for your country.",
+          "d": {
+            "cols": [
+              "Money flow",
+              "Rule"
+            ],
+            "rows": [
+              [
+                "Network payouts",
+                "Into the company account only"
+              ],
+              [
+                "Ad spend",
+                "Company payment methods only"
+              ],
+              [
+                "Owner pay",
+                "Fixed amount, recorded monthly"
+              ],
+              [
+                "Tax set-aside",
+                "Moved on payout day; % from accountant"
+              ],
+              [
+                "New contracts",
+                "Read in full; lawyer for big ones"
+              ]
+            ]
+          },
+          "say": "Write these money rules once, and follow them every month. Network payouts go into the company account only. Ad spend uses company payment methods only. Owner pay is a fixed amount, recorded monthly. The tax set-aside is moved on payout day, with the percentage from your accountant. And new contracts are read in full, with a lawyer for big ones. These keep your profit number honest, and the company easy to verify, bank, and one day, sell."
+        },
+        {
+          "v": "check",
+          "h": "Records to keep",
+          "p": "Keep these records in one shared folder, organised by month. How long you must keep them depends on your country, so ask your accountant. A complete folder makes verification, bank requests and disputes far easier.",
+          "d": [
+            "Company registration and tax documents",
+            "Signed network agreements and terms",
+            "Monthly ad invoices from each platform",
+            "Payout statements from each network",
+            "Staff contracts and pay records",
+            "Bank statements, reconciled monthly"
+          ],
+          "say": "Keep these records in one shared folder, organised by month. Company registration and tax documents. Signed network agreements and terms. Monthly ad invoices from each platform. Payout statements from each network. Staff contracts and pay records. And bank statements, reconciled monthly. How long you must keep them depends on your country, so ask your accountant."
+        },
+        {
+          "v": "compare",
+          "h": "Common company mistakes",
+          "p": "These mistakes rarely hurt in the first month. They hurt at tax time, during a payout dispute or when a platform asks for documents. Each fix is cheap if you start it now.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Mixing personal and business money",
+                "Signing network terms unread",
+                "Paying staff with no contract",
+                "Filing nothing until tax time"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Separate accounts from day one",
+                "Read payment, holds, termination",
+                "Written terms for everyone",
+                "Monthly records, monthly reconcile"
+              ]
+            }
+          },
+          "say": "These mistakes rarely hurt in the first month. They hurt at tax time, during a payout dispute, or when a platform asks for documents. Mixing personal and business money. Signing network terms unread. Paying staff with no contract. Filing nothing until tax time. The fixes: separate accounts from day one, read the payment, holds and termination clauses, written terms for everyone, and monthly records with a monthly reconcile."
+        },
+        {
+          "v": "tip",
+          "h": "A company does not make a shortcut legal",
+          "p": "Registering a company does not change platform rules or the law. You still need authorization for regulated offers, and you may not register companies in other people's names to open more ad accounts after a restriction. That is ban evasion and can be fraud.",
+          "d": {
+            "kind": "warn",
+            "text": "One real company, in your real details, with honest records. Never use nominees or borrowed identities."
+          },
+          "say": "Here's an important point. Registering a company doesn't change platform rules or the law. You still need authorization for regulated offers. And you may not register companies in other people's names to open more ad accounts after a restriction. That's ban evasion, and it can be fraud. As the warning says, one real company, in your real details, with honest records. Never use nominees or borrowed identities."
+        },
+        {
+          "v": "big",
+          "h": "Records make a business valuable",
+          "p": "A company with clean accounts, signed contracts and complete records can be verified, financed, audited and even sold. An operation that lives in one person's phone and personal bank account cannot. Build the first kind.",
+          "d": {
+            "b": "Build something you could sell",
+            "s": "Not legal or tax advice; consult professionals in your country."
+          },
+          "say": "A company with clean accounts, signed contracts and complete records can be verified, financed, audited, and even sold. An operation that lives in one person's phone and personal bank account can't. As the screen says, build something you could sell. And again, this isn't legal or tax advice, so consult professionals in your country."
+        }
+      ],
+      "takeaways": [
+        "At scale, a registered company should own the assets, sign the contracts and hold the money.",
+        "Keep every business payment in the business account so profit is a fact, not a guess.",
+        "Read payment terms, holds, termination and traffic rules before you scale with a network, and keep them in writing."
+      ],
+      "action": "List every money flow from last month: payouts in, ad spend, tools, salaries and owner pay. Mark each one that went through a personal account and write the date you will move it into the company account.",
+      "glossary": [
+        {
+          "term": "Business bank account",
+          "def": "A bank account in the company's name, used only for business money."
+        },
+        {
+          "term": "Ledger",
+          "def": "A record of every transaction with its date, category, amount and proof."
+        },
+        {
+          "term": "Payment terms",
+          "def": "When and how a network pays: net days, minimum payout and method."
+        },
+        {
+          "term": "Termination clause",
+          "def": "The part of a contract that says how either side can end it and what happens to money still owed."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "In one month: payouts $20,000, ad spend $13,000, tools $500, salaries $3,000. What is profit before tax?",
+          "options": [
+            "$7,000",
+            "$3,500",
+            "$4,000",
+            "$6,500"
+          ],
+          "answer": 1,
+          "why": "$20,000 − $13,000 − $500 − $3,000 = $3,500."
+        },
+        {
+          "q": "Which clause tells you what happens to unpaid earnings if the network ends the deal?",
+          "options": [
+            "Governing law",
+            "Traffic rules",
+            "Termination",
+            "Data"
+          ],
+          "answer": 2,
+          "why": "The termination clause covers how the contract ends and what happens to money still owed."
+        },
+        {
+          "q": "A network offers to pay into your personal account because it is faster. What is best practice?",
+          "options": [
+            "Accept; it is the same money",
+            "Split it between both accounts",
+            "Use a relative's account",
+            "Ask them to pay the company account and update your details"
+          ],
+          "answer": 3,
+          "why": "Payouts into the company account keep profit visible, records clean and the business easy to verify."
+        },
+        {
+          "q": "After a restriction, a friend offers to register a company in his name so you can open new ad accounts. What is this?",
+          "options": [
+            "Ban evasion using a nominee; refuse",
+            "A legitimate backup",
+            "Normal company setup",
+            "Fine if he is a director"
+          ],
+          "answer": 0,
+          "why": "Using another person's identity to keep advertising after a restriction is ban evasion and can be fraud."
+        },
+        {
+          "q": "How should you decide how much tax to set aside each month?",
+          "options": [
+            "Copy another affiliate's rate",
+            "Ask a qualified accountant in your country",
+            "Set aside nothing until year end",
+            "Use the platform's VAT rate"
+          ],
+          "answer": 1,
+          "why": "Tax depends on your country, company type and situation. A qualified accountant should set the figure."
+        }
+      ],
+      "say_intro": "This lesson covers your company, your contracts and your records. You'll see the steps from operating as a person to operating as a company, how to keep business money separate, and which network agreement clauses to read before you scale.",
+      "say_outro": "To recap: run the operation as a real company, keep business money separate, keep monthly records, and read the key network clauses before you scale. Your task: list every money flow from last month, payouts, ad spend, tools, salaries and owner pay, mark each one that went through a personal account, and write the date you'll move it into the company account. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "Your only business admin's phone is stolen and he did not use 2FA. Profit is $700 a day. Recovery takes 6 days. What does this show?",
+      "options": [
+        "Nothing, it was bad luck",
+        "You need more ad accounts",
+        "A single point of failure cost about $4,200; add a second admin and 2FA",
+        "Switch networks"
+      ],
+      "answer": 2,
+      "why": "$700 × 6 = $4,200 lost. A second admin and 2FA prevent this for almost no cost."
+    },
+    {
+      "q": "A seller offers 'aged, verified accounts' for rent to bypass a restriction. What do you do?",
+      "options": [
+        "Rent one as a backup",
+        "Rent only for regulated offers",
+        "Buy one instead of renting",
+        "Refuse: it is evasion using someone else's identity and risks wider bans and legal trouble"
+      ],
+      "answer": 3,
+      "why": "Renting or buying accounts breaks terms, may involve identity misuse, and usually ends in bans."
+    },
+    {
+      "q": "This week 9 of 45 ads were rejected; your usual rate is 6%. Most cite outcome claims. What do the health rules say?",
+      "options": [
+        "Group by reason, fix the brief, and review every ad with a second person until the rate falls",
+        "Appeal all 9 at once",
+        "Open new accounts for new ads",
+        "Raise budgets to compensate"
+      ],
+      "answer": 0,
+      "why": "The rate is 20%, more than 2 × your baseline, with one repeated reason. Fix the brief and add second-person review."
+    },
+    {
+      "q": "Card limit $3,000 a day. You plan to scale to $2,800 a day. What is the risk?",
+      "options": [
+        "None, it fits",
+        "Little room left; a declined charge could pause delivery; raise the limit or add a business backup first",
+        "CPM will rise",
+        "The pixel will break"
+      ],
+      "answer": 1,
+      "why": "Only $200 room remains. Plan payment capacity before the step."
+    },
+    {
+      "q": "Ads show $30 CPA. Currency costs add 6%. Payout is $34. What is true headroom?",
+      "options": [
+        "About 12%",
+        "About 18%",
+        "About 6%",
+        "About 0%"
+      ],
+      "answer": 2,
+      "why": "True CPA is $31.80. (34 − 31.80) ÷ 34 is about 6.5%."
+    },
+    {
+      "q": "A buyer suggests sending reviewers to a safe page and users to the real offer page. What is this?",
+      "options": [
+        "A legitimate A/B test",
+        "A billing workaround",
+        "Domain verification",
+        "Cloaking, which is prohibited and deceptive"
+      ],
+      "answer": 3,
+      "why": "Showing reviewers different content from users is cloaking and leads to bans and legal risk."
+    },
+    {
+      "q": "After a fair review, Meta restricts your business. 25% of profit comes from TikTok and owned channels. What next?",
+      "options": [
+        "Accept the decision, grow TikTok and owned channels, and improve the process",
+        "Create new Meta accounts in staff names",
+        "Buy a Meta account",
+        "Dispute all past Meta charges"
+      ],
+      "answer": 0,
+      "why": "Continuing through new accounts is ban evasion. Grow where you are in good standing."
+    },
+    {
+      "q": "You want to run a casino offer in a Nigerian state. What do you check?",
+      "options": [
+        "Nothing, it is legal everywhere",
+        "The state's gaming regulator and the platform's current gambling ad policy and authorization",
+        "Only the network's terms",
+        "Only Ghana's rules"
+      ],
+      "answer": 1,
+      "why": "Gambling in Nigeria is largely state-licensed, and platforms usually require authorization."
+    },
+    {
+      "q": "You collect lead names and numbers across Nigeria, Kenya and South Africa. What applies?",
+      "options": [
+        "Only Nigerian law",
+        "No law if leads give consent",
+        "Each country's data protection law: NDPA, Kenya's DPA and POPIA",
+        "Only the platform's rules"
+      ],
+      "answer": 2,
+      "why": "Each country's law applies to its residents' data. Consent or another lawful basis matters, but it does not replace the law."
+    },
+    {
+      "q": "Network payouts land in your personal account and ad spend comes from a personal card, while the company is verified with the platform. What do you fix first?",
+      "options": [
+        "Nothing; the money is all yours",
+        "Open more ad accounts",
+        "Move payouts and spend to the company account and methods, and keep monthly records",
+        "Wait until tax time"
+      ],
+      "answer": 2,
+      "why": "Mixed money hides real profit and weakens verification and records. The company should receive payouts and pay for spend."
+    }
+  ]
+}

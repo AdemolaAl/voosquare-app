@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Email heroes</title>
+<style>body{margin:0;background:#1b1b1b;font:13px system-ui;color:#ccc}.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(600px,1fr));gap:14px;padding:14px}.g img{width:600px;display:block;border-radius:12px}</style>
+</head><body><div class="g" id="g"></div>
+<script src="../../../public/js/shared.js"></script>
+<script src="art.js"></script>
+<script>
+/* Rasterise one frame of a hero at `scale` and return a PNG data URL. */
+window.frame = async function (key, T, scale) {
+  const { h } = EMAIL_ART.info(key);
+  const svg = EMAIL_ART.svg(key, T);
+  const img = new Image();
+  img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+  await img.decode();
+  const c = document.createElement('canvas'); c.width = 600 * scale; c.height = h * scale;
+  c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+  return c.toDataURL('image/png');
+};
+/* Contact sheet: frame 0 of every hero (open this file in a browser). */
+window.sheet = async function () {
+  const g = document.getElementById('g');
+  for (const hh of EMAIL_ART.HEROES) { const a = document.createElement('img'); a.src = await frame(hh.key, 0, 1); a.title = hh.key; g.appendChild(a); }
+};
+if (!navigator.webdriver) sheet();
+</script></body></html>

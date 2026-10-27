@@ -1,0 +1,154 @@
+/* VooSquare Academy lesson art (public/js/lesson-art.js): scenes, cast chips and the living stage.
+ * Motion is transforms and opacity only, eased and slow; everything stops with prefers-reduced-motion and while the
+ * stage is off-screen (.vl-off from lesson-visuals.js). */
+
+/* ---------------- living stage ---------------- */
+.vl-stage > .la-amb { position: absolute; inset: 0; overflow: hidden; pointer-events: none; border-radius: inherit; }
+.la-amb i, .la-amb b { position: absolute; display: block; pointer-events: none; }
+.la-g1, .la-g2 { width: 72%; aspect-ratio: 1; border-radius: 50%; will-change: transform; }
+.la-g1 { left: -18%; top: -34%; background: radial-gradient(closest-side, rgba(18,199,132,.2), rgba(18,199,132,0)); animation: laG1 21s ease-in-out infinite alternate; }
+.la-g2 { right: -22%; bottom: -46%; background: radial-gradient(closest-side, rgba(201,246,91,.11), rgba(201,246,91,0)); animation: laG2 27s ease-in-out infinite alternate; }
+.la-sh { inset: -10% -60%; background: linear-gradient(104deg, transparent 44%, rgba(201,246,91,.045) 50%, transparent 56%); animation: laSh 12s linear infinite; will-change: transform; }
+.la-amb b { width: 3px; height: 3px; border-radius: 50%; background: #C9F65B; opacity: 0; animation: laP 13s linear infinite; will-change: transform, opacity; }
+.la-amb b:nth-of-type(3n) { width: 2px; height: 2px; background: #B3E8D3; }
+@keyframes laG1 { from { transform: translate(0, 0) } to { transform: translate(18%, 22%) } }
+@keyframes laG2 { from { transform: translate(0, 0) } to { transform: translate(-20%, -16%) } }
+@keyframes laSh { from { transform: translateX(-40%) } to { transform: translateX(40%) } }
+@keyframes laP { 0% { transform: translateY(0); opacity: 0 } 15% { opacity: .55 } 85% { opacity: .35 } 100% { transform: translateY(-120px); opacity: 0 } }
+
+/* ---------------- scene on a slide ---------------- */
+.la-art { position: relative; display: grid; place-items: center; width: 100%; min-width: 0; pointer-events: none; }
+.la-svg { display: block; width: 100%; height: auto; overflow: hidden; border-radius: 0 0 14px 14px; }
+.vl-stage.la-split { grid-template-columns: minmax(0, 1fr); gap: 14px; align-content: center; }
+.vl-stage.la-split > .la-art { order: -1; }
+.vl-stage.la-split > .la-art .la-svg { width: min(100%, 300px); max-height: 200px; }
+/* Text-led visuals keep their own look next to the art; a little narrower so the pair reads as one picture. */
+.vl-stage.la-split .vl-tip { max-width: 560px; }
+.vl-stage.la-split .vl-quote q { font-size: clamp(24px, 3vw, 36px); }
+@media (min-width: 860px) {
+  .ssp .ssp-stage.la-split { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 24px; padding-inline: 34px 18px; }
+  .ssp .ssp-stage.la-split > .la-art { order: 0; }
+  .ssp .ssp-stage.la-split > .la-art .la-svg { width: 100%; max-width: 480px; max-height: 320px; }
+  .ssp .ssp-stage.la-split .vl-big, .ssp .ssp-stage.la-split .vl-stat, .ssp .ssp-stage.la-split .vl-quote { justify-self: center; }
+  .ssp .ssp-stage.la-split .vl-big b { font-size: clamp(36px, 4.6vw, 62px); }
+}
+@media (max-width: 720px) {
+  .ssp .ssp-stage.la-split { padding-top: 14px; }
+  .vl-stage.la-split > .la-art .la-svg { max-height: 188px; }
+  .ssp .ssp-stage.la-split .vl-big b { font-size: clamp(30px, 8.6vw, 40px); }
+  .ssp .ssp-stage.la-split .vl-stat b { font-size: clamp(48px, 13vw, 64px); }
+}
+
+/* parallax: back layer drifts against the pointer, front layer with it (set by VSA.parallax) */
+.la-l1, .la-l3 { transition: transform .9s cubic-bezier(.2,.8,.2,1); }
+.la-l1 { transform: translate(calc(var(--px, 0) * -5px), calc(var(--py, 0) * -4px)); }
+.la-l3 { transform: translate(calc(var(--px, 0) * 8px), calc(var(--py, 0) * 6px)); }
+.la-d1 { animation: laDrift 14s ease-in-out infinite alternate; }
+.la-d3 { animation: laDrift 10s ease-in-out -3s infinite alternate-reverse; }
+@keyframes laDrift { from { transform: translate(-3px, 2px) } to { transform: translate(3px, -3px) } }
+
+/* ---------------- the cast ---------------- */
+.la-bob { animation: laBob 3.8s ease-in-out infinite; }
+@keyframes laBob { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(-2.5px) } }
+.la-head { transform-box: fill-box; transform-origin: 50% 100%; animation: laTilt 7s ease-in-out infinite; }
+@keyframes laTilt { 0%, 100% { transform: rotate(0) } 35% { transform: rotate(-3deg) } 65% { transform: rotate(2.5deg) } }
+.la-type { animation: laType .34s ease-in-out infinite alternate; }
+.la-type.r { animation-delay: .17s; }
+@keyframes laType { to { transform: translateY(-2.5px) } }
+.la-thumb { animation: laThumb 2.2s ease-in-out infinite; }
+@keyframes laThumb { 0%, 60%, 100% { transform: translateY(0) } 70% { transform: translateY(-3px) } 80% { transform: translateY(0) } 88% { transform: translateY(-3px) } }
+.la-wave { transform-box: fill-box; transform-origin: 8% 92%; animation: laWave 3.2s ease-in-out infinite; }
+@keyframes laWave { 0%, 55%, 100% { transform: rotate(0) } 65% { transform: rotate(-14deg) } 75% { transform: rotate(6deg) } 85% { transform: rotate(-10deg) } }
+.la-point { transform-box: fill-box; transform-origin: 6% 94%; animation: laPoint 4s ease-in-out infinite; }
+@keyframes laPoint { 0%, 100% { transform: rotate(0) } 50% { transform: rotate(-4deg) } }
+.la-cheer { transform-box: fill-box; transform-origin: 90% 92%; animation: laCheer 2.6s ease-in-out infinite; }
+.la-cheer.r { transform-origin: 10% 92%; animation-name: laCheerR; }
+@keyframes laCheer { 0%, 100% { transform: rotate(0) } 50% { transform: rotate(5deg) } }
+@keyframes laCheerR { 0%, 100% { transform: rotate(0) } 50% { transform: rotate(-5deg) } }
+.la-glow { animation: laGlow 2.6s ease-in-out infinite; }
+@keyframes laGlow { 50% { opacity: .5 } }
+
+/* ---------------- props ---------------- */
+.la-float { animation: laFloat 5s ease-in-out infinite; }
+@keyframes laFloat { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(-6px) } }
+.la-pop { animation: laPop 6s cubic-bezier(.2,.8,.2,1) infinite; }
+@keyframes laPop { 0% { opacity: 0; transform: translateY(8px) } 8%, 78% { opacity: 1; transform: translateY(0) } 90%, 100% { opacity: 0; transform: translateY(-6px) } }
+.la-popc { transform-box: fill-box; transform-origin: center; animation: laPopc 4.8s cubic-bezier(.2,.8,.2,1) infinite; }
+@keyframes laPopc { 0%, 18% { opacity: 0; transform: scale(.6) } 28%, 86% { opacity: 1; transform: scale(1) } 100% { opacity: 0; transform: scale(1) } }
+.la-dot { animation: laDot 2.6s cubic-bezier(.45,0,.3,1) infinite; }
+@keyframes laDot { 0% { transform: translate(0, 0); opacity: 0 } 12% { opacity: 1 } 88% { opacity: 1 } 100% { transform: translate(var(--dx, 0), var(--dy, 0)); opacity: 0 } }
+.la-slide { animation: laSlide 2.7s cubic-bezier(.45,0,.3,1) infinite; }
+@keyframes laSlide { 0% { transform: translate(0, 0); opacity: 0 } 15% { opacity: 1 } 80% { transform: translate(var(--dx, 0), var(--dy, 0)); opacity: 1 } 100% { transform: translate(var(--dx, 0), calc(var(--dy, 0) + 14px)); opacity: 0 } }
+.la-drop { animation: laDrop 2.4s cubic-bezier(.5,0,.75,0) infinite; }
+@keyframes laDrop { 0% { transform: translateY(-34px); opacity: 0 } 20% { opacity: 1 } 75% { transform: translateY(36px); opacity: 1 } 90%, 100% { transform: translateY(40px); opacity: 0 } }
+.la-grow { transform-box: fill-box; transform-origin: 50% 100%; animation: laGrow 5.5s cubic-bezier(.2,.8,.2,1) infinite; }
+.la-grow.x { transform-origin: 0 50%; animation-name: laGrowX; }
+@keyframes laGrow { 0% { transform: scaleY(.08); opacity: .4 } 22%, 88% { transform: scaleY(1); opacity: 1 } 100% { transform: scaleY(1); opacity: .9 } }
+@keyframes laGrowX { 0% { transform: scaleX(.05) } 26%, 90% { transform: scaleX(1) } 100% { transform: scaleX(1) } }
+.la-draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: laDraw 7s cubic-bezier(.4,.1,.2,1) infinite; }
+@keyframes laDraw { 0% { stroke-dashoffset: 1; opacity: 1 } 28%, 86% { stroke-dashoffset: 0; opacity: 1 } 96% { stroke-dashoffset: 0; opacity: 0 } 100% { stroke-dashoffset: 1; opacity: 0 } }
+.la-ping { transform-box: fill-box; transform-origin: center; animation: laPing 2.4s cubic-bezier(.2,.6,.3,1) infinite; }
+@keyframes laPing { 0% { transform: scale(.5); opacity: .55 } 100% { transform: scale(1.9); opacity: 0 } }
+.la-pulse, .la-cta { transform-box: fill-box; transform-origin: center; animation: laPulse 2.8s ease-in-out infinite; }
+@keyframes laPulse { 0%, 100% { transform: scale(1) } 50% { transform: scale(1.06) } }
+.la-dash { animation: laDash 1.8s linear infinite; }
+@keyframes laDash { to { stroke-dashoffset: -22 } }
+.la-blinkdot, .la-rec { animation: laBlink 1.6s steps(2, jump-none) infinite; }
+@keyframes laBlink { 50% { opacity: .25 } }
+.la-cursor { animation: laCursor 4.4s cubic-bezier(.45,0,.3,1) infinite; }
+@keyframes laCursor { 0% { transform: translate(60px, 40px); opacity: 0 } 12% { opacity: 1 } 45%, 70% { transform: translate(-112px, -6px); opacity: 1 } 52% { transform: translate(-112px, -4px) } 90%, 100% { transform: translate(-112px, -6px); opacity: 0 } }
+.la-msg { animation: laMsg 6s cubic-bezier(.2,.8,.2,1) infinite; }
+@keyframes laMsg { 0%, 4% { opacity: 0; transform: translateY(8px) } 12%, 88% { opacity: 1; transform: translateY(0) } 96%, 100% { opacity: 0 } }
+.la-feed { animation: laFeed 9s linear infinite; }
+@keyframes laFeed { from { transform: translateY(0) } to { transform: translateY(-196px) } }
+.la-spin { animation: laSpin 16s linear infinite; }
+@keyframes laSpin { from { transform: translateX(0) } to { transform: translateX(60px) } }
+.la-orbit { transform-box: fill-box; transform-origin: center; animation: laOrbit 40s linear infinite; }
+@keyframes laOrbit { to { transform: rotate(360deg) } }
+.la-tick { animation: laTick 6s cubic-bezier(.2,.8,.2,1) infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes laTick { 0%, 6% { opacity: 0; transform: scale(.5) } 14%, 90% { opacity: 1; transform: scale(1) } 100% { opacity: 0 } }
+.la-ray { animation: laRay 2.8s ease-in-out infinite; }
+@keyframes laRay { 0%, 100% { opacity: .15 } 50% { opacity: .9 } }
+.la-hand { transform-box: view-box; transform-origin: 0 0; animation: laHand 6s linear infinite; }
+@keyframes laHand { to { transform: rotate(360deg) } }
+.la-fall { animation: laFall 2.6s cubic-bezier(.5,0,.6,1) infinite; }
+@keyframes laFall { 0% { transform: translate(0, 0); opacity: 0 } 12% { opacity: 1 } 80% { opacity: 1 } 100% { transform: translate(var(--fx, 0), 128px); opacity: 0 } }
+.la-dim { opacity: .55; }
+.la-bid { animation: laBid 4.8s ease-in-out infinite; }
+@keyframes laBid { 0%, 100% { transform: translateY(0) } 40% { transform: translateY(-10px) } 70% { transform: translateY(4px) } }
+.la-scan { animation: laScan 5s ease-in-out infinite; }
+@keyframes laScan { 0%, 100% { transform: translate(0, -44px) } 40%, 60% { transform: translate(-6px, 4px) } 80% { transform: translate(40px, 40px) } }
+.la-roll { animation: laRoll 4s ease-in-out infinite; }
+@keyframes laRoll { 0%, 100% { transform: translateX(0) } 50% { transform: translateX(18px) } }
+.la-lid { animation: laLid 4.6s ease-in-out infinite; }
+@keyframes laLid { 0%, 55%, 100% { transform: translateY(0) } 70%, 85% { transform: translateY(-8px) } }
+
+/* ---------------- chips on cards and flow nodes ---------------- */
+.la-chip { display: grid; place-items: center; flex: none; width: 34px; height: 34px; border-radius: 11px; margin-bottom: 9px; }
+.la-chip.la-face { border-radius: 50%; overflow: hidden; box-shadow: 0 0 0 2px #2E5240; }
+.la-chip.la-face svg { width: 100%; height: 100%; display: block; }
+.la-chip.la-ic { background: rgba(201,246,91,.12); color: var(--lime, #C9F65B); border: 1px solid rgba(201,246,91,.26); }
+.la-chip.la-ic svg { width: 19px; height: 19px; }
+.la-chip.la-num { background: #1B3427; color: #B9C9C1; font-family: var(--f-m); font-size: 13px; font-weight: 700; }
+.vl-c.la-has .la-chip { animation: laChip .55s cubic-bezier(.2,.8,.2,1) both; animation-delay: inherit; }
+@keyframes laChip { from { opacity: 0; transform: scale(.7) } }
+.vl-flow.la-chips .vl-fn { display: inline-flex; flex-direction: column; align-items: center; gap: 0; }
+.vl-flow.la-chips .la-chip { width: 30px; height: 30px; margin-bottom: 7px; }
+.vl-fn.last .la-chip.la-ic { background: rgba(20,32,10,.12); color: #14200A; border-color: rgba(20,32,10,.25); }
+.vl-fn.last .la-chip.la-num { background: rgba(20,32,10,.12); color: #14200A; }
+@media (max-width: 720px) {
+  .vl-flow.la-chips .vl-fn { flex-direction: row; gap: 10px; justify-content: flex-start; text-align: left; }
+  .vl-flow.la-chips .la-chip { margin-bottom: 0; width: 28px; height: 28px; }
+  .la-chip { width: 30px; height: 30px; margin-bottom: 7px; }
+}
+
+/* ---------------- still and paused ---------------- */
+.vl-off .la-amb *, .vl-off .la-svg *, .vl-off .la-svg, .vl-off .la-chip { animation-play-state: paused !important; }
+@media (prefers-reduced-motion: reduce) {
+  .la-amb *, .la-svg, .la-svg *, .la-chip, .vl-stage .la-svg * { animation: none !important; }
+  .la-l1, .la-l3 { transition: none; transform: none; }
+  .la-draw { stroke-dashoffset: 0; }
+  .la-pop, .la-popc, .la-msg, .la-tick, .la-dot, .la-slide, .la-drop, .la-fall, .la-cursor { opacity: 1; }
+  .la-dot, .la-slide, .la-fall, .la-ping, .la-cursor { display: none; }
+  .la-amb b { display: none; }
+}

@@ -1,0 +1,2695 @@
+{
+  "school": "operator",
+  "order": 9,
+  "slug": "testing-and-data",
+  "title": "Testing and data",
+  "summary": "How to design clean tests, size them sensibly and read results without being fooled by luck. You leave with written kill and scale rules, a lean dashboard and a weekly review habit.",
+  "lessons": [
+    {
+      "slug": "noise-and-luck",
+      "title": "Noise: why early numbers lie",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can explain what noise is and why it shows up in every campaign.",
+        "You can use a rough range to judge whether a gap between two ads could be luck.",
+        "You can tell a random swing apart from a real problem such as broken tracking."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Results wobble even when nothing changes",
+          "p": "Run the same ad twice with the same budget and you will get different results. People see ads at random moments. Some are busy, some are ready to act. That random wobble is called noise. Your job is to tell real differences from noise before you move money.",
+          "d": {
+            "b": "Same ad, different results",
+            "s": "Randomness is part of every campaign"
+          },
+          "say": "Here's something that surprises most beginners. Run the same ad twice, with the same budget, and you'll get different results. Why? Because people see ads at random moments. Some are busy, some are ready to act. That random wobble is called noise. It's part of every campaign, and it never goes away. Your job is to tell real differences from noise before you move any money."
+        },
+        {
+          "v": "compare",
+          "h": "Signal versus noise",
+          "p": "A signal is a difference that keeps showing up because something real caused it. Noise is a difference that appears and then vanishes. The danger is acting on noise: killing a good ad after a bad morning, or scaling a weak one after a lucky day.",
+          "d": {
+            "a": {
+              "title": "Noise",
+              "items": [
+                "Shows up on one day only",
+                "Flips when you wait",
+                "Built on 1 to 3 conversions",
+                "No clear reason behind it"
+              ]
+            },
+            "b": {
+              "title": "Signal",
+              "items": [
+                "Holds across several days",
+                "Gets clearer with more data",
+                "Built on many conversions",
+                "Has a believable cause"
+              ]
+            }
+          },
+          "say": "Look at the two columns. Noise shows up on one day only, flips when you wait, is built on one to three conversions, and has no clear reason behind it. A signal holds across several days, gets clearer with more data, is built on many conversions, and has a believable cause. The real danger is acting on noise. That means killing a good ad after a bad morning, or scaling a weak one after a lucky day."
+        },
+        {
+          "v": "tip",
+          "h": "A coin-flip lesson",
+          "p": "Flip a fair coin ten times. Getting seven heads happens often, yet nobody would say the coin prefers heads. Conversions behave the same way. With small numbers, lopsided results happen by chance all the time, so an early lead between two ads means very little.",
+          "more": "Seven or more heads out of ten happens about 17% of the time with a fair coin, so roughly one run in six. Now picture two copies of the same ad, each expected to bring 1 or 2 sign-ups on $20. One getting 3 and the other getting 0 is an ordinary outcome. If you killed Ad B on that evidence you would be throwing away an ad that is exactly as good as Ad A.",
+          "d": {
+            "kind": "example",
+            "text": "Example: two identical ads, $20 each. Ad A gets 3 sign-ups and Ad B gets 0. With counts this small, chance alone can easily produce that gap."
+          },
+          "say": "Here's a coin-flip lesson. Flip a fair coin ten times. Getting seven or more heads happens about seventeen percent of the time, roughly one run in six, yet nobody would say the coin prefers heads. Conversions behave the same way. Look at the example: two identical ads, twenty dollars each. Ad A gets three sign-ups, Ad B gets zero. With counts this small, chance alone can easily produce that gap. Kill Ad B on that evidence, and you throw away an ad that's exactly as good as Ad A."
+        },
+        {
+          "v": "screen",
+          "h": "What noise looks like in Ads Manager",
+          "p": "Example: one creative duplicated into three ad sets, same audience, same budget, same day. By the evening the three look like different ads. Nothing differs except chance. Remember this screen the next time one ad \"wins\" on day one. Column names change; check the current Ads Manager.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/adsets",
+            "title": "NG_Test_Duplicates: today",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Ad set",
+                  "Spend",
+                  "Sign-ups",
+                  "Cost per sign-up"
+                ],
+                "rows": [
+                  [
+                    "Copy A",
+                    "$20",
+                    "3",
+                    "$6.67"
+                  ],
+                  [
+                    "Copy B",
+                    "$20",
+                    "0",
+                    "None"
+                  ],
+                  [
+                    "Copy C",
+                    "$20",
+                    "1",
+                    "$20.00"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Example. Same ad three times. The spread is noise."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Now look at this Ads Manager-style screen. It's an example. One creative, duplicated into three ad sets, same audience, same budget, same day. Copy A got three sign-ups, Copy B got none, and Copy C got one. By evening they look like three different ads. But nothing differs except chance. The spread is noise. Remember this screen the next time one ad wins on day one. And column names change, so check the current Ads Manager."
+        },
+        {
+          "v": "funnel",
+          "h": "Conversions are rare events",
+          "p": "Clicks arrive in hundreds. Deposits arrive in ones and twos. The further down the funnel you look, the smaller the count and the bigger the wobble. That is why click-through rate settles fast while cost per FTD can swing hard for days.",
+          "more": "Example funnel. With 750 clicks, one extra click barely moves CTR (from 1.50% to 1.502%). With 6 FTDs, one extra FTD changes cost per FTD by about 14%. If spend is $180, cost per FTD is $30 at 6 FTDs and about $25.70 at 7. One person decided that swing.",
+          "d": [
+            [
+              "Impressions",
+              50000
+            ],
+            [
+              "Clicks",
+              750
+            ],
+            [
+              "Joins",
+              150
+            ],
+            [
+              "FTDs",
+              6
+            ]
+          ],
+          "say": "Follow the funnel down. Fifty thousand impressions, seven hundred and fifty clicks, one hundred and fifty joins, and just six F T Ds, first time deposits. Clicks arrive in hundreds, deposits in ones and twos. The further down you look, the smaller the count and the bigger the wobble. One extra click barely moves C T R, your click through rate. But one extra F T D changes cost per F T D by about fourteen percent. On one hundred and eighty dollars of spend, that's thirty dollars at six, and about twenty five dollars seventy at seven. One person decided that swing."
+        },
+        {
+          "v": "eq",
+          "h": "A rough range for any count",
+          "p": "Here is a simple intuition, not an exact law. For a count of conversions, the natural wobble is around the square root of that count. Doubling it gives a rough range where the true figure could sit. It is enough to stop you from overreacting.",
+          "more": "This comes from how random counts behave (statisticians call them Poisson counts). It is a rough guide only, and it assumes nothing else changed, such as budget, audience, offer or tracking. Use it to ask one question: could this gap be luck? It is never proof that a gap is real, and you should not quote it to two decimal places.",
+          "d": [
+            "Count",
+            "±",
+            "2 × √Count",
+            "=",
+            "Rough range"
+          ],
+          "say": "Here's a simple intuition, not an exact law. For any count of conversions, the natural wobble is around the square root of that count. Take the count, plus or minus two times its square root, and you get a rough range where the true figure could sit. Statisticians call these Poisson counts. It's a rough guide only, and it assumes nothing else changed. Use it to ask one question: could this gap be luck? It's never proof that a gap is real."
+        },
+        {
+          "v": "table",
+          "h": "What the rough range looks like",
+          "p": "The table shows how wide the rough range is at different counts. Small counts have huge ranges compared with their size. At 4 conversions the true figure could be anywhere from almost zero to double. At 100 it is about 20% either side.",
+          "d": {
+            "cols": [
+              "You saw",
+              "√ count",
+              "Rough range"
+            ],
+            "rows": [
+              [
+                "4",
+                "2",
+                "0 to 8"
+              ],
+              [
+                "9",
+                "3",
+                "3 to 15"
+              ],
+              [
+                "25",
+                "5",
+                "15 to 35"
+              ],
+              [
+                "100",
+                "10",
+                "80 to 120"
+              ]
+            ]
+          },
+          "say": "This table shows how wide the rough range gets. If you saw four conversions, the square root is two, so the range is zero to eight. At nine, it's three to fifteen. At twenty five, fifteen to thirty five. And at one hundred, eighty to one hundred and twenty. Notice how small counts have huge ranges compared with their size. At four, the true figure could be almost zero or double. At one hundred, it's about twenty percent either side."
+        },
+        {
+          "v": "bars",
+          "h": "Comparing two ads honestly",
+          "p": "Example: Ad A has 9 FTDs and Ad B has 4 on the same spend. A looks more than twice as good. But A's rough range is 3 to 15 and B's is 0 to 8. The ranges overlap a lot, so the gap may be luck. Keep both running a little longer.",
+          "more": "Example. 9 ± 2 × 3 gives 3 to 15. 4 ± 2 × 2 gives 0 to 8. When ranges overlap this much, the honest answer is that you do not know yet. If after more spend A has 30 FTDs (range about 19 to 41) and B has 12 (range about 5 to 19), the ranges barely touch and you can act with more confidence.",
+          "d": [
+            [
+              "Ad A seen",
+              60,
+              "9 FTDs"
+            ],
+            [
+              "Ad A range",
+              100,
+              "3 to 15"
+            ],
+            [
+              "Ad B seen",
+              27,
+              "4 FTDs"
+            ],
+            [
+              "Ad B range",
+              53,
+              "0 to 8"
+            ]
+          ],
+          "say": "Let's compare two ads honestly. In this example, Ad A has nine F T Ds and Ad B has four, on the same spend. A looks more than twice as good. But look at the bars. A's rough range is three to fifteen, and B's is zero to eight. They overlap a lot, so the gap may be luck, and the honest answer is that you don't know yet. Keep both running a little longer. If A later reaches thirty and B twelve, the ranges barely touch, and you can act with more confidence."
+        },
+        {
+          "v": "curve",
+          "h": "Early numbers settle with time",
+          "p": "Track cost per result day by day and a pattern appears. The first days swing hard, then the line calms down as data piles up. Decisions made on day one are often reversed by day five. Waiting for the line to settle is part of the method.",
+          "more": "Example, cumulative cost per lead. On day 1 Ad B looked four times cheaper than Ad A. By day 7 the two sit within a few dollars of each other. A buyer who killed Ad A on day 1 would have lost an ad that ended up slightly cheaper.",
+          "d": {
+            "a": [
+              40,
+              12,
+              22,
+              19,
+              17,
+              18,
+              18
+            ],
+            "la": "Ad A cost per lead ($)",
+            "b": [
+              9,
+              30,
+              24,
+              21,
+              22,
+              20,
+              21
+            ],
+            "lb": "Ad B cost per lead ($)",
+            "x": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7"
+            ]
+          },
+          "say": "Track cost per result day by day, and a pattern appears. In this example, look at day one. Ad B looks four times cheaper than Ad A. Then follow the two lines. The first days swing hard, then they calm down as data piles up. By day seven, they sit within a few dollars of each other. A buyer who killed Ad A on day one would have lost an ad that ended up slightly cheaper. Waiting for the line to settle is part of the method."
+        },
+        {
+          "v": "cards",
+          "h": "Hot streaks cool down",
+          "p": "A result that is unusually good today is likely to look more ordinary tomorrow. This is called regression to the mean. It explains why the ad you scaled after one great day often disappoints, and why a cold ad sometimes recovers with no changes.",
+          "d": [
+            "Lucky day|often followed by an average one",
+            "Bad day|often followed by a recovery",
+            "Scaling on one day|you buy the average, not the peak",
+            "The fix|judge several days together"
+          ],
+          "say": "A result that's unusually good today is likely to look more ordinary tomorrow. This is called regression to the mean. Look at the cards. A lucky day is often followed by an average one. A bad day is often followed by a recovery. If you scale on one day, you buy the average, not the peak. The fix is to judge several days together. That's why the ad you scaled after one great day often disappoints."
+        },
+        {
+          "v": "check",
+          "h": "Things that are not noise",
+          "p": "Not every swing is luck. Some changes have real causes, and you should look for them before you shrug. Check these first when numbers move sharply, because they need action rather than patience.",
+          "d": [
+            "Tracking or postback stopped firing",
+            "Offer paused or capped by the network",
+            "Ad rejected or account limited",
+            "Budget, bid or audience was edited",
+            "Payday, holiday or big match day"
+          ],
+          "say": "But not every swing is luck. Some changes have real causes, and they need action, not patience. When numbers move sharply, check these first. Has tracking or the postback stopped firing? Was the offer paused or capped by the network? Was the ad rejected or the account limited? Did someone edit the budget, bid or audience? Or is it payday, a holiday or a big match day? Look for these before you shrug and call it noise."
+        },
+        {
+          "v": "tip",
+          "h": "Look often, decide rarely",
+          "p": "Checking results every hour is fine. Acting on them every hour is the problem. Each time you look and react, you give noise another chance to fool you. Look as often as you like, but only make decisions at the checkpoints you set before launch.",
+          "d": {
+            "kind": "warn",
+            "text": "Set decision checkpoints in advance, for example each time spend reaches another 1x of your target CPA. Between checkpoints, act only on broken tracking or policy problems."
+          },
+          "say": "Here's a simple habit. Look often, decide rarely. Checking results every hour is fine. Acting on them every hour is the problem, because each reaction gives noise another chance to fool you. Read the warning. Set decision checkpoints in advance, for example each time spend reaches another one times your target C P A, your cost per acquisition. Between checkpoints, act only on broken tracking or policy problems."
+        },
+        {
+          "v": "tip",
+          "h": "The rule card is your noise filter",
+          "p": "The rule card in the Budget and kill rules module is built to resist noise. A zero kills only at 2 × target CPA. CPA kills only once spend reaches 3 × target. Scaling needs 3 or more network-confirmed conversions at CPA ≤ 0.8 × target. Below those lines the answer is Hold. Starting rules; adapt them.",
+          "d": {
+            "kind": "example",
+            "text": "Example: target $25. $20 spent, 0 FTDs: Hold, the kill line is $50. $55 spent, 0 FTDs, network confirms: Kill."
+          },
+          "say": "The rule card from the Budget and kill rules module is built to resist noise. A zero kills only at two times target C P A. A C P A kill only happens once spend reaches three times target. Scaling needs three or more network-confirmed conversions, at a C P A of point eight times target or less. Below those lines, the answer is hold. Look at the example. Target twenty five dollars. Twenty dollars spent with zero F T Ds: hold, because the kill line is fifty. Fifty five spent, zero F T Ds, network confirms: kill. These are starting rules, so adapt them."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: a zero after one day",
+          "p": "Copy B above had zero results. Suppose those were FTDs and your target is $25. Apply the rule card instead of your gut, then press check to see the working.",
+          "more": "Answer: hold. $20 ÷ $25 = 0.8 × target, well under the 2 × zero-conversion kill line of $50. With counts this small, a zero is what chance often looks like. Wait for the next checkpoint.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $25. Copy B spent $20 in 1 day with 0 network-confirmed FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 20,
+              "conversions": 0,
+              "target_cpa": 25,
+              "days": 1
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "hold",
+              "tolerance": 0
+            }
+          },
+          "say": "Time for a lab. Remember Copy B, with zero results? Suppose those were F T Ds, and your target is twenty five dollars. Copy B spent twenty dollars in one day, with zero network-confirmed F T Ds. Should you kill, hold or scale? Don't go with your gut. Apply the rule card. Pause and try it, then check your answer."
+        },
+        {
+          "v": "compare",
+          "h": "Common noise mistakes",
+          "p": "Every one of these mistakes comes from treating a small count as a verdict. They feel like quick, decisive management. In practice they kill good ads, feed lucky ones and make next week's data even noisier.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Killing after one bad morning",
+                "Scaling after one great day",
+                "Calling 3 conversions against 1 a win",
+                "Editing ad sets every few hours"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Decide only at planned checkpoints",
+                "Scale on 3+ conversions and the rule card",
+                "Check the rough ranges first",
+                "Look often, act rarely"
+              ]
+            }
+          },
+          "say": "These are the common noise mistakes. Killing after one bad morning. Scaling after one great day. Calling three conversions against one a win. And editing ad sets every few hours. Now the fixes on the right. Decide only at planned checkpoints. Scale on three or more conversions and the rule card. Check the rough ranges first. And look often, act rarely. Every mistake treats a small count as a verdict. It feels decisive, but it kills good ads and feeds lucky ones."
+        },
+        {
+          "v": "big",
+          "h": "Measure patience in conversions",
+          "p": "Time alone does not make a result trustworthy. Ten days with two conversions tells you less than one day with forty. Count how many conversions sit behind a number, then decide how much weight it deserves. Small counts are hints, never verdicts.",
+          "d": {
+            "b": "More conversions, more trust",
+            "s": "Rough guide: under 10 conversions, treat it as a hint"
+          },
+          "say": "Here's the big idea to take away. Time alone doesn't make a result trustworthy. Ten days with two conversions tells you less than one day with forty. So count how many conversions sit behind a number, then decide how much weight it deserves. As a rough guide, under ten conversions, treat it as a hint. Small counts are hints, never verdicts. More conversions means more trust."
+        }
+      ],
+      "takeaways": [
+        "Noise is random wobble; it is largest when conversion counts are small.",
+        "A rough range of count ± 2 × √count tells you whether a gap could be luck.",
+        "Rule out real causes such as broken tracking before you blame noise, and decide only at planned checkpoints."
+      ],
+      "action": "Take your last two ads that you compared. Write down the conversions for each, work out the rough range for both and note whether the ranges overlap.",
+      "glossary": [
+        {
+          "term": "Noise",
+          "def": "Random variation in results that has no real cause. It is biggest when counts are small."
+        },
+        {
+          "term": "Signal",
+          "def": "A difference in results that holds up over time because something real caused it."
+        },
+        {
+          "term": "Rough range",
+          "def": "Count plus or minus two times its square root. A quick way to see how much a count could wobble by chance."
+        },
+        {
+          "term": "Regression to the mean",
+          "def": "The tendency of unusually good or bad results to be followed by more ordinary ones."
+        },
+        {
+          "term": "Checkpoint",
+          "def": "A point set before launch, often a spend level, where you are allowed to make a decision."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Two identical ads each spend $20. One gets 3 sign-ups and the other gets 0. What is the most honest reading?",
+          "options": [
+            "The first ad is clearly better",
+            "The gap could easily be chance",
+            "The second ad has broken tracking",
+            "The first ad should get all the budget"
+          ],
+          "answer": 1,
+          "why": "With counts this small, a 3 to 0 split happens by chance often. You need more data before calling a winner."
+        },
+        {
+          "q": "Which metric settles fastest as spend grows?",
+          "options": [
+            "Cost per FTD",
+            "Number of deposits",
+            "Click-through rate",
+            "Revenue per depositor"
+          ],
+          "answer": 2,
+          "why": "CTR is built on hundreds or thousands of clicks, so one extra event barely moves it. Deposit-based numbers rest on small counts and swing more."
+        },
+        {
+          "q": "Using the rough range rule, what range fits a count of 25?",
+          "options": [
+            "15 to 35",
+            "20 to 30",
+            "23 to 27",
+            "0 to 50"
+          ],
+          "answer": 0,
+          "why": "The square root of 25 is 5. Two times 5 is 10, so 25 ± 10 gives 15 to 35."
+        },
+        {
+          "q": "Cost per FTD jumps sharply overnight and the network shows zero FTDs while joins look normal. What do you check first?",
+          "options": [
+            "Nothing, it is just noise",
+            "Whether the ad needs a new hook",
+            "Whether the budget is too low",
+            "Whether the postback and offer are working"
+          ],
+          "answer": 3,
+          "why": "A sudden drop to zero with normal joins points to a real cause, such as a broken postback or paused offer. Rule that out before blaming noise."
+        },
+        {
+          "q": "You scaled an ad after its best day ever and the next three days were average. What most likely happened?",
+          "options": [
+            "Regression to the mean",
+            "The platform punished you",
+            "The audience ran out",
+            "The tracking broke"
+          ],
+          "answer": 0,
+          "why": "An unusually good day tends to be followed by ordinary ones. Scaling on one peak day buys the average, not the peak."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn what noise is, why your early numbers lie, and how a simple rough range helps you tell luck apart from a real difference before you move money.",
+      "say_outro": "You've learned that noise is in every campaign, that a rough range of the count plus or minus two times its square root helps you spot luck, and that some swings have real causes you should check first. Your task: take the last two ads you compared, write down the conversions for each, work out both rough ranges and note whether they overlap. Now take the quiz."
+    },
+    {
+      "slug": "designing-a-test",
+      "title": "Designing a clean test",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can write a hypothesis with a change, an expected result and a reason.",
+        "You can set up a test that changes one variable against a control.",
+        "You can choose the success metric and decision rule before launch."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "A test is a question with a budget",
+          "p": "A test answers one question, such as: does a talking-head video beat a screen recording for this offer? Without a clear question you are just spending and watching. Write the question down before you build anything, and give it its own budget.",
+          "d": {
+            "b": "One question per test",
+            "s": "Written down before launch"
+          },
+          "say": "A test is a question with a budget. It answers one question, such as: does a talking-head video beat a screen recording for this offer? Without a clear question, you're just spending and watching. So write the question down before you build anything, and give it its own budget. One question per test, written down before launch."
+        },
+        {
+          "v": "flow",
+          "h": "The test cycle",
+          "p": "Every good test follows the same loop. You predict what will happen, build the smallest test that can check it, run it to a planned amount of data, read it with honest rules, and record the outcome so the next test starts smarter.",
+          "d": [
+            "Hypothesis",
+            "Design",
+            "Run",
+            "Read",
+            "Record"
+          ],
+          "say": "Every good test follows the same loop. Follow the flow on screen. Hypothesis: you predict what will happen. Design: you build the smallest test that can check it. Run: you run it to a planned amount of data. Read: you read it with honest rules. And record: you write down the outcome, so the next test starts smarter. Then the loop begins again."
+        },
+        {
+          "v": "eq",
+          "h": "Writing a hypothesis",
+          "p": "A useful hypothesis names the change, the expected result and the reason. The reason matters because it tells you what to try next, whether you win or lose. Vague guesses like video will do better give you nothing to build on.",
+          "more": "Example hypothesis: if we open the video with a person speaking Pidgin instead of a text card, cost per join will drop by at least 20%, because people stop scrolling for a familiar voice. If it wins, the next test might try other local languages. If it loses, you have learned that the voice was not the barrier, and you look at the offer or the angle instead.",
+          "d": [
+            "If we change X",
+            "→",
+            "we expect Y",
+            "because",
+            "Z"
+          ],
+          "say": "A useful hypothesis has three parts. If we change X, we expect Y, because of Z. Here's an example. If we open the video with a person speaking Pidgin instead of a text card, cost per join will drop by at least twenty percent, because people stop scrolling for a familiar voice. The reason matters most. If it wins, you might try other local languages next. If it loses, you've learned the voice wasn't the barrier, so you look at the offer or the angle instead."
+        },
+        {
+          "v": "compare",
+          "h": "Change one variable at a time",
+          "p": "If you change the hook, the audience and the landing page at once and results improve, you will not know which change helped. Change one thing, keep everything else the same, and the result points to a cause you can reuse.",
+          "d": {
+            "a": {
+              "title": "Messy test",
+              "items": [
+                "New hook and new audience",
+                "Different budgets per ad set",
+                "Launched on different days",
+                "Two landers mixed in"
+              ]
+            },
+            "b": {
+              "title": "Clean test",
+              "items": [
+                "Only the hook changes",
+                "Equal budgets",
+                "Same start time and schedule",
+                "Same lander and offer"
+              ]
+            }
+          },
+          "say": "Change one variable at a time. Look at the messy test on the left: new hook and new audience, different budgets, launched on different days, two landers mixed in. If results improve, which change helped? You can't tell. Now the clean test on the right: only the hook changes, equal budgets, same start time and schedule, same lander and offer. Change one thing, keep everything else the same, and the result points to a cause you can reuse."
+        },
+        {
+          "v": "bars",
+          "h": "What to test first",
+          "p": "Some variables move results far more than others. Test the big levers first: offer and geo, then angle, then hook. Button text and small copy edits rarely matter until the big pieces are right. The order below is a rough guide that varies by vertical.",
+          "d": [
+            [
+              "Offer and geo",
+              100,
+              "Biggest"
+            ],
+            [
+              "Angle",
+              80,
+              "Large"
+            ],
+            [
+              "Hook (first 3s)",
+              65,
+              "Large"
+            ],
+            [
+              "Format",
+              45,
+              "Medium"
+            ],
+            [
+              "Body copy",
+              25,
+              "Small"
+            ],
+            [
+              "Button text",
+              10,
+              "Tiny"
+            ]
+          ],
+          "say": "Some variables move results far more than others. Look at the bars. Offer and geo is the biggest lever. Then angle, which is large. Then the hook, the first three seconds, also large. Format is medium. Body copy is small, and button text is tiny. So test the big levers first. Button text and small copy edits rarely matter until the big pieces are right. This order is a rough guide, and it varies by vertical."
+        },
+        {
+          "v": "cards",
+          "h": "Control and variant",
+          "p": "Every test needs a control: your current best version, left untouched. Variants are the new versions you compare with it. Without a control you cannot tell whether a change helped or whether the whole market moved that week.",
+          "d": [
+            "Control|your current best, unchanged",
+            "Variant|one change from the control",
+            "Baseline|the control's usual numbers",
+            "Winner|beats control on the agreed metric"
+          ],
+          "say": "Every test needs a control. Look at the cards. The control is your current best version, left unchanged. A variant is one change from the control. The baseline is the control's usual numbers. And the winner is whatever beats the control on the agreed metric. Why does the control matter? Without one, you can't tell whether a change helped, or whether the whole market moved that week."
+        },
+        {
+          "v": "table",
+          "h": "Choose one success metric",
+          "p": "Decide before launch which number settles the test. Pick the metric closest to money that still gives you enough data in your budget. For a creative test that is often cost per join or cost per lead, checked later against deposits.",
+          "d": {
+            "cols": [
+              "Test type",
+              "Main metric",
+              "Check later"
+            ],
+            "rows": [
+              [
+                "Hook",
+                "Hook rate or CTR",
+                "Cost per lead"
+              ],
+              [
+                "Angle",
+                "Cost per lead or join",
+                "Cost per FTD"
+              ],
+              [
+                "Audience",
+                "Cost per FTD",
+                "Deposit quality"
+              ],
+              [
+                "Lander",
+                "Lander conversion rate",
+                "Cost per FTD"
+              ],
+              [
+                "Geo",
+                "Cost per FTD vs payout",
+                "Holds and approvals"
+              ]
+            ]
+          },
+          "say": "Decide before launch which number settles the test. Pick the metric closest to money that still gives you enough data in your budget. Look at the table. For a hook test, use hook rate or C T R, click through rate, then check cost per lead later. For an angle test, cost per lead or join, then check cost per F T D, first time deposit. For audiences, cost per F T D, then deposit quality. For a lander, its conversion rate. For a geo, cost per F T D against payout, then holds and approvals."
+        },
+        {
+          "v": "product",
+          "h": "Start from evidence, not guesses",
+          "p": "Good hypotheses come from somewhere. Before you write one, look at which angles and formats other advertisers in your geo keep running for weeks; long-running ads are often working. Use them to learn angles, never to copy someone's creative.",
+          "d": {
+            "slug": "spyvoo",
+            "why": "See which angles and formats keep running in your geo, so your next hypothesis starts from evidence."
+          },
+          "say": "Good hypotheses come from somewhere. Before you write one, look at which angles and formats other advertisers in your geo keep running for weeks, because long-running ads are often working. That's what Spyvoo, shown here, helps with. It shows which angles and formats keep running in your geo, so your next hypothesis starts from evidence. But use what you see to learn angles, never to copy someone's creative."
+        },
+        {
+          "v": "flow",
+          "h": "Building a fair split",
+          "p": "Ads inside one ad set let the platform choose, so spend often goes unevenly. Separate ad sets with equal budgets, or the platform's built-in A/B test tool, give a fairer split. Names and tools change; check the current Ads Manager.",
+          "more": "Letting the platform pick inside one ad set is not useless. It is a cheap way to screen many hooks and find candidates, because the platform quickly drifts toward ads it expects to perform. The catch is that ads it ignored early never got a fair chance. Use that kind of screening to build a shortlist, then confirm the shortlist with a fair split.",
+          "d": [
+            "Duplicate the control ad set",
+            "Change one thing",
+            "Set equal budgets",
+            "Launch together",
+            "Wait for the checkpoint"
+          ],
+          "say": "Now, building a fair split. When several ads sit inside one ad set, the platform chooses, and spend often goes unevenly. Ads it ignored early never get a fair chance. That screening is still a cheap way to build a shortlist of hooks. But to confirm, follow the flow. Duplicate the control ad set. Change one thing. Set equal budgets. Launch together. Then wait for the checkpoint. Separate ad sets, or the platform's built-in A B test tool, give a fairer split. Names and tools change, so check the current Ads Manager."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: set up a fair split",
+          "p": "Here is the fair split from the previous slide in an Ads Manager-style screen. Duplicate the control, change one thing, match the budgets and launch both together. Button names change; check the current Ads Manager. The Creative testing lab module covers creative tests in full.",
+          "d": {
+            "steps": [
+              {
+                "title": "Duplicate the control",
+                "text": "Select the control ad set and duplicate it. Do not edit the original.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/adsets",
+                  "title": "Ad sets",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Ad set",
+                        "Budget",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "NG_Voice_EN (control)",
+                          "$15/day",
+                          "Draft"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "button",
+                      "label": "Duplicate"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Change one thing",
+                "text": "In the copy, swap only the video for the Pidgin voiceover version. Name it clearly.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/ad/edit",
+                  "title": "Ad: NG_Voice_PCM",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Ad name",
+                      "value": "NG_Voice_PCM (variant)"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Video",
+                      "value": "market_notes_v3_pidgin.mp4"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Audience, placements, lander and offer unchanged."
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Match budgets, launch together",
+                "text": "Both ad sets at $15 a day, same schedule, published at the same time.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/review",
+                  "title": "Review and publish",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Ad set",
+                        "Budget",
+                        "Start"
+                      ],
+                      "rows": [
+                        [
+                          "NG_Voice_EN",
+                          "$15/day",
+                          "Mon 06:00"
+                        ],
+                        [
+                          "NG_Voice_PCM",
+                          "$15/day",
+                          "Mon 06:00"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "button",
+                      "label": "Publish"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Here's that fair split in an Ads Manager-style screen. Tap Next to follow each step. First, select the control ad set, here N G Voice E N, and duplicate it. Don't edit the original. Second, in the copy, swap only the video for the Pidgin voiceover version, and name it clearly as the variant. Audience, placements, lander and offer stay unchanged. Third, match budgets and launch together: both ad sets at fifteen dollars a day, same schedule, published at the same time. Button names change, so check the current Ads Manager. The Creative testing lab module covers creative tests in full."
+        },
+        {
+          "v": "tip",
+          "h": "Example test card",
+          "p": "Write each test on a card like this before launch. It stops you from moving the goalposts later, when you are tempted to pick whichever metric makes your favourite version look good.",
+          "more": "Check the maths before launch. $60 per ad set and at least 40 joins each means the test only works if cost per join is around $1.50 or lower. If your usual cost per join is $3, the test cannot reach 40 joins and you need a bigger budget or a different metric.",
+          "d": {
+            "kind": "example",
+            "text": "Example. Question: does a Pidgin voiceover beat English for Nigeria joins? Control: English video. Variant: same video, Pidgin voice. Budget: $15 per ad set per day for 4 days ($60 each). Metric: cost per join. Rule: variant wins if 20% cheaper with 40 or more joins each."
+          },
+          "say": "Write each test on a card like this before launch. Here's the example. Question: does a Pidgin voiceover beat English for Nigeria joins? Control: English video. Variant: same video, Pidgin voice. Budget: fifteen dollars per ad set per day for four days, sixty dollars each. Metric: cost per join. Rule: the variant wins if it's twenty percent cheaper, with forty or more joins each. The card stops you moving the goalposts later. And check the maths: forty joins on sixty dollars only works if cost per join is around one dollar fifty or lower."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: what does the test card cost?",
+          "p": "Check the test card before launch. Each side needs at least 40 joins and your usual cost per join is about $1.50. The test runs 4 days. Work out the daily budget for the whole test, both ad sets together.",
+          "more": "Answer: $30 a day. 80 joins × $1.50 = $120 over 4 days, so $30 a day, $15 per ad set. If your usual cost per join were $3, the same test would need $60 a day. If you cannot afford that, ask a bigger question with fewer variants, or use a cheaper metric.",
+          "d": {
+            "kind": "budget",
+            "task": "2 ad sets × 40 joins = 80 joins at a $1.50 target cost per join, over 4 days. What is the daily budget?",
+            "preset": {
+              "goal": 80,
+              "target_cpa": 1.5,
+              "days": 4
+            },
+            "answer": {
+              "field": "daily_budget",
+              "value": 30,
+              "tolerance": 0.01
+            }
+          },
+          "say": "Let's put that into a lab. Check the test card before launch. Each side needs at least forty joins, so two ad sets means eighty joins. Your usual cost per join is about one dollar fifty, and the test runs four days. Work out the daily budget for the whole test, both ad sets together. Pause and try it, then check your answer."
+        },
+        {
+          "v": "check",
+          "h": "Keep the test fair",
+          "p": "Small details can break a test without you noticing. Run through this list before launch so the only difference between control and variant is the one you chose to test.",
+          "d": [
+            "Same audience and placements",
+            "Same budget and bid strategy",
+            "Same start time and schedule",
+            "Same landing page and offer link",
+            "Tracking checked on both"
+          ],
+          "say": "Small details can break a test without you noticing. Before launch, run through this list. Same audience and placements. Same budget and bid strategy. Same start time and schedule. Same landing page and offer link. And tracking checked on both. The goal is simple. The only difference between control and variant should be the one you chose to test."
+        },
+        {
+          "v": "cards",
+          "h": "Common test design mistakes",
+          "p": "Most wasted test budget comes from a few repeat mistakes. If you recognise one of these in your plan, fix it before you spend, because no amount of later analysis can rescue a badly designed test.",
+          "d": [
+            "Too many variants|budget spread too thin",
+            "No control|nothing to compare with",
+            "Moving goalposts|metric picked after the fact",
+            "Stopped early|noise taken for a winner",
+            "Not recorded|same test repeated later"
+          ],
+          "say": "Most wasted test budget comes from a few repeat mistakes. Look at the cards. Too many variants, so budget is spread too thin. No control, so there's nothing to compare with. Moving goalposts, where the metric is picked after the fact. Stopped early, so noise is taken for a winner. And not recorded, so the same test gets repeated later. If you see one of these in your plan, fix it before you spend, because no later analysis can rescue a badly designed test."
+        },
+        {
+          "v": "tip",
+          "h": "Every variant must be compliant",
+          "p": "A test is still advertising. Every variant must follow ad policy and local law, carry the required risk or age wording and avoid claims you cannot prove. Never test a misleading claim to \"see if it works\". Trading and gambling ads usually need platform authorization; check both before you run.",
+          "d": {
+            "kind": "warn",
+            "text": "If a variant would break policy as a full campaign, it breaks policy as a test."
+          },
+          "say": "A test is still advertising. Every variant must follow ad policy and local law, carry the required risk or age wording, and avoid claims you can't prove. Never test a misleading claim just to see if it works. Trading and gambling ads usually need platform authorization, so check both policy and law before you run. Read the warning: if a variant would break policy as a full campaign, it breaks policy as a test."
+        },
+        {
+          "v": "big",
+          "h": "A clean loss is still a result",
+          "p": "Most tests lose, and that is normal. A losing test that was set up cleanly still tells you something true about your market and saves you from spending more on a wrong idea. Record losses as carefully as wins.",
+          "d": {
+            "b": "Clean losses are useful",
+            "s": "They rule ideas out for good"
+          },
+          "say": "Most tests lose, and that's normal. A losing test that was set up cleanly still tells you something true about your market. It saves you from spending more on a wrong idea, and it rules that idea out for good. So clean losses are useful. Record your losses as carefully as your wins."
+        }
+      ],
+      "takeaways": [
+        "Every test starts with a written hypothesis: change, expected result, reason.",
+        "Change one variable against a control, with equal budgets and the same timing.",
+        "Pick the success metric and decision rule before launch, and record every result."
+      ],
+      "action": "Write one test card for your next campaign: question, control, variant, budget per side, main metric and the rule that decides the winner.",
+      "glossary": [
+        {
+          "term": "Hypothesis",
+          "def": "A testable prediction: if we change X, we expect Y, because Z."
+        },
+        {
+          "term": "Control",
+          "def": "The current best version, left unchanged so new versions can be compared with it."
+        },
+        {
+          "term": "Variant",
+          "def": "A new version that differs from the control in one planned way."
+        },
+        {
+          "term": "Hook rate",
+          "def": "Share of impressions where people watched the first few seconds of a video. Platforms define it differently; check your columns."
+        },
+        {
+          "term": "A/B test",
+          "def": "A test that splits one audience between two versions so they can be compared fairly."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which is the most useful hypothesis?",
+          "options": [
+            "Video will do better",
+            "Let's try some new stuff this week",
+            "If we open with a local face, cost per join drops 20%, because people stop for familiar faces",
+            "Change everything and see what happens"
+          ],
+          "answer": 2,
+          "why": "It names the change, the expected result and the reason. That tells you what to try next whatever the outcome."
+        },
+        {
+          "q": "You changed the hook, the audience and the lander at once and cost per FTD fell. What do you know?",
+          "options": [
+            "The hook caused it",
+            "Something helped, but you cannot tell which change",
+            "The lander caused it",
+            "The audience caused it"
+          ],
+          "answer": 1,
+          "why": "With three changes at once, the result cannot be traced to one cause. Change one variable at a time."
+        },
+        {
+          "q": "With a small budget, which should you usually test first?",
+          "options": [
+            "Button colour",
+            "Body copy wording",
+            "Angle or offer",
+            "Font size"
+          ],
+          "answer": 2,
+          "why": "Big levers like offer, geo and angle move results most. Small details rarely matter until those are right."
+        },
+        {
+          "q": "Why might ads inside one ad set not get a fair test?",
+          "options": [
+            "The platform shifts spend toward the ads it likes early",
+            "Ads in one ad set cannot have different hooks",
+            "The platform blocks more than two ads",
+            "They always share the same CTR"
+          ],
+          "answer": 0,
+          "why": "The platform tends to favour early performers, so some ads never get a fair share of spend."
+        },
+        {
+          "q": "When should you choose the metric that decides a test?",
+          "options": [
+            "After the test, to see which looks best",
+            "Halfway through",
+            "Only if results are unclear",
+            "Before launch"
+          ],
+          "answer": 3,
+          "why": "Choosing it in advance stops you moving the goalposts toward your favourite version."
+        }
+      ],
+      "say_intro": "This lesson shows you how to design a clean test: a written hypothesis, one change against a control, and a success metric and decision rule chosen before launch. Clean tests give you answers you can reuse.",
+      "say_outro": "You've learned to write a hypothesis with a change, an expected result and a reason, to test one variable against a control, and to fix the metric and decision rule before launch. Your task: write one test card for your next campaign with the question, control, variant, budget per side, main metric and the rule that decides the winner. Now take the quiz."
+    },
+    {
+      "slug": "sample-size-and-patience",
+      "title": "Sample size and patience",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can explain why big gaps show up fast and small gaps need lots of data.",
+        "You can size a test budget in multiples of your target CPA.",
+        "You can account for learning phases, time patterns and late deposits before calling a winner."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Enough data depends on the gap",
+          "p": "There is no single magic number of clicks. How much data you need depends on how big the difference is between your versions. Large gaps show up quickly. Small gaps need a lot of data, and some are too small to be worth chasing at all.",
+          "d": {
+            "b": "Big gaps show fast",
+            "s": "Small gaps need large samples"
+          },
+          "say": "There's no single magic number of clicks. How much data you need depends on how big the difference is between your versions. Large gaps show up quickly. Small gaps need a lot of data. And some gaps are so small they aren't worth chasing at all. Keep that idea in mind for the whole lesson: big gaps show fast, small gaps need large samples."
+        },
+        {
+          "v": "table",
+          "h": "Big gap versus small gap",
+          "p": "Example: two landers, one converting at 2% and one at 4%. With about 1,000 clicks each you expect about 20 versus 40 conversions, and the rough ranges barely touch. If the gap is 2% versus 2.2%, the same clicks give 20 versus 22, which is pure noise.",
+          "more": "Using the rough range from lesson one: 20 gives about 11 to 29, and 40 gives about 27 to 53. They only touch at the edges. At 250 clicks, 5 (about 1 to 9) and 10 (about 4 to 16) overlap heavily. For a 10% relative gap like 2% versus 2.2%, you need tens of thousands of clicks per side before the ranges pull apart. Most small buyers cannot afford that, so they should hunt for bigger gaps instead.",
+          "d": {
+            "cols": [
+              "Rates",
+              "Clicks each",
+              "Expected",
+              "Clear?"
+            ],
+            "rows": [
+              [
+                "2% vs 4%",
+                "250",
+                "5 vs 10",
+                "No"
+              ],
+              [
+                "2% vs 4%",
+                "1,000",
+                "20 vs 40",
+                "Mostly"
+              ],
+              [
+                "2% vs 2.2%",
+                "1,000",
+                "20 vs 22",
+                "No"
+              ],
+              [
+                "2% vs 2.2%",
+                "Tens of thousands",
+                "Hundreds each",
+                "Maybe"
+              ]
+            ]
+          },
+          "say": "Let's look at the table. Example: two landers, one converting at two percent and one at four. With two hundred and fifty clicks each, you expect five versus ten, and the rough ranges overlap heavily, so it's not clear. With about one thousand clicks each, you expect twenty versus forty, and the ranges barely touch. Mostly clear. But two percent versus two point two percent on a thousand clicks gives twenty versus twenty two. That's pure noise. You'd need tens of thousands of clicks per side, so most small buyers should hunt for bigger gaps instead."
+        },
+        {
+          "v": "stat",
+          "h": "Budget in multiples of target CPA",
+          "p": "A practical way to size a test is to give each variant a budget measured in your target cost per action. A common rough guide is two to three times the target CPA per variant before a final call. It varies by geo and vertical.",
+          "d": {
+            "n": 3,
+            "pre": "",
+            "suf": "x",
+            "dec": 0,
+            "label": "target CPA per variant before a final call",
+            "note": "Rough guide, varies by geo and vertical."
+          },
+          "say": "Here's a practical way to size a test. Give each variant a budget measured in your target C P A, cost per acquisition. The number on screen is three times. A common rough guide is two to three times the target C P A per variant before you make a final call. It varies by geo and vertical, so treat it as a starting point."
+        },
+        {
+          "v": "eq",
+          "h": "Sizing a test budget",
+          "p": "Example: target cost per FTD is $25, you test 3 creatives, and you plan 3x target CPA for each. The test needs about $225. If your daily budget is $45, that is five days. Know this number before launch so you do not panic on day two.",
+          "more": "Check: $25 × 3 = $75 per variant. $75 × 3 variants = $225. $225 ÷ $45 per day = 5 days. Even at 3x, each variant may only have 2 to 4 FTDs if it performs near target, which is still a small count. That is why this budget is for spotting clear winners and clear losers, and why close calls go to a second, confirming round.",
+          "d": [
+            "$25 target CPA",
+            "×",
+            "3x",
+            "×",
+            "3 variants",
+            "=",
+            "$225"
+          ],
+          "say": "Let's size one. Example: your target cost per F T D, first time deposit, is twenty five dollars. You test three creatives, and you plan three times target C P A for each. Twenty five times three is seventy five dollars per variant. Times three variants is two hundred and twenty five dollars. At forty five dollars a day, that's five days. Even then, each variant may only have two to four F T Ds, still a small count. So this budget spots clear winners and losers, and close calls go to a second, confirming round."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: plan the daily budget",
+          "p": "Use the sizing rule from the slide above. Three creatives, 3 × target CPA each, target $25, and you want the test finished in 5 days. Enter the daily budget for the whole test.",
+          "more": "Answer: $45 a day. 3 creatives × 3 = 9 target CPAs. 9 × $25 = $225. $225 ÷ 5 days = $45 a day, $15 per creative. That is above half the target per ad set per day, so each one reaches the 2 × zero-FTD line in under 4 days.",
+          "d": {
+            "kind": "budget",
+            "task": "3 creatives × 3 × a $25 target = 9 target CPAs over 5 days. What is the daily budget?",
+            "preset": {
+              "goal": 9,
+              "target_cpa": 25,
+              "days": 5
+            },
+            "answer": {
+              "field": "daily_budget",
+              "value": 45,
+              "tolerance": 0.01
+            }
+          },
+          "say": "Now it's your turn. Use the sizing rule from the slide before. Three creatives, three times target C P A each, a target of twenty five dollars, and you want the test finished in five days. That's nine target C P As in total. Enter the daily budget for the whole test. Pause and try it, then check your answer."
+        },
+        {
+          "v": "compare",
+          "h": "Fewer variants, clearer answers",
+          "p": "With a fixed budget, every extra variant gets less money and less data. Five creatives on $100 means $20 each, which may not buy a single FTD. Two or three variants with enough budget each will teach you more than many starved ones.",
+          "d": {
+            "a": {
+              "title": "$100 across 5 ads",
+              "items": [
+                "$20 each",
+                "Often 0 or 1 FTD each",
+                "Winner picked by luck",
+                "Retest needed"
+              ]
+            },
+            "b": {
+              "title": "$100 across 2 ads",
+              "items": [
+                "$50 each",
+                "A few results each",
+                "Gap easier to read",
+                "Clearer next step"
+              ]
+            }
+          },
+          "say": "With a fixed budget, every extra variant gets less money and less data. Compare the two sides. One hundred dollars across five ads is twenty dollars each. That's often zero or one F T D each, so the winner is picked by luck and you need a retest. One hundred dollars across two ads is fifty each. You get a few results each, the gap is easier to read, and your next step is clearer. Two or three well-funded variants teach you more than many starved ones."
+        },
+        {
+          "v": "flow",
+          "h": "Use earlier signals while you wait",
+          "p": "When deposits are too rare to judge quickly, use a ladder. Screen creatives on early metrics that have lots of data, keep the ones that pass, and judge only the survivors on deposits. Early metrics can mislead, so always confirm with money before scaling.",
+          "more": "Early metrics mislead when an ad attracts curious clickers who never deposit. A shocking hook can win on CTR and lose on FTDs. That is why each step of the ladder is a filter, not a final verdict. The final call always uses the metric you are paid on.",
+          "d": [
+            "Screen on hook rate or CTR",
+            "Shortlist on cost per lead",
+            "Confirm on cost per FTD",
+            "Scale on ROI"
+          ],
+          "say": "When deposits are too rare to judge quickly, use a ladder. Follow the flow. Screen on hook rate or C T R, click through rate. Shortlist on cost per lead. Confirm on cost per F T D. And scale on R O I, return on investment. Each step is a filter, not a final verdict. Early metrics can mislead. A shocking hook can win on C T R and lose on F T Ds, because it attracts curious clickers who never deposit. So always confirm with money before scaling."
+        },
+        {
+          "v": "curve",
+          "h": "The learning phase",
+          "p": "Ad platforms need some conversions to learn who to show your ad to. While an ad set is learning, costs often swing more than usual, and big edits can restart learning. Give new ad sets room and batch your edits. Thresholds change; check the current platform help.",
+          "more": "Example only. Both ad sets start the same. The one left alone settles as the platform learns. The one edited every day keeps getting knocked back into learning, so its cost per lead never settles. Real accounts are noisier than this, but the pattern of frequent edits causing instability is common.",
+          "d": {
+            "a": [
+              3.8,
+              3.1,
+              2.6,
+              2.9,
+              2.3,
+              2.2,
+              2.1
+            ],
+            "la": "Cost per lead ($), left alone",
+            "b": [
+              3.8,
+              3.1,
+              3.9,
+              3.4,
+              3.7,
+              3.3,
+              3.6
+            ],
+            "lb": "Cost per lead ($), edited daily",
+            "x": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7"
+            ]
+          },
+          "say": "Ad platforms need some conversions to learn who to show your ad to. While an ad set is learning, costs often swing more than usual, and big edits can restart learning. Look at the two lines in this example. Both start the same. The one left alone settles as the platform learns. The one edited every day keeps getting knocked back, so its cost per lead never settles. Real accounts are noisier, but the pattern is common. Give new ad sets room, and batch your edits. Thresholds change, so check the current platform help."
+        },
+        {
+          "v": "cards",
+          "h": "Time patterns to respect",
+          "p": "Results change by hour and by day for reasons that have nothing to do with your ad. If your test only runs over a weekend or during a big football match, the result may not hold on a normal Tuesday.",
+          "d": [
+            "Day of week|weekends can differ from weekdays",
+            "Paydays|month end can shift deposits",
+            "Events|matches, holidays, elections",
+            "Time zone|ads may run while your geo sleeps"
+          ],
+          "say": "Results change by hour and by day for reasons that have nothing to do with your ad. Look at the cards. Day of week, because weekends can differ from weekdays. Paydays, because month end can shift deposits. Events, like matches, holidays and elections. And time zone, because ads may run while your geo sleeps. If your test only runs over a weekend, or during a big football match, the result may not hold on a normal Tuesday."
+        },
+        {
+          "v": "tip",
+          "h": "Deposits arrive late",
+          "p": "Many users join today and deposit days later. If you judge a test the evening it ends, the slower variant may look worse simply because its depositors have not acted yet. Leave a short wait after the test before the final read.",
+          "d": {
+            "kind": "warn",
+            "text": "Example: a test ends on Friday. Read joins on Friday, but read FTDs again on Monday or Tuesday before deciding, once late depositors have had time to show up."
+          },
+          "say": "Deposits arrive late. Many users join today and deposit days later. If you judge a test the evening it ends, the slower variant may look worse simply because its depositors haven't acted yet. Read the example. A test ends on Friday. Read joins on Friday, but read F T Ds again on Monday or Tuesday before deciding, once late depositors have had time to show up."
+        },
+        {
+          "v": "screen",
+          "h": "A test sheet that shows patience",
+          "p": "Track each variant's spend, network-confirmed FTDs and rough range in one sheet, with the rule-card call beside it. Example on day 3 of a $25-target test: nothing has crossed a kill or scale line yet, so every call is Hold. Doing nothing on purpose is part of the method.",
+          "d": {
+            "kind": "browser",
+            "url": "sheet.example/test-w41",
+            "title": "Hook test: day 3 of 5",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Variant",
+                  "Spend / FTDs",
+                  "Rough range",
+                  "Call"
+                ],
+                "rows": [
+                  [
+                    "Hook A",
+                    "$45 / 2",
+                    "0 to 5",
+                    "Hold"
+                  ],
+                  [
+                    "Hook B",
+                    "$45 / 1",
+                    "0 to 3",
+                    "Hold"
+                  ],
+                  [
+                    "Hook C",
+                    "$45 / 0",
+                    "None",
+                    "Hold, under $50"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Example. Kill line for 0 FTDs: $50. Final call at $75 each."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Here's a test sheet that shows patience. It tracks each variant's spend, network-confirmed F T Ds and rough range, with the rule-card call beside it. This example is day three of a twenty five dollar target test. Hook A has forty five dollars and two F T Ds. Hook B, forty five and one. Hook C, forty five and zero, still under the fifty dollar kill line. Nothing has crossed a kill or scale line, so every call is hold. The final call comes at seventy five dollars each. Doing nothing on purpose is part of the method."
+        },
+        {
+          "v": "bars",
+          "h": "Confidence grows slowly",
+          "p": "The rough range shrinks as conversions grow, but slowly. To halve the range you need about four times the data. This is why the first few results feel exciting and later ones feel dull: each extra result adds a little less certainty.",
+          "more": "Each bar is the rough range as a share of the count. 4 ± 4 is ±100%. 16 ± 8 is ±50%. 64 ± 16 is ±25%. 256 ± 32 is ±12.5%. Every time the count goes up four times, the range as a share halves.",
+          "d": [
+            [
+              "4 results",
+              100,
+              "±100%"
+            ],
+            [
+              "16 results",
+              50,
+              "±50%"
+            ],
+            [
+              "64 results",
+              25,
+              "±25%"
+            ],
+            [
+              "256 results",
+              13,
+              "±12.5%"
+            ]
+          ],
+          "say": "Confidence grows slowly. The rough range shrinks as conversions grow, but to halve it you need about four times the data. Look at the bars. At four results, the range is plus or minus one hundred percent. At sixteen, fifty percent. At sixty four, twenty five percent. At two hundred and fifty six, twelve and a half percent. That's why the first few results feel exciting and later ones feel dull. Each extra result adds a little less certainty."
+        },
+        {
+          "v": "check",
+          "h": "Before you call a winner",
+          "p": "Run through these questions before you declare a winner. If any answer is no, keep the test running or plan a follow-up test to confirm what you think you saw.",
+          "d": [
+            "Each variant reached its planned budget",
+            "Each has enough conversions to compare",
+            "Late conversions had time to arrive",
+            "The gap held for several days",
+            "Nothing else changed mid-test"
+          ],
+          "say": "Before you declare a winner, run through these questions. Did each variant reach its planned budget? Does each have enough conversions to compare? Have late conversions had time to arrive? Did the gap hold for several days? And did nothing else change mid-test? If any answer is no, keep the test running, or plan a follow-up test to confirm what you think you saw."
+        },
+        {
+          "v": "cards",
+          "h": "Common patience mistakes",
+          "p": "Impatience costs more than slow tests. These mistakes all end a test before the data can answer the question, so the money spent so far buys a guess instead of a result.",
+          "d": [
+            "Too many variants|each one starved of data",
+            "Calling it on day 2|before the checkpoint",
+            "Reading FTDs the night it ends|late deposits missing",
+            "Editing mid-test|learning resets, data mixes",
+            "Raising budget to \"speed up\"|changes what you are testing"
+          ],
+          "say": "Impatience costs more than slow tests. Look at these common mistakes. Too many variants, each one starved of data. Calling it on day two, before the checkpoint. Reading F T Ds the night it ends, with late deposits missing. Editing mid-test, so learning resets and data mixes. And raising the budget to speed up, which changes what you're testing. Each one ends a test before the data can answer, so the money spent buys a guess instead of a result."
+        },
+        {
+          "v": "big",
+          "h": "Patience is a budget line",
+          "p": "Patience costs money, so plan for it. Set the test budget aside before launch and treat it as tuition. If you cannot afford to finish a test, run fewer variants or ask a smaller question instead of stopping halfway and guessing.",
+          "d": {
+            "b": "Fund the full test",
+            "s": "Or test fewer things"
+          },
+          "say": "Patience costs money, so plan for it. Set the test budget aside before launch, and treat it as tuition. Fund the full test, or test fewer things. If you can't afford to finish a test, run fewer variants or ask a smaller question, instead of stopping halfway and guessing."
+        }
+      ],
+      "takeaways": [
+        "Big gaps show up with modest data; small gaps need far more than most small budgets allow.",
+        "Size tests in multiples of target CPA per variant, and run fewer variants on small budgets.",
+        "Respect learning phases, day and payday patterns, and late deposits before the final read."
+      ],
+      "action": "For your next test, write down target CPA, number of variants and the multiple you will use. Work out the total test budget and how many days it takes at your daily spend.",
+      "glossary": [
+        {
+          "term": "Sample size",
+          "def": "How much data (clicks, leads or conversions) sits behind a result."
+        },
+        {
+          "term": "Learning phase",
+          "def": "The early period when an ad platform is still working out who to show an ad set to. Costs are often less stable."
+        },
+        {
+          "term": "Leading metric",
+          "def": "An early number with lots of data, such as CTR or cost per lead, used to screen ideas."
+        },
+        {
+          "term": "Conversion delay",
+          "def": "The time between a click or join and the deposit or sale that follows it."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which gap needs the least data to detect?",
+          "options": [
+            "2% vs 2.1%",
+            "2% vs 4%",
+            "2% vs 2.2%",
+            "They all need the same"
+          ],
+          "answer": 1,
+          "why": "Bigger gaps show up faster. Doubling the rate is visible with far less data than a 5% or 10% relative change."
+        },
+        {
+          "q": "Target CPA $30, 2 variants, plan 3x target CPA each. What is the test budget?",
+          "options": [
+            "$90",
+            "$60",
+            "$180",
+            "$120"
+          ],
+          "answer": 2,
+          "why": "$30 × 3 = $90 per variant, and $90 × 2 variants = $180."
+        },
+        {
+          "q": "You have $100. What is usually the better plan?",
+          "options": [
+            "Five creatives at $20 each",
+            "Ten creatives at $10 each",
+            "One creative only",
+            "Two or three creatives with more budget each"
+          ],
+          "answer": 3,
+          "why": "Fewer variants each get enough data to compare. Many starved variants produce winners picked by luck."
+        },
+        {
+          "q": "A test ended last night. Variant B has fewer FTDs, but its users joined later in the week. What should you do?",
+          "options": [
+            "Wait a few days and read FTDs again",
+            "Kill B now",
+            "Scale A immediately",
+            "Restart the whole test"
+          ],
+          "answer": 0,
+          "why": "Late joiners have not had time to deposit. Re-read FTDs once conversion delay has passed."
+        },
+        {
+          "q": "Why should you avoid editing a new ad set every day?",
+          "options": [
+            "Edits are not allowed during the first week",
+            "Large edits can restart learning and keep costs unstable",
+            "Edits delete your data",
+            "Edits raise your payout"
+          ],
+          "answer": 1,
+          "why": "Frequent big edits can push an ad set back into learning, so its costs never settle."
+        }
+      ],
+      "say_intro": "How much data is enough? In this lesson you'll see why big gaps show up fast and small gaps need lots of data, how to size a test budget in multiples of your target C P A, and why patience protects your money.",
+      "say_outro": "You've learned that the size of the gap decides how much data you need, how to budget tests in multiples of target C P A, and why learning phases, time patterns and late deposits call for patience. Your task: for your next test, write down your target C P A, number of variants and multiple, then work out the total budget and how many days it takes at your daily spend. Now take the quiz."
+    },
+    {
+      "slug": "kill-rules",
+      "title": "Kill, hold and scale rules",
+      "minutes": 19,
+      "objectives": [
+        "By the end you can write a kill rule ladder measured in multiples of target CPA.",
+        "You can check tracking and offer status before any rule fires.",
+        "You can set scale rules for winners as well as kill rules for losers."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Decide your rules before you spend",
+          "p": "When money is burning, judgment gets worse. Kill rules are decisions you make calmly before launch: at this spend, with these numbers, I stop. Written rules protect you from hope, fear and the urge to give a loser one more day.",
+          "d": {
+            "b": "Rules first, money second",
+            "s": "Written before launch, applied without debate"
+          },
+          "say": "When money is burning, judgment gets worse. Kill rules are decisions you make calmly before launch: at this spend, with these numbers, I stop. Rules first, money second. They're written before launch and applied without debate. Written rules protect you from hope, from fear, and from the urge to give a loser one more day."
+        },
+        {
+          "v": "quote",
+          "h": "Why written rules matter",
+          "p": "Dchessking on the habit that keeps a weak ad set from quietly eating a whole week of budget. It is simple, and it only works if you write it down before the campaign goes live.",
+          "d": "I write the kill rule before I launch. If I wait until the money is gone, I will always find a reason to give it one more day.",
+          "by": "dchessking",
+          "say": "Here's a habit that keeps a weak ad set from quietly eating a whole week of budget. It's simple, and it only works if you write it down before the campaign goes live. Here's how Dchessking puts it: I write the kill rule before I launch. If I wait until the money is gone, I will always find a reason to give it one more day."
+        },
+        {
+          "v": "cards",
+          "h": "Leading and lagging metrics",
+          "p": "Lagging metrics such as cost per FTD are what you get paid on, but they arrive late and in small numbers. Leading metrics such as CTR and cost per join arrive early and in volume. Good rules use leading metrics for warnings and lagging ones for final calls.",
+          "d": [
+            "CTR|early: is the ad stopping people?",
+            "CPC|early: is traffic affordable?",
+            "Cost per join|middle: is the funnel working?",
+            "Cost per FTD|late: does it make money?"
+          ],
+          "say": "There are two kinds of metrics. Lagging metrics, like cost per F T D, first time deposit, are what you get paid on, but they arrive late and in small numbers. Leading metrics arrive early and in volume. Look at the cards. C T R, click through rate, asks: is the ad stopping people? C P C, cost per click: is traffic affordable? Cost per join: is the funnel working? And cost per F T D: does it make money? Good rules use leading metrics for warnings and lagging ones for final calls."
+        },
+        {
+          "v": "table",
+          "h": "The rule ladder",
+          "p": "Here is the ladder for one ad set, in multiples of target CPA. The kill, keep and scale rows are the rule card from the Budget and kill rules module; the first two rows are early warnings. The CPA kill line is the lower of 1.5 × target and break-even. Starting rules; adapt them to your margins.",
+          "d": {
+            "cols": [
+              "Spend so far",
+              "If you see",
+              "Do this"
+            ],
+            "rows": [
+              [
+                "0.5 × target",
+                "CTR far below your norm",
+                "Fix or replace creative"
+              ],
+              [
+                "1 × target",
+                "Cost per lead over 2 × its target",
+                "May kill early; never scale"
+              ],
+              [
+                "2 × target",
+                "0 FTDs, network-confirmed",
+                "Kill"
+              ],
+              [
+                "3 × target",
+                "CPA over the kill line",
+                "Kill"
+              ],
+              [
+                "Any",
+                "3+ FTDs, CPA ≤ 0.8 × target",
+                "Scale +20%, ≥ 48 h apart"
+              ],
+              [
+                "Any",
+                "3+ FTDs, CPA ≤ target",
+                "Keep"
+              ],
+              [
+                "Otherwise",
+                "",
+                "Hold"
+              ]
+            ]
+          },
+          "more": "Read it from the top and stop at the first row that is true. Early warnings may end an ad set before the zero-FTD line, but a proxy like cost per lead can never trigger a scale: only network-confirmed FTDs do. Use matured spend, meaning spend old enough for its FTDs to have arrived.",
+          "say": "Here's the rule ladder for one ad set, in multiples of target C P A, cost per acquisition. Read from the top, and stop at the first true row. The first two rows are early warnings: a weak C T R at half of target, and a cost per lead over twice its target at one times target. Then, zero confirmed F T Ds at two times target, kill. At three times target, C P A over the kill line, the lower of one point five times target and break-even, kill. Three or more F T Ds at point eight times target or less, scale twenty percent, forty eight hours apart. At or under target, keep. Otherwise, hold. Only confirmed F T Ds trigger a scale. Use matured spend, and adapt these starting rules."
+        },
+        {
+          "v": "eq",
+          "h": "Example: applying the ladder",
+          "p": "Example: target cost per FTD is $25. Ad set A has spent $50 with 0 FTDs but 40 joins. The ladder says kill at 2x with zero FTDs. Before you do, check the plumbing, because 40 joins with no deposits can mean a broken postback.",
+          "more": "You open the network dashboard and see 2 FTDs that never reached your tracker. The postback was broken. With 2 FTDs, cost per FTD is $50 ÷ 2 = $25, exactly on target. You fix the postback and move the ad set to hold, not kill. If the network had also shown 0 FTDs, the rule fires and you kill it without debate.",
+          "d": [
+            "$50 spent",
+            "÷",
+            "$25 target CPA",
+            "=",
+            "2x target"
+          ],
+          "say": "Let's apply the ladder. Example: target cost per F T D is twenty five dollars. Ad set A has spent fifty dollars, with zero F T Ds but forty joins. Fifty divided by twenty five is two times target, so the ladder says kill. But first, check the plumbing, because forty joins and no deposits can mean a broken postback. Here, the network dashboard shows two F T Ds that never reached your tracker. So cost per F T D is twenty five dollars, exactly on target. You fix the postback and hold. If the network had also shown zero, you'd kill without debate."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: a confirmed zero",
+          "p": "Ad set B has spent $55 against a $25 target. You checked the network dashboard, the postback is firing and the offer is live. The zero is real. Apply the ladder and make the call.",
+          "more": "Answer: kill. $55 ÷ $25 = 2.2 × target with 0 network-confirmed FTDs. The plumbing check passed, so the rule fires without debate. Pause, do not delete, and log the reason.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $25. Ad set B spent $55 over 4 days, 0 network-confirmed FTDs, plumbing checked. Kill, hold or scale?",
+            "preset": {
+              "spend": 55,
+              "conversions": 0,
+              "target_cpa": 25,
+              "days": 4
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "kill",
+              "tolerance": 0
+            }
+          },
+          "say": "Lab time. Ad set B has spent fifty five dollars over four days against a twenty five dollar target. You've checked the network dashboard, the postback is firing, and the offer is live. So the zero is real: zero network-confirmed F T Ds. Apply the ladder and make the call: kill, hold or scale? Pause and try it, then check your answer."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: a possible winner",
+          "p": "Ad set C has run 4 days against a $25 target. Work out its CPA, compare it with the 0.8 × scale line and count the FTDs. Then make the call.",
+          "more": "Answer: scale. $72 ÷ 4 = $18, which is 0.72 × target, with 4 network-confirmed FTDs and more than 72 hours running. Raise the budget 20%, then wait at least 48 hours and check CPA since the step before the next one.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $25. Ad set C spent $72 over 4 days with 4 network-confirmed FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 72,
+              "conversions": 4,
+              "target_cpa": 25,
+              "days": 4
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "scale",
+              "tolerance": 0
+            }
+          },
+          "say": "Here's another lab. Ad set C has run four days against a twenty five dollar target. It spent seventy two dollars, with four network-confirmed F T Ds. Work out its C P A, compare it with the point eight times scale line, and count the F T Ds. Then decide: kill, hold or scale? Pause and try it, then check your answer."
+        },
+        {
+          "v": "check",
+          "h": "Before you kill, check the plumbing",
+          "p": "A rule should never fire on broken data. Before you kill anything with zero conversions, spend two minutes confirming the zero is real. Many apparent losers turn out to be winners with a broken postback or a paused offer.",
+          "d": [
+            "Network dashboard shows the same",
+            "Postback or conversions API events firing",
+            "Offer link works on a phone",
+            "Offer not capped or paused",
+            "Ad not limited or rejected"
+          ],
+          "say": "A rule should never fire on broken data. Before you kill anything with zero conversions, spend two minutes confirming the zero is real. Go down this list. Does the network dashboard show the same? Are postback or conversions A P I events firing? Does the offer link work on a phone? Is the offer capped or paused? Is the ad limited or rejected? Many apparent losers turn out to be winners with a broken postback or a paused offer."
+        },
+        {
+          "v": "compare",
+          "h": "Hold versus scale",
+          "p": "Holding means leaving an ad set alone while you gather more data or test new creative beside it. Scaling means adding budget. Only scale when results are clear and stable, because scaling a noisy winner usually buys you its average result.",
+          "d": {
+            "a": {
+              "title": "Hold when",
+              "items": [
+                "Fewer than 3 FTDs so far",
+                "CPA above target, under the kill line",
+                "A recent edit reset learning",
+                "Late deposits still arriving"
+              ]
+            },
+            "b": {
+              "title": "Scale when",
+              "items": [
+                "3+ network-confirmed FTDs",
+                "CPA ≤ 0.8 × target",
+                "At least 72 hours running",
+                "Offer cap has room"
+              ]
+            }
+          },
+          "say": "Hold and scale mean different things. Holding means leaving an ad set alone while you gather data or test new creative beside it. Scaling means adding budget. Look at the left: hold when there are fewer than three F T Ds, when C P A is above target but under the kill line, when a recent edit reset learning, or when late deposits are still arriving. On the right: scale with three or more confirmed F T Ds, C P A at point eight times target or less, at least seventy two hours running, and room in the offer cap. Scaling a noisy winner usually buys you its average result."
+        },
+        {
+          "v": "stat",
+          "h": "Scale in steps",
+          "p": "When you scale, move in steps and watch what happens. The starting rule is to raise budget by 20% at a time and wait at least 48 hours before the next step, which must be earned again. Big jumps can reset learning and push costs up. It varies by platform and account.",
+          "more": "Example: an ad set at $50 a day goes to $60, then $72, then about $86, with at least 48 hours between steps. That is three steps to raise it about 73%. Each step needs CPA since the last step still at or under 0.8 × target. If CPA since the step stays above target for 48 hours, go back to the last good budget.",
+          "d": {
+            "n": 20,
+            "pre": "",
+            "suf": "%",
+            "dec": 0,
+            "label": "budget increase per step",
+            "note": "Rough guide, varies by platform and account."
+          },
+          "say": "When you scale, move in steps. The number on screen is twenty percent. The starting rule is to raise budget twenty percent at a time, and wait at least forty eight hours before the next step, which must be earned again. For example, fifty dollars a day goes to sixty, then seventy two, then about eighty six. Each step needs C P A since the last step at or under point eight times target. If it stays above target for forty eight hours, go back to the last good budget. Big jumps can reset learning. It varies by platform and account."
+        },
+        {
+          "v": "flow",
+          "h": "Automated rules",
+          "p": "Ad platforms let you automate simple rules, such as pausing an ad set when spend passes a limit with no results. Automation applies your rules at 3am while you sleep. Keep rules simple and review them weekly. Names change; check the current Ads Manager.",
+          "d": [
+            "Pick the metric",
+            "Set the threshold",
+            "Choose the action",
+            "Set how often it checks",
+            "Review weekly"
+          ],
+          "say": "Ad platforms let you automate simple rules, like pausing an ad set when spend passes a limit with no results. Automation applies your rules at three in the morning while you sleep. Follow the flow. Pick the metric. Set the threshold. Choose the action. Set how often it checks. And review weekly. Keep rules simple. Names change, so check the current Ads Manager."
+        },
+        {
+          "v": "screen",
+          "h": "An automated zero-FTD rule",
+          "p": "In an Ads Manager-style rule screen, the zero-conversion row of your card can run on its own. Example: target $25, so pause at $50 spend with 0 results. Platform results can differ from the network, so review every automated pause against network data. Names change; check the current Ads Manager.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/rules/new",
+            "title": "Create rule",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Rule name",
+                "value": "Kill: 2x target, 0 FTDs"
+              },
+              {
+                "type": "select",
+                "label": "Apply to",
+                "value": "Active ad sets in NG_TRD_Test"
+              },
+              {
+                "type": "select",
+                "label": "Action",
+                "value": "Turn off ad sets"
+              },
+              {
+                "type": "field",
+                "label": "Conditions",
+                "value": "Spent ≥ $50 AND Results = 0"
+              },
+              {
+                "type": "select",
+                "label": "Frequency",
+                "value": "Continuously"
+              },
+              {
+                "type": "button",
+                "label": "Create"
+              }
+            ],
+            "highlight": 3
+          },
+          "say": "Here's an Ads Manager-style rule screen. Look at the highlighted conditions. In this example, the target is twenty five dollars, so the rule turns off ad sets when spend reaches fifty dollars and results equal zero. That's the zero-conversion row of your rule card, running on its own, checking continuously. But platform results can differ from the network, so review every automated pause against network data. Names change, so check the current Ads Manager."
+        },
+        {
+          "v": "cards",
+          "h": "Common rule mistakes: four traps",
+          "p": "Rules only work if you follow them. These four traps are how most buyers end up ignoring their own rules. Name the trap when you notice it, and let the written rule win.",
+          "d": [
+            "Sunk cost|I already spent so much",
+            "One more day|hope dressed as patience",
+            "Favourite ad|you made it, so you protect it",
+            "Revenge scaling|chasing a bad day's losses"
+          ],
+          "say": "Rules only work if you follow them. Here are four traps that make buyers ignore their own rules. Sunk cost: I already spent so much. One more day: hope dressed up as patience. Favourite ad: you made it, so you protect it. And revenge scaling: chasing a bad day's losses. When you notice one, name the trap, and let the written rule win."
+        },
+        {
+          "v": "tip",
+          "h": "Rules for good news too",
+          "p": "Kill rules get the attention, but winners need rules as well. Decide in advance how fast you scale, when you duplicate and when you stop. Without them, buyers often over-scale a winner and give back the profit it made.",
+          "d": {
+            "kind": "tip",
+            "text": "Example scale rule: 3+ network-confirmed FTDs, CPA ≤ 0.8 × target and at least 72 hours running: raise budget 20%. Each next step needs 48 hours and CPA since the step still ≤ 0.8 × target. Above target for 48 hours: back to the last good budget."
+          },
+          "say": "Kill rules get the attention, but winners need rules too. Decide in advance how fast you scale, when you duplicate and when you stop. Without them, buyers often over-scale a winner and give back its profit. Here's the example scale rule. Three or more network-confirmed F T Ds, C P A at point eight times target or less, and at least seventy two hours running: raise budget twenty percent. Each next step needs forty eight hours and C P A since the step still at point eight times target or less. Above target for forty eight hours: back to the last good budget."
+        },
+        {
+          "v": "product",
+          "h": "Check each call in seconds",
+          "p": "Once you know the ladder by heart, a calculator saves time at each daily checkpoint. Use it to check your call, not to replace your written rules, and remember to adjust the CPA kill line to break-even when your margin is under about 33%.",
+          "d": {
+            "slug": "voosquare",
+            "why": "The Kill-or-scale tool applies these default rules to spend, conversions and target CPA so you can check each call quickly."
+          },
+          "say": "Once you know the ladder by heart, a calculator saves time at each daily checkpoint. The Kill-or-scale tool on voo square applies these default rules to spend, conversions and target C P A, so you can check each call quickly. Use it to check your call, not to replace your written rules. And remember to adjust the C P A kill line to break-even when your margin is under about thirty three percent."
+        },
+        {
+          "v": "tip",
+          "h": "Rules never override policy",
+          "p": "Checkpoints are also a policy check. Look at rejected ads, comments and account warnings before you look at CPA. A cheap CPA from an ad that breaks policy is not a winner. Regulated offers usually need platform authorization and must follow local law.",
+          "d": {
+            "kind": "warn",
+            "text": "Never scale an ad you would not defend to a platform reviewer. A rule card never overrides an ad policy."
+          },
+          "say": "Checkpoints are also a policy check. Look at rejected ads, comments and account warnings before you look at C P A. A cheap C P A from an ad that breaks policy is not a winner. Regulated offers usually need platform authorization and must follow local law. Read the warning: never scale an ad you wouldn't defend to a platform reviewer. A rule card never overrides an ad policy."
+        },
+        {
+          "v": "big",
+          "h": "Review your rules monthly",
+          "p": "Your first rules will be rough. Each month, look at what you killed and what you kept. Did killed ad sets look like they might have recovered? Did kept ones keep losing? Adjust thresholds a little at a time using that evidence.",
+          "d": {
+            "b": "Rules evolve with data",
+            "s": "Tighten or loosen with evidence, not mood"
+          },
+          "say": "Your first rules will be rough, and that's fine. Each month, look at what you killed and what you kept. Did killed ad sets look like they might have recovered? Did kept ones keep losing? Then adjust your thresholds a little at a time. Rules evolve with data. Tighten or loosen them with evidence, not mood."
+        }
+      ],
+      "takeaways": [
+        "Write kill, hold and scale rules before launch, measured in multiples of target CPA.",
+        "Always confirm a zero is real (tracking, offer, ad status) before a kill rule fires.",
+        "Scale in small steps with written rules, and review the rules themselves every month."
+      ],
+      "action": "Write the rule ladder for your current campaign with your real target CPA and break-even: the two early-warning rows, the kill lines at 2 × and 3 × target, the keep row, the scale row and how long a hold may last.",
+      "glossary": [
+        {
+          "term": "Kill rule",
+          "def": "A pre-set condition that tells you to stop an ad, ad set or campaign."
+        },
+        {
+          "term": "Lagging metric",
+          "def": "A number that arrives late and in small counts, such as cost per FTD, but is closest to money."
+        },
+        {
+          "term": "Hold",
+          "def": "Leaving an ad set running without changes while more data comes in."
+        },
+        {
+          "term": "Sunk cost",
+          "def": "Money already spent that cannot be recovered. It should not decide whether you keep spending."
+        },
+        {
+          "term": "Automated rule",
+          "def": "A platform setting that takes an action, such as pausing, when a condition is met."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Target CPA is $20. An ad set has spent $40 with 0 FTDs, and the network confirms 0. Your ladder says kill at 2x with zero FTDs. What do you do?",
+          "options": [
+            "Give it one more day",
+            "Double the budget",
+            "Kill it",
+            "Change the audience and keep going"
+          ],
+          "answer": 2,
+          "why": "$40 is 2x target with a confirmed zero. The written rule fires, and you follow it."
+        },
+        {
+          "q": "Why use leading metrics in kill rules?",
+          "options": [
+            "They give early warnings with more data",
+            "They are what the network pays on",
+            "They never mislead",
+            "They replace FTDs completely"
+          ],
+          "answer": 0,
+          "why": "Leading metrics arrive early and in volume, so they warn you sooner. Final calls still use lagging metrics."
+        },
+        {
+          "q": "An ad set has 40 joins and 0 FTDs in your tracker. What is the first check?",
+          "options": [
+            "Change the hook",
+            "Check the network dashboard and postback",
+            "Raise the budget",
+            "Kill it straight away"
+          ],
+          "answer": 1,
+          "why": "Joins with no deposits can mean broken tracking. Confirm the zero is real before acting."
+        },
+        {
+          "q": "An ad set at $50 a day has run 4 days: 4 network-confirmed FTDs at $18 CPA, target $25. What is the next budget?",
+          "options": [
+            "$100",
+            "$70",
+            "$55",
+            "$60"
+          ],
+          "answer": 3,
+          "why": "$18 ÷ $25 = 0.72 × target with 4 FTDs and over 72 hours: scale +20%. 20% of $50 is $10, so $60, then wait at least 48 hours."
+        },
+        {
+          "q": "You keep a losing ad running because you already spent $200 on it. Which trap is this?",
+          "options": [
+            "Revenge scaling",
+            "Regression to the mean",
+            "Learning phase",
+            "Sunk cost"
+          ],
+          "answer": 3,
+          "why": "Money already spent cannot be recovered and should not drive the next decision."
+        }
+      ],
+      "say_intro": "In this lesson you'll write kill, hold and scale rules in multiples of target C P A, learn to check tracking before any rule fires, and set rules for winners as well as losers.",
+      "say_outro": "You've learned the rule ladder in multiples of target C P A, why you check the plumbing before any kill, and how to scale winners in measured steps. Your task: write the rule ladder for your current campaign with your real target and break-even, including the two early-warning rows, the kill lines at two and three times target, the keep row, the scale row and how long a hold may last. Now take the quiz."
+    },
+    {
+      "slug": "dashboards-and-weekly-reviews",
+      "title": "Dashboards and weekly reviews",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can build a small dashboard where every column leads to a decision.",
+        "You can break totals down by segment and read cohorts fairly.",
+        "You can run a weekly review with a fixed agenda and a decisions log."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Data is only useful when you read it",
+          "p": "Most buyers collect plenty of numbers and read very few of them. A simple dashboard and a fixed weekly review turn scattered numbers into decisions. The aim is fewer, clearer numbers that you read the same way every time.",
+          "d": {
+            "b": "Fewer numbers, read every week",
+            "s": "Same layout, same questions"
+          },
+          "say": "Most buyers collect plenty of numbers and read very few of them. A simple dashboard and a fixed weekly review turn scattered numbers into decisions. The aim is fewer, clearer numbers, read every week, with the same layout and the same questions. That's what this lesson builds."
+        },
+        {
+          "v": "cards",
+          "h": "Three layers of reporting",
+          "p": "Good reporting has three layers: a daily check for problems, a weekly review for decisions and a monthly look at strategy. Mixing them up causes trouble, such as changing your whole strategy after one bad day.",
+          "d": [
+            "Daily|5 minutes: is anything broken?",
+            "Weekly|about an hour: kill, hold, scale",
+            "Monthly|strategy: geos, offers, budget"
+          ],
+          "say": "Good reporting has three layers. Look at the cards. Daily: five minutes, asking is anything broken? Weekly: about an hour, deciding kill, hold or scale. Monthly: strategy, meaning geos, offers and budget. Mixing them up causes trouble, like changing your whole strategy after one bad day. Keep each question at its own layer."
+        },
+        {
+          "v": "table",
+          "h": "The core dashboard",
+          "p": "Start with a small set of columns, one row per campaign or ad set. Every number should lead to a decision. If a column never changes what you do, remove it. The figures below are an example.",
+          "d": {
+            "cols": [
+              "Metric",
+              "Formula",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Spend",
+                "From ad platform",
+                "$1,200"
+              ],
+              [
+                "CTR",
+                "Clicks ÷ Impressions",
+                "1.6%"
+              ],
+              [
+                "Cost per join",
+                "Spend ÷ Joins",
+                "$0.95"
+              ],
+              [
+                "FTDs",
+                "From network",
+                "40"
+              ],
+              [
+                "Cost per FTD",
+                "Spend ÷ FTDs",
+                "$30"
+              ],
+              [
+                "Revenue",
+                "FTDs × payout",
+                "$1,600"
+              ],
+              [
+                "ROI",
+                "(Rev − Spend) ÷ Spend",
+                "33%"
+              ]
+            ]
+          },
+          "say": "Start with a small set of columns, one row per campaign or ad set. Look at the table, with example figures. Spend, from the ad platform, one thousand two hundred dollars. C T R, click through rate, clicks divided by impressions. Cost per join, spend divided by joins. F T Ds, first time deposits, from the network: forty. Cost per F T D: thirty dollars. Revenue, F T Ds times payout: one thousand six hundred. And R O I, return on investment: thirty three percent. Every number should lead to a decision. If a column never changes what you do, remove it."
+        },
+        {
+          "v": "screen",
+          "h": "The dashboard with a decision column",
+          "p": "Example: the core columns per ad set, plus one more: the rule-card call. Target $30, payout $40, network-confirmed FTDs. When every row ends in a decision, the weekly review takes minutes instead of an hour of staring at numbers.",
+          "more": "Check: AS1 $420 ÷ 18 = $23.33, 0.78 × target with 18 FTDs: scale +20%. AS2 $390 ÷ 13 = $30.00, on target: keep. AS3 $390 ÷ 9 = $43.33, past 3 × target ($90) and over the $40 kill line: kill. Total $1,200, 40 FTDs, $30 per FTD, matching the dashboard table.",
+          "d": {
+            "kind": "browser",
+            "url": "sheet.example/dashboard-w41",
+            "title": "Weekly dashboard: example",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Ad set",
+                  "Spend / FTDs",
+                  "Cost per FTD",
+                  "Call"
+                ],
+                "rows": [
+                  [
+                    "AS1",
+                    "$420 / 18",
+                    "$23.33",
+                    "Scale +20%"
+                  ],
+                  [
+                    "AS2",
+                    "$390 / 13",
+                    "$30.00",
+                    "Keep"
+                  ],
+                  [
+                    "AS3",
+                    "$390 / 9",
+                    "$43.33",
+                    "Kill"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Target $30, kill line $40 (break-even). Network-confirmed FTDs."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Now add one more column: the rule-card call. In this example the target is thirty dollars, the payout forty, and the kill line is forty, which is break-even. A S one: four hundred and twenty dollars for eighteen F T Ds, twenty three thirty three each, point seven eight times target. Scale twenty percent. A S two: three hundred and ninety for thirteen, exactly thirty dollars. Keep. A S three: three hundred and ninety for nine, forty three thirty three, over the kill line past three times target. Kill. When every row ends in a decision, the review takes minutes."
+        },
+        {
+          "v": "eq",
+          "h": "Reading ROI from the dashboard",
+          "p": "Example: $1,200 spent and 40 FTDs at a $40 payout. Revenue is $1,600 and profit is $400. ROI is profit divided by spend, so about 33%. Use the network's confirmed FTDs for this, since platform numbers can differ.",
+          "more": "Check: 40 × $40 = $1,600. $1,600 − $1,200 = $400. $400 ÷ $1,200 = 0.333, about 33%. Cost per FTD is $1,200 ÷ 40 = $30, which is $10 under the payout. ROAS on the same numbers would be $1,600 ÷ $1,200 = 1.33. Pick one return measure for your sheet and label it clearly.",
+          "d": [
+            "($1,600 − $1,200)",
+            "÷",
+            "$1,200",
+            "=",
+            "33% ROI"
+          ],
+          "say": "Let's read R O I from the dashboard. Example: one thousand two hundred dollars spent, and forty F T Ds at a forty dollar payout. Revenue is one thousand six hundred, so profit is four hundred. R O I is profit divided by spend, so about thirty three percent. R O A S, return on ad spend, on the same numbers would be one point three three. Pick one return measure for your sheet, and label it clearly. And use the network's confirmed F T Ds, since platform numbers can differ."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: profit for the week",
+          "p": "Use the dashboard example: $1,200 spent and 40 network-confirmed FTDs at a $40 payout, so $1,600 revenue. Enter the profit for the week, then press check to see ROAS and the working.",
+          "more": "Answer: $400. $1,600 − $1,200 = $400 profit. ROI is $400 ÷ $1,200, about 33%. ROAS is $1,600 ÷ $1,200, about 1.33. Use the network's confirmed revenue, not the platform's reported purchases.",
+          "d": {
+            "kind": "roas",
+            "task": "Spend $1,200, revenue $1,600. What is the profit?",
+            "preset": {
+              "spend": 1200,
+              "revenue": 1600
+            },
+            "answer": {
+              "field": "profit",
+              "value": 400,
+              "tolerance": 0.01
+            }
+          },
+          "say": "Lab time. Use the dashboard example: one thousand two hundred dollars spent, and forty network-confirmed F T Ds at a forty dollar payout, so one thousand six hundred dollars revenue. Enter the profit for the week. When you check, you'll also see R O A S and the working. Pause and try it, then check your answer."
+        },
+        {
+          "v": "bars",
+          "h": "Totals hide winners and losers",
+          "p": "A total can look fine while one part loses money. Example: the campaign shows 33% ROI overall. Split by geo and one geo is at 80% ROI while the other loses money. Always break totals down by geo, ad set and creative before deciding.",
+          "more": "Example, $40 payout in both geos. Geo A: $600 spend, 27 FTDs, revenue $1,080, ROI 80%. Geo B: $600 spend, 13 FTDs, revenue $520, ROI about −13%. Together: $1,200 spend, 40 FTDs, $1,600 revenue, 33% ROI. Bar length shows size of the ROI, not direction. Cutting Geo B and moving its budget to Geo A could lift the total, if Geo A can take more spend at a similar cost.",
+          "d": [
+            [
+              "Total",
+              41,
+              "+33%"
+            ],
+            [
+              "Geo A",
+              100,
+              "+80%"
+            ],
+            [
+              "Geo B",
+              17,
+              "−13%"
+            ]
+          ],
+          "say": "Totals hide winners and losers. In this example, the campaign shows thirty three percent R O I overall. Now look at the bars split by geo. Geo A is at plus eighty percent. Geo B is at about minus thirteen percent, losing money. Bar length shows the size of the R O I, not its direction. Moving Geo B's budget to Geo A could lift the total, if Geo A can take more spend at a similar cost. So always break totals down by geo, ad set and creative before deciding."
+        },
+        {
+          "v": "curve",
+          "h": "Cohorts: give each week fair credit",
+          "p": "Deposits from this week's spend keep arriving next week. If you compare this week's spend only with this week's FTDs, recent weeks look worse than they are. A cohort view links each FTD back to the week the user arrived.",
+          "more": "Example. People who joined in week 1 produced 8 FTDs on their first day and 25 by their seventh day. If you judged week 1 on day one, cost per FTD would look about three times worse than it really was. Judge each week only once most of its depositors have had time to arrive, and compare weeks at the same age.",
+          "d": {
+            "a": [
+              8,
+              14,
+              18,
+              21,
+              23,
+              24,
+              25
+            ],
+            "la": "Week 1 joiners, total FTDs",
+            "b": [
+              6,
+              11,
+              15,
+              18,
+              20,
+              21,
+              22
+            ],
+            "lb": "Week 2 joiners, total FTDs",
+            "x": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7"
+            ]
+          },
+          "say": "Deposits from this week's spend keep arriving next week. Compare this week's spend only with this week's F T Ds, and recent weeks look worse than they are. A cohort view links each F T D back to the week the user arrived. Look at the lines in this example. Week one joiners produced eight F T Ds on day one and twenty five by day seven. Judge week one on day one, and cost per F T D looks about three times worse. So compare weeks at the same age."
+        },
+        {
+          "v": "flow",
+          "h": "The weekly review agenda",
+          "p": "Run the same agenda every week, at the same time. A fixed order stops you from jumping to the exciting parts and skipping the dull checks that often matter most, such as whether network numbers match your tracker.",
+          "d": [
+            "Reconcile numbers",
+            "Review by segment",
+            "Apply rules",
+            "Read finished tests",
+            "Plan next tests",
+            "Log decisions"
+          ],
+          "say": "Run the same agenda every week, at the same time. Follow the flow. Reconcile numbers. Review by segment. Apply rules. Read finished tests. Plan next tests. And log decisions. A fixed order stops you jumping to the exciting parts and skipping the dull checks that often matter most, like whether network numbers match your tracker."
+        },
+        {
+          "v": "compare",
+          "h": "Platform versus network numbers",
+          "p": "Your ad platform, tracker and network will rarely agree exactly. Small steady gaps are normal because of attribution windows and timing. Big or growing gaps mean something is broken. Judge profit on the network's confirmed numbers and use platform numbers for optimisation signals.",
+          "d": {
+            "a": {
+              "title": "Normal gap",
+              "items": [
+                "Small and steady week to week",
+                "Explained by timing or windows",
+                "All sources move together"
+              ]
+            },
+            "b": {
+              "title": "Investigate",
+              "items": [
+                "Gap suddenly grows",
+                "Network shows FTDs the tracker misses",
+                "Platform reports results nobody paid for"
+              ]
+            }
+          },
+          "say": "Your ad platform, tracker and network will rarely agree exactly. On the left, a normal gap: small and steady week to week, explained by timing or attribution windows, with all sources moving together. On the right, investigate when the gap suddenly grows, when the network shows F T Ds the tracker misses, or when the platform reports results nobody paid for. Judge profit on the network's confirmed numbers, and use platform numbers for optimisation signals."
+        },
+        {
+          "v": "table",
+          "h": "Keep a decisions log",
+          "p": "Write down every important decision with the date and the reason. After a few months the log becomes your own playbook. You can see which rules worked, which tests you already ran and why a campaign changed.",
+          "d": {
+            "cols": [
+              "Day",
+              "Decision",
+              "Reason"
+            ],
+            "rows": [
+              [
+                "Mon",
+                "Killed ad set 3",
+                "2x target, 0 FTDs, tracking checked"
+              ],
+              [
+                "Mon",
+                "AS1 budget +20%",
+                "4 FTDs, CPA 0.7 × target, 72 h"
+              ],
+              [
+                "Thu",
+                "Started hook test",
+                "Main creative CTR falling"
+              ]
+            ]
+          },
+          "say": "Keep a decisions log. Write every important decision with the date and the reason. Look at the example rows. Monday: killed ad set three, at two times target with zero F T Ds, tracking checked. Monday: A S one budget up twenty percent, four F T Ds, C P A point seven times target, seventy two hours. Thursday: started a hook test, because the main creative's C T R was falling. After a few months, this log becomes your own playbook."
+        },
+        {
+          "v": "tip",
+          "h": "Spotting fatigue in the review",
+          "p": "Weekly reviews are where slow problems show up. Creative fatigue is a common one: frequency climbs, CTR slides and cost per result rises over a few weeks. One day of data hides it. A weekly view makes it obvious.",
+          "d": {
+            "kind": "example",
+            "text": "Example: over 4 weeks, frequency goes 1.4, 1.9, 2.5, 3.1 and CTR goes 1.8%, 1.5%, 1.2%, 0.9%. Plan new creatives before cost per FTD follows."
+          },
+          "say": "Weekly reviews are where slow problems show up. Creative fatigue is a common one. Look at the example over four weeks. Frequency goes one point four, one point nine, two point five, three point one. C T R goes one point eight percent, one point five, one point two, point nine. One day of data hides this. A weekly view makes it obvious. Plan new creatives before cost per F T D follows."
+        },
+        {
+          "v": "compare",
+          "h": "Common dashboard mistakes",
+          "p": "A dashboard can make you feel informed while hiding the very problem you need to see. These mistakes are common because each one makes the numbers look calmer or better than they are.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Twenty columns nobody reads",
+                "Profit from platform purchases",
+                "Only campaign totals",
+                "Comparing a 2-day cohort to a 2-week one",
+                "Decisions kept in your head"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Seven columns, each drives a decision",
+                "Profit from network-confirmed FTDs",
+                "Split by geo, ad set and creative",
+                "Compare cohorts at the same age",
+                "A dated decisions log"
+              ]
+            }
+          },
+          "say": "A dashboard can make you feel informed while hiding the problem. Look at the mistakes on the left, and the fixes on the right. Twenty columns nobody reads: seven columns, each driving a decision. Profit from platform purchases: profit from network-confirmed F T Ds. Only campaign totals: split by geo, ad set and creative. Comparing a two-day cohort to a two-week one: compare cohorts at the same age. Decisions kept in your head: a dated decisions log."
+        },
+        {
+          "v": "check",
+          "h": "Keep the review honest",
+          "p": "The review is where people fool themselves most, because they want the numbers to say something. These habits keep you honest, especially when a campaign you love is fading or one you doubted is working.",
+          "d": [
+            "Read the numbers before opinions",
+            "Use confirmed network data for profit",
+            "Check segments as well as totals",
+            "Compare with your written rules",
+            "Ask what you would do with no ego involved"
+          ],
+          "say": "The review is where people fool themselves most, because they want the numbers to say something. These habits keep you honest. Read the numbers before opinions. Use confirmed network data for profit. Check segments as well as totals. Compare with your written rules. And ask what you'd do with no ego involved. That matters most when a campaign you love is fading, or one you doubted is working."
+        },
+        {
+          "v": "big",
+          "h": "One hour a week pays for itself",
+          "p": "One focused hour a week often saves more money than any new trick. It catches broken tracking, stops slow losers and finds the winners that deserve more budget. Book it in your calendar and protect it like a meeting with your biggest client.",
+          "d": {
+            "b": "One hour, every week",
+            "s": "Same day, same agenda, written log"
+          },
+          "say": "One focused hour a week often saves more money than any new trick. It catches broken tracking, stops slow losers and finds winners that deserve more budget. One hour, every week. Same day, same agenda, written log. Book it in your calendar, and protect it like a meeting with your biggest client."
+        }
+      ],
+      "takeaways": [
+        "Keep a small dashboard where every column drives a decision, and judge profit on confirmed network numbers.",
+        "Break totals down by geo, ad set and creative, and read results by cohort so late deposits get credit.",
+        "Run a fixed weekly agenda and keep a decisions log that becomes your playbook."
+      ],
+      "action": "Book a recurring one-hour weekly review. Before the first one, set up a sheet with the seven core columns and a decisions log tab.",
+      "glossary": [
+        {
+          "term": "Dashboard",
+          "def": "A single view of the few numbers you use to make decisions, usually one row per campaign or ad set."
+        },
+        {
+          "term": "Segment",
+          "def": "A slice of your data, such as one geo, ad set, creative or placement."
+        },
+        {
+          "term": "Cohort",
+          "def": "A group of users who arrived in the same period, tracked together over time."
+        },
+        {
+          "term": "Reconcile",
+          "def": "Compare numbers from the platform, tracker and network to make sure they roughly agree."
+        },
+        {
+          "term": "Decisions log",
+          "def": "A dated record of what you changed and why."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "$800 spent, 25 FTDs, payout $40. What is the ROI?",
+          "options": [
+            "25%",
+            "100%",
+            "20%",
+            "40%"
+          ],
+          "answer": 0,
+          "why": "Revenue is 25 × $40 = $1,000. Profit is $200. $200 ÷ $800 = 25%."
+        },
+        {
+          "q": "A campaign shows 30% ROI overall. What should you do before scaling it?",
+          "options": [
+            "Scale every ad set equally",
+            "Break it down by geo, ad set and creative",
+            "Pause the best ad set",
+            "Nothing, the total is enough"
+          ],
+          "answer": 1,
+          "why": "Totals can hide a loser inside a winner. Segment first, then move budget to what earns."
+        },
+        {
+          "q": "Why use a cohort view for deposits?",
+          "options": [
+            "It makes numbers look better",
+            "It replaces the network dashboard",
+            "It credits late deposits to the week the user arrived",
+            "It removes the need for tracking"
+          ],
+          "answer": 2,
+          "why": "Deposits arrive late. Cohorts give each week fair credit for the depositors it brought in."
+        },
+        {
+          "q": "Your tracker and network numbers were 5% apart for months and are now 40% apart. What does this suggest?",
+          "options": [
+            "This is normal noise",
+            "The offer pays more now",
+            "Your CTR has improved",
+            "Something in tracking or reporting is broken"
+          ],
+          "answer": 3,
+          "why": "A small steady gap is normal. A sudden large gap points to a real problem to investigate."
+        },
+        {
+          "q": "Over four weeks frequency rose from 1.4 to 3.1 and CTR fell from 1.8% to 0.9%. What is the likely issue?",
+          "options": [
+            "Creative fatigue",
+            "A broken postback",
+            "Learning phase",
+            "A payout change"
+          ],
+          "answer": 0,
+          "why": "Rising frequency with falling CTR is the classic pattern of people tiring of the same creative."
+        }
+      ],
+      "say_intro": "Numbers only help when you read them the same way every time. In this lesson you'll build a small dashboard where every column leads to a decision, read totals and cohorts fairly, and run a weekly review with a decisions log.",
+      "say_outro": "You've learned the three layers of reporting, a seven-column dashboard that ends in decisions, why to split totals and compare cohorts at the same age, and how a fixed agenda and decisions log keep you honest. Your task: book a recurring one-hour weekly review, and before the first one, set up a sheet with the seven core columns and a decisions log tab. Now take the quiz."
+    },
+    {
+      "slug": "your-first-full-test",
+      "title": "Your first full test, day by day",
+      "minutes": 19,
+      "objectives": [
+        "By the end you can run one creative test from test card to logged decision",
+        "By the end you can apply the rule card at each daily checkpoint of a test",
+        "By the end you can separate a budget decision from what the test proved"
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Practise the whole loop once",
+          "p": "You have learned noise, test design, sample size and rules separately. This lesson runs them together on one example test, day by day, so the first time you do it with your own money is not the first time you have seen it done. All figures are examples.",
+          "d": {
+            "b": "One test, start to finish",
+            "s": "Card, budget, checkpoints, call, log"
+          },
+          "say": "You've learned noise, test design, sample size and rules separately. Now we run them together, on one example test, day by day: card, budget, checkpoints, call and log. That way, the first time you do it with your own money isn't the first time you've seen it done. All the figures in this lesson are examples."
+        },
+        {
+          "v": "table",
+          "h": "The test card",
+          "p": "Example: a Nigeria trading education funnel, paid per qualified FTD. The question is whether a Pidgin voiceover beats English. Everything else stays the same. The card is written and saved before anything is built.",
+          "d": {
+            "cols": [
+              "Item",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Question",
+                "Does a Pidgin voiceover beat English?"
+              ],
+              [
+                "Control / variant",
+                "English video / same video, Pidgin voice"
+              ],
+              [
+                "Payout and target",
+                "$35 payout, $25 target CPA"
+              ],
+              [
+                "Budget",
+                "$15 per ad set per day, 5 days"
+              ],
+              [
+                "Metric",
+                "Network-confirmed FTDs, cost per FTD"
+              ],
+              [
+                "Rule",
+                "Rule card at each evening check"
+              ]
+            ]
+          },
+          "say": "Here's the test card, written and saved before anything is built. Example: a Nigeria trading education funnel, paid per qualified F T D, first time deposit. The question: does a Pidgin voiceover beat English? Control, the English video. Variant, the same video with a Pidgin voice. Thirty five dollar payout, twenty five dollar target C P A, cost per acquisition. Budget, fifteen dollars per ad set per day for five days. Metric, network-confirmed F T Ds and cost per F T D. And the rule card at each evening check."
+        },
+        {
+          "v": "eq",
+          "h": "The kill and scale lines for this test",
+          "p": "Write the lines before launch. Target $25 and break-even $35. The CPA kill line is the lower of 1.5 × target ($37.50) and break-even, so $35. The zero-FTD line is 2 × target. The scale line is 0.8 × target. Starting rules from the Budget and kill rules module.",
+          "more": "The lines: zero-FTD kill at $50 spend. CPA kill once spend reaches $75 (3 × target) if CPA is over $35. Scale at 3+ FTDs with CPA $20 or less. Keep at 3+ FTDs with CPA $20 to $25. Everything else holds. On this offer FTDs usually arrive within a few hours, so evening checks use matured spend.",
+          "d": [
+            "$25 target",
+            "×",
+            "0.8",
+            "=",
+            "$20 scale line"
+          ],
+          "say": "Write the lines before launch. Target twenty five dollars, break-even thirty five. The C P A kill line is the lower of one point five times target, thirty seven fifty, and break-even, so thirty five dollars. The zero F T D kill comes at fifty dollars of spend, two times target. The C P A kill can fire once spend reaches seventy five. The scale line on screen is twenty five times point eight, twenty dollars, with three or more F T Ds. Keep is twenty to twenty five dollars. Everything else holds. These are starting rules from the Budget and kill rules module."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: the daily budget",
+          "p": "Two ad sets, each to reach 3 × target CPA, in 5 days. Enter the daily budget for the whole test. Then check it gives each ad set at least half the target per day, so the kill lines arrive in time.",
+          "more": "Answer: $30 a day. 2 × 3 = 6 target CPAs. 6 × $25 = $150. $150 ÷ 5 = $30 a day, $15 per ad set. $15 is above half of $25, so each ad set reaches the $50 zero-FTD line during day 4.",
+          "d": {
+            "kind": "budget",
+            "task": "2 ad sets × 3 × a $25 target = 6 target CPAs over 5 days. What is the daily budget?",
+            "preset": {
+              "goal": 6,
+              "target_cpa": 25,
+              "days": 5
+            },
+            "answer": {
+              "field": "daily_budget",
+              "value": 30,
+              "tolerance": 0.01
+            }
+          },
+          "say": "Lab time. Two ad sets, each needs to reach three times target C P A, in five days. That's six target C P As at twenty five dollars each. Enter the daily budget for the whole test. Then check that it gives each ad set at least half the target per day, so the kill lines arrive in time. Pause and try it, then check your answer."
+        },
+        {
+          "v": "screen",
+          "h": "Launch: two ad sets, one difference",
+          "p": "Launch day in an Ads Manager-style screen. Both ad sets share audience, placements, lander and start time; only the video differs. Names follow the naming rule so the report reads itself. Names change; check the current Ads Manager.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/adsets",
+            "title": "NG_TRD_VoiceTest_W42",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Ad set",
+                  "Budget",
+                  "Start",
+                  "Status"
+                ],
+                "rows": [
+                  [
+                    "NG_Voice_EN",
+                    "$15/day",
+                    "Mon 06:00",
+                    "Active"
+                  ],
+                  [
+                    "NG_Voice_PCM",
+                    "$15/day",
+                    "Mon 06:00",
+                    "Active"
+                  ]
+                ]
+              },
+              {
+                "type": "toggle",
+                "label": "Advantage campaign budget",
+                "on": false
+              },
+              {
+                "type": "text",
+                "value": "Ad set budgets keep the split equal. Setting names change; check yours."
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "It's launch day, in an Ads Manager-style screen. Two ad sets, N G Voice E N and N G Voice P C M, each at fifteen dollars a day, both starting Monday at six in the morning. They share audience, placements, lander and start time. Only the video differs. Notice the campaign budget toggle is off, so ad set budgets keep the split equal. The names follow the naming rule, so the report reads itself. Names change, so check the current Ads Manager."
+        },
+        {
+          "v": "table",
+          "h": "Days 1 to 4: hold, hold, hold",
+          "p": "Example, cumulative spend and network-confirmed FTDs at each evening check. Nothing crosses a kill or scale line, so every call is Hold. This is the hardest part: the variant looks better, and you still change nothing.",
+          "more": "Day 4 check, English: $60 is past the $50 zero-FTD line, but it has 1 FTD, so that rule does not fire. CPA $60 is high, but spend is under $75 (3 × target), so the CPA kill rule cannot fire yet. Pidgin: $60 for 2 FTDs is $30 CPA with only 2 FTDs, not enough to scale or keep. Both hold.",
+          "d": {
+            "cols": [
+              "Day",
+              "English (EN)",
+              "Pidgin (PCM)"
+            ],
+            "rows": [
+              [
+                "1",
+                "$15, 0: Hold",
+                "$15, 0: Hold"
+              ],
+              [
+                "2",
+                "$30, 0: Hold",
+                "$30, 1: Hold"
+              ],
+              [
+                "3",
+                "$45, 1: Hold",
+                "$45, 1: Hold"
+              ],
+              [
+                "4",
+                "$60, 1: Hold",
+                "$60, 2: Hold"
+              ]
+            ]
+          },
+          "say": "Here are days one to four, with cumulative spend and network-confirmed F T Ds at each evening check. Nothing crosses a kill or scale line, so every call is hold. On day four, English has sixty dollars and one F T D. It's past the fifty dollar zero line, but it has one F T D, so that rule doesn't fire, and spend is under seventy five, so the C P A kill can't fire yet. Pidgin has two F T Ds, a thirty dollar C P A, not enough to scale or keep. This is the hardest part. The variant looks better, and you still change nothing."
+        },
+        {
+          "v": "table",
+          "h": "Day 5: the rule card decides",
+          "p": "Day 5, both ad sets at $75, which is 3 × target. Now every rule can fire. Work down the card for each ad set, top row first, and stop at the first rule that is true.",
+          "more": "English: $75 ÷ 1 = $75 CPA, 3 × target, over the $35 kill line with spend at 3 × target: kill. Pidgin: $75 ÷ 4 = $18.75 CPA, 0.75 × target, with 4 FTDs and 5 days running: scale +20%, from $15 to $18 a day, then at least 48 hours before the next step.",
+          "d": {
+            "cols": [
+              "Ad set",
+              "Spend / FTDs",
+              "CPA",
+              "Call"
+            ],
+            "rows": [
+              [
+                "NG_Voice_EN",
+                "$75 / 1",
+                "$75.00",
+                "Kill"
+              ],
+              [
+                "NG_Voice_PCM",
+                "$75 / 4",
+                "$18.75",
+                "Scale +20%"
+              ]
+            ]
+          },
+          "say": "Day five. Both ad sets are at seventy five dollars, three times target, so now every rule can fire. Work down the card, top row first. English: seventy five dollars for one F T D, a C P A of seventy five, over the thirty five dollar kill line. Kill. Pidgin: seventy five for four F T Ds, eighteen seventy five, point seven five times target. Scale twenty percent, from fifteen to eighteen dollars a day, then wait at least forty eight hours before the next step."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: check the Pidgin call",
+          "p": "Check the Pidgin ad set yourself with the lab. Enter its day-5 numbers and see whether the rule card agrees with the table. Remember that the scale rule needs at least 3 network-confirmed FTDs.",
+          "more": "Answer: scale. $75 ÷ 4 = $18.75, which is 0.75 × the $25 target, with 4 FTDs. That passes the 0.8 × line with 3 or more conversions.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $25. NG_Voice_PCM spent $75 over 5 days with 4 network-confirmed FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 75,
+              "conversions": 4,
+              "target_cpa": 25,
+              "days": 5
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "scale",
+              "tolerance": 0
+            }
+          },
+          "say": "Check the Pidgin call yourself in the lab. Target twenty five dollars. N G Voice P C M spent seventy five dollars over five days, with four network-confirmed F T Ds. Enter its numbers and see whether the rule card agrees with the table. Remember, the scale rule needs at least three network-confirmed F T Ds. Pause and try it, then check your answer."
+        },
+        {
+          "v": "eq",
+          "h": "What the test proved, and what it did not",
+          "p": "The budget call is clear. The lesson is not yet. Rough ranges: 4 FTDs is about 0 to 8, and 1 FTD is about 0 to 3. They overlap, so \"Pidgin beats English\" is a strong hint, not a proven fact. Plan a confirming round before you rebuild every ad in Pidgin.",
+          "d": [
+            "4 ± 2 × √4",
+            "=",
+            "0 to 8",
+            "vs",
+            "1: 0 to 3"
+          ],
+          "say": "The budget call is clear. The lesson isn't, yet. Look at the rough ranges on screen. Four F T Ds, plus or minus two times the square root of four, gives about zero to eight. One F T D gives about zero to three. The ranges overlap. So Pidgin beats English is a strong hint, not a proven fact. Plan a confirming round before you rebuild every ad in Pidgin."
+        },
+        {
+          "v": "screen",
+          "h": "Log the decision the same day",
+          "p": "Write the call, the reason and the next step in the decisions log before you close the laptop. In three months this row tells you why Pidgin became your default, and whether the confirming round agreed.",
+          "d": {
+            "kind": "browser",
+            "url": "sheet.example/decisions",
+            "title": "Decisions log",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Date",
+                  "Decision",
+                  "Reason"
+                ],
+                "rows": [
+                  [
+                    "Fri",
+                    "Killed NG_Voice_EN",
+                    "3 × target, CPA $75 over $35 line"
+                  ],
+                  [
+                    "Fri",
+                    "NG_Voice_PCM $15 to $18",
+                    "4 FTDs, CPA 0.75 × target"
+                  ]
+                ]
+              },
+              {
+                "type": "field",
+                "label": "Next test",
+                "value": "Round 2: PCM vs new PCM hook, $15 each, 5 days"
+              },
+              {
+                "type": "button",
+                "label": "Save row"
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "Log the decision the same day, before you close the laptop. Look at the decisions log. Friday: killed the English ad set, three times target, C P A seventy five, over the thirty five dollar line. Friday: Pidgin ad set from fifteen to eighteen dollars, four F T Ds, C P A point seven five times target. Next test: round two, Pidgin versus a new Pidgin hook, fifteen dollars each, five days. In three months, this row tells you why Pidgin became your default, and whether the confirming round agreed."
+        },
+        {
+          "v": "product",
+          "h": "Make the next variant quickly",
+          "p": "The confirming round needs a fresh variant on the winning idea. A creative tool can draft new hooks and cut-downs from the winning Pidgin video. Review every output, keep claims honest, and have a fluent speaker check any Pidgin script before it runs.",
+          "d": {
+            "slug": "vooads",
+            "why": "Turns the winning video into new hooks and cut-downs for your confirming round."
+          },
+          "say": "The confirming round needs a fresh variant on the winning idea. Vooads, shown here, can turn the winning Pidgin video into new hooks and cut-downs for that round. But review every output, keep claims honest, and have a fluent speaker check any Pidgin script before it runs."
+        },
+        {
+          "v": "compare",
+          "h": "Common first-test mistakes",
+          "p": "These are the mistakes most beginners make on their first full test. Each one either ends the test early, mixes up what was tested or turns a hint into a \"fact\" that costs money later.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Killing English on day 2",
+                "Scaling Pidgin on day 3 with 1 FTD",
+                "Calling Pidgin proven after 4 FTDs",
+                "Changing the lander mid-test",
+                "No log entry"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Wait for the zero-FTD line",
+                "Scale needs 3+ FTDs at 0.8 × target",
+                "Run a confirming round",
+                "One change per test",
+                "Log call, reason and next test"
+              ]
+            }
+          },
+          "say": "These are the mistakes most beginners make on a first full test. Killing English on day two: wait for the zero F T D line. Scaling Pidgin on day three with one F T D: scaling needs three or more F T Ds at point eight times target. Calling Pidgin proven after four F T Ds: run a confirming round. Changing the lander mid-test: one change per test. And no log entry: log the call, the reason and the next test."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance in every variant",
+          "p": "A voiceover in another language must say the same honest things as the original, including the risk warning. Have a fluent speaker check the script. Trading ads usually need platform authorization and must follow local law; check both before the test runs, however small the budget.",
+          "d": {
+            "kind": "warn",
+            "text": "A translated ad that drops the risk warning is a different, non-compliant ad. Check every language version."
+          },
+          "say": "A voiceover in another language must say the same honest things as the original, including the risk warning. Have a fluent speaker check the script. Trading ads usually need platform authorization and must follow local law, so check both before the test runs, however small the budget. Read the warning: a translated ad that drops the risk warning is a different, non-compliant ad. Check every language version."
+        },
+        {
+          "v": "check",
+          "h": "Test finished checklist",
+          "p": "Run this list on the last day of every test. When every line is ticked, the test is done and the next one can start. If a line is missing, the test is not finished, however clear the numbers look.",
+          "d": [
+            "Rule-card call made for every ad set",
+            "Late FTDs re-checked after the lag",
+            "Rough ranges compared",
+            "Decision and reason logged",
+            "Confirming round planned or not needed",
+            "Next test card written"
+          ],
+          "say": "Run this list on the last day of every test. Rule-card call made for every ad set. Late F T Ds re-checked after the lag. Rough ranges compared. Decision and reason logged. Confirming round planned, or not needed. And the next test card written. When every line is ticked, the test is done and the next one can start. If a line is missing, it isn't finished, however clear the numbers look."
+        }
+      ],
+      "takeaways": [
+        "Write the test card and the kill and scale lines before you build anything.",
+        "Hold through the early days; the rule card fires only at its lines.",
+        "The rule card decides the budget; rough ranges decide how sure you are of the lesson.",
+        "Log every call and plan a confirming round for close or small-count results."
+      ],
+      "action": "Write a full test card for your next test, including the payout, target, break-even, kill lines, scale line, daily budget and the day you will make the final call.",
+      "glossary": [
+        {
+          "term": "Confirming round",
+          "def": "A second test that checks whether a first result holds before you rebuild everything around it."
+        },
+        {
+          "term": "Evening check",
+          "def": "A fixed daily checkpoint where you read matured numbers and apply the rule card."
+        },
+        {
+          "term": "Break-even CPA",
+          "def": "The cost per FTD equal to your payout. Above it, every FTD loses money."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Target $25, payout $35. What is the CPA kill line?",
+          "options": [
+            "$37.50",
+            "$25",
+            "$35",
+            "$50"
+          ],
+          "answer": 2,
+          "why": "The kill line is the lower of 1.5 × target ($37.50) and break-even ($35), so $35."
+        },
+        {
+          "q": "Day 3: English $45 with 1 FTD, Pidgin $45 with 1 FTD, target $25. What is the call for each?",
+          "options": [
+            "Hold both",
+            "Kill English, scale Pidgin",
+            "Kill both",
+            "Scale both"
+          ],
+          "answer": 0,
+          "why": "Neither has 3 FTDs, spend is under 3 × target and both have conversions, so nothing fires. Hold."
+        },
+        {
+          "q": "Day 5: Pidgin $75 with 4 FTDs, target $25. What do you do with its budget?",
+          "options": [
+            "Keep it at $15",
+            "Raise it to $18 and wait at least 48 hours before the next step",
+            "Double it to $30",
+            "Kill it"
+          ],
+          "answer": 1,
+          "why": "$18.75 CPA is 0.75 × target with 4 FTDs: scale +20%, from $15 to $18, then wait at least 48 hours."
+        },
+        {
+          "q": "Pidgin got 4 FTDs and English 1. How sure can you be that Pidgin is better?",
+          "options": [
+            "Certain: four times as many",
+            "Not at all: tests prove nothing",
+            "Sure, because the rule card said scale",
+            "It is a strong hint; the rough ranges overlap, so run a confirming round"
+          ],
+          "answer": 3,
+          "why": "4 has a rough range of 0 to 8 and 1 of 0 to 3. The budget call is clear, but the lesson needs confirming."
+        },
+        {
+          "q": "Your Pidgin version leaves out the risk warning to keep the video short. What is the problem?",
+          "options": [
+            "It is now a non-compliant ad; every language version needs the same warnings",
+            "No problem if the English version has it",
+            "Only a problem in English-speaking geos",
+            "It makes the test unfair, nothing else"
+          ],
+          "answer": 0,
+          "why": "A translated ad must say the same honest things, including risk warnings. Dropping them makes a different, non-compliant ad."
+        }
+      ],
+      "say_intro": "This lesson puts everything together. You'll follow one example creative test day by day, from the test card to the logged decision, so your first real test isn't the first time you've seen one done.",
+      "say_outro": "You've run one full test from card to logged decision, applied the rule card at each checkpoint, and separated the budget call from what the test actually proved. Your task: write a full test card for your next test, with the payout, target, break-even, kill lines, scale line, daily budget and the day you'll make the final call. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "Two ads each spent $40. Ad A has 2 FTDs, Ad B has 1. Target CPA is $25. What is the best next step?",
+      "options": [
+        "Kill B now, it is half as good",
+        "Keep both running to the planned checkpoint: neither has 3 FTDs and the gap could be noise",
+        "Move all budget to A immediately",
+        "Scale A because its CPA is under target"
+      ],
+      "answer": 1,
+      "why": "Neither has 3 FTDs, so neither can scale or keep, and both have conversions with spend under 3 × target, so neither is killed. 2 and 1 have overlapping rough ranges. Hold both."
+    },
+    {
+      "q": "You spent $60, got 0 FTDs, target CPA $25. Your ladder kills at 2x with zero FTDs. Joins look normal. What do you do first?",
+      "options": [
+        "Kill it, the rule fired",
+        "Raise the budget to get more data",
+        "Confirm on the network dashboard and check the postback, then apply the rule",
+        "Change the creative and keep going"
+      ],
+      "answer": 2,
+      "why": "$60 is 2.4x target, so the rule applies, but only after confirming the zero is real."
+    },
+    {
+      "q": "You want to know whether a Swahili voiceover beats English in Kenya. Which setup is cleanest?",
+      "options": [
+        "Same video, two voiceovers, separate ad sets with equal budgets, same audience and start time",
+        "Swahili video to one audience, English to a different audience",
+        "Both voiceovers plus a new lander in one ad set",
+        "Run English this week and Swahili next week"
+      ],
+      "answer": 0,
+      "why": "Only the voiceover changes, budgets are equal and timing is the same, so the result points to the voiceover."
+    },
+    {
+      "q": "Target CPA $20, 4 variants, 3x target per variant, $60 a day. How long does the test take?",
+      "options": [
+        "2 days",
+        "3 days",
+        "6 days",
+        "4 days"
+      ],
+      "answer": 3,
+      "why": "$20 × 3 × 4 = $240. $240 ÷ $60 = 4 days."
+    },
+    {
+      "q": "Test day 5: control $75 with 1 FTD, variant $75 with 4 FTDs. Target $25, payout $35. What are the calls?",
+      "options": [
+        "Kill the control (CPA $75 over the $35 kill line at 3 × spend); scale the variant +20% and plan a confirming round",
+        "Hold both until 10 FTDs",
+        "Kill both",
+        "Scale both"
+      ],
+      "answer": 0,
+      "why": "Control: spend at 3 × target, CPA over the kill line, so kill. Variant: $18.75 is 0.75 × target with 4 FTDs, so scale. The rough ranges overlap, so confirm the lesson in a second round."
+    },
+    {
+      "q": "An ad set had its best ever day yesterday and now has 3 FTDs at 0.7 × target after 2 days. A teammate wants to triple the budget today. What do you advise?",
+      "options": [
+        "Triple it, momentum matters",
+        "Kill it before it reverses",
+        "Duplicate it ten times",
+        "Wait until it has run at least 72 hours, then raise 20% and wait 48 hours before the next step"
+      ],
+      "answer": 3,
+      "why": "One great day often regresses to the mean, and the starting scale rule needs 72 hours running, then +20% steps at least 48 hours apart."
+    },
+    {
+      "q": "Weekly totals: $2,000 spend, 50 FTDs, $45 payout. What is ROI?",
+      "options": [
+        "12.5%",
+        "25%",
+        "112.5%",
+        "45%"
+      ],
+      "answer": 0,
+      "why": "Revenue is 50 × $45 = $2,250. Profit $250 ÷ $2,000 = 12.5%."
+    },
+    {
+      "q": "This week looks worse than last week on cost per FTD, but it ended yesterday. What is the most likely reason to wait before judging?",
+      "options": [
+        "The platform hides data for a week",
+        "Late deposits from this week's joiners have not arrived yet",
+        "Payouts change weekly",
+        "CTR always drops on weekends"
+      ],
+      "answer": 1,
+      "why": "Conversion delay means recent cohorts are incomplete. Compare weeks at the same age."
+    },
+    {
+      "q": "You screened 10 hooks on CTR and found one with double the usual CTR. What is the right next step?",
+      "options": [
+        "Scale it straight away",
+        "Kill the other nine and stop testing",
+        "Shortlist it and confirm on cost per lead and cost per FTD before scaling",
+        "Assume it will double FTDs"
+      ],
+      "answer": 2,
+      "why": "Leading metrics screen ideas, but a high CTR can attract curious clickers who never deposit. Confirm with money."
+    },
+    {
+      "q": "Your automated rule paused an ad set at 3am for 0 results after $30. In the morning the network shows 2 FTDs from it. What went wrong and what do you fix?",
+      "options": [
+        "The rule used tracker data that missed conversions; fix the postback and review the rule",
+        "Nothing, the rule worked",
+        "The payout is too low",
+        "The audience was too broad"
+      ],
+      "answer": 0,
+      "why": "Rules only work on accurate data. Fix the data feed first, then decide whether the rule thresholds still make sense."
+    }
+  ]
+}

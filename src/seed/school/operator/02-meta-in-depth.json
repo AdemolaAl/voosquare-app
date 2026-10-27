@@ -1,0 +1,2942 @@
+{
+  "school": "operator",
+  "order": 2,
+  "slug": "meta-in-depth",
+  "title": "Meta in depth",
+  "summary": "How Meta's ad system actually decides who sees your ads: structure, objectives, conversion events, audiences, automation, learning, budgets and bidding. Button names change often, so this module teaches the principles that stay true, with worked examples you can apply in whatever the current Ads Manager looks like. The last lesson shows how to read the reports and make the daily call with the starting kill, hold and scale rules.",
+  "lessons": [
+    {
+      "slug": "structure-and-objectives",
+      "title": "Campaign structure and objectives",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can explain what is set at campaign, ad set and ad level.",
+        "You can choose an objective based on the event you want and the data you have.",
+        "You can spot a structure that splits budget too thin to learn.",
+        "You can build a campaign click by click and work out how many ad sets your budget can feed."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Meta finds people who do what you ask for",
+          "p": "Meta's delivery system shows your ad to the people it predicts are most likely to take the action you optimise for. If you ask for clicks, it finds clickers. If you ask for deposits, it looks for depositors. Your structure and objective are how you ask.",
+          "d": {
+            "b": "You get what you optimise for",
+            "s": "Not what you hope for"
+          },
+          "say": "Here's the most important idea in this module. Meta's delivery system shows your ad to the people it predicts are most likely to take the action you optimise for. Ask for clicks, and it finds clickers. Ask for deposits, and it looks for depositors. Your structure and objective are how you ask. You get what you optimise for, not what you hope for."
+        },
+        {
+          "v": "table",
+          "h": "Three levels, three jobs",
+          "p": "Every Meta campaign has three levels. Knowing which setting lives where saves you from editing the wrong thing and resetting learning by accident. Exact options move between levels over time, so check the current Ads Manager.",
+          "d": {
+            "cols": [
+              "Level",
+              "What you set there"
+            ],
+            "rows": [
+              [
+                "Campaign",
+                "Objective, special ad category, campaign budget if used"
+              ],
+              [
+                "Ad set",
+                "Conversion event, audience, placements, budget, schedule"
+              ],
+              [
+                "Ad",
+                "Creative, copy, link, tracking parameters"
+              ]
+            ]
+          },
+          "say": "Every Meta campaign has three levels, and each has its own job. Read the table. At campaign level you set the objective, any special ad category, and a campaign budget if you use one. At ad set level you set the conversion event, audience, placements, budget and schedule. At ad level, the creative, copy, link and tracking parameters. Knowing where each setting lives saves you from editing the wrong thing and resetting learning by accident. Options move over time, so check the current Ads Manager."
+        },
+        {
+          "v": "map",
+          "h": "One campaign, two ad sets, a few ads",
+          "p": "The starting structure as a picture. One campaign holds the objective. Two ad sets with clearly different audiences each hold three or four ads. Clicks go to your lander, and the paid event comes back as a signal.",
+          "d": {
+            "nodes": [
+              {
+                "id": "c",
+                "label": "Campaign: Sales",
+                "kind": "tool"
+              },
+              {
+                "id": "a1",
+                "label": "Ad set: broad",
+                "kind": "ad"
+              },
+              {
+                "id": "a2",
+                "label": "Ad set: interests",
+                "kind": "ad"
+              },
+              {
+                "id": "ads",
+                "label": "3 to 4 ads each",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Lander",
+                "kind": "page"
+              },
+              {
+                "id": "offer",
+                "label": "Broker sign-up",
+                "kind": "offer"
+              },
+              {
+                "id": "ev",
+                "label": "Registration event",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "c",
+                "a1",
+                "budget"
+              ],
+              [
+                "c",
+                "a2",
+                "budget"
+              ],
+              [
+                "a1",
+                "ads",
+                ""
+              ],
+              [
+                "a2",
+                "ads",
+                ""
+              ],
+              [
+                "ads",
+                "lp",
+                "click"
+              ],
+              [
+                "lp",
+                "offer",
+                "sign-up"
+              ],
+              [
+                "offer",
+                "ev",
+                "signal"
+              ],
+              [
+                "ev",
+                "c",
+                "learns"
+              ]
+            ]
+          },
+          "say": "Here's the starting structure as a picture. Follow the lines. One campaign holds the objective, here Sales, and feeds budget to two ad sets with clearly different audiences, one broad and one interests. Each holds three or four ads. Clicks go to your lander, the lander leads to the broker sign-up, and the registration event comes back as a signal. Notice the last arrow: that signal returns to the campaign, which is how Meta learns."
+        },
+        {
+          "v": "cards",
+          "h": "The current objective groups",
+          "p": "Meta groups objectives by outcome. At the time of writing they are roughly the six below. Names and groupings change; check the current Ads Manager before you build.",
+          "d": [
+            "Awareness|reach and memory, not actions",
+            "Traffic|clicks or landing page views",
+            "Engagement|messages, video views, interactions",
+            "Leads|forms, calls, sign-ups",
+            "App promotion|installs and in-app events",
+            "Sales|purchases and other conversions"
+          ],
+          "say": "Meta groups objectives by outcome. At the time of writing there are roughly six, shown on these cards. Awareness, for reach and memory, not actions. Traffic, for clicks or landing page views. Engagement, for messages, video views and interactions. Leads, for forms, calls and sign-ups. App promotion, for installs and in-app events. And Sales, for purchases and other conversions. Names and groupings change, so check the current Ads Manager before you build."
+        },
+        {
+          "v": "compare",
+          "h": "Traffic vs conversion objectives",
+          "p": "A traffic objective finds people who click a lot. A conversion objective, such as Leads or Sales optimised for a website event, finds people who complete that event. For affiliate offers, cheap clicks rarely mean cheap deposits.",
+          "d": {
+            "a": {
+              "title": "Traffic objective",
+              "items": [
+                "Cheapest clicks",
+                "Many accidental taps",
+                "Meta learns who clicks",
+                "Good for warming a new pixel"
+              ]
+            },
+            "b": {
+              "title": "Conversion objective",
+              "items": [
+                "Higher cost per click",
+                "Fewer, better visitors",
+                "Meta learns who converts",
+                "Needs a working event"
+              ]
+            }
+          },
+          "say": "Compare the two columns. A traffic objective finds people who click a lot. You get the cheapest clicks, but many accidental taps, and Meta learns who clicks. It can help warm a new pixel. A conversion objective, like Leads or Sales optimised for a website event, costs more per click but brings fewer, better visitors, and Meta learns who converts. It does need a working event. For affiliate offers, cheap clicks rarely mean cheap deposits."
+        },
+        {
+          "v": "eq",
+          "h": "Cheap clicks can cost more",
+          "p": "Example: a Traffic campaign gets clicks at $0.15 but only 0.5% register. A conversion campaign gets clicks at $0.40 and 3% register. Divide cost per click by registration rate to get cost per registration.",
+          "more": "Worked example. Traffic: $0.15 ÷ 0.005 = $30 per registration. Conversion: $0.40 ÷ 0.03 = $13.33 per registration. The click was more than twice as expensive, yet each registration cost less than half. This pattern is common in trading and iGaming, but not guaranteed, so test it with your own data.",
+          "d": [
+            "$0.40 CPC",
+            "÷",
+            "3% reg rate",
+            "=",
+            "$13.33 per reg"
+          ],
+          "say": "Here's why cheap clicks can cost more. In this example, a traffic campaign gets clicks at fifteen cents, but only half a percent register. That's thirty dollars per registration. A conversion campaign pays forty cents per click, a C P C more than twice as high, but three percent register. Look at the equation: forty cents divided by three percent is thirteen dollars thirty three per registration, less than half. This pattern is common in trading and iGaming, but not guaranteed, so test it with your own data."
+        },
+        {
+          "v": "flow",
+          "h": "Choosing the objective",
+          "p": "Work backwards from the action that makes you money, then move up only as far as your data forces you to. The deeper the event, the better the people, as long as there is enough volume.",
+          "d": [
+            "Name the paid event",
+            "Can you track it?",
+            "Enough volume?",
+            "Optimise for it",
+            "If not, step one event up"
+          ],
+          "more": "If you cannot track the paid event yet, fix tracking before you choose the objective. Full setup: Tracking setup lab module. If you can track it but get fewer than a handful a week, optimise one step higher and keep judging on the paid event.",
+          "say": "How do you choose the objective? Work backwards from the action that makes you money. Follow the steps. Name the paid event. Can you track it? If not, fix tracking first. Do you get enough volume? If yes, optimise for it. If not, step one event up the funnel, and keep judging on the paid event. The deeper the event, the better the people, as long as there's enough volume."
+        },
+        {
+          "v": "tip",
+          "h": "Special ad categories are not optional",
+          "p": "If your ad promotes credit, and in some regions other financial products, you must declare the special ad category at campaign level. Targeting options are reduced. Declaring it honestly protects your account; hiding it gets ads rejected and accounts restricted.",
+          "d": {
+            "kind": "warn",
+            "text": "Declare special ad categories where they apply. Check the current list for your geo."
+          },
+          "say": "Special ad categories are not optional. If your ad promotes credit, and in some regions other financial products, you must declare the special ad category at campaign level. Targeting options are reduced. Declaring it honestly protects your account. Hiding it gets ads rejected and accounts restricted. Check the current list for your geo."
+        },
+        {
+          "v": "stat",
+          "h": "Too many ad sets starve each other",
+          "p": "Example: $50 a day split across 10 ad sets is $5 each. At a $20 cost per conversion, each ad set gets about 1.75 conversions a week. That is far too few for Meta to learn who your converters are.",
+          "more": "Worked example. $5 a day × 7 days = $35 a week per ad set. $35 ÷ $20 = 1.75 conversions. Put the same $50 into two ad sets and each gets $175 a week, or about 8.75 conversions. Still not a lot, but each ad set now has five times more signal. On small budgets, fewer ad sets almost always learn faster.",
+          "d": {
+            "n": 1.75,
+            "pre": "",
+            "suf": "",
+            "dec": 2,
+            "label": "conversions per ad set per week",
+            "note": "Example. $5 a day at $20 per conversion."
+          },
+          "say": "Too many ad sets starve each other. Here's an example. Fifty dollars a day split across ten ad sets is five dollars each. That's thirty five dollars a week per ad set. At twenty dollars per conversion, each one gets about one point seven five conversions a week, the number on screen. That's far too few for Meta to learn. Put the same fifty dollars into two ad sets, and each gets about eight point seven five, five times more signal."
+        },
+        {
+          "v": "eq",
+          "h": "How many ad sets your budget can feed",
+          "p": "The starting rule plans 3 × target CPA for each ad set so it can reach the kill and scale checks. Example: $50 a day for 6 days, target $30. $300 ÷ $90 is about 3 ad sets.",
+          "more": "Worked example. $50 × 6 = $300. 3 × $30 = $90 per ad set. $300 ÷ $90 = 3.3, so run 3 ad sets, not 10. With 10 ad sets each would get $30, which is only 1 × target, too little to apply even the zero-conversion kill rule at 2 × target. Full rule card: Budget and kill rules module.",
+          "d": [
+            "Daily budget × test days",
+            "÷",
+            "(3 × target CPA)",
+            "=",
+            "Max ad sets"
+          ],
+          "say": "So how many ad sets can your budget feed? The starting rule plans three times your target C P A, cost per acquisition, for each ad set, so it can reach the kill and scale checks. Look at the equation. Example: fifty dollars a day for six days is three hundred dollars. Three times a thirty dollar target is ninety per ad set. Three hundred divided by ninety is about three point three, so run three ad sets, not ten."
+        },
+        {
+          "v": "table",
+          "h": "A simple starting structure",
+          "p": "Example structure for a new offer and geo on a modest budget. One campaign, a small number of ad sets with clearly different audiences, and a few ads in each. Simple structures are easier to read.",
+          "d": {
+            "cols": [
+              "Level",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Campaign",
+                "KE trading, Sales, registration event"
+              ],
+              [
+                "Ad set 1",
+                "Broad, 21+ adults, Kenya"
+              ],
+              [
+                "Ad set 2",
+                "Interest stack, Kenya"
+              ],
+              [
+                "Ads",
+                "3 to 4 creatives per ad set"
+              ]
+            ]
+          },
+          "say": "Here's an example of a simple starting structure for a new offer and geo on a modest budget. One campaign for Kenya trading, with the Sales objective and the registration event. Ad set one is broad, adults twenty one and over in Kenya. Ad set two is an interest stack in Kenya. And three to four creatives per ad set. Simple structures like this are much easier to read."
+        },
+        {
+          "v": "walk",
+          "h": "Build the campaign, click by click",
+          "p": "A generic walkthrough in an Ads Manager-style tool. Follow the order: campaign, then ad set, then ad. Button and setting names change often, so look for the same idea if your screen differs. Names change; check the current Ads Manager.",
+          "more": "Why this order: the objective decides which events the ad set can optimise for, and the ad set decides who can see the ad. Changing the objective later usually means a new campaign. The {{campaign.name}} style placeholders are dynamic URL parameters; Meta fills them at click time. Check the current list of supported parameters in Meta's Help Center.",
+          "d": {
+            "steps": [
+              {
+                "title": "Campaign: objective and category",
+                "text": "Name it with your pattern, pick the objective and declare a special ad category if one applies.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/create",
+                  "title": "New campaign",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Campaign name",
+                      "value": "KE_brokerX_sales_reg_0412"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Objective",
+                      "value": "Sales"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Special ad category",
+                      "value": "None declared (check if credit applies)"
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Campaign budget",
+                      "on": false
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Ad set: event and budget",
+                "text": "Choose the website as conversion location, the event you can feed, and a daily budget.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/adset",
+                  "title": "Ad set: broad",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Conversion location",
+                      "value": "Website"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Conversion event",
+                      "value": "CompleteRegistration"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Daily budget",
+                      "value": "$25"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Ad set: who and where",
+                "text": "Set the country and the minimum age the offer and law require. Leave placements automatic for a first test.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/adset",
+                  "title": "Ad set: broad",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Location",
+                      "value": "Kenya"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Age",
+                      "value": "21 - 65+"
+                    },
+                    {
+                      "type": "radio",
+                      "label": "Placements",
+                      "options": [
+                        "Automatic",
+                        "Manual"
+                      ],
+                      "value": 0
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Ad: creative and link",
+                "text": "Upload the creative, write honest copy and paste the lander link with your tracking parameters.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/ad",
+                  "title": "Ad: C014",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Ad name",
+                      "value": "C014_hookQuestion_9x16"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Website URL",
+                      "value": "lander.example/ke?sub1={{campaign.name}}"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Publish"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              }
+            ]
+          },
+          "say": "Let's build it click by click, in a generic Ads Manager style tool. Follow the order. First, the campaign: name it with your pattern, pick the objective, and declare a special ad category if one applies. Second, the ad set event and budget: website as the conversion location, the event you can feed, and a daily budget. Third, who and where: the country and the minimum age the offer and law require, with automatic placements for a first test. Fourth, the ad: upload the creative, write honest copy, and paste the lander link with your tracking parameters."
+        },
+        {
+          "v": "check",
+          "h": "Name everything the same way",
+          "p": "A naming convention lets you read reports at a glance and lets your team work on the same account without confusion. Pick one pattern and use it on every campaign, ad set and ad.",
+          "more": "Example pattern: geo_offer_objective_event_audience_date. So KE_brokerX_sales_reg_broad_0412. Ads add the creative ID and hook: C014_hookQuestion_9x16. When you export a report or share with a manager, names alone tell the story.",
+          "d": [
+            "Geo first, for example NG or KE",
+            "Offer or brand",
+            "Objective and optimisation event",
+            "Audience type",
+            "Launch date",
+            "Creative ID on every ad"
+          ],
+          "say": "A naming convention lets you read reports at a glance, and lets your team work in the same account without confusion. Here's the checklist. Geo first, like N G or K E. Then the offer or brand. Then the objective and optimisation event. Then the audience type. Then the launch date. And a creative I D on every ad. Pick one pattern and use it everywhere, so when you share a report, the names alone tell the story."
+        },
+        {
+          "v": "compare",
+          "h": "Common structure mistakes",
+          "p": "These mistakes show up in almost every new buyer's first account. Each one makes results harder to read or slower to learn, and some of them cost real money every single day.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Traffic objective for an FTD offer",
+                "Ten ad sets on $50 a day",
+                "Hiding a special ad category",
+                "Random names nobody can read",
+                "Editing settings at the wrong level"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Optimise for the deepest event you can feed",
+                "Budget ÷ (3 × target) ad sets",
+                "Declare it honestly",
+                "One naming pattern everywhere",
+                "Know what lives at each level"
+              ]
+            }
+          },
+          "say": "These mistakes show up in almost every new buyer's first account, each with its fix. A traffic objective for an F T D, first-time deposit, offer, so optimise for the deepest event you can feed. Ten ad sets on fifty dollars a day, so use budget divided by three times target. Hiding a special ad category, so declare it honestly. Random names, so use one pattern everywhere. And editing at the wrong level, so know what lives where."
+        },
+        {
+          "v": "tip",
+          "h": "Same principles on every platform",
+          "p": "TikTok, Snapchat and Google use similar levels and objectives with different names. Learn the logic here once: optimise for the deepest event you can feed, keep structure simple, and declare restricted categories honestly.",
+          "d": {
+            "kind": "tip",
+            "text": "Learn the principle, then look up today's button names. Names change; the logic does not."
+          },
+          "say": "TikTok, Snapchat and Google use similar levels and objectives under different names. So learn the logic here once: optimise for the deepest event you can feed, keep structure simple, and declare restricted categories honestly. Then look up today's button names. Names change; the logic doesn't."
+        }
+      ],
+      "takeaways": [
+        "Meta delivers to people likely to do the action you optimise for, so choose that action carefully.",
+        "Compare objectives by cost per real conversion, not by cost per click.",
+        "Keep structure simple so each ad set gets enough budget and conversions to learn.",
+        "Fund each ad set with about 3 × target CPA for the test, so the kill and scale rules can be applied."
+      ],
+      "action": "Open one of your campaigns and write down its objective, optimisation event and how many conversions each ad set got last week. Mark any ad set with fewer than 10.",
+      "glossary": [
+        {
+          "term": "Objective",
+          "def": "The campaign goal you choose in Meta, which shapes what the delivery system optimises for."
+        },
+        {
+          "term": "Optimisation event",
+          "def": "The specific action, such as a registration, that an ad set asks Meta to find more of."
+        },
+        {
+          "term": "Ad set",
+          "def": "The level where you set audience, placements, budget and optimisation event."
+        },
+        {
+          "term": "Budget fragmentation",
+          "def": "Splitting a budget across so many ad sets that none gets enough conversions to learn."
+        },
+        {
+          "term": "Naming convention",
+          "def": "A fixed pattern for naming campaigns, ad sets and ads so reports are easy to read."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Where do you normally set the audience and optimisation event?",
+          "options": [
+            "Campaign level",
+            "Ad set level",
+            "Ad level",
+            "Business settings"
+          ],
+          "answer": 1,
+          "why": "Audience, placements, optimisation event and ad set budget live at ad set level."
+        },
+        {
+          "q": "Clicks cost $0.20 with a 1% registration rate. What is the cost per registration?",
+          "options": [
+            "$2",
+            "$0.20",
+            "$200",
+            "$20"
+          ],
+          "answer": 3,
+          "why": "$0.20 ÷ 0.01 = $20 per registration."
+        },
+        {
+          "q": "Your offer pays on FTD and you track FTDs reliably with good volume. What should you optimise for?",
+          "options": [
+            "The FTD event",
+            "Link clicks",
+            "Video views",
+            "Page likes"
+          ],
+          "answer": 0,
+          "why": "Optimise for the deepest event that makes you money, as long as you can feed enough volume."
+        },
+        {
+          "q": "You run a loan offer. What must you do at campaign level?",
+          "options": [
+            "Nothing special",
+            "Use a traffic objective",
+            "Declare the credit special ad category",
+            "Hide the word loan"
+          ],
+          "answer": 2,
+          "why": "Credit ads must be declared in the special ad category, which limits targeting options."
+        },
+        {
+          "q": "You have $60 a day for 5 days and a $25 target CPA. Using 3 × target per ad set, how many ad sets can the test feed?",
+          "options": [
+            "12",
+            "4",
+            "1",
+            "8"
+          ],
+          "answer": 1,
+          "why": "$60 × 5 = $300. 3 × $25 = $75 per ad set. $300 ÷ $75 = 4 ad sets."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn how Meta campaigns are structured, which settings live at each level, and how to choose an objective. You'll also work out how many ad sets your budget can actually feed, because a structure that splits money too thin can't learn.",
+      "say_outro": "So: Meta finds people who do what you optimise for, settings live at three levels, and your budget decides how many ad sets you can run. Your task: open one of your campaigns, write down its objective, optimisation event and how many conversions each ad set got last week, and mark any ad set with fewer than ten. Now take the quiz."
+    },
+    {
+      "slug": "conversion-events-and-signal",
+      "title": "Conversion events and signal",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can map your funnel steps to Meta events.",
+        "You can estimate the budget an event needs to give Meta enough signal.",
+        "You can explain why pixel plus Conversions API with deduplication gives better data.",
+        "You can read a server event and confirm deduplication with a real test conversion."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "The event is your most important setting",
+          "p": "The optimisation event tells Meta what a good result looks like. Choose an event that is too shallow and Meta finds people who do cheap things. Choose one that is too rare and Meta cannot learn. Your skill is finding the right depth.",
+          "d": {
+            "b": "Deep enough to matter",
+            "s": "Frequent enough to learn"
+          },
+          "say": "The optimisation event tells Meta what a good result looks like. Choose an event that's too shallow, and Meta finds people who do cheap things. Choose one that's too rare, and Meta can't learn. Your skill is finding the right depth: deep enough to matter, and frequent enough to learn."
+        },
+        {
+          "v": "flow",
+          "h": "How a signal reaches Meta",
+          "p": "An event only helps delivery if it reaches Meta quickly, with enough matching information to link it to a person who saw your ad. Each link in this chain can break, so test it before you spend.",
+          "d": [
+            "User acts",
+            "Pixel or server sends event",
+            "Meta matches to a person",
+            "Event counts for ad set",
+            "Delivery adjusts"
+          ],
+          "say": "Follow this chain to see how a signal reaches Meta. A user acts. The pixel or your server sends the event. Meta matches it to a person who saw your ad. The event counts for the ad set. And delivery adjusts. An event only helps if it arrives quickly, with enough matching information. Each link in the chain can break, so test it before you spend."
+        },
+        {
+          "v": "table",
+          "h": "Map your funnel to events",
+          "p": "Example mapping for a trading funnel through a lander and Telegram. Use standard events where they fit, because Meta understands them by default. Custom events or custom conversions also work when nothing standard fits.",
+          "d": {
+            "cols": [
+              "Funnel step",
+              "Example event",
+              "Volume"
+            ],
+            "rows": [
+              [
+                "Lander view",
+                "ViewContent",
+                "High"
+              ],
+              [
+                "Telegram join",
+                "Lead or custom event",
+                "Medium"
+              ],
+              [
+                "Broker sign-up",
+                "CompleteRegistration",
+                "Medium"
+              ],
+              [
+                "First deposit",
+                "Purchase with value",
+                "Low"
+              ]
+            ]
+          },
+          "say": "Here's an example mapping for a trading funnel through a lander and Telegram. A lander view maps to View Content, with high volume. A Telegram join maps to Lead or a custom event, medium volume. A broker sign-up maps to Complete Registration, medium volume. And a first deposit maps to Purchase with value, low volume. Use standard events where they fit, because Meta understands them by default. Custom events work when nothing standard fits."
+        },
+        {
+          "v": "product",
+          "h": "Tracking Telegram joins as an event",
+          "p": "If your funnel goes through Telegram, the join is often your best mid-funnel event. You need to count joins per invite link before you can send them as a Lead or custom event.",
+          "d": {
+            "slug": "joinvoo",
+            "why": "Track Telegram joins per invite link, so each join can be counted and mapped to an event in your funnel."
+          },
+          "say": "If your funnel goes through Telegram, the join is often your best mid-funnel event. But you need to count joins per invite link before you can send them as a Lead or custom event. A tool like the one on screen tracks Telegram joins per invite link, so each join can be counted and mapped to an event in your funnel."
+        },
+        {
+          "v": "compare",
+          "h": "Pixel only vs pixel plus Conversions API",
+          "p": "The pixel runs in the browser and can be blocked or lose cookies. The Conversions API sends events from your server or tracker. Using both, with matching event IDs, gives Meta more complete data.",
+          "d": {
+            "a": {
+              "title": "Pixel only",
+              "items": [
+                "Browser-based",
+                "Blocked by some browsers and apps",
+                "Cannot see events that happen later on the broker",
+                "Easy to set up"
+              ]
+            },
+            "b": {
+              "title": "Pixel + Conversions API",
+              "items": [
+                "Browser and server together",
+                "Recovers events the pixel misses",
+                "Can send FTDs from postbacks",
+                "Needs deduplication"
+              ]
+            }
+          },
+          "more": "Full Conversions API and postback mapping: Tracking, advanced module. Beginner setup step by step: Tracking setup lab module.",
+          "say": "Compare the columns. The pixel only runs in the browser. It's easy to set up, but some browsers and apps block it, and it can't see events that happen later on the broker. Pixel plus Conversions A P I, application programming interface, sends events from both the browser and your server or tracker. It recovers events the pixel misses and can send F T Ds, first-time deposits, from postbacks. The catch: it needs deduplication."
+        },
+        {
+          "v": "code",
+          "h": "What a server event looks like",
+          "p": "A simplified example of one Conversions API event. Your tracker or server sends it when a postback says a deposit happened. Field names follow Meta's docs at the time of writing; we are not certain they are current, so check them before you build.",
+          "more": "event_id is what lets Meta match this server event with a browser copy of the same event. fbc carries the click ID from the ad click. value should be the real payout or deposit value, never an inflated number. Most trackers build this for you once you map a postback goal to a Meta event; you mainly need to check the result in Events Manager.",
+          "d": {
+            "lang": "json",
+            "text": "{\n  \"event_name\": \"Purchase\",\n  \"event_time\": 1767225600,\n  \"event_id\": \"ftd_8f3a21\",\n  \"action_source\": \"website\",\n  \"user_data\": { \"em\": \"<sha256 of email>\", \"fbc\": \"fb.1.1767220000.AbCd\" },\n  \"custom_data\": { \"value\": 40, \"currency\": \"USD\" }\n}",
+            "note": "Example values. Hash personal data, send only what users consented to, and keep your access token on the server."
+          },
+          "say": "On screen is a simplified example of one server event. I won't read the code, but notice three things. There's an event I D, which lets Meta match this server event with a browser copy. There's a click I D from the ad click. And there's a value, which should be the real payout or deposit value, never inflated. Field names follow Meta's docs at the time of writing, and we're not certain they're current. Hash personal data, send only what users consented to, and keep your access token on the server."
+        },
+        {
+          "v": "tip",
+          "h": "Deduplicate with an event ID",
+          "p": "If the pixel and the server both send the same registration, Meta could count it twice. Send the same event name and the same event ID from both, and Meta keeps one. Check the deduplication status in Events Manager after setup; names change, so check the current tool.",
+          "d": {
+            "kind": "tip",
+            "text": "Same event name + same event ID from pixel and server = counted once."
+          },
+          "say": "If the pixel and the server both send the same registration, Meta could count it twice. The fix is simple. Send the same event name and the same event I D from both, and Meta keeps one. Same name plus same I D equals counted once. After setup, check the deduplication status in Events Manager. Names change, so check the current tool."
+        },
+        {
+          "v": "screen",
+          "h": "Check events in the test tool",
+          "p": "Before launch, make a real test conversion and watch it arrive. This generic mock-up shows a healthy result: browser and server copies of one registration, deduplicated into one. Names change; check the current Ads Manager.",
+          "d": {
+            "kind": "browser",
+            "url": "events.example/test-events",
+            "title": "Test events",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Event",
+                  "Source",
+                  "Event ID",
+                  "Status"
+                ],
+                "rows": [
+                  [
+                    "CompleteRegistration",
+                    "Browser",
+                    "reg_51c9",
+                    "Received"
+                  ],
+                  [
+                    "CompleteRegistration",
+                    "Server",
+                    "reg_51c9",
+                    "Deduplicated"
+                  ],
+                  [
+                    "Purchase",
+                    "Server",
+                    "ftd_8f3a",
+                    "Received"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Same event ID from both sources: counted once."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "Before launch, make a real test conversion and watch it arrive. This generic mock-up shows a healthy result. Look at the table. The registration arrives from the browser and is received. The same registration, with the same event I D, arrives from the server and is marked deduplicated. And a purchase arrives from the server. Same event I D from both sources means it's counted once."
+        },
+        {
+          "v": "big",
+          "h": "The learning phase needs volume",
+          "p": "Meta has said an ad set usually needs around 50 optimisation events within about a week after its last significant edit to exit the learning phase. Treat this as a guide and check current docs, as the number and wording change.",
+          "d": {
+            "b": "Around 50 events a week",
+            "s": "Meta's guidance. Check current docs."
+          },
+          "say": "Meta has said an ad set usually needs around fifty optimisation events within about a week after its last significant edit to exit the learning phase. Treat this as a guide and check current docs, because the number and wording change. But the idea matters: your event has to happen often enough for Meta to learn."
+        },
+        {
+          "v": "eq",
+          "h": "Budget needed for an event",
+          "p": "Multiply the expected cost per event by the events Meta wants per week, then divide by seven. This tells you whether an event is realistic for your daily budget before you build anything.",
+          "d": [
+            "Cost per event",
+            "×",
+            "50",
+            "÷",
+            "7 days",
+            "=",
+            "Daily budget"
+          ],
+          "say": "So how do you know if an event is realistic? Look at the equation. Multiply the expected cost per event by fifty, the events Meta wants per week, then divide by seven days. That gives the daily budget one ad set needs. Do this before you build anything, and you'll know straight away whether your budget can feed that event."
+        },
+        {
+          "v": "bars",
+          "h": "Daily budget by event depth",
+          "p": "Example: costs per event in one trading funnel. Optimising for FTD gives the best users but needs about $214 a day per ad set to reach 50 a week. Registration needs $57. Choose what your budget can feed.",
+          "more": "Worked example. Join at $2: $2 × 50 ÷ 7 = $14.29 a day. Registration at $8: $8 × 50 ÷ 7 = $57.14. FTD at $30: $30 × 50 ÷ 7 = $214.29. A buyer with $60 a day should optimise for registration and judge on FTDs in reporting. As volume grows, test an FTD-optimised ad set alongside.",
+          "d": [
+            [
+              "Join ($2)",
+              7,
+              "$14 a day"
+            ],
+            [
+              "Registration ($8)",
+              27,
+              "$57 a day"
+            ],
+            [
+              "FTD ($30)",
+              100,
+              "$214 a day"
+            ]
+          ],
+          "say": "Here's an example from one trading funnel. Look at the bars. A join at two dollars needs about fourteen dollars a day. A registration at eight dollars needs about fifty seven dollars a day. An F T D at thirty dollars needs about two hundred and fourteen dollars a day per ad set. F T D gives the best users, but a buyer with sixty dollars a day should optimise for registration, judge on F T Ds in reporting, and test an F T D-optimised ad set as volume grows."
+        },
+        {
+          "v": "curve",
+          "h": "Moving the event deeper over time",
+          "p": "Example: cost per FTD over seven weeks. The buyer optimised for registration first, then added an FTD-optimised ad set in week four once FTD volume was high enough. The deeper event found better depositors.",
+          "d": {
+            "a": [
+              38,
+              34,
+              33,
+              31,
+              29,
+              26,
+              24
+            ],
+            "la": "Cost per FTD, moved to FTD in W4 ($)",
+            "b": [
+              38,
+              34,
+              33,
+              32,
+              32,
+              33,
+              32
+            ],
+            "lb": "Cost per FTD, stayed on registration ($)",
+            "x": [
+              "W1",
+              "W2",
+              "W3",
+              "W4",
+              "W5",
+              "W6",
+              "W7"
+            ]
+          },
+          "say": "This example chart shows cost per F T D over seven weeks. Both lines start at thirty eight dollars. The buyer optimised for registration first, then added an F T D-optimised ad set in week four, once F T D volume was high enough. Watch the top line fall to twenty four dollars by week seven, while the line that stayed on registration hovers around thirty two. The deeper event found better depositors."
+        },
+        {
+          "v": "cards",
+          "h": "Signal quality matters too",
+          "p": "Volume is not enough. Meta also needs to recognise who did the event. Better matching and honest values let it find more people like your real depositors.",
+          "more": "Events Manager shows a match quality score for server events. It improves when you send more of the identifiers users have consented to share, such as hashed email or phone, plus click ID and browser ID. Send only data you are allowed to collect under the privacy law of your geo and your own privacy policy.",
+          "d": [
+            "Click ID|links the event to the ad click",
+            "Hashed email or phone|with consent only",
+            "Event value|real payout or deposit value",
+            "Timeliness|send events soon after they happen"
+          ],
+          "say": "Volume isn't enough. Meta also needs to recognise who did the event. Look at the cards. The click I D links the event to the ad click. A hashed email or phone helps matching, with consent only. The event value should be the real payout or deposit value. And timeliness means sending events soon after they happen. Send only data you're allowed to collect under the privacy law of your geo and your own privacy policy."
+        },
+        {
+          "v": "tip",
+          "h": "Never send fake or inflated events",
+          "p": "Some buyers fire events for people who did not act, or inflate values, to push delivery. It teaches Meta to find the wrong people, breaks platform terms, and corrupts your own data. Send only real events.",
+          "d": {
+            "kind": "warn",
+            "text": "Every event you send must be a real action by a real person who agreed to your privacy terms."
+          },
+          "say": "Some buyers fire events for people who didn't act, or inflate values, to push delivery. Don't. It teaches Meta to find the wrong people, breaks platform terms, and corrupts your own data. Read the warning: every event you send must be a real action by a real person who agreed to your privacy terms."
+        },
+        {
+          "v": "compare",
+          "h": "Common event mistakes",
+          "p": "Event mistakes are silent. The campaign spends and reports numbers, but the numbers teach Meta the wrong thing. Check your setup against this list before you trust any report.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Optimising for an event you cannot feed",
+                "No event ID, so events double count",
+                "Click ID lost between lander and offer",
+                "Firing Purchase for every join",
+                "Never making a test conversion"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Cost per event × 50 ÷ 7 vs budget",
+                "Same name and ID from both sources",
+                "Pass the click ID at every step",
+                "Send each event as what it is",
+                "Test one real conversion first"
+              ]
+            }
+          },
+          "say": "Event mistakes are silent. The campaign spends and reports numbers, but the numbers teach Meta the wrong thing. Here are the mistakes with their fixes. Optimising for an event you can't feed, so check cost per event times fifty divided by seven against budget. No event I D, so events double count. Click I D lost between lander and offer, so pass it at every step. Firing Purchase for every join, so send each event as what it is. And never testing, so test one real conversion first."
+        },
+        {
+          "v": "check",
+          "h": "Event setup checklist",
+          "p": "Run this before you launch any campaign that optimises for a conversion event. Use the test events tool in Events Manager and make a real test conversion yourself.",
+          "d": [
+            "Event fires once per real action",
+            "Pixel and server events deduplicated",
+            "Click ID passed through the funnel",
+            "Values sent for deposit events",
+            "Privacy policy and consent in place",
+            "Test conversion seen in Events Manager"
+          ],
+          "say": "Run this checklist before you launch any campaign that optimises for a conversion event. The event fires once per real action. Pixel and server events are deduplicated. The click I D passes through the funnel. Values are sent for deposit events. Your privacy policy and consent are in place. And a test conversion is seen in Events Manager. Use the test events tool and make a real test conversion yourself."
+        }
+      ],
+      "takeaways": [
+        "Pick the deepest event your budget can feed: cost per event × 50 ÷ 7 is a quick guide.",
+        "Use pixel plus Conversions API with matching event IDs, and pass click IDs through the funnel.",
+        "Send only real, consented events with honest values.",
+        "Make one real test conversion and see browser and server copies deduplicated before you spend."
+      ],
+      "action": "Write your funnel steps in a column. Next to each, write the Meta event you would map it to, its rough cost, and the daily budget it would need to reach about 50 a week.",
+      "glossary": [
+        {
+          "term": "Conversions API",
+          "def": "Meta's server-side way to send events, used alongside the pixel to recover events the browser misses."
+        },
+        {
+          "term": "Deduplication",
+          "def": "Counting an event once when both the pixel and the server send it, using a shared event ID."
+        },
+        {
+          "term": "Event ID",
+          "def": "A unique ID attached to an event so Meta can match browser and server copies."
+        },
+        {
+          "term": "Learning phase",
+          "def": "The period after launch or a significant edit when Meta is still exploring who converts, so results are less stable."
+        },
+        {
+          "term": "Match quality",
+          "def": "How well Meta can link a server event to a person, based on the identifiers you send."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Registrations cost $14. Roughly what daily budget does one ad set need for 50 a week?",
+          "options": [
+            "$14",
+            "$50",
+            "$100",
+            "$700"
+          ],
+          "answer": 2,
+          "why": "$14 × 50 = $700 a week. $700 ÷ 7 = $100 a day."
+        },
+        {
+          "q": "Why send the same event ID from the pixel and the server?",
+          "options": [
+            "So Meta counts the event once",
+            "So Meta pays you twice",
+            "To exit learning faster",
+            "To open more placements"
+          ],
+          "answer": 0,
+          "why": "A shared event ID lets Meta deduplicate browser and server copies of the same event."
+        },
+        {
+          "q": "You have $40 a day and FTDs cost about $35. What is the most sensible optimisation event?",
+          "options": [
+            "FTD",
+            "Page like",
+            "Video views",
+            "A shallower event such as registration, while judging results on FTDs"
+          ],
+          "answer": 3,
+          "why": "At $40 a day you would get about 8 FTDs a week, far below the volume Meta suggests. Optimise for a shallower event and report on FTDs."
+        },
+        {
+          "q": "In a server event, what is the event_id for?",
+          "options": [
+            "Matching the server copy with the browser copy so the event counts once",
+            "Setting the payout",
+            "Choosing the audience",
+            "Naming the ad"
+          ],
+          "answer": 0,
+          "why": "A shared event ID lets Meta deduplicate the two copies of the same action."
+        },
+        {
+          "q": "A buyer fires a Purchase event for every Telegram join to speed up learning. What is the problem?",
+          "options": [
+            "None, more events are better",
+            "It costs more",
+            "Meta will exit learning too fast",
+            "It teaches Meta to find joiners, misleads reporting and breaks honest data use"
+          ],
+          "answer": 3,
+          "why": "Mislabelling events corrupts optimisation and your own reporting. Send each event as what it really is."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn why the conversion event is your most important setting, how to map your funnel to Meta events, and how to work out whether your budget can feed an event. You'll also see how pixel plus Conversions A P I, with deduplication, gives Meta better data.",
+      "say_outro": "You've mapped funnel steps to events, used the cost per event times fifty divided by seven check, and seen how deduplication and honest, consented data keep your signal clean. Your task: write your funnel steps in a column, and next to each, write the Meta event, its rough cost, and the daily budget it would need to reach about fifty a week. Now take the quiz."
+    },
+    {
+      "slug": "audiences",
+      "title": "Audiences: broad, interests and lookalikes",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can choose between broad, interest, custom and lookalike audiences.",
+        "You can compare audiences by cost per conversion using CPM, CTR and conversion rate.",
+        "You can set exclusions and age and location rules for regulated offers.",
+        "You can set firm age and location limits and build a consented depositor lookalike step by step."
+      ],
+      "steps": [
+        {
+          "v": "cards",
+          "h": "The audience types",
+          "p": "Meta gives you several ways to describe who should see your ads. At the time of writing, most of them are treated as suggestions that the system can expand beyond; check the current Ads Manager. Know what each one is for.",
+          "d": [
+            "Broad|location, age, gender only",
+            "Interests|detailed targeting by topics",
+            "Custom|people who interacted with you",
+            "Lookalike|people similar to a seed list",
+            "Automated audience|Meta builds it from your suggestions"
+          ],
+          "say": "Meta gives you several ways to describe who should see your ads. Look at the cards. Broad uses location, age and gender only. Interests use detailed targeting by topic. Custom audiences are people who interacted with you. Lookalikes are people similar to a seed list. And an automated audience is one Meta builds from your suggestions. At the time of writing, most of these are treated as suggestions the system can expand beyond, so check the current Ads Manager."
+        },
+        {
+          "v": "big",
+          "h": "Your creative now does much of the targeting",
+          "p": "With broad audiences, Meta watches who stops, watches and converts on each ad, then finds more of them. A video in Pidgin about trading basics will find a different crowd from an English video about crypto. Your creative chooses the audience.",
+          "d": {
+            "b": "Creative is targeting",
+            "s": "Who engages decides who Meta finds next"
+          },
+          "say": "Here's a big shift in how targeting works. With broad audiences, Meta watches who stops, watches and converts on each ad, then finds more of them. So a video in Pidgin about trading basics will find a different crowd from an English video about crypto. Your creative chooses the audience. Who engages decides who Meta finds next."
+        },
+        {
+          "v": "compare",
+          "h": "Broad vs interest targeting",
+          "p": "Neither is always better. Broad gives Meta room to learn once your event and creative are strong. Interests can help a brand-new pixel find a starting point. Test both on the same creative.",
+          "d": {
+            "a": {
+              "title": "Broad",
+              "items": [
+                "Large pool, often lower CPM",
+                "Relies on strong event signal",
+                "Creative must call out the right people",
+                "Scales more easily"
+              ]
+            },
+            "b": {
+              "title": "Interests",
+              "items": [
+                "Smaller, more defined pool",
+                "Helps when signal is thin",
+                "Often higher CPM",
+                "Can saturate faster"
+              ]
+            }
+          },
+          "say": "Neither broad nor interests is always better. Compare the columns. Broad gives a large pool, often at a lower C P M, cost per thousand impressions. It relies on strong event signal, needs creative that calls out the right people, and scales more easily. Interests give a smaller, defined pool that helps when signal is thin, but often costs more and can saturate faster. Test both on the same creative."
+        },
+        {
+          "v": "eq",
+          "h": "Compare audiences on cost per result",
+          "p": "Cost per conversion depends on three numbers: CPM, CTR and conversion rate. Put them together and you can see why an audience with a higher CTR can still lose.",
+          "d": [
+            "CPM",
+            "÷",
+            "(1,000 × CTR × CR)",
+            "=",
+            "Cost per conversion"
+          ],
+          "say": "To compare audiences fairly, look at cost per conversion, which depends on three numbers. C P M, C T R, that's click-through rate, and conversion rate. Look at the equation: C P M divided by one thousand times C T R times conversion rate gives cost per conversion. Putting them together shows why an audience with a higher C T R can still lose."
+        },
+        {
+          "v": "table",
+          "h": "Broad vs interests, worked example",
+          "p": "Example: same creative, same offer, same week. The interest ad set had a higher CTR, but broad delivered at a lower CPM, so broad won on cost per registration.",
+          "more": "Worked example. Interests: $3.50 ÷ (1,000 × 0.015 × 0.02) = $3.50 ÷ 0.30 = $11.67. Broad: $2.20 ÷ (1,000 × 0.012 × 0.02) = $2.20 ÷ 0.24 = $9.17. Here CR is click to registration. Always finish with your real paid event too: if broad registrations deposit less often, the answer can flip.",
+          "d": {
+            "cols": [
+              "Metric",
+              "Interests",
+              "Broad"
+            ],
+            "rows": [
+              [
+                "CPM",
+                "$3.50",
+                "$2.20"
+              ],
+              [
+                "CTR",
+                "1.5%",
+                "1.2%"
+              ],
+              [
+                "Click to reg",
+                "2%",
+                "2%"
+              ],
+              [
+                "Cost per reg",
+                "$11.67",
+                "$9.17"
+              ]
+            ]
+          },
+          "say": "Here's a worked example, same creative, same offer, same week. Read the table. Interests had a C P M of three fifty and a C T R of one point five percent. Broad had a C P M of two twenty and a C T R of one point two percent. Both converted two percent of clicks to registrations. The result: eleven sixty seven per registration for interests, nine seventeen for broad. Broad won on cost. But always finish with your real paid event, because if broad registrations deposit less often, the answer can flip."
+        },
+        {
+          "v": "screen",
+          "h": "The audience section of an ad set",
+          "p": "A generic mock-up of the audience controls. Location and minimum age are set first as firm limits. Interests, if any, sit below as suggestions the system may expand beyond. Which controls are firm changes over time; names change; check the current Ads Manager.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/adset/audience",
+            "title": "Ad set: KE_broad",
+            "blocks": [
+              {
+                "type": "select",
+                "label": "Location",
+                "value": "Kenya"
+              },
+              {
+                "type": "field",
+                "label": "Minimum age",
+                "value": "21"
+              },
+              {
+                "type": "toggle",
+                "label": "Advantage audience (suggestions)",
+                "on": true
+              },
+              {
+                "type": "field",
+                "label": "Audience suggestions",
+                "value": "None, broad"
+              },
+              {
+                "type": "field",
+                "label": "Exclude",
+                "value": "Depositors list, last 180 days"
+              },
+              {
+                "type": "text",
+                "value": "Location and minimum age are treated as limits. Check this in the current Ads Manager."
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "This generic mock-up shows the audience controls. Notice the order. Location, here Kenya, and the highlighted minimum age, twenty one, are set first as firm limits. Below that, the audience suggestions, here none, so broad. And an exclusion for the depositors list from the last one hundred and eighty days. Which controls are firm changes over time, so check this in the current Ads Manager."
+        },
+        {
+          "v": "flow",
+          "h": "Building a lookalike",
+          "p": "A lookalike asks Meta to find people similar to a seed list. The seed decides everything. A seed of depositors is far more useful than a seed of everyone who clicked.",
+          "more": "Meta has said a seed needs at least 100 people from one country, and larger, higher quality seeds tend to work better; check current docs. Customer lists must only contain people who gave consent for this use under your privacy policy and local law, and Meta hashes the data before matching.",
+          "d": [
+            "Pick best seed",
+            "Check consent",
+            "Upload or use event",
+            "Choose country",
+            "Pick size %",
+            "Test vs broad"
+          ],
+          "say": "A lookalike asks Meta to find people similar to a seed list, and the seed decides everything. A seed of depositors is far more useful than a seed of everyone who clicked. Follow the steps: pick your best seed, check consent, upload it or use an event, choose the country, pick the size percentage, and test it against broad. Customer lists must only contain people who consented to this use under your privacy policy and local law."
+        },
+        {
+          "v": "walk",
+          "h": "Build a lookalike from depositors",
+          "p": "A generic walkthrough. The order matters: consented source first, then the lookalike. Menu names here are as we understand them at the time of writing; we are not certain they are current. Names change; check the current Ads Manager.",
+          "d": {
+            "steps": [
+              {
+                "title": "Create a custom audience",
+                "text": "Choose a customer list or a website event, such as Purchase, as the source.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/audiences",
+                  "title": "Create custom audience",
+                  "blocks": [
+                    {
+                      "type": "radio",
+                      "label": "Source",
+                      "options": [
+                        "Website event",
+                        "Customer list",
+                        "Video viewers"
+                      ],
+                      "value": 1
+                    },
+                    {
+                      "type": "button",
+                      "label": "Next"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Confirm consent",
+                "text": "Upload only people who agreed to this use in your privacy notice. The data is hashed before matching.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/audiences/list",
+                  "title": "Customer list",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "File",
+                      "value": "ke_depositors_consented.csv"
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "I confirm this data was collected with consent",
+                      "on": true
+                    },
+                    {
+                      "type": "button",
+                      "label": "Upload"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Create the lookalike",
+                "text": "Pick the depositor audience as seed, the target country and a small size first.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/audiences/lookalike",
+                  "title": "Create lookalike",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Source",
+                      "value": "KE depositors (consented)"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Location",
+                      "value": "Kenya"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Audience size",
+                      "value": "1%"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Create"
+                    }
+                  ],
+                  "highlight": 2
+                }
+              }
+            ]
+          },
+          "say": "Let's walk through building a lookalike from depositors. The order matters: consented source first, then the lookalike. Menu names may not be current. Step one: create a custom audience, choosing a customer list or a website event like Purchase as the source. Step two: confirm consent. Upload only people who agreed to this use in your privacy notice; the data is hashed before matching. Step three: create the lookalike, picking the depositor audience as seed, the target country, and a small size first, like one percent."
+        },
+        {
+          "v": "bars",
+          "h": "Seed quality matters",
+          "p": "Example: three lookalikes in the same geo, each built from a different seed. The depositor seed cost more per click but produced the cheapest FTDs because the people were closer to real customers.",
+          "d": [
+            [
+              "Clickers seed",
+              100,
+              "$41 per FTD"
+            ],
+            [
+              "Registrations seed",
+              78,
+              "$32 per FTD"
+            ],
+            [
+              "Depositors seed",
+              61,
+              "$25 per FTD"
+            ]
+          ],
+          "say": "Here's an example of why seed quality matters. Three lookalikes in the same geo, each from a different seed. Look at the bars. The clickers seed cost forty one dollars per F T D, first-time deposit. The registrations seed, thirty two. The depositors seed, twenty five dollars. It cost more per click, but produced the cheapest F T Ds, because the people were closer to real customers."
+        },
+        {
+          "v": "check",
+          "h": "Custom audiences you can use",
+          "p": "Custom audiences are built from people who already interacted with you. Use them for retargeting and as seeds. Only use data you collected with consent and in line with your privacy policy.",
+          "d": [
+            "Website or lander visitors",
+            "Video viewers, for example 50% watched",
+            "Page and Instagram engagers",
+            "Lead form openers or submitters",
+            "Consented customer lists"
+          ],
+          "say": "Custom audiences are built from people who already interacted with you. Use them for retargeting and as seeds. Here are the ones you can use: website or lander visitors, video viewers, for example fifty percent watched, Page and Instagram engagers, lead form openers or submitters, and consented customer lists. Only use data you collected with consent and in line with your privacy policy."
+        },
+        {
+          "v": "tip",
+          "h": "Exclude people you already have",
+          "p": "Acquisition campaigns should not pay to reach people who already deposited. Exclude depositors and recent registrants where you can, so your budget finds new people and your cost per new FTD stays honest.",
+          "d": {
+            "kind": "tip",
+            "text": "Exclude existing depositors from acquisition ad sets. Reach them through your own channels instead."
+          },
+          "say": "Acquisition campaigns shouldn't pay to reach people who already deposited. So exclude depositors and recent registrants where you can. That way your budget finds new people, and your cost per new F T D stays honest. Reach existing depositors through your own channels instead."
+        },
+        {
+          "v": "tip",
+          "h": "Age and location for regulated offers",
+          "p": "For trading and gambling, set the minimum age to the legal age in that geo or higher, and target only the countries the offer and your permission cover. Automated audience expansion must never push you outside those rules.",
+          "more": "Some automated audience options let Meta go beyond your suggestions, but minimum age and location are usually treated as firm limits. Confirm in the current Ads Manager which controls are hard limits and which are suggestions. Name changes are frequent. Full detail: Compliance for finance, trading and gambling offers module.",
+          "d": {
+            "kind": "warn",
+            "text": "Age minimum and location are legal limits, not suggestions. Set them first."
+          },
+          "say": "For trading and gambling, set the minimum age to the legal age in that geo or higher, and target only the countries the offer and your permission cover. Automated audience expansion must never push you outside those rules. Minimum age and location are usually treated as firm limits, but confirm that in the current Ads Manager. Read the warning: age minimum and location are legal limits, not suggestions. Set them first."
+        },
+        {
+          "v": "compare",
+          "h": "Common audience mistakes",
+          "p": "These are the audience mistakes that waste the most money. Several of them also create legal or policy risk, which is worse than a bad CPA.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Judging audiences on CTR",
+                "Lookalikes from all clickers",
+                "Uploading a bought list",
+                "Paying to reach depositors again",
+                "Letting age drop below the law"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Judge on cost per paid event",
+                "Seed from depositors",
+                "Consented data only",
+                "Exclude existing depositors",
+                "Set age and location first"
+              ]
+            }
+          },
+          "say": "These audience mistakes waste the most money, and several also create legal or policy risk, which is worse than a bad C P A. The fixes: judge audiences on cost per paid event, not C T R. Seed lookalikes from depositors, not all clickers. Use consented data only, never a bought list. Exclude existing depositors. And set age and location first, so age never drops below the law."
+        },
+        {
+          "v": "check",
+          "h": "Audience test plan",
+          "p": "A simple way to learn which audience type fits your offer. Keep the creative the same across ad sets, so the audience is the only thing that changes. Judge each ad set with the same starting rule card on network-confirmed conversions.",
+          "d": [
+            "One ad set broad",
+            "One ad set interest stack",
+            "One ad set lookalike from best seed",
+            "Same three creatives in each",
+            "About 3 × target CPA per ad set",
+            "Apply the rule card to each ad set"
+          ],
+          "say": "Here's a simple audience test plan. One ad set broad, one interest stack, and one lookalike from your best seed. The same three creatives in each, so the audience is the only thing that changes. About three times target C P A per ad set. Then apply the same starting rule card to each, judging on network-confirmed conversions."
+        }
+      ],
+      "takeaways": [
+        "Creative now does much of the targeting; broad works once your event and creative are strong.",
+        "Compare audiences with CPM ÷ (1,000 × CTR × CR), then confirm on the paid event.",
+        "Use consented data only, exclude existing depositors, and treat age and location as legal limits."
+      ],
+      "action": "Pull last week's numbers for two ad sets with different audiences. Calculate cost per conversion with the CPM, CTR and CR formula and check it matches Ads Manager.",
+      "glossary": [
+        {
+          "term": "Broad audience",
+          "def": "Targeting with only location, age and gender, leaving Meta to find converters."
+        },
+        {
+          "term": "Lookalike audience",
+          "def": "An audience Meta builds from people similar to a seed list you provide."
+        },
+        {
+          "term": "Seed",
+          "def": "The source list or event used to build a lookalike, such as depositors."
+        },
+        {
+          "term": "Custom audience",
+          "def": "People who already interacted with you, such as visitors, engagers or consented customers."
+        },
+        {
+          "term": "Exclusion",
+          "def": "An audience you remove from an ad set so you do not pay to reach them."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "CPM $4, CTR 1%, click-to-registration 2%. What is the cost per registration?",
+          "options": [
+            "$2",
+            "$20",
+            "$8",
+            "$40"
+          ],
+          "answer": 1,
+          "why": "$4 ÷ (1,000 × 0.01 × 0.02) = $4 ÷ 0.2 = $20."
+        },
+        {
+          "q": "Which seed usually builds the most useful lookalike for an FTD offer?",
+          "options": [
+            "All page likers",
+            "All link clickers",
+            "People who deposited",
+            "Video viewers at 3 seconds"
+          ],
+          "answer": 2,
+          "why": "The seed should look like the customers you are paid for. Depositors are closest."
+        },
+        {
+          "q": "Why can broad targeting work well once a pixel has strong signal?",
+          "options": [
+            "Meta uses conversion data and creative engagement to find buyers in a large pool",
+            "It always has the highest CTR",
+            "It ignores age limits",
+            "It never needs creative testing"
+          ],
+          "answer": 0,
+          "why": "With enough signal, Meta finds converters inside a large pool, often at lower CPM."
+        },
+        {
+          "q": "What is the right age setting for a gambling offer in a geo where the legal age is 18?",
+          "options": [
+            "13+",
+            "16+",
+            "Any age, Meta will filter",
+            "18+ or higher"
+          ],
+          "answer": 3,
+          "why": "The legal age is the minimum. You may go higher, never lower."
+        },
+        {
+          "q": "Which file may you upload as a customer list for a lookalike?",
+          "options": [
+            "A list bought from a seller",
+            "Depositors who consented to this use in your privacy notice",
+            "Members scraped from another Telegram group",
+            "Any phone numbers you have"
+          ],
+          "answer": 1,
+          "why": "Customer lists must contain only people who agreed to this use. Bought or scraped lists break platform terms and data protection law."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn the audience types Meta offers, how to compare them on cost per result, and how to build a consented lookalike from depositors. You'll also set firm age and location limits, which matter most for regulated offers.",
+      "say_outro": "You've compared broad, interest, custom and lookalike audiences, used the C P M, C T R and conversion rate formula, and set firm age and location limits. Your task: pull last week's numbers for two ad sets with different audiences, calculate cost per conversion with the formula, and check it matches Ads Manager. Now take the quiz."
+    },
+    {
+      "slug": "automation-placements-and-learning",
+      "title": "Automation, placements and the learning phase",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can decide when to use automated campaign options and when to keep manual control.",
+        "You can read placement breakdowns and act on them.",
+        "You can avoid edits that reset learning and know what 'learning limited' means.",
+        "You can apply a starting rule before cutting a placement."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Automation is a tool, not a strategy",
+          "p": "Meta keeps adding automated options under the Advantage name: automated campaigns, audiences, placements, budgets and creative enhancements. Names change; check the current Ads Manager. They often work well with strong signal. They still need clear inputs, honest creative and your judgement.",
+          "d": {
+            "b": "Automate the delivery",
+            "s": "Keep control of the rules"
+          },
+          "say": "Meta keeps adding automated options under the Advantage name: automated campaigns, audiences, placements, budgets and creative enhancements. Names change, so check the current Ads Manager. They often work well with strong signal. But they still need clear inputs, honest creative and your judgement. Automate the delivery, but keep control of the rules."
+        },
+        {
+          "v": "compare",
+          "h": "Automated vs manual setup",
+          "p": "Automated campaign types reduce the number of settings and let Meta move budget between audiences, placements and ads. Manual setups are slower but easier to read when you are testing.",
+          "d": {
+            "a": {
+              "title": "Automated campaign types",
+              "items": [
+                "Fewer settings",
+                "Meta moves budget freely",
+                "Strong when signal is good",
+                "Harder to see why results change"
+              ]
+            },
+            "b": {
+              "title": "Manual campaigns",
+              "items": [
+                "More settings to control",
+                "Clean tests of one variable",
+                "Easier to diagnose",
+                "More work to manage"
+              ]
+            }
+          },
+          "say": "Compare the two setups. Automated campaign types have fewer settings and let Meta move budget freely between audiences, placements and ads. They're strong when signal is good, but it's harder to see why results change. Manual campaigns have more settings to control and take more work, but they give clean tests of one variable and are easier to diagnose. That's why manual setups suit testing."
+        },
+        {
+          "v": "tip",
+          "h": "Check automatic creative enhancements",
+          "p": "Some automated options can change your creative: adjust brightness, add music, crop images, add text or generate variations. For regulated offers, review what is switched on so nothing alters your claims or removes a required warning.",
+          "d": {
+            "kind": "warn",
+            "text": "Review enhancement settings on every new ad. Turn off any that could change claims or hide risk text."
+          },
+          "say": "Some automated options can change your creative. They might adjust brightness, add music, crop images, add text or generate variations. For regulated offers, that's a real risk. Review what's switched on, so nothing alters your claims or removes a required warning. Read the warning: review enhancement settings on every new ad, and turn off any that could change claims or hide risk text."
+        },
+        {
+          "v": "cards",
+          "h": "Placements you will see",
+          "p": "Placements are where your ad appears. Automated placements let Meta choose. Each placement has its own format, audience mood and quality, so build creative for the main ones. Placement names and options change; check the current Ads Manager.",
+          "d": [
+            "Feeds|Facebook and Instagram, 4:5 or 1:1",
+            "Stories and Reels|full screen 9:16, sound often on",
+            "Audience Network|apps outside Meta, mixed quality",
+            "Messenger and others|smaller share, check results"
+          ],
+          "say": "Placements are where your ad appears. Look at the cards. Feeds on Facebook and Instagram, in four by five or square. Stories and Reels, full screen nine by sixteen, often with sound on. Audience Network, apps outside Meta, with mixed quality. And Messenger and others, a smaller share, so check results. Each placement has its own format, mood and quality, so build creative for the main ones."
+        },
+        {
+          "v": "screen",
+          "h": "Where placements are chosen",
+          "p": "A generic mock-up of the placement control. Automatic placements let Meta choose. Manual placements let you untick some, for example Audience Network, after your data shows it does not pay. Names change; check the current Ads Manager.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/adset/placements",
+            "title": "Ad set: KE_broad",
+            "blocks": [
+              {
+                "type": "radio",
+                "label": "Placements",
+                "options": [
+                  "Automatic placements",
+                  "Manual placements"
+                ],
+                "value": 1
+              },
+              {
+                "type": "toggle",
+                "label": "Facebook and Instagram feeds",
+                "on": true
+              },
+              {
+                "type": "toggle",
+                "label": "Stories and Reels",
+                "on": true
+              },
+              {
+                "type": "toggle",
+                "label": "Audience Network",
+                "on": false
+              },
+              {
+                "type": "text",
+                "value": "Turned off after 7 days: $30 per registration vs $10 in feeds."
+              }
+            ],
+            "highlight": 4
+          },
+          "say": "This generic mock-up shows the placement control. Manual placements are selected. Feeds and Stories and Reels are on, but Audience Network is off. Look at the highlighted note: it was turned off after seven days, at thirty dollars per registration versus ten dollars in feeds. That's the right way to do it: cut a placement only after your data shows it doesn't pay."
+        },
+        {
+          "v": "table",
+          "h": "Reading a placement breakdown",
+          "p": "Example: breakdown by placement for one ad set. Reels drove the cheapest registrations. Audience Network had cheap clicks but almost no registrations. Always judge placements on the paid event.",
+          "more": "Worked example. Feeds: $300 ÷ 30 = $10 per reg. Reels: $250 ÷ 31 = $8.06. Audience Network: $90 for 600 clicks is $0.15 a click, but only 3 regs, so $30 per reg. If this pattern holds for a week with enough data, exclude that placement or build a separate test. Small numbers can mislead, so do not act on a day's data.",
+          "d": {
+            "cols": [
+              "Placement",
+              "Spend",
+              "Regs",
+              "Cost per reg"
+            ],
+            "rows": [
+              [
+                "FB and IG feeds",
+                "$300",
+                "30",
+                "$10.00"
+              ],
+              [
+                "Reels",
+                "$250",
+                "31",
+                "$8.06"
+              ],
+              [
+                "Audience Network",
+                "$90",
+                "3",
+                "$30.00"
+              ]
+            ]
+          },
+          "say": "Here's an example breakdown for one ad set. Read the table. Feeds spent three hundred dollars for thirty registrations, ten dollars each. Reels spent two hundred and fifty for thirty one, about eight dollars each, the cheapest. Audience Network spent ninety dollars for six hundred cheap clicks, but only three registrations, thirty dollars each. Always judge placements on the paid event, and don't act on a single day's data, because small numbers can mislead."
+        },
+        {
+          "v": "tip",
+          "h": "Starting rule for cutting a placement",
+          "p": "Do not cut a placement on one day of data. Starting rule: exclude or separately test a placement only once it has spent at least 3 × your target and its cost per paid event is above your kill line. Adapt to your data.",
+          "more": "The kill line is the lower of 1.5 × target and break-even, the same as the ad set rule card. Here 1.5 × $10 = $15 and break-even is $14, so the line is $14. Full rule card: Budget and kill rules module.",
+          "d": {
+            "kind": "example",
+            "text": "Example: target $10 per registration, break-even $14. Audience Network spent $90 (9 × target) at $30 per registration over 7 days: cut it."
+          },
+          "say": "Here's a starting rule for cutting a placement. Exclude it, or test it separately, only once it has spent at least three times your target, and its cost per paid event is above your kill line. In this example, the target is ten dollars per registration and break-even is fourteen. Audience Network spent ninety dollars, nine times target, at thirty dollars per registration over seven days. So it's cut. Adapt the rule to your data."
+        },
+        {
+          "v": "big",
+          "h": "What the learning phase is",
+          "p": "After you launch or significantly edit an ad set, Meta explores who converts. Costs swing and results are less stable. Once it has enough conversions, delivery settles. Your job during learning is mostly patience.",
+          "d": {
+            "b": "Explore, then settle",
+            "s": "Results swing until Meta has enough data"
+          },
+          "say": "After you launch or significantly edit an ad set, Meta explores who converts. That's the learning phase. Costs swing and results are less stable. Once it has enough conversions, delivery settles. Your job during learning is mostly patience. Explore, then settle."
+        },
+        {
+          "v": "curve",
+          "h": "Learning in practice",
+          "p": "Example: daily cost per registration for a new ad set. It swings for the first days while Meta explores, then settles. The second line shows what happens when the buyer edits the ad set on day three.",
+          "d": {
+            "a": [
+              16,
+              7,
+              13,
+              9,
+              10,
+              9,
+              9
+            ],
+            "la": "Left alone ($)",
+            "b": [
+              16,
+              7,
+              13,
+              18,
+              8,
+              15,
+              11
+            ],
+            "lb": "Edited on D3, learning reset ($)",
+            "x": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7"
+            ]
+          },
+          "say": "This example chart shows daily cost per registration for a new ad set. The left alone line swings in the first days, then settles around nine or ten dollars. Now look at the second line. The buyer edited the ad set on day three, which reset learning, and costs jumped to eighteen dollars and kept swinging for the rest of the week."
+        },
+        {
+          "v": "check",
+          "h": "Edits that usually reset learning",
+          "p": "Meta has listed changes that count as significant edits, and the list changes over time; check current docs. These are the usual ones. Batch your changes and make them less often.",
+          "d": [
+            "Changing the optimisation event",
+            "Changing audience or placements",
+            "Large budget or bid changes",
+            "Adding or changing ads",
+            "Pausing for a long period"
+          ],
+          "say": "Meta has listed changes that count as significant edits, and the list changes over time, so check current docs. These are the usual ones: changing the optimisation event, changing the audience or placements, large budget or bid changes, adding or changing ads, and pausing for a long period. The habit to build: batch your changes, and make them less often."
+        },
+        {
+          "v": "screen",
+          "h": "Reading the delivery column",
+          "p": "A generic mock-up of the delivery column. Learning means the ad set is still exploring. Learning limited means Meta does not expect enough events to finish. Active means it has settled. Status names change; check the current Ads Manager.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/campaigns",
+            "title": "Ad sets",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Ad set",
+                  "Delivery",
+                  "Results (7d)",
+                  "Cost per result"
+                ],
+                "rows": [
+                  [
+                    "KE_broad",
+                    "Active",
+                    "58",
+                    "$8.40"
+                  ],
+                  [
+                    "KE_interests",
+                    "Learning",
+                    "21",
+                    "$9.90"
+                  ],
+                  [
+                    "KE_lal1",
+                    "Learning limited",
+                    "9",
+                    "$12.10"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Learning limited: consolidate, raise budget or move the event one step up."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "This mock-up shows the delivery column. Read the three statuses. Active, for the broad ad set with fifty eight results, means it has settled. Learning, for interests with twenty one, means it's still exploring. Learning limited, for the lookalike with nine, means Meta doesn't expect enough events to finish. The note suggests the fixes: consolidate, raise budget, or move the event one step up. Status names change, so check the current Ads Manager."
+        },
+        {
+          "v": "tip",
+          "h": "Learning limited means not enough signal",
+          "p": "If Meta shows that an ad set is learning limited, it expects the ad set will not get enough optimisation events to exit learning. Status names change; check the current Ads Manager. Usual fixes are to combine ad sets, raise budget, widen the audience or move to a shallower event.",
+          "more": "Example: three ad sets each getting 12 registrations a week are all learning limited. Merge them into one ad set and it gets about 36 a week from the same spend, closer to Meta's guidance. If that is still not enough, optimise one step higher in the funnel and judge results on your paid event.",
+          "d": {
+            "kind": "example",
+            "text": "Example: 3 ad sets × 12 regs a week merged into 1 ad set with about 36."
+          },
+          "say": "If Meta shows an ad set as learning limited, it expects it won't get enough optimisation events to exit learning. Usual fixes: combine ad sets, raise budget, widen the audience, or move to a shallower event. In this example, three ad sets each getting twelve registrations a week are all learning limited. Merge them into one, and it gets about thirty six a week from the same spend, closer to Meta's guidance."
+        },
+        {
+          "v": "stat",
+          "h": "Consolidation in numbers",
+          "p": "Example: the same $210 a week, at $7 per registration, gives 30 registrations whether split or combined. Combined in one ad set, all 30 teach one model instead of 10 each teaching three separate ones.",
+          "d": {
+            "n": 30,
+            "pre": "",
+            "suf": "",
+            "dec": 0,
+            "label": "registrations teaching one ad set",
+            "note": "Example. $210 ÷ $7 per registration."
+          },
+          "say": "Here's consolidation in numbers, as an example. The same two hundred and ten dollars a week, at seven dollars per registration, gives thirty registrations whether split or combined. But combined in one ad set, all thirty teach one model, the number on screen, instead of ten each teaching three separate ones."
+        },
+        {
+          "v": "compare",
+          "h": "Common automation mistakes",
+          "p": "Automation hides some decisions from you. These mistakes happen when buyers forget that, or fight the learning phase instead of planning around it. Each fix below keeps your data readable and your spend under control.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Leaving creative enhancements on blindly",
+                "Cutting placements after one day",
+                "Editing an ad set daily",
+                "Ignoring learning limited",
+                "Testing in an automated campaign"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Review enhancements on every ad",
+                "3 × target spend before cutting",
+                "Batch edits, log each one",
+                "Consolidate or move the event up",
+                "Test manually, scale with automation"
+              ]
+            }
+          },
+          "say": "Automation hides some decisions from you. These mistakes come from forgetting that, or fighting the learning phase. The fixes: review enhancements on every ad instead of leaving them on blindly. Spend three times target before cutting a placement, not one day. Batch edits and log each one, instead of editing daily. Consolidate or move the event up when learning is limited. And test manually, then scale with automation."
+        },
+        {
+          "v": "check",
+          "h": "Protecting the learning phase",
+          "p": "Simple habits that keep your ad sets stable while Meta learns. They also keep your data clean enough to make real decisions at the end of a test.",
+          "d": [
+            "Decide kill rules before launch",
+            "Do not edit for the first few days unless something is broken",
+            "Batch edits into one change",
+            "Add new creative in a planned slot",
+            "Write every change in a log"
+          ],
+          "say": "Finally, simple habits that keep ad sets stable while Meta learns. Decide kill rules before launch. Don't edit for the first few days unless something's broken. Batch edits into one change. Add new creative in a planned slot. And write every change in a log. These habits also keep your data clean enough to make real decisions at the end of a test."
+        }
+      ],
+      "takeaways": [
+        "Automated options work best with strong signal; review creative enhancements for regulated offers.",
+        "Judge placements by cost per paid event over enough data, not by cheap clicks.",
+        "Avoid frequent significant edits and fix learning limited ad sets by consolidating or moving the event up."
+      ],
+      "action": "Open a placement breakdown for your best ad set from the last 7 days. Write the cost per paid event for each placement and decide whether any should be excluded or tested separately.",
+      "glossary": [
+        {
+          "term": "Placement",
+          "def": "Where an ad appears, such as Feeds, Reels, Stories or Audience Network."
+        },
+        {
+          "term": "Advantage",
+          "def": "Meta's name for its family of automated options. Specific product names change often."
+        },
+        {
+          "term": "Significant edit",
+          "def": "A change, such as a new event or a large budget change, that sends an ad set back into learning."
+        },
+        {
+          "term": "Learning limited",
+          "def": "A status showing that an ad set is not expected to get enough optimisation events to exit learning."
+        },
+        {
+          "term": "Creative enhancements",
+          "def": "Automated changes Meta can apply to your ad, such as crops, music or text variations."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Target $10 per registration, break-even $14. After 7 days Audience Network spent $90 at $30 per registration. What does the starting rule say?",
+          "options": [
+            "Keep it, clicks are cheap",
+            "Cut it after one more day",
+            "Exclude or separately test it: spend is over 3 × target and CPA is above the kill line",
+            "Raise its budget"
+          ],
+          "answer": 2,
+          "why": "$90 is 9 × target, and $30 is above the kill line, the lower of $15 and break-even $14."
+        },
+        {
+          "q": "Which change is most likely to reset learning?",
+          "options": [
+            "Renaming the ad",
+            "Changing the optimisation event",
+            "Viewing the report",
+            "Downloading a CSV"
+          ],
+          "answer": 1,
+          "why": "Changing the optimisation event is a significant edit. Renaming or viewing is not."
+        },
+        {
+          "q": "Four ad sets each get 10 conversions a week and are learning limited. What is a sensible first fix?",
+          "options": [
+            "Consolidate into fewer ad sets",
+            "Add more ad sets",
+            "Lower all budgets",
+            "Change all creatives daily"
+          ],
+          "answer": 0,
+          "why": "Combining them puts about 40 conversions a week into one ad set, much closer to Meta's guidance."
+        },
+        {
+          "q": "Why review automatic creative enhancements on a trading ad?",
+          "options": [
+            "They always lower CPM",
+            "They are illegal",
+            "They make the ad longer",
+            "They can change the creative in ways that alter claims or hide risk text"
+          ],
+          "answer": 3,
+          "why": "For regulated offers you must control what the user sees, including required warnings."
+        },
+        {
+          "q": "Cost per registration swings from $7 to $16 in the first three days. What does this most likely mean?",
+          "options": [
+            "The offer is broken",
+            "The account is banned",
+            "Your pixel is double counting",
+            "The ad set is still learning"
+          ],
+          "answer": 3,
+          "why": "Swings early in an ad set's life are normal learning behaviour. Judge after enough data."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn when to use Meta's automated options and when to keep manual control, how to read placement breakdowns, and how to protect the learning phase. These choices decide whether your data stays readable.",
+      "say_outro": "You've seen how automation and manual setups compare, how to judge placements on the paid event with a starting rule, and which edits reset learning. Your task: open a placement breakdown for your best ad set from the last seven days, write the cost per paid event for each placement, and decide whether any should be excluded or tested separately. Now take the quiz."
+    },
+    {
+      "slug": "budgets-bidding-and-rules",
+      "title": "Budgets, bidding and automated rules",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can choose between campaign and ad set budgets.",
+        "You can explain the main bid strategies and when to use each.",
+        "You can write automated rules that protect spend without fighting late conversions."
+      ],
+      "steps": [
+        {
+          "v": "compare",
+          "h": "Campaign budget vs ad set budget",
+          "p": "With a campaign budget, Meta spreads money across ad sets based on where it expects results. With ad set budgets, you decide how much each one gets. Meta's name for campaign budget has changed over time; check the current Ads Manager.",
+          "d": {
+            "a": {
+              "title": "Campaign budget",
+              "items": [
+                "Meta moves money to winners",
+                "Less manual work",
+                "Some ad sets may get almost nothing",
+                "Good for scaling proven setups"
+              ]
+            },
+            "b": {
+              "title": "Ad set budget",
+              "items": [
+                "You control each ad set's spend",
+                "Fair tests between audiences",
+                "More manual work",
+                "Good for testing"
+              ]
+            }
+          },
+          "say": "Compare the two budget types. With a campaign budget, Meta moves money to winners. It's less manual work and good for scaling proven setups, but some ad sets may get almost nothing. With ad set budgets, you control each ad set's spend. It's more work, but gives fair tests between audiences, so it's good for testing. Meta's name for campaign budget has changed over time, so check the current Ads Manager."
+        },
+        {
+          "v": "tip",
+          "h": "Daily budgets can flex",
+          "p": "Meta has said it may spend more than your daily budget on good days and less on others, while keeping weekly spend within a set limit. We are not certain of the exact rule today; check current docs, and plan cash flow on the weekly figure.",
+          "more": "Meta's help pages have described spending up to 75% above a daily budget on some days, while keeping spend over a calendar week at or below seven times the daily budget. Treat this as an example of the mechanism and confirm the current rule. If your bank card or credit line is tight, set limits at account level too.",
+          "d": {
+            "kind": "tip",
+            "text": "Plan spend by the week. A $50 daily budget can spend more than $50 on some days."
+          },
+          "say": "Here's something that catches beginners out. Meta has said it may spend more than your daily budget on good days and less on others, while keeping weekly spend within a set limit. Its help pages have described up to seventy five percent above a daily budget on some days. We're not certain of the exact rule today, so check current docs. The practical point: plan by the week, because a fifty dollar daily budget can spend more than fifty on some days."
+        },
+        {
+          "v": "table",
+          "h": "The main bid strategies",
+          "p": "Bid strategies tell Meta how to balance volume and cost. These are the common types with their names at the time of writing in brackets. Names change; check the current Ads Manager. The ideas behind them have stayed similar.",
+          "d": {
+            "cols": [
+              "Strategy",
+              "What it does",
+              "Use when"
+            ],
+            "rows": [
+              [
+                "Highest volume (lowest cost)",
+                "Gets most results for the budget",
+                "Testing, most cases"
+              ],
+              [
+                "Cost per result goal (cost cap)",
+                "Aims to keep average cost near a target",
+                "You know your max CPA"
+              ],
+              [
+                "Bid cap",
+                "Limits the bid in each auction",
+                "Strict control, experienced"
+              ],
+              [
+                "ROAS goal",
+                "Aims for a minimum return on value",
+                "You send real values"
+              ]
+            ]
+          },
+          "say": "Bid strategies tell Meta how to balance volume and cost. Read the table. Highest volume, or lowest cost, gets the most results for the budget, for testing and most cases. Cost per result goal, or cost cap, aims to keep average cost near a target, when you know your max C P A, cost per acquisition. Bid cap limits the bid in each auction, for strict control by experienced buyers. And R O A S goal, return on ad spend, aims for a minimum return when you send real values."
+        },
+        {
+          "v": "eq",
+          "h": "Setting a cost goal from the offer",
+          "p": "Start a cost goal from what a result is worth to you, not from a number you saw online. Example: a registration is worth $12, you want a 25% margin, so the goal is $9.",
+          "d": [
+            "$12 value per reg",
+            "×",
+            "75%",
+            "=",
+            "$9 cost goal"
+          ],
+          "say": "Start a cost goal from what a result is worth to you, not from a number you saw online. Look at the equation. In this example, a registration is worth twelve dollars and you want a twenty five percent margin. Twelve dollars times seventy five percent gives a nine dollar cost goal."
+        },
+        {
+          "v": "curve",
+          "h": "Too-tight cost goals stop delivery",
+          "p": "Example: daily spend on two ad sets with a $100 budget. One has a realistic cost goal, one has a goal far below the market cost. The tight one barely spends, so it learns nothing.",
+          "more": "Worked example. Market cost per registration is around $10. Ad set A's goal is $10 and it spends close to budget. Ad set B's goal is $5. Meta cannot find many registrations at $5, so it spends $12 to $20 a day. Over a week B gets a handful of cheap results and no scale. If an ad set with a cost goal under-spends, raise the goal in small steps or go back to highest volume.",
+          "d": {
+            "a": [
+              92,
+              98,
+              100,
+              97,
+              100,
+              99,
+              100
+            ],
+            "la": "Goal $10, spend ($)",
+            "b": [
+              20,
+              14,
+              12,
+              15,
+              18,
+              13,
+              12
+            ],
+            "lb": "Goal $5, spend ($)",
+            "x": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7"
+            ]
+          },
+          "say": "Here's what happens when a cost goal is too tight. In this example, two ad sets each have a one hundred dollar budget. The top line has a realistic ten dollar goal and spends close to budget every day. The bottom line has a five dollar goal, far below the market cost of around ten. It barely spends, twelve to twenty dollars a day, so it learns nothing. If an ad set with a cost goal under-spends, raise the goal in small steps or go back to highest volume."
+        },
+        {
+          "v": "stat",
+          "h": "Budget steps when scaling",
+          "p": "Large budget jumps can act like a significant edit and unsettle delivery. Starting rule: raise by 20%, at least 48 hours apart, only while CPA ≤ 0.8 × target with 3 or more network-confirmed conversions. The 20% is a habit, not a Meta rule.",
+          "more": "Worked example. Start at $100 a day. Each step adds 20%: $120, $144, $172.80, $207.36. With 48 hours between steps, the earliest you reach $207.36 is about day 9, and each step has to be earned again with CPA since the step at or under 0.8 × target. If CPA rises above target after a step, stop stepping, and go back to the last budget that worked. Full scaling rules: Budget and kill rules module.",
+          "d": {
+            "n": 20,
+            "pre": "+",
+            "suf": "%",
+            "dec": 0,
+            "label": "per step, at least 48 h apart",
+            "note": "Starting rule. Earned with CPA ≤ 0.8 × target and 3+ conversions."
+          },
+          "say": "Large budget jumps can act like a significant edit and unsettle delivery. So here's the starting rule: raise by twenty percent, at least forty eight hours apart, and only while C P A is at or below zero point eight times target, with three or more network-confirmed conversions. The twenty percent is a habit, not a Meta rule. Each step has to be earned again. If C P A rises above target after a step, stop, and go back to the last budget that worked."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: is this ad set ready to step?",
+          "p": "Apply the starting rule card to registrations as the conversion. Work out the cost per registration, compare it with 0.8 × target, and count the conversions. Then check.",
+          "more": "Working. $35 ÷ 5 = $7.00 per registration. 0.8 × $9 = $7.20. $7.00 is under it with 5 conversions, so the card says Scale +20%. On an FTD offer, also confirm network FTDs before the step.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $9 per registration. Spent $35 in 3 days, 5 registrations. Kill, hold or scale?",
+            "preset": {
+              "spend": 35,
+              "conversions": 5,
+              "target_cpa": 9,
+              "days": 3
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "scale"
+            }
+          },
+          "say": "Time for a lab. Apply the starting rule card, with registrations as the conversion. The target is nine dollars per registration. The ad set spent thirty five dollars in three days and got five registrations. Your task: work out the cost per registration, compare it with zero point eight times target, count the conversions, and decide whether to kill, hold or scale. Pause and try it, then check your answer."
+        },
+        {
+          "v": "cards",
+          "h": "Automated rules you can set",
+          "p": "Automated rules check your campaigns on a schedule and act when conditions are met. They save time and protect you while you sleep, as long as the rules match how your conversions really arrive.",
+          "d": [
+            "Pause|stop an ad set that spends with no results",
+            "Notify|alert you when cost or frequency crosses a line",
+            "Adjust budget|raise or lower within limits",
+            "Schedule|run only in chosen hours"
+          ],
+          "say": "Automated rules check your campaigns on a schedule and act when conditions are met. Look at the cards. Pause stops an ad set that spends with no results. Notify alerts you when cost or frequency crosses a line. Adjust budget raises or lowers it within limits. And schedule runs ads only in chosen hours. They save time and protect you while you sleep, as long as the rules match how your conversions really arrive."
+        },
+        {
+          "v": "table",
+          "h": "Example rule set",
+          "p": "Example rules for a registration-optimised campaign with a $9 target cost per registration. They mirror the starting rule card, using registrations because Meta sees them quickly. Adjust the numbers to your own targets. Rules use Meta-reported results only.",
+          "d": {
+            "cols": [
+              "Rule",
+              "Condition",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Stop loss",
+                "Spend ≥ $18 (2 × target), 0 regs",
+                "Pause ad set"
+              ],
+              [
+                "Cost alert",
+                "Spend ≥ $27, cost per reg over $13.50",
+                "Notify me"
+              ],
+              [
+                "Fatigue alert",
+                "Frequency over 3 in 7 days",
+                "Notify me"
+              ],
+              [
+                "Scale alert",
+                "3+ regs, cost per reg ≤ $7.20",
+                "Notify me to check"
+              ]
+            ]
+          },
+          "more": "Why the scale rule only notifies: a +20% step should also check network-confirmed FTDs and the 48-hour gap since the last step, which a Meta rule cannot see. Why $13.50: it is 1.5 × target, checked only once spend reaches 3 × target ($27). If break-even is lower than $13.50, use break-even. Full rule card: Budget and kill rules module.",
+          "say": "Here's an example rule set for a nine dollar target cost per registration. Read the table. Stop loss: at eighteen dollars spent, two times target, with zero registrations, pause the ad set. Cost alert: at twenty seven dollars spent with cost per registration over thirteen fifty, notify me. Fatigue alert: frequency over three in seven days, notify me. Scale alert: three plus registrations at seven twenty or less, notify me to check. The scale rule only notifies, because a step should also check network F T Ds and the forty eight hour gap, which a Meta rule can't see."
+        },
+        {
+          "v": "walk",
+          "h": "Create a stop-loss rule, step by step",
+          "p": "A generic walkthrough of an automated rule. The menu names are as we understand them at the time of writing; we are not certain they are current, so look for the same idea on your screen. Names change; check the current Ads Manager.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open automated rules",
+                "text": "Select the ad sets the rule should watch, then choose to create a rule.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/rules",
+                  "title": "Automated rules",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Apply rule to",
+                      "value": "All active ad sets in KE_TEST"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Create rule"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Set the action and conditions",
+                "text": "Turn off the ad set when spend reaches 2 × target with zero results today.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/rules/new",
+                  "title": "New rule",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Action",
+                      "value": "Turn off ad sets"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Condition 1",
+                      "value": "Spent is greater than or equal to $18"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Condition 2",
+                      "value": "Results is equal to 0"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Time range",
+                      "value": "Today"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Schedule and notify",
+                "text": "Run the rule often enough to catch spend, and notify yourself so you know it fired.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/rules/new",
+                  "title": "New rule",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Schedule",
+                      "value": "Continuously"
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Notify me when the rule acts",
+                      "on": true
+                    },
+                    {
+                      "type": "field",
+                      "label": "Rule name",
+                      "value": "Stop loss 2x target, regs"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Create"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              }
+            ]
+          },
+          "say": "Let's walk through creating a stop-loss rule. Menu names may not be current, so look for the same idea. Step one: open automated rules, select the ad sets it should watch, and choose create rule. Step two: set the action to turn off ad sets, with conditions of spend at or above eighteen dollars, two times target, and zero results today. Step three: schedule it to run continuously, turn on notifications so you know it fired, and give it a clear name."
+        },
+        {
+          "v": "tip",
+          "h": "Rules cannot see late conversions",
+          "p": "Rules run on what Meta has recorded so far. FTDs that arrive by postback days later are invisible to a rule that fires today. Use rules for stop losses on fast events, and make FTD decisions yourself with complete data.",
+          "d": {
+            "kind": "warn",
+            "text": "Do not let a rule kill an FTD campaign on day one. Deposits often arrive days later."
+          },
+          "say": "Rules run on what Meta has recorded so far. F T Ds, first-time deposits, that arrive by postback days later are invisible to a rule that fires today. So use rules for stop losses on fast events, and make F T D decisions yourself with complete data. Read the warning: don't let a rule kill an F T D campaign on day one, because deposits often arrive days later."
+        },
+        {
+          "v": "compare",
+          "h": "Common budget and bidding mistakes",
+          "p": "These mistakes usually come from emotion after a good or bad day. Writing your numbers and rules before launch is the cure for most of them.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Doubling budget after one good day",
+                "Cost goal set far below market",
+                "Rules that kill FTD campaigns on day one",
+                "Campaign budget for a fair test",
+                "Daily budget planned as exact spend"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "+20% steps, 48 h apart, earned",
+                "Goal from value, raise in steps if it stalls",
+                "Rules on fast events only",
+                "Ad set budgets for tests",
+                "Plan cash on the weekly figure"
+              ]
+            }
+          },
+          "say": "These budget and bidding mistakes usually come from emotion after a good or bad day. The fixes: instead of doubling budget after one good day, use earned twenty percent steps, forty eight hours apart. Set cost goals from value, and raise them in steps if they stall. Put rules on fast events only. Use ad set budgets for fair tests. And plan cash on the weekly figure, not the daily budget."
+        },
+        {
+          "v": "quote",
+          "h": "From the founder",
+          "p": "Dchessking on budget discipline, from years of running daily spend across trading and iGaming offers in Nigeria, Kenya, Ghana, South Africa and Cameroon, and the rule he gives every new buyer.",
+          "d": "Set your stop loss before you launch, when you are calm. If you set it after a bad day, you set it with emotion.",
+          "by": "dchessking",
+          "say": "Dchessking has run daily spend across trading and iGaming offers in Nigeria, Kenya, Ghana, South Africa and Cameroon, and this is the rule he gives every new buyer. Here's how he puts it: Set your stop loss before you launch, when you are calm. If you set it after a bad day, you set it with emotion."
+        },
+        {
+          "v": "check",
+          "h": "Budget and bidding checklist",
+          "p": "Run through this before launching and again at every weekly review. It keeps budgets tied to what results are worth, not to how you feel about yesterday.",
+          "d": [
+            "Value per result written down",
+            "Bid strategy matches test or scale stage",
+            "Cost goals based on value, not hope",
+            "Stop loss rules set before launch",
+            "Weekly spend planned against cash"
+          ],
+          "say": "Run through this checklist before launching, and again at every weekly review. Value per result written down. Bid strategy matching your test or scale stage. Cost goals based on value, not hope. Stop loss rules set before launch. And weekly spend planned against cash. It keeps your budgets tied to what results are worth."
+        }
+      ],
+      "takeaways": [
+        "Use ad set budgets for clean tests and campaign budgets to scale proven setups.",
+        "Base cost goals on what a result is worth; goals far below market stop delivery.",
+        "Scale in +20% steps at least 48 h apart, and use automated rules for fast stop losses at 2 × target, not for late FTD decisions."
+      ],
+      "action": "Write a rule set for your current campaign: one stop loss, one cost alert, one frequency alert and one scale rule, using your own target cost per result.",
+      "glossary": [
+        {
+          "term": "Campaign budget",
+          "def": "A budget set at campaign level that Meta distributes across ad sets. Called CBO in the past."
+        },
+        {
+          "term": "Bid strategy",
+          "def": "The instruction that tells Meta how to balance cost and volume in the auction."
+        },
+        {
+          "term": "Cost cap",
+          "def": "A bid strategy that aims to keep average cost per result near a goal you set. Now often called cost per result goal."
+        },
+        {
+          "term": "Bid cap",
+          "def": "A strategy that limits the maximum bid in each auction."
+        },
+        {
+          "term": "Automated rule",
+          "def": "A rule that checks campaigns on a schedule and pauses, adjusts or notifies when conditions are met."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "An FTD is worth $40 to you and you want a 25% margin. What cost per FTD goal fits?",
+          "options": [
+            "$10",
+            "$30",
+            "$50",
+            "$40"
+          ],
+          "answer": 1,
+          "why": "$40 × 0.75 = $30."
+        },
+        {
+          "q": "Your cost goal ad set spends only $15 of a $100 daily budget. What is the likely cause?",
+          "options": [
+            "The goal is below what results really cost, so Meta cannot find enough",
+            "The creative is too good",
+            "Meta is out of inventory everywhere",
+            "The pixel is working too well"
+          ],
+          "answer": 0,
+          "why": "Tight cost goals limit delivery. Raise the goal in steps or switch back to highest volume."
+        },
+        {
+          "q": "You start at $200 a day. The ad set qualifies for two +20% steps. What is the budget after both, and how soon is the second step allowed?",
+          "options": [
+            "$280, the same day",
+            "$240, after 24 h",
+            "$400, after 48 h",
+            "$288, at least 48 h after the first"
+          ],
+          "answer": 3,
+          "why": "$200 × 1.2 = $240, then $240 × 1.2 = $288. Steps are at least 48 h apart and each must be earned again."
+        },
+        {
+          "q": "Which is the best use of an automated rule on an FTD offer?",
+          "options": [
+            "Kill any ad set with no FTD by noon on day one",
+            "Raise budget 100% hourly",
+            "Pause an ad set that spent 2× the target cost per registration with zero registrations today",
+            "Delete ads with low likes"
+          ],
+          "answer": 2,
+          "why": "Registrations are fast and visible to Meta, so a 2 × target stop loss on them is safe. FTDs arrive late, so rules based on them misfire."
+        },
+        {
+          "q": "When is an ad set budget usually better than a campaign budget?",
+          "options": [
+            "When you want each test audience to get a fair, fixed spend",
+            "When you have one proven ad set",
+            "When you want Meta to choose",
+            "Never"
+          ],
+          "answer": 0,
+          "why": "Ad set budgets give each test equal money, so results are comparable."
+        }
+      ],
+      "say_intro": "In this lesson you'll choose between campaign and ad set budgets, learn the main bid strategies, and write automated rules that protect your spend. Getting this right keeps budgets tied to what results are worth, not to how you feel about yesterday.",
+      "say_outro": "You've compared budget types, set a cost goal from value, scaled in earned twenty percent steps, and built rules that guard fast events without killing late F T Ds. Your task: write a rule set for your current campaign, with one stop loss, one cost alert, one frequency alert and one scale rule, using your own target cost per result. Now take the quiz."
+    },
+    {
+      "slug": "reading-reports-daily-decisions",
+      "title": "Reading Ads Manager and making the daily call",
+      "minutes": 20,
+      "objectives": [
+        "By the end you can set up report columns that answer the questions you actually decide on.",
+        "You can put Ads Manager numbers next to network numbers and explain why they differ.",
+        "You can apply the starting rule card to each ad set at a fixed daily checkpoint."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "The report is where money is decided",
+          "p": "Every day you either keep spending, stop or add budget. Each choice moves real money. Ads Manager shows dozens of columns, and most of them do not change the decision. Learning which few do, and checking them the same way each day, is what protects your bankroll.",
+          "d": {
+            "b": "Few columns, same time, written rules",
+            "s": "Decide on what you get paid for"
+          },
+          "say": "Every day you either keep spending, stop, or add budget, and each choice moves real money. Ads Manager shows dozens of columns, and most of them don't change the decision. Learning which few do, and checking them the same way each day, is what protects your bankroll. Few columns, same time, written rules, and decide on what you get paid for."
+        },
+        {
+          "v": "screen",
+          "h": "A column set for daily decisions",
+          "p": "A generic mock-up of a saved column preset. Keep spend, results and cost first, then the diagnostic columns. Save it so you see the same view every day. Column names change; check the current Ads Manager.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/campaigns?columns=daily",
+            "title": "Ad sets, last 7 days",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Ad set",
+                  "Spend",
+                  "Results",
+                  "Cost/result"
+                ],
+                "rows": [
+                  [
+                    "KE_broad",
+                    "$84",
+                    "9 regs",
+                    "$9.33"
+                  ],
+                  [
+                    "KE_interests",
+                    "$84",
+                    "6 regs",
+                    "$14.00"
+                  ],
+                  [
+                    "KE_lal1",
+                    "$84",
+                    "11 regs",
+                    "$7.64"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Also in the preset: CPM, link CTR, frequency, landing page views."
+              },
+              {
+                "type": "button",
+                "label": "Save as preset: Daily"
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "This generic mock-up shows a saved column preset. Spend, results and cost per result come first. In this example, over the last seven days, the lookalike has the lowest cost per registration at seven dollars sixty four, and interests the highest at fourteen dollars. The diagnostic columns, C P M, link C T R, frequency and landing page views, sit in the same preset. Save it, so you see the same view every day."
+        },
+        {
+          "v": "table",
+          "h": "Which column answers which question",
+          "p": "Each column answers one question. Use the top rows to decide and the rest to diagnose why. Benchmarks vary by geo and vertical, so compare an ad set with your own history, not a number online.",
+          "d": {
+            "cols": [
+              "Column",
+              "Question it answers"
+            ],
+            "rows": [
+              [
+                "Spend",
+                "How much has this cost so far"
+              ],
+              [
+                "Results",
+                "How many optimisation events"
+              ],
+              [
+                "Cost per result",
+                "Is the event cheap enough"
+              ],
+              [
+                "CPM",
+                "Is reach getting expensive"
+              ],
+              [
+                "Link CTR",
+                "Does the ad earn clicks"
+              ],
+              [
+                "Frequency",
+                "Are people seeing it too often"
+              ]
+            ]
+          },
+          "say": "Each column answers one question. Read the table. Spend: how much has this cost so far. Results: how many optimisation events. Cost per result: is the event cheap enough. C P M: is reach getting expensive. Link C T R: does the ad earn clicks. Frequency: are people seeing it too often. Use the top rows to decide and the rest to diagnose why. And compare an ad set with your own history, not a number online."
+        },
+        {
+          "v": "tip",
+          "h": "Attribution windows: not certain",
+          "p": "Ads Manager counts a conversion if it happens within an attribution window after a click or view. At the time of writing, many objectives default to 7-day click and 1-day view. We are not certain this is current; check the attribution setting column in your account.",
+          "d": {
+            "kind": "tip",
+            "text": "A conversion that happens 10 days after the click may count in your network report but not in Ads Manager."
+          },
+          "say": "Ads Manager counts a conversion if it happens within an attribution window after a click or view. At the time of writing, many objectives default to seven day click and one day view. We're not certain that's current, so check the attribution setting column in your account. This matters because a conversion that happens ten days after the click may count in your network report, but not in Ads Manager."
+        },
+        {
+          "v": "compare",
+          "h": "Platform numbers vs network numbers",
+          "p": "Ads Manager reports what its pixel and server events saw. The network reports what it will pay for. Use Ads Manager to steer delivery and the network number to decide. Mixing them up can double spend on a loser.",
+          "d": {
+            "a": {
+              "title": "Platform says",
+              "items": [
+                "Ads Manager: 12 Purchases",
+                "Counts duplicates it could not match",
+                "Includes deposits under the minimum",
+                "View-through conversions included"
+              ]
+            },
+            "b": {
+              "title": "Network confirms",
+              "items": [
+                "Network: 8 qualified FTDs",
+                "One per real person",
+                "Only baseline-qualified",
+                "Only what will be paid"
+              ]
+            }
+          },
+          "say": "Compare the columns. In this example, Ads Manager says twelve purchases. That can include duplicates it couldn't match, deposits under the minimum, and view-through conversions. The network confirms eight qualified F T Ds, first-time deposits: one per real person, only baseline-qualified, only what will be paid. Use Ads Manager to steer delivery, and the network number to decide. Mixing them up can double spend on a loser."
+        },
+        {
+          "v": "walk",
+          "h": "Your daily check, step by step",
+          "p": "A generic walkthrough of the daily routine. Do it at the same hour each day, with the same date range, so days can be compared. Field and menu names change; check the current Ads Manager.",
+          "d": {
+            "steps": [
+              {
+                "title": "Set the date range",
+                "text": "Use the period since launch, or since the last budget step, not just today.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/campaigns",
+                  "title": "Ad sets",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Date range",
+                      "value": "Since launch: 12 to 16 Oct"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Columns",
+                      "value": "Daily"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Check problems first",
+                "text": "Look for rejected ads, delivery errors and account notices before any numbers.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/campaigns",
+                  "title": "Ad sets",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Rejected ads",
+                      "value": "0"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Account notices",
+                      "value": "None"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Delivery",
+                      "value": "All active"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Export spend by ad set",
+                "text": "Export or copy spend per ad set into your sheet.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/export",
+                  "title": "Export",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Level",
+                      "value": "Ad set"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Format",
+                      "value": "CSV"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Export"
+                    }
+                  ],
+                  "highlight": 2
+                }
+              },
+              {
+                "title": "Add network numbers",
+                "text": "Paste network-confirmed conversions per sub ID next to spend, then apply the rule card row by row.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/daily",
+                  "title": "Daily sheet",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Ad set",
+                        "Spend",
+                        "Network FTDs",
+                        "Call"
+                      ],
+                      "rows": [
+                        [
+                          "KE_broad",
+                          "$84",
+                          "3",
+                          "Hold"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Here's the daily routine, step by step. Do it at the same hour each day with the same date range. Step one: set the date range to the period since launch, or since the last budget step, not just today. Step two: check problems first, like rejected ads, delivery errors and account notices, before any numbers. Step three: export or copy spend per ad set into your sheet. Step four: paste network-confirmed conversions per sub I D next to spend, then apply the rule card row by row."
+        },
+        {
+          "v": "eq",
+          "h": "The CPA you decide on",
+          "p": "Divide spend by network-confirmed conversions, not by Ads Manager results. Example: $84 spent, Ads Manager shows 4 Purchases, the network confirms 3 FTDs. The CPA you decide on is $28, not $21.",
+          "d": [
+            "$84 spend",
+            "÷",
+            "3 network FTDs",
+            "=",
+            "$28 CPA"
+          ],
+          "say": "Here's the C P A, cost per acquisition, you actually decide on. Divide spend by network-confirmed conversions, not Ads Manager results. Look at the equation. In this example, you spent eighty four dollars. Ads Manager shows four purchases, but the network confirms three F T Ds. Eighty four divided by three is twenty eight dollars. That's your C P A, not twenty one."
+        },
+        {
+          "v": "table",
+          "h": "The rule card for this account",
+          "p": "Example: target $25 per FTD, payout $35, so break-even is $35 and the kill line is the lower of $37.50 and $35. Check rows from the top and stop at the first true one. Starting rules; adapt to your data.",
+          "more": "Full rule card, timing and scaling steps: Budget and kill rules module. Count only network-confirmed conversions, and on slow offers only spend whose postbacks have had time to arrive.",
+          "d": {
+            "cols": [
+              "Decision",
+              "Rule",
+              "Example, $25 target"
+            ],
+            "rows": [
+              [
+                "Kill",
+                "0 conversions at spend ≥ 2 × target",
+                "$50 spent, 0 FTDs"
+              ],
+              [
+                "Kill",
+                "Spend ≥ 3 × target, CPA over the kill line",
+                "$75+ spent, CPA over $35"
+              ],
+              [
+                "Scale +20%",
+                "3+ conversions, CPA ≤ 0.8 × target, 48 h since last step",
+                "CPA ≤ $20"
+              ],
+              [
+                "Hold",
+                "Anything else",
+                "Change nothing"
+              ]
+            ]
+          },
+          "say": "Here's the rule card for this account, as an example. The target is twenty five dollars per F T D and the payout is thirty five, so the kill line is the lower of thirty seven fifty and thirty five, which is thirty five. Check rows from the top. Kill at fifty dollars spent with zero F T Ds. Kill at seventy five plus spent with C P A over thirty five. Scale twenty percent with three plus conversions at twenty dollars or less, forty eight hours since the last step. Anything else, hold. Adapt these starting rules to your data."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: the zero-FTD ad set",
+          "p": "Apply the card to this ad set. Check the first row: has it spent at least 2 × target with no network-confirmed conversions? Then press check to see the working.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $25. Spent $52 in 3 days, 0 network-confirmed FTDs, postbacks usually same day. Kill, hold or scale?",
+            "preset": {
+              "spend": 52,
+              "conversions": 0,
+              "target_cpa": 25,
+              "days": 3
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "kill"
+            }
+          },
+          "say": "Let's apply the card. In this lab, the target is twenty five dollars. The ad set spent fifty two dollars in three days with zero network-confirmed F T Ds, and postbacks usually arrive the same day. Your task: check the first row. Has it spent at least two times target with no conversions? Then decide kill, hold or scale. Pause and try it, then check your answer."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: the cheap ad set",
+          "p": "Another ad set in the same campaign. Work out the CPA on network numbers, compare it with 0.8 × target, and count the conversions before you decide.",
+          "more": "Working. $64 ÷ 4 = $16 CPA. 0.8 × $25 = $20. $16 is under it with 4 conversions, so Scale +20%: from $16 a day to $19.20 a day. Next step no sooner than 48 hours later.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $25. Spent $64 in 4 days, 4 network-confirmed FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 64,
+              "conversions": 4,
+              "target_cpa": 25,
+              "days": 4
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "scale"
+            }
+          },
+          "say": "Here's another ad set in the same campaign. Target twenty five dollars. It spent sixty four dollars in four days, with four network-confirmed F T Ds. Your task: work out the C P A on network numbers, compare it with zero point eight times target, count the conversions, then decide kill, hold or scale. Pause and try it, then check your answer."
+        },
+        {
+          "v": "curve",
+          "h": "Platform and network over a week",
+          "p": "Example: cumulative conversions for one ad set as reported by Ads Manager and by the network. The network line starts lower because deposits are confirmed later, then partly catches up. Decide on the lower, confirmed line.",
+          "d": {
+            "a": [
+              2,
+              5,
+              8,
+              11,
+              13,
+              15,
+              17
+            ],
+            "la": "Ads Manager Purchases (Example)",
+            "b": [
+              0,
+              2,
+              4,
+              7,
+              9,
+              11,
+              12
+            ],
+            "lb": "Network-confirmed FTDs (Example)",
+            "x": [
+              "D1",
+              "D2",
+              "D3",
+              "D4",
+              "D5",
+              "D6",
+              "D7"
+            ]
+          },
+          "say": "This example chart shows cumulative conversions for one ad set over a week. The top line is Ads Manager purchases, reaching seventeen. The lower line is network-confirmed F T Ds, reaching twelve. The network line starts lower because deposits are confirmed later, then partly catches up. Always decide on the lower, confirmed line."
+        },
+        {
+          "v": "compare",
+          "h": "Common reporting mistakes",
+          "p": "Most bad daily calls come from reading the wrong number or the wrong period. These are the ones to watch for in your first months.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Deciding on Ads Manager Purchases",
+                "Looking at today only",
+                "Changing the date range every day",
+                "Killing on CTR in the first hours",
+                "Not writing the call down"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Decide on network-confirmed FTDs",
+                "Since launch or since last step",
+                "Same range and hour daily",
+                "No CPA calls before 48 h",
+                "Log every call and why"
+              ]
+            }
+          },
+          "say": "Most bad daily calls come from reading the wrong number or the wrong period. The fixes: decide on network-confirmed F T Ds, not Ads Manager purchases. Look since launch or since the last step, not today only. Use the same range and hour daily. Make no C P A calls before forty eight hours, so don't kill on C T R in the first hours. And log every call, with the reason."
+        },
+        {
+          "v": "tip",
+          "h": "Check policy before performance",
+          "p": "At each checkpoint, look at rejected ads, comments and account notices before you look at CPA. A cheap result from an ad that breaks policy is not a winner, and repeated rejections put the whole account at risk.",
+          "more": "What repeated rejections can lead to, and how to appeal honestly: Ad account bans module.",
+          "d": {
+            "kind": "warn",
+            "text": "Never edit a rejected ad just to slip it past review. Fix the claim, or drop the ad."
+          },
+          "say": "At each checkpoint, look at rejected ads, comments and account notices before you look at C P A. A cheap result from an ad that breaks policy isn't a winner, and repeated rejections put the whole account at risk. Read the warning: never edit a rejected ad just to slip it past review. Fix the claim, or drop the ad."
+        },
+        {
+          "v": "check",
+          "h": "Your daily decision routine",
+          "p": "Run this list once a day at a fixed hour for every live ad set. It takes about fifteen minutes for a small account and stops most emotional decisions.",
+          "d": [
+            "Same hour, same column preset",
+            "Rejections and notices first",
+            "Spend since launch or last step",
+            "Network-confirmed conversions per sub ID",
+            "Apply the rule card row by row",
+            "Write each call and the reason"
+          ],
+          "say": "Here's your daily decision routine. Run it once a day, at a fixed hour, for every live ad set. Same hour, same column preset. Rejections and notices first. Spend since launch or the last step. Network-confirmed conversions per sub I D. Apply the rule card row by row. And write each call and the reason. It takes about fifteen minutes for a small account, and it stops most emotional decisions."
+        }
+      ],
+      "takeaways": [
+        "Use a saved column preset and the same date range and hour every day.",
+        "Steer with Ads Manager, decide with network-confirmed conversions.",
+        "Apply the starting rule card per ad set and write every call down."
+      ],
+      "action": "Save a 'Daily' column preset in your Ads Manager, then build a sheet with ad set, spend, network-confirmed conversions, CPA and decision. Fill it for yesterday.",
+      "glossary": [
+        {
+          "term": "Column preset",
+          "def": "A saved set of report columns so you see the same view every time."
+        },
+        {
+          "term": "Attribution window",
+          "def": "The time after a click or view within which a platform counts a conversion for an ad."
+        },
+        {
+          "term": "Network-confirmed conversion",
+          "def": "A conversion the network has recorded and will pay for, as opposed to one the ad platform reported."
+        },
+        {
+          "term": "Checkpoint",
+          "def": "A fixed time when you review results and apply your rules."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Ads Manager shows 6 Purchases for $90 spend. The network confirms 4 FTDs. What CPA do you decide on?",
+          "options": [
+            "$15",
+            "$22.50",
+            "$90",
+            "$36"
+          ],
+          "answer": 1,
+          "why": "Decide on network-confirmed conversions: $90 ÷ 4 = $22.50."
+        },
+        {
+          "q": "Target $25. An ad set spent $52 with 0 network-confirmed FTDs, and postbacks usually arrive the same day. What does the rule card say?",
+          "options": [
+            "Kill",
+            "Scale",
+            "Hold until $100",
+            "Change the audience"
+          ],
+          "answer": 0,
+          "why": "$52 is more than 2 × $25 with zero conversions, so the zero-conversion kill rule applies."
+        },
+        {
+          "q": "Why can Ads Manager show more conversions than the network?",
+          "options": [
+            "The network is always wrong",
+            "Ads Manager can include duplicates, unqualified deposits and view-through conversions",
+            "Ads Manager counts only clicks",
+            "They always match"
+          ],
+          "answer": 1,
+          "why": "The platform counts what its signals saw; the network counts what it will pay for."
+        },
+        {
+          "q": "What should you check first at each daily checkpoint?",
+          "options": [
+            "CPM",
+            "Frequency",
+            "CTR",
+            "Rejected ads, comments and account notices"
+          ],
+          "answer": 3,
+          "why": "Policy problems come before performance. A cheap result from a non-compliant ad is not a winner."
+        },
+        {
+          "q": "Target $25. Spent $64, 4 network FTDs. What does the card say and what is the new budget if it was $16 a day?",
+          "options": [
+            "Hold, $16",
+            "Kill, $0",
+            "Scale +20%, $19.20 a day",
+            "Scale +100%, $32"
+          ],
+          "answer": 2,
+          "why": "CPA $16 is at or under 0.8 × $25 = $20 with 4 conversions. $16 × 1.2 = $19.20."
+        }
+      ],
+      "say_intro": "In this lesson you'll set up report columns that answer the questions you actually decide on, and learn why Ads Manager and your network report different numbers. Then you'll apply the rule card at a fixed daily checkpoint, so each call is calm and consistent.",
+      "say_outro": "You've built a daily column set, learned to decide on network-confirmed numbers, and applied the rule card in the labs. Your task: save a Daily column preset in Ads Manager, then build a sheet with ad set, spend, network-confirmed conversions, C P A and decision, and fill it for yesterday. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "You have $70 a day for a new trading offer. Registration costs about $10 and FTD about $45. Which setup fits?",
+      "options": [
+        "Optimise for FTD in 5 ad sets",
+        "Optimise for registration in 1 to 2 ad sets and judge on FTDs",
+        "Traffic objective in 10 ad sets",
+        "Optimise for video views"
+      ],
+      "answer": 1,
+      "why": "FTD at $45 × 50 ÷ 7 needs about $321 a day. Registration at $10 needs about $71. One or two registration ad sets fit the budget."
+    },
+    {
+      "q": "Ad set A: CPM $5, CTR 2%, click-to-reg 2.5%. Ad set B: CPM $3, CTR 1%, click-to-reg 2.5%. Which has the lower cost per registration?",
+      "options": [
+        "B, $12 vs $10",
+        "They are equal",
+        "A, $10 vs $12",
+        "Cannot tell without CPC"
+      ],
+      "answer": 2,
+      "why": "A: $5 ÷ (1,000 × 0.02 × 0.025) = $5 ÷ 0.5 = $10. B: $3 ÷ (1,000 × 0.01 × 0.025) = $3 ÷ 0.25 = $12."
+    },
+    {
+      "q": "Events Manager shows registrations counted twice since you added the Conversions API. What is the likely fix?",
+      "options": [
+        "Remove the pixel",
+        "Turn off the campaign",
+        "Send the same event name and event ID from both pixel and server",
+        "Change the objective to Traffic"
+      ],
+      "answer": 2,
+      "why": "Matching event names and IDs let Meta deduplicate the browser and server copies."
+    },
+    {
+      "q": "Ads Manager shows 10 Purchases on $200 spend; the network confirms 5 qualified FTDs. Target $30, break-even $40, postbacks matured. What do the starting rules say?",
+      "options": [
+        "Hold: the network CPA of $40 is not above the $40 kill line",
+        "Scale, the Ads Manager CPA is $20",
+        "Kill, the CPA is above target",
+        "Kill, spend is over 2 × target"
+      ],
+      "answer": 0,
+      "why": "Decide on network numbers: $200 ÷ 5 = $40. The kill line is the lower of $45 and $40, so $40. CPA must be above it to kill, so the card says Hold, and the ad set needs work before any budget."
+    },
+    {
+      "q": "A placement breakdown over 7 days: Audience Network $120 spend, 900 clicks, 2 FTDs. Feeds $400 spend, 16 FTDs. Target cost per FTD $30. What is reasonable?",
+      "options": [
+        "Move all budget to Audience Network for cheap clicks",
+        "Exclude or separately test Audience Network; it costs $60 per FTD vs $25",
+        "Keep everything as is",
+        "Pause the whole campaign"
+      ],
+      "answer": 1,
+      "why": "Audience Network: $120 ÷ 2 = $60 per FTD. Feeds: $400 ÷ 16 = $25. Act on the paid event, with enough data."
+    },
+    {
+      "q": "A gambling campaign's automated audience is turned on. What must you still confirm?",
+      "options": [
+        "Nothing; automation handles compliance",
+        "That the CPM is low",
+        "That frequency is under 1",
+        "That minimum age and location are set as firm limits within your licence and permission"
+      ],
+      "answer": 3,
+      "why": "Age and location for regulated offers are legal limits. Confirm they cannot be expanded."
+    },
+    {
+      "q": "You raise a winning ad set from $100 to $400 a day in one step and costs double. What do the starting rules say you should have done?",
+      "options": [
+        "Raise +20% at a time, at least 48 h apart, while CPA stays ≤ 0.8 × target with 3+ conversions",
+        "Never change budgets",
+        "Use a Traffic objective",
+        "Pause winners"
+      ],
+      "answer": 0,
+      "why": "Big jumps can act like a significant edit. +20% steps, each earned, let you watch cost at every level."
+    },
+    {
+      "q": "A rule pauses any ad set with zero FTDs after spending $40. Target cost per FTD is $35 and FTDs often arrive two days late. What is wrong?",
+      "options": [
+        "Nothing",
+        "The rule is too generous",
+        "The rule fires on incomplete FTD data and will kill ad sets that would have converted",
+        "Rules cannot pause ad sets"
+      ],
+      "answer": 2,
+      "why": "Meta cannot see late postbacks yet. Use rules on fast events and review FTDs with complete data."
+    },
+    {
+      "q": "Target $9 per registration. Which automated rule matches the starting stop loss?",
+      "options": [
+        "Pause at $9 spent with 0 registrations",
+        "Pause at $90 spent with 0 registrations",
+        "Pause any ad set with CTR under 1%",
+        "Pause at $18 spent with 0 registrations today"
+      ],
+      "answer": 3,
+      "why": "The zero-conversion kill rule is spend ≥ 2 × target with no results: 2 × $9 = $18. Registrations are fast enough for a rule to use."
+    },
+    {
+      "q": "A value per FTD is $50, you want a 30% margin and you use a cost per result goal. Spend is low at a $25 goal. What is a sensible change?",
+      "options": [
+        "Lower the goal to $20",
+        "Raise the goal in steps towards $35",
+        "Remove all targeting",
+        "Fire extra Purchase events"
+      ],
+      "answer": 1,
+      "why": "Your break-even with a 30% margin is $50 × 0.70 = $35. A $25 goal is below what you can afford and is choking delivery."
+    }
+  ]
+}

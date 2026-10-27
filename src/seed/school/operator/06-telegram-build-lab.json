@@ -1,0 +1,2959 @@
+{
+  "school": "operator",
+  "order": 6,
+  "slug": "telegram-build-lab",
+  "title": "Telegram build lab",
+  "summary": "A hands-on build of the Telegram side of a funnel: a private channel with named join-request links, a bot made in BotFather, a small bot that greets and approves, welcome flows, broadcasts, and a launch test. You finish with a working, tracked, consent-first setup you can point ads at.",
+  "lessons": [
+    {
+      "slug": "set-up-your-channel",
+      "title": "Set up your channel the right way",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can create a Telegram channel and choose public or private on purpose",
+        "By the end you can set a clear name, description, photo and pinned welcome post",
+        "By the end you can add admins with only the rights they need",
+        "By the end you can create one named join-request link per ad source and read the results"
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "This lesson is hands-on",
+          "p": "The Landers and Telegram module explained why channels, join requests and bots matter. This module is the build. Keep Telegram open next to this lesson and do each step as you read it. By the end of this lesson you will have a channel that is ready for paid traffic, with one tracked link per ad source.",
+          "d": {
+            "b": "Read a slide, do the slide",
+            "s": "Phone or desktop app, both work"
+          },
+          "say": "This lesson is hands-on. The Landers and Telegram module explained why channels, join requests and bots matter. This module is the build. So keep Telegram open next to this lesson, on your phone or desktop, both work, and do each step as you read it. Read a slide, do the slide. By the end, you'll have a channel ready for paid traffic, with one tracked link per ad source."
+        },
+        {
+          "v": "big",
+          "h": "Why the setup decides your costs",
+          "p": "Every dollar you spend on Telegram ads lands on this channel. If links are shared, you cannot tell which ad set brought members who stay, so you move budget by guesswork. If the join screen looks careless or overpromises, people hesitate, and that raises your cost per join on every ad you run.",
+          "d": {
+            "b": "The channel is where your ad money lands",
+            "s": "Set it up badly and every ad pays for it"
+          },
+          "say": "Why does setup decide your costs? Because every dollar you spend on Telegram ads lands on this channel. If links are shared, you can't tell which ad set brought members who stay, so you move budget by guesswork. And if the join screen looks careless or overpromises, people hesitate, which raises your cost per join on every ad you run. Set it up badly, and every ad pays for it."
+        },
+        {
+          "v": "walk",
+          "h": "Create the channel",
+          "p": "Creating a channel takes about two minutes. The exact icons differ between Android, iPhone and desktop, and they change with app updates, so look for the same idea if your screen looks different. Follow the steps and stop when you reach the choice between public and private.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open the new message menu",
+                "text": "Tap the pencil or compose icon on the chat list. On desktop, open the main menu. Names change; check your app.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "New message",
+                  "subtitle": "menu",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "New Group"
+                    },
+                    {
+                      "from": "them",
+                      "text": "New Channel"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Contacts"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Tap New Channel",
+                "text": "Telegram explains what a channel is. Tap Create Channel to continue.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "New Channel",
+                  "subtitle": "setup",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "Channels are a tool for broadcasting your messages to large audiences.",
+                      "buttons": [
+                        "Create Channel"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Name and description",
+                "text": "Type the channel name and a one-line description. You can edit both later.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "New Channel",
+                  "subtitle": "name",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "Name: Daily Market Notes NG"
+                    },
+                    {
+                      "from": "me",
+                      "text": "Description: Plain-English market notes. Education only, not financial advice."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Add a photo",
+                "text": "Tap the camera circle and upload a simple square logo. A clean photo looks trustworthy in the join screen.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "New Channel",
+                  "subtitle": "photo",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "Set channel photo",
+                      "buttons": [
+                        "Upload",
+                        "Skip"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Choose the type",
+                "text": "Telegram asks Public or Private next. Read the next slide before you pick.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Channel type",
+                  "subtitle": "settings",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "Public channel",
+                      "buttons": [
+                        "Choose"
+                      ]
+                    },
+                    {
+                      "from": "them",
+                      "text": "Private channel",
+                      "buttons": [
+                        "Choose"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "say": "Let's create the channel. It takes about two minutes. Tap Next to follow each step. First, open the new message menu, the pencil or compose icon, or the main menu on desktop. Second, tap New Channel, then Create Channel. Third, type a name and a one-line description, like the example: plain-English market notes, education only, not financial advice. Fourth, add a simple square logo, because a clean photo looks trustworthy. Fifth, Telegram asks public or private. Stop there, and read the next slide first. Icons differ by device and app version, so look for the same idea."
+        },
+        {
+          "v": "compare",
+          "h": "Public or private for paid traffic",
+          "p": "A public channel has a t.me username anyone can search and open. A private channel is only reachable through invite links you create. For paid traffic most operators choose private, because every person must arrive through a link you made, and that is what lets you count joins per ad source.",
+          "d": {
+            "a": {
+              "title": "Public channel",
+              "items": [
+                "Searchable username, anyone can join",
+                "Good for organic growth and brand search",
+                "Cannot force join requests on the main username",
+                "Hard to tell which ad brought whom"
+              ]
+            },
+            "b": {
+              "title": "Private channel",
+              "items": [
+                "Only reachable by invite links",
+                "Each link can require admin approval",
+                "Each link can carry a name per ad source",
+                "Clean per-source counts for your sheet"
+              ]
+            }
+          },
+          "say": "Now the choice. A public channel has a username anyone can search and open. It's good for organic growth and brand search, but you can't force join requests on the main username, and it's hard to tell which ad brought whom. A private channel is only reachable by invite links. Each link can require admin approval and carry a name per ad source, which gives clean per-source counts for your sheet. That's why, for paid traffic, most operators choose private."
+        },
+        {
+          "v": "screen",
+          "h": "Name, description and photo",
+          "p": "People decide in seconds on the join screen. The name should say what they get, not hype. The description should repeat your ad promise in plain words and include an honest line such as \"education only\". The photo should be simple and readable at small size.",
+          "more": "Message match from the Landers and Telegram module starts here. If your ad says \"Free daily market notes in plain English\", the channel name and description should say the same thing. When the join screen matches the ad, more people tap Request to Join. When it says something different, they hesitate and leave. Avoid promises the channel cannot keep, such as guaranteed profits or fixed daily returns. In regulated verticals like trading or gambling, the ad usually needs platform authorization and must follow local law; check both before you run.",
+          "d": {
+            "kind": "browser",
+            "url": "telegram.example/channel/edit",
+            "title": "Edit channel",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Channel name",
+                "value": "Daily Market Notes NG"
+              },
+              {
+                "type": "field",
+                "label": "Description",
+                "value": "Plain-English market notes, 3 posts a day. Education only, not financial advice. Trading carries risk."
+              },
+              {
+                "type": "text",
+                "value": "Keep the description short enough to read on the join screen."
+              },
+              {
+                "type": "toggle",
+                "label": "Sign messages",
+                "on": false
+              },
+              {
+                "type": "button",
+                "label": "Save"
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "People decide in seconds on the join screen. Look at the edit screen. The name, Daily Market Notes N G, says what they get, without hype. The description repeats the ad promise in plain words: plain-English market notes, three posts a day, education only, not financial advice, trading carries risk. Keep it short enough to read on the join screen, and the photo simple. Avoid promises the channel can't keep, like guaranteed profits. In regulated verticals, the ad usually needs platform authorization and must follow local law, so check both."
+        },
+        {
+          "v": "phone",
+          "h": "The pinned welcome post",
+          "p": "Your first post is the one new members see. Write it, then pin it so it stays at the top. It should say who runs the channel, what you post and how often, what the channel is not, and how to leave or mute. Pin it so it is easy to find later.",
+          "d": {
+            "app": "chat",
+            "title": "Daily Market Notes NG",
+            "subtitle": "channel",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Welcome. This channel is run by the Daily Market Notes team in Lagos.\n\nWhat you get: 3 short notes a day, 8am, 1pm and 7pm WAT.\nWhat this is not: financial advice or signals with guaranteed results. Trading carries risk.\n\nYou can mute or leave any time from the channel menu."
+              },
+              {
+                "from": "them",
+                "text": "Message pinned"
+              }
+            ]
+          },
+          "say": "Your first post is the one new members see. Write it, then pin it. Look at the example. It says who runs the channel, the Daily Market Notes team in Lagos. What you get, three short notes a day at eight, one and seven, West Africa time. What this is not, financial advice or signals with guaranteed results, and that trading carries risk. And that you can mute or leave any time. Then, message pinned, so it's easy to find later."
+        },
+        {
+          "v": "check",
+          "h": "What a good welcome post includes",
+          "p": "Use this list every time you start a new channel. A welcome post that sets honest expectations reduces the number of people who join, feel misled and leave within a day. It also helps if a platform reviewer ever looks at where your ads send people.",
+          "d": [
+            "Who runs the channel, in one line",
+            "What you post and at what times",
+            "An honest risk or \"not advice\" line",
+            "How to mute or leave",
+            "Pinned so it stays at the top"
+          ],
+          "say": "Use this checklist every time you start a new channel. Who runs the channel, in one line. What you post and at what times. An honest risk or not-advice line. How to mute or leave. And pinned, so it stays at the top. A welcome that sets honest expectations reduces the number of people who join, feel misled and leave within a day. It also helps if a platform reviewer ever looks at where your ads send people."
+        },
+        {
+          "v": "walk",
+          "h": "Add an admin with limited rights",
+          "p": "Never share your own Telegram login with a team member. Add them as an admin and switch on only the rights they need. A media buyer who only needs to create invite links does not need to delete posts or add other admins. Right names change between app versions.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open Administrators",
+                "text": "Open the channel, tap its name, then Edit or Manage, then Administrators.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Manage channel",
+                  "subtitle": "settings",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "Channel type"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Invite Links"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Administrators"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Subscribers"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Add Admin",
+                "text": "Tap Add Admin and search for the person. They must already be in your contacts or a subscriber.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Administrators",
+                  "subtitle": "1 admin",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "Add Admin",
+                      "buttons": [
+                        "Search"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Pick the rights",
+                "text": "For a buyer, keep Invite users via link on. Turn Add new admins off.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "telegram.example/channel/admins/new",
+                  "title": "Admin rights",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Change channel info",
+                      "on": false
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Post messages",
+                      "on": false
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Delete messages of others",
+                      "on": false
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Invite users via link",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Add new admins",
+                      "on": false
+                    },
+                    {
+                      "type": "button",
+                      "label": "Save"
+                    }
+                  ],
+                  "highlight": 3
+                }
+              }
+            ]
+          },
+          "say": "Never share your own Telegram login with a team member. Instead, add them as an admin with only the rights they need. Tap Next to follow each step. First, open the channel, tap its name, then Edit or Manage, then Administrators. Second, tap Add Admin and search for the person, who must already be a contact or subscriber. Third, pick the rights. For a buyer, keep invite users via link on, and add new admins off. Right names change between app versions."
+        },
+        {
+          "v": "walk",
+          "h": "Create a join-request link",
+          "p": "Each ad source gets its own invite link. With Request admin approval on, people tap Request to Join instead of joining straight away, and your bot or an admin approves them. Give every link a clear name. The name is how you will tell sources apart later.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open Invite Links",
+                "text": "Channel, then Edit or Manage, then Invite Links, then Create a New Link.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Invite Links",
+                  "subtitle": "channel",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "Primary link: t.me/+aB3..."
+                    },
+                    {
+                      "from": "them",
+                      "text": "Create a New Link",
+                      "buttons": [
+                        "Create"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Turn on approval and name it",
+                "text": "Switch on Request admin approval. Type a link name that matches the ad source.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "telegram.example/channel/links/new",
+                  "title": "New invite link",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Request admin approval",
+                      "on": true
+                    },
+                    {
+                      "type": "field",
+                      "label": "Link name",
+                      "value": "META_NG_ADSET_A"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Limit by time period",
+                      "value": "No limit"
+                    },
+                    {
+                      "type": "text",
+                      "value": "With approval on, the user-count limit is usually hidden. Names change; check your app."
+                    },
+                    {
+                      "type": "button",
+                      "label": "Create link"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Copy the link",
+                "text": "Copy the new t.me/+ link and paste it into your prelander button or ad. Do not reuse it on another source.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Invite Links",
+                  "subtitle": "channel",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "META_NG_ADSET_A\nt.me/+Xy7...\nRequests to join",
+                      "buttons": [
+                        "Copy",
+                        "Share"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "say": "Each ad source gets its own invite link. Tap Next to follow each step. First, go to the channel, then Edit or Manage, then Invite Links, then create a new link. Second, switch on request admin approval, and type a link name that matches the ad source, like the example, meta N G ad set A. Third, copy the new link and paste it into your prelander button or ad. And don't reuse it on another source. The name is how you'll tell sources apart later."
+        },
+        {
+          "v": "table",
+          "h": "A naming pattern for links",
+          "p": "Pick one naming pattern and use it on every link. A good pattern reads like a sentence: source, geo, then the ad set or creative. Keep names short, in capital letters, with underscores. Your bot or tool will read this name when a request arrives, so spelling matters.",
+          "d": {
+            "cols": [
+              "Link name",
+              "Where it goes",
+              "Why"
+            ],
+            "rows": [
+              [
+                "META_NG_ADSET_A",
+                "Meta ad set A, Nigeria",
+                "Paid test"
+              ],
+              [
+                "META_KE_ADSET_A",
+                "Meta ad set A, Kenya",
+                "Same test, new geo"
+              ],
+              [
+                "TT_GH_HOOK_02",
+                "TikTok, Ghana, hook 2",
+                "Creative test"
+              ],
+              [
+                "ORG_LP_FOOTER",
+                "Prelander footer",
+                "Organic baseline"
+              ],
+              [
+                "STAFF_TEST",
+                "Your own team",
+                "Keep tests out of data"
+              ]
+            ]
+          },
+          "say": "Pick one naming pattern and use it on every link. It should read like a sentence: source, geo, then ad set or creative. In the table: meta N G ad set A, for a paid test in Nigeria. Meta K E ad set A, the same test in Kenya. T T G H hook zero two, a TikTok creative test in Ghana. Org L P footer, the organic baseline from your prelander footer. And staff test, for your own team, to keep tests out of the data. Short, capitals, underscores. Your bot reads this name, so spelling matters."
+        },
+        {
+          "v": "tip",
+          "h": "Why one link per source matters",
+          "p": "When two ad sets share one link you can no longer tell which one brought the joins. You end up guessing. One named link per source turns the channel admin screen and your bot logs into a simple report you can copy into your daily sheet.",
+          "d": {
+            "kind": "warn",
+            "text": "Never put the same invite link on two ad sets or two geos. You lose the ability to compare them."
+          },
+          "say": "Why does one link per source matter so much? When two ad sets share one link, you can no longer tell which one brought the joins, and you end up guessing. One named link per source turns the channel admin screen and your bot logs into a simple report you can copy into your daily sheet. The warning is clear: never put the same invite link on two ad sets or two geos. You lose the ability to compare them."
+        },
+        {
+          "v": "funnel",
+          "h": "Example: one link, one funnel",
+          "p": "This is how a single named link looks over one day. Every number comes from a place you can check: clicks from Ads Manager, requests from the link screen, approvals and welcome messages from your bot log. Figures are an example only.",
+          "d": [
+            [
+              "Ad clicks",
+              1000
+            ],
+            [
+              "Prelander button taps",
+              520
+            ],
+            [
+              "Join requests",
+              410
+            ],
+            [
+              "Approved",
+              400
+            ],
+            [
+              "Still subscribed day 7",
+              260
+            ]
+          ],
+          "say": "Here's a single named link over one day. These figures are an example only. Follow the funnel. One thousand ad clicks. Five hundred and twenty prelander button taps. Four hundred and ten join requests. Four hundred approved. And two hundred and sixty still subscribed on day seven. Every number comes from a place you can check: clicks from Ads Manager, requests from the link screen, and approvals and welcomes from your bot log."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example",
+          "p": "Compare two links using the same spend. Cost per approved join is spend divided by approved joins. The cheaper link is not always the better one; check day-7 retention before you move budget.",
+          "more": "Retained members: A keeps 400 x 0.65 = 260 people. B keeps 480 x 0.40 = 192 people. Cost per retained member: A is $120 / 260 = $0.46, B is $120 / 192 = $0.63. B looked cheaper on the first day, but A is cheaper once you count the people who stayed. This is why the link name matters: without it you could not split the two.",
+          "d": {
+            "kind": "example",
+            "text": "Example. META_NG_ADSET_A: $120 spend, 400 approved, $0.30 per join, 65% still in on day 7. META_NG_ADSET_B: $120 spend, 480 approved, $0.25 per join, 40% still in. A keeps 260 people, B keeps 192. A costs $0.46 per retained member, B $0.63."
+          },
+          "say": "Let's compare two links with the same spend. Example figures. Ad set A: one hundred and twenty dollars, four hundred approved, thirty cents per join, sixty five percent still in on day seven. Ad set B: same spend, four hundred and eighty approved, twenty five cents per join, but only forty percent still in. A keeps two hundred and sixty people, B keeps one hundred and ninety two. So A costs forty six cents per retained member, and B sixty three. B looked cheaper on day one, but A is cheaper once you count who stayed."
+        },
+        {
+          "v": "table",
+          "h": "Link numbers and the rule card",
+          "p": "Joins tell you early which link is healthy, but you are paid on deposits. Use cost per retained member to compare links and warn you early. Kill and scale calls follow the rule card from the Budget and kill rules module, on network-confirmed FTDs. Starting rules; adapt them to your vertical and data.",
+          "more": "Example: payout $40, target cost per FTD $30, break-even $40. The CPA kill line is the lower of 1.5 × target ($45) and break-even ($40), so $40. A link whose ad set has spent $60 with 0 FTDs is killed, however cheap its joins look. A link with cheap joins and 4 FTDs at $22 each (0.73 × target) earns a +20% step, then waits at least 48 hours before the next one.",
+          "d": {
+            "cols": [
+              "Signal",
+              "Starting rule",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Cost per retained member",
+                "Early warning only",
+                "Compare links; never scale on it"
+              ],
+              [
+                "0 FTDs",
+                "Spend ≥ 2 × target CPA",
+                "Kill the ad set"
+              ],
+              [
+                "CPA over kill line",
+                "Spend ≥ 3 × target CPA",
+                "Kill the ad set"
+              ],
+              [
+                "3+ FTDs, CPA ≤ 0.8 × target",
+                "Network-confirmed",
+                "Scale +20%, steps ≥ 48 h apart"
+              ],
+              [
+                "Anything else",
+                "",
+                "Hold, change nothing"
+              ]
+            ]
+          },
+          "say": "Joins warn you early, but you're paid on deposits. In the table, cost per retained member is an early warning only. Compare links with it, never scale on it. Kill and scale calls use the rule card, on network-confirmed F T Ds, first time deposits. Zero F T Ds at spend of two times target C P A, cost per acquisition, kill. C P A over the kill line at three times target, kill. Three or more F T Ds with C P A at or under point eight times target, scale twenty percent, steps forty eight hours apart. Anything else, hold. Adapt these starting rules to your data."
+        },
+        {
+          "v": "compare",
+          "h": "Common channel setup mistakes",
+          "p": "These are the setup mistakes we see most often in new funnels. Each one is cheap to avoid now and expensive to discover after a week of paid traffic, because by then the data you needed was never recorded.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Public channel for paid traffic",
+                "One link shared by every ad set",
+                "Hype name like \"Guaranteed Daily Profits\"",
+                "Sharing your login with the team",
+                "No pinned welcome post"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Private channel with join-request links",
+                "One named link per ad source",
+                "Plain name that matches the ad",
+                "Admins with only the rights they need",
+                "Honest welcome, pinned before traffic"
+              ]
+            }
+          },
+          "say": "These setup mistakes are the ones seen most often. A public channel for paid traffic, use a private channel with join-request links. One link shared by every ad set, use one named link per source. A hype name like guaranteed daily profits, use a plain name that matches the ad. Sharing your login with the team, add admins with only the rights they need. No pinned welcome post, pin an honest one before traffic. Each is cheap to avoid now, and expensive to discover after a week, because the data was never recorded."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: the channel is part of the ad",
+          "p": "Platform reviewers can follow an ad to the join screen and the posts behind it. Ads for trading and gambling offers usually need platform authorization and must follow local law; check both before you run. Keep the 18+ and risk lines visible, and never promise returns. Full guide: Compliance for finance, trading and gambling offers module.",
+          "d": {
+            "kind": "warn",
+            "text": "If an offer is not allowed for your geo on the ad platform, a Telegram channel in between does not make it allowed."
+          },
+          "say": "Compliance applies here too, because the channel is part of the ad. Platform reviewers can follow an ad to the join screen and the posts behind it. Ads for trading and gambling offers usually need platform authorization and must follow local law, so check both before you run. Keep the eighteen plus and risk lines visible, and never promise returns. And the warning: if an offer isn't allowed for your geo on the ad platform, a Telegram channel in between doesn't make it allowed."
+        },
+        {
+          "v": "check",
+          "h": "Channel ready for paid traffic",
+          "p": "Run through this list before any ad points at the channel. Each item takes about a minute, and together they save you a messy week of guessing which ad, link or setting caused a problem later.",
+          "d": [
+            "Private channel with a clear name and photo",
+            "Description matches the ad, with an honest line",
+            "Welcome post written and pinned",
+            "Admins added with only the rights they need",
+            "One named join-request link per ad source",
+            "Link names copied into your tracking sheet"
+          ],
+          "say": "Before any ad points at the channel, run this list. A private channel with a clear name and photo. A description that matches the ad, with an honest line. A welcome post written and pinned. Admins added with only the rights they need. One named join-request link per ad source. And link names copied into your tracking sheet. Each takes about a minute, and together they save you a messy week of guessing what caused a problem."
+        }
+      ],
+      "takeaways": [
+        "Private channels plus join-request links give you control and clean counts per source.",
+        "Write and pin an honest welcome post before any traffic arrives.",
+        "Add people as admins with limited rights; never share your own login.",
+        "One named link per ad source, using one naming pattern everywhere."
+      ],
+      "action": "Create a private test channel, pin a welcome post, and make two join-request links named STAFF_TEST and META_NG_ADSET_A. Copy the link names and the starting rules from this lesson into your tracking sheet.",
+      "glossary": [
+        {
+          "term": "Admin rights",
+          "def": "The individual permissions you switch on for each channel admin, such as posting, deleting or inviting users."
+        },
+        {
+          "term": "Request admin approval",
+          "def": "An invite link setting that makes people send a join request instead of joining straight away."
+        },
+        {
+          "term": "Link name",
+          "def": "A private label you give an invite link, such as META_NG_ADSET_A, so you can tell sources apart."
+        },
+        {
+          "term": "Pinned post",
+          "def": "A message fixed to the top of a channel so new members see it first."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why do most operators choose a private channel for paid traffic?",
+          "options": [
+            "Private channels get more reach in Telegram search",
+            "Every person must arrive through an invite link you created, so you can count joins per source",
+            "Private channels cannot be reported",
+            "Public channels cannot have a description"
+          ],
+          "answer": 1,
+          "why": "Private channels are only reachable by your invite links, which can require approval and carry a name per source. Search reach and reporting have nothing to do with it."
+        },
+        {
+          "q": "A media buyer on your team only needs to create invite links. Which admin setup is right?",
+          "options": [
+            "Give them your Telegram login",
+            "Turn on every right so they are never blocked",
+            "Turn on Invite users via link and leave Add new admins off",
+            "Make them the channel owner"
+          ],
+          "answer": 2,
+          "why": "Give only the rights the job needs. Sharing your login or every right makes mistakes and account loss more likely."
+        },
+        {
+          "q": "Two ad sets share one invite link. What is the main problem?",
+          "options": [
+            "Telegram blocks shared links",
+            "The link stops working after 100 joins",
+            "The channel becomes public",
+            "You cannot tell which ad set brought the joins"
+          ],
+          "answer": 3,
+          "why": "A shared link mixes the sources together, so you lose the per-source counts that guide budget decisions."
+        },
+        {
+          "q": "Link A: $100 spend, 250 approved, 60% still in on day 7. Link B: $100 spend, 300 approved, 40% still in. Which costs less per retained member?",
+          "options": [
+            "Link A, about $0.67",
+            "Link B, about $0.33",
+            "They cost the same",
+            "Link B, about $0.83"
+          ],
+          "answer": 0,
+          "why": "A keeps 150 people for $100, about $0.67 each. B keeps 120 for $100, about $0.83 each, so A is cheaper per retained member."
+        },
+        {
+          "q": "What belongs in a pinned welcome post?",
+          "options": [
+            "A promise of fixed daily profits",
+            "Who runs it, what and when you post, an honest risk line, and how to leave",
+            "Only the link to the offer",
+            "A countdown that says the channel closes tonight"
+          ],
+          "answer": 1,
+          "why": "Honest expectations reduce early leaves and keep you within platform rules. Profit promises and fake countdowns are misleading."
+        }
+      ],
+      "say_intro": "This is a hands-on lesson. You'll set up a Telegram channel that's ready for paid traffic, with one tracked link per ad source, because that setup decides what you can measure and what you pay.",
+      "say_outro": "You've built a private channel with an honest name, a pinned welcome, limited admin rights and one named join-request link per source. Your task: create a private test channel, pin a welcome post, make two join-request links named staff test and meta N G ad set A, and copy the link names and starting rules into your tracking sheet. Now take the quiz."
+    },
+    {
+      "slug": "create-your-bot-with-botfather",
+      "title": "Create your bot with BotFather",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can create a bot with @BotFather and choose a valid username",
+        "By the end you can explain what the bot token is and how to keep it secret",
+        "By the end you can set the description, about text, photo and commands",
+        "By the end you can test the bot with /start and a getMe call"
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "BotFather makes every bot",
+          "p": "Every Telegram bot is created inside one official chat called @BotFather. It is itself a bot, run by Telegram. You send it commands and it creates and edits your bots. There is no website form to fill in. Look for the verified tick next to the name so you do not open a copycat.",
+          "d": {
+            "b": "@BotFather",
+            "s": "The only official place to create a bot"
+          },
+          "say": "Every Telegram bot is created inside one official chat called BotFather. It's a bot itself, run by Telegram. You send it commands, and it creates and edits your bots. There's no website form to fill in. One thing to do every time: look for the verified tick next to the name, so you don't open a copycat. BotFather is the only official place to create a bot."
+        },
+        {
+          "v": "tip",
+          "h": "Only trust the real BotFather",
+          "p": "Scammers create look-alike accounts with names such as BotFather_Official or Bot Father Support. They ask for your token or a \"verification fee\". The real one is @BotFather with a verified badge. It never asks for money and never messages you first.",
+          "d": {
+            "kind": "warn",
+            "text": "If any account asks for your bot token, payment or login code, stop. That is not BotFather."
+          },
+          "say": "About those copycats. Scammers create look-alike accounts with names like BotFather underscore Official, or Bot Father Support. They ask for your token, or a verification fee. The real one is BotFather with a verified badge. It never asks for money, and it never messages you first. Read the warning: if any account asks for your bot token, payment or login code, stop. That's not BotFather."
+        },
+        {
+          "v": "tip",
+          "h": "What a leaked token can cost",
+          "p": "The token is the only key to your bot, so losing it is a money problem, not just a technical one. A stranger with your token can message everyone who started the bot, act in your channel with the bot's rights and wipe out trust you paid ads to build.",
+          "more": "Check: 2,500 × 5% = 125 people. 125 × $0.40 = $50 of paid contacts gone in one evening, before counting members who saw the scam and left. The fix in the last lesson takes two minutes; prevention takes none.",
+          "d": {
+            "kind": "example",
+            "text": "Example: 2,500 people started your bot at about $0.40 each. A leaked token lets a stranger send them a scam link. If 5% block the bot, you lose 125 contacts, about $50 of ad spend, plus their trust."
+          },
+          "say": "The token is the only key to your bot, so losing it is a money problem, not just a technical one. Here's an example. Two thousand five hundred people started your bot at about forty cents each. A leaked token lets a stranger send them a scam link. If five percent block the bot, you lose one hundred and twenty five contacts, about fifty dollars of ad spend, plus their trust. The fix takes two minutes. Prevention takes none."
+        },
+        {
+          "v": "walk",
+          "h": "Create the bot",
+          "p": "This is the full conversation, click by click. BotFather wording changes now and then, but the order stays the same: start, /newbot, display name, username, token. Do it now on your phone or desktop.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open @BotFather",
+                "text": "Search @BotFather, open the verified result and tap Start.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "BotFather",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "I can help you create and manage Telegram bots.",
+                      "buttons": [
+                        "Start"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Send /newbot",
+                "text": "Type /newbot and send it. BotFather asks for a name.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "BotFather",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "/newbot"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Alright, a new bot. How are we going to call it? Please choose a name for your bot."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Choose the display name",
+                "text": "This is the name people see in chats. Spaces are fine. You can change it later with /setname.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "BotFather",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "Daily Market Notes Helper"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Good. Now let's choose a username for your bot. It must end in 'bot'."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Choose the username",
+                "text": "Letters, numbers and underscores, ending in bot. It must be unique. Try another if it is taken.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "BotFather",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "DailyMarketNotesBot"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Sorry, this username is already taken. Please try something different."
+                    },
+                    {
+                      "from": "me",
+                      "text": "dmn_helper_bot"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Receive the token",
+                "text": "BotFather confirms and sends your HTTP API token. Copy it into a password manager now.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "BotFather",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "Done. Congratulations on your new bot. You will find it at t.me/dmn_helper_bot.\n\nUse this token to access the HTTP API:\n<TOKEN>\n\nKeep your token secure and store it safely."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "say": "Here's the full conversation, step by step. Do it now on your phone or desktop. Tap Next to follow each step. First, search BotFather, open the verified result, and tap Start. Second, send the new bot command, and BotFather asks for a name. Third, choose the display name people see, here, Daily Market Notes Helper. Spaces are fine. Fourth, choose the username: letters, numbers and underscores, ending in bot, and unique. In the example, the first try was taken, so they tried another. Fifth, BotFather sends your token. Copy it into a password manager straight away."
+        },
+        {
+          "v": "cards",
+          "h": "Name, username and token",
+          "p": "Beginners mix these three up. The display name is for people. The username is the bot address and must end in \"bot\", for example dmn_helper_bot. The token is the secret key your code or tool uses. Only the token gives control of the bot.",
+          "d": [
+            "Display name|What people see. Change any time.",
+            "Username|The t.me address. Must end in bot.",
+            "Token|The secret key. Whoever has it controls the bot."
+          ],
+          "say": "Beginners often mix these three up, so look at the cards. The display name is what people see, and you can change it any time. The username is the bot's address, and it must end in bot, for example, D M N helper bot. And the token is the secret key your code or tool uses. Whoever has it controls the bot. Only the token gives control."
+        },
+        {
+          "v": "code",
+          "h": "What a token looks like",
+          "p": "A token is a number, a colon, then a long string of letters, numbers, dashes and underscores. The number before the colon is the bot ID. Treat the whole thing like a bank password. In this course we always write it as <TOKEN> so no real token is ever shown.",
+          "more": "Anyone holding the token can read the messages sent to the bot, send messages as the bot to everyone who started it, and, if the bot is an admin, act in your channel with the rights you gave it. That includes approving or declining join requests. Store it in a password manager or in an environment variable on your server. If you hire a developer, give them access to the server or tool, not a copy in a chat. The last lesson of this module, Test, launch and troubleshoot, shows how to replace a leaked token with /revoke.",
+          "d": {
+            "lang": "text",
+            "text": "123456789:AAH-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx   (fake example)\n<TOKEN>                                      (how we write it in lessons)",
+            "note": "Never paste a real token into a chat, screenshot, ad tool, public repo or support ticket."
+          },
+          "say": "Here's what a token looks like, using the fake example on screen. It's a number, a colon, then a long string of letters, numbers, dashes and underscores. The number before the colon is the bot I D. Treat the whole thing like a bank password. In this course we always write it as a placeholder, so no real token is ever shown. And the note: never paste a real token into a chat, screenshot, ad tool, public repo or support ticket."
+        },
+        {
+          "v": "compare",
+          "h": "Where the token belongs",
+          "p": "Most token leaks are not hacks. They are copies left in the wrong place by the owner. Keep it in one or two safe places and nowhere else.",
+          "d": {
+            "a": {
+              "title": "Never here",
+              "items": [
+                "WhatsApp or Telegram chats",
+                "Screenshots and screen recordings",
+                "Code pushed to a public GitHub repo",
+                "Shared spreadsheets"
+              ]
+            },
+            "b": {
+              "title": "Here",
+              "items": [
+                "A password manager",
+                "An environment variable on your server",
+                "The secure settings field of a tool you trust",
+                "Nowhere else"
+              ]
+            }
+          },
+          "say": "Most token leaks aren't hacks. They're copies the owner left in the wrong place. On the left, never here: WhatsApp or Telegram chats, screenshots and screen recordings, code pushed to a public GitHub repo, or shared spreadsheets. On the right, here: a password manager, an environment variable on your server, or the secure settings field of a tool you trust. And nowhere else."
+        },
+        {
+          "v": "walk",
+          "h": "Set description, about and photo",
+          "p": "Next, make the bot look trustworthy. The description is what people see in an empty chat before they tap Start. The about text shows on the bot profile. The photo is the bot avatar. Each command asks you to pick the bot first, then send the text or image.",
+          "d": {
+            "steps": [
+              {
+                "title": "/setdescription",
+                "text": "Pick your bot, then send the text shown in the empty chat. At the time of writing up to 512 characters.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "BotFather",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "/setdescription"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Choose a bot to change description.",
+                      "buttons": [
+                        "@dmn_helper_bot"
+                      ]
+                    },
+                    {
+                      "from": "me",
+                      "text": "I send the 3 daily notes from Daily Market Notes NG and answer simple questions. Education only. Send /stop any time."
+                    },
+                    {
+                      "from": "them",
+                      "text": "Success. Description updated."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "/setabouttext",
+                "text": "A short bio for the profile page. At the time of writing up to 120 characters.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "BotFather",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "/setabouttext"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Choose a bot to change the about section.",
+                      "buttons": [
+                        "@dmn_helper_bot"
+                      ]
+                    },
+                    {
+                      "from": "me",
+                      "text": "Helper for Daily Market Notes NG. Education only."
+                    },
+                    {
+                      "from": "them",
+                      "text": "Success. About section updated."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "/setuserpic",
+                "text": "Pick the bot, then send a square image. Use the same logo as your channel.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "BotFather",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "/setuserpic"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Choose a bot to change profile photo.",
+                      "buttons": [
+                        "@dmn_helper_bot"
+                      ]
+                    },
+                    {
+                      "from": "me",
+                      "text": "[photo: logo.png]"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Success. Profile photo updated."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "say": "Next, make the bot look trustworthy. Tap Next to follow each step. First, set the description, the text people see in the empty chat before they tap Start, up to five hundred and twelve characters at the time of writing. The example says what the bot sends, education only, and to send stop any time. Second, set the about text, a short profile bio of up to one hundred and twenty characters. Third, set the profile picture, a square image. Use the same logo as your channel. For each, you pick the bot first, then send the text or image."
+        },
+        {
+          "v": "phone",
+          "h": "What the user sees before Start",
+          "p": "This is the empty chat a new person sees when they open your bot from a link. Your description sits in the middle with a Start button below. If it is blank or vague, many people close the chat. Say what the bot does and how to stop it.",
+          "d": {
+            "app": "bot",
+            "title": "Daily Market Notes Helper",
+            "subtitle": "bot",
+            "messages": [
+              {
+                "from": "them",
+                "text": "What can this bot do?\n\nI send the 3 daily notes from Daily Market Notes NG and answer simple questions. Education only. Send /stop any time.",
+                "buttons": [
+                  "Start"
+                ]
+              }
+            ]
+          },
+          "say": "This is the empty chat a new person sees when they open your bot from a link. Your description sits in the middle, with a Start button below. In the example: I send the three daily notes from Daily Market Notes N G and answer simple questions. Education only. Send stop any time. If this is blank or vague, many people close the chat. So say what the bot does, and how to stop it."
+        },
+        {
+          "v": "walk",
+          "h": "Set the command menu",
+          "p": "Commands appear in the menu button next to the message box, so people do not have to guess. Send /setcommands, pick the bot, then send one command per line in the format \"command - description\". Lower case, no slash at the start of each line.",
+          "d": {
+            "steps": [
+              {
+                "title": "Send /setcommands",
+                "text": "Pick your bot from the buttons.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "BotFather",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "/setcommands"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Choose a bot to change the list of commands.",
+                      "buttons": [
+                        "@dmn_helper_bot"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Send the list",
+                "text": "One command per line. Include a way to stop messages.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "BotFather",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "start - Start the bot\nhelp - How this bot works\nschedule - When we post\nstop - Stop messages from this bot"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Success. Command list updated."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "say": "Commands appear in the menu button next to the message box, so people don't have to guess. Tap Next to follow each step. First, send the set commands command, and pick your bot from the buttons. Second, send the list, one command per line, in the format command, dash, description. Lower case, with no slash at the start. In the example: start, help, schedule, and stop, to stop messages from this bot. Always include a way to stop."
+        },
+        {
+          "v": "tip",
+          "h": "Commands need code to answer",
+          "p": "Setting commands only fills the menu. It does not make the bot reply. When someone taps /help, your code or tool must send the answer. The next lesson connects the code. Until then, the bot will stay silent, which is normal.",
+          "d": {
+            "kind": "tip",
+            "text": "Always include /stop in the menu and make sure it works before launch. It is part of respecting consent."
+          },
+          "say": "Here's something that trips people up. Setting commands only fills the menu. It doesn't make the bot reply. When someone taps help, your code or tool has to send the answer, and the next lesson connects that code. Until then, the bot stays silent, and that's normal. The tip: always include stop in the menu, and make sure it works before launch. It's part of respecting consent."
+        },
+        {
+          "v": "phone",
+          "h": "Test with /start",
+          "p": "Open your bot from t.me/your_bot_username and tap Start. Right now nothing will reply, because no code is running. That is fine. What you are checking is that the name, photo, description and command menu all look right on a real phone.",
+          "d": {
+            "app": "bot",
+            "title": "Daily Market Notes Helper",
+            "subtitle": "bot",
+            "messages": [
+              {
+                "from": "me",
+                "text": "/start"
+              },
+              {
+                "from": "them",
+                "text": "(No reply yet. No code is running. Check the name, photo and menu.)"
+              }
+            ]
+          },
+          "say": "Now test with Start. Open your bot from its link and tap Start. Right now, nothing will reply, because no code is running. That's fine. Look at what you're actually checking here: that the name, photo, description and command menu all look right on a real phone."
+        },
+        {
+          "v": "code",
+          "h": "Check the token with getMe",
+          "p": "The quickest health check is the getMe method. Open this address in a browser with your own token in place of <TOKEN>, on your own device only. A working token returns \"ok\": true and the bot details. A wrong token returns an error with code 401.",
+          "d": {
+            "lang": "url",
+            "text": "https://api.telegram.org/bot<TOKEN>/getMe",
+            "note": "Type it into your own browser only. Never paste the real URL anywhere else, because it contains the token."
+          },
+          "say": "The quickest health check is the get me method. You open the address on screen in your own browser, with your own token in place of the placeholder. I won't read it out, and the note explains why: the real address contains your token, so never paste it anywhere else. A working token returns ok, true, and the bot details. A wrong token returns an error with code four oh one."
+        },
+        {
+          "v": "code",
+          "h": "What getMe returns",
+          "p": "This is the shape of a successful reply. Check that is_bot is true and the username is the one you created. If the username is different, you copied the token of another bot. Field names can be added over time; the core ones stay stable.",
+          "d": {
+            "lang": "json",
+            "text": "{\n  \"ok\": true,\n  \"result\": {\n    \"id\": 123456789,\n    \"is_bot\": true,\n    \"first_name\": \"Daily Market Notes Helper\",\n    \"username\": \"dmn_helper_bot\",\n    \"can_join_groups\": true,\n    \"can_read_all_group_messages\": false\n  }\n}",
+            "note": "Wrong token: {\"ok\": false, \"error_code\": 401, \"description\": \"Unauthorized\"}"
+          },
+          "say": "Here's the shape of a successful reply, in the code on screen. Check two things. First, that is bot is true. Second, that the username is the one you created, here, D M N helper bot. If the username is different, you copied the token of another bot. The note at the bottom shows what a wrong token returns: ok false, error code four oh one, unauthorized. Field names can be added over time, but the core ones stay stable."
+        },
+        {
+          "v": "bars",
+          "h": "Example: a clear description helps",
+          "p": "An illustrative test from one channel. Two bots, same traffic, only the description changed. Your numbers will differ, but the direction is common: people tap Start more when they know what happens next. Figures are an example only.",
+          "more": "Example. 1,000 people opened each bot. Blank: 410 tapped Start. Vague: 520. Clear: 680. That is 270 more people you can legally message, compared with a blank description, from the same ad spend. Run your own test before relying on any figure.",
+          "d": [
+            [
+              "Blank description",
+              41,
+              "41% tapped Start"
+            ],
+            [
+              "Vague: \"Welcome to our bot\"",
+              52,
+              "52% tapped Start"
+            ],
+            [
+              "Clear: what, when, how to stop",
+              68,
+              "68% tapped Start"
+            ]
+          ],
+          "say": "This is an illustrative test from one channel. Two bots, same traffic, only the description changed. These are example figures. Look at the bars. With a blank description, forty one percent tapped Start. With a vague one, welcome to our bot, fifty two percent. With a clear one saying what, when and how to stop, sixty eight percent. Your numbers will differ, but the direction is common. People tap Start more when they know what happens next. Run your own test."
+        },
+        {
+          "v": "cards",
+          "h": "Common BotFather mistakes",
+          "p": "Most bot problems start in the first ten minutes in BotFather. Check your setup against these mistakes and their fixes before you connect any code or tool, because each one is harder to fix once real people are using the bot.",
+          "d": [
+            "Copycat BotFather|check the verified tick first",
+            "Token in a group chat|password manager only",
+            "Username without bot|it must end in bot",
+            "Blank description|say what, when and how to stop",
+            "No /stop command|add it before launch"
+          ],
+          "say": "Most bot problems start in the first ten minutes in BotFather. Check these cards. A copycat BotFather, so check the verified tick first. A token in a group chat, keep it in a password manager only. A username without bot, it must end in bot. A blank description, say what, when and how to stop. And no stop command, add it before launch. Each one is harder to fix once real people are using the bot."
+        },
+        {
+          "v": "check",
+          "h": "Bot setup checklist",
+          "p": "Tick each item before moving to the next lesson. Each one takes under a minute in BotFather. If getMe fails, stop here and fix the token first, because nothing in the next lesson will work without it.",
+          "d": [
+            "Created with the verified @BotFather",
+            "Username ends in bot and matches your brand",
+            "Token saved in a password manager only",
+            "Description, about text and photo set",
+            "Command menu set, including stop",
+            "getMe returns ok: true with the right username"
+          ],
+          "say": "Tick each item before moving on. Created with the verified BotFather. Username ends in bot and matches your brand. Token saved in a password manager only. Description, about text and photo set. Command menu set, including stop. And get me returns ok, true, with the right username. Each takes under a minute. If get me fails, stop here and fix the token first, because nothing in the next lesson will work without it."
+        }
+      ],
+      "takeaways": [
+        "Every bot is created in the verified @BotFather chat with /newbot.",
+        "The username must end in bot; the display name can be anything clear.",
+        "The token is a secret key. Whoever holds it controls the bot.",
+        "Description, about text, photo and commands make the bot trustworthy before the first message."
+      ],
+      "action": "Create a test bot with /newbot, set its description, about text, photo and commands, then confirm getMe returns your bot.",
+      "glossary": [
+        {
+          "term": "BotFather",
+          "def": "The official Telegram bot, @BotFather, used to create bots and change their settings."
+        },
+        {
+          "term": "Bot username",
+          "def": "The unique address of a bot, such as dmn_helper_bot. It must end in bot."
+        },
+        {
+          "term": "Display name",
+          "def": "The name people see in chats. It can contain spaces and can be changed any time."
+        },
+        {
+          "term": "getMe",
+          "def": "A Bot API method that returns basic details of the bot. Used to check a token works."
+        },
+        {
+          "term": "Command menu",
+          "def": "The list of commands, set with /setcommands, shown in the menu next to the message box."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Which username would BotFather accept?",
+          "options": [
+            "Daily Market Notes",
+            "dmn_helper",
+            "dmn_helper_bot",
+            "@dmn-helper"
+          ],
+          "answer": 2,
+          "why": "Usernames use letters, numbers and underscores and must end in bot. Spaces, dashes and a missing \"bot\" ending are not accepted."
+        },
+        {
+          "q": "Someone in a Telegram group says they are BotFather support and asks for your token to \"verify\" your bot. What do you do?",
+          "options": [
+            "Send the token so the bot is verified",
+            "Send only the first half of the token",
+            "Ignore them; the real @BotFather never asks for your token",
+            "Pay the verification fee instead"
+          ],
+          "answer": 2,
+          "why": "The real @BotFather never messages you first or asks for tokens or money. Sharing any part of the token is risky."
+        },
+        {
+          "q": "What does /setdescription change?",
+          "options": [
+            "The text people see in the empty chat before tapping Start",
+            "The bot username",
+            "The bot token",
+            "The channel description"
+          ],
+          "answer": 0,
+          "why": "The description shows in the empty bot chat. The about text, set with /setabouttext, shows on the profile."
+        },
+        {
+          "q": "You open https://api.telegram.org/bot<TOKEN>/getMe with your token and get error code 401 Unauthorized. What is most likely?",
+          "options": [
+            "The bot is not an admin of your channel",
+            "The token is wrong or has been revoked",
+            "Telegram is down everywhere",
+            "You forgot /setcommands"
+          ],
+          "answer": 1,
+          "why": "A 401 from getMe means the token is not valid. Admin rights and commands do not affect getMe."
+        },
+        {
+          "q": "You set commands with /setcommands but tapping /help does nothing. Why?",
+          "options": [
+            "Commands only work in channels",
+            "BotFather takes 24 hours to apply commands",
+            "Commands must start with a capital letter",
+            "Commands only fill the menu; your code or tool must send the reply"
+          ],
+          "answer": 3,
+          "why": "/setcommands only defines the menu. A running program must receive the command and answer it."
+        }
+      ],
+      "say_intro": "Every Telegram bot is created in BotFather. In this lesson you'll create your bot, learn what the token is and why it must stay secret, and set up the bot so it looks trustworthy before anyone taps Start.",
+      "say_outro": "You've created a bot with the real BotFather, stored the token safely, and set a clear description, photo and command menu with a working way to stop. Your task: create a test bot, set its description, about text, photo and commands, then confirm get me returns your bot. Now take the quiz."
+    },
+    {
+      "slug": "connect-the-bot-to-your-channel",
+      "title": "Connect the bot to your channel",
+      "minutes": 19,
+      "objectives": [
+        "By the end you can add your bot as a channel admin with the right permission",
+        "By the end you can explain how a join request reaches the bot and how it is approved",
+        "By the end you can explain long polling and webhooks in plain words",
+        "By the end you can read a small Node.js bot that greets and approves join requests, or choose a no-code tool instead"
+      ],
+      "steps": [
+        {
+          "v": "map",
+          "h": "The system you are building",
+          "p": "Here is the whole flow. A person taps your ad, then your named link. Telegram creates a join request and sends it to your bot as an update. The bot greets the person privately, approves them and logs the link name. That log is your per-source report.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Meta ad",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Prelander",
+                "kind": "page"
+              },
+              {
+                "id": "link",
+                "label": "Named join link",
+                "kind": "telegram"
+              },
+              {
+                "id": "tg",
+                "label": "Telegram servers",
+                "kind": "telegram"
+              },
+              {
+                "id": "bot",
+                "label": "Your bot",
+                "kind": "bot"
+              },
+              {
+                "id": "user",
+                "label": "New member",
+                "kind": "person"
+              },
+              {
+                "id": "log",
+                "label": "Join log",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "lp",
+                "click"
+              ],
+              [
+                "lp",
+                "link",
+                "tap"
+              ],
+              [
+                "link",
+                "tg",
+                "request"
+              ],
+              [
+                "tg",
+                "bot",
+                "update"
+              ],
+              [
+                "bot",
+                "user",
+                "greet + approve"
+              ],
+              [
+                "bot",
+                "log",
+                "link name"
+              ]
+            ]
+          },
+          "say": "Here's the whole system on one map. A person taps your Meta ad, then the prelander, then your named join link. That sends a request to Telegram's servers, which pass an update to your bot. The bot greets the new member privately and approves them, and it writes the link name into your join log. That log becomes your per-source report."
+        },
+        {
+          "v": "big",
+          "h": "Why connect a bot at all",
+          "p": "Without a bot, someone must approve every request by hand and nobody greets people in the short private window. At 360 requests a day that is a full-time job, and every slow approval loses people you paid for. A bot greets, approves and logs the link name in seconds, every time.",
+          "d": {
+            "b": "Seconds, not hours",
+            "s": "Greet, approve and log every request"
+          },
+          "say": "Why connect a bot at all? Without one, someone has to approve every request by hand, and nobody greets people in the short private window. At three hundred and sixty requests a day, that's a full-time job, and every slow approval loses people you paid for. A bot greets, approves and logs the link name in seconds, every time."
+        },
+        {
+          "v": "walk",
+          "h": "Add the bot as an admin",
+          "p": "A bot can only approve join requests in a channel where it is an admin with permission to invite users. You add it the same way you add a person. Search the bot username, not the display name. Right names change between app versions.",
+          "more": "Turn on Post messages only if the bot will publish scheduled posts to the channel. Never give a bot Add new admins: if the token ever leaks, the attacker could add more admins and take the channel. In the Bot API this permission is called can_invite_users, and it is the one approveChatJoinRequest checks.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open Administrators",
+                "text": "Channel, then Edit or Manage, then Administrators, then Add Admin.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Administrators",
+                  "subtitle": "channel",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "Add Admin",
+                      "buttons": [
+                        "Search"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Search the bot username",
+                "text": "Type the exact username, for example dmn_helper_bot, and pick it.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Add Admin",
+                  "subtitle": "search",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "dmn_helper_bot"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Daily Market Notes Helper\n@dmn_helper_bot",
+                      "buttons": [
+                        "Select"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Give only what it needs",
+                "text": "Turn on Invite users via link. Leave the rest off unless your flow needs it.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "telegram.example/channel/admins/bot",
+                  "title": "Admin rights: @dmn_helper_bot",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Change channel info",
+                      "on": false
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Post messages",
+                      "on": false
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Delete messages of others",
+                      "on": false
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Invite users via link",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Add new admins",
+                      "on": false
+                    },
+                    {
+                      "type": "button",
+                      "label": "Save"
+                    }
+                  ],
+                  "highlight": 3
+                }
+              }
+            ]
+          },
+          "say": "A bot can only approve join requests in a channel where it's an admin with permission to invite users. Tap Next to follow each step. First, open the channel, then Edit or Manage, then Administrators, then Add Admin. Second, search the exact bot username, not the display name, for example D M N helper bot, and pick it. Third, give only what it needs. Turn on invite users via link, and leave the rest off unless your flow needs it. Never give a bot add new admins, because if the token leaks, an attacker could take the channel."
+        },
+        {
+          "v": "flow",
+          "h": "How a join request reaches the bot",
+          "p": "When someone taps Request to Join on a link with approval on, Telegram records a pending request. If your bot is an admin with invite rights, Telegram also sends the bot an update of type chat_join_request. The bot decides what to do. The person waits until someone approves or declines.",
+          "d": [
+            "User taps Request to Join",
+            "Telegram creates a pending request",
+            "Bot receives chat_join_request",
+            "Bot greets in private",
+            "Bot calls approveChatJoinRequest",
+            "User is now a member"
+          ],
+          "say": "How does a join request reach the bot? Follow the flow. The user taps Request to Join. Telegram creates a pending request. If your bot is an admin with invite rights, it receives an update of the join request type. The bot greets in private. The bot calls the approve method. And the user is now a member. Until someone approves or declines, the person simply waits."
+        },
+        {
+          "v": "code",
+          "h": "What the update contains",
+          "p": "This is a trimmed chat_join_request update. from is the person. chat is your channel. user_chat_id is the private chat the bot may use for a short time. invite_link.name is the link name you set, which tells you the ad source.",
+          "d": {
+            "lang": "json",
+            "text": "{\n  \"update_id\": 70412,\n  \"chat_join_request\": {\n    \"chat\": { \"id\": -1001234567890, \"title\": \"Daily Market Notes NG\", \"type\": \"channel\" },\n    \"from\": { \"id\": 555111222, \"first_name\": \"Ada\" },\n    \"user_chat_id\": 555111222,\n    \"date\": 1767600000,\n    \"invite_link\": { \"name\": \"META_NG_ADSET_A\", \"creates_join_request\": true }\n  }\n}",
+            "note": "Links created by another admin may show a partly hidden invite_link URL. The name is what you rely on."
+          },
+          "say": "Here's a trimmed join request update, in the code on screen. I'll just point out the parts that matter. From is the person, here, Ada. Chat is your channel. User chat I D is the private chat the bot may use for a short time. And the invite link name is the link name you set, here, meta N G ad set A. That tells you the ad source. The note says links made by another admin may partly hide the link address, so rely on the name."
+        },
+        {
+          "v": "tip",
+          "h": "The short private window",
+          "p": "Normally a bot cannot message a person who never started it. A join request is the exception. At the time of writing the Bot API lets the bot use user_chat_id for 5 minutes, and only until the request is approved or declined. This can change; check the current Bot API docs.",
+          "more": "Use the window for one useful greeting with a Start button, so the person can choose to open a normal conversation with the bot. If they tap Start, the bot can keep talking to them like any other user until they block it. If they do not, respect that. Do not use the window to push offers, and never try to work around it. The window is a courtesy Telegram gives bots, and abusing it gets bots reported and limited.",
+          "d": {
+            "kind": "warn",
+            "text": "Send the greeting before you approve. Once the request is handled, the window closes and the bot can only message people who start it."
+          },
+          "say": "Normally a bot can't message someone who never started it. A join request is the exception. At the time of writing, the Bot A P I, the bot programming interface, lets the bot use that private chat for five minutes, and only until the request is approved or declined. Use it for one useful greeting with a Start button, never to push offers. And the warning on screen: send the greeting before you approve. Once the request is handled, the window closes. Check the current docs, as this can change."
+        },
+        {
+          "v": "compare",
+          "h": "Polling or webhook",
+          "p": "A bot learns about new events in one of two ways. With long polling, your program keeps asking Telegram \"anything new?\" With a webhook, Telegram calls your server when something happens. Both work. You use one at a time, never both.",
+          "more": "Long polling: the program calls getUpdates with a timeout, for example 30 seconds. Telegram holds the call open until there is an update or the time runs out, then the program asks again. You pass offset = last update_id + 1 so Telegram knows which updates you already handled. Webhook: you call setWebhook once with your HTTPS URL. At the time of writing Telegram only sends to ports 443, 80, 88 or 8443. While a webhook is set, getUpdates is refused with a 409 Conflict error. Call deleteWebhook to go back to polling.",
+          "d": {
+            "a": {
+              "title": "Long polling (getUpdates)",
+              "items": [
+                "Your program asks Telegram in a loop",
+                "Runs on a laptop or small server",
+                "No domain or HTTPS needed",
+                "Best for learning and small bots"
+              ]
+            },
+            "b": {
+              "title": "Webhook (setWebhook)",
+              "items": [
+                "Telegram sends updates to your URL",
+                "Needs a public HTTPS address",
+                "Better for many bots or busy bots",
+                "Used by most hosted tools"
+              ]
+            }
+          },
+          "say": "A bot learns about new events in one of two ways. On the left, long polling. Your program keeps asking Telegram, anything new? It runs on a laptop or small server, needs no domain or H T T P S, and is best for learning and small bots. On the right, a webhook. Telegram sends updates to your web address. It needs a public H T T P S address, suits many or busy bots, and is used by most hosted tools. Both work. Use one at a time, never both."
+        },
+        {
+          "v": "code",
+          "h": "A minimal bot in Node.js",
+          "p": "This is the whole bot: about 40 lines. It long-polls for join requests, sends the greeting with a Start button first, then approves. It is for learning on a test channel. Read the warnings slide before you run it.",
+          "more": "Line by line: call() posts JSON to any Bot API method and logs errors. The loop asks for updates with a 30 second timeout and only chat_join_request updates. offset moves forward so no update is handled twice. handle() reads the link name, sends one greeting to user_chat_id with a Start button that opens the bot with ?start=SOURCE, then approves the request. The try/catch waits 5 seconds after a network error instead of hammering the API. What it does not do: store data, answer /help or /stop, or check that the request is for your own channel. Add those before real traffic.",
+          "d": {
+            "lang": "js",
+            "text": "// Node 18+ (built-in fetch). Run: BOT_TOKEN=xxx node bot.js\nconst API = `https://api.telegram.org/bot${process.env.BOT_TOKEN}`;\nlet offset = 0;\n\nasync function call(method, body) {\n  const res = await fetch(`${API}/${method}`, {\n    method: 'POST',\n    headers: { 'Content-Type': 'application/json' },\n    body: JSON.stringify(body),\n  });\n  const data = await res.json();\n  if (!data.ok) console.error(method, data.error_code, data.description);\n  return data;\n}\n\nasync function handle(req) {\n  const source = req.invite_link?.name || 'unknown';\n  console.log('request', req.from.id, 'via', source);\n  // 1. Greet first: the DM window closes once the request is handled\n  await call('sendMessage', {\n    chat_id: req.user_chat_id,\n    text: 'Welcome. Tap Start below to get updates from this bot. Send /stop any time.',\n    reply_markup: { inline_keyboard: [[{ text: 'Start', url: 'https://t.me/YourBot?start=' + source }]] },\n  });\n  // 2. Then approve\n  await call('approveChatJoinRequest', { chat_id: req.chat.id, user_id: req.from.id });\n}\n\n(async function loop() {\n  for (;;) {\n    try {\n      const r = await call('getUpdates', { offset, timeout: 30, allowed_updates: ['chat_join_request'] });\n      for (const u of r.result || []) {\n        offset = u.update_id + 1;\n        if (u.chat_join_request) await handle(u.chat_join_request);\n      }\n    } catch (e) { console.error(e.message); await new Promise(r => setTimeout(r, 5000)); }\n  }\n})();",
+            "note": "Needs Node 18 or newer. Replace YourBot with your bot username. Run it with the token in an environment variable, never in the file."
+          },
+          "say": "This is a whole bot, about forty lines of Node J S, shown on screen. I won't read the code. Here's what it does, in order. It long-polls for join requests. For each one, it reads the link name, sends one greeting with a Start button first, then approves. It also waits a few seconds after a network error, rather than hammering the A P I. What it doesn't do yet: store data, answer help or stop, or check the request is for your own channel. It's for learning on a test channel. Read the warnings slide before you run it."
+        },
+        {
+          "v": "code",
+          "h": "Run it on your own machine",
+          "p": "Save the code as bot.js. Put the token in an environment variable for this terminal session only, then start the bot. Send a join request from a second Telegram account using your STAFF_TEST link and watch the log.",
+          "d": {
+            "lang": "bash",
+            "text": "# macOS / Linux\nexport BOT_TOKEN=\"<TOKEN>\"\nnode bot.js\n\n# Windows PowerShell\n$env:BOT_TOKEN=\"<TOKEN>\"\nnode bot.js\n\n# Expected log\nrequest 555111222 via STAFF_TEST",
+            "note": "Stop the bot with Ctrl+C. Pending requests wait until the bot runs again."
+          },
+          "say": "To run it on your own machine, save the code as bot dot J S. Put the token in an environment variable for this terminal session only, then start the bot, using the commands on screen for Mac, Linux or Windows. Then, from a second Telegram account, send a join request using your staff test link, and watch the log. You should see a request line ending in, via staff test. Stop the bot with control C. Pending requests wait until it runs again."
+        },
+        {
+          "v": "check",
+          "h": "Warnings before you run any bot code",
+          "p": "Small bots break in simple ways, and most breakages cost you paid joins without any obvious error. Read these before you run the example, and read them again before real traffic touches the bot.",
+          "d": [
+            "Token only in an environment variable, never in the file or a repo",
+            "Run one copy only; two pollers on one token conflict",
+            "No webhook set while you poll (getUpdates returns 409 if one is)",
+            "Test on a private test channel first",
+            "Add /stop handling and logging before real traffic",
+            "Keep it running: requests sent while it is down miss the greeting"
+          ],
+          "say": "Read these warnings before you run any bot code, and again before real traffic. Keep the token only in an environment variable, never in the file or a repo. Run one copy only, because two pollers on one token conflict. No webhook set while you poll, or you'll get a four oh nine error. Test on a private test channel first. Add stop handling and logging before real traffic. And keep it running, because requests sent while it's down miss the greeting."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example: when the bot is down",
+          "p": "Downtime does not lose join requests. They stay pending. But the greeting window is short, so people who requested while the bot was off get approved later without a greeting. That costs you the chance to invite them to start the bot.",
+          "more": "The 30% Start rate is an example only. The fix is cheap: run the bot on a small always-on server or use a hosted tool, and add an alert if the bot stops. Some operators also review pending requests by hand when a bot was down, from the channel Subscribers or Requests screen.",
+          "d": {
+            "kind": "example",
+            "text": "Example. 360 requests a day, about 15 an hour. The bot is off for 6 hours overnight, so about 90 requests pile up. When it restarts it can still approve all 90, but at the time of writing their 5-minute window has passed, so it cannot greet them. If 30% of greeted people tap Start, you lose about 27 bot contacts that day."
+          },
+          "say": "Here's what happens when the bot is down. Example figures. Three hundred and sixty requests a day, about fifteen an hour. The bot is off for six hours overnight, so about ninety requests pile up. Downtime doesn't lose them. When it restarts, it can still approve all ninety. But their five-minute window has passed, so it can't greet them. If thirty percent of greeted people tap Start, you lose about twenty seven bot contacts that day. The fix is cheap: an always-on server or hosted tool, with an alert if the bot stops."
+        },
+        {
+          "v": "cards",
+          "h": "The no-code option",
+          "p": "You do not have to write code. Join-request tools give you a dashboard instead. In the Voo family, Joinvoo focuses on join tracking per link and Castvoo on broadcasts. Other tools exist. Most work in one of two ways, so ask which before you sign up.",
+          "more": "Before giving any tool your token, check who runs it, where data is stored and how you can remove access. If you stop using a tool that held your token, revoke the token in BotFather so the old copy stops working. Avoid any tool that offers to message people who never joined or started your bot, adds members without consent, or sells lists. Those break Telegram rules and get bots and channels limited.",
+          "d": [
+            "Their bot|You add the tool's bot as channel admin. Simple, but the bot name is theirs.",
+            "Your bot|You paste your own token into the tool. Your brand, but you trust them with it.",
+            "What to check|Per-link counts, greeting before approve, opt-out, data export.",
+            "Red flags|Promises of mass DMs to non-subscribers or scraped contact lists."
+          ],
+          "say": "You don't have to write code. Join-request tools give you a dashboard instead. In the Voo family, Joinvoo focuses on join tracking per link, and Castvoo on broadcasts, and other tools exist. On the cards: some tools use their bot, which is simple but the name is theirs. Others use your bot, with your token, so you trust them with it. Check for per-link counts, greeting before approve, opt-out and data export. Red flags are promises of mass messages to non-subscribers, or scraped contact lists."
+        },
+        {
+          "v": "product",
+          "h": "A join tracker instead of code",
+          "p": "If you would rather not run code, a join tracker does the polling, greeting, approving and per-link counting for you. Check that it greets before approving, honours opt-outs and lets you export your data. Code it yourself or use a tool; the logic is the same.",
+          "d": {
+            "slug": "joinvoo",
+            "why": "Tracks join requests per named link, greets before approving and shows requests, approvals and Starts per source without code."
+          },
+          "say": "If you'd rather not run code, a join tracker does the polling, greeting, approving and per-link counting for you. This card shows Joinvoo, which tracks join requests per named link, greets before approving, and shows requests, approvals and Starts per source. Whatever tool you choose, check that it greets before approving, honours opt-outs and lets you export your data. Code it yourself or use a tool. The logic is the same."
+        },
+        {
+          "v": "screen",
+          "h": "What a join tracker shows",
+          "p": "Whether you code it or use a tool, the result should look like this: one row per link name, with requests, approvals, greetings delivered and people who tapped Start. Numbers are an example only.",
+          "d": {
+            "kind": "browser",
+            "url": "jointracker.example/channel/daily-market-notes",
+            "title": "Join requests by link",
+            "blocks": [
+              {
+                "type": "select",
+                "label": "Date",
+                "value": "Yesterday"
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "Link name",
+                  "Requests",
+                  "Approved",
+                  "Started bot"
+                ],
+                "rows": [
+                  [
+                    "META_NG_ADSET_A",
+                    "410",
+                    "400",
+                    "128"
+                  ],
+                  [
+                    "META_NG_ADSET_B",
+                    "480",
+                    "470",
+                    "96"
+                  ],
+                  [
+                    "STAFF_TEST",
+                    "3",
+                    "3",
+                    "3"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Example data. Started bot = people who tapped Start after the greeting."
+              },
+              {
+                "type": "button",
+                "label": "Export CSV"
+              }
+            ],
+            "highlight": 1
+          },
+          "more": "To send these joins to the ad platform as server events, follow the full setup in the Tracking setup lab module, then the Telegram funnel flow module for the Telegram-specific hops.",
+          "say": "Whether you code it or use a tool, the result should look like this. Example data. One row per link name. Meta N G ad set A: four hundred and ten requests, four hundred approved, one hundred and twenty eight started the bot. Ad set B: four hundred and eighty requests, four hundred and seventy approved, ninety six started. And staff test, three of each. Started bot means people who tapped Start after the greeting."
+        },
+        {
+          "v": "compare",
+          "h": "Common connection mistakes",
+          "p": "When a join flow breaks, it is usually one of these five mistakes. None of them shows an obvious error on the channel itself. You only notice them when greetings, approvals or Start counts stop adding up in your log.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Bot added as a member, not admin",
+                "Approve first, greet second",
+                "Token pasted inside bot.js",
+                "Polling and a webhook at the same time",
+                "Bot on a laptop that sleeps"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Admin with Invite users via link",
+                "Greet first, then approve",
+                "Token in an environment variable",
+                "One receiver per token",
+                "Always-on server or trusted tool"
+              ]
+            }
+          },
+          "say": "When a join flow breaks, it's usually one of these five, and none shows an obvious error. Bot added as a member, not admin, make it admin with invite users via link. Approve first, greet second, greet first, then approve. Token pasted inside the code file, use an environment variable. Polling and a webhook at the same time, one receiver per token. And a bot on a laptop that sleeps, use an always-on server or trusted tool. You only notice these when your counts stop adding up."
+        },
+        {
+          "v": "tip",
+          "h": "Only approve what you can serve",
+          "p": "Auto-approval is fine for most channels. Still, decide what the bot checks first. Some operators decline requests from accounts flagged by their own spam filter, or pause approvals if the channel is getting bot floods. Use declineChatJoinRequest for those, and never discriminate unlawfully.",
+          "d": {
+            "kind": "tip",
+            "text": "Log every approve and decline with the link name and time. That log is your evidence if numbers ever disagree with your network or ad platform."
+          },
+          "say": "Only approve what you can serve. Auto-approval is fine for most channels, but decide what the bot checks first. Some operators decline requests from accounts flagged by their own spam filter, or pause approvals during bot floods, using the decline method. And never discriminate unlawfully. The tip: log every approve and decline with the link name and time. That log is your evidence if numbers ever disagree with your network or ad platform."
+        }
+      ],
+      "takeaways": [
+        "The bot needs admin rights with Invite users via link to approve join requests.",
+        "chat_join_request updates carry the person, the channel and the link name.",
+        "Greet first, then approve: the private window closes when the request is handled.",
+        "Use long polling or a webhook, never both; or use a trusted no-code tool."
+      ],
+      "action": "Add your test bot as admin of your test channel, run the example bot (or connect a tool), and approve one request from a second account via STAFF_TEST.",
+      "glossary": [
+        {
+          "term": "chat_join_request",
+          "def": "The Bot API update a bot receives when someone requests to join a chat where the bot is an admin."
+        },
+        {
+          "term": "approveChatJoinRequest",
+          "def": "The Bot API method that approves a pending join request. Needs the invite users right."
+        },
+        {
+          "term": "user_chat_id",
+          "def": "The private chat ID the bot may use to message the requester for a short time while the request is pending."
+        },
+        {
+          "term": "Long polling",
+          "def": "Receiving updates by calling getUpdates in a loop; Telegram holds each call open until something arrives."
+        },
+        {
+          "term": "Webhook",
+          "def": "Receiving updates by giving Telegram an HTTPS URL with setWebhook; Telegram sends each update to it."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Your bot is in the channel but never receives join requests. What is the first thing to check?",
+          "options": [
+            "That the bot has a profile photo",
+            "That the bot is an admin with Invite users via link turned on",
+            "That the channel is public",
+            "That /setcommands includes /join"
+          ],
+          "answer": 1,
+          "why": "Only an admin bot with invite rights receives and can approve join requests. Photos and commands do not matter here."
+        },
+        {
+          "q": "In the example bot, why is the greeting sent before approveChatJoinRequest?",
+          "options": [
+            "Telegram requires a message before approval",
+            "Approving first is slower",
+            "The private window closes once the request is handled",
+            "Greeting first makes the request public"
+          ],
+          "answer": 2,
+          "why": "At the time of writing the bot can use user_chat_id only until the request is processed, so the greeting must go first."
+        },
+        {
+          "q": "Your getUpdates calls return error 409 Conflict. What is a likely cause?",
+          "options": [
+            "A webhook is still set, or another copy of the bot is polling",
+            "The token is wrong",
+            "The channel is private",
+            "The bot has no description"
+          ],
+          "answer": 0,
+          "why": "getUpdates is refused while a webhook is active or another process is polling the same token. A wrong token gives 401."
+        },
+        {
+          "q": "Which field tells you which ad source brought a join request?",
+          "options": [
+            "from.first_name",
+            "chat.title",
+            "update_id",
+            "invite_link.name"
+          ],
+          "answer": 3,
+          "why": "The link name you set per source is sent in invite_link.name. The other fields describe the person, the channel or the update order."
+        },
+        {
+          "q": "A tool offers to send your offer to 50,000 Telegram users who never joined your channel. What do you do?",
+          "options": [
+            "Use it once to test",
+            "Decline: messaging people without consent breaks Telegram rules and gets bots limited",
+            "Use it only at night",
+            "Use it but with a different bot"
+          ],
+          "answer": 1,
+          "why": "Bots may only message people who started them, apart from the short join-request window. Mass unsolicited messaging is spam."
+        }
+      ],
+      "say_intro": "Now you'll connect your bot to your channel so it can greet, approve and log every join request in seconds. You'll learn how requests reach the bot, polling versus webhooks, and the no-code option if you'd rather not write code.",
+      "say_outro": "Your bot is now an admin with only invite rights, it greets before approving inside the short window, and it logs the link name for every request, whether through code or a tool. Your task: add your test bot as admin of your test channel, run the example bot or connect a tool, and approve one request from a second account via staff test. Now take the quiz."
+    },
+    {
+      "slug": "welcome-flows-and-broadcasts",
+      "title": "Welcome flows and broadcasts",
+      "minutes": 19,
+      "objectives": [
+        "By the end you can write a welcome DM with buttons that asks for consent",
+        "By the end you can handle /stop so opt-out is instant and permanent",
+        "By the end you can plan a drip schedule and segment it by link source",
+        "By the end you can work out how long a broadcast takes within rate limits"
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Two kinds of message, one rule",
+          "p": "Your bot sends two kinds of message: one-to-one flows that start when a person acts, and broadcasts to many people. The Landers and Telegram module explained the ideas; here you write them. Every block or report removes a contact you paid for, so the rule for both is the same: only message people who chose to hear from you, and make stopping easy.",
+          "d": {
+            "b": "Consent first, content second",
+            "s": "Every message should be one a person agreed to"
+          },
+          "say": "Your bot sends two kinds of message. One-to-one flows that start when a person acts, and broadcasts to many people. The Landers and Telegram module explained the ideas. Here, you write them. And the rule for both is the same. Only message people who chose to hear from you, and make stopping easy. Every block or report removes a contact you paid for. Consent first, content second."
+        },
+        {
+          "v": "phone",
+          "h": "The greeting in the join window",
+          "p": "This is the one message the bot sends during the short join-request window. It says who you are, what happens next and offers a choice. The Start button opens the bot with a source tag. No offer link yet. The person decides whether to continue.",
+          "d": {
+            "app": "bot",
+            "title": "Daily Market Notes Helper",
+            "subtitle": "bot",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Hi Ada, thanks for requesting to join Daily Market Notes NG. You are being approved now.\n\nWant the morning note and a short beginner guide here in private chat too? Tap Start. You can send /stop any time.",
+                "buttons": [
+                  "Start",
+                  "No thanks"
+                ]
+              }
+            ]
+          },
+          "say": "This is the one message the bot sends during the short join-request window. Look at it. Hi Ada, thanks for requesting to join Daily Market Notes N G, you're being approved now. Want the morning note and a short beginner guide here in private chat too? Tap Start. You can send stop any time. Then two buttons: Start, or No thanks. Notice there's no offer link yet. The person decides whether to continue."
+        },
+        {
+          "v": "phone",
+          "h": "After they tap Start",
+          "p": "Now the person has started the bot, so you can talk normally. Confirm what they signed up for, ask one simple question to segment them, and repeat how to stop. Buttons beat typed answers on a phone, and they give you clean data.",
+          "d": {
+            "app": "bot",
+            "title": "Daily Market Notes Helper",
+            "subtitle": "bot",
+            "messages": [
+              {
+                "from": "me",
+                "text": "/start"
+              },
+              {
+                "from": "them",
+                "text": "Welcome. You will get 1 morning note at 8am WAT and the beginner guide over the next 5 days. Nothing else.\n\nHow much trading have you done?",
+                "buttons": [
+                  "New to it",
+                  "Some experience",
+                  "Trade often"
+                ]
+              },
+              {
+                "from": "me",
+                "text": "New to it"
+              },
+              {
+                "from": "them",
+                "text": "Thanks. Day 1 of the beginner guide arrives tomorrow at 8am. Send /stop any time and I will stop messaging you."
+              }
+            ]
+          },
+          "say": "Once they tap Start, you can talk normally. In this chat, the bot confirms exactly what they signed up for: one morning note at eight, West Africa time, and the beginner guide over the next five days, nothing else. Then one simple segmenting question, how much trading have you done, with three buttons. Ada taps, new to it. The bot says day one arrives tomorrow, and repeats how to stop. Buttons beat typed answers on a phone, and they give you clean data."
+        },
+        {
+          "v": "code",
+          "h": "Buttons in the Bot API",
+          "p": "Inline buttons are sent in reply_markup. A url button opens a link. A callback_data button sends a short code back to your bot, which you use to record the answer. Keep callback codes short; at the time of writing the limit is 64 bytes.",
+          "d": {
+            "lang": "json",
+            "text": "{\n  \"chat_id\": 555111222,\n  \"text\": \"How much trading have you done?\",\n  \"reply_markup\": {\n    \"inline_keyboard\": [\n      [{ \"text\": \"New to it\", \"callback_data\": \"lvl:new\" }],\n      [{ \"text\": \"Some experience\", \"callback_data\": \"lvl:some\" }],\n      [{ \"text\": \"Trade often\", \"callback_data\": \"lvl:often\" }]\n    ]\n  }\n}",
+            "note": "When a button is tapped, the bot receives a callback_query update. Answer it with answerCallbackQuery so the button stops loading."
+          },
+          "say": "Here's how those buttons look in the Bot A P I, the bot programming interface, in the code on screen. Inline buttons go in the reply markup. A U R L button opens a link. A callback button sends a short code back to your bot, which you use to record the answer. Keep those codes short, the limit is sixty four bytes at the time of writing. And the note: when a button is tapped, answer the callback so the button stops loading."
+        },
+        {
+          "v": "check",
+          "h": "Consent and opt-out rules",
+          "p": "These are not optional extras. They keep your bot within Telegram rules, keep complaint rates low and respect the people you paid to reach. Build them before your first broadcast.",
+          "d": [
+            "Say what you will send and how often, at the start",
+            "/stop works instantly and is never ignored",
+            "Stopped users are never messaged again, even after a reimport",
+            "Record when and how each person opted in",
+            "Blocked bot (error 403) means remove from lists",
+            "No hidden offers or surprise topics"
+          ],
+          "say": "These consent and opt-out rules aren't optional extras. Say what you'll send and how often, at the start. Stop works instantly and is never ignored. Stopped users are never messaged again, even after a reimport. Record when and how each person opted in. A blocked bot, error four oh three, means remove them from lists. And no hidden offers or surprise topics. Build these before your first broadcast. They keep you within Telegram rules and respect the people you paid to reach."
+        },
+        {
+          "v": "phone",
+          "h": "What /stop should look like",
+          "p": "Opt-out must be one command and one confirmation. No \"are you sure\" loops, no guilt messages, no extra offer. Offer a way back in case they change their mind, then stop. Your code must mark them as stopped before replying.",
+          "d": {
+            "app": "bot",
+            "title": "Daily Market Notes Helper",
+            "subtitle": "bot",
+            "messages": [
+              {
+                "from": "me",
+                "text": "/stop"
+              },
+              {
+                "from": "them",
+                "text": "Done. You will not get any more messages from this bot. If you change your mind, send /start."
+              }
+            ]
+          },
+          "say": "Here's what stop should look like. One command, one confirmation. Done. You won't get any more messages from this bot. If you change your mind, send start. That's it. No are-you-sure loops, no guilt messages, no extra offer. Just a way back in case they change their mind. And behind the scenes, your code must mark them as stopped before it replies."
+        },
+        {
+          "v": "table",
+          "h": "A 5-day drip schedule",
+          "p": "A drip is a fixed sequence sent on a timetable after someone starts the bot. Plan it in a table first. Each day should teach or help. The offer appears only after value, with an honest risk line, and only for segments where it fits.",
+          "more": "Send at the person's local time. A Kenya member gets 8am EAT, not 8am WAT. Skip any day if the person has stopped. In regulated verticals such as trading, link only to brokers that are licensed or allowed in the person's country, include the risk warning the broker and local law require, and never promise returns. Check platform and local rules before you run.",
+          "d": {
+            "cols": [
+              "Day",
+              "Time (local)",
+              "Message"
+            ],
+            "rows": [
+              [
+                "0",
+                "On Start",
+                "Welcome and level question"
+              ],
+              [
+                "1",
+                "8am",
+                "Guide 1: how prices move"
+              ],
+              [
+                "2",
+                "8am",
+                "Guide 2: risk and position size"
+              ],
+              [
+                "3",
+                "8am",
+                "Guide 3: reading a chart"
+              ],
+              [
+                "4",
+                "8am",
+                "Broker checklist, regulated only"
+              ],
+              [
+                "5",
+                "8am",
+                "Open account option, risk warning"
+              ]
+            ]
+          },
+          "say": "A drip is a fixed sequence sent on a timetable after someone starts the bot. Plan it in a table first. Day zero, on Start, the welcome and level question. Days one to three at eight a m local time, guides on how prices move, risk and position size, and reading a chart. Day four, a broker checklist, regulated only. Day five, an open account option with a risk warning. Each day teaches first, and the offer comes only after value. Send at local time, and link only to brokers allowed in the person's country."
+        },
+        {
+          "v": "flow",
+          "h": "Segment by link and answers",
+          "p": "Your link name tells you where someone came from. Their button answers tell you what they need. Combine both to pick the right sequence, rather than sending everyone everything. Smaller, relevant sends get fewer blocks.",
+          "d": [
+            "Read invite_link.name",
+            "Store source and geo",
+            "Ask one button question",
+            "Tag the answer",
+            "Pick the matching drip",
+            "Send at local time"
+          ],
+          "say": "Now combine what you know. Follow the flow. Read the invite link name. Store the source and geo. Ask one button question. Tag the answer. Pick the matching drip. And send at local time. The link name tells you where someone came from, and their answer tells you what they need. Together, they let you send the right sequence instead of everything to everyone. Smaller, relevant sends get fewer blocks."
+        },
+        {
+          "v": "cards",
+          "h": "Example segments",
+          "p": "Start with three or four segments, not twenty. Each needs a reason to exist: a different message, timing or offer. If two segments would get the same messages, merge them.",
+          "d": [
+            "NG_NEW|Nigeria, new to trading. Beginner drip.",
+            "KE_NEW|Kenya, new to trading. Same drip, EAT times.",
+            "ANY_EXPERIENCED|Has traded. Shorter drip, tools focus.",
+            "STOPPED|Sent /stop. Never messaged."
+          ],
+          "say": "Start with three or four segments, not twenty. Here are examples. N G new, Nigeria, new to trading, on the beginner drip. K E new, Kenya, new to trading, the same drip at East Africa times. Any experienced, people who have traded, on a shorter drip focused on tools. And stopped, people who sent stop, who are never messaged. Each segment needs a reason to exist. If two would get the same messages, merge them."
+        },
+        {
+          "v": "compare",
+          "h": "Broadcast mistakes and fixes",
+          "p": "A broadcast goes to many people at once. Done badly, it looks like spam and people block the bot. Telegram tracks blocks and reports, and bots with many of them can be limited. Done well, it is a useful update people expect.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Message everyone who ever started the bot",
+                "Several promos a day",
+                "Clickbait first lines",
+                "Ignore 403 blocked errors"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Only active, consenting segments",
+                "One useful message, offers rarely",
+                "Clear first line that matches the content",
+                "Remove blocked users at once"
+              ]
+            }
+          },
+          "say": "A broadcast goes to many people at once. Done badly, it looks like spam, people block the bot, and Telegram can limit bots with many blocks and reports. The mistakes: messaging everyone who ever started the bot, several promos a day, clickbait first lines, and ignoring four oh three blocked errors. The fixes: only active, consenting segments. One useful message, with offers rarely. A clear first line that matches the content. And remove blocked users at once."
+        },
+        {
+          "v": "tip",
+          "h": "Rate limits",
+          "p": "Telegram limits how fast a bot may send. At the time of writing the Bot FAQ suggests about 30 messages per second in total for bulk sends, about 1 per second to the same chat, and about 20 per minute to the same group. Limits change; check the current Bot FAQ.",
+          "d": {
+            "kind": "warn",
+            "text": "If you get error 429 Too Many Requests, wait the retry_after seconds it gives, then slow your queue down."
+          },
+          "say": "Telegram limits how fast a bot may send. At the time of writing, the Bot F A Q suggests about thirty messages per second in total for bulk sends, about one per second to the same chat, and about twenty per minute to the same group. Limits change, so check the current F A Q. And the warning: if you get error four twenty nine, too many requests, wait the retry seconds it gives you, then slow your queue down."
+        },
+        {
+          "v": "product",
+          "h": "Let a tool run the queue",
+          "p": "Running drips, segments and safe send queues by hand gets hard past a few thousand people. A broadcast tool can handle local send times, rate limits, 403 clean-up and /stop for you. Whatever you use, check that it only messages people who started your bot.",
+          "d": {
+            "slug": "castvoo",
+            "why": "Schedules drips and broadcasts by segment and local time, queues sends under rate limits and removes blocked and stopped users."
+          },
+          "say": "Running drips, segments and safe send queues by hand gets hard past a few thousand people. A broadcast tool can handle local send times, rate limits, cleaning up blocked users, and stop for you. This card shows Castvoo, which schedules drips and broadcasts by segment and local time, queues under rate limits, and removes blocked and stopped users. Whatever you use, check that it only messages people who started your bot."
+        },
+        {
+          "v": "eq",
+          "h": "How long a broadcast takes",
+          "p": "Plan the send time before you press go. Divide the number of people by your safe sending rate. Use a rate below the limit, not at it, so retries and other bot traffic have room.",
+          "d": [
+            "Recipients",
+            "÷",
+            "Messages per second",
+            "=",
+            "Seconds to send"
+          ],
+          "say": "Plan the send time before you press go. The equation is simple. Recipients, divided by messages per second, equals seconds to send. And here's the important part: use a rate below the limit, not at it. That leaves room for retries and for the bot's other traffic."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example",
+          "p": "Work out the send time and whether it fits your posting slot. A queue that runs below the limit is slower but avoids 429 errors and failed sends.",
+          "more": "Also count what the send costs you in goodwill. Example: if 0.5% of recipients block the bot after each promo broadcast, that is 60 people per send from 12,000. Ten promo sends a month would lose about 600 people. Compare that with the conversions those sends bring before you decide how often to promote. These figures are an example only; track your own block rate per broadcast.",
+          "d": {
+            "kind": "example",
+            "text": "Example. 12,000 active members in segment NG_NEW. Safe rate 25 messages per second. 12,000 / 25 = 480 seconds, so 8 minutes. Start at 7:55am to finish by 8:03am. If 300 return error 403, remove those 300 now; your active list becomes 11,700."
+          },
+          "say": "Let's work an example. These are example figures. Twelve thousand active members in segment N G new. A safe rate of twenty five messages per second. Twelve thousand divided by twenty five is four hundred and eighty seconds, so eight minutes. Start at seven fifty five to finish by about three minutes past eight. If three hundred return error four oh three, remove them now, and your active list becomes eleven thousand seven hundred. Also count the goodwill cost of each promo, by tracking your own block rate."
+        },
+        {
+          "v": "table",
+          "h": "Promo broadcast rules",
+          "p": "Turn block rates into rules you apply after every promo send. Block rate is blocks (403 errors on the next send) divided by people messaged. These are starting rules from experience, not Telegram numbers; adapt them to your audience and vertical.",
+          "more": "Example: a promo to 8,000 people. The next send returns 60 new 403 errors, so the block rate is 60 ÷ 8,000 = 0.75%. That sits in the middle band: halve promo sends for the next two weeks and add more useful posts. A rate of 1.5% (120 blocks) would mean stopping promos until you have reviewed what you sent.",
+          "d": {
+            "cols": [
+              "Signal",
+              "Starting rule",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Block rate per promo",
+                "Under 0.5%",
+                "Keep the schedule"
+              ],
+              [
+                "Block rate per promo",
+                "0.5% to 1%",
+                "Halve promo sends"
+              ],
+              [
+                "Block rate per promo",
+                "Over 1%",
+                "Stop promos, review content"
+              ],
+              [
+                "Error 403",
+                "Any",
+                "Remove from lists now"
+              ],
+              [
+                "/stop",
+                "Any",
+                "Stop at once, forever"
+              ]
+            ]
+          },
+          "say": "Turn block rates into rules you apply after every promo send. Block rate is blocks, the four oh three errors on the next send, divided by people messaged. Under half a percent, keep the schedule. Half a percent to one percent, halve promo sends. Over one percent, stop promos and review the content. Any four oh three, remove from lists now. Any stop, stop at once, forever. These are starting rules from experience, not Telegram numbers, so adapt them to your audience."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: offers inside drips",
+          "p": "A drip or broadcast that mentions a broker or betting site is a promotion. It must carry the risk or responsible gambling wording your partner and local law require, go only to adults and link only to brands allowed in the person's country. Ads that feed these bots usually need platform authorization; check both.",
+          "d": {
+            "kind": "warn",
+            "text": "Never promise returns or \"sure wins\" in a drip, broadcast or bot reply."
+          },
+          "say": "A drip or broadcast that mentions a broker or betting site is a promotion. It must carry the risk or responsible gambling wording your partner and local law require. It must go only to adults, and link only to brands allowed in the person's country. The ads that feed these bots usually need platform authorization too, so check both. And the warning: never promise returns or sure wins, in a drip, broadcast or bot reply."
+        },
+        {
+          "v": "chat",
+          "h": "Answering a reply honestly",
+          "p": "People reply to broadcasts. A quick, honest answer builds trust. If your bot cannot answer, hand over to a person. Never let a bot invent claims about returns or pretend to be human.",
+          "d": [
+            {
+              "from": "lead",
+              "text": "Is this broker guaranteed? I want to put 200k naira."
+            },
+            {
+              "from": "ai",
+              "text": "Nothing in trading is guaranteed, and you can lose money. Only use money you can afford to lose. Want me to connect you with a team member for questions about the broker?"
+            },
+            {
+              "from": "lead",
+              "text": "Yes please"
+            },
+            {
+              "from": "buyer",
+              "text": "Hi Ada, this is Tunde from the team. Happy to explain how the account works and the risks first."
+            }
+          ],
+          "say": "People reply to broadcasts, so here's an honest answer in practice. In this chat, a lead asks, is this broker guaranteed, I want to put two hundred thousand naira. The bot answers: nothing in trading is guaranteed, and you can lose money, only use money you can afford to lose. Then it offers a team member. The lead says yes, and Tunde from the team steps in to explain the account and the risks first. If the bot can't answer, hand over. Never let it invent claims or pretend to be human."
+        }
+      ],
+      "takeaways": [
+        "Greet once in the join window, then let the person choose to start the bot.",
+        "Make /stop instant and permanent, and record how each person opted in.",
+        "Segment by link name and one button answer, and send at local time.",
+        "Queue broadcasts below Telegram rate limits and remove blocked users at once."
+      ],
+      "action": "Write your greeting, /start welcome and /stop reply, then plan a 5-day drip in a table with local send times.",
+      "glossary": [
+        {
+          "term": "Inline button",
+          "def": "A button under a bot message. A url button opens a link; a callback button sends a code back to the bot."
+        },
+        {
+          "term": "callback_query",
+          "def": "The update a bot receives when someone taps an inline callback button."
+        },
+        {
+          "term": "Opt-in record",
+          "def": "A saved note of when and how a person agreed to receive messages, such as tapping Start from a named link."
+        },
+        {
+          "term": "Send queue",
+          "def": "A list of messages a bot sends one by one at a controlled rate to stay within limits."
+        },
+        {
+          "term": "Error 429",
+          "def": "Too Many Requests. Telegram is asking the bot to slow down and wait retry_after seconds."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "What should the greeting in the join-request window do?",
+          "options": [
+            "Send the offer link straight away",
+            "Send three messages before the window closes",
+            "Say who you are, what happens next, and offer a Start button",
+            "Ask for the person's phone number"
+          ],
+          "answer": 2,
+          "why": "The short window is for one honest greeting that lets the person choose to start the bot. Pushing offers or extra messages is spam."
+        },
+        {
+          "q": "A user sends /stop. What is correct?",
+          "options": [
+            "Mark them stopped, confirm once, and never message them again unless they send /start",
+            "Ask \"are you sure?\" three times",
+            "Send one last offer first",
+            "Stop them only from promos"
+          ],
+          "answer": 0,
+          "why": "Opt-out must be instant and complete. Extra steps or a final promo ignore their choice."
+        },
+        {
+          "q": "You have 9,000 members and a safe rate of 25 messages per second. About how long does the broadcast take?",
+          "options": [
+            "36 seconds",
+            "2 minutes",
+            "15 minutes",
+            "6 minutes"
+          ],
+          "answer": 3,
+          "why": "9,000 / 25 = 360 seconds, which is 6 minutes."
+        },
+        {
+          "q": "A broadcast returns error 403 for 150 users. What does that usually mean and what do you do?",
+          "options": [
+            "Telegram is down; resend later",
+            "They blocked the bot or never started it; remove them from your lists",
+            "Your token leaked; revoke it",
+            "You need more admin rights"
+          ],
+          "answer": 1,
+          "why": "403 Forbidden on sendMessage usually means the user blocked the bot or never started it. Keep messaging them and you just waste sends."
+        },
+        {
+          "q": "Why send drips at each person's local time?",
+          "options": [
+            "Telegram blocks messages sent at night",
+            "It is required by the Bot API",
+            "Messages arrive when people expect them, which reduces mutes and blocks",
+            "It makes broadcasts faster"
+          ],
+          "answer": 2,
+          "why": "Time zones differ across your geos. Sending at a sensible local hour respects people and keeps engagement up."
+        }
+      ],
+      "say_intro": "In this lesson you'll write the messages your bot actually sends: the greeting, the welcome, a working stop, a drip schedule and broadcasts. The rule throughout is consent first, because every block or report removes a contact you paid for.",
+      "say_outro": "You've written a consent-first greeting and welcome, an instant stop, a segmented five-day drip, and broadcast rules that respect rate limits and block rates. Your task: write your greeting, start welcome and stop reply, then plan a five-day drip in a table with local send times. Now take the quiz."
+    },
+    {
+      "slug": "test-launch-and-troubleshoot",
+      "title": "Test, launch and troubleshoot",
+      "minutes": 19,
+      "objectives": [
+        "By the end you can run a full end-to-end test before any ad goes live",
+        "By the end you can match common Telegram bot errors to their fixes",
+        "By the end you can rotate a leaked token with /revoke and update your bot",
+        "By the end you can read launch-day numbers and spot a broken step"
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Test with a second account",
+          "p": "You cannot test a join flow from the account that owns the channel. Use a second Telegram account, ideally on a second phone, that is not an admin. It sees exactly what a new person sees. This is the most useful 15 minutes in the whole build.",
+          "d": {
+            "b": "Be your own first lead",
+            "s": "A second account, a STAFF_TEST link, a notepad"
+          },
+          "say": "You can't test a join flow from the account that owns the channel. Use a second Telegram account, ideally on a second phone, that isn't an admin. It sees exactly what a new person sees. Be your own first lead. All you need is a second account, a staff test link, and a notepad. This is the most useful fifteen minutes in the whole build."
+        },
+        {
+          "v": "walk",
+          "h": "The end-to-end test",
+          "p": "Do the whole path, slowly, as a stranger would. Write down anything that is confusing, slow or wrong. Fix it and run the test again from the start.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open the link",
+                "text": "From the second account, open your STAFF_TEST link from the prelander, not from a copied text.",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "notes.example/join",
+                  "page": {
+                    "h": "Free daily market notes in plain English",
+                    "p": "Three short notes a day. Education only. Trading carries risk.",
+                    "cta": "Join on Telegram"
+                  }
+                }
+              },
+              {
+                "title": "Request to join",
+                "text": "Check the name, photo and description on the join screen, then tap Request to Join.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Daily Market Notes NG",
+                  "subtitle": "private channel",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "Plain-English market notes, 3 posts a day. Education only, not financial advice.",
+                      "buttons": [
+                        "Request to Join"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Receive the greeting",
+                "text": "The greeting should arrive within seconds, before approval.",
+                "screen": {
+                  "v": "phone",
+                  "app": "bot",
+                  "title": "Daily Market Notes Helper",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "Hi, thanks for requesting to join Daily Market Notes NG. You are being approved now.",
+                      "buttons": [
+                        "Start",
+                        "No thanks"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Check approval",
+                "text": "You should now be inside the channel and see the pinned welcome post.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Daily Market Notes NG",
+                  "subtitle": "channel",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "Welcome. This channel is run by the Daily Market Notes team in Lagos."
+                    },
+                    {
+                      "from": "them",
+                      "text": "Message pinned"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Start, answer, stop",
+                "text": "Tap Start, answer the button question, then send /stop and confirm nothing else arrives.",
+                "screen": {
+                  "v": "phone",
+                  "app": "bot",
+                  "title": "Daily Market Notes Helper",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "/start"
+                    },
+                    {
+                      "from": "them",
+                      "text": "How much trading have you done?",
+                      "buttons": [
+                        "New to it",
+                        "Some experience",
+                        "Trade often"
+                      ]
+                    },
+                    {
+                      "from": "me",
+                      "text": "/stop"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Done. You will not get any more messages from this bot."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Check the log",
+                "text": "Your bot log or tool should show one request from STAFF_TEST, approved, greeted and stopped.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "jointracker.example/log",
+                  "title": "Join log",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Time",
+                        "Link",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "09:14:02",
+                          "STAFF_TEST",
+                          "greeted"
+                        ],
+                        [
+                          "09:14:03",
+                          "STAFF_TEST",
+                          "approved"
+                        ],
+                        [
+                          "09:16:40",
+                          "STAFF_TEST",
+                          "stopped"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Here's the end-to-end test. Go slowly, as a stranger would. Tap Next to follow each step. One, from the second account, open your staff test link from the prelander. Two, check the name, photo and description on the join screen, then tap Request to Join. Three, the greeting should arrive within seconds, before approval. Four, check you're in the channel and see the pinned welcome. Five, tap Start, answer the button question, send stop, and confirm nothing else arrives. Six, check the log shows one request from staff test, approved, greeted and stopped. Note anything confusing, fix it, and rerun."
+        },
+        {
+          "v": "check",
+          "h": "Pre-launch checklist",
+          "p": "Only point ads at the channel when every line is true. If one fails, fix it and rerun the full test. This list is short on purpose so you actually use it. If you also send joins or deposits to the ad platform, run the test events from the Tracking setup lab module too.",
+          "d": [
+            "Second-account test passed end to end",
+            "Each ad source has its own named link",
+            "Bot greets before approving, within seconds",
+            "/stop works and is respected by broadcasts",
+            "Bot runs on an always-on server or trusted tool",
+            "Token stored safely; nobody else has a copy"
+          ],
+          "say": "Only point ads at the channel when every line here is true. The second-account test passed end to end. Each ad source has its own named link. The bot greets before approving, within seconds. Stop works and is respected by broadcasts. The bot runs on an always-on server or a trusted tool. And the token is stored safely, with nobody else holding a copy. If one fails, fix it and rerun the full test."
+        },
+        {
+          "v": "table",
+          "h": "Symptom to fix",
+          "p": "Most launch problems come from the same short list. Find the symptom on the left, apply the fix on the right, then retest with the second account. Error wording can change; the codes are more stable.",
+          "more": "Two of these deserve a note. Privacy mode only affects groups: by default a bot in a group sees commands and replies to it, not every message. It has no effect on channel join requests, so do not change it to fix a join-request problem. \"User never started the bot\" is the most common confusion: a bot cannot open a conversation. The join-request window is the only exception, and only while the request is pending.",
+          "d": {
+            "cols": [
+              "Symptom",
+              "Likely cause",
+              "Fix"
+            ],
+            "rows": [
+              [
+                "No join requests reach bot",
+                "Bot not admin, or no invite right",
+                "Make bot admin, turn on Invite users"
+              ],
+              [
+                "People join instantly, no greeting",
+                "Link has approval off",
+                "New link with Request admin approval on"
+              ],
+              [
+                "getMe returns 401",
+                "Wrong or revoked token",
+                "Copy the current token from BotFather"
+              ],
+              [
+                "getUpdates returns 409",
+                "Webhook set, or two pollers",
+                "deleteWebhook, run one copy only"
+              ],
+              [
+                "sendMessage returns 403",
+                "User never started or blocked bot",
+                "Only greet in the window; remove blocked"
+              ],
+              [
+                "Approve fails, request missing",
+                "Already handled by another admin",
+                "Ignore; log and move on"
+              ],
+              [
+                "Bot ignores group messages",
+                "Privacy mode (groups only)",
+                "Use commands, or /setprivacy if needed"
+              ]
+            ]
+          },
+          "say": "Most launch problems come from the same short list. Find the symptom on the left and apply the fix. No join requests reaching the bot, make it admin with invite rights. People joining instantly with no greeting, make a new link with approval on. Get me returns four oh one, copy the current token. Get updates returns four oh nine, delete the webhook and run one copy only. Send message returns four oh three, only greet in the window and remove blocked users. Approve fails, it's already handled, so log it. Group messages ignored, that's privacy mode, which only affects groups."
+        },
+        {
+          "v": "code",
+          "h": "Reading an error reply",
+          "p": "Every Bot API error comes back in the same shape. Log error_code and description every time, as the example bot does. The code tells you the category; the description tells you the detail.",
+          "d": {
+            "lang": "json",
+            "text": "{ \"ok\": false, \"error_code\": 409,\n  \"description\": \"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first\" }\n\n{ \"ok\": false, \"error_code\": 403,\n  \"description\": \"Forbidden: bot can't initiate conversation with a user\" }\n\n{ \"ok\": false, \"error_code\": 429,\n  \"description\": \"Too Many Requests: retry after 14\",\n  \"parameters\": { \"retry_after\": 14 } }",
+            "note": "Description text can change. Match on error_code first."
+          },
+          "say": "Every Bot A P I error, from the bot programming interface, comes back in the same shape. Look at the examples on screen. A four oh nine, conflict, because a webhook is active. A four oh three, forbidden, because the bot can't start a conversation. And a four twenty nine, too many requests, with a retry time. Log the error code and description every time. The code tells you the category, the description tells you the detail. Descriptions can change, so match on the code first."
+        },
+        {
+          "v": "code",
+          "h": "Fixing a webhook conflict",
+          "p": "If you tried a tool or a webhook earlier and now want to poll, check whether a webhook is still set, then delete it. Run these in your own browser only, because the URLs contain your token.",
+          "d": {
+            "lang": "url",
+            "text": "https://api.telegram.org/bot<TOKEN>/getWebhookInfo\nhttps://api.telegram.org/bot<TOKEN>/deleteWebhook",
+            "note": "If a hosted tool set the webhook, deleting it disconnects that tool. Decide which one should own the bot."
+          },
+          "say": "If you tried a tool or a webhook earlier and now want to poll, check whether a webhook is still set, then delete it. The two addresses on screen do that. Run them in your own browser only, because they contain your token. And the note: if a hosted tool set the webhook, deleting it disconnects that tool. So first decide which one should own the bot."
+        },
+        {
+          "v": "tip",
+          "h": "One bot, one owner",
+          "p": "A bot token can only feed one receiver at a time: one webhook or one polling program. If you connect a tool and also run your own code, they fight, and updates go to whichever one wins. Decide who owns each bot. Use a separate bot for each system if you need two.",
+          "d": {
+            "kind": "warn",
+            "text": "Running the same polling script on a laptop and a server at the same time causes 409 errors and missed join requests."
+          },
+          "say": "One bot, one owner. A bot token can only feed one receiver at a time, either one webhook or one polling program. If you connect a tool and also run your own code, they fight, and updates go to whichever one wins. Decide who owns each bot, and use a separate bot for each system if you need two. The warning: running the same script on a laptop and a server at once causes four oh nine errors and missed join requests."
+        },
+        {
+          "v": "walk",
+          "h": "If the token leaks, revoke it",
+          "p": "If the token was pasted in a chat, a screenshot or a public repo, assume someone has it. Revoke it in BotFather straight away. The old token stops working and BotFather gives you a new one. Then update your server or tool.",
+          "more": "After revoking, check what the attacker may have done while they had the token. Look at your channel admins and recent actions, your bot log for messages you did not send, and any webhook set to an address you do not recognise (getWebhookInfo shows it). Remove anything unfamiliar. Then work out how the leak happened so it does not repeat: usually a token in a file pushed to a repo, or shared with a freelancer in a chat. Revoking also cuts off any tool that held the old token, which is the right outcome if you no longer use that tool.",
+          "d": {
+            "steps": [
+              {
+                "title": "Send /revoke",
+                "text": "In @BotFather, send /revoke and pick the bot.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "BotFather",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "/revoke"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Choose a bot to generate a new token.",
+                      "buttons": [
+                        "@dmn_helper_bot"
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Get the new token",
+                "text": "BotFather confirms the old token is revoked and shows a new one.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "BotFather",
+                  "subtitle": "bot",
+                  "messages": [
+                    {
+                      "from": "them",
+                      "text": "Your token was replaced with a new one. You can use this token to access the HTTP API:\n<NEW_TOKEN>"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Update and restart",
+                "text": "Replace the token in your environment variable or tool, restart, and check getMe and a test join.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "server.example/env",
+                  "title": "Environment variables",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "BOT_TOKEN",
+                      "value": "<NEW_TOKEN>"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Save and restart"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "If the token was pasted in a chat, a screenshot or a public repo, assume someone has it, and revoke it straight away. Tap Next to follow each step. First, in BotFather, send the revoke command and pick the bot. Second, BotFather confirms the old token is revoked and shows a new one. Third, replace the token in your environment variable or tool, restart, then check get me and a test join. Afterwards, check admins, your bot log and any unknown webhook, and work out how the leak happened."
+        },
+        {
+          "v": "funnel",
+          "h": "Example: launch day numbers",
+          "p": "On launch day, check each step against the one before. A big drop between two steps points at the broken part. Figures are an example only, from one named link.",
+          "d": [
+            [
+              "Ad clicks",
+              800
+            ],
+            [
+              "Join requests",
+              330
+            ],
+            [
+              "Approved",
+              325
+            ],
+            [
+              "Greeted",
+              140
+            ],
+            [
+              "Tapped Start",
+              45
+            ]
+          ],
+          "say": "On launch day, check each step against the one before. Example figures from one named link. Eight hundred ad clicks. Three hundred and thirty join requests. Three hundred and twenty five approved. But only one hundred and forty greeted. And forty five tapped Start. A big drop between two steps points straight at the broken part. Can you see where it is?"
+        },
+        {
+          "v": "tip",
+          "h": "Worked example",
+          "p": "Read the funnel above. Requests and approvals look healthy, so the bot is admin and approving. But only 140 of 330 requests were greeted. Something is failing between receiving the request and sending the greeting.",
+          "more": "Why approvals stayed high: the server copy approved requests whenever it held the update stream, and the laptop copy ran older code that approved without greeting. Each copy only saw some updates. This is the classic sign of two receivers on one token. The fix took one minute; finding it took the habit of comparing greeted to requests every day. Numbers are an example only.",
+          "d": {
+            "kind": "example",
+            "text": "Example. 330 requests, 140 greeted: 42%. Expected above 95%. The log shows the bot restarted 4 times with 409 errors. A second copy was running on a laptop. Stopping it brought the next day to 318 of 325 greeted, 98%."
+          },
+          "say": "Let's read that funnel. Requests and approvals look healthy, so the bot is admin and approving. But only one hundred and forty of three hundred and thirty requests were greeted, forty two percent, when you'd expect above ninety five. The log shows the bot restarted four times with four oh nine errors. A second copy was running on a laptop. Stopping it brought the next day to three hundred and eighteen of three hundred and twenty five greeted, ninety eight percent. Example figures, but a classic sign of two receivers on one token."
+        },
+        {
+          "v": "bars",
+          "h": "Daily health ratios",
+          "p": "Track three ratios every day per link. They catch most breakages within a day. The targets below are a rough guide for a working setup, not benchmarks for performance; they vary by geo and vertical.",
+          "d": [
+            [
+              "Greeted / requests",
+              97,
+              "aim 95%+"
+            ],
+            [
+              "Approved / requests",
+              98,
+              "aim 95%+"
+            ],
+            [
+              "403 errors / sends",
+              4,
+              "watch if rising"
+            ]
+          ],
+          "say": "Track three ratios every day, per link. They catch most breakages within a day. Look at the bars. Greeted divided by requests, here ninety seven, aim for ninety five percent or more. Approved divided by requests, ninety eight, also aim for ninety five plus. And four oh three errors divided by sends, at four, watch it if it's rising. These are a rough guide for a working setup, not performance benchmarks, and they vary by geo and vertical."
+        },
+        {
+          "v": "table",
+          "h": "Health rules and ad rules",
+          "p": "Two kinds of rules run from launch day. Health rules protect the build and fire on Telegram numbers; they pause ads only while you fix plumbing. Ad rules come from the Budget and kill rules module and fire only on network-confirmed FTDs. Starting rules; adapt to your vertical and data.",
+          "more": "The CPA kill line is the lower of 1.5 × target and your break-even. Example: payout $40, target $30, so 1.5 × $30 = $45 and break-even is $40; the kill line is $40. Health rules come first: if the bot is broken, the ad set is not losing, your plumbing is.",
+          "d": {
+            "cols": [
+              "Rule",
+              "Starting line",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Greeted / requests",
+                "Under 90% for a day",
+                "Pause ads to that link, fix, retest"
+              ],
+              [
+                "Approved / requests",
+                "Under 90% for a day",
+                "Check bot admin rights now"
+              ],
+              [
+                "0 FTDs",
+                "Spend ≥ 2 × target CPA",
+                "Kill the ad set"
+              ],
+              [
+                "CPA over kill line",
+                "Spend ≥ 3 × target CPA",
+                "Kill the ad set"
+              ],
+              [
+                "3+ FTDs, CPA ≤ 0.8 × target",
+                "Network-confirmed",
+                "Scale +20%, ≥ 48 h apart"
+              ],
+              [
+                "Anything else",
+                "",
+                "Hold"
+              ]
+            ]
+          },
+          "say": "Two kinds of rules run from launch day. Health rules protect the build. If greeted or approved falls under ninety percent for a day, pause ads to that link, fix and retest, or check bot admin rights. Ad rules fire only on network-confirmed F T Ds, first time deposits. Zero F T Ds at two times target C P A, cost per acquisition, kill. C P A over the kill line at three times target, kill. Three or more F T Ds at point eight times target or better, scale twenty percent, forty eight hours apart. Otherwise, hold. Health rules come first. Adapt to your data."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: a launch-week call",
+          "p": "Health ratios for this link are fine and a test postback reached your tracker, so the zero below is real. Apply the ad rules from the table to make the call, then press check to see the working.",
+          "more": "Answer: kill. $66 ÷ $30 = 2.2 × target with 0 network-confirmed FTDs, past the 2 × zero-conversion line. Because greeted and approved ratios are healthy and the postback works, the zero is not a plumbing problem, so the rule fires. Pause the ad set, keep the link, and log the reason.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $30. The ad set behind META_NG_ADSET_A spent $66 in 3 days. 0 network-confirmed FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 66,
+              "conversions": 0,
+              "target_cpa": 30,
+              "days": 3
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "kill",
+              "tolerance": 0
+            }
+          },
+          "say": "Lab time. Health ratios for this link are fine, and a test postback reached your tracker, so the zero here is real. The target is thirty dollars. The ad set behind meta N G ad set A spent sixty six dollars in three days, with zero network-confirmed F T Ds. Apply the ad rules from the table. Kill, hold or scale? Pause and try it, then check your answer."
+        },
+        {
+          "v": "quote",
+          "h": "From the founder",
+          "p": "A short note from the founder on testing before launch. It sums up this whole lesson: the cheapest problems to fix are the ones you find yourself, from a second account, before any money is spent on ads.",
+          "d": "Every channel I have launched without a second-account test has cost me a day of paid traffic. Fifteen minutes of testing is the cheapest insurance in this business.",
+          "by": "dchessking",
+          "say": "Here's a short note from Dchessking on testing before launch. It sums up this whole lesson: the cheapest problems to fix are the ones you find yourself. Here's how he puts it: Every channel I have launched without a second-account test has cost me a day of paid traffic. Fifteen minutes of testing is the cheapest insurance in this business."
+        },
+        {
+          "v": "compare",
+          "h": "Launch-day mistakes",
+          "p": "Launch day has its own set of mistakes. Most come from rushing: ads go live before the chain is tested, or a buyer reacts to day-one joins instead of waiting for deposits. Each fix below costs minutes, not money.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Testing from the owner account",
+                "Ads live before the chain test",
+                "Two copies of the bot running",
+                "Judging ad sets on day-one joins",
+                "Fixing three things at once"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Second, non-admin account",
+                "Chain test passes first",
+                "One receiver per token",
+                "Rule card on network FTDs",
+                "One fix, then retest"
+              ]
+            }
+          },
+          "say": "Launch day has its own mistakes, and most come from rushing. Testing from the owner account, use a second, non-admin account. Ads live before the chain test, pass the test first. Two copies of the bot running, one receiver per token. Judging ad sets on day-one joins, use the rule card on network F T Ds. Fixing three things at once, make one fix, then retest. Each fix costs minutes, not money."
+        },
+        {
+          "v": "tip",
+          "h": "Last check: is the offer allowed?",
+          "p": "Before the first ad goes live, confirm the offer is allowed on the ad platform for your geo, any required authorization is in place, and the channel, bot and posts carry the 18+ and risk wording your partner requires. Full guide: Compliance for finance, trading and gambling offers module.",
+          "d": {
+            "kind": "warn",
+            "text": "A working bot does not make an offer legal to promote. Trading and gambling ads usually need platform authorization and must follow local law; check both."
+          },
+          "say": "One last check: is the offer allowed? Before the first ad goes live, confirm the offer is allowed on the ad platform for your geo, any required authorization is in place, and the channel, bot and posts carry the eighteen plus and risk wording your partner requires. The warning: a working bot doesn't make an offer legal to promote. Trading and gambling ads usually need platform authorization and must follow local law, so check both."
+        },
+        {
+          "v": "check",
+          "h": "Weekly maintenance",
+          "p": "Telegram, the Bot API and your tools all change over time, and settings get edited by mistake. A short weekly check, about fifteen minutes, keeps the build healthy long after launch day.",
+          "d": [
+            "Rerun the second-account test",
+            "Check admins and bot rights are unchanged",
+            "Compare greeted, approved and Start counts per link",
+            "Clear blocked and stopped users from send lists",
+            "Skim the Bot API changelog for changes"
+          ],
+          "say": "Telegram, the Bot A P I and your tools all change over time, and settings get edited by mistake. So once a week, about fifteen minutes: rerun the second-account test. Check admins and bot rights are unchanged. Compare greeted, approved and Start counts per link. Clear blocked and stopped users from send lists. And skim the Bot A P I changelog for changes. That keeps the build healthy long after launch day."
+        }
+      ],
+      "takeaways": [
+        "Test the whole path from a second, non-admin account before any ad goes live.",
+        "Most failures are admin rights, approval off, wrong token, two receivers, or a user who never started the bot.",
+        "Log error_code and description; match on the code first.",
+        "If a token leaks, /revoke it in BotFather, update your server and check for damage."
+      ],
+      "action": "Run the full second-account test on your build, fill in the symptom-to-fix table with anything you hit, and practise /revoke on your test bot.",
+      "glossary": [
+        {
+          "term": "End-to-end test",
+          "def": "Running the full path a real person takes, from ad link to bot reply and opt-out, before launch."
+        },
+        {
+          "term": "/revoke",
+          "def": "A BotFather command that cancels the current token and issues a new one."
+        },
+        {
+          "term": "Error 409 Conflict",
+          "def": "getUpdates was refused because a webhook is set or another program is polling the same token."
+        },
+        {
+          "term": "Error 403 Forbidden",
+          "def": "The bot may not message this user, usually because they never started it or they blocked it."
+        },
+        {
+          "term": "Privacy mode",
+          "def": "A group setting where bots see only commands and replies to them. It does not affect channel join requests."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why test from a second account instead of the channel owner account?",
+          "options": [
+            "The owner account cannot open links",
+            "The second account sees exactly what a new, non-admin person sees",
+            "Telegram charges owners for tests",
+            "Bots only work on second phones"
+          ],
+          "answer": 1,
+          "why": "An admin or owner skips parts of the join flow. A non-admin account experiences the real path."
+        },
+        {
+          "q": "People join the channel instantly and the bot never greets them. What is the most likely cause?",
+          "options": [
+            "The bot token is wrong",
+            "Privacy mode is on",
+            "The link they used does not have Request admin approval switched on",
+            "Rate limits"
+          ],
+          "answer": 2,
+          "why": "Without approval on the link, there is no join request, so the bot gets no chat_join_request update to act on."
+        },
+        {
+          "q": "You pasted your token in a freelancer chat. What do you do first?",
+          "options": [
+            "Send /revoke in BotFather, then update your server or tool with the new token",
+            "Delete the chat message and carry on",
+            "Change the bot display name",
+            "Make the channel public"
+          ],
+          "answer": 0,
+          "why": "Deleting the message does not undo a copy. Revoking makes the old token useless immediately."
+        },
+        {
+          "q": "Launch day: 400 requests, 395 approved, 160 greeted. Using the health rules, what do you do first?",
+          "options": [
+            "Kill the ad set behind the link",
+            "Change the ad creative",
+            "Pause ads to that link and check whether two programs are receiving updates for the bot",
+            "Raise the budget to get more data"
+          ],
+          "answer": 2,
+          "why": "160 ÷ 400 = 40% greeted, far under the 90% health line. Pause ads to that link and fix the bot; two receivers on one token is a classic cause. The ad set is not judged until the plumbing works."
+        },
+        {
+          "q": "A bot in a group does not see normal messages. Will turning off privacy mode fix missing channel join requests?",
+          "options": [
+            "Yes, privacy mode blocks join requests",
+            "Yes, but only for private channels",
+            "No, privacy mode only affects what a bot sees in groups",
+            "No, privacy mode only affects webhooks"
+          ],
+          "answer": 2,
+          "why": "Privacy mode controls which group messages a bot receives. Join requests depend on admin rights and approval links."
+        }
+      ],
+      "say_intro": "Before any ad goes live, you test the whole chain yourself. In this lesson you'll run an end-to-end test, match common bot errors to fixes, replace a leaked token, and read launch-day numbers to spot a broken step.",
+      "say_outro": "You now test the whole chain from a second account, match errors to fixes, revoke a leaked token, and watch daily health ratios before applying the ad rules. Your task: run the full second-account test on your build, fill in the symptom-to-fix table with anything you hit, and practise revoke on your test bot. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "You run Meta ads in Nigeria and Kenya to one channel using one invite link. After a week you cannot tell which geo is cheaper per retained member. What should you have done?",
+      "options": [
+        "Used a public channel",
+        "Created one named join-request link per geo and ad set",
+        "Asked members where they came from",
+        "Run Kenya one week later"
+      ],
+      "answer": 1,
+      "why": "Named links per source give clean counts per geo and ad set without guessing or surveys."
+    },
+    {
+      "q": "A new media buyer asks for your Telegram login so they can create invite links. What is the right move?",
+      "options": [
+        "Share the login with 2FA off",
+        "Make them owner",
+        "Add them as admin with only Invite users via link turned on",
+        "Create links for them forever"
+      ],
+      "answer": 2,
+      "why": "Give each person their own admin role with the minimum rights. Sharing logins risks the whole account."
+    },
+    {
+      "q": "Yesterday link META_KE_ADSET_B greeted 60% of its requests. Its ad set spent $45, target CPA $30, 0 FTDs. What is the right first move?",
+      "options": [
+        "Kill the ad set: it has no FTDs",
+        "Pause ads to that link and fix the bot; $45 is still under the $60 zero-FTD kill line",
+        "Scale it, because joins are cheap",
+        "Delete the channel and start again"
+      ],
+      "answer": 1,
+      "why": "Greeted under 90% is a health-rule breach, so fix the plumbing first. On the rule card, $45 is 1.5 × target with 0 FTDs, under the 2 × kill line, so the ad set is a Hold until the build works."
+    },
+    {
+      "q": "You spend $150 on link A: 500 approved, 70% retained on day 7. Link B: $150, 600 approved, 45% retained. Where does the next $100 go, all else equal?",
+      "options": [
+        "Link B, because it has more joins",
+        "Split it 50/50",
+        "Pause both",
+        "Link A, about $0.43 per retained member against about $0.56 for B"
+      ],
+      "answer": 3,
+      "why": "A keeps 350 members for $150, about $0.43 each. B keeps 270, about $0.56 each. A is cheaper per member who stays."
+    },
+    {
+      "q": "Your example bot approves first and then tries to send the greeting. Most greetings fail. Why?",
+      "options": [
+        "Telegram blocks all welcome messages",
+        "The private window closes once the request is handled, so the greeting must go first",
+        "The bot lacks Post messages right",
+        "Greetings need a webhook"
+      ],
+      "answer": 1,
+      "why": "At the time of writing user_chat_id can be used only until the request is processed and for a short time. Greet, then approve."
+    },
+    {
+      "q": "You tested a hosted join tool last month and today your own polling script gets 409 Conflict. What do you do?",
+      "options": [
+        "Change the channel to public",
+        "Create a new channel",
+        "Check getWebhookInfo and deleteWebhook, accepting this disconnects the tool, or use a separate bot for your script",
+        "Wait for Telegram to fix it"
+      ],
+      "answer": 2,
+      "why": "A webhook left by the tool blocks getUpdates. One bot can feed one receiver; delete the webhook or use another bot."
+    },
+    {
+      "q": "You want to broadcast to 15,000 active members at a safe 25 messages per second. When should you start to finish around 8:00am?",
+      "options": [
+        "About 7:50am, since it takes about 10 minutes",
+        "At 8:00am exactly, it is instant",
+        "At 7:59am",
+        "At 6:00am"
+      ],
+      "answer": 0,
+      "why": "15,000 / 25 = 600 seconds, so about 10 minutes. Starting near 7:50am finishes around 8:00am."
+    },
+    {
+      "q": "A promo broadcast went to 10,000 people and the next send returned 150 new 403 errors. Using the lesson's starting rules, what do you do?",
+      "options": [
+        "Nothing, 150 is a small number",
+        "Send the same promo again to reach the rest",
+        "Delete the bot",
+        "Stop promos and review what you sent: 1.5% is over the 1% line"
+      ],
+      "answer": 3,
+      "why": "150 ÷ 10,000 = 1.5% block rate, above the 1% starting line, so promos stop until the content is reviewed. Remove the 150 blocked users from your lists."
+    },
+    {
+      "q": "A token was in a GitHub repo that was public for two days. You sent /revoke. What else should you check?",
+      "options": [
+        "Nothing, revoking fixes everything",
+        "Channel admins, recent bot messages and any unknown webhook via getWebhookInfo",
+        "Only the bot profile photo",
+        "Your Meta ad account"
+      ],
+      "answer": 1,
+      "why": "Revoking stops future use. You still need to look for anything the attacker changed while they had access."
+    },
+    {
+      "q": "Launch numbers for one link: 600 requests, 590 approved, 300 greeted, and sendMessage logs show many 403 errors. Which explanation fits best?",
+      "options": [
+        "The bot is not an admin",
+        "The link has approval off",
+        "Greetings are sent after approval or too late, so the window has closed and Telegram refuses them",
+        "The ad creative is weak"
+      ],
+      "answer": 2,
+      "why": "Approvals work, so admin rights and the link are fine. 403 on greetings means the bot is outside the window; check the order and speed of handling."
+    }
+  ]
+}

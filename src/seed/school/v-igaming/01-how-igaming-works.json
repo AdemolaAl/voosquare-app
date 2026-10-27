@@ -1,0 +1,2694 @@
+{
+  "school": "v-igaming",
+  "order": 1,
+  "slug": "how-igaming-works",
+  "title": "How iGaming works",
+  "summary": "How sportsbooks and casinos make money, how CPA, RevShare and hybrid deals turn that into your payout, and why only qualified FTDs count. You finish able to value a player, read operator KPIs and choose an offer with written rules before you spend.",
+  "lessons": [
+    {
+      "slug": "sportsbook-vs-casino",
+      "title": "Sportsbook and casino: two different businesses",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can explain how a sportsbook and an online casino each make money.",
+        "You can turn betting odds into implied probability and the bookmaker's margin.",
+        "You can work out GGR and NGR from simple figures and see where your RevShare comes from.",
+        "You can say why the same number of FTDs can be worth very different amounts in each product."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the product decides your money",
+          "p": "iGaming covers two different businesses: the sportsbook, where people bet on matches, and the casino, where people play slots and table games. They earn in different ways, keep players for different lengths of time and pay affiliates differently. If you promote both as if they were the same, you will misread your numbers and pick the wrong deal.",
+          "more": "Every number you will meet later in this school, from qualified FTD to RevShare to negative carryover, depends on how the operator earns. A sportsbook earns a margin built into the odds, so its results swing with match outcomes. A casino earns a house edge on every round, so its results are steadier per pound wagered but depend on how long a player keeps playing. This lesson gives you the mechanics in plain numbers so the rest of the school makes sense.",
+          "d": {
+            "b": "Same FTD count, different value",
+            "s": "Understand the product before you price the traffic."
+          },
+          "say": "iGaming is really two different businesses. The sportsbook, where people bet on matches, and the casino, where people play slots and table games. They earn in different ways, keep players for different lengths of time, and pay affiliates differently. Notice the line on screen: same F T D count, different value. F T D means first time deposit. A sportsbook's results swing with match outcomes, while a casino's are steadier per amount wagered. Understand the product before you price the traffic."
+        },
+        {
+          "v": "cards",
+          "h": "The two products side by side",
+          "p": "A rough guide, varies by brand and geo. Many operators sell both under one account, but the law in your target country may only allow one of them, and the deal may pay differently for each.",
+          "d": [
+            "Sportsbook|Bets on football, basketball and other events",
+            "Earns by|A margin built into the odds",
+            "Casino|Slots, roulette, blackjack, live dealer, crash games",
+            "Earns by|A house edge on every round played",
+            "Sportsbook rhythm|Spikes on match days and big tournaments",
+            "Casino rhythm|Steadier, every day, every hour"
+          ],
+          "say": "Here are the two products side by side, as a rough guide that varies by brand and geo. The sportsbook takes bets on football, basketball and other events, and earns through a margin built into the odds. Its rhythm spikes on match days and big tournaments. The casino covers slots, roulette, blackjack, live dealer and crash games, and earns a house edge on every round. Its rhythm is steadier, every day, every hour. Many operators sell both, but the law in your country may allow only one."
+        },
+        {
+          "v": "eq",
+          "h": "Odds hide a probability",
+          "p": "Decimal odds show what a winning bet returns per unit staked, including the stake. Divide 1 by the odds to get the implied probability the bookmaker has priced in. Odds of 2.00 imply 50%. Odds of 1.90 imply about 52.6%.",
+          "d": [
+            "1",
+            "÷",
+            "Decimal odds",
+            "=",
+            "Implied probability"
+          ],
+          "say": "Odds hide a probability. Decimal odds show what a winning bet returns per unit staked, including the stake. Follow the equation: one, divided by the decimal odds, gives the implied probability the bookmaker has priced in. So odds of two point nought nought imply fifty percent. Odds of one point nine nought imply about fifty two point six percent. That small difference is where the bookmaker's margin lives."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: the bookmaker's margin",
+          "p": "Example. A two-way market where both sides are priced at 1.90. Add the implied probabilities and you get more than 100%. The extra is the overround. It is how the sportsbook earns no matter which side wins, as long as money is spread across both sides.",
+          "more": "Example maths: 1 ÷ 1.90 = 0.5263. Two sides give 1.0526, an overround of 5.26%. The bookmaker's theoretical hold is 1 − 1 ÷ 1.0526 = 0.05, or 5.0% of money staked. In practice the result of each match decides whether the book wins or loses that day, so real margins swing. Over thousands of bets the margin tends to show through, which is why sportsbook RevShare should be judged over months, not days.",
+          "d": {
+            "cols": [
+              "Side",
+              "Odds",
+              "Implied"
+            ],
+            "rows": [
+              [
+                "Team A",
+                "1.90",
+                "52.6%"
+              ],
+              [
+                "Team B",
+                "1.90",
+                "52.6%"
+              ],
+              [
+                "Total",
+                "",
+                "105.3%"
+              ],
+              [
+                "Theoretical margin",
+                "",
+                "1 - 1/1.053 = 5.0%"
+              ]
+            ]
+          },
+          "say": "Here's a worked example of the bookmaker's margin. In a two-way market, both teams are priced at one point nine nought. Look at the table. Each side implies fifty two point six percent, so together they add up to about one hundred and five point three percent. That extra over one hundred is the overround. It works out to a theoretical margin of about five percent of money staked. In practice each match decides whether the book wins that day, so judge sportsbook RevShare over months, not days."
+        },
+        {
+          "v": "stat",
+          "h": "Example: theoretical sportsbook GGR",
+          "p": "Example. Players in your cohort stake ₦10,000,000 in a month at a 5% theoretical margin. The sportsbook expects about ₦500,000 of gross gaming revenue. If favourites keep winning, the real figure can be far lower or even negative for that month.",
+          "d": {
+            "n": 500000,
+            "pre": "₦",
+            "suf": "",
+            "dec": 0,
+            "label": "theoretical GGR on ₦10m staked",
+            "note": "Example. Real results swing with match outcomes."
+          },
+          "say": "Let's put that margin on real money. In this example, players in your cohort stake ten million naira in a month, at a five percent theoretical margin. The sportsbook expects about five hundred thousand naira of gross gaming revenue, or G G R. That's the number on screen. But notice the warning: if favourites keep winning, the real figure can be far lower, or even negative, for that month."
+        },
+        {
+          "v": "eq",
+          "h": "The casino's edge: RTP",
+          "p": "Casino games publish or imply a return to player, RTP. A slot with 96% RTP pays back, over a very long run, 96 of every 100 staked. The other 4% is the house edge. Each spin is random, but the edge is built into every round.",
+          "d": [
+            "100%",
+            "−",
+            "RTP 96%",
+            "=",
+            "House edge 4%"
+          ],
+          "say": "The casino's edge is called R T P, return to player. Follow the equation on screen: one hundred percent, minus an R T P of ninety six percent, equals a house edge of four percent. So a ninety six percent slot pays back, over a very long run, ninety six of every hundred staked. Each spin is random, but the edge is built into every single round."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: one casino deposit",
+          "p": "Example. A player deposits $20 and plays a 96% RTP slot at $0.50 a spin. Wins get re-staked, so the same money circulates. After 1,000 spins the player has staked $500 in total, and the expected loss is 4% of that.",
+          "more": "This is why turnover and deposits are different numbers. A $20 deposit can create $500 of bets because winnings are recycled. Operators report deposits, turnover, GGR and NGR, and your RevShare is usually paid on NGR, not on deposits. When a manager quotes you a big turnover figure, ask what the NGR was. Results per player vary hugely: some win and withdraw, others lose the deposit quickly.",
+          "d": {
+            "cols": [
+              "Item",
+              "Figure",
+              "Working"
+            ],
+            "rows": [
+              [
+                "Deposit",
+                "$20",
+                ""
+              ],
+              [
+                "Spins",
+                "1,000 × $0.50",
+                ""
+              ],
+              [
+                "Turnover",
+                "$500",
+                "1,000 × $0.50"
+              ],
+              [
+                "House edge",
+                "4%",
+                "100% - 96%"
+              ],
+              [
+                "Expected GGR",
+                "$20",
+                "$500 × 4%"
+              ]
+            ]
+          },
+          "say": "Here's one casino deposit, worked through. In this example, a player deposits twenty dollars and plays a ninety six percent slot at fifty cents a spin. Wins get re-staked, so the same money circulates. After one thousand spins, they've staked five hundred dollars in total. That's the turnover. At a four percent house edge, the expected G G R is twenty dollars. So turnover and deposits are very different numbers. When a manager quotes a big turnover figure, ask what the N G R, the net gaming revenue, was."
+        },
+        {
+          "v": "curve",
+          "h": "How the two products move week to week",
+          "p": "Example cohort GGR over seven weeks. Sportsbook GGR jumps around with results, and can go negative in a week where favourites win. Casino GGR is smoother but fades as players stop. Illustrative shapes, not benchmarks.",
+          "d": {
+            "a": [
+              900,
+              300,
+              1200,
+              -200,
+              800,
+              650,
+              400
+            ],
+            "la": "Sportsbook GGR $",
+            "b": [
+              1100,
+              950,
+              820,
+              700,
+              610,
+              540,
+              480
+            ],
+            "lb": "Casino GGR $",
+            "x": [
+              "W1",
+              "W2",
+              "W3",
+              "W4",
+              "W5",
+              "W6",
+              "W7"
+            ]
+          },
+          "say": "This chart shows how the two products move week to week, using an example cohort. The sportsbook line jumps around with results, and in week four it even goes negative, a week where favourites won. The casino line is smoother, but it fades steadily as players stop. These are illustrative shapes, not benchmarks. The point is that each product needs a different kind of patience."
+        },
+        {
+          "v": "eq",
+          "h": "From GGR to NGR",
+          "p": "Gross gaming revenue is stakes minus winnings paid. Net gaming revenue is what is left after the deductions your contract allows, usually bonuses, gaming taxes and some fees. RevShare is almost always a percentage of NGR, so the deductions matter as much as the percentage.",
+          "d": [
+            "GGR",
+            "−",
+            "Bonuses, taxes, fees",
+            "=",
+            "NGR"
+          ],
+          "say": "Now from G G R to N G R. Gross gaming revenue is stakes minus winnings paid. Net gaming revenue, N G R, is what's left after the deductions your contract allows, usually bonuses, gaming taxes and some fees. Follow the equation: G G R, minus bonuses, taxes and fees, equals N G R. RevShare is almost always a percentage of N G R, so the deductions matter as much as the percentage."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: your RevShare from NGR",
+          "p": "Example. Your players produce $1,000 GGR in a month. The contract lets the operator deduct bonuses, gaming tax and payment fees. You are on 30% RevShare. Read your own contract: the list of deductions differs between operators.",
+          "more": "Notice that a 30% share of GGR would have been $300, but a 30% share of NGR is $180. Two deals that both say 30% can pay very different amounts. Some contracts also deduct an admin or platform fee as a percentage, and some cap deductions. Ask for the exact NGR formula in writing before you compare offers.",
+          "d": {
+            "cols": [
+              "Line",
+              "Amount",
+              "Running total"
+            ],
+            "rows": [
+              [
+                "GGR",
+                "$1,000",
+                "$1,000"
+              ],
+              [
+                "Bonuses used",
+                "-$200",
+                "$800"
+              ],
+              [
+                "Gaming tax",
+                "-$150",
+                "$650"
+              ],
+              [
+                "Payment fees",
+                "-$50",
+                "$600"
+              ],
+              [
+                "NGR",
+                "",
+                "$600"
+              ],
+              [
+                "Your 30%",
+                "",
+                "$180"
+              ]
+            ]
+          },
+          "say": "Here's a worked example of RevShare from N G R. Your players produce one thousand dollars G G R in a month. Read down the table. Bonuses used take off two hundred, gaming tax one hundred and fifty, and payment fees fifty. That leaves six hundred dollars N G R. At thirty percent, you earn one hundred and eighty dollars. Notice that thirty percent of G G R would have been three hundred. So two deals that both say thirty percent can pay very differently. Ask for the exact formula in writing."
+        },
+        {
+          "v": "map",
+          "h": "Where the money flows",
+          "p": "The player stakes with the operator. The operator's results, after deductions, create NGR. The network or affiliate programme reports it and pays you your share or your CPA. You earn only because of the operator's earnings, which come from players' net losses.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Your ad",
+                "kind": "ad"
+              },
+              {
+                "id": "p",
+                "label": "Adult player",
+                "kind": "person"
+              },
+              {
+                "id": "op",
+                "label": "Licensed operator",
+                "kind": "offer"
+              },
+              {
+                "id": "ngr",
+                "label": "GGR to NGR",
+                "kind": "data"
+              },
+              {
+                "id": "net",
+                "label": "Network or programme",
+                "kind": "tool"
+              },
+              {
+                "id": "you",
+                "label": "Your payout",
+                "kind": "money"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "p",
+                "click"
+              ],
+              [
+                "p",
+                "op",
+                "deposit, bets"
+              ],
+              [
+                "op",
+                "ngr",
+                "results"
+              ],
+              [
+                "ngr",
+                "net",
+                "report"
+              ],
+              [
+                "net",
+                "you",
+                "CPA or share"
+              ]
+            ]
+          },
+          "say": "This map shows where the money flows. Start at your ad. It sends a click to an adult player. The player deposits and bets with a licensed operator. The operator's results go through the G G R to N G R step. The network or programme reports it, and pays you your C P A, cost per acquisition, or your share. Follow the arrows and you'll see it: you earn only because the operator earns, and that comes from players' net losses."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and fixes",
+          "p": "These mistakes come from treating iGaming as one product with one number. Each fix is a habit you build before you look at a single offer.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Judging sportsbook RevShare after one week",
+                "Comparing deals by the % alone",
+                "Treating turnover as revenue",
+                "Promoting casino where only betting is legal"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Judge over 2 to 3 months of results",
+                "Ask for the NGR formula in writing",
+                "Ask for NGR per FTD",
+                "Check which products are legal per geo"
+              ]
+            }
+          },
+          "say": "These mistakes come from treating iGaming as one product with one number. Read across the columns. Judging sportsbook RevShare after one week? Judge over two to three months of results. Comparing deals by the percentage alone? Ask for the N G R formula in writing. Treating turnover as revenue? Ask for N G R per F T D. Promoting casino where only betting is legal? Check which products are legal per geo."
+        },
+        {
+          "v": "tip",
+          "h": "Legal product, legal geo",
+          "p": "Many countries allow online sports betting but restrict or ban online casino, and some ban both. A brand that offers both may still only be licensed for one product in your geo. Check per product, per country, before any creative mentions it.",
+          "d": {
+            "kind": "warn",
+            "text": "Gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission; check the current policy and local law before you run."
+          },
+          "say": "Many countries allow online sports betting but restrict or ban online casino, and some ban both. A brand that offers both may still only be licensed for one product in your geo. So check per product, per country, before any creative mentions it. And read the warning on screen: gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing, Meta requires prior written permission. Check the current policy and local law before you run."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for this lesson",
+          "p": "Starting rules to adapt. They stop you from drawing conclusions from the noise that is built into gambling results, especially in sportsbook. Read them before every weekly review, and write any change you make to them in your log.",
+          "d": [
+            "Promote only the product licensed and legal in the geo",
+            "Judge RevShare only after 50+ FTDs and 60+ days",
+            "Compare deals on NGR per FTD, not turnover",
+            "Get the NGR deduction list in writing first",
+            "Sportsbook and casino: separate reports, separate decisions"
+          ],
+          "say": "Here are your starting decision rules for this lesson. They stop you drawing conclusions from the noise built into gambling results. Promote only the product that's licensed and legal in the geo. Judge RevShare only after fifty or more F T Ds and sixty or more days. Compare deals on N G R per F T D, not turnover. Get the N G R deduction list in writing first. And keep sportsbook and casino in separate reports, with separate decisions. Adapt these, and log any change you make."
+        }
+      ],
+      "takeaways": [
+        "A sportsbook earns a margin built into the odds; a casino earns a house edge on every round.",
+        "Turnover, GGR and NGR are different numbers; RevShare is usually paid on NGR.",
+        "Sportsbook results swing with match outcomes, so judge them over months, not days."
+      ],
+      "action": "Pick one operator you might promote. Find its odds for one two-way market and work out the margin with 1 ÷ odds, then ask the affiliate manager for the exact NGR formula in writing.",
+      "glossary": [
+        {
+          "term": "Implied probability",
+          "def": "1 divided by the decimal odds: the chance the price assumes."
+        },
+        {
+          "term": "Overround",
+          "def": "How far the implied probabilities of a market add up above 100%; the bookmaker's built-in margin."
+        },
+        {
+          "term": "RTP",
+          "def": "Return to player: the share of stakes a casino game pays back over a very long run."
+        },
+        {
+          "term": "House edge",
+          "def": "100% minus RTP: what the casino expects to keep from stakes."
+        },
+        {
+          "term": "GGR",
+          "def": "Gross gaming revenue: stakes minus winnings paid out."
+        },
+        {
+          "term": "NGR",
+          "def": "Net gaming revenue: GGR minus the deductions in your contract, such as bonuses, taxes and fees."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Odds of 1.90 on both sides of a market. Roughly what margin has the bookmaker built in?",
+          "options": [
+            "0%",
+            "1.9%",
+            "5%",
+            "10%"
+          ],
+          "answer": 2,
+          "why": "Each side implies 52.6%, total 105.3%, and 1 − 1/1.053 is about 5%."
+        },
+        {
+          "q": "A slot has 96% RTP. A player stakes $500 in total. What is the expected GGR?",
+          "options": [
+            "$20",
+            "$4",
+            "$96",
+            "$480"
+          ],
+          "answer": 0,
+          "why": "House edge is 4%, and 4% of $500 is $20. Individual results vary."
+        },
+        {
+          "q": "Which figure is RevShare usually calculated on?",
+          "options": [
+            "Deposits",
+            "Turnover",
+            "Withdrawals",
+            "NGR"
+          ],
+          "answer": 3,
+          "why": "Most RevShare deals pay a percentage of net gaming revenue, after contract deductions."
+        },
+        {
+          "q": "Why should sportsbook RevShare not be judged after one week?",
+          "options": [
+            "Operators do not report weekly",
+            "Match results can make one week's GGR very high or even negative",
+            "RevShare is only paid yearly",
+            "Sportsbook margins are always zero in week one"
+          ],
+          "answer": 1,
+          "why": "Results swing with outcomes; the margin shows through over many bets and weeks."
+        },
+        {
+          "q": "A brand offers sportsbook and casino. Your geo licenses only sports betting online. What do you do?",
+          "options": [
+            "Promote both; the brand is licensed somewhere",
+            "Promote casino on a separate page",
+            "Promote only sportsbook, with no casino mentions",
+            "Ask users to use a VPN"
+          ],
+          "answer": 2,
+          "why": "You promote only the product that is legal and licensed in the geo."
+        }
+      ],
+      "say_intro": "In this lesson you'll see how a sportsbook and an online casino each make money. You'll turn odds into probability, find the bookmaker's margin, and follow the money from G G R to N G R. It matters because the same number of deposits can be worth very different amounts in each product.",
+      "say_outro": "To recap: a sportsbook earns a margin built into the odds and swings with results, a casino earns a house edge on every round, and your RevShare usually comes from N G R after deductions. Your task: pick one operator, find its odds for one two-way market, work out the margin with one divided by the odds, then ask the affiliate manager for the exact N G R formula in writing. Now take the quiz."
+    },
+    {
+      "slug": "cpa-revshare-hybrid",
+      "title": "CPA, RevShare and hybrid: the maths",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can model what 100 FTDs pay under CPA, RevShare and hybrid deals.",
+        "You can work out a break-even cost per FTD for a RevShare deal over a time horizon.",
+        "You can explain why cash flow, not the 12-month total, often decides the right deal.",
+        "You can choose a deal type with written starting rules."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the deal type matters as much as the traffic",
+          "p": "Two buyers can send identical traffic and end the year with very different results because one took CPA and the other took RevShare. The deal decides when you get paid, how much risk you carry and whether you survive a slow month. Get this wrong and good traffic can still sink your bankroll.",
+          "d": {
+            "b": "Same players, three different paydays",
+            "s": "Model the deal before you buy a single click."
+          },
+          "say": "Two buyers can send identical traffic and end the year with very different results, because one took C P A, cost per acquisition, and the other took RevShare. The deal decides when you get paid, how much risk you carry, and whether you survive a slow month. As the screen says: same players, three different paydays. Model the deal before you buy a single click."
+        },
+        {
+          "v": "cards",
+          "h": "The three common deal types",
+          "p": "These are the shapes you will meet most. Names and details vary by programme, and a deal can mix tiers, caps and bonuses on top. Always ask for the exact terms in writing.",
+          "d": [
+            "CPA|A fixed fee per qualified FTD, paid once",
+            "RevShare|A % of the NGR your players produce, paid monthly for as long as the deal says",
+            "Hybrid|A smaller CPA plus a smaller RevShare",
+            "Tiered|Payout rises when you pass a monthly volume"
+          ],
+          "say": "Here are the three common deal types, plus one extra. C P A is a fixed fee per qualified F T D, first time deposit, paid once. RevShare is a percentage of the N G R, net gaming revenue, your players produce, paid monthly for as long as the deal says. Hybrid is a smaller C P A plus a smaller RevShare. And tiered means the payout rises when you pass a monthly volume. Names and details vary by programme, so always ask for the exact terms in writing."
+        },
+        {
+          "v": "table",
+          "h": "Example assumptions for the model",
+          "p": "Example. 100 qualified FTDs from one month of buying. The operator's data for similar players shows how much NGR each FTD produces over time. These figures are illustrative, not benchmarks; ask your programme for its own cohort data.",
+          "more": "Example maths: months 4 to 12 are nine months at $5, which is $45. Add months 1 to 3 ($55) and the 12-month NGR per FTD is $100. Real cohorts are lumpier: a few players produce most of the NGR, and in sportsbook a single bad month for the operator can be negative. We use smooth numbers here so you can follow the maths.",
+          "d": {
+            "cols": [
+              "Period",
+              "NGR per FTD",
+              "Cumulative"
+            ],
+            "rows": [
+              [
+                "Month 1",
+                "$30",
+                "$30"
+              ],
+              [
+                "Month 2",
+                "$15",
+                "$45"
+              ],
+              [
+                "Month 3",
+                "$10",
+                "$55"
+              ],
+              [
+                "Months 4 to 12",
+                "$5 each",
+                "$100"
+              ]
+            ]
+          },
+          "say": "Now the assumptions for our model. In this example, one hundred qualified F T Ds come from one month of buying. Read the table. Each F T D produces thirty dollars N G R in month one, fifteen in month two, ten in month three, then five dollars a month from month four to twelve. That adds up to one hundred dollars over twelve months. These are illustrative, smooth numbers so you can follow the maths. Real cohorts are lumpier, so ask your programme for its own data."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: what each deal pays",
+          "p": "Example. Same 100 FTDs under three deals: CPA $40; RevShare 35%; hybrid $20 CPA plus 20% RevShare. Look at month 1, month 3 and month 12 separately. The totals tell one story; the timing tells another.",
+          "more": "Working. CPA: 100 × $40 = $4,000. RevShare month 1: 100 × $30 × 35% = $1,050. By month 3: 100 × $55 × 35% = $1,925. By month 12: 100 × $100 × 35% = $3,500. Hybrid month 1: 100 × $20 = $2,000 plus 100 × $30 × 20% = $600, so $2,600. By month 3: $2,000 + 100 × $55 × 20% = $3,100. By month 12: $2,000 + 100 × $100 × 20% = $4,000. Payment timing also depends on your net terms, often paid after month close.",
+          "d": {
+            "cols": [
+              "Deal",
+              "Month 1",
+              "By month 3",
+              "By month 12"
+            ],
+            "rows": [
+              [
+                "CPA $40",
+                "$4,000",
+                "$4,000",
+                "$4,000"
+              ],
+              [
+                "RevShare 35%",
+                "$1,050",
+                "$1,925",
+                "$3,500"
+              ],
+              [
+                "$20 + 20%",
+                "$2,600",
+                "$3,100",
+                "$4,000"
+              ]
+            ]
+          },
+          "say": "Here's what each deal pays on those hundred F T Ds. Look at the three columns: month one, by month three, and by month twelve. C P A at forty dollars pays four thousand dollars, all upfront. RevShare at thirty five percent pays one thousand and fifty in month one, one thousand nine hundred and twenty five by month three, and three thousand five hundred by month twelve. The hybrid, twenty dollars plus twenty percent, pays two thousand six hundred, then three thousand one hundred, then four thousand. The totals tell one story. The timing tells another."
+        },
+        {
+          "v": "curve",
+          "h": "Cumulative payout: CPA versus RevShare",
+          "p": "Example, 100 FTDs. CPA pays everything early. RevShare starts low and climbs slowly. In this example it never catches CPA within 12 months. With longer-lived players, or a higher share, it can overtake later.",
+          "d": {
+            "a": [
+              4000,
+              4000,
+              4000,
+              4000,
+              4000,
+              4000,
+              4000
+            ],
+            "la": "CPA $40",
+            "b": [
+              1050,
+              1575,
+              1925,
+              2100,
+              2450,
+              2975,
+              3500
+            ],
+            "lb": "RevShare 35%",
+            "x": [
+              "M1",
+              "M2",
+              "M3",
+              "M4",
+              "M6",
+              "M9",
+              "M12"
+            ]
+          },
+          "say": "This curve shows the cumulative payout. The flat line is C P A, four thousand dollars, paid early. The rising line is RevShare at thirty five percent. It starts low and climbs slowly. In this example, it never catches C P A within twelve months. With longer-lived players or a higher share, it could overtake later. So don't assume RevShare always wins in the end."
+        },
+        {
+          "v": "eq",
+          "h": "Break-even cost per FTD on RevShare",
+          "p": "On RevShare, the most you can pay for an FTD and break even is the NGR per FTD you expect over your chosen horizon times your share. Pick the horizon by how long you can wait for cash, not by how far a spreadsheet can stretch.",
+          "more": "Example. 12-month horizon: $100 × 35% = $35. 3-month horizon: $55 × 35% = $19.25. If you buy FTDs at $30, you are profitable on paper over 12 months but you are $10.75 per FTD underwater at month 3. That gap is money you must fund from your own bankroll while you wait.",
+          "d": [
+            "NGR per FTD (horizon)",
+            "×",
+            "RevShare %",
+            "=",
+            "Break-even CPFTD"
+          ],
+          "say": "How much can you pay per F T D on RevShare and still break even? Follow the equation: the N G R per F T D over your chosen horizon, times your RevShare percentage. In this example, over twelve months, one hundred dollars times thirty five percent is thirty five dollars. Over three months, it's only nineteen dollars twenty five. So if you pay thirty dollars per F T D, you're fine on paper at twelve months, but underwater at month three. Choose the horizon by how long you can wait for cash."
+        },
+        {
+          "v": "stat",
+          "h": "Cash you must fund on RevShare",
+          "p": "Example. You buy 100 FTDs at $30 each, $3,000 spent. After three months RevShare has paid $1,925. You are still $1,075 short and must keep funding new campaigns from your own money.",
+          "d": {
+            "n": 1075,
+            "pre": "$",
+            "suf": "",
+            "dec": 0,
+            "label": "still unpaid after month 3",
+            "note": "Example: $3,000 spent minus $1,925 received."
+          },
+          "say": "This is the cash you must fund on RevShare. In this example, you buy one hundred F T Ds at thirty dollars each, three thousand dollars spent. After three months, RevShare has paid one thousand nine hundred and twenty five. So you're still one thousand and seventy five dollars short, the number on screen. Meanwhile, you must keep funding new campaigns from your own money."
+        },
+        {
+          "v": "table",
+          "h": "Risks that hit RevShare harder",
+          "p": "A rough guide. RevShare gives you a share of the upside and also of the operator's problems. These are the risks to price in before you accept a pure RevShare deal.",
+          "more": "Negative carryover means a negative NGR month is carried forward and deducted from future positive months before you earn again. Many programmes have policies on this; some reset monthly, some carry forward indefinitely. We cover it in depth in the scaling module. For now: ask whether it applies and how, before you sign.",
+          "d": {
+            "cols": [
+              "Risk",
+              "What happens",
+              "Protects you"
+            ],
+            "rows": [
+              [
+                "Big player win",
+                "NGR negative this month",
+                "No negative carryover"
+              ],
+              [
+                "Deduction changes",
+                "Your NGR shrinks",
+                "Fixed formula in contract"
+              ],
+              [
+                "Brand exits geo",
+                "Income stops",
+                "Spread across brands"
+              ],
+              [
+                "Few whales",
+                "Income lumpy",
+                "Larger samples"
+              ],
+              [
+                "Late payments",
+                "Cash gap",
+                "Clear net terms"
+              ]
+            ]
+          },
+          "say": "RevShare gives you a share of the upside, and also of the operator's problems. Read the table as a rough guide. A big player win can make N G R negative, and no negative carryover protects you. Deduction changes shrink your N G R, so get a fixed formula in your contract. If a brand exits the geo, income stops, so spread across brands. A few whales make income lumpy, so use larger samples. And late payments create a cash gap, so insist on clear net terms."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: your maximum CPA on a CPA deal",
+          "p": "Practise the CPA side. The deal pays $40 per qualified FTD. You want to keep a 30% margin as a buffer for bad weeks and rejected FTDs. Work out the most you can pay per qualified FTD.",
+          "d": {
+            "kind": "breakeven",
+            "task": "Payout $40 per qualified FTD, you want to keep 30%. What is your maximum cost per qualified FTD?",
+            "preset": {
+              "payout": 40,
+              "cr_pct": 100,
+              "margin_pct": 30
+            },
+            "answer": {
+              "field": "max_cpa",
+              "value": 28,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Time for a lab on the C P A side. The deal pays forty dollars per qualified F T D. You want to keep a thirty percent margin as a buffer for bad weeks and rejected F T Ds. What's the most you can pay per qualified F T D? Use the calculator on screen. Pause and try it, then check your answer."
+        },
+        {
+          "v": "walk",
+          "h": "How to compare deals with a manager",
+          "p": "Do this before every new deal. It takes an hour and turns a sales pitch into numbers you can test. Screens are illustrative mock-ups. Keep every answer in one folder per programme.",
+          "d": {
+            "steps": [
+              {
+                "title": "Ask for definitions",
+                "text": "Ask in writing for the qualified FTD rules, the NGR formula and the negative carryover policy.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Affiliate manager",
+                  "subtitle": "online",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "Before I pick a deal: can you send the qualification rules, the NGR deductions and your carryover policy?"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Sure, sending the terms PDF now."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Ask for cohort data",
+                "text": "Ask for average NGR per FTD at month 1, 3, 6 and 12 for your geo and traffic type.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Affiliate manager",
+                  "subtitle": "online",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "Do you have average NGR per FTD by month for Kenya paid social traffic?"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Roughly $28 month 1, $52 by month 3. Varies a lot."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Model all three",
+                "text": "Put CPA, RevShare and hybrid side by side for 100 FTDs at months 1, 3 and 12.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheets.example/deal-model",
+                  "title": "Deal model: 100 FTDs",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Deal",
+                        "M1",
+                        "M3",
+                        "M12"
+                      ],
+                      "rows": [
+                        [
+                          "CPA $40",
+                          "$4,000",
+                          "$4,000",
+                          "$4,000"
+                        ],
+                        [
+                          "RS 35%",
+                          "$1,050",
+                          "$1,925",
+                          "$3,500"
+                        ],
+                        [
+                          "$20+20%",
+                          "$2,600",
+                          "$3,100",
+                          "$4,000"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "Example figures."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Check your bankroll",
+                "text": "Choose the deal whose month-3 cash you can survive if the cohort is 30% worse than the estimate.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheets.example/deal-model",
+                  "title": "Stress test",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Cohort 30% worse, RS by M3",
+                      "value": "$1,348"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Spend on 100 FTDs",
+                      "value": "$3,000"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Gap to fund: $1,652. Example."
+                    }
+                  ],
+                  "highlight": 1
+                }
+              }
+            ]
+          },
+          "say": "Here's how to compare deals with a manager. Tap Next to follow each step. First, ask for definitions in writing: the qualified F T D rules, the N G R formula, and the negative carryover policy. Second, ask for cohort data, the average N G R per F T D at months one, three, six and twelve for your geo and traffic type. Third, model all three deals side by side for one hundred F T Ds. Fourth, check your bankroll. Choose the deal whose month three cash you can survive, even if the cohort is thirty percent worse than the estimate."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and fixes",
+          "p": "Most deal mistakes come from believing the 12-month line and forgetting the months in between. Each fix keeps you solvent long enough to find out whether the estimate was right.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Taking RevShare because 'it pays forever'",
+                "Using the manager's best cohort as your estimate",
+                "Ignoring negative carryover",
+                "Comparing CPA to 12-month RevShare only"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Pick by bankroll and cash horizon",
+                "Cut any estimate by 30% to test it",
+                "Get the carryover rule in writing",
+                "Compare at months 1, 3 and 12"
+              ]
+            }
+          },
+          "say": "Most deal mistakes come from believing the twelve month line and forgetting the months in between. Read across the columns. Taking RevShare because it pays forever? Pick by bankroll and cash horizon. Using the manager's best cohort as your estimate? Cut any estimate by thirty percent to test it. Ignoring negative carryover? Get the rule in writing. Comparing C P A to twelve month RevShare only? Compare at months one, three and twelve."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules: which deal",
+          "p": "Starting rules to adapt as your data grows. They lean towards cash early, because a new operator usually runs out of money before they run out of good ideas.",
+          "d": [
+            "Bankroll under 3 months of planned spend: CPA",
+            "No cohort data for your geo and source: CPA or hybrid",
+            "RevShare only with 3+ months of spend in reserve",
+            "RevShare only with no negative carryover, or a monthly reset",
+            "Re-check the deal after every 100 qualified FTDs"
+          ],
+          "say": "Here are starting rules for choosing a deal. If your bankroll is under three months of planned spend, take C P A. With no cohort data for your geo and source, take C P A or hybrid. Take RevShare only with three or more months of spend in reserve, and only with no negative carryover, or a monthly reset. And re-check the deal after every one hundred qualified F T Ds. These lean towards cash early, because a new operator usually runs out of money before good ideas."
+        },
+        {
+          "v": "quote",
+          "h": "On choosing a deal",
+          "p": "A short note from the founder on why the biggest 12-month number is often the wrong deal for a new buyer. Read it as a reminder of the cash rule above, not as a promise about any deal.",
+          "d": "Pick the deal your bankroll can survive in month three, not the one that looks best in month twelve.",
+          "by": "dchessking",
+          "say": "Here's how Dchessking, the founder, puts it, on why the biggest twelve month number is often the wrong deal for a new buyer. Pick the deal your bankroll can survive in month three, not the one that looks best in month twelve. Treat that as a reminder of the cash rule, not a promise about any deal."
+        },
+        {
+          "v": "tip",
+          "h": "Your earnings come from player losses",
+          "p": "On RevShare you earn when players lose. That is exactly why you must never push people to deposit more, chase losses or gamble beyond their means. Honest, adult-only traffic is the only kind you build a business on.",
+          "d": {
+            "kind": "warn",
+            "text": "Gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission; check the current policy and local law before you run."
+          },
+          "say": "One last, important point. On RevShare, you earn when players lose. That's exactly why you must never push people to deposit more, chase losses, or gamble beyond their means. Honest, adult-only traffic is the only kind you build a business on. And as the warning says, gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing, Meta requires prior written permission. Check the current policy and local law before you run."
+        }
+      ],
+      "takeaways": [
+        "CPA pays early and once; RevShare pays slowly and for longer; hybrid splits the difference.",
+        "Break-even CPFTD on RevShare is NGR per FTD over your horizon times your share.",
+        "Choose by the cash you can survive at month three, not by the 12-month total."
+      ],
+      "action": "Ask one programme for average NGR per FTD at months 1, 3 and 12 for your geo, then model CPA, RevShare and hybrid for 100 FTDs in a sheet.",
+      "glossary": [
+        {
+          "term": "Hybrid deal",
+          "def": "A deal paying a smaller CPA plus a smaller RevShare on the same players."
+        },
+        {
+          "term": "Cohort",
+          "def": "A group of players who made their first deposit in the same period, tracked over time."
+        },
+        {
+          "term": "Horizon",
+          "def": "How many months of NGR you count when working out break-even; set by how long you can wait for cash."
+        },
+        {
+          "term": "Negative carryover",
+          "def": "A rule that carries a negative NGR month forward and deducts it from future positive months."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "100 FTDs, NGR per FTD by month 3 is $55, RevShare 35%. What has RevShare paid by month 3?",
+          "options": [
+            "$1,050",
+            "$1,925",
+            "$3,500",
+            "$5,500"
+          ],
+          "answer": 1,
+          "why": "100 × $55 × 35% = $1,925."
+        },
+        {
+          "q": "Hybrid deal $20 CPA plus 20%. 100 FTDs, month-1 NGR per FTD $30. What does month 1 pay?",
+          "options": [
+            "$2,000",
+            "$3,000",
+            "$600",
+            "$2,600"
+          ],
+          "answer": 3,
+          "why": "$2,000 CPA plus 100 × $30 × 20% = $600, so $2,600."
+        },
+        {
+          "q": "12-month NGR per FTD is $100 and RevShare is 35%. What is break-even CPFTD on a 12-month horizon?",
+          "options": [
+            "$100",
+            "$65",
+            "$35",
+            "$3.50"
+          ],
+          "answer": 2,
+          "why": "$100 × 35% = $35."
+        },
+        {
+          "q": "You have one month of spend in reserve and no cohort data. Which deal do the starting rules suggest?",
+          "options": [
+            "CPA",
+            "Pure RevShare",
+            "Whichever pays most at month 12",
+            "Tiered RevShare"
+          ],
+          "answer": 0,
+          "why": "With little bankroll and no data, take cash early: CPA."
+        },
+        {
+          "q": "Why can a 12-month RevShare total be misleading?",
+          "options": [
+            "It is always lower than CPA",
+            "It hides the cash gap you must fund in the early months",
+            "RevShare is not paid in Africa",
+            "Operators never report NGR"
+          ],
+          "answer": 1,
+          "why": "The total may look good, but you must fund spend before the money arrives."
+        }
+      ],
+      "say_intro": "This lesson is the maths of iGaming deals: C P A, RevShare and hybrid. You'll model what one hundred deposits pay under each, find a break-even cost on RevShare, and see why cash flow often decides the right deal. It matters because good traffic on the wrong deal can still sink your bankroll.",
+      "say_outro": "To recap: C P A pays early, RevShare pays slowly over time, and hybrid sits in between, so choose by the cash you can survive in month three, not by the twelve month total. Your task: ask one programme for average N G R per F T D at months one, three and twelve for your geo, then model C P A, RevShare and hybrid for one hundred F T Ds in a sheet. Now take the quiz."
+    },
+    {
+      "slug": "baseline-and-qualified-ftd",
+      "title": "Baseline and qualified FTD",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can read baseline and qualification terms in a real deal.",
+        "You can calculate your true cost per qualified FTD and your qualified rate.",
+        "You can use a projected CPA to make decisions before qualification data arrives.",
+        "You can apply kill, hold and scale rules to qualified FTDs."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why most new buyers overestimate their profit",
+          "p": "In iGaming you are rarely paid for every first deposit. You are paid for FTDs that meet the deal's baseline and activity rules. If 30% of your FTDs never qualify, your real CPA is far higher than Ads Manager shows. Buyers who skip this lesson scale campaigns that are quietly losing money.",
+          "d": {
+            "b": "Paid on qualified FTDs, not all FTDs",
+            "s": "Your real CPA uses the number you get paid for."
+          },
+          "say": "Here's why most new buyers overestimate their profit. In iGaming, you're rarely paid for every first deposit. You're paid for F T Ds, first time deposits, that meet the deal's baseline and activity rules. If thirty percent never qualify, your real C P A, cost per acquisition, is far higher than Ads Manager shows. As the screen says, your real C P A uses the number you get paid for. Buyers who skip this scale campaigns that are quietly losing money."
+        },
+        {
+          "v": "cards",
+          "h": "The words in an iGaming deal",
+          "p": "Programmes use these words differently, so read the exact definition in your deal. These are the common meanings at the time of writing. If a word in your deal is not defined, ask the manager before launch.",
+          "d": [
+            "Registration|An account was created. Usually unpaid",
+            "FTD|First-time deposit: the player's first deposit",
+            "Baseline|The minimum first deposit, and sometimes wagering, to count",
+            "Activity rule|Bets the player must place, e.g. a total at minimum odds",
+            "Time window|Days the player has to meet the rules",
+            "Qualified FTD|An FTD that meets every rule and is not a duplicate"
+          ],
+          "say": "Let's learn the words in an iGaming deal. A registration means an account was created, usually unpaid. An F T D is the player's first deposit. The baseline is the minimum first deposit, and sometimes wagering, to count. An activity rule is the bets the player must place, for example a total at minimum odds. The time window is the days they have to meet the rules. And a qualified F T D meets every rule and isn't a duplicate. Programmes use these differently, so read your deal's definitions."
+        },
+        {
+          "v": "code",
+          "h": "Example deal terms, as you might receive them",
+          "p": "Example terms for a Kenya sportsbook CPA. Read each line and ask what it means for your numbers. Terms like these sit in the deal PDF or the programme's offer page.",
+          "d": {
+            "lang": "text",
+            "text": "Deal: CPA $50 per qualified FTD\nGeo: KE only. Product: sportsbook\nBaseline: first deposit >= $20 (local equivalent)\nActivity: >= $30 wagered at odds >= 1.50\nWindow: 30 days from registration\nExcluded: duplicates, incentivised traffic, bonus abuse\nPayment: net 30 after month close",
+            "note": "Example only. Real deals differ."
+          },
+          "say": "Here are example deal terms for a Kenya sportsbook C P A, the kind you might receive. Let's read them together. Fifty dollars per qualified F T D. Kenya only, sportsbook only. The first deposit must be twenty dollars or more, in local equivalent. The player must wager at least thirty dollars at odds of one point five or higher. They have thirty days from registration. Duplicates, incentivised traffic and bonus abuse are excluded. And payment is net thirty after month close. Ask what each line means for your numbers."
+        },
+        {
+          "v": "funnel",
+          "h": "Example funnel: clicks to qualified FTDs",
+          "p": "Example from one month of a Kenya sportsbook test. Each step loses people. The last step, FTD to qualified, is the one most beginners never look at, and it decides whether the month made money.",
+          "d": [
+            [
+              "Clicks",
+              2000
+            ],
+            [
+              "Registrations",
+              320
+            ],
+            [
+              "FTDs",
+              64
+            ],
+            [
+              "Qualified FTDs",
+              45
+            ]
+          ],
+          "say": "Here's an example funnel from one month of a Kenya sportsbook test. Two thousand clicks became three hundred and twenty registrations, then sixty four F T Ds, and finally forty five qualified F T Ds. Each step loses people. That last step, from F T D to qualified, is the one most beginners never look at. And it decides whether the month made money."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: platform CPA versus real CPA",
+          "p": "Example. Spend $2,000. Ads Manager, optimising on deposits, reports 64 FTDs. The network pays 45 qualified FTDs at $50. The difference between the two CPAs is the difference between thinking you are rich and knowing you broke even.",
+          "more": "If you had judged on $31.25 against a $50 payout, you would think you had a 37.5% margin and scale hard. The real margin per qualified FTD is $50 − $44.44 = $5.56. A few more rejected FTDs next month would turn it into a loss. Always calculate CPA with the number the network confirms as payable.",
+          "d": {
+            "cols": [
+              "Measure",
+              "Working",
+              "Result"
+            ],
+            "rows": [
+              [
+                "CPA on all FTDs",
+                "$2,000 ÷ 64",
+                "$31.25"
+              ],
+              [
+                "Qualified rate",
+                "45 ÷ 64",
+                "70.3%"
+              ],
+              [
+                "CPA on qualified",
+                "$2,000 ÷ 45",
+                "$44.44"
+              ],
+              [
+                "Revenue",
+                "45 × $50",
+                "$2,250"
+              ],
+              [
+                "Profit",
+                "$2,250 - $2,000",
+                "$250"
+              ],
+              [
+                "ROI",
+                "$250 ÷ $2,000",
+                "12.5%"
+              ]
+            ]
+          },
+          "say": "Now compare platform C P A with real C P A. In this example, you spend two thousand dollars, and Ads Manager reports sixty four F T Ds. That's thirty one dollars twenty five each. But the network pays only forty five qualified F T Ds at fifty dollars. Read down the table. The qualified rate is seventy point three percent. Your real C P A is forty four dollars forty four. Revenue is two thousand two hundred and fifty, so profit is two hundred and fifty, a twelve point five percent R O I, return on investment. That's the gap between thinking you're rich and knowing you broke even."
+        },
+        {
+          "v": "eq",
+          "h": "The two formulas to know by heart",
+          "p": "Your qualified rate tells you how much of your traffic counts. Your true CPA uses only qualified FTDs. Track both daily per campaign, and per ad set where the network can split data by sub-ID.",
+          "d": [
+            "Spend",
+            "÷",
+            "Qualified FTDs",
+            "=",
+            "True CPA"
+          ],
+          "say": "Know these two formulas by heart. Your qualified rate is qualified F T Ds divided by all F T Ds, and it tells you how much of your traffic counts. Your true C P A, on screen, is spend divided by qualified F T Ds. Track both daily per campaign, and per ad set where the network can split data by sub I D."
+        },
+        {
+          "v": "flow",
+          "h": "The timing of a qualified FTD",
+          "p": "Qualification takes time. The player deposits, then has a window to meet the activity rule, then the network confirms at month close. That delay is why you need a projected CPA for daily decisions.",
+          "d": [
+            "Click and register",
+            "First deposit",
+            "Activity window, e.g. 30 days",
+            "Qualified or rejected",
+            "Month close and payout"
+          ],
+          "say": "Qualification takes time. Follow the flow. The player clicks and registers, makes a first deposit, then has an activity window, for example thirty days, to meet the rules. Then they're marked qualified or rejected, and finally the network pays at month close. That delay is why you need a projected C P A for your daily decisions."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: projected CPA while you wait",
+          "p": "Example. Target CPA $35 on qualified FTDs, payout $50. Day 3: $105 spent, 4 FTDs, none qualified yet. Your history says 70% of FTDs qualify. Use that rate to project, then apply the rule card to the projected CPA.",
+          "more": "Example rules used: kill at spend ≥ 2 × target with 0 conversions; kill when CPA is above the lower of 1.5 × target and break-even once spend reaches 3 × target; scale +20% when CPA ≤ 0.8 × target with at least 3 conversions. Here 1.5 × $35 = $52.50, break-even is the $50 payout, so the kill line is $50. $105 is exactly 3 × target, and $37.50 is under $50, so you hold. When your qualified rate is unknown, use 60% as a cautious starting assumption and replace it with real data after the first month close.",
+          "d": {
+            "cols": [
+              "Step",
+              "Working",
+              "Result"
+            ],
+            "rows": [
+              [
+                "Projected qualified",
+                "4 × 70%",
+                "2.8"
+              ],
+              [
+                "Projected CPA",
+                "$105 ÷ 2.8",
+                "$37.50"
+              ],
+              [
+                "Scale line",
+                "0.8 × $35",
+                "$28"
+              ],
+              [
+                "CPA kill line",
+                "lower of $52.50, $50",
+                "$50"
+              ],
+              [
+                "Decision",
+                "above target, under kill line",
+                "Hold"
+              ]
+            ]
+          },
+          "say": "Here's how to use a projected C P A while you wait. In this example, your target is thirty five dollars, payout fifty. On day three you've spent one hundred and five dollars and have four F T Ds, none qualified yet. Your history says seventy percent qualify. So four times seventy percent gives two point eight projected qualified. One hundred and five divided by two point eight is thirty seven fifty. The kill line is the lower of fifty two fifty and the fifty dollar payout, so fifty. You're above target but under the kill line. So you hold. If your rate is unknown, assume sixty percent."
+        },
+        {
+          "v": "screen",
+          "h": "Reading the network report",
+          "p": "A typical network report splits FTDs into qualified, pending and rejected. Only qualified pays. Pending may still qualify. Rejected never will, and the reason column tells you what to fix. This screen is an illustrative mock-up; real dashboards differ.",
+          "d": {
+            "kind": "browser",
+            "url": "network.example/reports/ke-sportsbook",
+            "title": "Conversions: KE sportsbook",
+            "blocks": [
+              {
+                "type": "select",
+                "label": "Group by",
+                "value": "Sub ID 1 (campaign)"
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "Sub ID",
+                  "FTDs",
+                  "Qualified",
+                  "Pending",
+                  "Rejected"
+                ],
+                "rows": [
+                  [
+                    "KE_SB_01",
+                    "38",
+                    "28",
+                    "6",
+                    "4"
+                  ],
+                  [
+                    "KE_SB_02",
+                    "26",
+                    "17",
+                    "3",
+                    "6"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Rejected reasons: 7 under baseline deposit, 3 duplicate."
+              },
+              {
+                "type": "button",
+                "label": "Export CSV"
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "This is a typical network report, shown as a mock-up. Look at the highlighted table. It splits F T Ds into qualified, pending and rejected for each sub I D. Only qualified pays. Pending may still qualify. Rejected never will. Now read the line underneath: seven rejected for being under the baseline deposit, and three duplicates. That reason column tells you exactly what to fix."
+        },
+        {
+          "v": "cards",
+          "h": "Common mistakes and fixes",
+          "p": "These are the habits that hide a low qualified rate. Each one costs real money because it makes a losing campaign look like a winner for weeks.",
+          "d": [
+            "Mistake: CPA on all FTDs|Fix: CPA on qualified FTDs only",
+            "Mistake: counting pending as paid|Fix: project with a cautious rate",
+            "Mistake: ignoring reject reasons|Fix: read them weekly, fix the cause",
+            "Mistake: one sub-ID for everything|Fix: one sub-ID per campaign",
+            "Mistake: guessing the baseline|Fix: get it in writing before launch"
+          ],
+          "say": "These habits hide a low qualified rate. Look at each card. Calculating C P A on all F T Ds? Use qualified F T Ds only. Counting pending as paid? Project with a cautious rate. Ignoring reject reasons? Read them weekly and fix the cause. One sub I D for everything? Use one per campaign. Guessing the baseline? Get it in writing before launch. Each one makes a losing campaign look like a winner for weeks."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: a zero-qualified ad set",
+          "p": "Apply the card. Target CPA is $35 on qualified FTDs. Check the first kill rule: spend at or above 2 × target with no conversions.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $35. Spent $75 in 3 days, 0 FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 75,
+              "conversions": 0,
+              "target_cpa": 35,
+              "days": 3
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "kill"
+            }
+          },
+          "say": "Let's apply the rule card in a lab. Your target C P A is thirty five dollars on qualified F T Ds. You've spent seventy five dollars in three days, with zero F T Ds. Should you kill, hold or scale? Check the first kill rule: spend at or above two times target, with no conversions. Pause and try it, then check your answer."
+        },
+        {
+          "v": "tip",
+          "h": "Never manufacture qualification",
+          "p": "Paying players to deposit, refunding their deposit, or telling them how many bets to place so you get paid is incentivised traffic and usually fraud under the deal. It also pushes people to gamble. Expect rejection, clawback and a ban.",
+          "d": {
+            "kind": "warn",
+            "text": "Never incentivise deposits or bets. Gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission; check the current policy and local law before you run."
+          },
+          "say": "Never manufacture qualification. Paying players to deposit, refunding their deposit, or telling them how many bets to place so you get paid, is incentivised traffic. It's usually fraud under the deal, and it pushes people to gamble. Expect rejection, clawback and a ban. The warning on screen also reminds you: gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing, Meta requires prior written permission. Check the current policy and local law."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules on qualified FTDs",
+          "p": "Starting rules to adapt with your own data. Use projected CPA for daily calls, then correct with real qualified numbers at each month close. Write the result of each check in your log.",
+          "d": [
+            "Kill: 0 FTDs at spend ≥ 2 × target",
+            "Kill: projected CPA above the lower of 1.5 × target and payout, after 3 × target spend",
+            "Scale +20%: projected CPA ≤ 0.8 × target with ≥ 3 FTDs, steps ≥ 48 h apart",
+            "Qualified rate under 50% for 2 weeks: pause and read reject reasons",
+            "Unknown qualified rate: assume 60%"
+          ],
+          "say": "Here are your starting decision rules on qualified F T Ds. Kill at zero F T Ds once spend is two times target. Kill if projected C P A is above the lower of one point five times target and the payout, after three times target spend. Scale by twenty percent when projected C P A is nought point eight times target or less, with three or more F T Ds, and steps at least forty eight hours apart. If the qualified rate stays under fifty percent for two weeks, pause and read the reject reasons. And if your rate is unknown, assume sixty percent. Adapt these with your own data."
+        }
+      ],
+      "takeaways": [
+        "You are paid on qualified FTDs; calculate CPA with that number.",
+        "Qualification takes days or weeks, so use a projected CPA from a cautious qualified rate.",
+        "Reject reasons tell you exactly what to fix; read them every week."
+      ],
+      "action": "Open your current or planned iGaming deal and write down the baseline deposit, activity rule, time window and exclusions. Then set your cautious qualified rate (60% if unknown) in your tracking sheet.",
+      "glossary": [
+        {
+          "term": "Baseline",
+          "def": "The minimum first deposit, and sometimes wagering, a player must reach for an FTD to count."
+        },
+        {
+          "term": "Qualified FTD",
+          "def": "An FTD that meets every rule in the deal and is not a duplicate or fraud."
+        },
+        {
+          "term": "Qualified rate",
+          "def": "Qualified FTDs divided by all FTDs."
+        },
+        {
+          "term": "Projected CPA",
+          "def": "Spend divided by FTDs times your expected qualified rate; used before qualification is confirmed."
+        },
+        {
+          "term": "Incentivised traffic",
+          "def": "Users paid or rewarded to register, deposit or bet; banned in most iGaming deals."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "$2,000 spent, 64 FTDs, 45 qualified. What is your true CPA?",
+          "options": [
+            "$31.25",
+            "$50.00",
+            "$20.00",
+            "$44.44"
+          ],
+          "answer": 3,
+          "why": "True CPA uses qualified FTDs: $2,000 ÷ 45 = $44.44."
+        },
+        {
+          "q": "4 FTDs, expected qualified rate 70%, spend $105. What is the projected CPA?",
+          "options": [
+            "$26.25",
+            "$37.50",
+            "$35.00",
+            "$52.50"
+          ],
+          "answer": 1,
+          "why": "4 × 70% = 2.8 projected qualified; $105 ÷ 2.8 = $37.50."
+        },
+        {
+          "q": "Target $35, payout $50. What is the CPA kill line under the starting rules?",
+          "options": [
+            "$50",
+            "$52.50",
+            "$35",
+            "$70"
+          ],
+          "answer": 0,
+          "why": "The lower of 1.5 × $35 = $52.50 and break-even $50 is $50."
+        },
+        {
+          "q": "The report shows many rejections for 'under baseline deposit'. What is the honest fix?",
+          "options": [
+            "Offer players a refund if they deposit more",
+            "Tell players exactly how much to bet",
+            "Make sure ads and pages state the minimum deposit clearly and test other angles",
+            "Ignore it; pending will cover it"
+          ],
+          "answer": 2,
+          "why": "Be clear about terms and change targeting or angle; never incentivise deposits."
+        },
+        {
+          "q": "You do not know your qualified rate yet. What cautious rate do the starting rules use?",
+          "options": [
+            "100%",
+            "60%",
+            "90%",
+            "20%"
+          ],
+          "answer": 1,
+          "why": "Assume 60% until the first month close gives you real data."
+        }
+      ],
+      "say_intro": "This lesson is about the baseline and the qualified F T D, the deposits you actually get paid for. You'll read real deal terms, calculate your true cost per qualified deposit, and make daily decisions before qualification data arrives. It matters because most new buyers overestimate their profit right here.",
+      "say_outro": "To recap: you're paid on qualified F T Ds, so your true C P A is spend divided by qualified F T Ds, and you use a projected C P A while you wait for confirmation. Your task: open your current or planned iGaming deal, write down the baseline deposit, activity rule, time window and exclusions, then set your cautious qualified rate, sixty percent if unknown, in your tracking sheet. Now take the quiz."
+    },
+    {
+      "slug": "player-value-and-ltv",
+      "title": "Player value and lifetime value",
+      "minutes": 17,
+      "objectives": [
+        "By the end you can build NGR per FTD from four simple drivers.",
+        "You can explain why a few players produce most NGR and what that does to small samples.",
+        "You can set a maximum CPA for RevShare from a cautious lifetime value.",
+        "You can read an operator's cohort report."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why player value sets your ceiling",
+          "p": "On RevShare, the value of a player decides the most you can pay to get them. On CPA, the operator uses the same value to decide how much to pay you, and whether to keep paying. If you understand player value, you can negotiate, choose geos and spot bad traffic before the operator does.",
+          "d": {
+            "b": "Value per player sets your price",
+            "s": "Both you and the operator are doing this maths."
+          },
+          "say": "Why does player value matter so much? On RevShare, the value of a player decides the most you can pay to get them. On C P A, cost per acquisition, the operator uses that same value to decide how much to pay you, and whether to keep paying. As the screen says, both you and the operator are doing this maths. Understand it, and you can negotiate, choose geos, and spot bad traffic before the operator does."
+        },
+        {
+          "v": "cards",
+          "h": "The drivers of player value",
+          "p": "NGR per FTD comes from a few drivers. Each one is something you can ask the operator about and something your traffic choices can change, for better or worse.",
+          "d": [
+            "Deposits per player|How often they deposit in the period",
+            "Average deposit|Size of each deposit",
+            "Hold on deposits|GGR as a share of deposits",
+            "NGR ratio|NGR as a share of GGR, after bonuses and taxes",
+            "Retention|How many are still active after weeks"
+          ],
+          "say": "N G R, net gaming revenue, per F T D, first time deposit, comes from a few drivers. Look at the cards. Deposits per player, how often they deposit. Average deposit, the size of each one. Hold on deposits, the G G R, gross gaming revenue, as a share of deposits. The N G R ratio, what's left after bonuses and taxes. And retention, how many are still active after weeks. You can ask the operator about each one, and your traffic choices can change each one, for better or worse."
+        },
+        {
+          "v": "eq",
+          "h": "NGR per FTD from its drivers",
+          "p": "Multiply the drivers together. Each one is an average across the cohort, so the result is an average too. Averages are useful for planning and dangerous for small samples, as you will see next.",
+          "d": [
+            "Deposits × avg deposit",
+            "×",
+            "GGR/deposits",
+            "×",
+            "NGR/GGR"
+          ],
+          "say": "To get N G R per F T D, multiply the drivers together. Follow the equation: deposits times average deposit, times G G R over deposits, times N G R over G G R. Each one is an average across the cohort, so the result is an average too. Averages are useful for planning, but dangerous for small samples, as you'll see next."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: 90-day value of 200 FTDs",
+          "p": "Example. 200 FTDs in Kenya. Over 90 days each makes 4.2 deposits on average, averaging $22. The operator holds 30% of deposits as GGR, and NGR is 70% of GGR after bonuses and tax. You are on 35% RevShare.",
+          "more": "Read the result carefully. On these figures, a RevShare FTD is worth only $6.79 to you over the first 90 days. If you could get a $30 CPA for the same players, CPA would pay over four times more in that window. RevShare only wins if players keep producing NGR for many months after day 90, which is why you need the operator's longer cohort data. All figures here are examples.",
+          "d": {
+            "cols": [
+              "Step",
+              "Working",
+              "Per FTD"
+            ],
+            "rows": [
+              [
+                "Deposits",
+                "4.2 × $22",
+                "$92.40"
+              ],
+              [
+                "GGR",
+                "$92.40 × 30%",
+                "$27.72"
+              ],
+              [
+                "NGR",
+                "$27.72 × 70%",
+                "$19.40"
+              ],
+              [
+                "Your 35%",
+                "$19.40 × 35%",
+                "$6.79"
+              ],
+              [
+                "Cohort total",
+                "200 × $6.79",
+                "$1,358"
+              ]
+            ]
+          },
+          "say": "Here's a worked example: the ninety day value of two hundred F T Ds in Kenya. Each makes four point two deposits averaging twenty two dollars, so ninety two dollars forty. The operator holds thirty percent as G G R, twenty seven seventy two. N G R is seventy percent of that, nineteen forty. Your thirty five percent share is just six dollars seventy nine per F T D. If you could get a thirty dollar C P A, that pays over four times more in this window. RevShare only wins if players keep producing for many months. All figures are examples."
+        },
+        {
+          "v": "bars",
+          "h": "A few players produce most of the NGR",
+          "p": "Example split of 90-day NGR across a cohort. Gambling value is usually concentrated: a small share of players produces most of it. That makes small samples unreliable and averages misleading. Varies by geo and brand.",
+          "d": [
+            [
+              "Top 10% of players",
+              60,
+              "60% of NGR"
+            ],
+            [
+              "Next 20%",
+              25,
+              "25%"
+            ],
+            [
+              "Next 30%",
+              12,
+              "12%"
+            ],
+            [
+              "Bottom 40%",
+              3,
+              "3%"
+            ]
+          ],
+          "say": "This example shows how concentrated value is. Look at the bars. The top ten percent of players produce sixty percent of the N G R. The next twenty percent produce twenty five. The next thirty percent, twelve. And the bottom forty percent, just three percent. Gambling value usually works like this, which makes small samples unreliable and averages misleading. It varies by geo and brand."
+        },
+        {
+          "v": "big",
+          "h": "Small samples lie in iGaming",
+          "p": "With 20 FTDs, one or two big players can double or erase a month's NGR. With 200 FTDs the average starts to settle. Never set a lifetime value, raise a bid or switch to RevShare on the back of a few lucky players.",
+          "d": {
+            "b": "One whale is not a trend",
+            "s": "Wait for 100+ FTDs before you trust an average."
+          },
+          "say": "So, small samples lie in iGaming. With twenty F T Ds, one or two big players can double or erase a month's N G R. With two hundred, the average starts to settle. As the screen says, one whale is not a trend. Wait for one hundred or more F T Ds before you trust an average. Never set a lifetime value, raise a bid, or switch to RevShare on the back of a few lucky players."
+        },
+        {
+          "v": "curve",
+          "h": "Retention: sportsbook versus casino",
+          "p": "Example share of a cohort still active each week. Sportsbook players often return with each match week; casino players are often more valuable per active week but drop faster. Illustrative shapes only; ask your operator for real curves.",
+          "d": {
+            "a": [
+              100,
+              62,
+              45,
+              33,
+              27,
+              24,
+              20
+            ],
+            "la": "Sportsbook % active",
+            "b": [
+              100,
+              50,
+              32,
+              22,
+              17,
+              14,
+              11
+            ],
+            "lb": "Casino % active",
+            "x": [
+              "W1",
+              "W2",
+              "W4",
+              "W8",
+              "W12",
+              "W16",
+              "W24"
+            ]
+          },
+          "say": "This curve compares retention in an example cohort. Both start at one hundred percent. The sportsbook line falls more slowly, still at twenty percent by week twenty four, because players often return with each match week. The casino line drops faster, to eleven percent. Casino players are often more valuable per active week, but they leave sooner. These are illustrative shapes, so ask your operator for real curves."
+        },
+        {
+          "v": "eq",
+          "h": "Maximum CPA from lifetime value",
+          "p": "For RevShare, set your maximum cost per FTD from a cautious value, not a hopeful one. Use NGR per FTD over the horizon you can afford, times your share, times a safety factor below 1 to cover estimate error and slow payment.",
+          "more": "Example. 12-month NGR per FTD estimate $100, RevShare 35%, safety factor 0.7: $100 × 35% × 0.7 = $24.50. So you would not pay more than $24.50 per FTD for this cohort on RevShare. If the operator's 12-month figure is based on a different traffic source or geo than yours, use a lower safety factor such as 0.5 until your own data arrives.",
+          "d": [
+            "NGR per FTD",
+            "×",
+            "Your %",
+            "×",
+            "0.7 safety",
+            "=",
+            "Max CPFTD"
+          ],
+          "say": "For RevShare, set your maximum cost per F T D from a cautious value, not a hopeful one. Follow the equation: N G R per F T D, times your share, times a safety factor of nought point seven. In this example, one hundred dollars, times thirty five percent, times nought point seven, gives twenty four dollars fifty. That's your maximum. If the operator's figure comes from a different traffic source or geo than yours, use a lower factor, like nought point five, until your own data arrives."
+        },
+        {
+          "v": "screen",
+          "h": "Reading a cohort report",
+          "p": "Ask your programme for a cohort report like this one: rows are the month players joined, columns are months since joining. Read across a row to see how one group's value builds. Mock-up; real reports differ.",
+          "d": {
+            "kind": "browser",
+            "url": "partners.example/reports/cohorts",
+            "title": "Cohort NGR per FTD, KE",
+            "blocks": [
+              {
+                "type": "select",
+                "label": "Product",
+                "value": "Sportsbook"
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "Cohort",
+                  "M1",
+                  "M3",
+                  "M6"
+                ],
+                "rows": [
+                  [
+                    "Jan",
+                    "$31",
+                    "$58",
+                    "$79"
+                  ],
+                  [
+                    "Feb",
+                    "$26",
+                    "$49",
+                    "$70"
+                  ],
+                  [
+                    "Mar",
+                    "$34",
+                    "$61",
+                    "n/a"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Cumulative NGR per FTD. Example figures."
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "Here's a mock-up of a cohort report. Ask your programme for one like this. Rows are the month players joined. Columns are months since joining. Read across the January row: thirty one dollars in month one, fifty eight by month three, seventy nine by month six. That's how one group's value builds over time. March has no month six figure yet. These are example figures."
+        },
+        {
+          "v": "walk",
+          "h": "Build your own value sheet",
+          "p": "Once your own players exist, stop relying on averages from other affiliates. Build a simple cohort sheet from the operator's monthly report. Screens are mock-ups.",
+          "d": {
+            "steps": [
+              {
+                "title": "Export monthly data",
+                "text": "Download FTDs and NGR by sub-ID for each month from the network.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/reports",
+                  "title": "Monthly export",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Metric",
+                      "value": "NGR by player cohort"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Export CSV"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "One row per cohort",
+                "text": "Rows are the month of FTD. Columns are months since FTD. Fill in cumulative NGR per FTD.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheets.example/cohorts",
+                  "title": "My cohorts",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Cohort",
+                        "FTDs",
+                        "M1",
+                        "M2"
+                      ],
+                      "rows": [
+                        [
+                          "Jun",
+                          "112",
+                          "$24",
+                          "$37"
+                        ],
+                        [
+                          "Jul",
+                          "140",
+                          "$27",
+                          "n/a"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Compare to the plan",
+                "text": "Mark any cohort running more than 30% below the estimate you used to set your max CPA.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheets.example/cohorts",
+                  "title": "Plan check",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Planned M2 NGR per FTD",
+                      "value": "$45"
+                    },
+                    {
+                      "type": "field",
+                      "label": "June actual",
+                      "value": "$37 (-18%)"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Within 30%: keep max CPA. Example."
+                    }
+                  ],
+                  "highlight": 1
+                }
+              }
+            ]
+          },
+          "say": "Once you have your own players, build your own value sheet. Tap Next to follow each step. First, export monthly data: download F T Ds and N G R by sub I D for each month from the network. Second, make one row per cohort. Rows are the month of F T D, columns are months since, and you fill in cumulative N G R per F T D. Third, compare to the plan. Mark any cohort running more than thirty percent below the estimate you used to set your maximum C P A."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and fixes",
+          "p": "Each mistake below comes from trusting a number before it has enough players behind it, or from using someone else's number as if it were yours.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Setting LTV from 20 FTDs",
+                "Using another geo's cohort",
+                "No safety factor",
+                "Celebrating one whale"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Wait for 100+ FTDs",
+                "Your geo, your source, or a 0.5 factor",
+                "Multiply by 0.7 or lower",
+                "Judge the median, not the max"
+              ]
+            }
+          },
+          "say": "Each of these mistakes comes from trusting a number too early, or using someone else's number as yours. Setting lifetime value, L T V, from twenty F T Ds? Wait for one hundred or more. Using another geo's cohort? Use your geo and source, or a nought point five factor. No safety factor? Multiply by nought point seven or lower. Celebrating one whale? Judge the median, not the maximum."
+        },
+        {
+          "v": "tip",
+          "h": "Value is player losses: handle it carefully",
+          "p": "High-value players are often the ones losing the most. Never target or retarget people because they lose a lot, never build audiences from heavy losers, and never push higher deposits. If a player shows signs of harm, direct them to help, not to an offer.",
+          "d": {
+            "kind": "warn",
+            "text": "Gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission; check the current policy and local law before you run."
+          },
+          "say": "Please handle this carefully. Value comes from player losses, and high-value players are often the ones losing the most. Never target or retarget people because they lose a lot. Never build audiences from heavy losers. Never push higher deposits. If a player shows signs of harm, direct them to help, not to an offer. And as the warning says, gambling ads usually need platform authorization and must follow local law. At the time of writing, Meta requires prior written permission. Check the current policy."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules on player value",
+          "p": "Starting rules to adapt. They keep your estimate cautious and force you to update it with real data instead of hope. Review them at every month close.",
+          "d": [
+            "No LTV estimate before 100 FTDs and 60 days",
+            "Max CPFTD on RevShare = NGR × share × 0.7",
+            "Other geo or source data: use 0.5",
+            "Month-3 NGR more than 30% below plan: cut max CPA to match",
+            "Re-estimate every month close"
+          ],
+          "say": "Here are your starting rules on player value. No L T V estimate before one hundred F T Ds and sixty days. Your maximum cost per F T D on RevShare is N G R, times share, times nought point seven. With another geo or source's data, use nought point five. If month three N G R is more than thirty percent below plan, cut your maximum C P A to match. And re-estimate at every month close. These keep your estimate cautious and grounded in real data."
+        }
+      ],
+      "takeaways": [
+        "NGR per FTD = deposits × average deposit × hold × NGR ratio.",
+        "A few players produce most NGR, so small samples mislead.",
+        "Set a RevShare maximum CPA from a cautious value with a safety factor."
+      ],
+      "action": "Ask your programme for a cohort report of NGR per FTD at months 1, 3 and 6 for your geo, and calculate your maximum CPFTD with a 0.7 safety factor.",
+      "glossary": [
+        {
+          "term": "Player value",
+          "def": "The NGR a player produces over a period; on RevShare, your share of it is your income."
+        },
+        {
+          "term": "LTV",
+          "def": "Lifetime value: the total NGR, or your share of it, a player produces over a set horizon."
+        },
+        {
+          "term": "Hold on deposits",
+          "def": "GGR divided by deposits: how much of what players deposit the operator keeps."
+        },
+        {
+          "term": "Whale",
+          "def": "A player who produces a very large share of NGR."
+        },
+        {
+          "term": "Safety factor",
+          "def": "A multiplier below 1 applied to an estimate to cover error and delay."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "4.2 deposits, $22 average, 30% hold, NGR 70% of GGR. What is NGR per FTD?",
+          "options": [
+            "$92.40",
+            "$27.72",
+            "$19.40",
+            "$6.79"
+          ],
+          "answer": 2,
+          "why": "$92.40 × 30% = $27.72, × 70% = $19.40."
+        },
+        {
+          "q": "12-month NGR per FTD $100, RevShare 35%, safety factor 0.7. Max CPFTD?",
+          "options": [
+            "$35.00",
+            "$24.50",
+            "$70.00",
+            "$100.00"
+          ],
+          "answer": 1,
+          "why": "$100 × 35% × 0.7 = $24.50."
+        },
+        {
+          "q": "Your first 20 FTDs include one player who produced half the NGR. What do you do?",
+          "options": [
+            "Raise your max CPA",
+            "Switch to RevShare immediately",
+            "Target more players like them",
+            "Treat it as noise and wait for 100+ FTDs"
+          ],
+          "answer": 3,
+          "why": "One whale is not a trend; small samples lie."
+        },
+        {
+          "q": "You only have cohort data from a different geo. Which safety factor do the rules suggest?",
+          "options": [
+            "0.5",
+            "1.0",
+            "0.9",
+            "0.7"
+          ],
+          "answer": 0,
+          "why": "Data from another geo or source is less reliable, so use 0.5."
+        },
+        {
+          "q": "Which audience practice is acceptable?",
+          "options": [
+            "Lookalikes of the heaviest losers",
+            "Retargeting players who just lost big",
+            "Adults in approved geos with no vulnerability interests",
+            "Users who recently self-excluded"
+          ],
+          "answer": 2,
+          "why": "Target approved adults only and never single out losers or self-excluded people."
+        }
+      ],
+      "say_intro": "This lesson is about player value and lifetime value. You'll build N G R per F T D from a few simple drivers, see why a few players produce most of the value, and set a cautious maximum cost for RevShare. It matters because player value sets the ceiling on what you can pay.",
+      "say_outro": "To recap: player value comes from deposits, deposit size, hold, N G R ratio and retention, a few players drive most of it, and you set your RevShare maximum from a cautious estimate with a safety factor. Your task: ask your programme for a cohort report of N G R per F T D at months one, three and six for your geo, and calculate your maximum cost per F T D with a nought point seven safety factor. Now take the quiz."
+    },
+    {
+      "slug": "kpis-operators-watch",
+      "title": "The KPIs operators judge you on",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can name the quality KPIs operators use to rate affiliate traffic.",
+        "You can split your traffic by sub-ID so you can see which campaign causes a problem.",
+        "You can respond to a quality warning with data instead of guesses.",
+        "You can apply starting rules to pause low-quality sub-IDs."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the operator's view decides your future",
+          "p": "Operators do not just count your FTDs. They score your traffic on quality, and they cut payouts, lower caps or close accounts when the score drops. Good buyers watch the same KPIs as the operator, so they fix problems before an email from the manager arrives.",
+          "d": {
+            "b": "Your traffic has a report card",
+            "s": "Read it before your manager does."
+          },
+          "say": "Operators don't just count your F T Ds, your first time deposits. They score your traffic on quality, and they cut payouts, lower caps, or close accounts when the score drops. As the screen says, your traffic has a report card. Good buyers watch the same K P Is, key performance indicators, as the operator, so they fix problems before an email from the manager arrives."
+        },
+        {
+          "v": "table",
+          "h": "KPIs operators commonly watch",
+          "p": "A rough guide, varies by operator, geo and product. Ask your manager which KPIs your deal is reviewed on, and what level they expect. Some put minimums in the contract.",
+          "d": {
+            "cols": [
+              "KPI",
+              "What it shows",
+              "Ask for"
+            ],
+            "rows": [
+              [
+                "Reg to FTD %",
+                "Intent of sign-ups",
+                "By sub-ID"
+              ],
+              [
+                "Qualified %",
+                "Share that pays",
+                "Reject reasons"
+              ],
+              [
+                "Avg first deposit",
+                "Player quality",
+                "By geo"
+              ],
+              [
+                "Deposits per FTD, 30d",
+                "Engagement",
+                "Monthly"
+              ],
+              [
+                "Active at day 30",
+                "Retention",
+                "Monthly"
+              ],
+              [
+                "Bonus cost %",
+                "Bonus-only players",
+                "Monthly"
+              ],
+              [
+                "Duplicate rate",
+                "Fraud or repeats",
+                "Weekly"
+              ]
+            ]
+          },
+          "say": "Here are the K P Is operators commonly watch, as a rough guide. Registration to F T D rate shows sign-up intent. Qualified percentage shows the share that pays. Average first deposit shows player quality. Deposits per F T D over thirty days shows engagement. Active at day thirty shows retention. Bonus cost percentage reveals bonus-only players. And duplicate rate flags fraud or repeats. The right column tells you what to ask for. Ask your manager which K P Is your deal is reviewed on, and what level they expect."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: your traffic versus expectations",
+          "p": "Example. A manager shares this comparison for your Kenya traffic. Two KPIs are well below what the operator expects. Each one points to a different cause, and therefore a different fix.",
+          "more": "Reading it: a low qualified rate together with a low first deposit suggests your ads attract people who deposit the minimum or less, often because the creative leads with the bonus. A high bonus cost confirms it: many players use the bonus and leave. The fix is to change the angle, for example from 'claim your bonus' to the product itself, and to state the minimum deposit clearly. Example figures only.",
+          "d": {
+            "cols": [
+              "KPI",
+              "Yours",
+              "Expected",
+              "Signal"
+            ],
+            "rows": [
+              [
+                "Qualified %",
+                "48%",
+                "65%",
+                "Low intent"
+              ],
+              [
+                "Avg first deposit",
+                "$14",
+                "$20",
+                "Under baseline"
+              ],
+              [
+                "Active day 30",
+                "21%",
+                "25%",
+                "Close"
+              ],
+              [
+                "Bonus cost %",
+                "38%",
+                "25%",
+                "Bonus seekers"
+              ],
+              [
+                "Duplicate rate",
+                "1%",
+                "<3%",
+                "Fine"
+              ]
+            ]
+          },
+          "say": "Here's an example comparison a manager might share for your Kenya traffic. Read the table. Your qualified rate is forty eight percent, against sixty five expected. Your average first deposit is fourteen dollars, against twenty. And bonus cost is thirty eight percent, against twenty five. Together, these suggest your ads attract people who deposit the minimum, often because the creative leads with the bonus. The fix is to change the angle towards the product itself, and state the minimum deposit clearly. These are example figures."
+        },
+        {
+          "v": "compare",
+          "h": "Healthy traffic versus warning signs",
+          "p": "Rough guide, varies by brand. A single bad KPI can be noise; two or more pointing the same way usually mean your angle or audience is attracting the wrong players.",
+          "d": {
+            "a": {
+              "title": "Warning signs",
+              "items": [
+                "Many registrations, few FTDs",
+                "Most FTDs at the minimum deposit",
+                "Bonus used, then gone",
+                "Same device or payment on many accounts"
+              ]
+            },
+            "b": {
+              "title": "Healthy signs",
+              "items": [
+                "Steady reg to FTD rate",
+                "First deposits above baseline",
+                "Players active after a month",
+                "Low duplicate rate"
+              ]
+            }
+          },
+          "say": "One bad K P I can be noise. But two or more pointing the same way usually means your angle or audience is attracting the wrong players. On the left, warning signs: many registrations but few F T Ds, most F T Ds at the minimum deposit, bonus used then gone, and the same device or payment on many accounts. On the right, healthy signs: a steady registration to F T D rate, first deposits above baseline, players active after a month, and a low duplicate rate."
+        },
+        {
+          "v": "code",
+          "h": "Split traffic with sub-IDs",
+          "p": "Put the campaign, ad set and ad into sub-ID parameters on the tracking link. The network can then report KPIs per sub-ID, and you can find the one ad causing a problem. Parameter names differ by network.",
+          "d": {
+            "lang": "url",
+            "text": "https://track.network.example/c/123?sub1={{campaign.name}}&sub2={{adset.name}}&sub3={{ad.name}}",
+            "note": "Meta's URL parameters use names like {{campaign.name}} at the time of writing; check the current Ads Manager."
+          },
+          "say": "To find which ad causes a problem, split your traffic with sub I Ds. Put the campaign, ad set and ad into sub I D parameters on your tracking link, like the code on screen. Then the network can report K P Is per sub I D. The note mentions that Meta's U R L parameters use names in double braces at the time of writing, so check the current Ads Manager. Parameter names also differ by network."
+        },
+        {
+          "v": "screen",
+          "h": "A quality report by sub-ID",
+          "p": "With sub-IDs in place, a report like this tells you which campaign to fix. One ad set may drag the whole account down. Mock-up; your network's screen will differ.",
+          "d": {
+            "kind": "browser",
+            "url": "network.example/reports/quality",
+            "title": "Quality by sub ID 2",
+            "blocks": [
+              {
+                "type": "table",
+                "cols": [
+                  "Ad set",
+                  "FTDs",
+                  "Qualified %",
+                  "Avg dep."
+                ],
+                "rows": [
+                  [
+                    "Bonus_angle",
+                    "41",
+                    "39%",
+                    "$12"
+                  ],
+                  [
+                    "Matchday_angle",
+                    "33",
+                    "70%",
+                    "$23"
+                  ],
+                  [
+                    "Live_odds_angle",
+                    "18",
+                    "67%",
+                    "$21"
+                  ]
+                ]
+              },
+              {
+                "type": "text",
+                "value": "Bonus_angle drags the average down."
+              }
+            ],
+            "highlight": 0
+          },
+          "say": "With sub I Ds in place, you get a report like this mock-up. Look at the table by ad set. The bonus angle has forty one F T Ds, but only thirty nine percent qualified, and a twelve dollar average deposit. The match day angle is at seventy percent and twenty three dollars. The live odds angle, sixty seven percent and twenty one dollars. So one ad set, the bonus angle, drags the whole account down. Now you know exactly what to fix."
+        },
+        {
+          "v": "phone",
+          "h": "Answering a quality warning",
+          "p": "When a manager raises quality, reply with data and a plan, not excuses. Ask for the breakdown you do not have, say what you will pause and when you will report back.",
+          "d": {
+            "app": "chat",
+            "title": "Affiliate manager",
+            "subtitle": "online",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Your KE traffic is at 48% qualified this month. We expect 65%. We may lower your cap."
+              },
+              {
+                "from": "me",
+                "text": "Thanks. By sub-ID, Bonus_angle is at 39% and the rest at about 69%. I have paused Bonus_angle today."
+              },
+              {
+                "from": "me",
+                "text": "Can you share reject reasons for sub2=Bonus_angle? I will send an update in 7 days."
+              },
+              {
+                "from": "them",
+                "text": "Sending now. Let's review next week."
+              }
+            ]
+          },
+          "say": "Here's how to answer a quality warning. In this chat, the manager says your Kenya traffic is at forty eight percent qualified, against sixty five expected, and they may lower your cap. Notice the reply. The buyer uses sub I D data, says the bonus angle is at thirty nine percent, the rest about sixty nine, and confirms it's paused today. Then they ask for reject reasons and promise an update in seven days. Data and a plan, not excuses."
+        },
+        {
+          "v": "eq",
+          "h": "What a payout cut costs",
+          "p": "Example. Your manager cuts your CPA from $50 to $40 because of quality. On 100 qualified FTDs a month, that is $1,000 a month less, with the same spend. Fixing quality first is cheaper.",
+          "d": [
+            "100 FTDs",
+            "×",
+            "$10 cut",
+            "=",
+            "$1,000 a month"
+          ],
+          "say": "What does a payout cut cost? In this example, your manager cuts your C P A, cost per acquisition, from fifty dollars to forty because of quality. Follow the equation: one hundred F T Ds a month, times a ten dollar cut, equals one thousand dollars a month less, with the same spend. Fixing quality first is far cheaper."
+        },
+        {
+          "v": "flow",
+          "h": "Weekly quality review",
+          "p": "Do this every week at the same time. It takes 20 minutes and keeps your deal safe. Use network data, not platform data. Keep the same order every week so nothing gets skipped.",
+          "d": [
+            "Export network data by sub-ID",
+            "Compare 5 KPIs to expectations",
+            "Flag sub-IDs below the rules",
+            "Pause or rewrite the angle",
+            "Message the manager with the plan"
+          ],
+          "say": "Run a weekly quality review, at the same time each week. It takes about twenty minutes. Follow the flow. Export network data by sub I D. Compare five K P Is to expectations. Flag sub I Ds that fall below your rules. Pause them, or rewrite the angle. Then message the manager with your plan. Use network data, not platform data, and keep the same order every week so nothing gets skipped."
+        },
+        {
+          "v": "cards",
+          "h": "Common mistakes and fixes",
+          "p": "Each of these turns a fixable quality problem into a lost deal. The fixes are cheap and mostly habits you can set up in one afternoon and keep for every new deal.",
+          "d": [
+            "Mistake: one link for every ad|Fix: sub-IDs per campaign and ad set",
+            "Mistake: arguing with the manager|Fix: reply with data and a plan",
+            "Mistake: bonus-led ads everywhere|Fix: lead with the product, state terms",
+            "Mistake: checking quality monthly|Fix: weekly review, same day"
+          ],
+          "say": "These mistakes turn a fixable quality problem into a lost deal. One link for every ad? Use sub I Ds per campaign and ad set. Arguing with the manager? Reply with data and a plan. Bonus-led ads everywhere? Lead with the product and state the terms. Checking quality monthly? Do a weekly review on the same day. The fixes are cheap habits you can set up in one afternoon."
+        },
+        {
+          "v": "tip",
+          "h": "Never fake quality",
+          "p": "Making your own deposits, paying users to play, or creating accounts to lift numbers is fraud. Operators check devices, payments and behaviour, and they claw back payments. Improve quality with honest angles and better audiences only.",
+          "d": {
+            "kind": "warn",
+            "text": "Gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission; check the current policy and local law before you run."
+          },
+          "say": "Never fake quality. Making your own deposits, paying users to play, or creating accounts to lift your numbers is fraud. Operators check devices, payments and behaviour, and they claw back payments. Improve quality with honest angles and better audiences only. And as the warning says, gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing, Meta requires prior written permission. Check the current policy and local law."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for quality",
+          "p": "Starting rules to adapt with your manager's targets. They protect your deal by acting on a sub-ID before it damages the whole account. Share them with your manager so you agree on the lines.",
+          "d": [
+            "Sub-ID qualified % under 50% for 7 days: pause it",
+            "Average first deposit under baseline: rewrite the angle",
+            "Bonus cost % above the expected level 2 weeks running: drop bonus-led ads",
+            "Duplicate rate above 3%: pause and investigate",
+            "Manager warning: reply within 24 h with data and a plan"
+          ],
+          "say": "Here are starting rules for quality. If a sub I D's qualified rate is under fifty percent for seven days, pause it. If the average first deposit is under baseline, rewrite the angle. If bonus cost is above the expected level two weeks running, drop bonus-led ads. If the duplicate rate is above three percent, pause and investigate. And if a manager warns you, reply within twenty four hours with data and a plan. Adapt these to your manager's targets, and share them so you agree on the lines."
+        }
+      ],
+      "takeaways": [
+        "Operators score your traffic on quality KPIs, not just FTD count.",
+        "Sub-IDs let you find and fix the one campaign that drags quality down.",
+        "Answer quality warnings with data and a plan within 24 hours."
+      ],
+      "action": "Add sub1, sub2 and sub3 parameters to your iGaming tracking link and ask your manager which quality KPIs, and which levels, your deal is reviewed on.",
+      "glossary": [
+        {
+          "term": "Sub-ID",
+          "def": "A parameter on your tracking link that labels traffic, so reports can be split by campaign or ad."
+        },
+        {
+          "term": "Bonus cost %",
+          "def": "Bonus money used as a share of GGR or deposits; high values suggest bonus-only players."
+        },
+        {
+          "term": "Duplicate rate",
+          "def": "Share of accounts flagged as repeats of existing players."
+        },
+        {
+          "term": "Cap",
+          "def": "The maximum number of FTDs a deal will pay for in a period."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Qualified % is low and average first deposit is under baseline. Which change is most likely to help?",
+          "options": [
+            "Shift from bonus-led angles to the product and state terms clearly",
+            "Increase budget",
+            "Target younger users",
+            "Remove the 18+ line"
+          ],
+          "answer": 0,
+          "why": "Bonus-led ads tend to attract minimum depositors; an honest product angle usually improves quality."
+        },
+        {
+          "q": "Why put campaign and ad names into sub-ID parameters?",
+          "options": [
+            "It raises the payout",
+            "Meta requires it",
+            "So network reports can show quality by campaign and ad",
+            "It hides traffic from the operator"
+          ],
+          "answer": 2,
+          "why": "Sub-IDs let you see which campaign or ad causes a quality problem."
+        },
+        {
+          "q": "Your CPA is cut from $50 to $40. You send 100 qualified FTDs a month. Monthly cost of the cut?",
+          "options": [
+            "$100",
+            "$400",
+            "$4,000",
+            "$1,000"
+          ],
+          "answer": 3,
+          "why": "100 × $10 = $1,000 a month."
+        },
+        {
+          "q": "A sub-ID has been under 50% qualified for 7 days. What do the starting rules say?",
+          "options": [
+            "Scale it",
+            "Pause it",
+            "Hold for another month",
+            "Change the payout"
+          ],
+          "answer": 1,
+          "why": "Pause the sub-ID and investigate."
+        },
+        {
+          "q": "Which is a fraud, not a fix?",
+          "options": [
+            "Pausing a weak ad set",
+            "Rewriting the angle",
+            "Depositing into accounts yourself to lift numbers",
+            "Asking for reject reasons"
+          ],
+          "answer": 2,
+          "why": "Self-deposits fake quality and lead to clawbacks and bans."
+        }
+      ],
+      "say_intro": "Operators don't just count your deposits, they score your traffic on quality. In this lesson you'll learn the K P Is they watch, split your traffic by sub I D to find problems, and respond to a quality warning with data. It matters because a falling score can cost you payouts, caps or the whole deal.",
+      "say_outro": "To recap: operators judge you on quality K P Is like qualified rate, first deposit size and bonus cost, sub I Ds show you which ad causes a problem, and you reply to warnings with data and a plan. Your task: add sub one, sub two and sub three parameters to your iGaming tracking link, and ask your manager which quality K P Is, and which levels, your deal is reviewed on. Now take the quiz."
+    },
+    {
+      "slug": "choosing-an-igaming-offer",
+      "title": "Choosing your first iGaming offer",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can score an iGaming offer on payout, terms, licence and fit.",
+        "You can compare offers on value per FTD, not headline payout.",
+        "You can set target CPA, kill and scale lines for a chosen offer before launch.",
+        "You can ask a manager the right questions before you commit budget."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the offer choice is half the result",
+          "p": "A strong campaign on a weak offer still loses. A high payout with a tough baseline, a tiny cap or no licence for your geo is worth less than it looks, or nothing. This lesson turns everything in this module into a scorecard you fill in before you spend.",
+          "d": {
+            "b": "Headline payout is not value",
+            "s": "Value = payout × the share that qualifies."
+          },
+          "say": "The offer you choose is half the result. A strong campaign on a weak offer still loses. A high payout with a tough baseline, a tiny cap, or no licence for your geo is worth less than it looks, or nothing at all. As the screen says, headline payout is not value. Value is the payout times the share that qualifies. This lesson turns the whole module into a scorecard you fill in before you spend."
+        },
+        {
+          "v": "check",
+          "h": "The offer scorecard",
+          "p": "Fill this in for every offer you consider. Any missing answer is a reason to wait, not to guess. Most items come from the deal terms and one conversation with the manager.",
+          "d": [
+            "Licence for this product in this geo, verified",
+            "Payout and deal type in writing",
+            "Baseline, activity rule and window",
+            "Cap, hold and payment terms",
+            "Allowed traffic sources, including paid social",
+            "Required responsible gambling wording"
+          ],
+          "say": "Here's the offer scorecard. Fill it in for every offer you consider. A licence for this product in this geo, verified. Payout and deal type in writing. The baseline, activity rule and window. Cap, hold and payment terms. Allowed traffic sources, including paid social. And the required responsible gambling wording. Most answers come from the deal terms and one conversation with the manager. Any missing answer is a reason to wait, not to guess."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: two Kenya sportsbook offers",
+          "p": "Example. Offer A pays more per FTD but has a stricter baseline. Offer B pays less but more of your FTDs qualify. Assume the same traffic, so the same expected cost per FTD for both.",
+          "more": "Example maths: value per FTD is payout × expected qualified rate. A: $60 × 50% = $30. B: $40 × 75% = $30. The value is the same, but B has four times the cap and pays a month sooner. For a new buyer, B is the better offer even though A's headline is 50% higher. The qualified rates here are estimates; ask the manager for real figures for your source.",
+          "d": {
+            "cols": [
+              "",
+              "Offer A",
+              "Offer B"
+            ],
+            "rows": [
+              [
+                "CPA",
+                "$60",
+                "$40"
+              ],
+              [
+                "Baseline",
+                "$30 dep + $100 bets",
+                "$10 dep"
+              ],
+              [
+                "Expected qualified %",
+                "50%",
+                "75%"
+              ],
+              [
+                "Value per FTD",
+                "$30",
+                "$30"
+              ],
+              [
+                "Monthly cap",
+                "50",
+                "200"
+              ],
+              [
+                "Payment",
+                "Net 60",
+                "Net 30"
+              ]
+            ]
+          },
+          "say": "Here are two example Kenya sportsbook offers. Assume the same traffic, so the same cost per F T D, first time deposit. Offer A pays sixty dollars C P A, cost per acquisition, but needs a thirty dollar deposit plus one hundred dollars in bets, so only about fifty percent qualify. Offer B pays forty, needs a ten dollar deposit, and about seventy five percent qualify. Both are worth thirty dollars per F T D. But B has four times the cap, two hundred against fifty, and pays a month sooner. For a new buyer, B is better. These rates are estimates."
+        },
+        {
+          "v": "eq",
+          "h": "Value per FTD",
+          "p": "Use this to compare offers fairly. It tells you what one FTD is worth on average before you know which ones will qualify, and it puts high-baseline and low-baseline offers on the same scale.",
+          "d": [
+            "Payout",
+            "×",
+            "Expected qualified %",
+            "=",
+            "Value per FTD"
+          ],
+          "say": "Use this equation to compare offers fairly. Value per F T D equals the payout, times your expected qualified percentage. It tells you what one F T D is worth on average, before you know which ones will qualify. And it puts high-baseline and low-baseline offers on the same scale, so you're not fooled by a big headline number."
+        },
+        {
+          "v": "partner",
+          "h": "Where to look for iGaming partners",
+          "p": "These are the partners we list for this vertical. Whoever you choose, verify the licence per geo yourself and get baseline, cap and payment terms in writing before you build anything.",
+          "d": {
+            "vertical": "igaming",
+            "note": "Prefer partners who share qualified rates and cohort data for your geo and source."
+          },
+          "say": "These are the partners we list for iGaming. Whoever you choose, verify the licence per geo yourself, and get the baseline, cap and payment terms in writing before you build anything. As the note says, prefer partners who share qualified rates and cohort data for your geo and source."
+        },
+        {
+          "v": "product",
+          "h": "Compare deals in one place",
+          "p": "When you are shortlisting offers, a deals directory saves time. Use it to find candidates, then run each one through the scorecard. A listing is never proof of licence.",
+          "d": {
+            "slug": "affleego",
+            "why": "Browse affiliate deals by vertical and geo to build your shortlist before you score each offer."
+          },
+          "say": "When you're shortlisting offers, a deals directory saves time. The tool on screen, Affleego, lets you browse affiliate deals by vertical and geo. Use it to find candidates, then run each one through the scorecard. And remember, a listing is never proof of licence."
+        },
+        {
+          "v": "walk",
+          "h": "The questions to ask before you commit",
+          "p": "Send these in one message so the answers arrive in writing. A manager who will not answer them is telling you something about the deal. Mock-up chat.",
+          "d": {
+            "steps": [
+              {
+                "title": "Licence and geo",
+                "text": "Ask which entity and licence covers your geo and product.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Affiliate manager",
+                  "subtitle": "online",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "Which licence covers sportsbook for Kenya, and which company will hold the player accounts?"
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Terms in writing",
+                "text": "Ask for baseline, activity, window, cap, hold and payment terms.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Affiliate manager",
+                  "subtitle": "online",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "Please send baseline, activity rule, window, monthly cap and payment terms in writing."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Traffic and wording",
+                "text": "Confirm paid social is allowed and ask for approved responsible gambling wording.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Affiliate manager",
+                  "subtitle": "online",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "Is Meta traffic allowed for this deal? Can you send the required RG wording for Kenya?"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Yes with brand approval of creatives. Wording attached."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Quality data",
+                "text": "Ask for the typical qualified rate for paid social in your geo.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Affiliate manager",
+                  "subtitle": "online",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "What qualified rate do you usually see from paid social in Kenya?"
+                    },
+                    {
+                      "from": "them",
+                      "text": "Around 70%, varies by angle."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "say": "Here are the questions to ask before you commit. Send them in one message, so the answers arrive in writing. Tap Next to follow each step. First, licence and geo: ask which company and licence covers your geo and product. Second, terms in writing: baseline, activity rule, window, cap, hold and payment terms. Third, traffic and wording: confirm paid social is allowed and ask for approved responsible gambling wording. In the chat, the manager says yes, with brand approval of creatives. Fourth, quality data: ask the typical qualified rate for paid social in your geo. A manager who won't answer is telling you something."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: set your target CPA",
+          "p": "You chose Offer B: $40 per qualified FTD. You want to keep 30% for bad weeks and rejected FTDs. Work out your target cost per qualified FTD.",
+          "d": {
+            "kind": "breakeven",
+            "task": "Payout $40 per qualified FTD, keep 30%. What is your target CPA?",
+            "preset": {
+              "payout": 40,
+              "cr_pct": 100,
+              "margin_pct": 30
+            },
+            "answer": {
+              "field": "max_cpa",
+              "value": 28,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Time for a lab. You chose Offer B, which pays forty dollars per qualified F T D. You want to keep thirty percent for bad weeks and rejected F T Ds. What's your target cost per qualified F T D? Use the calculator on screen. Pause and try it, then check your answer."
+        },
+        {
+          "v": "table",
+          "h": "Your rule card for Offer B",
+          "p": "Example, using the starting rules from School 1 on qualified FTDs. Write this card before launch and keep it next to your screen. Adapt once you have real data.",
+          "more": "Working: 1.5 × $28 = $42, break-even is the $40 payout, so the CPA kill line is $40. The kill applies once spend reaches 3 × target, $84. Use projected CPA with your expected qualified rate until the network confirms qualification, then correct at month close.",
+          "d": {
+            "cols": [
+              "Rule",
+              "Working",
+              "Line"
+            ],
+            "rows": [
+              [
+                "Target CPA",
+                "$40 × 70%",
+                "$28"
+              ],
+              [
+                "Kill: 0 FTDs",
+                "2 × $28",
+                "Spend $56"
+              ],
+              [
+                "CPA kill line",
+                "lower of $42, $40",
+                "$40 after $84"
+              ],
+              [
+                "Scale line",
+                "0.8 × $28",
+                "≤ $22.40, 3+ FTDs"
+              ],
+              [
+                "Scale step",
+                "+20%",
+                "Every ≥ 48 h"
+              ]
+            ]
+          },
+          "say": "Here's your rule card for Offer B, using the starting rules from School one on qualified F T Ds. Read down the lines. Target C P A is twenty eight dollars. Kill with zero F T Ds at fifty six dollars spent. The C P A kill line is the lower of forty two and the forty dollar payout, so forty, once spend reaches eighty four. Scale when C P A is twenty two forty or less with three or more F T Ds, in twenty percent steps at least forty eight hours apart. Write it before launch and adapt once you have real data."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: is this a scale?",
+          "p": "Day 3 on Offer B. You spent $84 and have 5 FTDs the network marks as qualified. Work out the CPA, compare it with the scale line, and count the conversions.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $28. Spent $84 in 3 days, 5 qualified FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 84,
+              "conversions": 5,
+              "target_cpa": 28,
+              "days": 3
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "scale"
+            }
+          },
+          "say": "Another lab. It's day three on Offer B. Your target is twenty eight dollars. You've spent eighty four dollars, and the network marks five F T Ds as qualified. Should you kill, hold or scale? Work out the C P A, compare it with the scale line, and count the conversions. Pause and try it, then check your answer."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and fixes",
+          "p": "These are the offer-choice mistakes we see most often from new iGaming buyers. All of them are avoided by filling in the scorecard before launch.",
+          "d": {
+            "a": {
+              "title": "Mistakes",
+              "items": [
+                "Picking the highest payout",
+                "Assuming the licence covers your geo",
+                "Launching before the cap is known",
+                "Using generic RG wording"
+              ]
+            },
+            "b": {
+              "title": "Fixes",
+              "items": [
+                "Compare value per FTD",
+                "Verify on the regulator's register",
+                "Get the cap in writing",
+                "Use the brand's required wording"
+              ]
+            }
+          },
+          "say": "These are the offer-choice mistakes we see most from new iGaming buyers. Picking the highest payout? Compare value per F T D. Assuming the licence covers your geo? Verify it on the regulator's register. Launching before the cap is known? Get the cap in writing. Using generic responsible gambling wording? Use the brand's required wording. Filling in the scorecard before launch avoids all of them."
+        },
+        {
+          "v": "tip",
+          "h": "Licence and authorization before launch",
+          "p": "Your offer is not ready until the operator's licence for the geo is verified and your ad account has permission for gambling ads where the platform requires it. If either answer is unclear, the offer is a no-go for now.",
+          "d": {
+            "kind": "warn",
+            "text": "Gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing Meta requires prior written permission; check the current policy and local law before you run."
+          },
+          "say": "Finally, your offer isn't ready until two things are true. The operator's licence for the geo is verified, and your ad account has permission for gambling ads where the platform requires it. If either answer is unclear, the offer is a no-go for now. As the warning says, gambling ads usually need platform authorization and must follow the law where the user lives. At the time of writing, Meta requires prior written permission. Check the current policy and local law before you run."
+        }
+      ],
+      "takeaways": [
+        "Compare offers on value per FTD: payout × expected qualified rate.",
+        "Cap, payment terms and licence can make a lower payout the better offer.",
+        "Write the rule card for the offer before you launch."
+      ],
+      "action": "Score two iGaming offers for one geo with the scorecard, calculate value per FTD for each and write a rule card for the winner.",
+      "glossary": [
+        {
+          "term": "Value per FTD",
+          "def": "Payout multiplied by the expected qualified rate."
+        },
+        {
+          "term": "Offer scorecard",
+          "def": "A checklist of licence, terms, cap, payment and wording filled in before launch."
+        },
+        {
+          "term": "Net terms",
+          "def": "How many days after month close the network pays, e.g. net 30."
+        },
+        {
+          "term": "Target CPA",
+          "def": "The cost per qualified FTD you aim for, set below payout to keep a margin."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Offer A: $60 CPA, 50% qualify. Offer B: $40 CPA, 75% qualify. Value per FTD?",
+          "options": [
+            "A $60, B $40",
+            "A $30, B $30",
+            "A $30, B $40",
+            "A $50, B $75"
+          ],
+          "answer": 1,
+          "why": "$60 × 50% = $30 and $40 × 75% = $30."
+        },
+        {
+          "q": "Payout $40, you keep 30%. Target CPA?",
+          "options": [
+            "$28",
+            "$12",
+            "$30",
+            "$52"
+          ],
+          "answer": 0,
+          "why": "$40 × (1 − 30%) = $28."
+        },
+        {
+          "q": "Target $28, payout $40. What is the CPA kill line?",
+          "options": [
+            "$42",
+            "$28",
+            "$56",
+            "$40"
+          ],
+          "answer": 3,
+          "why": "Lower of 1.5 × $28 = $42 and break-even $40 is $40."
+        },
+        {
+          "q": "Spent $84, 5 qualified FTDs, target $28. What is the call?",
+          "options": [
+            "Kill",
+            "Hold",
+            "Scale +20%",
+            "Keep"
+          ],
+          "answer": 2,
+          "why": "CPA $16.80 is under 0.8 × $28 = $22.40 with 3+ conversions, so scale +20%."
+        },
+        {
+          "q": "A manager will not say which licence covers your geo. What do you do?",
+          "options": [
+            "Launch a small test anyway",
+            "Treat the offer as a no-go for now",
+            "Use another brand's licence number",
+            "Run it in a different country"
+          ],
+          "answer": 1,
+          "why": "No verified licence for the geo means no-go."
+        }
+      ],
+      "say_intro": "In this lesson you'll choose your first iGaming offer. You'll score offers on payout, terms, licence and fit, compare them on value per deposit, and set your target, kill and scale lines before launch. It matters because a strong campaign on a weak offer still loses.",
+      "say_outro": "To recap: headline payout isn't value, so compare offers on payout times expected qualified rate, check licence, cap and payment terms, and write your rule card before launch. Your task: score two iGaming offers for one geo with the scorecard, calculate value per F T D for each, and write a rule card for the winner. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "A sportsbook prices both sides of a match at 1.90. Players stake ₦10,000,000. What is the theoretical GGR?",
+      "options": [
+        "₦190,000",
+        "₦500,000",
+        "₦950,000",
+        "₦1,900,000"
+      ],
+      "answer": 1,
+      "why": "The margin is about 5%; 5% of ₦10,000,000 is ₦500,000. Real results swing with outcomes."
+    },
+    {
+      "q": "Your contract pays 30% of NGR. GGR $1,000, bonuses $200, tax $150, fees $50. What do you earn?",
+      "options": [
+        "$300",
+        "$240",
+        "$195",
+        "$180"
+      ],
+      "answer": 3,
+      "why": "NGR = $1,000 − $200 − $150 − $50 = $600; 30% is $180."
+    },
+    {
+      "q": "You have one month of spend in your bankroll and no cohort data. A manager offers 40% RevShare or $35 CPA. Which do the starting rules point to?",
+      "options": [
+        "$35 CPA",
+        "40% RevShare",
+        "Neither",
+        "Ask for 50% RevShare"
+      ],
+      "answer": 0,
+      "why": "With little bankroll and no data, take the cash early: CPA."
+    },
+    {
+      "q": "100 FTDs, NGR per FTD $55 by month 3. You paid $30 per FTD on a 35% RevShare deal. How much are you short at month 3?",
+      "options": [
+        "$0",
+        "$1,925",
+        "$1,075",
+        "$3,000"
+      ],
+      "answer": 2,
+      "why": "RevShare paid 100 × $55 × 35% = $1,925; spend $3,000; short $1,075."
+    },
+    {
+      "q": "$1,500 spent, 50 FTDs, 30 qualified. Payout $50. What is the true CPA and the profit?",
+      "options": [
+        "$30 CPA, $1,000 profit",
+        "$50 CPA, $0 profit",
+        "$30 CPA, $0 profit",
+        "$50 CPA, $1,000 profit"
+      ],
+      "answer": 1,
+      "why": "$1,500 ÷ 30 = $50; revenue 30 × $50 = $1,500; profit $0."
+    },
+    {
+      "q": "Target CPA $35 on qualified FTDs, payout $50. You spent $72, 0 FTDs. What do you do?",
+      "options": [
+        "Kill",
+        "Hold",
+        "Scale",
+        "Raise the bid"
+      ],
+      "answer": 0,
+      "why": "$72 is at least 2 × $35 = $70 with zero conversions: kill."
+    },
+    {
+      "q": "Day 4: $140 spent, 5 FTDs, none confirmed yet, expected qualified rate 70%. Target $35, payout $50. Decision?",
+      "options": [
+        "Kill",
+        "Scale +20%",
+        "Keep",
+        "Hold"
+      ],
+      "answer": 3,
+      "why": "Projected qualified 3.5; projected CPA $40. Above target, under the $50 kill line: hold."
+    },
+    {
+      "q": "12-month NGR per FTD estimate comes from another geo: $90. RevShare 30%. Max CPFTD with the cautious factor?",
+      "options": [
+        "$27.00",
+        "$18.90",
+        "$13.50",
+        "$45.00"
+      ],
+      "answer": 2,
+      "why": "Other-geo data uses 0.5: $90 × 30% × 0.5 = $13.50."
+    },
+    {
+      "q": "A manager says your traffic is at 45% qualified. Your sub-ID report shows one ad set at 30% and the rest near 70%. Best response?",
+      "options": [
+        "Pause the weak ad set and reply with data and a review date",
+        "Pause the whole account",
+        "Ask the manager to lower the baseline",
+        "Add more budget to raise volume"
+      ],
+      "answer": 0,
+      "why": "Act on the sub-ID causing the problem and answer with data and a plan."
+    },
+    {
+      "q": "Offer A: $70 CPA, 40% qualify, cap 30. Offer B: $45 CPA, 70% qualify, cap 150. Which is better for a new buyer and why?",
+      "options": [
+        "A, higher payout",
+        "A, lower cap means less risk",
+        "They are identical",
+        "B, higher value per FTD and a larger cap"
+      ],
+      "answer": 3,
+      "why": "A is worth $28 per FTD, B $31.50, and B's cap is five times larger."
+    }
+  ]
+}

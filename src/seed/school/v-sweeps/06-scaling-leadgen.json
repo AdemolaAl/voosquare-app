@@ -1,0 +1,2836 @@
+{
+  "school": "v-sweeps",
+  "order": 6,
+  "slug": "scaling-leadgen",
+  "title": "Scaling lead gen",
+  "summary": "How to scale a lead gen operation without breaking cost, quality, caps or cash: stepped scaling, one-geo-at-a-time expansion and list monetisation only with real consent. You also learn deliverability, partner management and the cash and concentration rules that keep a portfolio alive.",
+  "lessons": [
+    {
+      "slug": "ready-to-scale",
+      "title": "Is it ready to scale?",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can check whether a lead gen campaign is ready to scale using five tests.",
+        "By the end you can scale vertically and horizontally in steps with exact rules.",
+        "By the end you can plan cap increases before you hit the cap."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why most lead gen campaigns break when they scale",
+          "p": "A campaign that makes $40 a day at $50 of spend does not automatically make $400 at $500. Lead gen breaks in three places as you grow: cost per lead rises as the audience broadens, quality drifts down, and the offer's cap runs out. Scaling well means checking all three before and during every step.",
+          "d": {
+            "b": "Scale the result, not the budget",
+            "s": "Cost, quality and cap must all hold as you grow."
+          },
+          "say": "Here's why most lead gen campaigns break when they scale. A campaign that makes forty dollars a day at fifty dollars of spend doesn't automatically make four hundred at five hundred. It breaks in three places as you grow. Cost per lead rises as the audience broadens. Quality drifts down. And the offer's cap runs out. So scale the result, not the budget. Cost, quality and cap must all hold at every step."
+        },
+        {
+          "v": "check",
+          "h": "Five tests before you add budget",
+          "p": "Run these on network-paid numbers, not Ads Manager leads. If any test fails, fix it first. Scaling a campaign that fails one of these usually multiplies the problem, not the profit.",
+          "d": [
+            "Cost per paid lead ≤ 0.85 × target for 3+ days",
+            "50+ paid leads in that period",
+            "Accept rate within 5 points of its normal level",
+            "Cap has room for at least 50% more volume",
+            "Cash covers spend until the network pays"
+          ],
+          "say": "Before you add budget, run these five tests on network paid numbers, not Ads Manager leads. Cost per paid lead at or below zero point eight five times target for three days or more. Fifty or more paid leads in that period. Accept rate within five points of its normal level. A cap with room for at least fifty percent more volume. And cash to cover spend until the network pays. If any test fails, fix it first. Scaling a failing campaign usually multiplies the problem, not the profit."
+        },
+        {
+          "v": "cards",
+          "h": "Two ways to scale",
+          "p": "Vertical scaling adds budget to what already works. Horizontal scaling copies what works into new places. Lead gen usually needs both, because one audience in one geo runs out of fresh people fast.",
+          "d": [
+            "Vertical|raise budget on the winning ad set in steps",
+            "Horizontal: audiences|duplicate into new broad or lookalike audiences",
+            "Horizontal: creatives|new hooks and formats on the winning angle",
+            "Horizontal: placements|test new placements separately",
+            "Horizontal: offers and geos|same funnel, new offer or country"
+          ],
+          "say": "There are two ways to scale. Vertical scaling adds budget to what already works, raising the winning ad set in steps. Horizontal scaling copies what works into new places: new broad or lookalike audiences, new hooks and formats on the winning angle, new placements tested separately, or new offers and geos with the same funnel. Lead gen usually needs both, because one audience in one geo runs out of fresh people fast."
+        },
+        {
+          "v": "map",
+          "h": "Horizontal scaling from one winner",
+          "p": "Example of one winning ad set feeding several horizontal tests. Each branch is a separate test with its own rules. The winner keeps running untouched and pays for the tests. Branches that pass become new winners; branches that fail are switched off.",
+          "d": {
+            "nodes": [
+              {
+                "id": "w",
+                "label": "Winner: A Broad ZA",
+                "kind": "money"
+              },
+              {
+                "id": "aud",
+                "label": "New audience",
+                "kind": "ad"
+              },
+              {
+                "id": "cr",
+                "label": "New hooks",
+                "kind": "ad"
+              },
+              {
+                "id": "pl",
+                "label": "New placement",
+                "kind": "ad"
+              },
+              {
+                "id": "geo",
+                "label": "New geo",
+                "kind": "ad"
+              },
+              {
+                "id": "rules",
+                "label": "Test rules",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "w",
+                "aud",
+                "duplicate"
+              ],
+              [
+                "w",
+                "cr",
+                "duplicate"
+              ],
+              [
+                "w",
+                "pl",
+                "duplicate"
+              ],
+              [
+                "w",
+                "geo",
+                "new campaign"
+              ],
+              [
+                "aud",
+                "rules",
+                "results"
+              ],
+              [
+                "cr",
+                "rules",
+                "results"
+              ]
+            ]
+          },
+          "say": "This map is an example of one winner feeding several horizontal tests. In the middle is the winner, A Broad Z A. It's duplicated into a new audience, new hooks and a new placement, and a new campaign is built for a new geo. Each branch is a separate test with its own rules. The winner keeps running untouched and pays for the tests. Branches that pass become new winners, and branches that fail are switched off."
+        },
+        {
+          "v": "table",
+          "h": "Example: scaling one ad set in steps",
+          "p": "Example. Offer 3310, target $0.90 per paid lead. The ad set starts at $40 a day and steps up 20% every 48 hours while it passes the rules. At step 4 accept rate falls 10 points, so you step back one level.",
+          "more": "Each step is 20% of the previous budget, rounded: $40 × 1.2 = $48; $48 × 1.2 = $57.60, about $58; $58 × 1.2 = $69.60, about $70; $70 × 1.2 = $84. Every step stays under the $0.77 scale line, so cost alone says keep going. At $84 accept rate fell 11 points from 88%, so the quality rule says step back. Example figures only.",
+          "d": {
+            "cols": [
+              "Step",
+              "Daily budget",
+              "Cost per paid",
+              "Accept rate"
+            ],
+            "rows": [
+              [
+                "Start",
+                "$40",
+                "$0.68",
+                "88%"
+              ],
+              [
+                "Step 1 (+20%)",
+                "$48",
+                "$0.69",
+                "87%"
+              ],
+              [
+                "Step 2 (+20%)",
+                "$58",
+                "$0.71",
+                "85%"
+              ],
+              [
+                "Step 3 (+20%)",
+                "$70",
+                "$0.74",
+                "83%"
+              ],
+              [
+                "Step 4 (+20%)",
+                "$84",
+                "$0.76",
+                "77%"
+              ],
+              [
+                "Back to step 3",
+                "$70",
+                "$0.74",
+                "84%"
+              ]
+            ]
+          },
+          "say": "Here's an example of scaling one ad set in steps. Offer thirty three ten, with a target of ninety cents per paid lead. It starts at forty dollars a day and steps up twenty percent every forty eight hours: forty eight, about fifty eight, about seventy, then eighty four. Every step stays under the seventy seven cent scale line, so cost alone says keep going. But look at the accept rate. At eighty four dollars it fell eleven points from eighty eight percent, so the quality rule says step back one level, to seventy. Example figures only."
+        },
+        {
+          "v": "table",
+          "h": "Scaling rules for lead gen",
+          "p": "Starting rules to adapt. They combine the cost rules from Module 4 and the quality rules from Module 5. Apply them at the same time each day, on the previous full day's network data.",
+          "d": {
+            "cols": [
+              "Situation",
+              "Rule"
+            ],
+            "rows": [
+              [
+                "≤ 0.85 × target, 50+ paid, quality steady, 3+ days",
+                "Raise budget 20% every 48 h"
+              ],
+              [
+                "≤ 0.6 × target, 100+ paid, 5 days",
+                "Raise 30% or duplicate"
+              ],
+              [
+                "Accept rate falls 10+ points from pre-scale",
+                "Step back one level"
+              ],
+              [
+                "Cost above target 2 days after a step",
+                "Step back one level"
+              ],
+              [
+                "Two step-backs in a row",
+                "Stop scaling; go horizontal"
+              ]
+            ]
+          },
+          "say": "Here are starting scaling rules to adapt, combining cost rules from Module four and quality rules from Module five. At or below zero point eight five times target, fifty plus paid, quality steady for three days: raise twenty percent every forty eight hours. At or below zero point six times target, a hundred plus paid, five days: raise thirty percent or duplicate. Accept rate falls ten or more points: step back one level. Cost above target two days after a step: step back. Two step backs in a row: stop scaling and go horizontal. Apply them daily, on the previous full day's network data."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: budget for the next step",
+          "p": "Example. You want about 150 paid leads over the next 3 days, and you expect cost per paid lead to rise to about $0.80 at the higher budget. Work out the daily budget, then check it against the 20% step rule.",
+          "more": "150 × $0.80 = $120 over 3 days, so $40 a day. If you are at $34 now, $40 is an 18% step, inside the 20% rule. If you were at $25, the jump would be 60%; you would take it in steps over about a week instead.",
+          "d": {
+            "kind": "budget",
+            "task": "150 paid leads in 3 days at about $0.80 each. What daily budget?",
+            "preset": {
+              "goal": 150,
+              "target_cpa": 0.8,
+              "days": 3
+            },
+            "answer": {
+              "field": "daily_budget",
+              "value": 40,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Time for a lab. You want about one hundred and fifty paid leads over the next three days, and you expect cost per paid lead to rise to about eighty cents at the higher budget. Work out the daily budget, then check it against the twenty percent step rule. For example, if you were at twenty five dollars a day, would the jump be too big? Pause and try it, then check your answer."
+        },
+        {
+          "v": "curve",
+          "h": "Cost per paid lead as budget grows",
+          "p": "Example. As daily spend rises, cost per paid lead usually rises too, because the platform reaches less responsive people. The gap between cost and target is your margin. Stop scaling vertically when the lines get close.",
+          "d": {
+            "a": [
+              40,
+              48,
+              58,
+              70,
+              84,
+              100,
+              120
+            ],
+            "la": "Daily spend ($)",
+            "b": [
+              0.7,
+              0.71,
+              0.74,
+              0.79,
+              0.86,
+              0.93,
+              1.02
+            ],
+            "lb": "Cost per paid lead ($)",
+            "x": [
+              "S0",
+              "S1",
+              "S2",
+              "S3",
+              "S4",
+              "S5",
+              "S6"
+            ]
+          },
+          "say": "This example chart shows what usually happens. As daily spend rises, from forty dollars up to one hundred and twenty, cost per paid lead rises too, from seventy cents to about a dollar and two cents. That's because the platform reaches less responsive people. The gap between cost and your target is your margin. Stop scaling vertically when the lines get close."
+        },
+        {
+          "v": "phone",
+          "h": "Ask for more cap before you need it",
+          "p": "Caps are the daily or monthly limit on leads a network will pay for. Ask for an increase when you reach about 80% of the cap, with your quality numbers. Leads sent over the cap are often not paid.",
+          "d": {
+            "v": "phone",
+            "app": "chat",
+            "title": "Affiliate manager",
+            "subtitle": "network",
+            "messages": [
+              {
+                "from": "me",
+                "text": "3310 is at 240 of 300 daily cap, accept 86% for 14 days. Could we go to 450 from Monday?"
+              },
+              {
+                "from": "them",
+                "text": "Let me check with the advertiser. They like the quality."
+              },
+              {
+                "from": "me",
+                "text": "Thanks. I will hold at 280 a day until you confirm."
+              }
+            ]
+          },
+          "say": "Caps are the daily or monthly limit on leads a network will pay for. Leads sent over the cap are often not paid, so ask for an increase at about eighty percent of the cap, with your quality numbers. In this chat, offer thirty three ten is at two hundred and forty of a three hundred daily cap, with eighty six percent accepted for fourteen days. The request is for four hundred and fifty from Monday. And notice the affiliate holds at two hundred and eighty a day until it's confirmed."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: duplicate into a new audience",
+          "p": "Horizontal scaling keeps the winning ad set untouched while you test new audiences. Setting names change; check the current Ads Manager. Only the audience changes, so the result tells you whether the new audience works.",
+          "d": {
+            "steps": [
+              {
+                "title": "Duplicate the winner",
+                "text": "Copy the winning ad set into the same campaign or a new test campaign. Keep the original running untouched.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "adsmanager.example/adsets",
+                  "title": "Ad sets",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Ad set",
+                        "Status",
+                        "Cost/paid"
+                      ],
+                      "rows": [
+                        [
+                          "A Broad ZA",
+                          "Active",
+                          "$0.71"
+                        ]
+                      ]
+                    },
+                    {
+                      "type": "button",
+                      "label": "Duplicate"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Change only the audience",
+                "text": "Pick one new audience, such as a lookalike of accepted leads where allowed. Keep creative and lander the same.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "adsmanager.example/adset/copy",
+                  "title": "A2 Lookalike ZA",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Audience",
+                      "value": "Lookalike: accepted leads, 1%"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Daily budget",
+                      "value": "$20"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Creative",
+                      "value": "Same as A"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Write its rules down",
+                "text": "New ad sets start from zero. Use the test rules, not the scaling rules.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/test-plan",
+                  "title": "A2 plan",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Minimum read",
+                      "value": "$18"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Zero-lead kill",
+                      "value": "$4.50 with 0 paid"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Scale line",
+                      "value": "≤ $0.77"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Here's how to duplicate into a new audience. Setting names change, so check the current Ads Manager. Step one, duplicate the winner into the same campaign or a new test campaign, and keep the original running untouched. Step two, change only the audience, such as a lookalike of accepted leads where allowed, keeping creative and lander the same. Step three, write its rules down. New ad sets start from zero, so use the test rules, not the scaling rules. Because only the audience changes, the result tells you whether that audience works."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: lookalikes and customer lists",
+          "p": "Uploading lead data to build a lookalike or custom audience is personal data processing. Your consent and privacy notice must allow it, and some platforms restrict it for certain categories. We are not certain of the current rules for every geo; check the platform's customer list terms and your data law.",
+          "d": {
+            "kind": "warn",
+            "text": "Upload only leads whose consent covers advertising use, hashed, and never leads from another affiliate or a bought list."
+          },
+          "say": "A compliance point. Uploading lead data to build a lookalike or custom audience is personal data processing. Your consent and privacy notice must allow it, and some platforms restrict it for certain categories. We're not certain of the current rules for every geo, so check the platform's customer list terms and your data law. Upload only leads whose consent covers advertising use, hashed, and never leads from another affiliate or a bought list."
+        },
+        {
+          "v": "cards",
+          "h": "Common scaling mistakes",
+          "p": "These mistakes turn a good campaign into a loss in a week. Each one comes from treating a lead gen campaign like an FTD campaign or from impatience.",
+          "d": [
+            "Doubling budget in one go|step 20% at a time",
+            "Ignoring accept rate|quality rules before cost rules",
+            "Hitting cap without asking|ask at 80%",
+            "Editing the winner to test|duplicate, never edit",
+            "Scaling on platform leads|use network-paid leads"
+          ],
+          "say": "These mistakes turn a good campaign into a loss in a week. Doubling budget in one go, so step twenty percent at a time. Ignoring accept rate, so apply quality rules before cost rules. Hitting the cap without asking, so ask at eighty percent. Editing the winner to test something, so duplicate, never edit. And scaling on platform leads, so use network paid leads. Each one comes from impatience, or from treating lead gen like an F T D, first time deposit, campaign."
+        }
+      ],
+      "takeaways": [
+        "Check cost, quality, cap and cash before every step up.",
+        "Scale vertically in 20% steps, and go horizontal when steps stop working.",
+        "Ask for cap increases at about 80% of the cap, with quality data."
+      ],
+      "action": "Run the five scaling tests on your best ad set and write down which pass. If all pass, plan the next three 20% steps with their dates.",
+      "glossary": [
+        {
+          "term": "Vertical scaling",
+          "def": "Raising the budget on something that already works."
+        },
+        {
+          "term": "Horizontal scaling",
+          "def": "Copying a winner into new audiences, creatives, placements, offers or geos."
+        },
+        {
+          "term": "Cap",
+          "def": "The maximum number of leads a network will accept and pay for in a period."
+        },
+        {
+          "term": "Step back",
+          "def": "Returning the budget to the previous level after a rule fails."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Ad set at $0.71 per paid lead (target $0.90), 62 paid in 3 days, accept steady, cap 60% used. Starting rule?",
+          "options": [
+            "Hold",
+            "Kill",
+            "Raise budget 100%",
+            "Raise budget 20%"
+          ],
+          "answer": 3,
+          "why": "It passes all tests: under 0.85 × target ($0.77), 50+ paid, quality steady, cap room."
+        },
+        {
+          "q": "After a budget step, accept rate falls from 88% to 77% though cost is under target. What do you do?",
+          "options": [
+            "Keep scaling",
+            "Kill the ad set",
+            "Step back one level",
+            "Change the offer"
+          ],
+          "answer": 2,
+          "why": "A fall of 10+ points in accept rate means step back, whatever the cost says."
+        },
+        {
+          "q": "$58 × 1.2 rounds to which next step?",
+          "options": [
+            "$64",
+            "$70",
+            "$76",
+            "$84"
+          ],
+          "answer": 1,
+          "why": "$58 × 1.2 = $69.60, about $70."
+        },
+        {
+          "q": "The cap is 300 a day and you send 245. When should you ask for more?",
+          "options": [
+            "Now, at about 80%",
+            "When you hit 300",
+            "After a week over cap",
+            "Never"
+          ],
+          "answer": 0,
+          "why": "Ask at about 80% of the cap so the increase arrives before you need it."
+        },
+        {
+          "q": "Two step-backs in a row on the same ad set. What next?",
+          "options": [
+            "Keep trying vertical",
+            "Double the budget",
+            "Stop scaling vertically; go horizontal",
+            "Pause the campaign"
+          ],
+          "answer": 2,
+          "why": "Repeated step-backs mean the audience is saturating; grow in new places instead."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn how to tell whether a lead gen campaign is ready to scale, and how to scale it in safe steps. Lead gen breaks in predictable places as you grow, so we'll check cost, quality and cap at every step.",
+      "say_outro": "So, run the five tests on network paid numbers, scale vertically in twenty percent steps, step back when quality or cost slips, go horizontal by duplicating, and ask for more cap before you need it. Your task: run the five scaling tests on your best ad set and write down which pass. If all pass, plan the next three twenty percent steps with their dates. Now take the quiz."
+    },
+    {
+      "slug": "expanding-geo-by-geo",
+      "title": "Expanding geo by geo",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can compare geos on cost per paid lead and effective payout, not headline payout.",
+        "By the end you can list the data and promotion law questions to answer before entering a new geo.",
+        "By the end you can plan a one-geo-at-a-time expansion with a test budget and rules."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why a new geo is a new campaign",
+          "p": "A new country changes everything at once: language, prices, payment of the payout, data law, promotion law and what people want to win. A funnel that wins in South Africa may lose in Kenya. Treat each geo as a fresh test with its own rules, not a copy-paste of your winner.",
+          "d": {
+            "b": "Same funnel, new country, new test",
+            "s": "One geo at a time, with its own numbers."
+          },
+          "say": "A new country changes everything at once: language, prices, payment of the payout, data law, promotion law, and what people want to win. A funnel that wins in South Africa may lose in Kenya. So treat each geo as a fresh test with its own rules, not a copy paste of your winner. Same funnel, new country, new test. One geo at a time, with its own numbers."
+        },
+        {
+          "v": "table",
+          "h": "Example: comparing three geos",
+          "p": "Example figures for one sweeps offer type in three markets. Higher-payout geos often cost more per lead too. Compare margin per paid lead, not payout. These numbers are illustrative only, a rough guide that varies by offer, network and month.",
+          "more": "Margin per paid lead is effective payout minus cost per paid lead: $3.20 − $2.60 = $0.60; $1.15 − $0.75 = $0.40; $0.45 − $0.22 = $0.23. Margin as a share of payout: A 19%, B 35%, C 51%. Geo A pays most per lead but leaves the thinnest share, and needs more cash per lead. Geo C needs huge volume to earn the same total. Example figures only.",
+          "d": {
+            "cols": [
+              "Geo",
+              "Effective payout",
+              "Cost per paid",
+              "Margin per paid"
+            ],
+            "rows": [
+              [
+                "Geo A (Tier 1)",
+                "$3.20",
+                "$2.60",
+                "$0.60"
+              ],
+              [
+                "Geo B (Tier 2)",
+                "$1.15",
+                "$0.75",
+                "$0.40"
+              ],
+              [
+                "Geo C (Tier 3)",
+                "$0.45",
+                "$0.22",
+                "$0.23"
+              ]
+            ]
+          },
+          "say": "Here's an example comparing three geos for one sweeps offer type. Geo A, tier one, pays three dollars twenty, costs two sixty, a margin of sixty cents. Geo B, tier two, pays one fifteen, costs seventy five cents, a margin of forty cents. Geo C, tier three, pays forty five cents, costs twenty two, a margin of twenty three cents. Higher payout geos often cost more per lead too. Geo A pays most but keeps the thinnest share. These numbers are illustrative only, and vary by offer, network and month."
+        },
+        {
+          "v": "eq",
+          "h": "Daily profit by geo",
+          "p": "To compare geos fairly, multiply the margin per paid lead by how many paid leads the cap and the audience allow per day. A small margin with a big cap can beat a big margin with a small cap.",
+          "more": "Example: Geo A $0.60 × 80 leads a day = $48. Geo B $0.40 × 200 = $80. Geo C $0.23 × 300 = $69. Geo B wins here on daily profit, even with a middle payout. Caps and volumes are Example figures; ask the network for real caps.",
+          "d": [
+            "Margin per paid lead",
+            "×",
+            "Paid leads per day",
+            "=",
+            "Daily profit"
+          ],
+          "say": "To compare geos fairly, use this equation: margin per paid lead, times paid leads per day, equals daily profit. The paid leads per day is what the cap and the audience allow. In the example, Geo A is sixty cents times eighty, forty eight dollars a day. Geo B is forty cents times two hundred, eighty dollars. Geo C is twenty three cents times three hundred, sixty nine dollars. So a small margin with a big cap can beat a big margin with a small cap. Caps here are example figures, so ask the network for real ones."
+        },
+        {
+          "v": "bars",
+          "h": "Example: daily profit by geo",
+          "p": "Example from the last two slides. Geo B wins on daily profit even though Geo A pays the most per lead. Ask the network for real caps before you plan; the cap often decides the winner.",
+          "d": [
+            [
+              "Geo A",
+              60,
+              "$48 a day"
+            ],
+            [
+              "Geo B",
+              100,
+              "$80 a day"
+            ],
+            [
+              "Geo C",
+              86,
+              "$69 a day"
+            ]
+          ],
+          "say": "Here's that comparison as bars. Geo A, forty eight dollars a day. Geo B, eighty dollars a day, the tallest bar. Geo C, sixty nine dollars a day. So Geo B wins on daily profit, even though Geo A pays the most per lead. Ask the network for real caps before you plan, because the cap often decides the winner."
+        },
+        {
+          "v": "table",
+          "h": "Data law questions per geo",
+          "p": "Before you collect a single lead in a new geo, answer these. The laws named are the main ones we know of; they change and have details we cannot cover, so check the current law and get local advice for larger campaigns.",
+          "more": "Cameroon and several other markets have adopted or are updating data protection laws; we are not certain of the current status in each, so check before you launch. In the US, consent rules for marketing calls and texts have changed recently and are still being argued in court; get legal advice before collecting phone numbers for texts or calls.",
+          "d": {
+            "cols": [
+              "Geo",
+              "Main data law",
+              "Marketing email consent"
+            ],
+            "rows": [
+              [
+                "EU / UK",
+                "GDPR, UK GDPR, ePrivacy rules",
+                "Opt-in, few exceptions"
+              ],
+              [
+                "South Africa",
+                "POPIA",
+                "Opt-in for non-customers"
+              ],
+              [
+                "Nigeria",
+                "NDPA 2023",
+                "Consent expected"
+              ],
+              [
+                "Kenya",
+                "Data Protection Act 2019",
+                "Consent expected"
+              ],
+              [
+                "Ghana",
+                "Data Protection Act 2012",
+                "Consent expected"
+              ],
+              [
+                "USA",
+                "CAN-SPAM; TCPA for calls and texts",
+                "Opt-out for email; strict for texts"
+              ]
+            ]
+          },
+          "say": "Before you collect a single lead in a new geo, answer these data law questions. In the E U and U K, G D P R, U K G D P R and ePrivacy rules, with opt in and few exceptions. South Africa, POPIA, opt in for non customers. Nigeria, the N D P A of twenty twenty three, Kenya, the Data Protection Act twenty nineteen, and Ghana, the Data Protection Act twenty twelve, all with consent expected. The U S has CAN SPAM, opt out for email, and the T C P A, strict for calls and texts. Laws change, so check current law and get local advice for larger campaigns."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: promotion law changes at the border",
+          "p": "Sweepstakes and prize promotion rules differ by country, as Module 2 explained. Some countries require registration or approval of promotional competitions, some limit who can enter, and some treat any entry cost as gambling. A promotion that is legal in one country can be illegal next door.",
+          "d": {
+            "kind": "warn",
+            "text": "Confirm with the sponsor that the promotion is approved for the new geo, and that its official rules name that country, before any traffic."
+          },
+          "say": "Here's a compliance warning. Sweepstakes and prize promotion rules change at the border, as Module two explained. Some countries require registration or approval of promotional competitions, some limit who can enter, and some treat any entry cost as gambling. A promotion that's legal in one country can be illegal next door. So confirm with the sponsor that the promotion is approved for the new geo, and that its official rules name that country, before any traffic."
+        },
+        {
+          "v": "check",
+          "h": "Localisation checklist for a new geo",
+          "p": "Every item here has broken a geo launch we have seen. Go through it with someone from that market where you can. A native speaker reviewing your lander for ten minutes is cheaper than a failed test.",
+          "d": [
+            "Official rules name this country",
+            "Ads and lander in the right languages, native-checked",
+            "Prize and currency make sense locally",
+            "Phone format and validation set for the geo",
+            "Consent wording meets local law",
+            "Ads scheduled for local time zone"
+          ],
+          "say": "Here's the localisation checklist for a new geo. The official rules name this country. Ads and lander in the right languages, checked by a native speaker. The prize and currency make sense locally. Phone format and validation set for the geo. Consent wording that meets local law. And ads scheduled for the local time zone. Every item here has broken a geo launch. A native speaker reviewing your lander for ten minutes is cheaper than a failed test."
+        },
+        {
+          "v": "map",
+          "h": "Expanding one geo at a time",
+          "p": "Example expansion path from a South Africa winner. Each new geo is tested on its own with a small budget before the next starts. You learn from each one and protect the winner that pays for the tests.",
+          "d": {
+            "nodes": [
+              {
+                "id": "za",
+                "label": "ZA winner",
+                "kind": "money"
+              },
+              {
+                "id": "ke",
+                "label": "Kenya test",
+                "kind": "ad"
+              },
+              {
+                "id": "ng",
+                "label": "Nigeria test",
+                "kind": "ad"
+              },
+              {
+                "id": "gh",
+                "label": "Ghana test",
+                "kind": "ad"
+              },
+              {
+                "id": "rules",
+                "label": "Rules per geo",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "za",
+                "ke",
+                "profit funds test"
+              ],
+              [
+                "ke",
+                "rules",
+                "results"
+              ],
+              [
+                "rules",
+                "ng",
+                "next if passed"
+              ],
+              [
+                "ng",
+                "gh",
+                "next if passed"
+              ]
+            ]
+          },
+          "say": "This map shows an example expansion path. On the left, the South Africa winner, whose profit funds a Kenya test. The Kenya results go through the rules for each geo. Only if Kenya passes does the Nigeria test start, and only if Nigeria passes does Ghana follow. Each new geo is tested on its own with a small budget before the next starts. You learn from each one, and you protect the winner that pays for the tests."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: launch a geo test",
+          "p": "These steps assume the sponsor has confirmed the promotion is approved for the new geo. Screens are generic mock-ups; names change. Work through them in order, and do not skip the native review because the test budget is small.",
+          "d": {
+            "steps": [
+              {
+                "title": "Get the geo offer and cap",
+                "text": "Ask the network for the geo's payout, normal accept rate and cap in writing.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Affiliate manager",
+                  "subtitle": "network",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "For 3310 in Kenya: payout, normal accept rate and daily cap?"
+                    },
+                    {
+                      "from": "them",
+                      "text": "$0.90 per accepted, about 80% normal, 150 a day to start."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Set your numbers",
+                "text": "Target = $0.90 × 0.75 = $0.68 per paid lead. Minimum read 20 × target, about $14 per ad set.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/ke-plan",
+                  "title": "KE test plan",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Payout",
+                      "value": "$0.90"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Target per paid lead",
+                      "value": "$0.68"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Minimum read per ad set",
+                      "value": "$14"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Test budget, 3 ad sets",
+                      "value": "$41 to $81"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Localise and check",
+                "text": "Swahili and English versions, KES where prices appear, phone format +254, native review done.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/ke-plan",
+                  "title": "Localisation",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Rules name Kenya",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Native review of Swahili copy",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Phone check +254, 9 digits",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Launch as a separate campaign",
+                "text": "Never add the new geo to the winning campaign; keep data apart.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "adsmanager.example/create",
+                  "title": "New campaign",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Campaign name",
+                      "value": "KE_Sweeps3310_GeoTest_1004"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Location",
+                      "value": "Kenya"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Publish"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Here's how to launch a geo test, assuming the sponsor has confirmed the promotion is approved there. Screens are mock ups. Step one, get the geo's payout, normal accept rate and cap from the network in writing. Here, ninety cents per accepted lead, about eighty percent, and one hundred and fifty a day. Step two, set your numbers: a target of about sixty eight cents per paid lead, and a minimum read of about fourteen dollars per ad set. Step three, localise and check: Swahili and English, shillings where prices appear, the Kenyan phone format, and a native review. Step four, launch as a separate campaign, never inside the winner."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: most you can pay per delivered lead",
+          "p": "Example for the Kenya test. The network pays $0.90 per accepted lead and its normal accept rate is 80%. You keep a 25% margin. Work out the most you can pay per lead you deliver, before scrubs.",
+          "more": "$0.90 × 80% = $0.72 earned per delivered lead. Keep 25%: $0.72 × 0.75 = $0.54. Your target per paid lead stays $0.68; this second number tells you what each delivered lead may cost before the network's checks.",
+          "d": {
+            "kind": "breakeven",
+            "task": "Payout $0.90 per accepted lead, 80% accepted, 25% margin. Max cost per delivered lead?",
+            "preset": {
+              "payout": 0.9,
+              "cr_pct": 80,
+              "margin_pct": 25
+            },
+            "answer": {
+              "field": "max_cpl",
+              "value": 0.54,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Time for a lab, using the Kenya test. The network pays ninety cents per accepted lead, and its normal accept rate is eighty percent. You want to keep a twenty five percent margin. Work out the most you can pay per lead you deliver, before the network's scrubs. This is a different number from your target per paid lead. Pause and try it, then check your answer."
+        },
+        {
+          "v": "cards",
+          "h": "Common geo mistakes",
+          "p": "These are the mistakes that waste most expansion budgets. Each has a simple fix that costs little time before launch. Check your plan against this list before you spend anything in the new market.",
+          "d": [
+            "Adding the geo to the winning campaign|separate campaign per geo",
+            "Judging on headline payout|compare margin and daily profit",
+            "Three geos at once|one at a time",
+            "Machine translation unchecked|native review",
+            "Rules do not name the country|confirm before traffic"
+          ],
+          "say": "These mistakes waste most expansion budgets. Adding the geo to the winning campaign, so use a separate campaign per geo. Judging on headline payout, so compare margin and daily profit. Three geos at once, so go one at a time. Unchecked machine translation, so get a native review. And rules that don't name the country, so confirm before traffic. Each fix costs little time before launch."
+        },
+        {
+          "v": "table",
+          "h": "Decision rules for a geo test",
+          "p": "Starting rules to adapt. A geo passes when at least one ad set meets the scale rules from Lesson 1. Budget the test at 3 ad sets × 20 to 40 × the geo's target cost per paid lead.",
+          "d": {
+            "cols": [
+              "Result after the test budget",
+              "Rule"
+            ],
+            "rows": [
+              [
+                "One or more ad sets ≤ 0.85 × target",
+                "Geo passes; scale by Lesson 1 rules"
+              ],
+              [
+                "Best ad set between 0.85 × and 1.3 ×",
+                "One more round of creatives"
+              ],
+              [
+                "All ad sets above 1.3 × target",
+                "Geo fails for now; next geo"
+              ],
+              [
+                "Accept rate 10+ points below plan, 50+ leads",
+                "Fix validation before judging cost"
+              ]
+            ]
+          },
+          "say": "Here are starting decision rules for a geo test. Budget it at three ad sets times twenty to forty times the geo's target cost per paid lead. If one or more ad sets are at or below zero point eight five times target, the geo passes, so scale by the Lesson one rules. If the best is between zero point eight five and one point three times, run one more round of creatives. If all are above one point three times, the geo fails for now, so move to the next. And if accept rate is ten or more points below plan after fifty leads, fix validation before judging cost."
+        }
+      ],
+      "takeaways": [
+        "Treat each geo as a new test with its own target, read point and rules.",
+        "Compare geos on margin per paid lead × daily volume, not on payout.",
+        "Answer the data law and promotion law questions before collecting a single lead."
+      ],
+      "action": "Pick one geo you could test next, ask the network for its payout, normal accept rate and cap, and work out the target, read point and test budget.",
+      "glossary": [
+        {
+          "term": "Geo",
+          "def": "A country or region you target with ads."
+        },
+        {
+          "term": "Tier 1, 2, 3",
+          "def": "A rough grouping of countries by ad cost and payout levels, from highest to lowest."
+        },
+        {
+          "term": "Margin per paid lead",
+          "def": "Effective payout minus cost per paid lead."
+        },
+        {
+          "term": "Localisation",
+          "def": "Adapting language, currency, formats and context to a market without changing the promise."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Geo A: $0.60 margin × 80 leads a day. Geo B: $0.40 × 200 a day. Which earns more daily?",
+          "options": [
+            "A, $48",
+            "B, $80",
+            "Equal",
+            "A, because margin is higher"
+          ],
+          "answer": 1,
+          "why": "$0.40 × 200 = $80 beats $0.60 × 80 = $48."
+        },
+        {
+          "q": "Payout $0.90 per accepted lead in Kenya, 25% margin. Target cost per paid lead?",
+          "options": [
+            "$0.90",
+            "$0.45",
+            "$0.72",
+            "$0.68"
+          ],
+          "answer": 3,
+          "why": "$0.90 × 0.75 = $0.675, about $0.68."
+        },
+        {
+          "q": "Where should a new geo test run?",
+          "options": [
+            "In a separate campaign",
+            "Inside the winning campaign",
+            "In the same ad set",
+            "On a new ad account only"
+          ],
+          "answer": 0,
+          "why": "A separate campaign keeps the data apart and protects the winner."
+        },
+        {
+          "q": "The official rules list only South Africa. You want to run in Ghana. What first?",
+          "options": [
+            "Run and update later",
+            "Translate the ads",
+            "Confirm the promotion is approved for Ghana and named in the rules",
+            "Lower the bid"
+          ],
+          "answer": 2,
+          "why": "Traffic to a geo the rules do not cover breaks promotion law and the sponsor's terms."
+        },
+        {
+          "q": "All three Kenya ad sets end above 1.3 × target after the test budget. Starting rule?",
+          "options": [
+            "Scale the best",
+            "Geo fails for now; move to the next",
+            "Double the test budget",
+            "Change the offer payout"
+          ],
+          "answer": 1,
+          "why": "The rule card says the geo fails for now when every ad set is above 1.3 × target."
+        }
+      ],
+      "say_intro": "This lesson is about expanding into new countries one at a time. You'll learn to compare geos on margin and daily profit, not headline payout, and what data and promotion law questions to answer first.",
+      "say_outro": "So, a new geo is a new test, compare geos on margin times volume, check data and promotion law first, localise properly, and launch one geo at a time as its own campaign. Your task: pick one geo you could test next, ask the network for its payout, normal accept rate and cap, and work out the target, read point and test budget. Now take the quiz."
+    },
+    {
+      "slug": "monetising-your-list-with-consent",
+      "title": "Monetising your list with consent",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can explain the difference between selling a lead once and building a list you own.",
+        "By the end you can estimate list revenue with honest, modest numbers.",
+        "By the end you can name what consent must cover before any partner offer or data sharing."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why a list can be worth more than the lead",
+          "p": "When you sell a lead to a network, you are paid once. If the person also agreed to hear from you, you can send them useful offers for months. That can add value per lead, but only with real consent, useful content and honest offers. A list built without consent is a legal risk, not an asset.",
+          "d": {
+            "b": "A list is people who said yes to you",
+            "s": "Without consent, it is a liability."
+          },
+          "say": "When you sell a lead to a network, you're paid once. If the person also agreed to hear from you, you can send them useful offers for months. That can add value per lead, but only with real consent, useful content and honest offers. A list is people who said yes to you. A list built without consent is a legal risk, not an asset."
+        },
+        {
+          "v": "compare",
+          "h": "Sold lead versus owned list",
+          "p": "Many sweeps offers send the entrant to the sponsor's list, not yours. You can only build your own list if your form asks clearly, separately and honestly. The two models need different consent and different work.",
+          "d": {
+            "a": {
+              "title": "Sold lead",
+              "items": [
+                "Paid once by the network",
+                "Consent is to the sponsor",
+                "No further contact by you",
+                "Simple, no sending work"
+              ]
+            },
+            "b": {
+              "title": "Owned list",
+              "items": [
+                "Consent to you, asked separately",
+                "You send emails or messages",
+                "Revenue over months",
+                "Needs content, sending and care"
+              ]
+            }
+          },
+          "say": "Compare the two models. On the left, a sold lead: paid once by the network, consent is to the sponsor, no further contact by you, and no sending work. On the right, an owned list: consent to you, asked separately, you send emails or messages, revenue comes over months, and it needs content, sending and care. Many sweeps offers send the entrant to the sponsor's list, not yours. You can only build your own list if your form asks clearly, separately and honestly."
+        },
+        {
+          "v": "table",
+          "h": "What consent must cover",
+          "p": "Before you send any partner offer, check that your consent wording covers it. Laws such as GDPR, POPIA and NDPA expect consent to be specific and informed. Where your consent text does not cover a use, you do not have consent for it.",
+          "more": "Whether entry to a prize draw may depend on agreeing to marketing differs by country and is argued in some places, including under GDPR. We are not certain of the position in every geo. The safe approach is a separate, unticked box for marketing that people can leave empty and still enter.",
+          "d": {
+            "cols": [
+              "Use",
+              "Consent needed"
+            ],
+            "rows": [
+              [
+                "You email them offers",
+                "Clear opt-in to your emails"
+              ],
+              [
+                "You email partner offers",
+                "Wording covers partner offers by topic"
+              ],
+              [
+                "You share data with a partner",
+                "Partner named, separate opt-in"
+              ],
+              [
+                "SMS or calls",
+                "Separate consent for that channel"
+              ],
+              [
+                "Prize entry",
+                "Must not be tricked into the above"
+              ]
+            ]
+          },
+          "say": "Before you send any partner offer, check your consent covers it. Laws such as G D P R, POPIA and N D P A expect consent to be specific and informed. To email your own offers, you need a clear opt in. For partner offers, the wording must cover them by topic. To share data with a partner, the partner must be named, with a separate opt in. S M S or calls need separate consent. And prize entry must not trick people into any of this. The safe approach is a separate, unticked marketing box that people can leave empty and still enter."
+        },
+        {
+          "v": "phone",
+          "h": "A clear separate opt-in",
+          "p": "Example of an entry form with separate choices. Entry works with both boxes empty. Each box says exactly who will contact them and how. This is the form that lets you build a list you can defend.",
+          "d": {
+            "v": "phone",
+            "app": "browser",
+            "url": "enter.example/solar",
+            "page": {
+              "h": "Enter the solar kit draw",
+              "p": "[ ] Send me weekly money-saving deals by email from Example Media. [ ] Share my details with Example Energy for solar quotes. Both optional. Unsubscribe any time.",
+              "cta": "Enter the draw"
+            }
+          },
+          "say": "Here's an example entry form with separate choices. The headline says enter the solar kit draw. Then two boxes. One says send me weekly money saving deals by email from Example Media. The other says share my details with Example Energy for solar quotes. Both are optional, with unsubscribe any time. Notice that entry works with both boxes empty, and each box says exactly who will contact them and how. This is the form that lets you build a list you can defend."
+        },
+        {
+          "v": "table",
+          "h": "Example: honest list revenue",
+          "p": "Example monthly revenue from an owned email list. The number per person is small. Lists make sense at scale and with good engagement, not as a quick win. Click rates and earnings per click vary widely; these are illustrative.",
+          "more": "Maths: 20,000 × 1.5% = 300 clicks per send; 300 × 8 = 2,400 clicks; 2,400 × $0.12 = $288; $288 − $100 = $188. That is less than a cent per subscriber per month ($188 ÷ 20,000 = $0.0094). Over six months, if the list stays steady, about $0.06 per person. Useful extra margin, not a business on its own. Example figures only.",
+          "d": {
+            "cols": [
+              "Item",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Active subscribers",
+                "20,000"
+              ],
+              [
+                "Sends per month",
+                "8"
+              ],
+              [
+                "Clicks per send (1.5%)",
+                "300"
+              ],
+              [
+                "Clicks per month",
+                "2,400"
+              ],
+              [
+                "Earnings per click",
+                "$0.12"
+              ],
+              [
+                "Revenue per month",
+                "$288"
+              ],
+              [
+                "Sending tool cost",
+                "$100"
+              ],
+              [
+                "Net per month",
+                "$188"
+              ]
+            ]
+          },
+          "say": "Here's an example of honest list revenue. Twenty thousand active subscribers, eight sends a month. One and a half percent click, so three hundred clicks per send, two thousand four hundred a month. At twelve cents per click, that's two hundred and eighty eight dollars. Minus one hundred dollars for the sending tool, a net of one hundred and eighty eight dollars a month. That's less than a cent per subscriber per month. Useful extra margin, not a business on its own. Click rates and earnings vary widely, and these are example figures only."
+        },
+        {
+          "v": "eq",
+          "h": "Value per subscriber",
+          "p": "To decide whether a list is worth building, estimate net value per subscriber per month and multiply by how many months people stay active. Compare that with the extra cost of asking for consent and running the sends.",
+          "more": "Example: $188 ÷ 20,000 = $0.0094 a month. If people stay active for about 6 months, that is about $0.056 each. On a lead you were already paid $1.20 for, this adds under 5%. Worth doing well at scale; not worth risking consent for.",
+          "d": [
+            "Net per month ÷ subscribers",
+            "×",
+            "Months active",
+            "=",
+            "Value per subscriber"
+          ],
+          "say": "To decide whether a list is worth building, use this equation: net per month divided by subscribers, times months active, equals value per subscriber. In the example, that's under one cent a month. If people stay active for about six months, it's about five or six cents each. On a lead you were already paid a dollar twenty for, that adds under five percent. Worth doing well at scale. Not worth risking consent for."
+        },
+        {
+          "v": "cards",
+          "h": "Channels for an owned list",
+          "p": "Each channel needs its own consent and has its own rules. Start with one channel and do it well. Ask for consent per channel on the form, and never assume an email opt-in covers SMS or WhatsApp.",
+          "d": [
+            "Email|cheapest; needs deliverability care",
+            "Telegram channel|people join and leave freely",
+            "SMS|costly per message; strict consent",
+            "WhatsApp|business rules and templates apply",
+            "Push notifications|browser opt-in, easy to block"
+          ],
+          "say": "Each channel for an owned list needs its own consent and has its own rules. Email is cheapest but needs deliverability care. A Telegram channel lets people join and leave freely. S M S is costly per message, with strict consent. WhatsApp has business rules and templates. And push notifications need a browser opt in, and are easy to block. Start with one channel and do it well. And never assume an email opt in covers S M S or WhatsApp."
+        },
+        {
+          "v": "product",
+          "h": "Broadcasts to your own audience",
+          "p": "If your owned audience is a Telegram channel people joined themselves, regular useful broadcasts keep it alive. Any honest broadcast tool works; this is one option.",
+          "d": {
+            "slug": "castvoo",
+            "why": "Schedule broadcasts and drips to a Telegram audience that opted in, so your list earns between campaigns."
+          },
+          "say": "If your owned audience is a Telegram channel people joined themselves, regular useful broadcasts keep it alive. Any honest broadcast tool works, and this is one option. On screen is Castvoo, which schedules broadcasts and drips to a Telegram audience that opted in, so your list earns between campaigns."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: never sell or rent a list without consent",
+          "p": "Selling, renting or sharing lead data with anyone not named in the person's consent is illegal in many countries and against most network terms. Co-registration, where a form offers several named partners, is only acceptable when each partner is named and chosen separately. If you are unsure your consent covers a use, do not do it.",
+          "d": {
+            "kind": "warn",
+            "text": "No list sales, rentals or sharing without named, specific consent. Honour every unsubscribe quickly and everywhere."
+          },
+          "say": "A firm compliance warning. Selling, renting or sharing lead data with anyone not named in the person's consent is illegal in many countries, and against most network terms. Co registration, where a form offers several partners, is only acceptable when each partner is named and chosen separately. If you're unsure your consent covers a use, don't do it. No list sales, rentals or sharing without named, specific consent. And honour every unsubscribe quickly and everywhere."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: your first honest send",
+          "p": "A welcome email sets expectations and keeps complaints low. Screens are generic mock-ups of an email tool; names change. The welcome email is the one most people open, so make it clear, short and honest.",
+          "d": {
+            "steps": [
+              {
+                "title": "Segment by consent",
+                "text": "Send only to people who ticked your email box. Exclude everyone else.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "mail.example/audiences",
+                  "title": "Audience",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Segment",
+                      "value": "Consent: Example Media emails = yes"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Count",
+                      "value": "1,240"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Write the welcome",
+                "text": "Remind them who you are, why they hear from you, how often and how to leave.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "mail.example/campaigns/new",
+                  "title": "Welcome email",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Subject",
+                      "value": "You asked for weekly money-saving deals"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Body",
+                      "value": "Hi, you signed up at the solar draw. One email a week. Unsubscribe any time below."
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "One-click unsubscribe",
+                      "on": true
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Add one useful offer",
+                "text": "One relevant offer, honestly described, with the affiliate relationship disclosed.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "mail.example/campaigns/new",
+                  "title": "Offer block",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Offer",
+                      "value": "Compare prepaid electricity bundles (affiliate link)"
+                    },
+                    {
+                      "type": "text",
+                      "value": "We may earn a commission if you sign up."
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Check before sending",
+                "text": "Sender name, physical address if required, unsubscribe link, test send to yourself.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "mail.example/campaigns/new",
+                  "title": "Final checks",
+                  "blocks": [
+                    {
+                      "type": "toggle",
+                      "label": "Unsubscribe link works",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Business address shown",
+                      "on": true
+                    },
+                    {
+                      "type": "button",
+                      "label": "Send"
+                    }
+                  ],
+                  "highlight": 2
+                }
+              }
+            ]
+          },
+          "say": "Here's your first honest send, a welcome email. Screens are mock ups. Step one, segment by consent: send only to people who ticked your email box, and exclude everyone else. Step two, write the welcome: remind them who you are, why they hear from you, how often, and how to leave. Step three, add one useful offer, honestly described, with the affiliate relationship disclosed. Step four, check before sending: sender name, a physical address if required, the unsubscribe link, and a test send to yourself. The welcome is the email most people open, so keep it clear, short and honest."
+        },
+        {
+          "v": "cards",
+          "h": "Common list mistakes",
+          "p": "These mistakes create complaints, legal risk or a list nobody opens. Each fix is simple. Most of them look like quick revenue at the time and cost far more later in complaints and lost trust.",
+          "d": [
+            "Pre-ticked consent box|always unticked",
+            "Sending to everyone who entered|only those who opted in to you",
+            "Hiding affiliate links|disclose them",
+            "Daily offers from day one|start weekly, watch complaints",
+            "Selling the list when money is tight|never without named consent"
+          ],
+          "say": "These mistakes create complaints, legal risk, or a list nobody opens. A pre ticked consent box, so always leave it unticked. Sending to everyone who entered, so send only to those who opted in to you. Hiding affiliate links, so disclose them. Daily offers from day one, so start weekly and watch complaints. And selling the list when money is tight, never without named consent. Most look like quick revenue, and cost far more later."
+        },
+        {
+          "v": "table",
+          "h": "Decision rules for list monetisation",
+          "p": "Starting rules to adapt. They protect the list's health and keep you inside your consent. Lesson 4 of this module covers deliverability limits in detail.",
+          "d": {
+            "cols": [
+              "Situation",
+              "Rule"
+            ],
+            "rows": [
+              [
+                "Consent does not clearly cover a use",
+                "Do not do it"
+              ],
+              [
+                "Complaint rate above 0.1% on a send",
+                "Cut frequency, review content"
+              ],
+              [
+                "Net per month negative 3 months running",
+                "Stop sending; keep the leads business"
+              ],
+              [
+                "Partner offer unrelated to what they agreed to",
+                "Do not send"
+              ]
+            ]
+          },
+          "say": "Here are starting rules to adapt. If consent doesn't clearly cover a use, don't do it. If the complaint rate goes above zero point one percent on a send, cut frequency and review content. If net per month is negative three months running, stop sending and keep the leads business. And if a partner offer is unrelated to what people agreed to, don't send it. Lesson four of this module covers deliverability limits in detail."
+        }
+      ],
+      "takeaways": [
+        "Owning a list needs separate, specific consent to you, not just a prize entry.",
+        "List revenue per person is small; it adds margin at scale with good engagement.",
+        "Never sell, rent or share data with anyone not named in the consent."
+      ],
+      "action": "Rewrite your entry form so marketing consent is a separate, unticked, optional box that names who will contact people and how.",
+      "glossary": [
+        {
+          "term": "Owned list",
+          "def": "Contacts who agreed to hear from you directly, separate from the sponsor's list."
+        },
+        {
+          "term": "Co-registration",
+          "def": "A form that offers several named partners, each chosen separately by the person."
+        },
+        {
+          "term": "Earnings per click (EPC)",
+          "def": "Revenue divided by clicks on your offers."
+        },
+        {
+          "term": "Opt-in",
+          "def": "An active choice by the person, such as ticking an empty box, to receive something."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A person entered the draw but left your marketing box empty. Can you email them your offers?",
+          "options": [
+            "Yes, they entered",
+            "Yes, once",
+            "No",
+            "Yes, if you add unsubscribe"
+          ],
+          "answer": 2,
+          "why": "They did not opt in to your emails, so you have no consent to send them."
+        },
+        {
+          "q": "20,000 subscribers, 8 sends, 1.5% clicks per send, $0.12 per click. Monthly revenue?",
+          "options": [
+            "$288",
+            "$192",
+            "$360",
+            "$2,400"
+          ],
+          "answer": 0,
+          "why": "20,000 × 1.5% × 8 = 2,400 clicks; 2,400 × $0.12 = $288."
+        },
+        {
+          "q": "When is sharing a lead's data with a partner acceptable?",
+          "options": [
+            "When the partner pays well",
+            "After 30 days",
+            "When the data is hashed",
+            "When the person chose that named partner separately"
+          ],
+          "answer": 3,
+          "why": "Sharing needs specific consent naming the partner."
+        },
+        {
+          "q": "A send has a 0.18% complaint rate. Starting rule?",
+          "options": [
+            "Send more often",
+            "Cut frequency and review content",
+            "Buy a new list",
+            "Ignore it"
+          ],
+          "answer": 1,
+          "why": "Above 0.1% means reduce frequency and review what you send."
+        },
+        {
+          "q": "What makes a consent box valid in most strict regimes?",
+          "options": [
+            "Unticked, optional and specific",
+            "Hidden in the terms",
+            "Pre-ticked",
+            "Required for entry"
+          ],
+          "answer": 0,
+          "why": "Consent must be an active, specific choice, not assumed."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn the difference between selling a lead once and building a list you own. We'll estimate list revenue with honest, modest numbers, and cover exactly what consent must cover.",
+      "say_outro": "So, a list is people who said yes to you, consent must be separate, specific and unticked, list revenue per person is small, and you never sell or share data without named consent. Your task: rewrite your entry form so marketing consent is a separate, unticked, optional box that names who will contact people and how. Now take the quiz."
+    },
+    {
+      "slug": "keeping-the-list-healthy",
+      "title": "Keeping the list healthy",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can set up sender authentication for a list domain.",
+        "By the end you can calculate complaint and bounce rates and act on them.",
+        "By the end you can run a sunset policy that removes inactive people honestly."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why inbox placement decides list revenue",
+          "p": "A list only earns if emails reach the inbox. Mailbox providers watch complaints, bounces and engagement. When those slip, your emails move to spam for everyone, including people who wanted them. Protecting the list's health protects every future send, and it is also how you respect the people on it.",
+          "d": {
+            "b": "If it lands in spam, it earns nothing",
+            "s": "Health first, offers second."
+          },
+          "say": "A list only earns if emails reach the inbox. Mailbox providers watch complaints, bounces and engagement. When those slip, your emails move to spam for everyone, including people who wanted them. If it lands in spam, it earns nothing. So health first, offers second. Protecting the list's health protects every future send, and it's also how you respect the people on it."
+        },
+        {
+          "v": "cards",
+          "h": "What mailbox providers watch",
+          "p": "Providers do not publish exact formulas, but these signals are widely known to matter. Most are in your control through consent, content and list cleaning.",
+          "d": [
+            "Spam complaints|people clicking report spam",
+            "Bounces|addresses that do not exist",
+            "Engagement|clicks and replies over time",
+            "Authentication|SPF, DKIM and DMARC set up",
+            "Easy unsubscribe|one click, honoured quickly",
+            "Steady volume|no sudden huge sends"
+          ],
+          "say": "Providers don't publish exact formulas, but these signals are widely known to matter. Spam complaints, people clicking report spam. Bounces, addresses that don't exist. Engagement, clicks and replies over time. Authentication, meaning S P F, D K I M and D MARC set up. An easy one click unsubscribe, honoured quickly. And steady volume, no sudden huge sends. Most of these are in your control through consent, content and list cleaning."
+        },
+        {
+          "v": "table",
+          "h": "Bulk sender rules at the time of writing",
+          "p": "In 2024 Gmail and Yahoo introduced requirements for bulk senders. This is our summary at the time of writing; we are not certain it is current or complete, so check each provider's sender guidelines before relying on it.",
+          "d": {
+            "cols": [
+              "Requirement",
+              "Our summary"
+            ],
+            "rows": [
+              [
+                "Authentication",
+                "SPF and DKIM, plus a DMARC record"
+              ],
+              [
+                "Unsubscribe",
+                "One-click, honoured within about 2 days"
+              ],
+              [
+                "Spam rate",
+                "Keep under 0.3%; aim under 0.1%"
+              ],
+              [
+                "From address",
+                "Aligned with your authenticated domain"
+              ]
+            ]
+          },
+          "say": "In twenty twenty four, Gmail and Yahoo introduced requirements for bulk senders. Here's our summary at the time of writing. Authentication with S P F and D K I M, plus a D MARC record. One click unsubscribe, honoured within about two days. A spam rate kept under zero point three percent, aiming under zero point one. And a from address aligned with your authenticated domain. We're not certain this is current or complete, so check each provider's sender guidelines before relying on it."
+        },
+        {
+          "v": "code",
+          "h": "Example DNS records for a sending domain",
+          "p": "Example records you add at your domain host. Your email tool gives you the exact SPF include and the DKIM records. Start DMARC at p=none to monitor, then tighten once reports look clean.",
+          "d": {
+            "lang": "text",
+            "text": "TXT  @       v=spf1 include:send.mailtool.example ~all\nTXT  _dmarc  v=DMARC1; p=none; rua=mailto:dmarc@yourdomain.example\nCNAME s1._domainkey  s1.dkim.mailtool.example",
+            "note": "Example only. Use the values your email tool provides."
+          },
+          "say": "These are example D N S records you add at your domain host. The code on screen shows three: an S P F record, a D MARC record, and a D K I M record. Don't copy these values. Your email tool gives you the exact S P F include and the D K I M records. Start D MARC at p equals none, which only monitors, then tighten it once the reports look clean."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: authenticate your domain",
+          "p": "Do this once per sending domain, before your first send. Screens are generic mock-ups; names change in every email tool and domain host. Without these records, many providers will filter or reject your mail however good the content is.",
+          "d": {
+            "steps": [
+              {
+                "title": "Add the domain in your email tool",
+                "text": "It shows the SPF, DKIM and DMARC records to add.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "mail.example/settings/domains",
+                  "title": "Sending domains",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Domain",
+                      "value": "news.yourdomain.example"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Show DNS records"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Add records at your domain host",
+                "text": "Copy each record exactly. Do not create a second SPF record; merge into one.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "dns.example/zone",
+                  "title": "DNS records",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Type",
+                        "Name",
+                        "Value"
+                      ],
+                      "rows": [
+                        [
+                          "TXT",
+                          "@",
+                          "v=spf1 include:..."
+                        ],
+                        [
+                          "CNAME",
+                          "s1._domainkey",
+                          "s1.dkim..."
+                        ],
+                        [
+                          "TXT",
+                          "_dmarc",
+                          "v=DMARC1; p=none..."
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Verify",
+                "text": "Back in the email tool, click verify. DNS can take hours to update.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "mail.example/settings/domains",
+                  "title": "Sending domains",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "SPF",
+                      "value": "Verified"
+                    },
+                    {
+                      "type": "field",
+                      "label": "DKIM",
+                      "value": "Verified"
+                    },
+                    {
+                      "type": "field",
+                      "label": "DMARC",
+                      "value": "Found"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Verify again"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Watch reports",
+                "text": "Use the mailbox providers' postmaster tools where available to watch spam rate.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "postmaster.example/dashboard",
+                  "title": "Postmaster",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Spam rate",
+                      "value": "0.06%"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Domain reputation",
+                      "value": "High"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Here's how to authenticate your domain, once per sending domain, before your first send. Screens are mock ups and names change. Step one, add the domain in your email tool, which shows the records to add. Step two, add the records at your domain host. Copy each one exactly, and don't create a second S P F record, merge into one. Step three, click verify in the email tool. D N S can take hours to update. Step four, watch reports, using the providers' postmaster tools where available. Without these records, many providers will filter or reject your mail."
+        },
+        {
+          "v": "eq",
+          "h": "Complaint rate",
+          "p": "Complaint rate is spam reports divided by emails delivered. Example: 20,000 delivered and 30 complaints gives 0.15%, above the 0.1% aim. Bounce rate works the same way with bounced emails divided by emails sent.",
+          "d": [
+            "Spam complaints",
+            "÷",
+            "Emails delivered",
+            "=",
+            "Complaint rate"
+          ],
+          "say": "Complaint rate is spam complaints divided by emails delivered. For example, twenty thousand delivered and thirty complaints gives zero point one five percent, which is above the zero point one percent aim. Bounce rate works the same way: bounced emails divided by emails sent."
+        },
+        {
+          "v": "curve",
+          "h": "Warming up a new domain",
+          "p": "Example warm-up for a new sending domain. Start with your most engaged people and grow volume over a few weeks. Providers trust steady growth more than a sudden big send. This is a rough guide, not a rule; your email tool may give its own schedule.",
+          "d": {
+            "a": [
+              200,
+              400,
+              800,
+              1600,
+              3200,
+              6000,
+              10000
+            ],
+            "la": "Emails per day",
+            "b": [
+              0.02,
+              0.03,
+              0.03,
+              0.05,
+              0.06,
+              0.07,
+              0.08
+            ],
+            "lb": "Complaint rate (%)",
+            "x": [
+              "D1",
+              "D3",
+              "D5",
+              "D7",
+              "D10",
+              "D14",
+              "D21"
+            ]
+          },
+          "say": "Here's an example warm up for a new sending domain. Look at the rising line: two hundred emails a day on day one, then four hundred, eight hundred, and up to ten thousand by day twenty one. The complaint rate stays low, under zero point one percent throughout. Start with your most engaged people and grow volume over a few weeks. Providers trust steady growth more than a sudden big send. This is a rough guide, not a rule, and your email tool may give its own schedule."
+        },
+        {
+          "v": "table",
+          "h": "A sunset policy",
+          "p": "People stop engaging. Keeping them hurts deliverability for everyone else. A sunset policy asks once, then removes. Opens are unreliable because some mail apps load images automatically, so use clicks and replies to judge activity.",
+          "d": {
+            "cols": [
+              "No click or reply for",
+              "Action"
+            ],
+            "rows": [
+              [
+                "60 days",
+                "Lower frequency to them"
+              ],
+              [
+                "90 days",
+                "Send one 'still want these?' email"
+              ],
+              [
+                "No click on that email in 14 days",
+                "Remove from sends"
+              ],
+              [
+                "Hard bounce",
+                "Remove at once"
+              ]
+            ]
+          },
+          "say": "People stop engaging, and keeping them hurts deliverability for everyone else. A sunset policy asks once, then removes. No click or reply for sixty days, lower the frequency. At ninety days, send one still want these email. No click on that email in fourteen days, remove them from sends. And a hard bounce, remove at once. Notice we judge on clicks and replies, not opens, because opens are unreliable. Some mail apps load images automatically."
+        },
+        {
+          "v": "compare",
+          "h": "Subject lines: misleading versus honest",
+          "p": "Misleading subject lines raise opens once and complaints for good. Many laws ban them, and people who feel tricked report spam. Honest subjects say what is inside.",
+          "d": {
+            "a": {
+              "title": "Misleading",
+              "items": [
+                "RE: your prize",
+                "Final notice: action required",
+                "You have won",
+                "Payment received"
+              ]
+            },
+            "b": {
+              "title": "Honest",
+              "items": [
+                "This week's 3 electricity deals",
+                "Draw closes Friday: entries still open",
+                "Results of the October draw",
+                "New: solar quote comparison"
+              ]
+            }
+          },
+          "say": "Misleading subject lines raise opens once, and complaints for good. On the left: R E your prize, final notice action required, you have won, payment received. Many laws ban these, and people who feel tricked report spam. On the right, honest subjects that say what's inside: this week's three electricity deals, draw closes Friday entries still open, results of the October draw, and new solar quote comparison."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: unsubscribe, address and honest subjects",
+          "p": "Most email laws require a working unsubscribe that is honoured quickly. The US CAN-SPAM Act also requires a valid physical postal address and bans misleading subject lines and headers. Other countries have their own rules; check each geo you send to.",
+          "d": {
+            "kind": "warn",
+            "text": "Every marketing email needs a working unsubscribe, honest subject line and sender, and the details your local law requires."
+          },
+          "say": "Most email laws require a working unsubscribe that's honoured quickly. The U S CAN SPAM Act also requires a valid physical postal address, and bans misleading subject lines and headers. Other countries have their own rules, so check each geo you send to. Every marketing email needs a working unsubscribe, an honest subject line and sender, and the details your local law requires."
+        },
+        {
+          "v": "cards",
+          "h": "Common list health mistakes",
+          "p": "These mistakes push a healthy list into spam folders. Most are tempting because they look like quick revenue. Check your setup and your sending habits against this list once a month.",
+          "d": [
+            "Importing old or bought lists|send only to people who opted in",
+            "Huge first send on a new domain|warm up over weeks",
+            "Hard-to-find unsubscribe|one click, top or bottom",
+            "Judging activity on opens|use clicks and replies",
+            "Two SPF records|merge into one"
+          ],
+          "say": "These mistakes push a healthy list into spam folders. Importing old or bought lists, so send only to people who opted in. A huge first send on a new domain, so warm up over weeks. A hard to find unsubscribe, so make it one click, top or bottom. Judging activity on opens, so use clicks and replies. And two S P F records, so merge them into one. Check your setup and habits against this list once a month."
+        },
+        {
+          "v": "table",
+          "h": "Decision rules for list health",
+          "p": "Starting rules to adapt. Check after every send for the first month, then weekly. Write the results of each send in your sheet next to these lines, so you can see trends before they become problems.",
+          "more": "Example: a send to 20,000 with 500 bounces is 2.5%, so stop and clean. A send with 30 complaints out of 20,000 delivered is 0.15%, so cut frequency. These thresholds are starting points based on common industry guidance, not provider rules.",
+          "d": {
+            "cols": [
+              "Situation",
+              "Rule"
+            ],
+            "rows": [
+              [
+                "Bounce rate above 2% on a send",
+                "Stop; clean the list before next send"
+              ],
+              [
+                "Complaint rate above 0.1%",
+                "Cut frequency; review content and consent"
+              ],
+              [
+                "Complaint rate above 0.3%",
+                "Pause sends until fixed"
+              ],
+              [
+                "Domain reputation drops",
+                "Send only to engaged people for 2 weeks"
+              ]
+            ]
+          },
+          "say": "Here are starting rules to adapt, based on common industry guidance, not provider rules. Bounce rate above two percent on a send, stop and clean the list. For example, five hundred bounces from twenty thousand is two and a half percent. Complaint rate above zero point one percent, cut frequency and review content and consent. Above zero point three percent, pause sends until fixed. And if domain reputation drops, send only to engaged people for two weeks. Check after every send for the first month, then weekly."
+        }
+      ],
+      "takeaways": [
+        "Authenticate your sending domain with SPF, DKIM and DMARC before the first send.",
+        "Watch complaint and bounce rates after every send and act on fixed lines.",
+        "Remove inactive people with a sunset policy based on clicks and replies."
+      ],
+      "action": "Add your sending domain to your email tool, publish SPF, DKIM and a p=none DMARC record, and verify all three.",
+      "glossary": [
+        {
+          "term": "SPF",
+          "def": "A DNS record listing which servers may send email for your domain."
+        },
+        {
+          "term": "DKIM",
+          "def": "A digital signature that proves an email came from your domain unchanged."
+        },
+        {
+          "term": "DMARC",
+          "def": "A DNS record telling providers what to do with mail that fails SPF or DKIM, and where to send reports."
+        },
+        {
+          "term": "Sunset policy",
+          "def": "A rule for asking, then removing, people who stopped engaging."
+        },
+        {
+          "term": "Hard bounce",
+          "def": "An email rejected because the address does not exist; remove it at once."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "20,000 delivered, 30 spam complaints. Complaint rate?",
+          "options": [
+            "0.015%",
+            "0.3%",
+            "1.5%",
+            "0.15%"
+          ],
+          "answer": 3,
+          "why": "30 ÷ 20,000 = 0.0015 = 0.15%."
+        },
+        {
+          "q": "Which DMARC policy should you start with?",
+          "options": [
+            "p=reject",
+            "p=none",
+            "p=quarantine",
+            "No DMARC"
+          ],
+          "answer": 1,
+          "why": "Start at p=none to monitor reports, then tighten once clean."
+        },
+        {
+          "q": "Why judge activity on clicks rather than opens?",
+          "options": [
+            "Opens are more accurate",
+            "Clicks are cheaper",
+            "Some apps load images automatically, inflating opens",
+            "Providers ignore clicks"
+          ],
+          "answer": 2,
+          "why": "Automatic image loading makes open counts unreliable."
+        },
+        {
+          "q": "A send has a 2.5% bounce rate. Starting rule?",
+          "options": [
+            "Stop and clean the list",
+            "Send again",
+            "Raise frequency",
+            "Ignore it"
+          ],
+          "answer": 0,
+          "why": "Above 2% bounces means clean before the next send."
+        },
+        {
+          "q": "Your new domain is verified. How should you start sending to 15,000 people?",
+          "options": [
+            "All at once",
+            "Only send at night",
+            "Use a bought list first",
+            "Warm up from small, engaged groups over weeks"
+          ],
+          "answer": 3,
+          "why": "Gradual volume from engaged people builds trust with providers."
+        }
+      ],
+      "say_intro": "This lesson is about keeping your list healthy so your emails actually reach the inbox. You'll set up sender authentication, learn to calculate complaint and bounce rates, and run an honest sunset policy.",
+      "say_outro": "So, authenticate your domain, keep complaints and bounces low, warm up new domains slowly, remove inactive people honestly, and always write honest subject lines. Your task: add your sending domain to your email tool, publish S P F, D K I M and a p equals none D MARC record, and verify all three. Now take the quiz."
+    },
+    {
+      "slug": "working-with-networks-and-advertisers",
+      "title": "Working with networks and advertisers",
+      "minutes": 16,
+      "objectives": [
+        "By the end you can ask for a payout increase or cap raise with data.",
+        "By the end you can spot red flags in a network relationship.",
+        "By the end you can set exposure limits so one partner cannot sink you."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why relationships matter more at scale",
+          "p": "At small volume, any network will do. At scale, your partners decide your caps, your payout, how fast you are paid and which offers you see first. A good manager can raise your profit more than a new creative. A bad partner can hold weeks of revenue. Choose and manage partners as carefully as campaigns.",
+          "d": {
+            "b": "At scale, partners are part of your margin",
+            "s": "Choose them with data, manage them with data."
+          },
+          "say": "At small volume, any network will do. At scale, your partners decide your caps, your payout, how fast you're paid, and which offers you see first. A good manager can raise your profit more than a new creative. A bad partner can hold weeks of revenue. So at scale, partners are part of your margin. Choose them with data, and manage them with data."
+        },
+        {
+          "v": "cards",
+          "h": "What good networks value in an affiliate",
+          "p": "Managers have limited caps and bumps to give. They give them to affiliates who make their job easy and their advertisers happy. All of these are in your control.",
+          "d": [
+            "Steady volume|no sudden spikes and drops",
+            "Quality|accept rate at or above norm",
+            "Openness|traffic sources disclosed",
+            "Compliance|approved creatives and landers",
+            "Clear communication|weekly notes, fast replies"
+          ],
+          "say": "Managers have limited caps and bumps to give, and they give them to affiliates who make their job easy and their advertisers happy. Here's what good networks value. Steady volume, with no sudden spikes and drops. Quality, an accept rate at or above the norm. Openness, with traffic sources disclosed. Compliance, approved creatives and landers. And clear communication, weekly notes and fast replies. All of these are in your control."
+        },
+        {
+          "v": "partner",
+          "h": "Lead gen partners we list",
+          "p": "These are the sweeps and lead gen partners we list. Whoever you work with, ask for the payment terms, scrub policy and cap rules in writing before you scale with them.",
+          "d": {
+            "vertical": "sweeps",
+            "note": "Prefer partners with written payment terms, reject reasons by lead ID and a named manager who answers."
+          },
+          "say": "These are the sweeps and lead gen partners we list. Whoever you work with, ask for the payment terms, scrub policy and cap rules in writing before you scale with them. And prefer partners with written payment terms, reject reasons by lead I D, and a named manager who answers."
+        },
+        {
+          "v": "table",
+          "h": "Example: what a small bump is worth",
+          "p": "Example. You send 300 accepted leads a day on one offer. A bump of $0.10 per lead looks small. Over a month it is worth more than many creative tests.",
+          "more": "Maths: 300 × $0.10 = $30 a day; $30 × 30 = $900 a month, with no extra spend. That is why you prepare the request with data rather than asking casually. Example figures only.",
+          "d": {
+            "cols": [
+              "Item",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Accepted leads per day",
+                "300"
+              ],
+              [
+                "Payout bump",
+                "$0.10"
+              ],
+              [
+                "Extra per day",
+                "$30"
+              ],
+              [
+                "Extra per 30 days",
+                "$900"
+              ]
+            ]
+          },
+          "say": "Here's an example of what a small bump is worth. You send three hundred accepted leads a day on one offer. A bump of ten cents per lead looks small. But three hundred times ten cents is thirty dollars a day, and over thirty days that's nine hundred dollars, with no extra spend. That's worth more than many creative tests. It's why you prepare the request with data, rather than asking casually. Example figures only."
+        },
+        {
+          "v": "phone",
+          "h": "Asking for a bump with data",
+          "p": "Example message. Lead with what you deliver, give numbers the manager can forward to the advertiser, and ask for something specific. Offer something in return, such as more steady volume.",
+          "d": {
+            "v": "phone",
+            "app": "chat",
+            "title": "Affiliate manager",
+            "subtitle": "network",
+            "messages": [
+              {
+                "from": "me",
+                "text": "30 days on 3310: 8,700 accepted, accept rate 86% vs 78% norm, steady daily volume. Could we move from $1.20 to $1.35?"
+              },
+              {
+                "from": "them",
+                "text": "Strong numbers. I can get $1.30 if you can hold 300 a day."
+              },
+              {
+                "from": "me",
+                "text": "Agreed at $1.30 for 300 a day. Please confirm in writing."
+              }
+            ]
+          },
+          "say": "Here's an example of asking for a bump with data. The affiliate leads with what they deliver: thirty days on offer thirty three ten, eight thousand seven hundred accepted, an accept rate of eighty six percent against a seventy eight percent norm, and steady daily volume. Then a specific ask, from one dollar twenty to one dollar thirty five. The manager offers one thirty, if they can hold three hundred a day. The affiliate agrees, and asks for it to be confirmed in writing."
+        },
+        {
+          "v": "quote",
+          "h": "From the founder",
+          "p": "A practical habit for every negotiation. It keeps you honest about your own numbers and gives the manager something to work with. Keep it in mind when you prepare any request for a bump or a cap raise.",
+          "d": "Bring the numbers your manager needs to win the bump for you. Accept rate, steady volume and clean traffic do more than any argument.",
+          "by": "dchessking",
+          "say": "Here's a practical habit from the founder for every negotiation: Bring the numbers your manager needs to win the bump for you. Accept rate, steady volume and clean traffic do more than any argument."
+        },
+        {
+          "v": "compare",
+          "h": "Network versus direct advertiser",
+          "p": "As you grow, some advertisers may offer to work with you directly. Higher payout is common, but you lose some of what a network provides. Neither is always better.",
+          "d": {
+            "a": {
+              "title": "Through a network",
+              "items": [
+                "Many offers, one payment",
+                "Network chases late advertisers",
+                "Payout includes the network's cut",
+                "Faster to switch offers"
+              ]
+            },
+            "b": {
+              "title": "Direct advertiser",
+              "items": [
+                "Often higher payout",
+                "You carry payment risk",
+                "Contracts and invoices yourself",
+                "Usually needs proven volume"
+              ]
+            }
+          },
+          "say": "As you grow, some advertisers may offer to work with you directly. Through a network, on the left: many offers with one payment, the network chases late advertisers, the payout includes the network's cut, and it's faster to switch offers. Direct, on the right: often a higher payout, but you carry the payment risk, handle contracts and invoices yourself, and it usually needs proven volume. Neither is always better."
+        },
+        {
+          "v": "table",
+          "h": "Red flags in a partner",
+          "p": "One red flag deserves a question. Two or more deserve a plan to reduce exposure. Write down when each appears so you can see patterns over months.",
+          "d": {
+            "cols": [
+              "Red flag",
+              "What to do"
+            ],
+            "rows": [
+              [
+                "Payment late without explanation",
+                "Pause new volume until paid"
+              ],
+              [
+                "Terms changed without notice",
+                "Ask for written terms"
+              ],
+              [
+                "No reject reasons",
+                "Ask twice, then move volume"
+              ],
+              [
+                "Pressure to run non-compliant landers",
+                "Refuse; reduce exposure"
+              ],
+              [
+                "Asks for your ad account login",
+                "Refuse; never share access"
+              ]
+            ]
+          },
+          "say": "Here are red flags in a partner, and what to do. Payment late without explanation, pause new volume until paid. Terms changed without notice, ask for written terms. No reject reasons, ask twice, then move volume. Pressure to run non compliant landers, refuse and reduce exposure. And if they ask for your ad account login, refuse, and never share access. One red flag deserves a question. Two or more deserve a plan to reduce exposure."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: compliance is never outsourced",
+          "p": "Some partners say they handle compliance or that a lander is approved. You are still responsible for your ads and the pages you send traffic to. Keep terms, approvals and creative sign-offs in writing, and never share ad account logins or payment details with a partner.",
+          "d": {
+            "kind": "warn",
+            "text": "Get terms and approvals in writing. Refuse any request to share accounts, run unapproved pages or hide traffic sources."
+          },
+          "say": "Compliance is never outsourced. Some partners say they handle compliance, or that a lander is approved. You're still responsible for your ads and the pages you send traffic to. Keep terms, approvals and creative sign offs in writing. And refuse any request to share accounts or payment details, run unapproved pages, or hide traffic sources."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: the monthly partner review",
+          "p": "Once a month, review each partner on the same five points. Screens are generic mock-ups. The same five points every month make problems visible early, while they are still small and easy to fix.",
+          "d": {
+            "steps": [
+              {
+                "title": "Payments",
+                "text": "Were all payments on time and in full? Note days late.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/partners",
+                  "title": "Payments",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Partner",
+                        "Due",
+                        "Paid",
+                        "Days late"
+                      ],
+                      "rows": [
+                        [
+                          "Net A",
+                          "Sep 15",
+                          "Sep 15",
+                          "0"
+                        ],
+                        [
+                          "Net B",
+                          "Sep 15",
+                          "Sep 26",
+                          "11"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Quality and scrubs",
+                "text": "Accept rate against norm; were reasons given?",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/partners",
+                  "title": "Quality",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Partner",
+                        "Accept",
+                        "Norm",
+                        "Reasons"
+                      ],
+                      "rows": [
+                        [
+                          "Net A",
+                          "86%",
+                          "78%",
+                          "Yes"
+                        ],
+                        [
+                          "Net B",
+                          "61%",
+                          "80%",
+                          "No"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Exposure",
+                "text": "Unpaid balance with each partner, as days of revenue.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/partners",
+                  "title": "Exposure",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Net A unpaid",
+                      "value": "$6,200 (31 days)"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Net B unpaid",
+                      "value": "$4,900 (49 days)"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Decide and write it down",
+                "text": "Apply the rules: Net B gets no new volume until paid, and a reduced share.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/partners",
+                  "title": "Decisions",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Net A",
+                      "value": "Ask for cap raise"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Net B",
+                      "value": "Pause new volume; cut to 20% when paid"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              }
+            ]
+          },
+          "say": "Here's the monthly partner review, the same points every month. Screens are mock ups. First, payments: were they on time and in full? Here, Net B paid eleven days late. Second, quality and scrubs: accept rate against norm, and were reasons given? Net B is at sixty one percent against eighty, with no reasons. Third, exposure: the unpaid balance as days of revenue. Net B is at forty nine days. Fourth, decide and write it down. Net A gets a cap raise request. Net B gets no new volume until paid, and a reduced share."
+        },
+        {
+          "v": "table",
+          "h": "Decision rules for partners",
+          "p": "Starting rules to adapt. Unpaid balance means revenue earned but not yet paid. Count it in days of revenue from that partner. Review them at the monthly partner review, not in the middle of an argument.",
+          "d": {
+            "cols": [
+              "Situation",
+              "Rule"
+            ],
+            "rows": [
+              [
+                "Payment more than 7 days late",
+                "Pause new volume until paid"
+              ],
+              [
+                "2 late payments in 3 months",
+                "Cut to 20% or less of your volume"
+              ],
+              [
+                "Unpaid balance over 2 payment cycles",
+                "Stop sending until it falls"
+              ],
+              [
+                "Accept rate ≥ norm for 30 days",
+                "Ask for a bump or cap raise"
+              ]
+            ]
+          },
+          "say": "Here are starting rules to adapt. Unpaid balance means revenue earned but not yet paid, counted in days of revenue from that partner. If a payment is more than seven days late, pause new volume until paid. Two late payments in three months, cut that partner to twenty percent or less of your volume. Unpaid balance over two payment cycles, stop sending until it falls. And an accept rate at or above the norm for thirty days, ask for a bump or cap raise. Review these at the monthly review, not in the middle of an argument."
+        },
+        {
+          "v": "cards",
+          "h": "Common partner mistakes",
+          "p": "These mistakes leave money on the table or expose you to losses you could have limited. Check your partners against them monthly. Most of them come from being too polite to ask or too busy to write things down.",
+          "d": [
+            "Never asking for a bump|ask after 30 strong days",
+            "Verbal deals only|confirm every change in writing",
+            "All volume with one partner|spread your exposure",
+            "Ignoring a late payment|pause new volume at once",
+            "Arguing without data|bring lead-level numbers"
+          ],
+          "say": "These mistakes leave money on the table or expose you to losses. Never asking for a bump, so ask after thirty strong days. Verbal deals only, so confirm every change in writing. All volume with one partner, so spread your exposure. Ignoring a late payment, so pause new volume at once. And arguing without data, so bring lead level numbers. Most come from being too polite to ask, or too busy to write things down."
+        }
+      ],
+      "takeaways": [
+        "Managers give caps and bumps to steady, high-quality, open affiliates.",
+        "Ask for bumps with numbers and confirm every deal in writing.",
+        "Limit exposure: pause volume on late payment and spread volume across partners."
+      ],
+      "action": "Prepare a one-paragraph bump request for your best offer with 30 days of accepted leads, accept rate versus norm and daily volume.",
+      "glossary": [
+        {
+          "term": "Payout bump",
+          "def": "An increase in the payout per lead agreed with a network or advertiser."
+        },
+        {
+          "term": "Exposure",
+          "def": "Revenue you have earned from a partner but not yet been paid."
+        },
+        {
+          "term": "Direct advertiser",
+          "def": "A company that pays you for leads without a network in between."
+        },
+        {
+          "term": "Payment cycle",
+          "def": "How often a partner pays, such as weekly or monthly, and how long after the period ends."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "300 accepted leads a day, $0.10 bump. Extra per 30 days?",
+          "options": [
+            "$900",
+            "$300",
+            "$90",
+            "$3,000"
+          ],
+          "answer": 0,
+          "why": "300 × $0.10 × 30 = $900."
+        },
+        {
+          "q": "A network's payment is 11 days late with no explanation. Starting rule?",
+          "options": [
+            "Send more to show goodwill",
+            "Ignore it",
+            "Pause new volume until paid",
+            "Stop all networks"
+          ],
+          "answer": 2,
+          "why": "More than 7 days late means pause new volume until paid."
+        },
+        {
+          "q": "A partner asks for your ad account login to 'help optimise'. What do you do?",
+          "options": [
+            "Share it",
+            "Refuse and never share access",
+            "Share read-only for a week",
+            "Share with your manager's email"
+          ],
+          "answer": 1,
+          "why": "Never share account access with a partner."
+        },
+        {
+          "q": "What is a typical trade-off of working direct with an advertiser?",
+          "options": [
+            "Lower payout, less risk",
+            "No volume needed",
+            "No contracts needed",
+            "Higher payout, you carry payment risk"
+          ],
+          "answer": 3,
+          "why": "Direct often pays more, but you lose the network's payment protection."
+        },
+        {
+          "q": "Accept rate 86% versus a 78% norm for 30 days. Starting rule?",
+          "options": [
+            "Change network",
+            "Cut volume",
+            "Ask for a bump or cap raise",
+            "Do nothing"
+          ],
+          "answer": 2,
+          "why": "Sustained above-norm quality is the moment to ask."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn to work with networks and advertisers at scale. You'll ask for payout bumps and cap raises with data, spot red flags, and set limits so no single partner can sink you.",
+      "say_outro": "So, partners are part of your margin, bring data to every request, get everything in writing, watch for red flags, and review every partner monthly on the same points. Your task: prepare a one paragraph bump request for your best offer, with thirty days of accepted leads, your accept rate versus the norm, and your daily volume. Now take the quiz."
+    },
+    {
+      "slug": "cash-flow-and-a-durable-portfolio",
+      "title": "Cash flow and a durable portfolio",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can calculate how much cash a scaling lead gen operation needs.",
+        "By the end you can set concentration limits on networks, offers, geos and traffic sources.",
+        "By the end you can run a weekly cash review and decide how much to reinvest."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why profit is not cash",
+          "p": "You pay the ad platform every day. The network pays you weeks later, after a hold. A campaign that is profitable on paper can still empty your bank account as you scale, because spend grows today and payment arrives next month. Cash planning is what lets you keep a winner running.",
+          "d": {
+            "b": "Profitable campaigns can still run out of cash",
+            "s": "Plan the gap between paying and being paid."
+          },
+          "say": "Here's why profit isn't cash. You pay the ad platform every day. The network pays you weeks later, after a hold. So a campaign that's profitable on paper can still empty your bank account as you scale, because spend grows today and payment arrives next month. Profitable campaigns can still run out of cash. Cash planning is what lets you keep a winner running."
+        },
+        {
+          "v": "flow",
+          "h": "The lead gen cash cycle",
+          "p": "Every dollar goes around this loop. The longer the loop, the more cash you need to keep running. Shortening it, through better payment terms, is as valuable as a better ad.",
+          "d": [
+            "Pay ad platform daily",
+            "Leads delivered",
+            "Hold and month end",
+            "Network pays",
+            "Reinvest in ads"
+          ],
+          "say": "Every dollar goes around this loop. Follow it: you pay the ad platform daily, leads are delivered, there's a hold and the month ends, the network pays, and you reinvest in ads. The longer the loop, the more cash you need to keep running. That's why shortening it, through better payment terms, is as valuable as a better ad."
+        },
+        {
+          "v": "eq",
+          "h": "Cash you need to keep running",
+          "p": "Multiply daily spend by the days between spending and being paid, then add a buffer. If a network pays monthly, 30 days after month end, the gap is up to about 60 days for spend on the first day of a month.",
+          "d": [
+            "Daily spend",
+            "×",
+            "Days until paid + buffer",
+            "=",
+            "Cash needed"
+          ],
+          "say": "Here's how much cash you need to keep running. The equation: daily spend, times the days until paid plus a buffer, equals cash needed. Here's why the gap is longer than it looks. If a network pays monthly, thirty days after month end, then spend on the first day of a month waits up to about sixty days to be paid."
+        },
+        {
+          "v": "table",
+          "h": "Example: the cash gap at $200 a day",
+          "p": "Example. You spend $200 a day. The network pays monthly, 30 days after month end. Spend on 1 October is paid around 30 November, about 60 days later; spend on 31 October about 30 days later. The average gap is about 45 days.",
+          "more": "Maths: $200 × 45 = $9,000. $200 × 60 = $12,000. Buffer: $200 × 14 = $2,800; $12,000 + $2,800 = $14,800. If you have $6,000, you cannot safely spend $200 a day on these terms, however good the campaign. Weekly payment terms would cut the gap sharply. Example figures only.",
+          "d": {
+            "cols": [
+              "Item",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Daily spend",
+                "$200"
+              ],
+              [
+                "Average days until paid",
+                "45"
+              ],
+              [
+                "Cash tied up on average",
+                "$9,000"
+              ],
+              [
+                "Worst case, 60 days",
+                "$12,000"
+              ],
+              [
+                "Plus 14-day buffer",
+                "$14,800"
+              ]
+            ]
+          },
+          "say": "Here's an example at two hundred dollars a day, with monthly payment thirty days after month end. Spend on the first of October is paid around the thirtieth of November, about sixty days later. Spend on the thirty first is paid about thirty days later. So the average is about forty five days, nine thousand dollars tied up. The worst case is twelve thousand. Add a fourteen day buffer and you need fourteen thousand eight hundred. If you have six thousand, you can't safely spend two hundred a day on these terms, however good the campaign. Example figures only."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: profit on one month",
+          "p": "Example month. You spent $6,000 and earned $7,140 in network-confirmed revenue. Work out the profit, then think about how much of it is already sitting in the bank versus still owed to you.",
+          "more": "$7,140 − $6,000 = $1,140 profit, a return of 1.19 on spend. If that revenue is paid 30 days after month end, all of it is still owed when next month's spend starts. Profit is real only when cash arrives.",
+          "d": {
+            "kind": "roas",
+            "task": "Spend $6,000, revenue $7,140. What is the profit?",
+            "preset": {
+              "spend": 6000,
+              "revenue": 7140
+            },
+            "answer": {
+              "field": "profit",
+              "value": 1140,
+              "tolerance": 0.01
+            }
+          },
+          "say": "Time for a lab. In this example month, you spent six thousand dollars and earned seven thousand one hundred and forty in network confirmed revenue. Work out the profit. Then think about how much of it is already sitting in the bank, versus still owed to you. Remember, profit is real only when cash arrives. Pause and try it, then check your answer."
+        },
+        {
+          "v": "table",
+          "h": "Rules for cash and reinvestment",
+          "p": "Starting rules to adapt. They keep a winning operation alive through slow payments and bad weeks. Apply them at the weekly cash review, before you touch any budget. A winning campaign you can no longer fund is worth nothing, so these rules come before the scaling rules.",
+          "d": {
+            "cols": [
+              "Situation",
+              "Rule"
+            ],
+            "rows": [
+              [
+                "Before raising daily spend",
+                "Cash ≥ new daily spend × (days until paid + 14)"
+              ],
+              [
+                "Monthly profit received",
+                "Reinvest at most 50%; keep the rest"
+              ],
+              [
+                "Reserve below 30 days of spend",
+                "Freeze scaling"
+              ],
+              [
+                "Reserve below 14 days of spend",
+                "Cut spend to fit"
+              ]
+            ]
+          },
+          "say": "Here are starting rules for cash and reinvestment. Before raising daily spend, cash must be at least the new daily spend times the days until paid plus fourteen. When monthly profit is received, reinvest at most fifty percent and keep the rest. If your reserve falls below thirty days of spend, freeze scaling. Below fourteen days, cut spend to fit. Apply these at the weekly cash review, before you touch any budget. A winning campaign you can no longer fund is worth nothing, so these come before the scaling rules."
+        },
+        {
+          "v": "bars",
+          "h": "Example: revenue share by partner",
+          "p": "Example of a portfolio that has grown around one network. If Network A paid late or closed an offer, 70% of revenue would stop at once. The concentration rules on the next slide reduce that risk over a few months.",
+          "d": [
+            [
+              "Network A",
+              70,
+              "70%"
+            ],
+            [
+              "Network B",
+              20,
+              "20%"
+            ],
+            [
+              "Direct advertiser",
+              10,
+              "10%"
+            ]
+          ],
+          "say": "Here's an example of a portfolio that has grown around one network. Look at the bars. Network A, seventy percent of revenue. Network B, twenty percent. A direct advertiser, ten percent. If Network A paid late or closed an offer, seventy percent of revenue would stop at once. The concentration rules on the next slide reduce that risk over a few months."
+        },
+        {
+          "v": "table",
+          "h": "Concentration limits",
+          "p": "Starting limits to work towards, not to force overnight. Move volume gradually, testing each new partner, offer or geo with the test rules first. The aim is that no single failure can stop your whole income.",
+          "d": {
+            "cols": [
+              "Spread across",
+              "Starting limit"
+            ],
+            "rows": [
+              [
+                "Networks",
+                "No more than 50% of revenue in one"
+              ],
+              [
+                "Offers",
+                "No more than 40% in one"
+              ],
+              [
+                "Geos",
+                "At least 2 geos earning"
+              ],
+              [
+                "Traffic sources",
+                "A plan B source tested"
+              ],
+              [
+                "Ad accounts",
+                "Backups that follow platform rules"
+              ]
+            ]
+          },
+          "say": "Here are starting concentration limits to work towards, not to force overnight. No more than fifty percent of revenue in one network. No more than forty percent in one offer. At least two geos earning. A plan B traffic source tested. And backup ad accounts that follow platform rules. Move volume gradually, testing each new partner, offer or geo with the test rules first. The aim is that no single failure can stop your whole income."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: the weekly cash review",
+          "p": "Every week, 20 minutes, before any budget change. Screens are generic mock-ups. The order matters: cash first, then owed, then plans. Keep each week's review in the same sheet so you can see the trend.",
+          "d": {
+            "steps": [
+              {
+                "title": "Cash in the bank",
+                "text": "Note the balance available for ad spend after bills and tax set aside.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/cash",
+                  "title": "Cash",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Available for ads",
+                      "value": "$11,400"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Tax set aside (separate)",
+                      "value": "$1,900"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Owed to you",
+                "text": "List unpaid balances by partner and the expected dates.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/cash",
+                  "title": "Receivables",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Partner",
+                        "Owed",
+                        "Expected"
+                      ],
+                      "rows": [
+                        [
+                          "Net A",
+                          "$6,200",
+                          "Oct 15"
+                        ],
+                        [
+                          "Net B",
+                          "$1,800",
+                          "Oct 20"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Next 30 days of spend",
+                "text": "Planned daily spend × 30. Compare with cash plus what will arrive in time.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/cash",
+                  "title": "Plan",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Planned spend, 30 days",
+                      "value": "$7,500"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Cash + receipts due in 30 days",
+                      "value": "$19,400"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Decide",
+                "text": "Apply the cash rules. Write the decision and the reason.",
+                "screen": {
+                  "kind": "browser",
+                  "url": "sheets.example/cash",
+                  "title": "Decision",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Scale allowed",
+                      "value": "Yes, to $250 a day"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Reason",
+                      "value": "Reserve covers 45 + 14 days at $250 ($14,750)"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Here's the weekly cash review, twenty minutes before any budget change. Screens are mock ups. Step one, cash in the bank: the balance available for ads after bills and tax set aside, here eleven thousand four hundred. Step two, owed to you: unpaid balances by partner and expected dates. Step three, the next thirty days of spend, compared with cash plus what arrives in time. Step four, decide using the cash rules, and write down the decision and the reason. Here, scaling to two hundred and fifty a day is allowed. The order matters: cash first, then owed, then plans."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance: tax, currency and payment methods",
+          "p": "Affiliate income is taxable in most countries, and currency conversion can eat margin when you are paid in dollars and spend in naira or rand. Rules differ widely. Keep records of every payment and invoice, use payment methods that are legal where you live, and consult a qualified accountant.",
+          "d": {
+            "kind": "warn",
+            "text": "Set tax aside from every payment, keep full records, and get professional advice on tax and currency. We cannot give tax advice."
+          },
+          "say": "A compliance point on tax, currency and payment methods. Affiliate income is taxable in most countries, and currency conversion can eat margin when you're paid in dollars and spend in naira or rand. Rules differ widely. Keep records of every payment and invoice, use payment methods that are legal where you live, and consult a qualified accountant. Set tax aside from every payment. We can't give tax advice."
+        },
+        {
+          "v": "product",
+          "h": "Find offers to spread your risk",
+          "p": "Diversifying means testing new offers and partners. A deals directory can help you find candidates; check every offer's terms, scrubs and payment history yourself before testing.",
+          "d": {
+            "slug": "affleego",
+            "why": "Browse affiliate deals to find candidate offers and partners for diversifying your portfolio."
+          },
+          "say": "Diversifying means testing new offers and partners. A deals directory can help you find candidates. On screen is Affleego, where you can browse affiliate deals to find candidate offers and partners for your portfolio. But check every offer's terms, scrubs and payment history yourself before testing."
+        },
+        {
+          "v": "cards",
+          "h": "Common cash and portfolio mistakes",
+          "p": "These are the mistakes that end profitable lead gen operations. None of them shows up in a campaign dashboard, which is why they surprise people.",
+          "d": [
+            "Scaling on paper profit|check cash covers the gap",
+            "Spending the tax money|set it aside on arrival",
+            "One network, one offer|work towards the limits",
+            "Reinvesting 100%|keep a reserve",
+            "Ignoring payment terms|ask for weekly once trusted"
+          ],
+          "say": "These mistakes end profitable lead gen operations, and none of them shows up in a campaign dashboard. Scaling on paper profit, so check cash covers the gap. Spending the tax money, so set it aside on arrival. One network and one offer, so work towards the limits. Reinvesting a hundred percent, so keep a reserve. And ignoring payment terms, so ask for weekly payments once you're trusted."
+        },
+        {
+          "v": "phone",
+          "h": "Asking for faster payment",
+          "p": "Example message once you have a few months of steady, clean volume. Faster terms shrink the cash gap and let you scale with the same cash.",
+          "d": {
+            "v": "phone",
+            "app": "chat",
+            "title": "Affiliate manager",
+            "subtitle": "network",
+            "messages": [
+              {
+                "from": "me",
+                "text": "We have run 4 months on 3310 with steady quality. Could we move from monthly net-30 to weekly payments?"
+              },
+              {
+                "from": "them",
+                "text": "We can do bi-weekly from next month."
+              },
+              {
+                "from": "me",
+                "text": "Thank you. Please confirm the new terms by email."
+              }
+            ]
+          },
+          "say": "Finally, here's an example of asking for faster payment, once you have a few months of steady, clean volume. The affiliate says they've run four months on offer thirty three ten with steady quality, and asks to move from monthly net thirty to weekly payments. The manager offers bi weekly from next month. And the affiliate asks for the new terms by email. Faster terms shrink the cash gap, and let you scale with the same cash."
+        }
+      ],
+      "takeaways": [
+        "Profit is not cash: plan for daily spend × days until paid, plus a buffer.",
+        "Reinvest part of profit and keep a reserve; freeze scaling when the reserve is thin.",
+        "Spread revenue across networks, offers, geos and sources over time."
+      ],
+      "action": "Fill in the weekly cash review for your operation today: cash available, owed by each partner, next 30 days of spend and your decision.",
+      "glossary": [
+        {
+          "term": "Cash gap",
+          "def": "The time between paying for ads and receiving payment for the leads."
+        },
+        {
+          "term": "Reserve",
+          "def": "Cash kept back to cover spend and surprises."
+        },
+        {
+          "term": "Concentration",
+          "def": "How much of your revenue depends on one partner, offer, geo or source."
+        },
+        {
+          "term": "Receivables",
+          "def": "Money owed to you for leads already delivered and accepted."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "$200 a day spend, 45-day average gap. Cash tied up on average?",
+          "options": [
+            "$4,500",
+            "$12,000",
+            "$9,000",
+            "$200"
+          ],
+          "answer": 2,
+          "why": "$200 × 45 = $9,000."
+        },
+        {
+          "q": "You plan $250 a day, payment gap 45 days, buffer 14 days. Cash needed?",
+          "options": [
+            "$11,250",
+            "$15,000",
+            "$3,500",
+            "$14,750"
+          ],
+          "answer": 3,
+          "why": "$250 × (45 + 14) = $250 × 59 = $14,750."
+        },
+        {
+          "q": "70% of revenue comes from one network. What do you do?",
+          "options": [
+            "Gradually test other partners towards a 50% limit",
+            "Move 100% there",
+            "Nothing while it pays",
+            "Stop that network"
+          ],
+          "answer": 0,
+          "why": "Reduce concentration step by step, testing new partners with test rules."
+        },
+        {
+          "q": "Spend $6,000, revenue $7,140. Profit?",
+          "options": [
+            "$7,140",
+            "$1,140",
+            "$1,190",
+            "$13,140"
+          ],
+          "answer": 1,
+          "why": "$7,140 − $6,000 = $1,140."
+        },
+        {
+          "q": "Your reserve drops below 14 days of spend. Starting rule?",
+          "options": [
+            "Scale to earn faster",
+            "Ignore it",
+            "Borrow to keep spending",
+            "Cut spend to fit"
+          ],
+          "answer": 3,
+          "why": "Below 14 days of reserve, cut spend until it fits."
+        }
+      ],
+      "say_intro": "In this last lesson you'll learn why profit isn't the same as cash, and how to plan for the gap between paying for ads and being paid. You'll also set limits so your income doesn't depend on one partner.",
+      "say_outro": "So, plan the gap between paying and being paid, check cash before raising spend, reinvest only part of your profit, spread risk across partners, offers and geos, and set tax aside. Your task: fill in the weekly cash review for your operation today, with cash available, what each partner owes you, the next thirty days of spend, and your decision. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "Ad set: $0.70 per paid lead (target $0.90), 60 paid in 3 days, accept steady, cap 85% used, cash fine. What first?",
+      "options": [
+        "Raise budget 50%",
+        "Duplicate into 5 geos",
+        "Ask for a cap raise, then raise 20%",
+        "Hold"
+      ],
+      "answer": 2,
+      "why": "It passes cost and quality, but the cap is above 80%, so ask for more cap as you step up."
+    },
+    {
+      "q": "Geo A: margin $0.60 × 80 a day. Geo B: $0.35 × 220 a day. Which earns more daily?",
+      "options": [
+        "B, $77",
+        "A, $48",
+        "Equal",
+        "A, higher margin"
+      ],
+      "answer": 0,
+      "why": "$0.35 × 220 = $77 beats $0.60 × 80 = $48."
+    },
+    {
+      "q": "You want to email partner offers to everyone who entered the sweeps. 40% ticked your email box. Who can you email?",
+      "options": [
+        "Everyone",
+        "Nobody",
+        "Everyone once",
+        "The 40% who opted in, within what the wording covered"
+      ],
+      "answer": 3,
+      "why": "Only people who opted in to you, and only for uses their consent covers."
+    },
+    {
+      "q": "A send to 25,000: 600 hard bounces and 20 complaints. What do you do?",
+      "options": [
+        "Nothing",
+        "Stop and clean: bounce rate is 2.4%",
+        "Raise frequency",
+        "Pause only for complaints"
+      ],
+      "answer": 1,
+      "why": "600 ÷ 25,000 = 2.4%, over the 2% line; complaints are 0.08%, under 0.1%."
+    },
+    {
+      "q": "A network offers $0.15 more per lead if you run its lander with a fake winner ticker. 400 leads a day. What do you do?",
+      "options": [
+        "Accept: $1,800 a month extra",
+        "Accept for a week",
+        "Refuse and reduce exposure to that partner",
+        "Run it in a small geo"
+      ],
+      "answer": 2,
+      "why": "Fake winners are misleading; pressure to run non-compliant pages is a red flag."
+    },
+    {
+      "q": "Network B: payment 12 days late, 2nd late payment in 3 months, no reasons for rejects. Starting rules?",
+      "options": [
+        "Send more volume",
+        "Ignore",
+        "Cut to 50%",
+        "Pause new volume until paid, then cut to 20% or less"
+      ],
+      "answer": 3,
+      "why": "Late over 7 days pauses volume; 2 late in 3 months cuts to 20% or less."
+    },
+    {
+      "q": "You spend $300 a day, network pays monthly net-30, reserve is $9,000. Can you scale to $400?",
+      "options": [
+        "No: $400 × (45 + 14) = $23,600 needed",
+        "Yes",
+        "Yes, if ROI is high",
+        "Only on weekends"
+      ],
+      "answer": 0,
+      "why": "Cash needed far exceeds the reserve, so freeze scaling."
+    },
+    {
+      "q": "After two 20% steps, accept rate fell from 86% to 74%. Cost is still under target. What do you do?",
+      "options": [
+        "Keep scaling",
+        "Step back one level and go horizontal if it repeats",
+        "Kill the campaign",
+        "Change offer"
+      ],
+      "answer": 1,
+      "why": "A 10+ point quality fall means step back; repeated step-backs mean scale horizontally."
+    },
+    {
+      "q": "A partner wants to buy your list of 30,000 entrants for $3,000. Consent covered only your own weekly emails. What do you do?",
+      "options": [
+        "Sell it",
+        "Sell hashed data only",
+        "Sell half",
+        "Refuse: consent does not cover sharing"
+      ],
+      "answer": 3,
+      "why": "Sharing data with anyone not named in consent is not allowed."
+    },
+    {
+      "q": "New domain, 12,000 opted-in subscribers. Best first-week plan?",
+      "options": [
+        "Authenticate SPF, DKIM, DMARC and warm up from the most engaged",
+        "Send to all on day 1",
+        "Buy a warm list",
+        "Skip authentication"
+      ],
+      "answer": 0,
+      "why": "Authenticate first, then grow volume gradually from engaged people."
+    }
+  ]
+}

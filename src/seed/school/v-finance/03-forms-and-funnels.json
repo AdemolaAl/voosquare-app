@@ -1,0 +1,2605 @@
+{
+  "school": "v-finance",
+  "order": 3,
+  "slug": "forms-and-funnels",
+  "title": "Forms and funnels for finance",
+  "summary": "The funnel shapes that work for loans, cards, insurance and banking, and how to build instant forms, comparison pages, eligibility steps and consent capture that hold up. You finish able to compare funnels on value per click, collect provable consent and turn fast, honest follow-up into approvals.",
+  "lessons": [
+    {
+      "slug": "finance-funnel-types",
+      "title": "Four finance funnel shapes and when each wins",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can describe direct link, instant form, comparison page and pre-qualification funnels.",
+        "You can compare their economics on value per click, not on cost per lead.",
+        "You can pick a funnel shape that fits the offer's paid event and terms.",
+        "You can apply starting rules to switch funnel shapes."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the funnel shape decides lead quality",
+          "p": "In finance, the steps between the ad and the lender decide who arrives and how ready they are. A short funnel brings volume and weak intent. A longer one brings fewer, better-informed people. The right shape depends on the paid event and what the offer allows.",
+          "d": {
+            "b": "Funnel shape sets lead quality",
+            "s": "Short funnels bring volume; longer ones bring readiness."
+          },
+          "say": "In finance, the steps between your ad and the lender decide who arrives, and how ready they are. A short funnel brings volume, but weak intent. A longer one brings fewer people who are better informed. So the funnel shape sets lead quality. The right shape depends on the paid event, and on what the offer allows."
+        },
+        {
+          "v": "map",
+          "h": "The four common shapes",
+          "p": "Most finance funnels are one of these, or a mix. Each path ends at the same lender, but people arrive with very different levels of understanding and intent.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Your ad",
+                "kind": "ad"
+              },
+              {
+                "id": "form",
+                "label": "Instant lead form",
+                "kind": "page"
+              },
+              {
+                "id": "cmp",
+                "label": "Comparison page",
+                "kind": "page"
+              },
+              {
+                "id": "pq",
+                "label": "Eligibility quiz",
+                "kind": "page"
+              },
+              {
+                "id": "net",
+                "label": "Network or aggregator",
+                "kind": "tool"
+              },
+              {
+                "id": "lender",
+                "label": "Lender application",
+                "kind": "offer"
+              },
+              {
+                "id": "pb",
+                "label": "Stage postbacks",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "lender",
+                "direct link"
+              ],
+              [
+                "ad",
+                "form",
+                "form"
+              ],
+              [
+                "ad",
+                "cmp",
+                "compare"
+              ],
+              [
+                "ad",
+                "pq",
+                "quiz"
+              ],
+              [
+                "form",
+                "net",
+                "lead"
+              ],
+              [
+                "cmp",
+                "lender",
+                "choose"
+              ],
+              [
+                "pq",
+                "net",
+                "lead"
+              ],
+              [
+                "net",
+                "lender",
+                "routes"
+              ],
+              [
+                "lender",
+                "pb",
+                "status"
+              ]
+            ]
+          },
+          "say": "Look at this map. Most finance funnels are one of four shapes, or a mix. A direct link sends people straight from your ad to the lender's application. An instant lead form passes a lead to the network or aggregator, which routes it to the lender. A comparison page lets people choose before going to the lender. And an eligibility quiz qualifies people before the lead is passed on. Each path ends at the same lender, with status coming back as stage postbacks, but people arrive with very different levels of understanding and intent."
+        },
+        {
+          "v": "table",
+          "h": "What each shape is good at",
+          "p": "Rough guide, varies by geo and offer. Always check the offer terms first: some offers ban lead forms or require traffic to go straight to the lender's own page.",
+          "d": {
+            "cols": [
+              "Shape",
+              "Best for",
+              "Weak point"
+            ],
+            "rows": [
+              [
+                "Direct link",
+                "CPA offers with a strong lender page",
+                "Cold users bounce at the long form"
+              ],
+              [
+                "Instant lead form",
+                "CPL offers, fast learning",
+                "Low intent, many invalid leads"
+              ],
+              [
+                "Comparison page",
+                "Cards, insurance, banking",
+                "Takes work to keep accurate"
+              ],
+              [
+                "Eligibility quiz",
+                "Loans with clear criteria",
+                "More steps, fewer leads"
+              ]
+            ]
+          },
+          "say": "This table is a rough guide to what each shape is good at, and it varies by geo and offer. Direct link suits C P A, cost per acquisition, offers with a strong lender page, but cold users bounce at a long form. Instant forms suit C P L, cost per lead, offers and fast learning, but bring low intent and many invalid leads. Comparison pages suit cards, insurance and banking, but take work to keep accurate. Eligibility quizzes suit loans with clear criteria, with more steps and fewer leads. Always check the offer terms first. Some offers ban lead forms or require traffic to go straight to the lender."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: 2,000 clicks, four shapes",
+          "p": "Example, illustrative rates. Same audience and spend, $0.30 per click, $600 total. Value per click shows the winner, and it is not the shape with the cheapest lead.",
+          "more": "Check, with 2,000 clicks: direct 2,000 x 1% = 20 x $40 = $800. Instant form: 2,000 x 12% = 240 leads, 60% valid = 144 x $3 = $432. Comparison: 2,000 x 0.9% = 18 x $50 = $900. Quiz: 2,000 x 5% = 100 leads, 25% approved = 25 x $30 = $750. Spend is $600 in every row, so the instant form loses $168 while the comparison page makes $300. The instant form had the cheapest lead and the worst result.",
+          "d": {
+            "cols": [
+              "Shape",
+              "Result",
+              "Revenue",
+              "Per click"
+            ],
+            "rows": [
+              [
+                "Direct link, $40 funded",
+                "1.0% = 20 funded",
+                "$800",
+                "$0.40"
+              ],
+              [
+                "Instant form, $3 CPL",
+                "12% leads, 60% valid = 144",
+                "$432",
+                "$0.22"
+              ],
+              [
+                "Comparison, $50 card",
+                "0.9% = 18 approved",
+                "$900",
+                "$0.45"
+              ],
+              [
+                "Quiz, $30 approval",
+                "5% leads, 25% approved = 25",
+                "$750",
+                "$0.38"
+              ]
+            ]
+          },
+          "say": "Here's a worked example with illustrative rates. Same audience, two thousand clicks at thirty cents each, six hundred dollars spend. The direct link gets twenty funded at forty dollars, eight hundred, or forty cents per click. The instant form gets one hundred forty four valid leads at three dollars, four hundred thirty two, just twenty two cents per click. The comparison page gets eighteen approved at fifty dollars, nine hundred, forty five cents per click. The quiz gets twenty five approvals at thirty, seven hundred fifty. So the instant form loses one hundred sixty eight, while the comparison page makes three hundred. The cheapest lead had the worst result."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: where does the quiz funnel leak?",
+          "p": "Practise on the quiz funnel. Work out each pass-through rate and pick the weakest step. The lab says FTD; read it as approval. Fix the weakest step before touching the ad.",
+          "more": "Working: started 700 / 2,000 = 35%. Finished 420 / 700 = 60%. Leads 100 / 420 = 24%. Approved 25 / 100 = 25%. Finished quiz to lead is the weakest at about 24%, so the contact and consent screen is where to look first, not the ad.",
+          "d": {
+            "kind": "funnel",
+            "task": "Which step loses the largest share of people?",
+            "preset": {
+              "steps": [
+                [
+                  "Clicks",
+                  2000
+                ],
+                [
+                  "Quiz started",
+                  700
+                ],
+                [
+                  "Quiz finished",
+                  420
+                ],
+                [
+                  "Leads",
+                  100
+                ],
+                [
+                  "Approved",
+                  25
+                ]
+              ],
+              "payout": 30
+            },
+            "answer": {
+              "field": "worst_step",
+              "value": 3
+            }
+          },
+          "say": "Let's practise on the quiz funnel. Two thousand clicks, seven hundred started the quiz, four hundred twenty finished it, one hundred became leads, and twenty five were approved. The lab says F T D, first-time deposit, but read it as approval. Work out each pass-through rate, and find which step loses the largest share of people. Then remember, fix the weakest step before you touch the ad. Pause and try it, then check your answer."
+        },
+        {
+          "v": "cards",
+          "h": "Mixed shapes that often work",
+          "p": "Shapes can be combined. The rule is the same: each extra step must either inform the person or filter honestly. Steps that only add clicks lower value per click.",
+          "d": [
+            "Quiz then comparison|Eligibility first, then options they may qualify for",
+            "Pre-sell then direct link|Explain cost, then the lender's own form",
+            "Form then call|Short form, then a licensed adviser calls",
+            "Comparison then form|Choose a product, then one consented form"
+          ],
+          "say": "Shapes can be combined, and some mixes often work. Quiz then comparison: eligibility first, then options they may qualify for. Pre-sell then direct link: explain the cost, then the lender's own form. Form then call: a short form, then a licensed adviser calls. And comparison then form: choose a product, then one consented form. The rule stays the same. Each extra step must either inform the person or filter honestly. Steps that only add clicks lower value per click."
+        },
+        {
+          "v": "stat",
+          "h": "The best value per click in the example",
+          "p": "In the worked example the comparison page earned $0.45 per click against a $0.30 CPC, a 50% margin before lag. The instant form earned $0.22 and lost money on the same traffic.",
+          "d": {
+            "n": 0.45,
+            "pre": "$",
+            "suf": "",
+            "dec": 2,
+            "label": "value per click, comparison page",
+            "note": "Example. Rough guide, varies by geo, product and offer."
+          },
+          "say": "Here's the best value per click from the example: forty five cents, for the comparison page. Against a thirty cent C P C, cost per click, that's a fifty percent margin before lag. The instant form earned twenty two cents and lost money on the same traffic. This is an example, and a rough guide that varies by geo, product and offer."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes when choosing a shape",
+          "p": "These come from picking a shape because it is fashionable or cheap per lead, rather than because it fits the paid event, the offer terms and the product.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Instant forms on a CPA-on-funding offer",
+                "Direct link to a slow, desktop-only lender page",
+                "Comparison page with one real option",
+                "Quiz that asks for data it never uses"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Use forms for CPL; add qualifying questions",
+                "Pre-sell with a short, honest page",
+                "Compare real alternatives or call it a review",
+                "Ask only what routing needs"
+              ]
+            }
+          },
+          "say": "These mistakes come from picking a shape because it's fashionable or cheap per lead. Instant forms on a C P A on funding offer. A direct link to a slow, desktop-only lender page. A comparison page with one real option. A quiz that asks for data it never uses. And the fixes: use forms for C P L offers and add qualifying questions. Pre-sell with a short, honest page. Compare real alternatives, or call it a review. And ask only what routing needs."
+        },
+        {
+          "v": "phone",
+          "h": "A short honest pre-sell page",
+          "p": "When the lender's own page is long, a short page that explains the product, the cost and the criteria can raise completion without hype. Mock-up, illustrative.",
+          "d": {
+            "app": "browser",
+            "url": "yourdomain.example/za-card",
+            "page": {
+              "h": "A card with fees shown upfront",
+              "p": "Annual fee, interest rate and eligibility from Example Bank, an authorised credit provider. Takes about 8 minutes. Approval depends on a credit check. We earn a fee if you are approved.",
+              "cta": "Continue to Example Bank"
+            }
+          },
+          "say": "When the lender's own page is long, a short pre-sell page can raise completion without hype. Look at this mock-up. The headline says a card with fees shown upfront. Then it gives the annual fee, interest rate and eligibility from Example Bank, an authorised credit provider. It says it takes about eight minutes, approval depends on a credit check, and we earn a fee if you're approved. The button continues to the bank. It explains the product, cost and criteria honestly."
+        },
+        {
+          "v": "tip",
+          "h": "Funnel pages are ads too",
+          "p": "Every page in your funnel is reviewed by platforms and judged by regulators as part of the promotion. Pre-sell and comparison pages carry the same disclosure duties as the ad.",
+          "d": {
+            "kind": "warn",
+            "text": "Show the provider, the cost and that approval is not guaranteed on every page. Say you earn a fee. Never show reviewers a different page from users. Check that the offer allows your funnel shape in writing."
+          },
+          "say": "Remember, funnel pages are ads too. Every page in your funnel is reviewed by platforms and judged by regulators as part of the promotion. Pre-sell and comparison pages carry the same disclosure duties as the ad. As the warning says, show the provider, the cost, and that approval isn't guaranteed on every page. Say you earn a fee. Never show reviewers a different page from users. And check, in writing, that the offer allows your funnel shape."
+        },
+        {
+          "v": "check",
+          "h": "Starting rules for choosing and switching shapes",
+          "p": "Starting rules to adapt. Use them to choose the first shape and to decide when to test another. Compare shapes only on matured value per click.",
+          "d": [
+            "CPL offer: start with an instant form plus 2 qualifying questions",
+            "CPA on approval or funding: start with a pre-sell or quiz page",
+            "Test a second shape when value per click is under 1.2 x your CPC after 1,000 clicks",
+            "Keep the shape that wins on matured value per click by 20% or more",
+            "Check the offer allows the shape before building it"
+          ],
+          "say": "Here are starting rules for choosing and switching shapes, to adapt. For a C P L offer, start with an instant form plus two qualifying questions. For C P A on approval or funding, start with a pre-sell or quiz page. Test a second shape when value per click is under one point two times your C P C after one thousand clicks. Keep the shape that wins on matured value per click by twenty percent or more. And check the offer allows the shape before building it."
+        },
+        {
+          "v": "bars",
+          "h": "Example: value per click by shape",
+          "p": "Example, from the 2,000-click table. Bar length is value per click relative to the best. Your CPC is $0.30, so anything near or below that line is losing money.",
+          "d": [
+            [
+              "Instant form",
+              49,
+              "$0.22"
+            ],
+            [
+              "Quiz",
+              84,
+              "$0.38"
+            ],
+            [
+              "Direct link",
+              89,
+              "$0.40"
+            ],
+            [
+              "Comparison page",
+              100,
+              "$0.45"
+            ]
+          ],
+          "say": "These bars come from the two thousand click example. Bar length is value per click, relative to the best. The instant form at twenty two cents. The quiz at thirty eight. The direct link at forty. And the comparison page at forty five. Your C P C is thirty cents, so anything near or below that line is losing money. Here, that's the instant form."
+        }
+      ],
+      "takeaways": [
+        "Funnel shape decides who arrives and how ready they are.",
+        "Compare shapes on value per click, not cost per lead.",
+        "Every page in the funnel carries the ad's disclosure duties."
+      ],
+      "action": "For one finance offer, write the funnel shape you will start with and why, using the starting rules. Note which shapes the offer terms allow.",
+      "glossary": [
+        {
+          "term": "Pre-sell page",
+          "def": "A short page between the ad and the offer that explains the product and cost before the user continues."
+        },
+        {
+          "term": "Comparison page",
+          "def": "A page that lists several products side by side so the user can choose."
+        },
+        {
+          "term": "Eligibility quiz",
+          "def": "A short set of questions that checks basic criteria and routes the user."
+        },
+        {
+          "term": "Direct link",
+          "def": "Sending the ad click straight to the advertiser's page."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "2,000 clicks, 10% become instant-form leads, 50% valid, $3 CPL. Revenue?",
+          "options": [
+            "$600",
+            "$300",
+            "$1,000",
+            "$150"
+          ],
+          "answer": 1,
+          "why": "2,000 x 10% = 200 leads. 50% valid = 100. x $3 = $300."
+        },
+        {
+          "q": "Which shape is a sensible start for a CPA-on-funding loan offer?",
+          "options": [
+            "Instant form with no questions",
+            "Pre-sell or eligibility quiz page",
+            "Pop-up traffic",
+            "Bought list"
+          ],
+          "answer": 1,
+          "why": "Funding offers need ready, eligible applicants; a page that explains cost and criteria helps."
+        },
+        {
+          "q": "Why can the cheapest cost per lead give the worst result?",
+          "options": [
+            "Platforms charge more later",
+            "It cannot",
+            "Cheap leads are always fraud",
+            "Low-intent leads are often invalid or not approved"
+          ],
+          "answer": 3,
+          "why": "Value per click depends on what happens after the lead."
+        },
+        {
+          "q": "Value per click is $0.33 after 1,000 clicks and CPC is $0.30. What does the rule say?",
+          "options": [
+            "Test a second shape: $0.33 is under 1.2 x $0.30",
+            "Scale",
+            "Kill the offer",
+            "Do nothing forever"
+          ],
+          "answer": 0,
+          "why": "1.2 x $0.30 = $0.36. $0.33 is below it."
+        },
+        {
+          "q": "What must a pre-sell page in a finance funnel show?",
+          "options": [
+            "Only a big button",
+            "Testimonials of instant approval",
+            "Provider, cost, that approval is not guaranteed and that you earn a fee",
+            "Nothing; it is not an ad"
+          ],
+          "answer": 2,
+          "why": "Funnel pages carry the same disclosure duties as the ad."
+        }
+      ],
+      "say_intro": "In this lesson you'll meet the four common finance funnel shapes: direct link, instant form, comparison page and eligibility quiz. You'll learn to compare them on value per click, not cost per lead, and pick the shape that fits the offer.",
+      "say_outro": "So, funnel shape sets lead quality, value per click picks the winner, and the offer terms decide which shapes you may use. Your task: for one finance offer, write the funnel shape you'll start with and why, using the starting rules, and note which shapes the offer terms allow. Now take the quiz."
+    },
+    {
+      "slug": "instant-lead-forms",
+      "title": "Building a finance instant lead form",
+      "minutes": 20,
+      "objectives": [
+        "By the end you can build a Meta instant form for a finance offer, step by step.",
+        "You can choose between volume and higher-intent form types with numbers.",
+        "You can write qualifying questions, a disclaimer and consent controls.",
+        "You can apply exact rules to fix a form that sends weak leads."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why instant forms need extra care in finance",
+          "p": "Instant forms pre-fill details from the user's profile, so submitting takes seconds. That makes them cheap and fast, and also easy to submit by accident or without reading. In finance, a lead submitted without understanding is usually invalid and sometimes a complaint.",
+          "d": {
+            "b": "Fast forms need friction in the right places",
+            "s": "Make it easy to submit and hard to submit by mistake."
+          },
+          "say": "Instant forms pre-fill details from the user's profile, so submitting takes seconds. That makes them cheap and fast, but also easy to submit by accident, or without reading. In finance, a lead submitted without understanding is usually invalid, and sometimes becomes a complaint. So fast forms need friction in the right places. Make it easy to submit, and hard to submit by mistake."
+        },
+        {
+          "v": "walk",
+          "h": "Build the form, step by step",
+          "p": "A typical build at the time of writing. Names change; check the current Ads Manager. Follow the steps in order, because each screen depends on the one before. Screens are illustrative mock-ups.",
+          "more": "We are not certain of the current form type names, the exact consent options or which fields can be pre-filled in each region. The principle stays: add a review step, ask qualifying questions, name who receives the data and say what happens next. Check Meta's Help Center for the current lead ads options before relying on any detail here.",
+          "d": {
+            "steps": [
+              {
+                "title": "Choose the form type",
+                "text": "Pick the higher-intent option, which adds a review step, for finance. Test volume later if needed.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/form/new",
+                  "title": "Create form",
+                  "blocks": [
+                    {
+                      "type": "radio",
+                      "label": "Form type",
+                      "options": [
+                        "More volume",
+                        "Higher intent"
+                      ],
+                      "value": 1
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Write the intro",
+                "text": "Say what the person gets, who provides it and that approval is not guaranteed.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/form/intro",
+                  "title": "Intro",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Headline",
+                      "value": "See loan options from licensed lenders"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Description",
+                      "value": "Rates and fees shown before you apply. Approval depends on checks. We are paid by lenders."
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Add qualifying questions",
+                "text": "Ask only what routing and eligibility need, with multiple choice answers.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/form/questions",
+                  "title": "Questions",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "What is the loan for?",
+                      "value": "Planned purchase / Debt consolidation / Other"
+                    },
+                    {
+                      "type": "select",
+                      "label": "Monthly income range",
+                      "value": "Ranges set by lender criteria"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Phone (pre-filled)",
+                      "value": "Editable"
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Add consent and privacy",
+                "text": "Link your privacy policy and add a custom consent tick for sharing with named lenders.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/form/privacy",
+                  "title": "Privacy",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Privacy policy URL",
+                      "value": "https://yourdomain.example/privacy"
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Custom consent: share with lenders listed at yourdomain.example/partners",
+                      "on": true
+                    },
+                    {
+                      "type": "toggle",
+                      "label": "Optional: marketing messages",
+                      "on": false
+                    }
+                  ],
+                  "highlight": 1
+                }
+              },
+              {
+                "title": "Write the thank-you screen",
+                "text": "Say what happens next, who will contact them and how fast.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "adsmanager.example/form/end",
+                  "title": "Completion",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Message",
+                      "value": "Example Credit Ltd may call you within 1 working day from a number starting 020."
+                    },
+                    {
+                      "type": "button",
+                      "label": "Publish form"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Here's a typical build, at the time of writing. Names change, so check the current Ads Manager. Tap Next to follow each step. First, choose the higher-intent form type, which adds a review step. Second, write an intro that says what the person gets, who provides it, and that approval isn't guaranteed. Third, add qualifying questions, only what routing and eligibility need, as multiple choice. Fourth, link your privacy policy and add a custom consent tick for sharing with named lenders. Fifth, write a thank-you screen that says what happens next, who will contact them, and how fast."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: volume versus higher intent",
+          "p": "Example. Same $500 spend. The volume form brings more leads; the higher-intent form brings fewer but more valid and approvable ones. Value per lead decides.",
+          "more": "Check: 240 x 0.55 = 132 valid, x $4 = $528. 160 x 0.85 = 136 valid, x $4 = $544. Fewer leads, more revenue, and fewer wrong numbers reaching lenders. On a CPA-on-approval offer the gap is usually wider, because higher-intent leads also get approved more often. Illustrative figures, not a benchmark.",
+          "d": [
+            "Volume: 240 leads x 55% valid x $4",
+            "=",
+            "$528",
+            "Higher intent: 160 x 85% x $4",
+            "= $544"
+          ],
+          "say": "Here's an example of volume versus higher intent, with the same five hundred dollar spend. The volume form brings two hundred forty leads, fifty five percent valid, at four dollars each, so five hundred twenty eight dollars. The higher-intent form brings one hundred sixty leads, eighty five percent valid, so five hundred forty four. Fewer leads, more revenue, and fewer wrong numbers reaching lenders. On a C P A, cost per acquisition, on approval offer, the gap is usually wider. These are illustrative figures, not a benchmark."
+        },
+        {
+          "v": "table",
+          "h": "Questions that help and questions that hurt",
+          "p": "Each question should change routing or filter out people who cannot qualify. Questions that do neither only add friction and collect data you then have to protect.",
+          "d": {
+            "cols": [
+              "Question",
+              "Keep?",
+              "Why"
+            ],
+            "rows": [
+              [
+                "Loan purpose",
+                "Yes",
+                "Routes to the right product"
+              ],
+              [
+                "Income range",
+                "Yes, if lender needs it",
+                "Filters ineligible"
+              ],
+              [
+                "Employment type",
+                "Yes, if lender needs it",
+                "Common criterion"
+              ],
+              [
+                "ID number",
+                "No",
+                "Lender collects it securely"
+              ],
+              [
+                "Bank login",
+                "Never",
+                "Unsafe, not your role"
+              ],
+              [
+                "Free-text story",
+                "No",
+                "Hard to use, sensitive"
+              ]
+            ]
+          },
+          "say": "Each question should change routing, or filter out people who can't qualify. Look at the table. Loan purpose, yes, it routes to the right product. Income range and employment type, yes, if the lender needs them. But an I D number, no, the lender collects it securely. A bank login, never, it's unsafe and not your role. And a free-text story, no, it's hard to use and sensitive. Questions that do neither only add friction, and collect data you then have to protect."
+        },
+        {
+          "v": "screen",
+          "h": "A custom disclaimer on the form",
+          "p": "A custom disclaimer lets you show cost and consent text inside the form. Keep it short, readable and specific. Names change; check the current Ads Manager. Screen is an illustrative mock-up.",
+          "d": {
+            "kind": "browser",
+            "url": "adsmanager.example/form/disclaimer",
+            "title": "Custom disclaimer",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Title",
+                "value": "Before you continue"
+              },
+              {
+                "type": "field",
+                "label": "Text",
+                "value": "Loans from licensed lenders. Representative example and APR shown by the lender before you sign. Approval is not guaranteed. We are paid a fee by lenders."
+              },
+              {
+                "type": "toggle",
+                "label": "Require checkbox",
+                "on": true
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "A custom disclaimer lets you show cost and consent text inside the form. Look at the text on screen. Before you continue: loans from licensed lenders, representative example and A P R, the annual percentage rate, shown by the lender before you sign, approval is not guaranteed, and we are paid a fee by lenders. And notice the require checkbox toggle is on. Keep it short, readable and specific. This screen is an illustrative mock-up, and names change, so check the current Ads Manager."
+        },
+        {
+          "v": "phone",
+          "h": "What the user sees on the review step",
+          "p": "The review step lets people check their pre-filled details. In finance this is where wrong phone numbers and accidental submits get caught, before they become invalid leads. Mock-up, illustrative.",
+          "d": {
+            "app": "bot",
+            "title": "Review your info",
+            "subtitle": "lead form",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Please check your details before submitting."
+              },
+              {
+                "from": "them",
+                "text": "Name: Ada Okafor. Phone: 0803 000 0000. Purpose: Planned purchase."
+              },
+              {
+                "from": "me",
+                "text": "Edit phone"
+              },
+              {
+                "from": "them",
+                "text": "Updated. Submit to share with the lenders listed?",
+                "buttons": [
+                  "Submit",
+                  "Back"
+                ]
+              }
+            ]
+          },
+          "say": "Here's what the user sees on the review step. In this mock-up, the form asks them to check their details. It shows the name, phone and purpose. The user taps edit phone, fixes it, and is then asked to submit to share with the lenders listed, or go back. In finance, this is where wrong phone numbers and accidental submits get caught, before they become invalid leads."
+        },
+        {
+          "v": "table",
+          "h": "Form numbers to watch daily",
+          "p": "Track these per form and per ad set. Each one points to a different fix, so read them together rather than looking at cost per lead alone. Rough guide; set your own normal ranges.",
+          "d": {
+            "cols": [
+              "Metric",
+              "Formula",
+              "Warning sign"
+            ],
+            "rows": [
+              [
+                "Form completion",
+                "Submits / form opens",
+                "Sharp drop after an edit"
+              ],
+              [
+                "Valid rate",
+                "Valid / submits",
+                "Under 70%"
+              ],
+              [
+                "Duplicate rate",
+                "Duplicates / submits",
+                "Over 10%"
+              ],
+              [
+                "Contact rate",
+                "Reached / valid",
+                "Falling week on week"
+              ],
+              [
+                "Approved per lead",
+                "Approved / submits",
+                "Below plan after window"
+              ]
+            ]
+          },
+          "say": "Track these form numbers daily, per form and per ad set. Form completion, submits divided by form opens; watch for a sharp drop after an edit. Valid rate; warning under seventy percent. Duplicate rate; warning over ten percent. Contact rate, reached divided by valid; watch if it falls week on week. And approved per lead; watch if it's below plan after the window. Each one points to a different fix, so read them together, not just cost per lead. Set your own normal ranges."
+        },
+        {
+          "v": "cards",
+          "h": "Qualifying questions by product",
+          "p": "Use the advertiser's written criteria to choose. These are typical examples, not a list to copy. Two or three questions are usually enough to route people and filter out those who cannot qualify.",
+          "d": [
+            "Loans|Purpose, income range, employment type",
+            "Credit cards|Income range, existing card, main use",
+            "Insurance|What to cover, renewal month, region",
+            "Bank accounts|Main use, salary account or savings"
+          ],
+          "say": "Choose qualifying questions from the advertiser's written criteria. These are typical examples, not a list to copy. For loans: purpose, income range, employment type. For credit cards: income range, existing card, main use. For insurance: what to cover, renewal month, region. For bank accounts: main use, salary account or savings. Two or three questions are usually enough to route people and filter out those who can't qualify."
+        },
+        {
+          "v": "compare",
+          "h": "Common instant form mistakes",
+          "p": "These are the reasons finance instant forms get a bad name. Each one raises volume for a day and lowers the value of every lead.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Volume form type with no questions",
+                "Consent hidden in the privacy policy",
+                "Thank-you screen says nothing",
+                "Leads downloaded once a week"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Higher intent plus 2 to 3 questions",
+                "Separate consent tick naming lenders",
+                "Say who calls, when, from which number",
+                "Sync leads to your system in real time"
+              ]
+            }
+          },
+          "say": "These are the reasons finance instant forms get a bad name. A volume form type with no questions. Consent hidden in the privacy policy. A thank-you screen that says nothing. Leads downloaded once a week. And the fixes: higher intent plus two to three questions. A separate consent tick naming lenders. A thank-you screen that says who calls, when, and from which number. And leads synced to your system in real time. Each mistake raises volume for a day, and lowers the value of every lead."
+        },
+        {
+          "v": "tip",
+          "h": "Forms collect financial data: treat it that way",
+          "p": "Lead forms in finance collect data that can be misused, so platforms and laws expect care. Ask for less and protect what you collect, from the form to your sheets.",
+          "d": {
+            "kind": "warn",
+            "text": "Never ask for ID numbers, bank logins or card details in a lead form. Link a real privacy policy, name the recipients, and delete leads from the platform and your sheets when no longer needed. Names change; check the current Ads Manager."
+          },
+          "say": "Forms in finance collect data that can be misused, so platforms and laws expect care. Ask for less, and protect what you collect, from the form to your sheets. As the warning says, never ask for I D numbers, bank logins or card details in a lead form. Link a real privacy policy, name the recipients, and delete leads from the platform and your sheets when they're no longer needed. Names change, so check the current Ads Manager."
+        },
+        {
+          "v": "code",
+          "h": "Pull leads in real time, not weekly",
+          "p": "Leads go cold within hours. Connect the form to your CRM or a webhook so each lead arrives in seconds. The exact connection method differs; this shows the shape of the data you need.",
+          "d": {
+            "lang": "json",
+            "text": "{\n  \"lead_id\": \"fb_9921\",\n  \"created_time\": \"2026-10-04T10:02:11Z\",\n  \"form_id\": \"ng_loans_hi_v2\",\n  \"ad_id\": \"<ad id>\",\n  \"fields\": {\"purpose\": \"planned_purchase\", \"income_range\": \"band_3\", \"phone\": \"+234803...\"},\n  \"consent\": {\"share_lenders\": true, \"marketing\": false, \"text_version\": \"share-v2\"}\n}",
+            "note": "Illustrative structure. Field names come from your form and integration."
+          },
+          "say": "Leads go cold within hours, so pull them in real time, not weekly. Connect the form to your C R M, your customer relationship management system, or a webhook, so each lead arrives in seconds. On screen is an illustrative example of the data you need. I won't read the code. It shows the lead and form references, the time, the ad, the answers to your questions, the phone, and the consent choices with their text version. The exact connection method differs, and field names come from your form and integration."
+        },
+        {
+          "v": "check",
+          "h": "Starting rules for finance instant forms",
+          "p": "Starting rules to adapt. Apply them per form, and judge on valid and approved leads, not on submits. Change one thing at a time so you know what worked.",
+          "d": [
+            "Start with the higher-intent type and 2 to 3 qualifying questions",
+            "Valid rate under 70% after 100 leads: add or tighten a question",
+            "Duplicate rate over 10%: check retargeting overlap and dedupe",
+            "Leads must reach your system within 5 minutes",
+            "Switch to volume type only if higher-intent value per lead is lower after 200 leads each"
+          ],
+          "say": "Here are starting rules for finance instant forms, to adapt. Start with the higher-intent type and two to three qualifying questions. If the valid rate is under seventy percent after one hundred leads, add or tighten a question. If duplicates are over ten percent, check retargeting overlap and dedupe. Leads must reach your system within five minutes. And switch to the volume type only if higher-intent value per lead is lower after two hundred leads each. Judge on valid and approved leads, and change one thing at a time."
+        }
+      ],
+      "takeaways": [
+        "Use a review step and qualifying questions in finance forms.",
+        "Name who gets the data and what happens next.",
+        "Judge forms on valid and approved leads, not submits."
+      ],
+      "action": "Build (or draft in a document) one finance instant form using the five-step walkthrough: higher-intent type, honest intro, two qualifying questions, separate consent tick and a clear thank-you screen.",
+      "glossary": [
+        {
+          "term": "Instant form",
+          "def": "A lead form that opens inside the ad platform and pre-fills details from the user's profile."
+        },
+        {
+          "term": "Higher-intent form",
+          "def": "A form type that adds a review step before submitting. Names vary by platform."
+        },
+        {
+          "term": "Custom disclaimer",
+          "def": "Extra text in a lead form, often with a required checkbox, for disclosures and consent."
+        },
+        {
+          "term": "Webhook",
+          "def": "An automatic message from one system to another when something happens, such as a new lead."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Volume form: 300 leads, 50% valid. Higher intent: 200 leads, 85% valid. $4 per valid lead. Which earns more?",
+          "options": [
+            "Volume: $600",
+            "Neither",
+            "Equal",
+            "Higher intent: $680"
+          ],
+          "answer": 3,
+          "why": "300 x 0.5 x $4 = $600. 200 x 0.85 x $4 = $680."
+        },
+        {
+          "q": "Which question should never be in a finance lead form?",
+          "options": [
+            "Loan purpose",
+            "Bank login details",
+            "Income range",
+            "Employment type"
+          ],
+          "answer": 1,
+          "why": "Bank logins are unsafe to collect and not your role."
+        },
+        {
+          "q": "Valid rate is 62% after 120 leads. What does the starting rule say?",
+          "options": [
+            "Add or tighten a qualifying question",
+            "Scale",
+            "Remove all questions",
+            "Switch to volume type"
+          ],
+          "answer": 0,
+          "why": "Under 70% after 100 leads means tighten the form."
+        },
+        {
+          "q": "What should the thank-you screen say?",
+          "options": [
+            "Nothing",
+            "Congratulations, you are approved",
+            "Who will contact them, when and from which number",
+            "Share with friends"
+          ],
+          "answer": 2,
+          "why": "Clear next steps raise contact rates and avoid false promises."
+        },
+        {
+          "q": "Why sync leads in real time?",
+          "options": [
+            "Leads go cold within hours; fast contact raises contact and approval",
+            "Platforms require it",
+            "It lowers CPM",
+            "It removes consent duties"
+          ],
+          "answer": 0,
+          "why": "Speed to contact is one of the biggest levers on lead value."
+        }
+      ],
+      "say_intro": "In this lesson you'll build a Meta instant lead form for a finance offer, step by step. You'll choose the right form type with numbers, write qualifying questions, a disclaimer and consent controls, and learn rules to fix a form that sends weak leads.",
+      "say_outro": "So, add friction in the right places: higher intent, a few useful questions, clear consent, and leads synced in real time. Your task: build, or draft in a document, one finance instant form using the five step walkthrough, with the higher-intent type, an honest intro, two qualifying questions, a separate consent tick and a clear thank-you screen. Now take the quiz."
+    },
+    {
+      "slug": "comparison-pages",
+      "title": "Honest comparison pages",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can lay out a comparison page that helps people choose.",
+        "You can disclose how you are paid and how products are ranked.",
+        "You can keep rates and fees accurate with dates and checks.",
+        "You can measure a page by earnings per visitor."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why comparison pages work, and when they mislead",
+          "p": "People shopping for a card, a policy or an account want to see options side by side. A good comparison page saves them time and sends better-informed applicants. A page that ranks by payout while pretending to rank by value misleads people and is treated as a misleading promotion in many places.",
+          "d": {
+            "b": "Compare honestly or do not compare",
+            "s": "Say how you rank and how you are paid."
+          },
+          "say": "People shopping for a card, a policy or an account want to see options side by side. A good comparison page saves them time, and sends better-informed applicants. But a page that ranks by payout while pretending to rank by value misleads people, and in many places it's treated as a misleading promotion. So compare honestly, or don't compare. Say how you rank, and how you're paid."
+        },
+        {
+          "v": "phone",
+          "h": "A comparison page on mobile",
+          "p": "Key costs on each card, the ranking method and the payment disclosure near the top, before any product. Mock-up with illustrative products and figures, not real offers.",
+          "d": {
+            "app": "browser",
+            "url": "yourdomain.example/za/credit-cards",
+            "page": {
+              "h": "Credit cards compared, October 2026",
+              "p": "Sorted by lowest annual fee. We are paid by some providers when you are approved; this does not change the order. Card A: fee R0, rate per issuer. Card B: fee R420. Rates checked 1 Oct.",
+              "cta": "See all cards"
+            }
+          },
+          "say": "Here's a comparison page on mobile, a mock-up with illustrative products. Look at the top. The title says credit cards compared, October twenty twenty six. Then: sorted by lowest annual fee. We're paid by some providers when you're approved, and this doesn't change the order. Then the cards, with their fees, and the date rates were checked. The key costs, the ranking method and the payment disclosure all sit near the top, before any product."
+        },
+        {
+          "v": "table",
+          "h": "What each product row should show",
+          "p": "Rough guide; the provider and your regulator may require more. Use the provider's own figures, in writing, and show the same fields for every product so the comparison is fair.",
+          "d": {
+            "cols": [
+              "Field",
+              "Example",
+              "Source"
+            ],
+            "rows": [
+              [
+                "Provider and licence",
+                "Example Bank, credit provider",
+                "Register"
+              ],
+              [
+                "Main cost",
+                "Annual fee, rate, APR",
+                "Provider, in writing"
+              ],
+              [
+                "Key condition",
+                "Minimum income",
+                "Provider"
+              ],
+              [
+                "Date checked",
+                "1 Oct 2026",
+                "You"
+              ],
+              [
+                "Paid relationship",
+                "We earn a fee",
+                "You"
+              ]
+            ]
+          },
+          "say": "This table shows what each product row should show, as a rough guide. The provider and licence, from the register. The main cost, like annual fee, rate and A P R, the annual percentage rate, from the provider in writing. The key condition, like minimum income. The date you checked it. And your paid relationship, that you earn a fee. The provider and your regulator may require more. Use the provider's own figures, and show the same fields for every product so the comparison is fair."
+        },
+        {
+          "v": "cards",
+          "h": "Ranking methods you can defend",
+          "p": "Pick one method, state it at the top and apply it to every product. If you change it, change the statement. Users and regulators can then judge it.",
+          "d": [
+            "Lowest cost|Fee or rate, for a stated example",
+            "Best for a need|Travel, no fee, building credit",
+            "Alphabetical|Neutral, simple",
+            "Sponsored slot|Labelled clearly as paid"
+          ],
+          "say": "Here are ranking methods you can defend. Lowest cost, by fee or rate, for a stated example. Best for a need, like travel, no fee, or building credit. Alphabetical, neutral and simple. And a sponsored slot, labelled clearly as paid. Pick one method, state it at the top, and apply it to every product. If you change it, change the statement. Then users and regulators can judge it."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: earnings per visitor",
+          "p": "Example. 3,000 visitors, 12% click a product, 25% of those are approved, average payout $45. Earnings per visitor tell you how much you can pay per click.",
+          "more": "Check: 3,000 x 0.12 = 360 clicks out. 360 x 0.25 = 90 approved. 90 x $45 = $4,050. $4,050 / 3,000 = $1.35 per visitor. With a 30% margin you can pay up to about $0.95 per visitor. If a sponsored ranking raises payout but lowers approvals to 18%, revenue becomes 360 x 0.18 x $50 = $3,240, or $1.08 per visitor: honest ranking is often also the better business.",
+          "d": [
+            "3,000 x 12% x 25% x $45",
+            "=",
+            "$4,050",
+            "/ 3,000 =",
+            "$1.35 per visitor"
+          ],
+          "say": "Here's a worked example of earnings per visitor. Three thousand visitors, twelve percent click a product, twenty five percent of those are approved, and the average payout is forty five dollars. That's three hundred sixty clicks out, ninety approved, four thousand fifty dollars, or one thirty five per visitor. With a thirty percent margin, you can pay about ninety five cents per visitor. And if a sponsored ranking raised payout but dropped approvals to eighteen percent, you'd fall to about one oh eight. Honest ranking is often also the better business."
+        },
+        {
+          "v": "table",
+          "h": "Page structure, top to bottom",
+          "p": "A comparison page that works on a phone follows roughly this order. People decide in the first screen, so the statements that make the page honest must be there too, not only in the footer.",
+          "d": {
+            "cols": [
+              "Section",
+              "What goes in it"
+            ],
+            "rows": [
+              [
+                "Title with month",
+                "What is compared, when"
+              ],
+              [
+                "Ranking and pay statement",
+                "How you order, how you earn"
+              ],
+              [
+                "Filter or need picker",
+                "Travel, no fee, low rate"
+              ],
+              [
+                "Product rows",
+                "Same fields, dated figures"
+              ],
+              [
+                "How we compare",
+                "Method, sources, update dates"
+              ],
+              [
+                "Help",
+                "Free money-advice links"
+              ]
+            ]
+          },
+          "say": "Here's a page structure, top to bottom, that works on a phone. A title with the month, saying what's compared and when. The ranking and pay statement. A filter or need picker, like travel, no fee or low rate. The product rows, with the same fields and dated figures. A how we compare section, with method, sources and update dates. And help, with free money-advice links. People decide in the first screen, so the statements that make the page honest must be there too, not only in the footer."
+        },
+        {
+          "v": "big",
+          "h": "A comparison needs real alternatives",
+          "p": "A page with one real product and two filler rows is an advert dressed as a comparison. Either compare genuine options, including ones that do not pay you, or call the page a review of one product.",
+          "d": {
+            "b": "Compare real options, or call it a review",
+            "s": "Filler rows make the page misleading."
+          },
+          "say": "A comparison needs real alternatives. A page with one real product and two filler rows is an advert dressed as a comparison. Either compare genuine options, including ones that don't pay you, or call the page a review of one product. Filler rows make the page misleading."
+        },
+        {
+          "v": "compare",
+          "h": "Misleading versus honest comparison",
+          "p": "The left column is common in finance affiliate sites. Each item can make a page misleading even when every number on it is technically correct.",
+          "d": {
+            "a": {
+              "title": "Misleading",
+              "items": [
+                "'Best cards' ranked by payout, no statement",
+                "Rates with no date",
+                "Only partner products shown as 'all cards'",
+                "'Guaranteed approval' badge"
+              ]
+            },
+            "b": {
+              "title": "Honest",
+              "items": [
+                "Ranking method stated at the top",
+                "Every figure dated and sourced",
+                "'Cards from our partners' if not the full market",
+                "'Approval depends on checks'"
+              ]
+            }
+          },
+          "say": "Compare the two columns. On the left, what's common on finance affiliate sites. Best cards ranked by payout, with no statement. Rates with no date. Only partner products shown as all cards. A guaranteed approval badge. On the right, the honest version. Ranking method stated at the top. Every figure dated and sourced. Cards from our partners, if it's not the full market. And approval depends on checks. Each item on the left can make a page misleading, even when every number is technically correct."
+        },
+        {
+          "v": "product",
+          "h": "Building and updating comparison pages",
+          "p": "Comparison pages need frequent edits to stay accurate. A lander tool you control makes dated updates quick. Any builder works if you can edit it fast.",
+          "d": {
+            "slug": "landvoo",
+            "why": "Build and edit comparison and pre-sell pages yourself, so rates, dates and disclosures stay current."
+          },
+          "say": "Comparison pages need frequent edits to stay accurate. A lander tool you control makes dated updates quick. Landvoo lets you build and edit comparison and pre-sell pages yourself, so rates, dates and disclosures stay current. But any builder works, as long as you can edit it fast."
+        },
+        {
+          "v": "walk",
+          "h": "Your monthly accuracy check",
+          "p": "Accuracy is not a launch task, it is a routine. Do this monthly and whenever a provider tells you about a change. Screens are illustrative mock-ups.",
+          "d": {
+            "steps": [
+              {
+                "title": "Export your product table",
+                "text": "List every product, figure and date currently on the page.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "yourdomain.example/admin/products",
+                  "title": "Products",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Product",
+                        "Fee",
+                        "Checked"
+                      ],
+                      "rows": [
+                        [
+                          "Card A",
+                          "R0",
+                          "1 Sep"
+                        ],
+                        [
+                          "Card B",
+                          "R420",
+                          "1 Sep"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Compare with provider pages",
+                "text": "Open each provider's official page and compare every figure.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "examplebank.example/card-b",
+                  "title": "Card B, provider page",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Annual fee",
+                      "value": "R480"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Update and date",
+                "text": "Fix changes, update the date, and save a screenshot of the source.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "yourdomain.example/admin/products",
+                  "title": "Products",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Product",
+                        "Fee",
+                        "Checked"
+                      ],
+                      "rows": [
+                        [
+                          "Card A",
+                          "R0",
+                          "1 Oct"
+                        ],
+                        [
+                          "Card B",
+                          "R480",
+                          "1 Oct"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Accuracy isn't a launch task. It's a routine. Do this monthly, and whenever a provider tells you about a change. Tap Next to follow each step. First, export your product table, listing every product, figure and date on the page. Second, open each provider's official page and compare every figure. In the example, card B's fee has gone from four hundred twenty rand to four hundred eighty. Third, fix the changes, update the date, and save a screenshot of the source."
+        },
+        {
+          "v": "tip",
+          "h": "Comparison pages are financial promotions",
+          "p": "In many places a page comparing credit or insurance products is treated as a financial promotion or advice, with its own rules on fairness and accuracy.",
+          "d": {
+            "kind": "warn",
+            "text": "State your ranking method and your paid relationships, use only current provider figures, never claim to cover the whole market unless you do, and check with a local adviser whether comparing products is a regulated activity where you operate."
+          },
+          "say": "In many places, a page comparing credit or insurance products is treated as a financial promotion, or even advice, with its own rules on fairness and accuracy. As the warning says, state your ranking method and your paid relationships, use only current provider figures, and never claim to cover the whole market unless you do. And check with a local adviser whether comparing products is a regulated activity where you operate."
+        },
+        {
+          "v": "check",
+          "h": "Starting rules for comparison pages",
+          "p": "Starting rules to adapt. They protect the page's honesty and your earnings per visitor at the same time. Put the monthly check in your calendar.",
+          "d": [
+            "Ranking method and paid relationship stated above the first product",
+            "Every figure dated, checked monthly and after any provider change",
+            "Same fields shown for every product",
+            "Any figure older than 45 days: remove the product until rechecked",
+            "Keep a product only if its approvals per click are at least half the page average"
+          ],
+          "say": "Here are starting rules for comparison pages, to adapt. Ranking method and paid relationship stated above the first product. Every figure dated, checked monthly and after any provider change. The same fields shown for every product. Any figure older than forty five days, remove the product until it's rechecked. And keep a product only if its approvals per click are at least half the page average. These protect the page's honesty and your earnings per visitor at the same time."
+        }
+      ],
+      "takeaways": [
+        "State how you rank and how you are paid.",
+        "Date and recheck every figure; old figures mislead.",
+        "Measure the page by earnings per visitor."
+      ],
+      "action": "Draft the top section of one comparison page: title with month, ranking statement, paid relationship statement and the field list for each product row.",
+      "glossary": [
+        {
+          "term": "Earnings per visitor",
+          "def": "Total revenue from a page divided by the number of visitors."
+        },
+        {
+          "term": "Ranking method",
+          "def": "The stated rule used to order products on a comparison page."
+        },
+        {
+          "term": "Sponsored slot",
+          "def": "A position on a page that a provider pays for, which must be labelled as paid."
+        },
+        {
+          "term": "Financial promotion",
+          "def": "A communication that invites people to take up a financial product. Regulated in many places."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "2,000 visitors, 10% click out, 30% approved, $40 payout. Earnings per visitor?",
+          "options": [
+            "$0.60",
+            "$2.40",
+            "$1.20",
+            "$0.12"
+          ],
+          "answer": 2,
+          "why": "2,000 x 0.1 = 200. x 0.3 = 60. x $40 = $2,400. / 2,000 = $1.20."
+        },
+        {
+          "q": "A product's fee on your page was last checked 60 days ago. What does the starting rule say?",
+          "options": [
+            "Keep it",
+            "Remove it until rechecked",
+            "Double its ranking",
+            "Hide the date"
+          ],
+          "answer": 1,
+          "why": "Figures older than 45 days come off until rechecked."
+        },
+        {
+          "q": "Which statement belongs above the first product?",
+          "options": [
+            "Guaranteed approval",
+            "Nothing",
+            "Only the best cards",
+            "How products are ranked and that you are paid by providers"
+          ],
+          "answer": 3,
+          "why": "Ranking method and paid relationships let people judge the page."
+        },
+        {
+          "q": "You only list partner cards. How should the page describe them?",
+          "options": [
+            "All cards on the market",
+            "The only cards worth having",
+            "Cards from our partners",
+            "Bank-approved list"
+          ],
+          "answer": 2,
+          "why": "Claiming the whole market when you show partners only is misleading."
+        },
+        {
+          "q": "Why might honest ranking also earn more?",
+          "options": [
+            "Better-matched users get approved more, raising earnings per visitor",
+            "It never does",
+            "Platforms pay a bonus",
+            "It raises CPM"
+          ],
+          "answer": 0,
+          "why": "Matching people to products they qualify for raises approvals."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn to build comparison pages that genuinely help people choose. You'll disclose how you're paid and how you rank, keep figures accurate with dates and checks, and measure the page by earnings per visitor.",
+      "say_outro": "So, state how you rank and how you're paid, show the same dated fields for every product, compare real options, and check figures monthly. Your task: draft the top section of one comparison page, with a title with the month, a ranking statement, a paid relationship statement, and the field list for each product row. Now take the quiz."
+    },
+    {
+      "slug": "pre-qualification",
+      "title": "Pre-qualification and eligibility steps",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can design eligibility questions that route people honestly.",
+        "You can explain soft and hard credit checks and what you can say about them.",
+        "You can show with numbers how a filter step changes value per lead.",
+        "You can word eligibility results without promising approval."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why filtering people out can make you more money",
+          "p": "Every applicant the lender rejects costs you a lead and costs them a failed application, which in some places can leave a mark on their credit file. An honest eligibility step sends fewer people, more of whom qualify, and tells the rest early.",
+          "d": {
+            "b": "Fewer, better applicants",
+            "s": "An early 'not for you' saves money for both sides."
+          },
+          "say": "Here's a counterintuitive idea. Every applicant the lender rejects costs you a lead, and costs them a failed application, which in some places can leave a mark on their credit file. An honest eligibility step sends fewer people, more of whom qualify, and tells the rest early. Fewer, better applicants. An early not for you saves money for both sides."
+        },
+        {
+          "v": "cards",
+          "h": "Soft and hard checks",
+          "p": "These terms come from credit bureaus. How they work differs a lot by country; in some markets soft checks are not widely available. Ask the lender exactly what check their eligibility tool uses.",
+          "more": "In the UK, for example, eligibility checkers commonly use soft searches that do not affect credit scores, at the time of writing. In many African markets credit bureaus exist, but we are not certain how widely soft-search eligibility tools are offered. Never write 'won't affect your credit score' unless the lender confirms it in writing for that product and geo.",
+          "d": [
+            "Soft check|A look at credit data that other lenders usually do not see; used for eligibility tools where available",
+            "Hard check|A full credit search for an application; may be visible to other lenders",
+            "Self-declared answers|No credit data; the user's own answers",
+            "What you may say|Only what the lender confirms in writing"
+          ],
+          "say": "These terms come from credit bureaus. A soft check is a look at credit data that other lenders usually don't see, used for eligibility tools where available. A hard check is a full credit search for an application, and may be visible to other lenders. Self-declared answers use no credit data at all, just the user's own answers. How these work differs a lot by country, and in some markets soft checks aren't widely available. So what may you say? Only what the lender confirms in writing. Never write won't affect your credit score unless they confirm it for that product and geo."
+        },
+        {
+          "v": "funnel",
+          "h": "Worked example: adding an eligibility step",
+          "p": "Example. A loan funnel with a three-question eligibility step before the lead form. Fewer leads, but approval rises from 12% to 28% per lead, so approvals go up overall.",
+          "more": "Before the step: 2,000 clicks gave 300 leads at 12% approved = 36 approvals. After: 210 leads at 28% = about 59 approvals. At $30 per approval revenue goes from $1,080 to about $1,770 for the same clicks. And 340 people who were not eligible were told early instead of applying and being declined. Illustrative figures.",
+          "d": [
+            [
+              "Clicks",
+              2000
+            ],
+            [
+              "Started quiz",
+              760
+            ],
+            [
+              "Eligible",
+              420
+            ],
+            [
+              "Leads",
+              210
+            ],
+            [
+              "Approved",
+              59
+            ]
+          ],
+          "say": "Watch this funnel. It's an example of a loan funnel with a three question eligibility step before the lead form. Two thousand clicks, seven hundred sixty started the quiz, four hundred twenty eligible, two hundred ten leads, and fifty nine approved. Fewer leads, but approval per lead rises from twelve to twenty eight percent, so approvals go up overall, from thirty six to about fifty nine. At thirty dollars each, that's about one thousand seven hundred seventy instead of one thousand eighty. And people who weren't eligible were told early. Illustrative figures."
+        },
+        {
+          "v": "phone",
+          "h": "An eligibility chat flow",
+          "p": "A short bot or quiz asks the lender's main criteria, then routes. Results are worded as a next step, never as an approval. Mock-up, illustrative.",
+          "d": {
+            "app": "bot",
+            "title": "Loan options",
+            "subtitle": "bot",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Three quick questions to see which lenders may suit you.",
+                "buttons": [
+                  "Start"
+                ]
+              },
+              {
+                "from": "them",
+                "text": "Are you 18 or older and living in Kenya?",
+                "buttons": [
+                  "Yes",
+                  "No"
+                ]
+              },
+              {
+                "from": "them",
+                "text": "Do you have a regular monthly income?",
+                "buttons": [
+                  "Yes",
+                  "No"
+                ]
+              },
+              {
+                "from": "them",
+                "text": "You may be eligible to apply with Example Credit Ltd. They make the final decision after their checks.",
+                "buttons": [
+                  "See costs and apply"
+                ]
+              }
+            ]
+          },
+          "say": "Here's an eligibility chat flow, a mock-up. In this chat, notice the bot offers three quick questions to see which lenders may suit you. Are you eighteen or older and living in Kenya? Do you have a regular monthly income? Then the result: you may be eligible to apply with Example Credit Ltd, and they make the final decision after their checks. With a button to see costs and apply. The result is worded as a next step, never as an approval."
+        },
+        {
+          "v": "table",
+          "h": "Wording results honestly",
+          "p": "The words you use for the result change what people expect. Promising approval creates complaints and breaks platform policies. Use the right column every time.",
+          "d": {
+            "cols": [
+              "Avoid",
+              "Use instead"
+            ],
+            "rows": [
+              [
+                "You are pre-approved",
+                "You may be eligible to apply"
+              ],
+              [
+                "Guaranteed loan",
+                "The lender decides after checks"
+              ],
+              [
+                "No credit check",
+                "Check type: as the lender confirms"
+              ],
+              [
+                "Sorry, you failed",
+                "This lender may not suit you; here is why"
+              ]
+            ]
+          },
+          "say": "The words you use for the result change what people expect. Avoid you're pre-approved; say you may be eligible to apply. Avoid guaranteed loan; say the lender decides after checks. Avoid no credit check; give the check type as the lender confirms. And avoid sorry, you failed; say this lender may not suit you, and here's why. Promising approval creates complaints and breaks platform policies. Use the right column every time."
+        },
+        {
+          "v": "map",
+          "h": "Routing after the eligibility step",
+          "p": "Each answer leads somewhere useful. People who meet a lender's criteria see that lender's costs first. People who do not are told honestly and pointed to help, not to the costliest option.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Ad",
+                "kind": "ad"
+              },
+              {
+                "id": "q",
+                "label": "Eligibility questions",
+                "kind": "bot"
+              },
+              {
+                "id": "a",
+                "label": "Lender A: meets criteria",
+                "kind": "offer"
+              },
+              {
+                "id": "b",
+                "label": "Lender B: other criteria",
+                "kind": "offer"
+              },
+              {
+                "id": "no",
+                "label": "Not eligible: honest reason",
+                "kind": "page"
+              },
+              {
+                "id": "help",
+                "label": "Free advice links",
+                "kind": "person"
+              },
+              {
+                "id": "pb",
+                "label": "Stage postbacks",
+                "kind": "data"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "q",
+                "click"
+              ],
+              [
+                "q",
+                "a",
+                "fits A"
+              ],
+              [
+                "q",
+                "b",
+                "fits B"
+              ],
+              [
+                "q",
+                "no",
+                "fits none"
+              ],
+              [
+                "no",
+                "help",
+                "support"
+              ],
+              [
+                "a",
+                "pb",
+                "status"
+              ],
+              [
+                "b",
+                "pb",
+                "status"
+              ]
+            ]
+          },
+          "say": "Follow this map. After the eligibility questions, each answer leads somewhere useful. People who fit lender A see lender A. People who fit lender B's criteria see lender B. Both send status back as stage postbacks. And people who fit none get an honest reason, and are pointed to free advice links. People who don't qualify are told honestly and pointed to help, not to the costliest option."
+        },
+        {
+          "v": "table",
+          "h": "Example eligibility questions by product",
+          "p": "Take questions from the lender's written criteria. Keep answers as ranges or choices, so the step is quick and you collect less sensitive data. Examples only, not a list to copy.",
+          "d": {
+            "cols": [
+              "Product",
+              "Question",
+              "Why"
+            ],
+            "rows": [
+              [
+                "Loan",
+                "Regular monthly income?",
+                "Core criterion"
+              ],
+              [
+                "Loan",
+                "Age 18+ and resident?",
+                "Legal minimum"
+              ],
+              [
+                "Credit card",
+                "Income range",
+                "Card tiers differ"
+              ],
+              [
+                "Insurance",
+                "Vehicle year range",
+                "Insurer limits"
+              ],
+              [
+                "Bank account",
+                "Have a national ID?",
+                "Account opening rules"
+              ]
+            ]
+          },
+          "say": "Here are example eligibility questions by product. Examples only, not a list to copy. For a loan: regular monthly income, a core criterion, and age eighteen plus and resident, the legal minimum. For a credit card: income range, because card tiers differ. For insurance: vehicle year range, for insurer limits. For a bank account: do you have a national I D, for account opening rules. Take questions from the lender's written criteria, and keep answers as ranges or choices, so it's quick and collects less sensitive data."
+        },
+        {
+          "v": "compare",
+          "h": "Common pre-qualification mistakes",
+          "p": "These make the step either useless or misleading. A good eligibility step is short, uses the lender's real criteria and tells people the truth about what happens next.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Questions that never filter anyone",
+                "Everyone gets 'you qualify'",
+                "Asking for ID numbers early",
+                "Dead end for people who do not qualify"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Use the lender's actual criteria",
+                "Route honestly, including 'not for you'",
+                "Leave identity checks to the lender",
+                "Offer free money-advice resources"
+              ]
+            }
+          },
+          "say": "These mistakes make the step either useless or misleading. Questions that never filter anyone. Everyone gets you qualify. Asking for I D numbers early. A dead end for people who don't qualify. And the fixes: use the lender's actual criteria. Route honestly, including not for you. Leave identity checks to the lender. And offer free money-advice resources. A good eligibility step is short, uses real criteria, and tells people the truth about what happens next."
+        },
+        {
+          "v": "tip",
+          "h": "Do not steer people who cannot repay into debt",
+          "p": "Eligibility steps can be misused to find people under pressure and push them to the costliest lender. That is the opposite of their purpose, and it is the kind of design regulators look for.",
+          "d": {
+            "kind": "warn",
+            "text": "Never route people who fail mainstream criteria to high-cost lenders by default. Never say 'pre-approved' or 'no credit check' unless the lender confirms it in writing. Collect only the answers you use."
+          },
+          "say": "A serious warning. Eligibility steps can be misused to find people under pressure and push them to the costliest lender. That's the opposite of their purpose, and it's the kind of design regulators look for. As the warning says, never route people who fail mainstream criteria to high-cost lenders by default. Never say pre-approved or no credit check unless the lender confirms it in writing. And collect only the answers you use."
+        },
+        {
+          "v": "eq",
+          "h": "Max cost per click with the step",
+          "p": "Use the approvals per click to set your bid ceiling. Example from the funnel: 59 approvals from 2,000 clicks at $30 each, keeping a 30% margin.",
+          "more": "Check: 59 x 30 = 1,770. 1,770 / 2,000 = $0.885 per click. x 0.7 = $0.62. Without the step it was 36 x 30 / 2,000 = $0.54 per click, about $0.38 at the same margin. The step lets you afford better traffic.",
+          "d": [
+            "59 x $30 / 2,000",
+            "=",
+            "$0.885 per click",
+            "x 0.7 =",
+            "about $0.62 max CPC"
+          ],
+          "say": "Use approvals per click to set your bid ceiling. Here's the example from the funnel. Fifty nine approvals from two thousand clicks, at thirty dollars each, is about eighty eight and a half cents per click. Keeping a thirty percent margin, your max C P C, cost per click, is about sixty two cents. Without the step, it was about thirty eight cents at the same margin. So the step lets you afford better traffic."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: max cost per lead after the step",
+          "p": "Practise. The lab says FTD and deposit; read them as approval. Payout $30 per approval, 28% of leads approved after the eligibility step, keeping a 30% margin.",
+          "more": "Working: $30 x 28% = $8.40 break-even per lead. x 0.7 = $5.88.",
+          "d": {
+            "kind": "breakeven",
+            "task": "Payout $30, 28% of leads approved, margin 30%. What is your max cost per lead?",
+            "preset": {
+              "payout": 30,
+              "cr_pct": 28,
+              "margin_pct": 30
+            },
+            "answer": {
+              "field": "max_cpl",
+              "value": 5.88,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Now practise. The payout is thirty dollars per approval, twenty eight percent of leads are approved after the eligibility step, and you want to keep a thirty percent margin. What's your max cost per lead? The lab says F T D, first-time deposit, and deposit, but read them as approval. Pause and try it, then check your answer."
+        },
+        {
+          "v": "check",
+          "h": "Starting rules for eligibility steps",
+          "p": "Starting rules to adapt with the lender. Review them after each matured cohort, because the lender's criteria and your audience both change over time. Write each change down.",
+          "d": [
+            "Use 2 to 4 questions taken from the lender's written criteria",
+            "Approval per lead under 1.5 x the no-step version after 200 leads: rework questions",
+            "Every 'not eligible' result gets an honest reason and a help link",
+            "Results never say approved, guaranteed or no credit check without written confirmation",
+            "Remove any question whose answer you do not use"
+          ],
+          "say": "Here are starting rules for eligibility steps, to adapt with the lender. Use two to four questions taken from the lender's written criteria. If approval per lead is under one point five times the no-step version after two hundred leads, rework the questions. Every not eligible result gets an honest reason and a help link. Results never say approved, guaranteed or no credit check without written confirmation. And remove any question whose answer you don't use. Review these after each matured cohort, and write each change down."
+        }
+      ],
+      "takeaways": [
+        "An honest eligibility step trades lead volume for approvals.",
+        "Only say what the lender confirms about checks and results.",
+        "Tell people who do not qualify early and kindly."
+      ],
+      "action": "Ask one lender or network for the written basic criteria of an offer, then write a 3-question eligibility flow with honest result wording for both outcomes.",
+      "glossary": [
+        {
+          "term": "Soft check",
+          "def": "A credit data look-up that other lenders usually cannot see. Availability differs by country."
+        },
+        {
+          "term": "Hard check",
+          "def": "A full credit search for an application, which may be visible to other lenders."
+        },
+        {
+          "term": "Eligibility step",
+          "def": "Questions before the application that check basic criteria and route the person."
+        },
+        {
+          "term": "Pre-approved",
+          "def": "A strong claim that a lender has already agreed to lend. Avoid unless the lender confirms it in writing."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Before a filter step: 300 leads at 10% approved. After: 180 leads at 25% approved. Payout $30. Revenue change?",
+          "options": [
+            "$1,350 to $900",
+            "$900 to $540",
+            "No change",
+            "$900 to $1,350"
+          ],
+          "answer": 3,
+          "why": "300 x 0.1 x $30 = $900. 180 x 0.25 x $30 = $1,350."
+        },
+        {
+          "q": "Which result wording is honest?",
+          "options": [
+            "You are pre-approved",
+            "You may be eligible to apply; the lender decides after checks",
+            "Guaranteed loan",
+            "No credit check ever"
+          ],
+          "answer": 1,
+          "why": "It describes a next step without promising approval."
+        },
+        {
+          "q": "Can you write 'won't affect your credit score'?",
+          "options": [
+            "Always",
+            "Only if the lender confirms it in writing for that product and geo",
+            "Never needed",
+            "Only on Meta"
+          ],
+          "answer": 1,
+          "why": "Check types differ by lender and country."
+        },
+        {
+          "q": "Payout $40, 20% approved per lead, 30% margin. Max CPL?",
+          "options": [
+            "$4.00",
+            "$8.00",
+            "$2.40",
+            "$5.60"
+          ],
+          "answer": 3,
+          "why": "$40 x 0.2 = $8.00. x 0.7 = $5.60."
+        },
+        {
+          "q": "What should happen to someone who does not meet the criteria?",
+          "options": [
+            "Tell them honestly and offer a help link",
+            "Send them to the costliest lender",
+            "Tell them to change answers",
+            "Nothing"
+          ],
+          "answer": 0,
+          "why": "Early, honest routing protects them and your reputation."
+        }
+      ],
+      "say_intro": "In this lesson you'll learn to add an honest eligibility step before the lead. You'll design questions that route people fairly, understand soft and hard credit checks, see how a filter step changes value per lead, and word results without promising approval.",
+      "say_outro": "So, fewer but better applicants, honest results for everyone, and only the claims the lender confirms in writing. Your task: ask one lender or network for the written basic criteria of an offer, then write a three question eligibility flow with honest result wording for both outcomes. Now take the quiz."
+    },
+    {
+      "slug": "consent-capture-build",
+      "title": "Building consent capture that holds up",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can build consent controls that match what you do with the data.",
+        "You can add phone verification and measure its effect on lead value.",
+        "You can store and pass consent records with every lead.",
+        "You can version consent text and partner lists."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why consent must be built, not written",
+          "p": "The previous module covered what valid consent means. This lesson is about making it real in your forms and systems. Consent you cannot prove, or that does not match where the data went, protects nobody and often makes the lead unsellable.",
+          "d": {
+            "b": "Consent you cannot prove does not exist",
+            "s": "Build it into the form, the record and the handoff."
+          },
+          "say": "The previous module covered what valid consent means. This lesson is about making it real in your forms and systems. Consent you can't prove, or that doesn't match where the data went, protects nobody, and it often makes the lead unsellable. Consent you can't prove doesn't exist. So build it into the form, the record and the handoff."
+        },
+        {
+          "v": "flow",
+          "h": "The consent pipeline",
+          "p": "Consent has to survive every step from the screen to the buyer. A break anywhere means the lead cannot be shown to be lawful, even if the form itself was perfect.",
+          "d": [
+            "Clear controls on the form",
+            "Phone or email verified",
+            "Record saved with text version",
+            "Passed to buyer with the lead",
+            "Withdrawal handled everywhere"
+          ],
+          "say": "Here's the consent pipeline. Follow the flow. Clear controls on the form. The phone or email verified. A record saved with the text version. The consent passed to the buyer with the lead. And withdrawal handled everywhere. Consent has to survive every step from the screen to the buyer. A break anywhere means the lead can't be shown to be lawful, even if the form itself was perfect."
+        },
+        {
+          "v": "screen",
+          "h": "Consent controls on your own form",
+          "p": "Each purpose has its own unticked control. The partner list is linked next to the sharing tick, and its version is saved with the lead. Screen is an illustrative mock-up.",
+          "d": {
+            "kind": "browser",
+            "url": "yourdomain.example/gh-loans",
+            "title": "Find a loan that suits you",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Mobile number",
+                "value": "024 000 0000"
+              },
+              {
+                "type": "toggle",
+                "label": "I agree that my details are shared with the lenders on this list (Oct 2026) so they can contact me about my request",
+                "on": false
+              },
+              {
+                "type": "toggle",
+                "label": "Optional: send me money tips by SMS",
+                "on": false
+              },
+              {
+                "type": "text",
+                "value": "Privacy policy. You can withdraw consent at any time by replying STOP or writing to privacy@yourdomain.example."
+              },
+              {
+                "type": "button",
+                "label": "Continue"
+              }
+            ],
+            "highlight": 1
+          },
+          "say": "Look at the consent controls on this form, an illustrative mock-up. There's the mobile number field. Then a sharing toggle: I agree my details are shared with the lenders on this list, dated October twenty twenty six, so they can contact me about my request. It's off by default. Then a separate, optional toggle for money tips by S M S, also off. And a note on how to withdraw consent at any time. Each purpose has its own unticked control, and the partner list version is saved with the lead."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: phone verification",
+          "p": "Example. Adding an SMS code step cuts leads by 25% but raises the valid rate from 64% to 92%. On a $4 CPL offer, revenue per click goes up, and returns fall.",
+          "more": "Check: 400 x 0.64 = 256 x $4 = $1,024. 300 x 0.92 = 276 x $4 = $1,104. Same clicks, $80 more revenue, and fewer invalid numbers reaching lenders. Verification also proves the person controls the number they gave, which strengthens your consent record. Illustrative figures.",
+          "d": [
+            "Before: 400 x 64% x $4 = $1,024",
+            "->",
+            "After: 300 x 92% x $4",
+            "=",
+            "$1,104"
+          ],
+          "say": "Here's a worked example of phone verification. Adding an S M S code step cuts leads by twenty five percent, but raises the valid rate from sixty four to ninety two percent. Before: four hundred leads, sixty four percent valid, at four dollars, is one thousand twenty four. After: three hundred leads, ninety two percent valid, is one thousand one hundred four. Same clicks, eighty dollars more, and fewer invalid numbers reaching lenders. Verification also proves the person controls the number, which strengthens your consent record. Illustrative figures."
+        },
+        {
+          "v": "code",
+          "h": "Pass consent with the lead",
+          "p": "When you send a lead to a network or lender, send the consent details with it. Many networks have fields for this; ask for their specification.",
+          "d": {
+            "lang": "json",
+            "text": "{\n  \"lead_id\": \"ld_10233\",\n  \"phone\": \"+233240000000\",\n  \"phone_verified\": true,\n  \"consent\": {\n    \"share_with_lenders\": true,\n    \"partner_list_version\": \"gh-partners-2026-10\",\n    \"text_version\": \"share-v4\",\n    \"time_utc\": \"2026-10-04T11:20:05Z\",\n    \"page\": \"yourdomain.example/gh-loans\"\n  },\n  \"marketing_sms\": false\n}",
+            "note": "Illustrative. Use the field names in your network's specification."
+          },
+          "say": "When you send a lead to a network or lender, send the consent details with it. On screen is an illustrative example of the data. I won't read the code. It carries the lead, the phone and whether it's verified, whether they agreed to share with lenders, the partner list version, the consent text version, the time, the page, and their marketing choice. Many networks have fields for this, so ask for their specification and use their field names."
+        },
+        {
+          "v": "walk",
+          "h": "Changing consent text safely",
+          "p": "When you edit consent wording or the partner list, old leads keep the old version. Handle it in this order, and never skip the test. Screens are illustrative mock-ups.",
+          "d": {
+            "steps": [
+              {
+                "title": "Write the new version",
+                "text": "Save it with a new version name and date. Never edit the old one in place.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "yourdomain.example/admin/consent",
+                  "title": "Consent texts",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Version",
+                        "Live from",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "share-v3",
+                          "2026-08-01",
+                          "Retired"
+                        ],
+                        [
+                          "share-v4",
+                          "2026-10-04",
+                          "Live"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Update the partner list",
+                "text": "Publish the new list as a new version and keep the old one available.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "yourdomain.example/partners",
+                  "title": "Partner list",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Version",
+                      "value": "gh-partners-2026-10"
+                    },
+                    {
+                      "type": "text",
+                      "value": "Previous versions available on request."
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Check new leads carry it",
+                "text": "Submit a test lead and confirm the record shows the new version.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "crm.example/lead/test",
+                  "title": "Test lead",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "text_version",
+                      "value": "share-v4"
+                    },
+                    {
+                      "type": "field",
+                      "label": "partner_list_version",
+                      "value": "gh-partners-2026-10"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "When you edit consent wording or the partner list, old leads keep the old version. Handle it in this order. Tap Next to follow each step. First, write the new version, save it with a new version name and date, and never edit the old one in place. Second, publish the new partner list as a new version, and keep the old one available. Third, submit a test lead and confirm the record shows the new version. Never skip the test."
+        },
+        {
+          "v": "phone",
+          "h": "Phone verification as the user sees it",
+          "p": "Keep it to one short step: send a code, enter it, continue. Explain why you ask, and offer a resend. Mock-up, illustrative wording and numbers.",
+          "d": {
+            "app": "chat",
+            "title": "Messages",
+            "subtitle": "SMS",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Your code for yourdomain loan options is 482913. It expires in 10 minutes. We will never ask you for this code by phone."
+              },
+              {
+                "from": "me",
+                "text": "482913"
+              },
+              {
+                "from": "them",
+                "text": "Number confirmed. Reply STOP at any time to opt out."
+              }
+            ]
+          },
+          "say": "Here's phone verification as the user sees it. In this S M S chat, the person gets a code that expires in ten minutes, with a note that you'll never ask for the code by phone. They type it in, and get a confirmation, with reply STOP at any time to opt out. Keep it to one short step: send a code, enter it, continue. Explain why you ask, and offer a resend."
+        },
+        {
+          "v": "cards",
+          "h": "Proof a network or regulator may ask for",
+          "p": "When a lead is disputed or a complaint arrives, these are the things you will be asked to show. If you can produce each one within a day, your capture is in good shape.",
+          "d": [
+            "The exact form and text|Screenshot of the version the person saw",
+            "The record|Time, choices, versions, verification",
+            "The partner list|The version live at that time",
+            "The handoff|What you sent, to whom, when"
+          ],
+          "say": "When a lead is disputed or a complaint arrives, these are the things you'll be asked to show. The exact form and text, a screenshot of the version the person saw. The record, with time, choices, versions and verification. The partner list version live at that time. And the handoff, what you sent, to whom, and when. If you can produce each one within a day, your capture is in good shape."
+        },
+        {
+          "v": "compare",
+          "h": "Common consent-capture mistakes",
+          "p": "Each of these leaves you unable to prove consent for some or all leads, which can make months of leads worthless at the moment a partner or regulator asks.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Editing consent text in place",
+                "Partner list that changes without versions",
+                "Consent stored in one tool, leads in another",
+                "Withdrawal only removed from your sheet"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "New version name for every change",
+                "Versioned, dated partner lists",
+                "Consent saved with each lead record",
+                "Tell every partner who received it"
+              ]
+            }
+          },
+          "say": "Each of these mistakes leaves you unable to prove consent. Editing consent text in place. A partner list that changes without versions. Consent stored in one tool and leads in another. Withdrawal only removed from your own sheet. And the fixes: a new version name for every change. Versioned, dated partner lists. Consent saved with each lead record. And telling every partner who received the lead. Otherwise months of leads can become worthless the moment a partner or regulator asks."
+        },
+        {
+          "v": "tip",
+          "h": "Consent must match what actually happens",
+          "p": "The most common breach is not missing consent, it is consent for one thing and use for another. Check the match every time a partner or purpose changes.",
+          "d": {
+            "kind": "warn",
+            "text": "Only send leads to partners on the list the person saw, only for the purpose they agreed to, and stop all use when they withdraw. Never treat a form submit as consent to marketing or to sharing with new partners added later."
+          },
+          "say": "Consent must match what actually happens. The most common breach isn't missing consent. It's consent for one thing and use for another. As the warning says, only send leads to partners on the list the person saw, only for the purpose they agreed to, and stop all use when they withdraw. Never treat a form submit as consent to marketing, or to sharing with new partners added later. Check the match every time a partner or purpose changes."
+        },
+        {
+          "v": "table",
+          "h": "Withdrawal: who must act",
+          "p": "When someone withdraws consent or asks to stop contact, every system that holds their data must act. Rough guide; follow your law's deadlines, and log each action with its date.",
+          "d": {
+            "cols": [
+              "Where",
+              "Action"
+            ],
+            "rows": [
+              [
+                "Your form tool and CRM",
+                "Mark withdrawn, stop use"
+              ],
+              [
+                "SMS or chat tools",
+                "Add to suppression list"
+              ],
+              [
+                "Networks and lenders sent the lead",
+                "Notify in writing"
+              ],
+              [
+                "Ad platform audiences",
+                "Remove from uploaded lists"
+              ]
+            ]
+          },
+          "say": "When someone withdraws consent or asks to stop contact, every system that holds their data must act. Your form tool and C R M: mark withdrawn and stop use. S M S or chat tools: add to the suppression list. Networks and lenders you sent the lead to: notify them in writing. Ad platform audiences: remove them from uploaded lists. This is a rough guide, so follow your law's deadlines, and log each action with its date."
+        },
+        {
+          "v": "check",
+          "h": "Starting rules for consent capture",
+          "p": "Starting rules to adapt with your adviser. Test them with a dummy lead whenever you change a form, a tool or a partner, and keep the test record.",
+          "d": [
+            "Separate unticked controls for sharing and for marketing",
+            "Phone verification on every finance form that sends phone leads",
+            "Text version and partner list version saved with every lead",
+            "Consent passed to the buyer with each lead",
+            "Withdrawals reach every system and partner within your legal deadline",
+            "Test lead submitted after every form or partner change"
+          ],
+          "say": "Here are starting rules for consent capture, to adapt with your adviser. Separate unticked controls for sharing and for marketing. Phone verification on every finance form that sends phone leads. Text version and partner list version saved with every lead. Consent passed to the buyer with each lead. Withdrawals reaching every system and partner within your legal deadline. And a test lead after every form or partner change. Keep the test record."
+        }
+      ],
+      "takeaways": [
+        "Consent must be built into the form, the record and the handoff.",
+        "Verification costs volume but usually raises lead value.",
+        "Version every change to consent text and partner lists."
+      ],
+      "action": "Submit a test lead through one of your forms and check that its record shows the consent choices, the text version, the partner list version and the time. Fix any missing field.",
+      "glossary": [
+        {
+          "term": "Phone verification",
+          "def": "Checking a number is real and controlled by the user, usually with a one-time SMS code."
+        },
+        {
+          "term": "Partner list",
+          "def": "The published list of companies that may receive a lead's data, shown at the point of consent."
+        },
+        {
+          "term": "Suppression list",
+          "def": "A list of people who must not be contacted, used to stop messages after withdrawal."
+        },
+        {
+          "term": "Consent version",
+          "def": "A named, dated copy of the exact consent wording shown to users."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Before verification: 500 leads, 60% valid. After: 380 leads, 90% valid. $4 per valid lead. Which earns more?",
+          "options": [
+            "Before: $1,200",
+            "Equal",
+            "After: $1,368",
+            "Neither"
+          ],
+          "answer": 2,
+          "why": "500 x 0.6 x $4 = $1,200. 380 x 0.9 x $4 = $1,368."
+        },
+        {
+          "q": "You add a new lender to your partner list. What about leads collected last month?",
+          "options": [
+            "Send them to the new lender",
+            "Send if they are valid",
+            "Send half",
+            "Do not send; they consented to the old list"
+          ],
+          "answer": 3,
+          "why": "Consent covers the list the person saw at the time."
+        },
+        {
+          "q": "What should you do when changing consent wording?",
+          "options": [
+            "Edit the old text in place",
+            "Create a new named version and keep the old one",
+            "Delete old records",
+            "Nothing"
+          ],
+          "answer": 1,
+          "why": "Versioning shows exactly what each person agreed to."
+        },
+        {
+          "q": "A user replies STOP. Who must act?",
+          "options": [
+            "Every system holding their data and every partner you sent it to",
+            "Only your SMS tool",
+            "Nobody",
+            "Only the ad platform"
+          ],
+          "answer": 0,
+          "why": "Withdrawal must reach every system and partner."
+        },
+        {
+          "q": "Which is a valid reason to add phone verification?",
+          "options": [
+            "It raises lead count",
+            "It removes consent duties",
+            "It confirms the number is real and controlled by the user",
+            "Platforms pay for it"
+          ],
+          "answer": 2,
+          "why": "It improves validity and strengthens your consent record."
+        }
+      ],
+      "say_intro": "In this lesson you'll turn consent from words into working systems. You'll build consent controls that match what you do with the data, add phone verification, store and pass consent with every lead, and version your text and partner lists.",
+      "say_outro": "So, consent you can't prove doesn't exist: build it into the form, the record, the handoff and withdrawal. Your task: submit a test lead through one of your forms and check its record shows the consent choices, the text version, the partner list version and the time, then fix any missing field. Now take the quiz."
+    },
+    {
+      "slug": "speed-to-lead-and-stages",
+      "title": "After the submit: speed, follow-up and stage tracking",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can design the first minutes after a finance lead submits.",
+        "You can follow up only within the consent given.",
+        "You can send stage events back to the ad platform and know their limits.",
+        "You can apply exact rules on contact speed and stage-based optimisation."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the first minutes decide the lead's value",
+          "p": "A person who just asked about a loan or a card is most ready right now. Each hour without contact lowers the chance they answer, finish the application or remember asking. Fast, honest follow-up is often the cheapest way to raise approvals.",
+          "d": {
+            "b": "Speed is part of lead quality",
+            "s": "Contact within minutes, within consent."
+          },
+          "say": "A person who just asked about a loan or a card is most ready right now. Each hour without contact lowers the chance they answer, finish the application, or even remember asking. Fast, honest follow-up is often the cheapest way to raise approvals. Speed is part of lead quality. Contact within minutes, and within consent."
+        },
+        {
+          "v": "curve",
+          "h": "Example: contact rate falls with delay",
+          "p": "Example, illustrative numbers from one campaign. Share of leads reached by the first call, by how long after submitting the call was made. Your numbers will differ; measure them.",
+          "d": {
+            "a": [
+              62,
+              55,
+              46,
+              38,
+              30,
+              24,
+              20
+            ],
+            "la": "Reached on first call (%)",
+            "b": [
+              24,
+              22,
+              19,
+              16,
+              13,
+              10,
+              9
+            ],
+            "lb": "Approved per lead (%)",
+            "x": [
+              "5 min",
+              "30 min",
+              "1 h",
+              "3 h",
+              "6 h",
+              "24 h",
+              "48 h"
+            ]
+          },
+          "say": "Watch these two lines. It's an example with illustrative numbers from one campaign. The top line is the share of leads reached on the first call. Called within five minutes, sixty two percent are reached. By three hours, thirty eight. By forty eight hours, only twenty. The lower line, approved per lead, falls too, from twenty four percent down to nine. Your numbers will differ, so measure them."
+        },
+        {
+          "v": "map",
+          "h": "What happens after the submit",
+          "p": "Each step should be automatic and logged, so no lead waits for someone to open a spreadsheet. The status of each step goes back to your tracker.",
+          "d": {
+            "nodes": [
+              {
+                "id": "form",
+                "label": "Form submit",
+                "kind": "page"
+              },
+              {
+                "id": "ty",
+                "label": "Thank-you page",
+                "kind": "page"
+              },
+              {
+                "id": "crm",
+                "label": "Your CRM",
+                "kind": "tool"
+              },
+              {
+                "id": "msg",
+                "label": "Instant SMS or chat",
+                "kind": "bot"
+              },
+              {
+                "id": "net",
+                "label": "Network or lender",
+                "kind": "offer"
+              },
+              {
+                "id": "trk",
+                "label": "Tracker",
+                "kind": "data"
+              },
+              {
+                "id": "ads",
+                "label": "Ad platform events",
+                "kind": "ad"
+              }
+            ],
+            "edges": [
+              [
+                "form",
+                "ty",
+                "next steps"
+              ],
+              [
+                "form",
+                "crm",
+                "lead"
+              ],
+              [
+                "crm",
+                "msg",
+                "if consented"
+              ],
+              [
+                "crm",
+                "net",
+                "lead + consent"
+              ],
+              [
+                "net",
+                "trk",
+                "stage postbacks"
+              ],
+              [
+                "trk",
+                "ads",
+                "qualified events"
+              ]
+            ]
+          },
+          "say": "Follow this map of what happens after the submit. The form sends the person to a thank-you page with next steps, and sends the lead to your C R M, your customer relationship management system. If they consented, the C R M triggers an instant S M S or chat, and sends the lead with consent to the network or lender. The network sends stage postbacks to your tracker, and the tracker passes qualified events to the ad platform. Each step should be automatic and logged, so no lead waits for someone to open a spreadsheet."
+        },
+        {
+          "v": "phone",
+          "h": "A first message within consent",
+          "p": "Send only what the person agreed to: a confirmation and next step about their request. No unrelated offers unless they ticked marketing. Chat is illustrative.",
+          "d": {
+            "app": "chat",
+            "title": "Loan options",
+            "subtitle": "business account",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Hi Ada, thanks for your request. Example Credit Ltd may call you today from a number starting 020."
+              },
+              {
+                "from": "them",
+                "text": "Before you apply you will see the full cost. Approval depends on their checks."
+              },
+              {
+                "from": "me",
+                "text": "What documents do I need?"
+              },
+              {
+                "from": "them",
+                "text": "Usually ID and recent bank statements. The lender will confirm. Reply STOP to opt out."
+              }
+            ]
+          },
+          "say": "Here's a first message within consent, in an illustrative chat. It thanks Ada for her request and says Example Credit Ltd may call today, from a number starting zero two zero. It adds that before she applies she'll see the full cost, and approval depends on their checks. She asks what documents she needs. The reply: usually I D and recent bank statements, the lender will confirm, and reply STOP to opt out. Send only what the person agreed to. No unrelated offers unless they ticked marketing."
+        },
+        {
+          "v": "product",
+          "h": "Answering lead questions fast",
+          "p": "Many leads have one or two questions before they apply. An assistant that answers quickly, from approved wording, keeps them moving without promising approval. Any tool works if it uses your approved answers.",
+          "d": {
+            "slug": "replyvoo",
+            "why": "Answer lead questions in chat quickly using approved wording, and hand over to a person when needed."
+          },
+          "say": "Many leads have one or two questions before they apply. An assistant that answers quickly, from approved wording, keeps them moving without promising approval. Replyvoo answers lead questions in chat using approved wording, and hands over to a person when needed. But any tool works, as long as it uses your approved answers."
+        },
+        {
+          "v": "table",
+          "h": "Stage events to send back",
+          "p": "Platforms optimise toward the events you send. Sending only form submits teaches them to find people who submit, not people who get approved. Rough guide; names and options change.",
+          "more": "At the time of writing Meta offers ways to optimise lead campaigns for later-stage outcomes by sending CRM events through its conversions API. We are not certain of the current names, minimum volumes or availability per region, and these features have changed often. Check Meta's Help Center / Ads Manager before relying on them. Never send more personal data than the integration needs, and follow your consent and the special ad category rules.",
+          "d": {
+            "cols": [
+              "Stage",
+              "Source",
+              "Use"
+            ],
+            "rows": [
+              [
+                "Lead submitted",
+                "Form",
+                "Volume signal"
+              ],
+              [
+                "Valid lead",
+                "Network postback",
+                "Quality signal"
+              ],
+              [
+                "Approved",
+                "Network postback",
+                "Main optimisation goal if volume allows"
+              ],
+              [
+                "Funded",
+                "Network postback",
+                "Value reporting"
+              ]
+            ]
+          },
+          "say": "Platforms optimise toward the events you send. Sending only form submits teaches them to find people who submit, not people who get approved. Look at the stages. Lead submitted, from the form, a volume signal. Valid lead, from the network postback, a quality signal. Approved, the main optimisation goal if volume allows. Funded, for value reporting. At the time of writing, Meta offers ways to optimise for later stages through its conversions A P I, but we're not certain of current names, volumes or regional availability. Check Meta's Help Center, and follow your consent and special ad category rules."
+        },
+        {
+          "v": "code",
+          "h": "A stage event from your server",
+          "p": "When the network tells you a lead was approved, your server can send a matching event to the ad platform. Illustrative shape only; follow the platform's current documentation.",
+          "d": {
+            "lang": "json",
+            "text": "{\n  \"event_name\": \"QualifiedLead\",\n  \"event_time\": 1791110400,\n  \"action_source\": \"system_generated\",\n  \"user_data\": {\"lead_id\": \"fb_9921\"},\n  \"custom_data\": {\"stage\": \"approved\", \"value\": 30, \"currency\": \"USD\"}\n}",
+            "note": "Illustrative. Field and event names vary; check the platform's current docs."
+          },
+          "say": "When the network tells you a lead was approved, your server can send a matching event to the ad platform. On screen is an illustrative shape of that event. I won't read the code. It names the event, the time, that it was system generated, the lead reference, and the stage, approved, with its value. Field and event names vary, so follow the platform's current documentation."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: faster contact, more approvals",
+          "p": "Example. 300 leads a week. Moving first contact from 3 hours to 5 minutes lifts approved per lead from 16% to 24% in this illustration.",
+          "more": "Check: 300 x 0.08 = 24. 24 x $30 = $720. If an automation tool costs $100 a month, it pays for itself in the first week. Who makes the call matters too: if the lender calls, ask the network how fast they contact leads and whether a confirmation SMS from you is allowed.",
+          "d": [
+            "300 x (24% - 16%)",
+            "=",
+            "24 more approvals",
+            "x $30 =",
+            "$720 more a week"
+          ],
+          "say": "Here's a worked example of faster contact. Three hundred leads a week. Moving first contact from three hours to five minutes lifts approved per lead from sixteen to twenty four percent, in this illustration. That's twenty four more approvals, and at thirty dollars each, seven hundred twenty dollars more a week. If an automation tool costs one hundred dollars a month, it pays for itself in the first week. And if the lender makes the call, ask the network how fast they contact leads, and whether a confirmation S M S from you is allowed."
+        },
+        {
+          "v": "compare",
+          "h": "Common follow-up mistakes",
+          "p": "These either waste the lead's readiness or break the consent the person gave. Both lower approvals and raise complaints, and both are easy to fix with simple rules.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Leads checked once a day",
+                "Calling 10 times in a day",
+                "Sending other offers without marketing consent",
+                "Optimising only for submits"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Automatic contact within minutes",
+                "Set a polite contact limit",
+                "Only messages about their request",
+                "Send approved events back"
+              ]
+            }
+          },
+          "say": "These mistakes either waste the lead's readiness or break their consent. Leads checked once a day. Calling ten times in a day. Sending other offers without marketing consent. Optimising only for submits. And the fixes: automatic contact within minutes. A polite contact limit. Only messages about their request. And sending approved events back. Both kinds of mistake lower approvals and raise complaints, and both are easy to fix with simple rules."
+        },
+        {
+          "v": "tip",
+          "h": "Follow-up rules in finance are strict",
+          "p": "Calls and messages about credit are regulated in many places, with limits on timing, frequency and content. Pressure tactics also turn into complaints that reach the network, the platform and sometimes the regulator.",
+          "d": {
+            "kind": "warn",
+            "text": "Contact only within consent, at reasonable hours, with a clear opt-out in every message. Never pressure, never imply approval, never message people who withdrew. Rules on calls and texts differ by country and have changed recently in some, such as the US; check locally."
+          },
+          "say": "Follow-up rules in finance are strict. Calls and messages about credit are regulated in many places, with limits on timing, frequency and content. Pressure tactics turn into complaints that reach the network, the platform, and sometimes the regulator. As the warning says, contact only within consent, at reasonable hours, with a clear opt-out in every message. Never pressure, never imply approval, and never message people who withdrew. Rules differ by country and have changed recently in some, such as the U S, so check locally."
+        },
+        {
+          "v": "quote",
+          "h": "From the founder",
+          "p": "Dchessking, our founder, on what happens after the form is submitted. Read it as the reason this whole lesson exists.",
+          "d": "The ad gets you a name. What you do in the next ten minutes decides if that name becomes a customer or a complaint.",
+          "by": "dchessking",
+          "say": "Here's our founder on what happens after the form is submitted. Read it as the reason this whole lesson exists. Here's how Dchessking puts it: The ad gets you a name. What you do in the next ten minutes decides if that name becomes a customer or a complaint."
+        },
+        {
+          "v": "check",
+          "h": "Starting rules after the submit",
+          "p": "Starting rules to adapt. Measure contact time and approvals per lead weekly, and change one thing at a time so you can see what moved the numbers.",
+          "d": [
+            "First contact or confirmation within 5 minutes of submit",
+            "No more than 3 contact attempts in the first 48 hours unless the person asks",
+            "Every message carries an opt-out",
+            "Send valid and approved stage events back once volume allows",
+            "Switch optimisation to approved events when you have about 50 a week, if the platform supports it in your region",
+            "Report contact rate, approval per lead and complaints weekly"
+          ],
+          "say": "Here are starting rules after the submit, to adapt. First contact or confirmation within five minutes. No more than three contact attempts in the first forty eight hours, unless the person asks. Every message carries an opt-out. Send valid and approved stage events back once volume allows. Switch optimisation to approved events when you have about fifty a week, if the platform supports it in your region. And report contact rate, approval per lead and complaints weekly. Change one thing at a time."
+        }
+      ],
+      "takeaways": [
+        "The first minutes after a submit decide much of a lead's value.",
+        "Follow up fast and only within the consent given.",
+        "Send later-stage events back so the platform learns quality."
+      ],
+      "action": "Map what happens in the first 10 minutes after a lead submits on one of your funnels. Write who contacts the person, how fast, what the first message says and which stage events go back to your tracker.",
+      "glossary": [
+        {
+          "term": "Speed to lead",
+          "def": "How quickly a new lead is contacted after submitting."
+        },
+        {
+          "term": "Stage event",
+          "def": "An event that marks a later step, such as valid or approved, sent back to your tracker or ad platform."
+        },
+        {
+          "term": "Conversions API",
+          "def": "A server-to-server way to send events to an ad platform. Names and options vary."
+        },
+        {
+          "term": "Opt-out",
+          "def": "A clear way to stop further messages, such as replying STOP."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "400 leads a week; faster contact raises approved per lead from 15% to 21%. Payout $25. Extra revenue a week?",
+          "options": [
+            "$600",
+            "$150",
+            "$2,100",
+            "$60"
+          ],
+          "answer": 0,
+          "why": "400 x 0.06 = 24 approvals. x $25 = $600."
+        },
+        {
+          "q": "A lead ticked sharing but not marketing. Which message is allowed?",
+          "options": [
+            "A different loan offer next week",
+            "A casino promo",
+            "A confirmation and next steps about their request",
+            "A newsletter"
+          ],
+          "answer": 2,
+          "why": "Only messages about their request fall within the consent given."
+        },
+        {
+          "q": "Why send approved events back to the ad platform?",
+          "options": [
+            "To raise CPM",
+            "So delivery learns to find people who get approved, not just people who submit",
+            "It is required by law",
+            "To remove the special ad category"
+          ],
+          "answer": 1,
+          "why": "Platforms optimise toward the events you send."
+        },
+        {
+          "q": "How many contact attempts does the starting rule allow in the first 48 hours, unless the person asks?",
+          "options": [
+            "Unlimited",
+            "None",
+            "10",
+            "No more than 3"
+          ],
+          "answer": 3,
+          "why": "A polite limit avoids pressure and complaints."
+        },
+        {
+          "q": "Which statement about Meta's later-stage optimisation follows the uncertainty rule?",
+          "options": [
+            "It is identical everywhere",
+            "It needs no data",
+            "Names, volumes and availability change; check the Help Center",
+            "It was never available"
+          ],
+          "answer": 2,
+          "why": "Say what you are not sure of and point to the source."
+        }
+      ],
+      "say_intro": "In this lesson you'll design what happens in the first minutes after a finance lead submits. You'll follow up fast but only within consent, send stage events back to the ad platform, and apply clear rules on contact speed and optimisation.",
+      "say_outro": "So, speed is part of lead quality, every message stays within consent, and stage events teach the platform to find approvals. Your task: map what happens in the first ten minutes after a lead submits on one of your funnels, writing who contacts the person, how fast, what the first message says, and which stage events go back to your tracker. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "2,000 clicks at $0.30. Instant form: 240 leads, 55% valid, $3 CPL. Quiz: 100 leads, 26% approved, $30 per approval. Which funnel profits?",
+      "options": [
+        "Instant form",
+        "Quiz",
+        "Both",
+        "Neither"
+      ],
+      "answer": 1,
+      "why": "Form: 132 x $3 = $396, loss of $204 on $600. Quiz: 26 x $30 = $780, profit $180."
+    },
+    {
+      "q": "Your finance instant form has a 58% valid rate after 150 leads. What do you change first?",
+      "options": [
+        "Add or tighten a qualifying question",
+        "Switch to volume type",
+        "Remove the consent tick",
+        "Raise the budget"
+      ],
+      "answer": 0,
+      "why": "Under 70% valid after 100 leads means tighten the form."
+    },
+    {
+      "q": "A comparison page ranks cards by payout but says 'Best cards in South Africa'. What is wrong?",
+      "options": [
+        "Nothing",
+        "The title is too long",
+        "The ranking method and paid relationship are hidden, so the page misleads",
+        "It should list fewer cards"
+      ],
+      "answer": 2,
+      "why": "State the ranking method and paid relationships, or rank honestly."
+    },
+    {
+      "q": "3,000 visitors, 10% click out, 20% approved, $50 payout. Earnings per visitor and max cost per visitor at 30% margin?",
+      "options": [
+        "$1.00 and $0.70",
+        "$0.50 and $0.35",
+        "$3.00 and $2.10",
+        "$1.00 and $1.00"
+      ],
+      "answer": 0,
+      "why": "3,000 x 0.1 x 0.2 x $50 = $3,000. / 3,000 = $1.00. x 0.7 = $0.70."
+    },
+    {
+      "q": "A lender has not confirmed what check its eligibility tool uses. Your copywriter wrote 'No impact on your credit score'. What do you do?",
+      "options": [
+        "Keep it",
+        "Change to 'no credit check'",
+        "Remove it until the lender confirms in writing",
+        "Add 'probably'"
+      ],
+      "answer": 2,
+      "why": "Only say what the lender confirms for that product and geo."
+    },
+    {
+      "q": "Adding SMS verification: leads fall from 500 to 360, valid rate rises from 60% to 90%, $4 per valid lead. Effect on revenue?",
+      "options": [
+        "Falls from $1,200 to $1,080",
+        "Rises from $1,200 to $1,296",
+        "No change",
+        "Falls to $864"
+      ],
+      "answer": 1,
+      "why": "500 x 0.6 x $4 = $1,200. 360 x 0.9 x $4 = $1,296."
+    },
+    {
+      "q": "You add a new lender to the partner list today. A network asks for last month's leads to send to them. What do you do?",
+      "options": [
+        "Send them",
+        "Send without phone numbers",
+        "Send only valid ones",
+        "Decline: those leads consented to the old list"
+      ],
+      "answer": 3,
+      "why": "Consent covers the list the person saw at the time."
+    },
+    {
+      "q": "Leads are contacted after about 6 hours. You can automate a confirmation within 5 minutes. Approved per lead is 13%; your example data suggests 22% at 5 minutes. 250 leads a week, $30 payout. Weekly gain?",
+      "options": [
+        "$1,650",
+        "$270",
+        "$675",
+        "$75"
+      ],
+      "answer": 2,
+      "why": "250 x 0.09 = 22.5 approvals. x $30 = $675."
+    },
+    {
+      "q": "You get about 60 approved events a week. Meta seems to offer optimisation for later-stage lead events in your region, but you are unsure. Best step?",
+      "options": [
+        "Check Meta's Help Center for current availability, then test on one campaign",
+        "Assume it works and switch everything",
+        "Never use it",
+        "Send full applicant data to Meta"
+      ],
+      "answer": 0,
+      "why": "Follow the uncertainty rule and test carefully, sending only the data needed."
+    },
+    {
+      "q": "A person replies STOP after your first SMS. Their lead was sent to two lenders. What must happen?",
+      "options": [
+        "Nothing; they already applied",
+        "Send one more message",
+        "Call to ask why",
+        "Add to suppression, stop marketing, notify both lenders in writing as your law requires"
+      ],
+      "answer": 3,
+      "why": "Withdrawal must reach every system and partner that holds the data."
+    }
+  ]
+}

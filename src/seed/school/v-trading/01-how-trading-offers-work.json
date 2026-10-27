@@ -1,0 +1,2615 @@
+{
+  "school": "v-trading",
+  "order": 1,
+  "slug": "how-trading-offers-work",
+  "title": "How trading offers work",
+  "summary": "Who pays in a trading offer, which products you may promote and which to avoid, and how CPA, RevShare and hybrid deals turn qualified depositors into payouts. You finish able to read an offer, calculate effective payout after KYC and qualification, and plan a test with exact starting rules.",
+  "lessons": [
+    {
+      "slug": "trading-affiliate-ecosystem",
+      "title": "The trading affiliate ecosystem",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can name every player in a trading offer and say what each one wants.",
+        "You can explain the four main ways brokers and exchanges earn, and the conflict of interest in one of them.",
+        "You can estimate what a client may be worth to a broker and why that sets your payout.",
+        "You can plan the cash you need to cover spend while payouts are on hold."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why you must know who pays and why",
+          "p": "Trading offers often carry some of the larger payouts in affiliate marketing because a funded, active trader can be worth a lot to a broker over time. If you do not understand how the broker earns, you cannot judge an offer, spot a bad one or explain the risk honestly to the people you send.",
+          "d": {
+            "b": "A payout is a share of a client's future value",
+            "s": "Understand the value and you understand the offer."
+          },
+          "say": "Here's why this lesson matters. Trading offers often carry some of the larger payouts in affiliate marketing, because a funded, active trader can be worth a lot to a broker over time. So a payout is really a share of a client's future value. If you don't understand how the broker earns, you can't judge an offer, spot a bad one, or explain the risk honestly to the people you send."
+        },
+        {
+          "v": "map",
+          "h": "Who sits in a trading offer",
+          "p": "Follow one person from your ad to your payout. Each box is a different business with its own goals and its own rules. Money flows back along the same path, and every box takes a share or applies a check before it reaches you.",
+          "d": {
+            "nodes": [
+              {
+                "id": "ad",
+                "label": "Your ad",
+                "kind": "ad"
+              },
+              {
+                "id": "lp",
+                "label": "Your lander",
+                "kind": "page"
+              },
+              {
+                "id": "u",
+                "label": "User",
+                "kind": "person"
+              },
+              {
+                "id": "br",
+                "label": "Licensed broker",
+                "kind": "offer"
+              },
+              {
+                "id": "net",
+                "label": "Network or programme",
+                "kind": "tool"
+              },
+              {
+                "id": "pb",
+                "label": "Postback",
+                "kind": "data"
+              },
+              {
+                "id": "you",
+                "label": "Your payout",
+                "kind": "money"
+              }
+            ],
+            "edges": [
+              [
+                "ad",
+                "lp",
+                "click"
+              ],
+              [
+                "lp",
+                "u",
+                "reads"
+              ],
+              [
+                "u",
+                "br",
+                "signs up"
+              ],
+              [
+                "br",
+                "net",
+                "reports FTD"
+              ],
+              [
+                "net",
+                "pb",
+                "fires"
+              ],
+              [
+                "net",
+                "you",
+                "pays after hold"
+              ]
+            ]
+          },
+          "say": "This map follows one person from your ad to your payout. Start at your ad. A click takes them to your lander, where they read. They sign up with a licensed broker. The broker reports the F T D, the first time deposit, to the network or programme. The network fires a postback, and pays you after a hold. Each box is a different business, with its own goals and rules. Money flows back along the same path, and every box takes a share or applies a check before it reaches you."
+        },
+        {
+          "v": "cards",
+          "h": "The players and what each one wants",
+          "p": "Each player has a different job and a different reason to work with you. Knowing what they want tells you what to ask for, what proof to expect and where problems usually start when a deal goes wrong.",
+          "more": "Introducing brokers are treated differently from simple affiliates in some countries, because they are paid on trading activity and may be seen as arranging deals in investments. Whether you need a registration depends on the country and on what you actually do. We are not certain of the rules in every geo; if you take a per-lot deal, ask the broker and a local adviser whether any registration applies to you.",
+          "d": [
+            "Broker or exchange|The advertiser. Holds the licence and the client account",
+            "In-house programme|The broker's own affiliate team. Direct deal, direct terms",
+            "CPA network|A middleman with many brokers and one dashboard",
+            "Introducing broker (IB)|Paid per lot traded. May need its own registration",
+            "Sub-affiliate|Brings other affiliates and earns a slice of their results",
+            "You|Buy traffic, send real people, follow every rule"
+          ],
+          "say": "Here are the players and what each one wants. The broker or exchange is the advertiser, holding the licence and the client account. An in-house programme is the broker's own affiliate team, with direct terms. A C P A network, cost per acquisition, is a middleman with many brokers and one dashboard. An introducing broker, or I B, is paid per lot traded and may need its own registration. A sub-affiliate brings other affiliates. And you buy traffic, send real people, and follow every rule. If you take a per lot deal, ask the broker and a local adviser whether any registration applies to you."
+        },
+        {
+          "v": "table",
+          "h": "How brokers and exchanges earn",
+          "p": "Almost all broker revenue comes from the client, either as a cost on each trade or, at some brokers, from client losses. That is why payouts depend on how long and how actively people trade, not on how many sign up.",
+          "more": "Market making, often called B-book, means the broker does not pass the trade to the wider market but takes the opposite side itself. When the client loses, the broker gains. Many brokers mix models and hedge some trades, and you cannot tell from outside which mix a broker uses. This creates a conflict of interest that regulators know about, and it is one reason risk warnings exist. It matters to you because a RevShare deal on net revenue can include client losses, which we cover in lesson 3.",
+          "d": {
+            "cols": [
+              "Source",
+              "What it is",
+              "Paid by"
+            ],
+            "rows": [
+              [
+                "Spread",
+                "Gap between buy and sell price",
+                "Client, every trade"
+              ],
+              [
+                "Commission",
+                "Fixed fee per trade or lot",
+                "Client"
+              ],
+              [
+                "Overnight financing",
+                "Fee for holding leveraged trades overnight",
+                "Client"
+              ],
+              [
+                "Exchange fee",
+                "Percentage of each crypto trade",
+                "Client"
+              ],
+              [
+                "Market making",
+                "Broker takes the other side of trades",
+                "Client losses"
+              ]
+            ]
+          },
+          "say": "Here's how brokers and exchanges earn. Look at the table. The spread, the gap between buy and sell price, paid by the client on every trade. Commission, a fixed fee per trade or lot. Overnight financing, for holding leveraged trades overnight. Exchange fees on crypto trades. And market making, where the broker takes the other side of trades, so it earns from client losses. That last one is a conflict of interest regulators know about, and it's one reason risk warnings exist. Almost all broker revenue comes from the client, which is why payouts depend on how long and how actively people trade, not how many sign up."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: what one client may be worth",
+          "p": "Example. A broker earns about $8 of spread per lot from a client who trades 4 lots a month and stays active for 6 months. That client is worth about $192 in revenue. The broker pays you a share of that, after its own costs.",
+          "more": "Example maths: 4 × $8 = $32 a month. $32 × 6 = $192. The $8 per lot and the 6 months are illustrative; real figures depend on the instrument, account type and the person. Many clients deposit once and stop within weeks, while a few trade for years. The broker averages across all of them, keeps money for its own costs, compliance and profit, and offers you a payout that still leaves it ahead. That is why brokers add qualification rules: they only want to pay for clients who look like the ones who stay.",
+          "d": [
+            "4 lots a month",
+            "×",
+            "$8 per lot",
+            "×",
+            "6 months",
+            "=",
+            "$192"
+          ],
+          "say": "Here's a worked example of what one client may be worth. A broker earns about eight dollars of spread per lot, from a client who trades four lots a month and stays active for six months. Four times eight is thirty two dollars a month, times six months is a hundred and ninety two dollars. These figures are illustrative. Many clients deposit once and stop within weeks, while a few trade for years. The broker averages across them, keeps money for its own costs and profit, and pays you a share. That's why brokers add qualification rules."
+        },
+        {
+          "v": "bars",
+          "h": "Example: why payouts differ by geo",
+          "p": "Example. Payouts follow the client value a broker expects in each country, which depends on deposit size, trading activity, payment costs and regulation. These bars are illustrative, not statistics about any market. Read them as a shape, not as numbers to plan with.",
+          "d": [
+            [
+              "Geo A, high deposits",
+              100,
+              "$600 value"
+            ],
+            [
+              "Geo B",
+              45,
+              "$270 value"
+            ],
+            [
+              "Geo C",
+              20,
+              "$120 value"
+            ]
+          ],
+          "say": "These bars are an example of why payouts differ by geo. Geo A, with high deposits, shows a client value of six hundred dollars. Geo B, two hundred and seventy. Geo C, a hundred and twenty. Payouts follow the client value a broker expects in each country, which depends on deposit size, trading activity, payment costs and regulation. These bars are illustrative, not statistics about any market. Read them as a shape, not as numbers to plan with."
+        },
+        {
+          "v": "compare",
+          "h": "Forex and CFD broker versus crypto exchange",
+          "p": "Both pay for depositing users, but they sell different products under different rules. Before you write a single ad, know which one you are promoting, because the regulator, the risk warning and the platform policy all change with it.",
+          "d": {
+            "a": {
+              "title": "Forex and CFD broker",
+              "items": [
+                "Leveraged products, losses can be fast",
+                "Earns from spread, commission, financing",
+                "Licensed by a markets regulator",
+                "Standard risk warning in many regions"
+              ]
+            },
+            "b": {
+              "title": "Crypto exchange",
+              "items": [
+                "Buying and selling crypto, often unleveraged spot",
+                "Earns from trading fees and spread",
+                "Registration as a virtual asset provider in many places",
+                "Crypto ads often need platform permission"
+              ]
+            }
+          },
+          "say": "Compare the two kinds of advertiser. On the left, a forex and C F D broker: leveraged products where losses can be fast, earning from spread, commission and financing, licensed by a markets regulator, with a standard risk warning in many regions. On the right, a crypto exchange: buying and selling crypto, often unleveraged spot, earning from trading fees and spread, registered as a virtual asset provider in many places, and crypto ads often need platform permission. Know which one you're promoting before you write a single ad, because the regulator, the warning and the policy all change."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: how a sign-up becomes your payout",
+          "p": "Here is the data path behind one conversion, step by step. Every step can break. When a payout looks wrong, walk this path and find the step where the number changed. Screens are illustrative mock-ups.",
+          "d": {
+            "steps": [
+              {
+                "title": "Click with an ID",
+                "text": "Your tracking link adds a unique click ID and your sub IDs to the broker's sign-up page.",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "partner.example/click?aff=10457&sub1=ng_test",
+                  "page": {
+                    "h": "Open a demo or live account",
+                    "p": "Trading involves risk of loss.",
+                    "cta": "Register"
+                  }
+                }
+              },
+              {
+                "title": "Registration",
+                "text": "The user registers. The broker stores your click ID against the new account.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/reports",
+                  "title": "Registrations",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Click ID",
+                        "Status"
+                      ],
+                      "rows": [
+                        [
+                          "c81f2",
+                          "Registered"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "KYC and deposit",
+                "text": "The user verifies identity and makes a first deposit. The broker checks it meets the deal's rules.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/reports",
+                  "title": "Conversions",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Click ID",
+                        "KYC",
+                        "FTD"
+                      ],
+                      "rows": [
+                        [
+                          "c81f2",
+                          "Approved",
+                          "$100"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Postback fires",
+                "text": "The network sends the event back to your tracker or ad platform with the click ID.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "tracker.example/postbacks",
+                  "title": "Postback log",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Click ID",
+                        "Event",
+                        "Payout"
+                      ],
+                      "rows": [
+                        [
+                          "c81f2",
+                          "ftd",
+                          "$60"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Hold, then payment",
+                "text": "The conversion sits on hold for review. Approved conversions are paid on the agreed terms.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/billing",
+                  "title": "Balance",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "On hold",
+                      "value": "$60"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Next payment",
+                      "value": "After month close"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Tap Next to follow each step of the data path. First, the click: your tracking link adds a unique click I D and your sub I Ds to the broker's sign up page. Second, registration: the broker stores your click I D against the new account. Third, K Y C, know your customer, and deposit: the user verifies identity and makes a first deposit, and the broker checks it meets the deal's rules. Fourth, the postback fires, sending the event back to your tracker with the click I D. Fifth, the conversion sits on hold for review, and approved conversions are paid on the agreed terms. When a payout looks wrong, walk this path and find where the number changed."
+        },
+        {
+          "v": "code",
+          "h": "Your tracking link carries the labels",
+          "p": "Most networks give you a link with your affiliate ID and free sub ID fields. Fill the sub IDs with your campaign, ad set and ad names so every conversion can be traced back. Parameter names differ by network; check your own dashboard.",
+          "d": {
+            "lang": "url",
+            "text": "https://partner.example/click?offer=812&aff=10457&sub1={campaign}&sub2={adset}&sub3={ad}&click_id={click_id}",
+            "note": "Illustrative. Ask your manager which sub fields come back in the postback."
+          },
+          "say": "On screen is an illustrative tracking link. I won't read it out, but notice its parts. It carries your affiliate I D, and free sub I D fields. Fill those sub I Ds with your campaign, ad set and ad names, so every conversion can be traced back to the ad that brought it. Parameter names differ by network, so check your own dashboard, and ask your manager which sub fields come back in the postback."
+        },
+        {
+          "v": "tip",
+          "h": "Worked example: the cash you need while you wait",
+          "p": "Example. You spend $50 a day through March. The network pays March's approved conversions about 45 days after you started spending. You must fund roughly $2,250 of spend from your own cash before the first payout lands.",
+          "more": "Many beginners plan their test budget but forget the wait. Spend happens daily on your card. Payouts arrive after a qualification window, a review hold and the payment term, which can add up to several weeks. If you scale during that wait, the gap grows. Plan the cash for spend plus the wait, and never use money you need for rent, food or debts. Trading offers are not a way to get rich quickly, and results vary widely.",
+          "d": {
+            "kind": "example",
+            "text": "Example: $50 a day × 45 days = $2,250 of working capital before the first payment. Holds and payment terms differ by network; read yours."
+          },
+          "say": "Here's an example of the cash you need while you wait. You spend fifty dollars a day through March. The network pays March's approved conversions about forty five days after you started spending. So fifty dollars times forty five days is two thousand two hundred and fifty dollars you fund from your own cash before the first payout lands. Holds and payment terms differ by network, so read yours. If you scale during the wait, the gap grows. Never use money you need for rent, food or debts. Trading offers aren't a way to get rich quickly, and results vary widely."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "These mistakes come from treating a trading offer like any other link. Each one costs money or creates risk, and each fix is cheap if you do it before the first ad goes live.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Treat the broker as just a link",
+                "Pick the highest CPA on the list",
+                "Never ask who holds the client account",
+                "Copy the broker's own hype in your ads"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Learn how it earns and who regulates it",
+                "Compare what you earn per real depositor",
+                "Get the licensed entity per geo in writing",
+                "Write your own honest, compliant copy"
+              ]
+            }
+          },
+          "say": "These mistakes come from treating a trading offer like any other link. On the left: treating the broker as just a link, picking the highest C P A on the list, never asking who holds the client account, and copying the broker's own hype in your ads. On the right, the fixes: learn how it earns and who regulates it, compare what you earn per real depositor, get the licensed entity per geo in writing, and write your own honest, compliant copy. Each fix is cheap if you do it before the first ad goes live."
+        },
+        {
+          "v": "quote",
+          "h": "From the founder",
+          "p": "Dchessking on what a trading payout really pays for. Keep this in mind whenever an offer looks generous or a network pushes you to send more volume quickly.",
+          "d": "A broker pays you for a client who stays, not for a click. Build your funnel for the person who will still be there in six months.",
+          "by": "dchessking",
+          "say": "Here's how Dchessking puts what a trading payout really pays for. Keep it in mind whenever an offer looks generous, or a network pushes you to send more volume quickly. A broker pays you for a client who stays, not for a click. Build your funnel for the person who will still be there in six months."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance first",
+          "p": "Trading is a regulated vertical almost everywhere. The broker's licence, the platform's rules and the law where your users live all apply to your ads, even though you are only the affiliate. Check all three before you spend.",
+          "d": {
+            "kind": "warn",
+            "text": "Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country and the broker's licence for that country before you run. Education, not legal or financial advice."
+          },
+          "say": "A compliance warning. Trading is a regulated vertical almost everywhere. The broker's licence, the platform's rules, and the law where your users live all apply to your ads, even though you're only the affiliate. As the slide says, trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country, and the broker's licence for that country before you run. This is education, not legal or financial advice."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for a new trading partner",
+          "p": "Starting rules to adapt to your situation. They stop you from entering a deal you cannot afford or cannot defend. If any line fails, you do not start, whatever the payout looks like.",
+          "d": [
+            "Licensed entity for your geo named in writing, or no start",
+            "You can fund test spend plus the full hold period from savings you can afford to lose",
+            "Pause new spend if a payment is more than 14 days past its due date",
+            "Unpaid balance with one network above 4 weeks of spend: stop scaling there",
+            "Partner asks for income or no-risk claims: decline the deal"
+          ],
+          "say": "Here are starting decision rules for a new trading partner, to adapt. The licensed entity for your geo named in writing, or no start. You can fund test spend plus the full hold period from savings you can afford to lose. Pause new spend if a payment is more than fourteen days past its due date. If your unpaid balance with one network is above four weeks of spend, stop scaling there. And if a partner asks for income or no risk claims, decline the deal. If any line fails, you don't start, whatever the payout looks like."
+        }
+      ],
+      "takeaways": [
+        "A trading payout is a share of the value a broker expects from a real, active client.",
+        "Brokers earn from spread, commission, financing and, at some, client losses. That last one is a conflict of interest.",
+        "Your money flows through registration, KYC, deposit, postback, hold and payment. Any step can break.",
+        "Plan cash for spend plus the full wait before the first payout."
+      ],
+      "action": "Pick one trading offer you are considering. Write down who the broker is, which entity serves your geo, how it earns and the full time from a user's deposit to your payment. Ask the network for anything you cannot find.",
+      "glossary": [
+        {
+          "term": "Broker",
+          "def": "A company that lets clients trade financial products such as forex or CFDs. It holds the licence and the client account."
+        },
+        {
+          "term": "Spread",
+          "def": "The difference between the buy and sell price of an instrument. A main source of broker revenue."
+        },
+        {
+          "term": "Introducing broker (IB)",
+          "def": "A partner paid per lot its clients trade, rather than per deposit. May need registration in some countries."
+        },
+        {
+          "term": "Market maker (B-book)",
+          "def": "A broker that takes the other side of client trades, so it gains when clients lose."
+        },
+        {
+          "term": "Overnight financing",
+          "def": "A fee charged for holding a leveraged position overnight. Also called swap."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Why do trading offers often pay larger amounts than many other verticals?",
+          "options": [
+            "Brokers have large marketing budgets for brand ads",
+            "A funded, active trader can be worth a lot to a broker over time",
+            "Regulators set minimum affiliate payouts",
+            "Deposits are paid to the affiliate directly"
+          ],
+          "answer": 1,
+          "why": "The payout is a share of the client's expected future value. The other options are not how payouts are set."
+        },
+        {
+          "q": "Which revenue source creates a conflict of interest between broker and client?",
+          "options": [
+            "Commission per lot",
+            "Spread",
+            "Market making, where the broker takes the other side of trades",
+            "Overnight financing"
+          ],
+          "answer": 2,
+          "why": "A market maker gains when the client loses. The other sources are costs on activity, not a bet against the client."
+        },
+        {
+          "q": "Example: a client trades 3 lots a month at $10 revenue per lot for 5 months. What is the revenue?",
+          "options": [
+            "$150",
+            "$30",
+            "$50",
+            "$300"
+          ],
+          "answer": 0,
+          "why": "3 × $10 = $30 a month, × 5 months = $150."
+        },
+        {
+          "q": "You spend $40 a day and the first payout arrives 50 days after you start. Roughly how much cash do you need to fund?",
+          "options": [
+            "$800",
+            "$1,200",
+            "$4,000",
+            "$2,000"
+          ],
+          "answer": 3,
+          "why": "$40 × 50 days = $2,000 of spend before the first payment lands."
+        },
+        {
+          "q": "A network will not tell you which legal entity opens accounts for your users' country. What does the starting rule say?",
+          "options": [
+            "Start with a small budget",
+            "Start if the payout is high",
+            "Do not start until it is named in writing",
+            "Ask the users which entity they signed with"
+          ],
+          "answer": 2,
+          "why": "Without the licensed entity for your geo you cannot verify the licence, so the rule is no start."
+        }
+      ],
+      "say_intro": "Before you promote a trading offer, you need to know who pays you and why. In this lesson you'll meet every player in a trading offer, learn how brokers and exchanges earn, estimate what a client may be worth, and plan the cash you need while payouts are on hold.",
+      "say_outro": "So, a payout is a share of a client's future value, paid through a chain of businesses, and it arrives weeks after you spend. Your task: pick one trading offer you're considering, and write down who the broker is, which entity serves your geo, how it earns, and the full time from a user's deposit to your payment. Ask the network for anything you can't find. Now take the quiz."
+    },
+    {
+      "slug": "products-and-binary-options",
+      "title": "Products you can and cannot promote",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can rank the main trading products by the risk they carry for users and for you.",
+        "You can explain leverage with numbers and why it makes losses fast.",
+        "You can recognise a binary or digital option even when it uses another name, and explain why we steer away from it.",
+        "You can apply a go/no-go rule to any trading product before you build anything."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the product decides everything",
+          "p": "Two offers can pay the same and look alike on a network page, yet one is a licensed broker product and the other is banned from the ad platforms you use. The product decides the regulator, the risk warning, the platform policy and whether you may advertise at all.",
+          "d": {
+            "b": "Know the product before you write one word",
+            "s": "Same payout, very different rules."
+          },
+          "say": "Here's why the product decides everything. Two offers can pay the same and look alike on a network page. Yet one is a licensed broker product, and the other is banned from the ad platforms you use. The product decides the regulator, the risk warning, the platform policy, and whether you may advertise at all. So know the product before you write one word."
+        },
+        {
+          "v": "cards",
+          "h": "The risk ladder of trading products",
+          "p": "A rough guide at the time of writing, from lower to higher risk for the user and for your accounts. Rules differ by country, so treat this as a map of what to check, not as permission.",
+          "more": "The UK's FCA banned the sale of crypto derivatives and exchange traded notes to retail consumers from January 2021. Other countries have their own rules, and some are still developing them. We are not certain of the current position in every African market, so check your regulator's website before promoting any derivative product.",
+          "d": [
+            "Shares and ETFs|Through a licensed broker. Still risk of loss",
+            "Crypto spot exchange|Volatile. Platform permission often needed",
+            "Forex and CFDs|Leveraged. Most retail accounts lose money",
+            "Crypto derivatives|High leverage. Banned for UK retail at the time of writing",
+            "Copy trading and signals|Can be regulated advice or management",
+            "Binary or digital options|Prohibited on major ad platforms. We steer away"
+          ],
+          "say": "Here's a rough risk ladder, at the time of writing, from lower to higher risk for the user and for your accounts. Shares and E T Fs through a licensed broker, still with risk of loss. Crypto spot exchanges, volatile, often needing platform permission. Forex and C F Ds, leveraged, where most retail accounts lose money. Crypto derivatives, high leverage, banned for U K retail at the time of writing. Copy trading and signals, which can count as regulated advice or management. And binary or digital options, prohibited on major ad platforms, which we steer away from. Rules differ by country, so treat this as a map of what to check, not permission."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: what leverage does",
+          "p": "Example. A user deposits $200 and trades with leverage of 1:100. They now control a position worth $20,000. A price move of just 1% against them is $200, which is the whole deposit. Leverage multiplies gains and losses alike.",
+          "more": "Example maths: $200 × 100 = $20,000. 1% of $20,000 = $200. In practice the broker usually closes the position before the balance goes below zero, which is called a stop out. In the UK and EU, retail CFD clients get negative balance protection and leverage is capped, for example at 30:1 on major currency pairs at the time of writing. Many offshore entities offer far higher leverage. That is a risk you should never sell as a feature.",
+          "d": [
+            "$200 margin",
+            "×",
+            "1:100 leverage",
+            "=",
+            "$20,000 position"
+          ],
+          "say": "Here's what leverage does. Example: a user deposits two hundred dollars and trades with leverage of one to one hundred. Now they control a position worth twenty thousand dollars. A price move of just one percent against them is two hundred dollars, which is their whole deposit. Leverage multiplies gains and losses alike. In the U K and E U, retail C F D leverage is capped, for example at thirty to one on major currency pairs at the time of writing, but many offshore entities offer far higher. That's a risk you should never sell as a feature."
+        },
+        {
+          "v": "big",
+          "h": "Binary and digital options: we do not teach them",
+          "p": "A binary or digital option asks the user to guess whether a price will be above or below a level after a fixed time, often seconds or minutes. Right, and they get a fixed payout. Wrong, and they lose the whole stake. Major ad platforms prohibit them and many countries ban or restrict them at the time of writing.",
+          "d": {
+            "b": "No binary options in this school",
+            "s": "Prohibited on major ad platforms and banned for retail in many countries."
+          },
+          "say": "So, binary and digital options. We don't teach them. A binary or digital option asks the user to guess whether a price will be above or below a level after a fixed time, often seconds or minutes. If they're right, they get a fixed payout. If they're wrong, they lose the whole stake. Major ad platforms prohibit them, and many countries ban or restrict them at the time of writing. So there are no binary options in this school."
+        },
+        {
+          "v": "table",
+          "h": "Where binary options stand at the time of writing",
+          "p": "Examples only, at the time of writing. We are not certain this list is complete or current, especially for African markets where rules are developing. Check your regulator and each platform's current policy before relying on it.",
+          "more": "Many regulators, including several in Africa, have also published warnings about unlicensed binary options sellers and about scams that use the word. A ban on selling to retail clients is different from a ban on advertising, but for you the result is the same: if the platforms you use prohibit the ad and the regulator does not license the product, you cannot run it honestly. We have not listed TikTok, Snapchat or others because we are not certain of their current wording; check their policies.",
+          "d": {
+            "cols": [
+              "Who",
+              "Position"
+            ],
+            "rows": [
+              [
+                "Meta ads",
+                "Prohibited"
+              ],
+              [
+                "Google ads",
+                "Prohibited"
+              ],
+              [
+                "UK (FCA)",
+                "Retail sale banned since 2019"
+              ],
+              [
+                "EU (ESMA, then national rules)",
+                "Retail sale banned or restricted"
+              ],
+              [
+                "Australia (ASIC)",
+                "Retail ban since 2021"
+              ],
+              [
+                "Canada (most provinces)",
+                "Short-term binary options banned"
+              ],
+              [
+                "Other platforms and countries",
+                "Check current rules"
+              ]
+            ]
+          },
+          "say": "Here's where binary options stand, as examples only, at the time of writing. Meta ads and Google ads, prohibited. The U K's F C A, retail sale banned since twenty nineteen. The E U, through ESMA and then national rules, banned or restricted for retail. Australia's ASIC, a retail ban since twenty twenty one. Canada, in most provinces, short term binary options banned. Other platforms and countries, check current rules. We're not certain this list is complete or current, especially for African markets where rules are developing, so check your regulator and each platform's policy before relying on it."
+        },
+        {
+          "v": "cards",
+          "h": "How to spot a binary option with a new name",
+          "p": "Sellers rename the product to get past filters. Judge it by how it works, not by what it is called. If an offer shows several of these signs, treat it as a binary or digital option and steer away, whatever the network calls it.",
+          "d": [
+            "Fixed time|Trade closes itself after 30 seconds, 1 or 5 minutes",
+            "Fixed payout|Shown as 'earn 85% if right'",
+            "All or nothing|Wrong guess loses 100% of the stake",
+            "New names|Digital, turbo, fixed-time, up or down, high or low",
+            "Game feel|$1 trades, big green and red buttons, streaks",
+            "Licence gap|No retail licence from a major regulator"
+          ],
+          "say": "Sellers rename the product to get past filters, so judge it by how it works, not what it's called. Look for these signs. A fixed time, where the trade closes itself after thirty seconds, one or five minutes. A fixed payout, shown as earn eighty five percent if right. All or nothing, where a wrong guess loses the whole stake. New names, like digital, turbo, fixed time, up or down. A game feel, with one dollar trades and big green and red buttons. And a licence gap, with no retail licence from a major regulator. If an offer shows several of these, treat it as a binary option and steer away."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: why the maths works against the user",
+          "p": "Example. A product pays 85% on a correct guess and takes 100% on a wrong one. A user who is right half the time over 100 trades of $10 wins $425 and loses $500. They end $75 down, before any mistakes.",
+          "more": "Example maths: 50 wins × $8.50 = $425. 50 losses × $10 = $500. $425 − $500 = −$75. To break even the user must be right more often than 1 ÷ (1 + 0.85), which is about 54.1% of the time, on price moves over seconds or minutes that are close to random. This is why regulators compare these products to gambling and why we do not promote them. If your network offers them, choose a licensed forex, CFD or exchange offer instead.",
+          "d": [
+            "50 × $8.50 won",
+            "−",
+            "50 × $10 lost",
+            "=",
+            "−$75"
+          ],
+          "say": "Here's why the maths works against the user. Example: a product pays eighty five percent on a correct guess and takes everything on a wrong one. Over a hundred trades of ten dollars, a user who's right half the time wins four hundred and twenty five dollars and loses five hundred. They end seventy five dollars down, before any mistakes. To break even, they'd need to be right about fifty four percent of the time, on price moves that are close to random. That's why regulators compare these products to gambling, and why we don't promote them."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: check what an offer really is",
+          "p": "Never rely on the offer title. Spend ten minutes looking at the product the way a user from your geo will see it, from the offer page to the first trade screen. Screens are illustrative mock-ups.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open the offer page",
+                "text": "Read the product description and the allowed traffic. Note every product name used.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/offers/812",
+                  "title": "Offer 812",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Product",
+                      "value": "Forex, CFDs"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Allowed traffic",
+                      "value": "Social, native"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Open a demo account",
+                "text": "Register a demo from your geo and look at the instrument list and the order ticket.",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "broker.example/demo",
+                  "page": {
+                    "h": "Demo account",
+                    "p": "Practise with virtual funds. Trading involves risk.",
+                    "cta": "Open demo"
+                  }
+                }
+              },
+              {
+                "title": "Read the order ticket",
+                "text": "A ticket with an expiry time and a fixed payout percentage is a binary or digital option.",
+                "screen": {
+                  "v": "phone",
+                  "app": "browser",
+                  "url": "broker.example/trade",
+                  "page": {
+                    "h": "EUR/USD  Expiry 1 min",
+                    "p": "Payout 85% if correct",
+                    "cta": "Higher / Lower"
+                  }
+                }
+              },
+              {
+                "title": "Read the client agreement",
+                "text": "Find the list of products and the entity that offers them in your users' country.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "broker.example/legal",
+                  "title": "Client agreement",
+                  "blocks": [
+                    {
+                      "type": "field",
+                      "label": "Products",
+                      "value": "CFDs, digital options"
+                    },
+                    {
+                      "type": "field",
+                      "label": "Entity",
+                      "value": "Example Global Ltd"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Ask in writing",
+                "text": "Ask the manager which products users in your geo land on first. File the answer.",
+                "screen": {
+                  "v": "phone",
+                  "app": "chat",
+                  "title": "Network manager",
+                  "subtitle": "online",
+                  "messages": [
+                    {
+                      "from": "me",
+                      "text": "Do Nigerian users land on CFDs or on fixed-time products by default?"
+                    },
+                    {
+                      "from": "them",
+                      "text": "I will check with the broker and email you."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "say": "Tap Next to follow each step. Never rely on the offer title. First, open the offer page, read the product description and allowed traffic, and note every product name. Second, open a demo account from your geo, and look at the instrument list and order ticket. Third, read the order ticket. A ticket with an expiry time and a fixed payout percentage is a binary or digital option. Fourth, read the client agreement, finding the products and the entity that offers them in your users' country. Fifth, ask in writing which products users in your geo land on first, and file the answer. These screens are illustrative."
+        },
+        {
+          "v": "table",
+          "h": "What you need before advertising each product",
+          "p": "A starting checklist per product. Each line is the minimum we would want in writing before building a funnel. Policies and laws change, so confirm each item for your platform and geo at the time you launch.",
+          "d": {
+            "cols": [
+              "Product",
+              "Minimum before ads"
+            ],
+            "rows": [
+              [
+                "Forex and CFDs",
+                "Licensed entity for geo, risk warning wording"
+              ],
+              [
+                "Crypto spot exchange",
+                "Platform permission where required, local registration"
+              ],
+              [
+                "Crypto derivatives",
+                "Legal for retail in geo, platform allows it"
+              ],
+              [
+                "Copy trading",
+                "Check if it is advice or management needing a licence"
+              ],
+              [
+                "Shares and ETFs",
+                "Licensed broker for geo, risk warning"
+              ],
+              [
+                "Binary or digital options",
+                "Do not advertise"
+              ]
+            ]
+          },
+          "say": "Here's a starting checklist of what you need in writing before advertising each product. Forex and C F Ds: the licensed entity for your geo, and the risk warning wording. Crypto spot exchanges: platform permission where required, and local registration. Crypto derivatives: legal for retail in the geo, and allowed by the platform. Copy trading: check whether it's advice or management needing a licence. Shares and E T Fs: a licensed broker for the geo, and a risk warning. And binary or digital options: do not advertise. Policies and laws change, so confirm each item when you launch."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "These mistakes usually happen because an offer converts well and the product name sounds harmless. A fast-converting product with fixed expiries is a warning sign, not a lucky find.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Trust the offer title",
+                "Run a 'digital trading' app because it converts",
+                "Sell high leverage as a benefit",
+                "Assume a foreign licence covers your geo"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Open a demo and read the order ticket",
+                "Treat fixed-expiry products as binary and decline",
+                "Explain leverage as a risk, never a perk",
+                "Check the entity and permission for your geo"
+              ]
+            }
+          },
+          "say": "These mistakes usually happen because an offer converts well and the name sounds harmless. On the left: trusting the offer title, running a digital trading app because it converts, selling high leverage as a benefit, and assuming a foreign licence covers your geo. On the right, the fixes: open a demo and read the order ticket, treat fixed expiry products as binary and decline, explain leverage as a risk, never a perk, and check the entity and permission for your geo. A fast converting product with fixed expiries is a warning sign, not a lucky find."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance warning",
+          "p": "This lesson touches the most restricted products in finance advertising. When in doubt about a product, the safe answer is not to advertise it until you have written answers from the broker and, where needed, a local adviser.",
+          "d": {
+            "kind": "warn",
+            "text": "Binary and digital fixed-payout options are prohibited on major ad platforms and banned or restricted in many countries at the time of writing. Do not advertise them, and do not disguise them. Promote only licensed brokers and exchanges, with their risk warnings. Check current platform policy and local law before you run."
+          },
+          "say": "A compliance warning. This lesson touches the most restricted products in finance advertising. As the slide says, binary and digital fixed payout options are prohibited on major ad platforms, and banned or restricted in many countries at the time of writing. Don't advertise them, and don't disguise them. Promote only licensed brokers and exchanges, with their risk warnings, and check current platform policy and local law before you run. When in doubt, don't advertise until you have written answers."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules: product go or no-go",
+          "p": "Starting rules to adapt with your adviser. Apply them before any creative work. One clear no ends the plan for that offer, however good the payout or the network's numbers look.",
+          "d": [
+            "Fixed expiry plus fixed payout anywhere in the funnel = no-go",
+            "Users in your geo land on a fixed-time product by default = no-go",
+            "Leveraged product with no risk warning wording for your geo = do not publish",
+            "Crypto offer without platform permission where required = no-go",
+            "Copy trading or signals with no licence answer in writing = no-go"
+          ],
+          "say": "Here are starting go or no go rules, to adapt with your adviser. A fixed expiry plus a fixed payout anywhere in the funnel is no go. Users in your geo landing on a fixed time product by default is no go. A leveraged product with no risk warning wording for your geo, don't publish. A crypto offer without platform permission where required is no go. And copy trading or signals with no licence answer in writing is no go. Apply these before any creative work. One clear no ends the plan for that offer."
+        }
+      ],
+      "takeaways": [
+        "The product decides the regulator, the risk warning and whether the platform allows the ad.",
+        "Leverage multiplies losses: at 1:100, a 1% move can take a whole deposit.",
+        "Binary and digital options are prohibited on major ad platforms and banned or restricted in many countries. Judge by how a product works, not its name.",
+        "Promote licensed brokers and exchanges only, with their warnings."
+      ],
+      "action": "Open a demo account with one broker you are considering. Screenshot the instrument list and an order ticket, and write one line on whether any product has a fixed expiry and fixed payout.",
+      "glossary": [
+        {
+          "term": "Leverage",
+          "def": "Borrowed exposure that lets a small deposit control a larger position. Gains and losses grow by the same factor."
+        },
+        {
+          "term": "Margin",
+          "def": "The part of the user's money set aside to keep a leveraged position open."
+        },
+        {
+          "term": "Binary or digital option",
+          "def": "A product that pays a fixed amount if a price guess is right after a fixed time and loses the whole stake if wrong."
+        },
+        {
+          "term": "Negative balance protection",
+          "def": "A rule in some regions that stops a retail client losing more than the money in their account."
+        },
+        {
+          "term": "Stop out",
+          "def": "When a broker closes a client's positions automatically because the margin left is too low."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "A user deposits $100 and trades at 1:200 leverage. How large a position can they control?",
+          "options": [
+            "$2,000",
+            "$20,000",
+            "$200",
+            "$10,000"
+          ],
+          "answer": 1,
+          "why": "$100 × 200 = $20,000. A 0.5% move against them would equal the whole deposit."
+        },
+        {
+          "q": "Which feature most clearly marks a binary or digital option?",
+          "options": [
+            "A spread shown in pips",
+            "A fixed expiry time with a fixed payout percentage",
+            "A minimum deposit of $50",
+            "Negative balance protection"
+          ],
+          "answer": 1,
+          "why": "Fixed expiry plus a fixed all-or-nothing payout is the defining shape, whatever name the product uses."
+        },
+        {
+          "q": "A product pays 80% on a correct guess. Roughly what win rate does a user need just to break even?",
+          "options": [
+            "50%",
+            "80%",
+            "About 55.6%",
+            "About 44%"
+          ],
+          "answer": 2,
+          "why": "Break-even is 1 ÷ (1 + 0.8) = 0.556, so about 55.6%, on moves that are close to random."
+        },
+        {
+          "q": "A network offer called 'turbo trading' has 60-second trades that pay 90% if right. What do you do?",
+          "options": [
+            "Run it on small budgets only",
+            "Rename it in your ads",
+            "Run it only in countries without a ban",
+            "Treat it as a binary option and decline"
+          ],
+          "answer": 3,
+          "why": "It works like a binary option, which major ad platforms prohibit. Renaming or geo-hopping does not change that."
+        },
+        {
+          "q": "Why do we say a foreign licence does not automatically cover your geo?",
+          "options": [
+            "Licences expire every year",
+            "The entity serving your users may be different and may not be allowed to market there",
+            "Foreign regulators do not publish registers",
+            "Only African licences are valid for African users"
+          ],
+          "answer": 1,
+          "why": "Groups often use several entities; the one serving your geo may be offshore and may lack permission to market there."
+        }
+      ],
+      "say_intro": "Two trading offers can pay the same and look alike, yet one may be banned from the platforms you use. In this lesson you'll rank trading products by risk, see what leverage does with real numbers, learn to spot a binary option under any name, and apply a go or no go rule before you build anything.",
+      "say_outro": "So, know the product before you write one word: leverage is a risk, never a perk, and anything with a fixed expiry and a fixed payout is a binary option we steer away from. Your task: open a demo account with one broker you're considering, screenshot the instrument list and an order ticket, and write one line on whether any product has a fixed expiry and fixed payout. Now take the quiz."
+    },
+    {
+      "slug": "payout-models",
+      "title": "Payout models: CPA, RevShare and hybrid",
+      "minutes": 20,
+      "objectives": [
+        "By the end you can compare CPA, RevShare, hybrid and per-lot deals on the same cohort of users.",
+        "You can explain negative carryover and calculate a month's payout with it.",
+        "You can turn an expected RevShare value into a planning value and a target CPA.",
+        "You can list the written terms to confirm before accepting any deal."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the model matters as much as the number",
+          "p": "The payout model decides when you are paid, how much risk you carry and what happens when a client wins. Two deals can pay the same total over a year while one leaves you short of cash for months. Choose the model your cash flow can survive.",
+          "d": {
+            "b": "Same total, different risk",
+            "s": "The model decides your cash flow."
+          },
+          "say": "Here's why the model matters as much as the number. The payout model decides when you're paid, how much risk you carry, and what happens when a client wins. Two deals can pay the same total over a year, while one leaves you short of cash for months. Same total, different risk. So choose the model your cash flow can survive."
+        },
+        {
+          "v": "cards",
+          "h": "The models you will see",
+          "p": "Most trading deals are one of these or a mix. Names vary by network, so read the definitions in your agreement rather than trusting the label on the offer page.",
+          "d": [
+            "CPA|Fixed fee per qualified FTD, paid after a hold",
+            "RevShare|A percentage of the net revenue your users generate",
+            "Hybrid|A smaller CPA plus a smaller RevShare",
+            "Per-lot rebate|A fixed amount per lot your users trade",
+            "CPL or CPR|Per registration. Rare and low in trading",
+            "Volume tiers|Payout steps up with monthly FTDs"
+          ],
+          "say": "Here are the models you'll see. C P A, cost per acquisition: a fixed fee per qualified F T D, first time deposit, paid after a hold. RevShare: a percentage of the net revenue your users generate. Hybrid: a smaller C P A plus a smaller RevShare. Per lot rebate: a fixed amount per lot your users trade. C P L or C P R, per registration, which is rare and low in trading. And volume tiers, where the payout steps up with monthly F T Ds. Names vary, so read the definitions in your agreement, not the label."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: one cohort, three models",
+          "p": "Example. You send 20 FTDs. Over 12 months they generate $3,000 of net revenue for the broker. Compare what you receive under three deals. The totals match on purpose, so you can see that timing and risk are what differ.",
+          "more": "Example maths: CPA 20 × $60 = $1,200. RevShare 40% × $3,000 = $1,200. Hybrid 20 × $30 = $600 plus 20% × $3,000 = $600, total $1,200. In real life the totals will not match. RevShare can pay far more than CPA if your users trade for years, or far less if they leave quickly or win. CPA moves the risk to the broker and gives you cash sooner. All figures are illustrative.",
+          "d": {
+            "cols": [
+              "Model",
+              "Terms",
+              "12-month total",
+              "When paid"
+            ],
+            "rows": [
+              [
+                "CPA",
+                "$60 × 20",
+                "$1,200",
+                "Month 2"
+              ],
+              [
+                "RevShare",
+                "40% × $3,000",
+                "$1,200",
+                "Over 12 months"
+              ],
+              [
+                "Hybrid",
+                "$30 × 20 + 20% × $3,000",
+                "$1,200",
+                "Half early, half spread"
+              ]
+            ]
+          },
+          "say": "Here's one cohort under three models. Example: you send twenty F T Ds, and over twelve months they generate three thousand dollars of net revenue for the broker. Under C P A at sixty dollars, you get twelve hundred, in month two. Under forty percent RevShare, twelve hundred, spread over twelve months. Under hybrid, thirty dollars each plus twenty percent, also twelve hundred, half early and half spread. The totals match on purpose, so you can see that timing and risk are what differ. In real life they won't match, and all figures are illustrative."
+        },
+        {
+          "v": "bars",
+          "h": "Example: RevShare comes from a few users",
+          "p": "Example. Revenue in a cohort is rarely even. Here 14 of the 20 users produce little, 5 produce a fair amount and 1 produces more than the 14 smallest together. RevShare totals swing heavily with one or two people.",
+          "more": "Example maths: $280 + $1,000 + $1,720 = $3,000. If the large user had not joined, the cohort would have produced $1,280, and 40% RevShare would pay $512 instead of $1,200. That is why RevShare results from small cohorts are unreliable. Judge RevShare on many cohorts over many months, never on one good month.",
+          "d": [
+            [
+              "14 small users",
+              16,
+              "$280"
+            ],
+            [
+              "5 mid users",
+              58,
+              "$1,000"
+            ],
+            [
+              "1 large user",
+              100,
+              "$1,720"
+            ]
+          ],
+          "say": "Here's an example of where RevShare actually comes from. Revenue in a cohort is rarely even. Look at the bars. Fourteen small users produce two hundred and eighty dollars. Five mid users produce a thousand. And one large user produces seventeen hundred and twenty, more than the fourteen smallest together. If that one user hadn't joined, forty percent RevShare would pay five hundred and twelve dollars instead of twelve hundred. That's why RevShare from small cohorts is unreliable. Judge it on many cohorts over many months."
+        },
+        {
+          "v": "curve",
+          "h": "Example: cash received over time",
+          "p": "Example. You spent $900 on the cohort in month 1. Under CPA you receive $1,200 in month 2 after the hold. Under RevShare the money arrives month by month and has not passed your spend until month 5.",
+          "more": "Example: RevShare monthly payments of $300, $220, $170, $130, $100, $80 and $30 add up to $1,030 by month 7, with the remaining $170 of the $1,200 arriving over months 8 to 12. The $900 spend is covered in month 5, when the total reaches $920. Under CPA it is covered in month 2. If you keep buying traffic every month on RevShare, these delays stack, and you need much more cash before the deal pays for itself.",
+          "d": {
+            "a": [
+              0,
+              1200,
+              1200,
+              1200,
+              1200,
+              1200,
+              1200
+            ],
+            "la": "CPA, cumulative $",
+            "b": [
+              300,
+              520,
+              690,
+              820,
+              920,
+              1000,
+              1030
+            ],
+            "lb": "RevShare, cumulative $",
+            "x": [
+              "M1",
+              "M2",
+              "M3",
+              "M4",
+              "M5",
+              "M6",
+              "M7"
+            ]
+          },
+          "say": "This chart shows an example of cash received over time. You spent nine hundred dollars on the cohort in month one. Look at the C P A line. You receive twelve hundred in month two, after the hold. Now the RevShare line. Money arrives month by month, three hundred, then two twenty, then less each month, and it doesn't pass your spend until month five. If you keep buying traffic every month on RevShare, these delays stack, and you need much more cash before the deal pays for itself."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: negative carryover",
+          "p": "Example. Many RevShare deals carry negative months forward. In month 2 your users win $1,500 net, so you earn nothing and start month 3 at minus $1,500. Month 3 earns $1,000, which only shrinks the hole.",
+          "more": "Example maths: month 3 balance −$1,500 + $1,000 = −$500, so you are paid $0. Month 4 earns $1,200 net: −$500 + $1,200 = $700, and 40% of $700 = $280 is paid. Without carryover you would have been paid 40% × $1,000 = $400 in month 3 and 40% × $1,200 = $480 in month 4. Ask whether the deal has carryover, whether it resets monthly or never, and whether it is per brand or across your whole account. Terms vary; read your agreement.",
+          "d": [
+            "−$1,500 carried",
+            "+",
+            "$1,000 in month 3",
+            "=",
+            "−$500, paid $0"
+          ],
+          "say": "Here's how negative carryover works. Many RevShare deals carry negative months forward. Example: in month two your users win fifteen hundred dollars net, so you earn nothing, and you start month three at minus fifteen hundred. Month three earns a thousand, which only shrinks the hole to minus five hundred, so you're paid zero. Without carryover, you'd have been paid in both months. So ask whether the deal has carryover, whether it resets monthly or never, and whether it's per brand or across your whole account. Terms vary, so read your agreement."
+        },
+        {
+          "v": "tip",
+          "h": "The conflict inside net revenue",
+          "p": "At a market-making broker, net revenue can include client losses. On RevShare you then earn more when your users lose. Never let that change how you speak to people: no pushing to deposit more, trade more or chase losses.",
+          "d": {
+            "kind": "tip",
+            "text": "Your honest test: would you be comfortable if each user read your messages after losing their deposit? If not, rewrite them."
+          },
+          "say": "Here's the conflict inside net revenue. At a market making broker, net revenue can include client losses. So on RevShare, you earn more when your users lose. Never let that change how you speak to people: no pushing them to deposit more, trade more, or chase losses. Here's your honest test, on screen. Would you be comfortable if each user read your messages after losing their deposit? If not, rewrite them."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: a planning value for RevShare",
+          "p": "Example. Your past cohorts suggest about $60 of RevShare per FTD over 12 months. Because RevShare is uncertain, cut it by 30% before planning. Your planning value per FTD is $42, which you treat as the payout.",
+          "more": "Example maths: $60 × 0.7 = $42. With a 25% margin, target CPA is $42 × 0.75 = $31.50, break-even is $42, the zero-conversion kill line is 2 × $31.50 = $63, and the CPA kill line after 3 × target spend ($94.50) is the lower of 1.5 × $31.50 = $47.25 and $42, which is $42. The 30% cut is our starting rule, not a law. Use a bigger cut until you have at least 3 months of your own cohort data for that geo.",
+          "d": [
+            "$60 expected",
+            "×",
+            "0.7",
+            "=",
+            "$42 planning value"
+          ],
+          "say": "Here's how to get a planning value for RevShare. Example: your past cohorts suggest about sixty dollars of RevShare per F T D over twelve months. Because RevShare is uncertain, cut it by thirty percent before planning. Sixty times zero point seven is forty two dollars, and you treat that as the payout. With a twenty five percent margin, your target C P A is thirty one fifty. The thirty percent cut is a starting rule, not a law. Use a bigger cut until you have at least three months of your own cohort data for that geo."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: read the deal terms",
+          "p": "Before you accept a deal, find these fields in the agreement or the deal sheet. Carryover, the definition of net revenue and the right to change terms matter more than the headline percentage. Screen is an illustrative mock-up; names differ by network.",
+          "d": {
+            "kind": "browser",
+            "url": "network.example/deals/4471",
+            "title": "Deal terms",
+            "blocks": [
+              {
+                "type": "select",
+                "label": "Model",
+                "value": "Hybrid"
+              },
+              {
+                "type": "field",
+                "label": "CPA per qualified FTD",
+                "value": "$30"
+              },
+              {
+                "type": "field",
+                "label": "RevShare",
+                "value": "20% of net revenue"
+              },
+              {
+                "type": "toggle",
+                "label": "Negative carryover",
+                "on": true
+              },
+              {
+                "type": "field",
+                "label": "Net revenue deducts",
+                "value": "Bonuses, payment fees, chargebacks"
+              },
+              {
+                "type": "field",
+                "label": "Term",
+                "value": "24 months per client"
+              },
+              {
+                "type": "text",
+                "value": "Illustrative. Read your own agreement."
+              }
+            ],
+            "highlight": 3
+          },
+          "say": "Here's an illustrative deal terms screen. The model is hybrid, a thirty dollar C P A per qualified F T D, plus twenty percent of net revenue. Look at the highlighted toggle: negative carryover is on. Net revenue deducts bonuses, payment fees and chargebacks, and the term is twenty four months per client. Carryover, the definition of net revenue, and the right to change terms matter more than the headline percentage. Names differ by network, so read your own agreement."
+        },
+        {
+          "v": "check",
+          "h": "Questions to ask before you accept",
+          "p": "Ask these in writing and keep the replies in your offer folder. A partner who cannot answer them clearly is telling you how a dispute would go later.",
+          "d": [
+            "How is net revenue defined, and what is deducted?",
+            "Is there negative carryover, and does it ever reset?",
+            "How long is RevShare paid per client?",
+            "Can the deal be changed without notice, and does a change apply to existing clients?",
+            "What is the minimum payment threshold and the payment term?",
+            "Which events can you send as postbacks?"
+          ],
+          "say": "Here are the questions to ask before you accept, in writing. How is net revenue defined, and what's deducted? Is there negative carryover, and does it ever reset? How long is RevShare paid per client? Can the deal be changed without notice, and does a change apply to existing clients? What's the minimum payment threshold and the payment term? And which events can you receive as postbacks? Keep the replies in your offer folder. A partner who can't answer clearly is telling you how a dispute would go later."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "These mistakes often follow one good RevShare month or a manager's push to switch models. Decide models on your cash and your own cohort data, not on stories about other affiliates.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Take RevShare with no cash buffer",
+                "Ignore negative carryover",
+                "Judge RevShare on one cohort",
+                "Assume 'lifetime' means forever"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Start on CPA until you have data and cash",
+                "Model a losing month before you sign",
+                "Use a planning value with a 30% cut",
+                "Get the term per client in writing"
+              ]
+            }
+          },
+          "say": "These mistakes often follow one good RevShare month, or a manager's push to switch models. On the left: taking RevShare with no cash buffer, ignoring negative carryover, judging RevShare on one cohort, and assuming lifetime means forever. On the right, the fixes: start on C P A until you have data and cash, model a losing month before you sign, use a planning value with a thirty percent cut, and get the term per client in writing. Decide on your cash and your own cohort data, not on stories about other affiliates."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance warning",
+          "p": "The payout model never changes what you may say in ads. Whatever you earn on, the same platform rules, local law and risk warnings apply to every creative and message you send.",
+          "d": {
+            "kind": "warn",
+            "text": "Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country and the broker's licence for that country before you run. Education, not legal or financial advice."
+          },
+          "say": "A compliance warning. The payout model never changes what you may say in ads. Whatever you earn on, the same rules apply. As the slide says, trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country, and the broker's licence for that country before you run. This is education, not legal or financial advice."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for payout models",
+          "p": "Starting rules to adapt as your data grows. They keep you on the safer model until your own numbers, not a manager's forecast, justify more risk.",
+          "d": [
+            "Start every new geo on CPA or hybrid, not pure RevShare",
+            "Consider RevShare only with 3+ months of cohort data and 3 months of spend in reserve",
+            "Planning value = expected RevShare per FTD × 0.7",
+            "Kill at 2 × target CPA spent with 0 qualified FTDs; kill if CPA > lower of 1.5 × target and break-even after 3 × target spend",
+            "Scale +20% every ≥ 48 hours when CPA ≤ 0.8 × target with ≥ 3 qualified FTDs"
+          ],
+          "say": "Here are starting rules for payout models, to adapt as your data grows. Start every new geo on C P A or hybrid, not pure RevShare. Consider RevShare only with three or more months of cohort data and three months of spend in reserve. Planning value is expected RevShare per F T D times zero point seven. Kill at two times target C P A spent with zero qualified F T Ds, or if C P A is above the lower of one point five times target and break even after three times target spend. And scale twenty percent every forty eight hours or more, when C P A is at or below zero point eight times target with three or more qualified F T Ds."
+        }
+      ],
+      "takeaways": [
+        "CPA pays sooner and moves risk to the broker. RevShare pays over time and carries more risk.",
+        "RevShare totals swing heavily with a few users and with negative carryover.",
+        "Plan RevShare with a planning value cut by 30%, then use the normal kill and scale rules.",
+        "Get net revenue, carryover, term and change rights in writing."
+      ],
+      "action": "Take one deal you have or are offered. Write down its model, net revenue definition, carryover rule and payment term, then calculate a target CPA from its payout or planning value with a 25% margin.",
+      "glossary": [
+        {
+          "term": "RevShare",
+          "def": "A deal paying you a percentage of the net revenue your referred clients generate."
+        },
+        {
+          "term": "Hybrid deal",
+          "def": "A deal combining a smaller CPA with a smaller RevShare percentage."
+        },
+        {
+          "term": "Negative carryover",
+          "def": "When a month with negative net revenue is carried into later months, reducing future RevShare."
+        },
+        {
+          "term": "Net revenue",
+          "def": "Broker revenue from your clients after agreed deductions such as bonuses, fees and chargebacks."
+        },
+        {
+          "term": "Planning value",
+          "def": "An expected RevShare per FTD, cut for uncertainty, that you treat as the payout when setting targets."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "You have a small budget and little savings. Which model usually suits a new geo best?",
+          "options": [
+            "Pure RevShare",
+            "CPA or hybrid",
+            "Per-lot rebate only",
+            "Whichever has the highest percentage"
+          ],
+          "answer": 1,
+          "why": "CPA or hybrid pays sooner and moves risk to the broker, which protects a small cash buffer."
+        },
+        {
+          "q": "Carryover is −$800. This month's net revenue is $1,000 on 30% RevShare. What are you paid?",
+          "options": [
+            "$300",
+            "$0",
+            "$60",
+            "$240"
+          ],
+          "answer": 2,
+          "why": "−$800 + $1,000 = $200 net, and 30% × $200 = $60."
+        },
+        {
+          "q": "Expected RevShare is $80 per FTD. Using the 30% cut and a 25% margin, what is the target CPA?",
+          "options": [
+            "$42",
+            "$56",
+            "$60",
+            "$80"
+          ],
+          "answer": 0,
+          "why": "Planning value $80 × 0.7 = $56; target = $56 × 0.75 = $42."
+        },
+        {
+          "q": "Why are RevShare results from one small cohort unreliable?",
+          "options": [
+            "Brokers report RevShare late",
+            "Platforms hide RevShare data",
+            "Revenue is usually concentrated in a few users",
+            "RevShare is always lower than CPA"
+          ],
+          "answer": 2,
+          "why": "One or two large users can make or break a small cohort's total, so you need many cohorts to judge."
+        },
+        {
+          "q": "Which term matters most to check if a deal says 'lifetime RevShare'?",
+          "options": [
+            "The colour of the dashboard",
+            "Whether the partner can change the deal and how long it is paid per client",
+            "The broker's logo",
+            "How many offers the network has"
+          ],
+          "answer": 1,
+          "why": "Lifetime can be cut by a change of terms or a fixed per-client term, so get both in writing."
+        }
+      ],
+      "say_intro": "The payout model decides when you're paid and how much risk you carry. In this lesson you'll compare C P A, RevShare, hybrid and per lot deals on the same users, learn how negative carryover works, turn a RevShare estimate into a planning value, and list the terms to confirm before you accept any deal.",
+      "say_outro": "So, the same total can carry very different risk: C P A pays sooner, RevShare depends on a few users and on carryover, and you plan with a cautious value. Your task: take one deal you have or are offered, write down its model, net revenue definition, carryover rule and payment term, then calculate a target C P A from its payout or planning value with a twenty five percent margin. Now take the quiz."
+    },
+    {
+      "slug": "kyc-and-the-ftd-journey",
+      "title": "The user journey: registration, KYC and FTD",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can map every step from click to qualified FTD and measure the drop at each one.",
+        "You can explain what KYC checks and why brokers must do them.",
+        "You can calculate CPA per raw and per qualified FTD and see how KYC drop-off changes profit.",
+        "You can reduce honest drop-off without coaching anyone around a legal check."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the money hides after registration",
+          "p": "Most beginners watch clicks and registrations because they arrive fast. Yet in trading, many registrations never deposit, often because of identity checks the broker must run by law. The gap between registration and qualified FTD is where most of your profit is won or lost.",
+          "d": {
+            "b": "A registration is not a client",
+            "s": "Watch the steps between sign-up and deposit."
+          },
+          "say": "Here's why this lesson matters. Most beginners watch clicks and registrations, because they arrive fast. But in trading, many registrations never deposit, often because of identity checks the broker must run by law. The gap between registration and qualified F T D is where most of your profit is won or lost. So remember, a registration is not a client."
+        },
+        {
+          "v": "flow",
+          "h": "The trading user journey",
+          "p": "Each arrow is a place people leave. Your tracking should count every step you can, so that you know which one is costing you money rather than guessing.",
+          "d": [
+            "Click",
+            "Register",
+            "KYC documents",
+            "KYC approved",
+            "First deposit",
+            "Qualifies"
+          ],
+          "say": "Here's the trading user journey. Follow it across the screen. Click, register, K Y C documents, K Y C approved, first deposit, and qualifies. Each arrow is a place where people leave. Your tracking should count every step you can, so you know which one is costing you money, rather than guessing."
+        },
+        {
+          "v": "cards",
+          "h": "What KYC checks and why",
+          "p": "Know Your Customer checks are part of anti-money-laundering law in most countries. Brokers must confirm who the client is before they can trade or withdraw. The exact checks depend on the regulator and the entity, so ask your broker what users in your geo will see.",
+          "d": [
+            "Identity|Passport, national ID or driving licence",
+            "Address|Utility bill or bank statement, often recent",
+            "Liveness|A selfie or short video to match the ID",
+            "Appropriateness|Questions on trading knowledge in some regions",
+            "Source of funds|For larger deposits or on request",
+            "Sanctions and age|Screening, and adults only"
+          ],
+          "say": "K Y C means know your customer. These checks are part of anti money laundering law in most countries. Brokers must confirm who the client is before they can trade or withdraw. Look at the cards. Identity, with a passport, national I D or driving licence. Address, with a utility bill or bank statement. Liveness, a selfie or short video to match the I D. Appropriateness questions in some regions. Source of funds for larger deposits. And sanctions and age screening, adults only. The exact checks depend on the regulator, so ask your broker what users in your geo will see."
+        },
+        {
+          "v": "funnel",
+          "h": "Worked example: one month of a test",
+          "p": "Example. 2,000 clicks became 200 registrations. 120 submitted KYC documents, 96 were approved, 30 deposited and 21 met the qualification rule. Each step loses people for a different reason. Figures are illustrative, not benchmarks.",
+          "d": [
+            [
+              "Clicks",
+              2000
+            ],
+            [
+              "Registrations",
+              200
+            ],
+            [
+              "KYC submitted",
+              120
+            ],
+            [
+              "KYC approved",
+              96
+            ],
+            [
+              "FTDs",
+              30
+            ],
+            [
+              "Qualified FTDs",
+              21
+            ]
+          ],
+          "say": "Here's an example of one month of a test, as a funnel. Two thousand clicks became two hundred registrations. A hundred and twenty submitted K Y C documents. Ninety six were approved. Thirty deposited. And twenty one met the qualification rule. Watch how the funnel narrows at every stage. Each step loses people for a different reason. These figures are illustrative, not benchmarks."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: the real CPA",
+          "p": "Example. Same test, $1,200 spent, $70 paid per qualified FTD. On raw FTDs the CPA looks like $40, a comfortable margin. On qualified FTDs it is $57.14 and the margin is much thinner. Your rules must use the number you are paid on.",
+          "d": {
+            "cols": [
+              "Metric",
+              "Formula",
+              "Example"
+            ],
+            "rows": [
+              [
+                "CPA per raw FTD",
+                "$1,200 ÷ 30",
+                "$40.00"
+              ],
+              [
+                "CPA per qualified FTD",
+                "$1,200 ÷ 21",
+                "$57.14"
+              ],
+              [
+                "Revenue",
+                "21 × $70",
+                "$1,470"
+              ],
+              [
+                "Profit",
+                "$1,470 − $1,200",
+                "$270"
+              ],
+              [
+                "Margin",
+                "$270 ÷ $1,470",
+                "18.4%"
+              ]
+            ]
+          },
+          "say": "Now the real C P A, cost per acquisition, for that same test. You spent twelve hundred dollars, and you're paid seventy dollars per qualified F T D. Per raw F T D, twelve hundred divided by thirty, the C P A looks like forty dollars, a comfortable margin. But per qualified F T D, it's fifty seven dollars fourteen. Revenue is fourteen seventy, profit two seventy, a margin of about eighteen percent, much thinner. Your rules must use the number you're actually paid on."
+        },
+        {
+          "v": "cards",
+          "h": "Why people drop at KYC",
+          "p": "Some drop-off is healthy: the checks are doing their job. The rest is friction you can reduce honestly, mostly by setting expectations before people sign up.",
+          "d": [
+            "Surprise|Did not expect to show ID",
+            "Missing documents|No valid ID or address proof to hand",
+            "Photo fails|Blur, glare, cropped edges",
+            "Trust|Unsure about sending ID to a website",
+            "Appropriateness|Fails a knowledge check, rightly",
+            "Waiting|Manual review takes days"
+          ],
+          "say": "Why do people drop at K Y C? Some drop off is healthy, because the checks are doing their job. Look at the cards. Surprise, they didn't expect to show I D. Missing documents. Photo fails, from blur, glare or cropped edges. Trust, unsure about sending I D to a website. Appropriateness, failing a knowledge check, rightly. And waiting, when manual review takes days. The rest is friction you can reduce honestly, mostly by setting expectations before people sign up."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: the value of honest preparation",
+          "p": "Example. You add a clear line to your lander: 'You will need a valid ID and proof of address.' KYC submission rises from 60% to 70% of registrations while the later rates stay the same. Qualified FTDs rise from 21 to 24.5 on the same spend.",
+          "more": "Example maths: 200 × 70% = 140 submitted. 140 × 80% = 112 approved. 112 × 31.25% = 35 FTDs. 35 × 70% = 24.5 qualified. At $70 each that is $1,715 instead of $1,470, an extra $245 for the same $1,200 spend. The rates are illustrative. Fewer people may register once you are honest about ID, and that is fine: they would not have deposited anyway.",
+          "d": [
+            "200 × 70% × 80% × 31.25% × 70%",
+            "=",
+            "24.5 qualified"
+          ],
+          "say": "Here's the value of honest preparation. Example: you add a clear line to your lander, saying they'll need a valid I D and proof of address. K Y C submission rises from sixty to seventy percent of registrations, while the later rates stay the same. Qualified F T Ds rise from twenty one to twenty four and a half on the same spend. At seventy dollars each, that's two hundred and forty five dollars more. The rates are illustrative. Fewer people may register once you're honest about I D, and that's fine. They wouldn't have deposited anyway."
+        },
+        {
+          "v": "phone",
+          "h": "Preparing users before they sign up",
+          "p": "A short, honest message before the broker's form saves people time and saves you wasted spend. It explains what is needed, why the law requires it and that trading carries risk. This example is a welcome message in a Telegram-style bot.",
+          "d": {
+            "app": "bot",
+            "title": "Learning bot",
+            "subtitle": "bot",
+            "messages": [
+              {
+                "from": "them",
+                "text": "Before you open a live account: the broker must check your identity by law. Have a valid ID and a recent proof of address ready."
+              },
+              {
+                "from": "them",
+                "text": "Start with the demo if you are new. Trading involves risk and you can lose money.",
+                "buttons": [
+                  "Open demo",
+                  "What documents?"
+                ]
+              },
+              {
+                "from": "me",
+                "text": "What documents?"
+              },
+              {
+                "from": "them",
+                "text": "Usually a passport, national ID or driving licence, plus a bank statement or utility bill. The broker's page lists what applies in your country."
+              }
+            ]
+          },
+          "say": "Here's an example of preparing users before they sign up, in a Telegram style bot. Notice the first message. It says the broker must check identity by law, and to have a valid I D and recent proof of address ready. Then it suggests starting with the demo if you're new, and says trading involves risk and you can lose money. When the user asks what documents, the bot lists the usual ones and points to the broker's page for their country. Short, honest, and it saves everyone time."
+        },
+        {
+          "v": "walk",
+          "h": "Walkthrough: find your drop-off in the report",
+          "p": "Most network dashboards can show each stage by sub ID. Pull it weekly and compare ad sets. Screens are illustrative mock-ups; report names and columns differ by network.",
+          "d": {
+            "steps": [
+              {
+                "title": "Open the stage report",
+                "text": "Choose the date range and group by sub ID 2, your ad set name.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/reports/stages",
+                  "title": "Stage report",
+                  "blocks": [
+                    {
+                      "type": "select",
+                      "label": "Group by",
+                      "value": "sub2 (ad set)"
+                    },
+                    {
+                      "type": "button",
+                      "label": "Run report"
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Read each stage",
+                "text": "Look at registrations, KYC approved, FTD and qualified for each ad set.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "network.example/reports/stages",
+                  "title": "Stage report",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Ad set",
+                        "Regs",
+                        "KYC ok",
+                        "FTD"
+                      ],
+                      "rows": [
+                        [
+                          "demo_angle",
+                          "80",
+                          "46",
+                          "14"
+                        ],
+                        [
+                          "fast_angle",
+                          "120",
+                          "50",
+                          "8"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              },
+              {
+                "title": "Compare rates",
+                "text": "fast_angle: 8 ÷ 120 = 6.7% reg to FTD. demo_angle: 14 ÷ 80 = 17.5%. The cheap registrations were the expensive ones.",
+                "screen": {
+                  "v": "screen",
+                  "kind": "browser",
+                  "url": "sheet.example/weekly",
+                  "title": "Weekly sheet",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "cols": [
+                        "Ad set",
+                        "Reg to FTD"
+                      ],
+                      "rows": [
+                        [
+                          "demo_angle",
+                          "17.5%"
+                        ],
+                        [
+                          "fast_angle",
+                          "6.7%"
+                        ]
+                      ]
+                    }
+                  ],
+                  "highlight": 0
+                }
+              }
+            ]
+          },
+          "say": "Tap Next to follow each step. First, open the stage report, choose the date range, and group by sub I D two, your ad set name. Second, read each stage, registrations, K Y C approved, F T D and qualified, for each ad set. Third, compare rates. The fast angle ad set turned a hundred and twenty registrations into eight F T Ds, about six point seven percent. The demo angle turned eighty into fourteen, seventeen and a half percent. The cheap registrations were the expensive ones. Report names differ by network, and these screens are illustrative."
+        },
+        {
+          "v": "compare",
+          "h": "Honest fixes versus harmful fixes",
+          "p": "Some ways of lifting KYC completion are fraud or put users at risk. The honest ways all work by setting expectations and helping real, eligible adults finish a legal check, never by getting around it.",
+          "d": {
+            "a": {
+              "title": "Never do this",
+              "items": [
+                "Hide that ID is required",
+                "Give answers to the appropriateness test",
+                "Collect or forward users' documents yourself",
+                "Let anyone use another person's ID"
+              ]
+            },
+            "b": {
+              "title": "Do this",
+              "items": [
+                "Say ID is needed before sign-up",
+                "List documents and photo tips",
+                "Point users to the broker's own support",
+                "Invite people to stay on demo if unsure"
+              ]
+            }
+          },
+          "say": "Compare honest fixes with harmful ones. On the left, never do this: hide that I D is required, give answers to the appropriateness test, collect or forward users' documents yourself, or let anyone use another person's I D. Some of those are fraud, and they put users at risk. On the right, do this: say I D is needed before sign up, list documents and photo tips, point users to the broker's own support, and invite people to stay on demo if they're unsure."
+        },
+        {
+          "v": "product",
+          "h": "Answering document questions at scale",
+          "p": "If your funnel runs through Telegram, many people ask the same questions about documents and demo accounts. A reply assistant can answer from your approved script, so answers stay consistent and never drift into advice.",
+          "d": {
+            "slug": "replyvoo",
+            "why": "Answers repeated KYC and demo questions from your approved script, with the risk line included."
+          },
+          "say": "If your funnel runs through Telegram, many people ask the same questions about documents and demo accounts. On screen is Replyvoo, a reply assistant on voo square. It answers repeated K Y C and demo questions from your approved script, with the risk line included. That way answers stay consistent, and never drift into advice."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance warning",
+          "p": "KYC and appropriateness checks protect users and are required by law. Helping someone get around them can be fraud and can harm a person who should not be trading leveraged products.",
+          "d": {
+            "kind": "warn",
+            "text": "Never coach users through KYC or appropriateness tests, never handle their identity documents and never encourage use of someone else's details. Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country and the broker's licence for that country before you run. Education, not legal or financial advice."
+          },
+          "say": "A compliance warning. K Y C and appropriateness checks protect users and are required by law. Helping someone get around them can be fraud, and can harm a person who shouldn't be trading leveraged products. As the slide says, never coach users through K Y C or appropriateness tests, never handle their identity documents, and never encourage use of someone else's details. Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current policies, the law in your users' country, and the broker's licence there before you run. This is education, not legal or financial advice."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for the journey",
+          "p": "Starting rules to adapt to your offer and data. They make sure your decisions use the stage you are paid on and catch funnel problems before they eat a whole budget.",
+          "d": [
+            "Judge CPA on qualified FTDs from the network, never on registrations",
+            "Kill at 2 × target CPA spent with 0 qualified FTDs",
+            "Kill if CPA > lower of 1.5 × target and break-even after 3 × target spend",
+            "Ad set with reg-to-FTD under half your average after 40+ registrations: fix the angle before scaling",
+            "KYC approval below 60% across ad sets: ask the network about geo or document issues before more spend"
+          ],
+          "say": "Here are starting rules for the journey, to adapt. Judge C P A on qualified F T Ds from the network, never on registrations. Kill at two times target C P A spent with zero qualified F T Ds. Kill if C P A is above the lower of one point five times target and break even, after three times target spend. If an ad set's registration to F T D rate is under half your average after forty or more registrations, fix the angle before scaling. And if K Y C approval is below sixty percent across ad sets, ask the network about geo or document issues before more spend."
+        }
+      ],
+      "takeaways": [
+        "Registrations are cheap signals. Qualified FTDs are what pay.",
+        "KYC is a legal requirement. Some drop-off is healthy, the rest is friction you can reduce honestly.",
+        "Calculate CPA per qualified FTD and use it in every rule.",
+        "Set expectations before sign-up; never coach anyone around a check."
+      ],
+      "action": "Pull last week's stage report by ad set from your network, or build the table from your tracker. Calculate the reg-to-FTD rate for each ad set and mark any that sit below half your average.",
+      "glossary": [
+        {
+          "term": "KYC",
+          "def": "Know Your Customer. Checks a broker must run to confirm a client's identity and address before trading or withdrawal."
+        },
+        {
+          "term": "AML",
+          "def": "Anti-money-laundering. Laws that require firms to verify clients and watch for suspicious money."
+        },
+        {
+          "term": "Appropriateness test",
+          "def": "Questions some regulators require to check whether a client understands a complex product such as CFDs."
+        },
+        {
+          "term": "Liveness check",
+          "def": "A selfie or video step that confirms a real person matches the ID document."
+        },
+        {
+          "term": "Reg-to-FTD rate",
+          "def": "The share of registrations that go on to make a first deposit."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "You spent $900. There were 25 raw FTDs and 15 qualified FTDs. What is the CPA per qualified FTD?",
+          "options": [
+            "$36",
+            "$60",
+            "$45",
+            "$90"
+          ],
+          "answer": 1,
+          "why": "$900 ÷ 15 = $60. The $36 figure uses raw FTDs, which you are not paid on."
+        },
+        {
+          "q": "Which fix for KYC drop-off is honest?",
+          "options": [
+            "Sending users answers for the knowledge test",
+            "Telling users before sign-up which documents they need",
+            "Uploading documents on users' behalf",
+            "Hiding the ID step until after the deposit"
+          ],
+          "answer": 1,
+          "why": "Setting expectations helps eligible adults finish a legal check. The others are harmful or fraudulent."
+        },
+        {
+          "q": "Ad set A: 120 registrations, 8 FTDs. Ad set B: 80 registrations, 14 FTDs. Which statement is right?",
+          "options": [
+            "A is better because it has more registrations",
+            "B converts registrations to FTD more than twice as well",
+            "They are the same",
+            "You cannot compare without CTR"
+          ],
+          "answer": 1,
+          "why": "A is 6.7% and B is 17.5%. Cheap registrations that never deposit are expensive."
+        },
+        {
+          "q": "Why do brokers run KYC?",
+          "options": [
+            "To raise their prices",
+            "To slow down affiliates",
+            "Because anti-money-laundering law requires them to verify clients",
+            "Only to collect marketing data"
+          ],
+          "answer": 2,
+          "why": "KYC is a legal duty under AML rules in most countries."
+        },
+        {
+          "q": "Spend $300, 0 qualified FTDs, target CPA $140. What does the starting rule say?",
+          "options": [
+            "Scale +20% to get data faster",
+            "Hold until spend reaches 3 × target",
+            "Keep and change the creative only",
+            "Kill, because spend is above 2 × target with 0 qualified FTDs"
+          ],
+          "answer": 3,
+          "why": "2 × $140 = $280. Spend of $300 with 0 qualified FTDs passes the zero-conversion kill line."
+        }
+      ],
+      "say_intro": "In trading, the money hides between registration and deposit. In this lesson you'll map every step from click to qualified F T D, first time deposit, understand what K Y C checks and why, see how drop off changes your real C P A, and learn to reduce honest drop off without coaching anyone around a legal check.",
+      "say_outro": "So, a registration is not a client: judge on qualified F T Ds, watch each stage by ad set, and reduce drop off only by setting honest expectations. Your task: pull last week's stage report by ad set from your network, or build it from your tracker, calculate the registration to F T D rate for each ad set, and mark any that sit below half your average. Now take the quiz."
+    },
+    {
+      "slug": "qualified-ftd-math",
+      "title": "Baseline vs qualified FTD and the real target",
+      "minutes": 18,
+      "objectives": [
+        "By the end you can read a qualification rule and say exactly what a user must do to count.",
+        "You can calculate effective payout per raw FTD and set a target CPA from it.",
+        "You can explain why qualified conversions arrive late and how that changes when you judge.",
+        "You can list the reasons FTDs are rejected and what you can and cannot control."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why the headline payout is not your payout",
+          "p": "A $80 CPA only pays when a user meets every part of the qualification rule. If a third of your depositors do not, your real payout per depositor is far lower. Buyers who set targets on the headline number lose money while their dashboards look green.",
+          "d": {
+            "b": "You are paid on qualified FTDs only",
+            "s": "Set every target on what you are actually paid."
+          },
+          "say": "Here's why this lesson matters. An eighty dollar C P A, cost per acquisition, only pays when a user meets every part of the qualification rule. If a third of your depositors don't, your real payout per depositor is far lower. Buyers who set targets on the headline number lose money while their dashboards look green. You're paid on qualified F T Ds only, so set every target on what you're actually paid."
+        },
+        {
+          "v": "cards",
+          "h": "The terms in a qualification rule",
+          "p": "Read every word of the rule on the offer page and confirm it in writing. Small details, such as whether the deposit is counted in total or in one payment, change who counts.",
+          "d": [
+            "Baseline or raw FTD|Any first deposit at all",
+            "Minimum deposit|e.g. at least $100, single or cumulative",
+            "Activity rule|e.g. 0.5 lots or 5 trades",
+            "Window|Must happen within e.g. 30 days of sign-up",
+            "Exclusions|Duplicates, bonus-only, some payment methods",
+            "Geo rule|Only users from approved countries count"
+          ],
+          "say": "Here are the terms in a qualification rule. A baseline or raw F T D is any first deposit at all. A minimum deposit, for example at least a hundred dollars, single or cumulative. An activity rule, like half a lot or five trades. A window, for example within thirty days of sign up. Exclusions, like duplicates, bonus only, or some payment methods. And a geo rule, so only users from approved countries count. Read every word on the offer page and confirm it in writing, because small details change who counts."
+        },
+        {
+          "v": "eq",
+          "h": "What a lot is",
+          "p": "Activity rules are often in lots. In forex, one standard lot is 100,000 units of the base currency. A mini lot is 0.1 and a micro lot is 0.01. Fifty micro-lot trades add up to half a standard lot.",
+          "more": "Lot sizes for gold, indices, shares and crypto CFDs are defined differently by each broker, so 0.5 lots on gold is not the same exposure as 0.5 lots on EUR/USD. Ask the network how the rule is counted for each instrument. Never encourage users to trade more to meet an activity rule. If users only qualify because someone pushed them to trade, the deal is harming them and the broker may reverse the payout.",
+          "d": [
+            "0.01 lot",
+            "×",
+            "50 trades",
+            "=",
+            "0.5 lots"
+          ],
+          "say": "Activity rules are often written in lots. In forex, one standard lot is a hundred thousand units of the base currency. A mini lot is zero point one, and a micro lot is zero point zero one. So look at the formula: fifty micro lot trades add up to half a standard lot. Lot sizes for gold, indices and other instruments are defined differently by each broker, so ask how the rule is counted. And never encourage users to trade more to meet an activity rule. That harms them, and the broker may reverse the payout."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: effective payout",
+          "p": "Example. The offer pays $80 per qualified FTD. Of your 40 raw FTDs, 26 qualified, a 65% rate. You earned $2,080, which is $52 per raw FTD. That $52 is your effective payout and the base for every target.",
+          "d": {
+            "cols": [
+              "Item",
+              "Formula",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Raw FTDs",
+                "From report",
+                "40"
+              ],
+              [
+                "Qualified",
+                "From report",
+                "26"
+              ],
+              [
+                "Qualification rate",
+                "26 ÷ 40",
+                "65%"
+              ],
+              [
+                "Revenue",
+                "26 × $80",
+                "$2,080"
+              ],
+              [
+                "Effective payout",
+                "$2,080 ÷ 40",
+                "$52"
+              ],
+              [
+                "Target per raw FTD, 25% margin",
+                "$52 × 0.75",
+                "$39"
+              ]
+            ]
+          },
+          "say": "Here's a worked example of effective payout. The offer pays eighty dollars per qualified F T D. Of your forty raw F T Ds, twenty six qualified, a sixty five percent rate. Twenty six times eighty is two thousand and eighty dollars. Divided by forty raw F T Ds, that's fifty two dollars each. That fifty two is your effective payout, and the base for every target. With a twenty five percent margin, your target per raw F T D is thirty nine dollars."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: target cost per raw FTD",
+          "p": "Your turn. Treat a raw FTD as the 'lead' and the qualification rate as the conversion rate. Enter payout $80, conversion 65% and margin 25%, then find the most you can pay per raw FTD.",
+          "d": {
+            "kind": "breakeven",
+            "task": "Payout $80 per qualified FTD, 65% of raw FTDs qualify, 25% margin. What is the most you can pay per raw FTD?",
+            "preset": {
+              "payout": 80,
+              "cr_pct": 65,
+              "margin_pct": 25
+            },
+            "answer": {
+              "field": "max_cpl",
+              "value": 39,
+              "tolerance": 0.05
+            }
+          },
+          "say": "Your turn. Treat a raw F T D as the lead, and the qualification rate as the conversion rate. In the calculator, enter a payout of eighty dollars, a conversion of sixty five percent, and a margin of twenty five percent. Then find the most you can pay per raw F T D. Pause and try it, then check your answer."
+        },
+        {
+          "v": "curve",
+          "h": "Example: qualified FTDs arrive late",
+          "p": "Example. Raw FTDs show up within days, but qualification takes time because users must deposit enough and trade within the window. On day 7 you can see 24 raw FTDs but only 10 confirmed qualified.",
+          "more": "If you judged on day 7 with the qualified count, the CPA would look about two and a half times worse than it ends up. If you judged on raw FTDs, it would look far better than it is. The fix is to judge raw-FTD cost against the effective payout early, and to confirm with qualified counts once a cohort is old enough. Ask your network how long qualification usually takes in your geo; the curve here is illustrative.",
+          "d": {
+            "a": [
+              6,
+              14,
+              24,
+              30,
+              34,
+              38,
+              40
+            ],
+            "la": "Raw FTDs, cumulative",
+            "b": [
+              1,
+              4,
+              10,
+              15,
+              19,
+              23,
+              26
+            ],
+            "lb": "Qualified, cumulative",
+            "x": [
+              "D1",
+              "D3",
+              "D7",
+              "D10",
+              "D14",
+              "D21",
+              "D30"
+            ]
+          },
+          "say": "This chart shows an example of why qualified F T Ds arrive late. Raw F T Ds show up within days, but qualification takes time, because users must deposit enough and trade within the window. Look at day seven. You can see twenty four raw F T Ds, but only ten confirmed qualified. So judge raw F T D cost against the effective payout early, and confirm with qualified counts once a cohort is old enough. The curve is illustrative, so ask your network how long qualification usually takes in your geo."
+        },
+        {
+          "v": "lab",
+          "h": "Lab: apply the kill line",
+          "p": "Use the effective target of $39 per raw FTD. An ad set has spent $80 over 3 days with 0 raw FTDs, and the postback is working. Apply the starting rules and choose kill, hold or scale.",
+          "d": {
+            "kind": "killscale",
+            "task": "Target $39 per raw FTD. $80 spent over 3 days, 0 FTDs. Kill, hold or scale?",
+            "preset": {
+              "spend": 80,
+              "conversions": 0,
+              "target_cpa": 39,
+              "days": 3
+            },
+            "answer": {
+              "field": "verdict",
+              "value": "kill",
+              "tolerance": 0
+            }
+          },
+          "say": "Another lab. Use the effective target of thirty nine dollars per raw F T D. An ad set has spent eighty dollars over three days with zero raw F T Ds, and the postback is working. Apply the starting rules, and choose kill, hold or scale. Pause and try it, then check your answer."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: read conversion statuses",
+          "p": "Open the conversions report and filter by status. Each status means something different for your money and your decisions. Screen is an illustrative mock-up; status names differ by network.",
+          "d": {
+            "kind": "browser",
+            "url": "network.example/conversions",
+            "title": "Conversions, last 30 days",
+            "blocks": [
+              {
+                "type": "select",
+                "label": "Status",
+                "value": "All"
+              },
+              {
+                "type": "table",
+                "cols": [
+                  "Status",
+                  "Count",
+                  "Meaning"
+                ],
+                "rows": [
+                  [
+                    "Pending",
+                    "9",
+                    "Inside window"
+                  ],
+                  [
+                    "Qualified",
+                    "26",
+                    "Will be paid"
+                  ],
+                  [
+                    "Rejected",
+                    "5",
+                    "Will not be paid"
+                  ]
+                ]
+              },
+              {
+                "type": "button",
+                "label": "Export with reasons"
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "Here's an illustrative conversions report, filtered by status. Look at the table. Pending, nine, still inside the window. Qualified, twenty six, which will be paid. Rejected, five, which won't be paid. Notice the button to export with reasons. Each status means something different for your money and your decisions. Status names differ by network."
+        },
+        {
+          "v": "cards",
+          "h": "Why FTDs get rejected",
+          "p": "Ask for the reason on every rejected conversion. Some reasons point to your traffic, some to the broker's process and some to fraud. You can only fix what you can see.",
+          "d": [
+            "Duplicate|The person already had an account",
+            "Under minimum|Deposit below the rule",
+            "No activity|Did not meet the trading rule in time",
+            "Wrong geo|User outside the approved countries",
+            "Fraud|Stolen cards, self-referral, fake identities",
+            "Chargeback|Deposit reversed by the bank"
+          ],
+          "say": "Here's why F T Ds get rejected. Duplicate, the person already had an account. Under minimum, the deposit was below the rule. No activity, they didn't meet the trading rule in time. Wrong geo, the user was outside the approved countries. Fraud, like stolen cards, self referral or fake identities. And chargeback, where the bank reversed the deposit. Ask for the reason on every rejected conversion. Some point to your traffic, some to the broker's process, and some to fraud. You can only fix what you can see."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "These mistakes make dashboards look better than the bank balance. Fix them before you scale, because scaling multiplies whatever error is already in your numbers.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Set targets on the headline payout",
+                "Count platform purchase events as FTDs",
+                "Judge qualified CPA on day 3",
+                "Ignore rejection reasons"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Use effective payout per raw FTD",
+                "Use network-confirmed events only",
+                "Judge early on raw FTDs, confirm on mature cohorts",
+                "Export reasons weekly and act on patterns"
+              ]
+            }
+          },
+          "say": "These mistakes make dashboards look better than the bank balance. On the left: setting targets on the headline payout, counting platform purchase events as F T Ds, judging qualified C P A on day three, and ignoring rejection reasons. On the right, the fixes: use effective payout per raw F T D, use network confirmed events only, judge early on raw F T Ds and confirm on mature cohorts, and export reasons weekly and act on patterns. Fix these before you scale, because scaling multiplies any error."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance warning",
+          "p": "Qualification rules tempt some buyers to push users into trading. That harms people and is a reason for brokers to reverse payouts. Your job ends at sending informed adults; what they do next is their decision.",
+          "d": {
+            "kind": "warn",
+            "text": "Never tell users to deposit more or trade a set amount to 'unlock' anything, never deposit for users and never refer yourself. Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country and the broker's licence for that country before you run. Education, not legal or financial advice."
+          },
+          "say": "A compliance warning. Qualification rules tempt some buyers to push users into trading. That harms people, and it's a reason for brokers to reverse payouts. Your job ends at sending informed adults. As the slide says, never tell users to deposit more or trade a set amount to unlock anything, never deposit for users, and never refer yourself. Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current policies, the law in your users' country, and the broker's licence there before you run. This is education, not legal or financial advice."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules with qualification",
+          "p": "Starting rules to adapt. Until you have 20 raw FTDs of your own, use a cautious qualification rate such as 50%. Then use your own rate and update it monthly.",
+          "d": [
+            "Effective payout = payout × your qualification rate",
+            "Target per raw FTD = effective payout × (1 − margin)",
+            "Kill at 2 × target spent with 0 raw FTDs",
+            "Kill if raw-FTD CPA > lower of 1.5 × target and effective payout after 3 × target spend",
+            "Scale +20% every ≥ 48 hours at CPA ≤ 0.8 × target with ≥ 3 qualified FTDs",
+            "Qualification rate drops 15+ points in a month: pause scaling and ask why"
+          ],
+          "say": "Here are starting rules with qualification, to adapt. Effective payout is payout times your qualification rate. Target per raw F T D is effective payout times one minus margin. Kill at two times target spent with zero raw F T Ds, or if raw F T D C P A is above the lower of one point five times target and effective payout, after three times target spend. Scale twenty percent every forty eight hours or more at zero point eight times target or better, with three or more qualified. If the qualification rate drops fifteen or more points in a month, pause scaling and ask why. Until you have twenty raw F T Ds, use a cautious rate such as fifty percent."
+        }
+      ],
+      "takeaways": [
+        "Your real payout is payout × qualification rate.",
+        "Set targets on effective payout per raw FTD, then confirm with qualified counts as cohorts mature.",
+        "Qualified FTDs arrive late; plan when you judge.",
+        "Track rejection reasons and never push users to qualify."
+      ],
+      "action": "Find the qualification rule on one offer and write it in one sentence. Then use your last 30 days, or a cautious 50% rate, to calculate your effective payout and target per raw FTD.",
+      "glossary": [
+        {
+          "term": "Qualified FTD",
+          "def": "A first deposit that meets every condition of the deal, such as minimum amount and trading activity within a window."
+        },
+        {
+          "term": "Baseline FTD",
+          "def": "Any first deposit, before qualification rules are applied. Also called a raw FTD."
+        },
+        {
+          "term": "Lot",
+          "def": "A unit of trade size. In forex one standard lot is 100,000 units of the base currency."
+        },
+        {
+          "term": "Qualification window",
+          "def": "The time after sign-up in which a user must meet the deal's conditions to count."
+        },
+        {
+          "term": "Effective payout",
+          "def": "The payout multiplied by your qualification rate. What you really earn per raw FTD."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Payout $100, qualification rate 60%. What is the effective payout per raw FTD?",
+          "options": [
+            "$100",
+            "$40",
+            "$60",
+            "$166"
+          ],
+          "answer": 2,
+          "why": "$100 × 60% = $60."
+        },
+        {
+          "q": "Effective payout is $60 and you want a 25% margin. What is your target per raw FTD?",
+          "options": [
+            "$45",
+            "$75",
+            "$60",
+            "$15"
+          ],
+          "answer": 0,
+          "why": "$60 × 0.75 = $45."
+        },
+        {
+          "q": "On day 5 you see 20 raw FTDs and 6 qualified. The window is 30 days. What is the right reading?",
+          "options": [
+            "The ad set is failing; kill it",
+            "Most qualifications are still pending; judge raw cost now and confirm later",
+            "The network is cheating you",
+            "Qualification rate is 30% for good"
+          ],
+          "answer": 1,
+          "why": "Qualified FTDs arrive late, so early counts understate them."
+        },
+        {
+          "q": "Which action is acceptable to improve qualification?",
+          "options": [
+            "Messaging users to trade 5 times to unlock a reward",
+            "Depositing on behalf of slow users",
+            "Sending traffic whose message matches what the product is",
+            "Referring your own accounts"
+          ],
+          "answer": 2,
+          "why": "Better-matched traffic brings informed users. The others harm users or are fraud."
+        },
+        {
+          "q": "How many 0.01-lot trades make 0.3 standard lots?",
+          "options": [
+            "3",
+            "30",
+            "300",
+            "0.3"
+          ],
+          "answer": 1,
+          "why": "0.3 ÷ 0.01 = 30 trades."
+        }
+      ],
+      "say_intro": "The headline payout is not your payout. In this lesson you'll read a qualification rule, calculate your effective payout per raw F T D, first time deposit, and set a target from it, understand why qualified conversions arrive late, and learn why F T Ds get rejected.",
+      "say_outro": "So, you're paid on qualified F T Ds only: multiply the payout by your qualification rate, set targets on that effective payout, and judge late arriving qualifications on mature cohorts. Your task: find the qualification rule on one offer and write it in one sentence, then use your last thirty days, or a cautious fifty percent rate, to calculate your effective payout and target per raw F T D. Now take the quiz."
+    },
+    {
+      "slug": "choosing-a-trading-offer",
+      "title": "Choosing and testing a trading offer",
+      "minutes": 20,
+      "objectives": [
+        "By the end you can read a trading offer page and pull out the eight facts that decide its value.",
+        "You can compare two offers on effective payout, not headline payout.",
+        "You can score offers, ask a manager the right questions in writing and plan a test budget.",
+        "You can apply exact go, kill and scale rules to your first test."
+      ],
+      "steps": [
+        {
+          "v": "big",
+          "h": "Why picking the offer is half the result",
+          "p": "A good funnel on the wrong offer still loses. A small difference in qualification, payment methods or payment terms can decide whether a test is profitable. Spending an hour on the offer before you spend money on traffic is the cheapest work you will do.",
+          "d": {
+            "b": "Choose the offer with numbers, not the headline",
+            "s": "An hour of reading saves weeks of spend."
+          },
+          "say": "Here's why picking the offer is half the result. A good funnel on the wrong offer still loses. A small difference in qualification, payment methods, or payment terms can decide whether a test is profitable. Spending an hour on the offer before you spend money on traffic is the cheapest work you'll do. Choose the offer with numbers, not the headline."
+        },
+        {
+          "v": "screen",
+          "h": "Walkthrough: read the offer page",
+          "p": "Open the offer and find these fields. If one is missing, write it down as a question for your manager. Screen is an illustrative mock-up; layouts differ by network.",
+          "d": {
+            "kind": "browser",
+            "url": "network.example/offers/812",
+            "title": "Broker X: Forex and CFDs",
+            "blocks": [
+              {
+                "type": "field",
+                "label": "Geos and payout",
+                "value": "NG $70, KE $65, ZA $110 CPA"
+              },
+              {
+                "type": "field",
+                "label": "Qualification",
+                "value": "Deposit ≥ $100 and 0.5 lots in 30 days"
+              },
+              {
+                "type": "field",
+                "label": "Licensed entity per geo",
+                "value": "Ask manager"
+              },
+              {
+                "type": "field",
+                "label": "Payment methods for users",
+                "value": "Cards, bank transfer, mobile money (KE)"
+              },
+              {
+                "type": "field",
+                "label": "Allowed traffic",
+                "value": "Social with approval, native, email"
+              },
+              {
+                "type": "field",
+                "label": "Hold and payment",
+                "value": "30-day hold, monthly, net 15"
+              }
+            ],
+            "highlight": 2
+          },
+          "say": "Here's an illustrative offer page. Look at the fields. Geos and payout: Nigeria seventy dollars, Kenya sixty five, South Africa a hundred and ten, on C P A, cost per acquisition. Qualification: a deposit of at least a hundred dollars and half a lot within thirty days. Now the highlighted field, the licensed entity per geo, which just says ask manager. Then payment methods, allowed traffic, and a thirty day hold, paid monthly, net fifteen. If a field is missing or vague, like that entity line, write it down as a question for your manager."
+        },
+        {
+          "v": "cards",
+          "h": "Eight facts that decide an offer's value",
+          "p": "Collect all eight before you compare offers. Missing facts are risks, not neutral blanks. Treat an unknown as the worst likely answer until the manager confirms it in writing.",
+          "d": [
+            "Payout per geo|And the model",
+            "Qualification rule|Deposit, activity, window",
+            "Licensed entity|For each geo you target",
+            "User payment methods|Local cards, mobile money, bank",
+            "Allowed traffic|Which sources and with what approval",
+            "Banned claims|The broker's own list",
+            "Hold and terms|When you are actually paid",
+            "Postback events|Registration, FTD, qualified"
+          ],
+          "say": "Here are the eight facts that decide an offer's value. Payout per geo, and the model. The qualification rule. The licensed entity for each geo. User payment methods, like local cards, mobile money, or bank. Allowed traffic, and with what approval. The broker's banned claims list. Hold and terms, so when you're actually paid. And postback events, registration, F T D and qualified. Collect all eight before you compare. Missing facts are risks, so treat an unknown as the worst likely answer until it's confirmed in writing."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: headline versus effective payout",
+          "p": "Example. Offer A pays $120 but needs a $200 deposit and 1 lot, so only 45% of your FTDs qualify. Offer B pays $70 with a $50 minimum and no activity rule, and 85% qualify. B pays more per depositor.",
+          "more": "Example maths: A $120 × 45% = $54. B $70 × 85% = $59.50. B is also likely to get more FTDs from the same traffic, because a $50 minimum is easier to meet than $200 in many markets. Your own qualification rates may differ a lot from these. Run both only if you have budget for two clean tests; otherwise start with the one whose rule fits your geo's typical deposit.",
+          "d": {
+            "cols": [
+              "Offer",
+              "Payout",
+              "Qualify",
+              "Per raw FTD"
+            ],
+            "rows": [
+              [
+                "A",
+                "$120",
+                "45%",
+                "$54.00"
+              ],
+              [
+                "B",
+                "$70",
+                "85%",
+                "$59.50"
+              ]
+            ]
+          },
+          "say": "Here's headline versus effective payout. Example: offer A pays a hundred and twenty dollars, but needs a two hundred dollar deposit and one lot, so only forty five percent of your F T Ds, first time deposits, qualify. That's fifty four dollars per raw F T D. Offer B pays seventy dollars, with a fifty dollar minimum and no activity rule, and eighty five percent qualify. That's fifty nine fifty. So B pays more per depositor, and its lower minimum may bring more F T Ds too. Your own rates may differ a lot from these."
+        },
+        {
+          "v": "cards",
+          "h": "Red flags on a trading offer",
+          "p": "Any one of these is a reason to slow down and ask. Several together are a reason to walk away. Scam offers often pay quickly at first and stop paying when volume grows.",
+          "d": [
+            "No entity named|Or a different name on every page",
+            "Fixed-expiry products|Binary or digital options in the platform",
+            "Manager wants hype|'Say they can earn daily'",
+            "Withdrawal complaints|Many users say they cannot withdraw",
+            "Managed accounts|'We trade for you' with promised returns",
+            "Pressure to start|'Payout drops tomorrow'"
+          ],
+          "say": "Here are red flags on a trading offer. No entity named, or a different name on every page. Fixed expiry products, meaning binary or digital options in the platform. A manager who wants hype, like say they can earn daily. Many users complaining they can't withdraw. Managed accounts, we trade for you, with promised returns. And pressure to start, like the payout drops tomorrow. Any one of these is a reason to slow down and ask. Several together are a reason to walk away. Scam offers often pay quickly at first, then stop paying when volume grows."
+        },
+        {
+          "v": "partner",
+          "h": "Trading partners we list",
+          "p": "These are the trading networks and brokers listed by VooSquare. Whoever you work with, ask for the licensed entity per geo, the risk warning wording and their list of banned claims in writing before you build.",
+          "d": {
+            "vertical": "trading",
+            "note": "Prefer partners who name the licensed entity per geo, offer no fixed-expiry products to your users and give postbacks per stage."
+          },
+          "say": "These are the trading networks and brokers listed by voo square. Whoever you work with, ask for the licensed entity per geo, the risk warning wording, and their banned claims list, in writing, before you build. As the note says, prefer partners who name the licensed entity per geo, offer no fixed expiry products to your users, and give postbacks per stage."
+        },
+        {
+          "v": "phone",
+          "h": "Walkthrough: questions to ask the manager",
+          "p": "Send your questions in one written message and keep the reply. Clear, prompt answers are a good sign. Vague answers on the entity or the products are a reason not to start.",
+          "d": {
+            "app": "chat",
+            "title": "Network manager",
+            "subtitle": "online",
+            "messages": [
+              {
+                "from": "me",
+                "text": "For offer 812 in Kenya: which licensed entity onboards users, and which products do they see first?"
+              },
+              {
+                "from": "me",
+                "text": "Please also send the required risk warning, your banned claims list and the postback events available."
+              },
+              {
+                "from": "them",
+                "text": "Entity and licence link coming by email. Users land on forex and CFDs. Events: reg, ftd, qftd."
+              },
+              {
+                "from": "me",
+                "text": "Thanks. What is the qualification window and when is March paid?"
+              }
+            ]
+          },
+          "say": "Here's a chat with a network manager. Notice how the questions go in one written message. Which licensed entity onboards users in Kenya, and which products do they see first? Please send the required risk warning, the banned claims list, and the available postback events. The manager answers clearly: the entity and licence link are coming by email, users land on forex and C F Ds, and lists the events. Then a follow up on the qualification window and payment date. Clear, prompt answers are a good sign. Vague answers on the entity or products are a reason not to start."
+        },
+        {
+          "v": "code",
+          "h": "Ask for a postback per stage",
+          "p": "If the network can fire registration, FTD and qualified FTD separately, you can see the whole journey in your tracker. One postback URL with an event field is common. Names differ by network and tracker.",
+          "d": {
+            "lang": "url",
+            "text": "https://tracker.example/postback?click_id={click_id}&event={event}&payout={payout}",
+            "note": "Illustrative. Map reg, ftd and qftd to separate conversions in your tracker."
+          },
+          "say": "On screen is an illustrative postback link. I won't read it out, but notice it carries the click I D, an event field, and the payout. If the network can fire registration, F T D and qualified F T D separately, you can see the whole journey in your tracker. One postback link with an event field is common. Map each event to a separate conversion in your tracker. Names differ by network and tracker."
+        },
+        {
+          "v": "table",
+          "h": "Worked example: an offer scorecard",
+          "p": "Example. Score each offer on the same lines. The licence line is a gate, not a score: if it fails, the offer is out whatever its other numbers. Weights are our starting suggestion; adapt them.",
+          "d": {
+            "cols": [
+              "Line",
+              "Weight",
+              "Offer A",
+              "Offer B"
+            ],
+            "rows": [
+              [
+                "Licensed entity verified",
+                "Gate",
+                "Yes",
+                "Yes"
+              ],
+              [
+                "Per raw FTD",
+                "30%",
+                "$54.00",
+                "$59.50"
+              ],
+              [
+                "User payment methods",
+                "20%",
+                "Cards only",
+                "Cards, mobile money"
+              ],
+              [
+                "Payment terms",
+                "20%",
+                "Net 30",
+                "Weekly"
+              ],
+              [
+                "Postbacks per stage",
+                "15%",
+                "FTD only",
+                "Reg, FTD, qualified"
+              ],
+              [
+                "Written answers",
+                "15%",
+                "Slow",
+                "Fast"
+              ]
+            ]
+          },
+          "say": "Here's an example offer scorecard. Score each offer on the same lines. The first line, licensed entity verified, is a gate, not a score. If it fails, the offer is out, whatever its other numbers. Then the weighted lines: per raw F T D, thirty percent, user payment methods, twenty, payment terms, twenty, postbacks per stage, fifteen, and written answers, fifteen. In this example, offer B is ahead on most lines. The weights are a starting suggestion, so adapt them."
+        },
+        {
+          "v": "eq",
+          "h": "Worked example: test budget",
+          "p": "Example. With Offer B, a 50% starting qualification guess gives an effective payout of $35 and a target of $26.25 per raw FTD at 25% margin. Three ad sets at 3 × target each need about $236.",
+          "more": "Example maths: $70 × 50% = $35 effective payout, until you have your own rate. $35 × 0.75 = $26.25 target. 3 × $26.25 = $78.75 per ad set, × 3 ad sets = $236.25. Spread over 6 days that is about $39 a day in total. Only spend money you can afford to lose. A test is tuition: it buys data, and results vary.",
+          "d": [
+            "$26.25",
+            "×",
+            "3",
+            "×",
+            "3 ad sets",
+            "=",
+            "$236.25"
+          ],
+          "say": "Here's the test budget. Example: with offer B, a cautious fifty percent qualification guess gives an effective payout of thirty five dollars, and a target of twenty six dollars twenty five per raw F T D at a twenty five percent margin. Three ad sets at three times target each is about two hundred and thirty six dollars. Spread over six days, that's about thirty nine dollars a day in total. Only spend money you can afford to lose. A test is tuition. It buys data, and results vary."
+        },
+        {
+          "v": "product",
+          "h": "Finding offers to compare",
+          "p": "Comparing offers is easier when you can see several side by side. Use an offer directory as a starting list, then do every check in this lesson yourself before you send a single click.",
+          "d": {
+            "slug": "affleego",
+            "why": "Lists affiliate offers to shortlist; you still verify licence, product and terms yourself."
+          },
+          "say": "Comparing offers is easier when you can see several side by side. On screen is Affleego, an offer directory listed on voo square, which you can use as a starting shortlist. But you still verify the licence, product and terms yourself, doing every check in this lesson before you send a single click."
+        },
+        {
+          "v": "compare",
+          "h": "Common mistakes and the fix",
+          "p": "These mistakes all come from choosing quickly, usually because a manager is pushing or a payout looks high. Each fix adds a few minutes before launch and can save the whole test budget.",
+          "d": {
+            "a": {
+              "title": "Mistake",
+              "items": [
+                "Choose by headline payout",
+                "Run three offers on a small budget",
+                "Start before the entity is confirmed",
+                "Skip payment methods for your geo"
+              ]
+            },
+            "b": {
+              "title": "Fix",
+              "items": [
+                "Compare effective payout per raw FTD",
+                "One offer, three ad sets, clean data",
+                "Gate on the licence, in writing",
+                "Check users can actually pay locally"
+              ]
+            }
+          },
+          "say": "These mistakes all come from choosing quickly, usually because a manager is pushing or a payout looks high. On the left: choosing by headline payout, running three offers on a small budget, starting before the entity is confirmed, and skipping payment methods for your geo. On the right, the fixes: compare effective payout per raw F T D, one offer with three ad sets and clean data, gate on the licence in writing, and check users can actually pay locally. Each fix adds a few minutes and can save the whole test budget."
+        },
+        {
+          "v": "tip",
+          "h": "Compliance warning",
+          "p": "Choosing an offer is a compliance decision. You are about to put your ad account, your name and real people's money behind it, so the checks belong before the first click, not after.",
+          "d": {
+            "kind": "warn",
+            "text": "Trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country and the broker's licence for that country before you run. Education, not legal or financial advice."
+          },
+          "say": "A compliance warning. Choosing an offer is a compliance decision. You're about to put your ad account, your name, and real people's money behind it, so the checks belong before the first click. As the slide says, trading ads usually need platform authorization and must follow local law in each geo. Check the platform's current financial and crypto policies, the law in your users' country, and the broker's licence for that country before you run. This is education, not legal or financial advice."
+        },
+        {
+          "v": "check",
+          "h": "Starting decision rules for your first test",
+          "p": "Starting rules to adapt to your data. Write them in your plan before launch and apply them only at your daily checkpoint, on network-confirmed numbers.",
+          "d": [
+            "Go only if the licence gate passes and no fixed-expiry products reach your users",
+            "Budget per ad set = 3 × target per raw FTD",
+            "Kill at 2 × target spent with 0 FTDs",
+            "Kill if CPA > lower of 1.5 × target and effective payout after 3 × target spend",
+            "Scale +20% every ≥ 48 hours at CPA ≤ 0.8 × target with ≥ 3 qualified FTDs",
+            "Whole test: stop at total budget and review before adding money"
+          ],
+          "say": "Here are starting rules for your first test, to adapt. Go only if the licence gate passes and no fixed expiry products reach your users. Budget per ad set is three times target per raw F T D. Kill at two times target spent with zero F T Ds, or if C P A is above the lower of one point five times target and effective payout, after three times target spend. Scale twenty percent every forty eight hours or more at zero point eight times target or better, with three or more qualified. And for the whole test, stop at the total budget and review before adding money. Write these in your plan, and apply them only at your daily checkpoint, on network confirmed numbers."
+        }
+      ],
+      "takeaways": [
+        "Collect eight facts before comparing offers; unknowns count as risks.",
+        "Compare on effective payout per raw FTD, not the headline.",
+        "The licence is a gate, not a score.",
+        "Plan the test budget from the target and apply the rules only at checkpoints."
+      ],
+      "action": "Shortlist two trading offers for one geo. Fill the scorecard for both, send the manager questions in writing and calculate the test budget for the one you choose.",
+      "glossary": [
+        {
+          "term": "Cap",
+          "def": "The maximum number of conversions a network will accept or pay for in a period."
+        },
+        {
+          "term": "Hold period",
+          "def": "Time a network keeps conversions under review before they become payable."
+        },
+        {
+          "term": "Net terms",
+          "def": "How many days after the period closes a payment is due, e.g. net 15."
+        },
+        {
+          "term": "Scorecard",
+          "def": "A table that compares offers on the same weighted lines, with the licence as a gate."
+        },
+        {
+          "term": "Postback per stage",
+          "def": "Separate server-to-server signals for registration, FTD and qualified FTD."
+        }
+      ],
+      "quiz": [
+        {
+          "q": "Offer A pays $150 with 40% qualifying. Offer B pays $90 with 75% qualifying. Which pays more per raw FTD?",
+          "options": [
+            "A, $60",
+            "B, $67.50",
+            "They are equal",
+            "A, $150"
+          ],
+          "answer": 1,
+          "why": "A: $150 × 40% = $60. B: $90 × 75% = $67.50."
+        },
+        {
+          "q": "The manager cannot name the licensed entity for your geo but offers a higher payout. What does the scorecard say?",
+          "options": [
+            "Score it lower on payout",
+            "Run a small test",
+            "The licence is a gate, so the offer is out",
+            "Ask users which entity they used"
+          ],
+          "answer": 2,
+          "why": "The licence line is a gate. If it fails, no other number matters."
+        },
+        {
+          "q": "Target per raw FTD is $30. What is the test budget for 3 ad sets at 3 × target?",
+          "options": [
+            "$270",
+            "$180",
+            "$90",
+            "$300"
+          ],
+          "answer": 0,
+          "why": "3 × $30 = $90 per ad set; × 3 ad sets = $270."
+        },
+        {
+          "q": "Which is the strongest red flag?",
+          "options": [
+            "Monthly payment terms",
+            "Postbacks only for FTD",
+            "A $100 minimum deposit",
+            "A manager suggesting you tell users they can earn daily"
+          ],
+          "answer": 3,
+          "why": "Income claims are banned and misleading; a partner pushing them is a serious warning sign."
+        },
+        {
+          "q": "An ad set has spent $95 with 4 qualified FTDs over 3 days. Target $30. What do the rules say?",
+          "options": [
+            "Kill",
+            "Hold",
+            "Scale +20%",
+            "Keep"
+          ],
+          "answer": 2,
+          "why": "CPA is $95 ÷ 4 = $23.75, which is below 0.8 × $30 = $24, with at least 3 qualified FTDs and 48+ hours, so scale +20%."
+        }
+      ],
+      "say_intro": "A good funnel on the wrong offer still loses. In this lesson you'll learn to read a trading offer page for the eight facts that decide its value, compare offers on effective payout, score them, ask a manager the right questions in writing, and plan your first test budget with exact rules.",
+      "say_outro": "So, choose the offer with numbers, not the headline: gate on the licence, compare effective payout, get answers in writing, and test one offer with clear kill and scale rules. Your task: shortlist two trading offers for one geo, fill the scorecard for both, send the manager your questions in writing, and calculate the test budget for the one you choose. Now take the quiz."
+    }
+  ],
+  "exam": [
+    {
+      "q": "You spent $120 on an ad set. Network shows 0 qualified FTDs. Target per raw FTD is $55 and the postback works. What do you do?",
+      "options": [
+        "Hold for another week",
+        "Scale +20% to get data",
+        "Switch to RevShare",
+        "Kill: spend is above 2 × target with 0 conversions"
+      ],
+      "answer": 3,
+      "why": "2 × $55 = $110. $120 with 0 conversions passes the zero-conversion kill line."
+    },
+    {
+      "q": "Offer pays $90 per qualified FTD. Your qualification rate is 60% and you want a 25% margin. What is your target per raw FTD?",
+      "options": [
+        "$67.50",
+        "$54.00",
+        "$40.50",
+        "$45.00"
+      ],
+      "answer": 2,
+      "why": "$90 × 60% = $54 effective payout; $54 × 0.75 = $40.50."
+    },
+    {
+      "q": "A network offers 'digital trading' with 2-minute trades that pay 88% if right. The payout is double your current offer. What do you do?",
+      "options": [
+        "Test it with a small budget",
+        "Run it under a different name",
+        "Decline: it works as a binary option, which major ad platforms prohibit",
+        "Run it only on Telegram"
+      ],
+      "answer": 2,
+      "why": "Fixed expiry and fixed payout make it a binary or digital option. Steer to licensed forex, CFD or exchange offers."
+    },
+    {
+      "q": "RevShare carryover is −$1,200. This month's net revenue is $2,000 on 25% RevShare. What are you paid?",
+      "options": [
+        "$500",
+        "$300",
+        "$0",
+        "$200"
+      ],
+      "answer": 3,
+      "why": "−$1,200 + $2,000 = $800; 25% × $800 = $200."
+    },
+    {
+      "q": "An ad set has spent $150 over 4 days with 4 qualified FTDs. Target is $45. What do you do?",
+      "options": [
+        "Scale +20%",
+        "Kill",
+        "Keep: CPA $37.50 is below target but above 0.8 × target ($36)",
+        "Hold forever"
+      ],
+      "answer": 2,
+      "why": "$150 ÷ 4 = $37.50. It is under target but not at or below $36, so keep without scaling."
+    },
+    {
+      "q": "200 registrations, 50% submit KYC, 75% of those are approved, 30% of approved deposit. How many FTDs?",
+      "options": [
+        "30",
+        "22.5",
+        "45",
+        "15"
+      ],
+      "answer": 1,
+      "why": "200 × 50% = 100; × 75% = 75; × 30% = 22.5 FTDs."
+    },
+    {
+      "q": "Expected RevShare is $100 per FTD. Using the 30% cut, what is your break-even for planning?",
+      "options": [
+        "$100",
+        "$75",
+        "$70",
+        "$52.50"
+      ],
+      "answer": 2,
+      "why": "$100 × 0.7 = $70 planning value, which is your break-even."
+    },
+    {
+      "q": "You spend $60 a day and the first payment arrives 40 days after you start. How much cash must you fund first?",
+      "options": [
+        "$2,400",
+        "$600",
+        "$1,200",
+        "$4,000"
+      ],
+      "answer": 0,
+      "why": "$60 × 40 = $2,400 of spend before the first payment."
+    },
+    {
+      "q": "A user in your Telegram bot asks how to answer the broker's trading knowledge test. What do you do?",
+      "options": [
+        "Send the answers so they qualify",
+        "Tell them it checks whether the product suits them, answer honestly, and suggest a demo first",
+        "Ignore them",
+        "Fill it in for them"
+      ],
+      "answer": 1,
+      "why": "The appropriateness test protects users. Coaching around it harms people and can be fraud."
+    },
+    {
+      "q": "Which deal term should you get in writing before accepting a RevShare deal?",
+      "options": [
+        "The broker's office address only",
+        "The colour of the tracking link",
+        "How net revenue is defined and whether carryover applies",
+        "The number of employees"
+      ],
+      "answer": 2,
+      "why": "Net revenue definition and carryover decide what you are actually paid."
+    }
+  ]
+}
