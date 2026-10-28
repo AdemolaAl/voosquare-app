@@ -980,7 +980,10 @@ html.tab-hidden *, html.tab-hidden *::before, html.tab-hidden *::after { animati
   .sapp, .gchip { min-height: 44px; }
   .ft ul a, .ft ul button { display: inline-flex; align-items: center; min-height: 44px; }
   .ft ul { gap: 0; }
-  .ann-msg a { display: inline-flex; align-items: center; min-height: 44px; margin: -4px 0; }
+  .ann { gap: 6px; padding: 0 8px; }
+  .ann .tagnew { display: none; }
+  .ann-msg { gap: 6px; font-size: 13px; }
+  .ann-msg a { display: inline-flex; align-items: center; min-height: 44px; margin: 0; font-size: 13px; }
 }
 
 /* Phone text floor (QA-24): nothing under 12px on phones. Generated from the rules above; keep it last. */
