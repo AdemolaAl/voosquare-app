@@ -14,7 +14,6 @@ The hub for media buyers and performance marketers, by Zedapex. **Media buying, 
 **Stack:** Node 22, zero npm dependencies (built-in `node:sqlite`, `http`, `crypto`). Nothing to install, nothing to build.
 
 ---
-
 ## Deploy on Railway (about 10 minutes)
 
 1. **Push this folder to a GitHub repo** (private is fine).

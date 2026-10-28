@@ -175,6 +175,7 @@ a[x-apple-data-detectors]{color:inherit !important;text-decoration:none !importa
  * hero: key in heroes.json (or null). kicker: the topic, shown on the right of the band.
  */
 function layout({ title, kicker = '', hero = null, body, marketing }) {
+  if (!marketing) return plainLayout({ title, body });
   const H = hero ? HEROES[hero] : null;
   const band = H ? H.band : '#083323';
   const heroRow = H ? `<tr><td bgcolor="${band}" style="background:${band};padding:0;font-size:0;line-height:0;"><img src="${IMG(H.file)}" width="${H.width}" height="${H.height}" alt="${H.alt}" class="fluid" style="display:block;width:100%;max-width:${H.width}px;height:auto;border:0;outline:none;text-decoration:none;${font(14, 20, 700, '#FFFFFF')}background:${band};"></td></tr>` : '';
@@ -218,6 +219,47 @@ ${body}
 ${footer}
 </table>
 <!--[if mso]></td></tr></table><![endif]-->
+</td></tr>
+</table>
+</body>
+</html>`;
+}
+
+/**
+ * Transactional shell (codes, receipts, payouts, support replies, approvals).
+ * Gmail sorts by how a message looks, not by what you call it: a dark branded band, an illustrated GIF hero, a logo image
+ * and a web font read as a newsletter and land in Promotions. This shell looks like a message from a person's app:
+ * no images at all, no external stylesheet, system fonts, one white column, one button. That keeps these in Primary.
+ */
+function plainLayout({ title, body }) {
+  const footer = `<tr><td class="px" style="padding:22px 36px 0;">
+<p class="dm-muted" style="margin:0 0 4px;${font(12, 19, 400, C.muted)}">Questions? Write to <a class="dm-link" href="mailto:{{supportEmail}}" style="color:${C.deep};text-decoration:none;">{{supportEmail}}</a></p>
+<p class="dm-muted" style="margin:0;${font(12, 19, 400, C.faint)}">VooSquare, Zedapex Limited, Lagos</p>
+</td></tr>`;
+  return `<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<title>${title}</title>
+<style>${HEAD_CSS}</style>
+</head>
+<body class="dm-card" style="margin:0;padding:0;width:100%;background:${C.card};">
+<div style="display:none;max-height:0;max-width:0;overflow:hidden;opacity:0;mso-hide:all;font-size:1px;line-height:1px;color:${C.card};">{{preheader}}</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="dm-card" bgcolor="${C.card}" style="background:${C.card};">
+<tr><td align="left" class="wrap" style="padding:28px 16px 36px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:560px;border-collapse:separate;">
+<tr><td class="px" style="padding:0 36px 22px;"><p class="dm-ink" style="margin:0;${font(17, 24, 800, C.ink, 'letter-spacing:-0.3px;')}">VooSquare</p></td></tr>
+<tr><td class="px dm-card" style="padding:0 36px;${font(16, 26, 400, C.body)}">
+${body}
+</td></tr>
+<tr><td class="px" style="padding:28px 36px 0;">${table(`<tr><td class="dm-line" style="height:1px;line-height:1px;font-size:0;background:${C.line};">&nbsp;</td></tr>`)}</td></tr>
+${footer}
+</table>
 </td></tr>
 </table>
 </body>

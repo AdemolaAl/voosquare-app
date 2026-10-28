@@ -129,6 +129,9 @@ function settingsEmail() {
     provider: (s.provider || config.email.provider || '').toLowerCase(),
     apiKey: s.api_key || config.email.apiKey,
     from: s.from || config.email.from,
+    // Codes, receipts and support replies go out from their own address so they build their own reputation in Gmail,
+    // apart from the welcome series and broadcasts. Falls back to the main From address.
+    fromTransactional: s.from_transactional || config.email.fromTransactional || s.from || config.email.from,
     replyTo: s.reply_to || config.email.replyTo,
   };
 }
@@ -165,14 +168,26 @@ function render(key, vars) {
     html: fill(t.html, { ...vars, preheader: fill(t.preheader || '', vars, false) }, true),
     text: fill(t.text || '', vars, false).replace(/\n{3,}/g, '\n\n'),
     marketing: !!t.marketing && !TRANSACTIONAL.has(key),
+    unsubscribeUrl: vars.unsubscribeUrl || '',
   };
+}
+
+/**
+ * Extra headers. Marketing gets one-click unsubscribe (RFC 8058), which Gmail and Yahoo require from bulk senders.
+ * Transactional mail gets none: a List-Unsubscribe header tells Gmail "this is a newsletter".
+ */
+function mailHeaders(msg) {
+  if (!msg.marketing || !/\/u\/\d+\//.test(msg.unsubscribeUrl || '')) return null;
+  return { 'List-Unsubscribe': `<${msg.unsubscribeUrl}>`, 'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click' };
 }
 
 async function deliver(to, msg) {
   const e = settingsEmail();
-  const fromMatch = /^(.*)<(.+)>$/.exec(e.from || '');
+  const from = msg.marketing ? e.from : e.fromTransactional;
+  const headers = mailHeaders(msg);
+  const fromMatch = /^(.*)<(.+)>$/.exec(from || '');
   const fromName = fromMatch ? fromMatch[1].trim().replace(/^"|"$/g, '') : 'VooSquare';
-  const fromEmail = fromMatch ? fromMatch[2].trim() : e.from;
+  const fromEmail = fromMatch ? fromMatch[2].trim() : from;
   if (!configured()) {
     console.log(`[email:console] to=${to} subject="${msg.subject}"\n${msg.text.slice(0, 400)}`);
     return { ok: true, console: true };
@@ -181,17 +196,17 @@ async function deliver(to, msg) {
   if (e.provider === 'resend') {
     r = await fetchJson('https://api.resend.com/emails', {
       method: 'POST', headers: { Authorization: 'Bearer ' + e.apiKey, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ from: e.from, to: [to], subject: msg.subject, html: msg.html, text: msg.text, reply_to: e.replyTo || undefined }),
+      body: JSON.stringify({ from, to: [to], subject: msg.subject, html: msg.html, text: msg.text, reply_to: e.replyTo || undefined, headers: headers || undefined }),
     });
   } else if (e.provider === 'brevo') {
     r = await fetchJson('https://api.brevo.com/v3/smtp/email', {
       method: 'POST', headers: { 'api-key': e.apiKey, 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify({ sender: { name: fromName, email: fromEmail }, to: [{ email: to }], subject: msg.subject, htmlContent: msg.html, textContent: msg.text, replyTo: e.replyTo ? { email: e.replyTo } : undefined }),
+      body: JSON.stringify({ sender: { name: fromName, email: fromEmail }, to: [{ email: to }], subject: msg.subject, htmlContent: msg.html, textContent: msg.text, replyTo: e.replyTo ? { email: e.replyTo } : undefined, headers: headers || undefined }),
     });
   } else if (e.provider === 'postmark') {
     r = await fetchJson('https://api.postmarkapp.com/email', {
       method: 'POST', headers: { 'X-Postmark-Server-Token': e.apiKey, 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify({ From: e.from, To: to, Subject: msg.subject, HtmlBody: msg.html, TextBody: msg.text, ReplyTo: e.replyTo || undefined, MessageStream: 'outbound' }),
+      body: JSON.stringify({ From: from, To: to, Subject: msg.subject, HtmlBody: msg.html, TextBody: msg.text, ReplyTo: e.replyTo || undefined, MessageStream: 'outbound', Headers: headers ? Object.entries(headers).map(([Name, Value]) => ({ Name, Value })) : undefined }),
     });
   } else {
     throw new Error('Unknown EMAIL_PROVIDER: ' + e.provider + ' (use resend, brevo or postmark)');

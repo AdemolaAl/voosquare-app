@@ -84,6 +84,7 @@ module.exports = {
     provider: (env.EMAIL_PROVIDER || '').toLowerCase(),
     apiKey: env.EMAIL_API_KEY || '',
     from: env.EMAIL_FROM || 'VooSquare <hello@voosquare.com>',
+    fromTransactional: env.EMAIL_FROM_TRANSACTIONAL || '',
     replyTo: env.EMAIL_REPLY_TO || '',
   },
   publicDir: path.join(__dirname, '..', 'public'),

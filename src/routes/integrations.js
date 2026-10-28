@@ -328,6 +328,13 @@ module.exports = function routes(r) {
     D.run('UPDATE users SET marketing=0 WHERE id=?', id);
     return ctx.html(200, page('You are unsubscribed', 'You will no longer get marketing emails from VooSquare. You will still get codes, receipts and support replies.'));
   });
+  // One-click unsubscribe (RFC 8058): Gmail's "Unsubscribe" button POSTs List-Unsubscribe=One-Click here.
+  r.post('/u/:id/:token', (ctx) => {
+    const id = Number(ctx.params.id);
+    if (!safeEq(ctx.params.token, mailer.unsubToken(id))) return ctx.html(400, 'Link not valid');
+    D.run('UPDATE users SET marketing=0 WHERE id=?', id);
+    return ctx.html(200, 'Unsubscribed');
+  }, { noCsrf: true });
 };
 
 function page(title, body) {

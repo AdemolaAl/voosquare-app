@@ -665,7 +665,7 @@ module.exports = function routes(r) {
     if (key === 'apps') value = ART.adminApps();
     if (key === 'referrals') value = { ...REF.settings(), terms: (value && value.terms) || '', default_terms: REF.DEFAULT_TERMS };
     if (key === 'billing') value = pay.billingSettings();
-    return { key, value, catalog: key === 'tools' ? TOOLS.CATALOG : undefined, email_env: key === 'email' ? { provider: config.email.provider, from: config.email.from, has_key: !!config.email.apiKey, ready: mailer.configured() } : undefined };
+    return { key, value, catalog: key === 'tools' ? TOOLS.CATALOG : undefined, email_env: key === 'email' ? { provider: config.email.provider, from: config.email.from, from_transactional: config.email.fromTransactional, has_key: !!config.email.apiKey, ready: mailer.configured() } : undefined };
   });
   r.put('/api/admin/settings/:key', async (ctx) => {
     const key = ctx.params.key;
