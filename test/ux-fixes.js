@@ -1,7 +1,7 @@
 'use strict';
 /* UX fixes from the independent black-box QA (2026-10-05, findings QA-1 … QA-38). Called from test/smoke.js.
  *  - QA-1  Telegram prefill never shows "[object Object]".
- *  - QA-2  Affiliate terms: no {placeholders}, no internal file paths, figures from settings, owner-controlled draft banner.
+ *  - QA-2  Affiliate terms: no {placeholders}, no internal file paths, figures from settings, owner-controlled approval status.
  *  - QA-3  /privacy and /terms pages from Admin → Legal, with their own approval switches; linked in footers and sign-up.
  *  - QA-4  Unpaid transfer/crypto orders: reused, cancellable, expire after the setting ('expired', never deleted).
  *  - QA-5  A code that does not exist is refused before any order is made.
@@ -38,13 +38,13 @@ module.exports = async function uxFixes({ BASE, Client, check, owner, DB }) {
     const p = (await new Client().get('/api/aff/public')).data;
     check('QA-2: affiliate terms have no {placeholders} and no internal file paths', t.markdown.length > 5000 && !/[{}]/.test(t.markdown) && !/docs\//.test(t.markdown) && !/confirm with counsel\}/.test(t.markdown), (t.markdown.match(/\{[^}]*\}/g) || []).slice(0, 5));
     check('QA-2: figures come from the program settings (attribution window, payout minimum)', t.markdown.includes(`${p.attribution_days} days from the click`) && /\*\*\$\d+\*\* for USDT/.test(t.markdown));
-    check('QA-2: the draft banner shows until the owner approves (default off)', t.approved === false && /DRAFT FOR LEGAL REVIEW\.\*\* Not in force/.test(t.markdown) && /^## Changes in v1\.1$/m.test(t.markdown));
+    check('QA-2: affiliate terms have no public review warning, and approval starts off', t.approved === false && !/DRAFT FOR LEGAL REVIEW|needs legal review/i.test(t.markdown) && /^## Changes in v1\.1$/m.test(t.markdown));
     const staff = new Client(); await login(staff, 'ux-settings@test.dev', 'Set Tings');
     await owner.post('/api/admin/team', { email: 'ux-settings@test.dev', perms: ['settings'] });
     check('QA-2: only an owner can mark a document approved by counsel', (await staff.put('/api/admin/legal/approval', { affiliate: true })).status === 403);
     const ap = await owner.put('/api/admin/legal/approval', { affiliate: true });
     const t2 = (await new Client().get('/api/aff/terms')).data;
-    check('QA-2: approved → the banner is gone, the change is in the audit log', ap.status === 200 && ap.data.approved.affiliate === true && t2.approved === true && !/DRAFT FOR LEGAL REVIEW/.test(t2.markdown) && !!sqlGet("SELECT 1 FROM audit WHERE action='legal.approval'"));
+    check('QA-2: owner approval status is saved and audited without adding a public warning', ap.status === 200 && ap.data.approved.affiliate === true && t2.approved === true && !/DRAFT FOR LEGAL REVIEW|needs legal review/i.test(t2.markdown) && !!sqlGet("SELECT 1 FROM audit WHERE action='legal.approval'"));
     await owner.put('/api/admin/legal/approval', { affiliate: false });
     check('QA-2: no "draft" wording was added to the affiliate app code (the banner comes from the server)', !/draft/i.test(read('js/aff-site.js') + read('js/aff-core.js')));
   }
@@ -56,18 +56,18 @@ module.exports = async function uxFixes({ BASE, Client, check, owner, DB }) {
     const sections = (h) => (h.match(/<h2 id=/g) || []).length;
     check('QA-3: /privacy and /terms are pages (200, CSP, no scripts) naming only Zedapex Limited, Lagos', pv.status === 200 && tm.status === 200 && !!pv.csp && !/<script/i.test(pv.text + tm.text) && pv.text.includes('Zedapex Limited, Lagos') && tm.text.includes('Zedapex Limited, Lagos'));
     check('QA-3: the privacy template covers data, payment proofs, KYC images, use, sharing via Voo ID, retention, rights, cookies, contact', sections(pv.text) >= 8 && /payment proof/i.test(pv.text) && /selfie/i.test(pv.text) && /Continue with VooSquare/.test(pv.text) && /How long we keep it/.test(pv.text) && /Your rights/.test(pv.text) && /Cookies/.test(pv.text) && /<h2 id="s\d+">Contact<\/h2>/.test(pv.text) && /mailto:/.test(pv.text));
-    check('QA-3: privacy carries the draft warning while Terms of service does not', pv.text.includes('Draft — needs legal review before launch') && !tm.text.includes('Draft — needs legal review before launch') && sections(tm.text) >= 6);
+    check('QA-3: Privacy and Terms of service have no legal-review warning', !/Draft\s*[—-]\s*needs legal review/i.test(pv.text + tm.text) && sections(tm.text) >= 6);
     check('QA-3: /legal goes to the terms', (await page('/legal')).status === 302);
     const member = new Client(); await login(member, 'ux-legal-member@test.dev', 'Leg Al');
     check('QA-3: Admin → Legal needs the settings permission', (await member.get('/api/admin/legal')).status === 403 && (await member.put('/api/admin/legal/privacy', { body: 'x' })).status === 403);
     const g = (await owner.get('/api/admin/legal')).data;
-    check('QA-3: Admin → Legal returns both documents, the template and the switches', g.privacy.custom === false && g.terms.custom === false && g.can_approve === true && g.approved.privacy === false && g.templates.privacy.length > 1000);
+    check('QA-3: Admin → Legal returns both documents, the template and the switches without public-warning copy', g.privacy.custom === false && g.terms.custom === false && g.can_approve === true && g.approved.privacy === false && g.templates.privacy.length > 1000 && !('banner' in g));
     const sv = await owner.put('/api/admin/legal/privacy', { body: '# Privacy policy\n\n## Who we are\nUX test text <script>x</script> for the policy.\n\n## Contact\nWrite to {support_email}.' });
     const pv2 = await page('/privacy');
     check('QA-3: saved text renders on /privacy, escaped, with a last-updated date', sv.status === 200 && sv.data.doc.custom === true && pv2.text.includes('UX test text &lt;script&gt;') && /Last updated/.test(pv2.text));
     await owner.put('/api/admin/legal/approval', { privacy: true });
     const pv3 = await page('/privacy'); const tm3 = await page('/terms');
-    check('QA-3: approving the privacy policy removes its banner; Terms of service remains clear', !pv3.text.includes('needs legal review') && !tm3.text.includes('needs legal review'));
+    check('QA-3: approval status does not add a legal-review warning to public pages', !/needs legal review/i.test(pv3.text + tm3.text));
     const rs = await owner.put('/api/admin/legal/privacy', { body: '' });
     await owner.put('/api/admin/legal/approval', { privacy: false });
     check('QA-3: an empty save goes back to the template', rs.data.doc.custom === false && (await page('/privacy')).text.includes('How long we keep it'));

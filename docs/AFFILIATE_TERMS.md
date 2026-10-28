@@ -1,7 +1,5 @@
 # VooSquare Affiliate Program Terms and Conditions
 
-> **DRAFT FOR LEGAL REVIEW.** Not in force. Prepared from the program spec (`docs/AFFILIATE_SPEC.md`). Items in `{braces}` are set in admin or to be confirmed. Governing law and dispute venue must be confirmed by counsel.
-
 Version: **v1.1** · Effective date: 2026-10-05 · Last updated: 2026-10-05 (replaces v1.0)
 
 ## Changes in v1.1

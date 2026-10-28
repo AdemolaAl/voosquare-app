@@ -1957,3 +1957,16 @@ textarea.inp.ap-a { resize: none; min-height: 50px; line-height: 1.45; overflow-
 .pb-t b { font-size: 14.5px; letter-spacing: -.02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .pb-t small { color: var(--muted); font-size: 12.5px; }
 .pb-empty { color: var(--muted); font-size: 14px; }
+
+@media (max-width: 640px) {
+  .app-body { font-size: 15px; }
+  .app-body :is(input, select, textarea) { font-size: 16px; }
+  .page-head h2 { font-size: clamp(26px, 7vw, 30px); }
+  .hero2 h2, .ch h2 { font-size: clamp(26px, 7vw, 30px); }
+  .h2-stats div b { font-size: 22px; }
+  .ch-p { font-size: 15px; }
+  .cs-h h3 { font-size: 20px; }
+  .cs-h p { font-size: 16px; }
+  .prose { font-size: 15.5px; }
+  .prose blockquote { font-size: 20px; }
+}

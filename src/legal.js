@@ -3,13 +3,12 @@
  * Legal pages (QA-2, QA-3).
  *  - /privacy and /terms: the member privacy policy and terms of service. The text lives in the 'legal' setting and is
  *    edited in Admin → Legal (settings permission). Until someone saves their own text, a plain-language template is
- *    shown (below). The privacy page carries the draft banner until approval. Rendered on the server, so the pages work
- *    without JavaScript and can be linked from anywhere.
+ *    shown (below). Rendered on the server, so the pages work without JavaScript and can be linked from anywhere.
  *  - The affiliate terms (docs/AFFILIATE_TERMS.md) are served with their {placeholders} filled from the live program
  *    settings, without the internal drafting notes.
- *  - "Approved by counsel": one switch per document (privacy, terms, affiliate), off by default, owner only. The privacy
- *    page carries the draft banner until approved; the owner controls approval after legal review.
- * Nothing here invents legal terms: the templates are drafts for review, clearly marked as such until approved.
+ *  - "Approved by counsel": one switch per document (privacy, terms, affiliate), off by default, owner only. Approval
+ *    status is recorded for the team and does not add a notice to public pages.
+ * Nothing here invents legal terms: the templates remain subject to owner review.
  */
 const D = require('./db');
 const config = require('./config');
@@ -173,7 +172,6 @@ function render(md) {
 const supportEmail = () => (D.getSetting('brand', {}) || {}).support_email || 'support@voosquare.com';
 const fillVars = (md) => md.replace(/\{support_email\}/g, `[${supportEmail()}](mailto:${supportEmail()})`);
 
-const BANNER = 'Draft — needs legal review before launch. This text is a plain-language template and is not yet in force.';
 const dateText = (t) => new Date(t).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Africa/Lagos' });
 
 function page(key) {
@@ -189,7 +187,7 @@ function page(key) {
 <body class="lg-body"><header class="lg-top"><a class="lg-brand" href="/"><img src="/assets/logo-icon.svg" alt="" width="32" height="32"><b>Voo<span>Square</span></b></a><nav class="lg-nav" aria-label="Legal"><a href="/privacy"${key === 'privacy' ? ' aria-current="page"' : ''}>Privacy</a><a href="/terms"${key === 'terms' ? ' aria-current="page"' : ''}>Terms</a><a href="/affiliates#/site/terms">Affiliate terms</a></nav></header>
 <main class="lg">
   <div class="lg-head"><h1>${esc(d.title)}</h1><p class="lg-meta">${esc(COMPANY)}${d.updated_at ? ` · Last updated ${esc(dateText(d.updated_at))}` : ''}</p>
-  ${key !== 'terms' && !s.approved[key] ? `<p class="lg-draft" role="note"><span aria-hidden="true"></span>${esc(BANNER)}</p>` : ''}</div>
+  </div>
   ${toc.length > 2 ? `<nav class="lg-toc" aria-label="On this page"><b>On this page</b>${toc.map(([id, t]) => `<a href="#${id}">${esc(t)}</a>`).join('')}</nav>` : ''}
   <article class="lg-doc">${html}</article>
 </main>
@@ -200,7 +198,7 @@ function page(key) {
 /* ------------------------------------------------------------------ affiliate terms, public version */
 /**
  * docs/AFFILIATE_TERMS.md as affiliates read it: program figures in {braces} come from the live settings, drafting notes
- * for counsel and the pointer to internal files are left out, and the draft banner shows until the owner approves.
+ * for counsel and the pointer to internal files are left out.
  */
 function affiliateTerms() {
   const C = require('./aff/core');
@@ -214,8 +212,6 @@ function affiliateTerms() {
   const kyc = s.kyc || {};
   let md = C.termsText();
   const rep = [
-    // The drafting note at the top (it named an internal file) becomes the owner-controlled banner.
-    [/^>\s*\*\*DRAFT FOR LEGAL REVIEW\.\*\*.*$/m, ''],
     [/\{60\} days from the click/, `${s.attribution_days} days from the click`],
     [/within \{2\} business days/, `within ${s.approval_sla_days} business days`],
     [/reapply after \{30\} days/, `reapply after ${s.reapply_days} days`],
@@ -234,7 +230,7 @@ function affiliateTerms() {
     [/\*\*\{14\} days\*\* after notice for program-wide/, `**${s.notice_days.cpa_program} days** after notice for program-wide`],
     [/\*\*\{7\} days\*\* after notice for a deal/, `**${s.notice_days.cpa_affiliate} days** after notice for a deal`],
     [/take effect \*\*\{30\} days\*\* after notice/, `take effect **${s.notice_days.revshare} days** after notice`],
-    // Notes for counsel: the banner says governing law and venue are to be confirmed, so the text itself stays clean.
+    // Notes for counsel: remove the unresolved items so the public terms stay clean.
     [/ \{confirm with counsel\}/g, ''], [/ \{confirm method\}/g, ''], [/ \{venue to confirm with counsel\}/g, ''],
     [/\*\*Nigeria — confirm with counsel\*\*/, '**Nigeria**'], [/\*\*\{Lagos State, Nigeria, confirm with counsel\}\*\*/, '**Lagos State, Nigeria**'],
     [/VooSquare Privacy Policy \{link\}/, 'VooSquare [Privacy Policy](/privacy)'],
@@ -243,7 +239,6 @@ function affiliateTerms() {
   // Every other {value} is a fixed figure of these terms: keep the value, drop the braces.
   md = md.replace(/\$\{([^{}]+)\}/g, '$$$1').replace(/\{([^{}]+)\}/g, '$1');
   md = md.replace(/^\n+/, '');
-  if (!approved('affiliate')) md = md.replace(/^(# .*\n)/, `$1\n> **DRAFT FOR LEGAL REVIEW.** Not in force. Governing law and dispute venue must be confirmed by counsel.\n`);
   return md;
 }
 
@@ -259,7 +254,7 @@ function routes(r) {
   r.get('/api/admin/legal', (ctx) => {
     const me = A.requirePerm(ctx, 'settings');
     const s = get();
-    return { ...s, templates: TEMPLATES, company: COMPANY, banner: BANNER, can_approve: A.isOwner(me), urls: { privacy: config.baseUrl + '/privacy', terms: config.baseUrl + '/terms', affiliate: config.baseUrl + '/affiliates#/site/terms' } };
+    return { ...s, templates: TEMPLATES, company: COMPANY, can_approve: A.isOwner(me), urls: { privacy: config.baseUrl + '/privacy', terms: config.baseUrl + '/terms', affiliate: config.baseUrl + '/affiliates#/site/terms' } };
   });
   r.put('/api/admin/legal/approval', async (ctx) => {
     const me = A.requirePerm(ctx, 'settings');
@@ -277,4 +272,4 @@ function routes(r) {
   });
 }
 
-module.exports = { get, approved, saveDoc, setApproval, render, page, affiliateTerms, routes, TEMPLATES, BANNER, COMPANY };
+module.exports = { get, approved, saveDoc, setApproval, render, page, affiliateTerms, routes, TEMPLATES, COMPANY };

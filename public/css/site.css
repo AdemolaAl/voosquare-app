@@ -45,9 +45,10 @@ section[id], [id="tools"], [id="pricing"] { scroll-margin-top: calc(var(--nav-h)
   .links, .login, .nav-r > .btn, .nav-r > .me-btn .lbl { display: none; }
   .nav-r > .me-btn { padding: 3px; }
   .menu-b { display: grid; }
-  .drawer.open { display: grid; gap: 4px; padding: 8px 20px 20px; border-top: 1px solid var(--line); background: #fff; max-height: calc(100vh - 80px); overflow: auto; }
-  .drawer a, .drawer button.dl { padding: 13px 4px; font-weight: 700; font-size: 18px; border-bottom: 1px solid var(--line); text-align: left; }
-  .drawer .btn { margin-top: 12px; border: 0; }
+  .drawer.open { display: grid; gap: 2px; padding: 6px 16px 12px; border-top: 1px solid var(--line); background: #fff; max-height: calc(100vh - 80px); overflow: auto; }
+  .drawer a, .drawer button.dl { min-height: 44px; padding: 8px 4px; font-weight: 700; font-size: 15px; border-bottom: 1px solid var(--line); text-align: left; }
+  .drawer #drawerAcct { display: grid; gap: 2px; padding-bottom: 4px; border-bottom: 1px solid var(--line); }
+  .drawer #drawerAcct .btn { min-height: 44px; margin: 0 0 2px; border: 0; }
 }
 
 /* ---------- hero ---------- */

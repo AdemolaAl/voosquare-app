@@ -248,8 +248,8 @@
       const doc = d[key]; const meta = LG_DOCS.find((x) => x[0] === key);
       const APPR = [['privacy', 'Privacy policy', '/privacy'], ['terms', 'Terms of service', '/terms'], ['affiliate', 'Affiliate terms', '/affiliates#/site/terms']];
       el.innerHTML = `${pageHead('Legal', 'The privacy policy and terms members read, and whether counsel has approved them.')}
-        <section class="card stack lg-appr"><div class="card-h"><div><h3>Approved by counsel</h3><span class="sub">While a document is not approved, its page shows: “${esc(d.banner.split('.')[0])}.” Turn it on only after your lawyer has reviewed the text.</span></div>${d.can_approve ? '' : pill('Owner only', 'w')}</div>
-          <div class="lg-appr-l">${APPR.map(([k, l, u]) => `<div class="lg-appr-r"><span><b>${esc(l)}</b><a href="${u}" target="_blank" rel="noopener">${icon('ext')}Open page</a></span>${d.can_approve ? switchField('ap_' + k, d.approved[k], d.approved[k] ? 'Approved' : 'Draft') : pill(d.approved[k] ? 'Approved' : 'Draft', d.approved[k] ? 'g' : 'gold')}</div>`).join('')}</div></section>
+        <section class="card stack lg-appr"><div class="card-h"><div><h3>Approved by counsel</h3><span class="sub">Approval status is recorded for the team and is not displayed on public pages. Turn it on only after your lawyer has reviewed the text.</span></div>${d.can_approve ? '' : pill('Owner only', 'w')}</div>
+          <div class="lg-appr-l">${APPR.map(([k, l, u]) => `<div class="lg-appr-r"><span><b>${esc(l)}</b><a href="${u}" target="_blank" rel="noopener">${icon('ext')}Open page</a></span>${d.can_approve ? switchField('ap_' + k, d.approved[k], d.approved[k] ? 'Approved' : 'Not approved') : pill(d.approved[k] ? 'Approved' : 'Not approved', d.approved[k] ? 'g' : 'gold')}</div>`).join('')}</div></section>
         <nav class="tabs st-tabs mt" aria-label="Documents">${LG_DOCS.map(([k, l]) => `<a href="#legal/${k}" class="${k === key ? 'on' : ''}"${k === key ? ' aria-current="page"' : ''}>${esc(l)}</a>`).join('')}</nav>
         <form class="card stack" id="lgF" novalidate>
           <div class="card-h"><div><h3>${esc(meta[1])}</h3><span class="sub">${doc.custom ? `Your text, saved ${esc(when(doc.updated_at))}.` : `The draft template, naming only ${esc(d.company)}. Edit it with your lawyer, then save.`}</span></div><a class="r btn btn-w btn-xs" href="${meta[2]}" target="_blank" rel="noopener">${icon('ext')}View page</a></div>
@@ -267,9 +267,9 @@
       if (rs) rs.onclick = () => confirmIn(rs, { text: 'Replace your text with the draft template? Your saved text is overwritten.', yes: 'Use the template', onYes: async () => { await PUT('/api/admin/legal/' + key, { body: '' }); toast('Template restored'); A.route(true); } });
       el.querySelectorAll('.lg-appr [name^="ap_"]').forEach((sw) => sw.addEventListener('change', async () => {
         const k = sw.name.slice(3);
-        const r = await run(null, () => PUT('/api/admin/legal/approval', { [k]: sw.checked }), sw.checked ? 'Marked as approved. The draft banner is gone from that page.' : 'Marked as draft. The banner is back.');
+        const r = await run(null, () => PUT('/api/admin/legal/approval', { [k]: sw.checked }), sw.checked ? 'Approval status saved.' : 'Approval status removed.');
         if (!r) { sw.checked = !sw.checked; return; }
-        const lb = sw.closest('label').querySelector('span'); if (lb) lb.textContent = sw.checked ? 'Approved' : 'Draft';
+        const lb = sw.closest('label').querySelector('span'); if (lb) lb.textContent = sw.checked ? 'Approved' : 'Not approved';
       }));
     },
   });

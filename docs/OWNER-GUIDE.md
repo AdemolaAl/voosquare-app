@@ -75,7 +75,7 @@ Invite people by email and tick what they can do: Support (choose which products
 
 ## Legal pages (Legal)
 - **Legal** in the admin holds the **Privacy policy** (`/privacy`) and the **Terms of service** (`/terms`). Both start from a plain-language draft naming Zedapex Limited, Lagos; edit them here (saving an empty box goes back to the draft). They are linked from every footer, sign-up and checkout.
-- **Approved by counsel** (owner only, off by default): while a document is not approved, its page shows "Draft — needs legal review before launch" (the affiliate terms show "DRAFT FOR LEGAL REVIEW"). Turn each switch on only after a lawyer has reviewed that text. The drafts are not legal advice.
+- **Approved by counsel** (owner only, off by default): approval status is recorded for the team and is not displayed on public pages. Turn each switch on only after a lawyer has reviewed that text.
 
 ## Settings
 - **General**: brand name, support email, social links, the **email provider** (Resend, Brevo or Postmark; values here win over the server variables) and the **reporting time zone** for revenue.
