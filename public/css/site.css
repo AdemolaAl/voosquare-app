@@ -17,14 +17,14 @@ section[id], [id="tools"], [id="pricing"] { scroll-margin-top: calc(var(--nav-h)
 .html-login .loginp { display: grid; }
 
 /* ---------- announcement bar ---------- */
-.ann { background: linear-gradient(180deg, #0B1712, #13241C); color: #fff; text-align: center; padding: 11px 16px 13px; }
-.ann .tagnew { display: inline-block; background: var(--brand2); color: #062016; font-weight: 800; font-size: 11.5px; letter-spacing: .08em; padding: 4px 12px; border-radius: 999px; }
-.ann-msgs { position: relative; display: grid; margin-top: 6px; }
-.ann-msg { grid-area: 1 / 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; font-size: 15px; font-weight: 500; transition: transform .5s var(--ease), opacity .5s; }
-.ann-msg span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-height: 1.35; }
+.ann { display: flex; align-items: center; justify-content: center; gap: 10px; background: linear-gradient(180deg, #0B1712, #13241C); color: #fff; padding: 4px 12px; }
+.ann .tagnew { display: inline-block; flex: none; background: var(--brand2); color: #062016; font-weight: 800; font-size: 11.5px; letter-spacing: .08em; padding: 3px 9px; border-radius: 999px; }
+.ann-msgs { position: relative; display: grid; min-width: 0; margin: 0; }
+.ann-msg { grid-area: 1 / 1; display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 8px; font-size: 14px; font-weight: 500; transition: transform .5s var(--ease), opacity .5s; }
+.ann-msg span { min-width: 0; max-width: 100%; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-height: 1.25; }
 .ann-msg a { color: var(--lime); font-weight: 700; font-size: 14px; white-space: nowrap; }
 .ann-msg:not(.on) { opacity: 0; transform: translateY(14px); pointer-events: none; }
-@media (min-width: 700px) { .ann-msg { flex-direction: row; gap: 12px; } .ann-msg span { -webkit-line-clamp: 1; } }
+@media (min-width: 700px) { .ann { gap: 12px; } .ann-msg { gap: 12px; } .ann-msg span { -webkit-line-clamp: 1; } }
 
 /* ---------- nav ---------- */
 .nav { position: sticky; top: 0; z-index: 40; background: rgba(255,255,255,.86); backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); border-bottom: 1px solid var(--line); padding-top: env(safe-area-inset-top, 0px); }
@@ -980,7 +980,7 @@ html.tab-hidden *, html.tab-hidden *::before, html.tab-hidden *::after { animati
   .sapp, .gchip { min-height: 44px; }
   .ft ul a, .ft ul button { display: inline-flex; align-items: center; min-height: 44px; }
   .ft ul { gap: 0; }
-  .ann-msg a { display: inline-flex; align-items: center; min-height: 44px; margin: -11px 0; }
+  .ann-msg a { display: inline-flex; align-items: center; min-height: 44px; margin: -4px 0; }
 }
 
 /* Phone text floor (QA-24): nothing under 12px on phones. Generated from the rules above; keep it last. */
