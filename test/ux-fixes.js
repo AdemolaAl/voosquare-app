@@ -56,7 +56,7 @@ module.exports = async function uxFixes({ BASE, Client, check, owner, DB }) {
     const sections = (h) => (h.match(/<h2 id=/g) || []).length;
     check('QA-3: /privacy and /terms are pages (200, CSP, no scripts) naming only Zedapex Limited, Lagos', pv.status === 200 && tm.status === 200 && !!pv.csp && !/<script/i.test(pv.text + tm.text) && pv.text.includes('Zedapex Limited, Lagos') && tm.text.includes('Zedapex Limited, Lagos'));
     check('QA-3: the privacy template covers data, payment proofs, KYC images, use, sharing via Voo ID, retention, rights, cookies, contact', sections(pv.text) >= 8 && /payment proof/i.test(pv.text) && /selfie/i.test(pv.text) && /Continue with VooSquare/.test(pv.text) && /How long we keep it/.test(pv.text) && /Your rights/.test(pv.text) && /Cookies/.test(pv.text) && /<h2 id="s\d+">Contact<\/h2>/.test(pv.text) && /mailto:/.test(pv.text));
-    check('QA-3: both pages carry "Draft — needs legal review before launch" until approved', pv.text.includes('Draft — needs legal review before launch') && tm.text.includes('Draft — needs legal review before launch') && sections(tm.text) >= 6);
+    check('QA-3: privacy carries the draft warning while Terms of service does not', pv.text.includes('Draft — needs legal review before launch') && !tm.text.includes('Draft — needs legal review before launch') && sections(tm.text) >= 6);
     check('QA-3: /legal goes to the terms', (await page('/legal')).status === 302);
     const member = new Client(); await login(member, 'ux-legal-member@test.dev', 'Leg Al');
     check('QA-3: Admin → Legal needs the settings permission', (await member.get('/api/admin/legal')).status === 403 && (await member.put('/api/admin/legal/privacy', { body: 'x' })).status === 403);
@@ -67,7 +67,7 @@ module.exports = async function uxFixes({ BASE, Client, check, owner, DB }) {
     check('QA-3: saved text renders on /privacy, escaped, with a last-updated date', sv.status === 200 && sv.data.doc.custom === true && pv2.text.includes('UX test text &lt;script&gt;') && /Last updated/.test(pv2.text));
     await owner.put('/api/admin/legal/approval', { privacy: true });
     const pv3 = await page('/privacy'); const tm3 = await page('/terms');
-    check('QA-3: approving the privacy policy removes its banner only', !pv3.text.includes('needs legal review') && tm3.text.includes('needs legal review'));
+    check('QA-3: approving the privacy policy removes its banner; Terms of service remains clear', !pv3.text.includes('needs legal review') && !tm3.text.includes('needs legal review'));
     const rs = await owner.put('/api/admin/legal/privacy', { body: '' });
     await owner.put('/api/admin/legal/approval', { privacy: false });
     check('QA-3: an empty save goes back to the template', rs.data.doc.custom === false && (await page('/privacy')).text.includes('How long we keep it'));

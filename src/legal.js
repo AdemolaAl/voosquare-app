@@ -2,12 +2,13 @@
 /*
  * Legal pages (QA-2, QA-3).
  *  - /privacy and /terms: the member privacy policy and terms of service. The text lives in the 'legal' setting and is
- *    edited in Admin → Legal (settings permission). Until someone saves their own text, a plain-language DRAFT template
- *    is shown (below). Rendered on the server, so the pages work without JavaScript and can be linked from anywhere.
+ *    edited in Admin → Legal (settings permission). Until someone saves their own text, a plain-language template is
+ *    shown (below). The privacy page carries the draft banner until approval. Rendered on the server, so the pages work
+ *    without JavaScript and can be linked from anywhere.
  *  - The affiliate terms (docs/AFFILIATE_TERMS.md) are served with their {placeholders} filled from the live program
  *    settings, without the internal drafting notes.
- *  - "Approved by counsel": one switch per document (privacy, terms, affiliate), off by default, owner only. While a
- *    switch is off the page carries the draft banner; the owner turns it on after the legal review.
+ *  - "Approved by counsel": one switch per document (privacy, terms, affiliate), off by default, owner only. The privacy
+ *    page carries the draft banner until approved; the owner controls approval after legal review.
  * Nothing here invents legal terms: the templates are drafts for review, clearly marked as such until approved.
  */
 const D = require('./db');
@@ -188,7 +189,7 @@ function page(key) {
 <body class="lg-body"><header class="lg-top"><a class="lg-brand" href="/"><img src="/assets/logo-icon.svg" alt="" width="32" height="32"><b>Voo<span>Square</span></b></a><nav class="lg-nav" aria-label="Legal"><a href="/privacy"${key === 'privacy' ? ' aria-current="page"' : ''}>Privacy</a><a href="/terms"${key === 'terms' ? ' aria-current="page"' : ''}>Terms</a><a href="/affiliates#/site/terms">Affiliate terms</a></nav></header>
 <main class="lg">
   <div class="lg-head"><h1>${esc(d.title)}</h1><p class="lg-meta">${esc(COMPANY)}${d.updated_at ? ` · Last updated ${esc(dateText(d.updated_at))}` : ''}</p>
-  ${s.approved[key] ? '' : `<p class="lg-draft" role="note"><span aria-hidden="true"></span>${esc(BANNER)}</p>`}</div>
+  ${key !== 'terms' && !s.approved[key] ? `<p class="lg-draft" role="note"><span aria-hidden="true"></span>${esc(BANNER)}</p>` : ''}</div>
   ${toc.length > 2 ? `<nav class="lg-toc" aria-label="On this page"><b>On this page</b>${toc.map(([id, t]) => `<a href="#${id}">${esc(t)}</a>`).join('')}</nav>` : ''}
   <article class="lg-doc">${html}</article>
 </main>

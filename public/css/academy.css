@@ -54,11 +54,11 @@
 .va-grain { inset: 0; opacity: .07; mix-blend-mode: overlay; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
 @keyframes acBeam { from { transform: rotate(14deg) translateX(-6%); opacity: .8; } to { transform: rotate(22deg) translateX(8%); opacity: 1; } }
 .va-hero-in { display: grid; gap: 40px; align-items: center; }
-.va-h1 { font-size: clamp(60px, 15.5vw, 172px); font-weight: 800; letter-spacing: -.065em; line-height: .86; color: #fff; text-wrap: initial; }
+.va-h1 { font-size: clamp(48px, 11vw, 112px); font-weight: 800; letter-spacing: -.065em; line-height: .86; color: #fff; text-wrap: initial; }
 .va-line { display: block; overflow: hidden; padding-bottom: .16em; margin-bottom: -.16em; }
 .va-line > span { display: inline-block; padding-bottom: .16em; margin-bottom: -.16em; }
 .va-line:last-child > span { background: linear-gradient(100deg, #fff 10%, #E3FBA0 55%, var(--lime) 90%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.va-sub { margin-top: 26px; font-size: clamp(18px, 2.1vw, 22px); line-height: 1.45; color: #C9D8D0; max-width: 34ch; }
+.va-sub { margin-top: 26px; font-size: clamp(16px, 1.9vw, 20px); line-height: 1.45; color: #C9D8D0; max-width: 34ch; }
 .va-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; align-items: center; }
 .va-facts { display: flex; gap: 0; margin: 40px 0 0; max-width: 470px; }
 .va-facts > div { flex: 1; padding: 0 18px; border-left: 1px solid var(--a-line2); }
@@ -134,7 +134,7 @@
   .va-js .va-device { animation-name: acDevTilt; }
   .va-crew { height: 150px; left: 4%; right: 12%; }
   .va-stage { padding-bottom: 136px; }
-  .va-h1 { font-size: clamp(64px, 7.4vw, 116px); }
+  .va-h1 { font-size: clamp(56px, 6.6vw, 104px); }
 }
 @keyframes acDevTilt { from { opacity: 0; transform: rotateY(-18deg) rotateX(8deg) translateY(30px) scale(.96); } to { opacity: 1; transform: rotateY(-7deg) rotateX(3deg); } }
 @media (max-width: 999px) {
